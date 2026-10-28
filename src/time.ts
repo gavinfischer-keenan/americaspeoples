@@ -1,5 +1,5 @@
 import type { EvidenceRecord, TimeExtent } from "./model";
-export const END_YEAR = 1803;
+export const END_YEAR = 1934;
 export function formatYear(year: number): string {
   return `${(year <= 0 ? 1 - year : year).toLocaleString("en-US")} ${year <= 0 ? "BCE" : "CE"}`;
 }

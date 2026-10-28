@@ -1,5 +1,7 @@
+import { validateOverlay } from "./overlays";
 import type { Dataset, EvidenceRecord } from "./model";
 import { validateCitation } from "./citations";
+import { END_YEAR } from "./time";
 export function safeURL(value: unknown): boolean {
   if (typeof value !== "string") return false;
   try {
@@ -17,12 +19,17 @@ const text = (x: any) => typeof x === "string" && x.length <= 100_000;
 const id = (x: any) =>
   typeof x === "string" && /^[a-zA-Z0-9][a-zA-Z0-9._-]{0,119}$/.test(x);
 const year = (x: any) =>
-  Number.isSafeInteger(x) && x >= -1_000_000 && x <= 1803;
+  Number.isSafeInteger(x) && x >= -1_000_000 && x <= END_YEAR;
 export function validateRecord(value: unknown, complete = true): string[] {
   const errors: string[] = [];
   const add = (s: string) => errors.push(s);
   const r = value as EvidenceRecord;
   if (!object(r)) return ["Record must be an object."];
+  if (r.overlay !== undefined) {
+    errors.push(...validateOverlay(r.overlay));
+    if (r.type !== "event")
+      add("Overlay records must use event type, not occupation or migration.");
+  }
   if (!id(r.id))
     add("Record ID must use letters, digits, dots, underscores or hyphens.");
   if (!Number.isSafeInteger(r.revision) || r.revision < 1)
@@ -84,7 +91,9 @@ export function validateRecord(value: unknown, complete = true): string[] {
       if (t.start !== null || t.end !== null)
         add("Unplaced records must have null dates.");
     } else if (!year(t.start) || !year(t.end) || t.start! > t.end!)
-      add("Dates must be ordered whole astronomical years, at or before 1803.");
+      add(
+        `Dates must be ordered whole astronomical years, at or before ${END_YEAR}.`,
+      );
     if (t.certainStart !== undefined || t.certainEnd !== undefined) {
       if (
         t.kind !== "interval" ||

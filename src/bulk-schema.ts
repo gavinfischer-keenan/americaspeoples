@@ -1,5 +1,5 @@
 /** Public spreadsheet contract. Headers are case-sensitive; column order is flexible. */
-export const BULK_SCHEMA_VERSION = 1;
+export const BULK_SCHEMA_VERSION = 2;
 export const BULK_HEADERS = {
   Evidence: [
     "start_year",
@@ -83,7 +83,17 @@ export const BULK_HEADERS = {
 } as const;
 export type BulkSheetName = keyof typeof BULK_HEADERS;
 export type BulkRow = Record<string, string | number | boolean | null>;
-export type BulkTables = Record<BulkSheetName, BulkRow[]>;
+export type BulkTables = Record<BulkSheetName, BulkRow[]> & {
+  Overlays?: BulkRow[];
+};
+export const OVERLAY_HEADERS = [
+  ...BULK_HEADERS.Evidence,
+  "overlay_type",
+  "geometry_basis",
+  "geometry_geojson",
+  "geometry_precision",
+  "geometry_source",
+] as const;
 export const REFERENCE_TYPES = [
   "journal-article",
   "book",

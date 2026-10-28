@@ -1,6 +1,6 @@
 # Americas Peoples bulk import guide
 
-**Version compatibility:** this workbook contract is for Americas Peoples **v0.1.1**, spreadsheet schema 1. The original **v0.1 tag accepts native proposal JSON only**; it cannot import this workbook directly. Use the v0.1.1 application for XLSX import. Native proposal JSON remains supported.
+**Version compatibility:** the current template uses spreadsheet schema 2 and requires **Americas Peoples v0.2.0**. It adds a sixth tab, Overlays, for trade, conflict, forced removal, epidemics and violence. The app also accepts old five-tab schema 1 workbooks. v0.1 accepts JSON only; v0.1.1 accepts schema 1 XLSX only. JSON packages containing overlays use proposal schema 2; ordinary site-only packages can still use schema 1.
 
 [Download the Excel template](../templates/americas-peoples-import.xlsx). On GitHub, choose **Download raw file** to save the actual `.xlsx` workbook.
 
@@ -8,7 +8,7 @@ Every imported entry becomes a proposal. Choose `draft` while researching or `re
 
 ## Start with one entry
 
-1. Download the template and save a working copy. Keep all five sheets: `Readme`, `Evidence`, `Claims`, `References`, and `ClaimSources`. Keep every data header in row 1. The required version marker is `Readme!A1=format_version` and `Readme!B1=1` (a number). Other `Readme` instructions and field descriptions are not evidence data. Extra sheets are rejected. Delete or replace all sample rows across the four data sheets before adding your own batch. Keep data contiguous with no blank rows between entries; trailing blank rows are allowed.
+1. Download the template and save a working copy. Keep all six sheets: `Readme`, `Evidence`, `Claims`, `References`, `ClaimSources`, and `Overlays`. Keep every data header in row 1. The required version marker is `Readme!A1=format_version` and `Readme!B1=2` (a number). Other `Readme` instructions and field descriptions are not evidence data. Extra sheets are rejected. Delete or replace all sample rows across the data sheets before adding your own batch. Keep data contiguous with no blank rows between entries; trailing blank rows are allowed.
 2. In `Evidence`, give your entry a stable `record_id`, such as `example-site-01`. Fill the title, culture, dates, location when known, and narrative sections. Use `operation=new` and `proposal_state=draft` to start.
 3. In `Claims`, add one row per statement supported by evidence. Repeat the evidence `record_id`; give each statement a `claim_id`.
 4. In `References`, enter one row per source with a unique `reference_id` and its bibliographic metadata. A reference may support several claims or records.
@@ -130,9 +130,9 @@ Headers are case-sensitive. Column order may change, but **all listed headers mu
 
 ## Dates, places, and narrative sections
 
-An `interval` represents supported duration. Its optional certain core must have both bounds and sit inside the overall interval. An `occurrence` represents something happening within a dating window; a multi-year occurrence does not claim continuous occupation. Use `unplaced` when timing is unresolved and leave all start/end/certain year and era cells blank. Such records remain reviewable but do not appear in time queries. Do not extend an unknown endpoint to 1803.
+An `interval` represents supported duration. Its optional certain core must have both bounds and sit inside the overall interval. An `occurrence` represents something happening within a dating window; a multi-year occurrence does not claim continuous occupation. Use `unplaced` when timing is unresolved and leave all start/end/certain year and era cells blank. Such records remain reviewable but do not appear in time queries. Do not extend an unknown endpoint to 1934.
 
-Chronology must run from earlier to later, including across BCE/CE. The supported range is 1,000,000 BCE through 1803 CE. Preserve original dates and uncertainty. Calibrated BP has a 1950 CE reference; do not apply a calibrated conversion to uncalibrated radiocarbon determinations. Separate disjoint episodes into separate records. See [the detailed data format](data-format.md) for internal astronomical numbering and map behavior.
+Chronology must run from earlier to later, including across BCE/CE. The supported range is 1,000,000 BCE through 1934 CE. Preserve original dates and uncertainty. Calibrated BP has a 1950 CE reference; do not apply a calibrated conversion to uncalibrated radiocarbon determinations. Separate disjoint episodes into separate records. See [the detailed data format](data-format.md) for internal astronomical numbering and map behavior.
 
 Leave a location wholly blank if it cannot responsibly be mapped. Otherwise provide its ID, name, both coordinates, precision, and provenance. Label proxy or generalized coordinates clearly. Ready movement records require both origin and destination and independent supporting claims. Connections are schematic; the line is not an evidence-backed reconstruction of an intermediate route.
 
@@ -196,6 +196,28 @@ Identical workbook content produces stable bulk proposal identities: repeat impo
 
 The cell ceiling matches [Excel's documented 32,767-character limit](https://support.microsoft.com/en-us/excel/excel-specifications-and-limits). The other limits above are application limits. A workbook within the compressed-size limit can still exceed the decompressed or resulting JSON limit, especially when a shared reference is embedded into many records.
 
-Do not include macros or formulas. Use plain values, ordinary year numbers, and text source-check dates. Keep all five sheets, including the `Readme` version marker, even if a draft leaves a supporting data sheet empty apart from headers. Do not add extra sheets, rename headers, merge header cells, or replace IDs with display names.
+Do not include macros or formulas. Use plain values, ordinary year numbers, and text source-check dates. Keep all six sheets, including the `Readme` version marker, even if a draft leaves a supporting data sheet empty apart from headers. Do not add extra sheets, rename headers, merge header cells, or replace IDs with display names.
 
 When import reports a sheet and row, check that row's IDs, enumerated values, number types, and required relationships first. Check the related sheet when a referenced ID is missing. For readiness errors, either complete the missing evidence or choose `draft`; choosing draft does not bypass structural errors. No partial subset is imported after a structural failure. Fix the workbook and retry, then inspect the preview and evidence pages before sharing.
+
+
+## Thematic overlays (v0.2.0)
+
+The **Overlays** tab uses every Evidence header, in the same order, plus these five columns. Keep an empty Overlays tab when submitting only sites in schema 2. An overlay has a stable record_id shared by its Claims and ClaimSources; cite bibliography rows in References exactly as for ordinary evidence. IDs must be unique across Evidence and Overlays. The combined limit is 200 site and overlay proposals per import.
+
+| Extra column | Values and meaning |
+| --- | --- |
+| overlay_type | `trade`, `conflict`, `forced-removal`, `epidemic`, or `violence` |
+| geometry_basis | `documented`, `schematic`, or `unmapped` |
+| geometry_geojson | A GeoJSON Point or LineString geometry object as text, or `null` when unmapped. Coordinates are decimal `[longitude, latitude]`. No Feature/FeatureCollection wrapper, polygons, or altitude. Maximum 1,000 positions. |
+| geometry_precision | Explain spatial uncertainty and what the mark represents. A public site locator is not an excavated battlefield location. |
+| geometry_source | Citation and locator for the geometry, or why the route is unresolved. This also needs a claim/source mapping. |
+
+Set `record_type=event`. Use occurrence for a dated event or an uncertainty window; interval requires evidence supporting activity over that period. Preserve original dates and dating method. Use `culture_id=unknown` if an overlay covers multiple parties or attribution is unsupported, explaining identified participants in the review. Do not represent exchange as population movement.
+
+A documented Point can locate an affected site; it does not establish the extent of warfare. A documented LineString requires source-supported intermediate geometry. A schematic LineString must have **exactly two endpoints** and establishes a connection only, not an itinerary. Example syntax (illustrative coordinates, not evidence): `{"type":"LineString","coordinates":[[-100,30],[-90,35]]}`. If a commodity's source is known but no defensible route exists, use a receiving-site Point or unmapped geometry. Do not invent a route.
+
+Import, review, save and share overlays through Suggestions. They remain unreviewed proposals. Enable **Preview complete suggestions** and use the individual overlay controls on the map. Overlays follow the year slider, appear in the evidence table with filters for each overlay kind, and open supporting review pages. The editor's **Overlay JSON** field preserves all five geometry/type fields as kind, basis, geometry, precision and provenance. Use `null` to remove overlay metadata deliberately.
+
+
+Use `forced-removal` for supported coerced displacement, with directed schematic connections from origin to destination. Record return journeys separately. Use `violence` for documented massacres or other violence and `epidemic` for epidemic evidence. An epidemic Point is a declared locality or regional proxy, not the reconstructed origin or extent of transmission. Do not derive a spreading wave from dates alone. Mortality claims must name the affected population, period, source and estimation limits. Where estimates disagree, use separate claims and the discussion fields. Never equate a missing later record with extinction. The 1934 cutoff marks the Indian Reorganization Act for this edition; it does not imply that dispossession ended.

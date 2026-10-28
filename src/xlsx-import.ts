@@ -3,6 +3,7 @@ import { unzipSync, zipSync } from "fflate";
 import {
   BULK_HEADERS,
   BULK_SCHEMA_VERSION,
+  OVERLAY_HEADERS,
   type BulkRow,
   type BulkTables,
   type BulkSheetName,
@@ -45,11 +46,16 @@ export async function importWorkbook(
     cellFormula: true,
     cellHTML: false,
   });
-  const allowed = ["Readme", ...Object.keys(BULK_HEADERS)];
+  const version = workbook.Sheets.Readme?.B1?.v;
+  const sheetHeaders: Record<string, readonly string[]> = {
+    ...BULK_HEADERS,
+    ...(version === 2 ? { Overlays: OVERLAY_HEADERS } : {}),
+  };
+  const allowed = ["Readme", ...Object.keys(sheetHeaders)];
   for (const name of workbook.SheetNames) {
     if (!allowed.includes(name))
       throw new Error(
-        `Unexpected worksheet ${name}. Use the template's five tabs; no sheet is silently ignored.`,
+        `Unexpected worksheet ${name}. Use the documented template tabs; no sheet is silently ignored.`,
       );
     for (const [address, cell] of Object.entries(workbook.Sheets[name]))
       if (!address.startsWith("!") && (cell as XLSX.CellObject).f !== undefined)
@@ -60,10 +66,10 @@ export async function importWorkbook(
   const readme = workbook.Sheets.Readme;
   if (
     readme?.A1?.v !== "format_version" ||
-    readme?.B1?.v !== BULK_SCHEMA_VERSION
+    ![1, BULK_SCHEMA_VERSION].includes(readme?.B1?.v as number)
   )
     throw new Error(
-      "Readme!A1 must be format_version and B1 must be 1. Use the published template.",
+      "Readme!A1 must be format_version and B1 must be 1 or 2. Use the published template.",
     );
   const scalar = (
     cell: XLSX.CellObject | undefined,
@@ -94,7 +100,10 @@ export async function importWorkbook(
     );
   };
   const tables = {} as BulkTables;
-  for (const sheetName of Object.keys(BULK_HEADERS) as BulkSheetName[]) {
+  for (const sheetName of Object.keys(sheetHeaders) as (
+    | BulkSheetName
+    | "Overlays"
+  )[]) {
     const sheet = workbook.Sheets[sheetName];
     if (!sheet) throw new Error(`Missing ${sheetName} sheet.`);
     const range = XLSX.utils.decode_range(sheet["!ref"] || "A1");
@@ -111,7 +120,7 @@ export async function importWorkbook(
       if (value === null || value === "") continue;
       const header = String(value).trim();
       if (
-        !(BULK_HEADERS[sheetName] as readonly string[]).includes(header) ||
+        !(sheetHeaders[sheetName] as readonly string[]).includes(header) ||
         headers.has(header)
       )
         throw new Error(
@@ -119,7 +128,7 @@ export async function importWorkbook(
         );
       headers.set(header, col);
     }
-    for (const header of BULK_HEADERS[sheetName])
+    for (const header of sheetHeaders[sheetName])
       if (!headers.has(header))
         throw new Error(
           `${sheetName} row 1: missing header ${header}. Keep all template columns, even when cells are blank.`,

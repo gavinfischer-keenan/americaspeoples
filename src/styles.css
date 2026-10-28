@@ -1275,3 +1275,48 @@ dd:last-child {
     min-height: 0;
   }
 }
+
+.overlay-controls {
+  margin: 18px 0;
+  border-top: 1px solid #30424c;
+  padding-top: 12px;
+}
+.overlay-feature {
+  cursor: pointer;
+  fill: none;
+  stroke: #57c7c4;
+  stroke-width: 2.5;
+}
+.overlay-conflict {
+  stroke: #ee8c78;
+}
+.overlay-feature text {
+  fill: currentColor;
+  stroke: none;
+  font-size: 16px;
+}
+.overlay-feature .overlay-hit {
+  fill: transparent;
+  stroke: none;
+}
+.overlay-feature .overlay-line-hit {
+  stroke: transparent;
+  fill: none;
+  pointer-events: stroke;
+}
+.overlay-schematic > path:not(.overlay-line-hit) {
+  stroke-dasharray: 7 5;
+}
+.overlay-uncertain {
+  opacity: 0.7;
+}
+
+.overlay-violence {
+  stroke: #ff696d;
+}
+.overlay-epidemic {
+  stroke: #caa1ef;
+}
+.overlay-forced-removal {
+  stroke: #e5c78c;
+}

@@ -9,6 +9,21 @@ const records = (data as Dataset).records;
 const template = async () =>
   new Uint8Array(await readFile("templates/americas-peoples-import.xlsx"));
 const buffer = (bytes: Uint8Array) => bytes.slice().buffer as ArrayBuffer;
+
+test("the original schema 1 workbook still imports from the archived release", async () => {
+  const release = unzipSync(
+    new Uint8Array(
+      await readFile("downloads/americas-peoples-v0.1.1-offline.zip"),
+    ),
+  );
+  const bytes =
+    release["americas-peoples/templates/americas-peoples-import.xlsx"];
+  assert.ok(bytes, "archived template exists");
+  const pack = await importWorkbook(buffer(bytes), records);
+  assert.equal(pack.proposals.length, 1);
+  assert.equal(pack.proposals[0].record.id, "lanse-1021");
+  assert.equal(pack.proposals[0].record.overlay, undefined);
+});
 test("the delivered XLSX template imports its real sample, references and explicit location claim", async () => {
   const pack = await importWorkbook(buffer(await template()), records);
   assert.equal(pack.proposals.length, 1);

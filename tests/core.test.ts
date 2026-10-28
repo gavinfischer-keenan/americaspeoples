@@ -126,8 +126,16 @@ test("playback lands on evidence boundaries so high speeds do not skip one-year 
     year: 1041,
     boundary: false,
   });
-  assert.deepEqual(advancePlayback([r], 1800, 20), {
-    year: 1803,
+  assert.deepEqual(advancePlayback([r], 1930, 20), {
+    year: 1934,
     boundary: false,
   });
+});
+
+test("historical records through 1934 are accepted but later dates are rejected", () => {
+  const r = fixture();
+  r.time = { ...r.time, kind: "occurrence", start: 1934, end: 1934 };
+  assert.deepEqual(validateRecord(r), []);
+  r.time.end = 1935;
+  assert.match(validateRecord(r).join(" "), /1934/);
 });

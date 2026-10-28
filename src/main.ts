@@ -32,6 +32,7 @@ import {
 } from "./proposals";
 import { validateRecord } from "./validation";
 import { importWorkbook } from "./xlsx-import";
+import { OVERLAY_LABELS } from "./overlays";
 
 const dataset = rawData as Dataset;
 const minYear = earliestYear(dataset.records);
@@ -53,6 +54,9 @@ let preview = false,
   legendSearch = "";
 let selected: DisplayRecord[] = [];
 const hiddenCultures = new Set<string>();
+const hiddenLayers = new Set<string>();
+const mapRows = () =>
+  rows().filter((r) => !r.overlay || !hiddenLayers.has(r.overlay.kind));
 const storeKey = "americas-peoples-proposals-v1";
 try {
   const saved = localStorage.getItem(storeKey);
@@ -86,7 +90,7 @@ const rows = (): DisplayRecord[] => {
   return base.filter((r) => !hiddenCultures.has(r.culture.id));
 };
 const app = $("#app");
-app.innerHTML = `<header class="topbar"><a class="brand" href="#map"><span class="brand-mark">◈</span><span><h1>Americas Peoples</h1><small>AN ATLAS OF HUMAN EVIDENCE</small></span></a><nav aria-label="Main navigation"><a href="#map">Map</a><a href="#evidence">Events / Evidence</a><a href="#proposals">Suggestions <span id="proposal-count">${proposals.length}</span></a><a href="#about">About</a></nav><span class="offline-badge"><i></i> Fully offline</span></header><div class="shell"><main id="main" tabindex="-1"></main></div><footer class="timeline"><div class="time-top"><div class="year-display"><span class="eyebrow">EXPLORING THE RECORD AT</span><strong id="current-year"></strong></div><div class="playback"><button id="restart" title="Earliest evidence" aria-label="Earliest evidence">↤</button><button id="play" class="play-button" aria-label="Play">▶ Play</button><label>Speed<select id="speed" aria-label="Playback speed" title="Years per second between evidence boundaries; a brief hold keeps short events visible"><option value="10">10 years / sec</option><option value="50">50 years / sec</option><option value="250" selected>250 years / sec</option><option value="1000">1,000 years / sec</option></select></label></div><form id="year-form" class="year-form"><label class="sr-only" for="year-number">Year number</label><input id="year-number" type="number" min="1" step="1" aria-label="Year number"><select id="era" aria-label="Era"><option>BCE</option><option>CE</option></select><button type="submit" aria-label="Go to year">Go</button></form><label class="range-window">Timeline window<select id="window" aria-label="Timeline window"><option value="all">Entire record</option><option value="1000">± 1,000 years</option><option value="100">± 100 years</option><option value="10">± 10 years</option></select></label></div><div id="time-error" role="alert"></div><div class="slider-wrap"><input type="range" id="time-slider" min="${minYear}" max="1803" step="1" value="${year}" aria-label="Timeline year"><div class="range-labels"><span id="range-start"></span><span>Drag to travel through time <span class="keyhint">← →</span></span><span id="range-end">1803 CE · Louisiana Purchase</span></div></div></footer><div id="toast" role="status"></div>`;
+app.innerHTML = `<header class="topbar"><a class="brand" href="#map"><span class="brand-mark">◈</span><span><h1>Americas Peoples</h1><small>AN ATLAS OF HUMAN EVIDENCE</small></span></a><nav aria-label="Main navigation"><a href="#map">Map</a><a href="#evidence">Events / Evidence</a><a href="#proposals">Suggestions <span id="proposal-count">${proposals.length}</span></a><a href="#about">About</a></nav><span class="offline-badge"><i></i> Fully offline</span></header><div class="shell"><main id="main" tabindex="-1"></main></div><footer class="timeline"><div class="time-top"><div class="year-display"><span class="eyebrow">EXPLORING THE RECORD AT</span><strong id="current-year"></strong></div><div class="playback"><button id="restart" title="Earliest evidence" aria-label="Earliest evidence">↤</button><button id="play" class="play-button" aria-label="Play">▶ Play</button><label>Speed<select id="speed" aria-label="Playback speed" title="Years per second between evidence boundaries; a brief hold keeps short events visible"><option value="10">10 years / sec</option><option value="50">50 years / sec</option><option value="250" selected>250 years / sec</option><option value="1000">1,000 years / sec</option></select></label></div><form id="year-form" class="year-form"><label class="sr-only" for="year-number">Year number</label><input id="year-number" type="number" min="1" step="1" aria-label="Year number"><select id="era" aria-label="Era"><option>BCE</option><option>CE</option></select><button type="submit" aria-label="Go to year">Go</button></form><label class="range-window">Timeline window<select id="window" aria-label="Timeline window"><option value="all">Entire record</option><option value="1000">± 1,000 years</option><option value="100">± 100 years</option><option value="10">± 10 years</option></select></label></div><div id="time-error" role="alert"></div><div class="slider-wrap"><input type="range" id="time-slider" min="${minYear}" max="${END_YEAR}" step="1" value="${year}" aria-label="Timeline year"><div class="range-labels"><span id="range-start"></span><span>Drag to travel through time <span class="keyhint">← →</span></span><span id="range-end">${END_YEAR} CE · Indian Reorganization Act</span></div></div></footer><div id="toast" role="status"></div>`;
 const main = $("#main");
 const map = new MapView(land, (items) => {
   selected = items;
@@ -121,15 +125,15 @@ function bounds(recenter = false) {
     w = $<HTMLSelectElement>("#window").value;
   if (w === "all") {
     input.min = String(minYear);
-    input.max = "1803";
+    input.max = String(END_YEAR);
   } else if (recenter) {
     input.min = String(Math.max(minYear, year - Number(w)));
-    input.max = String(Math.min(1803, year + Number(w)));
+    input.max = String(Math.min(END_YEAR, year + Number(w)));
   }
   $("#range-start").textContent = formatYear(Number(input.min));
   $("#range-end").textContent =
     formatYear(Number(input.max)) +
-    (Number(input.max) === 1803 ? " · Louisiana Purchase" : "");
+    (Number(input.max) === END_YEAR ? " · Indian Reorganization Act" : "");
 }
 function setYear(next: number, manual = true) {
   if (manual) stop();
@@ -197,9 +201,9 @@ $("#year-form").addEventListener("submit", (e) => {
       $<HTMLInputElement>("#year-number").value,
       $<HTMLSelectElement>("#era").value,
     );
-    if (next < minYear || next > 1803)
+    if (next < minYear || next > END_YEAR)
       throw new Error(
-        `Choose a year from ${formatYear(minYear)} through 1803 CE.`,
+        `Choose a year from ${formatYear(minYear)} through ${END_YEAR} CE.`,
       );
     $("#time-error").textContent = "";
     setYear(next);
@@ -218,8 +222,25 @@ document.addEventListener("visibilitychange", () => {
 });
 function mapPage() {
   mountedMap = true;
-  main.innerHTML = `<div class="map-layout"><aside class="map-sidebar"><div class="eyebrow">THE AMERICAS / ${dataset.records.length} EVIDENCE RECORDS</div><h2>Places hold<br>the evidence.</h2><p class="intro">Explore a changing record of human presence, one source at a time.</p><div class="scope-note">${esc(dataset.coverage)}</div><div class="legend-head"><h3>Cultures & peoples</h3><button id="show-all" class="text-button">Show all</button></div><input id="legend-search" type="search" placeholder="Find a culture or people…" aria-label="Search cultures" value="${esc(legendSearch)}"><div id="legend"></div><div class="map-key"><span><i class="key-dot"></i> Documented interval / dated event</span><span><i class="key-ring"></i> Possible time / broadly dated occurrence</span><span><b>*</b> Claim under discussion or disputed</span><span><i class="key-dash"></i> Unreviewed suggestion (opt-in)</span></div><label class="check"><input id="preview" type="checkbox" ${preview ? "checked" : ""}> Preview complete suggestions</label><p class="fine">A dot ending means the displayed evidence ends. It does not establish abandonment or a population's fate.</p></aside><section class="map-stage" aria-label="Map and active evidence"><div class="map-topline"><span id="active-count"></span><span>Pan · Scroll to zoom</span></div><div id="map-host"></div><section class="visible-panel"><div class="visible-heading"><h3 id="visible-heading">Visible evidence</h3><button id="clear-selection" class="text-button">Show all visible</button></div><div id="visible-records"></div></section></section></div>`;
+  main.innerHTML = `<div class="map-layout"><aside class="map-sidebar"><div class="eyebrow">THE AMERICAS / ${dataset.records.length} EVIDENCE RECORDS</div><h2>Places hold<br>the evidence.</h2><p class="intro">Explore a changing record of human presence, one source at a time.</p><div class="scope-note">${esc(dataset.coverage)}</div><div class="legend-head"><h3>Cultures & peoples</h3><button id="show-all" class="text-button">Show all</button></div><input id="legend-search" type="search" placeholder="Find a culture or people…" aria-label="Search cultures" value="${esc(legendSearch)}"><div id="legend"></div><div class="map-key"><span><i class="key-dot"></i> Documented interval / dated event</span><span><i class="key-ring"></i> Possible time / broadly dated occurrence</span><span><b>*</b> Claim under discussion or disputed</span><span><i class="key-dash"></i> Unreviewed suggestion (opt-in)</span></div><div class="overlay-controls"><h3>Overlays</h3>${Object.entries(
+    OVERLAY_LABELS,
+  )
+    .map(
+      ([key, label]) =>
+        `<label class="check"><input type="checkbox" data-layer="${key}" ${hiddenLayers.has(key) ? "" : "checked"}> ${esc(label)} overlays</label>`,
+    )
+    .join(
+      "",
+    )}<p class="fine">Teal diamond: trade. Coral cross: conflict. Red crossed square: violence. Purple ring: epidemic. Amber square or arrow: forced removal. Dashed lines connect sourced endpoints; they do not reconstruct a route. Symbols do not encode death tolls.</p></div><label class="check"><input id="preview" type="checkbox" ${preview ? "checked" : ""}> Preview complete suggestions</label><p class="fine">A dot ending means the displayed evidence ends. It does not establish abandonment or a population's fate.</p></aside><section class="map-stage" aria-label="Map and active evidence"><div class="map-topline"><span id="active-count"></span><span>Pan · Scroll to zoom</span></div><div id="map-host"></div><section class="visible-panel"><div class="visible-heading"><h3 id="visible-heading">Visible evidence</h3><button id="clear-selection" class="text-button">Show all visible</button></div><div id="visible-records"></div></section></section></div>`;
   $("#map-host").append(map.element);
+  main.querySelectorAll<HTMLInputElement>("[data-layer]").forEach((el) =>
+    el.addEventListener("change", () => {
+      if (el.checked) hiddenLayers.delete(el.dataset.layer!);
+      else hiddenLayers.add(el.dataset.layer!);
+      selected = [];
+      renderMapData();
+    }),
+  );
   $("#legend-search").addEventListener("input", (e) => {
     legendSearch = (e.target as HTMLInputElement).value;
     renderLegend();
@@ -262,15 +283,15 @@ function renderLegend() {
     );
 }
 function renderMapData() {
-  const active = activeRecords(rows(), year);
+  const active = activeRecords(mapRows(), year);
   map.update(active, year);
   $("#active-count").textContent =
-    `${active.filter((r) => r.location).length} mapped records at this time`;
+    `${active.filter((r) => (r.overlay ? r.overlay.geometry : r.location)).length} mapped records at this time`;
   renderVisible();
 }
 function renderVisible() {
   if (!mountedMap) return;
-  const active = activeRecords(rows(), year);
+  const active = activeRecords(mapRows(), year);
   const chosen = selected.length
     ? active.filter((r) =>
         selected.some((s) => s.id === r.id && s.proposalKey === r.proposalKey),
@@ -289,7 +310,7 @@ function renderVisible() {
     : `<p class="empty">${selected.length ? "No selected records intersect this year. Use “Show all visible” to clear the selection." : "No included evidence intersects this year and these filters. This is a gap in this small dataset, not evidence of an uninhabited continent."}</p>`;
 }
 function tablePage() {
-  main.innerHTML = `<article class="table-page"><div class="page-heading"><div><div class="eyebrow">THE EVIDENCE INDEX</div><h2>Every row has a source.</h2><p class="lead">Occupation, occurrences, movements, and events. Open a row for its full review.</p></div><a class="button primary" href="#new">+ Suggest new evidence</a></div><div class="table-filters"><input id="table-search" type="search" aria-label="Search evidence" placeholder="Search places, cultures, claims…" value="${esc(search)}"><label>Period<select id="period" aria-label="Table period"><option value="all" ${period === "all" ? "selected" : ""}>All records</option><option value="current" ${period === "current" ? "selected" : ""}>At selected year</option></select></label><label>Type<select id="type-filter" aria-label="Record type filter">${["all", "occupation", "occurrence", "movement", "event"].map((t) => `<option ${t === typeFilter ? "selected" : ""}>${t}</option>`).join("")}</select></label><label>Sort<select id="sort" aria-label="Sort evidence"><option value="oldest" ${sort === "oldest" ? "selected" : ""}>Earliest first</option><option value="newest" ${sort === "newest" ? "selected" : ""}>Latest first</option><option value="name" ${sort === "name" ? "selected" : ""}>Name</option></select></label><label class="check"><input id="table-preview" type="checkbox" ${preview ? "checked" : ""}> Preview suggestions</label></div><p id="table-caption" class="muted"></p><div class="table-scroll"><table><thead><tr><th>Dates / occupation</th><th>Evidence & location</th><th>Culture / people</th><th>Type</th><th>Evidence status</th><th>Supporting page</th></tr></thead><tbody></tbody></table></div><p class="fine">* A particular claim is under discussion or disputed. Open its review to see which claim and why. Culture filters from the map also apply here.</p></article>`;
+  main.innerHTML = `<article class="table-page"><div class="page-heading"><div><div class="eyebrow">THE EVIDENCE INDEX</div><h2>Every row has a source.</h2><p class="lead">Occupation, occurrences, movements, and events. Open a row for its full review.</p></div><a class="button primary" href="#new">+ Suggest new evidence</a></div><div class="table-filters"><input id="table-search" type="search" aria-label="Search evidence" placeholder="Search places, cultures, claims…" value="${esc(search)}"><label>Period<select id="period" aria-label="Table period"><option value="all" ${period === "all" ? "selected" : ""}>All records</option><option value="current" ${period === "current" ? "selected" : ""}>At selected year</option></select></label><label>Type<select id="type-filter" aria-label="Record type filter">${["all", "occupation", "occurrence", "movement", "event", ...Object.keys(OVERLAY_LABELS)].map((t) => `<option value="${t}" ${t === typeFilter ? "selected" : ""}>${esc(OVERLAY_LABELS[t as keyof typeof OVERLAY_LABELS] ?? t)}</option>`).join("")}</select></label><label>Sort<select id="sort" aria-label="Sort evidence"><option value="oldest" ${sort === "oldest" ? "selected" : ""}>Earliest first</option><option value="newest" ${sort === "newest" ? "selected" : ""}>Latest first</option><option value="name" ${sort === "name" ? "selected" : ""}>Name</option></select></label><label class="check"><input id="table-preview" type="checkbox" ${preview ? "checked" : ""}> Preview suggestions</label></div><p id="table-caption" class="muted"></p><div class="table-scroll"><table><thead><tr><th>Dates / occupation</th><th>Evidence & location</th><th>Culture / people</th><th>Type</th><th>Evidence status</th><th>Supporting page</th></tr></thead><tbody></tbody></table></div><p class="fine">* A particular claim is under discussion or disputed. Open its review to see which claim and why. Culture filters from the map also apply here.</p></article>`;
   for (const [selector, handler] of [
     ["#table-search", (v: string) => (search = v)],
     ["#period", (v: string) => (period = v)],
@@ -313,7 +334,7 @@ function tablePage() {
 function renderTableBody() {
   let records = rows().filter(
     (r) =>
-      (typeFilter === "all" || r.type === typeFilter) &&
+      (typeFilter === "all" || (r.overlay?.kind ?? r.type) === typeFilter) &&
       `${r.title} ${r.location?.name ?? ""} ${r.culture.name} ${r.claims.map((c) => c.text).join(" ")}`
         .toLowerCase()
         .includes(search.toLowerCase()),
@@ -332,7 +353,7 @@ function renderTableBody() {
     records
       .map(
         (r) =>
-          `<tr data-href="${recordHref(r)}"><td><strong>${esc(timeLabel(r.time))}</strong><small>${esc(r.time.kind === "occurrence" && r.time.start !== r.time.end ? "Possible occurrence window" : r.time.kind)}</small></td><td><strong>${esc(r.title)}${isDisputed(r) ? " *" : ""}</strong><small>${esc(r.location?.name ?? "Unmapped")}</small></td><td><span class="culture-label"><i style="background:${r.culture.color}"></i>${esc(r.culture.name)}</span></td><td>${esc(r.type)}</td><td>${r.proposalKey ? '<span class="tag proposal-tag">Unreviewed proposal</span>' : ""}<span class="tag">${isDisputed(r) ? "* See discussion" : "Well-supported"}</span></td><td><a href="${recordHref(r)}">Detailed review</a></td></tr>`,
+          `<tr data-href="${recordHref(r)}"><td><strong>${esc(timeLabel(r.time))}</strong><small>${esc(r.time.kind === "occurrence" && r.time.start !== r.time.end ? "Possible occurrence window" : r.time.kind)}</small></td><td><strong>${esc(r.title)}${isDisputed(r) ? " *" : ""}</strong><small>${esc(r.location?.name ?? (r.overlay?.geometry ? "Mapped overlay" : "Unmapped"))}</small></td><td><span class="culture-label"><i style="background:${r.culture.color}"></i>${esc(r.culture.name)}</span></td><td>${esc(r.overlay ? OVERLAY_LABELS[r.overlay.kind] : r.type)}</td><td>${r.proposalKey ? '<span class="tag proposal-tag">Unreviewed proposal</span>' : ""}<span class="tag">${isDisputed(r) ? "* See discussion" : "Well-supported"}</span></td><td><a href="${recordHref(r)}">Detailed review</a></td></tr>`,
       )
       .join("") ||
     '<tr><td colspan="6" class="empty">No matching records. Broaden your filters or select All records.</td></tr>';
@@ -373,6 +394,7 @@ function reviewPage(r: DisplayRecord, p?: Proposal, index?: number) {
     if (r.time.start !== null) setYear(r.time.start);
     if (p) preview = true;
     hiddenCultures.delete(r.culture.id);
+    if (r.overlay) hiddenLayers.delete(r.overlay.kind);
     location.hash = "#map";
     setTimeout(() => map.focus(r), 0);
   });
@@ -395,7 +417,7 @@ function exportProposals(list: Proposal[]) {
   }
 }
 function proposalsPage() {
-  main.innerHTML = `<article class="proposals-page"><div class="page-heading"><div><div class="eyebrow">A LOCAL RESEARCH WORKSPACE</div><h2>Your suggestions</h2><p class="lead">Add evidence. Propose a correction. Share the supporting research.</p></div><a class="button primary" href="#new">+ Suggest new evidence</a></div><p id="storage-status" class="notice">${storageAvailable ? "Browser storage is available as a convenience. Download your suggestions for a portable backup." : "Browser storage is unavailable. Download your suggestions before closing this page."}</p><div class="actions"><button id="export-selected">Send to others</button><button id="select-all">Select all</button><label class="button file-button">Import suggestions<input type="file" id="import-file" aria-label="Import suggestions" accept=".json,.xlsx,application/json,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"></label></div><p class="muted">Sharing downloads a file; nothing is uploaded or emailed. Imported suggestions remain unreviewed. Complete suggestions can be previewed on the map.</p><div class="actions"><a href="docs/bulk-import-guide.html">Bulk import guide</a><a href="templates/americas-peoples-import.xlsx" download>Download spreadsheet template</a></div><p class="muted">Bulk entry: use the XLSX template for records, claims, references and source mappings. Excel, LibreOffice, or a downloaded Google Sheets workbook can be used.</p><div id="import-error" role="alert"></div><div class="proposal-list">${proposals.length ? proposals.map((p, i) => `<section class="proposal-card" data-proposal-card><label class="check"><input type="checkbox" data-share="${i}" aria-label="Select proposal ${i + 1}"><span class="tag proposal-tag">${esc(p.state)} · ${esc(p.kind)} · v${p.version}</span></label><h3>${esc(p.record.title || "Untitled draft")}</h3><p>${esc(p.rationale || "No rationale yet.")}</p><div class="actions"><a href="#proposal/${i}">Detailed review</a><a href="#edit/${i}">Edit suggestion</a></div>${comparisonHTML(p)}</section>`).join("") : '<div class="empty large"><h3>A place for the next finding.</h3><p>Start a new evidence row or open a reviewed record and choose Suggest correction.</p></div>'}</div></article>`;
+  main.innerHTML = `<article class="proposals-page"><div class="page-heading"><div><div class="eyebrow">A LOCAL RESEARCH WORKSPACE</div><h2>Your suggestions</h2><p class="lead">Add evidence. Propose a correction. Share the supporting research.</p></div><a class="button primary" href="#new">+ Suggest new evidence</a></div><p id="storage-status" class="notice">${storageAvailable ? "Browser storage is available as a convenience. Download your suggestions for a portable backup." : "Browser storage is unavailable. Download your suggestions before closing this page."}</p><div class="actions"><button id="export-selected">Send to others</button><button id="select-all">Select all</button><label class="button file-button">Import suggestions<input type="file" id="import-file" aria-label="Import suggestions" accept=".json,.xlsx,application/json,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"></label></div><p class="muted">Sharing downloads a file; nothing is uploaded or emailed. Imported suggestions remain unreviewed. Complete suggestions can be previewed on the map.</p><div class="actions"><a href="docs/bulk-import-guide.html">Bulk import guide</a><a href="templates/americas-peoples-import.xlsx" download>Download spreadsheet template</a><a href="templates/americas-peoples-researched-import.xlsx" download>Download researched batch</a></div><p class="muted">Bulk entry: use the XLSX template for records, claims, references and source mappings. Excel, LibreOffice, or a downloaded Google Sheets workbook can be used.</p><div id="import-error" role="alert"></div><div class="proposal-list">${proposals.length ? proposals.map((p, i) => `<section class="proposal-card" data-proposal-card><label class="check"><input type="checkbox" data-share="${i}" aria-label="Select proposal ${i + 1}"><span class="tag proposal-tag">${esc(p.state)} · ${esc(p.kind)} · v${p.version}</span></label><h3>${esc(p.record.title || "Untitled draft")}</h3><p>${esc(p.rationale || "No rationale yet.")}</p><div class="actions"><a href="#proposal/${i}">Detailed review</a><a href="#edit/${i}">Edit suggestion</a></div>${comparisonHTML(p)}</section>`).join("") : '<div class="empty large"><h3>A place for the next finding.</h3><p>Start a new evidence row or open a reviewed record and choose Suggest correction.</p></div>'}</div></article>`;
   $("#export-selected").addEventListener("click", () =>
     exportProposals(
       [...main.querySelectorAll<HTMLInputElement>("[data-share]:checked")].map(
@@ -454,7 +476,7 @@ function importPage() {
   });
 }
 function aboutPage() {
-  main.innerHTML = `<article class="review-page"><div class="eyebrow">METHOD & COVERAGE</div><h2>The record, with its uncertainties.</h2><p class="lead">A fully offline atlas of archaeological and verified historical evidence, from the earliest included finding through 1803.</p><section><h3>A deliberately small beginning</h3><p>${esc(dataset.coverage)}</p><p>App 0.1.1 · Dataset ${esc(dataset.version)} · source check ${esc(dataset.reviewedAt)}</p><p>“Bundled evidence” means the included sources were checked to the extent described on each review page. It is not an independent peer review or a guarantee of scholarly consensus. The record is not a population census.</p></section><section><h3>How to read the map</h3><p>Filled dots show documented intervals or precisely dated events. Outlined dots show a broadly dated occurrence or uncertain interval edge. An asterisk marks a claim under discussion or dispute. Open the detailed review to see which claim and why. Culture colors are descriptive classifications, not racial categories.</p><p>Dates are inclusive. An occurrence window means something is dated within that window; it does not imply continuous settlement. A blank year means no included matching record, not human absence. Arrow paths are schematic unless separately supported.</p></section><section><h3>Academic evidence</h3><p>Each claim maps to specific scholarly or archival sources. Critical historical reading and corroboration matter: repeated assertions are not independent evidence. Original dating, methods, calendar interpretation and limitations stay attached to the record. Uncalibrated radiocarbon ages are not silently converted into calendar years.</p></section><section><h3>Your local workspace</h3><p>Suggest new rows or corrections, then save as drafts or complete suggestions. “Complete” means required fields are present, not academically verified. “Send to others” downloads selected rows with their review content and bibliography. A recipient imports and previews the package. Corrections preserve the original and base revision. No proposal automatically replaces reviewed data.</p><p>Browser storage may vary by browser and file location. Export files are the portable backup. Copying or moving index.html does not transfer browser storage. Import your saved files into the new copy.</p></section><section><h3>Offline, by design</h3><p>All map geometry, code, evidence and review pages are bundled. Source links open online only when selected. There is no account, server, analytics or automatic update check.</p></section><section><h3>Attribution and licensing</h3><p>Made with Natural Earth. Generalized reference coastlines are public domain and represent modern geography, not ancient coastlines or ice sheets. ${esc(dataset.license)}</p><p>See README and THIRD_PARTY files in the download for build instructions, dependency licenses and dataset maintenance.</p></section></article>`;
+  main.innerHTML = `<article class="review-page"><div class="eyebrow">METHOD & COVERAGE</div><h2>The record, with its uncertainties.</h2><p class="lead">A fully offline atlas of archaeological and verified historical evidence, from the earliest included finding through ${END_YEAR}.</p><section><h3>A deliberately small beginning</h3><p>${esc(dataset.coverage)}</p><p>App 0.2.0 · Dataset ${esc(dataset.version)} · source check ${esc(dataset.reviewedAt)}</p><p>“Bundled evidence” means the included sources were checked to the extent described on each review page. It is not an independent peer review or a guarantee of scholarly consensus. The record is not a population census.</p></section><section><h3>How to read the map</h3><p>Filled dots show documented intervals or precisely dated events. Outlined dots show a broadly dated occurrence or uncertain interval edge. An asterisk marks a claim under discussion or dispute. Open the detailed review to see which claim and why. Culture colors are descriptive classifications, not racial categories.</p><p>Dates are inclusive. An occurrence window means something is dated within that window; it does not imply continuous settlement. A blank year means no included matching record, not human absence. Arrow paths are schematic unless separately supported.</p></section><section><h3>Why the timeline ends in 1934</h3><p>The Indian Reorganization Act is a policy boundary chosen for this edition. It does not mark the end of dispossession, forced relocation, or Indigenous history. Native nations and communities continued beyond the displayed periods. A disappearing marker indicates the end of an included evidence interval, never extinction by itself.</p><p>Epidemics, massacres and forced removals have separate layers. Mortality estimates belong to specific sources, populations and date ranges; the map does not turn them into an unsupported population census or disease-spread animation.</p></section><section><h3>Academic evidence</h3><p>Each claim maps to specific scholarly or archival sources. Critical historical reading and corroboration matter: repeated assertions are not independent evidence. Original dating, methods, calendar interpretation and limitations stay attached to the record. Uncalibrated radiocarbon ages are not silently converted into calendar years.</p></section><section><h3>Your local workspace</h3><p>Suggest new rows or corrections, then save as drafts or complete suggestions. “Complete” means required fields are present, not academically verified. “Send to others” downloads selected rows with their review content and bibliography. A recipient imports and previews the package. Corrections preserve the original and base revision. No proposal automatically replaces reviewed data.</p><p>Browser storage may vary by browser and file location. Export files are the portable backup. Copying or moving index.html does not transfer browser storage. Import your saved files into the new copy.</p></section><section><h3>Offline, by design</h3><p>All map geometry, code, evidence and review pages are bundled. Source links open online only when selected. There is no account, server, analytics or automatic update check.</p></section><section><h3>Attribution and licensing</h3><p>Made with Natural Earth. Generalized reference coastlines are public domain and represent modern geography, not ancient coastlines or ice sheets. ${esc(dataset.license)}</p><p>See README and THIRD_PARTY files in the download for build instructions, dependency licenses and dataset maintenance.</p></section></article>`;
 }
 let previousHash = location.hash || "#map";
 let reverting = false;

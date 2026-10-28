@@ -69,7 +69,11 @@ export function validateProposal(p: Proposal): string[] {
 export function makePackage(proposals: Proposal[]): SharePackage {
   return {
     format: "americas-peoples-proposals",
-    schemaVersion: 1,
+    schemaVersion: proposals.some(
+      (p) => p.record.overlay || p.baseRecord?.overlay,
+    )
+      ? 2
+      : 1,
     exportedAt: new Date().toISOString(),
     proposals: structuredClone(proposals),
   };
@@ -92,13 +96,22 @@ export function parsePackage(raw: string): SharePackage {
   if (
     !p ||
     p.format !== "americas-peoples-proposals" ||
-    p.schemaVersion !== 1 ||
+    ![1, 2].includes(p.schemaVersion) ||
     !Array.isArray(p.proposals) ||
     p.proposals.length > 200
   )
     throw new Error(
       "Unsupported proposal format, version, or more than 200 proposals.",
     );
+  if (
+    p.schemaVersion === 1 &&
+    p.proposals.some(
+      (x) =>
+        x?.record?.overlay !== undefined ||
+        x?.baseRecord?.overlay !== undefined,
+    )
+  )
+    throw new Error("Overlays require proposal schema version 2.");
   const errors = p.proposals.flatMap((x, i) =>
     validateProposal(x).map((e) => `Row ${i + 1}: ${e}`),
   );

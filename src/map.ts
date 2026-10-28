@@ -1,6 +1,7 @@
 import { geoEquirectangular, geoPath, geoGraticule10 } from "d3-geo";
 import type { DisplayRecord } from "./model";
-import { temporalState, isDisputed } from "./time";
+import { temporalState, isDisputed, END_YEAR } from "./time";
+import { OVERLAY_LABELS } from "./overlays";
 import { esc, $ } from "./dom";
 export class MapView {
   readonly element = document.createElement("div");
@@ -17,7 +18,7 @@ export class MapView {
   private tx = 0;
   private ty = 0;
   private records: DisplayRecord[] = [];
-  private year = 1803;
+  private year = END_YEAR;
   private selected: string | null = null;
   constructor(
     land: any,
@@ -32,7 +33,7 @@ export class MapView {
     const pixels = () => 1000 / svg.getBoundingClientRect().width;
     svg.addEventListener("pointerdown", (e) => {
       moved = false;
-      if ((e.target as Element).closest("[data-point]")) return;
+      if ((e.target as Element).closest("[data-point],[data-overlay]")) return;
       drag = { x: e.clientX, y: e.clientY, tx: this.tx, ty: this.ty };
       moved = false;
       svg.setPointerCapture(e.pointerId);
@@ -78,7 +79,7 @@ export class MapView {
     });
     this.element.addEventListener("click", (e) => {
       const target = (e.target as Element).closest<HTMLElement>(
-        "[data-zoom],[data-point]",
+        "[data-zoom],[data-point],[data-overlay]",
       );
       if (!target) return;
       if (target.dataset.zoom) {
@@ -88,6 +89,8 @@ export class MapView {
           this.transform();
           this.draw();
         } else this.zoom(target.dataset.zoom === "in" ? 1.35 : 1 / 1.35);
+      } else if (!moved && target.dataset.overlay !== undefined) {
+        this.onSelect([this.records[Number(target.dataset.overlay)]]);
       } else if (!moved) {
         this.selected = target.dataset.point!;
         this.onSelect(
@@ -123,8 +126,17 @@ export class MapView {
     this.draw();
   }
   focus(r: DisplayRecord) {
-    if (!r.location) return;
-    const p = this.projection([r.location.lon, r.location.lat]);
+    const geometry = r.overlay?.geometry;
+    const position =
+      geometry?.type === "Point"
+        ? geometry.coordinates
+        : geometry?.type === "LineString"
+          ? geometry.coordinates[0]
+          : r.location
+            ? [r.location.lon, r.location.lat]
+            : null;
+    if (!position) return;
+    const p = this.projection(position as [number, number]);
     if (!p) return;
     this.scale = 2;
     this.tx = 500 - p[0] * 2;
@@ -135,8 +147,28 @@ export class MapView {
   }
   private draw() {
     const groups = new Map<string, DisplayRecord[]>();
-    let arrows = "";
-    for (const r of this.records) {
+    let arrows = "",
+      overlays = "";
+    for (const [index, r] of this.records.entries()) {
+      if (r.overlay) {
+        const o = r.overlay,
+          g = o.geometry;
+        if (!g) continue;
+        const cls = `overlay-feature overlay-${o.kind} ${o.basis === "schematic" ? "overlay-schematic" : ""} ${temporalState(r.time, this.year) === "possible" ? "overlay-uncertain" : ""}`;
+        const title = esc(
+          `${r.title} — ${OVERLAY_LABELS[o.kind]}, ${o.basis}${isDisputed(r) ? " *" : ""}`,
+        );
+        if (g.type === "Point") {
+          const p = this.projection(g.coordinates);
+          if (p)
+            overlays += `<g data-overlay="${index}" class="${cls}" transform="translate(${p[0]},${p[1]}) scale(${1 / this.scale})"><title>${title}</title><circle class="overlay-hit" r="14"/><path d="${o.kind === "conflict" ? "M-7,-7 L7,7 M7,-7 L-7,7" : o.kind === "violence" ? "M-8,-8 H8 V8 H-8 Z M-6,-6 L6,6 M6,-6 L-6,6" : o.kind === "epidemic" ? "M0,-8 A8,8 0 1,1 0,8 A8,8 0 1,1 0,-8 M0,-12 V-9 M0,9 V12 M-12,0 H-9 M9,0 H12" : o.kind === "forced-removal" ? "M-8,-8 H8 V8 H-8 Z" : "M0,-9 L9,0 L0,9 L-9,0 Z"}"/>${isDisputed(r) ? '<text x="10" y="-9">*</text>' : ""}</g>`;
+        } else {
+          const d = geoPath(this.projection)(g);
+          if (d)
+            overlays += `<g data-overlay="${index}" class="${cls}"><title>${title}</title><path d="${d}" ${o.kind === "forced-removal" ? 'marker-end="url(#arrow)"' : ""} style="stroke-width:${3 / this.scale}"/><path class="overlay-line-hit" d="${d}" style="stroke-width:${15 / this.scale}"/></g>`;
+        }
+        continue;
+      }
       if (!r.location) continue;
       const key = `${r.location.lon},${r.location.lat}`;
       groups.set(key, [...(groups.get(key) ?? []), r]);
@@ -157,6 +189,6 @@ export class MapView {
       );
       markers += `<g data-point="${key}" class="site ${possible ? "possible" : ""} ${rows.some((x) => x.proposalKey) ? "proposal-point" : ""}" transform="translate(${p[0]},${p[1]}) scale(${1 / this.scale})"><title>${esc(rows.map((x) => x.title).join("; "))}${possible ? " — uncertain time" : ""}</title><circle class="site-halo" r="13"/><circle class="site-dot" r="6" style="--site-color:${r.culture.color}"/>${rows.length > 1 ? `<text class="site-count" x="11" y="-8">${rows.length}</text>` : ""}${rows.some(isDisputed) ? '<text class="site-star" x="-13" y="-8">*</text>' : ""}</g>`;
     }
-    $(".features", this.element).innerHTML = arrows + markers;
+    $(".features", this.element).innerHTML = overlays + arrows + markers;
   }
 }

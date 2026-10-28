@@ -90,12 +90,26 @@ function place(r: BulkRow, row: number, destination = false): Place | null {
     provenance: str(r, keys[5]),
   };
 }
-export function tablesToPackage(
+function buildPackage(
   tables: BulkTables,
   records: EvidenceRecord[],
   now = new Date().toISOString(),
 ): SharePackage {
-  for (const sheet of Object.keys(tables) as BulkSheetName[]) {
+  const overlayRows = new Map(
+    (tables.Overlays ?? []).map((r, i) => [
+      str(r, "record_id"),
+      { row: r, index: i + 2 },
+    ]),
+  );
+  if (overlayRows.size !== (tables.Overlays ?? []).length)
+    throw new Error("Overlays: duplicate record_id.");
+  tables = {
+    ...tables,
+    Evidence: [...tables.Evidence, ...(tables.Overlays ?? [])],
+  };
+  for (const sheet of Object.keys(tables).filter(
+    (s) => s !== "Overlays",
+  ) as BulkSheetName[]) {
     const max = sheet === "Evidence" ? 200 : 2000;
     if (tables[sheet].length > max)
       fail(
@@ -310,11 +324,30 @@ export function tablesToPackage(
         reviewedAt: reviewDate,
         history: [
           ...(operation === "correction" ? base!.review.history : []),
-          "Suggested via bulk workbook format 1; not reviewed.",
+          "Suggested via bulk workbook; not reviewed.",
         ],
         relatedIds: related,
       },
     };
+    const overlayRow = overlayRows.get(id);
+    if (overlayRow) {
+      const o = overlayRow.row;
+      let geometry;
+      try {
+        geometry = JSON.parse(str(o, "geometry_geojson") || "null");
+      } catch {
+        throw new Error(
+          `Overlays row ${overlayRow.index}: geometry_geojson is not valid JSON.`,
+        );
+      }
+      record.overlay = {
+        kind: str(o, "overlay_type") as any,
+        basis: str(o, "geometry_basis") as any,
+        geometry,
+        precision: str(o, "geometry_precision"),
+        provenance: str(o, "geometry_source"),
+      };
+    }
     const proposal: Proposal = {
       id: stableID(id),
       version: 1,
@@ -333,4 +366,24 @@ export function tablesToPackage(
     return proposal;
   });
   return parsePackage(JSON.stringify(makePackage(proposals)));
+}
+
+export function tablesToPackage(
+  tables: BulkTables,
+  records: EvidenceRecord[],
+  now = new Date().toISOString(),
+): SharePackage {
+  try {
+    return buildPackage(tables, records, now);
+  } catch (error) {
+    if (error instanceof Error)
+      error.message = error.message.replace(
+        /Evidence row (\d+):/g,
+        (text, row) =>
+          Number(row) > tables.Evidence.length + 1
+            ? `Overlays row ${Number(row) - tables.Evidence.length}:`
+            : text,
+      );
+    throw error;
+  }
 }

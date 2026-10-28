@@ -1,17 +1,21 @@
 # Americas Peoples
 
-A fully offline browser atlas of archaeological and historical evidence in the Americas. Explore the earliest included evidence through 1803, inspect the science behind every row, and exchange proposed updates as files.
+A fully offline browser atlas of archaeological and historical evidence in the Americas. Explore the earliest included evidence through 1934, inspect the science behind every row, and exchange proposed updates as files.
 
 ## Downloads and bulk contributions
 
-- [Download v0.1.1 — offline application ZIP](https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/heads/main/downloads/americas-peoples-v0.1.1-offline.zip)
+- [Download v0.2.0 — offline application ZIP](https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/heads/main/downloads/americas-peoples-v0.2.0-offline.zip)
 - [Read the bulk import and reference guide](docs/bulk-import-guide.md)
 - [Download the XLSX template](https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/heads/main/templates/americas-peoples-import.xlsx)
 - [Original v0.1 download](https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/heads/main/downloads/americas-peoples-v0.1-offline.zip)
 
-Version 0.1.1 adds XLSX import. The workbook has Evidence, Claims, References and ClaimSources tables plus instructions. Evidence begins with dates, culture and location; its final columns hold summary, limitations and discussion. Structured bibliography rows support articles, books, chapters, reports, theses, archival documents, datasets and web resources. Every factual claim links to its sources. All imported rows remain proposals pending review.
+Version 0.2.0 extends the timeline through 1934 and adds trade, conflict, forced-removal, epidemic and massacre/violence overlays to the offline XLSX workflow. The workbook has Evidence, Claims, References and ClaimSources tables plus instructions and an Overlays tab. Evidence begins with dates, culture and location; its final columns hold summary, limitations and discussion. Structured bibliography rows support articles, books, chapters, reports, theses, archival documents, datasets and web resources. Every factual claim links to its sources. All imported rows remain proposals pending review.
 
 The guide and template are also available inside the offline app under Suggestions. Replace the worked sample with your own rows. Import XLSX or the app's JSON packages directly. BibTeX, RIS and CSL-JSON can be supplied to an assistant for conversion; they are not direct app import formats. DOI lookup requires an online research step, never an offline dependency.
+
+The [populated research workbook](templates/americas-peoples-researched-import.xlsx) provides 51 additional proposals: 30 ordinary evidence records and 21 overlays, with 145 claims and 123 bibliographic entries. It includes 6 forced-removal connections, 5 epidemic records and 6 violence records, alongside trade and conflict evidence. Source-access limits and scholarly disagreements are explicit. Import it under Suggestions, then enable Preview complete suggestions. Each overlay kind has a separate control, alongside culture filters. Source-linked overlays are temporal; schematic connections are not reconstructed routes. Forced-removal arrows explicitly identify coercion. Epidemic and violence symbols do not encode population totals or death tolls.
+
+1934 is a chosen policy boundary, not an assertion that dispossession or Indigenous history ended. The researched workbook includes removals, confinement, return journeys, epidemics and massacres as separate evidence records. A marker ending never establishes extinction; casualty estimates retain their source, population scope and uncertainty.
 
 ## Open the application
 
@@ -19,7 +23,7 @@ Extract `americas-peoples-offline.zip`, then open `americas-peoples/index.html` 
 
 ## Explore
 
-- Drag the bottom slider in either direction, enter a BCE/CE year, or press Play. Speed is measured in years per second between evidence boundaries, with a brief hold at each boundary so short events remain visible. Playback stops at 1803. Select a narrower timeline window for close inspection.
+- Drag the bottom slider in either direction, enter a BCE/CE year, or press Play. Speed is measured in years per second between evidence boundaries, with a brief hold at each boundary so short events remain visible. Playback stops at 1934 (Indian Reorganization Act). Select a narrower timeline window for close inspection.
 - Pan the map by dragging or focus it and use arrow keys. Use the zoom buttons or mouse wheel. Culture filters and legend search are on the left. “Show all” restores hidden categories.
 - The visible evidence list provides keyboard-accessible links to all active records, including overlapping locations and nonspatial events. Selecting a map dot narrows the list to that location; “Show all visible” clears it.
 - Open Events / Evidence to search, filter and sort the table. Its Period control explicitly chooses all records or the selected year. Map culture filters also apply.
@@ -59,7 +63,7 @@ npm run build
 
 The build writes `dist/` and `release/americas-peoples-offline.zip`. It bundles a classic script with embedded evidence and vector geometry, so runtime JSON fetching and server routing are unnecessary. No service worker or online first load is used. Dependency versions are locked in `package-lock.json`; build inputs and scripts are tracked.
 
-Browser tests use Playwright with an installed browser. `scripts/browser-test.mjs` and `scripts/regression-browser.mjs` default to the Windows Edge location. Set `BROWSER_PATH` to another Chromium-family executable. Set `APP_PATH` to an extracted release's `index.html` to test the packaged artifact. No browser test starts a server. `scripts/bulk-browser.mjs` additionally checks the shipped XLSX template and guide.
+Browser tests use Playwright with an installed browser. `scripts/browser-test.mjs` and `scripts/regression-browser.mjs` default to the Windows Edge location. Set `BROWSER_PATH` to another Chromium-family executable. Set `APP_PATH` to an extracted release's `index.html` to test the packaged artifact. No browser test starts a server. `scripts/bulk-browser.mjs` checks the shipped XLSX template and guide. `scripts/overlay-browser.mjs` exercises all overlay layers and the 1934 endpoint; `scripts/research-browser.mjs` imports the actual 51-record workbook and opens every claim and bibliography.
 
 ```sh
 npm run test:browser

@@ -69,7 +69,18 @@ export interface Review {
   history: string[];
   relatedIds: string[];
 }
+export interface Overlay {
+  kind: "trade" | "conflict" | "forced-removal" | "epidemic" | "violence";
+  basis: "documented" | "schematic" | "unmapped";
+  geometry:
+    | { type: "Point"; coordinates: [number, number] }
+    | { type: "LineString"; coordinates: [number, number][] }
+    | null;
+  precision: string;
+  provenance: string;
+}
 export interface EvidenceRecord {
+  overlay?: Overlay;
   id: string;
   revision: number;
   type: "occupation" | "occurrence" | "movement" | "event";
@@ -106,7 +117,7 @@ export interface Proposal {
 }
 export interface SharePackage {
   format: "americas-peoples-proposals";
-  schemaVersion: 1;
+  schemaVersion: 1 | 2;
   exportedAt: string;
   proposals: Proposal[];
 }

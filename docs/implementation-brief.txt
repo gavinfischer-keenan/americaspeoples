@@ -1,3 +1,6 @@
+CURRENT SCOPE AMENDMENT — 28 October 2026
+The user extended the timeline endpoint to 1934 (Indian Reorganization Act), replacing the 1803 cutoff throughout the updated brief below. Add separately sourced forced-removal, epidemic and massacre/violence overlays; distinguish removal, confinement and return; preserve mortality-estimate uncertainty. The endpoint is not the end of dispossession or Indigenous history.
+
 AMERICAS PEOPLES — CODEX IMPLEMENTATION BRIEF
 
 Repository: https://github.com/gavinfischer-keenan/americaspeoples
@@ -15,7 +18,7 @@ The owner is a PhD scientist and expects rigorous academic evidence standards. S
 
 Show a map of North America, Central America, South America, the Caribbean, Greenland, and the Arctic approaches. Users explore sites and movements by dragging a year slider or playing an animated timeline. Include enough of Beringia to explain relevant entry evidence and movements.
 
-The timeline begins at the earliest evidence included in the reviewed dataset and ends at 1803, the year of the Louisiana Purchase. The endpoint is a year-level cutoff, not a claim to portray a particular day of that transaction. Do not label the start as the known date of first arrival. Derive the earliest boundary from the data so it can change as scholarship changes.
+The timeline begins at the earliest evidence included in the reviewed dataset and ends at 1934, the year of the Indian Reorganization Act. The endpoint is a year-level cutoff, not a claim to portray a particular day of that enactment. Do not label the start as the known date of first arrival. Derive the earliest boundary from the data so it can change as scholarship changes.
 
 Include Indigenous cultures and peoples, and later settlements and populations where within geographic and chronological scope. The application does not equate archaeological cultures with biological races. Use archaeological culture or a supported identification of a people for color categories; use an explicit unknown attribution where necessary.
 
@@ -33,7 +36,7 @@ Do not depend on a service worker to meet offline requirements. Browser storage 
 
 3. MAP AND TIME CONTROLS
 
-The primary screen is a pan-and-zoom map with a time slider along the bottom. Show the selected year clearly in BCE/CE notation. Provide Play/Pause, a playback speed control expressed as years per second, and a way to return to the beginning. Playback stops at 1803 by default.
+The primary screen is a pan-and-zoom map with a time slider along the bottom. Show the selected year clearly in BCE/CE notation. Provide Play/Pause, a playback speed control expressed as years per second, and a way to return to the beginning. Playback stops at 1934 by default.
 
 Users can scrub in either direction at any time. Manual scrubbing pauses playback by default. Map state must be derived from the selected year, not accumulated animation state, so reversing time produces the same results as advancing to that year.
 
@@ -53,7 +56,7 @@ Keep scholarly status separate from date precision and proposal review status. S
 
 Represent uncertainty rather than inventing precise arrival or abandonment years. Distinguish an interval during which an event could have occurred from evidence for occupation across an interval. Do not render an uncertain single occurrence as continuous occupation.
 
-Recommended display rule: documented occupation intervals use ordinary markers; possible boundary ranges or broadly dated occurrences use a distinct outlined marker labeled as temporally uncertain. Show the original published dates and the exact display interpretation on the review page. Support separate episodes and unknown boundaries without filling gaps or extending them silently to 1803.
+Recommended display rule: documented occupation intervals use ordinary markers; possible boundary ranges or broadly dated occurrences use a distinct outlined marker labeled as temporally uncertain. Show the original published dates and the exact display interpretation on the review page. Support separate episodes and unknown boundaries without filling gaps or extending them silently to 1934.
 
 Use one internal chronological convention consistently. Recommended: integer astronomical years, where year 0 represents 1 BCE, year -1 represents 2 BCE, and year 1 represents 1 CE. Display historical BCE/CE notation without a displayed year zero. Document inclusive interval boundaries.
 
@@ -163,7 +166,7 @@ The delivered app must satisfy the following:
 
 - With the network disconnected, extract the ZIP and double-click index.html in supported desktop browsers. Map, timeline, table, review pages, proposal editor, import, and export work without a server.
 - No network request is needed for ordinary use. Publication links are explicit external actions.
-- Slider minimum follows the earliest included reviewed evidence; maximum is 1803. BCE/CE display, boundary conversions, and uncertain dates are tested.
+- Slider minimum follows the earliest included reviewed evidence; maximum is 1934. BCE/CE display, boundary conversions, and uncertain dates are tested.
 - Moving to a year by playback, direct input, forward scrubbing, or backward scrubbing yields the same evidence state.
 - A site with two occupation episodes disappears during the documented gap. Overlapping episodes remain discoverable.
 - Disputed claims are visible by default and subtly marked on map/table/review surfaces; discussion is accessible on their review pages.

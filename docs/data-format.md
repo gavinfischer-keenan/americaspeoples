@@ -12,11 +12,11 @@ Each claim has an ID, text, status, an editorial explanation, and source mapping
 
 ## Temporal semantics
 
-Internal years are integers in astronomical numbering: 1 = 1 CE, 0 = 1 BCE, −1 = 2 BCE. BCE/CE display never shows a year zero. The program's supported range is −1,000,000 through 1803. Endpoints are inclusive. Every temporal definition keeps `original`, `method` and `interpretation` strings.
+Internal years are integers in astronomical numbering: 1 = 1 CE, 0 = 1 BCE, −1 = 2 BCE. BCE/CE display never shows a year zero. The program's supported range is −1,000,000 through 1934. Endpoints are inclusive. Every temporal definition keeps `original`, `method` and `interpretation` strings.
 
 - `interval`: documentary/archaeological occupation or another supported duration, with start and end. Optional `certainStart` and `certainEnd` must both be present and fall inside that envelope; outside the certain core markers are outlined.
 - `occurrence`: something is dated within a start/end window, without asserting residence throughout. Multi-year windows are always possible, not certain. A single-year occurrence can be exact only when the source supports annual precision.
-- `unplaced`: start and end are null. The row remains in the table but is excluded from timeline queries. Use this for unresolved/unknown boundaries that do not support a bounded display interval; do not extend an unknown endpoint automatically to 1803.
+- `unplaced`: start and end are null. The row remains in the table but is excluded from timeline queries. Use this for unresolved/unknown boundaries that do not support a bounded display interval; do not extend an unknown endpoint automatically to 1934.
 - `approximate: true`: rounded reference date(s), with no invented confidence interval. Display is marked ≈ and the marker is outlined. For an approximate single-year reference, only that reference year is plotted; use review navigation to jump to it. For a rounded phase interval, the marker is conservatively outlined throughout the displayed interval. This does not erase the evidence for the phase.
 
 Calibrated BP uses 1950 CE as the reference; astronomical year = 1950 − calibrated BP. Preserve calibration provenance and original uncertainty. Do not apply this conversion to an uncalibrated radiocarbon determination. Disjoint occupation episodes are separate records, never one interval spanning the gap.
@@ -42,3 +42,7 @@ Editor revisions replace the corresponding local draft slot with an incremented 
 See [the bulk import guide](bulk-import-guide.md) for the exact five-tab XLSX schema, supported reference types, required fields and worked examples. App 0.1.1 imports XLSX locally and converts it to the same proposal model. Optional source fields are referenceType, doi, volume, issue, pages, publisher, editors, edition, archive, collection and identifier. Existing v0.1 source records remain compatible. Citations use a consistent author-year display, not a full CSL style engine.
 
 Bulk proposal IDs derive from the evidence record ID. For IDs beginning `bulk-`, duplicate comparison ignores import timestamps, so reimporting unchanged workbook content is idempotent. Substantive changes retain conflict handling. XLSX corrections require a current matching base revision and contain complete replacement records; blank fields are not sparse patches. Native JSON sharing retains the original proposal timestamps and history.
+
+## Overlays
+
+App 0.2.0 optionally adds `overlay` to an event record: kind (trade/conflict/forced-removal/epidemic/violence), basis (documented/schematic/unmapped), geometry (GeoJSON Point/LineString or null), precision and provenance. Schematic connections have exactly two endpoints. Geometry validates finite longitude/latitude and is bounded to 1,000 positions. Existing claims, citations, reviews, time extents and proposal handling apply. `makePackage` emits proposal schema 2 whenever an overlay occurs in either proposed or preserved base records. Old packages without overlays remain schema 1. The new app reads both; it rejects overlays mislabeled as schema 1. Workbook schema 2 requires Overlays; legacy workbook schema 1 retains its five tabs.

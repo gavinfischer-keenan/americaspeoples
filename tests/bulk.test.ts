@@ -6,7 +6,7 @@ import { inspectImport, mergeImport } from "../src/proposals";
 import { formatReference } from "../src/citations";
 import { fixture } from "./fixtures";
 export function tables(): BulkTables {
-  const blank = (name: keyof BulkTables) =>
+  const blank = (name: keyof typeof BULK_HEADERS) =>
     Object.fromEntries(BULK_HEADERS[name].map((x) => [x, ""]));
   return {
     Evidence: [

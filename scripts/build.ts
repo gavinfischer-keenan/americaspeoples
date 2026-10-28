@@ -31,6 +31,7 @@ for (const name of [
   "docs/verification.md",
   "docs/bulk-import-guide.md",
   "templates/americas-peoples-import.xlsx",
+  "templates/americas-peoples-researched-import.xlsx",
 ]) {
   await copyFile(name, `dist/${name}`);
   names.push(name);
