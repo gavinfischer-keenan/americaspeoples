@@ -1,0 +1,188 @@
+AMERICAS PEOPLES — CODEX IMPLEMENTATION BRIEF
+
+Repository: https://github.com/gavinfischer-keenan/americaspeoples
+Prepared: October 28, 2026
+
+TASK
+
+Build a downloadable, fully offline browser application that maps archaeological and historically documented human presence and movements throughout the Americas over time. Implement the requirements below in the repository. Inspect the repository and any AGENTS.md instructions first; it was empty when initially inspected, but do not assume it remains empty. Preserve existing user work.
+
+This brief records the product decisions made with the owner. Technical defaults below are recommendations supplied for implementation, not additional preferences explicitly chosen by the owner. Resolve routine implementation details autonomously. Do not reopen settled product decisions. Ask only when an unresolved decision materially changes scope or scientific meaning.
+
+The owner is a PhD scientist and expects rigorous academic evidence standards. Scientific integrity is part of the functionality, not a later editorial enhancement.
+
+1. PRODUCT AND SCOPE
+
+Show a map of North America, Central America, South America, the Caribbean, Greenland, and the Arctic approaches. Users explore sites and movements by dragging a year slider or playing an animated timeline. Include enough of Beringia to explain relevant entry evidence and movements.
+
+The timeline begins at the earliest evidence included in the reviewed dataset and ends at 1803, the year of the Louisiana Purchase. The endpoint is a year-level cutoff, not a claim to portray a particular day of that transaction. Do not label the start as the known date of first arrival. Derive the earliest boundary from the data so it can change as scholarship changes.
+
+Include Indigenous cultures and peoples, and later settlements and populations where within geographic and chronological scope. The application does not equate archaeological cultures with biological races. Use archaeological culture or a supported identification of a people for color categories; use an explicit unknown attribution where necessary.
+
+The first release should deliver a complete working application with a small, carefully sourced starter dataset. It must not imply exhaustive coverage of the Americas. Expanding the research corpus is separate from completing the software. Display dataset version, coverage limitations, and source review dates.
+
+2. FULLY OFFLINE DELIVERY
+
+Distribute a ZIP that users extract and open by double-clicking index.html. No executable, installation, account, terminal command, local server, or first online visit may be required. Development and build tools may require installation for developers; the delivered application must not.
+
+Bundle application code, map geometry, styles, icons, evidence, bibliography metadata, and every detailed review page. No runtime CDN, remote map tile service, external font, API, telemetry, or online authentication dependency. Academic source links may open online; the explanations and citations themselves must remain readable offline. Do not bundle copyrighted publication PDFs without appropriate rights.
+
+Use an offline-compatible build. Avoid runtime fetch of bundled JSON or module loading patterns that fail under file://. A practical default is a bundled classic JavaScript application with embedded data and local vector map geometry. Hash-based routes can provide distinct review pages within the application without server routing. Each review route must work when opened directly or reached with browser Back and Forward.
+
+Do not depend on a service worker to meet offline requirements. Browser storage under file:// can differ across browsers; use explicit downloadable save files as the authoritative portable persistence mechanism. Browser storage may provide best-effort convenience, with clear status and a graceful fallback.
+
+3. MAP AND TIME CONTROLS
+
+The primary screen is a pan-and-zoom map with a time slider along the bottom. Show the selected year clearly in BCE/CE notation. Provide Play/Pause, a playback speed control expressed as years per second, and a way to return to the beginning. Playback stops at 1803 by default.
+
+Users can scrub in either direction at any time. Manual scrubbing pauses playback by default. Map state must be derived from the selected year, not accumulated animation state, so reversing time produces the same results as advancing to that year.
+
+Provide an exact-year input and finer timeline navigation or zoom so users can inspect short events near the end of a timeline spanning tens of thousands of years. Keep map, table, review links, and selected time synchronized. Preserve map viewport and time when returning from a detailed review.
+
+Dots represent documented site occupation episodes. A location may have multiple episodes, gaps, and changing or overlapping cultural attributions. Do not collapse them into one uninterrupted occupation. A disappearing dot means the displayed evidence interval has ended, not that every inhabitant died or the location was conclusively abandoned.
+
+Use stable colors by culture or identified people, with a searchable legend and filters. Preserve category colors across time and imported proposals. Use neutral styling for unknown attribution. Do not rely on color alone: names, labels, selection details, and accessible markers must identify the category. Where episodes overlap at one location, offer an explicit list or grouped marker so records are not hidden behind one another.
+
+Do not use dot size or opacity to imply population unless independently supported population data and an explanation are added later. Animation is a display of evidence, not a population simulation.
+
+4. UNCERTAIN TIME AND DISPUTED CLAIMS
+
+Academically credible disputed evidence is included by default, with a subtle visible asterisk or equivalent marker. Explain the symbol in the legend and make its meaning available to keyboard and assistive-technology users. Apply the marker to the disputed claim: a disputed date need not make the location disputed, and an uncertain cultural attribution need not invalidate occupation evidence.
+
+Keep scholarly status separate from date precision and proposal review status. Suggested scholarly statuses are well-supported, under discussion, and disputed. These labels require an editorial explanation; do not invent quantitative confidence scores.
+
+Represent uncertainty rather than inventing precise arrival or abandonment years. Distinguish an interval during which an event could have occurred from evidence for occupation across an interval. Do not render an uncertain single occurrence as continuous occupation.
+
+Recommended display rule: documented occupation intervals use ordinary markers; possible boundary ranges or broadly dated occurrences use a distinct outlined marker labeled as temporally uncertain. Show the original published dates and the exact display interpretation on the review page. Support separate episodes and unknown boundaries without filling gaps or extending them silently to 1803.
+
+Use one internal chronological convention consistently. Recommended: integer astronomical years, where year 0 represents 1 BCE, year -1 represents 2 BCE, and year 1 represents 1 CE. Display historical BCE/CE notation without a displayed year zero. Document inclusive interval boundaries.
+
+Preserve original date notation, dating method, calibration information, and uncertainty. BP convention uses 1950 as its reference; uncalibrated radiocarbon ages must not be treated as calendar years through simple subtraction. Calendar placement requires a defensible conversion with provenance. If a record cannot yet be placed defensibly, retain it in the evidence table with an explanation and exclude it from time-positioned rendering.
+
+5. MOVEMENTS AND EVENTS
+
+Migration arrows have their own evidence, identifiers, scholarly status, and temporal extent. Show them only during supported movement intervals. An earlier site and a later nearby site do not by themselves establish migration or ancestry.
+
+Distinguish supported origin/destination connections from reconstructed routes. A straight or curved connector is schematic unless intermediate route geometry has support; label it accordingly. Do not fabricate precise paths. Unknown destinations remain unknown. Do not infer population flows, conquest, extermination, assimilation, or continuity merely from changes in site or culture distributions.
+
+Historical events can be point events or intervals and may link to sites, peoples, or movements. Only events with defensible geographic relevance should appear on the map; other events remain available in the timeline and table.
+
+For Arctic transitions, represent the evidence for particular cultures and sites. Do not encode the claim that Inuit exterminated Dorset people as established fact. Any causal interpretation requires its own evidence and discussion.
+
+6. EVIDENCE TABLE AND DETAILED REVIEW PAGES
+
+A prominent map button labeled Events / Evidence switches to a table view. The table includes occupation or event dates, culture/people (the owner's original civilization column), site/location, record type, scholarly status, and proposal status when applicable. Provide search, sorting, and filters. Make it explicit whether the table shows all records or only those intersecting the selected time.
+
+Every evidence row must open a dedicated detailed review page. This replaces the earlier popup concept. Use a distinct route and page layout, not a modal. Provide a visible link as well as whole-row interaction for accessibility. Map record selections must also lead to the supporting review.
+
+Every review page contains:
+
+- A readable title and stable record identifier.
+- The actual claim, dates, location, and culture/people attribution.
+- A substantive text explanation of the evidence and its limits.
+- Dating methods, original reported dates, calendar interpretation, and uncertainty.
+- A bibliography with authors, title, publication year, venue, DOI or stable scholarly URL, and relevant page, table, or passage references where available.
+- Explicit mapping of sources to the claims they support.
+- A Discussion section for disputed claims explaining the competing interpretations, supporting evidence, objections, and unresolved questions, with citations for each position.
+- Record provenance, review status, dataset version, and revision history as applicable.
+- Links to related records, map location, and relevant timeline position.
+- Suggest correction and Send to others controls.
+
+Well-supported records also need complete review pages; do not create bibliography-only stubs. Proposed records must carry their own explanation and supporting references, clearly labeled as unreviewed. Missing required evidence may be saved as a draft, but must not appear as a completed reviewed record.
+
+7. EVIDENCE STANDARDS
+
+Use critically evaluated archaeological publications and verified historical evidence: peer-reviewed research, scholarly monographs, formal excavation reports, and properly contextualized archival sources or scholarly editions. A source's academic appearance or publication status alone does not establish its reliability.
+
+Historical primary documents can be evidence but require provenance and source criticism. Clearly distinguish an author's reported claim from a corroborated event. Explain independent corroboration where it matters. Repeated accounts derived from the same source are not independent confirmation.
+
+Do not use unsourced assertions, popular videos, social media, or repeated internet claims as academic corroboration. They may point toward scholarship but cannot substitute for it. Credible scholarly disputes are welcome and must be represented fairly; inclusion is not a declaration that competing interpretations are equally supported.
+
+Verify source metadata and the actual supporting text. Never fabricate citations, dates, coordinates, cultural assignments, excerpts, or peer-review status. If full evidence cannot be checked, say what was accessible and do not claim to have verified inaccessible material. Store source locators and brief paraphrases; avoid reproducing copyrighted text unnecessarily.
+
+The application itself cannot automatically certify scholarly truth. Reviewed status reflects the documented editorial process. Never label an imported user proposal verified merely because it passes JSON validation.
+
+8. USER SUGGESTIONS AND SHARING
+
+Users can propose both new evidence rows and corrections to existing rows. They can save drafts locally, reopen them, and select proposals to share.
+
+Corrections preserve the original stable record ID and base revision, proposed field changes, a rationale, and supporting sources. Show a before/after comparison. Do not mutate the bundled reviewed dataset when a user saves or imports a proposal.
+
+Send to others exports selected proposals as a portable JSON file containing their review narratives, sources, necessary linked entities, and base revision information. It does not send email or upload data. Explain that the user can send the file using their own preferred channel. Links to local files are not portable sharing links.
+
+Recipients import the file, preview the changes, and see validation results and conflicts before adding proposals to their local collection. Handle repeated imports without duplicating identical proposals. If the base revision differs, show the conflict rather than silently overwriting either version. Preserve competing proposals.
+
+Provide an opt-in map/table preview of proposals, visually distinct from reviewed evidence. Merely importing a suggestion must not alter the default reviewed visualization. Reject malformed or unsupported packages safely, without losing existing work. Render imported content as text or sanitized markup; do not execute HTML or script from evidence files.
+
+For the initial offline release, promotion into a reviewed release is a maintainer editorial action in the repository, followed by publication of a new versioned dataset. No central submission service, user accounts, or automatic consensus system is required.
+
+9. RECOMMENDED DATA MODEL
+
+Keep schema version and dataset version distinct. Use stable IDs and explicit relationships rather than labels as keys. Validate references and dates before packaging or importing.
+
+Suggested entities:
+
+- Dataset manifest: schema version, dataset version, coverage notes, review date, licenses.
+- Site: ID, name, coordinates or approximate region, coordinate precision, public-location provenance.
+- Culture or people: ID, name, classification type, explanatory notes, stable display color.
+- Evidence record: ID, revision, record type, claim, site/culture links, temporal interpretation, claim-specific scholarly statuses, source links, and full review content.
+- Occupation episode: an evidence record representing one bounded or qualified episode; a site can have many.
+- Movement: evidence record linking supported origins and destinations with temporal extent and schematic or supported route geometry.
+- Event: evidence record with point or interval dating and optional geographic/entity links.
+- Source: full bibliography metadata, stable URLs, access/review notes, and reusable source ID.
+- Claim support: claim ID, source ID, locator, interpretation, and whether the source supports or challenges the claim.
+- Proposal: ID, new/correction type, target record ID and base revision if applicable, proposed content, rationale, sources, status, and timestamps.
+- Share package: format/schema version, selected proposals, required dependencies, and export metadata.
+
+Store review content in structured fields or constrained Markdown. Require review content for every evidence record. Keep scientific data separate from presentation logic and keep derived display years traceable to source dates.
+
+10. ARCHITECTURE AND IMPLEMENTATION APPROACH
+
+Selected delivery approach: fully offline downloadable app. A hosted application was considered but deferred because it adds infrastructure and is unnecessary for local exploration and file-based sharing. A native executable was explicitly rejected.
+
+Recommended technical default: TypeScript with a small UI framework or plain components, a pure chronological query layer, local vector map rendering, and a build step that emits a file://-compatible distributable. Use a mapping approach that does not require a tile server. Choose specific libraries after checking the repository and bundle constraints; document the choice.
+
+Separate temporal querying, scholarly data validation, map rendering, review-page navigation, and proposal import/export. This makes it possible to test scientific display rules without driving the whole UI.
+
+For the initial map, use bundled generalized land geometry with clear attribution and licensing. Label it as a reference basemap; present-day shorelines are not a reconstruction of Ice Age geography. Paleo-coastlines and ice sheets are a future evidence-backed layer, not invented background decoration.
+
+Inspect available repository tooling, then produce a short implementation plan and proceed in working increments:
+
+1. Define the schemas, date semantics, validators, and a small set of clearly synthetic test fixtures.
+2. Implement map, timeline, playback, uncertainty styling, culture legend, and filtered temporal queries.
+3. Implement evidence table, full review routes, bibliography, and navigation.
+4. Implement new/correction proposal editing, portable saves, import/export, comparisons, and conflict handling.
+5. Research and verify a small starter corpus covering early disputed evidence, separate occupation episodes, and at least one defensible movement or historical event. Do not force a migration example if the supporting evidence is inadequate.
+6. Produce the offline ZIP, run checks on the actual extracted build, and document use and data maintenance.
+
+Synthetic fixtures must never ship as genuine scholarly evidence. If starter data research remains incomplete, report the limitation explicitly and keep unverified material out of the reviewed corpus. Do not claim software completeness as research completeness.
+
+11. ACCEPTANCE CRITERIA
+
+The delivered app must satisfy the following:
+
+- With the network disconnected, extract the ZIP and double-click index.html in supported desktop browsers. Map, timeline, table, review pages, proposal editor, import, and export work without a server.
+- No network request is needed for ordinary use. Publication links are explicit external actions.
+- Slider minimum follows the earliest included reviewed evidence; maximum is 1803. BCE/CE display, boundary conversions, and uncertain dates are tested.
+- Moving to a year by playback, direct input, forward scrubbing, or backward scrubbing yields the same evidence state.
+- A site with two occupation episodes disappears during the documented gap. Overlapping episodes remain discoverable.
+- Disputed claims are visible by default and subtly marked on map/table/review surfaces; discussion is accessible on their review pages.
+- Unknown culture and uncertain temporal placement remain explicit rather than being assigned fabricated values.
+- Movement arrows appear only during their supported intervals and identify schematic connections as such.
+- Every evidence row opens a substantive supporting review page; no orphan rows, fabricated citations, or empty review placeholders pass dataset validation.
+- Navigation to and from reviews preserves selected year and map state; browser history works.
+- Users can draft, save, reload, export, and import both new rows and corrections without changing reviewed data.
+- Export/import round trips preserve narratives, references, IDs, revisions, and uncertainties. Duplicate imports and revision conflicts have deterministic, visible handling.
+- Malformed, oversized, incompatible, or script-bearing imports do not execute code or corrupt saved work.
+- Controls work with a keyboard, statuses are not communicated by color alone, and reduced-motion preferences are respected.
+- Basemap attribution, data licensing, dataset coverage notes, and evidence status explanations are visible.
+
+Test the pure temporal rules, data validation, and proposal conflict behavior with meaningful automated tests. Use browser smoke tests against the actual file:// distribution, including a disconnected run. State which browsers were actually tested; do not claim unperformed checks.
+
+12. HANDOFF DELIVERABLES
+
+Deliver maintainable source code in the repository, a reproducible build, an offline release ZIP, a scientifically traceable starter dataset, schemas and validation tools, meaningful tests, and concise user/developer documentation.
+
+Document how to open the app, use the timeline, interpret uncertain/disputed evidence, save and share proposals, review imports, maintain scholarly records, and build a new release. Explain that local browser storage is a convenience and exported files are the portable backup.
+
+In the completion report, distinguish implemented features, tests actually run, dataset coverage, and remaining limitations. Do not publish or merge changes unless authorized by the user or the repository workflow.

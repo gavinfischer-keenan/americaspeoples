@@ -1,0 +1,26 @@
+{
+  "name": "americas-peoples",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --import tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "node --import tsx scripts/build.ts",
+    "test:browser": "node scripts/browser-test.mjs",
+    "validate": "node --import tsx scripts/validate.ts"
+  },
+  "dependencies": {
+    "d3-geo": "3.1.1"
+  },
+  "devDependencies": {
+    "@types/d3-geo": "3.1.0",
+    "@types/node": "24.0.0",
+    "esbuild": "0.25.5",
+    "fflate": "0.8.2",
+    "playwright": "1.56.1",
+    "prettier": "3.5.3",
+    "tsx": "4.20.3",
+    "typescript": "5.8.3"
+  }
+}
