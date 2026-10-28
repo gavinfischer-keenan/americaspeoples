@@ -29,6 +29,11 @@ const check = async (name, fn) => {
 };
 try {
   await page.goto(url + "#map");
+  await check("the full map viewport fits above the timeline", async () => {
+    const svg = await page.locator('.map-canvas svg').boundingBox();
+    const stage = await page.locator('.map-stage').boundingBox();
+    assert.ok(svg.height <= stage.height, `SVG ${svg.height} exceeds stage ${stage.height}`);
+  });
   await check(
     "visible evidence panel is not covered by fixed timeline",
     async () => {

@@ -1255,6 +1255,9 @@ dd:last-child {
   }
 }
 @media (min-width: 761px) {
+  #map-host {
+    height: 100%;
+  }
   .map-layout {
     height: calc(100vh - 258px);
     min-height: 450px;
