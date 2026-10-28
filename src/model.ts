@@ -35,6 +35,17 @@ export interface Source {
   venue: string;
   url: string;
   access: string;
+  referenceType?: string;
+  doi?: string;
+  volume?: string;
+  issue?: string;
+  pages?: string;
+  publisher?: string;
+  editors?: string;
+  edition?: string;
+  archive?: string;
+  collection?: string;
+  identifier?: string;
 }
 export interface Support {
   sourceId: string;

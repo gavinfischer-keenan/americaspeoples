@@ -1,4 +1,5 @@
 import type { Dataset, EvidenceRecord } from "./model";
+import { validateCitation } from "./citations";
 export function safeURL(value: unknown): boolean {
   if (typeof value !== "string") return false;
   try {
@@ -108,6 +109,7 @@ export function validateRecord(value: unknown, complete = true): string[] {
         continue;
       }
       ids.add(s.id);
+      errors.push(...validateCitation(s, complete));
       if (
         !["authors", "title", "venue", "url", "access"].every((k) =>
           text((s as any)[k]),

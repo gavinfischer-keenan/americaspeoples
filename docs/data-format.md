@@ -36,3 +36,9 @@ Share packages contain `format: "americas-peoples-proposals"`, `schemaVersion: 1
 Duplicate detection compares canonical full proposal contents, ignoring object key ordering. Identical copies are skipped. Different content with the same ID/version is a conflict and is retained separately; different versions are retained as separate proposals. Corrections whose original or revision differs from the recipient dataset are marked as conflicts in the import preview. Previewing a proposal never promotes it to the dataset.
 
 Editor revisions replace the corresponding local draft slot with an incremented proposal version. The bundled original evidence remains preserved. Exported prior versions can be imported later as separate proposals. To promote a proposal, a maintainer must inspect its sources, resolve conflicts, edit the reviewed data deliberately, increment record revisions, update the dataset version and build a new release.
+
+## Bulk workbooks and structured bibliography
+
+See [the bulk import guide](bulk-import-guide.md) for the exact five-tab XLSX schema, supported reference types, required fields and worked examples. App 0.1.1 imports XLSX locally and converts it to the same proposal model. Optional source fields are referenceType, doi, volume, issue, pages, publisher, editors, edition, archive, collection and identifier. Existing v0.1 source records remain compatible. Citations use a consistent author-year display, not a full CSL style engine.
+
+Bulk proposal IDs derive from the evidence record ID. For IDs beginning `bulk-`, duplicate comparison ignores import timestamps, so reimporting unchanged workbook content is idempotent. Substantive changes retain conflict handling. XLSX corrections require a current matching base revision and contain complete replacement records; blank fields are not sparse patches. Native JSON sharing retains the original proposal timestamps and history.

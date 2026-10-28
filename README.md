@@ -2,6 +2,17 @@
 
 A fully offline browser atlas of archaeological and historical evidence in the Americas. Explore the earliest included evidence through 1803, inspect the science behind every row, and exchange proposed updates as files.
 
+## Downloads and bulk contributions
+
+- [Download v0.1.1 — offline application ZIP](https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/heads/main/downloads/americas-peoples-v0.1.1-offline.zip)
+- [Read the bulk import and reference guide](docs/bulk-import-guide.md)
+- [Download the XLSX template](https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/heads/main/templates/americas-peoples-import.xlsx)
+- [Original v0.1 download](https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/heads/main/downloads/americas-peoples-v0.1-offline.zip)
+
+Version 0.1.1 adds XLSX import. The workbook has Evidence, Claims, References and ClaimSources tables plus instructions. Evidence begins with dates, culture and location; its final columns hold summary, limitations and discussion. Structured bibliography rows support articles, books, chapters, reports, theses, archival documents, datasets and web resources. Every factual claim links to its sources. All imported rows remain proposals pending review.
+
+The guide and template are also available inside the offline app under Suggestions. Replace the worked sample with your own rows. Import XLSX or the app's JSON packages directly. BibTeX, RIS and CSL-JSON can be supplied to an assistant for conversion; they are not direct app import formats. DOI lookup requires an online research step, never an offline dependency.
+
 ## Open the application
 
 Extract `americas-peoples-offline.zip`, then open `americas-peoples/index.html` in a desktop browser. Keep `app.js` and `app.css` beside it. No server, installation, account or network connection is required. External scholarly publication links need internet access. The download includes citation metadata and original explanations, not copies of copyrighted papers.
@@ -18,7 +29,7 @@ An outlined marker means possible timing or approximate reference dates. An aste
 
 ## Suggest and share updates
 
-Choose Suggest new evidence, or Suggest correction on an existing review. Complete the narrative, dating and location fields. The first release uses structured JSON editors for bibliography entries, source-to-claim mappings, and movement destinations; template buttons provide the expected shapes. A location can remain unmapped, and dating can remain unplaced.
+Choose Suggest new evidence, or Suggest correction on an existing review. Complete the narrative, dating and location fields. The single-record form uses structured JSON editors for bibliography entries, source-to-claim mappings, and movement destinations; template buttons provide the expected shapes. A location can remain unmapped, and dating can remain unplaced.
 
 Save draft permits incomplete evidence. Save complete suggestion checks required fields and references; it does **not** certify scientific truth. Both remain unreviewed proposals. Reopen drafts from Suggestions. Corrections retain a full original record and base revision, with a field-by-field comparison.
 
@@ -48,7 +59,7 @@ npm run build
 
 The build writes `dist/` and `release/americas-peoples-offline.zip`. It bundles a classic script with embedded evidence and vector geometry, so runtime JSON fetching and server routing are unnecessary. No service worker or online first load is used. Dependency versions are locked in `package-lock.json`; build inputs and scripts are tracked.
 
-Browser tests use Playwright with an installed browser. `scripts/browser-test.mjs` and `scripts/regression-browser.mjs` default to the Windows Edge location. Set `BROWSER_PATH` to another Chromium-family executable. Set `APP_PATH` to an extracted release's `index.html` to test the packaged artifact. Neither test starts a server.
+Browser tests use Playwright with an installed browser. `scripts/browser-test.mjs` and `scripts/regression-browser.mjs` default to the Windows Edge location. Set `BROWSER_PATH` to another Chromium-family executable. Set `APP_PATH` to an extracted release's `index.html` to test the packaged artifact. No browser test starts a server. `scripts/bulk-browser.mjs` additionally checks the shipped XLSX template and guide.
 
 ```sh
 npm run test:browser

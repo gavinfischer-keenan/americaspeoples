@@ -31,6 +31,7 @@ import {
   canonical,
 } from "./proposals";
 import { validateRecord } from "./validation";
+import { importWorkbook } from "./xlsx-import";
 
 const dataset = rawData as Dataset;
 const minYear = earliestYear(dataset.records);
@@ -394,7 +395,7 @@ function exportProposals(list: Proposal[]) {
   }
 }
 function proposalsPage() {
-  main.innerHTML = `<article class="proposals-page"><div class="page-heading"><div><div class="eyebrow">A LOCAL RESEARCH WORKSPACE</div><h2>Your suggestions</h2><p class="lead">Add evidence. Propose a correction. Share the supporting research.</p></div><a class="button primary" href="#new">+ Suggest new evidence</a></div><p id="storage-status" class="notice">${storageAvailable ? "Browser storage is available as a convenience. Download your suggestions for a portable backup." : "Browser storage is unavailable. Download your suggestions before closing this page."}</p><div class="actions"><button id="export-selected">Send to others</button><button id="select-all">Select all</button><label class="button file-button">Import suggestions<input type="file" id="import-file" aria-label="Import suggestions" accept=".json,application/json"></label></div><p class="muted">Sharing downloads a file; nothing is uploaded or emailed. Imported suggestions remain unreviewed. Complete suggestions can be previewed on the map.</p><div id="import-error" role="alert"></div><div class="proposal-list">${proposals.length ? proposals.map((p, i) => `<section class="proposal-card" data-proposal-card><label class="check"><input type="checkbox" data-share="${i}" aria-label="Select proposal ${i + 1}"><span class="tag proposal-tag">${esc(p.state)} · ${esc(p.kind)} · v${p.version}</span></label><h3>${esc(p.record.title || "Untitled draft")}</h3><p>${esc(p.rationale || "No rationale yet.")}</p><div class="actions"><a href="#proposal/${i}">Detailed review</a><a href="#edit/${i}">Edit suggestion</a></div>${comparisonHTML(p)}</section>`).join("") : '<div class="empty large"><h3>A place for the next finding.</h3><p>Start a new evidence row or open a reviewed record and choose Suggest correction.</p></div>'}</div></article>`;
+  main.innerHTML = `<article class="proposals-page"><div class="page-heading"><div><div class="eyebrow">A LOCAL RESEARCH WORKSPACE</div><h2>Your suggestions</h2><p class="lead">Add evidence. Propose a correction. Share the supporting research.</p></div><a class="button primary" href="#new">+ Suggest new evidence</a></div><p id="storage-status" class="notice">${storageAvailable ? "Browser storage is available as a convenience. Download your suggestions for a portable backup." : "Browser storage is unavailable. Download your suggestions before closing this page."}</p><div class="actions"><button id="export-selected">Send to others</button><button id="select-all">Select all</button><label class="button file-button">Import suggestions<input type="file" id="import-file" aria-label="Import suggestions" accept=".json,.xlsx,application/json,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"></label></div><p class="muted">Sharing downloads a file; nothing is uploaded or emailed. Imported suggestions remain unreviewed. Complete suggestions can be previewed on the map.</p><div class="actions"><a href="docs/bulk-import-guide.html">Bulk import guide</a><a href="templates/americas-peoples-import.xlsx" download>Download spreadsheet template</a></div><p class="muted">Bulk entry: use the XLSX template for records, claims, references and source mappings. Excel, LibreOffice, or a downloaded Google Sheets workbook can be used.</p><div id="import-error" role="alert"></div><div class="proposal-list">${proposals.length ? proposals.map((p, i) => `<section class="proposal-card" data-proposal-card><label class="check"><input type="checkbox" data-share="${i}" aria-label="Select proposal ${i + 1}"><span class="tag proposal-tag">${esc(p.state)} · ${esc(p.kind)} · v${p.version}</span></label><h3>${esc(p.record.title || "Untitled draft")}</h3><p>${esc(p.rationale || "No rationale yet.")}</p><div class="actions"><a href="#proposal/${i}">Detailed review</a><a href="#edit/${i}">Edit suggestion</a></div>${comparisonHTML(p)}</section>`).join("") : '<div class="empty large"><h3>A place for the next finding.</h3><p>Start a new evidence row or open a reviewed record and choose Suggest correction.</p></div>'}</div></article>`;
   $("#export-selected").addEventListener("click", () =>
     exportProposals(
       [...main.querySelectorAll<HTMLInputElement>("[data-share]:checked")].map(
@@ -408,15 +409,33 @@ function proposalsPage() {
       .forEach((el) => (el.checked = true)),
   );
   $<HTMLInputElement>("#import-file").addEventListener("change", async (e) => {
-    const file = (e.target as HTMLInputElement).files?.[0];
+    const control = e.target as HTMLInputElement;
+    const file = control.files?.[0];
     if (!file) return;
+    control.disabled = true;
+    $("#import-error").textContent = "Reading and validating the file…";
     try {
-      if (file.size > 2_000_000)
-        throw new Error("Package exceeds the 2 MB limit.");
-      pending = parsePackage(await file.text());
+      if (file.name.toLowerCase().endsWith(".xlsx")) {
+        if (file.size > 5_000_000)
+          throw new Error("Workbook exceeds the 5 MB file limit.");
+        pending = await importWorkbook(
+          await file.arrayBuffer(),
+          dataset.records,
+        );
+      } else if (file.name.toLowerCase().endsWith(".json")) {
+        if (file.size > 2_000_000)
+          throw new Error("Package exceeds the 2 MB limit.");
+        pending = parsePackage(await file.text());
+      } else
+        throw new Error(
+          "Choose a .xlsx template workbook or a native .json proposal file.",
+        );
       location.hash = "#import";
     } catch (error) {
       $("#import-error").textContent = (error as Error).message;
+    } finally {
+      control.disabled = false;
+      control.value = "";
     }
   });
 }
@@ -435,7 +454,7 @@ function importPage() {
   });
 }
 function aboutPage() {
-  main.innerHTML = `<article class="review-page"><div class="eyebrow">METHOD & COVERAGE</div><h2>The record, with its uncertainties.</h2><p class="lead">A fully offline atlas of archaeological and verified historical evidence, from the earliest included finding through 1803.</p><section><h3>A deliberately small beginning</h3><p>${esc(dataset.coverage)}</p><p>Dataset ${esc(dataset.version)} · source check ${esc(dataset.reviewedAt)}</p><p>“Bundled evidence” means the included sources were checked to the extent described on each review page. It is not an independent peer review or a guarantee of scholarly consensus. The record is not a population census.</p></section><section><h3>How to read the map</h3><p>Filled dots show documented intervals or precisely dated events. Outlined dots show a broadly dated occurrence or uncertain interval edge. An asterisk marks a claim under discussion or dispute. Open the detailed review to see which claim and why. Culture colors are descriptive classifications, not racial categories.</p><p>Dates are inclusive. An occurrence window means something is dated within that window; it does not imply continuous settlement. A blank year means no included matching record, not human absence. Arrow paths are schematic unless separately supported.</p></section><section><h3>Academic evidence</h3><p>Each claim maps to specific scholarly or archival sources. Critical historical reading and corroboration matter: repeated assertions are not independent evidence. Original dating, methods, calendar interpretation and limitations stay attached to the record. Uncalibrated radiocarbon ages are not silently converted into calendar years.</p></section><section><h3>Your local workspace</h3><p>Suggest new rows or corrections, then save as drafts or complete suggestions. “Complete” means required fields are present, not academically verified. “Send to others” downloads selected rows with their review content and bibliography. A recipient imports and previews the package. Corrections preserve the original and base revision. No proposal automatically replaces reviewed data.</p><p>Browser storage may vary by browser and file location. Export files are the portable backup. Copying or moving index.html does not transfer browser storage. Import your saved files into the new copy.</p></section><section><h3>Offline, by design</h3><p>All map geometry, code, evidence and review pages are bundled. Source links open online only when selected. There is no account, server, analytics or automatic update check.</p></section><section><h3>Attribution and licensing</h3><p>Made with Natural Earth. Generalized reference coastlines are public domain and represent modern geography, not ancient coastlines or ice sheets. ${esc(dataset.license)}</p><p>See README and THIRD_PARTY files in the download for build instructions, dependency licenses and dataset maintenance.</p></section></article>`;
+  main.innerHTML = `<article class="review-page"><div class="eyebrow">METHOD & COVERAGE</div><h2>The record, with its uncertainties.</h2><p class="lead">A fully offline atlas of archaeological and verified historical evidence, from the earliest included finding through 1803.</p><section><h3>A deliberately small beginning</h3><p>${esc(dataset.coverage)}</p><p>App 0.1.1 · Dataset ${esc(dataset.version)} · source check ${esc(dataset.reviewedAt)}</p><p>“Bundled evidence” means the included sources were checked to the extent described on each review page. It is not an independent peer review or a guarantee of scholarly consensus. The record is not a population census.</p></section><section><h3>How to read the map</h3><p>Filled dots show documented intervals or precisely dated events. Outlined dots show a broadly dated occurrence or uncertain interval edge. An asterisk marks a claim under discussion or dispute. Open the detailed review to see which claim and why. Culture colors are descriptive classifications, not racial categories.</p><p>Dates are inclusive. An occurrence window means something is dated within that window; it does not imply continuous settlement. A blank year means no included matching record, not human absence. Arrow paths are schematic unless separately supported.</p></section><section><h3>Academic evidence</h3><p>Each claim maps to specific scholarly or archival sources. Critical historical reading and corroboration matter: repeated assertions are not independent evidence. Original dating, methods, calendar interpretation and limitations stay attached to the record. Uncalibrated radiocarbon ages are not silently converted into calendar years.</p></section><section><h3>Your local workspace</h3><p>Suggest new rows or corrections, then save as drafts or complete suggestions. “Complete” means required fields are present, not academically verified. “Send to others” downloads selected rows with their review content and bibliography. A recipient imports and previews the package. Corrections preserve the original and base revision. No proposal automatically replaces reviewed data.</p><p>Browser storage may vary by browser and file location. Export files are the portable backup. Copying or moving index.html does not transfer browser storage. Import your saved files into the new copy.</p></section><section><h3>Offline, by design</h3><p>All map geometry, code, evidence and review pages are bundled. Source links open online only when selected. There is no account, server, analytics or automatic update check.</p></section><section><h3>Attribution and licensing</h3><p>Made with Natural Earth. Generalized reference coastlines are public domain and represent modern geography, not ancient coastlines or ice sheets. ${esc(dataset.license)}</p><p>See README and THIRD_PARTY files in the download for build instructions, dependency licenses and dataset maintenance.</p></section></article>`;
 }
 let previousHash = location.hash || "#map";
 let reverting = false;

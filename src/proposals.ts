@@ -14,6 +14,11 @@ export function canonical(value: unknown): string {
     );
   return JSON.stringify(value);
 }
+function proposalContent(p: Proposal): string {
+  if (!p.id.startsWith("bulk-")) return canonical(p);
+  const { createdAt, updatedAt, ...content } = p;
+  return canonical(content);
+}
 export function validateProposal(p: Proposal): string[] {
   if (!p || typeof p !== "object") return ["Invalid proposal."];
   const e: string[] = [];
@@ -113,7 +118,7 @@ export function inspectImport(
   return incoming.map((p) => {
     let status: "new" | "duplicate" | "conflict" = "new",
       reason = "New local proposal; not reviewed evidence.";
-    if (seen.some((x) => canonical(x) === canonical(p))) {
+    if (seen.some((x) => proposalContent(x) === proposalContent(p))) {
       status = "duplicate";
       reason = "An identical proposal is already in your collection.";
     } else if (seen.some((x) => x.id === p.id && x.version === p.version)) {
@@ -155,9 +160,9 @@ export function mergeImport(
   existing: Proposal[],
 ): Proposal[] {
   const result = structuredClone(existing);
-  const keys = new Set(result.map(canonical));
+  const keys = new Set(result.map(proposalContent));
   for (const p of incoming) {
-    const key = canonical(p);
+    const key = proposalContent(p);
     if (!keys.has(key)) {
       result.push(structuredClone(p));
       keys.add(key);
