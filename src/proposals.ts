@@ -1,6 +1,7 @@
 import type { EvidenceRecord, Proposal, SharePackage } from "./model";
 import { validateRecord } from "./validation";
-export const MAX_PACKAGE_BYTES = 2_000_000;
+export const MAX_PACKAGE_BYTES = 4_000_000;
+export const MAX_PROPOSALS = 500;
 export function canonical(value: unknown): string {
   if (Array.isArray(value)) return "[" + value.map(canonical).join(",") + "]";
   if (value && typeof value === "object")
@@ -81,7 +82,7 @@ export function makePackage(proposals: Proposal[]): SharePackage {
 export function parsePackage(raw: string): SharePackage {
   if (new TextEncoder().encode(raw).length > MAX_PACKAGE_BYTES)
     throw new Error(
-      "Package exceeds the 2 MB limit. Export fewer rows at a time.",
+      "Package exceeds the 4 MB limit. Export fewer rows at a time.",
     );
   let p: SharePackage;
   try {
@@ -98,10 +99,10 @@ export function parsePackage(raw: string): SharePackage {
     p.format !== "americas-peoples-proposals" ||
     ![1, 2].includes(p.schemaVersion) ||
     !Array.isArray(p.proposals) ||
-    p.proposals.length > 200
+    p.proposals.length > MAX_PROPOSALS
   )
     throw new Error(
-      "Unsupported proposal format, version, or more than 200 proposals.",
+      `Unsupported proposal format, version, or more than ${MAX_PROPOSALS} proposals.`,
     );
   if (
     p.schemaVersion === 1 &&

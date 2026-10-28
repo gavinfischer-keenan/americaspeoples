@@ -43,6 +43,30 @@ export function activeRecords<T extends EvidenceRecord>(
 ): T[] {
   return records.filter((r) => temporalState(r.time, year) !== "absent");
 }
+/** Illustrative temporal support, not a probability density or population size.
+ * No padding outside source bounds; uncertain single-year references stay visible.
+ */
+export function temporalOpacity(t: TimeExtent, year: number): number {
+  const state = temporalState(t, year);
+  if (state === "absent") return 0;
+  if (state === "certain") return 1;
+  if (t.start === t.end) return 0.7;
+  const start = t.start!,
+    end = t.end!;
+  if (
+    !t.approximate &&
+    t.certainStart !== undefined &&
+    t.certainEnd !== undefined
+  ) {
+    const strength =
+      year < t.certainStart
+        ? (year - start) / (t.certainStart - start)
+        : (end - year) / (end - t.certainEnd);
+    return 0.22 + 0.78 * Math.max(0, Math.min(1, strength));
+  }
+  const phase = (year - start) / (end - start);
+  return 0.22 + 0.53 * Math.sin(Math.PI * phase);
+}
 export function earliestYear(records: EvidenceRecord[]): number {
   return Math.min(
     END_YEAR,

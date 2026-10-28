@@ -44,6 +44,7 @@ export const BULK_HEADERS = {
     "summary",
     "limitations",
     "discussion",
+    "population_json",
   ],
   Claims: [
     "record_id",
@@ -93,6 +94,7 @@ export const OVERLAY_HEADERS = [
   "geometry_geojson",
   "geometry_precision",
   "geometry_source",
+  "reach_radius_km",
 ] as const;
 export const REFERENCE_TYPES = [
   "journal-article",

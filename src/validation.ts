@@ -1,4 +1,5 @@
 import { validateOverlay } from "./overlays";
+import { validatePopulation } from "./population";
 import type { Dataset, EvidenceRecord } from "./model";
 import { validateCitation } from "./citations";
 import { END_YEAR } from "./time";
@@ -25,6 +26,7 @@ export function validateRecord(value: unknown, complete = true): string[] {
   const add = (s: string) => errors.push(s);
   const r = value as EvidenceRecord;
   if (!object(r)) return ["Record must be an object."];
+  errors.push(...validatePopulation(r));
   if (r.overlay !== undefined) {
     errors.push(...validateOverlay(r.overlay));
     if (r.type !== "event")

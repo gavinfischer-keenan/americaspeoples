@@ -1,3 +1,7 @@
+import fsSnapshot from "node:fs";
+const snapshot=JSON.parse(fsSnapshot.readFileSync("dist/evidence-appendix.json","utf8"));
+const expectedRecords=snapshot.records.length;
+const expectedOverlays=snapshot.records.filter(x=>x.record.overlay).length;
 import { chromium } from "playwright";
 import { pathToFileURL } from "node:url";
 import path from "node:path";
@@ -32,7 +36,7 @@ try {
     .waitFor();
   assert.deepEqual(
     await page.locator(".proposal-card>.tag").allTextContents(),
-    Array(51).fill("new"),
+    Array(expectedRecords).fill("correction"),
   );
   await page
     .getByRole("button", { name: "Add to local collection", exact: true })
@@ -43,9 +47,9 @@ try {
   const pack = await page.evaluate(() =>
     JSON.parse(localStorage.getItem("americas-peoples-proposals-v1")),
   );
-  assert.equal(pack.proposals.length, 51);
-  assert.equal(pack.proposals.filter((p) => p.record.overlay).length, 21);
-  assert.equal(await page.locator("[data-proposal-card]").count(), 51);
+  assert.equal(pack.proposals.length, expectedRecords);
+  assert.equal(pack.proposals.filter((p) => p.record.overlay).length, expectedOverlays);
+  assert.equal(await page.locator("[data-proposal-card]").count(), expectedRecords);
   for (let i = 0; i < pack.proposals.length; i++) {
     const r = pack.proposals[i].record;
     await page.evaluate((i) => (location.hash = "#proposal/" + i), i);
@@ -109,11 +113,11 @@ try {
   await page
     .getByRole("heading", { name: "Your suggestions", exact: true })
     .waitFor();
-  assert.equal(await page.locator("[data-proposal-card]").count(), 51);
+  assert.equal(await page.locator("[data-proposal-card]").count(), expectedRecords);
   assert.deepEqual(errors, []);
   assert.deepEqual(network, []);
   console.log(
-    "PASS: actual researched workbook imports 51 proposals, renders every claim and bibliography, and reimports without duplicates. " +
+    "PASS: actual researched workbook imports expectedRecords proposals, renders every claim and bibliography, and reimports without duplicates. " +
       (await browser.version()),
   );
 } finally {

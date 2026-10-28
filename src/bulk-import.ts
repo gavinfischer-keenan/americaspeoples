@@ -9,7 +9,12 @@ import type {
 import type { BulkTables, BulkRow, BulkSheetName } from "./bulk-schema";
 import { REFERENCE_TYPES } from "./bulk-schema";
 import { normalizeDOI, citationFields } from "./citations";
-import { makePackage, parsePackage, validateProposal } from "./proposals";
+import {
+  makePackage,
+  parsePackage,
+  validateProposal,
+  MAX_PROPOSALS,
+} from "./proposals";
 import { parseYear } from "./time";
 
 const str = (r: BulkRow, k: string) => String(r[k] ?? "").trim();
@@ -110,7 +115,7 @@ function buildPackage(
   for (const sheet of Object.keys(tables).filter(
     (s) => s !== "Overlays",
   ) as BulkSheetName[]) {
-    const max = sheet === "Evidence" ? 200 : 2000;
+    const max = sheet === "Evidence" ? MAX_PROPOSALS : 2000;
     if (tables[sheet].length > max)
       fail(
         sheet,
@@ -329,6 +334,16 @@ function buildPackage(
         relatedIds: related,
       },
     };
+    if (str(r, "population_json")) {
+      try {
+        record.population = JSON.parse(str(r, "population_json"));
+      } catch {
+        throw new Error(
+          `Evidence row ${row}: population_json is not valid JSON.`,
+        );
+      }
+    } else if (operation === "correction" && base?.population)
+      record.population = structuredClone(base.population);
     const overlayRow = overlayRows.get(id);
     if (overlayRow) {
       const o = overlayRow.row;
@@ -346,6 +361,9 @@ function buildPackage(
         geometry,
         precision: str(o, "geometry_precision"),
         provenance: str(o, "geometry_source"),
+        ...(str(o, "reach_radius_km")
+          ? { radiusKm: Number(str(o, "reach_radius_km")) }
+          : {}),
       };
     }
     const proposal: Proposal = {

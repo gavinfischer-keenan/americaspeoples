@@ -14,7 +14,7 @@ Version 0.2.1 prepares static web hosting, adds a complete HTML/JSON evidence ap
 
 The guide and template are also available inside the offline app under Suggestions. Replace the worked sample with your own rows. Import XLSX or the app's JSON packages directly. BibTeX, RIS and CSL-JSON can be supplied to an assistant for conversion; they are not direct app import formats. DOI lookup requires an online research step, never an offline dependency.
 
-The [populated research workbook](templates/americas-peoples-researched-import.xlsx) provides 51 additional proposals: 30 ordinary evidence records and 21 overlays, with 145 claims and 123 bibliographic entries. It includes 6 forced-removal connections, 5 epidemic records and 6 violence records, alongside trade and conflict evidence. Source-access limits and scholarly disagreements are explicit. Import it under Suggestions, then enable Preview complete suggestions. Each overlay kind has a separate control, alongside culture filters. Source-linked overlays are temporal; schematic connections are not reconstructed routes. Forced-removal arrows explicitly identify coercion. Epidemic and violence symbols do not encode population totals or death tolls.
+The [populated research workbook](templates/americas-peoples-researched-import.xlsx) is the complete published snapshot. All author records already appear by default. Its rows preserve base revisions and can be edited as source-linked corrections. Regional, genomic, environment and cultural-context layers remain distinct from named settlement points. Claim-specific disputes and source-access limits are explicit.
 
 1934 is a chosen policy boundary, not an assertion that dispossession or Indigenous history ended. The researched workbook includes removals, confinement, return journeys, epidemics and massacres as separate evidence records. A marker ending never establishes extinction; casualty estimates retain their source, population scope and uncertainty.
 
@@ -42,7 +42,7 @@ Select rows in Suggestions and choose Send to others. The app downloads a JSON f
 
 Complete proposals appear on the map/table only when Preview suggestions is enabled. Drafts remain in the local workspace and are not mapped. Existing culture IDs retain the bundled dataset's color in previews; conflicting metadata must be reviewed.
 
-**Download files are the portable backup.** Browser storage is only a convenience. File URL storage can vary by browser and file location; private browsing, storage restrictions, moving the app or clearing browser data may remove it. Save/export before closing. The app reports when browser storage is unavailable. Share packages are limited to 2 MB and 200 proposals; export smaller selections if necessary.
+**Download files are the portable backup.** Browser storage is only a convenience. File URL storage can vary by browser and file location; private browsing, storage restrictions, moving the app or clearing browser data may remove it. Save/export before closing. The app reports when browser storage is unavailable. Share packages are limited to 4 MB and 500 proposals; export smaller selections if necessary.
 
 ## Starter evidence
 
@@ -64,7 +64,7 @@ npm run build
 
 The build writes `dist/`, a versioned ZIP and the convenience alias `release/americas-peoples-offline.zip`. It bundles a classic script with embedded evidence and vector geometry, so runtime JSON fetching and server routing are unnecessary. The ZIP needs no online first load. A hosted URL needs its initial assets from the host; offline web reloads are not guaranteed. There is no service worker or installable PWA. Dependency versions are locked in `package-lock.json`; build inputs and scripts are tracked.
 
-Browser tests use Playwright with an installed browser. They default to the Windows Edge location; set `BROWSER_PATH` to another Chromium-family executable. Set `APP_PATH` to an extracted release's `index.html` to test the packaged artifact. The five offline suites use file URLs without a server. `scripts/bulk-browser.mjs` checks the shipped XLSX template and guide. `scripts/overlay-browser.mjs` exercises all overlay layers and the 1934 endpoint; `scripts/research-browser.mjs` imports the actual 51-record workbook and opens every claim and bibliography. `npm run test:hosted` separately starts and stops a loopback HTTP server to verify the built app with the recommended hosting headers.
+Browser tests use Playwright with an installed browser. They default to the Windows Edge location; set `BROWSER_PATH` to another Chromium-family executable. Set `APP_PATH` to an extracted release's `index.html` to test the packaged artifact. The five offline suites use file URLs without a server. `scripts/bulk-browser.mjs` checks the shipped XLSX template and guide. `scripts/overlay-browser.mjs` exercises all overlay layers and the 1934 endpoint; `scripts/research-browser.mjs` imports the complete published workbook and opens every claim and bibliography. `npm run test:hosted` separately starts and stops a loopback HTTP server to verify the built app with the recommended hosting headers.
 
 ```sh
 npm run test:browser
@@ -81,7 +81,7 @@ See `docs/verification.md` for the browsers actually tested and current limitati
 
 The app is prepared for static hosting at the root of its own subdomain in the TripoFisch / 11 Mosswood ecosystem. [DEPLOYMENT.md](DEPLOYMENT.md) describes the exact deployable directory, commands, hash routing, response headers, storage/privacy behavior, downloads and remaining work. [Product-page copy](docs/landing-page-content.md) explains the utility and the appendix. No backend, database, login or external runtime API is required.
 
-The build includes `evidence-appendix.html` and `evidence-appendix.json`: all eight default records and 51 optional research proposals, with claims, bibliographies and clear collection labels. The product page should put this appendix below its explanation and launch link. The proposed subdomain is `americaspeoples.11mosswood.us`; animal name and logo are to be provided. Hosting, DNS, routing and public verification are assigned to the website deployment agent. This release does not claim that the public site is deployed.
+The build includes `evidence-appendix.html` and `evidence-appendix.json`, preserving every published record, claim, citation and access caveat. The public app is hosted at https://americaspeoples.11mosswood.us/ and the product explanation at https://tripofisch.com/free-utilities/americaspeoples/.
 
 ## Maintain the research
 
@@ -94,6 +94,14 @@ Edit `data/evidence.json`, following `docs/data-format.md` and `docs/evidence-po
 Natural Earth reference land geometry is public domain. The basemap uses present-day generalized coastlines, not reconstructed ancient coastlines or ice sheets. Dependency notices are in `THIRD_PARTY.md`. Academic sources retain their own copyrights. No publication PDFs are bundled. This repository does not assign an open-source license to the owner's original application code.
 
 
-## Published dataset — v0.2.2
+## Published dataset — v0.3.0
 
-All 59 author-supplied records (8 initial plus 51 researched records) now load by default. No import or Preview switch is required. The source collections remain distinguishable in the appendix, but both are published. Individual claim status, citations, uncertainty and geographic limits are unchanged. Future author batches in data/research-proposals.json are compiled into the published dataset; visitor import limits do not cap this author publication pipeline. Visitor-created drafts remain local and opt-in. Hosted pages disclose Cloudflare analytics; the extracted offline edition does not receive hosting-injected analytics.
+All author-published records load by default. No import or Preview switch is required. Current counts are generated from the data in the app, appendix and workbook. Original intake exports and source reconciliation are bundled. Visitor drafts remain local and opt-in. Hosted pages disclose Cloudflare analytics; the extracted offline edition does not receive hosting-injected analytics.
+
+Named settlements use source-supported locations and date-specific resident estimates where available. Unknown population uses a striped smallest-band symbol. Estimates are not interpolated or summed. Soft cultural envelopes are optional editorial regional context, not surveyed borders. See docs/data-format.md.
+
+## Literature, context and uncertainty — v0.3.0
+
+The author’s literature batches extend coverage across continental America and the Caribbean. New regional clouds distinguish archaeological syntheses, genomic inferences and environmental context from dated sites. Possible dates fade inside their source bounds. Opacity is illustrative, not a probability distribution or population size. Light and strong asterisks distinguish claims under discussion from explicitly disputed claims; review boxes identify the competing interpretations. No confidence is calculated from citation counts or search-result percentages.
+
+The Movement & context view links mechanisms and alternatives, and separates non-American comparisons from American evidence. Abstract-only access is explicitly identified. Uncalibrated or unspecified BP dates and open-ended constraints are retained without invented calendar bounds. The full supplied Consensus exports are archived as secondary provenance in docs/intake; they are not relabeled as primary studies. Original subscription PDFs are not republished.

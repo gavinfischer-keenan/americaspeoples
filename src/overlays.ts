@@ -5,14 +5,31 @@ export const OVERLAY_LABELS: Record<Overlay["kind"], string> = {
   "forced-removal": "Forced removal",
   epidemic: "Epidemic",
   violence: "Massacre / violence",
+  "population-history": "Genomic population history",
+  "regional-evidence": "Regional archaeological synthesis",
+  environment: "Environment / fauna",
+  "cultural-reach": "Approximate cultural reach",
 };
 export function validateOverlay(value: unknown): string[] {
   const o = value as Overlay;
   if (!o || typeof o !== "object") return ["Invalid overlay metadata."];
   const errors: string[] = [];
+  if (
+    o.kind === "cultural-reach" &&
+    (o.basis !== "schematic" ||
+      o.geometry?.type !== "Point" ||
+      !Number.isFinite(o.radiusKm) ||
+      o.radiusKm! <= 0 ||
+      o.radiusKm! > 3000)
+  )
+    errors.push(
+      "Cultural reach requires a schematic center and illustrative radiusKm from 0 to 3000 km, with source qualifications.",
+    );
+  if (o.kind !== "cultural-reach" && o.radiusKm !== undefined)
+    errors.push("radiusKm applies only to cultural reach.");
   if (typeof o.kind !== "string" || !Object.hasOwn(OVERLAY_LABELS, o.kind))
     errors.push(
-      "Overlay type must be trade, conflict, forced-removal, epidemic or violence.",
+      "Overlay type must be a supported historical, regional, population-history or environment layer.",
     );
   if (!["documented", "schematic", "unmapped"].includes(o.basis))
     errors.push("Invalid overlay geometry basis.");

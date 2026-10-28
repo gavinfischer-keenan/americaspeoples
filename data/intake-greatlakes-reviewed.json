@@ -1,0 +1,2161 @@
+{
+  "records": [
+    {
+      "id": "greatlakes-belson-clovis",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Belson — buried Clovis campsite; occupation dates pending",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Expected~13,000calendar years ago from Clovis technology(Talbot2021); direct occupation dating pending(Nash2024)",
+        "method": "Published chronology retained in its original scope and units",
+        "interpretation": "13ka is an expected typological age rather than an independent site date.14ka refers to landscape development. Retained unplaced pending direct site chronology."
+      },
+      "claims": [
+        {
+          "id": "occupation",
+          "text": "Buried lithics at Belson document repeated activity below the plow zone; Attica chert was transported approximately235km.",
+          "status": "well-supported",
+          "explanation": "Technological attribution and raw-material sourcing support repeated use and long-distance conveyance, without establishing a particular route or dated settlement duration.",
+          "support": [
+            {
+              "sourceId": "nash2024-belson",
+              "locator": "Abstract; Introduction; Summary and conclusions",
+              "stance": "supports",
+              "note": "Supports this specific finding within its stated source scope."
+            },
+            {
+              "sourceId": "talbot2021-belson",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "Proposes Clovis attribution and expected~13ka age; does not directly date the occupation."
+            }
+          ]
+        },
+        {
+          "id": "residues",
+          "text": "Initial residue tests suggest varied mammal use, with weak signals and inconclusive proboscidean evidence.",
+          "status": "under discussion",
+          "explanation": "Three tools were tested. Canid/equid signals also in controls cannot establish ancient exploitation. Broad-spectrum foraging remains an interpretation.",
+          "support": [
+            {
+              "sourceId": "nash2024-belson",
+              "locator": "Animal exploitation indicated by initial residue study",
+              "stance": "supports",
+              "note": "Supports this specific finding within its stated source scope."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "nash2024-belson",
+          "authors": "Brendan Nash, Thomas Talbot, Henry T. Wright, Elliot Greiner, and Linda Scott Cummings",
+          "title": "Clovis organizational dynamics at a Late Glacial campsite in the central Great Lakes: Belson site excavations 2020–2021",
+          "year": 2024,
+          "venue": "PLOS ONE 19(5):e0302255",
+          "url": "https://doi.org/10.1371/journal.pone.0302255",
+          "access": "Publisher full text read: abstract, introduction, residue study, conclusions, and dating caveat.",
+          "referenceType": "journal-article",
+          "doi": "10.1371/journal.pone.0302255"
+        },
+        {
+          "id": "talbot2021-belson",
+          "authors": "Thomas Talbot, Henry T. Wright, and Brendan Nash",
+          "title": "The Belson Site: A Paleoindian Campsite on the Outwash Plains of the Central Great Lakes",
+          "year": 2021,
+          "venue": "PaleoAmerica7(1):76–84",
+          "url": "https://doi.org/10.1080/20555563.2020.1848105",
+          "doi": "10.1080/20555563.2020.1848105",
+          "access": "Publisher abstract read. It proposes an expected age about13,000calendar years ago conditional on Clovis technological attribution; direct age establishment is future work.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "Research intake reviewed against primary publications and author institutional records; factual scope, original chronology and interpretive uncertainty are preserved.",
+        "limitations": "No defensible exact public site coordinate or completed occupation chronology extracted. Private-farm setting is not replaced with an invented point.",
+        "discussion": "The14ka landscape statement does not demonstrate human arrival then. Weak protein signals do not securely identify every named animal or establish specialized megafaunal hunting.",
+        "provenance": "User-supplied Great Lakes synthesis and all20 bibliography entries audited2026-10-28. Source access statements distinguish full text, abstracts, reviews and unresolved metadata.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "greatlakes-eastern-initial-settlement",
+      "revision": 1,
+      "type": "event",
+      "title": "Eastern Great Lakes — early settlement around13,000calBP",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -11050,
+        "end": -11050,
+        "approximate": true,
+        "original": "Circa13,000cal yrBP",
+        "method": "Regional synthesis of early fluted-point sites and accepted calibrated radiocarbon chronology",
+        "interpretation": "1950 minus13,000; approximate regional onset assessment, not a single-year first arrival or a continuous occupation interval."
+      },
+      "claims": [
+        {
+          "id": "chronology",
+          "text": "The regional review places settlement of parts of the Northeast, including eastern Great Lakes entry, around13,000calBP.",
+          "status": "under discussion",
+          "explanation": "This supports an approximate regional synthesis. Earlier landscape exposure does not automatically imply human occupation.",
+          "support": [
+            {
+              "sourceId": "lothrop2016-northeast",
+              "locator": "Section5: Early Paleoindian in the Northeast",
+              "stance": "supports",
+              "note": "Supports this specific finding within its stated source scope."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "lothrop2016-northeast",
+          "authors": "Jonathan C. Lothrop, Darrin L. Lowery, Arthur E. Spiess, and Christopher J. Ellis",
+          "title": "Early Human Settlement of Northeastern North America",
+          "year": 2016,
+          "venue": "PaleoAmerica 2(3):192–251",
+          "url": "https://doi.org/10.1080/20555563.2016.1212178",
+          "access": "Publisher open-access text inspected: chronology and early Paleoindian settlement sections. Regional review, not a directly dated single occupation.",
+          "referenceType": "journal-article",
+          "doi": "10.1080/20555563.2016.1212178"
+        }
+      ],
+      "review": {
+        "summary": "Research intake reviewed against primary publications and author institutional records; factual scope, original chronology and interpretive uncertainty are preserved.",
+        "limitations": "Regional evidence does not establish a named people's identity, exact settlement position, resident count or continuous occupation.",
+        "discussion": "Interpretation follows the evidence type. Proxy frequencies, modeled movements and environmental associations are not equivalent to counts of people or mapped migration routes.",
+        "provenance": "User-supplied Great Lakes synthesis and all20 bibliography entries audited2026-10-28. Source access statements distinguish full text, abstracts, reviews and unresolved metadata.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -82,
+            43
+          ]
+        },
+        "precision": "Rounded regional display anchor only; not a site, route, occupation boundary or confidence area.",
+        "provenance": "Geographic study scope named by the cited publication; illustrative regional locator selected for display only."
+      }
+    },
+    {
+      "id": "greatlakes-paleoindian-range-mobility",
+      "revision": 1,
+      "type": "event",
+      "title": "Great Lakes/Northeast — toolstone-based mobility model",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "83concave-based-point sites, ca.11,000–10,000B.P.",
+        "method": "Published chronology retained in its original scope and units",
+        "interpretation": "Accessible source does not identify these B.P. bounds as calendar ages. No1950 subtraction or invented calibrated interval."
+      },
+      "claims": [
+        {
+          "id": "mobility",
+          "text": "Analysis of toolstone at83sites supports unusually large early ranges, often oriented north–south, with later reductions.",
+          "status": "under discussion",
+          "explanation": "Seasonality and residential movement are modeled from material provenance. Exchange and logistical procurement are alternatives; straight-line stone distances are not walked routes.",
+          "support": [
+            {
+              "sourceId": "ellis2011-mobility",
+              "locator": "Abstract, highlights and introduction",
+              "stance": "supports",
+              "note": "Supports this specific finding within its stated source scope."
+            }
+          ]
+        },
+        {
+          "id": "wisconsin-comparison",
+          "text": "Eastern Wisconsin assemblages retain average toolstone conveyance over200km in early and late Paleoindian samples, followed by mainly local material in Archaic/Woodland samples.",
+          "status": "under discussion",
+          "explanation": "The directional change is north–south to east–west. This regional comparison does not establish every group's annual range or movements of every stone's maker.",
+          "support": [
+            {
+              "sourceId": "lambert-loebel2015",
+              "locator": "Abstract; institutional PDF p.284",
+              "stance": "supports",
+              "note": "Distinct regional sample; adds context rather than assuming uniform basin-wide mobility."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "ellis2011-mobility",
+          "authors": "Christopher J. Ellis",
+          "title": "Measuring Paleoindian range mobility and land-use in the Great Lakes/Northeast",
+          "year": 2011,
+          "venue": "Journal of Anthropological Archaeology 30(3):385–401",
+          "url": "https://doi.org/10.1016/j.jaa.2011.05.001",
+          "access": "Publisher abstract, highlights, introduction and available section excerpts read; subscription full text not accessed.",
+          "referenceType": "journal-article",
+          "doi": "10.1016/j.jaa.2011.05.001"
+        },
+        {
+          "id": "lambert-loebel2015",
+          "authors": "John M. Lambert and Thomas J. Loebel",
+          "title": "Paleoindian Colonization of the Recently Deglaciated Great Lakes: Mobility and Technological Organization in Eastern Wisconsin",
+          "year": 2015,
+          "venue": "PaleoAmerica1(3):284–288",
+          "url": "https://doi.org/10.1179/2055557115Y.0000000002",
+          "access": "Primary institutional PDF and author institutional abstract read; surface collection analysis and sourcing scope.",
+          "referenceType": "journal-article",
+          "doi": "10.1179/2055557115Y.0000000002"
+        }
+      ],
+      "review": {
+        "summary": "Research intake reviewed against primary publications and author institutional records; factual scope, original chronology and interpretive uncertainty are preserved.",
+        "limitations": "Regional evidence does not establish a named people's identity, exact settlement position, resident count or continuous occupation.",
+        "discussion": "Interpretation follows the evidence type. Proxy frequencies, modeled movements and environmental associations are not equivalent to counts of people or mapped migration routes.",
+        "provenance": "User-supplied Great Lakes synthesis and all20 bibliography entries audited2026-10-28. Source access statements distinguish full text, abstracts, reviews and unresolved metadata.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No supported individual location or sufficiently resolved geographic extent plotted.",
+        "provenance": "Geographic study scope named by the cited publication; illustrative regional locator selected for display only."
+      }
+    },
+    {
+      "id": "greatlakes-youngerdryas-reorganization",
+      "revision": 1,
+      "type": "event",
+      "title": "Great Lakes — Younger Dryas settlement changes and causal limits",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Ca.10,800–10,000 radiocarbon BP",
+        "method": "Published chronology retained in its original scope and units",
+        "interpretation": "Explicit14C BP cannot be entered as calendar years without calibration; chronological correlation alone does not establish causation."
+      },
+      "claims": [
+        {
+          "id": "reorganization",
+          "text": "The authors report spatially variable declines in site frequency and mobility, alongside increasing use of lakeshores and drained-lake wetlands.",
+          "status": "under discussion",
+          "explanation": "They attribute some mobility change to colonization dynamics rather than climate, and describe environmental causation as difficult to demonstrate.",
+          "support": [
+            {
+              "sourceId": "ellis2011-youngerdryas",
+              "locator": "Abstract and introduction",
+              "stance": "supports",
+              "note": "Supports this specific finding within its stated source scope."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "ellis2011-youngerdryas",
+          "authors": "Christopher J. Ellis, Dillon H. Carr, and Thomas J. Loebel",
+          "title": "The Younger Dryas and Late Pleistocene peoples of the Great Lakes region",
+          "year": 2011,
+          "venue": "Quaternary International 242(2):534–545",
+          "url": "https://doi.org/10.1016/j.quaint.2011.02.038",
+          "access": "Author institutional abstract and primary author PDF abstract/introduction read. Original dates explicitly radiocarbon BP.",
+          "referenceType": "journal-article",
+          "doi": "10.1016/j.quaint.2011.02.038"
+        }
+      ],
+      "review": {
+        "summary": "Research intake reviewed against primary publications and author institutional records; factual scope, original chronology and interpretive uncertainty are preserved.",
+        "limitations": "Regional evidence does not establish a named people's identity, exact settlement position, resident count or continuous occupation.",
+        "discussion": "Interpretation follows the evidence type. Proxy frequencies, modeled movements and environmental associations are not equivalent to counts of people or mapped migration routes.",
+        "provenance": "User-supplied Great Lakes synthesis and all20 bibliography entries audited2026-10-28. Source access statements distinguish full text, abstracts, reviews and unresolved metadata.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "environment",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No supported individual location or sufficiently resolved geographic extent plotted.",
+        "provenance": "Geographic study scope named by the cited publication; illustrative regional locator selected for display only."
+      }
+    },
+    {
+      "id": "greatlakes-upperpeninsula-site-model",
+      "revision": 1,
+      "type": "event",
+      "title": "Upper Peninsula — high-ground settlement model",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Late Paleoindian / early Holocene",
+        "method": "Published chronology retained in its original scope and units",
+        "interpretation": "Repository abstract gives no explicit calendar bounds; contextual period labels are not converted into a manufactured date range."
+      },
+      "claims": [
+        {
+          "id": "pattern",
+          "text": "Known late Paleoindian sites correlate with high ground near hilly terrain and inland lakes.",
+          "status": "under discussion",
+          "explanation": "A Michigamme River corridor from upper Wisconsin is suggested, not demonstrated by a traced migration. Predicted undiscovered sites are not observations.",
+          "support": [
+            {
+              "sourceId": "legg2017-model",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "Supports this specific finding within its stated source scope."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "legg2017-model",
+          "authors": "Robert J. Legg, Robert R. Regis, John M. Lambert, Matthew Liesch, and Charles B. Travis",
+          "title": "Geoarchaeological Modeling of Late Paleoindian Site Location in the Northwestern Great Lakes Region",
+          "year": 2017,
+          "venue": "PaleoAmerica",
+          "url": "https://commons.nmu.edu/facwork_journalarticles/337/",
+          "access": "Authors' Northern Michigan University repository abstract read; full date model and original site coordinates not accessed.",
+          "referenceType": "journal-article",
+          "doi": "10.1080/20555563.2017.1291244"
+        }
+      ],
+      "review": {
+        "summary": "Research intake reviewed against primary publications and author institutional records; factual scope, original chronology and interpretive uncertainty are preserved.",
+        "limitations": "Regional evidence does not establish a named people's identity, exact settlement position, resident count or continuous occupation.",
+        "discussion": "Interpretation follows the evidence type. Proxy frequencies, modeled movements and environmental associations are not equivalent to counts of people or mapped migration routes.",
+        "provenance": "User-supplied Great Lakes synthesis and all20 bibliography entries audited2026-10-28. Source access statements distinguish full text, abstracts, reviews and unresolved metadata.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No supported individual location or sufficiently resolved geographic extent plotted.",
+        "provenance": "Geographic study scope named by the cited publication; illustrative regional locator selected for display only."
+      }
+    },
+    {
+      "id": "greatlakes-fulton-growth",
+      "revision": 1,
+      "type": "event",
+      "title": "Lower Great Lakes — rising paleopopulation proxy",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": -3450,
+        "end": -550,
+        "approximate": true,
+        "original": "5400–2500BP; archaeological chronology calibrated with IntCal13",
+        "method": "Calib7.0.4; median2σ ages summarized in100-year bins",
+        "interpretation": "1950 minus calibrated BP. Approximate regional synthesis phase, not universal local timing."
+      },
+      "claims": [
+        {
+          "id": "phase",
+          "text": "The synthesis identifies an initial increase in archaeological date frequencies during5400–2500BP.",
+          "status": "under discussion",
+          "explanation": "Regional proxy synthesis; not a census or uniform basin-wide transition.",
+          "support": [
+            {
+              "sourceId": "fulton-yansa2021",
+              "locator": "Abstract; Materials and Methods; synthesis phases",
+              "stance": "supports",
+              "note": "Supports this specific finding within its stated source scope."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "fulton-yansa2021",
+          "authors": "Albert E. Fulton II and Catherine H. Yansa",
+          "title": "Onset of the Paleoanthropocene in the Lower Great Lakes Region of North America: An Archaeological and Paleoecological Synthesis",
+          "year": 2021,
+          "venue": "Annals of the American Association of Geographers 111(3):771–783",
+          "url": "https://doi.org/10.1080/24694452.2020.1846489",
+          "access": "Institutional abstract plus author-uploaded full text inspected on ResearchGate, uploaded by Albert E. Fulton II February5,2021. Methods calibrate archaeological dates with Calib7.0.4/IntCal13; median2σ ages binned by100years. Publisher version states online January31,2021, correcting input2020.",
+          "referenceType": "journal-article",
+          "doi": "10.1080/24694452.2020.1846489"
+        }
+      ],
+      "review": {
+        "summary": "Research intake reviewed against primary publications and author institutional records; factual scope, original chronology and interpretive uncertainty are preserved.",
+        "limitations": "Broad phases; local variation and proxy biases remain.",
+        "discussion": "Calibration verified in primary methods; no interpolation into resident counts.",
+        "provenance": "User-supplied Great Lakes synthesis and all20 bibliography entries audited2026-10-28. Source access statements distinguish full text, abstracts, reviews and unresolved metadata.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -80,
+            43
+          ]
+        },
+        "precision": "Rounded regional display anchor only; not a site, route, occupation boundary or confidence area.",
+        "provenance": "Geographic study scope named by the cited publication; illustrative regional locator selected for display only."
+      }
+    },
+    {
+      "id": "greatlakes-fulton-maize-introduction",
+      "revision": 1,
+      "type": "event",
+      "title": "Lower Great Lakes — maize introduction phase",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": -550,
+        "end": 850,
+        "approximate": true,
+        "original": "2500–1100BP; archaeological chronology calibrated with IntCal13",
+        "method": "Calib7.0.4; median2σ ages summarized in100-year bins",
+        "interpretation": "1950 minus calibrated BP. Approximate regional synthesis phase, not universal local timing."
+      },
+      "claims": [
+        {
+          "id": "phase",
+          "text": "The synthesis groups regional maize introduction within2500–1100BP.",
+          "status": "under discussion",
+          "explanation": "Regional proxy synthesis; not a census or uniform basin-wide transition.",
+          "support": [
+            {
+              "sourceId": "fulton-yansa2021",
+              "locator": "Abstract; Materials and Methods; synthesis phases",
+              "stance": "supports",
+              "note": "Supports this specific finding within its stated source scope."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "fulton-yansa2021",
+          "authors": "Albert E. Fulton II and Catherine H. Yansa",
+          "title": "Onset of the Paleoanthropocene in the Lower Great Lakes Region of North America: An Archaeological and Paleoecological Synthesis",
+          "year": 2021,
+          "venue": "Annals of the American Association of Geographers 111(3):771–783",
+          "url": "https://doi.org/10.1080/24694452.2020.1846489",
+          "access": "Institutional abstract plus author-uploaded full text inspected on ResearchGate, uploaded by Albert E. Fulton II February5,2021. Methods calibrate archaeological dates with Calib7.0.4/IntCal13; median2σ ages binned by100years. Publisher version states online January31,2021, correcting input2020.",
+          "referenceType": "journal-article",
+          "doi": "10.1080/24694452.2020.1846489"
+        }
+      ],
+      "review": {
+        "summary": "Research intake reviewed against primary publications and author institutional records; factual scope, original chronology and interpretive uncertainty are preserved.",
+        "limitations": "Broad phases; local variation and proxy biases remain.",
+        "discussion": "Calibration verified in primary methods; no interpolation into resident counts.",
+        "provenance": "User-supplied Great Lakes synthesis and all20 bibliography entries audited2026-10-28. Source access statements distinguish full text, abstracts, reviews and unresolved metadata.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -80,
+            43
+          ]
+        },
+        "precision": "Rounded regional display anchor only; not a site, route, occupation boundary or confidence area.",
+        "provenance": "Geographic study scope named by the cited publication; illustrative regional locator selected for display only."
+      }
+    },
+    {
+      "id": "greatlakes-fulton-maize-agriculture",
+      "revision": 1,
+      "type": "event",
+      "title": "Lower Great Lakes — maize agriculture phase",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 850,
+        "end": 1650,
+        "approximate": true,
+        "original": "1100–300BP; archaeological chronology calibrated with IntCal13",
+        "method": "Calib7.0.4; median2σ ages summarized in100-year bins",
+        "interpretation": "1950 minus calibrated BP. Approximate regional synthesis phase, not universal local timing."
+      },
+      "claims": [
+        {
+          "id": "phase",
+          "text": "The synthesis identifies regional adoption of maize-based agriculture during1100–300BP, associated with stronger ecological impacts.",
+          "status": "under discussion",
+          "explanation": "Regional proxy synthesis; not a census or uniform basin-wide transition.",
+          "support": [
+            {
+              "sourceId": "fulton-yansa2021",
+              "locator": "Abstract; Materials and Methods; synthesis phases",
+              "stance": "supports",
+              "note": "Supports this specific finding within its stated source scope."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "fulton-yansa2021",
+          "authors": "Albert E. Fulton II and Catherine H. Yansa",
+          "title": "Onset of the Paleoanthropocene in the Lower Great Lakes Region of North America: An Archaeological and Paleoecological Synthesis",
+          "year": 2021,
+          "venue": "Annals of the American Association of Geographers 111(3):771–783",
+          "url": "https://doi.org/10.1080/24694452.2020.1846489",
+          "access": "Institutional abstract plus author-uploaded full text inspected on ResearchGate, uploaded by Albert E. Fulton II February5,2021. Methods calibrate archaeological dates with Calib7.0.4/IntCal13; median2σ ages binned by100years. Publisher version states online January31,2021, correcting input2020.",
+          "referenceType": "journal-article",
+          "doi": "10.1080/24694452.2020.1846489"
+        }
+      ],
+      "review": {
+        "summary": "Research intake reviewed against primary publications and author institutional records; factual scope, original chronology and interpretive uncertainty are preserved.",
+        "limitations": "Broad phases; local variation and proxy biases remain.",
+        "discussion": "Calibration verified in primary methods; no interpolation into resident counts.",
+        "provenance": "User-supplied Great Lakes synthesis and all20 bibliography entries audited2026-10-28. Source access statements distinguish full text, abstracts, reviews and unresolved metadata.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "environment",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -80,
+            43
+          ]
+        },
+        "precision": "Rounded regional display anchor only; not a site, route, occupation boundary or confidence area.",
+        "provenance": "Geographic study scope named by the cited publication; illustrative regional locator selected for display only."
+      }
+    },
+    {
+      "id": "greatlakes-alpena-hunting-landscape",
+      "revision": 1,
+      "type": "event",
+      "title": "Alpena–Amberley Ridge — submerged hunting landscape",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Lake Stanley lowstand between10,000 and8,000years ago",
+        "method": "Published chronology retained in its original scope and units",
+        "interpretation": "Review gives a broad lowstand envelope without explicit BP/calendar convention here; it is not a date for every drive lane. No direct calendar conversion."
+      },
+      "claims": [
+        {
+          "id": "hunting",
+          "text": "Multiple mapped and sampled structures on the submerged ridge are interpreted as caribou hunting complexes.",
+          "status": "disputed",
+          "explanation": "Stone hunting interpretation and specifically caribou targeting are debated. White questions ecological/chronological assumptions and calls for alternative game hypotheses; regional faunal presence does not settle target species.",
+          "support": [
+            {
+              "sourceId": "sonnenburg2025-submerged",
+              "locator": "Section4: Alpena-Amberley Ridge2011–present",
+              "stance": "supports",
+              "note": "Supports this specific finding within its stated source scope."
+            },
+            {
+              "sourceId": "oshea-meadows2009",
+              "locator": "Abstract and discussion",
+              "stance": "supports",
+              "note": "Initial feature analogy; cultural origin and age required further ground-truthing."
+            },
+            {
+              "sourceId": "white2021-aar",
+              "locator": "Abstract",
+              "stance": "challenges",
+              "note": "Challenges caribou-specific ecological and chronological interpretation; proposes testing other large-game alternatives."
+            },
+            {
+              "sourceId": "lemke2015-rangifer",
+              "locator": "Abstract and materials/results",
+              "stance": "context",
+              "note": "Regional Rangifer presence supports ecological plausibility but most specimens are paleontological; cervid tooth alone does not identify caribou at the structures."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "sonnenburg2025-submerged",
+          "authors": "Lisa Sonnenburg",
+          "title": "Research in Great Lakes submerged site archaeology: past, present and future",
+          "year": 2025,
+          "venue": "Frontiers in Environmental Archaeology 4:1513697",
+          "url": "https://doi.org/10.3389/fearc.2025.1513697",
+          "access": "Publisher full perspective article read, especially introduction, section4 and section5; includes author's research experience but also reviews earlier field studies.",
+          "referenceType": "journal-article",
+          "doi": "10.3389/fearc.2025.1513697"
+        },
+        {
+          "id": "white2021-aar",
+          "authors": "Andrew A. White",
+          "title": "A Critique of the Case for Paleoindian Caribou Hunting on the Submerged Alpena-Amberley Ridge",
+          "year": 2021,
+          "venue": "PaleoAmerica7(4):287–304",
+          "url": "https://doi.org/10.1080/20555563.2021.1942651",
+          "access": "Author institutional abstract read. Interpretive critique, not newly excavated counter-evidence.",
+          "referenceType": "journal-article",
+          "doi": "10.1080/20555563.2021.1942651"
+        },
+        {
+          "id": "oshea-meadows2009",
+          "authors": "John M. O'Shea and Guy A. Meadows",
+          "title": "Evidence for early hunters beneath the Great Lakes",
+          "year": 2009,
+          "venue": "PNAS106(25):10120–10123",
+          "url": "https://doi.org/10.1073/pnas.0902785106",
+          "access": "Primary full article on PMC and institutional PDF inspected;2009 remote-sensing interpretation and need for ground-truthing retained.",
+          "referenceType": "journal-article",
+          "doi": "10.1073/pnas.0902785106"
+        },
+        {
+          "id": "lemke2015-rangifer",
+          "authors": "Ashley Kate Lemke",
+          "title": "Great Lakes Rangifer and Paleoindians: Archaeological and Paleontological Caribou Remains from Michigan",
+          "year": 2015,
+          "venue": "PaleoAmerica1(3):276–283",
+          "url": "https://doi.org/10.1179/2055557115Y.0000000003",
+          "access": "Author-uploaded full text inspected: abstract and materials/results;27specimens include1archaeological and26paleontological specimens.",
+          "referenceType": "journal-article",
+          "doi": "10.1179/2055557115Y.0000000003"
+        }
+      ],
+      "review": {
+        "summary": "Research intake reviewed against primary publications and author institutional records; factual scope, original chronology and interpretive uncertainty are preserved.",
+        "limitations": "Regional evidence does not establish a named people's identity, exact settlement position, resident count or continuous occupation.",
+        "discussion": "Interpretation is explicitly challenged by White2021. A published Lemke2021 reply was identified from the journal issue but its argument was not accessed, so it is not characterized. The2009 survey and2025 perspective are not treated as independent votes establishing species.",
+        "provenance": "User-supplied Great Lakes synthesis and all20 bibliography entries audited2026-10-28. Source access statements distinguish full text, abstracts, reviews and unresolved metadata.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No supported individual location or sufficiently resolved geographic extent plotted.",
+        "provenance": "Geographic study scope named by the cited publication; illustrative regional locator selected for display only."
+      }
+    },
+    {
+      "id": "greatlakes-submerged-visibility",
+      "revision": 1,
+      "type": "event",
+      "title": "Great Lakes — inundation and archaeological visibility",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Postglacial water-level changes; no single event interval",
+        "method": "Published chronology retained in its original scope and units",
+        "interpretation": "A methodological finding spans different landscapes and episodes; no bounded cultural event is supplied."
+      },
+      "claims": [
+        {
+          "id": "visibility",
+          "text": "Changing water levels submerged former landscapes, so gaps in terrestrial records may partly reflect inundation.",
+          "status": "well-supported",
+          "explanation": "This motivates submerged survey and cautions against mapping an absence of finds as absence of people.",
+          "support": [
+            {
+              "sourceId": "sonnenburg2025-submerged",
+              "locator": "Introduction",
+              "stance": "supports",
+              "note": "Supports this specific finding within its stated source scope."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "sonnenburg2025-submerged",
+          "authors": "Lisa Sonnenburg",
+          "title": "Research in Great Lakes submerged site archaeology: past, present and future",
+          "year": 2025,
+          "venue": "Frontiers in Environmental Archaeology 4:1513697",
+          "url": "https://doi.org/10.3389/fearc.2025.1513697",
+          "access": "Publisher full perspective article read, especially introduction, section4 and section5; includes author's research experience but also reviews earlier field studies.",
+          "referenceType": "journal-article",
+          "doi": "10.3389/fearc.2025.1513697"
+        }
+      ],
+      "review": {
+        "summary": "Research intake reviewed against primary publications and author institutional records; factual scope, original chronology and interpretive uncertainty are preserved.",
+        "limitations": "Regional evidence does not establish a named people's identity, exact settlement position, resident count or continuous occupation.",
+        "discussion": "Interpretation follows the evidence type. Proxy frequencies, modeled movements and environmental associations are not equivalent to counts of people or mapped migration routes.",
+        "provenance": "User-supplied Great Lakes synthesis and all20 bibliography entries audited2026-10-28. Source access statements distinguish full text, abstracts, reviews and unresolved metadata.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "environment",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No supported individual location or sufficiently resolved geographic extent plotted.",
+        "provenance": "Geographic study scope named by the cited publication; illustrative regional locator selected for display only."
+      }
+    },
+    {
+      "id": "greatlakes-eastern-up-settlement-settings",
+      "revision": 1,
+      "type": "event",
+      "title": "Eastern Upper Peninsula — settlement and shore settings",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Middle/Late Woodland sample ca.3000–300years before present",
+        "method": "Published chronology retained in its original scope and units",
+        "interpretation": "Calibration convention is not explicit in the abstract. The input's50–1500CE conversion is rejected."
+      },
+      "claims": [
+        {
+          "id": "settings",
+          "text": "Known occupations tend toward low-slope bedrock and lowland settings near Great Lakes shores.",
+          "status": "well-supported",
+          "explanation": "The study compares archaeological sites,1850s survey records and modern urban land cover. Similar aggregate settings do not establish continuity of particular communities.",
+          "support": [
+            {
+              "sourceId": "silbernagel1997",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "Supports this specific finding within its stated source scope."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "silbernagel1997",
+          "authors": "Janet Silbernagel, Susan R. Martin, Margaret R. Gale, and Jiquan Chen",
+          "title": "Prehistoric, historic, and present settlement patterns related to ecological hierarchy in the Eastern Upper Peninsula of Michigan, U.S.A.",
+          "year": 1997,
+          "venue": "Landscape Ecology 12:223–240",
+          "url": "https://doi.org/10.1023/A:1007946907682",
+          "access": "Publisher abstract and metadata read. Abstract's3000–300years BP is not explicitly labeled calibrated; no calendar conversion used.",
+          "referenceType": "journal-article",
+          "doi": "10.1023/A:1007946907682"
+        }
+      ],
+      "review": {
+        "summary": "Research intake reviewed against primary publications and author institutional records; factual scope, original chronology and interpretive uncertainty are preserved.",
+        "limitations": "Regional evidence does not establish a named people's identity, exact settlement position, resident count or continuous occupation.",
+        "discussion": "Interpretation follows the evidence type. Proxy frequencies, modeled movements and environmental associations are not equivalent to counts of people or mapped migration routes.",
+        "provenance": "User-supplied Great Lakes synthesis and all20 bibliography entries audited2026-10-28. Source access statements distinguish full text, abstracts, reviews and unresolved metadata.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No supported individual location or sufficiently resolved geographic extent plotted.",
+        "provenance": "Geographic study scope named by the cited publication; illustrative regional locator selected for display only."
+      }
+    },
+    {
+      "id": "greatlakes-cloudman-chronology",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Cloudman — revised pottery and trade chronology",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Pottery-making occupation culminates byAD1500; glass beads manufactured afterAD1650",
+        "method": "Published chronology retained in its original scope and units",
+        "interpretation": "These are open temporal constraints, not a closed1300–1700occupation interval. No exact site position extracted."
+      },
+      "claims": [
+        {
+          "id": "chronology",
+          "text": "AMS residue dates place the culmination of pottery-making occupations byAD1500; glass bead composition indicates manufacture afterAD1650.",
+          "status": "under discussion",
+          "explanation": "The earlier apparent association aroundAD1630 is revised. Object manufacture after1650does not by itself date occupation to1650or document movement of the object's makers.",
+          "support": [
+            {
+              "sourceId": "kooiman-walder2019",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "Supports this specific finding within its stated source scope."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "kooiman-walder2019",
+          "authors": "Susan M. Kooiman and Heather Walder",
+          "title": "Reconsidering the Chronology: Carbonized Food Residue, Accelerator Mass Spectrometry Dates, and Compositional Analysis of a Curated Collection from the Upper Great Lakes",
+          "year": 2019,
+          "venue": "American Antiquity 84(3):495–515",
+          "url": "https://doi.org/10.1017/aaq.2019.33",
+          "access": "Publisher abstract and metadata read; full results/tables not accessed. Replaces reliance on the2024 book review for chronological claims.",
+          "referenceType": "journal-article",
+          "doi": "10.1017/aaq.2019.33"
+        }
+      ],
+      "review": {
+        "summary": "Research intake reviewed against primary publications and author institutional records; factual scope, original chronology and interpretive uncertainty are preserved.",
+        "limitations": "Publisher abstract only; full sample ranges and reservoir-effect assessment not reviewed. Drummond Island is known but an exact public site locator was not established.",
+        "discussion": "Coexisting pottery styles do not establish ethnic identity. Pottery and later trade goods must not be flattened into a continuous, uniformly dated village.",
+        "provenance": "User-supplied Great Lakes synthesis and all20 bibliography entries audited2026-10-28. Source access statements distinguish full text, abstracts, reviews and unresolved metadata.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "greatlakes-cloudman-cuisine",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Cloudman — culinary continuity and dietary variation",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Multiple Woodland and later components; exact occupation intervals not extracted",
+        "method": "Published chronology retained in its original scope and units",
+        "interpretation": "Author's dissertation abstract supports change through time but not a single bounded residence span."
+      },
+      "claims": [
+        {
+          "id": "foodways",
+          "text": "Multiproxy residue analysis indicates sustained aquatic-resource and probable acorn use alongside variable maize and wild-rice exploitation.",
+          "status": "under discussion",
+          "explanation": "The author's integrated interpretation preserves continuity and choice rather than a simple replacement of hunting by agriculture.",
+          "support": [
+            {
+              "sourceId": "kooiman2018-dissertation",
+              "locator": "Author-hosted dissertation abstract",
+              "stance": "supports",
+              "note": "Supports this specific finding within its stated source scope."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "kooiman2018-dissertation",
+          "authors": "Susan M. Kooiman",
+          "title": "A multiproxy analysis of culinary, technological, and environmental interactions in the northern Great Lakes region",
+          "year": 2018,
+          "venue": "Michigan State University doctoral dissertation",
+          "url": "https://michiganstate.academia.edu/SusanKooiman",
+          "access": "Author-hosted dissertation abstract read; full chapter dating tables not reviewed.",
+          "referenceType": "thesis",
+          "publisher": "Michigan State University"
+        }
+      ],
+      "review": {
+        "summary": "Research intake reviewed against primary publications and author institutional records; factual scope, original chronology and interpretive uncertainty are preserved.",
+        "limitations": "Dissertation abstract read; no exact public locator or chapter-level occupation bounds extracted. Book review claims are not treated as new primary analyses.",
+        "discussion": "Food residues identify cooking and processing evidence; they do not independently measure population size, maize dependence or ethnic ancestry.",
+        "provenance": "User-supplied Great Lakes synthesis and all20 bibliography entries audited2026-10-28. Source access statements distinguish full text, abstracts, reviews and unresolved metadata.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "greatlakes-sleepingbear-taphonomy",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Sleeping Bear Point20LU115 — coastal site preservation",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Late Woodland archaeological site; landscape framework covers past2,000years",
+        "method": "Published chronology retained in its original scope and units",
+        "interpretation": "The abstract's environmental study duration is not an occupation interval. No exact site coordinates or habitation bounds supplied in accessible primary abstract."
+      },
+      "claims": [
+        {
+          "id": "taphonomy",
+          "text": "The site study integrates changing lake levels, coastlines, vegetation and dune activity to explain preservation and destruction.",
+          "status": "well-supported",
+          "explanation": "The result concerns how an occupation enters the surviving record, not a dated migration or a count of residents.",
+          "support": [
+            {
+              "sourceId": "lovis2020-sleepingbear",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "Supports this specific finding within its stated source scope."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "lovis2020-sleepingbear",
+          "authors": "William A. Lovis, G. William Monaghan, and Alan F. Arbogast",
+          "title": "Reconstructing the precontact Late Woodland archaeology of site20LU115 and the landscape history of Sleeping Bear Point, Great Lakes, USA",
+          "year": 2020,
+          "venue": "The Journal of Island and Coastal Archaeology 16(2–4):371–391",
+          "url": "https://doi.org/10.1080/15564894.2019.1659885",
+          "access": "Authors' abstract visible in publication listing read; publisher fetch failed. Online2020/issue2021 distinction retained; no site occupation bounds extracted from unrelated landscape extent.",
+          "referenceType": "journal-article",
+          "doi": "10.1080/15564894.2019.1659885"
+        }
+      ],
+      "review": {
+        "summary": "Research intake reviewed against primary publications and author institutional records; factual scope, original chronology and interpretive uncertainty are preserved.",
+        "limitations": "Accessible author abstract only. No invented location at a tourist trailhead or entire Sleeping Bear Point centroid.",
+        "discussion": "Dynamic coastal exposure can alter find distributions; visible material does not necessarily represent the original settlement extent or intensity.",
+        "provenance": "User-supplied Great Lakes synthesis and all20 bibliography entries audited2026-10-28. Source access statements distinguish full text, abstracts, reviews and unresolved metadata.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "greatlakes-fitting-cleland-adaptation",
+      "revision": 1,
+      "type": "event",
+      "title": "Upper Great Lakes — adaptation models and identity limits",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Late Woodland compared with early historic adaptations",
+        "method": "Published chronology retained in its original scope and units",
+        "interpretation": "Historical model spans differing settings; no single independently dated event bounds."
+      },
+      "claims": [
+        {
+          "id": "analogy",
+          "text": "Fitting and Cleland project ecological adaptations, explicitly not ethnic groups, into prehistory.",
+          "status": "under discussion",
+          "explanation": "Their paper assigns agriculture-favorable Carolinian settings to the southern area. Its ceramic/lithic sex-ratio assumptions are hypotheses rather than measured prehistoric demographics.",
+          "support": [
+            {
+              "sourceId": "fitting-cleland1969",
+              "locator": "Pp.289,292–293",
+              "stance": "supports",
+              "note": "Supports this specific finding within its stated source scope."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "fitting-cleland1969",
+          "authors": "James E. Fitting and Charles E. Cleland",
+          "title": "Late Prehistoric Settlement Patterns in the Upper Great Lakes",
+          "year": 1969,
+          "venue": "Ethnohistory 16(4):289–302",
+          "url": "https://doi.org/10.2307/480965",
+          "access": "Primary article PDF mirrored by Turtle Talk inspected, especially pp.289–294. Historical interpretive model, not direct proof of prehistoric ethnicity or sex ratios.",
+          "referenceType": "journal-article",
+          "doi": "10.2307/480965"
+        }
+      ],
+      "review": {
+        "summary": "Research intake reviewed against primary publications and author institutional records; factual scope, original chronology and interpretive uncertainty are preserved.",
+        "limitations": "Regional evidence does not establish a named people's identity, exact settlement position, resident count or continuous occupation.",
+        "discussion": "Interpretation follows the evidence type. Proxy frequencies, modeled movements and environmental associations are not equivalent to counts of people or mapped migration routes.",
+        "provenance": "User-supplied Great Lakes synthesis and all20 bibliography entries audited2026-10-28. Source access statements distinguish full text, abstracts, reviews and unresolved metadata.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No supported individual location or sufficiently resolved geographic extent plotted.",
+        "provenance": "Geographic study scope named by the cited publication; illustrative regional locator selected for display only."
+      }
+    },
+    {
+      "id": "greatlakes-hipwater-parkhill",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Hipwater — small Parkhill-phase activity locale",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -10250,
+        "end": -9650,
+        "approximate": true,
+        "original": "Parkhill Phase Middle Paleoindian, ca.12,200–11,600cal yrBP",
+        "method": "Typological phase assignment, with interdisciplinary assemblage and landscape study",
+        "interpretation": "1950 minus published calibrated phase bounds; activity occurred somewhere within this broad phase. Landform stabilization14,000–13,600calBP is not occupation dating."
+      },
+      "claims": [
+        {
+          "id": "activity",
+          "text": "A small assemblage suggests brief but intensive activity with possible hearth evidence and tools made from Bayport chert.",
+          "status": "under discussion",
+          "explanation": "The12,200–11,600calBP bracket is phase attribution, not a600-year continuous campsite. Primary outcrops are~170km away; secondary glacial sources nearer the site remain possible.",
+          "support": [
+            {
+              "sourceId": "lovis2022-hipwater",
+              "locator": "Abstract; sections8–9",
+              "stance": "supports",
+              "note": "Supports the stated inference at the described evidence resolution."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "lovis2022-hipwater",
+          "authors": "William A. Lovis, Alan F. Arbogast, Dillon H. Carr, Randolph E. Donahue, Kurt Rademaker, and Kevin McKeehan",
+          "title": "The Parkhill Phase Middle Paleoindian Hipwater Site, Great Lakes, USA",
+          "year": 2022,
+          "venue": "PaleoAmerica8(4):315–329",
+          "url": "https://doi.org/10.1080/20555563.2022.2135478",
+          "access": "Author-uploaded full text inspected: abstract, Bayport sourcing and discussion. Typological12,200–11,600calBP assignment; exact coordinates not extracted.",
+          "referenceType": "journal-article",
+          "doi": "10.1080/20555563.2022.2135478"
+        }
+      ],
+      "review": {
+        "summary": "Research intake reviewed against primary publications and author institutional records; factual scope, original chronology and interpretive uncertainty are preserved.",
+        "limitations": "No exact defensible public site coordinate extracted; no generic county or tourist-point coordinate substituted. Time bounds preserve the publication's resolution.",
+        "discussion": "Interpretation follows the evidence type. Proxy frequencies, modeled movements and environmental associations are not equivalent to counts of people or mapped migration routes.",
+        "provenance": "Both Great Lakes input batches reconciled2026-10-28; actual access scope stated in citations.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "greatlakes-western-generalized-foraging",
+      "revision": 1,
+      "type": "event",
+      "title": "Western Great Lakes — Late Paleoindian faunal breadth",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Late Paleoindian–Early Archaic",
+        "method": "Original publication scope and units retained",
+        "interpretation": "Publisher abstract gives no explicit calendar date spans or exact public site coordinates; no generic period boundaries inserted."
+      },
+      "claims": [
+        {
+          "id": "subsistence",
+          "text": "Faunal evidence from Deadman Slough and Sucices supports a generalized foraging model across varied habitats.",
+          "status": "under discussion",
+          "explanation": "The abstract challenges reliance on an exclusively focused big-game model. It does not quantify each resource's dietary share.",
+          "support": [
+            {
+              "sourceId": "kuehn1998",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "Supports the stated inference at the described evidence resolution."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "kuehn1998",
+          "authors": "Steven R. Kuehn",
+          "title": "New Evidence for Late Paleoindian–Early Archaic Subsistence Behavior in the Western Great Lakes",
+          "year": 1998,
+          "venue": "American Antiquity63(3):457–476",
+          "url": "https://doi.org/10.2307/2694630",
+          "access": "Publisher abstract read; no full sample or occupation date tables inspected.",
+          "referenceType": "journal-article",
+          "doi": "10.2307/2694630"
+        }
+      ],
+      "review": {
+        "summary": "Research intake reviewed against primary publications and author institutional records; factual scope, original chronology and interpretive uncertainty are preserved.",
+        "limitations": "Regional evidence does not establish a named people's identity, exact settlement position, resident count or continuous occupation.",
+        "discussion": "Interpretation follows the evidence type. Proxy frequencies, modeled movements and environmental associations are not equivalent to counts of people or mapped migration routes.",
+        "provenance": "Both Great Lakes input batches reconciled2026-10-28; actual access scope stated in citations.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No supported individual location or sufficiently resolved geographic extent plotted.",
+        "provenance": "Geographic study scope named by the cited publication; illustrative regional locator selected for display only."
+      }
+    },
+    {
+      "id": "greatlakes-ricelake-eh1",
+      "revision": 1,
+      "type": "event",
+      "title": "Rice Lake — early lowstand landscape",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": -10550,
+        "end": -9050,
+        "approximate": true,
+        "original": "12.5–11ka calBP",
+        "method": "Sediment facies, testate amoebae, radiocarbon chronology and microdebitage",
+        "interpretation": "1950 minus explicit calibrated BP. Environmental envelope, not a habitation duration."
+      },
+      "claims": [
+        {
+          "id": "lowstand",
+          "text": "Core analyses identify a lowstand interval at12.5–11ka calBP.",
+          "status": "under discussion",
+          "explanation": "Microdebitage and wetland-associated microfossils support likely human use of wetland resources duringEH-1.",
+          "support": [
+            {
+              "sourceId": "sonnenburg2013-rice",
+              "locator": "Abstract; water-level reconstruction",
+              "stance": "supports",
+              "note": "Supports the stated inference at the described evidence resolution."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "sonnenburg2013-rice",
+          "authors": "Elizabeth P. Sonnenburg, Joseph I. Boyce, and Eduard G. Reinhardt",
+          "title": "Multi-proxy lake sediment record of prehistoric (Paleoindian–Archaic) archaeological paleoenvironments at Rice Lake, Ontario, Canada",
+          "year": 2013,
+          "venue": "Quaternary Science Reviews",
+          "url": "https://doi.org/10.1016/j.quascirev.2013.05.012",
+          "access": "Publisher abstract, highlights, introduction and section previews read. Lowstands explicitly ka calBP; archaeological association stronger forEH-1.",
+          "referenceType": "journal-article",
+          "doi": "10.1016/j.quascirev.2013.05.012"
+        }
+      ],
+      "review": {
+        "summary": "Research intake reviewed against primary publications and author institutional records; factual scope, original chronology and interpretive uncertainty are preserved.",
+        "limitations": "Regional evidence does not establish a named people's identity, exact settlement position, resident count or continuous occupation.",
+        "discussion": "Interpretation follows the evidence type. Proxy frequencies, modeled movements and environmental associations are not equivalent to counts of people or mapped migration routes.",
+        "provenance": "Both Great Lakes input batches reconciled2026-10-28; actual access scope stated in citations.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "environment",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -78,
+            44
+          ]
+        },
+        "precision": "Rounded regional display anchor only, not an archaeological site or confidence region.",
+        "provenance": "Geographic study scope named by the cited publication; illustrative regional locator selected for display only."
+      }
+    },
+    {
+      "id": "greatlakes-ricelake-eh2",
+      "revision": 1,
+      "type": "event",
+      "title": "Rice Lake — later lowstand landscape",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": -4050,
+        "end": -1050,
+        "approximate": true,
+        "original": "6–3ka calBP",
+        "method": "Sediment facies, testate amoebae, radiocarbon chronology and microdebitage",
+        "interpretation": "1950 minus explicit calibrated BP. Environmental envelope, not a habitation duration."
+      },
+      "claims": [
+        {
+          "id": "lowstand",
+          "text": "Core analyses identify a lowstand interval at6–3ka calBP.",
+          "status": "under discussion",
+          "explanation": "A second erosional hiatus records a later lowstand; this does not by itself demonstrate continuous occupation or identical subsistence throughoutEH-2.",
+          "support": [
+            {
+              "sourceId": "sonnenburg2013-rice",
+              "locator": "Abstract; water-level reconstruction",
+              "stance": "supports",
+              "note": "Supports the stated inference at the described evidence resolution."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "sonnenburg2013-rice",
+          "authors": "Elizabeth P. Sonnenburg, Joseph I. Boyce, and Eduard G. Reinhardt",
+          "title": "Multi-proxy lake sediment record of prehistoric (Paleoindian–Archaic) archaeological paleoenvironments at Rice Lake, Ontario, Canada",
+          "year": 2013,
+          "venue": "Quaternary Science Reviews",
+          "url": "https://doi.org/10.1016/j.quascirev.2013.05.012",
+          "access": "Publisher abstract, highlights, introduction and section previews read. Lowstands explicitly ka calBP; archaeological association stronger forEH-1.",
+          "referenceType": "journal-article",
+          "doi": "10.1016/j.quascirev.2013.05.012"
+        }
+      ],
+      "review": {
+        "summary": "Research intake reviewed against primary publications and author institutional records; factual scope, original chronology and interpretive uncertainty are preserved.",
+        "limitations": "Regional evidence does not establish a named people's identity, exact settlement position, resident count or continuous occupation.",
+        "discussion": "Interpretation follows the evidence type. Proxy frequencies, modeled movements and environmental associations are not equivalent to counts of people or mapped migration routes.",
+        "provenance": "Both Great Lakes input batches reconciled2026-10-28; actual access scope stated in citations.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "environment",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -78,
+            44
+          ]
+        },
+        "precision": "Rounded regional display anchor only, not an archaeological site or confidence region.",
+        "provenance": "Geographic study scope named by the cited publication; illustrative regional locator selected for display only."
+      }
+    },
+    {
+      "id": "greatlakes-saginaw-lithic-interaction",
+      "revision": 1,
+      "type": "event",
+      "title": "Saginaw drainage — lake-level and lithic interaction changes",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Post-Nipissing recession ca.3200BP; later Late Woodland use",
+        "method": "Original publication scope and units retained",
+        "interpretation": "Abstract'sBP calibration convention unverified. Two different occupations and open later chronology are not collapsed into a closed invented interval."
+      },
+      "claims": [
+        {
+          "id": "materials",
+          "text": "Bay City sites20BY28 and20BY387 show local bipolar chert reduction in earlier components and increasing Onondaga chert in later components.",
+          "status": "under discussion",
+          "explanation": "Authors infer changing mobility and exchange partly enabled by falling lake levels. Material movement is not proof of population migration.",
+          "support": [
+            {
+              "sourceId": "cook-lovis2014",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "Supports the stated inference at the described evidence resolution."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "cook-lovis2014",
+          "authors": "Robert A. Cook and William A. Lovis",
+          "title": "Lake levels, mobility and lithic raw material selection and reduction strategies: A Great Lakes case study",
+          "year": 2014,
+          "venue": "Environmental Archaeology19(1):55–71",
+          "url": "https://doi.org/10.1179/1749631413Y.0000000001",
+          "access": "Publication abstract visible in author listing read; publisher fetch failed. Full text not accessed; BP calibration not established.",
+          "referenceType": "journal-article",
+          "doi": "10.1179/1749631413Y.0000000001"
+        }
+      ],
+      "review": {
+        "summary": "Research intake reviewed against primary publications and author institutional records; factual scope, original chronology and interpretive uncertainty are preserved.",
+        "limitations": "Regional evidence does not establish a named people's identity, exact settlement position, resident count or continuous occupation.",
+        "discussion": "Interpretation follows the evidence type. Proxy frequencies, modeled movements and environmental associations are not equivalent to counts of people or mapped migration routes.",
+        "provenance": "Both Great Lakes input batches reconciled2026-10-28; actual access scope stated in citations.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No supported individual location or sufficiently resolved geographic extent plotted.",
+        "provenance": "Geographic study scope named by the cited publication; illustrative regional locator selected for display only."
+      }
+    },
+    {
+      "id": "greatlakes-cummins-context",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Cummins — stratified Lake Minong shoreline context",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Paleoindian assemblages and Lake Minong shorelines",
+        "method": "Original publication scope and units retained",
+        "interpretation": "Complete site chronology and BP calibration convention not extracted; no guessed calendar occupation bounds."
+      },
+      "claims": [
+        {
+          "id": "context",
+          "text": "The Cummins study examines stratified Paleoindian assemblages at Thunder Bay in relation to proglacial shoreline development.",
+          "status": "under discussion",
+          "explanation": "Its geoarchaeological framing emphasizes formation processes and post-occupation disturbance; shoreline age alone is not a directly dated settlement.",
+          "support": [
+            {
+              "sourceId": "julig1990-cummins",
+              "locator": "Chapter2 introduction",
+              "stance": "supports",
+              "note": "Supports the stated inference at the described evidence resolution."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "julig1990-cummins",
+          "authors": "P. J. Julig, J. H. McAndrews, and William C. Mahaney",
+          "title": "Geoarchaeology of the Cummins site on the beach of proglacial Lake Minong, Lake Superior Basin, Canada",
+          "year": 1990,
+          "venue": "Archaeological Geology of North America, GSA Centennial Special Volume4, chapter2",
+          "url": "https://www.lakeheadu.ca/sites/default/files/uploads/53/outlines/2014-15/NECU5311/Juligetal_1990_GSA_Cummins.pdf",
+          "access": "Institution-hosted primary PDF introductory text inspected via indexed text. No complete occupation dating table extracted.",
+          "referenceType": "book-chapter",
+          "publisher": "Geological Society of America",
+          "editors": "N. P. Lasca and J. Donahue",
+          "pages": "21–49"
+        }
+      ],
+      "review": {
+        "summary": "Research intake reviewed against primary publications and author institutional records; factual scope, original chronology and interpretive uncertainty are preserved.",
+        "limitations": "No exact defensible public site coordinate extracted; no generic county or tourist-point coordinate substituted. Time bounds preserve the publication's resolution.",
+        "discussion": "Interpretation follows the evidence type. Proxy frequencies, modeled movements and environmental associations are not equivalent to counts of people or mapped migration routes.",
+        "provenance": "Both Great Lakes input batches reconciled2026-10-28; actual access scope stated in citations.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      }
+    }
+  ],
+  "updates": [],
+  "sourceRegister": [
+    {
+      "sourceId": "nash2024-belson",
+      "title": "Clovis organizational dynamics at a Late Glacial campsite in the central Great Lakes: Belson site excavations 2020–2021",
+      "authors": "Brendan Nash, Thomas Talbot, Henry T. Wright, Elliot Greiner, and Linda Scott Cummings",
+      "year": 2024,
+      "url": "https://doi.org/10.1371/journal.pone.0302255",
+      "inputReferences": [
+        "batch1:1"
+      ],
+      "disposition": "used",
+      "access": "Publisher full text read: abstract, introduction, residue study, conclusions, and dating caveat.",
+      "recordIds": [
+        "greatlakes-belson-clovis"
+      ]
+    },
+    {
+      "sourceId": "ellis2011-mobility",
+      "title": "Measuring Paleoindian range mobility and land-use in the Great Lakes/Northeast",
+      "authors": "Christopher J. Ellis",
+      "year": 2011,
+      "url": "https://doi.org/10.1016/j.jaa.2011.05.001",
+      "inputReferences": [
+        "batch1:2"
+      ],
+      "disposition": "used",
+      "access": "Publisher abstract, highlights, introduction and available section excerpts read; subscription full text not accessed.",
+      "recordIds": [
+        "greatlakes-paleoindian-range-mobility"
+      ]
+    },
+    {
+      "sourceId": "lothrop2016-northeast",
+      "title": "Early Human Settlement of Northeastern North America",
+      "authors": "Jonathan C. Lothrop, Darrin L. Lowery, Arthur E. Spiess, and Christopher J. Ellis",
+      "year": 2016,
+      "url": "https://doi.org/10.1080/20555563.2016.1212178",
+      "inputReferences": [
+        "batch1:3",
+        "batch2:3"
+      ],
+      "disposition": "used",
+      "access": "Publisher open-access text inspected: chronology and early Paleoindian settlement sections. Regional review, not a directly dated single occupation.",
+      "recordIds": [
+        "greatlakes-eastern-initial-settlement"
+      ]
+    },
+    {
+      "sourceId": "ellis2011-youngerdryas",
+      "title": "The Younger Dryas and Late Pleistocene peoples of the Great Lakes region",
+      "authors": "Christopher J. Ellis, Dillon H. Carr, and Thomas J. Loebel",
+      "year": 2011,
+      "url": "https://doi.org/10.1016/j.quaint.2011.02.038",
+      "inputReferences": [
+        "batch1:5",
+        "batch2:6"
+      ],
+      "disposition": "used",
+      "access": "Author institutional abstract and primary author PDF abstract/introduction read. Original dates explicitly radiocarbon BP.",
+      "recordIds": [
+        "greatlakes-youngerdryas-reorganization"
+      ]
+    },
+    {
+      "sourceId": "fulton-yansa2021",
+      "title": "Onset of the Paleoanthropocene in the Lower Great Lakes Region of North America: An Archaeological and Paleoecological Synthesis",
+      "authors": "Albert E. Fulton II and Catherine H. Yansa",
+      "year": 2021,
+      "url": "https://doi.org/10.1080/24694452.2020.1846489",
+      "inputReferences": [
+        "batch1:6"
+      ],
+      "disposition": "used",
+      "access": "Institutional abstract plus author-uploaded full text inspected on ResearchGate, uploaded by Albert E. Fulton II February5,2021. Methods calibrate archaeological dates with Calib7.0.4/IntCal13; median2σ ages binned by100years. Publisher version states online January31,2021, correcting input2020.",
+      "recordIds": [
+        "greatlakes-fulton-growth",
+        "greatlakes-fulton-maize-introduction",
+        "greatlakes-fulton-maize-agriculture"
+      ]
+    },
+    {
+      "sourceId": "legg2017-model",
+      "title": "Geoarchaeological Modeling of Late Paleoindian Site Location in the Northwestern Great Lakes Region",
+      "authors": "Robert J. Legg, Robert R. Regis, John M. Lambert, Matthew Liesch, and Charles B. Travis",
+      "year": 2017,
+      "url": "https://commons.nmu.edu/facwork_journalarticles/337/",
+      "inputReferences": [
+        "batch1:7",
+        "batch2:9"
+      ],
+      "disposition": "used",
+      "access": "Authors' Northern Michigan University repository abstract read; full date model and original site coordinates not accessed.",
+      "recordIds": [
+        "greatlakes-upperpeninsula-site-model"
+      ]
+    },
+    {
+      "sourceId": "sonnenburg2025-submerged",
+      "title": "Research in Great Lakes submerged site archaeology: past, present and future",
+      "authors": "Lisa Sonnenburg",
+      "year": 2025,
+      "url": "https://doi.org/10.3389/fearc.2025.1513697",
+      "inputReferences": [
+        "batch1:9"
+      ],
+      "disposition": "used",
+      "access": "Publisher full perspective article read, especially introduction, section4 and section5; includes author's research experience but also reviews earlier field studies.",
+      "recordIds": [
+        "greatlakes-alpena-hunting-landscape",
+        "greatlakes-submerged-visibility"
+      ]
+    },
+    {
+      "sourceId": "silbernagel1997",
+      "title": "Prehistoric, historic, and present settlement patterns related to ecological hierarchy in the Eastern Upper Peninsula of Michigan, U.S.A.",
+      "authors": "Janet Silbernagel, Susan R. Martin, Margaret R. Gale, and Jiquan Chen",
+      "year": 1997,
+      "url": "https://doi.org/10.1023/A:1007946907682",
+      "inputReferences": [
+        "batch1:10"
+      ],
+      "disposition": "used",
+      "access": "Publisher abstract and metadata read. Abstract's3000–300years BP is not explicitly labeled calibrated; no calendar conversion used.",
+      "recordIds": [
+        "greatlakes-eastern-up-settlement-settings"
+      ]
+    },
+    {
+      "sourceId": "lovis2020-sleepingbear",
+      "title": "Reconstructing the precontact Late Woodland archaeology of site20LU115 and the landscape history of Sleeping Bear Point, Great Lakes, USA",
+      "authors": "William A. Lovis, G. William Monaghan, and Alan F. Arbogast",
+      "year": 2020,
+      "url": "https://doi.org/10.1080/15564894.2019.1659885",
+      "inputReferences": [
+        "batch1:14",
+        "batch2:18"
+      ],
+      "disposition": "used",
+      "access": "Authors' abstract visible in publication listing read; publisher fetch failed. Online2020/issue2021 distinction retained; no site occupation bounds extracted from unrelated landscape extent.",
+      "recordIds": [
+        "greatlakes-sleepingbear-taphonomy"
+      ]
+    },
+    {
+      "sourceId": "fitting-cleland1969",
+      "title": "Late Prehistoric Settlement Patterns in the Upper Great Lakes",
+      "authors": "James E. Fitting and Charles E. Cleland",
+      "year": 1969,
+      "url": "https://doi.org/10.2307/480965",
+      "inputReferences": [
+        "batch1:20"
+      ],
+      "disposition": "used",
+      "access": "Primary article PDF mirrored by Turtle Talk inspected, especially pp.289–294. Historical interpretive model, not direct proof of prehistoric ethnicity or sex ratios.",
+      "recordIds": [
+        "greatlakes-fitting-cleland-adaptation"
+      ]
+    },
+    {
+      "sourceId": "lambert-loebel2015",
+      "title": "Paleoindian Colonization of the Recently Deglaciated Great Lakes: Mobility and Technological Organization in Eastern Wisconsin",
+      "authors": "John M. Lambert and Thomas J. Loebel",
+      "year": 2015,
+      "url": "https://doi.org/10.1179/2055557115Y.0000000002",
+      "inputReferences": [
+        "batch2:1"
+      ],
+      "disposition": "used",
+      "access": "Primary institutional PDF and author institutional abstract read; surface collection analysis and sourcing scope.",
+      "recordIds": [
+        "greatlakes-paleoindian-range-mobility"
+      ]
+    },
+    {
+      "sourceId": "talbot2021-belson",
+      "title": "The Belson Site: A Paleoindian Campsite on the Outwash Plains of the Central Great Lakes",
+      "authors": "Thomas Talbot, Henry T. Wright, and Brendan Nash",
+      "year": 2021,
+      "url": "https://doi.org/10.1080/20555563.2020.1848105",
+      "inputReferences": [
+        "batch2:4"
+      ],
+      "disposition": "used",
+      "access": "Publisher abstract read. It proposes an expected age about13,000calendar years ago conditional on Clovis technological attribution; direct age establishment is future work.",
+      "recordIds": [
+        "greatlakes-belson-clovis"
+      ]
+    },
+    {
+      "sourceId": "lovis2022-hipwater",
+      "title": "The Parkhill Phase Middle Paleoindian Hipwater Site, Great Lakes, USA",
+      "authors": "William A. Lovis, Alan F. Arbogast, Dillon H. Carr, Randolph E. Donahue, Kurt Rademaker, and Kevin McKeehan",
+      "year": 2022,
+      "url": "https://doi.org/10.1080/20555563.2022.2135478",
+      "inputReferences": [
+        "batch2:7"
+      ],
+      "disposition": "used",
+      "access": "Author-uploaded full text inspected: abstract, Bayport sourcing and discussion. Typological12,200–11,600calBP assignment; exact coordinates not extracted.",
+      "recordIds": [
+        "greatlakes-hipwater-parkhill"
+      ]
+    },
+    {
+      "sourceId": "kuehn1998",
+      "title": "New Evidence for Late Paleoindian–Early Archaic Subsistence Behavior in the Western Great Lakes",
+      "authors": "Steven R. Kuehn",
+      "year": 1998,
+      "url": "https://doi.org/10.2307/2694630",
+      "inputReferences": [
+        "batch2:8"
+      ],
+      "disposition": "used",
+      "access": "Publisher abstract read; no full sample or occupation date tables inspected.",
+      "recordIds": [
+        "greatlakes-western-generalized-foraging"
+      ]
+    },
+    {
+      "sourceId": "oshea-meadows2009",
+      "title": "Evidence for early hunters beneath the Great Lakes",
+      "authors": "John M. O'Shea and Guy A. Meadows",
+      "year": 2009,
+      "url": "https://doi.org/10.1073/pnas.0902785106",
+      "inputReferences": [
+        "batch2:11"
+      ],
+      "disposition": "used",
+      "access": "Primary full article on PMC and institutional PDF inspected;2009 remote-sensing interpretation and need for ground-truthing retained.",
+      "recordIds": [
+        "greatlakes-alpena-hunting-landscape"
+      ]
+    },
+    {
+      "sourceId": "white2021-aar",
+      "title": "A Critique of the Case for Paleoindian Caribou Hunting on the Submerged Alpena-Amberley Ridge",
+      "authors": "Andrew A. White",
+      "year": 2021,
+      "url": "https://doi.org/10.1080/20555563.2021.1942651",
+      "inputReferences": [
+        "batch2:12"
+      ],
+      "disposition": "used",
+      "access": "Author institutional abstract read. Interpretive critique, not newly excavated counter-evidence.",
+      "recordIds": [
+        "greatlakes-alpena-hunting-landscape"
+      ]
+    },
+    {
+      "sourceId": "lemke2015-rangifer",
+      "title": "Great Lakes Rangifer and Paleoindians: Archaeological and Paleontological Caribou Remains from Michigan",
+      "authors": "Ashley Kate Lemke",
+      "year": 2015,
+      "url": "https://doi.org/10.1179/2055557115Y.0000000003",
+      "inputReferences": [
+        "batch2:13"
+      ],
+      "disposition": "used",
+      "access": "Author-uploaded full text inspected: abstract and materials/results;27specimens include1archaeological and26paleontological specimens.",
+      "recordIds": [
+        "greatlakes-alpena-hunting-landscape"
+      ]
+    },
+    {
+      "sourceId": "julig1990-cummins",
+      "title": "Geoarchaeology of the Cummins site on the beach of proglacial Lake Minong, Lake Superior Basin, Canada",
+      "authors": "P. J. Julig, J. H. McAndrews, and William C. Mahaney",
+      "year": 1990,
+      "url": "https://www.lakeheadu.ca/sites/default/files/uploads/53/outlines/2014-15/NECU5311/Juligetal_1990_GSA_Cummins.pdf",
+      "inputReferences": [
+        "batch2:14"
+      ],
+      "disposition": "used",
+      "access": "Institution-hosted primary PDF introductory text inspected via indexed text. No complete occupation dating table extracted.",
+      "recordIds": [
+        "greatlakes-cummins-context"
+      ]
+    },
+    {
+      "sourceId": "sonnenburg2013-rice",
+      "title": "Multi-proxy lake sediment record of prehistoric (Paleoindian–Archaic) archaeological paleoenvironments at Rice Lake, Ontario, Canada",
+      "authors": "Elizabeth P. Sonnenburg, Joseph I. Boyce, and Eduard G. Reinhardt",
+      "year": 2013,
+      "url": "https://doi.org/10.1016/j.quascirev.2013.05.012",
+      "inputReferences": [
+        "batch2:15"
+      ],
+      "disposition": "used",
+      "access": "Publisher abstract, highlights, introduction and section previews read. Lowstands explicitly ka calBP; archaeological association stronger forEH-1.",
+      "recordIds": [
+        "greatlakes-ricelake-eh1",
+        "greatlakes-ricelake-eh2"
+      ]
+    },
+    {
+      "sourceId": "cook-lovis2014",
+      "title": "Lake levels, mobility and lithic raw material selection and reduction strategies: A Great Lakes case study",
+      "authors": "Robert A. Cook and William A. Lovis",
+      "year": 2014,
+      "url": "https://doi.org/10.1179/1749631413Y.0000000001",
+      "inputReferences": [
+        "batch2:16"
+      ],
+      "disposition": "used",
+      "access": "Publication abstract visible in author listing read; publisher fetch failed. Full text not accessed; BP calibration not established.",
+      "recordIds": [
+        "greatlakes-saginaw-lithic-interaction"
+      ]
+    },
+    {
+      "sourceId": "calkin1977",
+      "title": "Late Quaternary Environment and Man in Western New York",
+      "authors": "Parker E. Calkin and coauthors",
+      "year": 1977,
+      "url": "https://doi.org/10.1111/j.1749-6632.1977.tb33624.x",
+      "inputReferences": [
+        "batch1:4"
+      ],
+      "disposition": "unresolved",
+      "access": "Bibliographic record located; publisher DOI could not be accessed.",
+      "note": "No precise early-site chronology or modern calibrated convention verified. Not used to date Michigan/Ohio sites."
+    },
+    {
+      "sourceId": "fitting1969-settlement",
+      "title": "Settlement Analysis in the Great Lakes Region",
+      "authors": "James E. Fitting",
+      "year": 1969,
+      "url": "https://doi.org/10.1086/soutjanth.25.4.3629428",
+      "inputReferences": [
+        "batch1:8"
+      ],
+      "disposition": "unresolved",
+      "access": "Bibliographic metadata located; primary full text/abstract not recovered.",
+      "note": "Method history retained in register; no site date inferred."
+    },
+    {
+      "sourceId": "peterson2024-review",
+      "title": "Ancient Pottery, Cuisine, and Society at the Northern Great Lakes by Susan M. Kooiman(review)",
+      "authors": "Ryan Edward Peterson",
+      "year": 2024,
+      "url": "https://iris.sena.edu.co/EDS/Search?lookfor=%22Susan+M.+Kooiman%22&type=Author",
+      "inputReferences": [
+        "batch1:11",
+        "batch2:2"
+      ],
+      "disposition": "book-review",
+      "access": "Library index identifies Indiana Magazine of History120(2):157–158; review full text not accessed.",
+      "note": "Review is not the pottery study. Kooiman's primary dissertation and2019chronology article substitute for supported findings."
+    },
+    {
+      "sourceId": "buss2019-review",
+      "title": "David Andrew Nichols. Peoples of the Inland Sea: Native Americans and Newcomers in the Great Lakes Region,1600–1870.",
+      "authors": "James Joseph Buss",
+      "year": 2019,
+      "url": "https://doi.org/10.1093/ahr/rhz786",
+      "inputReferences": [
+        "batch1:12"
+      ],
+      "disposition": "book-review",
+      "access": "Journal issue contents verified; article access returned validation barrier.",
+      "note": "A review of Nichols's2018book, not an independent primary history or archaeological dataset."
+    },
+    {
+      "sourceId": "hall2019-review",
+      "title": "Peoples of the Inland Sea: Native Americans and Newcomers in the Great Lakes Region,1600–1870",
+      "authors": "John W. Hall",
+      "year": 2019,
+      "url": "https://doi.org/10.1093/jahist/jaz365",
+      "inputReferences": [
+        "batch1:13"
+      ],
+      "disposition": "book-review",
+      "access": "Publisher extract and metadata read.",
+      "note": "Useful historiographic context; no specific dated movement/location sourced from this brief review."
+    },
+    {
+      "sourceId": "nelson2019",
+      "title": "The Ecology of Travel on the Great Lakes Frontier: Native Knowledge, European Dependence, and the Environmental Specifics of Contact",
+      "authors": "John William Nelson",
+      "year": 2019,
+      "url": "https://doi.org/10.1353/mhr.2019.0007",
+      "inputReferences": [
+        "batch1:15"
+      ],
+      "disposition": "unresolved",
+      "access": "Official journal author index and author's publication listing verified; full article not read.",
+      "note": "Input2021corrected to2019based author listing and journal45(1):1–26. No dated route inferred."
+    },
+    {
+      "sourceId": "allgaier-codding2023",
+      "title": "Paleoindian Settlement Decisions in the Great Basin: A Test of the Pluvial Lake Hypothesis with the Ideal Free Distribution Model",
+      "authors": "Paul E. Allgaier and Brian F. Codding",
+      "year": 2023,
+      "url": "https://uuac.utah.edu/publications/allgaier_codding_7-2023.php",
+      "inputReferences": [
+        "batch1:16",
+        "batch2:19"
+      ],
+      "disposition": "out-of-scope",
+      "access": "Authors' University of Utah primary abstract read.",
+      "note": "Great Basin comparison, not Great Lakes evidence. IFD archaeological spatial analysis is not epidemiology."
+    },
+    {
+      "sourceId": "macdonald2019-review",
+      "title": "Peoples of the Inland Sea: Native Americans and Newcomers in the Great Lakes Region,1600–1870 by David Andrew Nichols(review)",
+      "authors": "Gillian Macdonald",
+      "year": 2019,
+      "url": "https://doi.org/10.1353/mhr.2019.0014",
+      "inputReferences": [
+        "batch1:17"
+      ],
+      "disposition": "book-review",
+      "access": "Author publication listing/metadata read; review text not read.",
+      "note": "Input2021corrected to2019; third review of same2018book, not an independent corroborating study."
+    },
+    {
+      "sourceId": "michalak2017-review",
+      "title": "Environmental sciences: Troubled waters on the Great Lakes",
+      "authors": "Anna M. Michalak",
+      "year": 2017,
+      "url": "https://doi.org/10.1038/543488a",
+      "inputReferences": [
+        "batch1:18"
+      ],
+      "disposition": "book-review",
+      "access": "Nature Books & Arts metadata and short description read.",
+      "note": "Modern environmental book commentary, not a comprehensive prehistoric occupation study."
+    },
+    {
+      "sourceId": "hartman2022-unresolved",
+      "title": "Root of the tree: Environmental and ethnohistory of the Wisconsin Northwoods,1880–1920",
+      "authors": "Grace Hartman(possible correction to inputG.H.Tomasi; unresolved repository identity)",
+      "year": 2022,
+      "url": "https://www.graduation.iastate.edu/media/13/file/Commencement%20Book%20S22.pdf",
+      "inputReferences": [
+        "batch1:19"
+      ],
+      "disposition": "unresolved",
+      "access": "Exact thesis title found in Iowa State official2022commencement program under Grace Hartman; thesis full text not recovered.",
+      "note": "Inputauthor attributionG.H.Tomasi not confirmed. NoOjibwe narrative treated as verified from title alone."
+    },
+    {
+      "sourceId": "roosa1977-parkhill",
+      "title": "Great Lakes Paleoindian: The Parkhill Site,Ontario",
+      "authors": "William B. Roosa",
+      "year": 1977,
+      "url": "https://doi.org/10.1111/j.1749-6632.1977.tb33627.x",
+      "inputReferences": [
+        "batch2:5"
+      ],
+      "disposition": "unresolved",
+      "access": "Bibliographic identity checked against Ontario Archaeological Society primary bibliographies; original article dating details not accessed.",
+      "note": "Input9,750–10,750yearsago lacks verified units. No subtraction or direct occupation span accepted."
+    },
+    {
+      "sourceId": "kolb1997-review",
+      "title": "Investigating the Archaeological Record of the Great Lakes State: Essays in Honor of Elizabeth Baldwin Garland(review)",
+      "authors": "Jennifer Kolb",
+      "year": 1997,
+      "url": "https://www.cambridge.org/core/journals/american-antiquity/issue/F8D77431A4D1742108A2F87A44A4871D?pageNum=2",
+      "inputReferences": [
+        "batch2:10"
+      ],
+      "disposition": "book-review",
+      "access": "Primary journal contents identify Kolb as reviewer,AmericanAntiquity62(4):752–753.",
+      "note": "The1996edited collection is by MargaretB.Holman,JanetG.Brashler,andKathrynE.Parker; not a1997archaeological study byKolb."
+    },
+    {
+      "sourceId": "anderson2025-southeast",
+      "title": "Exploring settlement distribution and demographic change in the early through late Holocene Southeast",
+      "authors": "David G. Anderson,D. Shane Miller,andAndrew A. White",
+      "year": 2025,
+      "url": "https://doi.org/10.1080/0734578X.2025.2553965",
+      "inputReferences": [
+        "batch2:17"
+      ],
+      "disposition": "out-of-scope",
+      "access": "Author institutional abstract read.",
+      "note": "Southeastern United States sample, not independent Great Lakes Early Woodland evidence. Already belongs to a different regional audit."
+    },
+    {
+      "sourceId": "jackson-hinshelwood2004",
+      "title": "The Late Palaeo-Indian Great Lakes: Geological and Archaeological Investigations of Late Pleistocene and Early Holocene Environments",
+      "authors": "Lawrence J. Jackson andAndrew Hinshelwood(editors)",
+      "year": 2004,
+      "url": "https://doi.org/10.2307/j.ctv16x58",
+      "inputReferences": [
+        "batch2:20"
+      ],
+      "disposition": "context-only",
+      "access": "Publisher/library book description and table of contents checked; individual chapters not read.",
+      "note": "Edited volume, not one primary site study; no pooled date/identity claims from its title."
+    },
+    {
+      "sourceId": "kooiman-walder2019",
+      "title": "Reconsidering the Chronology: Carbonized Food Residue, Accelerator Mass Spectrometry Dates, and Compositional Analysis of a Curated Collection from the Upper Great Lakes",
+      "authors": "Susan M. Kooiman and Heather Walder",
+      "year": 2019,
+      "url": "https://doi.org/10.1017/aaq.2019.33",
+      "inputReferences": [],
+      "disposition": "supplemental-used",
+      "access": "Publisher abstract and metadata read; full results/tables not accessed. Replaces reliance on the2024 book review for chronological claims."
+    },
+    {
+      "sourceId": "kooiman2018-dissertation",
+      "title": "A multiproxy analysis of culinary, technological, and environmental interactions in the northern Great Lakes region",
+      "authors": "Susan M. Kooiman",
+      "year": 2018,
+      "url": "https://michiganstate.academia.edu/SusanKooiman",
+      "inputReferences": [],
+      "disposition": "supplemental-used",
+      "access": "Author-hosted dissertation abstract read; full chapter dating tables not reviewed."
+    },
+    {
+      "sourceId": "kooiman2021-book",
+      "title": "Ancient Pottery,Cuisine,andSociety at the Northern Great Lakes",
+      "authors": "Susan M. Kooiman",
+      "year": 2021,
+      "url": "https://undpress.nd.edu/9780268201449/ancient-pottery-cuisine-and-society-at-the-northern-great-lakes/",
+      "inputReferences": [],
+      "disposition": "supplemental-context",
+      "access": "Publisher book description,contents and excerpt read; complete book not read.",
+      "note": "Identifies underlying original study forPeterson2024review."
+    },
+    {
+      "sourceId": "lemke2021-reply",
+      "title": "The Day the Armchair Broke: A Reply to White",
+      "authors": "Ashley K. Lemke",
+      "year": 2021,
+      "url": "https://www.tandfonline.com/toc/ypal20/7/4",
+      "inputReferences": [],
+      "disposition": "unresolved",
+      "access": "Primary journal issue contents verifies replyPaleoAmerica7(4):305–308. Argument not accessed.",
+      "note": "Published response exists; no unverified characterization of its rebuttal."
+    }
+  ],
+  "unresolved": [
+    {
+      "topic": "Individual site coordinates",
+      "note": "No exact defensible public locator verified for Belson,Hipwater,Cloudman,Cummins or20LU115. These named sites retain null locations, rather than plotting a private farm, tourist access point or island/county centroid as an occupation. Primary public place records or releasable archaeological coordinates are required for individual dots."
+    },
+    {
+      "topic": "Noncalendar and unspecified BP",
+      "note": "Ellis2011YoungerDryas explicitly uses14CBP; Ellis mobility,Silbernagel,Cook andRoosa source scopes require calibrated convention checks. Sonnenburg2025's10–8ka lowstand is not a per-feature occupation date. Original bounds retained unplaced."
+    },
+    {
+      "topic": "Book review and inaccessible source claims",
+      "note": "Register records all34distinct input works across40references. Primary study content was not inferred from book-review titles or inaccessible article metadata; those entries remain context or unresolved."
+    },
+    {
+      "topic": "Hunting interpretation disagreement",
+      "note": "White2021critique added as challenges to AAR caribou interpretation. Lemke2021reply identified but not read; its arguments are not guessed. New target-species and chronometric evidence could change assessment."
+    },
+    {
+      "topic": "Fulton dates",
+      "note": "Author full text confirms calibrated archaeological chronology, unlike abstract-only BP wording. Phase bounds are approximate regional syntheses and do not date all communities or substitute for source-level age models."
+    },
+    {
+      "topic": "Thesis attribution",
+      "note": "The exact2022Wisconsin Northwoods title occurs in Iowa State commencement underGraceHartman, whereas inputattributesG.H.Tomasi. Full repository record/text needed before attaching Ojibwe-specific historical claims."
+    }
+  ],
+  "corrections": [
+    {
+      "topic": "Belson arrival age",
+      "note": "14,000–13,000calBP descriptions date landscape/channel development. Talbot2021expects~13ka fromClovis technology; Nash2024reports direct dating still pending. Neither establishes direct14ka human arrival."
+    },
+    {
+      "topic": "Woodland arithmetic",
+      "note": "3000–300BP is not50–1500CE. If calibrated and1950-based it converts to astronomical-1050 through1650(1051BCE–1650CE). Since the cited abstract's calendar convention is unverified, no corrected mappedspan is inserted. Likewise2200–1500BP wouldnot50–500CE;1500–450BP wouldnotexact500–1500CE."
+    },
+    {
+      "topic": "Younger Dryas bounds",
+      "note": "10,800–10,00014CBP and12,200–11,600calBP are not interchangeable full-event brackets. Lothrop2016gives theYD broadly12,900–11,600calBP;12,200–11,600calBP is itsMiddlePaleoindian analytical phase."
+    },
+    {
+      "topic": "Hipwater local stone",
+      "note": "Primary Bayport outcrops are~170km fromHipwater. Nearby secondary glacial deposits remain possible. Describing this as demonstrated local procurement or a fixed short annual range is unsupported."
+    },
+    {
+      "topic": "Caribou remains",
+      "note": "Lemke2015's27Michigan specimens include1archaeological and26paleontological remains. Abundance/ecological presence is not27hunted animals or proof of a caribou-exclusive economy; submerged cervidtooth is not securely species-specific here."
+    },
+    {
+      "topic": "Upper Great Lakes ecological zones",
+      "note": "FittingandCleland1969place agriculture-favorable Carolinian province in southern UpperGreatLakes, not northernCanadianprovince. They explicitly project adaptations,not ethnic groups; artifactratios are not direct demographiccounts."
+    },
+    {
+      "topic": "Cloudman dating",
+      "note": "Peterson2024is a bookreview. PrimaryKooiman/Walder2019revises apparentAD1630pottery/tradeassociation: pottery-making endsby1500, beads manufacturedafter1650. This does not support uninterrupted50–1500occupation or allIndigenouspeople leaving1500."
+    },
+    {
+      "topic": "Chronology versus taphonomy",
+      "note": "SleepingBearPointabstract's past2000years refers to environmentalframework, not a directly boundedoccupation. Dune/reworkingevidence cannot alone establish periodicvillage rebuilding."
+    },
+    {
+      "topic": "Metadata and scope",
+      "note": "FultonandYansaprimarypublishertextstates2021onlinepublication;NelsonandMacdonaldlisted2019ratherthaninput2021. Kolb1997is a bookreview of1996editedvolume. Michalak2017isBooksandArts commentary. Allgaier/Codding2023isGreatBasin,andAnderson2025Southeast; neither supplies directGreatLakes evidence."
+    },
+    {
+      "topic": "Population and continuity",
+      "note": "No source-supported resident-count series was recovered. Date/sitefrequency, toolstone distances and artifact numbers are not population estimates. Earlypresence does not prove uninterrupted local communities or a fixed descendant genetic line."
+    }
+  ]
+}

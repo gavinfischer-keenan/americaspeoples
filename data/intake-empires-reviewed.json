@@ -1,0 +1,2294 @@
+{
+  "records": [
+    {
+      "id": "empire-mesoamerican-city-size",
+      "revision": 1,
+      "type": "event",
+      "title": "Mesoamerica — sampled Late Postclassic city sizes",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "Unmapped comparative or regional interpretation.",
+        "provenance": "Editorial regional proxy for study geography; no precise archaeological location copied."
+      },
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "Late Postclassic; eve of Spanish conquest",
+        "method": "Published archaeological analysis, chronology or stated comparative study context; no unsupported calendar conversion.",
+        "interpretation": "No bounded event date established; analytical cohorts and broad processes remain unplaced."
+      },
+      "claims": [
+        {
+          "id": "finding",
+          "text": "Smith’s sample includes 87 urban centers with reliable area data; median total urban area is 90 ha and median administrative epicenter area 2 ha.",
+          "status": "well-supported",
+          "explanation": "Published sample or inventory result with explicit category and coverage limits.",
+          "support": [
+            {
+              "sourceId": "smith2005-size",
+              "locator": "Abstract and stated access context",
+              "stance": "supports",
+              "note": "Supports the scoped result; counts, founding dates and causal narratives are not extended beyond the study."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "smith2005-size",
+          "authors": "Michael E. Smith",
+          "title": "City Size in Late Postclassic Mesoamerica",
+          "year": 2005,
+          "venue": "Journal of Urban History",
+          "doi": "10.1177/0096144204274396",
+          "url": "https://doi.org/10.1177/0096144204274396",
+          "access": "Abstract only: publisher.",
+          "referenceType": "journal-article",
+          "volume": "31",
+          "issue": "4",
+          "pages": "403–434"
+        }
+      ],
+      "review": {
+        "summary": "Smith’s sample includes 87 urban centers with reliable area data; median total urban area is 90 ha and median administrative epicenter area 2 ha.",
+        "limitations": "A cross-regional sample is not a census of all Aztec towns; city and epicenter are different measures.",
+        "discussion": "Political-administrative explanation is an inference from comparative patterns.",
+        "provenance": "Two user-supplied empire and Inca-settlement literature extracts; primary publications checked and automated narrative overclaims separated from findings.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Reviewed intake; shared published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "empire-tenochtitlan-population",
+      "revision": 1,
+      "type": "event",
+      "title": "Basin of Mexico — Tenochtitlan–Tlatelolco population estimate",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -99,
+            19
+          ]
+        },
+        "precision": "Broad rounded regional anchor; no excavated site, route or territorial boundary.",
+        "provenance": "Editorial regional proxy for study geography; no precise archaeological location copied."
+      },
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "Aztec-period analytical cohort 1200–1519 CE",
+        "method": "Published archaeological analysis, chronology or stated comparative study context; no unsupported calendar conversion.",
+        "interpretation": "No bounded event date established; analytical cohorts and broad processes remain unplaced."
+      },
+      "claims": [
+        {
+          "id": "finding",
+          "text": "Ortman et al. use an approximately 200000-person estimate for Tenochtitlan–Tlatelolco and 5000 as a typical city-state-capital scale for analysis.",
+          "status": "under discussion",
+          "explanation": "Interpretive/model-based result with chronological, proxy, causal or sampling limits.",
+          "support": [
+            {
+              "sourceId": "ortman2014",
+              "locator": "Methods: Settlement Selection and Grouping; Results",
+              "stance": "supports",
+              "note": "Supports the scoped result; counts, founding dates and causal narratives are not extended beyond the study."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "ortman2014",
+          "authors": "Scott G. Ortman, Andrew H. F. Cabaniss, Jennie O. Sturm, and Luís M. A. Bettencourt",
+          "title": "The Pre-History of Urban Scaling",
+          "year": 2014,
+          "venue": "PLoS ONE",
+          "doi": "10.1371/journal.pone.0087902",
+          "url": "https://doi.org/10.1371/journal.pone.0087902",
+          "access": "Full text: publisher/PMC, Methods and Results.",
+          "referenceType": "journal-article",
+          "volume": "9",
+          "issue": "2",
+          "pages": "e87902"
+        }
+      ],
+      "review": {
+        "summary": "Ortman et al. use an approximately 200000-person estimate for Tenochtitlan–Tlatelolco and 5000 as a typical city-state-capital scale for analysis.",
+        "limitations": "Archaeological estimates, not counted residents;5000 is a comparative breakpoint, not every city’s population.",
+        "discussion": "This article provides no estimate for Cuzco’s population.",
+        "provenance": "Two user-supplied empire and Inca-settlement literature extracts; primary publications checked and automated narrative overclaims separated from findings.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Reviewed intake; shared published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "empire-basinmexico-scaling",
+      "revision": 1,
+      "type": "event",
+      "title": "Basin of Mexico — settlement scaling analysis",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -99,
+            19
+          ]
+        },
+        "precision": "Broad rounded regional anchor; no excavated site, route or territorial boundary.",
+        "provenance": "Editorial regional proxy for study geography; no precise archaeological location copied."
+      },
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "Four cohorts across more than two millennia",
+        "method": "Published archaeological analysis, chronology or stated comparative study context; no unsupported calendar conversion.",
+        "interpretation": "No bounded event date established; analytical cohorts and broad processes remain unplaced."
+      },
+      "claims": [
+        {
+          "id": "finding",
+          "text": "More than 1500 Basin of Mexico settlements exhibit increasing density with population, broadly matching settlement-scaling predictions.",
+          "status": "under discussion",
+          "explanation": "Interpretive/model-based result with chronological, proxy, causal or sampling limits.",
+          "support": [
+            {
+              "sourceId": "ortman2014",
+              "locator": "Methods: Settlement Selection and Grouping; Results",
+              "stance": "supports",
+              "note": "Supports the scoped result; counts, founding dates and causal narratives are not extended beyond the study."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "ortman2014",
+          "authors": "Scott G. Ortman, Andrew H. F. Cabaniss, Jennie O. Sturm, and Luís M. A. Bettencourt",
+          "title": "The Pre-History of Urban Scaling",
+          "year": 2014,
+          "venue": "PLoS ONE",
+          "doi": "10.1371/journal.pone.0087902",
+          "url": "https://doi.org/10.1371/journal.pone.0087902",
+          "access": "Full text: publisher/PMC, Methods and Results.",
+          "referenceType": "journal-article",
+          "volume": "9",
+          "issue": "2",
+          "pages": "e87902"
+        }
+      ],
+      "review": {
+        "summary": "More than 1500 Basin of Mexico settlements exhibit increasing density with population, broadly matching settlement-scaling predictions.",
+        "limitations": "Settlements span different periods and polities and are not contemporaneous or all cities.",
+        "discussion": "The 1500 count cannot be transferred to the Inca core.",
+        "provenance": "Two user-supplied empire and Inca-settlement literature extracts; primary publications checked and automated narrative overclaims separated from findings.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Reviewed intake; shared published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "empire-agrarian-urbanism",
+      "revision": 1,
+      "type": "event",
+      "title": "Mesoamerica — cultivation within urban settlements",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "Unmapped comparative or regional interpretation.",
+        "provenance": "Editorial regional proxy for study geography; no precise archaeological location copied."
+      },
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "Comparative pre-Hispanic Maya and Aztec urbanism",
+        "method": "Published archaeological analysis, chronology or stated comparative study context; no unsupported calendar conversion.",
+        "interpretation": "No bounded event date established; analytical cohorts and broad processes remain unplaced."
+      },
+      "claims": [
+        {
+          "id": "finding",
+          "text": "Isendahl and Smith describe cultivation among dispersed residential neighborhoods as a distinctive form of agrarian urbanism.",
+          "status": "under discussion",
+          "explanation": "Interpretive/model-based result with chronological, proxy, causal or sampling limits.",
+          "support": [
+            {
+              "sourceId": "isendahl-smith2013",
+              "locator": "Abstract and stated access context",
+              "stance": "supports",
+              "note": "Supports the scoped result; counts, founding dates and causal narratives are not extended beyond the study."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "isendahl-smith2013",
+          "authors": "Christian Isendahl and Michael E. Smith",
+          "title": "Sustainable agrarian urbanism: The low-density cities of the Mayas and Aztecs",
+          "year": 2013,
+          "venue": "Cities",
+          "doi": "10.1016/j.cities.2012.07.012",
+          "url": "https://doi.org/10.1016/j.cities.2012.07.012",
+          "access": "Abstract only: author institutional record.",
+          "referenceType": "journal-article",
+          "volume": "31",
+          "pages": "132–143"
+        }
+      ],
+      "review": {
+        "summary": "Isendahl and Smith describe cultivation among dispersed residential neighborhoods as a distinctive form of agrarian urbanism.",
+        "limitations": "Abstract only; city longevity alone does not prove every environmental or social practice was sustainable.",
+        "discussion": "A proposed resilience mechanism; urban forms varied across cities.",
+        "provenance": "Two user-supplied empire and Inca-settlement literature extracts; primary publications checked and automated narrative overclaims separated from findings.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Reviewed intake; shared published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "empire-yautepec-survey",
+      "revision": 1,
+      "type": "event",
+      "title": "Morelos — Yautepec Valley survey coverage",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -99,
+            19
+          ]
+        },
+        "precision": "Broad rounded regional anchor; no excavated site, route or territorial boundary.",
+        "provenance": "Editorial regional proxy for study geography; no precise archaeological location copied."
+      },
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "Survey covers Early Formative through Colonial contexts",
+        "method": "Published archaeological analysis, chronology or stated comparative study context; no unsupported calendar conversion.",
+        "interpretation": "No bounded event date established; analytical cohorts and broad processes remain unplaced."
+      },
+      "claims": [
+        {
+          "id": "finding",
+          "text": "The Yautepec survey covered over 150 square kilometers and recorded 415 sites with different occupation phases, from less than 0.1 to 130 ha.",
+          "status": "well-supported",
+          "explanation": "Published sample or inventory result with explicit category and coverage limits.",
+          "support": [
+            {
+              "sourceId": "smith2021-yautepec",
+              "locator": "Abstract and stated access context",
+              "stance": "supports",
+              "note": "Supports the scoped result; counts, founding dates and causal narratives are not extended beyond the study."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "smith2021-yautepec",
+          "authors": "Michael E. Smith, Timothy S. Hare, Lisa Montiel, Anne Sherfield, and Angela Huster",
+          "title": "Settlement Patterns and Urbanization in the Yautepec Valley of Central Mexico",
+          "year": 2021,
+          "venue": "Open Archaeology",
+          "doi": "10.1515/opar-2020-0141",
+          "url": "https://doi.org/10.1515/opar-2020-0141",
+          "access": "Published publisher PDF, abstract and Background.",
+          "referenceType": "journal-article",
+          "volume": "7",
+          "pages": "378–416"
+        }
+      ],
+      "review": {
+        "summary": "The Yautepec survey covered over 150 square kilometers and recorded 415 sites with different occupation phases, from less than 0.1 to 130 ha.",
+        "limitations": "Sites are not all simultaneous Aztec cities; survey coverage differs from total regional population.",
+        "discussion": "Imperial relationships and local settlement change require phase-specific analysis.",
+        "provenance": "Two user-supplied empire and Inca-settlement literature extracts; primary publications checked and automated narrative overclaims separated from findings.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Reviewed intake; shared published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "empire-mendoza-onset",
+      "revision": 1,
+      "type": "event",
+      "title": "Mendoza — modelled Inca occupation onset",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -69,
+            -33
+          ]
+        },
+        "precision": "Broad rounded regional anchor; no excavated site, route or territorial boundary.",
+        "provenance": "Editorial regional proxy for study geography; no precise archaeological location copied."
+      },
+      "time": {
+        "kind": "occurrence",
+        "start": 1350,
+        "end": 1440,
+        "approximate": true,
+        "original": "1350–1440 cal CE,95%probability",
+        "method": "Bayesian published radiocarbon/TL model; calibrated CE retained.",
+        "interpretation": "Uncertain onset window, not a continuous occupation envelope or whole-empire founding date."
+      },
+      "claims": [
+        {
+          "id": "finding",
+          "text": "Marsh et al. model Inca occupation onset in northwestern Mendoza at 1350–1440 cal CE using dates from ten sites.",
+          "status": "under discussion",
+          "explanation": "Interpretive/model-based result with chronological, proxy, causal or sampling limits.",
+          "support": [
+            {
+              "sourceId": "marsh2017",
+              "locator": "Abstract; Conclusions",
+              "stance": "supports",
+              "note": "Supports the scoped result; counts, founding dates and causal narratives are not extended beyond the study."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "marsh2017",
+          "authors": "Erik J. Marsh, Ray Kidd, Dennis Ogburn, and Víctor Durán",
+          "title": "Dating the Expansion of the Inca Empire: Bayesian Models from Ecuador and Argentina",
+          "year": 2017,
+          "venue": "Radiocarbon",
+          "doi": "10.1017/RDC.2016.118",
+          "url": "https://doi.org/10.1017/RDC.2016.118",
+          "access": "Published article PDF at CONICET repository, abstract and conclusions.",
+          "referenceType": "journal-article",
+          "volume": "59",
+          "issue": "1",
+          "pages": "117–140"
+        }
+      ],
+      "review": {
+        "summary": "Marsh et al. model Inca occupation onset in northwestern Mendoza at 1350–1440 cal CE using dates from ten sites.",
+        "limitations": "Regional onset is not the empire’s founding date or a demonstrated instantaneous conquest.",
+        "discussion": "Earlier than the traditional 1471 ethnohistoric assignment; model assumptions and dated contexts matter.",
+        "provenance": "Two user-supplied empire and Inca-settlement literature extracts; primary publications checked and automated narrative overclaims separated from findings.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Reviewed intake; shared published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "empire-chamical-onset",
+      "revision": 1,
+      "type": "event",
+      "title": "Northern Ecuador — Chamical occupation-onset model",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -79,
+            0
+          ]
+        },
+        "precision": "Broad rounded regional anchor; no excavated site, route or territorial boundary.",
+        "provenance": "Editorial regional proxy for study geography; no precise archaeological location copied."
+      },
+      "time": {
+        "kind": "occurrence",
+        "start": 1410,
+        "end": 1480,
+        "approximate": true,
+        "original": "1410–1480 cal CE,95%probability",
+        "method": "Bayesian published radiocarbon/TL model; calibrated CE retained.",
+        "interpretation": "Uncertain onset window, not a continuous occupation envelope or whole-empire founding date."
+      },
+      "claims": [
+        {
+          "id": "finding",
+          "text": "Marsh et al. model first occupation at Chamical at 1410–1480 cal CE from seven radiocarbon dates.",
+          "status": "under discussion",
+          "explanation": "Interpretive/model-based result with chronological, proxy, causal or sampling limits.",
+          "support": [
+            {
+              "sourceId": "marsh2017",
+              "locator": "Abstract; Conclusions",
+              "stance": "supports",
+              "note": "Supports the scoped result; counts, founding dates and causal narratives are not extended beyond the study."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "marsh2017",
+          "authors": "Erik J. Marsh, Ray Kidd, Dennis Ogburn, and Víctor Durán",
+          "title": "Dating the Expansion of the Inca Empire: Bayesian Models from Ecuador and Argentina",
+          "year": 2017,
+          "venue": "Radiocarbon",
+          "doi": "10.1017/RDC.2016.118",
+          "url": "https://doi.org/10.1017/RDC.2016.118",
+          "access": "Published article PDF at CONICET repository, abstract and conclusions.",
+          "referenceType": "journal-article",
+          "volume": "59",
+          "issue": "1",
+          "pages": "117–140"
+        }
+      ],
+      "review": {
+        "summary": "Marsh et al. model first occupation at Chamical at 1410–1480 cal CE from seven radiocarbon dates.",
+        "limitations": "A site-specific probability window is not a precise occupation date for all northern Ecuador.",
+        "discussion": "Chronicle 1463 falls within this window; the authors infer a high probability of earlier establishment rather than total exclusion of 1463.",
+        "provenance": "Two user-supplied empire and Inca-settlement literature extracts; primary publications checked and automated narrative overclaims separated from findings.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Reviewed intake; shared published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "empire-akawillay-discontinuity",
+      "revision": 1,
+      "type": "event",
+      "title": "Cuzco region — Ak’awillay settlement discontinuity",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -72,
+            -13
+          ]
+        },
+        "precision": "Broad rounded regional anchor; no excavated site, route or territorial boundary.",
+        "provenance": "Editorial regional proxy for study geography; no precise archaeological location copied."
+      },
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "Decline in final Middle Horizon; sparse settlement for centuries",
+        "method": "Published archaeological analysis, chronology or stated comparative study context; no unsupported calendar conversion.",
+        "interpretation": "No bounded event date established; analytical cohorts and broad processes remain unplaced."
+      },
+      "claims": [
+        {
+          "id": "finding",
+          "text": "Covey et al. find that Ak’awillay declined before regional Inca expansion and was sparsely occupied while nearby communities developed.",
+          "status": "under discussion",
+          "explanation": "Interpretive/model-based result with chronological, proxy, causal or sampling limits.",
+          "support": [
+            {
+              "sourceId": "covey2025-akawillay",
+              "locator": "Discussion",
+              "stance": "supports",
+              "note": "Supports the scoped result; counts, founding dates and causal narratives are not extended beyond the study."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "covey2025-akawillay",
+          "authors": "R. Alan Covey et al.",
+          "title": "Settlement discontinuity at Ak’awillay and the development of the Inca imperial capital region",
+          "year": 2025,
+          "venue": "Antiquity",
+          "doi": "10.15184/aqy.2024.236",
+          "url": "https://doi.org/10.15184/aqy.2024.236",
+          "access": "Indexed publisher article and published PDF, Discussion.",
+          "referenceType": "journal-article",
+          "volume": "99",
+          "issue": "404",
+          "pages": "481–499"
+        }
+      ],
+      "review": {
+        "summary": "Covey et al. find that Ak’awillay declined before regional Inca expansion and was sparsely occupied while nearby communities developed.",
+        "limitations": "Excavated sectors do not establish complete absence across the entire site.",
+        "discussion": "Chronicle claims of timeless local residence require critical evaluation; legal testimony reflects colonial political settings.",
+        "provenance": "Two user-supplied empire and Inca-settlement literature extracts; primary publications checked and automated narrative overclaims separated from findings.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Reviewed intake; shared published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "empire-collective-infrastructure",
+      "revision": 1,
+      "type": "event",
+      "title": "Mesoamerica — shared infrastructure and longevity",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "Unmapped comparative or regional interpretation.",
+        "provenance": "Editorial regional proxy for study geography; no precise archaeological location copied."
+      },
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "Comparative ancient-city sample",
+        "method": "Published archaeological analysis, chronology or stated comparative study context; no unsupported calendar conversion.",
+        "interpretation": "No bounded event date established; analytical cohorts and broad processes remain unplaced."
+      },
+      "claims": [
+        {
+          "id": "finding",
+          "text": "Carballo et al. find correlations between city longevity, more collective governance, greater density and more equitably shared infrastructure.",
+          "status": "under discussion",
+          "explanation": "Interpretive/model-based result with chronological, proxy, causal or sampling limits.",
+          "support": [
+            {
+              "sourceId": "carballo2025-urbanism",
+              "locator": "Abstract and stated access context",
+              "stance": "supports",
+              "note": "Supports the scoped result; counts, founding dates and causal narratives are not extended beyond the study."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "carballo2025-urbanism",
+          "authors": "David M. Carballo, Gary M. Feinman, and Aurelio López Corral",
+          "title": "Mesoamerican urbanism: Indigenous institutions, infrastructure, and resilience",
+          "year": 2025,
+          "venue": "Urban Studies",
+          "doi": "10.1177/00420980221105418",
+          "url": "https://doi.org/10.1177/00420980221105418",
+          "access": "Full text: indexed publisher article, abstract and Conclusion; online 2022, issue 2025.",
+          "referenceType": "journal-article",
+          "volume": "62",
+          "issue": "3",
+          "pages": "507–524"
+        }
+      ],
+      "review": {
+        "summary": "Carballo et al. find correlations between city longevity, more collective governance, greater density and more equitably shared infrastructure.",
+        "limitations": "Correlation does not establish causation; architectural proxies and some inequality measures have limited coverage.",
+        "discussion": "Collective investment is a proposed persistence mechanism, not a universal formula.",
+        "provenance": "Two user-supplied empire and Inca-settlement literature extracts; primary publications checked and automated narrative overclaims separated from findings.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Reviewed intake; shared published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "empire-persistence-types",
+      "revision": 1,
+      "type": "event",
+      "title": "American urban histories — occupation differs from imperial survival",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "Unmapped comparative or regional interpretation.",
+        "provenance": "Editorial regional proxy for study geography; no precise archaeological location copied."
+      },
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "Comparative long-term settlement histories",
+        "method": "Published archaeological analysis, chronology or stated comparative study context; no unsupported calendar conversion.",
+        "interpretation": "No bounded event date established; analytical cohorts and broad processes remain unplaced."
+      },
+      "claims": [
+        {
+          "id": "finding",
+          "text": "Smith et al. distinguish persistence of occupation, demographic scale, institutions and culture; changes in one need not end the others.",
+          "status": "under discussion",
+          "explanation": "Interpretive/model-based result with chronological, proxy, causal or sampling limits.",
+          "support": [
+            {
+              "sourceId": "smith2021-persistence",
+              "locator": "Abstract and stated access context",
+              "stance": "supports",
+              "note": "Supports the scoped result; counts, founding dates and causal narratives are not extended beyond the study."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "smith2021-persistence",
+          "authors": "Michael E. Smith et al.",
+          "title": "The persistence of ancient settlements and urban sustainability",
+          "year": 2021,
+          "venue": "Proceedings of the National Academy of Sciences",
+          "doi": "10.1073/pnas.2018155118",
+          "url": "https://doi.org/10.1073/pnas.2018155118",
+          "access": "Full text: author article in PMC, persistence definitions and proposed drivers.",
+          "referenceType": "journal-article",
+          "volume": "118",
+          "issue": "20",
+          "pages": "e2018155118"
+        }
+      ],
+      "review": {
+        "summary": "Smith et al. distinguish persistence of occupation, demographic scale, institutions and culture; changes in one need not end the others.",
+        "limitations": "A research framework rather than a dated conquest or demographic model.",
+        "discussion": "Imperial defeat, urban rebuilding and Indigenous cultural survival must be tracked separately.",
+        "provenance": "Two user-supplied empire and Inca-settlement literature extracts; primary publications checked and automated narrative overclaims separated from findings.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Reviewed intake; shared published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "empire-colonial-urban-continuity",
+      "revision": 1,
+      "type": "event",
+      "title": "Spanish America — Indigenous antecedents of colonial urbanization",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "Unmapped comparative or regional interpretation.",
+        "provenance": "Editorial regional proxy for study geography; no precise archaeological location copied."
+      },
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "Colonial urban development through late sixteenth century",
+        "method": "Published archaeological analysis, chronology or stated comparative study context; no unsupported calendar conversion.",
+        "interpretation": "No bounded event date established; analytical cohorts and broad processes remain unplaced."
+      },
+      "claims": [
+        {
+          "id": "finding",
+          "text": "Morse emphasizes Indigenous and peninsular antecedents and substantial continuities between pre-conquest and early colonial urban systems.",
+          "status": "under discussion",
+          "explanation": "Interpretive/model-based result with chronological, proxy, causal or sampling limits.",
+          "support": [
+            {
+              "sourceId": "morse1984",
+              "locator": "Publisher introductory extract",
+              "stance": "supports",
+              "note": "Supports the scoped result; counts, founding dates and causal narratives are not extended beyond the study."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "morse1984",
+          "authors": "Richard M. Morse",
+          "title": "The urban development of colonial Spanish America",
+          "year": 1984,
+          "venue": "The Cambridge History of Latin America, Volume 2",
+          "doi": "10.1017/CHOL9780521245166.004",
+          "url": "https://doi.org/10.1017/CHOL9780521245166.004",
+          "access": "Publisher chapter introductory extract only; online 2008, print 1984.",
+          "referenceType": "book-chapter",
+          "publisher": "Cambridge University Press",
+          "editors": "Leslie Bethell",
+          "pages": "67–104"
+        }
+      ],
+      "review": {
+        "summary": "Morse emphasizes Indigenous and peninsular antecedents and substantial continuities between pre-conquest and early colonial urban systems.",
+        "limitations": "Introductory extract only; does not supply site-specific founding, destruction or mortality counts.",
+        "discussion": "Colonial transformation cannot be generalized as simultaneous abandonment of every Indigenous city.",
+        "provenance": "Two user-supplied empire and Inca-settlement literature extracts; primary publications checked and automated narrative overclaims separated from findings.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Reviewed intake; shared published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "empire-comparative-maya-aggregation",
+      "revision": 1,
+      "type": "event",
+      "title": "Maya lowlands — comparative model of urban aggregation",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -90,
+            17
+          ]
+        },
+        "precision": "Broad rounded regional anchor; no excavated site, route or territorial boundary.",
+        "provenance": "Editorial regional proxy for study geography; no precise archaeological location copied."
+      },
+      "time": {
+        "kind": "occurrence",
+        "start": 250,
+        "end": 1000,
+        "approximate": true,
+        "original": "Study coverage 250–1000 CE",
+        "method": "Published archaeological analysis, chronology or stated comparative study context; no unsupported calendar conversion.",
+        "interpretation": "Approximate episode, inventory classification or analysis coverage; no invented core or padding."
+      },
+      "claims": [
+        {
+          "id": "finding",
+          "text": "McCool et al. model interacting climatic stress, conflict and agricultural economies of scale as influences on Classic Maya urban aggregation and dissolution.",
+          "status": "under discussion",
+          "explanation": "Interpretive/model-based result with chronological, proxy, causal or sampling limits.",
+          "support": [
+            {
+              "sourceId": "mccool2025",
+              "locator": "Abstract and stated access context",
+              "stance": "supports",
+              "note": "Supports the scoped result; counts, founding dates and causal narratives are not extended beyond the study."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "mccool2025",
+          "authors": "Weston C. McCool et al.",
+          "title": "Modeling the rise and demise of Classic Maya cities: Climate, conflict, and economies of scale",
+          "year": 2025,
+          "venue": "Proceedings of the National Academy of Sciences",
+          "doi": "10.1073/pnas.2512325122",
+          "url": "https://doi.org/10.1073/pnas.2512325122",
+          "access": "Abstract and indexed author article in PMC, Discussion.",
+          "referenceType": "journal-article",
+          "volume": "122",
+          "issue": "42",
+          "pages": "e2512325122"
+        }
+      ],
+      "review": {
+        "summary": "McCool et al. model interacting climatic stress, conflict and agricultural economies of scale as influences on Classic Maya urban aggregation and dissolution.",
+        "limitations": "Modelled causal pathways depend on proxies and structure; this is Maya evidence, not direct Aztec or Inca proof.",
+        "discussion": "Urbanization and dispersal can be nonlinear rather than a single climate-collapse sequence.",
+        "provenance": "Two user-supplied empire and Inca-settlement literature extracts; primary publications checked and automated narrative overclaims separated from findings.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Reviewed intake; shared published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "empire-tlaxcallan-landscape",
+      "revision": 1,
+      "type": "event",
+      "title": "Tlaxcala — urban terraces and environmental legacies",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "overlay": {
+        "kind": "environment",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -98,
+            19
+          ]
+        },
+        "precision": "Broad rounded regional anchor; no excavated site, route or territorial boundary.",
+        "provenance": "Editorial regional proxy for study geography; no precise archaeological location copied."
+      },
+      "time": {
+        "kind": "occurrence",
+        "start": 1250,
+        "end": 1300,
+        "approximate": true,
+        "original": "Initial occupation approximately 1250–1300 CE",
+        "method": "Published archaeological analysis, chronology or stated comparative study context; no unsupported calendar conversion.",
+        "interpretation": "Approximate episode, inventory classification or analysis coverage; no invented core or padding."
+      },
+      "claims": [
+        {
+          "id": "finding",
+          "text": "Antorcha-Pedemonte and colleagues report a Tlaxcallan onset around 1250–1300 CE; its urban terraces created deep soils and enduring vegetation legacies.",
+          "status": "under discussion",
+          "explanation": "Interpretive/model-based result with chronological, proxy, causal or sampling limits.",
+          "support": [
+            {
+              "sourceId": "antorcha-pedemonte2023",
+              "locator": "Tlaxcallan case; Conclusions",
+              "stance": "supports",
+              "note": "Supports the scoped result; counts, founding dates and causal narratives are not extended beyond the study."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "antorcha-pedemonte2023",
+          "authors": "Ricardo Antorcha-Pedemonte, Tlacaelel Rivera-Núñez, and Lane F. Fargher-Navarro",
+          "title": "The impact of ancient Mesoamerican cities on long-term environmental sustainability: the view from historical ecology",
+          "year": 2023,
+          "venue": "Frontiers in Ecology and Evolution",
+          "doi": "10.3389/fevo.2023.1237953",
+          "url": "https://doi.org/10.3389/fevo.2023.1237953",
+          "access": "Full text: publisher, Tlaxcallan case and Conclusions.",
+          "referenceType": "journal-article",
+          "volume": "11",
+          "pages": "1237953"
+        }
+      ],
+      "review": {
+        "summary": "Antorcha-Pedemonte and colleagues report a Tlaxcallan onset around 1250–1300 CE; its urban terraces created deep soils and enduring vegetation legacies.",
+        "limitations": "Tlaxcallan was distinct from Aztec imperial rule; environmental benefits cannot be generalized to all cities.",
+        "discussion": "Peak area 450 ha and population 30000–40000 are estimates, not measurements of founding population.",
+        "provenance": "Two user-supplied empire and Inca-settlement literature extracts; primary publications checked and automated narrative overclaims separated from findings.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Reviewed intake; shared published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "empire-cuzco-survey-counts",
+      "revision": 1,
+      "type": "event",
+      "title": "Cuzco region — imperial pottery and variable integration",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -72,
+            -13
+          ]
+        },
+        "precision": "Broad rounded regional anchor; no excavated site, route or territorial boundary.",
+        "provenance": "Editorial regional proxy for study geography; no precise archaeological location copied."
+      },
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "State formation and imperial growth;1400–1530 scomparison",
+        "method": "Published archaeological analysis, chronology or stated comparative study context; no unsupported calendar conversion.",
+        "interpretation": "No bounded event date established; analytical cohorts and broad processes remain unplaced."
+      },
+      "claims": [
+        {
+          "id": "finding",
+          "text": "Covey reports over 1500 sites with Inca imperial pottery, while excavations and landscape patterns show variable state influence between valley farms and upland villages.",
+          "status": "under discussion",
+          "explanation": "Interpretive/model-based result with chronological, proxy, causal or sampling limits.",
+          "support": [
+            {
+              "sourceId": "covey2015-kinship",
+              "locator": "Introduction; Abstract; Discussion",
+              "stance": "supports",
+              "note": "Supports the scoped result; counts, founding dates and causal narratives are not extended beyond the study."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "covey2015-kinship",
+          "authors": "R. Alan Covey",
+          "title": "Kinship and the Inca imperial core: Multiscalar archaeological patterns in the Sacred Valley (Cuzco, Peru)",
+          "year": 2015,
+          "venue": "Journal of Anthropological Archaeology",
+          "doi": "10.1016/j.jaa.2015.08.004",
+          "url": "https://doi.org/10.1016/j.jaa.2015.08.004",
+          "access": "Publisher abstract and indexed Introduction/Discussion.",
+          "referenceType": "journal-article",
+          "volume": "40",
+          "pages": "183–195"
+        }
+      ],
+      "review": {
+        "summary": "Covey reports over 1500 sites with Inca imperial pottery, while excavations and landscape patterns show variable state influence between valley farms and upland villages.",
+        "limitations": "Sites with imperial pottery are not 1500 cities, newly founded centers or uniformly governed settlements.",
+        "discussion": "Elite kinship and royal estates shaped valley-bottom power; many upland daily practices changed less.",
+        "provenance": "Two user-supplied empire and Inca-settlement literature extracts; primary publications checked and automated narrative overclaims separated from findings.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Reviewed intake; shared published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "empire-andes-scaling",
+      "revision": 1,
+      "type": "event",
+      "title": "Central Andes — aggregation and material-output proxies",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -75,
+            -12
+          ]
+        },
+        "precision": "Broad rounded regional anchor; no excavated site, route or territorial boundary.",
+        "provenance": "Editorial regional proxy for study geography; no precise archaeological location copied."
+      },
+      "time": {
+        "kind": "occurrence",
+        "start": 1450,
+        "end": 1450,
+        "approximate": true,
+        "original": "Incorporation around 1450 CE",
+        "method": "Published archaeological analysis, chronology or stated comparative study context; no unsupported calendar conversion.",
+        "interpretation": "Approximate episode, inventory classification or analysis coverage; no invented core or padding."
+      },
+      "claims": [
+        {
+          "id": "finding",
+          "text": "Ortman et al. identify increased material-output proxies in Tarma and Mantaro after Inca incorporation and interpret larger settlements and connectivity as economic mechanisms.",
+          "status": "under discussion",
+          "explanation": "Interpretive/model-based result with chronological, proxy, causal or sampling limits.",
+          "support": [
+            {
+              "sourceId": "ortman2016-andes",
+              "locator": "Abstract and stated access context",
+              "stance": "supports",
+              "note": "Supports the scoped result; counts, founding dates and causal narratives are not extended beyond the study."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "ortman2016-andes",
+          "authors": "Scott G. Ortman et al.",
+          "title": "Settlement scaling and economic change in the Central Andes",
+          "year": 2016,
+          "venue": "Journal of Archaeological Science",
+          "doi": "10.1016/j.jas.2016.07.012",
+          "url": "https://doi.org/10.1016/j.jas.2016.07.012",
+          "access": "Abstract only: author institutional record; preprint also identified, not substituted for published results.",
+          "referenceType": "journal-article",
+          "volume": "73",
+          "pages": "94–106"
+        }
+      ],
+      "review": {
+        "summary": "Ortman et al. identify increased material-output proxies in Tarma and Mantaro after Inca incorporation and interpret larger settlements and connectivity as economic mechanisms.",
+        "limitations": "Abstract only; proxies are not direct modern income measurements or proof every household benefited.",
+        "discussion": "The abstract does not independently validate a universal 0.5 percent annual aggregation rate.",
+        "provenance": "Two user-supplied empire and Inca-settlement literature extracts; primary publications checked and automated narrative overclaims separated from findings.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Reviewed intake; shared published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "empire-ica-inventory",
+      "revision": 1,
+      "type": "event",
+      "title": "Río Ica catchment — Inca-period inventory",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -76,
+            -14
+          ]
+        },
+        "precision": "Broad rounded regional anchor; no excavated site, route or territorial boundary.",
+        "provenance": "Editorial regional proxy for study geography; no precise archaeological location copied."
+      },
+      "time": {
+        "kind": "occurrence",
+        "start": 1450,
+        "end": 1532,
+        "approximate": true,
+        "original": "Paper’s Inca-period classification 1450–1532 CE",
+        "method": "Published archaeological analysis, chronology or stated comparative study context; no unsupported calendar conversion.",
+        "interpretation": "Approximate episode, inventory classification or analysis coverage; no invented core or padding."
+      },
+      "claims": [
+        {
+          "id": "finding",
+          "text": "Haburaj et al. classify 54 sites, including 40 settlements, in the Inca-period Río Ica inventory and analyze their spatial relation to river resources and functions.",
+          "status": "well-supported",
+          "explanation": "Published sample or inventory result with explicit category and coverage limits.",
+          "support": [
+            {
+              "sourceId": "haburaj2017",
+              "locator": "Table 2; Methods",
+              "stance": "supports",
+              "note": "Supports the scoped result; counts, founding dates and causal narratives are not extended beyond the study."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "haburaj2017",
+          "authors": "Vincent Haburaj et al.",
+          "title": "Geo-statistical methods to analyse changes in pre-Hispanic settlement patterns in the Río Ica catchment, Peru",
+          "year": 2017,
+          "venue": "Journal of Archaeological Science: Reports",
+          "doi": "10.1016/j.jasrep.2017.01.033",
+          "url": "https://doi.org/10.1016/j.jasrep.2017.01.033",
+          "access": "Indexed published article Table 2 and methods; DOI/author metadata checked against Crossref and author institutional bibliography.",
+          "referenceType": "journal-article",
+          "volume": "12",
+          "pages": "272–287"
+        }
+      ],
+      "review": {
+        "summary": "Haburaj et al. classify 54 sites, including 40 settlements, in the Inca-period Río Ica inventory and analyze their spatial relation to river resources and functions.",
+        "limitations": "Settlements are not necessarily 40 nucleated cities; categories and survey visibility constrain cross-region totals.",
+        "discussion": "Freshwater access matters in this arid catchment, alongside political and socioeconomic factors.",
+        "provenance": "Two user-supplied empire and Inca-settlement literature extracts; primary publications checked and automated narrative overclaims separated from findings.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Reviewed intake; shared published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "empire-yanawilka-resettlement",
+      "revision": 1,
+      "type": "event",
+      "title": "Vilcas Huamán region — mitmaq settlement space",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -74,
+            -14
+          ]
+        },
+        "precision": "Broad rounded regional anchor; no excavated site, route or territorial boundary.",
+        "provenance": "Editorial regional proxy for study geography; no precise archaeological location copied."
+      },
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "Inca-period resettlement case; no bounded founding date",
+        "method": "Published archaeological analysis, chronology or stated comparative study context; no unsupported calendar conversion.",
+        "interpretation": "No bounded event date established; analytical cohorts and broad processes remain unplaced."
+      },
+      "claims": [
+        {
+          "id": "finding",
+          "text": "Hu analyzes Yanawilka’s spatial organization to investigate differentiated effects of Inca control on a resettled agricultural community.",
+          "status": "under discussion",
+          "explanation": "Interpretive/model-based result with chronological, proxy, causal or sampling limits.",
+          "support": [
+            {
+              "sourceId": "hu2019",
+              "locator": "Abstract and stated access context",
+              "stance": "supports",
+              "note": "Supports the scoped result; counts, founding dates and causal narratives are not extended beyond the study."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "hu2019",
+          "authors": "Di Hu",
+          "title": "Making space under the Inca: a space syntax analysis of a mitmaq settlement in Vilcas Huamán Province, Peru",
+          "year": 2019,
+          "venue": "Antiquity",
+          "doi": "10.15184/aqy.2019.82",
+          "url": "https://doi.org/10.15184/aqy.2019.82",
+          "access": "Abstract only: publisher; author preprint identified.",
+          "referenceType": "journal-article",
+          "volume": "93",
+          "issue": "370",
+          "pages": "990–1008"
+        }
+      ],
+      "review": {
+        "summary": "Hu analyzes Yanawilka’s spatial organization to investigate differentiated effects of Inca control on a resettled agricultural community.",
+        "limitations": "Abstract only; cited up-to-one-third imperial resettlement is background estimation, not a census measured at Yanawilka.",
+        "discussion": "Resettlement policy, architecture and everyday social relations are distinct evidence; displacement did not erase local agency.",
+        "provenance": "Two user-supplied empire and Inca-settlement literature extracts; primary publications checked and automated narrative overclaims separated from findings.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Reviewed intake; shared published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "empire-caranqui-control",
+      "revision": 1,
+      "type": "event",
+      "title": "Northern Ecuador — coercion and local political ties",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -78,
+            0
+          ]
+        },
+        "precision": "Broad rounded regional anchor; no excavated site, route or territorial boundary.",
+        "provenance": "Editorial regional proxy for study geography; no precise archaeological location copied."
+      },
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "Inca frontier occupation; no precise onset in reviewed abstract",
+        "method": "Published archaeological analysis, chronology or stated comparative study context; no unsupported calendar conversion.",
+        "interpretation": "No bounded event date established; analytical cohorts and broad processes remain unplaced."
+      },
+      "claims": [
+        {
+          "id": "finding",
+          "text": "Bray’s 120-square-kilometer survey suggests direct coercion and weakening ties among local polities were aspects of Inca northern-frontier strategies.",
+          "status": "under discussion",
+          "explanation": "Interpretive/model-based result with chronological, proxy, causal or sampling limits.",
+          "support": [
+            {
+              "sourceId": "bray1992",
+              "locator": "Abstract and stated access context",
+              "stance": "supports",
+              "note": "Supports the scoped result; counts, founding dates and causal narratives are not extended beyond the study."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "bray1992",
+          "authors": "Tamara L. Bray",
+          "title": "Archaeological survey in northern highland Ecuador: Inca imperialism and the País Caranqui",
+          "year": 1992,
+          "venue": "World Archaeology",
+          "doi": "10.1080/00438243.1992.9980204",
+          "url": "https://doi.org/10.1080/00438243.1992.9980204",
+          "access": "Abstract only: publisher.",
+          "referenceType": "journal-article",
+          "volume": "24",
+          "issue": "2",
+          "pages": "218–233"
+        }
+      ],
+      "review": {
+        "summary": "Bray’s 120-square-kilometer survey suggests direct coercion and weakening ties among local polities were aspects of Inca northern-frontier strategies.",
+        "limitations": "Abstract only; inferred imperial agenda rather than observed intentions of every outpost.",
+        "discussion": "Strategies varied by region; this evidence should not be generalized to peaceful negotiation everywhere or coercion everywhere.",
+        "provenance": "Two user-supplied empire and Inca-settlement literature extracts; primary publications checked and automated narrative overclaims separated from findings.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Reviewed intake; shared published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "empire-huarochiri-ritual",
+      "revision": 1,
+      "type": "event",
+      "title": "Huarochirí — ritual mediation and local agency",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -76,
+            -12
+          ]
+        },
+        "precision": "Broad rounded regional anchor; no excavated site, route or territorial boundary.",
+        "provenance": "Editorial regional proxy for study geography; no precise archaeological location copied."
+      },
+      "time": {
+        "kind": "occurrence",
+        "start": 1400,
+        "end": 1532,
+        "approximate": true,
+        "original": "Article’s imperial context 1400–1532 CE",
+        "method": "Published archaeological analysis, chronology or stated comparative study context; no unsupported calendar conversion.",
+        "interpretation": "Approximate episode, inventory classification or analysis coverage; no invented core or padding."
+      },
+      "claims": [
+        {
+          "id": "finding",
+          "text": "Hernández Garavito interprets ritual outcrops and plazas as arenas where local communities negotiated Inca authority and reworked traditions that survived imperial rule.",
+          "status": "under discussion",
+          "explanation": "Interpretive/model-based result with chronological, proxy, causal or sampling limits.",
+          "support": [
+            {
+              "sourceId": "hernandez-garavito2020",
+              "locator": "Publisher-deposited abstract",
+              "stance": "supports",
+              "note": "Supports the scoped result; counts, founding dates and causal narratives are not extended beyond the study."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "hernandez-garavito2020",
+          "authors": "Carla Hernández Garavito",
+          "title": "Producing legibility through ritual: The Inka expansion in Huarochirí (Lima, Peru)",
+          "year": 2020,
+          "venue": "Journal of Social Archaeology",
+          "doi": "10.1177/1469605320920127",
+          "url": "https://doi.org/10.1177/1469605320920127",
+          "access": "Abstract only: publisher-deposited Crossref abstract and publisher metadata.",
+          "referenceType": "journal-article",
+          "volume": "20",
+          "issue": "3",
+          "pages": "292–312"
+        }
+      ],
+      "review": {
+        "summary": "Hernández Garavito interprets ritual outcrops and plazas as arenas where local communities negotiated Inca authority and reworked traditions that survived imperial rule.",
+        "limitations": "Abstract only; broad imperial context is not a founding date for Canchaje.",
+        "discussion": "Ritual familiarity and local agency offer mechanisms complementary to military coercion, rather than excluding it.",
+        "provenance": "Two user-supplied empire and Inca-settlement literature extracts; primary publications checked and automated narrative overclaims separated from findings.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Reviewed intake; shared published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "empire-copiapo-stages",
+      "revision": 1,
+      "type": "event",
+      "title": "Copiapó Valley — staged imperial interventions",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -70,
+            -27
+          ]
+        },
+        "precision": "Broad rounded regional anchor; no excavated site, route or territorial boundary.",
+        "provenance": "Editorial regional proxy for study geography; no precise archaeological location copied."
+      },
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "Progressive Inca expansion; exact phase boundaries not extracted",
+        "method": "Published archaeological analysis, chronology or stated comparative study context; no unsupported calendar conversion.",
+        "interpretation": "No bounded event date established; analytical cohorts and broad processes remain unplaced."
+      },
+      "claims": [
+        {
+          "id": "finding",
+          "text": "Garrido identifies three stages of Inca infrastructure development in Copiapó and interprets the sequence as shaped by negotiations, conflict and local actors.",
+          "status": "under discussion",
+          "explanation": "Interpretive/model-based result with chronological, proxy, causal or sampling limits.",
+          "support": [
+            {
+              "sourceId": "garrido2025",
+              "locator": "Abstract and stated access context",
+              "stance": "supports",
+              "note": "Supports the scoped result; counts, founding dates and causal narratives are not extended beyond the study."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "garrido2025",
+          "authors": "Francisco Garrido",
+          "title": "A Chronological Model for Inca Provincial Expansion: The Case of the Copiapo Valley",
+          "year": 2025,
+          "venue": "Latin American Antiquity",
+          "doi": "10.1017/laq.2023.66",
+          "url": "https://doi.org/10.1017/laq.2023.66",
+          "access": "Abstract only: publisher; online 2024, issue 2025.",
+          "referenceType": "journal-article",
+          "volume": "36",
+          "issue": "1",
+          "pages": "100–119"
+        }
+      ],
+      "review": {
+        "summary": "Garrido identifies three stages of Inca infrastructure development in Copiapó and interprets the sequence as shaped by negotiations, conflict and local actors.",
+        "limitations": "Abstract only; no numerical boundaries or universal sequence imported from the summary.",
+        "discussion": "Roads, shrines and administrative buildings need not mark a single instant of conquest.",
+        "provenance": "Two user-supplied empire and Inca-settlement literature extracts; primary publications checked and automated narrative overclaims separated from findings.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Reviewed intake; shared published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "empire-calchaqui-ritualmodel",
+      "revision": 1,
+      "type": "event",
+      "title": "North Calchaquí Valley — public ritual and authority model",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66,
+            -25
+          ]
+        },
+        "precision": "Broad rounded regional anchor; no excavated site, route or territorial boundary.",
+        "provenance": "Editorial regional proxy for study geography; no precise archaeological location copied."
+      },
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "Inca ceremonial context; no dated event extracted",
+        "method": "Published archaeological analysis, chronology or stated comparative study context; no unsupported calendar conversion.",
+        "interpretation": "No bounded event date established; analytical cohorts and broad processes remain unplaced."
+      },
+      "claims": [
+        {
+          "id": "finding",
+          "text": "Ferrari and colleagues use 3 Dreconstruction of Guitián to interpret how plaza architecture and lighting could communicate imperial cosmological claims.",
+          "status": "under discussion",
+          "explanation": "Interpretive/model-based result with chronological, proxy, causal or sampling limits.",
+          "support": [
+            {
+              "sourceId": "ferrari2021",
+              "locator": "Abstract and stated access context",
+              "stance": "supports",
+              "note": "Supports the scoped result; counts, founding dates and causal narratives are not extended beyond the study."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "ferrari2021",
+          "authors": "Alejandro Andrés Ferrari, Joaquín Ignacio Izaguirre, and Félix Alejandro Acuto",
+          "title": "A bit closer to the past: the three-dimensionalization of an Inca ceremony in the north Calchaquí Valley (Salta, Argentina)",
+          "year": 2021,
+          "venue": "Virtual Archaeology Review",
+          "doi": "10.4995/var.2021.15285",
+          "url": "https://doi.org/10.4995/var.2021.15285",
+          "access": "Abstract only: publisher-deposited abstract in DOAJ; publisher page timed out.",
+          "referenceType": "journal-article",
+          "volume": "12",
+          "issue": "25",
+          "pages": "16–41"
+        }
+      ],
+      "review": {
+        "summary": "Ferrari and colleagues use 3 Dreconstruction of Guitián to interpret how plaza architecture and lighting could communicate imperial cosmological claims.",
+        "limitations": "Abstract only; reconstructions test interpretations and do not recover every participant’s actual experience.",
+        "discussion": "A local ceremony model cannot establish an empire-wide urban census or exact road-network length.",
+        "provenance": "Two user-supplied empire and Inca-settlement literature extracts; primary publications checked and automated narrative overclaims separated from findings.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Reviewed intake; shared published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    }
+  ],
+  "updates": [
+    {
+      "recordId": "south-machupicchu-ams-occupation",
+      "source": {
+        "id": "marsh2017",
+        "authors": "Erik J. Marsh, Ray Kidd, Dennis Ogburn, and Víctor Durán",
+        "title": "Dating the Expansion of the Inca Empire: Bayesian Models from Ecuador and Argentina",
+        "year": 2017,
+        "venue": "Radiocarbon",
+        "doi": "10.1017/RDC.2016.118",
+        "url": "https://doi.org/10.1017/RDC.2016.118",
+        "access": "Published article PDF at CONICET repository, abstract and conclusions.",
+        "referenceType": "journal-article",
+        "volume": "59",
+        "issue": "1",
+        "pages": "117–140"
+      },
+      "claimId": "chronology",
+      "stance": "context",
+      "locator": "Abstract; Conclusions",
+      "note": "Regional Mendoza and Chamical onset models explain why traditional reign dates should not automatically fix construction chronologies; not independent dating of Machu Picchu."
+    }
+  ],
+  "sourceRegister": [
+    {
+      "source": {
+        "id": "smith2005-size",
+        "authors": "Michael E. Smith",
+        "title": "City Size in Late Postclassic Mesoamerica",
+        "year": 2005,
+        "venue": "Journal of Urban History",
+        "doi": "10.1177/0096144204274396",
+        "url": "https://doi.org/10.1177/0096144204274396",
+        "access": "Abstract only: publisher.",
+        "referenceType": "journal-article",
+        "volume": "31",
+        "issue": "4",
+        "pages": "403–434"
+      },
+      "batches": {
+        "empires": [
+          6
+        ],
+        "incaSettlements": []
+      },
+      "disposition": "Used with explicit sample/category, chronology and inference limits."
+    },
+    {
+      "source": {
+        "id": "ortman2014",
+        "authors": "Scott G. Ortman, Andrew H. F. Cabaniss, Jennie O. Sturm, and Luís M. A. Bettencourt",
+        "title": "The Pre-History of Urban Scaling",
+        "year": 2014,
+        "venue": "PLoS ONE",
+        "doi": "10.1371/journal.pone.0087902",
+        "url": "https://doi.org/10.1371/journal.pone.0087902",
+        "access": "Full text: publisher/PMC, Methods and Results.",
+        "referenceType": "journal-article",
+        "volume": "9",
+        "issue": "2",
+        "pages": "e87902"
+      },
+      "batches": {
+        "empires": [
+          2
+        ],
+        "incaSettlements": []
+      },
+      "disposition": "Used with explicit sample/category, chronology and inference limits."
+    },
+    {
+      "source": {
+        "id": "isendahl-smith2013",
+        "authors": "Christian Isendahl and Michael E. Smith",
+        "title": "Sustainable agrarian urbanism: The low-density cities of the Mayas and Aztecs",
+        "year": 2013,
+        "venue": "Cities",
+        "doi": "10.1016/j.cities.2012.07.012",
+        "url": "https://doi.org/10.1016/j.cities.2012.07.012",
+        "access": "Abstract only: author institutional record.",
+        "referenceType": "journal-article",
+        "volume": "31",
+        "pages": "132–143"
+      },
+      "batches": {
+        "empires": [
+          1
+        ],
+        "incaSettlements": []
+      },
+      "disposition": "Used with explicit sample/category, chronology and inference limits."
+    },
+    {
+      "source": {
+        "id": "smith2021-yautepec",
+        "authors": "Michael E. Smith, Timothy S. Hare, Lisa Montiel, Anne Sherfield, and Angela Huster",
+        "title": "Settlement Patterns and Urbanization in the Yautepec Valley of Central Mexico",
+        "year": 2021,
+        "venue": "Open Archaeology",
+        "doi": "10.1515/opar-2020-0141",
+        "url": "https://doi.org/10.1515/opar-2020-0141",
+        "access": "Published publisher PDF, abstract and Background.",
+        "referenceType": "journal-article",
+        "volume": "7",
+        "pages": "378–416"
+      },
+      "batches": {
+        "empires": [
+          10
+        ],
+        "incaSettlements": []
+      },
+      "disposition": "Used with explicit sample/category, chronology and inference limits."
+    },
+    {
+      "source": {
+        "id": "marsh2017",
+        "authors": "Erik J. Marsh, Ray Kidd, Dennis Ogburn, and Víctor Durán",
+        "title": "Dating the Expansion of the Inca Empire: Bayesian Models from Ecuador and Argentina",
+        "year": 2017,
+        "venue": "Radiocarbon",
+        "doi": "10.1017/RDC.2016.118",
+        "url": "https://doi.org/10.1017/RDC.2016.118",
+        "access": "Published article PDF at CONICET repository, abstract and conclusions.",
+        "referenceType": "journal-article",
+        "volume": "59",
+        "issue": "1",
+        "pages": "117–140"
+      },
+      "batches": {
+        "empires": [
+          14
+        ],
+        "incaSettlements": []
+      },
+      "disposition": "Used with explicit sample/category, chronology and inference limits."
+    },
+    {
+      "source": {
+        "id": "covey2025-akawillay",
+        "authors": "R. Alan Covey et al.",
+        "title": "Settlement discontinuity at Ak’awillay and the development of the Inca imperial capital region",
+        "year": 2025,
+        "venue": "Antiquity",
+        "doi": "10.15184/aqy.2024.236",
+        "url": "https://doi.org/10.15184/aqy.2024.236",
+        "access": "Indexed publisher article and published PDF, Discussion.",
+        "referenceType": "journal-article",
+        "volume": "99",
+        "issue": "404",
+        "pages": "481–499"
+      },
+      "batches": {
+        "empires": [
+          13
+        ],
+        "incaSettlements": []
+      },
+      "disposition": "Used with explicit sample/category, chronology and inference limits."
+    },
+    {
+      "source": {
+        "id": "carballo2025-urbanism",
+        "authors": "David M. Carballo, Gary M. Feinman, and Aurelio López Corral",
+        "title": "Mesoamerican urbanism: Indigenous institutions, infrastructure, and resilience",
+        "year": 2025,
+        "venue": "Urban Studies",
+        "doi": "10.1177/00420980221105418",
+        "url": "https://doi.org/10.1177/00420980221105418",
+        "access": "Full text: indexed publisher article, abstract and Conclusion; online 2022, issue 2025.",
+        "referenceType": "journal-article",
+        "volume": "62",
+        "issue": "3",
+        "pages": "507–524"
+      },
+      "batches": {
+        "empires": [
+          11
+        ],
+        "incaSettlements": []
+      },
+      "disposition": "Used with explicit sample/category, chronology and inference limits."
+    },
+    {
+      "source": {
+        "id": "smith2021-persistence",
+        "authors": "Michael E. Smith et al.",
+        "title": "The persistence of ancient settlements and urban sustainability",
+        "year": 2021,
+        "venue": "Proceedings of the National Academy of Sciences",
+        "doi": "10.1073/pnas.2018155118",
+        "url": "https://doi.org/10.1073/pnas.2018155118",
+        "access": "Full text: author article in PMC, persistence definitions and proposed drivers.",
+        "referenceType": "journal-article",
+        "volume": "118",
+        "issue": "20",
+        "pages": "e2018155118"
+      },
+      "batches": {
+        "empires": [
+          19
+        ],
+        "incaSettlements": []
+      },
+      "disposition": "Used with explicit sample/category, chronology and inference limits."
+    },
+    {
+      "source": {
+        "id": "morse1984",
+        "authors": "Richard M. Morse",
+        "title": "The urban development of colonial Spanish America",
+        "year": 1984,
+        "venue": "The Cambridge History of Latin America, Volume 2",
+        "doi": "10.1017/CHOL9780521245166.004",
+        "url": "https://doi.org/10.1017/CHOL9780521245166.004",
+        "access": "Publisher chapter introductory extract only; online 2008, print 1984.",
+        "referenceType": "book-chapter",
+        "publisher": "Cambridge University Press",
+        "editors": "Leslie Bethell",
+        "pages": "67–104"
+      },
+      "batches": {
+        "empires": [
+          5
+        ],
+        "incaSettlements": []
+      },
+      "disposition": "Used with explicit sample/category, chronology and inference limits."
+    },
+    {
+      "source": {
+        "id": "mccool2025",
+        "authors": "Weston C. McCool et al.",
+        "title": "Modeling the rise and demise of Classic Maya cities: Climate, conflict, and economies of scale",
+        "year": 2025,
+        "venue": "Proceedings of the National Academy of Sciences",
+        "doi": "10.1073/pnas.2512325122",
+        "url": "https://doi.org/10.1073/pnas.2512325122",
+        "access": "Abstract and indexed author article in PMC, Discussion.",
+        "referenceType": "journal-article",
+        "volume": "122",
+        "issue": "42",
+        "pages": "e2512325122"
+      },
+      "batches": {
+        "empires": [
+          20
+        ],
+        "incaSettlements": []
+      },
+      "disposition": "Used with explicit sample/category, chronology and inference limits."
+    },
+    {
+      "source": {
+        "id": "antorcha-pedemonte2023",
+        "authors": "Ricardo Antorcha-Pedemonte, Tlacaelel Rivera-Núñez, and Lane F. Fargher-Navarro",
+        "title": "The impact of ancient Mesoamerican cities on long-term environmental sustainability: the view from historical ecology",
+        "year": 2023,
+        "venue": "Frontiers in Ecology and Evolution",
+        "doi": "10.3389/fevo.2023.1237953",
+        "url": "https://doi.org/10.3389/fevo.2023.1237953",
+        "access": "Full text: publisher, Tlaxcallan case and Conclusions.",
+        "referenceType": "journal-article",
+        "volume": "11",
+        "pages": "1237953"
+      },
+      "batches": {
+        "empires": [
+          9
+        ],
+        "incaSettlements": []
+      },
+      "disposition": "Used with explicit sample/category, chronology and inference limits."
+    },
+    {
+      "source": {
+        "id": "covey2015-kinship",
+        "authors": "R. Alan Covey",
+        "title": "Kinship and the Inca imperial core: Multiscalar archaeological patterns in the Sacred Valley (Cuzco, Peru)",
+        "year": 2015,
+        "venue": "Journal of Anthropological Archaeology",
+        "doi": "10.1016/j.jaa.2015.08.004",
+        "url": "https://doi.org/10.1016/j.jaa.2015.08.004",
+        "access": "Publisher abstract and indexed Introduction/Discussion.",
+        "referenceType": "journal-article",
+        "volume": "40",
+        "pages": "183–195"
+      },
+      "batches": {
+        "empires": [],
+        "incaSettlements": [
+          4
+        ]
+      },
+      "disposition": "Used with explicit sample/category, chronology and inference limits."
+    },
+    {
+      "source": {
+        "id": "ortman2016-andes",
+        "authors": "Scott G. Ortman et al.",
+        "title": "Settlement scaling and economic change in the Central Andes",
+        "year": 2016,
+        "venue": "Journal of Archaeological Science",
+        "doi": "10.1016/j.jas.2016.07.012",
+        "url": "https://doi.org/10.1016/j.jas.2016.07.012",
+        "access": "Abstract only: author institutional record; preprint also identified, not substituted for published results.",
+        "referenceType": "journal-article",
+        "volume": "73",
+        "pages": "94–106"
+      },
+      "batches": {
+        "empires": [],
+        "incaSettlements": [
+          5
+        ]
+      },
+      "disposition": "Used with explicit sample/category, chronology and inference limits."
+    },
+    {
+      "source": {
+        "id": "haburaj2017",
+        "authors": "Vincent Haburaj et al.",
+        "title": "Geo-statistical methods to analyse changes in pre-Hispanic settlement patterns in the Río Ica catchment, Peru",
+        "year": 2017,
+        "venue": "Journal of Archaeological Science: Reports",
+        "doi": "10.1016/j.jasrep.2017.01.033",
+        "url": "https://doi.org/10.1016/j.jasrep.2017.01.033",
+        "access": "Indexed published article Table 2 and methods; DOI/author metadata checked against Crossref and author institutional bibliography.",
+        "referenceType": "journal-article",
+        "volume": "12",
+        "pages": "272–287"
+      },
+      "batches": {
+        "empires": [],
+        "incaSettlements": [
+          6
+        ]
+      },
+      "disposition": "Used with explicit sample/category, chronology and inference limits."
+    },
+    {
+      "source": {
+        "id": "hu2019",
+        "authors": "Di Hu",
+        "title": "Making space under the Inca: a space syntax analysis of a mitmaq settlement in Vilcas Huamán Province, Peru",
+        "year": 2019,
+        "venue": "Antiquity",
+        "doi": "10.15184/aqy.2019.82",
+        "url": "https://doi.org/10.15184/aqy.2019.82",
+        "access": "Abstract only: publisher; author preprint identified.",
+        "referenceType": "journal-article",
+        "volume": "93",
+        "issue": "370",
+        "pages": "990–1008"
+      },
+      "batches": {
+        "empires": [],
+        "incaSettlements": [
+          8
+        ]
+      },
+      "disposition": "Used with explicit sample/category, chronology and inference limits."
+    },
+    {
+      "source": {
+        "id": "bray1992",
+        "authors": "Tamara L. Bray",
+        "title": "Archaeological survey in northern highland Ecuador: Inca imperialism and the País Caranqui",
+        "year": 1992,
+        "venue": "World Archaeology",
+        "doi": "10.1080/00438243.1992.9980204",
+        "url": "https://doi.org/10.1080/00438243.1992.9980204",
+        "access": "Abstract only: publisher.",
+        "referenceType": "journal-article",
+        "volume": "24",
+        "issue": "2",
+        "pages": "218–233"
+      },
+      "batches": {
+        "empires": [],
+        "incaSettlements": [
+          9
+        ]
+      },
+      "disposition": "Used with explicit sample/category, chronology and inference limits."
+    },
+    {
+      "source": {
+        "id": "hernandez-garavito2020",
+        "authors": "Carla Hernández Garavito",
+        "title": "Producing legibility through ritual: The Inka expansion in Huarochirí (Lima, Peru)",
+        "year": 2020,
+        "venue": "Journal of Social Archaeology",
+        "doi": "10.1177/1469605320920127",
+        "url": "https://doi.org/10.1177/1469605320920127",
+        "access": "Abstract only: publisher-deposited Crossref abstract and publisher metadata.",
+        "referenceType": "journal-article",
+        "volume": "20",
+        "issue": "3",
+        "pages": "292–312"
+      },
+      "batches": {
+        "empires": [],
+        "incaSettlements": [
+          2
+        ]
+      },
+      "disposition": "Used with explicit sample/category, chronology and inference limits."
+    },
+    {
+      "source": {
+        "id": "garrido2025",
+        "authors": "Francisco Garrido",
+        "title": "A Chronological Model for Inca Provincial Expansion: The Case of the Copiapo Valley",
+        "year": 2025,
+        "venue": "Latin American Antiquity",
+        "doi": "10.1017/laq.2023.66",
+        "url": "https://doi.org/10.1017/laq.2023.66",
+        "access": "Abstract only: publisher; online 2024, issue 2025.",
+        "referenceType": "journal-article",
+        "volume": "36",
+        "issue": "1",
+        "pages": "100–119"
+      },
+      "batches": {
+        "empires": [],
+        "incaSettlements": [
+          11
+        ]
+      },
+      "disposition": "Used with explicit sample/category, chronology and inference limits."
+    },
+    {
+      "source": {
+        "id": "ferrari2021",
+        "authors": "Alejandro Andrés Ferrari, Joaquín Ignacio Izaguirre, and Félix Alejandro Acuto",
+        "title": "A bit closer to the past: the three-dimensionalization of an Inca ceremony in the north Calchaquí Valley (Salta, Argentina)",
+        "year": 2021,
+        "venue": "Virtual Archaeology Review",
+        "doi": "10.4995/var.2021.15285",
+        "url": "https://doi.org/10.4995/var.2021.15285",
+        "access": "Abstract only: publisher-deposited abstract in DOAJ; publisher page timed out.",
+        "referenceType": "journal-article",
+        "volume": "12",
+        "issue": "25",
+        "pages": "16–41"
+      },
+      "batches": {
+        "empires": [],
+        "incaSettlements": [
+          1
+        ]
+      },
+      "disposition": "Used with explicit sample/category, chronology and inference limits."
+    },
+    {
+      "title": "Settlement scaling theory: Bridging the study of ancient and contemporary urban systems",
+      "authors": "José Lobo, Luís M. A. Bettencourt, Michael E. Smith, and Scott Ortman",
+      "year": 2020,
+      "batches": {
+        "empires": [
+          3
+        ],
+        "incaSettlements": []
+      },
+      "doi": "10.1177/0042098019873796",
+      "url": "https://doi.org/10.1177/0042098019873796",
+      "access": "Publisher abstract; online 2019, issue 2020;57(4):731–747.",
+      "disposition": "Comparative framework, not an Inca-city census."
+    },
+    {
+      "title": "Pre-Colombian Cities",
+      "authors": "Jorge E. Hardoy",
+      "year": 2007,
+      "batches": {
+        "empires": [
+          4
+        ],
+        "incaSettlements": []
+      },
+      "access": "Exact edition/translation and full contents unresolved.",
+      "disposition": "Related to Hardoy 1974 entry; not treated as independent confirmation of capital population estimates."
+    },
+    {
+      "title": "Aztec City-State Capitals",
+      "authors": "Michael E. Smith",
+      "year": 2008,
+      "batches": {
+        "empires": [
+          7
+        ],
+        "incaSettlements": []
+      },
+      "access": "Publisher book description and Smithsonian catalogue only.",
+      "disposition": "Monograph distinguishes provincial capitals from Tenochtitlan; no exact all-city count derived from description."
+    },
+    {
+      "title": "Mesoamerican urbanism revisited: Environmental change, adaptation, resilience, persistence, and collapse",
+      "authors": "Diane Z. Chase et al.",
+      "year": 2023,
+      "batches": {
+        "empires": [
+          8
+        ],
+        "incaSettlements": []
+      },
+      "doi": "10.1073/pnas.2211558120",
+      "url": "https://doi.org/10.1073/pnas.2211558120",
+      "access": "Published perspective opening at author repository and indexed PMC text.",
+      "disposition": "Comparative synthesis, not one new demographic census."
+    },
+    {
+      "title": "The Earliest Cities",
+      "authors": "Michael E. Smith",
+      "year": 2025,
+      "batches": {
+        "empires": [
+          12
+        ],
+        "incaSettlements": []
+      },
+      "access": "Exact edition and full text not independently reviewed.",
+      "disposition": "General typology not evidence for an empire-wide city count."
+    },
+    {
+      "title": "Two thousand years of garden urbanism in the Upper Amazon",
+      "authors": "Stéphen Rostain et al.",
+      "year": 2024,
+      "batches": {
+        "empires": [
+          15
+        ],
+        "incaSettlements": [
+          14
+        ]
+      },
+      "doi": "10.1126/science.adi6317",
+      "url": "https://doi.org/10.1126/science.adi6317",
+      "access": "Published abstract/metadata identified; critical e-letter on cultural sequence also identified but substantive response not reviewed.",
+      "disposition": "Upano Amazonian urbanism predates Inca imperial period; not evidence for Inca road nodes. No detailed chronological claim authored here."
+    },
+    {
+      "title": "Urban settlements in ancient Peru",
+      "authors": "John H. Rowe",
+      "year": 1963,
+      "batches": {
+        "empires": [
+          16
+        ],
+        "incaSettlements": [
+          12
+        ]
+      },
+      "doi": "10.1179/naw.1963.1.1.001",
+      "url": "https://doi.org/10.1179/naw.1963.1.1.001",
+      "access": "Bibliographic identity only; Ñawpa Pacha 1(1):1–27; full article not reviewed.",
+      "disposition": "Historical urbanism article, not a directly inspected primary account of colonial mortality."
+    },
+    {
+      "title": "Pre-Columbian Cities",
+      "authors": "Jorge E. Hardoy",
+      "year": 1974,
+      "batches": {
+        "empires": [
+          17
+        ],
+        "incaSettlements": []
+      },
+      "access": "Edition metadata unresolved; related earlier/later title family to row 4.",
+      "disposition": "Do not count as independent corroboration without edition reconciliation."
+    },
+    {
+      "title": "From City to Empire",
+      "authors": "Michael Chazan",
+      "year": 2021,
+      "batches": {
+        "empires": [
+          18
+        ],
+        "incaSettlements": []
+      },
+      "access": "Chapter metadata/full text not independently reviewed.",
+      "disposition": "Orientation only; no Inca or Aztec city facts inferred."
+    },
+    {
+      "title": "Andean Civilizations (C.3000 BCE to 1532 CE)",
+      "authors": "Brian Fagan et al. as supplied",
+      "year": 2021,
+      "batches": {
+        "empires": [],
+        "incaSettlements": [
+          3
+        ]
+      },
+      "access": "Edition/chapter text not independently reviewed.",
+      "disposition": "Broad textbook title range is not an empire founding span."
+    },
+    {
+      "title": "Rethinking the Inka: Community, Landscape, and Empire in the Southern Andes",
+      "authors": "Ana María Presta",
+      "year": 2023,
+      "batches": {
+        "empires": [],
+        "incaSettlements": [
+          7
+        ]
+      },
+      "doi": "10.1215/00182168-10589013",
+      "url": "https://doi.org/10.1215/00182168-10589013",
+      "access": "Bibliographic identity checked: Hispanic American Historical Review 103(3):551–553.",
+      "disposition": "Book review of an edited volume; not independent primary evidence for counted imperial settlements or resettlement fraction."
+    },
+    {
+      "title": "Andean Statecraft before the Incas",
+      "authors": "Jerry D. Moore",
+      "year": 2018,
+      "batches": {
+        "empires": [],
+        "incaSettlements": [
+          10
+        ]
+      },
+      "access": "Full text/edition not independently reviewed.",
+      "disposition": "Pre-Inca synthesis does not independently establish counts of Inca towns."
+    },
+    {
+      "title": "Lidar reveals pre-Hispanic low-density urbanism in the Bolivian Amazon",
+      "authors": "Heiko Prümers et al.",
+      "year": 2022,
+      "batches": {
+        "empires": [],
+        "incaSettlements": [
+          13
+        ]
+      },
+      "access": "Bibliographic title only in this batch; no source-specific findings authored.",
+      "disposition": "Casarabe Amazonian urbanism is not an Inca administrative-settlement census."
+    }
+  ],
+  "unresolved": [
+    "No consistent empire-wide list of cities and definition of nucleated/urban settlements was established; regional counts cannot simply be added across overlapping periods and categories.",
+    "Cuzco population above 100000 in its monumental core and exact founding dates for all named cities remain unverified.",
+    "Global Inca road length 40000 km and empire-wide annual 0.5 percent settlement growth were not independently established from reviewed study results.",
+    "Hernández Garavito/Ferrari local ritual cases do not themselves count all imperial settlements; Presta 2023 is a review.",
+    "No new site-specific conquest, mortality or reducción chronology established from the broad historical extracts; traumatic colonial transformations require source-critical local evidence.",
+    "Hardoy editions and Chazan/Fagan/Smith 2025 chapter texts remain unresolved.",
+    "Upano and Casarabe histories remain relevant American urban comparisons but cannot be substituted for Inca urban evidence."
+  ],
+  "corrections": [
+    "Smith 2005 uses 87 centers with reliable area data, not totalAztec city count; median 90 ha refers totalcity and 2 ha administrative epicenter.",
+    "Ortman 2014 more than 1500 settlements belongs BasinMexico across four noncontemporaneous cohorts, not 1500 Inca cities.",
+    "Covey 2015 does report more than 1500 sites with imperial pottery, but sites are not all towns/cities or newly founded by the state.",
+    "Haburaj Table 2 classifies 54 sites and 40 settlements for 1450–1532 CE; no automatic inference of 40 nucleated urban centers.",
+    "Marsh 2017 Mendoza 1350–1440 cal CE and Chamical 1410–1480 cal CE are regional/site onset 95 percentprobability models, not foundingdates for allTawantinsuyu.",
+    "Chamical interval includes traditional 1463; authors argue high probability of earlier establishment, not exclusion of 1463 by its 95 percent interval.",
+    "Covey 2025 Ak’awillay decline precedes imperial expansion; imperial growth did not create a uniform continuously settled core.",
+    "Carballo study online 2022, issue 2025; Lobo online 2019, issue 2020; Garrido online 2024, issue 2025.",
+    "Rostain 2024 Upano does not substantiate Inca highland camino real nodes.",
+    "Conquest/rebuilding, political defeat, continued settlement and Indigenous survival are separate processes."
+  ]
+}

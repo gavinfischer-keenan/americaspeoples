@@ -70,7 +70,17 @@ export interface Review {
   relatedIds: string[];
 }
 export interface Overlay {
-  kind: "trade" | "conflict" | "forced-removal" | "epidemic" | "violence";
+  radiusKm?: number;
+  kind:
+    | "trade"
+    | "conflict"
+    | "forced-removal"
+    | "epidemic"
+    | "violence"
+    | "population-history"
+    | "regional-evidence"
+    | "environment"
+    | "cultural-reach";
   basis: "documented" | "schematic" | "unmapped";
   geometry:
     | { type: "Point"; coordinates: [number, number] }
@@ -80,6 +90,14 @@ export interface Overlay {
   provenance: string;
 }
 export interface EvidenceRecord {
+  population?: {
+    start: number;
+    end: number;
+    min: number;
+    max: number;
+    claimId: string;
+    scope: string;
+  }[];
   overlay?: Overlay;
   id: string;
   revision: number;

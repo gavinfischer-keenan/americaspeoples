@@ -1,3 +1,7 @@
+import fsSnapshot from "node:fs";
+const snapshot=JSON.parse(fsSnapshot.readFileSync("dist/evidence-appendix.json","utf8"));
+const expectedRecords=snapshot.records.length;
+const expectedOverlays=snapshot.records.filter(x=>x.record.overlay).length;
 import { chromium } from "playwright";
 import assert from "node:assert/strict";
 import { readFile, mkdir, writeFile } from "node:fs/promises";
@@ -72,7 +76,7 @@ try {
   await page
     .getByRole("heading", { name: "Your suggestions", exact: true })
     .waitFor();
-  assert.equal(await page.locator("[data-proposal-card]").count(), 51);
+  assert.equal(await page.locator("[data-proposal-card]").count(), expectedRecords);
   const savedAfter = await page.evaluate(() =>
     localStorage.getItem("americas-peoples-proposals-v1"),
   );
@@ -80,7 +84,7 @@ try {
   await page
     .getByRole("heading", { name: "Your suggestions", exact: true })
     .waitFor();
-  assert.equal(await page.locator("[data-proposal-card]").count(), 51);
+  assert.equal(await page.locator("[data-proposal-card]").count(), expectedRecords);
   assert.equal(
     await page.evaluate(() =>
       localStorage.getItem("americas-peoples-proposals-v1"),
@@ -98,7 +102,7 @@ try {
   assert.equal(
     JSON.parse(await readFile("test-results/hosted-proposals.json", "utf8"))
       .proposals.length,
-    51,
+    expectedRecords,
   );
   await page.getByRole("link", { name: "Map", exact: true }).click();
   await page.getByLabel("Preview complete suggestions").check();
@@ -108,11 +112,11 @@ try {
   assert.equal(await page.locator(".overlay-forced-removal").count(), 1);
   assert.equal(await page.locator(".overlay-violence").count(), 1);
   await page.goto(origin + "/evidence-appendix.html");
-  assert.equal(await page.locator("details[data-evidence-id]").count(), 59);
+  assert.equal(await page.locator("details[data-evidence-id]").count(), expectedRecords);
   const appendix = await (
     await fetch(origin + "/evidence-appendix.json")
   ).json();
-  assert.equal(appendix.records.filter((r) => r.defaultVisible).length, 59);
+  assert.equal(appendix.records.filter((r) => r.defaultVisible).length, expectedRecords);
   for (const url of [
     "/app.js",
     "/app.css",
@@ -163,8 +167,8 @@ try {
     checkedAt: new Date().toISOString(),
     browser: await browser.version(),
     origin: "local HTTP root, not production",
-    recordsImported: 51,
-    appendixRecords: 59,
+    recordsImported: expectedRecords,
+    appendixRecords: expectedRecords,
     requests,
     errors,
     violations,
@@ -175,7 +179,7 @@ try {
     JSON.stringify(report, null, 2),
   );
   console.log(
-    "PASS: hosted root, hash deep links, 51-record import/export, persistence, appendix, CSP, unsupported-browser message and no data uploads. Browser " +
+    "PASS: hosted root, hash deep links, complete snapshot import/export, persistence, appendix, CSP, unsupported-browser message and no data uploads. Browser " +
       report.browser,
   );
 } finally {

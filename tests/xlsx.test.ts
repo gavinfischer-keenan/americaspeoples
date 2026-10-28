@@ -4,6 +4,7 @@ import { readFile } from "node:fs/promises";
 import { unzipSync, zipSync, strFromU8, strToU8 } from "fflate";
 import { importWorkbook } from "../src/xlsx-import";
 import data from "../data/evidence.json";
+import historical from './fixtures/evidence-0.2.2.json';
 import type { Dataset } from "../src/model";
 const records = (data as Dataset).records;
 const template = async () =>
@@ -19,7 +20,7 @@ test("the original schema 1 workbook still imports from the archived release", a
   const bytes =
     release["americas-peoples/templates/americas-peoples-import.xlsx"];
   assert.ok(bytes, "archived template exists");
-  const pack = await importWorkbook(buffer(bytes), records);
+  const pack = await importWorkbook(buffer(bytes), (historical as Dataset).records);
   assert.equal(pack.proposals.length, 1);
   assert.equal(pack.proposals[0].record.id, "lanse-1021");
   assert.equal(pack.proposals[0].record.overlay, undefined);

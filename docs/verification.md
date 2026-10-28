@@ -23,7 +23,7 @@ Bulk tests additionally cover the actual distributed XLSX example, workbook rela
 - Eight entries demonstrate the research model; they do not supply comprehensive geographic or temporal coverage. No migration route is asserted in the starter corpus. Synthetic movement tests never ship as scholarly records.
 - All displayed route curves are schematic endpoint connections. Schema version 1 rejects purportedly supported path geometry; intermediate route reconstruction requires a later schema extension.
 - Bulk bibliography and claim mappings use the documented XLSX tables. The single-record form also offers structured JSON editors. The ordinary narrative, location, culture and date fields have labeled form controls.
-- Browser storage is a convenience. Exported JSON is the portable backup; packages must fit 2 MB / 200 proposals. A proposal that cannot be exported is rejected before leaving the editor.
+- Browser storage is a convenience. Exported JSON is the portable backup; packages must fit 4 MB / 500 proposals. A proposal that cannot be exported is rejected before leaving the editor.
 - Approximate single-year references are not expanded into fabricated date ranges. Playback lands on boundaries and holds briefly, making them visible; review links can also jump directly to them.
 - Unknown occupation bounds remain unplaced unless a defensible bounded interval is supplied. The reviewed dataset determines the timeline minimum; proposals do not silently redefine it.
 - The basemap shows generalized present-day coastlines. It is not a reconstruction of ancient shorelines, sea levels, ice sheets or political boundaries.
@@ -35,7 +35,7 @@ The researched workbook adds 51 proposals (30 ordinary records and 21 overlays),
 
 The 1934 extension uses one shared endpoint for validation, timeline input and playback. Further review caught coerced array values bypassing the overlay-kind enum and directional wording on point-only removal records. Regression tests now reject non-string kinds and reserve arrow wording for lines; point locators use a neutral symbol.
 
-## Deployment preparation checks
+## v0.2.1 deployment preparation checks (historical)
 
 `npm ci`, `npm test` (42 passing), `npm run typecheck`, `npm run validate` and `npm run build` passed. Node.js 24.19.0 was used. The clean build includes all runtime assets and all 59 appendix records while keeping the eight bundled entries distinct from the 51 optional proposals. Appendix tests preserve complete JSON records, escape text, and verify per-record provenance, source-check dates, history and geographic caveats in readable HTML.
 
@@ -44,3 +44,13 @@ All five offline suites and the additional hosted suite passed in both Edge 156.
 The dependency audit identified a malformed-ZIP64 parsing issue in fflate 0.8.2. The lockfile now pins the upstream [0.8.3 fix](https://github.com/101arrowz/fflate/releases/tag/v0.8.3); its license notice is updated. `npm audit --audit-level=moderate` reports zero known vulnerabilities as of October 28, 2026. The workbook archive-bounds and malformed-input regression tests pass. An audit is not proof that every dependency is vulnerability-free.
 
 An independent read-only deployment review found missing record/geographic provenance in the readable appendix. This was reproduced, corrected and checked for every record. The reviewer confirmed the finding resolved. Screenshots of the built appendix and map were inspected for readable layout. Animal branding and the final hostname remain to be supplied/confirmed by the deployment work; no infrastructure was changed.
+
+## v0.3.0 literature and settlement release
+
+October 28, 2026: 267 published records (55 ordinary evidence rows and 212 overlays), 389 claims and 426 record-scoped reference entries. Twenty-three complete author-supplied text exports are archived with SHA-256 hashes. Source reconciliation retains excluded comparisons, unresolved metadata, abstract-only access and corrections; a synthesis is not mislabeled as primary research.
+
+`npm test` passes 59 tests; `npm run typecheck`, `npm run validate` and `npm run build` pass. The actual researched XLSX imports all published records as corrections and preserves dates, claims, source mappings, population estimates and overlay geometry. The older schema-1 template and current sample template still import. Malformed archives, formula/macro content, unsafe links, byte/count limits and stale revisions remain checked. The native JSON cap is deliberately 4 MB/500 proposals so the complete snapshot fits; XLSX stays at 5 MB compressed/20 MB expanded.
+
+Independent read-only review found a broken internal population-citation anchor and stale workbook references/revisions. Both were corrected and independently rechecked. The reviewer found no remaining blockers and confirmed tests/type checking. A further regression verifies that records without a usable location or date explain why map navigation is unavailable.
+
+Browser checks on the built local atlas verified individual Hovenweep-area records, deep map focus, unknown striped symbols, separate population-range halos, culture/date information and population citation navigation without losing the review route. Date fading is illustrative; no statistical posterior is invented. Current archaeological reference coastlines are not a detailed local street map. Additional named-site datasets still need source-supported dates and public coordinates; this release is selected coverage, not a complete inventory of settlements.

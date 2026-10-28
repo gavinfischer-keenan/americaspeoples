@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "0.1.0",
+  "version": "0.3.0",
   "reviewedAt": "2026-10-28",
   "coverage": "Eight source-traceable examples, not comprehensive coverage. Many years and regions have no included records. No migration routes are asserted in this starter release.",
   "license": "Original summaries are supplied with the application. Scholarly works retain their own copyrights; only citation metadata, links and short original explanations are bundled.",
@@ -92,7 +92,7 @@
     },
     {
       "id": "white-sands-footprints",
-      "revision": 1,
+      "revision": 2,
       "type": "occupation",
       "title": "White Sands — repeated human trackmaking",
       "culture": {
@@ -139,6 +139,20 @@
               "note": "Independent chronological checks and historical objections"
             }
           ]
+        },
+        {
+          "id": "geographic-context",
+          "text": "The associated regional setting is White Sands National Park, New Mexico, United States.",
+          "status": "well-supported",
+          "explanation": "Official geographic context only. This does not independently establish archaeological dates, mission chronology, exact excavation positions or disputed interpretations.",
+          "support": [
+            {
+              "sourceId": "nps-white-sands-location",
+              "stance": "context",
+              "locator": "Official place information; see the separately sourced location provenance for more specific archaeological context.",
+              "note": "Identifies the named regional setting. Not evidence for the associated archaeological age or historical event."
+            }
+          ]
         }
       ],
       "sources": [
@@ -177,7 +191,8 @@
         "provenance": "Starter corpus compiled from the named publications and archival sources. Editorial source check only; access limitations are recorded per citation. No independent peer review.",
         "reviewedAt": "2026-10-28",
         "history": [
-          "2026-10-28: Initial source-traceable starter entry."
+          "2026-10-28: Initial source-traceable starter entry.",
+          "2026-10-28: linked existing official geographic references explicitly as location context, without changing archaeological dating."
         ],
         "relatedIds": [
           "chiquihuite-sc-c-onset"
@@ -186,7 +201,7 @@
     },
     {
       "id": "monte-verde-ii",
-      "revision": 1,
+      "revision": 3,
       "type": "occupation",
       "title": "Monte Verde II — late Pleistocene dating interpretation",
       "culture": {
@@ -238,6 +253,12 @@
               "locator": "PDF pages 1–2",
               "stance": "supports",
               "note": "Critiques the Holocene reinterpretation and supports retaining the late-Pleistocene chronology."
+            },
+            {
+              "sourceId": "braje2020",
+              "locator": "Abstract: Monte Verde in the review’s 2020 evidentiary context",
+              "stance": "context",
+              "note": "Regional review context only; does not independently date this context or override newer site-specific assessments."
             }
           ]
         },
@@ -252,6 +273,20 @@
               "locator": "Site descriptions and cultural materials",
               "stance": "supports",
               "note": "Supports human activity without settling the contested date."
+            }
+          ]
+        },
+        {
+          "id": "geographic-context",
+          "text": "The associated regional setting is Monte Verde complex, Chile.",
+          "status": "well-supported",
+          "explanation": "Official geographic context only. This does not independently establish archaeological dates, mission chronology, exact excavation positions or disputed interpretations.",
+          "support": [
+            {
+              "sourceId": "unesco-monte-location",
+              "stance": "context",
+              "locator": "Official place information; see the separately sourced location provenance for more specific archaeological context.",
+              "note": "Identifies the named regional setting. Not evidence for the associated archaeological age or historical event."
             }
           ]
         }
@@ -292,6 +327,18 @@
           "venue": "UNESCO World Heritage Centre",
           "url": "https://whc.unesco.org/en/tentativelists/1873/",
           "access": "Official submission page and listed boundary coordinates read."
+        },
+        {
+          "id": "braje2020",
+          "authors": "Todd J. Braje et al.",
+          "year": 2020,
+          "title": "Fladmark + 40: What Have We Learned about a Potential Pacific Coast Peopling of the Americas?",
+          "venue": "American Antiquity",
+          "doi": "10.1017/aaq.2019.80",
+          "url": "https://doi.org/10.1017/aaq.2019.80",
+          "access": "Abstract only: supplied by the app author or available from the publisher. No claim of reviewing unavailable methods, tables or supplementary data.",
+          "referenceType": "journal-article",
+          "pages": ""
         }
       ],
       "review": {
@@ -301,7 +348,9 @@
         "provenance": "Starter corpus compiled from the named publications and archival sources. Editorial source check only; access limitations are recorded per citation. No independent peer review.",
         "reviewedAt": "2026-10-28",
         "history": [
-          "2026-10-28: Initial source-traceable starter entry."
+          "2026-10-28: Initial source-traceable starter entry.",
+          "2026-10-28: added literature-review context; original dating and claim status retained.",
+          "2026-10-28: linked existing official geographic references explicitly as location context, without changing archaeological dating."
         ],
         "relatedIds": [
           "chinchihuapi-later-context"
@@ -310,7 +359,7 @@
     },
     {
       "id": "chinchihuapi-later-context",
-      "revision": 1,
+      "revision": 2,
       "type": "occupation",
       "title": "Chinchihuapi CH-I — later projectile-point and hearth context",
       "culture": {
@@ -351,6 +400,20 @@
               "note": "Later CH-I context and date"
             }
           ]
+        },
+        {
+          "id": "geographic-context",
+          "text": "The associated regional setting is Chinchihuapi CH-I, Monte Verde complex, Chile.",
+          "status": "well-supported",
+          "explanation": "Official geographic context only. This does not independently establish archaeological dates, mission chronology, exact excavation positions or disputed interpretations.",
+          "support": [
+            {
+              "sourceId": "unesco-monte-location",
+              "stance": "context",
+              "locator": "Official place information; see the separately sourced location provenance for more specific archaeological context.",
+              "note": "Identifies the named regional setting. Not evidence for the associated archaeological age or historical event."
+            }
+          ]
         }
       ],
       "sources": [
@@ -380,7 +443,8 @@
         "provenance": "Starter corpus compiled from the named publications and archival sources. Editorial source check only; access limitations are recorded per citation. No independent peer review.",
         "reviewedAt": "2026-10-28",
         "history": [
-          "2026-10-28: Initial source-traceable starter entry."
+          "2026-10-28: Initial source-traceable starter entry.",
+          "2026-10-28: linked existing official geographic references explicitly as location context, without changing archaeological dating."
         ],
         "relatedIds": [
           "monte-verde-ii"
@@ -389,7 +453,7 @@
     },
     {
       "id": "lanse-1021",
-      "revision": 1,
+      "revision": 2,
       "type": "event",
       "title": "L’Anse aux Meadows — Norse woodworking in 1021 CE",
       "culture": {
@@ -430,6 +494,20 @@
               "note": "1021 CE activity and Norse archaeological association"
             }
           ]
+        },
+        {
+          "id": "geographic-context",
+          "text": "The associated regional setting is L’Anse aux Meadows, Newfoundland, Canada.",
+          "status": "well-supported",
+          "explanation": "Official geographic context only. This does not independently establish archaeological dates, mission chronology, exact excavation positions or disputed interpretations.",
+          "support": [
+            {
+              "sourceId": "unesco-lanse-location",
+              "stance": "context",
+              "locator": "Official place information; see the separately sourced location provenance for more specific archaeological context.",
+              "note": "Identifies the named regional setting. Not evidence for the associated archaeological age or historical event."
+            }
+          ]
         }
       ],
       "sources": [
@@ -459,14 +537,15 @@
         "provenance": "Starter corpus compiled from the named publications and archival sources. Editorial source check only; access limitations are recorded per citation. No independent peer review.",
         "reviewedAt": "2026-10-28",
         "history": [
-          "2026-10-28: Initial source-traceable starter entry."
+          "2026-10-28: Initial source-traceable starter entry.",
+          "2026-10-28: linked existing official geographic references explicitly as location context, without changing archaeological dating."
         ],
         "relatedIds": []
       }
     },
     {
       "id": "cahokia-urban",
-      "revision": 1,
+      "revision": 3,
       "type": "occupation",
       "title": "Cahokia — urban archaeological complex",
       "culture": {
@@ -477,11 +556,11 @@
       },
       "location": {
         "id": "cahokia",
-        "name": "Cahokia archaeological complex, Illinois",
-        "lon": -90.06,
-        "lat": 38.66,
-        "precision": "Generalized archaeological-complex locator, not an individual structure or excavation.",
-        "provenance": "Cahokia Mounds State Historic Site; Property coordinates. https://whc.unesco.org/en/list/198/"
+        "name": "Cahokia Mounds State Historic Site, Illinois",
+        "lon": -90.06138888888889,
+        "lat": 38.65861111111111,
+        "precision": "DMS-derived public UNESCO property reference point, not an individual mound, house or settlement centroid. Published accuracy is one arcsecond; extra decimal places are conversion precision only.",
+        "provenance": "UNESCO property 198bis maps table: N38 39 31 W90 3 41; https://whc.unesco.org/en/list/198/maps/"
       },
       "destination": null,
       "routeKind": "schematic",
@@ -508,6 +587,40 @@
               "note": "Urban phase and regional continuity distinction"
             }
           ]
+        },
+        {
+          "id": "geographic-context",
+          "text": "The associated regional setting is Cahokia archaeological complex, Illinois.",
+          "status": "well-supported",
+          "explanation": "Official geographic context only. This does not independently establish archaeological dates, mission chronology, exact excavation positions or disputed interpretations.",
+          "support": [
+            {
+              "sourceId": "unesco-cahokia-location",
+              "stance": "context",
+              "locator": "Official place information; see the separately sourced location provenance for more specific archaeological context.",
+              "note": "Identifies the named regional setting. Not evidence for the associated archaeological age or historical event."
+            }
+          ]
+        },
+        {
+          "id": "resident-population-phases",
+          "text": "A published reconstruction displayed by Illinois State Museum gives Cahokia roughly 10,200–15,300 residents in the Lohmann phase and approximately 5,200–7,200 in the Stirling phase.",
+          "status": "under discussion",
+          "explanation": "These are archaeological resident estimates, not censuses or statistical confidence limits. The original demographic chapter was not directly accessible; the museum graph was inspected. Phase dates come from White et al. Different study areas and models yield different totals; no estimate is derived here from house counts or fecal molecules.",
+          "support": [
+            {
+              "sourceId": "ism-cahokia-population-graph",
+              "locator": "Population graph, Lohmann and Stirling high/low estimates; caption cites Pauketat and Lopinot 1997 Figure 6.3",
+              "stance": "supports",
+              "note": "Numeric values are approximate graph readings; preserve rounding and the original reconstruction’s scope."
+            },
+            {
+              "sourceId": "white2018-demography-phases",
+              "locator": "Indexed introduction, archaeological population reconstructions",
+              "stance": "context",
+              "note": "Lohmann 1050–1100 CE; Stirling 1100–1200 CE. Fecal stanols are an independent trend proxy, not absolute resident counts."
+            }
+          ]
         }
       ],
       "sources": [
@@ -528,25 +641,68 @@
           "venue": "World Heritage List, property 198bis",
           "url": "https://whc.unesco.org/en/list/198/",
           "access": "Official property page read, including description and public coordinates."
+        },
+        {
+          "id": "ism-cahokia-population-graph",
+          "authors": "Illinois State Museum; after Timothy R. Pauketat and Neal H. Lopinot",
+          "title": "Estimates of Cahokia population through time",
+          "year": null,
+          "referenceType": "web-resource",
+          "venue": "RiverWeb / Society Archives",
+          "url": "https://www.museum.state.il.us/RiverWeb/landings/Ambot/prehistory/archives/images/society/pages/ptscty50ld2.html",
+          "access": "Official museum caption and graph inspected. Caption identifies a modification of Pauketat and Lopinot 1997, Figure 6.3, p. 119; the original chapter was access-restricted."
+        },
+        {
+          "id": "white2018-demography-phases",
+          "authors": "A. J. White; Lora R. Stevens; Varenka Lorenzi; Samuel E. Munoz; Carl P. Lipo; Sissel Schroeder",
+          "title": "An evaluation of fecal stanols as indicators of population change at Cahokia, Illinois",
+          "year": 2018,
+          "venue": "Journal of Archaeological Science",
+          "volume": "93",
+          "pages": "129–134",
+          "referenceType": "journal-article",
+          "url": "https://doi.org/10.1016/j.jas.2018.03.009",
+          "access": "Publisher abstract and indexed article introductory passage read; phase chronology checked. Full article tables were not accessed. Author-hosted PDF identified but robot verification prevented full access.",
+          "doi": "10.1016/j.jas.2018.03.009"
         }
       ],
       "review": {
         "summary": "This row represents the urban phase, not the first or last human presence in the region. Mississippian is an archaeological classification, not a race.",
         "limitations": "The regional population persisted and later increased. Ending this marker must not imply an empty watershed or extinction.",
-        "discussion": "The regional population persisted and later increased. Ending this marker must not imply an empty watershed or extinction.",
+        "discussion": "The regional population persisted and later increased. Ending this marker must not imply an empty watershed or extinction. Museum-reproduced Lohmann/Stirling estimates are model-based and approximate; the original 1997 chapter remains access-restricted. No interpolation between phases.",
         "provenance": "Starter corpus compiled from the named publications and archival sources. Editorial source check only; access limitations are recorded per citation. No independent peer review.",
         "reviewedAt": "2026-10-28",
         "history": [
-          "2026-10-28: Initial source-traceable starter entry."
+          "2026-10-28: Initial source-traceable starter entry.",
+          "2026-10-28: linked existing official geographic references explicitly as location context, without changing archaeological dating.",
+          "2026-10-28: UNESCO coordinate and qualified sourced population phases added."
         ],
         "relatedIds": [
           "river-labbe-mission"
         ]
-      }
+      },
+      "population": [
+        {
+          "start": 1050,
+          "end": 1099,
+          "min": 10200,
+          "max": 15300,
+          "claimId": "resident-population-phases",
+          "scope": "Cahokia site resident reconstruction reproduced by Illinois State Museum; not Greater Cahokia, American Bottom, or Horseshoe Lake watershed. Phase boundaries are a display convention; the shared 1100 boundary is assigned to the Stirling phase. Estimates are approximate graph readings, not annual censuses."
+        },
+        {
+          "start": 1100,
+          "end": 1200,
+          "min": 5200,
+          "max": 7200,
+          "claimId": "resident-population-phases",
+          "scope": "Same Cahokia site reconstruction, Stirling phase; approximate graph reading, not a measured error interval. Phase boundaries are a display convention; the shared 1100 boundary is assigned to the Stirling phase. Estimates are approximate graph readings, not annual censuses."
+        }
+      ]
     },
     {
       "id": "river-labbe-mission",
-      "revision": 1,
+      "revision": 3,
       "type": "occupation",
       "title": "Monks Mound — River L’Abbe mission",
       "culture": {
@@ -557,11 +713,11 @@
       },
       "location": {
         "id": "cahokia",
-        "name": "Cahokia archaeological complex, Illinois",
-        "lon": -90.06,
-        "lat": 38.66,
-        "precision": "Generalized archaeological-complex locator, not an individual structure or excavation.",
-        "provenance": "Cahokia Mounds State Historic Site; Property coordinates. https://whc.unesco.org/en/list/198/"
+        "name": "Cahokia Mounds State Historic Site, Illinois",
+        "lon": -90.06138888888889,
+        "lat": 38.65861111111111,
+        "precision": "DMS-derived public UNESCO property reference point, not an individual mound, house or settlement centroid. Published accuracy is one arcsecond; extra decimal places are conversion precision only.",
+        "provenance": "UNESCO property 198bis maps table: N38 39 31 W90 3 41; https://whc.unesco.org/en/list/198/maps/"
       },
       "destination": null,
       "routeKind": "schematic",
@@ -585,6 +741,20 @@
               "locator": "Discussion, 1735 relocation and 1752 closure paragraphs",
               "stance": "supports",
               "note": "Mission interval and associated peoples"
+            }
+          ]
+        },
+        {
+          "id": "geographic-context",
+          "text": "The associated regional setting is Cahokia archaeological complex, Illinois.",
+          "status": "well-supported",
+          "explanation": "Official geographic context only. This does not independently establish archaeological dates, mission chronology, exact excavation positions or disputed interpretations.",
+          "support": [
+            {
+              "sourceId": "unesco-cahokia-location",
+              "stance": "context",
+              "locator": "Official place information; see the separately sourced location provenance for more specific archaeological context.",
+              "note": "Identifies the named regional setting. Not evidence for the associated archaeological age or historical event."
             }
           ]
         }
@@ -616,7 +786,9 @@
         "provenance": "Starter corpus compiled from the named publications and archival sources. Editorial source check only; access limitations are recorded per citation. No independent peer review.",
         "reviewedAt": "2026-10-28",
         "history": [
-          "2026-10-28: Initial source-traceable starter entry."
+          "2026-10-28: Initial source-traceable starter entry.",
+          "2026-10-28: linked existing official geographic references explicitly as location context, without changing archaeological dating.",
+          "2026-10-28: shared public Cahokia complex locator refined; no individual structure location asserted."
         ],
         "relatedIds": [
           "cahokia-urban"

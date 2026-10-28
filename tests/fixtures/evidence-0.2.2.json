@@ -1,0 +1,688 @@
+{
+  "schemaVersion": 1,
+  "version": "0.1.0",
+  "reviewedAt": "2026-10-28",
+  "coverage": "Eight source-traceable examples, not comprehensive coverage. Many years and regions have no included records. No migration routes are asserted in this starter release.",
+  "license": "Original summaries are supplied with the application. Scholarly works retain their own copyrights; only citation metadata, links and short original explanations are bundled.",
+  "records": [
+    {
+      "id": "chiquihuite-sc-c-onset",
+      "revision": 1,
+      "type": "event",
+      "title": "Chiquihuite Cave — proposed onset of early human activity",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": {
+        "id": "chiquihuite",
+        "name": "Chiquihuite Cave, Zacatecas, Mexico",
+        "lon": -101.13,
+        "lat": 24.62,
+        "precision": "Approximate public locator, rounded to 0.01 degrees; not an excavation point",
+        "provenance": "Evidence of human occupation in Mexico around the Last Glacial Maximum; Reporting summary Location: WGS84 24.61666, -101.13333. https://doi.org/10.1038/s41586-020-2509-0"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -31200,
+        "end": -29455,
+        "original": "Modelled start of SC-C: 33,150–31,405 cal BP (95.4%)",
+        "method": "Bayesian age model of radiocarbon determinations with OSL chronological control",
+        "interpretation": "1950 minus calibrated BP; a possible onset interval, not a 1,746-year occupation"
+      },
+      "claims": [
+        {
+          "id": "primary",
+          "text": "The excavators interpret lithic material and its stratigraphic chronology as evidence of human activity beginning before the Last Glacial Maximum.",
+          "status": "disputed",
+          "explanation": "Ardelean and colleagues report a stone assemblage with a modelled early boundary in SC-C. This row shows that proposed boundary only. It does not assert continuous residence or a known ethnic identity.",
+          "support": [
+            {
+              "sourceId": "ardelean2020",
+              "locator": "Chronology and Fig. 2",
+              "stance": "supports",
+              "note": "Reported assemblage and onset model"
+            },
+            {
+              "sourceId": "chatters2022",
+              "locator": "Abstract",
+              "stance": "challenges",
+              "note": "Human manufacture of assemblage"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "ardelean2020",
+          "authors": "Ciprian F. Ardelean, Lorena Becerra-Valdivia, Mikkel Winther Pedersen, et al.",
+          "title": "Evidence of human occupation in Mexico around the Last Glacial Maximum",
+          "year": 2020,
+          "venue": "Nature 584, 87–92",
+          "url": "https://doi.org/10.1038/s41586-020-2509-0",
+          "access": "Publisher abstract/metadata and author-uploaded full-text version read. The upload identifies Ciprian F. Ardelean as uploader. Chronology section and reporting summary inspected. Limitation: A modelled stratigraphic boundary is not a directly dated arrival or an uninterrupted occupation. Human manufacture is contested."
+        },
+        {
+          "id": "chatters2022",
+          "authors": "James C. Chatters, Ben A. Potter, Anna Marie Prentiss, et al.",
+          "title": "Evaluating Claims of Early Human Occupation at Chiquihuite Cave, Mexico",
+          "year": 2022,
+          "venue": "PaleoAmerica 8(1), 1–16 (published online 2021)",
+          "url": "https://doi.org/10.1080/20555563.2021.1940441",
+          "access": "University of Montana publication record, author list, publication metadata, and complete abstract read. Full article was not independently inspected."
+        }
+      ],
+      "review": {
+        "summary": "Ardelean and colleagues report a stone assemblage with a modelled early boundary in SC-C. This row shows that proposed boundary only. It does not assert continuous residence or a known ethnic identity.",
+        "limitations": "The central dispute concerns whether the stones were made by people. Chatters and colleagues favor natural fragmentation and cave processes. A dated sediment sequence does not, by itself, resolve human agency. Treat this as a credible published but contested claim, not an established first arrival.",
+        "discussion": "The central dispute concerns whether the stones were made by people. Chatters and colleagues favor natural fragmentation and cave processes. A dated sediment sequence does not, by itself, resolve human agency. Treat this as a credible published but contested claim, not an established first arrival.",
+        "provenance": "Starter corpus compiled from the named publications and archival sources. Editorial source check only; access limitations are recorded per citation. No independent peer review.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Initial source-traceable starter entry."
+        ],
+        "relatedIds": [
+          "white-sands-footprints"
+        ]
+      }
+    },
+    {
+      "id": "white-sands-footprints",
+      "revision": 1,
+      "type": "occupation",
+      "title": "White Sands — repeated human trackmaking",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": {
+        "id": "white-sands",
+        "name": "White Sands National Park, New Mexico, United States",
+        "lon": -106.17,
+        "lat": 32.78,
+        "precision": "Park visitor-center proxy; NOT the footprint locality; generalized geographic locator only",
+        "provenance": "Directions — White Sands National Park; GPS Coordinates. https://www.nps.gov/whsa/planyourvisit/directions.htm"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -21550,
+        "end": -19750,
+        "original": "23.5–21.7 ka calibrated BP",
+        "method": "Conifer-pollen and aquatic-seed radiocarbon dating; OxCal 4.4.4 / IntCal20; earlier independent quartz OSL checks",
+        "interpretation": "1950 minus 23500 and 21700; aggregate footprint sequence, not continuous residence"
+      },
+      "claims": [
+        {
+          "id": "primary",
+          "text": "Multiple footprint horizons document repeated human presence during the Last Glacial Maximum.",
+          "status": "well-supported",
+          "explanation": "The October 2026 study refines the expanded footprint sequence to 23.5–21.7 ka. An outlined interval represents the aggregate dating envelope; it is not evidence that a settlement remained occupied in every intervening year.",
+          "support": [
+            {
+              "sourceId": "springer2026",
+              "locator": "Abstract; Calibration",
+              "stance": "supports",
+              "note": "Refined aggregate chronology"
+            },
+            {
+              "sourceId": "pigati2023",
+              "locator": "Pages 73–75",
+              "stance": "supports",
+              "note": "Independent chronological checks and historical objections"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "springer2026",
+          "authors": "Kathleen B. Springer, Jeffrey S. Pigati, Jessica E. Tierney, et al.",
+          "title": "Humans experienced abrupt environmental changes at White Sands during the Last Glacial Maximum",
+          "year": 2026,
+          "venue": "Science Advances 12(42), eaeh0707",
+          "url": "https://doi.org/10.1126/sciadv.aeh0707",
+          "access": "USGS abstract/metadata and PMC article text including Calibration section read; DOI metadata cross-checked with PubMed 42873862. Published October 14, 2026. Limitation: An aggregate sequence does not establish uninterrupted residence between every dated horizon."
+        },
+        {
+          "id": "pigati2023",
+          "authors": "Jeffrey S. Pigati, Kathleen B. Springer, Jeffrey S. Honke, et al.",
+          "title": "Independent age estimates resolve the controversy of ancient human footprints at White Sands",
+          "year": 2023,
+          "venue": "Science 382(6666), 73–75",
+          "url": "https://doi.org/10.1126/science.adh5007",
+          "access": "Full published article read through UC Berkeley-hosted PDF; text and chronology figure captions inspected. Limitation: Earlier seed measurements and the independent checks belong to the same site chronology and are not independent evidence for a migration route."
+        },
+        {
+          "id": "nps-white-sands-location",
+          "authors": "National Park Service",
+          "title": "Directions — White Sands National Park",
+          "year": null,
+          "venue": "National Park Service visitor information",
+          "url": "https://www.nps.gov/whsa/planyourvisit/directions.htm",
+          "access": "Official page read; public visitor-center coordinates checked."
+        }
+      ],
+      "review": {
+        "summary": "The October 2026 study refines the expanded footprint sequence to 23.5–21.7 ka. An outlined interval represents the aggregate dating envelope; it is not evidence that a settlement remained occupied in every intervening year.",
+        "limitations": "Earlier dates based on aquatic seeds raised objections about old carbon and redeposition. Pigati and colleagues tested that chronology with terrestrial pollen and quartz luminescence in 2023. The newer chronology adds pollen analyses. Cultural affiliation and migration direction remain unassigned; footprints cannot establish either on their own.",
+        "discussion": "Earlier dates based on aquatic seeds raised objections about old carbon and redeposition. Pigati and colleagues tested that chronology with terrestrial pollen and quartz luminescence in 2023. The newer chronology adds pollen analyses. Cultural affiliation and migration direction remain unassigned; footprints cannot establish either on their own.",
+        "provenance": "Starter corpus compiled from the named publications and archival sources. Editorial source check only; access limitations are recorded per citation. No independent peer review.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Initial source-traceable starter entry."
+        ],
+        "relatedIds": [
+          "chiquihuite-sc-c-onset"
+        ]
+      }
+    },
+    {
+      "id": "monte-verde-ii",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Monte Verde II — late Pleistocene dating interpretation",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": {
+        "id": "monte-verde",
+        "name": "Monte Verde complex, Chile",
+        "lon": -73.2,
+        "lat": -41.5,
+        "precision": "Generalized complex locator, rounded to 0.01 degrees",
+        "provenance": "Monte Verde Archaeological Site — Tentative List submission 1873; Coordinates. https://whc.unesco.org/en/tentativelists/1873/"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -12550,
+        "end": -12550,
+        "original": "Approximately 14,500 cal BP",
+        "method": "Radiocarbon and stratigraphic interpretation; contextual OSL",
+        "interpretation": "1950 - 14500 = -12550; rounded reference year only, not an exact annual date or duration An approximate single-year reference is not an exact occurrence. Show a tilde/approximate label and provide jump-to-record navigation; do not silently manufacture an uncertainty window.",
+        "approximate": true
+      },
+      "claims": [
+        {
+          "id": "primary",
+          "text": "One interpretation dates the MV-II cultural component to approximately 14,500 cal BP.",
+          "status": "disputed",
+          "explanation": "The earlier interpretation associates structures, hearths, and artifacts with a late-Pleistocene surface. The displayed year represents this published interpretation, not the resolution of the dating evidence.",
+          "support": [
+            {
+              "sourceId": "dillehay2015",
+              "locator": "Previous work at Monte Verde; chronology",
+              "stance": "supports",
+              "note": "Late-Pleistocene interpretation"
+            },
+            {
+              "sourceId": "surovell2026",
+              "locator": "Abstract",
+              "stance": "challenges",
+              "note": "Late-Pleistocene chronology"
+            },
+            {
+              "sourceId": "waters2026-letter",
+              "locator": "PDF pages 1–2",
+              "stance": "supports",
+              "note": "Critiques the Holocene reinterpretation and supports retaining the late-Pleistocene chronology."
+            }
+          ]
+        },
+        {
+          "id": "human-agency",
+          "text": "Cultural materials are reported; the dispute concerns their chronological placement.",
+          "status": "well-supported",
+          "explanation": "The dating dispute is kept separate from evidence of human activity.",
+          "support": [
+            {
+              "sourceId": "dillehay2015",
+              "locator": "Site descriptions and cultural materials",
+              "stance": "supports",
+              "note": "Supports human activity without settling the contested date."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "dillehay2015",
+          "authors": "Tom D. Dillehay, Carlos Ocampo, José Saavedra, et al.",
+          "title": "New Archaeological Evidence for an Early Human Presence at Monte Verde, Chile",
+          "year": 2015,
+          "venue": "PLOS ONE 10(11), e0141923",
+          "url": "https://doi.org/10.1371/journal.pone.0141923",
+          "access": "Open full text read, including site descriptions, chronology, Material Remains, and discussion. The publisher links a correction at DOI 10.1371/journal.pone.0145471. Limitation: The 2026 debate about MV-II must accompany the older interpretation. Do not combine all described horizons into continuous residence."
+        },
+        {
+          "id": "surovell2026",
+          "authors": "Todd A. Surovell, César Méndez, Juan-Luis García, Christopher Lüthgens, Jay M. Thompson, Claudio Latorre",
+          "title": "A mid-Holocene age for Monte Verde challenges the timeline of human colonization of South America",
+          "year": 2026,
+          "venue": "Science 391(6791), 1283–1288",
+          "url": "https://doi.org/10.1126/science.adw9217",
+          "access": "PubMed abstract and metadata read; publisher full-text access returned 403. Authors' institutional explanation also inspected. Do not represent this as a full methodological audit."
+        },
+        {
+          "id": "waters2026-letter",
+          "authors": "Michael Waters, Jessi Halligan, Rolfe Mandel, Justin Holcomb, Loren Davis, Vance Holliday",
+          "title": "Geoarchaeological Assessment of the Suggested Middle Holocene Age for Monte Verde II, Chile",
+          "year": 2026,
+          "venue": "Science eLetters, May 5, 2026",
+          "url": "https://liberalarts.tamu.edu/csfa/wp-content/uploads/sites/14/2026/05/Three-Critiques.pdf",
+          "access": "First eLetter in the Texas A&M-hosted PDF read, especially Arguments 1 and 2 and Conclusions. The PDF contains additional eLetters; this source record names only the first. Limitation: A subsequent peer-reviewed version exists (10.1080/20555563.2026.2699013, August 12, 2026); full text was inaccessible in this review, so do not claim to have inspected it."
+        },
+        {
+          "id": "unesco-monte-location",
+          "authors": "National Monuments Council of Chile",
+          "title": "Monte Verde Archaeological Site — Tentative List submission 1873",
+          "year": 2004,
+          "venue": "UNESCO World Heritage Centre",
+          "url": "https://whc.unesco.org/en/tentativelists/1873/",
+          "access": "Official submission page and listed boundary coordinates read."
+        }
+      ],
+      "review": {
+        "summary": "The earlier interpretation associates structures, hearths, and artifacts with a late-Pleistocene surface. The displayed year represents this published interpretation, not the resolution of the dating evidence.",
+        "limitations": "Surovell and colleagues proposed a Middle Holocene age in 2026, invoking alluvial chronology and a tephra relationship. Waters and colleagues dispute the terrace correlations and evidence for redeposition. These competing interpretations must remain distinct; do not average them into one date or imply occupation throughout the interval separating them. An approximate single-year reference is not an exact occurrence. Show a tilde/approximate label and provide jump-to-record navigation; do not silently manufacture an uncertainty window.",
+        "discussion": "Surovell and colleagues proposed a Middle Holocene age in 2026, invoking alluvial chronology and a tephra relationship. Waters and colleagues dispute the terrace correlations and evidence for redeposition. These competing interpretations must remain distinct; do not average them into one date or imply occupation throughout the interval separating them.",
+        "provenance": "Starter corpus compiled from the named publications and archival sources. Editorial source check only; access limitations are recorded per citation. No independent peer review.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Initial source-traceable starter entry."
+        ],
+        "relatedIds": [
+          "chinchihuapi-later-context"
+        ]
+      }
+    },
+    {
+      "id": "chinchihuapi-later-context",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Chinchihuapi CH-I — later projectile-point and hearth context",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": {
+        "id": "chinchihuapi",
+        "name": "Chinchihuapi CH-I, Monte Verde complex, Chile",
+        "lon": -73.2,
+        "lat": -41.5,
+        "precision": "Generalized complex locator; CH-I is a separate locality, not the MV-II excavation",
+        "provenance": "Monte Verde Archaeological Site — Tentative List submission 1873; Coordinates. https://whc.unesco.org/en/tentativelists/1873/"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -8700,
+        "end": -8670,
+        "original": "10,650–10,620 cal BP",
+        "method": "Published radiocarbon context dating",
+        "interpretation": "1950 minus calibrated endpoints; uncertain occurrence range, not a 31-year residence"
+      },
+      "claims": [
+        {
+          "id": "primary",
+          "text": "Dillehay and colleagues report a later CH-I context containing a projectile point, hearth, and drill fragment.",
+          "status": "well-supported",
+          "explanation": "This younger context is separate from the MV-II interpretation. Similarity to Paiján forms does not establish the makers' identity or a migration link.",
+          "support": [
+            {
+              "sourceId": "dillehay2015",
+              "locator": "Material Remains; Fig. 9",
+              "stance": "supports",
+              "note": "Later CH-I context and date"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "dillehay2015",
+          "authors": "Tom D. Dillehay, Carlos Ocampo, José Saavedra, et al.",
+          "title": "New Archaeological Evidence for an Early Human Presence at Monte Verde, Chile",
+          "year": 2015,
+          "venue": "PLOS ONE 10(11), e0141923",
+          "url": "https://doi.org/10.1371/journal.pone.0141923",
+          "access": "Open full text read, including site descriptions, chronology, Material Remains, and discussion. The publisher links a correction at DOI 10.1371/journal.pone.0145471. Limitation: The 2026 debate about MV-II must accompany the older interpretation. Do not combine all described horizons into continuous residence."
+        },
+        {
+          "id": "unesco-monte-location",
+          "authors": "National Monuments Council of Chile",
+          "title": "Monte Verde Archaeological Site — Tentative List submission 1873",
+          "year": 2004,
+          "venue": "UNESCO World Heritage Centre",
+          "url": "https://whc.unesco.org/en/tentativelists/1873/",
+          "access": "Official submission page and listed boundary coordinates read."
+        }
+      ],
+      "review": {
+        "summary": "This younger context is separate from the MV-II interpretation. Similarity to Paiján forms does not establish the makers' identity or a migration link.",
+        "limitations": "This is a bounded record of the published context, not independent replication of the excavation. Do not fill the intervening millennia with occupation or transfer the MV-II dispute automatically to every nearby context.",
+        "discussion": "This is a bounded record of the published context, not independent replication of the excavation. Do not fill the intervening millennia with occupation or transfer the MV-II dispute automatically to every nearby context.",
+        "provenance": "Starter corpus compiled from the named publications and archival sources. Editorial source check only; access limitations are recorded per citation. No independent peer review.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Initial source-traceable starter entry."
+        ],
+        "relatedIds": [
+          "monte-verde-ii"
+        ]
+      }
+    },
+    {
+      "id": "lanse-1021",
+      "revision": 1,
+      "type": "event",
+      "title": "L’Anse aux Meadows — Norse woodworking in 1021 CE",
+      "culture": {
+        "id": "norse",
+        "name": "Norse",
+        "kind": "people",
+        "color": "#dfba7a"
+      },
+      "location": {
+        "id": "lanse-aux-meadows",
+        "name": "L’Anse aux Meadows, Newfoundland, Canada",
+        "lon": -55.55,
+        "lat": 51.58,
+        "precision": "Generalized property locator rounded from UNESCO coordinates; not individual sample findspots",
+        "provenance": "L’Anse aux Meadows National Historic Site; Property coordinates. https://whc.unesco.org/en/list/4/"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1021,
+        "end": 1021,
+        "original": "AD 1021",
+        "method": "Annual tree rings matched to the 993 CE radiocarbon anomaly",
+        "interpretation": "CE year retained unchanged"
+      },
+      "claims": [
+        {
+          "id": "primary",
+          "text": "Wood modified with metal tools in Norse archaeological contexts dates to cutting activity in 1021 CE.",
+          "status": "well-supported",
+          "explanation": "Kuitems and colleagues identified the 993 CE radiocarbon signal in three different trees and counted annual rings to their outer edges. Agreement among the resulting cutting dates anchors Norse activity to 1021.",
+          "support": [
+            {
+              "sourceId": "kuitems2022",
+              "locator": "Precise dating of Norse activity in the Americas; Fig. 2",
+              "stance": "supports",
+              "note": "1021 CE activity and Norse archaeological association"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "kuitems2022",
+          "authors": "Margot Kuitems, Birgitta L. Wallace, Charles Lindsay, et al.",
+          "title": "Evidence for European presence in the Americas in AD 1021",
+          "year": 2022,
+          "venue": "Nature 601, 388–391 (published online October 20, 2021)",
+          "url": "https://doi.org/10.1038/s41586-021-03972-8",
+          "access": "Open full article read, particularly Precise dating of Norse activity in the Americas and Fig. 2. Limitation: This dates activity, not the beginning or end of the settlement. It does not justify a precise travel route."
+        },
+        {
+          "id": "unesco-lanse-location",
+          "authors": "UNESCO World Heritage Centre",
+          "title": "L’Anse aux Meadows National Historic Site",
+          "year": null,
+          "venue": "World Heritage List, property 4bis",
+          "url": "https://whc.unesco.org/en/list/4/",
+          "access": "Official property page read, including public coordinate listing."
+        }
+      ],
+      "review": {
+        "summary": "Kuitems and colleagues identified the 993 CE radiocarbon signal in three different trees and counted annual rings to their outer edges. Agreement among the resulting cutting dates anchors Norse activity to 1021.",
+        "limitations": "This precise date does not date the settlement's founding or abandonment. It also does not show that every Norse activity occurred in that year. No arrival route is inferred from this record.",
+        "discussion": "This precise date does not date the settlement's founding or abandonment. It also does not show that every Norse activity occurred in that year. No arrival route is inferred from this record.",
+        "provenance": "Starter corpus compiled from the named publications and archival sources. Editorial source check only; access limitations are recorded per citation. No independent peer review.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Initial source-traceable starter entry."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "cahokia-urban",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Cahokia — urban archaeological complex",
+      "culture": {
+        "id": "mississippian",
+        "name": "Mississippian archaeological tradition",
+        "kind": "culture",
+        "color": "#79b8a3"
+      },
+      "location": {
+        "id": "cahokia",
+        "name": "Cahokia archaeological complex, Illinois",
+        "lon": -90.06,
+        "lat": 38.66,
+        "precision": "Generalized archaeological-complex locator, not an individual structure or excavation.",
+        "provenance": "Cahokia Mounds State Historic Site; Property coordinates. https://whc.unesco.org/en/list/198/"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1050,
+        "end": 1400,
+        "original": "ca. AD 1050–1400",
+        "method": "Archaeological chronology synthesized with regional environmental evidence",
+        "interpretation": "CE years retained; endpoints are approximate scholarly period boundaries",
+        "approximate": true
+      },
+      "claims": [
+        {
+          "id": "primary",
+          "text": "Cahokia's urban complex belongs to a Mississippian occupation phase approximately 1050–1400 CE.",
+          "status": "well-supported",
+          "explanation": "This row represents the urban phase, not the first or last human presence in the region. Mississippian is an archaeological classification, not a race.",
+          "support": [
+            {
+              "sourceId": "white2020",
+              "locator": "Abstract; Discussion",
+              "stance": "supports",
+              "note": "Urban phase and regional continuity distinction"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "white2020",
+          "authors": "A. J. White, Samuel E. Munoz, Sissel Schroeder, Lora R. Stevens",
+          "title": "After Cahokia: Indigenous Repopulation and Depopulation of the Horseshoe Lake Watershed AD 1400–1900",
+          "year": 2020,
+          "venue": "American Antiquity 85(2), 263–278",
+          "url": "https://doi.org/10.1017/aaq.2019.103",
+          "access": "Open full article read, including Abstract and Discussion historical sequence. Original historical works cited by the article were not independently inspected."
+        },
+        {
+          "id": "unesco-cahokia-location",
+          "authors": "UNESCO World Heritage Centre",
+          "title": "Cahokia Mounds State Historic Site",
+          "year": null,
+          "venue": "World Heritage List, property 198bis",
+          "url": "https://whc.unesco.org/en/list/198/",
+          "access": "Official property page read, including description and public coordinates."
+        }
+      ],
+      "review": {
+        "summary": "This row represents the urban phase, not the first or last human presence in the region. Mississippian is an archaeological classification, not a race.",
+        "limitations": "The regional population persisted and later increased. Ending this marker must not imply an empty watershed or extinction.",
+        "discussion": "The regional population persisted and later increased. Ending this marker must not imply an empty watershed or extinction.",
+        "provenance": "Starter corpus compiled from the named publications and archival sources. Editorial source check only; access limitations are recorded per citation. No independent peer review.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Initial source-traceable starter entry."
+        ],
+        "relatedIds": [
+          "river-labbe-mission"
+        ]
+      }
+    },
+    {
+      "id": "river-labbe-mission",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Monks Mound — River L’Abbe mission",
+      "culture": {
+        "id": "cahokia-illini",
+        "name": "Cahokia people / Illinois Confederation",
+        "kind": "people",
+        "color": "#d48d77"
+      },
+      "location": {
+        "id": "cahokia",
+        "name": "Cahokia archaeological complex, Illinois",
+        "lon": -90.06,
+        "lat": 38.66,
+        "precision": "Generalized archaeological-complex locator, not an individual structure or excavation.",
+        "provenance": "Cahokia Mounds State Historic Site; Property coordinates. https://whc.unesco.org/en/list/198/"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1735,
+        "end": 1752,
+        "original": "AD 1735–1752",
+        "method": "Historical chronology reported in a peer-reviewed archaeological synthesis",
+        "interpretation": "CE years retained unchanged"
+      },
+      "claims": [
+        {
+          "id": "primary",
+          "text": "The River L’Abbe mission operated at Monks Mound between 1735 and 1752 CE.",
+          "status": "well-supported",
+          "explanation": "White and colleagues describe Cahokia people relocating to the Horseshoe Lake area and a French mission established on Monks Mound. This is a later historical episode, not continuation of the medieval urban polity.",
+          "support": [
+            {
+              "sourceId": "white2020",
+              "locator": "Discussion, 1735 relocation and 1752 closure paragraphs",
+              "stance": "supports",
+              "note": "Mission interval and associated peoples"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "white2020",
+          "authors": "A. J. White, Samuel E. Munoz, Sissel Schroeder, Lora R. Stevens",
+          "title": "After Cahokia: Indigenous Repopulation and Depopulation of the Horseshoe Lake Watershed AD 1400–1900",
+          "year": 2020,
+          "venue": "American Antiquity 85(2), 263–278",
+          "url": "https://doi.org/10.1017/aaq.2019.103",
+          "access": "Open full article read, including Abstract and Discussion historical sequence. Original historical works cited by the article were not independently inspected."
+        },
+        {
+          "id": "unesco-cahokia-location",
+          "authors": "UNESCO World Heritage Centre",
+          "title": "Cahokia Mounds State Historic Site",
+          "year": null,
+          "venue": "World Heritage List, property 198bis",
+          "url": "https://whc.unesco.org/en/list/198/",
+          "access": "Official property page read, including description and public coordinates."
+        }
+      ],
+      "review": {
+        "summary": "White and colleagues describe Cahokia people relocating to the Horseshoe Lake area and a French mission established on Monks Mound. This is a later historical episode, not continuation of the medieval urban polity.",
+        "limitations": "The dates delimit the mission's operation. The later destination of every resident is not established here. Original cited historical studies were not independently reviewed. Also present: French missionaries. This category does not describe every participant.",
+        "discussion": "The dates delimit the mission's operation. The later destination of every resident is not established here. Original cited historical studies were not independently reviewed.",
+        "provenance": "Starter corpus compiled from the named publications and archival sources. Editorial source check only; access limitations are recorded per citation. No independent peer review.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Initial source-traceable starter entry."
+        ],
+        "relatedIds": [
+          "cahokia-urban"
+        ]
+      }
+    },
+    {
+      "id": "louisiana-purchase",
+      "revision": 1,
+      "type": "event",
+      "title": "Louisiana Purchase Treaty",
+      "culture": {
+        "id": "france-united-states",
+        "name": "France and United States governments",
+        "kind": "people",
+        "color": "#89a9d4"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1803,
+        "end": 1803,
+        "original": "April 30, 1803",
+        "method": "Dated treaty in an authenticated archival collection",
+        "interpretation": "Year-level timeline uses 1803 CE; full date preserved"
+      },
+      "claims": [
+        {
+          "id": "primary",
+          "text": "The United States and France concluded the Louisiana Purchase Treaty in 1803.",
+          "status": "well-supported",
+          "explanation": "The National Archives preserves the treaty and identifies its provenance in Record Group 11. This primary document supports a dated diplomatic transaction and the application's chronological endpoint.",
+          "support": [
+            {
+              "sourceId": "louisiana1803",
+              "locator": "Archival citation, preamble, Articles I and VI, closing date",
+              "stance": "supports",
+              "note": "Treaty and date"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "louisiana1803",
+          "authors": "United States and French Republic; archival custodian: U.S. National Archives",
+          "title": "Louisiana Purchase Treaty, April 30, 1803",
+          "year": 1803,
+          "venue": "Perfected Treaties, 1778–1945; General Records of the United States Government, Record Group 11",
+          "url": "https://www.archives.gov/milestone-documents/louisiana-purchase-treaty",
+          "access": "National Archives record description, treaty transcription, and archival citation read. Limitation: A diplomatic cession is not evidence of vacant land, Indigenous consent, or a population migration."
+        }
+      ],
+      "review": {
+        "summary": "The National Archives preserves the treaty and identifies its provenance in Record Group 11. This primary document supports a dated diplomatic transaction and the application's chronological endpoint.",
+        "limitations": "The treaty expresses the claims of its signatory governments. It is not evidence that the territory was unoccupied, that Indigenous peoples consented, or that populations moved in the year of signature. Keep it in the event table and timeline without a fabricated settlement dot.",
+        "discussion": "The treaty expresses the claims of its signatory governments. It is not evidence that the territory was unoccupied, that Indigenous peoples consented, or that populations moved in the year of signature. Keep it in the event table and timeline without a fabricated settlement dot.",
+        "provenance": "Starter corpus compiled from the named publications and archival sources. Editorial source check only; access limitations are recorded per citation. No independent peer review.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Initial source-traceable starter entry."
+        ],
+        "relatedIds": []
+      }
+    }
+  ]
+}

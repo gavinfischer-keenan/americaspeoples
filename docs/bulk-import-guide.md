@@ -187,10 +187,10 @@ Identical workbook content produces stable bulk proposal identities: repeat impo
 | --- | --- |
 | XLSX compressed file | 5 MB |
 | XLSX decompressed contents | 20 MB |
-| Evidence data rows | 200 |
+| Evidence data rows | 500 |
 | Data rows in each supporting sheet | 2,000 each in Claims, References, and ClaimSources |
 | Characters in one cell | 32,767 |
-| Resulting native proposal JSON package | 2 MB UTF-8, at most 200 proposals |
+| Resulting native proposal JSON package | 4 MB UTF-8, at most 500 proposals |
 | Per-record claims and sources | 100 of each |
 | Source mappings per claim | 100 |
 
@@ -203,7 +203,7 @@ When import reports a sheet and row, check that row's IDs, enumerated values, nu
 
 ## Thematic overlays (v0.2.0)
 
-The **Overlays** tab uses every Evidence header, in the same order, plus these five columns. Keep an empty Overlays tab when submitting only sites in schema 2. An overlay has a stable record_id shared by its Claims and ClaimSources; cite bibliography rows in References exactly as for ordinary evidence. IDs must be unique across Evidence and Overlays. The combined limit is 200 site and overlay proposals per import.
+The **Overlays** tab uses every Evidence header, in the same order, plus these five columns. Keep an empty Overlays tab when submitting only sites in schema 2. An overlay has a stable record_id shared by its Claims and ClaimSources; cite bibliography rows in References exactly as for ordinary evidence. IDs must be unique across Evidence and Overlays. The combined limit is 500 site and overlay proposals per import.
 
 | Extra column | Values and meaning |
 | --- | --- |
@@ -221,3 +221,11 @@ Import, review, save and share overlays through Suggestions. They remain unrevie
 
 
 Use `forced-removal` for supported coerced displacement, with directed schematic connections from origin to destination. Record return journeys separately. Use `violence` for documented massacres or other violence and `epidemic` for epidemic evidence. An epidemic Point is a declared locality or regional proxy, not the reconstructed origin or extent of transmission. Do not derive a spreading wave from dates alone. Mortality claims must name the affected population, period, source and estimation limits. Where estimates disagree, use separate claims and the discussion fields. Never equate a missing later record with extinction. The 1934 cutoff marks the Indian Reorganization Act for this edition; it does not imply that dispossession ended.
+
+## Optional settlement and reach columns
+
+`population_json` is an optional Evidence column holding the population array documented in data-format.md. Leave it blank for unknown values on new records. On a correction, a blank or omitted column preserves existing population metadata for backward compatibility; enter `[]` to remove it explicitly. Each entry links a `claimId` to Claims and ClaimSources. Do not add raw counts without the supported settlement scope and dates.
+
+`reach_radius_km` is an optional Overlays column used only with `overlay_type=cultural-reach`, `geometry_basis=schematic` and a Point center. It is an illustrative geographic envelope, not an established historical border. Population and reach columns are accepted without making older schema-1/schema-2 workbooks obsolete.
+
+The native JSON limit is now 4 MB and the proposal count limit 500, so the complete published correction snapshot fits. Compressed XLSX remains limited to 5 MB, expanded ZIP content to 20 MB, archive entries to 200, rows to 2000 and columns to 100. Formula, macro, external-link, unsafe-URL and prototype-key checks remain enabled.

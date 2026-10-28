@@ -31,7 +31,7 @@ A place includes ID, name, longitude, latitude, precision and provenance. Null l
 
 A proposal includes ID, version, kind (new/correction), target ID and base revision or null, preserved baseRecord or null, proposed record, rationale, state (draft/ready), and timestamps. Drafts may have incomplete prose or missing citations but must still have safe, structurally valid fields. Ready requires all evidence fields; readiness is not verification.
 
-Share packages contain `format: "americas-peoples-proposals"`, `schemaVersion: 1`, export time and proposals. A package is limited to 2 MB UTF-8 and 200 proposals. Source and place dependencies are embedded. HTTP(S) links only; markup is rendered as escaped text. Prototype-related JSON keys are rejected.
+Share packages contain `format: "americas-peoples-proposals"`, `schemaVersion: 1`, export time and proposals. A package is limited to 4 MB UTF-8 and 500 proposals. Source and place dependencies are embedded. HTTP(S) links only; markup is rendered as escaped text. Prototype-related JSON keys are rejected.
 
 Duplicate detection compares canonical full proposal contents, ignoring object key ordering. Identical copies are skipped. Different content with the same ID/version is a conflict and is retained separately; different versions are retained as separate proposals. Corrections whose original or revision differs from the recipient dataset are marked as conflicts in the import preview. Previewing a proposal never promotes it to the dataset.
 
@@ -46,3 +46,19 @@ Bulk proposal IDs derive from the evidence record ID. For IDs beginning `bulk-`,
 ## Overlays
 
 App 0.2.0 optionally adds `overlay` to an event record: kind (trade/conflict/forced-removal/epidemic/violence), basis (documented/schematic/unmapped), geometry (GeoJSON Point/LineString or null), precision and provenance. Schematic connections have exactly two endpoints. Geometry validates finite longitude/latitude and is bounded to 1,000 positions. Existing claims, citations, reviews, time extents and proposal handling apply. `makePackage` emits proposal schema 2 whenever an overlay occurs in either proposed or preserved base records. Old packages without overlays remain schema 1. The new app reads both; it rejects overlays mislabeled as schema 1. Workbook schema 2 requires Overlays; legacy workbook schema 1 retains its five tabs.
+
+## Regional and environmental layers
+
+Version0.3.0 accepts `population-history`, `regional-evidence` and `environment` overlay kinds in schema2 workbooks/JSON. Use event records. Broad cloud anchors are qualitative regional associations, never excavated settlements, statistical boundaries or documented routes. Existing Point/LineString validation and two-endpoint schematic limits apply.
+
+Time opacity uses documented bounds and optional certain cores. Without a core, a symmetric illustrative fade is used for approximate windows, explicitly not a posterior probability. Single rounded reference dates are not padded. Unknown calendar calibration, disjoint windows and open ends must remain unplaced unless a separate supported interval is available.
+
+## Settlement detail and population display
+
+Named settlements remain individual ordinary records, with coordinates, coordinate precision and provenance. Regional syntheses do not become settlement dots. Public access locators are labeled as such; decimal digits are not a claim of survey accuracy. This rule applies throughout the atlas, including Hovenweep and the Caribbean.
+
+Optional `population` entries contain `start`, `end`, `min`, `max`, `claimId` and `scope`. Dates use astronomical calendar years and must lie within the site record's interval. Counts refer to estimated residents at that settlement. Each claimId links to a claim with supporting sources. The map applies entries only within their dates, with no interpolation, extrapolation or addition of overlapping estimates. Population estimates can change through time; a gap returns to unknown. Peak estimates within a broader dated phase must state that qualification in scope.
+
+Dot-radius bands: 1–500, 501–2,500, 2,501–10,000, 10,001–50,000 and 50,001+. Unknown population shares the smallest symbol and is striped. This size is a display convention, **not an estimate of 1–500 residents**. A translucent outer population halo shows an upper estimate crossing a band; alternative estimates are shown as an envelope, not added. Site sample counts, artifacts, building counts and genetic effective population are never automatically converted to resident counts.
+
+`cultural-reach` overlays use a schematic Point center with `radiusKm` (greater than zero, at most 3000). The very soft geographic envelope is an editorial illustration of the named cultural context, not a surveyed border, exclusive territory, statistical confidence area or claim about modern identity. Cite the cultural interpretation and explain the editorial geographic choice separately. It has its own map toggle.

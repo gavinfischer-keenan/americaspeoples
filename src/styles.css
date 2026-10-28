@@ -1320,3 +1320,83 @@ dd:last-child {
 .overlay-forced-removal {
   stroke: #e5c78c;
 }
+
+/* Broad qualitative extents: not site markers or reconstructed itineraries. */
+.regional-cloud {
+  cursor: pointer;
+  --cloud: #8eb8f5;
+}
+.cloud-regional-evidence {
+  --cloud: #58c8bd;
+}
+.cloud-environment {
+  --cloud: #c3c378;
+}
+.regional-cloud path {
+  fill: none;
+  stroke: var(--cloud);
+  stroke-linecap: round;
+}
+.regional-cloud .cloud-glow {
+  stroke-width: 58;
+  opacity: 0.21;
+  filter: blur(12px);
+}
+.regional-cloud circle.cloud-glow {
+  fill: var(--cloud);
+  stroke: none;
+}
+.regional-cloud .cloud-core {
+  stroke-width: 22;
+  opacity: 0.23;
+  filter: blur(5px);
+}
+.regional-cloud .cloud-hit {
+  stroke: transparent;
+  stroke-width: 60;
+  fill: none;
+  pointer-events: stroke;
+}
+.regional-cloud circle.cloud-hit {
+  fill: transparent;
+  stroke: none;
+  pointer-events: all;
+}
+
+.asterisk.dispute-discussion {
+  color: #d1b47f;
+  fill: #d1b47f;
+  font-weight: 500;
+  stroke: none;
+}
+.asterisk.dispute-disputed {
+  color: #ff6e7d;
+  fill: #ff6e7d;
+  font-weight: 900;
+  stroke: none;
+}
+.dispute-box {
+  border-left: 4px solid #d1b47f;
+  background: #d1b47f0c;
+  padding: 14px 20px;
+  margin: 20px 0;
+}
+.dispute-box.dispute-disputed {
+  border-left-color: #ff6e7d;
+  background: #ff6e7d10;
+}
+.dispute-box h3 {
+  margin-top: 0;
+}
+.evidence-card .asterisk { display:inline; }
+.context-records > li { margin:24px 0; }
+.context-records p { margin:6px 0; }
+.cloud-star {
+  paint-order: stroke;
+  stroke: var(--water);
+  stroke-width: 2px;
+}
+
+.population-unknown{pointer-events:none}.population-range{opacity:.3;pointer-events:none}.cultural-reach{cursor:pointer}.cultural-reach path{fill:var(--reach-color);opacity:.28;filter:blur(8px);stroke:none}.cultural-reach:hover path{opacity:.4}
+
+.settlement-label{font:11px system-ui;fill:#edf7f8;paint-order:stroke;stroke:#102e38;stroke-width:3px;pointer-events:none}

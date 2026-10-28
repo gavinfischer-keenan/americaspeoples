@@ -7,6 +7,7 @@ import {
   copyFile,
   rm,
   lstat,
+  readdir,
 } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import path from "node:path";
@@ -46,8 +47,29 @@ await build({
   legalComments: "eof",
   loader: { ".geojson": "json" },
 });
-await writeFile("dist/index.html", (await readFile("index.html", "utf8")).replace('src="app.js"', `src="app.js?v=${version}"`).replace('href="app.css"', `href="app.css?v=${version}"`));
+await writeFile(
+  "dist/index.html",
+  (await readFile("index.html", "utf8"))
+    .replace('src="app.js"', `src="app.js?v=${version}"`)
+    .replace('href="app.css"', `href="app.css?v=${version}"`),
+);
 const names = ["index.html", "app.js", "app.css"];
+async function includeDirectory(dir: string) {
+  await mkdir(`dist/${dir}`, { recursive: true });
+  for (const item of await readdir(dir, { withFileTypes: true })) {
+    if (item.isDirectory()) await includeDirectory(`${dir}/${item.name}`);
+    else if (item.isFile()) {
+      await copyFile(`${dir}/${item.name}`, `dist/${dir}/${item.name}`);
+      names.push(`${dir}/${item.name}`);
+    }
+  }
+}
+await includeDirectory("docs/intake");
+await copyFile(
+  "data/literature-intake-2026-10-28.json",
+  "dist/literature-intake.json",
+);
+names.push("literature-intake.json");
 await mkdir("dist/docs", { recursive: true });
 await mkdir("dist/templates", { recursive: true });
 for (const name of [

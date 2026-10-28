@@ -34,14 +34,17 @@ test("readable appendix retains record and geographic provenance with uncertaint
 
 test("the public appendix preserves all records and includes both author collections by default", () => {
   const appendix = createAppendix(dataset as any, research as any, "test");
-  assert.equal(appendix.records.length, 59);
+  assert.equal(
+    appendix.records.length,
+    dataset.records.length + research.proposals.length,
+  );
   assert.equal(
     appendix.records.filter((r) => r.collection === "bundled").length,
     8,
   );
   assert.equal(
     appendix.records.filter((r) => r.collection === "research-proposal").length,
-    51,
+    research.proposals.length,
   );
   const proposal = appendix.records.find(
     (r) => r.collection === "research-proposal",
@@ -56,7 +59,10 @@ test("appendix text is escaped and every record includes its claims and bibliogr
   const appendix = createAppendix(dataset as any, research as any, "test");
   appendix.records[0].record.title = '<img src=x onerror="bad()">';
   const html = renderAppendix(appendix);
-  assert.equal((html.match(/data-evidence-id=/g) ?? []).length, 59);
+  assert.equal(
+    (html.match(/data-evidence-id=/g) ?? []).length,
+    dataset.records.length + research.proposals.length,
+  );
   assert.ok(!html.includes("<img src=x"));
   assert.ok(html.includes("&lt;img src=x"));
   assert.ok(html.includes("Published research"));
