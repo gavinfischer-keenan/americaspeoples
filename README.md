@@ -4,12 +4,13 @@ A fully offline browser atlas of archaeological and historical evidence in the A
 
 ## Downloads and bulk contributions
 
-- [Download v0.2.0 — offline application ZIP](https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/heads/main/downloads/americas-peoples-v0.2.0-offline.zip)
+- [Download v0.2.1 — offline application ZIP](https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/tags/v0.2.1/downloads/americas-peoples-v0.2.1-offline.zip)
+- [Release filenames, sizes and SHA-256 checksums](https://github.com/gavinfischer-keenan/americaspeoples/blob/v0.2.1/downloads/v0.2.1-artifacts.json)
 - [Read the bulk import and reference guide](docs/bulk-import-guide.md)
 - [Download the XLSX template](https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/heads/main/templates/americas-peoples-import.xlsx)
 - [Original v0.1 download](https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/heads/main/downloads/americas-peoples-v0.1-offline.zip)
 
-Version 0.2.0 extends the timeline through 1934 and adds trade, conflict, forced-removal, epidemic and massacre/violence overlays to the offline XLSX workflow. The workbook has Evidence, Claims, References and ClaimSources tables plus instructions and an Overlays tab. Evidence begins with dates, culture and location; its final columns hold summary, limitations and discussion. Structured bibliography rows support articles, books, chapters, reports, theses, archival documents, datasets and web resources. Every factual claim links to its sources. All imported rows remain proposals pending review.
+Version 0.2.1 prepares static web hosting, adds a complete HTML/JSON evidence appendix and deployment handoff, and updates the ZIP parser. The app retains the 0.2.0 timeline through 1934 and trade, conflict, forced-removal, epidemic and massacre/violence overlays. The workbook has Evidence, Claims, References and ClaimSources tables plus instructions and an Overlays tab. Evidence begins with dates, culture and location; its final columns hold summary, limitations and discussion. Structured bibliography rows support articles, books, chapters, reports, theses, archival documents, datasets and web resources. Every factual claim links to its sources. All imported rows remain proposals pending review.
 
 The guide and template are also available inside the offline app under Suggestions. Replace the worked sample with your own rows. Import XLSX or the app's JSON packages directly. BibTeX, RIS and CSL-JSON can be supplied to an assistant for conversion; they are not direct app import formats. DOI lookup requires an online research step, never an offline dependency.
 
@@ -61,16 +62,26 @@ npm run validate
 npm run build
 ```
 
-The build writes `dist/` and `release/americas-peoples-offline.zip`. It bundles a classic script with embedded evidence and vector geometry, so runtime JSON fetching and server routing are unnecessary. No service worker or online first load is used. Dependency versions are locked in `package-lock.json`; build inputs and scripts are tracked.
+The build writes `dist/`, a versioned ZIP and the convenience alias `release/americas-peoples-offline.zip`. It bundles a classic script with embedded evidence and vector geometry, so runtime JSON fetching and server routing are unnecessary. The ZIP needs no online first load. A hosted URL needs its initial assets from the host; offline web reloads are not guaranteed. There is no service worker or installable PWA. Dependency versions are locked in `package-lock.json`; build inputs and scripts are tracked.
 
-Browser tests use Playwright with an installed browser. `scripts/browser-test.mjs` and `scripts/regression-browser.mjs` default to the Windows Edge location. Set `BROWSER_PATH` to another Chromium-family executable. Set `APP_PATH` to an extracted release's `index.html` to test the packaged artifact. No browser test starts a server. `scripts/bulk-browser.mjs` checks the shipped XLSX template and guide. `scripts/overlay-browser.mjs` exercises all overlay layers and the 1934 endpoint; `scripts/research-browser.mjs` imports the actual 51-record workbook and opens every claim and bibliography.
+Browser tests use Playwright with an installed browser. They default to the Windows Edge location; set `BROWSER_PATH` to another Chromium-family executable. Set `APP_PATH` to an extracted release's `index.html` to test the packaged artifact. The five offline suites use file URLs without a server. `scripts/bulk-browser.mjs` checks the shipped XLSX template and guide. `scripts/overlay-browser.mjs` exercises all overlay layers and the 1934 endpoint; `scripts/research-browser.mjs` imports the actual 51-record workbook and opens every claim and bibliography. `npm run test:hosted` separately starts and stops a loopback HTTP server to verify the built app with the recommended hosting headers.
 
 ```sh
 npm run test:browser
 node scripts/regression-browser.mjs
+node scripts/bulk-browser.mjs
+node scripts/overlay-browser.mjs
+node scripts/research-browser.mjs
+npm run test:hosted
 ```
 
 See `docs/verification.md` for the browsers actually tested and current limitations. Synthetic fixtures under `tests/` are never bundled as evidence.
+
+## Deployment handoff
+
+The app is prepared for static hosting at the root of its own subdomain in the TripoFisch / 11 Mosswood ecosystem. [DEPLOYMENT.md](DEPLOYMENT.md) describes the exact deployable directory, commands, hash routing, response headers, storage/privacy behavior, downloads and remaining work. [Product-page copy](docs/landing-page-content.md) explains the utility and the appendix. No backend, database, login or external runtime API is required.
+
+The build includes `evidence-appendix.html` and `evidence-appendix.json`: all eight default records and 51 optional research proposals, with claims, bibliographies and clear collection labels. The product page should put this appendix below its explanation and launch link. The proposed subdomain is `americaspeoples.11mosswood.us`; animal name and logo are to be provided. Hosting, DNS, routing and public verification are assigned to the website deployment agent. This release does not claim that the public site is deployed.
 
 ## Maintain the research
 

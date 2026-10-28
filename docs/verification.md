@@ -1,16 +1,16 @@
 # Release verification
 
-Release 0.2.0 — October 28, 2026.
+Release 0.2.1 — October 28, 2026.
 
 ## Automated checks
 
-- 39 Node tests cover BCE/CE conversion, inclusive boundaries, gaps, uncertain occurrences, approximate reference dates, validation, unsafe links, portable drafts, duplicate/conflicting imports, stable category identity, schematic-only routes, and playback boundary snapping.
+- 42 Node tests cover BCE/CE conversion, inclusive boundaries, gaps, uncertain occurrences, approximate reference dates, validation, unsafe links, portable drafts, duplicate/conflicting imports, stable category identity, schematic-only routes, and playback boundary snapping.
 - TypeScript strict type checking and dataset validation run before release.
 - Eight evidence records have substantive review pages and valid source mappings. Fourteen distinct sources are cited. Source-access limits are explicit, including abstract-only checks; automated validation is not a scientific peer review.
 
 ## Browser coverage
 
-The browser suites use real file URLs, not an HTTP server. Network access is disabled at browser-context level. They exercise year input and playback; all eight bibliography/review routes; corrections and new drafts; download/import round trips; duplicate detection; unreviewed-data isolation; storage-denied behavior; hostile text rendering; culture conflict normalization; time-bounded synthetic movement arrows; overlap discovery; post-pan selection; approximate-date preservation; export-size validation; fixed-panel layout; and a 390-pixel mobile viewport.
+The five offline browser suites use real file URLs, not an HTTP server. Network access is disabled at browser-context level. They exercise year input and playback; all eight bibliography/review routes; corrections and new drafts; download/import round trips; duplicate detection; unreviewed-data isolation; storage-denied behavior; hostile text rendering; culture conflict normalization; time-bounded synthetic movement arrows; overlap discovery; post-pan selection; approximate-date preservation; export-size validation; fixed-panel layout; and a 390-pixel mobile viewport.
 
 The final release is tested after extracting the ZIP using installed Microsoft Edge and Google Chrome. Verified versions: Microsoft Edge 156.0.4314.50 and Google Chrome 156.0.8078.73. All five offline browser suites passed in both browsers against the extracted ZIP. Desktop/mobile viewport rendering is checked; no claim is made for testing a physical phone, Firefox or Safari.
 
@@ -27,10 +27,20 @@ Bulk tests additionally cover the actual distributed XLSX example, workbook rela
 - Approximate single-year references are not expanded into fabricated date ranges. Playback lands on boundaries and holds briefly, making them visible; review links can also jump directly to them.
 - Unknown occupation bounds remain unplaced unless a defensible bounded interval is supplied. The reviewed dataset determines the timeline minimum; proposals do not silently redefine it.
 - The basemap shows generalized present-day coastlines. It is not a reconstruction of ancient shorelines, sea levels, ice sheets or political boundaries.
-- No hosted app, telemetry, auto-update service, account system or central suggestion collection is part of this local release.
+- This release prepares static hosting but does not verify a public deployment. There is no telemetry, auto-update service, account system or central suggestion collection. A hosted URL requires initial network access; the extracted ZIP supplies the supported fully offline mode.
 
 Overlay checks cover geometry validation, schema-version preservation, time bounds, layer toggles, review navigation to hidden layers, editor/export preservation and comparison of removed overlay metadata. Point and LineString overlays are supported. Polygons are deliberately rejected; no territorial boundaries are inferred. The populated research batch remains an importable set of proposals, separate from the eight-record bundled corpus.
 
 The researched workbook adds 51 proposals (30 ordinary records and 21 overlays), 145 claims, 123 bibliography entries and 201 claim/source mappings. Every saved XLSX record is validated and opened in the offline browser. Selected coverage includes six forced removals, five epidemic records and six violence records. Five overlays remain unmapped where the evidence does not support a defensible geometry. These proposals are not independently peer-reviewed or exhaustive.
 
 The 1934 extension uses one shared endpoint for validation, timeline input and playback. Further review caught coerced array values bypassing the overlay-kind enum and directional wording on point-only removal records. Regression tests now reject non-string kinds and reserve arrow wording for lines; point locators use a neutral symbol.
+
+## Deployment preparation checks
+
+`npm ci`, `npm test` (42 passing), `npm run typecheck`, `npm run validate` and `npm run build` passed. Node.js 24.19.0 was used. The clean build includes all runtime assets and all 59 appendix records while keeping the eight bundled entries distinct from the 51 optional proposals. Appendix tests preserve complete JSON records, escape text, and verify per-record provenance, source-check dates, history and geographic caveats in readable HTML.
+
+All five offline suites and the additional hosted suite passed in both Edge 156.0.4314.50 and Chrome 156.0.8078.73 against the extracted v0.2.1 ZIP. The hosted suite uses the same files at a loopback HTTP root with the recommended CSP, MIME and caching headers. It checks hash deep-link reloads, 51-record workbook import and deduplication, JSON download, exact preservation of existing storage across reloads, the 1864 removal/violence overlays, 59 appendix entries, unavailable-browser-API help and JavaScript-disabled help. No application uploads, external resource requests, page errors or CSP violations were observed in that workflow. Public Caddy/Cloudflare behavior remains for the deployment agent to verify.
+
+The dependency audit identified a malformed-ZIP64 parsing issue in fflate 0.8.2. The lockfile now pins the upstream [0.8.3 fix](https://github.com/101arrowz/fflate/releases/tag/v0.8.3); its license notice is updated. `npm audit --audit-level=moderate` reports zero known vulnerabilities as of October 28, 2026. The workbook archive-bounds and malformed-input regression tests pass. An audit is not proof that every dependency is vulnerability-free.
+
+An independent read-only deployment review found missing record/geographic provenance in the readable appendix. This was reproduced, corrected and checked for every record. The reviewer confirmed the finding resolved. Screenshots of the built appendix and map were inspected for readable layout. Animal branding and the final hostname remain to be supplied/confirmed by the deployment work; no infrastructure was changed.
