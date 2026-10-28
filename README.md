@@ -92,3 +92,8 @@ Edit `data/evidence.json`, following `docs/data-format.md` and `docs/evidence-po
 ## Attribution
 
 Natural Earth reference land geometry is public domain. The basemap uses present-day generalized coastlines, not reconstructed ancient coastlines or ice sheets. Dependency notices are in `THIRD_PARTY.md`. Academic sources retain their own copyrights. No publication PDFs are bundled. This repository does not assign an open-source license to the owner's original application code.
+
+
+## Published dataset — v0.2.2
+
+All 59 author-supplied records (8 initial plus 51 researched records) now load by default. No import or Preview switch is required. The source collections remain distinguishable in the appendix, but both are published. Individual claim status, citations, uncertainty and geographic limits are unchanged. Future author batches in data/research-proposals.json are compiled into the published dataset; visitor import limits do not cap this author publication pipeline. Visitor-created drafts remain local and opt-in. Hosted pages disclose Cloudflare analytics; the extracted offline edition does not receive hosting-injected analytics.

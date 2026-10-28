@@ -32,7 +32,7 @@ test("readable appendix retains record and geographic provenance with uncertaint
   }
 });
 
-test("the public appendix preserves all records and distinguishes default from optional data", () => {
+test("the public appendix preserves all records and includes both author collections by default", () => {
   const appendix = createAppendix(dataset as any, research as any, "test");
   assert.equal(appendix.records.length, 59);
   assert.equal(
@@ -46,8 +46,8 @@ test("the public appendix preserves all records and distinguishes default from o
   const proposal = appendix.records.find(
     (r) => r.collection === "research-proposal",
   )!;
-  assert.equal(proposal.defaultVisible, false);
-  assert.equal(proposal.reviewPath, null);
+  assert.equal(proposal.defaultVisible, true);
+  assert.match(proposal.reviewPath!, /^\/#review\//);
   assert.deepEqual(proposal.record, research.proposals[0].record);
   assert.match(appendix.records[0].reviewPath!, /^\/#review\//);
 });
@@ -59,7 +59,7 @@ test("appendix text is escaped and every record includes its claims and bibliogr
   assert.equal((html.match(/data-evidence-id=/g) ?? []).length, 59);
   assert.ok(!html.includes("<img src=x"));
   assert.ok(html.includes("&lt;img src=x"));
-  assert.ok(html.includes("Optional research proposal"));
+  assert.ok(html.includes("Published research"));
   assert.ok(html.includes("Indian Reorganization Act"));
   assert.equal(dataset.records[0].title.includes("<img"), false);
 });

@@ -1,6 +1,5 @@
-import { readFile } from "node:fs/promises";
+import { dataset as d } from "../src/published-data";
 import { validateDataset } from "../src/validation";
-const d = JSON.parse(await readFile("data/evidence.json", "utf8"));
 const errors = validateDataset(d);
 if (errors.length) {
   console.error(errors.join("\n"));

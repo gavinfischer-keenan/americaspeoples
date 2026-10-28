@@ -112,7 +112,7 @@ try {
   const appendix = await (
     await fetch(origin + "/evidence-appendix.json")
   ).json();
-  assert.equal(appendix.records.filter((r) => r.defaultVisible).length, 8);
+  assert.equal(appendix.records.filter((r) => r.defaultVisible).length, 59);
   for (const url of [
     "/app.js",
     "/app.css",

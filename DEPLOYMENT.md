@@ -104,3 +104,8 @@ See `docs/verification.md` for actual test results. The hosted test checks the b
 Current Edge and Chrome are tested; Firefox/Safari and physical mobile devices have not been exhaustively tested. Essential missing browser APIs produce an explanatory startup message. File-location storage behavior varies. Imports remain bounded to 5 MB compressed XLSX / 20 MB expanded, or 2 MB JSON, with at most 200 proposals. The dataset is selected and incomplete; no population simulation, reconstructed disease-spread model, inferred ethnic borders or blanket extinction claim is provided. Five research overlays remain unmapped. The 1934 endpoint is a policy/display boundary, not the end of dispossession.
 
 The deployment agent still needs to integrate the utility card and product/animal pages, choose final branding and hostname, publish through the established Caddy/tunnel workflow, and verify the actual public URL, headers and downloads. None of that infrastructure work has been performed in this handoff.
+
+
+## TripoFisch hosted deployment privacy update — October 28, 2026
+
+The owner authorizes Cloudflare Web Analytics on the hosted edition. Its CSP permits `https://static.cloudflareinsights.com` scripts and same-origin / `https://cloudflareinsights.com` analytics connections. The hosted About page and Privacy link disclose this. Research files and drafts remain local; no application upload endpoint is added. The tagged v0.2.1 offline download remains immutable and does not receive injected hosting analytics. Hosted app.js has a privacy-copy update relative to that tag.

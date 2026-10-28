@@ -1,4 +1,5 @@
 import { build } from "esbuild";
+import { dataset as published } from "../src/published-data";
 import {
   readFile,
   writeFile,
@@ -20,7 +21,7 @@ const research = JSON.parse(
   await readFile("data/research-proposals.json", "utf8"),
 );
 const appendix = createAppendix(d, research, version);
-const errors = validateDataset(d);
+const errors = validateDataset(published);
 if (errors.length) throw new Error(errors.join("\n"));
 // Delete only this repository's generated directory, never a symlink or a caller-selected path.
 const projectRoot = path.resolve(fileURLToPath(new URL("..", import.meta.url)));
@@ -45,7 +46,7 @@ await build({
   legalComments: "eof",
   loader: { ".geojson": "json" },
 });
-await copyFile("index.html", "dist/index.html");
+await writeFile("dist/index.html", (await readFile("index.html", "utf8")).replace('src="app.js"', `src="app.js?v=${version}"`).replace('href="app.css"', `href="app.css?v=${version}"`));
 const names = ["index.html", "app.js", "app.css"];
 await mkdir("dist/docs", { recursive: true });
 await mkdir("dist/templates", { recursive: true });
@@ -73,7 +74,7 @@ await writeFile(
 );
 names.push("docs/bulk-import-guide.html");
 for (const [name, content] of Object.entries({
-  "dataset.json": JSON.stringify(d, null, 2),
+  "dataset.json": JSON.stringify(published, null, 2),
   "research-proposals.json": JSON.stringify(research, null, 2),
   "evidence-appendix.json": JSON.stringify(appendix, null, 2),
   "evidence-appendix.html": renderAppendix(appendix),
@@ -125,5 +126,5 @@ await writeFile(
   artifacts.map((a) => `${a.sha256}  ${a.filename}`).join("\n") + "\n",
 );
 console.log(
-  `Built offline file:// release with ${d.records.length} evidence reviews.`,
+  `Built offline file:// release with ${published.records.length} evidence reviews.`,
 );
