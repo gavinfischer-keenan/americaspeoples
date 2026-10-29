@@ -1,0 +1,1967 @@
+{
+  "records": [
+    {
+      "id": "ultima-esperanza-historic-skeleton",
+      "revision": 1,
+      "type": "event",
+      "title": "Última Esperanza: historic-period individual and genetic affinities",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Table 1: 1698–1724 cal AD (12.9%) or 1810–1905 cal AD (87.1%), 95.4% total; historic publication constrains latest date.",
+        "method": "Original units retained without invented calendar conversion.",
+        "interpretation": "No closed calendar extent is supplied by the accessed source; retained as contextual evidence."
+      },
+      "claims": [
+        {
+          "id": "skeleton-date",
+          "text": "The studied woman belongs to the historic period, with two separated calibrated date ranges, rather than to the initial peopling of Patagonia.",
+          "status": "well-supported",
+          "explanation": "This claim follows the evidence and scope stated by the cited authors; it does not assign an ethnic identity or a resident population.",
+          "support": [
+            {
+              "sourceId": "menendez-2025-ultima",
+              "locator": "Table 1; radiocarbon methods",
+              "stance": "supports",
+              "note": "Tooth enamel bioapatite: 130 ± 15 radiocarbon years BP. The two modes are retained without filling their gap."
+            }
+          ]
+        },
+        {
+          "id": "skeleton-affinity",
+          "text": "Genetic comparisons link this individual with southern-cone ancient samples, while cranial comparisons particularly resemble Chubut; these affinities do not identify her ethnicity.",
+          "status": "well-supported",
+          "explanation": "This claim follows the evidence and scope stated by the cited authors; it does not assign an ethnic identity or a resident population.",
+          "support": [
+            {
+              "sourceId": "menendez-2025-ultima",
+              "locator": "Genetic and morphometric results",
+              "stance": "supports",
+              "note": "One individual and limited overlapping SNP coverage do not establish a migration route."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "menendez-2025-ultima",
+          "authors": "Lumila Paula Menéndez et al.",
+          "title": "A human skeleton from Última Esperanza, South-West Patagonia, Chile: Osteobiography, morphometric, and genetic analysis",
+          "year": 2025,
+          "venue": "Journal of Archaeological Science: Reports 65, 105237",
+          "doi": "10.1016/j.jasrep.2025.105237",
+          "url": "https://www.researchgate.net/publication/392027397_A_human_skeleton_from_Ultima_Esperanza_South-West_Patagonia_Chile_osteobiography_morphometric_and_genetic_analysis",
+          "access": "Author-uploaded full text read: methods, results and Table 1.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "This review distinguishes dated observations from interpretive models, preserving source access, geographic scope, site formation and chronological limitations.",
+        "limitations": "Multimodal date cannot be represented faithfully by one solid interval. Museum collection history and a single individual's data limit interpretation; no indigenous identity is assigned.",
+        "discussion": "Left temporally unplaced to preserve the two calibrated modes and their unequal probabilities. Do not cite this skeleton as direct evidence of Late Pleistocene human presence.",
+        "provenance": "Reviewed against primary publisher, institutional or author-hosted material, with actual access scope recorded per source. Intake synthesis reviewed separately from the submitted Consensus summary.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "population-history",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No spatial geometry asserted.",
+        "provenance": "Geographic scope follows the cited study. Any rounded anchor is editorial and schematic."
+      }
+    },
+    {
+      "id": "argentina-early-radiocarbon-pattern",
+      "revision": 1,
+      "type": "event",
+      "title": "Argentina: uneven early radiocarbon evidence",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Survey of 274 dates from 72 sites, 13,000–7,000 radiocarbon years BP; more consistent evidence after 11,000 radiocarbon years BP.",
+        "method": "Original units retained without invented calendar conversion.",
+        "interpretation": "No closed calendar extent is supplied by the accessed source; retained as contextual evidence."
+      },
+      "claims": [
+        {
+          "id": "survey-pattern",
+          "text": "The survey found sparse early evidence before 11,000 radiocarbon years BP and a more consistent record afterward, strongest initially in the Pampas and southern Patagonia.",
+          "status": "well-supported",
+          "explanation": "This claim follows the evidence and scope stated by the cited authors; it does not assign an ethnic identity or a resident population.",
+          "support": [
+            {
+              "sourceId": "prates-2013-argentina",
+              "locator": "Abstract; Results preview",
+              "stance": "supports",
+              "note": "These are uncalibrated radiocarbon ages, not calendar dates."
+            }
+          ]
+        },
+        {
+          "id": "absence-bias",
+          "text": "Regional absence of dates can reflect research and preservation biases; it is insufficient to declare the Chaco or Northeast uninhabited.",
+          "status": "under discussion",
+          "explanation": "The observational gap is clear, but occupation history cannot be uniquely inferred from it.",
+          "support": [
+            {
+              "sourceId": "prates-2013-argentina",
+              "locator": "Abstract and discussion preview",
+              "stance": "supports",
+              "note": "The authors distinguish possible explanations across regions."
+            }
+          ]
+        },
+        {
+          "id": "older-exploration-synthesis",
+          "text": "Borrero's earlier review supported entry into Fuego-Patagonia at least 12,000 years ago, while distinguishing exploration from colonization.",
+          "status": "under discussion",
+          "explanation": "This is an older synthesis whose generic age statement is retained in its own units rather than merged with later calibrated chronologies.",
+          "support": [
+            {
+              "sourceId": "borrero-1999-colonization",
+              "locator": "Abstract and first page",
+              "stance": "context",
+              "note": "The abstract's 'years old' wording does not establish a calibrated date extent."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "prates-2013-argentina",
+          "authors": "Luciano Prates, Gustavo Politis and James Steele",
+          "title": "Radiocarbon chronology of the early human occupation of Argentina",
+          "year": 2013,
+          "venue": "Quaternary International 301:104–122",
+          "doi": "10.1016/j.quaint.2013.03.011",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S1040618213001444",
+          "access": "Publisher abstract and results previews read; full paper not read.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "borrero-1999-colonization",
+          "authors": "Luis Alberto Borrero",
+          "title": "The Prehistoric Exploration and Colonization of Fuego-Patagonia",
+          "year": 1999,
+          "venue": "Journal of World Prehistory 13(3):321–355",
+          "doi": "10.1023/A:1022341730119",
+          "url": "https://www.bfa.fcnym.unlp.edu.ar/catalogo/doc_num.php?explnum_id=1906",
+          "access": "Primary article abstract and first page read through university-hosted PDF; remaining full text not read.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "This review distinguishes dated observations from interpretive models, preserving source access, geographic scope, site formation and chronological limitations.",
+        "limitations": "National sampling differs sharply among regions. No summed radiocarbon density has been converted into a population count.",
+        "discussion": "Borrero's 1999 review provides earlier exploration/colonization context; its generic '12,000 years' statement is not substituted for calibrated dates.",
+        "provenance": "Reviewed against primary publisher, institutional or author-hosted material, with actual access scope recorded per source. Intake synthesis reviewed separately from the submitted Consensus summary.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No spatial geometry asserted.",
+        "provenance": "Geographic scope follows the cited study. Any rounded anchor is editorial and schematic."
+      }
+    },
+    {
+      "id": "la-gruta-1-earliest",
+      "revision": 1,
+      "type": "occupation",
+      "title": "La Gruta 1: earliest dated charcoal activity",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -10849,
+        "end": -10099,
+        "approximate": true,
+        "original": "12,799–12,049 cal BP; reported charcoal assays include 10,845 ± 61 to 10,477 ± 56 radiocarbon years BP.",
+        "method": "Published calibrated/calendar chronology, with cal BP referenced to 1950; an approximate occurrence envelope.",
+        "interpretation": "Envelope of the earliest dated charcoal activity, not a claim of continuous residence."
+      },
+      "claims": [
+        {
+          "id": "earliest-charcoal",
+          "text": "La Gruta 1 preserves early charcoal concentrations dated to 12,799–12,049 cal BP.",
+          "status": "well-supported",
+          "explanation": "This claim follows the evidence and scope stated by the cited authors; it does not assign an ethnic identity or a resident population.",
+          "support": [
+            {
+              "sourceId": "brook-2015-gruta",
+              "locator": "Abstract; conclusion preview",
+              "stance": "supports",
+              "note": "Corrects the submitted summary's narrower 12,799–12,653 cal BP range."
+            }
+          ]
+        },
+        {
+          "id": "sloth-site-separation",
+          "text": "The younger mylodontid bones discussed in this study come from La Gruta 3; their dates do not establish hunting or direct association with the earliest La Gruta 1 hearths.",
+          "status": "well-supported",
+          "explanation": "This claim follows the evidence and scope stated by the cited authors; it does not assign an ethnic identity or a resident population.",
+          "support": [
+            {
+              "sourceId": "brook-2015-gruta",
+              "locator": "Abstract; conclusion preview",
+              "stance": "supports",
+              "note": "Faunal and human evidence must retain their separate site proveniences."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "brook-2015-gruta",
+          "authors": "G. A. Brook, N. V. Franco, P. Ambrústolo, M. V. Mancini, L. Wang and P. M. Fernández",
+          "title": "Evidence of the earliest humans in the Southern Deseado Massif (Patagonia, Argentina), Mylodontidae, and changes in water availability",
+          "year": 2015,
+          "venue": "Quaternary International 363:107–125",
+          "doi": "10.1016/j.quaint.2014.04.022",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1040618214002304",
+          "access": "Publisher abstract, introduction and conclusion previews read.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "This review distinguishes dated observations from interpretive models, preserving source access, geographic scope, site formation and chronological limitations.",
+        "limitations": "An exact publicly verified La Gruta 1 coordinate was not established from the accessed primary text; location remains null. Charcoal distribution does not yield a resident count.",
+        "discussion": "Evidence is retained at the source's scale; dates do not establish uninterrupted settlement.",
+        "provenance": "Reviewed against primary publisher, institutional or author-hosted material, with actual access scope recorded per source. Intake synthesis reviewed separately from the submitted Consensus summary.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "la-gruta-1-early-holocene",
+      "revision": 1,
+      "type": "occupation",
+      "title": "La Gruta 1: early Holocene return",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -7079,
+        "end": -5810,
+        "approximate": true,
+        "original": "9,029–7,760 cal BP",
+        "method": "Published calibrated/calendar chronology, with cal BP referenced to 1950; an approximate occurrence envelope.",
+        "interpretation": "Published envelope of early Holocene activity; separate from the earliest charcoal phase."
+      },
+      "claims": [
+        {
+          "id": "return-phase",
+          "text": "The study reports another La Gruta 1 occupation phase at 9,029–7,760 cal BP.",
+          "status": "well-supported",
+          "explanation": "This claim follows the evidence and scope stated by the cited authors; it does not assign an ethnic identity or a resident population.",
+          "support": [
+            {
+              "sourceId": "brook-2015-gruta",
+              "locator": "Conclusion preview",
+              "stance": "supports",
+              "note": "A later phase does not imply uninterrupted occupation since the earliest dated charcoal."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "brook-2015-gruta",
+          "authors": "G. A. Brook, N. V. Franco, P. Ambrústolo, M. V. Mancini, L. Wang and P. M. Fernández",
+          "title": "Evidence of the earliest humans in the Southern Deseado Massif (Patagonia, Argentina), Mylodontidae, and changes in water availability",
+          "year": 2015,
+          "venue": "Quaternary International 363:107–125",
+          "doi": "10.1016/j.quaint.2014.04.022",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1040618214002304",
+          "access": "Publisher abstract, introduction and conclusion previews read.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "This review distinguishes dated observations from interpretive models, preserving source access, geographic scope, site formation and chronological limitations.",
+        "limitations": "Exact site position remains unverified in accessed primary material; dated episodes are not resident-population estimates.",
+        "discussion": "Evidence is retained at the source's scale; dates do not establish uninterrupted settlement.",
+        "provenance": "Reviewed against primary publisher, institutional or author-hosted material, with actual access scope recorded per source. Intake synthesis reviewed separately from the submitted Consensus summary.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": [
+          "la-gruta-1-earliest"
+        ]
+      }
+    },
+    {
+      "id": "southern-deseado-water-hiatus",
+      "revision": 1,
+      "type": "event",
+      "title": "Southern Deseado Massif: water availability and an archaeological hiatus",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -5810,
+        "end": -3633,
+        "approximate": true,
+        "original": "No evidence of human presence reported at studied localities between 7,760 and 5,583 cal BP.",
+        "method": "Published calibrated/calendar chronology, with cal BP referenced to 1950; an approximate occurrence envelope.",
+        "interpretation": "Dates delimit a gap in the studied archaeological record, not a proven regional depopulation."
+      },
+      "claims": [
+        {
+          "id": "water-hiatus",
+          "text": "The La Gruta, La Martita and Viuda Quenzana records have a reported gap at 7,760–5,583 cal BP; reduced water availability is proposed as an explanation.",
+          "status": "under discussion",
+          "explanation": "Environmental change may affect both land use and the surviving record; this study does not exclude alternative explanations.",
+          "support": [
+            {
+              "sourceId": "brook-2015-gruta",
+              "locator": "Abstract and conclusion previews",
+              "stance": "supports",
+              "note": "Absence concerns sampled localities; aridity is an interpretation, not demonstrated human absence."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "brook-2015-gruta",
+          "authors": "G. A. Brook, N. V. Franco, P. Ambrústolo, M. V. Mancini, L. Wang and P. M. Fernández",
+          "title": "Evidence of the earliest humans in the Southern Deseado Massif (Patagonia, Argentina), Mylodontidae, and changes in water availability",
+          "year": 2015,
+          "venue": "Quaternary International 363:107–125",
+          "doi": "10.1016/j.quaint.2014.04.022",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1040618214002304",
+          "access": "Publisher abstract, introduction and conclusion previews read.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "This review distinguishes dated observations from interpretive models, preserving source access, geographic scope, site formation and chronological limitations.",
+        "limitations": "Regional anchor is deliberately coarse. A sampled-site hiatus does not establish an empty region or a quantified population decline.",
+        "discussion": "Evidence is retained at the source's scale; dates do not establish uninterrupted settlement.",
+        "provenance": "Reviewed against primary publisher, institutional or author-hosted material, with actual access scope recorded per source. Intake synthesis reviewed separately from the submitted Consensus summary.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "environment",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -69,
+            -49
+          ]
+        },
+        "precision": "Rounded regional anchor; not a settlement coordinate, boundary, route, or confidence area.",
+        "provenance": "Geographic scope follows the cited study. Any rounded anchor is editorial and schematic."
+      }
+    },
+    {
+      "id": "southern-patagonia-pioneer-nodes",
+      "revision": 1,
+      "type": "event",
+      "title": "Southern Patagonia: three early occupation nodes",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -10889,
+        "end": -9484,
+        "approximate": true,
+        "original": "12,839–11,434 cal BP",
+        "method": "Published calibrated/calendar chronology, with cal BP referenced to 1950; an approximate occurrence envelope.",
+        "interpretation": "Combined regional evidence envelope across three nodes; no individual settlement is assigned this entire span."
+      },
+      "claims": [
+        {
+          "id": "three-nodes",
+          "text": "The synthesis distinguishes early evidence clusters in the Pali Aike lava field, Última Esperanza and northern Tierra del Fuego, with spatial and temporal discontinuities.",
+          "status": "under discussion",
+          "explanation": "The clusters summarize currently known evidence; their interpretation as pioneer population nodes remains a regional model.",
+          "support": [
+            {
+              "sourceId": "borrero-martin-2021-nodes",
+              "locator": "Chapter abstract",
+              "stance": "supports",
+              "note": "The combined calibrated span is regional; nodes are not migration paths or continuously occupied territories."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "borrero-martin-2021-nodes",
+          "authors": "Luis Alberto Borrero and Fabiana María Martin",
+          "title": "Pioneer Population Nodes in Southern Patagonian Lands",
+          "year": 2021,
+          "venue": "South American Contributions to World Archaeology",
+          "doi": "10.1007/978-3-030-73998-0_7",
+          "url": "https://link.springer.com/chapter/10.1007/978-3-030-73998-0_7",
+          "access": "Publisher abstract and bibliographic metadata read; chapter text not read.",
+          "referenceType": "book-chapter",
+          "publisher": "Springer, Cham",
+          "editors": "Mariano Bonomo and Sonia Archila",
+          "pages": "159–183"
+        }
+      ],
+      "review": {
+        "summary": "This review distinguishes dated observations from interpretive models, preserving source access, geographic scope, site formation and chronological limitations.",
+        "limitations": "Only the chapter abstract was accessed. No node-specific calendar envelope, resident population, or mapped route is inferred.",
+        "discussion": "Evidence is retained at the source's scale; dates do not establish uninterrupted settlement.",
+        "provenance": "Reviewed against primary publisher, institutional or author-hosted material, with actual access scope recorded per source. Intake synthesis reviewed separately from the submitted Consensus summary.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No spatial geometry asserted.",
+        "provenance": "Geographic scope follows the cited study. Any rounded anchor is editorial and schematic."
+      }
+    },
+    {
+      "id": "fell-cave-early-context-reinterpreted",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Fell Cave: early occupations and the rockfall reinterpretation",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": {
+        "id": "fell-cave",
+        "name": "Fell Cave",
+        "lon": -70.056389,
+        "lat": -52.044444,
+        "precision": "Published site coordinate, rounded to six decimal places; source gives seconds, not a measured site boundary.",
+        "provenance": "Martin 2022, site description: 52°02′40″S, 70°03′23″W. Position is transcribed as published."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Early AMS assays discussed by Martin: approximately 10,295–10,835 radiocarbon years BP; Waters et al. redating of three hearths: approximately 10,800–10,400 radiocarbon years BP.",
+        "method": "Original units retained without invented calendar conversion.",
+        "interpretation": "No closed calendar extent is supplied by the accessed source; retained as contextual evidence."
+      },
+      "claims": [
+        {
+          "id": "fell-early",
+          "text": "New dating and reanalysis retain early human activity at Fell Cave, but the accessed site-specific dates are radiocarbon ages and are not converted arithmetically into calendar years.",
+          "status": "well-supported",
+          "explanation": "This claim follows the evidence and scope stated by the cited authors; it does not assign an ethnic identity or a resident population.",
+          "support": [
+            {
+              "sourceId": "martin-2022-fell",
+              "locator": "Chronology and Table 1",
+              "stance": "supports",
+              "note": "Individual assay ranges retained in original units."
+            },
+            {
+              "sourceId": "waters-2015-fell",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "The broader 12,800–12,100 cal BP Fishtail distribution is regional, not an exact site occupation interval."
+            }
+          ]
+        },
+        {
+          "id": "fell-rockfall",
+          "text": "Martin's reanalysis argues that the rockfall did not seal the whole floor and that human activity with megafauna continued after it.",
+          "status": "under discussion",
+          "explanation": "This is a substantive reinterpretation of the site's stratigraphic sequence.",
+          "support": [
+            {
+              "sourceId": "martin-2022-fell",
+              "locator": "Discussion and conclusions",
+              "stance": "supports",
+              "note": "Challenges using the rockfall as a strict Pleistocene/Holocene cultural dividing line."
+            }
+          ]
+        },
+        {
+          "id": "fell-resource-use",
+          "text": "Cut marks support processing extinct animals, while some sloth-part acquisition could involve carcasses left by large carnivores.",
+          "status": "under discussion",
+          "explanation": "Taphonomic observations support interaction; acquisition mechanisms vary.",
+          "support": [
+            {
+              "sourceId": "martin-2022-fell",
+              "locator": "Faunal analysis and discussion",
+              "stance": "supports",
+              "note": "Processing evidence does not establish that all animals were hunted."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "martin-2022-fell",
+          "authors": "Fabiana María Martin",
+          "title": "Fell Cave Reinterpreted",
+          "year": 2022,
+          "venue": "Chungará 54(3):535–556",
+          "url": "https://www.scielo.cl/scielo.php?lng=en&pid=S0717-73562022000300535&script=sci_arttext",
+          "access": "Full primary SciELO article read, including location, chronology and discussion.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "waters-2015-fell",
+          "authors": "Michael R. Waters, Thomas Amorosi and Thomas W. Stafford Jr.",
+          "title": "Redating Fell's Cave, Chile and the Chronological Placement of the Fishtail Projectile Point",
+          "year": 2015,
+          "venue": "American Antiquity 80(2):376–386",
+          "doi": "10.7183/0002-7316.80.2.376",
+          "url": "https://www.cambridge.org/core/journals/american-antiquity/article/abs/redating-fells-cave-chile-and-the-chronological-placement-of-the-fishtail-projectile-point/6A26D6E1D18B1E46EB02A51EFE8262AF",
+          "access": "Publisher abstract read; individual calibrated hearth dates not available in accessed text.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "This review distinguishes dated observations from interpretive models, preserving source access, geographic scope, site formation and chronological limitations.",
+        "limitations": "Calendar placement awaits site-specific calibrated ranges from the full redating tables. The published point is not an excavation polygon.",
+        "discussion": "The submitted summary reversed the paper's argument by treating the rockfall as a simple seal. This record preserves the chronological and taphonomic alternatives explicitly.",
+        "provenance": "Reviewed against primary publisher, institutional or author-hosted material, with actual access scope recorded per source. Intake synthesis reviewed separately from the submitted Consensus summary.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "ultima-esperanza-deglaciation-exploration",
+      "revision": 1,
+      "type": "event",
+      "title": "Última Esperanza: changing landscapes during human exploration",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Late Pleistocene exploration; no closed calibrated interval established from accessed abstract.",
+        "method": "Original units retained without invented calendar conversion.",
+        "interpretation": "No closed calendar extent is supplied by the accessed source; retained as contextual evidence."
+      },
+      "claims": [
+        {
+          "id": "deglaciation-context",
+          "text": "Glacial retreat, an ice-dammed proglacial lake, volcanism and vegetation changes shaped landscapes available to early human explorers in Última Esperanza.",
+          "status": "under discussion",
+          "explanation": "Landscape availability supplies a mechanism, but does not uniquely explain the timing or direction of colonization.",
+          "support": [
+            {
+              "sourceId": "martin-borrero-2017-environment",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "An archaeological and paleoenvironmental interpretation, rather than documentary historical analysis."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "martin-borrero-2017-environment",
+          "authors": "Fabiana María Martin and Luis Alberto Borrero",
+          "title": "Climate change, availability of territory, and Late Pleistocene human exploration of Ultima Esperanza, South Chile",
+          "year": 2017,
+          "venue": "Quaternary International 428:86–95",
+          "doi": "10.1016/j.quaint.2015.06.023",
+          "url": "https://ri.conicet.gov.ar/bitstream/handle/11336/38571/CONICET_Digital_Nro.1fbac40f-cd30-495d-80a2-25aedb77d66a_A.pdf?isAllowed=y&sequence=2",
+          "access": "Primary institutional PDF abstract indexed text read; complete paper not read. Online 2015, issue 2017.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "This review distinguishes dated observations from interpretive models, preserving source access, geographic scope, site formation and chronological limitations.",
+        "limitations": "Abstract access supports the proposed mechanism but supplies no precise human occupation date or site-specific coordinate.",
+        "discussion": "Evidence is retained at the source's scale; dates do not establish uninterrupted settlement.",
+        "provenance": "Reviewed against primary publisher, institutional or author-hosted material, with actual access scope recorded per source. Intake synthesis reviewed separately from the submitted Consensus summary.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "environment",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -73,
+            -51
+          ]
+        },
+        "precision": "Rounded regional anchor; not a settlement coordinate, boundary, route, or confidence area.",
+        "provenance": "Geographic scope follows the cited study. Any rounded anchor is editorial and schematic."
+      }
+    },
+    {
+      "id": "lago-sofia-1-faunal-use",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Cueva Lago Sofía 1: animal processing camp",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Late Pleistocene context; the accessed abstract does not give a site-specific calibrated occupation range.",
+        "method": "Original units retained without invented calendar conversion.",
+        "interpretation": "No closed calendar extent is supplied by the accessed source; retained as contextual evidence."
+      },
+      "claims": [
+        {
+          "id": "site-function",
+          "text": "Faunal and taphonomic evidence is interpreted as a logistical animal-processing camp at Cueva Lago Sofía 1.",
+          "status": "under discussion",
+          "explanation": "Camp roles are interpretations of the zooarchaeological and taphonomic assemblages.",
+          "support": [
+            {
+              "sourceId": "labarca-2025-fauna",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "Site-function inference, not an estimate of camp population."
+            }
+          ]
+        },
+        {
+          "id": "diet-spectrum",
+          "text": "Across the two studied assemblages, canids and camelids were principal exploited groups; extinct taxa supplied supplementary resources.",
+          "status": "well-supported",
+          "explanation": "This claim follows the evidence and scope stated by the cited authors; it does not assign an ethnic identity or a resident population.",
+          "support": [
+            {
+              "sourceId": "labarca-2025-fauna",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "Comparative scope spans both sites; no species proportions are allocated to an individual site."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "labarca-2025-fauna",
+          "authors": "Rafael Labarca, Alfredo Prieto and Mauricio Massone",
+          "title": "Late Pleistocene subsistence and settlement during the initial human colonization of southern South America: Faunal evidence of Cueva Lago Sofía 1 and Tres Arroyos 1, southern Patagonia",
+          "year": 2025,
+          "venue": "Journal of Quaternary Science 41 (2026):237–259",
+          "doi": "10.1002/jqs.70039",
+          "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/jqs.70039",
+          "access": "Publisher abstract read. Online 10 December 2025; journal issue 2026.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "This review distinguishes dated observations from interpretive models, preserving source access, geographic scope, site formation and chronological limitations.",
+        "limitations": "Only the primary abstract was read; exact coordinates and site-specific calibrated ranges remain unresolved. The paper was online in 2025 and appeared in a 2026 issue.",
+        "discussion": "Evidence is retained at the source's scale; dates do not establish uninterrupted settlement.",
+        "provenance": "Reviewed against primary publisher, institutional or author-hosted material, with actual access scope recorded per source. Intake synthesis reviewed separately from the submitted Consensus summary.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "tres-arroyos-1-faunal-use",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Tres Arroyos 1: recurrent small base camp",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Late Pleistocene context; the accessed abstract does not give a site-specific calibrated occupation range.",
+        "method": "Original units retained without invented calendar conversion.",
+        "interpretation": "No closed calendar extent is supplied by the accessed source; retained as contextual evidence."
+      },
+      "claims": [
+        {
+          "id": "site-function",
+          "text": "Faunal and taphonomic evidence is interpreted as recurrent use of Tres Arroyos 1 as a small base camp.",
+          "status": "under discussion",
+          "explanation": "Camp roles are interpretations of the zooarchaeological and taphonomic assemblages.",
+          "support": [
+            {
+              "sourceId": "labarca-2025-fauna",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "Site-function inference, not an estimate of camp population."
+            }
+          ]
+        },
+        {
+          "id": "diet-spectrum",
+          "text": "Across the two studied assemblages, canids and camelids were principal exploited groups; extinct taxa supplied supplementary resources.",
+          "status": "well-supported",
+          "explanation": "This claim follows the evidence and scope stated by the cited authors; it does not assign an ethnic identity or a resident population.",
+          "support": [
+            {
+              "sourceId": "labarca-2025-fauna",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "Comparative scope spans both sites; no species proportions are allocated to an individual site."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "labarca-2025-fauna",
+          "authors": "Rafael Labarca, Alfredo Prieto and Mauricio Massone",
+          "title": "Late Pleistocene subsistence and settlement during the initial human colonization of southern South America: Faunal evidence of Cueva Lago Sofía 1 and Tres Arroyos 1, southern Patagonia",
+          "year": 2025,
+          "venue": "Journal of Quaternary Science 41 (2026):237–259",
+          "doi": "10.1002/jqs.70039",
+          "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/jqs.70039",
+          "access": "Publisher abstract read. Online 10 December 2025; journal issue 2026.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "This review distinguishes dated observations from interpretive models, preserving source access, geographic scope, site formation and chronological limitations.",
+        "limitations": "Only the primary abstract was read; exact coordinates and site-specific calibrated ranges remain unresolved. The paper was online in 2025 and appeared in a 2026 issue.",
+        "discussion": "Evidence is retained at the source's scale; dates do not establish uninterrupted settlement.",
+        "provenance": "Reviewed against primary publisher, institutional or author-hosted material, with actual access scope recorded per source. Intake synthesis reviewed separately from the submitted Consensus summary.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "patagonia-2003-coastal-entry-model",
+      "revision": 1,
+      "type": "event",
+      "title": "Patagonia: an older hypothesis of independent coastal entries",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "13–10.5 ka BP in the 2003 abstract; units not explicitly established as calibrated.",
+        "method": "Original units retained without invented calendar conversion.",
+        "interpretation": "No closed calendar extent is supplied by the accessed source; retained as contextual evidence."
+      },
+      "claims": [
+        {
+          "id": "entry-model",
+          "text": "Miotti and Salemme proposed independent Atlantic and Pacific entries and a later occupation of Andean foothills, separated by at least two millennia in their model.",
+          "status": "under discussion",
+          "explanation": "Later site chronologies can revise the regional sequence; the model should not be displayed as established directional movement.",
+          "support": [
+            {
+              "sourceId": "miotti-salemme-2003-mobility",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "A model based on the evidence then available, not a verified pair of migration routes."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "miotti-salemme-2003-mobility",
+          "authors": "Laura Miotti and Mónica Salemme",
+          "title": "When Patagonia was colonized: people mobility at high latitudes during Pleistocene/Holocene transition",
+          "year": 2003,
+          "venue": "Quaternary International 109–110:95–111",
+          "doi": "10.1016/S1040-6182(02)00206-9",
+          "url": "https://www.researchgate.net/publication/238376591_When_Patagonia_was_colonized_People_mobility_at_high_latitudes_during_PleistoceneHolocene_transition",
+          "access": "Author-uploaded paper abstract read; full paper not read.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "This review distinguishes dated observations from interpretive models, preserving source access, geographic scope, site formation and chronological limitations.",
+        "limitations": "Abstract access does not establish calibrated bounds. The submitted summary's one-millennium lag differs from this abstract's at-least-two-millennia proposal.",
+        "discussion": "Evidence is retained at the source's scale; dates do not establish uninterrupted settlement.",
+        "provenance": "Reviewed against primary publisher, institutional or author-hosted material, with actual access scope recorded per source. Intake synthesis reviewed separately from the submitted Consensus summary.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": [
+          "cerro-casa-piedra-7-earliest"
+        ]
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No spatial geometry asserted.",
+        "provenance": "Geographic scope follows the cited study. Any rounded anchor is editorial and schematic."
+      }
+    },
+    {
+      "id": "cerro-casa-piedra-7-earliest",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Cerro Casa de Piedra 7: early human activity",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": {
+        "id": "cerro-casa-piedra-7",
+        "name": "Cerro Casa de Piedra 7",
+        "lon": -72.095675,
+        "lat": -47.955356,
+        "precision": "Published cave coordinate to hundredths of an arcsecond; display is a site point, not a boundary.",
+        "provenance": "Bozzuto author preprint abstract reports 47°57′19.28″S, 72°05′44.43″W; 918 m elevation."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Approximately 12,500 calibrated years; preprint abstract and final article chronology.",
+        "method": "Published calendar/calibrated age retained; accessed abstract does not explicitly establish the 1950 baseline.",
+        "interpretation": "Awaiting the full dating table to verify the BP baseline; no integer-year conversion asserted."
+      },
+      "claims": [
+        {
+          "id": "ccp-earliest",
+          "text": "Bozzuto reports the earliest dated human evidence at Cerro Casa de Piedra 7 at approximately 12,500 calibrated years ago.",
+          "status": "well-supported",
+          "explanation": "This claim follows the evidence and scope stated by the cited authors; it does not assign an ethnic identity or a resident population.",
+          "support": [
+            {
+              "sourceId": "bozzuto-2022-preprint",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "The author reports a calibrated age; no synthetic confidence range is added."
+            },
+            {
+              "sourceId": "bozzuto-2023-casa-piedra",
+              "locator": "Abstract and highlights",
+              "stance": "supports",
+              "note": "Final article places the work in early and middle Holocene landscape-use research."
+            }
+          ]
+        },
+        {
+          "id": "ccp-older-radiocarbon",
+          "text": "The earlier comparative study reported initial occupations around 9,700 radiocarbon years BP; this is a different unit and evidence vintage from the newer calibrated chronology.",
+          "status": "well-supported",
+          "explanation": "This claim follows the evidence and scope stated by the cited authors; it does not assign an ethnic identity or a resident population.",
+          "support": [
+            {
+              "sourceId": "civalero-franco-2003-western",
+              "locator": "Abstract and site descriptions",
+              "stance": "supports",
+              "note": "No arithmetic conversion of radiocarbon BP is attempted."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "bozzuto-2023-casa-piedra",
+          "authors": "Damián L. Bozzuto",
+          "title": "Early and middle Holocene periglacial lake-level changes and human landscape use in south-central Patagonia. An approach to hunting activities in Cerro Casa de Piedra locality",
+          "year": 2023,
+          "venue": "Journal of Archaeological Science: Reports 51, 104110",
+          "doi": "10.1016/j.jasrep.2023.104110",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S2352409X23002857",
+          "access": "Publisher abstract/highlights read; author preprint abstract also consulted for coordinates and initial chronology.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "bozzuto-2022-preprint",
+          "authors": "Damián Leandro Bozzuto",
+          "title": "Early and Middle Holocene Periglacial Lake-Level Changes and Human Land Use in South-Central Patagonia. An Approach from Cerro Casa De Piedra Locality",
+          "year": 2022,
+          "venue": "SSRN",
+          "doi": "10.2139/ssrn.4103009",
+          "url": "https://ssrn.com/abstract=4103009",
+          "access": "Primary author preprint abstract read, including explicit site coordinates and calibrated age statement.",
+          "referenceType": "web-resource"
+        },
+        {
+          "id": "civalero-franco-2003-western",
+          "authors": "María Teresa Civalero and Nora V. Franco",
+          "title": "Early human occupations in Western Santa Cruz Province, Southernmost South America",
+          "year": 2003,
+          "venue": "Quaternary International 109–110:77–86",
+          "doi": "10.1016/S1040-6182(02)00204-5",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S1040618202002045",
+          "access": "Publisher abstract, introduction and site-description previews read.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "This review distinguishes dated observations from interpretive models, preserving source access, geographic scope, site formation and chronological limitations.",
+        "limitations": "The preprint abstract says 'calibrated years' without spelling out the reference year; BP convention is used provisionally and flagged for checking against final dating tables.",
+        "discussion": "A single approximate dated onset is retained without a fabricated interval. The older radiocarbon chronology is not treated as a calendar contradiction.",
+        "provenance": "Reviewed against primary publisher, institutional or author-hosted material, with actual access scope recorded per source. Intake synthesis reviewed separately from the submitted Consensus summary.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "cerro-casa-piedra-hunting-change",
+      "revision": 1,
+      "type": "event",
+      "title": "Cerro Casa de Piedra: changing projectile-point deposition",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Decline in projectile points after approximately 8,000 cal BP; no supported closed end date.",
+        "method": "Original units retained without invented calendar conversion.",
+        "interpretation": "No closed calendar extent is supplied by the accessed source; retained as contextual evidence."
+      },
+      "claims": [
+        {
+          "id": "point-decline",
+          "text": "A decline in projectile-point representation after about 8,000 cal BP is interpreted through changing hunting activities and landscape use.",
+          "status": "under discussion",
+          "explanation": "Changes in site function can alter artifact frequencies independently of resident population.",
+          "support": [
+            {
+              "sourceId": "bozzuto-2023-casa-piedra",
+              "locator": "Publisher highlights and abstract",
+              "stance": "supports",
+              "note": "Artifact deposition is not a direct population count."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "bozzuto-2023-casa-piedra",
+          "authors": "Damián L. Bozzuto",
+          "title": "Early and middle Holocene periglacial lake-level changes and human landscape use in south-central Patagonia. An approach to hunting activities in Cerro Casa de Piedra locality",
+          "year": 2023,
+          "venue": "Journal of Archaeological Science: Reports 51, 104110",
+          "doi": "10.1016/j.jasrep.2023.104110",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S2352409X23002857",
+          "access": "Publisher abstract/highlights read; author preprint abstract also consulted for coordinates and initial chronology.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "This review distinguishes dated observations from interpretive models, preserving source access, geographic scope, site formation and chronological limitations.",
+        "limitations": "The 'after 8,000' statement is open-ended and remains temporally unplaced. The anchor denotes the study region, not the cave itself.",
+        "discussion": "Evidence is retained at the source's scale; dates do not establish uninterrupted settlement.",
+        "provenance": "Reviewed against primary publisher, institutional or author-hosted material, with actual access scope recorded per source. Intake synthesis reviewed separately from the submitted Consensus summary.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": [
+          "cerro-casa-piedra-7-earliest"
+        ]
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -72,
+            -48
+          ]
+        },
+        "precision": "Rounded regional anchor; not a settlement coordinate, boundary, route, or confidence area.",
+        "provenance": "Geographic scope follows the cited study. Any rounded anchor is editorial and schematic."
+      }
+    },
+    {
+      "id": "chorrillo-malo-2-early",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Chorrillo Malo 2: early occupations in western Santa Cruz",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": {
+        "id": "chorrillo-malo-2",
+        "name": "Chorrillo Malo 2",
+        "lon": -72.666667,
+        "lat": -50.5,
+        "precision": "Published coordinate rounded to an arcminute; several-kilometre positional precision.",
+        "provenance": "Civalero and Franco 2003 site description: 50°30′S, 72°40′W."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Initial occupation reported at approximately 9,700 radiocarbon years BP.",
+        "method": "Original units retained without invented calendar conversion.",
+        "interpretation": "No closed calendar extent is supplied by the accessed source; retained as contextual evidence."
+      },
+      "claims": [
+        {
+          "id": "cm2-early",
+          "text": "Chorrillo Malo 2 is one of the western Santa Cruz early sites compared by Civalero and Franco, with initial occupation around 9,700 radiocarbon years BP.",
+          "status": "well-supported",
+          "explanation": "This claim follows the evidence and scope stated by the cited authors; it does not assign an ethnic identity or a resident population.",
+          "support": [
+            {
+              "sourceId": "civalero-franco-2003-western",
+              "locator": "Abstract and site-description preview",
+              "stance": "supports",
+              "note": "Original radiocarbon units retained."
+            }
+          ]
+        },
+        {
+          "id": "deposition-distance",
+          "text": "The comparison relates differing lithic deposition to distance from the Pampa del Asador obsidian source; it does not measure population density.",
+          "status": "under discussion",
+          "explanation": "Raw-material availability is a proposed explanation for deposition patterns.",
+          "support": [
+            {
+              "sourceId": "civalero-franco-2003-western",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "Assemblage differences concern tool use and raw-material access."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "civalero-franco-2003-western",
+          "authors": "María Teresa Civalero and Nora V. Franco",
+          "title": "Early human occupations in Western Santa Cruz Province, Southernmost South America",
+          "year": 2003,
+          "venue": "Quaternary International 109–110:77–86",
+          "doi": "10.1016/S1040-6182(02)00204-5",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S1040618202002045",
+          "access": "Publisher abstract, introduction and site-description previews read.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "This review distinguishes dated observations from interpretive models, preserving source access, geographic scope, site formation and chronological limitations.",
+        "limitations": "The source coordinate is approximate and the accessed early date is uncalibrated. No precise cave position or closed calendar occupation range is asserted.",
+        "discussion": "Evidence is retained at the source's scale; dates do not establish uninterrupted settlement.",
+        "provenance": "Reviewed against primary publisher, institutional or author-hosted material, with actual access scope recorded per source. Intake synthesis reviewed separately from the submitted Consensus summary.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "bano-nuevo-1-early-holocene",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Baño Nuevo 1: early Holocene activity and burials",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": {
+        "id": "bano-nuevo-1",
+        "name": "Baño Nuevo 1",
+        "lon": -71.530083,
+        "lat": -45.293306,
+        "precision": "Published cave coordinate to a tenth of an arcsecond; point denotes the cave, not its full deposits.",
+        "provenance": "Méndez, Nuevo-Delaunay and Reyes 2023, p. 3: 45°17′35.9″S, 71°31′48.3″W; 478 m elevation."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -8950,
+        "end": -6950,
+        "approximate": true,
+        "original": "Early component 10,900–8,900 cal BP; ten human burials approximately 10,200 cal BP.",
+        "method": "Published calibrated/calendar chronology, with cal BP referenced to 1950; an approximate occurrence envelope.",
+        "interpretation": "Analytical component envelope contains separate visits and hiatuses; it is not continuous residence."
+      },
+      "claims": [
+        {
+          "id": "early-component",
+          "text": "Baño Nuevo 1 preserves an early Holocene component at 10,900–8,900 cal BP and ten approximately contemporary human burials around 10,200 cal BP.",
+          "status": "well-supported",
+          "explanation": "This claim follows the evidence and scope stated by the cited authors; it does not assign an ethnic identity or a resident population.",
+          "support": [
+            {
+              "sourceId": "hammond-2024-shell",
+              "locator": "Site chronology",
+              "stance": "supports",
+              "note": "Component limits group discrete dated events."
+            },
+            {
+              "sourceId": "mendez-2024-bano",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "Dry-cave preservation and synchronous early burials."
+            }
+          ]
+        },
+        {
+          "id": "discontinuous-use",
+          "text": "The cave's Holocene sequence includes repeated short episodes separated by hiatuses; its oldest animal deposits predate human occupation.",
+          "status": "well-supported",
+          "explanation": "This claim follows the evidence and scope stated by the cited authors; it does not assign an ethnic identity or a resident population.",
+          "support": [
+            {
+              "sourceId": "hammond-2024-shell",
+              "locator": "Stratigraphy and chronology",
+              "stance": "supports",
+              "note": "A 16,000-year natural-history sequence does not imply equally old human occupation."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "mendez-2024-bano",
+          "authors": "César Méndez, Amalia Nuevo-Delaunay, Omar Reyes, Carolina Belmar and Francisco Mena",
+          "title": "Early Holocene Archaeological Context and Assemblages of Baño Nuevo 1: A Key Site in Central West Patagonia",
+          "year": 2024,
+          "venue": "PaleoAmerica 10(1):45–62",
+          "doi": "10.1080/20555563.2024.2327129",
+          "url": "https://investigadores.anid.cl//es/public_search/work?id=807221",
+          "access": "Primary institutional abstract read; full article unavailable through publisher.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "hammond-2024-shell",
+          "authors": "Heidi Hammond, Leandro Zilio, Amalia Nuevo-Delaunay and César Méndez",
+          "title": "Middle through late Holocene long-distance transport of exotic shell personal adornments in Central West Patagonia (southern South America). The archaeomalacological assemblage of Baño Nuevo 1",
+          "year": 2024,
+          "venue": "PLOS ONE 19(5):e0304454",
+          "doi": "10.1371/journal.pone.0304454",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0304454",
+          "access": "Full primary open article read, especially site chronology and stratigraphic cautions.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "mendez-2023-museum",
+          "authors": "César Méndez, Amalia Nuevo-Delaunay and Omar Reyes",
+          "title": "Una cueva con 16 000 años de historia en Patagonia central. La Colección Baño Nuevo 1 en el Museo Regional de Aysén",
+          "year": 2023,
+          "venue": "Bajo la Lupa, Servicio Nacional del Patrimonio Cultural, Chile",
+          "url": "https://www.investigacion.patrimoniocultural.gob.cl/sites/www.investigacion.patrimoniocultural.gob.cl/files/2023-09/02%20Arti%CC%81culo%20-%20La%20Coleccio%CC%81n%20Ban%CC%83o%20Nuevo%201%20en%20el%20Museo%20Regional%20de%20Ayse%CC%81n.pdf",
+          "access": "Government-hosted author article downloaded in memory; first three pages read, including explicit site coordinates on p. 3.",
+          "referenceType": "web-resource"
+        }
+      ],
+      "review": {
+        "summary": "This review distinguishes dated observations from interpretive models, preserving source access, geographic scope, site formation and chronological limitations.",
+        "limitations": "Ten buried individuals are not a census or resident population estimate. Component envelopes cannot be read as permanent settlement.",
+        "discussion": "The museum article supplies a directly published location. Detailed chronology is supported by the supplementary full PLOS article; the requested 2024 PaleoAmerica source was accessed only as an abstract.",
+        "provenance": "Reviewed against primary publisher, institutional or author-hosted material, with actual access scope recorded per source. Intake synthesis reviewed separately from the submitted Consensus summary.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "bano-nuevo-1-shell-transport",
+      "revision": 1,
+      "type": "event",
+      "title": "Baño Nuevo 1: nonlocal shell ornaments",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Middle through late Holocene material; no artifact-specific closed date envelope asserted here.",
+        "method": "Original units retained without invented calendar conversion.",
+        "interpretation": "No closed calendar extent is supplied by the accessed source; retained as contextual evidence."
+      },
+      "claims": [
+        {
+          "id": "shell-transport",
+          "text": "Manufactured marine-shell ornaments at inland Baño Nuevo 1 demonstrate movement of nonlocal materials into central-west Patagonia.",
+          "status": "well-supported",
+          "explanation": "This claim follows the evidence and scope stated by the cited authors; it does not assign an ethnic identity or a resident population.",
+          "support": [
+            {
+              "sourceId": "hammond-2024-shell",
+              "locator": "Results and discussion",
+              "stance": "supports",
+              "note": "Object movement does not establish migration of an ethnic population or a particular path."
+            }
+          ]
+        },
+        {
+          "id": "stratigraphic-caution",
+          "text": "Vertical displacement is considered for a small bead in an older layer, preventing a secure attribution to prehuman or earliest deposits.",
+          "status": "under discussion",
+          "explanation": "Postdepositional movement limits the age attributed to individual objects.",
+          "support": [
+            {
+              "sourceId": "hammond-2024-shell",
+              "locator": "Stratigraphic discussion",
+              "stance": "supports",
+              "note": "Artifact layer alone does not establish manufacture or arrival date."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "hammond-2024-shell",
+          "authors": "Heidi Hammond, Leandro Zilio, Amalia Nuevo-Delaunay and César Méndez",
+          "title": "Middle through late Holocene long-distance transport of exotic shell personal adornments in Central West Patagonia (southern South America). The archaeomalacological assemblage of Baño Nuevo 1",
+          "year": 2024,
+          "venue": "PLOS ONE 19(5):e0304454",
+          "doi": "10.1371/journal.pone.0304454",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0304454",
+          "access": "Full primary open article read, especially site chronology and stratigraphic cautions.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "This review distinguishes dated observations from interpretive models, preserving source access, geographic scope, site formation and chronological limitations.",
+        "limitations": "Source-coast distances are not transport routes. No ethnic identity, directional line, or continuous trade interval is inferred.",
+        "discussion": "Evidence is retained at the source's scale; dates do not establish uninterrupted settlement.",
+        "provenance": "Reviewed against primary publisher, institutional or author-hosted material, with actual access scope recorded per source. Intake synthesis reviewed separately from the submitted Consensus summary.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": [
+          "bano-nuevo-1-early-holocene"
+        ]
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No spatial geometry asserted.",
+        "provenance": "Geographic scope follows the cited study. Any rounded anchor is editorial and schematic."
+      }
+    },
+    {
+      "id": "abrigo-1-sombrero-early",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Abrigo 1, Cerro El Sombrero: early Pampas shelter",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Oldest levels: 13,000–12,000 calendar years ago.",
+        "method": "Published calendar/calibrated age retained; accessed abstract does not explicitly establish the 1950 baseline.",
+        "interpretation": "Awaiting the full dating table to verify the BP baseline; no integer-year conversion asserted."
+      },
+      "claims": [
+        {
+          "id": "abrigo-early",
+          "text": "The oldest Abrigo 1 levels in the Tandilia Range of the Argentine Pampas are dated to 13,000–12,000 calendar years ago and yielded two Fishtail points.",
+          "status": "well-supported",
+          "explanation": "This claim follows the evidence and scope stated by the cited authors; it does not assign an ethnic identity or a resident population.",
+          "support": [
+            {
+              "sourceId": "zarate-2023-abrigo",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "Pampas comparison, geographically distinct from Patagonia."
+            }
+          ]
+        },
+        {
+          "id": "abrigo-formation",
+          "text": "The shelter's sediments are chiefly geogenic, with pedogenesis central to site formation; artifact distributions and refitting inform integrity assessment.",
+          "status": "well-supported",
+          "explanation": "This claim follows the evidence and scope stated by the cited authors; it does not assign an ethnic identity or a resident population.",
+          "support": [
+            {
+              "sourceId": "zarate-2023-abrigo",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "Site formation constrains interpretation of dated archaeological associations."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "zarate-2023-abrigo",
+          "authors": "Marcelo Zárate, Nora Flegenheimer and Adriana Mehl",
+          "title": "Abrigo 1, Cerro El Sombrero: An Early Site in Eastern Argentina",
+          "year": 2023,
+          "venue": "PaleoAmerica 9(1):60–75",
+          "doi": "10.1080/20555563.2022.2157929",
+          "url": "https://www.tandfonline.com/doi/abs/10.1080/20555563.2022.2157929",
+          "access": "Publisher abstract and metadata read; full article not read.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "This review distinguishes dated observations from interpretive models, preserving source access, geographic scope, site formation and chronological limitations.",
+        "limitations": "The abstract specifies calendar years ago but not its baseline explicitly; inspect the full dating tables before treating endpoints as exact. No exact shelter coordinate was verified; nearby hilltop coordinates are not substituted.",
+        "discussion": "Retained as a comparative Pampas record. It must not be presented as a southern Patagonian site.",
+        "provenance": "Reviewed against primary publisher, institutional or author-hosted material, with actual access scope recorded per source. Intake synthesis reviewed separately from the submitted Consensus summary.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "casa-piedra-rosello-early",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Casa de Piedra de Roselló: early forest–steppe occupation",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -7050,
+        "end": -7050,
+        "approximate": true,
+        "original": "Approximately 9,000 cal yr BP.",
+        "method": "Published calibrated/calendar chronology, with cal BP referenced to 1950; an approximate occurrence envelope.",
+        "interpretation": "Approximate dated early activity; no fabricated duration or continuous residence."
+      },
+      "claims": [
+        {
+          "id": "rosello-early",
+          "text": "The latest dates reported in the 2017 paper place human occupation at Casa de Piedra de Roselló near Aldea Beleiro at approximately 9,000 cal yr BP.",
+          "status": "well-supported",
+          "explanation": "This claim follows the evidence and scope stated by the cited authors; it does not assign an ethnic identity or a resident population.",
+          "support": [
+            {
+              "sourceId": "castro-esnal-2017-rosello",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "The primary abstract explicitly uses calibrated years BP."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "castro-esnal-2017-rosello",
+          "authors": "Analía Castro Esnal, Cecilia B. Pérez de Micou and María Laura Casanueva",
+          "title": "Early Holocene Occupation of the Forest-Steppe Ecotone of Southern South America: Evidence from Casa de Piedra de Roselló Cave (Chubut, Patagonia Argentina)",
+          "year": 2017,
+          "venue": "PaleoAmerica 3(3):276–282",
+          "doi": "10.1080/20555563.2017.1330102",
+          "url": "https://www.researchgate.net/publication/317851663_Early_Holocene_Occupation_of_the_Forest-Steppe_Ecotone_of_Southern_South_America_Evidence_from_Casa_de_Piedra_de_Rosello_Cave_Chubut_Patagonia_Argentina",
+          "access": "Primary paper abstract reproduced on author publication page read; full paper not accessible.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "This review distinguishes dated observations from interpretive models, preserving source access, geographic scope, site formation and chronological limitations.",
+        "limitations": "Primary abstract read, full dating table and exact site coordinate not accessed. Location remains null rather than substituting Aldea Beleiro's town centroid.",
+        "discussion": "Evidence is retained at the source's scale; dates do not establish uninterrupted settlement.",
+        "provenance": "Reviewed against primary publisher, institutional or author-hosted material, with actual access scope recorded per source. Intake synthesis reviewed separately from the submitted Consensus summary.",
+        "reviewedAt": "2026-10-28",
+        "history": [],
+        "relatedIds": []
+      }
+    }
+  ],
+  "updates": [],
+  "sourceRegister": [
+    {
+      "sourceId": "menendez-2025-ultima",
+      "inputWork": true,
+      "source": {
+        "id": "menendez-2025-ultima",
+        "authors": "Lumila Paula Menéndez et al.",
+        "title": "A human skeleton from Última Esperanza, South-West Patagonia, Chile: Osteobiography, morphometric, and genetic analysis",
+        "year": 2025,
+        "venue": "Journal of Archaeological Science: Reports 65, 105237",
+        "doi": "10.1016/j.jasrep.2025.105237",
+        "url": "https://www.researchgate.net/publication/392027397_A_human_skeleton_from_Ultima_Esperanza_South-West_Patagonia_Chile_osteobiography_morphometric_and_genetic_analysis",
+        "access": "Author-uploaded full text read: methods, results and Table 1.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "used",
+      "recordIds": [
+        "ultima-esperanza-historic-skeleton"
+      ],
+      "verification": "Author-uploaded full text read: methods, results and Table 1."
+    },
+    {
+      "sourceId": "prates-2013-argentina",
+      "inputWork": true,
+      "source": {
+        "id": "prates-2013-argentina",
+        "authors": "Luciano Prates, Gustavo Politis and James Steele",
+        "title": "Radiocarbon chronology of the early human occupation of Argentina",
+        "year": 2013,
+        "venue": "Quaternary International 301:104–122",
+        "doi": "10.1016/j.quaint.2013.03.011",
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S1040618213001444",
+        "access": "Publisher abstract and results previews read; full paper not read.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "used",
+      "recordIds": [
+        "argentina-early-radiocarbon-pattern"
+      ],
+      "verification": "Publisher abstract and results previews read; full paper not read."
+    },
+    {
+      "sourceId": "brook-2015-gruta",
+      "inputWork": true,
+      "source": {
+        "id": "brook-2015-gruta",
+        "authors": "G. A. Brook, N. V. Franco, P. Ambrústolo, M. V. Mancini, L. Wang and P. M. Fernández",
+        "title": "Evidence of the earliest humans in the Southern Deseado Massif (Patagonia, Argentina), Mylodontidae, and changes in water availability",
+        "year": 2015,
+        "venue": "Quaternary International 363:107–125",
+        "doi": "10.1016/j.quaint.2014.04.022",
+        "url": "https://www.sciencedirect.com/science/article/pii/S1040618214002304",
+        "access": "Publisher abstract, introduction and conclusion previews read.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "used",
+      "recordIds": [
+        "la-gruta-1-earliest",
+        "la-gruta-1-early-holocene",
+        "southern-deseado-water-hiatus"
+      ],
+      "verification": "Publisher abstract, introduction and conclusion previews read."
+    },
+    {
+      "sourceId": "borrero-martin-2021-nodes",
+      "inputWork": true,
+      "source": {
+        "id": "borrero-martin-2021-nodes",
+        "authors": "Luis Alberto Borrero and Fabiana María Martin",
+        "title": "Pioneer Population Nodes in Southern Patagonian Lands",
+        "year": 2021,
+        "venue": "South American Contributions to World Archaeology",
+        "doi": "10.1007/978-3-030-73998-0_7",
+        "url": "https://link.springer.com/chapter/10.1007/978-3-030-73998-0_7",
+        "access": "Publisher abstract and bibliographic metadata read; chapter text not read.",
+        "referenceType": "book-chapter",
+        "publisher": "Springer, Cham",
+        "editors": "Mariano Bonomo and Sonia Archila",
+        "pages": "159–183"
+      },
+      "disposition": "used",
+      "recordIds": [
+        "southern-patagonia-pioneer-nodes"
+      ],
+      "verification": "Publisher abstract and bibliographic metadata read; chapter text not read."
+    },
+    {
+      "sourceId": "martin-2022-fell",
+      "inputWork": true,
+      "source": {
+        "id": "martin-2022-fell",
+        "authors": "Fabiana María Martin",
+        "title": "Fell Cave Reinterpreted",
+        "year": 2022,
+        "venue": "Chungará 54(3):535–556",
+        "url": "https://www.scielo.cl/scielo.php?lng=en&pid=S0717-73562022000300535&script=sci_arttext",
+        "access": "Full primary SciELO article read, including location, chronology and discussion.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "used",
+      "recordIds": [
+        "fell-cave-early-context-reinterpreted"
+      ],
+      "verification": "Full primary SciELO article read, including location, chronology and discussion."
+    },
+    {
+      "sourceId": "martin-borrero-2017-environment",
+      "inputWork": true,
+      "source": {
+        "id": "martin-borrero-2017-environment",
+        "authors": "Fabiana María Martin and Luis Alberto Borrero",
+        "title": "Climate change, availability of territory, and Late Pleistocene human exploration of Ultima Esperanza, South Chile",
+        "year": 2017,
+        "venue": "Quaternary International 428:86–95",
+        "doi": "10.1016/j.quaint.2015.06.023",
+        "url": "https://ri.conicet.gov.ar/bitstream/handle/11336/38571/CONICET_Digital_Nro.1fbac40f-cd30-495d-80a2-25aedb77d66a_A.pdf?isAllowed=y&sequence=2",
+        "access": "Primary institutional PDF abstract indexed text read; complete paper not read. Online 2015, issue 2017.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "used",
+      "recordIds": [
+        "ultima-esperanza-deglaciation-exploration"
+      ],
+      "verification": "Primary institutional PDF abstract indexed text read; complete paper not read. Online 2015, issue 2017."
+    },
+    {
+      "sourceId": "borrero-1999-colonization",
+      "inputWork": true,
+      "source": {
+        "id": "borrero-1999-colonization",
+        "authors": "Luis Alberto Borrero",
+        "title": "The Prehistoric Exploration and Colonization of Fuego-Patagonia",
+        "year": 1999,
+        "venue": "Journal of World Prehistory 13(3):321–355",
+        "doi": "10.1023/A:1022341730119",
+        "url": "https://www.bfa.fcnym.unlp.edu.ar/catalogo/doc_num.php?explnum_id=1906",
+        "access": "Primary article abstract and first page read through university-hosted PDF; remaining full text not read.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "used",
+      "recordIds": [
+        "argentina-early-radiocarbon-pattern"
+      ],
+      "verification": "Primary article abstract and first page read through university-hosted PDF; remaining full text not read."
+    },
+    {
+      "sourceId": "labarca-2025-fauna",
+      "inputWork": true,
+      "source": {
+        "id": "labarca-2025-fauna",
+        "authors": "Rafael Labarca, Alfredo Prieto and Mauricio Massone",
+        "title": "Late Pleistocene subsistence and settlement during the initial human colonization of southern South America: Faunal evidence of Cueva Lago Sofía 1 and Tres Arroyos 1, southern Patagonia",
+        "year": 2025,
+        "venue": "Journal of Quaternary Science 41 (2026):237–259",
+        "doi": "10.1002/jqs.70039",
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/jqs.70039",
+        "access": "Publisher abstract read. Online 10 December 2025; journal issue 2026.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "used",
+      "recordIds": [
+        "lago-sofia-1-faunal-use",
+        "tres-arroyos-1-faunal-use"
+      ],
+      "verification": "Publisher abstract read. Online 10 December 2025; journal issue 2026."
+    },
+    {
+      "sourceId": "miotti-salemme-2003-mobility",
+      "inputWork": true,
+      "source": {
+        "id": "miotti-salemme-2003-mobility",
+        "authors": "Laura Miotti and Mónica Salemme",
+        "title": "When Patagonia was colonized: people mobility at high latitudes during Pleistocene/Holocene transition",
+        "year": 2003,
+        "venue": "Quaternary International 109–110:95–111",
+        "doi": "10.1016/S1040-6182(02)00206-9",
+        "url": "https://www.researchgate.net/publication/238376591_When_Patagonia_was_colonized_People_mobility_at_high_latitudes_during_PleistoceneHolocene_transition",
+        "access": "Author-uploaded paper abstract read; full paper not read.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "used",
+      "recordIds": [
+        "patagonia-2003-coastal-entry-model"
+      ],
+      "verification": "Author-uploaded paper abstract read; full paper not read."
+    },
+    {
+      "sourceId": "bozzuto-2023-casa-piedra",
+      "inputWork": true,
+      "source": {
+        "id": "bozzuto-2023-casa-piedra",
+        "authors": "Damián L. Bozzuto",
+        "title": "Early and middle Holocene periglacial lake-level changes and human landscape use in south-central Patagonia. An approach to hunting activities in Cerro Casa de Piedra locality",
+        "year": 2023,
+        "venue": "Journal of Archaeological Science: Reports 51, 104110",
+        "doi": "10.1016/j.jasrep.2023.104110",
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S2352409X23002857",
+        "access": "Publisher abstract/highlights read; author preprint abstract also consulted for coordinates and initial chronology.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "used",
+      "recordIds": [
+        "cerro-casa-piedra-7-earliest",
+        "cerro-casa-piedra-hunting-change"
+      ],
+      "verification": "Publisher abstract/highlights read; author preprint abstract also consulted for coordinates and initial chronology."
+    },
+    {
+      "sourceId": "civalero-franco-2003-western",
+      "inputWork": true,
+      "source": {
+        "id": "civalero-franco-2003-western",
+        "authors": "María Teresa Civalero and Nora V. Franco",
+        "title": "Early human occupations in Western Santa Cruz Province, Southernmost South America",
+        "year": 2003,
+        "venue": "Quaternary International 109–110:77–86",
+        "doi": "10.1016/S1040-6182(02)00204-5",
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S1040618202002045",
+        "access": "Publisher abstract, introduction and site-description previews read.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "used",
+      "recordIds": [
+        "cerro-casa-piedra-7-earliest",
+        "chorrillo-malo-2-early"
+      ],
+      "verification": "Publisher abstract, introduction and site-description previews read."
+    },
+    {
+      "sourceId": "mendez-2024-bano",
+      "inputWork": true,
+      "source": {
+        "id": "mendez-2024-bano",
+        "authors": "César Méndez, Amalia Nuevo-Delaunay, Omar Reyes, Carolina Belmar and Francisco Mena",
+        "title": "Early Holocene Archaeological Context and Assemblages of Baño Nuevo 1: A Key Site in Central West Patagonia",
+        "year": 2024,
+        "venue": "PaleoAmerica 10(1):45–62",
+        "doi": "10.1080/20555563.2024.2327129",
+        "url": "https://investigadores.anid.cl//es/public_search/work?id=807221",
+        "access": "Primary institutional abstract read; full article unavailable through publisher.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "used",
+      "recordIds": [
+        "bano-nuevo-1-early-holocene"
+      ],
+      "verification": "Primary institutional abstract read; full article unavailable through publisher."
+    },
+    {
+      "sourceId": "zarate-2023-abrigo",
+      "inputWork": true,
+      "source": {
+        "id": "zarate-2023-abrigo",
+        "authors": "Marcelo Zárate, Nora Flegenheimer and Adriana Mehl",
+        "title": "Abrigo 1, Cerro El Sombrero: An Early Site in Eastern Argentina",
+        "year": 2023,
+        "venue": "PaleoAmerica 9(1):60–75",
+        "doi": "10.1080/20555563.2022.2157929",
+        "url": "https://www.tandfonline.com/doi/abs/10.1080/20555563.2022.2157929",
+        "access": "Publisher abstract and metadata read; full article not read.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "used",
+      "recordIds": [
+        "abrigo-1-sombrero-early"
+      ],
+      "verification": "Publisher abstract and metadata read; full article not read."
+    },
+    {
+      "sourceId": "castro-esnal-2017-rosello",
+      "inputWork": true,
+      "source": {
+        "id": "castro-esnal-2017-rosello",
+        "authors": "Analía Castro Esnal, Cecilia B. Pérez de Micou and María Laura Casanueva",
+        "title": "Early Holocene Occupation of the Forest-Steppe Ecotone of Southern South America: Evidence from Casa de Piedra de Roselló Cave (Chubut, Patagonia Argentina)",
+        "year": 2017,
+        "venue": "PaleoAmerica 3(3):276–282",
+        "doi": "10.1080/20555563.2017.1330102",
+        "url": "https://www.researchgate.net/publication/317851663_Early_Holocene_Occupation_of_the_Forest-Steppe_Ecotone_of_Southern_South_America_Evidence_from_Casa_de_Piedra_de_Rosello_Cave_Chubut_Patagonia_Argentina",
+        "access": "Primary paper abstract reproduced on author publication page read; full paper not accessible.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "used",
+      "recordIds": [
+        "casa-piedra-rosello-early"
+      ],
+      "verification": "Primary paper abstract reproduced on author publication page read; full paper not accessible."
+    },
+    {
+      "sourceId": "hammond-2024-shell",
+      "inputWork": false,
+      "source": {
+        "id": "hammond-2024-shell",
+        "authors": "Heidi Hammond, Leandro Zilio, Amalia Nuevo-Delaunay and César Méndez",
+        "title": "Middle through late Holocene long-distance transport of exotic shell personal adornments in Central West Patagonia (southern South America). The archaeomalacological assemblage of Baño Nuevo 1",
+        "year": 2024,
+        "venue": "PLOS ONE 19(5):e0304454",
+        "doi": "10.1371/journal.pone.0304454",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0304454",
+        "access": "Full primary open article read, especially site chronology and stratigraphic cautions.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "used",
+      "recordIds": [
+        "bano-nuevo-1-early-holocene",
+        "bano-nuevo-1-shell-transport"
+      ],
+      "verification": "Full primary open article read, especially site chronology and stratigraphic cautions."
+    },
+    {
+      "sourceId": "waters-2015-fell",
+      "inputWork": false,
+      "source": {
+        "id": "waters-2015-fell",
+        "authors": "Michael R. Waters, Thomas Amorosi and Thomas W. Stafford Jr.",
+        "title": "Redating Fell's Cave, Chile and the Chronological Placement of the Fishtail Projectile Point",
+        "year": 2015,
+        "venue": "American Antiquity 80(2):376–386",
+        "doi": "10.7183/0002-7316.80.2.376",
+        "url": "https://www.cambridge.org/core/journals/american-antiquity/article/abs/redating-fells-cave-chile-and-the-chronological-placement-of-the-fishtail-projectile-point/6A26D6E1D18B1E46EB02A51EFE8262AF",
+        "access": "Publisher abstract read; individual calibrated hearth dates not available in accessed text.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "used",
+      "recordIds": [
+        "fell-cave-early-context-reinterpreted"
+      ],
+      "verification": "Publisher abstract read; individual calibrated hearth dates not available in accessed text."
+    },
+    {
+      "sourceId": "bozzuto-2022-preprint",
+      "inputWork": false,
+      "source": {
+        "id": "bozzuto-2022-preprint",
+        "authors": "Damián Leandro Bozzuto",
+        "title": "Early and Middle Holocene Periglacial Lake-Level Changes and Human Land Use in South-Central Patagonia. An Approach from Cerro Casa De Piedra Locality",
+        "year": 2022,
+        "venue": "SSRN",
+        "doi": "10.2139/ssrn.4103009",
+        "url": "https://ssrn.com/abstract=4103009",
+        "access": "Primary author preprint abstract read, including explicit site coordinates and calibrated age statement.",
+        "referenceType": "web-resource"
+      },
+      "disposition": "used",
+      "recordIds": [
+        "cerro-casa-piedra-7-earliest"
+      ],
+      "verification": "Primary author preprint abstract read, including explicit site coordinates and calibrated age statement."
+    },
+    {
+      "sourceId": "mendez-2023-museum",
+      "inputWork": false,
+      "source": {
+        "id": "mendez-2023-museum",
+        "authors": "César Méndez, Amalia Nuevo-Delaunay and Omar Reyes",
+        "title": "Una cueva con 16 000 años de historia en Patagonia central. La Colección Baño Nuevo 1 en el Museo Regional de Aysén",
+        "year": 2023,
+        "venue": "Bajo la Lupa, Servicio Nacional del Patrimonio Cultural, Chile",
+        "url": "https://www.investigacion.patrimoniocultural.gob.cl/sites/www.investigacion.patrimoniocultural.gob.cl/files/2023-09/02%20Arti%CC%81culo%20-%20La%20Coleccio%CC%81n%20Ban%CC%83o%20Nuevo%201%20en%20el%20Museo%20Regional%20de%20Ayse%CC%81n.pdf",
+        "access": "Government-hosted author article downloaded in memory; first three pages read, including explicit site coordinates on p. 3.",
+        "referenceType": "web-resource"
+      },
+      "disposition": "used",
+      "recordIds": [
+        "bano-nuevo-1-early-holocene"
+      ],
+      "verification": "Government-hosted author article downloaded in memory; first three pages read, including explicit site coordinates on p. 3."
+    }
+  ],
+  "unresolved": [
+    {
+      "issue": "Exact positions remain unverified for several named sites.",
+      "recordIds": [
+        "la-gruta-1-earliest",
+        "la-gruta-1-early-holocene",
+        "lago-sofia-1-faunal-use",
+        "tres-arroyos-1-faunal-use",
+        "abrigo-1-sombrero-early",
+        "casa-piedra-rosello-early"
+      ],
+      "action": "Consult primary site descriptions or official public heritage records before assigning dots; do not substitute town, massif or nearby-site centroids."
+    },
+    {
+      "issue": "Site-specific calibrated Fell Cave ranges were not accessible.",
+      "recordIds": [
+        "fell-cave-early-context-reinterpreted"
+      ],
+      "action": "Consult Waters et al. 2015 dating tables. Their regional Fishtail 12,800–12,100 cal BP envelope must not become the exact Fell occupation range."
+    },
+    {
+      "issue": "Cerro Casa de Piedra 7 and Abrigo 1 abstracts specify calibrated/calendar years but do not explicitly state the 1950 baseline.",
+      "recordIds": [
+        "cerro-casa-piedra-7-earliest",
+        "abrigo-1-sombrero-early"
+      ],
+      "action": "Dates retained in text and left temporally unplaced until dating tables verify BP convention."
+    },
+    {
+      "issue": "Última Esperanza individual has separated calibrated date modes.",
+      "recordIds": [
+        "ultima-esperanza-historic-skeleton"
+      ],
+      "action": "If a future model supports disjoint intervals, encode 1698–1724 cal AD (12.9%) and 1810–1905 cal AD (87.1%) without filling the gap."
+    },
+    {
+      "issue": "Individual occupation ranges for Lago Sofía 1 and Tres Arroyos 1 are not in the accessed abstract.",
+      "recordIds": [
+        "lago-sofia-1-faunal-use",
+        "tres-arroyos-1-faunal-use"
+      ],
+      "action": "Full Labarca dating tables are needed; the regional statement around 13,000 cal BP is not assigned to either site's entire occupation."
+    }
+  ],
+  "corrections": [
+    {
+      "target": "Submitted La Gruta 1 earliest-date table",
+      "correction": "Brook et al. give 12,799–12,049 cal BP, not 12,799–12,653 cal BP; mylodontid bones discussed separately are from La Gruta 3.",
+      "sourceId": "brook-2015-gruta"
+    },
+    {
+      "target": "Menéndez 2025 skeleton classification",
+      "correction": "The dated individual is historic, with multimodal calibrated ranges in 1698–1905 cal AD, rather than an early or middle Holocene pioneer.",
+      "sourceId": "menendez-2025-ultima"
+    },
+    {
+      "target": "Fell Cave rockfall summary",
+      "correction": "Martin reinterprets the rockfall as incomplete and does not accept it as a simple seal dividing all Pleistocene and Holocene activity.",
+      "sourceId": "martin-2022-fell"
+    },
+    {
+      "target": "Miotti 2003 foothill lag",
+      "correction": "The abstract proposes at least two millennia, not one millennium; it is an older regional colonization model, not a verified mapped route.",
+      "sourceId": "miotti-salemme-2003-mobility"
+    },
+    {
+      "target": "Mixed age conventions",
+      "correction": "Prates 2013 and Civalero/Franco 2003 radiocarbon-year statements are not arithmetically converted to calendar years.",
+      "sourceIds": [
+        "prates-2013-argentina",
+        "civalero-franco-2003-western"
+      ]
+    },
+    {
+      "target": "Labarca publication year",
+      "correction": "Published online in December 2025, journal issue 2026; preserve both rather than treating these as two studies.",
+      "sourceId": "labarca-2025-fauna"
+    },
+    {
+      "target": "Abrigo 1 regional scope",
+      "correction": "Abrigo 1 is a Tandilia/Pampas comparison, not a Patagonian settlement.",
+      "sourceId": "zarate-2023-abrigo"
+    },
+    {
+      "target": "Water availability and artifact-density interpretations",
+      "correction": "Sampled-site gaps and changes in projectile-point deposition do not directly establish an empty landscape or a resident-population decline.",
+      "sourceIds": [
+        "brook-2015-gruta",
+        "bozzuto-2023-casa-piedra"
+      ]
+    },
+    {
+      "target": "Baño Nuevo natural versus cultural antiquity",
+      "correction": "A 16,000-year cave history includes prehuman animal deposits; early human component and burials are much younger.",
+      "sourceIds": [
+        "hammond-2024-shell",
+        "mendez-2024-bano"
+      ]
+    }
+  ]
+}

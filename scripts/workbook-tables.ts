@@ -1,12 +1,13 @@
 import { writeFile } from "node:fs/promises";
 import { dataset } from "../src/published-data";
+import { version as appVersion } from '../package.json';
 import { BULK_HEADERS, OVERLAY_HEADERS } from "../src/bulk-schema";
 
 const tables: Record<string, unknown[][]> = {
   Readme: [
     ["format_version", 2],
     ["title", "Americas Peoples — complete published evidence"],
-    ["app_version", "0.3.0"],
+    ["app_version", appVersion],
     ["records", dataset.records.length],
     [
       "scope",
@@ -94,6 +95,7 @@ for (const r of dataset.records) {
     limitations: r.review.limitations,
     discussion: r.review.discussion,
     population_json: r.population ? JSON.stringify(r.population) : "",
+    language_json: r.linguistics ? JSON.stringify(r.linguistics) : "",
   };
   const key = r.overlay ? "Overlays" : "Evidence",
     headers = r.overlay ? OVERLAY_HEADERS : BULK_HEADERS.Evidence;

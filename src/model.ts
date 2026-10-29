@@ -80,7 +80,8 @@ export interface Overlay {
     | "population-history"
     | "regional-evidence"
     | "environment"
-    | "cultural-reach";
+    | "cultural-reach"
+    | "language";
   basis: "documented" | "schematic" | "unmapped";
   geometry:
     | { type: "Point"; coordinates: [number, number] }
@@ -89,7 +90,19 @@ export interface Overlay {
   precision: string;
   provenance: string;
 }
+export interface Linguistics {
+  languages: { id: string; name: string; family?: string }[];
+  claimId: string;
+  scope: string;
+  uncertainty: string;
+  relationship?: {
+    kind: "descent" | "borrowing" | "contact" | "unclassified";
+    from: string;
+    to: string;
+  };
+}
 export interface EvidenceRecord {
+  linguistics?: Linguistics;
   population?: {
     start: number;
     end: number;

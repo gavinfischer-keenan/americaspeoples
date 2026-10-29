@@ -1,0 +1,2316 @@
+{
+  "records": [
+    {
+      "id": "la-watson-brake",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Watson Brake — construction onset and foraging",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -3499,
+        "end": -3499,
+        "approximate": true,
+        "original": "Minor earthworks ca.3500 BCE; substantial moundraising ca.3350 BCE to sometime after3000 BCE",
+        "method": "25 radiocarbon and six luminescence dates described in2005 abstract",
+        "interpretation": "Only ca.3500BCE onset is a rounded plotted reference. Open-ended later sequence is retained in prose, not closed at3000BCE."
+      },
+      "claims": [
+        {
+          "id": "onset",
+          "text": "Watson Brake’s initial earthworks are reported around3500BCE; larger construction began around3350BCE and continued beyond3000BCE.",
+          "status": "well-supported",
+          "explanation": "Scoped evidence; no population total or precise migration route inferred.",
+          "support": [
+            {
+              "sourceId": "la-saunders2005",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Supports this local finding within the recorded access limits."
+            },
+            {
+              "sourceId": "la-saunders1997",
+              "stance": "context",
+              "locator": "Abstract and bibliographic identity; access limits above",
+              "note": "Related primary chronology or earlier interpretation; not additional independent evidence for every assertion."
+            }
+          ]
+        },
+        {
+          "id": "foraging",
+          "text": "Basal food remains support broad foraging and year-round use; the1997 seasonal-use interpretation was refined by later work.",
+          "status": "well-supported",
+          "explanation": "Scoped evidence; no population total or precise migration route inferred.",
+          "support": [
+            {
+              "sourceId": "la-saunders2005",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Supports this local finding within the recorded access limits."
+            }
+          ]
+        },
+        {
+          "id": "driver",
+          "text": "Some building episodes covary with increased ENSO variability; communal response is a possible explanation, not a demonstrated cause.",
+          "status": "under discussion",
+          "explanation": "Covariation does not establish why construction began.",
+          "support": [
+            {
+              "sourceId": "la-saunders2005",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Supports this local finding within the recorded access limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "la-saunders2005",
+          "title": "Watson Brake, a Middle Archaic Mound Complex in Northeast Louisiana",
+          "authors": "Joe W. Saunders et al.",
+          "year": 2005,
+          "venue": "American Antiquity",
+          "url": "https://doi.org/10.2307/40035868",
+          "doi": "10.2307/40035868",
+          "access": "Abstract only: Cambridge publisher and University of Southern Mississippi author repository.",
+          "referenceType": "journal-article",
+          "volume": "70",
+          "issue": "4",
+          "pages": "631–668"
+        },
+        {
+          "id": "la-saunders1997",
+          "title": "A Mound Complex in Louisiana at 5400–5000 Years Before the Present",
+          "authors": "Joe W. Saunders et al.",
+          "year": 1997,
+          "venue": "Science",
+          "url": "https://doi.org/10.1126/science.277.5333.1796",
+          "doi": "10.1126/science.277.5333.1796",
+          "access": "Abstract only: University of Southern Mississippi author repository; its title has a5400–5500 transcription error. DOI/title cross-check retains5400–5000.",
+          "referenceType": "journal-article",
+          "volume": "277",
+          "issue": "5333",
+          "pages": "1796–1799"
+        }
+      ],
+      "review": {
+        "summary": "Watson Brake’s initial earthworks are reported around3500BCE; larger construction began around3350BCE and continued beyond3000BCE.",
+        "limitations": "Reference year is neither first arrival in Louisiana nor a settlement lifespan. No precise public coordinates verified; no resident estimate.",
+        "discussion": "Seasonal use in1997 and all-season basal evidence in2005 are not identical. Plants later domesticated were not thereby already crops at Watson Brake.",
+        "provenance": "2026-10-28 Louisiana and bayou Consensus exports independently reconciled against linked primary/institutional records. Exact site coordinates omitted where not verified.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Independent next-release intake; published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "la-grand-caillou",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Grand Caillou — levee setting and Plaquemine affiliation",
+      "culture": {
+        "id": "la-plaquemine",
+        "name": "Plaquemine archaeological attribution",
+        "kind": "culture",
+        "color": "#c6a778"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1000,
+        "end": 1450,
+        "approximate": true,
+        "original": "Barataria phase of Plaquemine culture AD1000–1450; dated mound sequence truncates at0.6ka",
+        "method": "Ceramic attribution plus coring, trenching, LiDAR and radiocarbon described in abstract",
+        "interpretation": "Approximate source reference or occurrence window only; no continuous residence or invented padding asserted."
+      },
+      "claims": [
+        {
+          "id": "affiliation",
+          "text": "Grand Caillou is assigned to the Barataria phase(AD1000–1450); mound layers alternate sediment types.",
+          "status": "well-supported",
+          "explanation": "Scoped evidence; no population total or precise migration route inferred.",
+          "support": [
+            {
+              "sourceId": "la-mehta2019",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Supports this local finding within the recorded access limits."
+            }
+          ]
+        },
+        {
+          "id": "setting",
+          "text": "Its levee-and-crevasse-channel junction offered elevation and waterway access; coincident delta and mound chronology does not prove one abandonment cause.",
+          "status": "under discussion",
+          "explanation": "Site-selection advantages and causal abandonment remain interpretations.",
+          "support": [
+            {
+              "sourceId": "la-mehta2019",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Supports this local finding within the recorded access limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "la-mehta2019",
+          "title": "Mound Construction and Site Selection in the Lafourche Subdelta of the Mississippi River Delta, Louisiana, USA",
+          "authors": "Jayur Madhusudan Mehta and Elizabeth L. Chamberlain",
+          "year": 2019,
+          "venue": "Journal of Island and Coastal Archaeology",
+          "url": "https://doi.org/10.1080/15564894.2018.1458764",
+          "doi": "10.1080/15564894.2018.1458764",
+          "access": "Abstract only: Wageningen author institutional record. Full article not checked.",
+          "referenceType": "journal-article",
+          "volume": "14",
+          "issue": "4",
+          "pages": "453–478"
+        }
+      ],
+      "review": {
+        "summary": "Grand Caillou is assigned to the Barataria phase(AD1000–1450); mound layers alternate sediment types.",
+        "limitations": "Phase endpoints are not measured foundation and abandonment years;0.6ka retained without unverified datum conversion. No population inference.",
+        "discussion": "Water access and elevation may interact with other choices; this is not a universal migration rule.",
+        "provenance": "2026-10-28 Louisiana and bayou Consensus exports independently reconciled against linked primary/institutional records. Exact site coordinates omitted where not verified.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Independent next-release intake; published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "la-hillman-components",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Hillman(16EBR60) — Marksville, Troyville and Coles Creek components",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Marksville; later Troyville and Coles Creek occupations; pre- and post-contact material",
+        "method": "Chronological description in checked source",
+        "interpretation": "No numerical occupation bounds extracted; cultural/environmental dates do not supply a continuous settlement interval."
+      },
+      "claims": [
+        {
+          "id": "components",
+          "text": "Hillman’s assemblages confirm a Marksville component and subsequent Troyville and Coles Creek use.",
+          "status": "well-supported",
+          "explanation": "Scoped evidence; no population total or precise migration route inferred.",
+          "support": [
+            {
+              "sourceId": "la-kerr2023",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Supports this local finding within the recorded access limits."
+            }
+          ]
+        },
+        {
+          "id": "lithics",
+          "text": "Hillman shares ceramic similarities with nearby Bayou Manchac sites but has an unusual lithic assemblage for a Marksville village.",
+          "status": "well-supported",
+          "explanation": "Scoped evidence; no population total or precise migration route inferred.",
+          "support": [
+            {
+              "sourceId": "la-kerr2023",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Supports this local finding within the recorded access limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "la-kerr2023",
+          "title": "The Hillman Site (16EBR60): A Glimpse into Pre-Contact South Louisiana",
+          "authors": "Brandy Kerr",
+          "year": 2023,
+          "venue": "LSU Master’s Theses,5769",
+          "url": "https://repository.lsu.edu/gradschool_theses/5769/",
+          "doi": "10.31390/gradschool_theses.5769",
+          "access": "Abstract only: LSU institutional thesis record. Date tables and coordinates not checked.",
+          "referenceType": "thesis",
+          "publisher": "Louisiana State University and Agricultural and Mechanical College"
+        }
+      ],
+      "review": {
+        "summary": "Hillman’s assemblages confirm a Marksville component and subsequent Troyville and Coles Creek use.",
+        "limitations": "Period labels cannot substantiate uninterruptedAD1–1000 residence. Numeric assays/public site coordinates not checked; artifact density is not residents.",
+        "discussion": "Assemblage differences raise activity and site-function questions rather than proving a separate people.",
+        "provenance": "2026-10-28 Louisiana and bayou Consensus exports independently reconciled against linked primary/institutional records. Exact site coordinates omitted where not verified.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Independent next-release intake; published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "la-morgan-coles-creek",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Morgan — Pecan Island Coles Creek center",
+      "culture": {
+        "id": "la-coles-creek",
+        "name": "Coles Creek archaeological attribution",
+        "kind": "culture",
+        "color": "#90b78d"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 800,
+        "end": 1000,
+        "approximate": true,
+        "original": "Middle and Late Coles Creek, circaAD800–1000",
+        "method": "Relative ceramic chronology and excavated midden comparison",
+        "interpretation": "Approximate source reference or occurrence window only; no continuous residence or invented padding asserted."
+      },
+      "claims": [
+        {
+          "id": "center",
+          "text": "Morgan was an important Pecan Island center during approximatelyAD800–1000, with excavated areas of intensive use.",
+          "status": "well-supported",
+          "explanation": "Scoped evidence; no population total or precise migration route inferred.",
+          "support": [
+            {
+              "sourceId": "la-brown1982",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Supports this local finding within the recorded access limits."
+            }
+          ]
+        },
+        {
+          "id": "ceramics",
+          "text": "Changes in Baytown Plain rim forms help compare which regional Coles Creek components were contemporary.",
+          "status": "well-supported",
+          "explanation": "Scoped evidence; no population total or precise migration route inferred.",
+          "support": [
+            {
+              "sourceId": "la-brown1982",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Supports this local finding within the recorded access limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "la-brown1982",
+          "title": "The Morgan Site: An Important Coles Creek Mound Complex on the Chenier Plain of Southwest Louisiana",
+          "authors": "Ian W. Brown",
+          "year": 1982,
+          "venue": "North American Archaeologist",
+          "url": "https://doi.org/10.2190/53C0-YWXL-MAA6-VNJE",
+          "doi": "10.2190/53C0-YWXL-MAA6-VNJE",
+          "access": "Abstract only: SAGE publisher page dates issueJanuary1982; older bibliographies sometimes use1981.",
+          "referenceType": "journal-article",
+          "volume": "2",
+          "issue": "3",
+          "pages": "207–237"
+        }
+      ],
+      "review": {
+        "summary": "Morgan was an important Pecan Island center during approximatelyAD800–1000, with excavated areas of intensive use.",
+        "limitations": "Relative ceramic dating is not annual occupation history. Descriptive density supplies no numeric population; site coordinates unverified.",
+        "discussion": "",
+        "provenance": "2026-10-28 Louisiana and bayou Consensus exports independently reconciled against linked primary/institutional records. Exact site coordinates omitted where not verified.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Independent next-release intake; published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "la-adams-bay",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Adams Bay(16PL8) — Plaquemine mound complex",
+      "culture": {
+        "id": "la-plaquemine",
+        "name": "Plaquemine archaeological attribution",
+        "kind": "culture",
+        "color": "#c6a778"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1200,
+        "end": 1500,
+        "approximate": true,
+        "original": "Plaquemine culture AD1200–1500",
+        "method": "Cultural assignment in publication abstract covering2018 fieldwork",
+        "interpretation": "Approximate source reference or occurrence window only; no continuous residence or invented padding asserted."
+      },
+      "claims": [
+        {
+          "id": "complex",
+          "text": "Adams Bay is a Plaquemine mound complex assigned toAD1200–1500 on a subsiding, eroding marsh island.",
+          "status": "well-supported",
+          "explanation": "Scoped evidence; no population total or precise migration route inferred.",
+          "support": [
+            {
+              "sourceId": "la-ostahowski2026",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Supports this local finding within the recorded access limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "la-ostahowski2026",
+          "title": "Investigations at the Adams Bay Site (16PL8), a Plaquemines mound complex located in Plaquemines Parish, Louisiana",
+          "authors": "Brian Ostahowski, Jayur Mehta and Ted Marks",
+          "year": 2026,
+          "venue": "Southeastern Archaeology",
+          "url": "https://doi.org/10.1080/0734578X.2025.2604415",
+          "doi": "10.1080/0734578X.2025.2604415",
+          "access": "Abstract only: publisher page; online27February2026.",
+          "referenceType": "journal-article",
+          "volume": "45",
+          "issue": "1",
+          "pages": "36–48"
+        }
+      ],
+      "review": {
+        "summary": "Adams Bay is a Plaquemine mound complex assigned toAD1200–1500 on a subsiding, eroding marsh island.",
+        "limitations": "Phase window does not date every mound or prove continuous occupation. Modern coastal destruction is not proof of an ancient abandonment cause.",
+        "discussion": "Protection recommendations concern heritage, not a reconstructed prehistoric evacuation.",
+        "provenance": "2026-10-28 Louisiana and bayou Consensus exports independently reconciled against linked primary/institutional records. Exact site coordinates omitted where not verified.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Independent next-release intake; published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "la-belcher-chronology",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Belcher(16CD13) — mound sequence and ceramic chronology",
+      "culture": {
+        "id": "la-late-caddoan",
+        "name": "Late Caddoan archaeological attribution",
+        "kind": "culture",
+        "color": "#c698c8"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Late Caddoan; numerical age bounds not independently extracted",
+        "method": "Chronological description in checked source",
+        "interpretation": "No numerical occupation bounds extracted; cultural/environmental dates do not supply a continuous settlement interval."
+      },
+      "claims": [
+        {
+          "id": "sequence",
+          "text": "Belcher’s mound stratigraphy provided a detailed construction sequence and a basis for northwestern Louisiana ceramic chronology.",
+          "status": "well-supported",
+          "explanation": "Scoped evidence; no population total or precise migration route inferred.",
+          "support": [
+            {
+              "sourceId": "la-girard1999",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Supports this local finding within the recorded access limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "la-girard1999",
+          "title": "Late Caddoan Occupation Along Cowhide Bayou: An Update on the Belcher Mound and Village Sites",
+          "authors": "Jeffery S. Girard",
+          "year": 1999,
+          "venue": "Caddoan Archeology; archived in Index of Texas Archaeology",
+          "url": "https://scholarworks.sfasu.edu/ita/vol1999/iss1/20/",
+          "doi": "10.21112/.ita.1999.1.20",
+          "access": "SFA ScholarWorks institutional abstract and metadata only. Full PDF fetch failed; precise chronology/coordinates not extracted.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "Belcher’s mound stratigraphy provided a detailed construction sequence and a basis for northwestern Louisiana ceramic chronology.",
+        "limitations": "Only institutional abstract checked. Comegys village and intervening scatter remain distinct from the mound; chronology and coordinates await full report.",
+        "discussion": "Supplied informatics-journal attribution is false; institutional archaeological repository resolves identity.",
+        "provenance": "2026-10-28 Louisiana and bayou Consensus exports independently reconciled against linked primary/institutional records. Exact site coordinates omitted where not verified.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Independent next-release intake; published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "la-lafourche-landscape",
+      "revision": 1,
+      "type": "event",
+      "title": "Lower Lafourche — land emergence before occupation",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Late Holocene; landform and settlement dates remain distinct",
+        "method": "Chronological description in checked source",
+        "interpretation": "No numerical occupation bounds extracted; cultural/environmental dates do not supply a continuous settlement interval."
+      },
+      "claims": [
+        {
+          "id": "lag",
+          "text": "Studied delta settings show a lag between emergence and human use; sediment accumulation could improve elevation before mound building.",
+          "status": "under discussion",
+          "explanation": "Scoped evidence; no population total or precise migration route inferred.",
+          "support": [
+            {
+              "sourceId": "la-chamberlain2020",
+              "stance": "supports",
+              "locator": "Study and discussion",
+              "note": "Supports this local finding within the recorded access limits."
+            }
+          ]
+        },
+        {
+          "id": "coverage",
+          "text": "The study identified36 monumental sites, but only five had radiocarbon chronologies; this sample cannot date first settlement of every Louisiana bayou.",
+          "status": "well-supported",
+          "explanation": "Scoped evidence; no population total or precise migration route inferred.",
+          "support": [
+            {
+              "sourceId": "la-chamberlain2020",
+              "stance": "supports",
+              "locator": "Section4.2",
+              "note": "Supports this local finding within the recorded access limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "la-chamberlain2020",
+          "title": "A geoarchaeological perspective on the challenges and trajectories of Mississippi Delta communities",
+          "authors": "Elizabeth L. Chamberlain, Jayur M. Mehta, Tony Reimann and Jakob Wallinga",
+          "year": 2020,
+          "venue": "Geomorphology",
+          "url": "https://doi.org/10.1016/j.geomorph.2020.107132",
+          "doi": "10.1016/j.geomorph.2020.107132",
+          "access": "Indexed publisher text: sections4.2 and4.4. Assay tables and calibration details not independently extracted.",
+          "referenceType": "journal-article",
+          "volume": "360",
+          "pages": "107132"
+        }
+      ],
+      "review": {
+        "summary": "Studied delta settings show a lag between emergence and human use; sediment accumulation could improve elevation before mound building.",
+        "limitations": "Emergence dates constrain landscape history, not human presence. Shell reservoir and reworking questions require assay-level assessment, not automatic rejection when shell dates exceed OSL ages.",
+        "discussion": "Elevation, freshwater, river shifts and cultural choices can interact.",
+        "provenance": "2026-10-28 Louisiana and bayou Consensus exports independently reconciled against linked primary/institutional records. Exact site coordinates omitted where not verified.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Independent next-release intake; published corpus unchanged."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "environment",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No verified numerical site coordinates or defensible regional geometry extracted; named context retained in index.",
+        "provenance": "Checked source names the study area/site; town, bayou or parish centroids are not substituted for settlements."
+      }
+    },
+    {
+      "id": "la-flooding-context",
+      "revision": 1,
+      "type": "event",
+      "title": "Upper Tensas — Early Woodland gaps and flooding hypothesis",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "State plan highlights proposed flooding1000–600BCE; not newly dated occupation",
+        "method": "Chronological description in checked source",
+        "interpretation": "No numerical occupation bounds extracted; cultural/environmental dates do not supply a continuous settlement interval."
+      },
+      "claims": [
+        {
+          "id": "hypothesis",
+          "text": "Louisiana’s archaeological plan treats sparse upper-floodplain Early Woodland evidence as potentially related to major flooding and calls for further testing.",
+          "status": "under discussion",
+          "explanation": "Scoped evidence; no population total or precise migration route inferred.",
+          "support": [
+            {
+              "sourceId": "la-plan2022",
+              "stance": "supports",
+              "locator": "Early Woodland research context",
+              "note": "Supports this local finding within the recorded access limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "la-plan2022",
+          "title": "Louisiana’s Comprehensive Archaeological Plan",
+          "authors": "Louisiana Division of Archaeology",
+          "year": 2022,
+          "venue": "Louisiana Department of Culture, Recreation and Tourism",
+          "url": "https://crt.state.la.us/Assets/OCD/archaeology/CRM-Resources/Section106/Comprehensive%20Plan%202022.pdf",
+          "access": "State research plan Early Woodland context checked; not a new excavation.",
+          "referenceType": "report",
+          "publisher": "Louisiana Division of Archaeology"
+        }
+      ],
+      "review": {
+        "summary": "Louisiana’s archaeological plan treats sparse upper-floodplain Early Woodland evidence as potentially related to major flooding and calls for further testing.",
+        "limitations": "Recorded-site gaps can reflect preservation and research history as well as settlement change; no total abandonment or single statewide migration established.",
+        "discussion": "Kidder2010 four-site dates and ten-year construction claim await direct article review.",
+        "provenance": "2026-10-28 Louisiana and bayou Consensus exports independently reconciled against linked primary/institutional records. Exact site coordinates omitted where not verified.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Independent next-release intake; published corpus unchanged."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "environment",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No verified numerical site coordinates or defensible regional geometry extracted; named context retained in index.",
+        "provenance": "Checked source names the study area/site; town, bayou or parish centroids are not substituted for settlements."
+      }
+    },
+    {
+      "id": "la-bayou-survey-bias",
+      "revision": 1,
+      "type": "event",
+      "title": "Louisiana bayous — concealed channels and survey bias",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Methodological context across precontact and historical landscape change",
+        "method": "Chronological description in checked source",
+        "interpretation": "No numerical occupation bounds extracted; cultural/environmental dates do not supply a continuous settlement interval."
+      },
+      "claims": [
+        {
+          "id": "methods",
+          "text": "Channel movement, erosion and later land use can hide older Louisiana landscapes; historical reconstruction with shallow geophysics can improve discovery.",
+          "status": "well-supported",
+          "explanation": "Scoped evidence; no population total or precise migration route inferred.",
+          "support": [
+            {
+              "sourceId": "la-filoromo2024",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Supports this local finding within the recorded access limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "la-filoromo2024",
+          "title": "Landscape Histories and the Search for Early Settlements along Louisiana’s Bayous",
+          "authors": "Steven J. Filoromo, Emily K. Dale and Paul D. Jackson",
+          "year": 2024,
+          "venue": "Advances in Archaeological Practice",
+          "url": "https://doi.org/10.1017/aap.2024.9",
+          "doi": "10.1017/aap.2024.9",
+          "access": "Abstract only: Northern Arizona author institutional record and Cambridge publisher search. Detailed Point Pleasant excavation chronology not checked.",
+          "referenceType": "journal-article",
+          "volume": "12",
+          "issue": "3",
+          "pages": "259–275"
+        }
+      ],
+      "review": {
+        "summary": "Channel movement, erosion and later land use can hide older Louisiana landscapes; historical reconstruction with shallow geophysics can improve discovery.",
+        "limitations": "Abstract supplies no dated Point Pleasant/Bayou Goula contexts. Survey methods do not date occupation or prove blank areas were inhabited.",
+        "discussion": "",
+        "provenance": "2026-10-28 Louisiana and bayou Consensus exports independently reconciled against linked primary/institutional records. Exact site coordinates omitted where not verified.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Independent next-release intake; published corpus unchanged."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "environment",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No verified numerical site coordinates or defensible regional geometry extracted; named context retained in index.",
+        "provenance": "Checked source names the study area/site; town, bayou or parish centroids are not substituted for settlements."
+      }
+    },
+    {
+      "id": "la-delta-cultural-landscapes",
+      "revision": 1,
+      "type": "event",
+      "title": "Mississippi Delta — Indigenous landscapes and interacting threats",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Ancestral landscapes; modern threats discussed in2025–2026 publications",
+        "method": "Chronological description in checked source",
+        "interpretation": "No numerical occupation bounds extracted; cultural/environmental dates do not supply a continuous settlement interval."
+      },
+      "claims": [
+        {
+          "id": "threats",
+          "text": "Delta archaeology faces sea-level rise, subsidence, wetland fragmentation, storms and development; many places retain Indigenous cultural importance.",
+          "status": "well-supported",
+          "explanation": "Scoped evidence; no population total or precise migration route inferred.",
+          "support": [
+            {
+              "sourceId": "la-rodning2026",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Supports this local finding within the recorded access limits."
+            },
+            {
+              "sourceId": "la-mehta2026",
+              "stance": "context",
+              "locator": "Abstract and bibliographic identity; access limits above",
+              "note": "Related primary chronology or earlier interpretation; not additional independent evidence for every assertion."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "la-rodning2026",
+          "title": "“A river runs through it”: archaeology of Indigenous settlements in the Mississippi River Delta in southeastern Louisiana",
+          "authors": "Christopher B. Rodning and Jayur Madhusudan Mehta",
+          "year": 2026,
+          "venue": "Southeastern Archaeology",
+          "url": "https://doi.org/10.1080/0734578X.2025.2597613",
+          "doi": "10.1080/0734578X.2025.2597613",
+          "access": "Abstract only: publisher article page; online9March2026.",
+          "referenceType": "journal-article",
+          "volume": "45",
+          "issue": "1",
+          "pages": "6–25"
+        },
+        {
+          "id": "la-mehta2026",
+          "title": "Lost to sea: Louisiana and its remarkable, fading history",
+          "authors": "Jayur Madhusudan Mehta",
+          "year": 2026,
+          "venue": "Southeastern Archaeology",
+          "url": "https://doi.org/10.1080/0734578X.2025.2597611",
+          "doi": "10.1080/0734578X.2025.2597611",
+          "access": "Publisher short abstract and metadata only. OnlineDecember2025; issue2026.",
+          "referenceType": "journal-article",
+          "volume": "45",
+          "issue": "1",
+          "pages": "1–5"
+        }
+      ],
+      "review": {
+        "summary": "Delta archaeology faces sea-level rise, subsidence, wetland fragmentation, storms and development; many places retain Indigenous cultural importance.",
+        "limitations": "Threats today do not date ancient settlements or identify past migration causes. Mehta’s short editorial abstract is orientation only.",
+        "discussion": "",
+        "provenance": "2026-10-28 Louisiana and bayou Consensus exports independently reconciled against linked primary/institutional records. Exact site coordinates omitted where not verified.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Independent next-release intake; published corpus unchanged."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "environment",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No verified numerical site coordinates or defensible regional geometry extracted; named context retained in index.",
+        "provenance": "Checked source names the study area/site; town, bayou or parish centroids are not substituted for settlements."
+      }
+    },
+    {
+      "id": "la-delta-research-history",
+      "revision": 1,
+      "type": "event",
+      "title": "Mississippi Delta — research coverage and salvage priorities",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Century of archaeological research; not ancient occupation bounds",
+        "method": "Chronological description in checked source",
+        "interpretation": "No numerical occupation bounds extracted; cultural/environmental dates do not supply a continuous settlement interval."
+      },
+      "claims": [
+        {
+          "id": "archive",
+          "text": "A century-scale review emphasizes underused regulatory surveys and coastal salvage data for studying delta adaptation.",
+          "status": "well-supported",
+          "explanation": "Scoped evidence; no population total or precise migration route inferred.",
+          "support": [
+            {
+              "sourceId": "la-helmer2023",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Supports this local finding within the recorded access limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "la-helmer2023",
+          "title": "A centennial perspective on archeological research trends and contemporary needs for a vanishing Mississippi Delta",
+          "authors": "Matthew R. Helmer, Elizabeth L. Chamberlain and Jayur M. Mehta",
+          "year": 2023,
+          "venue": "The Holocene",
+          "url": "https://doi.org/10.1177/09596836221138328",
+          "doi": "10.1177/09596836221138328",
+          "access": "Abstract only: SAGE publisher; online8December2022, issueMarch2023.",
+          "referenceType": "journal-article",
+          "volume": "33",
+          "issue": "3",
+          "pages": "355–365"
+        }
+      ],
+      "review": {
+        "summary": "A century-scale review emphasizes underused regulatory surveys and coastal salvage data for studying delta adaptation.",
+        "limitations": "Review recommendations are not new site dates or a universal earliest-bayou threshold.",
+        "discussion": "",
+        "provenance": "2026-10-28 Louisiana and bayou Consensus exports independently reconciled against linked primary/institutional records. Exact site coordinates omitted where not verified.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Independent next-release intake; published corpus unchanged."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No verified numerical site coordinates or defensible regional geometry extracted; named context retained in index.",
+        "provenance": "Checked source names the study area/site; town, bayou or parish centroids are not substituted for settlements."
+      }
+    },
+    {
+      "id": "arkansas-wapanocca-landuse",
+      "revision": 1,
+      "type": "event",
+      "title": "Wapanocca Bayou, Arkansas — human effects on vegetation",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 300,
+        "end": 1650,
+        "approximate": true,
+        "original": "Nearby Late Woodland/Mississippian settlements AD300–1650; channel infilling since at least2450calBP",
+        "method": "Radiocarbon age-depth model, pollen and multiproxy sediment data",
+        "interpretation": "Approximate source reference or occurrence window only; no continuous residence or invented padding asserted."
+      },
+      "claims": [
+        {
+          "id": "setting",
+          "text": "Levees by Wapanocca Bayou supported settlements assigned toAD300–1650; channel cores record a longer infilling history.",
+          "status": "well-supported",
+          "explanation": "Scoped evidence; no population total or precise migration route inferred.",
+          "support": [
+            {
+              "sourceId": "la-aiuvalasit2020",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Supports this local finding within the recorded access limits."
+            }
+          ]
+        },
+        {
+          "id": "mechanism",
+          "text": "Pollen and sediment proxies support an increasing human role in local vegetation change, later sustained by historical agriculture.",
+          "status": "under discussion",
+          "explanation": "Local multiproxy interpretation, not a claim that natural processes ceased.",
+          "support": [
+            {
+              "sourceId": "la-aiuvalasit2020",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Supports this local finding within the recorded access limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "la-aiuvalasit2020",
+          "title": "Multiproxy evidence for rapid and enduring anthropogenic vegetation change during the Late Holocene from an abandoned channel of the Mississippi River, Wapanocca Bayou, Arkansas, USA",
+          "authors": "Michael Aiuvalasit, Tim Riley and Joseph Schuldenrein",
+          "year": 2020,
+          "venue": "Geoarchaeology",
+          "url": "https://doi.org/10.1002/gea.21773",
+          "doi": "10.1002/gea.21773",
+          "access": "Abstract only: University of Illinois author institutional record; online2019, issue2020.",
+          "referenceType": "journal-article",
+          "volume": "35",
+          "issue": "3",
+          "pages": "351–365"
+        }
+      ],
+      "review": {
+        "summary": "Levees by Wapanocca Bayou supported settlements assigned toAD300–1650; channel cores record a longer infilling history.",
+        "limitations": "Arkansas, not Louisiana. Channel infilling since2450calBP is not a village founding date; no ancient population total inferred.",
+        "discussion": "Human land use and natural succession are contributions to be assessed together.",
+        "provenance": "2026-10-28 Louisiana and bayou Consensus exports independently reconciled against linked primary/institutional records. Exact site coordinates omitted where not verified.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Independent next-release intake; published corpus unchanged."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "environment",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No verified numerical site coordinates or defensible regional geometry extracted; named context retained in index.",
+        "provenance": "Checked source names the study area/site; town, bayou or parish centroids are not substituted for settlements."
+      }
+    },
+    {
+      "id": "mexico-cerro-pedregoso-context",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Cerro Pedregoso, Cedros Island — repeated early use",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -10050,
+        "end": -7650,
+        "approximate": true,
+        "original": "Approximately12,000–9600calBP",
+        "method": "Radiocarbon chronology in author GSA2025 abstract",
+        "interpretation": "Approximate source reference or occurrence window only; no continuous residence or invented padding asserted."
+      },
+      "claims": [
+        {
+          "id": "chronology",
+          "text": "Cerro Pedregoso preserves repeated early use in spring-fed settings, with dated material around12,000–9600calBP.",
+          "status": "well-supported",
+          "explanation": "Scoped evidence; no population total or precise migration route inferred.",
+          "support": [
+            {
+              "sourceId": "la-davis-gsa2025",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Supports this local finding within the recorded access limits."
+            },
+            {
+              "sourceId": "la-davis-cerro2025",
+              "stance": "context",
+              "locator": "Abstract and bibliographic identity; access limits above",
+              "note": "Related primary chronology or earlier interpretation; not additional independent evidence for every assertion."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "la-davis-cerro2025",
+          "title": "The Geoarchaeological Context of Early Holocene Human Occupation at the Cerro Pedregoso Site, Cedros Island, Mexico",
+          "authors": "Loren G. Davis et al.",
+          "year": 2025,
+          "venue": "Geoarchaeology",
+          "url": "https://doi.org/10.1002/gea.70017",
+          "doi": "10.1002/gea.70017",
+          "access": "Publisher bibliographic identity checked. Numerical chronology independently checked in author GSA2025 abstract10.1130/abs/2025AM-8550; journal full text not checked.",
+          "referenceType": "journal-article",
+          "volume": "40",
+          "issue": "3",
+          "pages": "e70017"
+        },
+        {
+          "id": "la-davis-gsa2025",
+          "title": "Geoarchaeology of Cedros Island’s Southern End: A Late Pleistocene to Early Holocene Case Study",
+          "authors": "Loren G. Davis",
+          "year": 2025,
+          "venue": "Geological Society of America Abstracts with Programs",
+          "url": "https://doi.org/10.1130/abs/2025AM-8550",
+          "doi": "10.1130/abs/2025AM-8550",
+          "access": "Author conference abstract at GSA; not an additional independent excavation.",
+          "referenceType": "journal-article",
+          "volume": "57",
+          "issue": "6"
+        }
+      ],
+      "review": {
+        "summary": "Cerro Pedregoso preserves repeated early use in spring-fed settings, with dated material around12,000–9600calBP.",
+        "limitations": "Mexico, not Louisiana. Potentially older buried soil is a research target, not proof of earlier occupation. No verified numerical archaeological coordinates.",
+        "discussion": "Approximate12ka reference is retained despite the journal title’s broad Early Holocene label.",
+        "provenance": "2026-10-28 Louisiana and bayou Consensus exports independently reconciled against linked primary/institutional records. Exact site coordinates omitted where not verified.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Independent next-release intake; published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "mexico-el-peregrino",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "El Peregrino(PAIC-88) — Younger Dryas occupation",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -10955,
+        "end": -10100,
+        "approximate": true,
+        "original": "12,905–12,050calBP",
+        "method": "Bayesian radiocarbon modelling, final abstract",
+        "interpretation": "Approximate source reference or occurrence window only; no continuous residence or invented padding asserted."
+      },
+      "claims": [
+        {
+          "id": "chronology",
+          "text": "El Peregrino’s modelled activity falls within12,905–12,050calBP.",
+          "status": "well-supported",
+          "explanation": "Scoped evidence; no population total or precise migration route inferred.",
+          "support": [
+            {
+              "sourceId": "la-davis-cedros2025",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Supports this local finding within the recorded access limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "la-davis-cedros2025",
+          "title": "Geoarchaeology of Late Pleistocene to Early Holocene Occupation at the El Peregrino and Colina Castor Sites on Cedros Island, Baja California, Mexico",
+          "authors": "Loren G. Davis et al.",
+          "year": 2025,
+          "venue": "Geoarchaeology",
+          "url": "https://doi.org/10.1002/gea.70022",
+          "doi": "10.1002/gea.70022",
+          "access": "Abstract only: publisher and University of Bristol author record. Final abstract ranges retained rather than longer earlier-manuscript Colina Castor tail.",
+          "referenceType": "journal-article",
+          "volume": "40",
+          "issue": "4",
+          "pages": "e70022"
+        }
+      ],
+      "review": {
+        "summary": "El Peregrino’s modelled activity falls within12,905–12,050calBP.",
+        "limitations": "Final abstract interval, not an annual continuous census. Sedimentation and plant disturbance affect formation; Mexico scope retained.",
+        "discussion": "",
+        "provenance": "2026-10-28 Louisiana and bayou Consensus exports independently reconciled against linked primary/institutional records. Exact site coordinates omitted where not verified.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Independent next-release intake; published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "mexico-colina-castor",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Colina Castor(PAIC-91) — Younger Dryas occupation",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -10830,
+        "end": -10155,
+        "approximate": true,
+        "original": "12,780–12,105calBP",
+        "method": "Bayesian modelling; final abstract, not earlier manuscript sensitivity model",
+        "interpretation": "Approximate source reference or occurrence window only; no continuous residence or invented padding asserted."
+      },
+      "claims": [
+        {
+          "id": "chronology",
+          "text": "Colina Castor’s final abstract reports a12,780–12,105calBP activity window.",
+          "status": "well-supported",
+          "explanation": "Scoped evidence; no population total or precise migration route inferred.",
+          "support": [
+            {
+              "sourceId": "la-davis-cedros2025",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Supports this local finding within the recorded access limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "la-davis-cedros2025",
+          "title": "Geoarchaeology of Late Pleistocene to Early Holocene Occupation at the El Peregrino and Colina Castor Sites on Cedros Island, Baja California, Mexico",
+          "authors": "Loren G. Davis et al.",
+          "year": 2025,
+          "venue": "Geoarchaeology",
+          "url": "https://doi.org/10.1002/gea.70022",
+          "doi": "10.1002/gea.70022",
+          "access": "Abstract only: publisher and University of Bristol author record. Final abstract ranges retained rather than longer earlier-manuscript Colina Castor tail.",
+          "referenceType": "journal-article",
+          "volume": "40",
+          "issue": "4",
+          "pages": "e70022"
+        }
+      ],
+      "review": {
+        "summary": "Colina Castor’s final abstract reports a12,780–12,105calBP activity window.",
+        "limitations": "Do not substitute the earlier manuscript’s tail to9755calBP for final abstract bounds. No population estimate inferred.",
+        "discussion": "",
+        "provenance": "2026-10-28 Louisiana and bayou Consensus exports independently reconciled against linked primary/institutional records. Exact site coordinates omitted where not verified.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Independent next-release intake; published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "mexico-cedros-spring-context",
+      "revision": 1,
+      "type": "event",
+      "title": "Cedros Island — freshwater and coastal resource access",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Late Pleistocene–Early Holocene context",
+        "method": "Chronological description in checked source",
+        "interpretation": "No numerical occupation bounds extracted; cultural/environmental dates do not supply a continuous settlement interval."
+      },
+      "claims": [
+        {
+          "id": "water",
+          "text": "El Peregrino and Colina Castor lie by extinct freshwater springs; marine materials carried inland connect water access with site choice.",
+          "status": "under discussion",
+          "explanation": "Site-selection interpretation, not a precise migration route.",
+          "support": [
+            {
+              "sourceId": "la-davis-cedros2025",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Supports this local finding within the recorded access limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "la-davis-cedros2025",
+          "title": "Geoarchaeology of Late Pleistocene to Early Holocene Occupation at the El Peregrino and Colina Castor Sites on Cedros Island, Baja California, Mexico",
+          "authors": "Loren G. Davis et al.",
+          "year": 2025,
+          "venue": "Geoarchaeology",
+          "url": "https://doi.org/10.1002/gea.70022",
+          "doi": "10.1002/gea.70022",
+          "access": "Abstract only: publisher and University of Bristol author record. Final abstract ranges retained rather than longer earlier-manuscript Colina Castor tail.",
+          "referenceType": "journal-article",
+          "volume": "40",
+          "issue": "4",
+          "pages": "e70022"
+        }
+      ],
+      "review": {
+        "summary": "El Peregrino and Colina Castor lie by extinct freshwater springs; marine materials carried inland connect water access with site choice.",
+        "limitations": "Marine resources inland do not establish that a site stood on the contemporary coast. No travel itinerary reconstructed.",
+        "discussion": "Freshwater is one plausible constraint on local movement in arid coastal settings.",
+        "provenance": "2026-10-28 Louisiana and bayou Consensus exports independently reconciled against linked primary/institutional records. Exact site coordinates omitted where not verified.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Independent next-release intake; published corpus unchanged."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "environment",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No verified numerical site coordinates or defensible regional geometry extracted; named context retained in index.",
+        "provenance": "Checked source names the study area/site; town, bayou or parish centroids are not substituted for settlements."
+      }
+    },
+    {
+      "id": "mississippi-hester-formation",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Hester(22MO569), Mississippi — repeated use and formation",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Late Pleistocene through Holocene; numerical dating table not extracted",
+        "method": "Chronological description in checked source",
+        "interpretation": "No numerical occupation bounds extracted; cultural/environmental dates do not supply a continuous settlement interval."
+      },
+      "claims": [
+        {
+          "id": "record",
+          "text": "Hester is a stratified open-air site with Late Pleistocene and Holocene components in northeastern Mississippi.",
+          "status": "well-supported",
+          "explanation": "Scoped evidence; no population total or precise migration route inferred.",
+          "support": [
+            {
+              "sourceId": "la-strawn2026",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Supports this local finding within the recorded access limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "la-strawn2026",
+          "title": "Site Formation Processes at the Hester Site (22MO569): A Late Pleistocene/Early Holocene Occupation on the Tombigbee River Alluvial Plain in Northeast Mississippi, USA",
+          "authors": "James L. Strawn, D. Shane Miller, Derek T. Anderson and Stephen B. Carmody",
+          "year": 2026,
+          "venue": "Geoarchaeology",
+          "url": "https://doi.org/10.1002/gea.70079",
+          "doi": "10.1002/gea.70079",
+          "access": "Publisher abstract and metadata only; detailed radiocarbon table not checked.",
+          "referenceType": "journal-article",
+          "volume": "41",
+          "issue": "5",
+          "pages": "e70079"
+        }
+      ],
+      "review": {
+        "summary": "Hester is a stratified open-air site with Late Pleistocene and Holocene components in northeastern Mississippi.",
+        "limitations": "Abstract does not supply numerical onset, population or unaffected integrity for every deposit. Not Louisiana evidence.",
+        "discussion": "",
+        "provenance": "2026-10-28 Louisiana and bayou Consensus exports independently reconciled against linked primary/institutional records. Exact site coordinates omitted where not verified.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Independent next-release intake; published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "comparative-dor-submergence",
+      "revision": 1,
+      "type": "event",
+      "title": "Comparative context — Dor, Israel coastal inundation",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Pottery Neolithic submerged evidence8.25–7ka; environmental sequence much longer",
+        "method": "Chronological description in checked source",
+        "interpretation": "No numerical occupation bounds extracted; cultural/environmental dates do not supply a continuous settlement interval."
+      },
+      "claims": [
+        {
+          "id": "comparison",
+          "text": "Dor’s coastal stratigraphy connects changing wetlands and marine inundation with submerged Neolithic evidence.",
+          "status": "well-supported",
+          "explanation": "Scoped evidence; no population total or precise migration route inferred.",
+          "support": [
+            {
+              "sourceId": "la-dor2022",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Supports this local finding within the recorded access limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "la-dor2022",
+          "title": "Changing environments and human interaction during the Pleistocene–Early Holocene from the shallow coastal area of Dor, Israel",
+          "authors": "Gilad Shtienberg et al.",
+          "year": 2022,
+          "venue": "Quaternary Research",
+          "url": "https://doi.org/10.1017/qua.2021.30",
+          "doi": "10.1017/qua.2021.30",
+          "access": "Publisher PDF abstract and title page checked; online2021, issue2022. Comparative case outside Americas.",
+          "referenceType": "journal-article",
+          "volume": "105",
+          "pages": "64–81"
+        }
+      ],
+      "review": {
+        "summary": "Dor’s coastal stratigraphy connects changing wetlands and marine inundation with submerged Neolithic evidence.",
+        "limitations": "Outside Americas: no Louisiana occupation date, delta chronology or migration threshold follows. Long environmental sequences are not continuous human occupation.",
+        "discussion": "",
+        "provenance": "2026-10-28 Louisiana and bayou Consensus exports independently reconciled against linked primary/institutional records. Exact site coordinates omitted where not verified.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Independent next-release intake; published corpus unchanged."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "environment",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No verified numerical site coordinates or defensible regional geometry extracted; named context retained in index.",
+        "provenance": "Checked source names the study area/site; town, bayou or parish centroids are not substituted for settlements."
+      }
+    },
+    {
+      "id": "mexico-faro-punta-marquez",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Faro Punta Marquez — early coastal component",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Early component older than10,000calBP; later Holocene components also reported",
+        "method": "Author SAA2026 conference abstract; journal date table not reviewed",
+        "interpretation": "No numerical occupation bounds extracted; cultural/environmental dates do not supply a continuous settlement interval."
+      },
+      "claims": [
+        {
+          "id": "component",
+          "text": "The author reports an early component older than10,000calBP at Faro Punta Marquez, alongside later Holocene use.",
+          "status": "well-supported",
+          "explanation": "Scoped evidence; no population total or precise migration route inferred.",
+          "support": [
+            {
+              "sourceId": "la-fujita-gsa2026",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Supports this local finding within the recorded access limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "la-fujita-gsa2026",
+          "title": "Early and Middle Holocene Coastal Occupations at the Faro Punta Marquez Site, Baja California Sur, Mexico",
+          "authors": "Harumi Fujita",
+          "year": 2026,
+          "venue": "91st Society for American Archaeology Annual Meeting, individual abstracts,p.258",
+          "url": "https://saa.org/common/Uploaded%20files/saadocs/AnnualMeeting/Abstract/91st-annual-meeting-abstracts-%28San%20Francisco_CA_2026%29.pdf",
+          "access": "Author conference abstract; journal identity verified separately, journal abstract unavailable.",
+          "referenceType": "report",
+          "publisher": "Society for American Archaeology"
+        }
+      ],
+      "review": {
+        "summary": "The author reports an early component older than10,000calBP at Faro Punta Marquez, alongside later Holocene use.",
+        "limitations": "Open threshold remains unplaced. Exact10,600calBP and shellfish succession await primary journal review; Mexico, not Louisiana.",
+        "discussion": "",
+        "provenance": "2026-10-28 Louisiana and bayou Consensus exports independently reconciled against linked primary/institutional records. Exact site coordinates omitted where not verified.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Independent next-release intake; published corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "gulf-woodland-fishery-context",
+      "revision": 1,
+      "type": "event",
+      "title": "North-central Gulf — Woodland fishery strategies",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 325,
+        "end": 1040,
+        "approximate": true,
+        "original": "Combined study period approximatelyAD325–1040",
+        "method": "Zooarchaeology, stable isotopes, incremental analysis; publisher abstract",
+        "interpretation": "Approximate source reference or occurrence window only; no continuous residence or invented padding asserted."
+      },
+      "claims": [
+        {
+          "id": "resources",
+          "text": "Two non-farming Woodland villages used estuarine resources throughout the year with seasonally changing harvest strategies.",
+          "status": "under discussion",
+          "explanation": "Authors’ local interpretation, not uniform management across the Gulf.",
+          "support": [
+            {
+              "sourceId": "la-fisheries2022",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Supports this local finding within the recorded access limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "la-fisheries2022",
+          "title": "Temporality of fishery taskscapes on the north-central Gulf of Mexico coast (USA) during the Middle/Late Woodland period (AD325–1040)",
+          "authors": "Carla S. Hadden, Gregory A. Waselkov, Elizabeth J. Reitz and C. Fred T. Andrus",
+          "year": 2022,
+          "venue": "Journal of Anthropological Archaeology",
+          "url": "https://doi.org/10.1016/j.jaa.2022.101436",
+          "doi": "10.1016/j.jaa.2022.101436",
+          "access": "Indexed publisher abstract/highlights; follow-up to supplied Reitz2021. Not Louisiana dating.",
+          "referenceType": "journal-article",
+          "volume": "67",
+          "pages": "101436"
+        }
+      ],
+      "review": {
+        "summary": "Two non-farming Woodland villages used estuarine resources throughout the year with seasonally changing harvest strategies.",
+        "limitations": "Combined period is not the continuous lifespan of either village. Alabama cases do not show Louisiana bayous began inAD1.",
+        "discussion": "Reliable resources can support coastal persistence without one coastward migration.",
+        "provenance": "2026-10-28 Louisiana and bayou Consensus exports independently reconciled against linked primary/institutional records. Exact site coordinates omitted where not verified.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Independent next-release intake; published corpus unchanged."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No verified numerical site coordinates or defensible regional geometry extracted; named context retained in index.",
+        "provenance": "Checked source names the study area/site; town, bayou or parish centroids are not substituted for settlements."
+      }
+    }
+  ],
+  "updates": [
+    {
+      "recordId": "poverty-point-earthworks",
+      "source": {
+        "id": "la-ford1954",
+        "title": "Additional notes on the Poverty Point Site in Northern Louisiana",
+        "authors": "James A. Ford",
+        "year": 1954,
+        "venue": "American Antiquity",
+        "url": "https://doi.org/10.2307/277139",
+        "doi": "10.2307/277139",
+        "access": "Publisher extract and bibliography only. Cambridge page labels issue1953 while its citation trail uses1954; chronology not inferred.",
+        "referenceType": "journal-article",
+        "volume": "19",
+        "issue": "3",
+        "pages": "282–285"
+      },
+      "claimId": "chronology",
+      "stance": "context",
+      "locator": "Publisher extract",
+      "note": "Historical investigation context, not modern occupation chronology. Publisher issue-year conflict is logged."
+    },
+    {
+      "recordId": "early-page-ladson-unit3c",
+      "source": {
+        "id": "early-halligan2016",
+        "referenceType": "journal-article",
+        "authors": "Halligan, Jessi J; Waters, Michael R; Perrotti, Angelina; Owens, Ivy J; Feinberg, Joshua M; Bourne, Mark D; Fenerty, Brendan; Winsborough, Barbara; Carlson, David; Fisher, Daniel C; Stafford, Thomas W Jr; Dunbar, James S",
+        "year": 2016,
+        "title": "Pre-Clovis occupation 14,550 years ago at the Page-Ladson site, Florida, and the peopling of the Americas",
+        "venue": "Science Advances",
+        "url": "https://doi.org/10.1126/sciadv.1600375",
+        "access": "Full article XML retrieved from Europe PMC and relevant results, methods, tables and discussion read on 2026-10-28. Unit 3c stratigraphy, radiocarbon discussion and Figure 2 checked; radiocarbon model not rerun.",
+        "doi": "10.1126/sciadv.1600375",
+        "volume": "2",
+        "issue": "5",
+        "pages": "e1600375",
+        "archive": "Europe PMC",
+        "identifier": "PMC4928949"
+      },
+      "claimId": "activity",
+      "stance": "context",
+      "locator": "Abstract; geographic scope",
+      "note": "Rechecked PMC abstract/site setting: Aucilla sinkhole, Florida, around14,550calBP is not Louisiana occupation. Butchery or scavenging remain alternatives; regional coexistence is not continuous local residence."
+    },
+    {
+      "recordId": "se-holocene-settlement-synthesis",
+      "source": {
+        "id": "se-anderson2025",
+        "authors": "David G. Anderson; D. Shane Miller; Andrew A. White",
+        "title": "Exploring settlement distribution and demographic change in the early through late Holocene Southeast",
+        "year": 2025,
+        "venue": "Southeastern Archaeology",
+        "doi": "10.1080/0734578X.2025.2553965",
+        "url": "https://experts.illinois.edu/en/publications/exploring-settlement-distribution-and-demographic-change-in-the-e/",
+        "access": "Author institution repository abstract and bibliographic record inspected; full article not inspected.",
+        "referenceType": "journal-article",
+        "volume": "44",
+        "issue": "3-4",
+        "pages": "101-119"
+      },
+      "claimId": "se-holocene-settlement-synthesis-claim",
+      "stance": "context",
+      "locator": "Abstract; geographic scope",
+      "note": "Rechecked Illinois author abstract: apparent decline or reorganization and varying research coverage do not establish complete Louisiana abandonment."
+    },
+    {
+      "recordId": "se-gulf-persistent-coastal-use",
+      "source": {
+        "id": "se-cookhale-sanger2025",
+        "authors": "Jessica W. Cook Hale; Matthew C. Sanger",
+        "title": "Recent middle and late Holocene transition research along the northern and eastern Gulf of Mexico shoreline",
+        "year": 2025,
+        "venue": "Southeastern Archaeology",
+        "doi": "10.1080/0734578X.2025.2553966",
+        "url": "https://www.tandfonline.com/doi/full/10.1080/0734578X.2025.2553966",
+        "access": "Open publisher abstract and opening introduction inspected; remainder of full article not inspected.",
+        "referenceType": "journal-article",
+        "volume": "44",
+        "issue": "3-4",
+        "pages": "142-161"
+      },
+      "claimId": "se-gulf-persistent-coastal-use-claim",
+      "stance": "context",
+      "locator": "Abstract; geographic scope",
+      "note": "Repeated supplied work retained as context; no new Louisiana first-bayou threshold inferred. Existing reviewed source remains evidence basis."
+    }
+  ],
+  "sourceRegister": [
+    {
+      "batches": {
+        "louisiana": [
+          1
+        ],
+        "bayou": []
+      },
+      "disposition": "Added Grand Caillou; not evidence of Louisiana first occupation11,500BCE or Banana Bayou/Monte Sano dates.",
+      "title": "Mound Construction and Site Selection in the Lafourche Subdelta of the Mississippi River Delta, Louisiana, USA",
+      "authors": "Jayur Madhusudan Mehta and Elizabeth L. Chamberlain",
+      "year": 2019,
+      "venue": "Journal of Island and Coastal Archaeology",
+      "url": "https://doi.org/10.1080/15564894.2018.1458764",
+      "doi": "10.1080/15564894.2018.1458764",
+      "access": "Abstract only: Wageningen author institutional record. Full article not checked.",
+      "referenceType": "journal-article",
+      "volume": "14",
+      "issue": "4",
+      "pages": "453–478",
+      "sourceId": "la-mehta2019"
+    },
+    {
+      "batches": {
+        "louisiana": [
+          3
+        ],
+        "bayou": []
+      },
+      "disposition": "Added Watson Brake onset, foraging and qualified ENSO hypothesis.",
+      "title": "Watson Brake, a Middle Archaic Mound Complex in Northeast Louisiana",
+      "authors": "Joe W. Saunders et al.",
+      "year": 2005,
+      "venue": "American Antiquity",
+      "url": "https://doi.org/10.2307/40035868",
+      "doi": "10.2307/40035868",
+      "access": "Abstract only: Cambridge publisher and University of Southern Mississippi author repository.",
+      "referenceType": "journal-article",
+      "volume": "70",
+      "issue": "4",
+      "pages": "631–668",
+      "sourceId": "la-saunders2005"
+    },
+    {
+      "batches": {
+        "louisiana": [
+          7
+        ],
+        "bayou": []
+      },
+      "disposition": "Same Watson Brake work; distinguish seasonal1997 interpretation from all-season2005 basal evidence.",
+      "title": "A Mound Complex in Louisiana at 5400–5000 Years Before the Present",
+      "authors": "Joe W. Saunders et al.",
+      "year": 1997,
+      "venue": "Science",
+      "url": "https://doi.org/10.1126/science.277.5333.1796",
+      "doi": "10.1126/science.277.5333.1796",
+      "access": "Abstract only: University of Southern Mississippi author repository; its title has a5400–5500 transcription error. DOI/title cross-check retains5400–5000.",
+      "referenceType": "journal-article",
+      "volume": "277",
+      "issue": "5333",
+      "pages": "1796–1799",
+      "sourceId": "la-saunders1997"
+    },
+    {
+      "batches": {
+        "louisiana": [
+          9
+        ],
+        "bayou": []
+      },
+      "disposition": "Historical source added to existing Poverty Point, with publisher issue-date discrepancy.",
+      "title": "Additional notes on the Poverty Point Site in Northern Louisiana",
+      "authors": "James A. Ford",
+      "year": 1954,
+      "venue": "American Antiquity",
+      "url": "https://doi.org/10.2307/277139",
+      "doi": "10.2307/277139",
+      "access": "Publisher extract and bibliography only. Cambridge page labels issue1953 while its citation trail uses1954; chronology not inferred.",
+      "referenceType": "journal-article",
+      "volume": "19",
+      "issue": "3",
+      "pages": "282–285",
+      "sourceId": "la-ford1954"
+    },
+    {
+      "batches": {
+        "louisiana": [
+          12
+        ],
+        "bayou": [
+          4
+        ]
+      },
+      "disposition": "Scoped Lower Lafourche evidence; no statewideAD1 threshold or blanket shell-date rule.",
+      "title": "A geoarchaeological perspective on the challenges and trajectories of Mississippi Delta communities",
+      "authors": "Elizabeth L. Chamberlain, Jayur M. Mehta, Tony Reimann and Jakob Wallinga",
+      "year": 2020,
+      "venue": "Geomorphology",
+      "url": "https://doi.org/10.1016/j.geomorph.2020.107132",
+      "doi": "10.1016/j.geomorph.2020.107132",
+      "access": "Indexed publisher text: sections4.2 and4.4. Assay tables and calibration details not independently extracted.",
+      "referenceType": "journal-article",
+      "volume": "360",
+      "pages": "107132",
+      "sourceId": "la-chamberlain2020"
+    },
+    {
+      "batches": {
+        "louisiana": [
+          13
+        ],
+        "bayou": [
+          2
+        ]
+      },
+      "disposition": "Separate Hillman record; culture components do not establish continuousAD1–1000 occupation.",
+      "title": "The Hillman Site (16EBR60): A Glimpse into Pre-Contact South Louisiana",
+      "authors": "Brandy Kerr",
+      "year": 2023,
+      "venue": "LSU Master’s Theses,5769",
+      "url": "https://repository.lsu.edu/gradschool_theses/5769/",
+      "doi": "10.31390/gradschool_theses.5769",
+      "access": "Abstract only: LSU institutional thesis record. Date tables and coordinates not checked.",
+      "referenceType": "thesis",
+      "sourceId": "la-kerr2023"
+    },
+    {
+      "batches": {
+        "louisiana": [
+          15
+        ],
+        "bayou": [
+          6
+        ]
+      },
+      "disposition": "Survey-bias context; detailed Point Pleasant/Bayou Goula dating unresolved.",
+      "title": "Landscape Histories and the Search for Early Settlements along Louisiana’s Bayous",
+      "authors": "Steven J. Filoromo, Emily K. Dale and Paul D. Jackson",
+      "year": 2024,
+      "venue": "Advances in Archaeological Practice",
+      "url": "https://doi.org/10.1017/aap.2024.9",
+      "doi": "10.1017/aap.2024.9",
+      "access": "Abstract only: Northern Arizona author institutional record and Cambridge publisher search. Detailed Point Pleasant excavation chronology not checked.",
+      "referenceType": "journal-article",
+      "volume": "12",
+      "issue": "3",
+      "pages": "259–275",
+      "sourceId": "la-filoromo2024"
+    },
+    {
+      "batches": {
+        "louisiana": [
+          17
+        ],
+        "bayou": [
+          10
+        ]
+      },
+      "disposition": "Modern threats and living Indigenous landscapes, not new ancient dates.",
+      "title": "“A river runs through it”: archaeology of Indigenous settlements in the Mississippi River Delta in southeastern Louisiana",
+      "authors": "Christopher B. Rodning and Jayur Madhusudan Mehta",
+      "year": 2026,
+      "venue": "Southeastern Archaeology",
+      "url": "https://doi.org/10.1080/0734578X.2025.2597613",
+      "doi": "10.1080/0734578X.2025.2597613",
+      "access": "Abstract only: publisher article page; online9March2026.",
+      "referenceType": "journal-article",
+      "volume": "45",
+      "issue": "1",
+      "pages": "6–25",
+      "sourceId": "la-rodning2026"
+    },
+    {
+      "batches": {
+        "louisiana": [
+          18
+        ],
+        "bayou": [
+          7
+        ]
+      },
+      "disposition": "Adams Bay separate, phase affiliation and modern erosion qualified.",
+      "title": "Investigations at the Adams Bay Site (16PL8), a Plaquemines mound complex located in Plaquemines Parish, Louisiana",
+      "authors": "Brian Ostahowski, Jayur Mehta and Ted Marks",
+      "year": 2026,
+      "venue": "Southeastern Archaeology",
+      "url": "https://doi.org/10.1080/0734578X.2025.2604415",
+      "doi": "10.1080/0734578X.2025.2604415",
+      "access": "Abstract only: publisher page; online27February2026.",
+      "referenceType": "journal-article",
+      "volume": "45",
+      "issue": "1",
+      "pages": "36–48",
+      "sourceId": "la-ostahowski2026"
+    },
+    {
+      "batches": {
+        "louisiana": [
+          19
+        ],
+        "bayou": []
+      },
+      "disposition": "Morgan separately named, ceramic chronology; no population inferred.",
+      "title": "The Morgan Site: An Important Coles Creek Mound Complex on the Chenier Plain of Southwest Louisiana",
+      "authors": "Ian W. Brown",
+      "year": 1982,
+      "venue": "North American Archaeologist",
+      "url": "https://doi.org/10.2190/53C0-YWXL-MAA6-VNJE",
+      "doi": "10.2190/53C0-YWXL-MAA6-VNJE",
+      "access": "Abstract only: SAGE publisher page dates issueJanuary1982; older bibliographies sometimes use1981.",
+      "referenceType": "journal-article",
+      "volume": "2",
+      "issue": "3",
+      "pages": "207–237",
+      "sourceId": "la-brown1982"
+    },
+    {
+      "batches": {
+        "louisiana": [
+          20
+        ],
+        "bayou": []
+      },
+      "disposition": "False informatics venue corrected. Belcher retained; Comegys exact dates await full text.",
+      "title": "Late Caddoan Occupation Along Cowhide Bayou: An Update on the Belcher Mound and Village Sites",
+      "authors": "Jeffery S. Girard",
+      "year": 1999,
+      "venue": "Caddoan Archeology; archived in Index of Texas Archaeology",
+      "url": "https://scholarworks.sfasu.edu/ita/vol1999/iss1/20/",
+      "doi": "10.21112/.ita.1999.1.20",
+      "access": "SFA ScholarWorks institutional abstract and metadata only. Full PDF fetch failed; precise chronology/coordinates not extracted.",
+      "referenceType": "journal-article",
+      "sourceId": "la-girard1999"
+    },
+    {
+      "batches": {
+        "louisiana": [],
+        "bayou": [
+          3
+        ]
+      },
+      "disposition": "Research context; online2022/issue2023 distinguished.",
+      "title": "A centennial perspective on archeological research trends and contemporary needs for a vanishing Mississippi Delta",
+      "authors": "Matthew R. Helmer, Elizabeth L. Chamberlain and Jayur M. Mehta",
+      "year": 2023,
+      "venue": "The Holocene",
+      "url": "https://doi.org/10.1177/09596836221138328",
+      "doi": "10.1177/09596836221138328",
+      "access": "Abstract only: SAGE publisher; online8December2022, issueMarch2023.",
+      "referenceType": "journal-article",
+      "volume": "33",
+      "issue": "3",
+      "pages": "355–365",
+      "sourceId": "la-helmer2023"
+    },
+    {
+      "batches": {
+        "louisiana": [],
+        "bayou": [
+          13
+        ]
+      },
+      "disposition": "Short editorial orientation only; online2025/issue2026.",
+      "title": "Lost to sea: Louisiana and its remarkable, fading history",
+      "authors": "Jayur Madhusudan Mehta",
+      "year": 2026,
+      "venue": "Southeastern Archaeology",
+      "url": "https://doi.org/10.1080/0734578X.2025.2597611",
+      "doi": "10.1080/0734578X.2025.2597611",
+      "access": "Publisher short abstract and metadata only. OnlineDecember2025; issue2026.",
+      "referenceType": "journal-article",
+      "volume": "45",
+      "issue": "1",
+      "pages": "1–5",
+      "sourceId": "la-mehta2026"
+    },
+    {
+      "batches": {
+        "louisiana": [],
+        "bayou": [
+          15
+        ]
+      },
+      "disposition": "Arkansas context; channel infilling date is not village foundation.",
+      "title": "Multiproxy evidence for rapid and enduring anthropogenic vegetation change during the Late Holocene from an abandoned channel of the Mississippi River, Wapanocca Bayou, Arkansas, USA",
+      "authors": "Michael Aiuvalasit, Tim Riley and Joseph Schuldenrein",
+      "year": 2020,
+      "venue": "Geoarchaeology",
+      "url": "https://doi.org/10.1002/gea.21773",
+      "doi": "10.1002/gea.21773",
+      "access": "Abstract only: University of Illinois author institutional record; online2019, issue2020.",
+      "referenceType": "journal-article",
+      "volume": "35",
+      "issue": "3",
+      "pages": "351–365",
+      "sourceId": "la-aiuvalasit2020"
+    },
+    {
+      "batches": {
+        "louisiana": [],
+        "bayou": [
+          12
+        ]
+      },
+      "disposition": "Mexico evidence; chronology independently supported by author GSA abstract.",
+      "title": "The Geoarchaeological Context of Early Holocene Human Occupation at the Cerro Pedregoso Site, Cedros Island, Mexico",
+      "authors": "Loren G. Davis et al.",
+      "year": 2025,
+      "venue": "Geoarchaeology",
+      "url": "https://doi.org/10.1002/gea.70017",
+      "doi": "10.1002/gea.70017",
+      "access": "Publisher bibliographic identity checked. Numerical chronology independently checked in author GSA2025 abstract10.1130/abs/2025AM-8550; journal full text not checked.",
+      "referenceType": "journal-article",
+      "volume": "40",
+      "issue": "3",
+      "pages": "e70017",
+      "sourceId": "la-davis-cerro2025"
+    },
+    {
+      "batches": {
+        "louisiana": [],
+        "bayou": [
+          16
+        ]
+      },
+      "disposition": "Separate El Peregrino/Colina Castor records; final published abstract bounds.",
+      "title": "Geoarchaeology of Late Pleistocene to Early Holocene Occupation at the El Peregrino and Colina Castor Sites on Cedros Island, Baja California, Mexico",
+      "authors": "Loren G. Davis et al.",
+      "year": 2025,
+      "venue": "Geoarchaeology",
+      "url": "https://doi.org/10.1002/gea.70022",
+      "doi": "10.1002/gea.70022",
+      "access": "Abstract only: publisher and University of Bristol author record. Final abstract ranges retained rather than longer earlier-manuscript Colina Castor tail.",
+      "referenceType": "journal-article",
+      "volume": "40",
+      "issue": "4",
+      "pages": "e70022",
+      "sourceId": "la-davis-cedros2025"
+    },
+    {
+      "batches": {
+        "louisiana": [],
+        "bayou": []
+      },
+      "disposition": "Supplemental primary source, not another supplied input row.",
+      "title": "Geoarchaeology of Cedros Island’s Southern End: A Late Pleistocene to Early Holocene Case Study",
+      "authors": "Loren G. Davis",
+      "year": 2025,
+      "venue": "Geological Society of America Abstracts with Programs",
+      "url": "https://doi.org/10.1130/abs/2025AM-8550",
+      "doi": "10.1130/abs/2025AM-8550",
+      "access": "Author conference abstract at GSA; not an additional independent excavation.",
+      "referenceType": "journal-article",
+      "volume": "57",
+      "issue": "6",
+      "sourceId": "la-davis-gsa2025"
+    },
+    {
+      "batches": {
+        "louisiana": [],
+        "bayou": [
+          20
+        ]
+      },
+      "disposition": "Mississippi formation context; no numeric onset from chronozone labels.",
+      "title": "Site Formation Processes at the Hester Site (22MO569): A Late Pleistocene/Early Holocene Occupation on the Tombigbee River Alluvial Plain in Northeast Mississippi, USA",
+      "authors": "James L. Strawn, D. Shane Miller, Derek T. Anderson and Stephen B. Carmody",
+      "year": 2026,
+      "venue": "Geoarchaeology",
+      "url": "https://doi.org/10.1002/gea.70079",
+      "doi": "10.1002/gea.70079",
+      "access": "Publisher abstract and metadata only; detailed radiocarbon table not checked.",
+      "referenceType": "journal-article",
+      "volume": "41",
+      "issue": "5",
+      "pages": "e70079",
+      "sourceId": "la-strawn2026"
+    },
+    {
+      "batches": {
+        "louisiana": [],
+        "bayou": [
+          17
+        ]
+      },
+      "disposition": "Comparative Israel only, outside Americas.",
+      "title": "Changing environments and human interaction during the Pleistocene–Early Holocene from the shallow coastal area of Dor, Israel",
+      "authors": "Gilad Shtienberg et al.",
+      "year": 2022,
+      "venue": "Quaternary Research",
+      "url": "https://doi.org/10.1017/qua.2021.30",
+      "doi": "10.1017/qua.2021.30",
+      "access": "Publisher PDF abstract and title page checked; online2021, issue2022. Comparative case outside Americas.",
+      "referenceType": "journal-article",
+      "volume": "105",
+      "pages": "64–81",
+      "sourceId": "la-dor2022"
+    },
+    {
+      "batches": {
+        "louisiana": [],
+        "bayou": []
+      },
+      "disposition": "Supplemental primary source, not another supplied input row.",
+      "title": "Temporality of fishery taskscapes on the north-central Gulf of Mexico coast (USA) during the Middle/Late Woodland period (AD325–1040)",
+      "authors": "Carla S. Hadden, Gregory A. Waselkov, Elizabeth J. Reitz and C. Fred T. Andrus",
+      "year": 2022,
+      "venue": "Journal of Anthropological Archaeology",
+      "url": "https://doi.org/10.1016/j.jaa.2022.101436",
+      "doi": "10.1016/j.jaa.2022.101436",
+      "access": "Indexed publisher abstract/highlights; follow-up to supplied Reitz2021. Not Louisiana dating.",
+      "referenceType": "journal-article",
+      "volume": "67",
+      "pages": "101436",
+      "sourceId": "la-fisheries2022"
+    },
+    {
+      "batches": {
+        "louisiana": [],
+        "bayou": []
+      },
+      "disposition": "Supplemental primary source, not another supplied input row.",
+      "title": "Early and Middle Holocene Coastal Occupations at the Faro Punta Marquez Site, Baja California Sur, Mexico",
+      "authors": "Harumi Fujita",
+      "year": 2026,
+      "venue": "91st Society for American Archaeology Annual Meeting, individual abstracts,p.258",
+      "url": "https://saa.org/common/Uploaded%20files/saadocs/AnnualMeeting/Abstract/91st-annual-meeting-abstracts-%28San%20Francisco_CA_2026%29.pdf",
+      "access": "Author conference abstract; journal identity verified separately, journal abstract unavailable.",
+      "referenceType": "report",
+      "sourceId": "la-fujita-gsa2026"
+    },
+    {
+      "batches": {
+        "louisiana": [],
+        "bayou": []
+      },
+      "disposition": "Supplemental primary source, not another supplied input row.",
+      "title": "Louisiana’s Comprehensive Archaeological Plan",
+      "authors": "Louisiana Division of Archaeology",
+      "year": 2022,
+      "venue": "Louisiana Department of Culture, Recreation and Tourism",
+      "url": "https://crt.state.la.us/Assets/OCD/archaeology/CRM-Resources/Section106/Comprehensive%20Plan%202022.pdf",
+      "access": "State research plan Early Woodland context checked; not a new excavation.",
+      "referenceType": "report",
+      "sourceId": "la-plan2022"
+    },
+    {
+      "title": "The Caddos and Their Ancestors: Archaeology and the Native People of Northwest Louisiana (review)",
+      "batches": {
+        "louisiana": [
+          2
+        ],
+        "bayou": []
+      },
+      "disposition": "Trubitt book review, not a Conly excavation or new dates.",
+      "access": "Author institutional annual report confirms review; text unavailable.",
+      "url": "https://archeology.uark.edu/wp-content/uploads/2020/03/ARAS-2019-Annual-Report.pdf",
+      "authors": "Mary Beth D. Trubitt",
+      "year": 2019
+    },
+    {
+      "title": "Pre-Clovis occupation14,550years ago at the Page-Ladson site, Florida, and the peopling of the Americas",
+      "batches": {
+        "louisiana": [
+          4
+        ],
+        "bayou": [
+          8
+        ]
+      },
+      "disposition": "Existing record qualified, no duplicate Louisiana site.",
+      "access": "Primary PMC abstract and site setting checked.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4928949/",
+      "sourceId": "early-halligan2016",
+      "doi": "10.1126/sciadv.1600375",
+      "year": 2016
+    },
+    {
+      "title": "Pleistocene Human Settlement in the Southeastern United States: Current Evidence and Future Directions",
+      "batches": {
+        "louisiana": [
+          5
+        ],
+        "bayou": [
+          11
+        ]
+      },
+      "disposition": "Regional review is not primary proof of Louisiana11,500BCE occupation.",
+      "access": "Author institutional CV and DOI identity checked; publisher fetch blocked, detailed text not checked.",
+      "url": "https://doi.org/10.1179/2055556314Z.00000000012",
+      "authors": "David G. Anderson, Ashley M. Smallwood and D. Shane Miller",
+      "year": 2015
+    },
+    {
+      "title": "Archaeology of Louisiana",
+      "batches": {
+        "louisiana": [
+          6
+        ],
+        "bayou": []
+      },
+      "disposition": "Kassabaum2012 reviews Mark A. Rees’s2010 book, not a new field study or book itself.",
+      "access": "Penn author CV explicitly identifies review, Southeastern Archaeology31(2):256.",
+      "url": "https://anthropology.sas.upenn.edu/sites/default/files/Kassabaum%20C.V.pdf",
+      "authors": "Megan C. Kassabaum",
+      "year": 2012
+    },
+    {
+      "title": "Oldest Mound Complex Found at Louisiana Site",
+      "batches": {
+        "louisiana": [
+          8
+        ],
+        "bayou": []
+      },
+      "disposition": "Science news report, not independent excavation or a Poverty Point study.",
+      "access": "DOI/citation cross-checked in primary NPS nomination bibliography; Science blocked, no new facts extracted.",
+      "url": "https://doi.org/10.1126/science.277.5333.1761",
+      "authors": "Heather Pringle",
+      "year": 1997,
+      "doi": "10.1126/science.277.5333.1761"
+    },
+    {
+      "title": "Early Woodland Settlement and Mound Building in the Upper Tensas Basin, Northeast Louisiana",
+      "batches": {
+        "louisiana": [
+          10
+        ],
+        "bayou": []
+      },
+      "disposition": "Four-site dating model, ten-year construction and recolonization routes deferred.",
+      "access": "Primary journal contents at Tulane confirms authors/pages; publisher abstract blocked. State2022 plan used separately for qualified flood-gap context.",
+      "url": "https://doi.org/10.1179/sea.2010.29.1.009",
+      "authors": "Tristram R. Kidder, Lori Roe and Timothy M. Schilling",
+      "year": 2010,
+      "doi": "10.1179/sea.2010.29.1.009"
+    },
+    {
+      "title": "Exploring settlement distribution and demographic change in the early through late Holocene Southeast",
+      "batches": {
+        "louisiana": [
+          11
+        ],
+        "bayou": []
+      },
+      "disposition": "Existing record qualified; site gaps do not directly measure residents or complete abandonment.",
+      "access": "University of Illinois author abstract checked.",
+      "url": "https://experts.illinois.edu/en/publications/exploring-settlement-distribution-and-demographic-change-in-the-e/",
+      "sourceId": "se-anderson2025",
+      "doi": "10.1080/0734578X.2025.2553965"
+    },
+    {
+      "title": "An Analysis of Prehistoric Food Remains from the Bruly St. Martin Site, Louisiana, with a Comparative Discussion of Mississippi Valley Faunal Studies",
+      "batches": {
+        "louisiana": [
+          14
+        ],
+        "bayou": [
+          1
+        ]
+      },
+      "disposition": "Identity5(2):193–223 confirmed. AD600–750/850 and four assays not adopted without primary contexts.",
+      "access": "Primary JSTOR link identified, fetch unavailable. University of Arkansas institutional bibliography cross-check only.",
+      "url": "https://www.jstor.org/stable/20707857",
+      "authors": "James W. Springer",
+      "year": 1980
+    },
+    {
+      "title": "Invisible Founders: How Two Centuries of African American Families Transformed a Plantation into a College (review)",
+      "batches": {
+        "louisiana": [
+          16
+        ],
+        "bayou": []
+      },
+      "disposition": "Zejdlik review of Lynn Rainville book, unrelated to earliest Louisiana occupations.",
+      "access": "Underlying book checked at Berghahn publisher; review DOI metadata found, full review not checked.",
+      "url": "https://doi.org/10.1080/0734578X.2021.2016148",
+      "authors": "Katie Zejdlik",
+      "year": 2021,
+      "doi": "10.1080/0734578X.2021.2016148"
+    },
+    {
+      "title": "A Publication of the Geological Society of America July2003",
+      "batches": {
+        "louisiana": [],
+        "bayou": [
+          5
+        ]
+      },
+      "disposition": "Unidentified header, not usable citation. Closest literal issue GSA Today13(7) concerns Phanerozoic climate; cannot assume delta-occupation study.",
+      "access": "Primary GSA issue cover checked; intended archaeological work unresolved.",
+      "url": "https://rock.geosociety.org/net/gsatoday/archive/13/7/pdf/gt0307.pdf"
+    },
+    {
+      "title": "Recent middle and late Holocene transition research along the northern and eastern Gulf of Mexico shoreline",
+      "batches": {
+        "louisiana": [],
+        "bayou": [
+          9
+        ]
+      },
+      "disposition": "Existing reviewed record retained, no duplicate or LouisianaAD1 threshold.",
+      "access": "Existing source retained; full text not reread in this batch.",
+      "url": "https://doi.org/10.1080/0734578X.2025.2553966",
+      "sourceId": "se-cookhale-sanger2025"
+    },
+    {
+      "title": "Late Upper Paleolithic occupation at Cooper’s Ferry, Idaho, USA, approximately16,000years ago",
+      "batches": {
+        "louisiana": [],
+        "bayou": [
+          14
+        ]
+      },
+      "disposition": "Already represented by Cooper’s Ferry debate/context; no duplicate. AreaA2019 not substituted for AreaB2022.",
+      "access": "Institutional research-output identity checked; primary article not reread for new dating.",
+      "url": "https://doi.org/10.1126/science.aax9830",
+      "authors": "Loren G. Davis et al.",
+      "year": 2019,
+      "doi": "10.1126/science.aax9830"
+    },
+    {
+      "title": "Trans-Holocene coastal occupations at the Faro Punta Marquez site, Pacific Coast of Baja California Sur (BCS), Mexico",
+      "batches": {
+        "louisiana": [],
+        "bayou": [
+          18
+        ]
+      },
+      "disposition": "Identity/online3September2026 confirmed. Author conference supports cautious older-than10,000calBP component; exact10,600 and taxon succession deferred.",
+      "access": "Publisher listings and publisher-deposited Crossref identity only; journal text unavailable.",
+      "url": "https://doi.org/10.1080/15564894.2026.2663428",
+      "authors": "Harumi Fujita, Amira Ainis, Alberto Guia and Rene L. Vellanoweth",
+      "year": 2026,
+      "doi": "10.1080/15564894.2026.2663428"
+    },
+    {
+      "title": "Woodland-period fisheries on the north-central coast of the Gulf of Mexico",
+      "batches": {
+        "louisiana": [],
+        "bayou": [
+          19
+        ]
+      },
+      "disposition": "Alabama context, not Louisiana dates. Primary2022 follow-up used for fishery interpretation, not individual site chronologies.",
+      "access": "Author university CV/annual report confirms40(2):135–155; publisher2021 fetch blocked. Publisher2022 follow-up abstract checked.",
+      "url": "https://doi.org/10.1080/0734578X.2021.1922214",
+      "authors": "Elizabeth J. Reitz, Carla S. Hadden, Gregory A. Waselkov and C. Fred T. Andrus",
+      "year": 2021,
+      "doi": "10.1080/0734578X.2021.1922214"
+    }
+  ],
+  "unresolved": [
+    "Precise public numerical archaeological coordinates not verified for Watson Brake, Grand Caillou, Hillman, Morgan, Adams Bay, Belcher, Cedros sites or Hester. Keep individually named records unmapped; town/bayou centroids, tourist access points and monitoring stations are not settlements.",
+    "Bruly St. Martin1980 primary text unavailable. AD600–750 versus850 extension, four assays, material/calibration and coordinates require direct review; no synthetic interval added.",
+    "Kidder2010 direct access failed: four-site model, ten-year mound construction and2400–2100calBP recolonization need primary review. State2022 research plan supports qualified flood-gap context only.",
+    "Point Pleasant16IV199, Bayou Goula16IV11, Ellesley, Avery Island, Banana Bayou, Monte Sano and Conly details await dated contexts; no chronology derived solely from synopsis.",
+    "Faro Punta Marquez2026 exact10,600calBP and shellfish succession await primary journal text; author conference abstract used with explicit access limits.",
+    "Springer1980, Anderson2015 and Girard1999 full text not obtained. Register distinguishes metadata/abstract checks from full review.",
+    "Shell-versus-OSL mismatches need reservoir, reworking, deposition and uncertainty assessment. No universal older-than-landform rejection rule.",
+    "GSAJuly2003 header not resolved to an archaeology article; no settlement evidence attributed to it."
+  ],
+  "corrections": [
+    "Neither dump establishes statewide first occupation11,500BCE or universal first coastal-bayou settlement afterAD1. Mehta2019 concerns Grand Caillou/Lafourche, not Paleoindian Louisiana.",
+    "Page-Ladson is Florida; Cooper’s Ferry Idaho; Hester Mississippi; Wapanocca Arkansas; Cedros/Faro Mexico; Dor an Israel comparison. Regional context is not a Louisiana dated settlement.",
+    "Hillman components do not establish uninterruptedAD1–1000 occupation. Cultural-period endpoints are not site founding/abandonment dates.",
+    "Landform emergence/OSL age is not occupation. Delta abandonment and truncation of dated activity may coincide without proving a single cause.",
+    "Saunders1997 seasonal use differs from2005 all-season basal evidence. Plants later domesticated are not thereby already proven crops at Watson Brake.",
+    "Watson Brake construction continued sometime after3000BCE. No hard3000BCE endpoint invented; ca3500BCE onset plotted as rounded reference only.",
+    "Trubitt2019 and Kassabaum2012 are book reviews. Zejdlik review is unrelated. Pringle1997 is news about the Science report, not independent excavation.",
+    "Girard1999 belongs to archaeological Caddoan literature/SFA ITA, not Theoretical Informatics and Applications. Belcher mound and Comegys village remain distinct.",
+    "Helmer online2022 is Holocene33(3)2023; Dor online2021 is Quaternary Research105(2022); Mehta online2025 appears in2026issue45(1).",
+    "Automated method labels, citation counts and rankings are not scientific confidence. Artifacts, mounds, rooms, genetic effective population and core ages are not resident totals.",
+    "Final abstract gives Colina Castor12,780–12,105calBP; earlier9755calBPtail not substituted. calBP normalized1950minusBP;14CBP never silently treated ascalBP.",
+    "Ford publisher page contradicts citation trail on issue year.1954 retained with warning; no modern dating inferred."
+  ]
+}

@@ -45,6 +45,7 @@ export const BULK_HEADERS = {
     "limitations",
     "discussion",
     "population_json",
+    "language_json",
   ],
   Claims: [
     "record_id",

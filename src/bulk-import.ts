@@ -344,6 +344,15 @@ function buildPackage(
       }
     } else if (operation === "correction" && base?.population)
       record.population = structuredClone(base.population);
+    if (str(r, "language_json")) {
+      try {
+        const value = JSON.parse(str(r, "language_json"));
+        if (value !== null) record.linguistics = value;
+      } catch {
+        fail("Evidence", row, "language_json is not valid JSON.");
+      }
+    } else if (operation === "correction" && base?.linguistics)
+      record.linguistics = structuredClone(base.linguistics);
     const overlayRow = overlayRows.get(id);
     if (overlayRow) {
       const o = overlayRow.row;

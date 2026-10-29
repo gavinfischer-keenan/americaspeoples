@@ -1,0 +1,1522 @@
+{
+  "records": [
+    {
+      "id": "patagonia-pilauco-lithic-sequence",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Pilauco — revised lithic sequence",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": {
+        "id": "patagonia-pilauco",
+        "name": "Pilauco locality, Osorno, Chile",
+        "lon": -73.11666666666666,
+        "lat": -40.56666666666667,
+        "precision": "Published minute-resolution locality reference, not a surveyed footprint, excavation-grid coordinate or site boundary. The article reports the point with its Osorno locality setting.",
+        "provenance": "Moreno et al. 2019, Introduction: Pilauco in Osorno, 40°34′S, 73°07′W; converted from DMS without claiming added accuracy."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -15350,
+        "end": -10850,
+        "approximate": true,
+        "original": "Around 17,300–12,800 cal BP",
+        "method": "Reported stratigraphic calendar chronology in the 2024 Project Gallery; not new calibration.",
+        "interpretation": "Cal BP uses 1950 CE; Window of recurrent finds, not continuous residence."
+      },
+      "claims": [
+        {
+          "id": "lithics",
+          "text": "Pérez-Balarezo and colleagues report a Pilauco lithic sequence around 17,300–12,800 cal BP, with 244 recognized objects in the revised collection.",
+          "status": "under discussion",
+          "explanation": "Artifact classification and age association are the authors’ analysis; preliminary ongoing use-wear work is not a completed independent test.",
+          "support": [
+            {
+              "sourceId": "perezbalarezo2024",
+              "stance": "supports",
+              "locator": "Introduction; Comprehensive technological and petrographic study",
+              "note": "199 newly recognized stored pieces plus 45 previously recognized pieces; not 244 newly excavated objects."
+            }
+          ]
+        },
+        {
+          "id": "locality",
+          "text": "The public locality reference places Pilauco in Osorno, Chile.",
+          "status": "well-supported",
+          "explanation": "The coordinate has only the source’s minute resolution.",
+          "support": [
+            {
+              "sourceId": "moreno2019",
+              "stance": "supports",
+              "locator": "Introduction; Figure 1",
+              "note": "Locality reference, not a footprint excavation coordinate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "perezbalarezo2024",
+          "authors": "Antonio Pérez-Balarezo; Mario Pino; Ximena Navarro-Harris; Ana M. Abarzúa; Daniel Fritte; Francisco Tello; Ignacio Aguilera",
+          "title": "Revised pre-Younger Dryas chronocultural sequence at the Pilauco site, north-western Patagonia (40°–44°S)",
+          "year": 2024,
+          "venue": "Antiquity",
+          "doi": "10.15184/aqy.2024.29",
+          "url": "https://doi.org/10.15184/aqy.2024.29",
+          "access": "Full indexed publisher Project Gallery text read, introduction, geological setting, lithic study, figures 1–6 captions and conclusions; no independent reanalysis of artifacts.",
+          "referenceType": "journal-article",
+          "volume": "98",
+          "issue": "399",
+          "pages": "e16"
+        },
+        {
+          "id": "moreno2019",
+          "authors": "Karen Moreno; Juan Enrique Bostelmann; Cintia Macías; Ximena Navarro-Harris; Ricardo De Pol-Holz; Mario Pino",
+          "title": "A late Pleistocene human footprint from the Pilauco archaeological site, northern Patagonia, Chile",
+          "year": 2019,
+          "venue": "PLOS ONE",
+          "doi": "10.1371/journal.pone.0213572",
+          "url": "https://doi.org/10.1371/journal.pone.0213572",
+          "access": "Open full main article read: geological setting, methods, sedimentology and stratigraphy, systematic ichnology, experimental trackmaking and discussion. Table 1 caption and discussion read; separate supplementary files were not inspected.",
+          "referenceType": "journal-article",
+          "volume": "14",
+          "issue": "4",
+          "pages": "e0213572"
+        }
+      ],
+      "review": {
+        "summary": "Pérez-Balarezo and colleagues report a Pilauco lithic sequence around 17,300–12,800 cal BP, with 244 recognized objects in the revised collection. The date and material scope remain tied to the cited study.",
+        "limitations": "A 4500-year find envelope does not establish continuous settlement or a count of residents. Lithic resemblance does not establish a shared culture.",
+        "discussion": "The classification assesses the stated evidence and interpretation, not the number of citations. An absence of securely dated activity is not proof of absence. No resident headcount, ethnic affiliation or migration route is inferred.",
+        "provenance": "AI-assisted source review of the named primary publications. Access limits are stated per reference; no independent excavation, calibration or peer review.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "Northern Patagonia intake review; no shared published record edited."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "patagonia-pilauco-footprint",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Pilauco — single interpreted human footprint",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": {
+        "id": "patagonia-pilauco",
+        "name": "Pilauco locality, Osorno, Chile",
+        "lon": -73.11666666666666,
+        "lat": -40.56666666666667,
+        "precision": "Published minute-resolution locality reference, not a surveyed footprint, excavation-grid coordinate or site boundary. The article reports the point with its Osorno locality setting.",
+        "provenance": "Moreno et al. 2019, Introduction: Pilauco in Osorno, 40°34′S, 73°07′W; converted from DMS without claiming added accuracy."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -13650,
+        "end": -13650,
+        "approximate": true,
+        "original": "Circa 15,600 cal yr BP",
+        "method": "Indirect radiocarbon association using surrounding seeds and wood; SHCal13 described in the paper.",
+        "interpretation": "Cal BP uses 1950 CE; Approximate reference age, not directly dated footprint or invented confidence interval."
+      },
+      "claims": [
+        {
+          "id": "footprint",
+          "text": "Moreno and colleagues interpret one Pilauco impression as a barefoot adult human trace, Hominipes modernus, at approximately 15,600 cal BP.",
+          "status": "under discussion",
+          "explanation": "Morphology and experimental replication support the interpretation; the trace itself cannot be radiocarbon dated.",
+          "support": [
+            {
+              "sourceId": "moreno2019",
+              "stance": "supports",
+              "locator": "Results: Sedimentology and stratigraphy; Systematic palaeoichnology; Experimental trackmaking",
+              "note": "Seven associated measurements are 13,195 ±35 to 12,735 ±40 radiocarbon BP; do not subtract these uncalibrated values from 1950."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "moreno2019",
+          "authors": "Karen Moreno; Juan Enrique Bostelmann; Cintia Macías; Ximena Navarro-Harris; Ricardo De Pol-Holz; Mario Pino",
+          "title": "A late Pleistocene human footprint from the Pilauco archaeological site, northern Patagonia, Chile",
+          "year": 2019,
+          "venue": "PLOS ONE",
+          "doi": "10.1371/journal.pone.0213572",
+          "url": "https://doi.org/10.1371/journal.pone.0213572",
+          "access": "Open full main article read: geological setting, methods, sedimentology and stratigraphy, systematic ichnology, experimental trackmaking and discussion. Table 1 caption and discussion read; separate supplementary files were not inspected.",
+          "referenceType": "journal-article",
+          "volume": "14",
+          "issue": "4",
+          "pages": "e0213572"
+        }
+      ],
+      "review": {
+        "summary": "Moreno and colleagues interpret one Pilauco impression as a barefoot adult human trace, Hominipes modernus, at approximately 15,600 cal BP. The date and material scope remain tied to the cited study.",
+        "limitations": "One ichnite is not a trackway. Associated megafauna and artifacts have distinct depositional histories; the impression does not establish population size or cultural identity.",
+        "discussion": "The classification assesses the stated evidence and interpretation, not the number of citations. An absence of securely dated activity is not proof of absence. No resident headcount, ethnic affiliation or migration route is inferred.",
+        "provenance": "AI-assisted source review of the named primary publications. Access limits are stated per reference; no independent excavation, calibration or peer review.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "Northern Patagonia intake review; no shared published record edited."
+        ],
+        "relatedIds": [
+          "patagonia-pilauco-lithic-sequence"
+        ]
+      }
+    },
+    {
+      "id": "patagonia-cueva-vieja-earliest-hearth",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Cueva de la Vieja — earliest dated hearth context",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": {
+        "id": "patagonia-cueva-vieja",
+        "name": "Cueva de la Vieja archaeological locality, central-western Patagonia, Chile",
+        "lon": -71.53999999999999,
+        "lat": -45.274166666666666,
+        "precision": "Site coordinate explicitly published to arcseconds in the primary article; no added field accuracy, excavation location or boundary is claimed.",
+        "provenance": "Méndez et al., online 2017 / issue 2018, abstract: 45°16′27″S, 71°32′24″W, 718 m asl."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -10110,
+        "end": -9810,
+        "approximate": true,
+        "original": "Hearth 14: 11,760–12,060 cal BP",
+        "method": "Published calibrated hearth age and stratigraphic association; no recalibration performed.",
+        "interpretation": "Cal BP uses 1950 CE; Uncertain feature age, not a continuous 300-year stay or all occupation of the cave."
+      },
+      "claims": [
+        {
+          "id": "hearth",
+          "text": "Méndez and colleagues date the earliest Cueva de la Vieja hearth context to 12,060–11,760 cal BP and associate it with nearby lithics on the basal occupation surface.",
+          "status": "well-supported",
+          "explanation": "The feature and basal contact support the local association; the study also records mixing and occasional inverted dates.",
+          "support": [
+            {
+              "sourceId": "mendez2018-vieja",
+              "stance": "supports",
+              "locator": "Discussion 5.1, p. 271; abstract",
+              "note": "Hearth 14 and lithics at SU2/SU3 contact. The full sequence spans later intermittent returns."
+            }
+          ]
+        },
+        {
+          "id": "deglaciation",
+          "text": "The authors suggest settlement on this eastern Andean flank followed glacial retreat and the emergence of viable ecosystems.",
+          "status": "under discussion",
+          "explanation": "Environmental opportunity is a proposed enabling condition, not a measured migration cause.",
+          "support": [
+            {
+              "sourceId": "mendez2018-vieja",
+              "stance": "supports",
+              "locator": "Abstract; regional discussion",
+              "note": "Does not identify a travelled route or prove exclusive ecological causation."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "mendez2018-vieja",
+          "authors": "César Méndez; Amalia Nuevo Delaunay; Omar Reyes; Ivana Laura Ozán; Carolina Belmar; Patricio López",
+          "title": "The initial peopling of Central Western Patagonia (southernmost South America): Late Pleistocene through Holocene site context and archaeological assemblages from Cueva de la Vieja site",
+          "year": 2018,
+          "venue": "Quaternary International",
+          "doi": "10.1016/j.quaint.2017.07.014",
+          "url": "https://doi.org/10.1016/j.quaint.2017.07.014",
+          "access": "Open published article PDF at CONICET read: abstract, locality coordinates, assemblage discussion and site-scale interpretation, especially p. 271. Online publication 21 July 2017; issue publication 20 April 2018.",
+          "referenceType": "journal-article",
+          "volume": "473",
+          "pages": "261–277"
+        }
+      ],
+      "review": {
+        "summary": "Méndez and colleagues date the earliest Cueva de la Vieja hearth context to 12,060–11,760 cal BP and associate it with nearby lithics on the basal occupation surface. The date and material scope remain tied to the cited study.",
+        "limitations": "Palimpsests and rodent disturbance limit episode resolution. Central-western Patagonia is the study region; this is not the oldest claim for all Patagonia.",
+        "discussion": "The classification assesses the stated evidence and interpretation, not the number of citations. An absence of securely dated activity is not proof of absence. No resident headcount, ethnic affiliation or migration route is inferred.",
+        "provenance": "AI-assisted source review of the named primary publications. Access limits are stated per reference; no independent excavation, calibration or peer review.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "Northern Patagonia intake review; no shared published record edited."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "patagonia-huenul1-early-component",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Cueva Huenul 1 — principal early human component",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": {
+        "id": "patagonia-huenul1",
+        "name": "Cueva Huenul 1, Neuquén, Argentina",
+        "lon": -69.81666666666666,
+        "lat": -36.95,
+        "precision": "Public primary-article locality reference at arcminute resolution, not an individual motif, excavation or shelter boundary.",
+        "provenance": "Barberena 2015, p. 306: 36°57′S, 69°49′W, 1000 m asl."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -9120,
+        "end": -8286,
+        "approximate": true,
+        "original": "Five Unit IV dates: 11,070–10,236 cal BP combined envelope",
+        "method": "AMS radiocarbon; OxCal 4.2 and Southern Hemisphere SH13 curve; Table 1 calibrated 2σ ranges.",
+        "interpretation": "Cal BP uses 1950 CE; Envelope calculated from the oldest and youngest endpoints of five main-group samples; not a single posterior or continuous residence."
+      },
+      "claims": [
+        {
+          "id": "component",
+          "text": "Five Unit IV archaeological samples at Cueva Huenul 1 form the principal early human component, broadly around 11,000–10,200 cal BP.",
+          "status": "well-supported",
+          "explanation": "Directly dated archaeological materials support this phase; source-specific 2σ endpoints are retained as a find envelope.",
+          "support": [
+            {
+              "sourceId": "barberena2015",
+              "stance": "supports",
+              "locator": "Table 1; Chrono-stratigraphy, pp. 308–309",
+              "note": "Includes charcoal, a Prosopis seed, fruit and guanaco bones; no human headcount is inferred."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "barberena2015",
+          "authors": "Ramiro Barberena",
+          "title": "Cueva Huenul 1 Archaeological Site, Northwestern Patagonia, Argentina: Initial Colonization and Mid-Holocene Demographic Retraction",
+          "year": 2015,
+          "venue": "Latin American Antiquity",
+          "doi": "10.7183/1045-6635.26.3.304",
+          "url": "https://doi.org/10.7183/1045-6635.26.3.304",
+          "access": "Published full article PDF at CONICET read, site location, Methods, Table 1, chrono-stratigraphy, local megafaunal gap and mid-Holocene demographic hypothesis.",
+          "referenceType": "journal-article",
+          "volume": "26",
+          "issue": "3",
+          "pages": "304–318"
+        }
+      ],
+      "review": {
+        "summary": "Five Unit IV archaeological samples at Cueva Huenul 1 form the principal early human component, broadly around 11,000–10,200 cal BP. The date and material scope remain tied to the cited study.",
+        "limitations": "The shallow sequence has low temporal resolution and intrusive features. The older guanaco assay is represented separately with its stated outlier alternative.",
+        "discussion": "The classification assesses the stated evidence and interpretation, not the number of citations. An absence of securely dated activity is not proof of absence. No resident headcount, ethnic affiliation or migration route is inferred.",
+        "provenance": "AI-assisted source review of the named primary publications. Access limits are stated per reference; no independent excavation, calibration or peer review.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "Northern Patagonia intake review; no shared published record edited."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "patagonia-huenul1-older-assay",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Cueva Huenul 1 — older guanaco assay and outlier alternative",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": {
+        "id": "patagonia-huenul1",
+        "name": "Cueva Huenul 1, Neuquén, Argentina",
+        "lon": -69.81666666666666,
+        "lat": -36.95,
+        "precision": "Public primary-article locality reference at arcminute resolution, not an individual motif, excavation or shelter boundary.",
+        "provenance": "Barberena 2015, p. 306: 36°57′S, 69°49′W, 1000 m asl."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -10082,
+        "end": -9344,
+        "approximate": true,
+        "original": "CH1.10, AA99106: 12,032–11,294 cal BP, 2σ; 10,155 ±98 radiocarbon BP",
+        "method": "AMS guanaco metapodial; calibrated in OxCal 4.2 using SH13, as published.",
+        "interpretation": "Cal BP uses 1950 CE; Older individual assay, not a settled founding date."
+      },
+      "claims": [
+        {
+          "id": "older-assay",
+          "text": "The 12,032–11,294 cal BP guanaco assay at Cueva Huenul 1 may represent an earlier human episode or a statistically insignificant outlier.",
+          "status": "under discussion",
+          "explanation": "Barberena explicitly presents both alternatives.",
+          "support": [
+            {
+              "sourceId": "barberena2015",
+              "stance": "supports",
+              "locator": "Table 1 CH1.10; Chrono-stratigraphy, p. 309",
+              "note": "Do not describe this lone older date as the unanimously secure onset."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "barberena2015",
+          "authors": "Ramiro Barberena",
+          "title": "Cueva Huenul 1 Archaeological Site, Northwestern Patagonia, Argentina: Initial Colonization and Mid-Holocene Demographic Retraction",
+          "year": 2015,
+          "venue": "Latin American Antiquity",
+          "doi": "10.7183/1045-6635.26.3.304",
+          "url": "https://doi.org/10.7183/1045-6635.26.3.304",
+          "access": "Published full article PDF at CONICET read, site location, Methods, Table 1, chrono-stratigraphy, local megafaunal gap and mid-Holocene demographic hypothesis.",
+          "referenceType": "journal-article",
+          "volume": "26",
+          "issue": "3",
+          "pages": "304–318"
+        }
+      ],
+      "review": {
+        "summary": "The 12,032–11,294 cal BP guanaco assay at Cueva Huenul 1 may represent an earlier human episode or a statistically insignificant outlier. The date and material scope remain tied to the cited study.",
+        "limitations": "Association and component resolution require the authors’ explicit alternative to accompany the date.",
+        "discussion": "The classification assesses the stated evidence and interpretation, not the number of citations. An absence of securely dated activity is not proof of absence. No resident headcount, ethnic affiliation or migration route is inferred.",
+        "provenance": "AI-assisted source review of the named primary publications. Access limits are stated per reference; no independent excavation, calibration or peer review.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "Northern Patagonia intake review; no shared published record edited."
+        ],
+        "relatedIds": [
+          "patagonia-huenul1-early-component"
+        ]
+      }
+    },
+    {
+      "id": "patagonia-huenul1-midholocene-pit",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Cueva Huenul 1 — mid-Holocene plant-filled pit",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": {
+        "id": "patagonia-huenul1",
+        "name": "Cueva Huenul 1, Neuquén, Argentina",
+        "lon": -69.81666666666666,
+        "lat": -36.95,
+        "precision": "Public primary-article locality reference at arcminute resolution, not an individual motif, excavation or shelter boundary.",
+        "provenance": "Barberena 2015, p. 306: 36°57′S, 69°49′W, 1000 m asl."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -3638,
+        "end": -3374,
+        "approximate": true,
+        "original": "CH1.16 Structure G: 5588–5324 cal BP, 2σ",
+        "method": "AMS Senna aphylla twigs; OxCal 4.2 and SH13 as published.",
+        "interpretation": "Cal BP uses 1950 CE; Individual feature age; not occupation across a site-wide hiatus."
+      },
+      "claims": [
+        {
+          "id": "pit",
+          "text": "Structure G preserves a dated mid-Holocene plant-filled pit at Cueva Huenul 1.",
+          "status": "well-supported",
+          "explanation": "A localized dated feature supports this event.",
+          "support": [
+            {
+              "sourceId": "barberena2015",
+              "stance": "supports",
+              "locator": "Table 1 CH1.16; Chrono-stratigraphy",
+              "note": "The 2015 study identifies this pit as its only mid-Holocene stratigraphic evidence."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "barberena2015",
+          "authors": "Ramiro Barberena",
+          "title": "Cueva Huenul 1 Archaeological Site, Northwestern Patagonia, Argentina: Initial Colonization and Mid-Holocene Demographic Retraction",
+          "year": 2015,
+          "venue": "Latin American Antiquity",
+          "doi": "10.7183/1045-6635.26.3.304",
+          "url": "https://doi.org/10.7183/1045-6635.26.3.304",
+          "access": "Published full article PDF at CONICET read, site location, Methods, Table 1, chrono-stratigraphy, local megafaunal gap and mid-Holocene demographic hypothesis.",
+          "referenceType": "journal-article",
+          "volume": "26",
+          "issue": "3",
+          "pages": "304–318"
+        }
+      ],
+      "review": {
+        "summary": "Structure G preserves a dated mid-Holocene plant-filled pit at Cueva Huenul 1. The date and material scope remain tied to the cited study.",
+        "limitations": "A single pit neither fills every chronological gap nor establishes population density.",
+        "discussion": "The classification assesses the stated evidence and interpretation, not the number of citations. An absence of securely dated activity is not proof of absence. No resident headcount, ethnic affiliation or migration route is inferred.",
+        "provenance": "AI-assisted source review of the named primary publications. Access limits are stated per reference; no independent excavation, calibration or peer review.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "Northern Patagonia intake review; no shared published record edited."
+        ],
+        "relatedIds": [
+          "patagonia-huenul1-early-component"
+        ]
+      }
+    },
+    {
+      "id": "patagonia-huenul1-rockart-model",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Cueva Huenul 1 — modeled emergence of rock art",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": {
+        "id": "patagonia-huenul1",
+        "name": "Cueva Huenul 1, Neuquén, Argentina",
+        "lon": -69.81666666666666,
+        "lat": -36.95,
+        "precision": "Public primary-article locality reference at arcminute resolution, not an individual motif, excavation or shelter boundary.",
+        "provenance": "Barberena 2015, p. 306: 36°57′S, 69°49′W, 1000 m asl."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -6221,
+        "end": -3124,
+        "approximate": true,
+        "original": "Modeled rock-art phase: start 8171 BP, end 5074 BP; reported boundary estimates",
+        "method": "Published OxCal 4.4 Bayesian phase analysis with SHCal20; three retained painted motifs and one ocher-covered plant feature.",
+        "interpretation": "Cal BP uses 1950 CE; Point summaries of modeled boundaries, not 95.4% bounds or uninterrupted painting/residence."
+      },
+      "claims": [
+        {
+          "id": "model",
+          "text": "Sepúlveda and colleagues model a rock-art emergence phase at Cueva Huenul 1 with reported start and end estimates of 8171 and 5074 cal BP.",
+          "status": "under discussion",
+          "explanation": "Phase-boundary estimates depend on the archaeological model; the raw oldest painting-carbon assay is younger than the inferred onset.",
+          "support": [
+            {
+              "sourceId": "sepulveda2024",
+              "stance": "supports",
+              "locator": "Rock art production phase and occupational history; Figure 8",
+              "note": "The frequently quoted 8.2 ka is modeled phase onset, not a direct radiocarbon assay of an 8200-year-old painting."
+            }
+          ]
+        },
+        {
+          "id": "material-date",
+          "text": "AMS dates the plant carbon used in pigment; plant death supplies a maximum age for painting, and one very small sample was excluded.",
+          "status": "well-supported",
+          "explanation": "Material age and painting execution are distinct events.",
+          "support": [
+            {
+              "sourceId": "sepulveda2024",
+              "stance": "supports",
+              "locator": "Anchoring images in time; Table 1; paragraph before Bayesian model",
+              "note": "CH1-AMS3 contained 4 μg carbon and was not used in subsequent analyses."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "sepulveda2024",
+          "authors": "Marcela Sepúlveda et al.",
+          "title": "Earliest directly dated rock art from Patagonia reveals socioecological resilience to mid-Holocene climate",
+          "year": 2024,
+          "venue": "Science Advances",
+          "doi": "10.1126/sciadv.adk4415",
+          "url": "https://doi.org/10.1126/sciadv.adk4415",
+          "access": "Open full main article via PMC read, especially Table 1, dates and Bayesian model, environmental interpretation, and Methods. Supplementary code and individual posterior bounds not independently inspected.",
+          "referenceType": "journal-article",
+          "volume": "10",
+          "issue": "7",
+          "pages": "eadk4415"
+        },
+        {
+          "id": "barberena2015",
+          "authors": "Ramiro Barberena",
+          "title": "Cueva Huenul 1 Archaeological Site, Northwestern Patagonia, Argentina: Initial Colonization and Mid-Holocene Demographic Retraction",
+          "year": 2015,
+          "venue": "Latin American Antiquity",
+          "doi": "10.7183/1045-6635.26.3.304",
+          "url": "https://doi.org/10.7183/1045-6635.26.3.304",
+          "access": "Published full article PDF at CONICET read, site location, Methods, Table 1, chrono-stratigraphy, local megafaunal gap and mid-Holocene demographic hypothesis.",
+          "referenceType": "journal-article",
+          "volume": "26",
+          "issue": "3",
+          "pages": "304–318"
+        }
+      ],
+      "review": {
+        "summary": "Sepúlveda and colleagues model a rock-art emergence phase at Cueva Huenul 1 with reported start and end estimates of 8171 and 5074 cal BP. The date and material scope remain tied to the cited study.",
+        "limitations": "The calibrated values in Table 1 differ from the oldest sample’s numerical range in the main text; preserve this unresolved discrepancy rather than silently choosing a supposedly exact raw painting age. No ethnic label or population follows from motif count.",
+        "discussion": "The classification assesses the stated evidence and interpretation, not the number of citations. An absence of securely dated activity is not proof of absence. No resident headcount, ethnic affiliation or migration route is inferred.",
+        "provenance": "AI-assisted source review of the named primary publications. Access limits are stated per reference; no independent excavation, calibration or peer review.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "Northern Patagonia intake review; no shared published record edited."
+        ],
+        "relatedIds": [
+          "patagonia-huenul1-midholocene-pit"
+        ]
+      }
+    },
+    {
+      "id": "patagonia-north-midholocene-retraction",
+      "revision": 1,
+      "type": "event",
+      "title": "Northwestern Patagonia — demographic-retraction hypothesis",
+      "culture": {
+        "id": "regional-synthesis",
+        "name": "Regional archaeological syntheses",
+        "kind": "unknown",
+        "color": "#58c8bd"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -6050,
+        "end": -4050,
+        "approximate": true,
+        "original": "Regional low occupational intensity around 8000–6000 cal BP",
+        "method": "Regional radiocarbon and archaeological distributions; interpreted demographic proxy.",
+        "interpretation": "Cal BP uses 1950 CE; Regional hypothesis window, not a count of residents or complete abandonment."
+      },
+      "claims": [
+        {
+          "id": "retraction",
+          "text": "Barberena proposes regional demographic retraction during mid-Holocene aridity, while acknowledging sampling and spatial-rearrangement alternatives.",
+          "status": "under discussion",
+          "explanation": "Low archaeological intensity cannot uniquely distinguish smaller population from relocation or record formation.",
+          "support": [
+            {
+              "sourceId": "barberena2015",
+              "stance": "supports",
+              "locator": "Mid-Holocene Local and Regional Gaps: A Demographic Hypothesis, pp. 313–314",
+              "note": "The inferred bottleneck is a hypothesis, not measured genetic effective size or census."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "barberena2015",
+          "authors": "Ramiro Barberena",
+          "title": "Cueva Huenul 1 Archaeological Site, Northwestern Patagonia, Argentina: Initial Colonization and Mid-Holocene Demographic Retraction",
+          "year": 2015,
+          "venue": "Latin American Antiquity",
+          "doi": "10.7183/1045-6635.26.3.304",
+          "url": "https://doi.org/10.7183/1045-6635.26.3.304",
+          "access": "Published full article PDF at CONICET read, site location, Methods, Table 1, chrono-stratigraphy, local megafaunal gap and mid-Holocene demographic hypothesis.",
+          "referenceType": "journal-article",
+          "volume": "26",
+          "issue": "3",
+          "pages": "304–318"
+        }
+      ],
+      "review": {
+        "summary": "Barberena proposes regional demographic retraction during mid-Holocene aridity, while acknowledging sampling and spatial-rearrangement alternatives. The date and material scope remain tied to the cited study.",
+        "limitations": "Local non-overlap of megafauna and human evidence cannot resolve extinction causes everywhere; demographic mechanisms remain underdetermined.",
+        "discussion": "The classification assesses the stated evidence and interpretation, not the number of citations. An absence of securely dated activity is not proof of absence. No resident headcount, ethnic affiliation or migration route is inferred.",
+        "provenance": "AI-assisted source review of the named primary publications. Access limits are stated per reference; no independent excavation, calibration or peer review.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "Northern Patagonia intake review; no shared published record edited."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "population-history",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "Interpretive regional evidence remains unmapped; no routes, precise territories or confidence boundaries are drawn.",
+        "provenance": "Spatial scope is the cited publication’s regional interpretation, not an inferred settlement footprint."
+      }
+    },
+    {
+      "id": "patagonia-north-rockart-resilience",
+      "revision": 1,
+      "type": "event",
+      "title": "Northwestern Patagonia — rock art and ecological-stress interpretation",
+      "culture": {
+        "id": "regional-synthesis",
+        "name": "Regional archaeological syntheses",
+        "kind": "unknown",
+        "color": "#58c8bd"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -6221,
+        "end": -3124,
+        "approximate": true,
+        "original": "Rock-art emergence phase context: modeled 8171–5074 cal BP",
+        "method": "Comparison of the published rock-art phase with environmental and demographic proxies.",
+        "interpretation": "Cal BP uses 1950 CE; Context window of the interpretation, not an actual migration or a causal experiment."
+      },
+      "claims": [
+        {
+          "id": "resilience",
+          "text": "Sepúlveda and colleagues interpret persistent place-marking as a possible means of transmitting information and sustaining networks during ecological stress.",
+          "status": "under discussion",
+          "explanation": "The relationship is a socioecological explanation supported by chronological overlap, not proof that aridity caused all movements.",
+          "support": [
+            {
+              "sourceId": "sepulveda2024",
+              "stance": "supports",
+              "locator": "Images in context; Discussion",
+              "note": "No migration route, network boundary, census or identity equivalence is mapped."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "sepulveda2024",
+          "authors": "Marcela Sepúlveda et al.",
+          "title": "Earliest directly dated rock art from Patagonia reveals socioecological resilience to mid-Holocene climate",
+          "year": 2024,
+          "venue": "Science Advances",
+          "doi": "10.1126/sciadv.adk4415",
+          "url": "https://doi.org/10.1126/sciadv.adk4415",
+          "access": "Open full main article via PMC read, especially Table 1, dates and Bayesian model, environmental interpretation, and Methods. Supplementary code and individual posterior bounds not independently inspected.",
+          "referenceType": "journal-article",
+          "volume": "10",
+          "issue": "7",
+          "pages": "eadk4415"
+        }
+      ],
+      "review": {
+        "summary": "Sepúlveda and colleagues interpret persistent place-marking as a possible means of transmitting information and sustaining networks during ecological stress. The date and material scope remain tied to the cited study.",
+        "limitations": "Repeated motifs may reflect intergenerational practices without continuous residence. Regional radiocarbon sums are not actual population totals.",
+        "discussion": "The classification assesses the stated evidence and interpretation, not the number of citations. An absence of securely dated activity is not proof of absence. No resident headcount, ethnic affiliation or migration route is inferred.",
+        "provenance": "AI-assisted source review of the named primary publications. Access limits are stated per reference; no independent excavation, calibration or peer review.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "Northern Patagonia intake review; no shared published record edited."
+        ],
+        "relatedIds": [
+          "patagonia-huenul1-rockart-model"
+        ]
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "Interpretive regional evidence remains unmapped; no routes, precise territories or confidence boundaries are drawn.",
+        "provenance": "Spatial scope is the cited publication’s regional interpretation, not an inferred settlement footprint."
+      }
+    }
+  ],
+  "updates": [
+    {
+      "recordId": "monte-verde-ii",
+      "source": {
+        "id": "pino2023",
+        "authors": "Mario Pino; Tom D. Dillehay",
+        "title": "Monte Verde II: an assessment of new radiocarbon dates and their sedimentological context",
+        "year": 2023,
+        "venue": "Antiquity",
+        "doi": "10.15184/aqy.2023.32",
+        "url": "https://doi.org/10.15184/aqy.2023.32",
+        "access": "Open indexed publisher main text read: abstract, Introduction, marine reservoir offsets and volcanic deposits, new AMS assays and discussion. Separate supplementary files not reviewed.",
+        "referenceType": "journal-article",
+        "volume": "97",
+        "issue": "393",
+        "pages": "524–540"
+      },
+      "claimId": "primary",
+      "stance": "supports",
+      "locator": "Abstract; New AMS assays; Discussion",
+      "note": "43 measurements from adjacent overlying sediment cores support the authors’ approximately 14,550 cal BP sealing-age interpretation; the cores are not 43 direct occupation dates. Their correlation with MV-II is disputed by Surovell et al. 2026."
+    },
+    {
+      "recordId": "monte-verde-ii",
+      "source": {
+        "id": "dillehay2026-response",
+        "authors": "Tom D. Dillehay et al.",
+        "title": "Archaeological and Geological Evidence at Monte Verde II, Chile, Supports a Human Occupation at ∼14,500 Years Ago",
+        "year": 2026,
+        "venue": "PaleoAmerica",
+        "doi": "10.1080/20555563.2026.2699017",
+        "url": "https://doi.org/10.1080/20555563.2026.2699017",
+        "access": "Indexed publisher full-text passages read, including T2/T4 peat-core correlation, tephra, redeposition arguments and conclusions. Direct page requests returned 403; supplementary contents were not independently read. Response/commentary to the 2026 reassessment, not an independent new excavation.",
+        "referenceType": "journal-article"
+      },
+      "claimId": "primary",
+      "stance": "supports",
+      "locator": "T2/T4 core-correlation and redeposition discussion; Conclusions",
+      "note": "Response authors reject the equivalence of upper-terrace and site-adjacent peat, and argue that contextual patterning and fragile remains do not fit substantial redeposition. Present as the authors’ rebuttal, not a resolved geological fact."
+    },
+    {
+      "recordId": "monte-verde-ii",
+      "source": {
+        "id": "surovell2026",
+        "authors": "Todd A. Surovell, César Méndez, Juan-Luis García, Christopher Lüthgens, Jay M. Thompson, Claudio Latorre",
+        "title": "A mid-Holocene age for Monte Verde challenges the timeline of human colonization of South America",
+        "year": 2026,
+        "venue": "Science 391(6791), 1283–1288",
+        "url": "https://doi.org/10.1126/science.adw9217",
+        "access": "Abstract only: primary research article abstract and metadata verified via PubMed (PMID 41855346). Full methods/supplement not independently reviewed in this batch."
+      },
+      "claimId": "primary",
+      "stance": "challenges",
+      "locator": "Abstract",
+      "note": "Retain Surovell et al.’s 8200–4200 BP Middle Holocene proposal and underlying ~11,000 BP tephra argument as the explicit competing interpretation. It is not a newly measured calibrated occupational interval to average with 14,500 cal BP."
+    },
+    {
+      "recordId": "monte-verde-ii",
+      "source": {
+        "id": "meltzer1997-inspection",
+        "authors": "David J. Meltzer; Donald K. Grayson; Gerardo Ardila; Alex W. Barker; Dena F. Dincauze; C. Vance Haynes; Francisco Mena; Lautaro Nuñez; Dennis J. Stanford",
+        "title": "On the Pleistocene Antiquity of Monte Verde, Southern Chile",
+        "year": 1997,
+        "venue": "American Antiquity",
+        "doi": "10.2307/281884",
+        "url": "https://doi.org/10.2307/281884",
+        "access": "Abstract only: publisher report of January 1997 collection examination and site visit. Full paper not read; 12,500 years old is not silently converted as calibrated BP.",
+        "referenceType": "journal-article",
+        "volume": "62",
+        "issue": "4",
+        "pages": "659–663"
+      },
+      "claimId": "primary",
+      "stance": "supports",
+      "locator": "Abstract",
+      "note": "The 1997 group’s collection examination and site visit supported MV-II; it left MV-I unresolved. Historical agreement is not evidence that the 2026 dispute has vanished."
+    },
+    {
+      "recordId": "monte-verde-ii",
+      "source": {
+        "id": "dillehay2008-seaweed",
+        "authors": "Tom D. Dillehay; C. Ramírez; M. Pino; M. B. Collins; J. Rossen; J. D. Pino-Navarro",
+        "title": "Monte Verde: Seaweed, Food, Medicine, and the Peopling of South America",
+        "year": 2008,
+        "venue": "Science",
+        "doi": "10.1126/science.1156533",
+        "url": "https://doi.org/10.1126/science.1156533",
+        "access": "Abstract only: primary article abstract and metadata read via PubMed. No independent audit of sample selection, calibration or marine reservoir corrections.",
+        "referenceType": "journal-article",
+        "volume": "320",
+        "issue": "5877",
+        "pages": "784–786"
+      },
+      "claimId": "marine-resource-evidence",
+      "stance": "supports",
+      "locator": "Abstract",
+      "note": "Nine marine-algal species from hearths and other features were directly dated to 14,220–13,980 calendar BP. Marine-resource use supports coastal connections but does not map a migration route.",
+      "newClaim": {
+        "id": "marine-resource-evidence",
+        "text": "The 2008 study reports nine marine-algal species in MV-II features and direct dates of 14,220–13,980 calendar BP.",
+        "status": "under discussion",
+        "explanation": "Reported sample ages support the earlier archaeological interpretation, while the later dispute concerns whether dates fix occupation or redeposited material. The abstract alone does not permit an independent marine-reservoir audit.",
+        "support": [
+          {
+            "sourceId": "dillehay2008-seaweed",
+            "stance": "supports",
+            "locator": "Abstract",
+            "note": "Dietary/medicinal use is the study interpretation, not a directly observed migration path."
+          }
+        ]
+      }
+    },
+    {
+      "recordId": "monte-verde-ii",
+      "source": {
+        "id": "dillehay2015",
+        "authors": "Tom D. Dillehay, Carlos Ocampo, José Saavedra, et al.",
+        "title": "New Archaeological Evidence for an Early Human Presence at Monte Verde, Chile",
+        "year": 2015,
+        "venue": "PLOS ONE 10(11), e0141923",
+        "url": "https://doi.org/10.1371/journal.pone.0141923",
+        "access": "Open full text read, including site descriptions, chronology, Material Remains, and discussion. The publisher links a correction at DOI 10.1371/journal.pone.0145471. Limitation: The 2026 debate about MV-II must accompany the older interpretation. Do not combine all described horizons into continuous residence."
+      },
+      "claimId": "earlier-ephemeral-horizons",
+      "stance": "supports",
+      "locator": "Abstract; Material Remains; Discussion",
+      "note": "The 2015 article’s ~18,500–14,500 cal BP ephemeral horizons are separate from classic MV-II and from the much deeper unresolved ~33,000 BP material. No continuous 18,500–33,000 BP occupation is established.",
+      "newClaim": {
+        "id": "earlier-ephemeral-horizons",
+        "text": "Dillehay and colleagues propose discrete ephemeral activity horizons around 18,500–14,500 cal BP across the wider Monte Verde complex.",
+        "status": "under discussion",
+        "explanation": "Low-density horizons and their human agency require separate assessment from the MV-II occupation; deeper ~33,000 BP materials remain inconclusive in that same article.",
+        "support": [
+          {
+            "sourceId": "dillehay2015",
+            "stance": "supports",
+            "locator": "Abstract; Material Remains; Discussion",
+            "note": "Do not combine discontinuous contexts into a single long settlement or equate the 2026 MV-II challenge with direct reassessment of every horizon."
+          }
+        ]
+      }
+    },
+    {
+      "recordId": "monte-verde-ii",
+      "source": {
+        "id": "dillehay2015-correction",
+        "authors": "Tom D. Dillehay et al.",
+        "title": "Correction: New Archaeological Evidence for an Early Human Presence at Monte Verde, Chile",
+        "year": 2015,
+        "venue": "PLOS ONE",
+        "doi": "10.1371/journal.pone.0145471",
+        "url": "https://doi.org/10.1371/journal.pone.0145471",
+        "access": "Full correction text and corrected Figure 7/8 captions read; this is a figure-image correction, not a revised age determination.",
+        "referenceType": "journal-article",
+        "volume": "10",
+        "issue": "12",
+        "pages": "e0145471"
+      },
+      "claimId": "human-agency",
+      "stance": "context",
+      "locator": "Correction text; corrected Figures 7 and 8",
+      "note": "Corrects swapped images for the serpentine tool and basalt wedge only; adds no Early Pleistocene occupation evidence."
+    },
+    {
+      "recordId": "chinchihuapi-later-context",
+      "source": {
+        "id": "dillehay2019-chinchihuapi",
+        "authors": "Tom D. Dillehay; Carlos Ocampo; Jose Saavedra; Mario Pino; Linda Scott-Cummings; Peter Kovácik; Claudia Silva; Rodrigo Alvar",
+        "title": "New excavations at the late Pleistocene site of Chinchihuapi I, Chile",
+        "year": 2019,
+        "venue": "Quaternary Research",
+        "doi": "10.1017/qua.2018.145",
+        "url": "https://doi.org/10.1017/qua.2018.145",
+        "access": "Abstract only: publisher abstract and metadata read. University repository file identified but contained abstract-level material. No sample-table or supplement audit.",
+        "referenceType": "journal-article",
+        "volume": "92",
+        "issue": "1",
+        "pages": "70–80"
+      },
+      "claimId": "primary",
+      "stance": "context",
+      "locator": "Abstract",
+      "note": "2017–2018 excavations support intermittent CH-I use and distinguish the early Holocene Paiján-like material from the older MV-II-type point; do not expand the existing later-context date into continuous ~14,500–10,000 BP residence."
+    }
+  ],
+  "sourceRegister": [
+    {
+      "source": {
+        "id": "perezbalarezo2024",
+        "authors": "Antonio Pérez-Balarezo; Mario Pino; Ximena Navarro-Harris; Ana M. Abarzúa; Daniel Fritte; Francisco Tello; Ignacio Aguilera",
+        "title": "Revised pre-Younger Dryas chronocultural sequence at the Pilauco site, north-western Patagonia (40°–44°S)",
+        "year": 2024,
+        "venue": "Antiquity",
+        "doi": "10.15184/aqy.2024.29",
+        "url": "https://doi.org/10.15184/aqy.2024.29",
+        "access": "Full indexed publisher Project Gallery text read, introduction, geological setting, lithic study, figures 1–6 captions and conclusions; no independent reanalysis of artifacts.",
+        "referenceType": "journal-article",
+        "volume": "98",
+        "issue": "399",
+        "pages": "e16"
+      },
+      "inputRows": [
+        "patagonia:2"
+      ],
+      "decision": "New Pilauco sequence; revised total and indirect dating scope explicit."
+    },
+    {
+      "source": {
+        "id": "moreno2019",
+        "authors": "Karen Moreno; Juan Enrique Bostelmann; Cintia Macías; Ximena Navarro-Harris; Ricardo De Pol-Holz; Mario Pino",
+        "title": "A late Pleistocene human footprint from the Pilauco archaeological site, northern Patagonia, Chile",
+        "year": 2019,
+        "venue": "PLOS ONE",
+        "doi": "10.1371/journal.pone.0213572",
+        "url": "https://doi.org/10.1371/journal.pone.0213572",
+        "access": "Open full main article read: geological setting, methods, sedimentology and stratigraphy, systematic ichnology, experimental trackmaking and discussion. Table 1 caption and discussion read; separate supplementary files were not inspected.",
+        "referenceType": "journal-article",
+        "volume": "14",
+        "issue": "4",
+        "pages": "e0213572"
+      },
+      "inputRows": [
+        "patagonia:4"
+      ],
+      "decision": "One footprint with indirect contextual age and published minute-resolution locality."
+    },
+    {
+      "source": {
+        "id": "mendez2018-vieja",
+        "authors": "César Méndez; Amalia Nuevo Delaunay; Omar Reyes; Ivana Laura Ozán; Carolina Belmar; Patricio López",
+        "title": "The initial peopling of Central Western Patagonia (southernmost South America): Late Pleistocene through Holocene site context and archaeological assemblages from Cueva de la Vieja site",
+        "year": 2018,
+        "venue": "Quaternary International",
+        "doi": "10.1016/j.quaint.2017.07.014",
+        "url": "https://doi.org/10.1016/j.quaint.2017.07.014",
+        "access": "Open published article PDF at CONICET read: abstract, locality coordinates, assemblage discussion and site-scale interpretation, especially p. 271. Online publication 21 July 2017; issue publication 20 April 2018.",
+        "referenceType": "journal-article",
+        "volume": "473",
+        "pages": "261–277"
+      },
+      "inputRows": [
+        "patagonia:1"
+      ],
+      "decision": "New Cueva de la Vieja hearth record; correct issue year to 2018 while retaining 2017 online date."
+    },
+    {
+      "source": {
+        "id": "sepulveda2024",
+        "authors": "Marcela Sepúlveda et al.",
+        "title": "Earliest directly dated rock art from Patagonia reveals socioecological resilience to mid-Holocene climate",
+        "year": 2024,
+        "venue": "Science Advances",
+        "doi": "10.1126/sciadv.adk4415",
+        "url": "https://doi.org/10.1126/sciadv.adk4415",
+        "access": "Open full main article via PMC read, especially Table 1, dates and Bayesian model, environmental interpretation, and Methods. Supplementary code and individual posterior bounds not independently inspected.",
+        "referenceType": "journal-article",
+        "volume": "10",
+        "issue": "7",
+        "pages": "eadk4415"
+      },
+      "inputRows": [
+        "patagonia:16"
+      ],
+      "decision": "Modeled rock-art phase and ecological interpretation; raw and modeled chronology distinguished."
+    },
+    {
+      "source": {
+        "id": "barberena2015",
+        "authors": "Ramiro Barberena",
+        "title": "Cueva Huenul 1 Archaeological Site, Northwestern Patagonia, Argentina: Initial Colonization and Mid-Holocene Demographic Retraction",
+        "year": 2015,
+        "venue": "Latin American Antiquity",
+        "doi": "10.7183/1045-6635.26.3.304",
+        "url": "https://doi.org/10.7183/1045-6635.26.3.304",
+        "access": "Published full article PDF at CONICET read, site location, Methods, Table 1, chrono-stratigraphy, local megafaunal gap and mid-Holocene demographic hypothesis.",
+        "referenceType": "journal-article",
+        "volume": "26",
+        "issue": "3",
+        "pages": "304–318"
+      },
+      "inputRows": [
+        "patagonia:20",
+        "monte-verde:19"
+      ],
+      "decision": "New Huenul contexts and demographic hypothesis. Not a primary source for the 2019 Pilauco footprint."
+    },
+    {
+      "source": {
+        "id": "dillehay2015",
+        "authors": "Tom D. Dillehay, Carlos Ocampo, José Saavedra, et al.",
+        "title": "New Archaeological Evidence for an Early Human Presence at Monte Verde, Chile",
+        "year": 2015,
+        "venue": "PLOS ONE 10(11), e0141923",
+        "url": "https://doi.org/10.1371/journal.pone.0141923",
+        "access": "Open full text read, including site descriptions, chronology, Material Remains, and discussion. The publisher links a correction at DOI 10.1371/journal.pone.0145471. Limitation: The 2026 debate about MV-II must accompany the older interpretation. Do not combine all described horizons into continuous residence."
+      },
+      "inputRows": [
+        "patagonia:3",
+        "monte-verde:7"
+      ],
+      "decision": "Existing citation updated; no duplicate Monte Verde site."
+    },
+    {
+      "source": {
+        "id": "surovell2026",
+        "authors": "Todd A. Surovell, César Méndez, Juan-Luis García, Christopher Lüthgens, Jay M. Thompson, Claudio Latorre",
+        "title": "A mid-Holocene age for Monte Verde challenges the timeline of human colonization of South America",
+        "year": 2026,
+        "venue": "Science 391(6791), 1283–1288",
+        "url": "https://doi.org/10.1126/science.adw9217",
+        "access": "Abstract only: primary research article abstract and metadata verified via PubMed (PMID 41855346). Full methods/supplement not independently reviewed in this batch."
+      },
+      "inputRows": [
+        "monte-verde:1"
+      ],
+      "decision": "Existing challenging interpretation preserved as research reassessment; abstract access explicit."
+    },
+    {
+      "source": {
+        "id": "dillehay2026-response",
+        "authors": "Tom D. Dillehay et al.",
+        "title": "Archaeological and Geological Evidence at Monte Verde II, Chile, Supports a Human Occupation at ∼14,500 Years Ago",
+        "year": 2026,
+        "venue": "PaleoAmerica",
+        "doi": "10.1080/20555563.2026.2699017",
+        "url": "https://doi.org/10.1080/20555563.2026.2699017",
+        "access": "Indexed publisher full-text passages read, including T2/T4 peat-core correlation, tephra, redeposition arguments and conclusions. Direct page requests returned 403; supplementary contents were not independently read. Response/commentary to the 2026 reassessment, not an independent new excavation.",
+        "referenceType": "journal-article"
+      },
+      "inputRows": [
+        "monte-verde:2"
+      ],
+      "decision": "Add published rebuttal to existing disputed chronology; indexed publisher argument passages available."
+    },
+    {
+      "source": {
+        "id": "waters2026-published",
+        "authors": "Michael R. Waters; Jessi J. Halligan; Rolfe D. Mandel; Justin A. Holcomb; Loren G. Davis; Vance T. Holliday",
+        "title": "Evaluation of the Geoarchaeological Study that Proposes a Middle Holocene Age for Monte Verde II, Chile",
+        "year": 2026,
+        "venue": "PaleoAmerica",
+        "doi": "10.1080/20555563.2026.2699013",
+        "url": "https://doi.org/10.1080/20555563.2026.2699013",
+        "access": "Metadata only for the published August 12 article; direct access returned 403. Do not claim the published paper was read. The separately recorded May eLetter was inspected in the existing corpus.",
+        "referenceType": "journal-article"
+      },
+      "inputRows": [
+        "monte-verde:3"
+      ],
+      "decision": "Published article metadata only; retain separately sourced existing May eLetter argument and access note."
+    },
+    {
+      "source": {
+        "id": "meltzer1997-science",
+        "authors": "David J. Meltzer",
+        "title": "Monte Verde and the Pleistocene Peopling of the Americas",
+        "year": 1997,
+        "venue": "Science",
+        "doi": "10.1126/science.276.5313.754",
+        "url": "https://doi.org/10.1126/science.276.5313.754",
+        "access": "Bibliographic identity verified through author publication list and publisher-linked citations; full commentary not inspected.",
+        "referenceType": "journal-article",
+        "volume": "276",
+        "issue": "5313",
+        "pages": "754–755"
+      },
+      "inputRows": [
+        "monte-verde:4"
+      ],
+      "decision": "Historical perspective, not an independent new dated site."
+    },
+    {
+      "source": {
+        "id": "meltzer1997-inspection",
+        "authors": "David J. Meltzer; Donald K. Grayson; Gerardo Ardila; Alex W. Barker; Dena F. Dincauze; C. Vance Haynes; Francisco Mena; Lautaro Nuñez; Dennis J. Stanford",
+        "title": "On the Pleistocene Antiquity of Monte Verde, Southern Chile",
+        "year": 1997,
+        "venue": "American Antiquity",
+        "doi": "10.2307/281884",
+        "url": "https://doi.org/10.2307/281884",
+        "access": "Abstract only: publisher report of January 1997 collection examination and site visit. Full paper not read; 12,500 years old is not silently converted as calibrated BP.",
+        "referenceType": "journal-article",
+        "volume": "62",
+        "issue": "4",
+        "pages": "659–663"
+      },
+      "inputRows": [
+        "monte-verde:5"
+      ],
+      "decision": "Distinct 1997 site-inspection report; preserve raw versus calendar-age wording."
+    },
+    {
+      "source": {
+        "id": "dillehay2005-monument",
+        "authors": "Tom D. Dillehay",
+        "title": "From Archaeological Site to National Monument: Chile’s Monte Verde",
+        "year": 2005,
+        "venue": "AnthroNotes",
+        "volume": "26",
+        "issue": "1",
+        "pages": "8–12",
+        "url": "https://repository.si.edu/items/3ebf4e92-8015-4599-aea8-783c5b2b33f4",
+        "access": "Smithsonian repository abstract, citation and indexed opening article passage read. Full article not independently reviewed.",
+        "referenceType": "journal-article"
+      },
+      "inputRows": [
+        "monte-verde:6"
+      ],
+      "decision": "User dump says 2014; official Smithsonian publication is Spring 2005. Heritage/research history, no new age claim."
+    },
+    {
+      "source": {
+        "id": "pino2023",
+        "authors": "Mario Pino; Tom D. Dillehay",
+        "title": "Monte Verde II: an assessment of new radiocarbon dates and their sedimentological context",
+        "year": 2023,
+        "venue": "Antiquity",
+        "doi": "10.15184/aqy.2023.32",
+        "url": "https://doi.org/10.15184/aqy.2023.32",
+        "access": "Open indexed publisher main text read: abstract, Introduction, marine reservoir offsets and volcanic deposits, new AMS assays and discussion. Separate supplementary files not reviewed.",
+        "referenceType": "journal-article",
+        "volume": "97",
+        "issue": "393",
+        "pages": "524–540"
+      },
+      "inputRows": [
+        "monte-verde:8"
+      ],
+      "decision": "Contextual core dating supports original correlation; not 43 independent habitation dates."
+    },
+    {
+      "source": {
+        "id": "dillehay-collins1991",
+        "authors": "Tom D. Dillehay; Michael B. Collins",
+        "title": "Monte Verde, Chile: A Comment on Lynch",
+        "year": 1991,
+        "venue": "American Antiquity",
+        "doi": "10.2307/281422",
+        "url": "https://doi.org/10.2307/281422",
+        "access": "Abstract only: publisher abstract and metadata; full comment unavailable.",
+        "referenceType": "journal-article",
+        "volume": "56",
+        "issue": "2",
+        "pages": "333–341"
+      },
+      "inputRows": [
+        "monte-verde:9"
+      ],
+      "decision": "Historical response; not independent excavation or proof the current controversy is resolved."
+    },
+    {
+      "source": {
+        "id": "dillehay2008-seaweed",
+        "authors": "Tom D. Dillehay; C. Ramírez; M. Pino; M. B. Collins; J. Rossen; J. D. Pino-Navarro",
+        "title": "Monte Verde: Seaweed, Food, Medicine, and the Peopling of South America",
+        "year": 2008,
+        "venue": "Science",
+        "doi": "10.1126/science.1156533",
+        "url": "https://doi.org/10.1126/science.1156533",
+        "access": "Abstract only: primary article abstract and metadata read via PubMed. No independent audit of sample selection, calibration or marine reservoir corrections.",
+        "referenceType": "journal-article",
+        "volume": "320",
+        "issue": "5877",
+        "pages": "784–786"
+      },
+      "inputRows": [
+        "monte-verde:10"
+      ],
+      "decision": "Add distinct marine-resource claim and explicit chronological debate."
+    },
+    {
+      "source": {
+        "id": "surovell2003-coastal-model",
+        "authors": "Todd A. Surovell",
+        "title": "Simulating Coastal Migration in New World Colonization",
+        "year": 2003,
+        "venue": "Current Anthropology",
+        "doi": "10.1086/377651",
+        "url": "https://doi.org/10.1086/377651",
+        "access": "Publisher metadata only; article behind access wall. Model methods/results not inspected.",
+        "referenceType": "journal-article",
+        "volume": "44",
+        "issue": "4",
+        "pages": "580–591"
+      },
+      "inputRows": [
+        "monte-verde:11"
+      ],
+      "decision": "Not used to map a real journey or independently date Monte Verde."
+    },
+    {
+      "source": {
+        "id": "dillehay2019-chinchihuapi",
+        "authors": "Tom D. Dillehay; Carlos Ocampo; Jose Saavedra; Mario Pino; Linda Scott-Cummings; Peter Kovácik; Claudia Silva; Rodrigo Alvar",
+        "title": "New excavations at the late Pleistocene site of Chinchihuapi I, Chile",
+        "year": 2019,
+        "venue": "Quaternary Research",
+        "doi": "10.1017/qua.2018.145",
+        "url": "https://doi.org/10.1017/qua.2018.145",
+        "access": "Abstract only: publisher abstract and metadata read. University repository file identified but contained abstract-level material. No sample-table or supplement audit.",
+        "referenceType": "journal-article",
+        "volume": "92",
+        "issue": "1",
+        "pages": "70–80"
+      },
+      "inputRows": [
+        "monte-verde:12"
+      ],
+      "decision": "Existing CH-I row gains context citation, preserving separate later episode."
+    },
+    {
+      "source": {
+        "id": "gibbons2015-news",
+        "authors": "Ann Gibbons",
+        "title": "Archaeology. Humans may have reached Chile by 18,500 years ago.",
+        "year": 2015,
+        "venue": "Science",
+        "doi": "10.1126/science.350.6263.898",
+        "url": "https://doi.org/10.1126/science.350.6263.898",
+        "access": "PubMed metadata only; this is science news, not the underlying excavation study.",
+        "referenceType": "journal-article",
+        "volume": "350",
+        "issue": "6263",
+        "pages": "898"
+      },
+      "inputRows": [
+        "monte-verde:13"
+      ],
+      "decision": "Exclude as independent archaeological evidence; use Dillehay 2015 primary article."
+    },
+    {
+      "source": {
+        "id": "dillehay2015-correction",
+        "authors": "Tom D. Dillehay et al.",
+        "title": "Correction: New Archaeological Evidence for an Early Human Presence at Monte Verde, Chile",
+        "year": 2015,
+        "venue": "PLOS ONE",
+        "doi": "10.1371/journal.pone.0145471",
+        "url": "https://doi.org/10.1371/journal.pone.0145471",
+        "access": "Full correction text and corrected Figure 7/8 captions read; this is a figure-image correction, not a revised age determination.",
+        "referenceType": "journal-article",
+        "volume": "10",
+        "issue": "12",
+        "pages": "e0145471"
+      },
+      "inputRows": [
+        "monte-verde:15"
+      ],
+      "decision": "Figure-image swap correction only; reject false Early Pleistocene takeaway."
+    },
+    {
+      "source": {
+        "id": "politis-prates2020",
+        "authors": "Gustavo G. Politis; Luciano Prates",
+        "title": "Some Opinions about Monte Verde: Response to Dillehay (2019) and Dillehay, Pino, and Ocampo (2020)",
+        "year": 2020,
+        "venue": "PaleoAmerica",
+        "doi": "10.1080/20555563.2020.1792056",
+        "url": "https://doi.org/10.1080/20555563.2020.1792056",
+        "access": "Publisher title/DOI verified; full article returned 403 and substantive argument was not independently read. Online 2020; assigned to volume 7 issue 1.",
+        "referenceType": "journal-article",
+        "volume": "7",
+        "issue": "1"
+      },
+      "inputRows": [
+        "monte-verde:16"
+      ],
+      "decision": "Keep as unresolved earlier debate source; do not invent the scope of criticism from a research-summary takeaway."
+    },
+    {
+      "source": {
+        "id": "dillehay-collins1988",
+        "authors": "Tom D. Dillehay; Michael B. Collins",
+        "title": "Early cultural evidence from Monte Verde in Chile",
+        "year": 1988,
+        "venue": "Nature",
+        "doi": "10.1038/332150a0",
+        "url": "https://doi.org/10.1038/332150a0",
+        "access": "Publisher bibliographic record verified; full article inaccessible.",
+        "referenceType": "journal-article",
+        "volume": "332",
+        "pages": "150–152"
+      },
+      "inputRows": [
+        "monte-verde:17"
+      ],
+      "decision": "Older primary publication logged; no new uncalibrated 33,000 BP human-occupation fact adopted."
+    },
+    {
+      "source": {
+        "id": "tune-miller2026",
+        "authors": "Jesse W. Tune; D. Shane Miller",
+        "title": "Replication as a Virtue: What the Monte Verde Debate Tells Us About Archaeological Science",
+        "year": 2026,
+        "venue": "PaleoAmerica",
+        "doi": "10.1080/20555563.2026.2653407",
+        "url": "https://doi.org/10.1080/20555563.2026.2653407",
+        "access": "Publisher bibliographic identity verified; full commentary not inspected.",
+        "referenceType": "journal-article",
+        "volume": "12",
+        "issue": "1",
+        "pages": "5–9"
+      },
+      "inputRows": [
+        "monte-verde:18"
+      ],
+      "decision": "Scientific-practice commentary, not a second independently measured Monte Verde age."
+    },
+    {
+      "source": {
+        "id": "pino-dillehay1988",
+        "authors": "Mario Pino Quivira; Tom D. Dillehay",
+        "title": "Monte Verde, South-Central Chile: Stratigraphy, Climate Change, and Human Settlement",
+        "year": 1988,
+        "venue": "Geoarchaeology",
+        "doi": "10.1002/gea.3340030302",
+        "url": "https://doi.org/10.1002/gea.3340030302",
+        "access": "Abstract only: publisher abstract and metadata read. Historical BP wording is not assumed to be calibrated calendar age.",
+        "referenceType": "journal-article",
+        "volume": "3",
+        "issue": "3",
+        "pages": "177–191"
+      },
+      "inputRows": [
+        "monte-verde:20"
+      ],
+      "decision": "Environmental and stratigraphic historical context only; no silent conversion of ~13,000 yr BP into a calendar date."
+    },
+    {
+      "source": {
+        "id": "miotti-salemme2003",
+        "authors": "Laura Miotti; Mónica Salemme",
+        "title": "When Patagonia was colonized: people mobility at high latitudes during Pleistocene/Holocene transition",
+        "year": 2003,
+        "venue": "Quaternary International",
+        "doi": "10.1016/S1040-6182(02)00206-9",
+        "url": "https://doi.org/10.1016/S1040-6182(02)00206-9",
+        "access": "Publisher abstract and bibliographic information verified; substantive southern-Patagonia review delegated to the southeast intake.",
+        "referenceType": "journal-article",
+        "volume": "109–110",
+        "pages": "95–111"
+      },
+      "inputRows": [
+        "monte-verde:14"
+      ],
+      "decision": "Logged for complete companion-table coverage; avoid duplicate southern records."
+    }
+  ],
+  "unresolved": [
+    {
+      "topic": "Sepúlveda calibrated-age inconsistency",
+      "sourceId": "sepulveda2024",
+      "issue": "Table 1 prints CH1-AMS2 7565–7728 cal BP, while the main text prints unmodeled 2σ 7779–7578 and median 7660 cal BP. Other table ranges are also unusually narrow relative to laboratory errors. Resolve against the supplementary OxCal outputs or an author correction before publishing a precise raw-assay record.",
+      "action": "Retain the explicitly identified modeled phase only; do not silently normalize the numbers."
+    },
+    {
+      "topic": "Huenul phase posterior uncertainty",
+      "sourceId": "sepulveda2024",
+      "issue": "Individual 95.4% posterior boundary ranges were not extracted from Fig. S7/code.",
+      "action": "Use approximate point-summary phase bounds only and do not label them a 95.4% interval."
+    },
+    {
+      "topic": "Published Waters 2026 rebuttal",
+      "sourceId": "waters2026-published",
+      "issue": "Published full text unavailable in this batch.",
+      "action": "Do not replace the inspected May eLetter with a false full-text-access statement; log the published DOI separately."
+    },
+    {
+      "topic": "Politis–Prates response",
+      "sourceId": "politis-prates2020",
+      "issue": "Full text unavailable; publisher indexed abstract establishes its relation to MV-I/CH-I and age-tightening arguments, but detailed critique not assessed.",
+      "action": "Keep this source in the register pending substantive audit; no invented source-specific stance added to a dating claim."
+    },
+    {
+      "topic": "Pilauco locality point",
+      "sourceId": "moreno2019",
+      "issue": "Published minute coordinates accompany the locality/Osorno setting; they are not a surveyed excavation centroid.",
+      "action": "Use the explicit coarse precision label. A finer dot requires a public institutional site point or primary georeferenced archaeological map."
+    },
+    {
+      "topic": "Monte Verde site identity and chronology",
+      "issue": "The current main record already preserves the late-Pleistocene interpretation, the Surovell challenge and the Waters eLetter response.",
+      "action": "Apply citation/new-claim updates without duplicate MV-II or an averaged Holocene-to-Pleistocene occupation window."
+    },
+    {
+      "topic": "Legacy ages in 1988 and 1997 sources",
+      "sourceIds": [
+        "dillehay-collins1988",
+        "pino-dillehay1988",
+        "meltzer1997-inspection"
+      ],
+      "issue": "Abstract-era BP and years-old wording is not sufficient to reconstruct calibrated bounds.",
+      "action": "No calendar-year geometry or chronology is created by simple subtraction of uncalibrated numbers."
+    },
+    {
+      "topic": "Southern companion work",
+      "sourceId": "miotti-salemme2003",
+      "issue": "Same work appears in both supplied dumps.",
+      "action": "Deduplicate by DOI and use the southeast agent’s review; no duplicate regional migration record here."
+    }
+  ],
+  "corrections": [
+    {
+      "input": "patagonia and Monte Verde dumps",
+      "issue": "Do not call all oldest candidates confirmed, undisputed or uncontested.",
+      "correction": "MV-II has a named 2026 chronological dispute; sample age, artifact agency, stratigraphic association and regional-first claims require distinct assessments."
+    },
+    {
+      "input": "Pilauco table and prose",
+      "issue": "Human trackway and direct dating overclaim.",
+      "correction": "Moreno 2019 reports one ichnite, with an indirect circa 15,600 cal BP contextual estimate. It is not a directly radiocarbon-dated footprint or trackway.",
+      "sourceId": "moreno2019"
+    },
+    {
+      "input": "Pilauco lithic count",
+      "issue": "Summary conflates the approximate headline count with new excavations.",
+      "correction": "The 2024 analysis recognized 199 additional stored objects besides 45 known ones, giving 244. Its chronology is a recurrent-find envelope.",
+      "sourceId": "perezbalarezo2024"
+    },
+    {
+      "input": "Companion claims citing Barberena 2015 for Pilauco 15,600 cal BP footprint",
+      "issue": "Incorrect source attribution.",
+      "correction": "Use Moreno 2019 and Pérez-Balarezo 2024 for Pilauco; Barberena 2015 investigates Cueva Huenul 1.",
+      "sourceId": "barberena2015"
+    },
+    {
+      "input": "Cueva Huenul 1 oldest date",
+      "issue": "Single older assay presented as secure universal onset.",
+      "correction": "The 2015 study explicitly allows an earlier episode or an outlier. Five main-group samples and the older assay remain separate.",
+      "sourceId": "barberena2015"
+    },
+    {
+      "input": "Sepúlveda 2024 headline age",
+      "issue": "8.2 ka modeled phase onset confused with a direct painting assay.",
+      "correction": "The 8171 BP onset is a model output. The oldest pigment carbon is 6830 ±50 radiocarbon BP; its calibrated range differs between Table 1 and main-text wording. Plant death is a maximum painting age.",
+      "sourceId": "sepulveda2024"
+    },
+    {
+      "input": "Méndez2017 citation",
+      "issue": "Online and issue years conflated.",
+      "correction": "DOI 10.1016/j.quaint.2017.07.014 was online in 2017 but published in Quaternary International 473, pp. 261–277, in 2018.",
+      "sourceId": "mendez2018-vieja"
+    },
+    {
+      "input": "From Archaeological Site to National Monument (2014)",
+      "issue": "Year is wrong.",
+      "correction": "Official Smithsonian citation is AnthroNotes 26(1), Spring 2005, pp. 8–12.",
+      "sourceId": "dillehay2005-monument"
+    },
+    {
+      "input": "PLOS correction takeaway",
+      "issue": "False Early Pleistocene occupation claim.",
+      "correction": "The correction swaps Figures 7 and 8 images. It does not establish an Early Pleistocene human presence.",
+      "sourceId": "dillehay2015-correction"
+    },
+    {
+      "input": "MV-I 18,500–33,000 BP row",
+      "issue": "Distinct proposed horizons merged into one occupation span and age systems blurred.",
+      "correction": "The 2015 approximately 18,500–14,500 cal BP horizons differ from unresolved deeper material reported with varied radiocarbon/OSL ages. Do not turn 33,000 BP into a calibrated human occupation endpoint.",
+      "sourceId": "dillehay2015"
+    },
+    {
+      "input": "Monte Verde 43 measurements",
+      "issue": "Adjacent sediment-core dates treated as 43 direct cultural-material dates.",
+      "correction": "Pino and Dillehay date sediment cores sealing deposits in their correlation model. Surovell and response authors dispute the geological correlation, which remains visible.",
+      "sourceId": "pino2023"
+    },
+    {
+      "input": "All early dates and regional expansion narrative",
+      "issue": "Radiocarbon BP and calibrated BP treated as identical; environmental opportunity treated as proved movement cause.",
+      "correction": "Only explicitly calibrated endpoints are converted using 1950 minus BP. Legacy BP, laboratory errors and contextual opportunities remain labeled; no route or modern people identity is reconstructed."
+    }
+  ]
+}

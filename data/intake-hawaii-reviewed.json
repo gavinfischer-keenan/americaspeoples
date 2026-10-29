@@ -1,0 +1,1698 @@
+{
+  "records": [
+    {
+      "id": "hawaii-athens2014-model",
+      "revision": 1,
+      "type": "event",
+      "title": "Hawaiʻi: combined archaeological and environmental arrival model",
+      "culture": {
+        "id": "regional-synthesis",
+        "name": "Regional archaeological syntheses",
+        "kind": "unknown",
+        "color": "#58c8bd"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 940,
+        "end": 1130,
+        "approximate": true,
+        "original": "Athens et al. 2014: 95% HPD AD 940–1130; 67% HPD AD 1000–1100",
+        "method": "Bayesian colonization model using paleoenvironmental and archaeological radiocarbon evidence",
+        "interpretation": "Reported dated evidence envelope; neither an exact founding date nor proof of continuous occupation throughout the range."
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -157,
+            21
+          ]
+        },
+        "precision": "Illustrative main Hawaiian Islands regional anchor only; not a site, landing point, sampled-person location, route or territorial/probability boundary.",
+        "provenance": "NOAA map distinguishes the main island chain; chosen whole-degree anchor157°W21°N is regional, not a landing point. Coordinates are deliberately rounded/editorial annotation positions for viewing the cited regional evidence."
+      },
+      "claims": [
+        {
+          "id": "regional-arrival-model",
+          "text": "Athens and colleagues estimate Hawaiian colonization at 940–1130 CE (95% HPD), with 1000–1100 CE at 67% HPD.",
+          "status": "under discussion",
+          "explanation": "This regional posterior is not a directly dated landing, site occupation span or geographic confidence boundary.",
+          "support": [
+            {
+              "sourceId": "athens2014-hawaii",
+              "locator": "Abstract; conclusion pp. 151–152",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        },
+        {
+          "id": "bulk-core-limits",
+          "text": "The analysis cautions that bulk-soil dates can distort environmental core chronologies.",
+          "status": "well-supported",
+          "explanation": "Proxy changes and depositional modeling require explicit dating assumptions.",
+          "support": [
+            {
+              "sourceId": "athens2014-hawaii",
+              "locator": "Abstract; Ordy Pond reanalysis",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        },
+        {
+          "id": "regional-map-anchor",
+          "text": "The map annotation locates the broad main Hawaiian Islands context; its position does not identify an archaeological settlement.",
+          "status": "well-supported",
+          "explanation": "Geographic reference sources support the regional association only. Schematic placement is an editorial visualization choice and carries no archaeological precision.",
+          "support": [
+            {
+              "sourceId": "noaa-hawaiian-archipelago-map",
+              "locator": "Fig.1.1, printed p.3",
+              "stance": "context",
+              "note": "NOAA map distinguishes the main island chain; chosen whole-degree anchor157°W21°N is regional, not a landing point."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "athens2014-hawaii",
+          "authors": "J. Stephen Athens; Timothy M. Rieth; Thomas S. Dye",
+          "title": "A Paleoenvironmental and Archaeological Model-Based Age Estimate for the Colonization of Hawaiʻi",
+          "year": 2014,
+          "venue": "American Antiquity 79(1):144–155",
+          "url": "https://doi.org/10.7183/0002-7316.79.1.144",
+          "doi": "10.7183/0002-7316.79.1.144",
+          "access": "Author-hosted published PDF inspected via web extraction: abstract, model discussion and conclusion; no independent recalibration.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "noaa-hawaiian-archipelago-map",
+          "authors": "NOAA Pacific Islands Fisheries Science Center",
+          "title": "The Hawaiian Archipelago (Figure 1.1)",
+          "year": null,
+          "venue": "NOAA public technical-memorandum map, repository item3383",
+          "url": "https://repository.library.noaa.gov/view/noaa/3383/noaa_3383_DS1.pdf",
+          "access": "Primary NOAA map and coordinate-grid labels inspected via indexed PDF extraction, printed p.3/PDF p.14. Geographic reference only; animal study results are not evidence of human occupation."
+        }
+      ],
+      "review": {
+        "summary": "This record retains a source-specific result and its interpretive limits. Regional models and indirect indicators remain distinct from directly dated settlement evidence.",
+        "limitations": "No resident census, precise landing point or excavated site coordinate is inferred. Published model intervals reflect the assumptions of their individual analyses.",
+        "discussion": "Named source disagreements are recorded explicitly; shared support for a broad late chronology does not erase differences about first arrival and established settlement.",
+        "provenance": "Reviewed from the user’s Hawaiʻi export and primary sources at the access scopes stated in each citation.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Source-intake review only; no website build, push or deployment.",
+          "2026-10-28: Added explicitly schematic regional geography anchor; no exact site coordinate or geographic extent asserted."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "hawaii-dye2011-model",
+      "revision": 1,
+      "type": "event",
+      "title": "Hawaiʻi: alternative Bayesian colonization estimates",
+      "culture": {
+        "id": "regional-synthesis",
+        "name": "Regional archaeological syntheses",
+        "kind": "unknown",
+        "color": "#58c8bd"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 780,
+        "end": 1119,
+        "approximate": true,
+        "original": "Floral-and-faunal model: AD 780–1119 (95% HPD); floral-only alternative AD 810–1289 (95% HPD)",
+        "method": "Bayesian calibration of introduced floral/faunal and precolonization core material",
+        "interpretation": "Reported dated evidence envelope; neither an exact founding date nor proof of continuous occupation throughout the range."
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -157,
+            21
+          ]
+        },
+        "precision": "Illustrative main Hawaiian Islands regional anchor only; not a site, landing point, sampled-person location, route or territorial/probability boundary.",
+        "provenance": "NOAA map distinguishes the main island chain; chosen whole-degree anchor157°W21°N is regional, not a landing point. Coordinates are deliberately rounded/editorial annotation positions for viewing the cited regional evidence."
+      },
+      "claims": [
+        {
+          "id": "model-variants",
+          "text": "Dye’s floral-and-faunal model yields 780–1119 CE at 95% HPD; the floral-only model yields 810–1289 CE.",
+          "status": "under discussion",
+          "explanation": "The plotted envelope belongs to the floral-and-faunal variant only; the two posteriors are not merged into an invented range.",
+          "support": [
+            {
+              "sourceId": "dye2011-hawaii",
+              "locator": "Fig. 1 and model discussion",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        },
+        {
+          "id": "regional-map-anchor",
+          "text": "The map annotation locates the broad main Hawaiian Islands context; its position does not identify an archaeological settlement.",
+          "status": "well-supported",
+          "explanation": "Geographic reference sources support the regional association only. Schematic placement is an editorial visualization choice and carries no archaeological precision.",
+          "support": [
+            {
+              "sourceId": "noaa-hawaiian-archipelago-map",
+              "locator": "Fig.1.1, printed p.3",
+              "stance": "context",
+              "note": "NOAA map distinguishes the main island chain; chosen whole-degree anchor157°W21°N is regional, not a landing point."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "dye2011-hawaii",
+          "authors": "Thomas S. Dye",
+          "title": "A model-based age estimate for Polynesian colonization of Hawaiʻi",
+          "year": 2011,
+          "venue": "Archaeology in Oceania 46:130–138",
+          "url": "https://doi.org/10.1002/j.1834-4453.2011.tb00107.x",
+          "doi": "10.1002/j.1834-4453.2011.tb00107.x",
+          "access": "Author-hosted published PDF inspected via web extraction: introduction, Fig. 1, model and Bellows application; no independent recalibration.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "noaa-hawaiian-archipelago-map",
+          "authors": "NOAA Pacific Islands Fisheries Science Center",
+          "title": "The Hawaiian Archipelago (Figure 1.1)",
+          "year": null,
+          "venue": "NOAA public technical-memorandum map, repository item3383",
+          "url": "https://repository.library.noaa.gov/view/noaa/3383/noaa_3383_DS1.pdf",
+          "access": "Primary NOAA map and coordinate-grid labels inspected via indexed PDF extraction, printed p.3/PDF p.14. Geographic reference only; animal study results are not evidence of human occupation."
+        }
+      ],
+      "review": {
+        "summary": "This record retains a source-specific result and its interpretive limits. Regional models and indirect indicators remain distinct from directly dated settlement evidence.",
+        "limitations": "No resident census, precise landing point or excavated site coordinate is inferred. Published model intervals reflect the assumptions of their individual analyses.",
+        "discussion": "Named source disagreements are recorded explicitly; shared support for a broad late chronology does not erase differences about first arrival and established settlement.",
+        "provenance": "Reviewed from the user’s Hawaiʻi export and primary sources at the access scopes stated in each citation.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Source-intake review only; no website build, push or deployment.",
+          "2026-10-28: Added explicitly schematic regional geography anchor; no exact site coordinate or geographic extent asserted."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "hawaii-bellows-o18-establishment",
+      "revision": 1,
+      "type": "event",
+      "title": "Bellows Dune O18: modeled establishment differs from island arrival",
+      "culture": {
+        "id": "regional-synthesis",
+        "name": "Regional archaeological syntheses",
+        "kind": "unknown",
+        "color": "#58c8bd"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1050,
+        "end": 1209,
+        "approximate": true,
+        "original": "Dye 2011: AD 1050–1209, 67% HPD for O18 establishment",
+        "method": "Bayesian application to short-lived materials from Layer III",
+        "interpretation": "Reported dated evidence envelope; neither an exact founding date nor proof of continuous occupation throughout the range."
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -158,
+            21
+          ]
+        },
+        "precision": "Illustrative Oʻahu/Hawaiian Islands regional anchor only; not a site, landing point, sampled-person location, route or territorial/probability boundary.",
+        "provenance": "NOAA map locates Oʻahu within the main chain. Whole-degree anchor158°W21°N is an Oʻahu regional annotation, not the Bellows O18 site. Coordinates are deliberately rounded/editorial annotation positions for viewing the cited regional evidence."
+      },
+      "claims": [
+        {
+          "id": "o18-establishment",
+          "text": "The model application gives Bellows O18 establishment at 1050–1209 CE (67% HPD).",
+          "status": "under discussion",
+          "explanation": "A site-establishment posterior is distinct from colonization of the archipelago; this is not a 95% interval or the entire occupation duration.",
+          "support": [
+            {
+              "sourceId": "dye2011-hawaii",
+              "locator": "Table 3 and application, p. 136",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        },
+        {
+          "id": "regional-map-anchor",
+          "text": "The map annotation locates the broad Oʻahu/Hawaiian Islands context; its position does not identify an archaeological settlement.",
+          "status": "well-supported",
+          "explanation": "Geographic reference sources support the regional association only. Schematic placement is an editorial visualization choice and carries no archaeological precision.",
+          "support": [
+            {
+              "sourceId": "noaa-hawaiian-archipelago-map",
+              "locator": "Fig.1.1, printed p.3",
+              "stance": "context",
+              "note": "NOAA map locates Oʻahu within the main chain. Whole-degree anchor158°W21°N is an Oʻahu regional annotation, not the Bellows O18 site."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "dye2011-hawaii",
+          "authors": "Thomas S. Dye",
+          "title": "A model-based age estimate for Polynesian colonization of Hawaiʻi",
+          "year": 2011,
+          "venue": "Archaeology in Oceania 46:130–138",
+          "url": "https://doi.org/10.1002/j.1834-4453.2011.tb00107.x",
+          "doi": "10.1002/j.1834-4453.2011.tb00107.x",
+          "access": "Author-hosted published PDF inspected via web extraction: introduction, Fig. 1, model and Bellows application; no independent recalibration.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "noaa-hawaiian-archipelago-map",
+          "authors": "NOAA Pacific Islands Fisheries Science Center",
+          "title": "The Hawaiian Archipelago (Figure 1.1)",
+          "year": null,
+          "venue": "NOAA public technical-memorandum map, repository item3383",
+          "url": "https://repository.library.noaa.gov/view/noaa/3383/noaa_3383_DS1.pdf",
+          "access": "Primary NOAA map and coordinate-grid labels inspected via indexed PDF extraction, printed p.3/PDF p.14. Geographic reference only; animal study results are not evidence of human occupation."
+        }
+      ],
+      "review": {
+        "summary": "This record retains a source-specific result and its interpretive limits. Regional models and indirect indicators remain distinct from directly dated settlement evidence.",
+        "limitations": "No resident census, precise landing point or excavated site coordinate is inferred. Published model intervals reflect the assumptions of their individual analyses.",
+        "discussion": "Named source disagreements are recorded explicitly; shared support for a broad late chronology does not erase differences about first arrival and established settlement.",
+        "provenance": "Reviewed from the user’s Hawaiʻi export and primary sources at the access scopes stated in each citation.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Source-intake review only; no website build, push or deployment.",
+          "2026-10-28: Added explicitly schematic regional geography anchor; no exact site coordinate or geographic extent asserted."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "pacific-wilmshurst2011-chronology",
+      "revision": 1,
+      "type": "event",
+      "title": "East Polynesia: two-phase short-chronology model and debate",
+      "culture": {
+        "id": "regional-synthesis",
+        "name": "Regional archaeological syntheses",
+        "kind": "unknown",
+        "color": "#58c8bd"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1025,
+        "end": 1290,
+        "approximate": true,
+        "original": "Societies ~AD 1025–1120; later regional pulse ~AD 1190–1290 (abstract)",
+        "method": "Reliability-classified regional radiocarbon synthesis; model estimates, not one continuous occupation",
+        "interpretation": "Reported dated evidence envelope; neither an exact founding date nor proof of continuous occupation throughout the range."
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -151,
+            -17
+          ]
+        },
+        "precision": "Illustrative central East Polynesian regional anchor only; not a site, landing point, sampled-person location, route or territorial/probability boundary.",
+        "provenance": "NASA metadata places a Society Islands image around151.5°W16.5°S. Rounded151°W17°S serves only as a central East Polynesian annotation for the broader regional synthesis/network. Coordinates are deliberately rounded/editorial annotation positions for viewing the cited regional evidence."
+      },
+      "claims": [
+        {
+          "id": "two-phase-model",
+          "text": "The synthesis proposes Society Islands colonization around 1025–1120 CE followed by a regional pulse around 1190–1290 CE.",
+          "status": "under discussion",
+          "explanation": "This is a region-wide two-phase model, not a date for every island or site.",
+          "support": [
+            {
+              "sourceId": "wilmshurst2011-polynesia",
+              "locator": "Abstract; results; Fig. 4",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        },
+        {
+          "id": "hawaii-estimate",
+          "text": "Its Hawaiian estimate is 1219–1266 CE, later than the Athens and Dye environmental/Bayesian models.",
+          "status": "under discussion",
+          "explanation": "Different methods target first colonization and visible settlement differently.",
+          "support": [
+            {
+              "sourceId": "dye2011-hawaii",
+              "locator": "Introduction p. 131, reporting Wilmshurst et al. 2011",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            },
+            {
+              "sourceId": "wilmshurst2011-polynesia",
+              "locator": "Fig. 4",
+              "stance": "supports",
+              "note": "Hawaiian colonization estimate in the regional model."
+            },
+            {
+              "sourceId": "athens2014-hawaii",
+              "locator": "Introduction p. 145",
+              "stance": "context",
+              "note": "Contrasts the later summed-date estimates with Bayesian estimates."
+            }
+          ]
+        },
+        {
+          "id": "methodological-dispute",
+          "text": "Mulrooney and colleagues challenge sample selection, late/nonbasal dates and probability methods; Wilmshurst and colleagues defend conservative reliability criteria and say the corrected supplementary table does not change their analysis.",
+          "status": "disputed",
+          "explanation": "The dispute concerns precision and what the curves date; both sides still support a substantially later chronology than older long models.",
+          "support": [
+            {
+              "sourceId": "mulrooney2011-critique",
+              "locator": "Letter, methodological critique",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            },
+            {
+              "sourceId": "wilmshurst2011-reply",
+              "locator": "Reply, corrected table and three methodological issues",
+              "stance": "challenges",
+              "note": "Named response retained alongside the critique."
+            }
+          ]
+        },
+        {
+          "id": "regional-map-anchor",
+          "text": "The map annotation locates the broad central East Polynesian context; its position does not identify an archaeological settlement.",
+          "status": "well-supported",
+          "explanation": "Geographic reference sources support the regional association only. Schematic placement is an editorial visualization choice and carries no archaeological precision.",
+          "support": [
+            {
+              "sourceId": "nasa-society-geography",
+              "locator": "Official geographic-name and photo-center metadata",
+              "stance": "context",
+              "note": "NASA metadata places a Society Islands image around151.5°W16.5°S. Rounded151°W17°S serves only as a central East Polynesian annotation for the broader regional synthesis/network."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "wilmshurst2011-polynesia",
+          "authors": "Janet M. Wilmshurst; Terry L. Hunt; Carl P. Lipo; Atholl J. Anderson",
+          "title": "High-precision radiocarbon dating shows recent and rapid initial human colonization of East Polynesia",
+          "year": 2011,
+          "venue": "PNAS 108(5):1815–1820",
+          "url": "https://doi.org/10.1073/pnas.1015876108",
+          "doi": "10.1073/pnas.1015876108",
+          "access": "Indexed primary PMC full text inspected: abstract, methods, results and corrected-supplement notice; all original assays not independently audited. Online 27 December 2010, issue 1 February 2011.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "mulrooney2011-critique",
+          "authors": "Mara A. Mulrooney; Simon H. Bickler; Melinda S. Allen; Thegn N. Ladefoged",
+          "title": "High-precision dating of colonization and settlement in East Polynesia",
+          "year": 2011,
+          "venue": "PNAS 108(23):E192–E194",
+          "url": "https://doi.org/10.1073/pnas.1100447108",
+          "doi": "10.1073/pnas.1100447108",
+          "access": "Primary open PMC letter read in full.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "wilmshurst2011-reply",
+          "authors": "Janet M. Wilmshurst; Terry L. Hunt; Carl P. Lipo; Atholl J. Anderson",
+          "title": "Reply to Mulrooney et al.: Accepting lower precision radiocarbon dates results in longer colonization chronologies for East Polynesia",
+          "year": 2011,
+          "venue": "PNAS 108(23):E195",
+          "url": "https://doi.org/10.1073/pnas.1101348108",
+          "doi": "10.1073/pnas.1101348108",
+          "access": "Primary open PMC reply read in full.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "dye2011-hawaii",
+          "authors": "Thomas S. Dye",
+          "title": "A model-based age estimate for Polynesian colonization of Hawaiʻi",
+          "year": 2011,
+          "venue": "Archaeology in Oceania 46:130–138",
+          "url": "https://doi.org/10.1002/j.1834-4453.2011.tb00107.x",
+          "doi": "10.1002/j.1834-4453.2011.tb00107.x",
+          "access": "Author-hosted published PDF inspected via web extraction: introduction, Fig. 1, model and Bellows application; no independent recalibration.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "athens2014-hawaii",
+          "authors": "J. Stephen Athens; Timothy M. Rieth; Thomas S. Dye",
+          "title": "A Paleoenvironmental and Archaeological Model-Based Age Estimate for the Colonization of Hawaiʻi",
+          "year": 2014,
+          "venue": "American Antiquity 79(1):144–155",
+          "url": "https://doi.org/10.7183/0002-7316.79.1.144",
+          "doi": "10.7183/0002-7316.79.1.144",
+          "access": "Author-hosted published PDF inspected via web extraction: abstract, model discussion and conclusion; no independent recalibration.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "nasa-society-geography",
+          "authors": "NASA Johnson Space Center, Earth Science and Remote Sensing Unit",
+          "title": "Astronaut photograph ISS006-E-22132: Society Islands",
+          "year": 2003,
+          "venue": "NASA Gateway to Astronaut Photography of Earth",
+          "url": "https://esrs.jsc.nasa.gov/SearchPhotos/photo.pl?frame=22132&mission=ISS006&roll=E",
+          "access": "Official image metadata inspected: photo center16.5°S151.5°W, named Huahine/Raiatea/Bora-Bora/Tupai. Geography only; not an archaeological site coordinate."
+        }
+      ],
+      "review": {
+        "summary": "This record retains a source-specific result and its interpretive limits. Regional models and indirect indicators remain distinct from directly dated settlement evidence.",
+        "limitations": "No resident census, precise landing point or excavated site coordinate is inferred. Published model intervals reflect the assumptions of their individual analyses.",
+        "discussion": "Named source disagreements are recorded explicitly; shared support for a broad late chronology does not erase differences about first arrival and established settlement.",
+        "provenance": "Reviewed from the user’s Hawaiʻi export and primary sources at the access scopes stated in each citation.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Source-intake review only; no website build, push or deployment.",
+          "2026-10-28: Added explicitly schematic regional geography anchor; no exact site coordinate or geographic extent asserted."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "pacific-ioannidis2021-network",
+      "revision": 1,
+      "type": "event",
+      "title": "Polynesia: genomic founder network across sampled islands",
+      "culture": {
+        "id": "regional-synthesis",
+        "name": "Regional archaeological syntheses",
+        "kind": "unknown",
+        "color": "#58c8bd"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "Model dates vary among inferred population divergences; no composite interval or direct Hawaiʻi date assigned",
+        "method": "Ancestry-specific modern genomic network and shared-haplotype divergence modeling",
+        "interpretation": "No closed, independently supported calendar interval is assigned."
+      },
+      "overlay": {
+        "kind": "population-history",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -151,
+            -17
+          ]
+        },
+        "precision": "Illustrative central East Polynesian regional anchor only; not a site, landing point, sampled-person location, route or territorial/probability boundary.",
+        "provenance": "NASA metadata places a Society Islands image around151.5°W16.5°S. Rounded151°W17°S serves only as a central East Polynesian annotation for the broader regional synthesis/network. Coordinates are deliberately rounded/editorial annotation positions for viewing the cited regional evidence."
+      },
+      "claims": [
+        {
+          "id": "serial-founder-network",
+          "text": "The study infers a serial-founder network from Samoa through Rarotonga and the Societies, branching through other sampled East Polynesian islands.",
+          "status": "under discussion",
+          "explanation": "Modern ancestry patterns support a model of branching population history, not exact sailed tracks, ethnic replacements or a complete list of intermediate islands.",
+          "support": [
+            {
+              "sourceId": "ioannidis2021-polynesia",
+              "locator": "Abstract; Figs. 1–2; Results",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        },
+        {
+          "id": "divergence-dates",
+          "text": "The inferred Rarotonga date is around 830 CE; the authors caution that inter-island divergence dates are termini ante quem for settlement.",
+          "status": "under discussion",
+          "explanation": "Recent exchange can shift divergence estimates; 30-year generations and founder assumptions matter. No unsupported uncertainty padding is added.",
+          "support": [
+            {
+              "sourceId": "ioannidis2021-polynesia",
+              "locator": "Dating; proposed chronology p. 4; Fig. 2",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        },
+        {
+          "id": "sampling-limit",
+          "text": "Hawaiʻi is not one of the sampled island populations in this network.",
+          "status": "well-supported",
+          "explanation": "The paper cannot directly establish the Hawaiian colonists’ source island or arrival date. Linguistic Taiwan origins are background citations, not a direct inference from this network.",
+          "support": [
+            {
+              "sourceId": "ioannidis2021-polynesia",
+              "locator": "Fig. 1 sample labels; Fig. 2 network; discussion of future studies",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        },
+        {
+          "id": "regional-map-anchor",
+          "text": "The map annotation locates the broad central East Polynesian context; its position does not identify an archaeological settlement.",
+          "status": "well-supported",
+          "explanation": "Geographic reference sources support the regional association only. Schematic placement is an editorial visualization choice and carries no archaeological precision.",
+          "support": [
+            {
+              "sourceId": "nasa-society-geography",
+              "locator": "Official geographic-name and photo-center metadata",
+              "stance": "context",
+              "note": "NASA metadata places a Society Islands image around151.5°W16.5°S. Rounded151°W17°S serves only as a central East Polynesian annotation for the broader regional synthesis/network."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "ioannidis2021-polynesia",
+          "authors": "Alexander G. Ioannidis; Javier Blanco-Portillo; Karla Sandoval; et al.",
+          "title": "Paths and timings of the peopling of Polynesia inferred from genomic networks",
+          "year": 2021,
+          "venue": "Nature 597:522–526",
+          "url": "https://doi.org/10.1038/s41586-021-03902-8",
+          "doi": "10.1038/s41586-021-03902-8",
+          "access": "Author-associated archived accepted/proof PDF inspected in memory: main text, Figs. 1–2 and dating limitations. Publisher metadata verified; supplementary model tables not independently audited.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "nasa-society-geography",
+          "authors": "NASA Johnson Space Center, Earth Science and Remote Sensing Unit",
+          "title": "Astronaut photograph ISS006-E-22132: Society Islands",
+          "year": 2003,
+          "venue": "NASA Gateway to Astronaut Photography of Earth",
+          "url": "https://esrs.jsc.nasa.gov/SearchPhotos/photo.pl?frame=22132&mission=ISS006&roll=E",
+          "access": "Official image metadata inspected: photo center16.5°S151.5°W, named Huahine/Raiatea/Bora-Bora/Tupai. Geography only; not an archaeological site coordinate."
+        }
+      ],
+      "review": {
+        "summary": "This record retains a source-specific result and its interpretive limits. Regional models and indirect indicators remain distinct from directly dated settlement evidence.",
+        "limitations": "No resident census, precise landing point or excavated site coordinate is inferred. Published model intervals reflect the assumptions of their individual analyses.",
+        "discussion": "Named source disagreements are recorded explicitly; shared support for a broad late chronology does not erase differences about first arrival and established settlement.",
+        "provenance": "Reviewed from the user’s Hawaiʻi export and primary sources at the access scopes stated in each citation.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Source-intake review only; no website build, push or deployment.",
+          "2026-10-28: Added explicitly schematic regional geography anchor; no exact site coordinate or geographic extent asserted."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "pacific-sear2020-atiu",
+      "revision": 1,
+      "type": "event",
+      "title": "Atiu: early human-or-pig indicators and later disturbance",
+      "culture": {
+        "id": "regional-synthesis",
+        "name": "Regional archaeological syntheses",
+        "kind": "unknown",
+        "color": "#58c8bd"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 800,
+        "end": 1004,
+        "approximate": true,
+        "original": "Initial fecal-marker depth interval: AD800–1004(2σ); Table1 individual horizons800–966 and828–1004",
+        "method": "Bayesian sediment age-depth model constrained by short-lived materials",
+        "interpretation": "Published envelope for first pig/human indicators; not a founding date or proof of continuous settlement throughout this range."
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -158,
+            -20
+          ]
+        },
+        "precision": "Illustrative Atiu/Southern Cook Islands regional anchor only; not a site, landing point, sampled-person location, route or territorial/probability boundary.",
+        "provenance": "Sear et al. publish Lake Te Roto20°0′34.99″S158°7′24.83″W. Coordinates rounded to158°W20°S for an island-region overlay, not a settlement point or exact coring coordinate. Coordinates are deliberately rounded/editorial annotation positions for viewing the cited regional evidence."
+      },
+      "claims": [
+        {
+          "id": "early-indicators",
+          "text": "Atiu’s initial pig and/or human fecal-marker interval dates to800–1004CE(2σ); later proxy changes distinguish colonization and establishment stages.",
+          "status": "under discussion",
+          "explanation": "These are indirect indicators and source-modeled stages, not a directly dated Hawaiian landing or proof of uninterrupted permanent residence.",
+          "support": [
+            {
+              "sourceId": "sear2020-polynesia",
+              "locator": "Abstract; Atiu environmental sequence",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            },
+            {
+              "sourceId": "sear2020-correction",
+              "locator": "Correction",
+              "stance": "context",
+              "note": "Adds Emma Pearson and acknowledgment; does not revise chronology."
+            }
+          ]
+        },
+        {
+          "id": "regional-map-anchor",
+          "text": "The map annotation locates the broad Atiu/Southern Cook Islands context; its position does not identify an archaeological settlement.",
+          "status": "well-supported",
+          "explanation": "Geographic reference sources support the regional association only. Schematic placement is an editorial visualization choice and carries no archaeological precision.",
+          "support": [
+            {
+              "sourceId": "sear2020-polynesia",
+              "locator": "Study Sites: Lake Te Roto coordinates",
+              "stance": "context",
+              "note": "Sear et al. publish Lake Te Roto20°0′34.99″S158°7′24.83″W. Coordinates rounded to158°W20°S for an island-region overlay, not a settlement point or exact coring coordinate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "sear2020-polynesia",
+          "authors": "David A. Sear; Melinda S. Allen; Jonathan D. Hassall; Ashley E. Maloney; et al., including Emma Pearson (corrected authorship)",
+          "title": "Human settlement of East Polynesia earlier, incremental, and coincident with prolonged South Pacific drought",
+          "year": 2020,
+          "venue": "PNAS 117(16):8813–8819",
+          "url": "https://doi.org/10.1073/pnas.1920975117",
+          "doi": "10.1073/pnas.1920975117",
+          "access": "Primary PMC full text now inspected: Study Sites, Table1, anthropogenic signatures, climate and discussion. No independent recalibration. Authorship correction inspected.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "sear2020-correction",
+          "authors": "David A. Sear et al.",
+          "title": "Correction for Sear et al., Human settlement of East Polynesia earlier, incremental, and coincident with prolonged South Pacific drought",
+          "year": 2020,
+          "venue": "PNAS 117(24):13846",
+          "url": "https://doi.org/10.1073/pnas.2008788117",
+          "doi": "10.1073/pnas.2008788117",
+          "access": "Open institutional deposited correction read: adds Emma Pearson, contributions and grant acknowledgment; no chronological-results correction.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "This record retains a source-specific result and its interpretive limits. Regional models and indirect indicators remain distinct from directly dated settlement evidence.",
+        "limitations": "No resident census, precise landing point or excavated site coordinate is inferred. Published model intervals reflect the assumptions of their individual analyses.",
+        "discussion": "Named source disagreements are recorded explicitly; shared support for a broad late chronology does not erase differences about first arrival and established settlement.",
+        "provenance": "Reviewed from the user’s Hawaiʻi export and primary sources at the access scopes stated in each citation.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Source-intake review only; no website build, push or deployment.",
+          "2026-10-28: Added explicitly schematic regional geography anchor; no exact site coordinate or geographic extent asserted."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "pacific-sear2020-drought",
+      "revision": 1,
+      "type": "event",
+      "title": "Southern Pacific: drought as a proposed dispersal pressure",
+      "culture": {
+        "id": "regional-synthesis",
+        "name": "Regional archaeological syntheses",
+        "kind": "unknown",
+        "color": "#58c8bd"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 923,
+        "end": 1058,
+        "approximate": true,
+        "original": "Atiu driest interval around AD 990, AD 923–1058 (2σ)",
+        "method": "Hydroclimate biomarker reconstruction and sediment age model",
+        "interpretation": "Reported dated evidence envelope; neither an exact founding date nor proof of continuous occupation throughout the range."
+      },
+      "overlay": {
+        "kind": "environment",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -158,
+            -20
+          ]
+        },
+        "precision": "Illustrative Atiu/Southern Cook Islands regional anchor only; not a site, landing point, sampled-person location, route or territorial/probability boundary.",
+        "provenance": "Sear et al. publish Lake Te Roto20°0′34.99″S158°7′24.83″W. Coordinates rounded to158°W20°S for an island-region overlay, not a settlement point or exact coring coordinate. Coordinates are deliberately rounded/editorial annotation positions for viewing the cited regional evidence."
+      },
+      "claims": [
+        {
+          "id": "hydroclimate-context",
+          "text": "Atiu’s driest modeled interval is 923–1058 CE (2σ); western source-region drought overlaps early eastward exploration.",
+          "status": "under discussion",
+          "explanation": "The authors propose water and agricultural stress as contributory pressures. Temporal overlap does not establish the motives of every voyage or prove a specific migration route.",
+          "support": [
+            {
+              "sourceId": "sear2020-polynesia",
+              "locator": "The Climatic Context of Eastward Dispersals",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            },
+            {
+              "sourceId": "sear2020-correction",
+              "locator": "Correction, authorship/contributions/acknowledgments",
+              "stance": "context",
+              "note": "Adds Emma Pearson, contributions and grant acknowledgment; no change to climate dates or geographic results."
+            }
+          ]
+        },
+        {
+          "id": "regional-map-anchor",
+          "text": "The map annotation locates the broad Atiu/Southern Cook Islands context; its position does not identify an archaeological settlement.",
+          "status": "well-supported",
+          "explanation": "Geographic reference sources support the regional association only. Schematic placement is an editorial visualization choice and carries no archaeological precision.",
+          "support": [
+            {
+              "sourceId": "sear2020-polynesia",
+              "locator": "Study Sites: Lake Te Roto coordinates",
+              "stance": "context",
+              "note": "Sear et al. publish Lake Te Roto20°0′34.99″S158°7′24.83″W. Coordinates rounded to158°W20°S for an island-region overlay, not a settlement point or exact coring coordinate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "sear2020-polynesia",
+          "authors": "David A. Sear; Melinda S. Allen; Jonathan D. Hassall; Ashley E. Maloney; et al., including Emma Pearson (corrected authorship)",
+          "title": "Human settlement of East Polynesia earlier, incremental, and coincident with prolonged South Pacific drought",
+          "year": 2020,
+          "venue": "PNAS 117(16):8813–8819",
+          "url": "https://doi.org/10.1073/pnas.1920975117",
+          "doi": "10.1073/pnas.1920975117",
+          "access": "Primary abstract, indexed PMC chronology and climate passages, institutional published-version metadata inspected. No independent sediment age-model recalibration. Authorship correction inspected.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "sear2020-correction",
+          "authors": "David A. Sear et al.",
+          "title": "Correction for Sear et al., Human settlement of East Polynesia earlier, incremental, and coincident with prolonged South Pacific drought",
+          "year": 2020,
+          "venue": "PNAS 117(24):13846",
+          "url": "https://doi.org/10.1073/pnas.2008788117",
+          "doi": "10.1073/pnas.2008788117",
+          "access": "Open institutional deposited correction read: adds Emma Pearson, contributions and grant acknowledgment; no chronological-results correction.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "This record retains a source-specific result and its interpretive limits. Regional models and indirect indicators remain distinct from directly dated settlement evidence.",
+        "limitations": "No resident census, precise landing point or excavated site coordinate is inferred. Published model intervals reflect the assumptions of their individual analyses.",
+        "discussion": "Named source disagreements are recorded explicitly; shared support for a broad late chronology does not erase differences about first arrival and established settlement.",
+        "provenance": "Reviewed from the user’s Hawaiʻi export and primary sources at the access scopes stated in each citation.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Source-intake review only; no website build, push or deployment.",
+          "2026-10-28: Added explicitly schematic regional geography anchor; no exact site coordinate or geographic extent asserted."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "pacific-allen2014-marquesas",
+      "revision": 1,
+      "type": "event",
+      "title": "Marquesas: dated settlement, regional contact and Hawaiian homeland hypothesis",
+      "culture": {
+        "id": "regional-synthesis",
+        "name": "Regional archaeological syntheses",
+        "kind": "unknown",
+        "color": "#58c8bd"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "Short-lived dates secure 13th-century presence; other samples suggest 11th–12th centuries; less secure 10th–11th-century indications",
+        "method": "Source-ranked chronology review; no precise colonization interval assigned",
+        "interpretation": "No closed, independently supported calendar interval is assigned."
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -140,
+            -9
+          ]
+        },
+        "precision": "Illustrative Marquesas regional anchor only; not a site, landing point, sampled-person location, route or territorial/probability boundary.",
+        "provenance": "NASA metadata places the Marquesas photograph center at140°W9.4°S. Whole-degree140°W9°S is a regional annotation, not any excavated site. Coordinates are deliberately rounded/editorial annotation positions for viewing the cited regional evidence."
+      },
+      "claims": [
+        {
+          "id": "graded-chronology",
+          "text": "Allen distinguishes secure thirteenth-century short-lived dates from probable eleventh–twelfth-century colonization and less secure earlier suggestions.",
+          "status": "under discussion",
+          "explanation": "Sample reliability levels are preserved rather than merged into one broad settled interval.",
+          "support": [
+            {
+              "sourceId": "allen2014-marquesas",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        },
+        {
+          "id": "homeland-and-contact",
+          "text": "Evidence of regional contact roughly in the twelfth–fifteenth centuries keeps a Marquesan departure point for Hawaiʻi plausible, with substantial uncertainties.",
+          "status": "under discussion",
+          "explanation": "Contact and chronology make a homeland hypothesis possible; they do not identify the birthplace or exclusive source of the first Hawaiian settlers.",
+          "support": [
+            {
+              "sourceId": "allen2014-marquesas",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        },
+        {
+          "id": "regional-map-anchor",
+          "text": "The map annotation locates the broad Marquesas context; its position does not identify an archaeological settlement.",
+          "status": "well-supported",
+          "explanation": "Geographic reference sources support the regional association only. Schematic placement is an editorial visualization choice and carries no archaeological precision.",
+          "support": [
+            {
+              "sourceId": "nasa-marquesas-geography",
+              "locator": "Official photo-center and geographic-name metadata",
+              "stance": "context",
+              "note": "NASA metadata places the Marquesas photograph center at140°W9.4°S. Whole-degree140°W9°S is a regional annotation, not any excavated site."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "allen2014-marquesas",
+          "authors": "Melinda S. Allen",
+          "title": "Marquesan Colonisation Chronologies and Postcolonisation Interaction: Implications for Hawaiian origins and the ‘Marquesan Homeland’ hypothesis",
+          "year": 2014,
+          "venue": "Journal of Pacific Archaeology 5(2):1–17",
+          "url": "https://doi.org/10.70460/jpa.v5i2.137",
+          "doi": "10.70460/jpa.v5i2.137",
+          "access": "Abstract only: primary journal abstract and metadata inspected; full archaeological sample and geochemical tables not audited.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "nasa-marquesas-geography",
+          "authors": "NASA Johnson Space Center, Earth Science and Remote Sensing Unit",
+          "title": "Astronaut photograph ISS055-E-70941: Marquesas Islands",
+          "year": 2018,
+          "venue": "NASA Gateway to Astronaut Photography of Earth",
+          "url": "https://esrs.jsc.nasa.gov/SearchPhotos/photo.pl?frame=70941&mission=ISS055&roll=E",
+          "access": "Official image metadata inspected: photo center9.4°S140.0°W. Geography only; no archaeological coordinate inferred."
+        }
+      ],
+      "review": {
+        "summary": "This record retains a source-specific result and its interpretive limits. Regional models and indirect indicators remain distinct from directly dated settlement evidence.",
+        "limitations": "No resident census, precise landing point or excavated site coordinate is inferred. Published model intervals reflect the assumptions of their individual analyses.",
+        "discussion": "Named source disagreements are recorded explicitly; shared support for a broad late chronology does not erase differences about first arrival and established settlement.",
+        "provenance": "Reviewed from the user’s Hawaiʻi export and primary sources at the access scopes stated in each citation.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Source-intake review only; no website build, push or deployment.",
+          "2026-10-28: Added explicitly schematic regional geography anchor; no exact site coordinate or geographic extent asserted."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "pacific-faahia2019-basal-dates",
+      "revision": 1,
+      "type": "event",
+      "title": "Faʻahia, Huahine: lowest cultural layer and settlement chronology",
+      "culture": {
+        "id": "regional-synthesis",
+        "name": "Regional archaeological syntheses",
+        "kind": "unknown",
+        "color": "#58c8bd"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1050,
+        "end": 1160,
+        "approximate": true,
+        "original": "About AD 1050–1160, interpretation of 12 short-lived radiocarbon determinations",
+        "method": "Radiocarbon analysis of renewed 2007 excavations, lowest cultural layer",
+        "interpretation": "Reported dated evidence envelope; neither an exact founding date nor proof of continuous occupation throughout the range."
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -151,
+            -17
+          ]
+        },
+        "precision": "Illustrative Huahine/Society Islands regional anchor only; not a site, landing point, sampled-person location, route or territorial/probability boundary.",
+        "provenance": "NASA image includes Huahine in the Society Islands. Rounded151°W17°S is an archipelago reference, not the excavated Faʻahia site. Coordinates are deliberately rounded/editorial annotation positions for viewing the cited regional evidence."
+      },
+      "claims": [
+        {
+          "id": "basal-occupation",
+          "text": "Twelve short-lived determinations from the lowest cultural layer place initial occupation in the investigated Faʻahia area around 1050–1160 CE.",
+          "status": "well-supported",
+          "explanation": "The excavation was limited. This is not an exact founding date for all Huahine or a direct Hawaiian departure event.",
+          "support": [
+            {
+              "sourceId": "anderson2019-faahia",
+              "locator": "Abstract; new excavation chronology",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        },
+        {
+          "id": "regional-map-anchor",
+          "text": "The map annotation locates the broad Huahine/Society Islands context; its position does not identify an archaeological settlement.",
+          "status": "well-supported",
+          "explanation": "Geographic reference sources support the regional association only. Schematic placement is an editorial visualization choice and carries no archaeological precision.",
+          "support": [
+            {
+              "sourceId": "nasa-society-geography",
+              "locator": "Official geographic-name, Huahine feature and photo-center metadata",
+              "stance": "context",
+              "note": "NASA image includes Huahine in the Society Islands. Rounded151°W17°S is an archipelago reference, not the excavated Faʻahia site."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "anderson2019-faahia",
+          "authors": "Atholl J. Anderson; Eric Conte; Ian Smith; Katherine Szabo",
+          "title": "New excavations at Fa’ahia (Huahine, Society Islands) and chronologies of central East Polynesian colonization",
+          "year": 2019,
+          "venue": "Journal of Pacific Archaeology 10(1):1–14",
+          "url": "https://doi.org/10.70460/jpa.v10i1.279",
+          "doi": "10.70460/jpa.v10i1.279",
+          "access": "Primary journal abstract and indexed published PDF chronology discussion inspected; no independent recalibration or verified public site coordinate.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "nasa-society-geography",
+          "authors": "NASA Johnson Space Center, Earth Science and Remote Sensing Unit",
+          "title": "Astronaut photograph ISS006-E-22132: Society Islands",
+          "year": 2003,
+          "venue": "NASA Gateway to Astronaut Photography of Earth",
+          "url": "https://esrs.jsc.nasa.gov/SearchPhotos/photo.pl?frame=22132&mission=ISS006&roll=E",
+          "access": "Official image metadata inspected: photo center16.5°S151.5°W, named Huahine/Raiatea/Bora-Bora/Tupai. Geography only; not an archaeological site coordinate."
+        }
+      ],
+      "review": {
+        "summary": "This record retains a source-specific result and its interpretive limits. Regional models and indirect indicators remain distinct from directly dated settlement evidence.",
+        "limitations": "No resident census, precise landing point or excavated site coordinate is inferred. Published model intervals reflect the assumptions of their individual analyses.",
+        "discussion": "Named source disagreements are recorded explicitly; shared support for a broad late chronology does not erase differences about first arrival and established settlement.",
+        "provenance": "Reviewed from the user’s Hawaiʻi export and primary sources at the access scopes stated in each citation.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Source-intake review only; no website build, push or deployment.",
+          "2026-10-28: Added explicitly schematic regional geography anchor; no exact site coordinate or geographic extent asserted."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "hawaii-graves1995-settlement-process",
+      "revision": 1,
+      "type": "event",
+      "title": "Hawaiʻi: discovery, colonization and establishment as separate processes",
+      "culture": {
+        "id": "regional-synthesis",
+        "name": "Regional archaeological syntheses",
+        "kind": "unknown",
+        "color": "#58c8bd"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "Conceptual settlement models; no calendar date adopted from this abstract",
+        "method": "Source-specific chronology or dating limitation",
+        "interpretation": "No closed, independently supported calendar interval is assigned."
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -157,
+            21
+          ]
+        },
+        "precision": "Illustrative main Hawaiian Islands regional anchor only; not a site, landing point, sampled-person location, route or territorial/probability boundary.",
+        "provenance": "NOAA map distinguishes the main island chain; chosen whole-degree anchor157°W21°N is regional, not a landing point. Coordinates are deliberately rounded/editorial annotation positions for viewing the cited regional evidence."
+      },
+      "claims": [
+        {
+          "id": "separate-processes",
+          "text": "Graves and Addison distinguish discovery, colonization and establishment, and test models with different lags between them.",
+          "status": "under discussion",
+          "explanation": "The framework helps compare proxies; the abstract does not substantiate the export’s claim of Hawaiian settlement 5000 years ago.",
+          "support": [
+            {
+              "sourceId": "graves-addison1995-hawaii",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        },
+        {
+          "id": "regional-map-anchor",
+          "text": "The map annotation locates the broad main Hawaiian Islands context; its position does not identify an archaeological settlement.",
+          "status": "well-supported",
+          "explanation": "Geographic reference sources support the regional association only. Schematic placement is an editorial visualization choice and carries no archaeological precision.",
+          "support": [
+            {
+              "sourceId": "noaa-hawaiian-archipelago-map",
+              "locator": "Fig.1.1, printed p.3",
+              "stance": "context",
+              "note": "NOAA map distinguishes the main island chain; chosen whole-degree anchor157°W21°N is regional, not a landing point."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graves-addison1995-hawaii",
+          "authors": "Michael W. Graves; David J. Addison",
+          "title": "The Polynesian settlement of the Hawaiian Archipelago: Integrating models and methods in archaeological interpretation",
+          "year": 1995,
+          "venue": "World Archaeology 26(3):380–399",
+          "url": "https://doi.org/10.1080/00438243.1995.9980283",
+          "doi": "10.1080/00438243.1995.9980283",
+          "access": "Abstract only: original publisher abstract and issue metadata inspected; export’s 5000-year claim not verified.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "noaa-hawaiian-archipelago-map",
+          "authors": "NOAA Pacific Islands Fisheries Science Center",
+          "title": "The Hawaiian Archipelago (Figure 1.1)",
+          "year": null,
+          "venue": "NOAA public technical-memorandum map, repository item3383",
+          "url": "https://repository.library.noaa.gov/view/noaa/3383/noaa_3383_DS1.pdf",
+          "access": "Primary NOAA map and coordinate-grid labels inspected via indexed PDF extraction, printed p.3/PDF p.14. Geographic reference only; animal study results are not evidence of human occupation."
+        }
+      ],
+      "review": {
+        "summary": "This record retains a source-specific result and its interpretive limits. Regional models and indirect indicators remain distinct from directly dated settlement evidence.",
+        "limitations": "No resident census, precise landing point or excavated site coordinate is inferred. Published model intervals reflect the assumptions of their individual analyses.",
+        "discussion": "Named source disagreements are recorded explicitly; shared support for a broad late chronology does not erase differences about first arrival and established settlement.",
+        "provenance": "Reviewed from the user’s Hawaiʻi export and primary sources at the access scopes stated in each citation.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Source-intake review only; no website build, push or deployment.",
+          "2026-10-28: Added explicitly schematic regional geography anchor; no exact site coordinate or geographic extent asserted."
+        ],
+        "relatedIds": []
+      }
+    }
+  ],
+  "updates": [],
+  "sourceRegister": [
+    {
+      "inputRows": [
+        1
+      ],
+      "source": {
+        "id": "athens2014-hawaii",
+        "authors": "J. Stephen Athens; Timothy M. Rieth; Thomas S. Dye",
+        "title": "A Paleoenvironmental and Archaeological Model-Based Age Estimate for the Colonization of Hawaiʻi",
+        "year": 2014,
+        "venue": "American Antiquity 79(1):144–155",
+        "url": "https://doi.org/10.7183/0002-7316.79.1.144",
+        "doi": "10.7183/0002-7316.79.1.144",
+        "access": "Author-hosted published PDF inspected via web extraction: abstract, model discussion and conclusion; no independent recalibration.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "incorporated",
+      "note": "95% and 67% HPDs retained separately, without certain/core timeline bounds."
+    },
+    {
+      "inputRows": [
+        2
+      ],
+      "source": {
+        "id": "allen2014-marquesas",
+        "authors": "Melinda S. Allen",
+        "title": "Marquesan Colonisation Chronologies and Postcolonisation Interaction: Implications for Hawaiian origins and the ‘Marquesan Homeland’ hypothesis",
+        "year": 2014,
+        "venue": "Journal of Pacific Archaeology 5(2):1–17",
+        "url": "https://doi.org/10.70460/jpa.v5i2.137",
+        "doi": "10.70460/jpa.v5i2.137",
+        "access": "Abstract only: primary journal abstract and metadata inspected; full archaeological sample and geochemical tables not audited.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "incorporated",
+      "note": "Source-ranked Marquesan dates and homeland uncertainty retained."
+    },
+    {
+      "inputRows": [
+        3
+      ],
+      "source": {
+        "id": "wilmshurst2011-polynesia",
+        "authors": "Janet M. Wilmshurst; Terry L. Hunt; Carl P. Lipo; Atholl J. Anderson",
+        "title": "High-precision radiocarbon dating shows recent and rapid initial human colonization of East Polynesia",
+        "year": 2011,
+        "venue": "PNAS 108(5):1815–1820",
+        "url": "https://doi.org/10.1073/pnas.1015876108",
+        "doi": "10.1073/pnas.1015876108",
+        "access": "Indexed primary PMC full text inspected: abstract, methods, results and corrected-supplement notice; all original assays not independently audited. Online 27 December 2010, issue 1 February 2011.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "incorporated",
+      "note": "Online 2010, issue 2011; critique and response added. No Australia/NZ records generated."
+    },
+    {
+      "inputRows": [
+        4
+      ],
+      "source": {
+        "id": "ioannidis2021-polynesia",
+        "authors": "Alexander G. Ioannidis; Javier Blanco-Portillo; Karla Sandoval; et al.",
+        "title": "Paths and timings of the peopling of Polynesia inferred from genomic networks",
+        "year": 2021,
+        "venue": "Nature 597:522–526",
+        "url": "https://doi.org/10.1038/s41586-021-03902-8",
+        "doi": "10.1038/s41586-021-03902-8",
+        "access": "Author-associated archived accepted/proof PDF inspected in memory: main text, Figs. 1–2 and dating limitations. Publisher metadata verified; supplementary model tables not independently audited.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "incorporated-canonical",
+      "note": "One canonical genomic-network record; Hawaiʻi absent from sampled populations. Deep linguistic origin statements are background literature, not direct proof of one ethnic migration route."
+    },
+    {
+      "inputRows": [
+        5
+      ],
+      "source": {
+        "id": "petersen2019-review",
+        "authors": "Glenn Petersen",
+        "title": "Review of On the Road of the Winds: An Archaeological History of the Pacific Islands before European Contact",
+        "year": 2019,
+        "venue": "Pacific Affairs",
+        "access": "Official journal review inspected; not primary archaeological chronology.",
+        "url": "https://pacificaffairs.ubc.ca/book-reviews/on-the-road-of-the-winds-an-archaeological-history-of-the-pacific-islands-before-european-contact-by-patrick-vinton-kirch/"
+      },
+      "disposition": "excluded-as-primary-evidence",
+      "note": "Petersen reviews Patrick Vinton Kirch’s 2017 book; do not attribute that book or primary Pacific excavations to Petersen."
+    },
+    {
+      "inputRows": [
+        6
+      ],
+      "source": {
+        "id": "tice2004-travel",
+        "authors": "Kerry Tice",
+        "title": "Heart of the Aloha State",
+        "year": 2004,
+        "venue": "Healthcare Traveler",
+        "access": "Export metadata only; independent original item not retrieved.",
+        "url": null
+      },
+      "disposition": "excluded-nonresearch",
+      "note": "Healthcare travel article cannot substantiate prehistoric radiocarbon, genomic or linguistic methods."
+    },
+    {
+      "inputRows": [
+        7
+      ],
+      "source": {
+        "id": "brown2015-review",
+        "authors": "Andrew A. Brown",
+        "title": "Review of A Shark Going Inland is My Chief: The Island Civilization of Ancient Hawaiʻi",
+        "year": 2015,
+        "venue": "Book review (venue unresolved)",
+        "access": "Export metadata only; original review not independently retrieved.",
+        "url": null
+      },
+      "disposition": "excluded-as-primary-evidence",
+      "note": "Book review rather than a new excavation or colonization study."
+    },
+    {
+      "inputRows": [
+        8
+      ],
+      "source": {
+        "id": "sear2020-polynesia",
+        "authors": "David A. Sear; Melinda S. Allen; Jonathan D. Hassall; Ashley E. Maloney; et al., including Emma Pearson (corrected authorship)",
+        "title": "Human settlement of East Polynesia earlier, incremental, and coincident with prolonged South Pacific drought",
+        "year": 2020,
+        "venue": "PNAS 117(16):8813–8819",
+        "url": "https://doi.org/10.1073/pnas.1920975117",
+        "doi": "10.1073/pnas.1920975117",
+        "access": "Primary abstract, indexed PMC chronology and climate passages, institutional published-version metadata inspected. No independent sediment age-model recalibration. Authorship correction inspected.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "incorporated",
+      "note": "Atiu proxy observations and drought interpretation separated; correction logged separately."
+    },
+    {
+      "inputRows": [
+        9
+      ],
+      "source": {
+        "id": "dening2007-sea-people",
+        "authors": "Greg Dening",
+        "title": "Sea People of the West",
+        "year": 2007,
+        "venue": "Geographical Review 97(2):288–301",
+        "url": "https://doi.org/10.1111/j.1931-0846.2007.tb00404.x",
+        "doi": "10.1111/j.1931-0846.2007.tb00404.x",
+        "access": "Abstract only: author institutional publication record and abstract inspected.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "historical-context-only",
+      "note": "Narrative reconstruction of Marquesan settlement; not a newly dated landing, resident census or direct Hawaiian source-island identification."
+    },
+    {
+      "inputRows": [
+        10
+      ],
+      "source": {
+        "id": "kanaiaupuni2004-strengths",
+        "authors": "Shawn Malia Kanaʻiaupuni",
+        "title": "Kaʻakālai Kū Kanaka: A Call for Strengths-based Approaches from a Native Hawaiian Perspective",
+        "year": 2004,
+        "venue": "Educational Researcher 33(9):26–32",
+        "url": "https://doi.org/10.3102/0013189X033009026",
+        "doi": "10.3102/0013189X033009026",
+        "access": "Publisher metadata inspected; no primary voyaging experiment or chronology audited.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "excluded-as-archaeological-methods",
+      "note": "Educational perspective is not a primary dating or Hōkūleʻa experiment report. This exclusion concerns the export’s use as archaeological proof, not the value of Indigenous perspectives."
+    },
+    {
+      "inputRows": [
+        11
+      ],
+      "source": {
+        "id": "emory-origin-unresolved",
+        "authors": "Kenneth P. Emory",
+        "title": "Origin of the Hawaiians",
+        "year": 1959,
+        "venue": "Journal of the Polynesian Society 68:29–35",
+        "access": "Bibliographic identity cross-check only: Bishop Museum history confirms a 1959 work of this title. The alleged 2016 item was not independently located.",
+        "url": "https://hbs.bishopmuseum.org/PUBS-ONLINE/pdf/op29p3-22.pdf"
+      },
+      "disposition": "unresolved-edition",
+      "note": "Export year 2016 is unsupported; do not claim modern research or original Hōkūleʻa experiment methods from this unmatched citation."
+    },
+    {
+      "inputRows": [
+        12
+      ],
+      "source": {
+        "id": "dye2011-hawaii",
+        "authors": "Thomas S. Dye",
+        "title": "A model-based age estimate for Polynesian colonization of Hawaiʻi",
+        "year": 2011,
+        "venue": "Archaeology in Oceania 46:130–138",
+        "url": "https://doi.org/10.1002/j.1834-4453.2011.tb00107.x",
+        "doi": "10.1002/j.1834-4453.2011.tb00107.x",
+        "access": "Author-hosted published PDF inspected via web extraction: introduction, Fig. 1, model and Bellows application; no independent recalibration.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "incorporated",
+      "note": "Model variants and Bellows establishment distinct from regional arrival."
+    },
+    {
+      "inputRows": [
+        13
+      ],
+      "source": {
+        "id": "fisher2015-sustainability",
+        "authors": "Scott Fisher",
+        "title": "Hawaiian Culture and Its Foundation in Sustainability",
+        "year": 2015,
+        "venue": "Thinking Like an Island, chapter 1, pp. 7–27",
+        "access": "Official publisher abstract inspected.",
+        "url": "https://doi.org/10.21313/hawaii/9780824847616.003.0002"
+      },
+      "disposition": "context-with-chronological-conflict",
+      "note": "Chapter abstract repeats 300–600 CE arrival; this is a synthesis statement conflicting with later short-chronology models, not new radiocarbon evidence. No new first-arrival record adopted."
+    },
+    {
+      "inputRows": [
+        14
+      ],
+      "source": {
+        "id": "graves-addison1995-hawaii",
+        "authors": "Michael W. Graves; David J. Addison",
+        "title": "The Polynesian settlement of the Hawaiian Archipelago: Integrating models and methods in archaeological interpretation",
+        "year": 1995,
+        "venue": "World Archaeology 26(3):380–399",
+        "url": "https://doi.org/10.1080/00438243.1995.9980283",
+        "doi": "10.1080/00438243.1995.9980283",
+        "access": "Abstract only: original publisher abstract and issue metadata inspected; export’s 5000-year claim not verified.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "incorporated-conceptual",
+      "note": "Process distinction retained; the export’s 5000-year assertion is not supported by inspected abstract."
+    },
+    {
+      "inputRows": [
+        15
+      ],
+      "source": {
+        "id": "anderson2019-faahia",
+        "authors": "Atholl J. Anderson; Eric Conte; Ian Smith; Katherine Szabo",
+        "title": "New excavations at Fa’ahia (Huahine, Society Islands) and chronologies of central East Polynesian colonization",
+        "year": 2019,
+        "venue": "Journal of Pacific Archaeology 10(1):1–14",
+        "url": "https://doi.org/10.70460/jpa.v10i1.279",
+        "doi": "10.70460/jpa.v10i1.279",
+        "access": "Primary journal abstract and indexed published PDF chronology discussion inspected; no independent recalibration or verified public site coordinate.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "incorporated",
+      "note": "Single site-area lowest-layer record, not all Society Islands or direct Hawaiian voyaging."
+    },
+    {
+      "inputRows": [
+        16
+      ],
+      "source": {
+        "id": "jacobeit1963-inventory",
+        "authors": "Wolfgang Jacobeit",
+        "title": "An Inventory of Farming Implements in Museums of the German Democratic Republic",
+        "year": 1963,
+        "venue": "Current Anthropology (export metadata)",
+        "access": "Original item not independently retrieved; no Pacific archaeological evidence inspected.",
+        "url": null
+      },
+      "disposition": "excluded-topic-mismatch",
+      "note": "European farming-implement inventory is mismatched to the export’s Hawaiian/Marquesan homeland assertion; exact bibliographic identity remains unresolved."
+    },
+    {
+      "inputRows": [
+        17
+      ],
+      "source": {
+        "id": "montenegro2016-voyaging",
+        "authors": "Álvaro Montenegro; Richard T. Callaghan; Scott M. Fitzpatrick",
+        "title": "Using seafaring simulations and shortest-hop trajectories to model the prehistoric colonization of Remote Oceania",
+        "year": 2016,
+        "venue": "PNAS",
+        "url": "https://doi.org/10.1073/pnas.1612426113",
+        "doi": "10.1073/pnas.1612426113",
+        "access": "Primary source review delegated to southeast Pacific-origins intake; no independent simulation methods claimed here.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "deferred-overlap",
+      "note": "Southeast agent owns canonical record. Simulation viability differs from evidence that a particular voyage occurred."
+    },
+    {
+      "inputRows": [
+        18
+      ],
+      "source": {
+        "id": "maclennan2017-waves",
+        "authors": "Carol A. MacLennan",
+        "title": "Waves of migration: settlement and creation of the Hawaiian environment",
+        "year": 2017,
+        "venue": "Environmental History of Modern Migrations",
+        "access": "Conference organizer’s official 2017 programme confirms author/topic; chapter methods not independently inspected.",
+        "url": "https://eseh.org/wp-content/uploads/ESEH2017PrintedProgramme.pdf"
+      },
+      "disposition": "historical-context-only",
+      "note": "Broad environmental/historical synthesis not new direct dating of Hawaiian first settlement."
+    },
+    {
+      "inputRows": [
+        19
+      ],
+      "source": {
+        "id": "ioannidis2020-america",
+        "authors": "Alexander G. Ioannidis et al.",
+        "title": "Native American gene flow into Polynesia predating Easter Island settlement",
+        "year": 2020,
+        "venue": "Nature",
+        "url": "https://doi.org/10.1038/s41586-020-2487-2",
+        "doi": "10.1038/s41586-020-2487-2",
+        "access": "Primary source review delegated to southeast Pacific-origins intake; no independent model audit claimed here.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "deferred-overlap",
+      "note": "Genomic contact inference does not identify a crop transport event, exact voyage, or direct Hawaiian founding route."
+    },
+    {
+      "inputRows": [
+        20
+      ],
+      "source": {
+        "id": "glick-cycle-migration",
+        "authors": "Clarence E. Glick",
+        "title": "The Cycle of Migration",
+        "year": 2020,
+        "venue": "Sojourners and Settlers: Chinese Migrants in Hawaii",
+        "access": "Export identification; original chapter and edition date not independently verified.",
+        "url": null
+      },
+      "disposition": "excluded-period-mismatch",
+      "note": "Historical Chinese overseas migration is not evidence of prehistoric Polynesian arrival. Original book publication versus electronic reissue remains unresolved."
+    },
+    {
+      "inputRows": [],
+      "source": {
+        "id": "mulrooney2011-critique",
+        "authors": "Mara A. Mulrooney; Simon H. Bickler; Melinda S. Allen; Thegn N. Ladefoged",
+        "title": "High-precision dating of colonization and settlement in East Polynesia",
+        "year": 2011,
+        "venue": "PNAS 108(23):E192–E194",
+        "url": "https://doi.org/10.1073/pnas.1100447108",
+        "doi": "10.1073/pnas.1100447108",
+        "access": "Primary open PMC letter read in full.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "additional-primary-critique",
+      "note": "Named methodological challenge retained in canonical chronology record."
+    },
+    {
+      "inputRows": [],
+      "source": {
+        "id": "wilmshurst2011-reply",
+        "authors": "Janet M. Wilmshurst; Terry L. Hunt; Carl P. Lipo; Atholl J. Anderson",
+        "title": "Reply to Mulrooney et al.: Accepting lower precision radiocarbon dates results in longer colonization chronologies for East Polynesia",
+        "year": 2011,
+        "venue": "PNAS 108(23):E195",
+        "url": "https://doi.org/10.1073/pnas.1101348108",
+        "doi": "10.1073/pnas.1101348108",
+        "access": "Primary open PMC reply read in full.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "additional-primary-response",
+      "note": "Corrected table and defended criteria preserved, rather than declaring false consensus."
+    },
+    {
+      "inputRows": [],
+      "source": {
+        "id": "sear2020-correction",
+        "authors": "David A. Sear et al.",
+        "title": "Correction for Sear et al., Human settlement of East Polynesia earlier, incremental, and coincident with prolonged South Pacific drought",
+        "year": 2020,
+        "venue": "PNAS 117(24):13846",
+        "url": "https://doi.org/10.1073/pnas.2008788117",
+        "doi": "10.1073/pnas.2008788117",
+        "access": "Open institutional deposited correction read: adds Emma Pearson, contributions and grant acknowledgment; no chronological-results correction.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "additional-correction",
+      "note": "Authorship, contributions and funding correction only."
+    },
+    {
+      "inputRows": [],
+      "source": {
+        "id": "noaa-hawaiian-archipelago-map",
+        "authors": "NOAA Pacific Islands Fisheries Science Center",
+        "title": "The Hawaiian Archipelago (Figure 1.1)",
+        "year": null,
+        "venue": "NOAA public technical-memorandum map, repository item3383",
+        "url": "https://repository.library.noaa.gov/view/noaa/3383/noaa_3383_DS1.pdf",
+        "access": "Primary NOAA map and coordinate-grid labels inspected via indexed PDF extraction, printed p.3/PDF p.14. Geographic reference only; animal study results are not evidence of human occupation."
+      },
+      "disposition": "additional-geography-only",
+      "note": "Supports regional map annotation only; no prehistoric claim or exact archaeological site location inferred."
+    },
+    {
+      "inputRows": [],
+      "source": {
+        "id": "nasa-society-geography",
+        "authors": "NASA Johnson Space Center, Earth Science and Remote Sensing Unit",
+        "title": "Astronaut photograph ISS006-E-22132: Society Islands",
+        "year": 2003,
+        "venue": "NASA Gateway to Astronaut Photography of Earth",
+        "url": "https://esrs.jsc.nasa.gov/SearchPhotos/photo.pl?frame=22132&mission=ISS006&roll=E",
+        "access": "Official image metadata inspected: photo center16.5°S151.5°W, named Huahine/Raiatea/Bora-Bora/Tupai. Geography only; not an archaeological site coordinate."
+      },
+      "disposition": "additional-geography-only",
+      "note": "Supports regional map annotation only; no prehistoric claim or exact archaeological site location inferred."
+    },
+    {
+      "inputRows": [],
+      "source": {
+        "id": "nasa-marquesas-geography",
+        "authors": "NASA Johnson Space Center, Earth Science and Remote Sensing Unit",
+        "title": "Astronaut photograph ISS055-E-70941: Marquesas Islands",
+        "year": 2018,
+        "venue": "NASA Gateway to Astronaut Photography of Earth",
+        "url": "https://esrs.jsc.nasa.gov/SearchPhotos/photo.pl?frame=70941&mission=ISS055&roll=E",
+        "access": "Official image metadata inspected: photo center9.4°S140.0°W. Geography only; no archaeological coordinate inferred."
+      },
+      "disposition": "additional-geography-only",
+      "note": "Supports regional map annotation only; no prehistoric claim or exact archaeological site location inferred."
+    }
+  ],
+  "unresolved": [
+    {
+      "topic": "Precise public site mapping",
+      "reason": "Exact public archaeological coordinates for Bellows O18 and Faʻahia remain unverified. Sear publishes a lake coordinate, not an ancient settlement. Broad schematic regional anchors now make the evidence viewable without substituting exact site points."
+    },
+    {
+      "topic": "Genomic network confidence limits",
+      "reason": "Ioannidis 2021 extended model tables and numerical confidence intervals were not independently audited. Point estimates remain in qualified claim text; no padded timeline ranges are invented."
+    },
+    {
+      "topic": "Hawaiian source island",
+      "reason": "Marquesan and Society hypotheses remain alternatives. Neither genomic network sampling nor chronological compatibility identifies an exclusive first Hawaiian homeland."
+    },
+    {
+      "topic": "First visit versus established settlement",
+      "reason": "Biomarkers, archaeological basal layers, site-establishment posteriors and regional colonization models target different events and should not be silently collapsed."
+    },
+    {
+      "topic": "Dye and Athens variants",
+      "reason": "Preserve full model definitions and calibration assumptions if recomputing; 67% and 95% HPDs cannot be exchanged or treated as occupation cores."
+    },
+    {
+      "topic": "Hōkūleʻa experiments",
+      "reason": "No original experimental-voyage report was supplied or independently audited here. Capability experiments can test viability but do not directly date prehistoric arrivals."
+    },
+    {
+      "topic": "Mismatched or unverified bibliography",
+      "reason": "Tice item, Brown review venue, Jacobeit exact identity, alleged Emory2016 edition and Glick electronic/original edition date remain unresolved; no prehistoric claims rely on them."
+    },
+    {
+      "topic": "Agricultural and ecological transformation",
+      "reason": "Broad export assertions about forest clearance, rats, flightless bird extinction and agricultural infrastructure require dedicated source-specific dates and causal studies. No automatic all-island contemporaneity inferred."
+    },
+    {
+      "topic": "Linguistic origin layers",
+      "reason": "Austronesian and Polynesian language relationships must be modeled separately from genetic ancestry, archaeological traditions and named peoples. Ioannidis background citations alone do not date a single Taiwan-to-Hawaiʻi migration."
+    }
+  ],
+  "corrections": [
+    {
+      "input": "Hawaiʻi export genomic sequence",
+      "correction": "Ioannidis 2021 did not sample Hawaiʻi. It cannot directly trace the first Hawaiian colonists or date their arrival."
+    },
+    {
+      "input": "Hawaiʻi export single arrival window",
+      "correction": "Athens2014 940–1130 CE (95% HPD) and 1000–1100 CE (67% HPD), Dye2011 variants, and Wilmshurst2011 1219–1266 CE differ. Preserve source-specific models and methodological debate."
+    },
+    {
+      "input": "Wilmshurst year and precision",
+      "correction": "Online December2010, issue February2011. Regional phase estimates are not precise dates for all islands, and Mulrooney2011 challenges selection/statistics; Wilmshurst2011 reply defends them."
+    },
+    {
+      "input": "Sear2020 location and correction",
+      "correction": "Atiu is in the Southern Cook Islands. Pig/human biomarkers are indirect local indicators rather than direct Hawaiian arrival evidence. Erratum adds Emma Pearson and funding acknowledgment without changing dates."
+    },
+    {
+      "input": "Drought causality",
+      "correction": "Environmental stress is a proposed contributory explanation, not established motive for every voyage or proof of an actual modeled route."
+    },
+    {
+      "input": "Faʻahia chronology",
+      "correction": "About1050–1160 CE concerns the investigated lowest cultural layer and 12 short-lived determinations, not every Society Island or a known Hawaiian departure event."
+    },
+    {
+      "input": "Marquesan homeland table",
+      "correction": "Allen separates secure, probable and less-secure chronology evidence and retains homeland uncertainty; do not declare Marquesan origin proven."
+    },
+    {
+      "input": "Graves1995 result",
+      "correction": "The inspected abstract supports distinct settlement-process models, not Hawaiian settlement5000years ago."
+    },
+    {
+      "input": "Petersen/Brown citations",
+      "correction": "These are book reviews; Petersen2019 is not the author of Kirch’s archaeological history, and neither review is a new primary dating program."
+    },
+    {
+      "input": "Tice/Jacobeit/Kanaʻiaupuni citations",
+      "correction": "Travel writing, German implement inventory and an education perspective do not provide the prehistoric archaeology/experimental methods assigned to them by the export."
+    },
+    {
+      "input": "Emory date",
+      "correction": "A 1959 Origin of the Hawaiians is bibliographically documented; the export’s2016 attribution is unresolved."
+    },
+    {
+      "input": "Language, genetic ancestry and identity",
+      "correction": "Related language families, modeled ancestry and archaeological traditions are distinct evidence. No one-to-one language–gene–people equivalence adopted."
+    }
+  ]
+}

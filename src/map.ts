@@ -1,4 +1,5 @@
-import { geoEquirectangular, geoPath, geoGraticule10, geoCircle } from "d3-geo";
+import { mapProjection, type MapScope } from "./map-projection";
+import { geoPath, geoGraticule10, geoCircle } from "d3-geo";
 import { populationAt } from "./population";
 import type { DisplayRecord } from "./model";
 import { temporalState, temporalOpacity, timeLabel, isDisputed, END_YEAR } from "./time";
@@ -7,15 +8,8 @@ import { esc, $ } from "./dom";
 import { disputeLevel, disputeLabel } from "./disputes";
 export class MapView {
   readonly element = document.createElement("div");
-  private projection = geoEquirectangular()
-    .rotate([100, 0])
-    .center([0, 15])
-    .scale(300)
-    .translate([500, 400])
-    .clipExtent([
-      [0, 0],
-      [1000, 800],
-    ]);
+  private scope: MapScope = "pacific";
+  private projection = mapProjection(this.scope);
   private scale = 1;
   private tx = 0;
   private ty = 0;
@@ -23,13 +17,16 @@ export class MapView {
   private year = END_YEAR;
   private selected: string | null = null;
   constructor(
-    land: any,
+    private readonly land: any,
     private onSelect: (rows: DisplayRecord[]) => void,
   ) {
     this.element.className = "map-canvas";
     const path = geoPath(this.projection);
-    this.element.innerHTML = `<svg viewBox="0 0 1000 800" role="img" aria-label="Map of the Americas. Use the visible records list for keyboard access to evidence." tabindex="0"><defs><pattern id="population-unknown" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V5" stroke="#fff" stroke-width="1.8" opacity=".8"/></pattern><radialGradient id="reach-fade"><stop offset="0%" stop-color="white" stop-opacity=".35"/><stop offset="40%" stop-color="white" stop-opacity=".22"/><stop offset="100%" stop-color="white" stop-opacity="0"/></radialGradient><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#e5c78c"/></marker></defs><g class="world"><path class="graticule" d="${path(geoGraticule10())}"/><path class="land" d="${path(land)}"/><g class="map-labels"><text x="390" y="230">NORTH AMERICA</text><text x="680" y="610">SOUTH AMERICA</text><text x="810" y="90">GREENLAND</text><text x="100" y="110">BERING STRAIT</text><text class="ocean-label" x="160" y="480">PACIFIC OCEAN</text><text class="ocean-label" x="830" y="390">ATLANTIC OCEAN</text></g><g class="features"></g></g></svg><div class="map-controls"><button data-zoom="in" aria-label="Zoom in">+</button><button data-zoom="out" aria-label="Zoom out">−</button><button data-zoom="reset" aria-label="Reset map view">⌖</button></div><div class="map-caption">Present-day reference coastlines · Not an Ice Age reconstruction<br>Made with Natural Earth · Public domain</div>`;
+    this.element.innerHTML = `<svg viewBox="0 0 1000 800" role="img" aria-label="Map of the Americas and Pacific. Use the visible records list for keyboard access to evidence." tabindex="0"><defs><pattern id="population-unknown" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V5" stroke="#fff" stroke-width="1.8" opacity=".8"/></pattern><radialGradient id="reach-fade"><stop offset="0%" stop-color="white" stop-opacity=".35"/><stop offset="40%" stop-color="white" stop-opacity=".22"/><stop offset="100%" stop-color="white" stop-opacity="0"/></radialGradient><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#e5c78c"/></marker></defs><g class="world"><path class="graticule" d="${path(geoGraticule10())}"/><path class="land" d="${path(land)}"/><g class="map-labels">${this.labels()}</g><g class="features"></g></g></svg><div class="map-controls"><label class="map-scope">Map region<select aria-label="Map region"><option value="pacific">Asia-Pacific / Americas</option><option value="americas">Americas focus</option></select></label><button data-zoom="in" aria-label="Zoom in">+</button><button data-zoom="out" aria-label="Zoom out">−</button><button data-zoom="reset" aria-label="Reset map view">⌖</button></div><div class="map-caption">Present-day reference coastlines · Not an Ice Age reconstruction<br>Made with Natural Earth · Public domain</div>`;
     const svg = $<SVGSVGElement>("svg", this.element);
+    $(".map-scope select", this.element).addEventListener("change", (e) => {
+      this.setScope((e.target as HTMLSelectElement).value as MapScope);
+    });
     let drag: { x: number; y: number; tx: number; ty: number } | null = null;
     let moved = false;
     const pixels = () => 1 / this.viewportFit();
@@ -114,6 +111,24 @@ export class MapView {
       }
     });
   }
+  private labels() {
+    return this.scope === "pacific"
+      ? '<text x="110" y="285">ISLAND ASIA</text><text x="435" y="345">HAWAII</text><text class="ocean-label" x="385" y="500">PACIFIC OCEAN</text><text x="615" y="240">NORTH AMERICA</text><text x="800" y="570">SOUTH AMERICA</text>'
+      : '<text x="390" y="230">NORTH AMERICA</text><text x="680" y="610">SOUTH AMERICA</text><text x="810" y="90">GREENLAND</text><text x="100" y="110">BERING STRAIT</text><text class="ocean-label" x="160" y="480">PACIFIC OCEAN</text><text class="ocean-label" x="830" y="390">ATLANTIC OCEAN</text>';
+  }
+  private setScope(scope: MapScope) {
+    this.scope = scope;
+    this.projection = mapProjection(scope);
+    this.scale = 1;
+    this.tx = this.ty = 0;
+    const path = geoPath(this.projection);
+    $(".land", this.element).setAttribute("d", path(this.land) ?? "");
+    $(".graticule", this.element).setAttribute("d", path(geoGraticule10()) ?? "");
+    $(".map-labels", this.element).innerHTML = this.labels();
+    ($(".map-scope select", this.element) as HTMLSelectElement).value = scope;
+    this.transform();
+    this.draw();
+  }
   private zoom(factor: number) {
     const old = this.scale;
     this.scale = Math.max(1, Math.min(4096, this.scale * factor));
@@ -147,6 +162,12 @@ export class MapView {
             ? [r.location.lon, r.location.lat]
             : null;
     if (!position) return;
+    if (position[0] > 90 || position[0] < -145) {
+      if (this.scope !== "pacific") this.setScope("pacific");
+    } else {
+      const current = this.projection(position as [number, number]);
+      if (this.scope === "pacific" && current && (current[0] < 0 || current[0] > 1000)) this.setScope("americas");
+    }
     const p = this.projection(position as [number, number]);
     if (!p) return;
     this.scale = r.overlay || r.type === "movement" ? 2 : 256;
@@ -172,15 +193,15 @@ export class MapView {
         if (!g) continue;
         const cls = `overlay-feature overlay-${o.kind} ${o.basis === "schematic" ? "overlay-schematic" : ""} ${temporalState(r.time, this.year) === "possible" ? "overlay-uncertain" : ""}`;
         const title = esc(
-          `${r.title} — ${OVERLAY_LABELS[o.kind]}, ${o.basis}${isDisputed(r) ? " *" : ""}`,
+          `${r.title} — ${OVERLAY_LABELS[o.kind]}, ${o.basis}${r.linguistics ? " — " + r.linguistics.languages.map(x => x.name).join(" / ") + " — " + (r.linguistics.relationship?.kind ?? "affiliation") : ""}${isDisputed(r) ? " *" : ""}`,
         );
         const opacity = temporalOpacity(r.time, this.year);
-        if (o.kind === "cultural-reach" && g.type === "Point" && o.radiusKm) {
+        if (["cultural-reach", "language"].includes(o.kind) && g.type === "Point" && o.radiusKm) {
           const shape = geoCircle()
             .center(g.coordinates)
             .radius(((o.radiusKm / 6371) * 180) / Math.PI)();
           const d = geoPath(this.projection)(shape);
-          overlays += `<g data-overlay="${index}" class="cultural-reach" style="opacity:${opacity};--reach-color:${r.culture.color}"><title>${title} — feathered illustrative reach, not a surveyed border or exclusive territory</title><path d="${d}"/></g>`;
+          overlays += `<g data-overlay="${index}" class="cultural-reach ${o.kind === "language" ? "language-area" : ""}" style="opacity:${opacity};--reach-color:${o.kind === "language" ? "#caa5f1" : r.culture.color}"><title>${title} — feathered illustrative area, not a surveyed border or exclusive territory</title><path d="${d}"/>${isDisputed(r) ? `<text class="asterisk dispute-${disputeLevel(r)}" x="${this.projection(g.coordinates)![0]}" y="${this.projection(g.coordinates)![1]}" style="font-size:${20 * symbolScale}px">*</text>` : ""}</g>`;
           continue;
         }
         const anchor = this.projection(
@@ -193,7 +214,7 @@ export class MapView {
             ? `<text class="cloud-star asterisk dispute-${disputeLevel(r)}" x="${anchor[0] + 10}" y="${anchor[1] - 12}" style="font-size:${20 / this.scale}px"><title>${esc(disputeLabel(r))}</title>*</text>`
             : "";
         if (
-          ["population-history", "regional-evidence", "environment"].includes(
+          ["population-history", "regional-evidence", "environment", "language"].includes(
             o.kind,
           )
         ) {
@@ -221,7 +242,7 @@ export class MapView {
         const a = this.projection([r.location.lon, r.location.lat]),
           b = this.projection([r.destination.lon, r.destination.lat]);
         if (a && b)
-          arrows += `<path style="opacity:${temporalOpacity(r.time, this.year)}" class="movement ${r.proposalKey ? "proposal-path" : ""}" d="M${a[0]},${a[1]} Q${(a[0] + b[0]) / 2},${(a[1] + b[1]) / 2 - 35} ${b[0]},${b[1]}" marker-end="url(#arrow)"><title>${esc(r.title)} — ${esc(r.routeKind)} connection</title></path>`;
+          arrows += `<path style="opacity:${temporalOpacity(r.time, this.year)}" class="movement ${r.proposalKey ? "proposal-path" : ""}" d="${geoPath(this.projection)({type: "LineString", coordinates: [[r.location.lon, r.location.lat], [r.destination.lon, r.destination.lat]]})}" marker-end="url(#arrow)"><title>${esc(r.title)} — ${esc(r.routeKind)} connection</title></path>`;
       }
     }
     let markers = "";

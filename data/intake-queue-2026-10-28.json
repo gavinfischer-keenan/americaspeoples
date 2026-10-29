@@ -1,0 +1,94 @@
+{
+  "publicRelease": {
+    "version": "0.3.0",
+    "records": 267,
+    "tag": "4fb65d166576cb2295f53e3f0b560fb603ca8e97",
+    "releaseDirectory": "/srv/tripofisch/releases/20261028T234637Z",
+    "verified": true
+  },
+  "workingVersion": "0.3.1",
+  "deployment": "Author closed intake and authorized full update and deployment, including language overlay, on 2026-10-28.",
+  "archivedExports": 37,
+  "workingRecords": 405,
+  "batches": [
+    {
+      "name": "patagonia-north",
+      "state": "reviewed and integrated",
+      "records": 9
+    },
+    {
+      "name": "patagonia-south",
+      "state": "reviewed and integrated",
+      "records": 18
+    },
+    {
+      "name": "louisiana",
+      "state": "reviewed and integrated",
+      "records": 20
+    },
+    {
+      "name": "cuba",
+      "state": "reviewed and integrated",
+      "records": 13
+    },
+    {
+      "name": "abcislands",
+      "state": "reviewed and integrated",
+      "records": 19
+    },
+    {
+      "name": "jamaica",
+      "state": "reviewed and integrated"
+    },
+    {
+      "name": "hawaii",
+      "state": "reviewed and integrated"
+    },
+    {
+      "name": "polynesian-origins",
+      "state": "reviewed and integrated"
+    }
+  ],
+  "geographicScope": {
+    "include": "Americas and Caribbean; island East/Southeast Asia through Guam, Micronesia, Melanesia, Polynesia and Hawaii; Pacific extent north of New Zealand",
+    "exclude": [
+      "Australia",
+      "New Zealand"
+    ]
+  },
+  "recentIntake": [
+    {
+      "archive": 34,
+      "attachment": "cc52cffa-8251-44ea-86a0-d2d1e04af30d",
+      "topic": "Origins of Polynesian voyaging"
+    },
+    {
+      "archive": 35,
+      "attachment": "7c1d53c2-7c7b-401e-8436-275ae0e0f3aa",
+      "topic": "Society Islands hub and alternative homeland models"
+    },
+    {
+      "archive": 36,
+      "attachment": "5dabb2af-450e-4965-85d9-dd844fce05ae",
+      "topic": "Linguistic archaeological and genomic lines"
+    }
+  ],
+  "reviewRequirements": [
+    "Deduplicate repeated papers across exports; preserve each supplied export unchanged.",
+    "Distinguish language history, modern and ancient genomic inference, archaeological observations and environmental hypotheses.",
+    "Do not convert island or archipelago centroids into precise settlement locations.",
+    "Do not treat genetic sample sizes or ancestry percentages as settlement populations.",
+    "Verify apparent bibliography/summary mismatches, including the unrelated mammal brain paper in export 36.",
+    "Regional colonization models and source-specific disagreements remain separate; no exact voyage tracks inferred from ancestry."
+  ],
+  "batchClosed": true,
+  "preparedRelease": {
+    "version": "0.3.1",
+    "records": 405,
+    "claims": 624,
+    "sourceMappings": 779,
+    "archivedExports": 37,
+    "testsPassed": 67,
+    "visualVerification": "Blocked by computer-use browser URL policy support; no screenshot claimed."
+  }
+}

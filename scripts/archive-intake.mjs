@@ -24,7 +24,21 @@ const batches=[
 ['afd33638-6bfb-4a23-b40e-1e531fc83103','20-inca-settlements','Inca nucleated settlements'],
 ['50c68d6a-1c71-48eb-8c92-f797ccf466fb','21-fourcorners','Four Corners occupation and migration'],
 ['bfcb60b2-bc10-44f4-a38f-9d7cc0f0d7b7','22-greatlakes','Great Lakes settlement and environment'],
-['22325765-e709-4392-81fc-fb1586db18f7','23-greatlakes-sequence','Great Lakes chronological sequence']
+['22325765-e709-4392-81fc-fb1586db18f7','23-greatlakes-sequence','Great Lakes chronological sequence'],
+['2e4d7424-b94d-4c8b-bd56-3a2e577449a0','24-patagonia','Patagonia initial sites and environment'],
+['db87bf4a-ff5b-44b3-866d-3391e3fe4e92','25-monte-verde-debate','Monte Verde chronology and competing interpretations'],
+['5a879cb8-f330-4884-b793-8fc337310072','26-louisiana','Louisiana settlements and earthworks'],
+['3fbac5a5-bcb8-4116-a370-1a78c2ef62b5','27-louisiana-bayous','Coastal bayou settlements and landform context'],
+['bd5e7df9-cbbf-4a1b-8129-ad063bf3f917','28-cuba','Cuban archaeological sites and chronology'],
+['163f105e-384d-4466-a818-604cfcbdd064','29-cuba-early','Cuban early occupation and dietary context'],
+['6abeb741-dd03-4af9-9f4d-87205d30b3f9','30-abc-islands','Aruba Bonaire and Curacao archaeology'],
+['4887e447-dbb2-46c9-b35b-5f0e0a34e696','31-abc-early','ABC early occupation and comparative chronology'],
+['65b5830d-18f9-401a-ae8b-646bb3d92268','32-jamaica','Jamaican occupation chronology'],
+['16b3ee29-12bb-47f0-bc4c-5a3736cf9051','33-hawaii','Hawaiian settlement and Pacific connections'],
+['cc52cffa-8251-44ea-86a0-d2d1e04af30d','34-polynesian-voyaging','Origins of Polynesian voyaging'],
+['7c1d53c2-7c7b-401e-8436-275ae0e0f3aa','35-society-islands','Society Islands hub and competing origins models'],
+['5dabb2af-450e-4965-85d9-dd844fce05ae','36-polynesian-lines','Linguistic archaeological and genomic dispersal evidence'],
+['cfc97cec-6337-4392-b9cd-8d7f77d0bc3c','37-fiji','Fijian highland origins and mixed ancestry']
 ];
 fs.mkdirSync('docs/intake',{recursive:true});
 const manifest=[];

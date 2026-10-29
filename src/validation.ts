@@ -1,3 +1,4 @@
+import { validateLinguistics } from "./languages";
 import { validateOverlay } from "./overlays";
 import { validatePopulation } from "./population";
 import type { Dataset, EvidenceRecord } from "./model";
@@ -27,6 +28,7 @@ export function validateRecord(value: unknown, complete = true): string[] {
   const r = value as EvidenceRecord;
   if (!object(r)) return ["Record must be an object."];
   errors.push(...validatePopulation(r));
+  errors.push(...validateLinguistics(r, complete));
   if (r.overlay !== undefined) {
     errors.push(...validateOverlay(r.overlay));
     if (r.type !== "event")
@@ -183,7 +185,7 @@ export function validateRecord(value: unknown, complete = true): string[] {
           add("Invalid source mapping.");
         else if (
           complete &&
-          (!r.sources?.some((x) => x.id === s.sourceId) ||
+          ((!Array.isArray(r.sources) || !r.sources.some((x) => x && x.id === s.sourceId)) ||
             !s.locator.trim() ||
             !s.note.trim())
         )

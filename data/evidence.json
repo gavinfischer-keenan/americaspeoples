@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "0.3.0",
+  "version": "0.3.1",
   "reviewedAt": "2026-10-28",
   "coverage": "Eight source-traceable examples, not comprehensive coverage. Many years and regions have no included records. No migration routes are asserted in this starter release.",
   "license": "Original summaries are supplied with the application. Scholarly works retain their own copyrights; only citation metadata, links and short original explanations are bundled.",
@@ -201,7 +201,7 @@
     },
     {
       "id": "monte-verde-ii",
-      "revision": 3,
+      "revision": 10,
       "type": "occupation",
       "title": "Monte Verde II — late Pleistocene dating interpretation",
       "culture": {
@@ -246,7 +246,7 @@
               "sourceId": "surovell2026",
               "locator": "Abstract",
               "stance": "challenges",
-              "note": "Late-Pleistocene chronology"
+              "note": "Late-Pleistocene chronology Retain Surovell et al.’s 8200–4200 BP Middle Holocene proposal and underlying ~11,000 BP tephra argument as the explicit competing interpretation. It is not a newly measured calibrated occupational interval to average with 14,500 cal BP."
             },
             {
               "sourceId": "waters2026-letter",
@@ -259,6 +259,24 @@
               "locator": "Abstract: Monte Verde in the review’s 2020 evidentiary context",
               "stance": "context",
               "note": "Regional review context only; does not independently date this context or override newer site-specific assessments."
+            },
+            {
+              "sourceId": "pino2023",
+              "stance": "supports",
+              "locator": "Abstract; New AMS assays; Discussion",
+              "note": "43 measurements from adjacent overlying sediment cores support the authors’ approximately 14,550 cal BP sealing-age interpretation; the cores are not 43 direct occupation dates. Their correlation with MV-II is disputed by Surovell et al. 2026."
+            },
+            {
+              "sourceId": "dillehay2026-response",
+              "stance": "supports",
+              "locator": "T2/T4 core-correlation and redeposition discussion; Conclusions",
+              "note": "Response authors reject the equivalence of upper-terrace and site-adjacent peat, and argue that contextual patterning and fragile remains do not fit substantial redeposition. Present as the authors’ rebuttal, not a resolved geological fact."
+            },
+            {
+              "sourceId": "meltzer1997-inspection",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "The 1997 group’s collection examination and site visit supported MV-II; it left MV-I unresolved. Historical agreement is not evidence that the 2026 dispute has vanished."
             }
           ]
         },
@@ -273,6 +291,12 @@
               "locator": "Site descriptions and cultural materials",
               "stance": "supports",
               "note": "Supports human activity without settling the contested date."
+            },
+            {
+              "sourceId": "dillehay2015-correction",
+              "stance": "context",
+              "locator": "Correction text; corrected Figures 7 and 8",
+              "note": "Corrects swapped images for the serpentine tool and basalt wedge only; adds no Early Pleistocene occupation evidence."
             }
           ]
         },
@@ -287,6 +311,34 @@
               "stance": "context",
               "locator": "Official place information; see the separately sourced location provenance for more specific archaeological context.",
               "note": "Identifies the named regional setting. Not evidence for the associated archaeological age or historical event."
+            }
+          ]
+        },
+        {
+          "id": "marine-resource-evidence",
+          "text": "The 2008 study reports nine marine-algal species in MV-II features and direct dates of 14,220–13,980 calendar BP.",
+          "status": "under discussion",
+          "explanation": "Reported sample ages support the earlier archaeological interpretation, while the later dispute concerns whether dates fix occupation or redeposited material. The abstract alone does not permit an independent marine-reservoir audit.",
+          "support": [
+            {
+              "sourceId": "dillehay2008-seaweed",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Dietary/medicinal use is the study interpretation, not a directly observed migration path. Nine marine-algal species from hearths and other features were directly dated to 14,220–13,980 calendar BP. Marine-resource use supports coastal connections but does not map a migration route."
+            }
+          ]
+        },
+        {
+          "id": "earlier-ephemeral-horizons",
+          "text": "Dillehay and colleagues propose discrete ephemeral activity horizons around 18,500–14,500 cal BP across the wider Monte Verde complex.",
+          "status": "under discussion",
+          "explanation": "Low-density horizons and their human agency require separate assessment from the MV-II occupation; deeper ~33,000 BP materials remain inconclusive in that same article.",
+          "support": [
+            {
+              "sourceId": "dillehay2015",
+              "stance": "supports",
+              "locator": "Abstract; Material Remains; Discussion",
+              "note": "Do not combine discontinuous contexts into a single long settlement or equate the 2026 MV-II challenge with direct reassessment of every horizon. The 2015 article’s ~18,500–14,500 cal BP ephemeral horizons are separate from classic MV-II and from the much deeper unresolved ~33,000 BP material. No continuous 18,500–33,000 BP occupation is established."
             }
           ]
         }
@@ -339,6 +391,73 @@
           "access": "Abstract only: supplied by the app author or available from the publisher. No claim of reviewing unavailable methods, tables or supplementary data.",
           "referenceType": "journal-article",
           "pages": ""
+        },
+        {
+          "id": "pino2023",
+          "authors": "Mario Pino; Tom D. Dillehay",
+          "title": "Monte Verde II: an assessment of new radiocarbon dates and their sedimentological context",
+          "year": 2023,
+          "venue": "Antiquity",
+          "doi": "10.15184/aqy.2023.32",
+          "url": "https://doi.org/10.15184/aqy.2023.32",
+          "access": "Open indexed publisher main text read: abstract, Introduction, marine reservoir offsets and volcanic deposits, new AMS assays and discussion. Separate supplementary files not reviewed.",
+          "referenceType": "journal-article",
+          "volume": "97",
+          "issue": "393",
+          "pages": "524–540"
+        },
+        {
+          "id": "dillehay2026-response",
+          "authors": "Tom D. Dillehay et al.",
+          "title": "Archaeological and Geological Evidence at Monte Verde II, Chile, Supports a Human Occupation at ∼14,500 Years Ago",
+          "year": 2026,
+          "venue": "PaleoAmerica",
+          "doi": "10.1080/20555563.2026.2699017",
+          "url": "https://doi.org/10.1080/20555563.2026.2699017",
+          "access": "Indexed publisher full-text passages read, including T2/T4 peat-core correlation, tephra, redeposition arguments and conclusions. Direct page requests returned 403; supplementary contents were not independently read. Response/commentary to the 2026 reassessment, not an independent new excavation.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "meltzer1997-inspection",
+          "authors": "David J. Meltzer; Donald K. Grayson; Gerardo Ardila; Alex W. Barker; Dena F. Dincauze; C. Vance Haynes; Francisco Mena; Lautaro Nuñez; Dennis J. Stanford",
+          "title": "On the Pleistocene Antiquity of Monte Verde, Southern Chile",
+          "year": 1997,
+          "venue": "American Antiquity",
+          "doi": "10.2307/281884",
+          "url": "https://doi.org/10.2307/281884",
+          "access": "Abstract only: publisher report of January 1997 collection examination and site visit. Full paper not read; 12,500 years old is not silently converted as calibrated BP.",
+          "referenceType": "journal-article",
+          "volume": "62",
+          "issue": "4",
+          "pages": "659–663"
+        },
+        {
+          "id": "dillehay2008-seaweed",
+          "authors": "Tom D. Dillehay; C. Ramírez; M. Pino; M. B. Collins; J. Rossen; J. D. Pino-Navarro",
+          "title": "Monte Verde: Seaweed, Food, Medicine, and the Peopling of South America",
+          "year": 2008,
+          "venue": "Science",
+          "doi": "10.1126/science.1156533",
+          "url": "https://doi.org/10.1126/science.1156533",
+          "access": "Abstract only: primary article abstract and metadata read via PubMed. No independent audit of sample selection, calibration or marine reservoir corrections.",
+          "referenceType": "journal-article",
+          "volume": "320",
+          "issue": "5877",
+          "pages": "784–786"
+        },
+        {
+          "id": "dillehay2015-correction",
+          "authors": "Tom D. Dillehay et al.",
+          "title": "Correction: New Archaeological Evidence for an Early Human Presence at Monte Verde, Chile",
+          "year": 2015,
+          "venue": "PLOS ONE",
+          "doi": "10.1371/journal.pone.0145471",
+          "url": "https://doi.org/10.1371/journal.pone.0145471",
+          "access": "Full correction text and corrected Figure 7/8 captions read; this is a figure-image correction, not a revised age determination.",
+          "referenceType": "journal-article",
+          "volume": "10",
+          "issue": "12",
+          "pages": "e0145471"
         }
       ],
       "review": {
@@ -350,7 +469,14 @@
         "history": [
           "2026-10-28: Initial source-traceable starter entry.",
           "2026-10-28: added literature-review context; original dating and claim status retained.",
-          "2026-10-28: linked existing official geographic references explicitly as location context, without changing archaeological dating."
+          "2026-10-28: linked existing official geographic references explicitly as location context, without changing archaeological dating.",
+          "2026-10-28: supplementary source and interpretation context added.",
+          "2026-10-28: supplementary source and interpretation context added.",
+          "2026-10-28: supplementary source and interpretation context added.",
+          "2026-10-28: supplementary source and interpretation context added.",
+          "2026-10-28: supplementary source and interpretation context added.",
+          "2026-10-28: supplementary source and interpretation context added.",
+          "2026-10-28: supplementary source and interpretation context added."
         ],
         "relatedIds": [
           "chinchihuapi-later-context"
@@ -359,7 +485,7 @@
     },
     {
       "id": "chinchihuapi-later-context",
-      "revision": 2,
+      "revision": 3,
       "type": "occupation",
       "title": "Chinchihuapi CH-I — later projectile-point and hearth context",
       "culture": {
@@ -398,6 +524,12 @@
               "locator": "Material Remains; Fig. 9",
               "stance": "supports",
               "note": "Later CH-I context and date"
+            },
+            {
+              "sourceId": "dillehay2019-chinchihuapi",
+              "stance": "context",
+              "locator": "Abstract",
+              "note": "2017–2018 excavations support intermittent CH-I use and distinguish the early Holocene Paiján-like material from the older MV-II-type point; do not expand the existing later-context date into continuous ~14,500–10,000 BP residence."
             }
           ]
         },
@@ -434,6 +566,20 @@
           "venue": "UNESCO World Heritage Centre",
           "url": "https://whc.unesco.org/en/tentativelists/1873/",
           "access": "Official submission page and listed boundary coordinates read."
+        },
+        {
+          "id": "dillehay2019-chinchihuapi",
+          "authors": "Tom D. Dillehay; Carlos Ocampo; Jose Saavedra; Mario Pino; Linda Scott-Cummings; Peter Kovácik; Claudia Silva; Rodrigo Alvar",
+          "title": "New excavations at the late Pleistocene site of Chinchihuapi I, Chile",
+          "year": 2019,
+          "venue": "Quaternary Research",
+          "doi": "10.1017/qua.2018.145",
+          "url": "https://doi.org/10.1017/qua.2018.145",
+          "access": "Abstract only: publisher abstract and metadata read. University repository file identified but contained abstract-level material. No sample-table or supplement audit.",
+          "referenceType": "journal-article",
+          "volume": "92",
+          "issue": "1",
+          "pages": "70–80"
         }
       ],
       "review": {
@@ -444,7 +590,8 @@
         "reviewedAt": "2026-10-28",
         "history": [
           "2026-10-28: Initial source-traceable starter entry.",
-          "2026-10-28: linked existing official geographic references explicitly as location context, without changing archaeological dating."
+          "2026-10-28: linked existing official geographic references explicitly as location context, without changing archaeological dating.",
+          "2026-10-28: supplementary source and interpretation context added."
         ],
         "relatedIds": [
           "monte-verde-ii"

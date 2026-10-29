@@ -1,0 +1,1723 @@
+{
+  "records": [
+    {
+      "id": "cuba-canimar-older-cemetery",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Canímar Abajo: older cemetery and limited mobility",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": {
+        "id": "canimar-abajo-cuba",
+        "name": "Canímar Abajo, Matanzas, Cuba",
+        "lat": 23.03777777777778,
+        "lon": -81.49638888888889,
+        "precision": "Public site coordinate, rounded to one arcsecond; not a burial or excavation location.",
+        "provenance": "Chinique de Armas et al. 2025 PNAS, site description: 23°02′16″N, 81°29′47″W."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -2236,
+        "end": -789,
+        "approximate": true,
+        "original": "2237–790 cal BCE (2σ), older cemetery",
+        "method": "Published calibrated radiocarbon range",
+        "interpretation": "Reported dated evidence envelope; neither an exact founding date nor proof of continuous occupation throughout the range."
+      },
+      "claims": [
+        {
+          "id": "dated-burials",
+          "text": "The PNAS study assigns the older cemetery to 2237–790 cal BCE; most sampled isotope signatures are consistent with local resources and relatively low residential mobility.",
+          "status": "well-supported",
+          "explanation": "Isotopic compatibility supports this interpretation but cannot prove lifelong immobility.",
+          "support": [
+            {
+              "sourceId": "chinique2025-sedentism",
+              "locator": "Site description; isotope results and discussion",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            },
+            {
+              "sourceId": "roksandic2015-canimar",
+              "locator": "Abstract",
+              "stance": "context",
+              "note": "The earlier study reports 1380–800 BCE for the older cemetery; preserve this study-specific chronology."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "chinique2025-sedentism",
+          "authors": "Yadira Chinique de Armas; Silvia Teresita Hernández Godoy; Luis M. Viera; William M. Buhay; Jason Laffoon",
+          "title": "Earliest evidence of sedentism in the Antilles: Multiple isotope data from Canímar Abajo, Cuba",
+          "year": 2025,
+          "venue": "Proceedings of the National Academy of Sciences",
+          "url": "https://doi.org/10.1073/pnas.2413963121",
+          "doi": "10.1073/pnas.2413963121",
+          "access": "Indexed primary full-text passages via PMC read: abstract, site context, isotope results, mobility discussion and conclusions. Direct PMC navigation encountered browser verification. Supplementary data not independently audited. Online December 23, 2024; issue January 7, 2025.",
+          "referenceType": "journal-article",
+          "volume": "122",
+          "issue": "1",
+          "pages": "e2413963121"
+        },
+        {
+          "id": "roksandic2015-canimar",
+          "authors": "Mirjana Roksandic; William Mark Buhay; Yadira Chinique des Armas; Roberto Rodríguez Suárez; Matthew C. Peros; Ivan Roksandic; Stephanie Mowat; Luis M. Vieira; Carlos Arredondo; Antonio Martínez Fuentes; David Gray Smith",
+          "title": "Radiocarbon and Stratigraphic Chronology of Canímar Abajo, Matanzas, Cuba",
+          "year": 2015,
+          "venue": "Radiocarbon",
+          "url": "https://doi.org/10.2458/azu_rc.57.18313",
+          "doi": "10.2458/azu_rc.57.18313",
+          "access": "Abstract only: publisher abstract and bibliographic details read. Full treatment of the conventional charcoal date’s reliability was unavailable.",
+          "referenceType": "journal-article",
+          "volume": "57",
+          "issue": "5",
+          "pages": "755–763"
+        }
+      ],
+      "review": {
+        "summary": "Source-specific observations are retained with their dating and interpretive limits. Each claim identifies the primary publication and the actual access scope used for review.",
+        "limitations": "No resident population estimate is available; archaeological classifications do not establish a named ethnic identity.",
+        "discussion": "Claim status reflects evidential scope and named interpretive limits, rather than the number of citations. Unmapped records require additional location evidence before a site point is added.",
+        "provenance": "Reviewed from the two user-supplied Cuba exports and primary publications; unsupported export assertions corrected in the accompanying register.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Initial primary-source intake review; no deployment or shared corpus edit."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "cuba-canimar-younger-cemetery",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Canímar Abajo: younger cemetery and possible migrants",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": {
+        "id": "canimar-abajo-cuba",
+        "name": "Canímar Abajo, Matanzas, Cuba",
+        "lat": 23.03777777777778,
+        "lon": -81.49638888888889,
+        "precision": "Public site coordinate, rounded to one arcsecond; not a burial or excavation location.",
+        "provenance": "Chinique de Armas et al. 2025 PNAS, site description: 23°02′16″N, 81°29′47″W."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 403,
+        "end": 1282,
+        "approximate": true,
+        "original": "403–1282 cal CE (2σ), younger cemetery",
+        "method": "Published calibrated radiocarbon range",
+        "interpretation": "Reported dated evidence envelope; neither an exact founding date nor proof of continuous occupation throughout the range."
+      },
+      "claims": [
+        {
+          "id": "dated-burials",
+          "text": "The PNAS study places the younger cemetery at 403–1282 CE and identifies greater dietary variation and several possible migrants.",
+          "status": "well-supported",
+          "explanation": "An isotope outlier does not identify a unique birthplace or travel route.",
+          "support": [
+            {
+              "sourceId": "chinique2025-sedentism",
+              "locator": "Site description; isotope results and discussion",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            },
+            {
+              "sourceId": "roksandic2015-canimar",
+              "locator": "Abstract",
+              "stance": "context",
+              "note": "Earlier study reports 360–950 CE; this is not interchangeable with the later envelope."
+            }
+          ]
+        },
+        {
+          "id": "sample-size",
+          "text": "The isotope study analyzed 44 teeth from 26 people, not 44 people or a resident population census.",
+          "status": "well-supported",
+          "explanation": "The count describes the analytical sample.",
+          "support": [
+            {
+              "sourceId": "chinique2025-sedentism",
+              "locator": "Abstract and sample description",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "chinique2025-sedentism",
+          "authors": "Yadira Chinique de Armas; Silvia Teresita Hernández Godoy; Luis M. Viera; William M. Buhay; Jason Laffoon",
+          "title": "Earliest evidence of sedentism in the Antilles: Multiple isotope data from Canímar Abajo, Cuba",
+          "year": 2025,
+          "venue": "Proceedings of the National Academy of Sciences",
+          "url": "https://doi.org/10.1073/pnas.2413963121",
+          "doi": "10.1073/pnas.2413963121",
+          "access": "Indexed primary full-text passages via PMC read: abstract, site context, isotope results, mobility discussion and conclusions. Direct PMC navigation encountered browser verification. Supplementary data not independently audited. Online December 23, 2024; issue January 7, 2025.",
+          "referenceType": "journal-article",
+          "volume": "122",
+          "issue": "1",
+          "pages": "e2413963121"
+        },
+        {
+          "id": "roksandic2015-canimar",
+          "authors": "Mirjana Roksandic; William Mark Buhay; Yadira Chinique des Armas; Roberto Rodríguez Suárez; Matthew C. Peros; Ivan Roksandic; Stephanie Mowat; Luis M. Vieira; Carlos Arredondo; Antonio Martínez Fuentes; David Gray Smith",
+          "title": "Radiocarbon and Stratigraphic Chronology of Canímar Abajo, Matanzas, Cuba",
+          "year": 2015,
+          "venue": "Radiocarbon",
+          "url": "https://doi.org/10.2458/azu_rc.57.18313",
+          "doi": "10.2458/azu_rc.57.18313",
+          "access": "Abstract only: publisher abstract and bibliographic details read. Full treatment of the conventional charcoal date’s reliability was unavailable.",
+          "referenceType": "journal-article",
+          "volume": "57",
+          "issue": "5",
+          "pages": "755–763"
+        }
+      ],
+      "review": {
+        "summary": "Source-specific observations are retained with their dating and interpretive limits. Each claim identifies the primary publication and the actual access scope used for review.",
+        "limitations": "No resident population estimate is available; archaeological classifications do not establish a named ethnic identity.",
+        "discussion": "Claim status reflects evidential scope and named interpretive limits, rather than the number of citations. Unmapped records require additional location evidence before a site point is added.",
+        "provenance": "Reviewed from the two user-supplied Cuba exports and primary publications; unsupported export assertions corrected in the accompanying register.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Initial primary-source intake review; no deployment or shared corpus edit."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "cuba-canimar-old-charcoal-problem",
+      "revision": 1,
+      "type": "event",
+      "title": "Canímar Abajo: early charcoal is not a direct burial date",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -5479,
+        "end": -5379,
+        "approximate": true,
+        "original": "5480–5380 cal BCE, charcoal UNAM-0715; attribution disputed",
+        "method": "Published calibrated radiocarbon range",
+        "interpretation": "Reported dated evidence envelope; neither an exact founding date nor proof of continuous occupation throughout the range."
+      },
+      "claims": [
+        {
+          "id": "charcoal-association",
+          "text": "Charcoal dated to 5480–5380 cal BCE does not directly date the cemetery burials; the 2015 starch paper explicitly treats UNAM-0715 as problematic.",
+          "status": "disputed",
+          "explanation": "The dispute concerns association and reliability as evidence of early human activity, not a secure sixth-millennium-BCE cemetery.",
+          "support": [
+            {
+              "sourceId": "chinique2015-cultigens",
+              "locator": "Site chronology discussion, UNAM-0715",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            },
+            {
+              "sourceId": "roksandic2015-canimar",
+              "locator": "Abstract",
+              "stance": "context",
+              "note": "Reports the early charcoal determination separately from directly dated cemeteries."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "chinique2015-cultigens",
+          "authors": "Yadira Chinique de Armas; William M. Buhay; Roberto Rodríguez Suárez; Stephanie Bestel; David Gray Smith; Stephanie D. Mowat; Mirjana Roksandic",
+          "title": "Starch analysis and isotopic evidence of consumption of cultigens among fisher–gatherers in Cuba: the archaeological site of Canímar Abajo, Matanzas",
+          "year": 2015,
+          "venue": "Journal of Archaeological Science",
+          "url": "https://doi.org/10.1016/j.jas.2015.03.003",
+          "doi": "10.1016/j.jas.2015.03.003",
+          "access": "Publisher indexed article passages read: site chronology and location, methods excerpt, starch identification, Discussion and Conclusions; not a full sample-table audit.",
+          "referenceType": "journal-article",
+          "volume": "58",
+          "pages": "121–132"
+        },
+        {
+          "id": "roksandic2015-canimar",
+          "authors": "Mirjana Roksandic; William Mark Buhay; Yadira Chinique des Armas; Roberto Rodríguez Suárez; Matthew C. Peros; Ivan Roksandic; Stephanie Mowat; Luis M. Vieira; Carlos Arredondo; Antonio Martínez Fuentes; David Gray Smith",
+          "title": "Radiocarbon and Stratigraphic Chronology of Canímar Abajo, Matanzas, Cuba",
+          "year": 2015,
+          "venue": "Radiocarbon",
+          "url": "https://doi.org/10.2458/azu_rc.57.18313",
+          "doi": "10.2458/azu_rc.57.18313",
+          "access": "Abstract only: publisher abstract and bibliographic details read. Full treatment of the conventional charcoal date’s reliability was unavailable.",
+          "referenceType": "journal-article",
+          "volume": "57",
+          "issue": "5",
+          "pages": "755–763"
+        }
+      ],
+      "review": {
+        "summary": "Source-specific observations are retained with their dating and interpretive limits. Each claim identifies the primary publication and the actual access scope used for review.",
+        "limitations": "Old charcoal, depositional association and directly dated human remains must remain separate. The calendar range is retained as a disputed sample age, not secure occupation.",
+        "discussion": "Claim status reflects evidential scope and named interpretive limits, rather than the number of citations. Unmapped records require additional location evidence before a site point is added.",
+        "provenance": "Reviewed from the two user-supplied Cuba exports and primary publications; unsupported export assertions corrected in the accompanying register.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Initial primary-source intake review; no deployment or shared corpus edit."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No site coordinate adopted from the inspected primary evidence.",
+        "provenance": "Evidence is retained without inventing a site point or a geographic extent."
+      }
+    },
+    {
+      "id": "cuba-canimar-cultigen-evidence",
+      "revision": 1,
+      "type": "event",
+      "title": "Canímar Abajo: plant use beyond a simple forager label",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "Plant-use evidence from cemetery samples; no single new crop-adoption boundary adopted",
+        "method": "Source-specific chronology or dating limitation",
+        "interpretation": "No closed, independently supported calendar interval is assigned."
+      },
+      "claims": [
+        {
+          "id": "plant-use",
+          "text": "Starch and isotope evidence indicates consumption of cultigens at Canímar Abajo, complicating classifications that imply an absence of plant cultivation.",
+          "status": "well-supported",
+          "explanation": "Some starch identifications permit alternative taxa; consumption alone does not establish local fields or a specific acquisition route.",
+          "support": [
+            {
+              "sourceId": "chinique2015-cultigens",
+              "locator": "Results and discussion",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "chinique2015-cultigens",
+          "authors": "Yadira Chinique de Armas; William M. Buhay; Roberto Rodríguez Suárez; Stephanie Bestel; David Gray Smith; Stephanie D. Mowat; Mirjana Roksandic",
+          "title": "Starch analysis and isotopic evidence of consumption of cultigens among fisher–gatherers in Cuba: the archaeological site of Canímar Abajo, Matanzas",
+          "year": 2015,
+          "venue": "Journal of Archaeological Science",
+          "url": "https://doi.org/10.1016/j.jas.2015.03.003",
+          "doi": "10.1016/j.jas.2015.03.003",
+          "access": "Publisher indexed article passages read: site chronology and location, methods excerpt, starch identification, Discussion and Conclusions; not a full sample-table audit.",
+          "referenceType": "journal-article",
+          "volume": "58",
+          "pages": "121–132"
+        }
+      ],
+      "review": {
+        "summary": "Source-specific observations are retained with their dating and interpretive limits. Each claim identifies the primary publication and the actual access scope used for review.",
+        "limitations": "No resident population estimate is available; archaeological classifications do not establish a named ethnic identity.",
+        "discussion": "Claim status reflects evidential scope and named interpretive limits, rather than the number of citations. Unmapped records require additional location evidence before a site point is added.",
+        "provenance": "Reviewed from the two user-supplied Cuba exports and primary publications; unsupported export assertions corrected in the accompanying register.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Initial primary-source intake review; no deployment or shared corpus edit."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No site coordinate adopted from the inspected primary evidence.",
+        "provenance": "Evidence is retained without inventing a site point or a geographic extent."
+      }
+    },
+    {
+      "id": "cuba-playa-mango-m2-cemetery",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Playa del Mango: M2 cemetery",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": {
+        "id": "playa-del-mango-cuba",
+        "name": "Playa del Mango, Río Cauto, Granma, Cuba",
+        "lat": 20.55388888888889,
+        "lon": -76.98583333333333,
+        "precision": "Published public site coordinate rounded to one arcsecond; cemetery sectors share the site point.",
+        "provenance": "Chinique de Armas et al. 2025, Diversity of Lifeways, site description: 20°33′14″N, 76°59′9″W. Not an individual grave coordinate."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -115,
+        "end": 241,
+        "approximate": true,
+        "original": "M2 cemetery: at least 116 cal BCE–241 cal CE (2σ)",
+        "method": "Published calibrated radiocarbon range",
+        "interpretation": "Reported dated evidence envelope; neither an exact founding date nor proof of continuous occupation throughout the range."
+      },
+      "claims": [
+        {
+          "id": "m2-burials",
+          "text": "The 2020 chronology places dated use of the M2 cemetery at least within 116 BCE–241 CE.",
+          "status": "well-supported",
+          "explanation": "The minimum dated span is not the full beginning or end of cemetery use.",
+          "support": [
+            {
+              "sourceId": "chinique2020-mango-chronology",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "chinique2020-mango-chronology",
+          "authors": "Yadira Chinique de Armas; Ulises M. González Herrera; William M. Buhay; José M. Yero Masdeu; Luis M. Viera Sanfiel; Meghan Burchell; Carley Crann; Esteban R. Grau González-Quevedo; Mirjana Roksandic",
+          "title": "Chronology of the Archaeological Site of Playa del Mango, Rio Cauto, Granma, Cuba",
+          "year": 2020,
+          "venue": "Radiocarbon",
+          "url": "https://doi.org/10.1017/RDC.2020.52",
+          "doi": "10.1017/RDC.2020.52",
+          "access": "Abstract only: publisher abstract and metadata read. Separate site and context spans retained; laboratory sample tables and calibration procedures not independently reviewed.",
+          "referenceType": "journal-article",
+          "volume": "62",
+          "issue": "5",
+          "pages": "1221–1236"
+        },
+        {
+          "id": "chinique2025-lifeways",
+          "authors": "Yadira Chinique de Armas et al.",
+          "title": "Diversity of Lifeways in Early Antillean Societies: A Multi-Isotope Approach",
+          "year": 2025,
+          "venue": "American Journal of Biological Anthropology",
+          "url": "https://doi.org/10.1002/ajpa.70039",
+          "doi": "10.1002/ajpa.70039",
+          "access": "Indexed primary full-text site-description passage inspected for Playa del Mango public coordinates only; other results not independently audited.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "Source-specific observations are retained with their dating and interpretive limits. Each claim identifies the primary publication and the actual access scope used for review.",
+        "limitations": "No resident population estimate is available; archaeological classifications do not establish a named ethnic identity.",
+        "discussion": "Claim status reflects evidential scope and named interpretive limits, rather than the number of citations. Unmapped records require additional location evidence before a site point is added.",
+        "provenance": "Reviewed from the two user-supplied Cuba exports and primary publications; unsupported export assertions corrected in the accompanying register.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Initial primary-source intake review; no deployment or shared corpus edit."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "cuba-playa-mango-m2-domestic",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Playa del Mango: M2 domestic evidence",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": {
+        "id": "playa-del-mango-cuba",
+        "name": "Playa del Mango, Río Cauto, Granma, Cuba",
+        "lat": 20.55388888888889,
+        "lon": -76.98583333333333,
+        "precision": "Published public site coordinate rounded to one arcsecond; cemetery sectors share the site point.",
+        "provenance": "Chinique de Armas et al. 2025, Diversity of Lifeways, site description: 20°33′14″N, 76°59′9″W. Not an individual grave coordinate."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -54,
+        "end": 435,
+        "approximate": true,
+        "original": "M2 domestic area: at minimum 55 cal BCE–435 cal CE (2σ)",
+        "method": "Published calibrated radiocarbon range",
+        "interpretation": "Reported dated evidence envelope; neither an exact founding date nor proof of continuous occupation throughout the range."
+      },
+      "claims": [
+        {
+          "id": "m2-domestic",
+          "text": "The dated M2 domestic area spans at minimum 55 BCE–435 CE; this domestic envelope must not extend the cemetery chronology automatically.",
+          "status": "well-supported",
+          "explanation": "Distinct archaeological contexts have distinct dated envelopes.",
+          "support": [
+            {
+              "sourceId": "chinique2020-mango-chronology",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "chinique2020-mango-chronology",
+          "authors": "Yadira Chinique de Armas; Ulises M. González Herrera; William M. Buhay; José M. Yero Masdeu; Luis M. Viera Sanfiel; Meghan Burchell; Carley Crann; Esteban R. Grau González-Quevedo; Mirjana Roksandic",
+          "title": "Chronology of the Archaeological Site of Playa del Mango, Rio Cauto, Granma, Cuba",
+          "year": 2020,
+          "venue": "Radiocarbon",
+          "url": "https://doi.org/10.1017/RDC.2020.52",
+          "doi": "10.1017/RDC.2020.52",
+          "access": "Abstract only: publisher abstract and metadata read. Separate site and context spans retained; laboratory sample tables and calibration procedures not independently reviewed.",
+          "referenceType": "journal-article",
+          "volume": "62",
+          "issue": "5",
+          "pages": "1221–1236"
+        },
+        {
+          "id": "chinique2025-lifeways",
+          "authors": "Yadira Chinique de Armas et al.",
+          "title": "Diversity of Lifeways in Early Antillean Societies: A Multi-Isotope Approach",
+          "year": 2025,
+          "venue": "American Journal of Biological Anthropology",
+          "url": "https://doi.org/10.1002/ajpa.70039",
+          "doi": "10.1002/ajpa.70039",
+          "access": "Indexed primary full-text site-description passage inspected for Playa del Mango public coordinates only; other results not independently audited.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "Source-specific observations are retained with their dating and interpretive limits. Each claim identifies the primary publication and the actual access scope used for review.",
+        "limitations": "No resident population estimate is available; archaeological classifications do not establish a named ethnic identity.",
+        "discussion": "Claim status reflects evidential scope and named interpretive limits, rather than the number of citations. Unmapped records require additional location evidence before a site point is added.",
+        "provenance": "Reviewed from the two user-supplied Cuba exports and primary publications; unsupported export assertions corrected in the accompanying register.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Initial primary-source intake review; no deployment or shared corpus edit."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "cuba-playa-mango-m1-tooth",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Playa del Mango: isolated M1 tooth",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": {
+        "id": "playa-del-mango-cuba",
+        "name": "Playa del Mango, Río Cauto, Granma, Cuba",
+        "lat": 20.55388888888889,
+        "lon": -76.98583333333333,
+        "precision": "Published public site coordinate rounded to one arcsecond; cemetery sectors share the site point.",
+        "provenance": "Chinique de Armas et al. 2025, Diversity of Lifeways, site description: 20°33′14″N, 76°59′9″W. Not an individual grave coordinate."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 125,
+        "end": 435,
+        "approximate": true,
+        "original": "M1 isolated tooth: 125–435 cal CE (2σ)",
+        "method": "Published calibrated radiocarbon range",
+        "interpretation": "Reported dated evidence envelope; neither an exact founding date nor proof of continuous occupation throughout the range."
+      },
+      "claims": [
+        {
+          "id": "m1-tooth",
+          "text": "An isolated tooth from M1 dates to 125–435 CE.",
+          "status": "well-supported",
+          "explanation": "A single dated tooth does not define the full settlement or a continuous cemetery interval.",
+          "support": [
+            {
+              "sourceId": "chinique2020-mango-chronology",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "chinique2020-mango-chronology",
+          "authors": "Yadira Chinique de Armas; Ulises M. González Herrera; William M. Buhay; José M. Yero Masdeu; Luis M. Viera Sanfiel; Meghan Burchell; Carley Crann; Esteban R. Grau González-Quevedo; Mirjana Roksandic",
+          "title": "Chronology of the Archaeological Site of Playa del Mango, Rio Cauto, Granma, Cuba",
+          "year": 2020,
+          "venue": "Radiocarbon",
+          "url": "https://doi.org/10.1017/RDC.2020.52",
+          "doi": "10.1017/RDC.2020.52",
+          "access": "Abstract only: publisher abstract and metadata read. Separate site and context spans retained; laboratory sample tables and calibration procedures not independently reviewed.",
+          "referenceType": "journal-article",
+          "volume": "62",
+          "issue": "5",
+          "pages": "1221–1236"
+        },
+        {
+          "id": "chinique2025-lifeways",
+          "authors": "Yadira Chinique de Armas et al.",
+          "title": "Diversity of Lifeways in Early Antillean Societies: A Multi-Isotope Approach",
+          "year": 2025,
+          "venue": "American Journal of Biological Anthropology",
+          "url": "https://doi.org/10.1002/ajpa.70039",
+          "doi": "10.1002/ajpa.70039",
+          "access": "Indexed primary full-text site-description passage inspected for Playa del Mango public coordinates only; other results not independently audited.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "Source-specific observations are retained with their dating and interpretive limits. Each claim identifies the primary publication and the actual access scope used for review.",
+        "limitations": "No resident population estimate is available; archaeological classifications do not establish a named ethnic identity.",
+        "discussion": "Claim status reflects evidential scope and named interpretive limits, rather than the number of citations. Unmapped records require additional location evidence before a site point is added.",
+        "provenance": "Reviewed from the two user-supplied Cuba exports and primary publications; unsupported export assertions corrected in the accompanying register.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Initial primary-source intake review; no deployment or shared corpus edit."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "cuba-playa-mango-diet",
+      "revision": 1,
+      "type": "event",
+      "title": "Playa del Mango: mixed dietary resources",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "27 analyzed individuals; no new chronological boundary adopted from the abstract",
+        "method": "Source-specific chronology or dating limitation",
+        "interpretation": "No closed, independently supported calendar interval is assigned."
+      },
+      "claims": [
+        {
+          "id": "mixed-diet",
+          "text": "The multiproxy study identifies mixed C3 and C4 dietary inputs and substantial C3 protein contributions at Playa del Mango.",
+          "status": "well-supported",
+          "explanation": "Isotope model proportions and starch proportions measure different things; a 50:50 starch count is not a 50:50 food-consumption estimate.",
+          "support": [
+            {
+              "sourceId": "chinique2022-mango-diet",
+              "locator": "Abstract and highlights",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "chinique2022-mango-diet",
+          "authors": "Yadira Chinique de Armas; Ulises M. González Herrera; Idalí Reyes Serrano; William M. Buhay; Stephanie Skelton; Roberto Rodríguez Suárez; Mirjana Roksandic; Jason Laffoon",
+          "title": "Multiproxy paleodietary reconstruction using stable isotopes and starch analysis: The case of the archaeological site of Playa del Mango, Granma, Cuba",
+          "year": 2022,
+          "venue": "Journal of Archaeological Science: Reports",
+          "url": "https://doi.org/10.1016/j.jasrep.2022.103671",
+          "doi": "10.1016/j.jasrep.2022.103671",
+          "access": "Abstract only: primary publisher abstract and highlights read; full dietary-model methods not inspected.",
+          "referenceType": "journal-article",
+          "volume": "46",
+          "pages": "103671"
+        }
+      ],
+      "review": {
+        "summary": "Source-specific observations are retained with their dating and interpretive limits. Each claim identifies the primary publication and the actual access scope used for review.",
+        "limitations": "No resident population estimate is available; archaeological classifications do not establish a named ethnic identity.",
+        "discussion": "Claim status reflects evidential scope and named interpretive limits, rather than the number of citations. Unmapped records require additional location evidence before a site point is added.",
+        "provenance": "Reviewed from the two user-supplied Cuba exports and primary publications; unsupported export assertions corrected in the accompanying register.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Initial primary-source intake review; no deployment or shared corpus edit."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No site coordinate adopted from the inspected primary evidence.",
+        "provenance": "Evidence is retained without inventing a site point or a geographic extent."
+      }
+    },
+    {
+      "id": "cuba-cayo-caiman-resource-use",
+      "revision": 1,
+      "type": "event",
+      "title": "Cayo Caimán Mata Coco: early shell-resource use",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -2753,
+        "end": -2477,
+        "approximate": true,
+        "original": "OxA-15267 shell: 2754–2478 cal BCE, published calibrated range",
+        "method": "Published calibrated radiocarbon range",
+        "interpretation": "Reported dated evidence envelope; neither an exact founding date nor proof of continuous occupation throughout the range."
+      },
+      "claims": [
+        {
+          "id": "shell-date",
+          "text": "Cooper’s thesis reports OxA-15267 from Cayo Caimán Mata Coco at 2754–2478 cal BCE.",
+          "status": "well-supported",
+          "explanation": "The source inconsistently labels the context Surface Deposit 1 and Midden 1; exact provenance requires reconciliation.",
+          "support": [
+            {
+              "sourceId": "cooper2007-thesis",
+              "locator": "Table 7.10 p. 211; shell dating discussion pp. 213–215",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        },
+        {
+          "id": "island-use",
+          "text": "Shell deposits support resource exploitation; the thesis finds no evidence of permanent settlement or fresh water on the island.",
+          "status": "under discussion",
+          "explanation": "Repeated resource visits do not establish a permanent village. The date is after 5000 cal BP, not proof of a pre-5000-cal-BP Cuban presence.",
+          "support": [
+            {
+              "sourceId": "cooper2007-thesis",
+              "locator": "Site interpretation pp. 218–224",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "cooper2007-thesis",
+          "authors": "Jago Cooper",
+          "title": "Island interaction in the prehistoric Caribbean: An archaeological case study from Northern Cuba",
+          "year": 2007,
+          "venue": "Doctoral thesis, University College London",
+          "url": "https://discovery.ucl.ac.uk/id/eprint/1446016/",
+          "access": "Open UCL thesis PDF text extracted in memory and read: Table 7.10 (p. 211), dated shell discussion and Tables 7.11–7.12 (pp. 213–215), site synthesis (pp. 218–224). No claim of reading the entire thesis or independent shell recalibration.",
+          "referenceType": "thesis",
+          "publisher": "University College London"
+        },
+        {
+          "id": "cooper-thomas2012",
+          "authors": "Jago Cooper; Kenneth D. Thomas",
+          "title": "Constructing Caribbean Chronologies: Comparative Radiocarbon Dating of Shell and Wood Artefacts from Pre-Columbian Sites in Cuba",
+          "year": 2012,
+          "venue": "Archaeometry",
+          "url": "https://doi.org/10.1111/j.1475-4754.2011.00622.x",
+          "doi": "10.1111/j.1475-4754.2011.00622.x",
+          "access": "Abstract only: publisher abstract and metadata read. Full sample tables and shell corrections unavailable; online 2011, issue 2012.",
+          "referenceType": "journal-article",
+          "volume": "54",
+          "issue": "2",
+          "pages": "401–425"
+        }
+      ],
+      "review": {
+        "summary": "Source-specific observations are retained with their dating and interpretive limits. Each claim identifies the primary publication and the actual access scope used for review.",
+        "limitations": "No resident population estimate is available; archaeological classifications do not establish a named ethnic identity.",
+        "discussion": "Claim status reflects evidential scope and named interpretive limits, rather than the number of citations. Unmapped records require additional location evidence before a site point is added.",
+        "provenance": "Reviewed from the two user-supplied Cuba exports and primary publications; unsupported export assertions corrected in the accompanying register.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Initial primary-source intake review; no deployment or shared corpus edit."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No site coordinate adopted from the inspected primary evidence.",
+        "provenance": "Evidence is retained without inventing a site point or a geographic extent."
+      }
+    },
+    {
+      "id": "cuba-los-buchillones-waterfront",
+      "revision": 1,
+      "type": "event",
+      "title": "Los Buchillones: waterfront structures and open-ended chronology",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "Occupation began before AD 1220 and continued until AD 1640 or later",
+        "method": "Source-specific chronology or dating limitation",
+        "interpretation": "No closed, independently supported calendar interval is assigned."
+      },
+      "claims": [
+        {
+          "id": "open-chronology",
+          "text": "Peros and colleagues report occupation from before 1220 CE until 1640 CE or later and more than 40 collapsed structures.",
+          "status": "well-supported",
+          "explanation": "These are open chronological bounds and a structure count, not a closed occupation interval or population census.",
+          "support": [
+            {
+              "sourceId": "peros2006-buchillones",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            },
+            {
+              "sourceId": "cooper-rojas2004",
+              "locator": "Introduction",
+              "stance": "context",
+              "note": "The survey report describes more than 50 stilted houses using a different referenced account; retain the source-specific difference."
+            }
+          ]
+        },
+        {
+          "id": "waterfront-choice",
+          "text": "Coring suggests relatively stable sea level during occupation; one of two cleared structures appeared to have been built on pilings over water.",
+          "status": "under discussion",
+          "explanation": "The authors link site choice to nearby resources and freshwater; a limited structural sample cannot establish that every building was over water.",
+          "support": [
+            {
+              "sourceId": "peros2006-buchillones",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "peros2006-buchillones",
+          "authors": "Matthew C. Peros; Elizabeth Graham; Anthony M. Davis",
+          "title": "Stratigraphic investigations at Los Buchillones, a coastal Taino site in north-central Cuba",
+          "year": 2006,
+          "venue": "Geoarchaeology",
+          "url": "https://doi.org/10.1002/gea.20113",
+          "doi": "10.1002/gea.20113",
+          "access": "Abstract only: publisher abstract and metadata read. Source explicitly uses open chronology bounds and more than 40 collapsed structures.",
+          "referenceType": "journal-article",
+          "volume": "21",
+          "issue": "5",
+          "pages": "403–428"
+        },
+        {
+          "id": "cooper-rojas2004",
+          "authors": "Jago Cooper; Roberto Valcárcel Rojas",
+          "title": "Pre-Hispanic Settlements Along the North Coast of Cuba: A Pilot Survey Report from Los Buchillones, January-February 2004",
+          "year": 2004,
+          "venue": "Papers from the Institute of Archaeology",
+          "url": "https://doi.org/10.5334/258",
+          "doi": "10.5334/258",
+          "access": "Open publisher PDF indexed text read: Introduction, Coastal Ecology and survey context. The printed longitude has E instead of W; no silently corrected exact site coordinate is adopted.",
+          "referenceType": "journal-article",
+          "volume": "15",
+          "pages": "77–81"
+        }
+      ],
+      "review": {
+        "summary": "Source-specific observations are retained with their dating and interpretive limits. Each claim identifies the primary publication and the actual access scope used for review.",
+        "limitations": "The 2004 report prints an east longitude for this Cuban locality; no silently corrected precise point is adopted. Open chronological bounds remain unplaced.",
+        "discussion": "Claim status reflects evidential scope and named interpretive limits, rather than the number of citations. Unmapped records require additional location evidence before a site point is added.",
+        "provenance": "Reviewed from the two user-supplied Cuba exports and primary publications; unsupported export assertions corrected in the accompanying register.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Initial primary-source intake review; no deployment or shared corpus edit."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No site coordinate adopted from the inspected primary evidence.",
+        "provenance": "Evidence is retained without inventing a site point or a geographic extent."
+      }
+    },
+    {
+      "id": "cuba-archaic-faunal-variability",
+      "revision": 1,
+      "type": "event",
+      "title": "Las Obas, Vega del Palmar and Los Caracoles: varied animal use",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "The abstract gives a combined approximately 350 BCE–630 CE range for three assemblages, not separate site ranges",
+        "method": "Source-specific chronology or dating limitation",
+        "interpretation": "No closed, independently supported calendar interval is assigned."
+      },
+      "claims": [
+        {
+          "id": "faunal-diversity",
+          "text": "The three museum assemblages show variable use of hutia, fish, birds, reptiles and manatee; Vega del Palmar includes pre-Arawak pottery.",
+          "status": "well-supported",
+          "explanation": "Museum collections support assemblage comparisons; the combined chronology cannot be assigned independently to all three sites. This is not Late Pleistocene evidence.",
+          "support": [
+            {
+              "sourceId": "colten-worthington2019",
+              "locator": "Abstract",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "colten-worthington2019",
+          "authors": "Roger H. Colten; Brian Worthington",
+          "title": "Museum Collections and Archaic Era Vertebrate Faunal Remains from Cuba",
+          "year": 2019,
+          "venue": "Environmental Archaeology",
+          "url": "https://doi.org/10.1080/14614103.2018.1500157",
+          "doi": "10.1080/14614103.2018.1500157",
+          "access": "Abstract only: publisher-deposited abstract and publication metadata read. Full article unavailable. Online 2018, issue 2019; no site-specific numerical age table inspected.",
+          "referenceType": "journal-article",
+          "volume": "24",
+          "issue": "2",
+          "pages": "211–227"
+        }
+      ],
+      "review": {
+        "summary": "Source-specific observations are retained with their dating and interpretive limits. Each claim identifies the primary publication and the actual access scope used for review.",
+        "limitations": "Public coordinates and independent dated envelopes for Las Obas, Vega del Palmar and Los Caracoles are not verified here; individual site mapping awaits the full primary tables.",
+        "discussion": "Claim status reflects evidential scope and named interpretive limits, rather than the number of citations. Unmapped records require additional location evidence before a site point is added.",
+        "provenance": "Reviewed from the two user-supplied Cuba exports and primary publications; unsupported export assertions corrected in the accompanying register.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Initial primary-source intake review; no deployment or shared corpus edit."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No site coordinate adopted from the inspected primary evidence.",
+        "provenance": "Evidence is retained without inventing a site point or a geographic extent."
+      }
+    },
+    {
+      "id": "cuba-el-morrillo-postholes",
+      "revision": 1,
+      "type": "event",
+      "title": "El Morrillo: a possible dwelling structure",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "Legacy determination 590 ± 90 radiocarbon BP; no calibrated calendar range supplied here",
+        "method": "Source-specific chronology or dating limitation",
+        "interpretation": "No closed, independently supported calendar interval is assigned."
+      },
+      "claims": [
+        {
+          "id": "possible-dwelling",
+          "text": "Postholes cut into bedrock are interpreted provisionally as part of a dwelling at El Morrillo.",
+          "status": "under discussion",
+          "explanation": "The authors discuss disturbance and erosion; the structural interpretation is preliminary. Uncalibrated radiocarbon BP cannot be converted by simply subtracting from 1950.",
+          "support": [
+            {
+              "sourceId": "hernandez-rodriguez2008-morrillo",
+              "locator": "Main text: excavations and possible structure",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "hernandez-rodriguez2008-morrillo",
+          "authors": "Odlanyer Hernández de Lara; Boris E. Rodríguez Tápanes",
+          "title": "Consideraciones en torno a una posible estructura de vivienda en el asentamiento aborigen El Morrillo, Matanzas, Cuba",
+          "year": 2008,
+          "venue": "Comechingonia Virtual",
+          "issue": "1",
+          "pages": "24–42",
+          "url": "https://comechingonia.com/Virtual%20II%201/Arqueologia%20Domestica%20Cuba%20Hernandez%20Rodriguez%202008.htm",
+          "access": "Open publisher article read: Abstract, El Morrillo setting, earlier investigations and housing interpretation. Legacy 590 ±90 radiocarbon BP is not recalibrated.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "Source-specific observations are retained with their dating and interpretive limits. Each claim identifies the primary publication and the actual access scope used for review.",
+        "limitations": "No resident population estimate is available; archaeological classifications do not establish a named ethnic identity.",
+        "discussion": "Claim status reflects evidential scope and named interpretive limits, rather than the number of citations. Unmapped records require additional location evidence before a site point is added.",
+        "provenance": "Reviewed from the two user-supplied Cuba exports and primary publications; unsupported export assertions corrected in the accompanying register.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Initial primary-source intake review; no deployment or shared corpus edit."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No site coordinate adopted from the inspected primary evidence.",
+        "provenance": "Evidence is retained without inventing a site point or a geographic extent."
+      }
+    },
+    {
+      "id": "cuba-jigue-1-precolonial",
+      "revision": 1,
+      "type": "event",
+      "title": "Jigüe 1: precolonial activity without a settled chronology",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "Precolonial attribution; report explicitly awaits chronological investigation",
+        "method": "Source-specific chronology or dating limitation",
+        "interpretation": "No closed, independently supported calendar interval is assigned."
+      },
+      "claims": [
+        {
+          "id": "activity",
+          "text": "The Jigüe 1 report describes fire, food-processing and lithic-manufacturing evidence, while noting severe disturbance and no preserved dwelling structures.",
+          "status": "under discussion",
+          "explanation": "Domestic activity is inferred, but a house plan, resident population and dated occupation span are not established. Fieldwork in 2015–2017 is not an ancient occupation date.",
+          "support": [
+            {
+              "sourceId": "gonzalez-izquierdo2018-jigue",
+              "locator": "Report pp. 73–77",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "gonzalez-izquierdo2018-jigue",
+          "authors": "Ulises M. González Herrera; Gerardo Izquierdo Díaz",
+          "title": "Nueva localidad arqueológica con vestigios de ocupación precolonial en el municipio de Colón, Matanzas, Cuba",
+          "year": 2018,
+          "venue": "Cuba Arqueológica",
+          "volume": "11",
+          "issue": "1",
+          "pages": "73–77",
+          "url": "https://cubaarqueologica.com/wp-content/uploads/2024/02/ra11n1-09.pdf",
+          "access": "Full five-page primary report read, including preliminary domestic evidence, disturbed stratigraphy and statement that chronological results were still awaited.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "Source-specific observations are retained with their dating and interpretive limits. Each claim identifies the primary publication and the actual access scope used for review.",
+        "limitations": "No resident population estimate is available; archaeological classifications do not establish a named ethnic identity.",
+        "discussion": "Claim status reflects evidential scope and named interpretive limits, rather than the number of citations. Unmapped records require additional location evidence before a site point is added.",
+        "provenance": "Reviewed from the two user-supplied Cuba exports and primary publications; unsupported export assertions corrected in the accompanying register.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Initial primary-source intake review; no deployment or shared corpus edit."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No site coordinate adopted from the inspected primary evidence.",
+        "provenance": "Evidence is retained without inventing a site point or a geographic extent."
+      }
+    }
+  ],
+  "updates": [],
+  "sourceRegister": [
+    {
+      "inputRows": [
+        "A1",
+        "B3"
+      ],
+      "source": {
+        "id": "keegan-hofman2017-earliest",
+        "authors": "William F. Keegan; Corinne L. Hofman",
+        "title": "The Earliest Inhabitants",
+        "year": 2017,
+        "venue": "The Caribbean before Columbus, chapter 2",
+        "url": "https://doi.org/10.1093/acprof:oso/9780190605247.003.0002",
+        "access": "Official Oxford chapter metadata and book abstract inspected; chapter evidence tables not read."
+      },
+      "disposition": "context-only",
+      "note": "Synthesis chapter, part of A2/B2 book; no named Cuban site or secure 5000-BCE date extracted."
+    },
+    {
+      "inputRows": [
+        "A2",
+        "B2"
+      ],
+      "source": {
+        "id": "keegan-hofman2017-book",
+        "authors": "William F. Keegan; Corinne L. Hofman",
+        "title": "The Caribbean before Columbus",
+        "year": 2017,
+        "venue": "Oxford University Press",
+        "url": "https://doi.org/10.1093/acprof:oso/9780190605247.001.0001",
+        "access": "Official publisher metadata and description inspected; not full book."
+      },
+      "disposition": "context-only",
+      "note": "Official publication date 16 February 2017; export labels 2016. Direct Yucatán navigation remains a model, not a route demonstrated by these Cuba dates."
+    },
+    {
+      "inputRows": [
+        "A3"
+      ],
+      "source": {
+        "id": "chinique2025-sedentism",
+        "authors": "Yadira Chinique de Armas; Silvia Teresita Hernández Godoy; Luis M. Viera; William M. Buhay; Jason Laffoon",
+        "title": "Earliest evidence of sedentism in the Antilles: Multiple isotope data from Canímar Abajo, Cuba",
+        "year": 2025,
+        "venue": "Proceedings of the National Academy of Sciences",
+        "url": "https://doi.org/10.1073/pnas.2413963121",
+        "doi": "10.1073/pnas.2413963121",
+        "access": "Indexed primary full-text passages via PMC read: abstract, site context, isotope results, mobility discussion and conclusions. Direct PMC navigation encountered browser verification. Supplementary data not independently audited. Online December 23, 2024; issue January 7, 2025.",
+        "referenceType": "journal-article",
+        "volume": "122",
+        "issue": "1",
+        "pages": "e2413963121"
+      },
+      "disposition": "incorporated",
+      "note": "Separate older/younger cemetery envelopes and isotopic mobility interpretations; online 2024, issue 2025."
+    },
+    {
+      "inputRows": [
+        "A4"
+      ],
+      "source": {
+        "id": "roksandic2015-canimar",
+        "authors": "Mirjana Roksandic; William Mark Buhay; Yadira Chinique des Armas; Roberto Rodríguez Suárez; Matthew C. Peros; Ivan Roksandic; Stephanie Mowat; Luis M. Vieira; Carlos Arredondo; Antonio Martínez Fuentes; David Gray Smith",
+        "title": "Radiocarbon and Stratigraphic Chronology of Canímar Abajo, Matanzas, Cuba",
+        "year": 2015,
+        "venue": "Radiocarbon",
+        "url": "https://doi.org/10.2458/azu_rc.57.18313",
+        "doi": "10.2458/azu_rc.57.18313",
+        "access": "Abstract only: publisher abstract and bibliographic details read. Full treatment of the conventional charcoal date’s reliability was unavailable.",
+        "referenceType": "journal-article",
+        "volume": "57",
+        "issue": "5",
+        "pages": "755–763"
+      },
+      "disposition": "incorporated",
+      "note": "Retain earlier study-specific cemetery ranges as context, not false agreement with 2025 envelope."
+    },
+    {
+      "inputRows": [
+        "A5"
+      ],
+      "source": {
+        "id": "callaghan2008-jamaica",
+        "authors": "Richard T. Callaghan",
+        "title": "On the Question of the Absence of Archaic Age Sites on Jamaica",
+        "year": 2008,
+        "venue": "Journal of Island and Coastal Archaeology 3(1):54–71",
+        "url": "https://doi.org/10.1080/15564890801928615",
+        "doi": "10.1080/15564890801928615",
+        "access": "Abstract only: primary publisher abstract inspected.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "related-other-island",
+      "note": "Jamaica navigation model does not directly date Cuba or prove absence of earlier Jamaican visits."
+    },
+    {
+      "inputRows": [
+        "A6",
+        "B5"
+      ],
+      "source": {
+        "id": "cooper2007-thesis",
+        "authors": "Jago Cooper",
+        "title": "Island interaction in the prehistoric Caribbean: An archaeological case study from Northern Cuba",
+        "year": 2007,
+        "venue": "Doctoral thesis, University College London",
+        "url": "https://discovery.ucl.ac.uk/id/eprint/1446016/",
+        "access": "Open UCL thesis PDF text extracted in memory and read: Table 7.10 (p. 211), dated shell discussion and Tables 7.11–7.12 (pp. 213–215), site synthesis (pp. 218–224). No claim of reading the entire thesis or independent shell recalibration.",
+        "referenceType": "thesis",
+        "publisher": "University College London"
+      },
+      "disposition": "incorporated",
+      "note": "Primary Table 7.10 and site interpretation read; Cayo sample context inconsistency retained."
+    },
+    {
+      "inputRows": [
+        "A7",
+        "B6"
+      ],
+      "source": {
+        "id": "cooper-thomas2012",
+        "authors": "Jago Cooper; Kenneth D. Thomas",
+        "title": "Constructing Caribbean Chronologies: Comparative Radiocarbon Dating of Shell and Wood Artefacts from Pre-Columbian Sites in Cuba",
+        "year": 2012,
+        "venue": "Archaeometry",
+        "url": "https://doi.org/10.1111/j.1475-4754.2011.00622.x",
+        "doi": "10.1111/j.1475-4754.2011.00622.x",
+        "access": "Abstract only: publisher abstract and metadata read. Full sample tables and shell corrections unavailable; online 2011, issue 2012.",
+        "referenceType": "journal-article",
+        "volume": "54",
+        "issue": "2",
+        "pages": "401–425"
+      },
+      "disposition": "context-only",
+      "note": "Abstract only; do not claim independently verified sample table or exact age from this paper."
+    },
+    {
+      "inputRows": [
+        "A8",
+        "B9"
+      ],
+      "source": {
+        "id": "chinique2020-mango-chronology",
+        "authors": "Yadira Chinique de Armas; Ulises M. González Herrera; William M. Buhay; José M. Yero Masdeu; Luis M. Viera Sanfiel; Meghan Burchell; Carley Crann; Esteban R. Grau González-Quevedo; Mirjana Roksandic",
+        "title": "Chronology of the Archaeological Site of Playa del Mango, Rio Cauto, Granma, Cuba",
+        "year": 2020,
+        "venue": "Radiocarbon",
+        "url": "https://doi.org/10.1017/RDC.2020.52",
+        "doi": "10.1017/RDC.2020.52",
+        "access": "Abstract only: publisher abstract and metadata read. Separate site and context spans retained; laboratory sample tables and calibration procedures not independently reviewed.",
+        "referenceType": "journal-article",
+        "volume": "62",
+        "issue": "5",
+        "pages": "1221–1236"
+      },
+      "disposition": "incorporated",
+      "note": "M2 cemetery, M2 domestic and M1 tooth separated; abstract does not establish uninterrupted cemetery use until 435 CE."
+    },
+    {
+      "inputRows": [
+        "A9",
+        "B10"
+      ],
+      "source": {
+        "id": "colten-worthington2019",
+        "authors": "Roger H. Colten; Brian Worthington",
+        "title": "Museum Collections and Archaic Era Vertebrate Faunal Remains from Cuba",
+        "year": 2019,
+        "venue": "Environmental Archaeology",
+        "url": "https://doi.org/10.1080/14614103.2018.1500157",
+        "doi": "10.1080/14614103.2018.1500157",
+        "access": "Abstract only: publisher-deposited abstract and publication metadata read. Full article unavailable. Online 2018, issue 2019; no site-specific numerical age table inspected.",
+        "referenceType": "journal-article",
+        "volume": "24",
+        "issue": "2",
+        "pages": "211–227"
+      },
+      "disposition": "incorporated",
+      "note": "Online 2018, issue 2019; combined assemblage chronology is not Late Pleistocene."
+    },
+    {
+      "inputRows": [
+        "A10"
+      ],
+      "source": {
+        "id": "peros2006-buchillones",
+        "authors": "Matthew C. Peros; Elizabeth Graham; Anthony M. Davis",
+        "title": "Stratigraphic investigations at Los Buchillones, a coastal Taino site in north-central Cuba",
+        "year": 2006,
+        "venue": "Geoarchaeology",
+        "url": "https://doi.org/10.1002/gea.20113",
+        "doi": "10.1002/gea.20113",
+        "access": "Abstract only: publisher abstract and metadata read. Source explicitly uses open chronology bounds and more than 40 collapsed structures.",
+        "referenceType": "journal-article",
+        "volume": "21",
+        "issue": "5",
+        "pages": "403–428"
+      },
+      "disposition": "incorporated",
+      "note": "Before 1220 until 1640 or later remains unplaced; >40 collapsed structures; limited water-piling observation."
+    },
+    {
+      "inputRows": [
+        "A11"
+      ],
+      "source": {
+        "id": "cooper-rojas2004",
+        "authors": "Jago Cooper; Roberto Valcárcel Rojas",
+        "title": "Pre-Hispanic Settlements Along the North Coast of Cuba: A Pilot Survey Report from Los Buchillones, January-February 2004",
+        "year": 2004,
+        "venue": "Papers from the Institute of Archaeology",
+        "url": "https://doi.org/10.5334/258",
+        "doi": "10.5334/258",
+        "access": "Open publisher PDF indexed text read: Introduction, Coastal Ecology and survey context. The printed longitude has E instead of W; no silently corrected exact site coordinate is adopted.",
+        "referenceType": "journal-article",
+        "volume": "15",
+        "pages": "77–81"
+      },
+      "disposition": "incorporated-context",
+      "note": "Survey report >50-house account and longitude typo retained as source-specific limitations."
+    },
+    {
+      "inputRows": [
+        "A12"
+      ],
+      "source": {
+        "id": "hernandez-rodriguez2008-morrillo",
+        "authors": "Odlanyer Hernández de Lara; Boris E. Rodríguez Tápanes",
+        "title": "Consideraciones en torno a una posible estructura de vivienda en el asentamiento aborigen El Morrillo, Matanzas, Cuba",
+        "year": 2008,
+        "venue": "Comechingonia Virtual",
+        "issue": "1",
+        "pages": "24–42",
+        "url": "https://comechingonia.com/Virtual%20II%201/Arqueologia%20Domestica%20Cuba%20Hernandez%20Rodriguez%202008.htm",
+        "access": "Open publisher article read: Abstract, El Morrillo setting, earlier investigations and housing interpretation. Legacy 590 ±90 radiocarbon BP is not recalibrated.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "incorporated",
+      "note": "Possible dwelling, uncalibrated age and disturbance retained; no exact point adopted."
+    },
+    {
+      "inputRows": [
+        "A13",
+        "B1"
+      ],
+      "source": {
+        "id": "dickau2015-cauca",
+        "authors": "Ruth E. Dickau et al.",
+        "title": "Radiocarbon chronology of terminal Pleistocene to middle Holocene human occupation in the Middle Cauca Valley, Colombia",
+        "year": 2015,
+        "venue": "Quaternary International 363",
+        "url": "https://doi.org/10.1016/j.quaint.2014.12.025",
+        "doi": "10.1016/j.quaint.2014.12.025",
+        "access": "Primary bibliographic record and abstract checked; full sample-level audit not performed.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "excluded-geographic-mismatch",
+      "note": "Colombia evidence cannot directly establish Cuban settlement or a Yucatán-to-Cuba route."
+    },
+    {
+      "inputRows": [
+        "A14",
+        "B4"
+      ],
+      "source": {
+        "id": "kraan2024-curacao",
+        "authors": "Claudia T. Kraan et al.",
+        "title": "Radiocarbon dates from Curaçao’s oldest Archaic site extend earliest island settlement to ca. 5700 cal BP",
+        "year": 2024,
+        "venue": "Journal of Island and Coastal Archaeology 19(4):871–878",
+        "url": "https://doi.org/10.1080/15564894.2024.2321575",
+        "doi": "10.1080/15564894.2024.2321575",
+        "access": "Primary publisher abstract and metadata inspected.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "related-other-island-deferred",
+      "note": "C-1426 is on Curaçao, not Cuba; actual site record deferred to the southeast agent’s ABC-islands intake to avoid duplication."
+    },
+    {
+      "inputRows": [
+        "B7"
+      ],
+      "source": {
+        "id": "chinique2022-mango-diet",
+        "authors": "Yadira Chinique de Armas; Ulises M. González Herrera; Idalí Reyes Serrano; William M. Buhay; Stephanie Skelton; Roberto Rodríguez Suárez; Mirjana Roksandic; Jason Laffoon",
+        "title": "Multiproxy paleodietary reconstruction using stable isotopes and starch analysis: The case of the archaeological site of Playa del Mango, Granma, Cuba",
+        "year": 2022,
+        "venue": "Journal of Archaeological Science: Reports",
+        "url": "https://doi.org/10.1016/j.jasrep.2022.103671",
+        "doi": "10.1016/j.jasrep.2022.103671",
+        "access": "Abstract only: primary publisher abstract and highlights read; full dietary-model methods not inspected.",
+        "referenceType": "journal-article",
+        "volume": "46",
+        "pages": "103671"
+      },
+      "disposition": "incorporated",
+      "note": "Model dietary proportions are not starch counts or proof of local maize fields."
+    },
+    {
+      "inputRows": [
+        "B8"
+      ],
+      "source": {
+        "id": "chinique2015-cultigens",
+        "authors": "Yadira Chinique de Armas; William M. Buhay; Roberto Rodríguez Suárez; Stephanie Bestel; David Gray Smith; Stephanie D. Mowat; Mirjana Roksandic",
+        "title": "Starch analysis and isotopic evidence of consumption of cultigens among fisher–gatherers in Cuba: the archaeological site of Canímar Abajo, Matanzas",
+        "year": 2015,
+        "venue": "Journal of Archaeological Science",
+        "url": "https://doi.org/10.1016/j.jas.2015.03.003",
+        "doi": "10.1016/j.jas.2015.03.003",
+        "access": "Publisher indexed article passages read: site chronology and location, methods excerpt, starch identification, Discussion and Conclusions; not a full sample-table audit.",
+        "referenceType": "journal-article",
+        "volume": "58",
+        "pages": "121–132"
+      },
+      "disposition": "incorporated",
+      "note": "Cultigen consumption and problematic early charcoal association retained separately."
+    },
+    {
+      "inputRows": [
+        "B11"
+      ],
+      "source": {
+        "id": "ardelean2020",
+        "authors": "Ciprian F. Ardelean, Lorena Becerra-Valdivia, Mikkel Winther Pedersen, et al.",
+        "title": "Evidence of human occupation in Mexico around the Last Glacial Maximum",
+        "year": 2020,
+        "venue": "Nature 584, 87–92",
+        "url": "https://doi.org/10.1038/s41586-020-2509-0",
+        "access": "Publisher abstract/metadata and author-uploaded full-text version read. The upload identifies Ciprian F. Ardelean as uploader. Chronology section and reporting summary inspected. Limitation: A modelled stratigraphic boundary is not a directly dated arrival or an uninterrupted occupation. Human manufacture is contested."
+      },
+      "disposition": "already-covered-outside-cuba",
+      "note": "Existing Chiquihuite onset record includes this primary claim and Chatters critique; no new duplicate."
+    },
+    {
+      "inputRows": [
+        "B12"
+      ],
+      "source": {
+        "id": "davis2025-cerro-pedregoso",
+        "authors": "Loren G. Davis et al.",
+        "title": "The geoarchaeological context of Late Pleistocene–Early Holocene human occupation at the Cerro Pedregoso site, Cedros Island, Mexico",
+        "year": 2025,
+        "venue": "Geoarchaeology",
+        "url": "https://doi.org/10.1002/gea.70017",
+        "doi": "10.1002/gea.70017",
+        "access": "Author institutional publication listing verified; detailed chronology not audited in this Cuba review.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "excluded-geographic-mismatch",
+      "note": "Cedros Island, Mexico, not Cuba. Title differs from the abbreviated export."
+    },
+    {
+      "inputRows": [
+        "B13"
+      ],
+      "source": {
+        "id": "barse1990-orinoco",
+        "authors": "William P. Barse",
+        "title": "Preceramic Occupations in the Orinoco River Valley",
+        "year": 1990,
+        "venue": "Science 250(4986):1388–1390",
+        "url": "https://doi.org/10.1126/science.250.4986.1388",
+        "doi": "10.1126/science.250.4986.1388",
+        "access": "Primary article metadata and indexed primary text checked.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "excluded-geographic-mismatch",
+      "note": "Venezuela evidence, not a Cuban dated site."
+    },
+    {
+      "inputRows": [
+        "B14"
+      ],
+      "source": {
+        "id": "troncoso2025-north-chile",
+        "authors": "Andrés Troncoso et al.",
+        "title": "Terminal Pleistocene–Early Holocene human occupation in north-central Chile",
+        "year": 2025,
+        "venue": "Antiquity 99(403):13–31",
+        "url": "https://doi.org/10.15184/aqy.2024.188",
+        "doi": "10.15184/aqy.2024.188",
+        "access": "Primary publisher metadata checked; online 2024, issue 2025.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "excluded-geographic-mismatch",
+      "note": "North-central Chile, not Cuba; no Cuban inference adopted."
+    },
+    {
+      "inputRows": [
+        "B15"
+      ],
+      "source": {
+        "id": "mendez2024-bano-nuevo",
+        "authors": "César Méndez et al.",
+        "title": "Early Holocene Archaeological Context and Assemblages of Baño Nuevo 1: A Key Site in Central West Patagonia",
+        "year": 2024,
+        "venue": "PaleoAmerica",
+        "url": "https://www.tandfonline.com/journals/ypal20",
+        "access": "Input identification only in this Cuba audit; source-level review delegated to Patagonia southeast intake."
+      },
+      "disposition": "deferred-related-other-region",
+      "note": "Baño Nuevo 1, Patagonia; no Cuban evidence. DOI not guessed."
+    },
+    {
+      "inputRows": [
+        "B16"
+      ],
+      "source": {
+        "id": "zangrando2022-beagle",
+        "authors": "A. F. Zangrando et al.",
+        "title": "Colonización humana de Tierra del Fuego: contextos arqueológicos pretransgresivos en la costa norte del canal Beagle",
+        "year": 2022,
+        "venue": "Chungara 54(3):557–577",
+        "url": "https://doi.org/10.4067/S0717-73562022005000401",
+        "doi": "10.4067/S0717-73562022005000401",
+        "access": "Primary journal PDF metadata and abstract checked; detailed site review delegated to Patagonia southeast.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "deferred-related-other-region",
+      "note": "Tierra del Fuego, not Cuba; no new duplicate."
+    },
+    {
+      "inputRows": [
+        "B17"
+      ],
+      "source": {
+        "id": "chatters2022",
+        "authors": "James C. Chatters, Ben A. Potter, Anna Marie Prentiss, et al.",
+        "title": "Evaluating Claims of Early Human Occupation at Chiquihuite Cave, Mexico",
+        "year": 2022,
+        "venue": "PaleoAmerica 8(1), 1–16 (published online 2021)",
+        "url": "https://doi.org/10.1080/20555563.2021.1940441",
+        "access": "University of Montana publication record, author list, publication metadata, and complete abstract read. Full article was not independently inspected."
+      },
+      "disposition": "already-covered-outside-cuba",
+      "note": "Online 2021, issue 2022; already represented as a named challenge to Chiquihuite human agency."
+    },
+    {
+      "inputRows": [
+        "B18"
+      ],
+      "source": {
+        "id": "hering2018-chan-hol",
+        "authors": "Fabio Hering et al.",
+        "title": "The Chan Hol cave near Tulum (Quintana Roo, Mexico): evidence for long-lasting human presence during the early to middle Holocene",
+        "year": 2018,
+        "venue": "Journal of Quaternary Science 33(4):444–454",
+        "url": "https://doi.org/10.1002/jqs.3025",
+        "doi": "10.1002/jqs.3025",
+        "access": "Primary publisher abstract inspected; full article not independently audited.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "excluded-geographic-mismatch",
+      "note": "Mexico cave visits are not proof of a Cuban colonization date or route."
+    },
+    {
+      "inputRows": [
+        "B19"
+      ],
+      "source": {
+        "id": "gonzalez-izquierdo2018-jigue",
+        "authors": "Ulises M. González Herrera; Gerardo Izquierdo Díaz",
+        "title": "Nueva localidad arqueológica con vestigios de ocupación precolonial en el municipio de Colón, Matanzas, Cuba",
+        "year": 2018,
+        "venue": "Cuba Arqueológica",
+        "volume": "11",
+        "issue": "1",
+        "pages": "73–77",
+        "url": "https://cubaarqueologica.com/wp-content/uploads/2024/02/ra11n1-09.pdf",
+        "access": "Full five-page primary report read, including preliminary domestic evidence, disturbed stratigraphy and statement that chronological results were still awaited.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "incorporated",
+      "note": "Full five-page primary report read; ancient dating remains unplaced."
+    },
+    {
+      "inputRows": [
+        "B20"
+      ],
+      "source": {
+        "id": "politis2016-arroyo-seco",
+        "authors": "Gustavo G. Politis et al.",
+        "title": "The Arrival of Homo sapiens into the Southern Cone at 14,000 Years Ago",
+        "year": 2016,
+        "venue": "PLOS ONE 11(9):e0162870",
+        "url": "https://doi.org/10.1371/journal.pone.0162870",
+        "doi": "10.1371/journal.pone.0162870",
+        "access": "Primary publisher article identification and abstract checked; site-specific review outside this Cuba task.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "excluded-geographic-mismatch",
+      "note": "Arroyo Seco 2, Argentine Pampas, not Cuban evidence."
+    },
+    {
+      "inputRows": [],
+      "source": {
+        "id": "chinique2025-lifeways",
+        "authors": "Yadira Chinique de Armas et al.",
+        "title": "Diversity of Lifeways in Early Antillean Societies: A Multi-Isotope Approach",
+        "year": 2025,
+        "venue": "American Journal of Biological Anthropology",
+        "url": "https://doi.org/10.1002/ajpa.70039",
+        "doi": "10.1002/ajpa.70039",
+        "access": "Indexed primary full-text site-description passage inspected for Playa del Mango public coordinates only; other results not independently audited.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "additional-location-source",
+      "note": "Public Playa del Mango site point only; no extra mobility or demographic claims imported."
+    }
+  ],
+  "unresolved": [
+    {
+      "topic": "Canímar Abajo early charcoal",
+      "reason": "Obtain full dating table, depositional records and laboratory quality details for UNAM-0715 before treating its early age as secure human occupation. Current source explicitly calls it problematic."
+    },
+    {
+      "topic": "Cayo Caimán Mata Coco context",
+      "reason": "Thesis Table 7.10 identifies OxA-15267 as Midden 1; adjacent text also calls it Surface Deposit 1. Reconcile original sample provenance and shell-reservoir assumptions. No public coordinate adopted."
+    },
+    {
+      "topic": "Los Buchillones point",
+      "reason": "Cooper and Rojas 2004 prints 22°23′11.9″N, 78°48′10.6″E, inconsistent with Cuba. Other primary regional descriptions give west longitude but not an independently verified identical point. Retain unmapped until source-backed corrected coordinates are established."
+    },
+    {
+      "topic": "Las Obas / Los Caracoles / Vega del Palmar",
+      "reason": "All three require separate public site coordinates and site-specific dating tables before individual map points. Combined abstract range must not be copied to each site."
+    },
+    {
+      "topic": "El Morrillo",
+      "reason": "Possible housing is provisional; no public site coordinate or calibrated version of the legacy 590 ± 90 radiocarbon-BP determination independently verified."
+    },
+    {
+      "topic": "Jigüe 1",
+      "reason": "Primary report awaits chronological work; no ancient date or exact public point verified. Domestic evidence does not establish a preserved house plan."
+    },
+    {
+      "topic": "Earliest western Cuban lithic sites",
+      "reason": "Exports name no individual sites or primary dated assemblage supporting their blanket ca. 5000-BCE assertion. Keegan/Hofman synthesis access does not substitute for those missing primary records."
+    },
+    {
+      "topic": "Shell versus wood calibration",
+      "reason": "Cooper and Thomas 2012 was inspected at abstract level only. Full comparative sample tables and reservoir correction methods are needed for a methodological reassessment."
+    },
+    {
+      "topic": "Museum collection confidence",
+      "reason": "Colten and Worthington source is abstract-only here; collection biases and three independent site chronologies remain unaudited."
+    },
+    {
+      "topic": "Resident population estimates",
+      "reason": "No source-verified resident population estimate is adopted. Teeth, burials, structures and analytical sample sizes are not converted to population."
+    }
+  ],
+  "corrections": [
+    {
+      "input": "A narrative opening; B conclusion",
+      "correction": "Do not present 5500–5000 BCE as the earliest secure Cuban occupation established by this batch. Old charcoal is not directly dated human remains and its association is problematic."
+    },
+    {
+      "input": "A/B Cayo pre-5000-cal-BP inference",
+      "correction": "2754–2478 BCE falls after 5000 cal BP. The sample cannot support the export’s claim of pre-5000-cal-BP Cuban occupation."
+    },
+    {
+      "input": "A/B Playa del Mango cemetery span",
+      "correction": "M2 cemetery: 116 BCE–241 CE; M2 domestic area: 55 BCE–435 CE; isolated M1 tooth: 125–435 CE. None establishes uninterrupted cemetery use until 435 CE."
+    },
+    {
+      "input": "A/B Colten summary",
+      "correction": "The reported combined ca. 350 BCE–630 CE assemblages are not Late Pleistocene, and the combined range is not independently dated for each of the three sites."
+    },
+    {
+      "input": "A Los Buchillones dates/count",
+      "correction": "Peros 2006 gives before 1220 CE to 1640 CE or later, with >40 collapsed structures. Cooper/Rojas 2004 separately cites >50 stilted houses. Preserve source-specific counts without treating either as a resident census."
+    },
+    {
+      "input": "B Dickau geographic attribution",
+      "correction": "The Middle Cauca Valley paper concerns Colombia and cannot directly establish Cuban settlement or a Yucatán–Cuba route."
+    },
+    {
+      "input": "A/B Kraan",
+      "correction": "C-1426 is Curaçao; defer its site record to the ABC-islands intake. Its age does not directly date Cuba."
+    },
+    {
+      "input": "A/B Keegan book year",
+      "correction": "Official Oxford publication date is 2017; export 2016 is not used as the book issue year."
+    },
+    {
+      "input": "A3 and Colten rows",
+      "correction": "PNAS paper was online 2024, issue 2025. Colten/Worthington was online 2018, issue 2019. Record both date contexts accurately."
+    },
+    {
+      "input": "B paleodiet and cultivation wording",
+      "correction": "Cultigen consumption does not itself locate fields; model isotope dietary ratios are not starch-grain count ratios. Archaeological tradition labels are not ethnic identities."
+    },
+    {
+      "input": "Canímar cemetery chronology",
+      "correction": "Roksandic 2015 and PNAS 2025 report different study-specific envelopes. Both are retained with provenance instead of silently selecting a consensus."
+    },
+    {
+      "input": "Cross-regional B11–B18 and B20",
+      "correction": "Mexico, Venezuela, Chile, Patagonia and Pampas references are logged as related, already covered or excluded from Cuban fact support."
+    }
+  ]
+}

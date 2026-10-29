@@ -71,7 +71,7 @@ export function makePackage(proposals: Proposal[]): SharePackage {
   return {
     format: "americas-peoples-proposals",
     schemaVersion: proposals.some(
-      (p) => p.record.overlay || p.baseRecord?.overlay,
+      (p) => p.record.overlay || p.baseRecord?.overlay || p.record.linguistics || p.baseRecord?.linguistics,
     )
       ? 2
       : 1,
@@ -109,10 +109,12 @@ export function parsePackage(raw: string): SharePackage {
     p.proposals.some(
       (x) =>
         x?.record?.overlay !== undefined ||
-        x?.baseRecord?.overlay !== undefined,
+        x?.baseRecord?.overlay !== undefined ||
+        x?.record?.linguistics !== undefined ||
+        x?.baseRecord?.linguistics !== undefined,
     )
   )
-    throw new Error("Overlays require proposal schema version 2.");
+    throw new Error("Overlays and linguistic metadata require proposal schema version 2.");
   const errors = p.proposals.flatMap((x, i) =>
     validateProposal(x).map((e) => `Row ${i + 1}: ${e}`),
   );

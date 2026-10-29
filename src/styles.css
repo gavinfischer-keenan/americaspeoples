@@ -1400,3 +1400,5 @@ dd:last-child {
 .population-unknown{pointer-events:none}.population-range{opacity:.3;pointer-events:none}.cultural-reach{cursor:pointer}.cultural-reach path{fill:var(--reach-color);opacity:.28;filter:blur(8px);stroke:none}.cultural-reach:hover path{opacity:.4}
 
 .settlement-label{font:11px system-ui;fill:#edf7f8;paint-order:stroke;stroke:#102e38;stroke-width:3px;pointer-events:none}
+
+.map-scope{display:flex;flex-direction:column;font-size:12px;gap:3px}.map-scope select{max-width:160px;background:var(--panel);color:inherit}.cloud-language{--cloud:#caa5f1}.language-review{border-left:3px solid #caa5f1;padding-left:14px}.language-area path{stroke:#caa5f1}

@@ -22,6 +22,7 @@ test("complete published workbook retains dates, claims, sources and overlay geo
     assert.equal(p.record.time.kind, r.time.kind);
     assert.deepEqual(p.record.overlay, r.overlay);
     assert.deepEqual(p.record.population, r.population);
+    assert.deepEqual(p.record.linguistics, r.linguistics);
     assert.deepEqual(
       p.record.claims.map((c) => [c.id, c.text, c.status, c.explanation]),
       r.claims.map((c) => [c.id, c.text, c.status, c.explanation]),

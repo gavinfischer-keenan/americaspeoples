@@ -1,5 +1,6 @@
 import type { Overlay } from "./model";
 export const OVERLAY_LABELS: Record<Overlay["kind"], string> = {
+  language: "Languages / linguistic relationships",
   trade: "Trade",
   conflict: "Conflict",
   "forced-removal": "Forced removal",
@@ -15,7 +16,7 @@ export function validateOverlay(value: unknown): string[] {
   if (!o || typeof o !== "object") return ["Invalid overlay metadata."];
   const errors: string[] = [];
   if (
-    o.kind === "cultural-reach" &&
+    (o.kind === "cultural-reach" || (o.kind === "language" && o.radiusKm !== undefined)) &&
     (o.basis !== "schematic" ||
       o.geometry?.type !== "Point" ||
       !Number.isFinite(o.radiusKm) ||
@@ -25,8 +26,8 @@ export function validateOverlay(value: unknown): string[] {
     errors.push(
       "Cultural reach requires a schematic center and illustrative radiusKm from 0 to 3000 km, with source qualifications.",
     );
-  if (o.kind !== "cultural-reach" && o.radiusKm !== undefined)
-    errors.push("radiusKm applies only to cultural reach.");
+  if (!["cultural-reach", "language"].includes(o.kind) && o.radiusKm !== undefined)
+    errors.push("radiusKm applies only to cultural reach or language areas.");
   if (typeof o.kind !== "string" || !Object.hasOwn(OVERLAY_LABELS, o.kind))
     errors.push(
       "Overlay type must be a supported historical, regional, population-history or environment layer.",

@@ -131,7 +131,7 @@ export async function importWorkbook(
     for (const header of sheetHeaders[sheetName])
       if (
         !headers.has(header) &&
-        !["population_json", "reach_radius_km"].includes(header)
+        !["population_json", "language_json", "reach_radius_km"].includes(header)
       )
         throw new Error(
           `${sheetName} row 1: missing header ${header}. Keep all template columns, even when cells are blank.`,

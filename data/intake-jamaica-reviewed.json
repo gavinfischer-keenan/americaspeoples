@@ -1,0 +1,1214 @@
+{
+  "records": [
+    {
+      "id": "jm-archaic-evidence-limits",
+      "revision": 1,
+      "type": "event",
+      "title": "Jamaica — reported early-record gap and navigation hypothesis",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "No independent ancient date assigned.",
+        "method": "Contextual interpretation; no direct occupation date.",
+        "interpretation": "Unplaced research context, not an undated settlement."
+      },
+      "claims": [
+        {
+          "id": "gap",
+          "text": "Callaghan reported no known Jamaican Archaic Age sites in 2008; Rampersad emphasized incomplete coastal survey in 2009. This does not establish that nobody visited or settled earlier.",
+          "status": "well-supported",
+          "explanation": "Statements are time-specific reports about the archaeological record, not proof of absence.",
+          "support": [
+            {
+              "sourceId": "jm-rampersad2009",
+              "stance": "supports",
+              "locator": "p.25; compare Callaghan abstract",
+              "note": "Statements are time-specific reports about the archaeological record, not proof of absence."
+            }
+          ]
+        },
+        {
+          "id": "navigation",
+          "text": "Rough seas and the later social conditions favoring large canoes are Callaghan’s proposed explanation for the record gap.",
+          "status": "under discussion",
+          "explanation": "Simulation-based hypothesis; delayed settlement and a particular cause are not demonstrated by non-discovery.",
+          "support": [
+            {
+              "sourceId": "jm-callaghan2008",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Simulation-based hypothesis; delayed settlement and a particular cause are not demonstrated by non-discovery."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "jm-callaghan2008",
+          "authors": "Richard T. Callaghan",
+          "title": "On the Question of the Absence of Archaic Age Sites on Jamaica",
+          "year": 2008,
+          "venue": "The Journal of Island and Coastal Archaeology",
+          "url": "https://www.tandfonline.com/doi/abs/10.1080/15564890801928615",
+          "access": "Publisher abstract read; navigation hypothesis, not proof of nonoccupation.",
+          "referenceType": "journal-article",
+          "volume": "3",
+          "issue": "1",
+          "pages": "54–71",
+          "doi": "10.1080/15564890801928615"
+        },
+        {
+          "id": "jm-rampersad2009",
+          "authors": "Sabrina R. Rampersad",
+          "title": "Targeting the Jamaican Ostionoid: The Blue Marlin Archaeological Project",
+          "year": 2009,
+          "venue": "Caribbean Quarterly",
+          "url": "https://doi.org/10.1080/00086495.2009.11829757",
+          "access": "Selected original journal text, especially p.25, read in reproduced June 2009 issue at https://latinamericanstudies.org/caribbean/CQ-june-2009.pdf; identity checked against UWI institutional publication record. Publisher full text not retrieved.",
+          "referenceType": "journal-article",
+          "volume": "55",
+          "issue": "2",
+          "pages": "23–42",
+          "doi": "10.1080/00086495.2009.11829757"
+        }
+      ],
+      "review": {
+        "summary": "Publication-era non-discovery and navigation modelling leave earlier presence unresolved.",
+        "limitations": "No verified public site coordinates were located in the consulted sources. No population estimate is inferred.",
+        "discussion": "Evidence is limited to the study and samples described; regional generalizations require additional evidence.",
+        "provenance": "Independent literature intake from 15-row Jamaica export; primary-source access recorded per citation. Working material only; no deployment authorized.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: independently checked supplied synopsis against primary publisher/institutional material."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "Research context; no geographic footprint or route asserted.",
+        "provenance": "No verified coordinates or evidence-bounded polygon available in reviewed material."
+      }
+    },
+    {
+      "id": "jm-blue-marlin-survey-context",
+      "revision": 1,
+      "type": "event",
+      "title": "Blue Marlin project — survey and cultural chronology limits",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "No independent ancient date assigned.",
+        "method": "Contextual interpretation; no direct occupation date.",
+        "interpretation": "Unplaced research context, not an undated settlement."
+      },
+      "claims": [
+        {
+          "id": "survey",
+          "text": "The Blue Marlin project proposed targeted coastal investigation; its ca. AD 650–850 Redware chronology rested on very few dates then available.",
+          "status": "well-supported",
+          "explanation": "A cultural-period model is not a dated occupation span for every named or prospective site.",
+          "support": [
+            {
+              "sourceId": "jm-rampersad2009",
+              "stance": "supports",
+              "locator": "p.25 and project introduction",
+              "note": "A cultural-period model is not a dated occupation span for every named or prospective site."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "jm-rampersad2009",
+          "authors": "Sabrina R. Rampersad",
+          "title": "Targeting the Jamaican Ostionoid: The Blue Marlin Archaeological Project",
+          "year": 2009,
+          "venue": "Caribbean Quarterly",
+          "url": "https://doi.org/10.1080/00086495.2009.11829757",
+          "access": "Selected original journal text, especially p.25, read in reproduced June 2009 issue at https://latinamericanstudies.org/caribbean/CQ-june-2009.pdf; identity checked against UWI institutional publication record. Publisher full text not retrieved.",
+          "referenceType": "journal-article",
+          "volume": "55",
+          "issue": "2",
+          "pages": "23–42",
+          "doi": "10.1080/00086495.2009.11829757"
+        }
+      ],
+      "review": {
+        "summary": "The project targets an incompletely surveyed coastal record; cultural chronology cannot date all prospects.",
+        "limitations": "No verified public site coordinates were located in the consulted sources. No population estimate is inferred.",
+        "discussion": "Evidence is limited to the study and samples described; regional generalizations require additional evidence.",
+        "provenance": "Independent literature intake from 15-row Jamaica export; primary-source access recorded per citation. Working material only; no deployment authorized.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: independently checked supplied synopsis against primary publisher/institutional material."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "Research context; no geographic footprint or route asserted.",
+        "provenance": "No verified coordinates or evidence-bounded polygon available in reviewed material."
+      }
+    },
+    {
+      "id": "jm-paradise-wes15a",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Paradise (Wes-15a) — dated contexts",
+      "culture": {
+        "id": "jamaica-little-river",
+        "name": "Little River / Redware archaeological attribution",
+        "kind": "culture",
+        "color": "#bd8059"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 673,
+        "end": 1428,
+        "approximate": true,
+        "original": "Table 1: Beta-620132 charcoal: cal AD 673–778 and 785–838; Beta-125832 shell: 710–896; Beta-620134 charcoal: 1312–1362 and 1386–1428.",
+        "method": "Calibrated radiocarbon, including Marine20 recalibration with ΔR −193 ±29 for shell.",
+        "interpretation": "Envelope of disjoint sample ranges; gaps are not filled. Late sample attribution remains open."
+      },
+      "claims": [
+        {
+          "id": "dates",
+          "text": "Paradise has early Redware contexts and a later dated charcoal sample; the later activity may represent White Marl reuse.",
+          "status": "well-supported",
+          "explanation": "Separate dated contexts do not prove uninterrupted occupation or persistence of one ceramic tradition.",
+          "support": [
+            {
+              "sourceId": "jm-keegan2022",
+              "stance": "supports",
+              "locator": "Table 1; Paradise chronology discussion",
+              "note": "Separate dated contexts do not prove uninterrupted occupation or persistence of one ceramic tradition."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "jm-keegan2022",
+          "authors": "William F. Keegan",
+          "title": "Archaeology in Paradise (Park), Jamaica: Investigating Jamaica’s two Pre-Columbian Cultures",
+          "year": 2022,
+          "venue": "Journal of Caribbean Archaeology",
+          "url": "https://www.floridamuseum.ufl.edu/wp-content/uploads/sites/44/2022/06/JCA-PP-article-final.pdf",
+          "access": "Primary museum-hosted full PDF consulted: abstract, site descriptions, chronology discussion and Table 1; not every appendix audited.",
+          "referenceType": "journal-article",
+          "volume": "22",
+          "pages": "1–28"
+        }
+      ],
+      "review": {
+        "summary": "Distinct calibrated samples support early and later activity; the late context is not securely assigned to continued Redware use.",
+        "limitations": "No verified public site coordinates were located in the consulted sources. No population estimate is inferred.",
+        "discussion": "Evidence is limited to the study and samples described; regional generalizations require additional evidence.",
+        "provenance": "Independent literature intake from 15-row Jamaica export; primary-source access recorded per citation. Working material only; no deployment authorized.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: independently checked supplied synopsis against primary publisher/institutional material."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "jm-sweetwater-wes15b",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Sweetwater (Wes-15b) — distinct later site",
+      "culture": {
+        "id": "jamaica-white-marl-montego-bay",
+        "name": "Montego Bay variety of White Marl",
+        "kind": "culture",
+        "color": "#81a292"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1396,
+        "end": 1466,
+        "approximate": true,
+        "original": "Beta-125833 charcoal: cal AD 1396–1466; post-contact continuation is separately indicated and open-ended.",
+        "method": "Recalibrated radiocarbon sample; faunal evidence for later activity.",
+        "interpretation": "Only the dated sample envelope is plotted. Later activity has no imposed termination year."
+      },
+      "claims": [
+        {
+          "id": "date",
+          "text": "Sweetwater, 240 m from Paradise, has Montego Bay pottery and a dated charcoal context; introduced black-rat remains also indicate post-contact activity.",
+          "status": "well-supported",
+          "explanation": "The dated sample is not a settlement foundation date or final abandonment date.",
+          "support": [
+            {
+              "sourceId": "jm-keegan2022",
+              "stance": "supports",
+              "locator": "Table 1; Sweetwater site discussion",
+              "note": "The dated sample is not a settlement foundation date or final abandonment date."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "jm-keegan2022",
+          "authors": "William F. Keegan",
+          "title": "Archaeology in Paradise (Park), Jamaica: Investigating Jamaica’s two Pre-Columbian Cultures",
+          "year": 2022,
+          "venue": "Journal of Caribbean Archaeology",
+          "url": "https://www.floridamuseum.ufl.edu/wp-content/uploads/sites/44/2022/06/JCA-PP-article-final.pdf",
+          "access": "Primary museum-hosted full PDF consulted: abstract, site descriptions, chronology discussion and Table 1; not every appendix audited.",
+          "referenceType": "journal-article",
+          "volume": "22",
+          "pages": "1–28"
+        }
+      ],
+      "review": {
+        "summary": "A charcoal range and later introduced fauna document separate temporal evidence at a distinct named site.",
+        "limitations": "No verified public site coordinates were located in the consulted sources. No population estimate is inferred.",
+        "discussion": "Evidence is limited to the study and samples described; regional generalizations require additional evidence.",
+        "provenance": "Independent literature intake from 15-row Jamaica export; primary-source access recorded per citation. Working material only; no deployment authorized.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: independently checked supplied synopsis against primary publisher/institutional material."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "jm-bluefields-mollusk-change",
+      "revision": 1,
+      "type": "event",
+      "title": "Bluefields Bay — changing exploited mollusk habitats",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 800,
+        "end": 1500,
+        "approximate": true,
+        "original": "Paper scope AD 800–1500; older publication chronology, not a continuous environmental core.",
+        "method": "Assemblage comparison; article title supplies rounded comparison period.",
+        "interpretation": "Comparison frame only; site-specific chronology is refined by Keegan 2022."
+      },
+      "claims": [
+        {
+          "id": "habitats",
+          "text": "Compared assemblages at Wes-15a and Wes-15b shift from high-salinity seagrass-associated mollusks toward lower-salinity, poorly circulated mud/mangrove taxa.",
+          "status": "well-supported",
+          "explanation": "Two sampled sites and different periods, not an island-wide environmental sequence.",
+          "support": [
+            {
+              "sourceId": "jm-keegan-portell-slapcinsky2003",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Two sampled sites and different periods, not an island-wide environmental sequence."
+            }
+          ]
+        },
+        {
+          "id": "drivers",
+          "text": "Overharvesting, recruitment limits and siltation associated with land clearance are proposed contributors to this local change.",
+          "status": "under discussion",
+          "explanation": "Environmental and cultural explanations remain hypotheses; no single migration or abandonment cause is established.",
+          "support": [
+            {
+              "sourceId": "jm-keegan-portell-slapcinsky2003",
+              "stance": "supports",
+              "locator": "Indexed conclusions",
+              "note": "Environmental and cultural explanations remain hypotheses; no single migration or abandonment cause is established."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "jm-keegan-portell-slapcinsky2003",
+          "authors": "William F. Keegan; Roger W. Portell; John Slapcinsky",
+          "title": "Changes in invertebrate taxa at two pre-Columbian sites in southwestern Jamaica, AD 800–1500",
+          "year": 2003,
+          "venue": "Journal of Archaeological Science",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0305440303000621",
+          "access": "Publisher abstract and indexed conclusion excerpts read; not full assemblage tables.",
+          "referenceType": "journal-article",
+          "volume": "30",
+          "issue": "12",
+          "pages": "1607–1617",
+          "doi": "10.1016/S0305-4403(03)00062-1"
+        }
+      ],
+      "review": {
+        "summary": "Contrasting sampled mollusk communities indicate different exploited habitats; proposed causes remain open.",
+        "limitations": "No verified public site coordinates were located in the consulted sources. No population estimate is inferred.",
+        "discussion": "Evidence is limited to the study and samples described; regional generalizations require additional evidence.",
+        "provenance": "Independent literature intake from 15-row Jamaica export; primary-source access recorded per citation. Working material only; no deployment authorized.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: independently checked supplied synopsis against primary publisher/institutional material."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "environment",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "Research context; no geographic footprint or route asserted.",
+        "provenance": "No verified coordinates or evidence-bounded polygon available in reviewed material."
+      }
+    },
+    {
+      "id": "jm-white-marl-settlement",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "White Marl — village evidence and dated burials",
+      "culture": {
+        "id": "jamaica-white-marl",
+        "name": "White Marl archaeological attribution",
+        "kind": "culture",
+        "color": "#9aa875"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 900,
+        "end": 1500,
+        "approximate": true,
+        "original": "Village synthesis ca.1050–450 cal BP = AD 900–1500. Individual burials separately span cal AD 1221–1641.",
+        "method": "Published village synthesis and calibrated rescue-burial dates.",
+        "interpretation": "Village reference span only; burial sample endpoints must not extend continuous village occupation."
+      },
+      "claims": [
+        {
+          "id": "village",
+          "text": "Elliott and colleagues describe village occupation around 1050–450 cal BP (approximately AD 900–1500), about 600 years rather than 1300 years of continuous village life.",
+          "status": "well-supported",
+          "explanation": "The title covers a broader land-use legacy, including later periods.",
+          "support": [
+            {
+              "sourceId": "jm-elliott2024",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "The title covers a broader land-use legacy, including later periods."
+            }
+          ]
+        },
+        {
+          "id": "burials",
+          "text": "Three rescue burials collectively span cal AD 1221–1641; one may belong to the Spanish colonial period.",
+          "status": "well-supported",
+          "explanation": "Combined individual-date envelope; not a 900–1641 continuous settlement range.",
+          "support": [
+            {
+              "sourceId": "jm-mickleburgh2019",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Combined individual-date envelope; not a 900–1641 continuous settlement range."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "jm-elliott2024",
+          "authors": "Sarah Elliott; S. Yoshi Maezumi; Mark Robinson; Michael Burn; William D. Gosling; Hayley L. Mickleburgh; Selvenious Walters; Zachary J. M. Beier",
+          "title": "The legacy of 1300 years of land use in Jamaica",
+          "year": 2024,
+          "venue": "The Journal of Island and Coastal Archaeology",
+          "url": "https://eprints.bournemouth.ac.uk/37236/7/The%20legacy%20of%201300%20years%20of%20land%20use%20in%20Jamaica.pdf",
+          "access": "Institutional published PDF: abstract and selected results/discussion read. First online 2022, issue 2024. Internal contact-era wording/date mismatch is flagged below.",
+          "referenceType": "journal-article",
+          "volume": "19",
+          "issue": "2",
+          "pages": "312–343",
+          "doi": "10.1080/15564894.2022.2078448"
+        },
+        {
+          "id": "jm-mickleburgh2019",
+          "authors": "Hayley L. Mickleburgh; Jason E. Laffoon; Jaime R. Pagán Jiménez; Angus A. A. Mol; Selvenious Walters; Zachary J. M. Beier; Corinne L. Hofman",
+          "title": "Precolonial/early colonial human burials from the site of White Marl, Jamaica: New findings from recent rescue excavations",
+          "year": 2019,
+          "venue": "International Journal of Osteoarchaeology",
+          "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/oa.2707",
+          "access": "Publisher abstract read; first online 7 September 2018, issue publication 2019. No full osteological tables consulted.",
+          "referenceType": "journal-article",
+          "volume": "29",
+          "issue": "1",
+          "pages": "155–161",
+          "doi": "10.1002/oa.2707"
+        }
+      ],
+      "review": {
+        "summary": "Published village synthesis and three rescue burials describe different chronological scopes.",
+        "limitations": "No verified public site coordinates were located in the consulted sources. No population estimate is inferred.",
+        "discussion": "Evidence is limited to the study and samples described; regional generalizations require additional evidence.",
+        "provenance": "Independent literature intake from 15-row Jamaica export; primary-source access recorded per citation. Working material only; no deployment authorized.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: independently checked supplied synopsis against primary publisher/institutional material."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "jm-white-marl-pottery-provenance",
+      "revision": 1,
+      "type": "event",
+      "title": "White Marl — sampled pottery clay sources",
+      "culture": {
+        "id": "jamaica-white-marl",
+        "name": "White Marl archaeological attribution",
+        "kind": "culture",
+        "color": "#9aa875"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "No independent ancient date assigned.",
+        "method": "Contextual interpretation; no direct occupation date.",
+        "interpretation": "Unplaced research context, not an undated settlement."
+      },
+      "claims": [
+        {
+          "id": "sample",
+          "text": "In 75 tested sherds, about 97% were attributed to clays derived from the Above Rocks Inlier/Rio Cobre system; two samples point outside that drainage.",
+          "status": "well-supported",
+          "explanation": "Percentage describes the tested sample, not all pottery production.",
+          "support": [
+            {
+              "sourceId": "jm-siegel2025",
+              "stance": "supports",
+              "locator": "Discussion p.16",
+              "note": "Percentage describes the tested sample, not all pottery production."
+            }
+          ]
+        },
+        {
+          "id": "exchange",
+          "text": "Nonlocal-clay vessels may reflect pottery exchange; direct procurement of distant clay was considered and not conclusively rejected.",
+          "status": "under discussion",
+          "explanation": "No fixed trade route, export quantity, or political dependency is established.",
+          "support": [
+            {
+              "sourceId": "jm-siegel2025",
+              "stance": "supports",
+              "locator": "Discussion p.16, hypotheses 1 and 2",
+              "note": "No fixed trade route, export quantity, or political dependency is established."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "jm-siegel2025",
+          "authors": "Peter E. Siegel; Simon F. Mitchell; Jeffrey R. Ferguson; et al.",
+          "title": "Source to sink in precolonial Jamaica: Tracing geochemistry and mineralogy from the rocks to the pots in understanding White Marl pottery production and exchange",
+          "year": 2025,
+          "venue": "Journal of Archaeological Science: Reports",
+          "url": "https://digitalcommons.montclair.edu/anthropology-facpubs/88/",
+          "access": "Institutional abstract and indexed author-hosted PDF discussion p.16 read. Direct author PDF fetch failed; not a full-text audit.",
+          "referenceType": "journal-article",
+          "volume": "61",
+          "pages": "104899",
+          "doi": "10.1016/j.jasrep.2024.104899"
+        }
+      ],
+      "review": {
+        "summary": "The tested sherd sample largely matches nearby source rocks; pottery exchange remains an interpretation.",
+        "limitations": "No verified public site coordinates were located in the consulted sources. No population estimate is inferred.",
+        "discussion": "Evidence is limited to the study and samples described; regional generalizations require additional evidence.",
+        "provenance": "Independent literature intake from 15-row Jamaica export; primary-source access recorded per citation. Working material only; no deployment authorized.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: independently checked supplied synopsis against primary publisher/institutional material."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "Research context; no geographic footprint or route asserted.",
+        "provenance": "No verified coordinates or evidence-bounded polygon available in reviewed material."
+      }
+    },
+    {
+      "id": "jm-white-marl-plant-diet",
+      "revision": 1,
+      "type": "event",
+      "title": "White Marl — dietary residues and tentative cacao",
+      "culture": {
+        "id": "jamaica-white-marl",
+        "name": "White Marl archaeological attribution",
+        "kind": "culture",
+        "color": "#9aa875"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1221,
+        "end": 1641,
+        "approximate": true,
+        "original": "Three individuals collectively dated cal AD 1221–1641; not every residue independently dated.",
+        "method": "Human-burial radiocarbon; calculus microremains and isotopes.",
+        "interpretation": "Combined sample envelope, not continuous settlement or independently dated crop introduction."
+      },
+      "claims": [
+        {
+          "id": "plants",
+          "text": "Dental calculus yielded root crops, palms, maize and wild beans; isotope results indicate substantial C3 plant use and relatively low marine protein.",
+          "status": "well-supported",
+          "explanation": "Dietary interpretation is scoped to three individuals and the sampled tissues.",
+          "support": [
+            {
+              "sourceId": "jm-mickleburgh2019",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Dietary interpretation is scoped to three individuals and the sampled tissues."
+            }
+          ]
+        },
+        {
+          "id": "cacao",
+          "text": "A possible cacao starch grain in Burial 1 is tentative.",
+          "status": "under discussion",
+          "explanation": "Do not present this as confirmed cacao or the first demonstrated Caribbean cacao consumption.",
+          "support": [
+            {
+              "sourceId": "jm-mickleburgh2019",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "Do not present this as confirmed cacao or the first demonstrated Caribbean cacao consumption."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "jm-mickleburgh2019",
+          "authors": "Hayley L. Mickleburgh; Jason E. Laffoon; Jaime R. Pagán Jiménez; Angus A. A. Mol; Selvenious Walters; Zachary J. M. Beier; Corinne L. Hofman",
+          "title": "Precolonial/early colonial human burials from the site of White Marl, Jamaica: New findings from recent rescue excavations",
+          "year": 2019,
+          "venue": "International Journal of Osteoarchaeology",
+          "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/oa.2707",
+          "access": "Publisher abstract read; first online 7 September 2018, issue publication 2019. No full osteological tables consulted.",
+          "referenceType": "journal-article",
+          "volume": "29",
+          "issue": "1",
+          "pages": "155–161",
+          "doi": "10.1002/oa.2707"
+        }
+      ],
+      "review": {
+        "summary": "Burial tissue and calculus evidence inform sampled diets; possible cacao remains tentative.",
+        "limitations": "No verified public site coordinates were located in the consulted sources. No population estimate is inferred.",
+        "discussion": "Evidence is limited to the study and samples described; regional generalizations require additional evidence.",
+        "provenance": "Independent literature intake from 15-row Jamaica export; primary-source access recorded per citation. Working material only; no deployment authorized.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: independently checked supplied synopsis against primary publisher/institutional material."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "Research context; no geographic footprint or route asserted.",
+        "provenance": "No verified coordinates or evidence-bounded polygon available in reviewed material."
+      }
+    },
+    {
+      "id": "jm-white-marl-landscape-proxies",
+      "revision": 1,
+      "type": "event",
+      "title": "White Marl — local vegetation and burning evidence",
+      "culture": {
+        "id": "jamaica-white-marl",
+        "name": "White Marl archaeological attribution",
+        "kind": "culture",
+        "color": "#9aa875"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "No independent ancient date assigned.",
+        "method": "Contextual interpretation; no direct occupation date.",
+        "interpretation": "Unplaced research context, not an undated settlement."
+      },
+      "claims": [
+        {
+          "id": "phases",
+          "text": "A sampled midden profile shifts from arboreal to palm-dominated vegetation around 870–670 cal BP, then toward open grass cover after about 670 cal BP.",
+          "status": "well-supported",
+          "explanation": "670 cal BP is about AD 1280, not European arrival. The upper profile includes later disturbance.",
+          "support": [
+            {
+              "sourceId": "jm-elliott2024",
+              "stance": "supports",
+              "locator": "Abstract; results and discussion",
+              "note": "670 cal BP is about AD 1280, not European arrival. The upper profile includes later disturbance."
+            }
+          ]
+        },
+        {
+          "id": "management",
+          "text": "Manioc phytoliths and burning indicators support the authors’ interpretation of cultivation and vegetation management.",
+          "status": "under discussion",
+          "explanation": "Single-profile inference; comparison with climate records does not prove climate had no influence.",
+          "support": [
+            {
+              "sourceId": "jm-elliott2024",
+              "stance": "supports",
+              "locator": "Results and discussion",
+              "note": "Single-profile inference; comparison with climate records does not prove climate had no influence."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "jm-elliott2024",
+          "authors": "Sarah Elliott; S. Yoshi Maezumi; Mark Robinson; Michael Burn; William D. Gosling; Hayley L. Mickleburgh; Selvenious Walters; Zachary J. M. Beier",
+          "title": "The legacy of 1300 years of land use in Jamaica",
+          "year": 2024,
+          "venue": "The Journal of Island and Coastal Archaeology",
+          "url": "https://eprints.bournemouth.ac.uk/37236/7/The%20legacy%20of%201300%20years%20of%20land%20use%20in%20Jamaica.pdf",
+          "access": "Institutional published PDF: abstract and selected results/discussion read. First online 2022, issue 2024. Internal contact-era wording/date mismatch is flagged below.",
+          "referenceType": "journal-article",
+          "volume": "19",
+          "issue": "2",
+          "pages": "312–343",
+          "doi": "10.1080/15564894.2022.2078448"
+        }
+      ],
+      "review": {
+        "summary": "One profile records vegetation and burning patterns; chronology wording and later disturbance constrain interpretation.",
+        "limitations": "One sampled midden profile; upper deposits affected by later plowing. No spatial extent or population estimate. Source abstract/conclusion contact-era wording conflicts with its BP chronology.",
+        "discussion": "Evidence is limited to the study and samples described; regional generalizations require additional evidence.",
+        "provenance": "Independent literature intake from 15-row Jamaica export; primary-source access recorded per citation. Working material only; no deployment authorized.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: independently checked supplied synopsis against primary publisher/institutional material."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "environment",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "Research context; no geographic footprint or route asserted.",
+        "provenance": "No verified coordinates or evidence-bounded polygon available in reviewed material."
+      }
+    },
+    {
+      "id": "jm-white-marl-living-heritage",
+      "revision": 1,
+      "type": "event",
+      "title": "White Marl — community heritage and preservation",
+      "culture": {
+        "id": "jamaica-white-marl",
+        "name": "White Marl archaeological attribution",
+        "kind": "culture",
+        "color": "#9aa875"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "No independent ancient date assigned.",
+        "method": "Contextual interpretation; no direct occupation date.",
+        "interpretation": "Unplaced research context, not an undated settlement."
+      },
+      "claims": [
+        {
+          "id": "heritage",
+          "text": "White Marl is an archaeological and living heritage resource for local and descendant communities; the study addresses infrastructure threats and community relationships.",
+          "status": "well-supported",
+          "explanation": "Modern heritage context supplies no additional ancient foundation date or population total.",
+          "support": [
+            {
+              "sourceId": "jm-siegel-beier-kaiman2022",
+              "stance": "supports",
+              "locator": "Institutional abstract",
+              "note": "Modern heritage context supplies no additional ancient foundation date or population total."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "jm-siegel-beier-kaiman2022",
+          "authors": "Peter E. Siegel; Zachary J. M. Beier; Kalaan Nibonrix Kaiman",
+          "title": "Archaeological History, Memory, and Heritage at the White Marl Site, Central Village, St Catherine Parish, Jamaica",
+          "year": 2022,
+          "venue": "Public Archaeology",
+          "url": "https://researchwith.montclair.edu/en/publications/archaeological-history-memory-and-heritage-at-the-white-marl-site/",
+          "access": "Primary author-institution abstract and metadata read. Volume dated 2022; online/DOI publication 2023.",
+          "referenceType": "journal-article",
+          "volume": "21",
+          "issue": "1–4",
+          "pages": "3–33",
+          "doi": "10.1080/14655187.2023.2279414"
+        }
+      ],
+      "review": {
+        "summary": "The study situates archaeological preservation within relationships with living local and descendant communities.",
+        "limitations": "No verified public site coordinates were located in the consulted sources. No population estimate is inferred.",
+        "discussion": "Evidence is limited to the study and samples described; regional generalizations require additional evidence.",
+        "provenance": "Independent literature intake from 15-row Jamaica export; primary-source access recorded per citation. Working material only; no deployment authorized.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: independently checked supplied synopsis against primary publisher/institutional material."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "Research context; no geographic footprint or route asserted.",
+        "provenance": "No verified coordinates or evidence-bounded polygon available in reviewed material."
+      }
+    }
+  ],
+  "updates": [
+    {
+      "recordId": "caribbean-colonization-synthesis",
+      "source": {
+        "id": "jm-keegan-hofman2017",
+        "authors": "William F. Keegan; Corinne L. Hofman",
+        "title": "The Caribbean before Columbus",
+        "year": 2017,
+        "venue": "Oxford University Press",
+        "url": "https://academic.oup.com/book/11404",
+        "access": "Publisher abstract, contents and publication metadata only; Jamaica chapter not read.",
+        "referenceType": "book",
+        "publisher": "Oxford University Press",
+        "doi": "10.1093/acprof:oso/9780190605247.001.0001"
+      },
+      "claimId": "finding",
+      "stance": "context",
+      "locator": "Consulted context as described in source access field.",
+      "note": "Regional synthesis context only, not proof of Jamaican nonoccupation. Oxford publication 2017, supplied listing 2016."
+    },
+    {
+      "recordId": "caribbean-napolitano-routepattern",
+      "source": {
+        "id": "jm-callaghan2008",
+        "authors": "Richard T. Callaghan",
+        "title": "On the Question of the Absence of Archaic Age Sites on Jamaica",
+        "year": 2008,
+        "venue": "The Journal of Island and Coastal Archaeology",
+        "url": "https://www.tandfonline.com/doi/abs/10.1080/15564890801928615",
+        "access": "Publisher abstract read; navigation hypothesis, not proof of nonoccupation.",
+        "referenceType": "journal-article",
+        "volume": "3",
+        "issue": "1",
+        "pages": "54–71",
+        "doi": "10.1080/15564890801928615"
+      },
+      "claimId": "finding",
+      "stance": "context",
+      "locator": "Consulted context as described in source access field.",
+      "note": "Earlier Jamaica navigation hypothesis; rough seas/canoe explanation is not a demonstrated cause or precise migration route."
+    },
+    {
+      "recordId": "caribbean-resource-landscape-feedbacks",
+      "source": {
+        "id": "jm-keegan-portell-slapcinsky2003",
+        "authors": "William F. Keegan; Roger W. Portell; John Slapcinsky",
+        "title": "Changes in invertebrate taxa at two pre-Columbian sites in southwestern Jamaica, AD 800–1500",
+        "year": 2003,
+        "venue": "Journal of Archaeological Science",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0305440303000621",
+        "access": "Publisher abstract and indexed conclusion excerpts read; not full assemblage tables.",
+        "referenceType": "journal-article",
+        "volume": "30",
+        "issue": "12",
+        "pages": "1607–1617",
+        "doi": "10.1016/S0305-4403(03)00062-1"
+      },
+      "claimId": "finding",
+      "stance": "context",
+      "locator": "Consulted context as described in source access field.",
+      "note": "Local Jamaican mollusk assemblage context; proposed cultural/environmental drivers not an island-wide deterministic sequence."
+    }
+  ],
+  "sourceRegister": [
+    {
+      "inputRows": [
+        1
+      ],
+      "title": "The Caribbean before Columbus",
+      "url": "https://academic.oup.com/book/11404",
+      "access": "Publisher abstract, contents and publication metadata only; Jamaica chapter not read.",
+      "disposition": "Existing Caribbean synthesis context, no new Jamaica date.",
+      "source": {
+        "id": "jm-keegan-hofman2017",
+        "authors": "William F. Keegan; Corinne L. Hofman",
+        "title": "The Caribbean before Columbus",
+        "year": 2017,
+        "venue": "Oxford University Press",
+        "url": "https://academic.oup.com/book/11404",
+        "access": "Publisher abstract, contents and publication metadata only; Jamaica chapter not read.",
+        "referenceType": "book",
+        "publisher": "Oxford University Press",
+        "doi": "10.1093/acprof:oso/9780190605247.001.0001"
+      },
+      "note": "Supplied 2016 may reflect advance/ebook listing; Oxford gives February 2017."
+    },
+    {
+      "inputRows": [
+        2
+      ],
+      "title": "On the Question of the Absence of Archaic Age Sites on Jamaica",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/15564890801928615",
+      "access": "Publisher abstract read; navigation hypothesis, not proof of nonoccupation.",
+      "disposition": "Reported gap and navigation hypothesis, not proof of absence.",
+      "source": {
+        "id": "jm-callaghan2008",
+        "authors": "Richard T. Callaghan",
+        "title": "On the Question of the Absence of Archaic Age Sites on Jamaica",
+        "year": 2008,
+        "venue": "The Journal of Island and Coastal Archaeology",
+        "url": "https://www.tandfonline.com/doi/abs/10.1080/15564890801928615",
+        "access": "Publisher abstract read; navigation hypothesis, not proof of nonoccupation.",
+        "referenceType": "journal-article",
+        "volume": "3",
+        "issue": "1",
+        "pages": "54–71",
+        "doi": "10.1080/15564890801928615"
+      }
+    },
+    {
+      "inputRows": [
+        3
+      ],
+      "title": "Targeting the Jamaican Ostionoid: The Blue Marlin Archaeological Project",
+      "url": "https://doi.org/10.1080/00086495.2009.11829757",
+      "access": "Selected original journal text, especially p.25, read in reproduced June 2009 issue at https://latinamericanstudies.org/caribbean/CQ-june-2009.pdf; identity checked against UWI institutional publication record. Publisher full text not retrieved.",
+      "disposition": "Project context, not uniformly dated sites.",
+      "source": {
+        "id": "jm-rampersad2009",
+        "authors": "Sabrina R. Rampersad",
+        "title": "Targeting the Jamaican Ostionoid: The Blue Marlin Archaeological Project",
+        "year": 2009,
+        "venue": "Caribbean Quarterly",
+        "url": "https://doi.org/10.1080/00086495.2009.11829757",
+        "access": "Selected original journal text, especially p.25, read in reproduced June 2009 issue at https://latinamericanstudies.org/caribbean/CQ-june-2009.pdf; identity checked against UWI institutional publication record. Publisher full text not retrieved.",
+        "referenceType": "journal-article",
+        "volume": "55",
+        "issue": "2",
+        "pages": "23–42",
+        "doi": "10.1080/00086495.2009.11829757"
+      }
+    },
+    {
+      "inputRows": [
+        4
+      ],
+      "title": "The Pre-Columbian Caribbean: Colonization, Population Dispersal, and Island Adaptations",
+      "url": "https://doi.org/10.1179/2055557115Y.0000000010",
+      "access": "Publisher abstract read; exact existing citation retained.",
+      "disposition": "Reuse caribbean-colonization-synthesis, not duplicate.",
+      "source": {
+        "id": "fitzpatrick2015",
+        "authors": "Scott M. Fitzpatrick",
+        "year": 2015,
+        "title": "The Pre-Columbian Caribbean: Colonization, Population Dispersal, and Island Adaptations",
+        "venue": "PaleoAmerica 1(4)",
+        "doi": "10.1179/2055557115Y.0000000010",
+        "url": "https://doi.org/10.1179/2055557115Y.0000000010",
+        "access": "Publisher abstract checked. The onset is approximately 7,000 calibrated years BP, not 7,000 BC.",
+        "referenceType": "journal-article",
+        "pages": "305–331"
+      },
+      "note": "7000 cal BP is approximately 5050 BCE, not 7000 BCE."
+    },
+    {
+      "inputRows": [
+        5
+      ],
+      "title": "Rescue recovery of the earliest known burials from Barbuda, West Indies (ca. 3560–3220 cal years BP)",
+      "url": "https://digitalcommons.cwu.edu/anthropology_museum_studies/110/",
+      "access": "Primary author-institution abstract read.",
+      "disposition": "Barbuda related only; no Jamaican evidence.",
+      "authors": "Steven Hackenberger; Scott M. Fitzpatrick; Jessica H. Stone; Matthew F. Napolitano",
+      "year": 2021,
+      "doi": "10.1080/15564894.2021.1962438",
+      "note": "Three individuals recovered; direct early dating applies to one."
+    },
+    {
+      "inputRows": [
+        6
+      ],
+      "title": "Archaeology in Paradise (Park), Jamaica: Investigating Jamaica’s two Pre-Columbian Cultures",
+      "url": "https://www.floridamuseum.ufl.edu/wp-content/uploads/sites/44/2022/06/JCA-PP-article-final.pdf",
+      "access": "Primary museum-hosted full PDF consulted: abstract, site descriptions, chronology discussion and Table 1; not every appendix audited.",
+      "disposition": "Distinct Paradise and Sweetwater contexts; Table 1 retained.",
+      "source": {
+        "id": "jm-keegan2022",
+        "authors": "William F. Keegan",
+        "title": "Archaeology in Paradise (Park), Jamaica: Investigating Jamaica’s two Pre-Columbian Cultures",
+        "year": 2022,
+        "venue": "Journal of Caribbean Archaeology",
+        "url": "https://www.floridamuseum.ufl.edu/wp-content/uploads/sites/44/2022/06/JCA-PP-article-final.pdf",
+        "access": "Primary museum-hosted full PDF consulted: abstract, site descriptions, chronology discussion and Table 1; not every appendix audited.",
+        "referenceType": "journal-article",
+        "volume": "22",
+        "pages": "1–28"
+      }
+    },
+    {
+      "inputRows": [
+        7
+      ],
+      "title": "Changes in invertebrate taxa at two pre-Columbian sites in southwestern Jamaica, AD 800–1500",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0305440303000621",
+      "access": "Publisher abstract and indexed conclusion excerpts read; not full assemblage tables.",
+      "disposition": "Local habitat comparison; contributors remain hypotheses.",
+      "source": {
+        "id": "jm-keegan-portell-slapcinsky2003",
+        "authors": "William F. Keegan; Roger W. Portell; John Slapcinsky",
+        "title": "Changes in invertebrate taxa at two pre-Columbian sites in southwestern Jamaica, AD 800–1500",
+        "year": 2003,
+        "venue": "Journal of Archaeological Science",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0305440303000621",
+        "access": "Publisher abstract and indexed conclusion excerpts read; not full assemblage tables.",
+        "referenceType": "journal-article",
+        "volume": "30",
+        "issue": "12",
+        "pages": "1607–1617",
+        "doi": "10.1016/S0305-4403(03)00062-1"
+      }
+    },
+    {
+      "inputRows": [
+        8
+      ],
+      "title": "Source to sink in precolonial Jamaica: Tracing geochemistry and mineralogy from the rocks to the pots in understanding White Marl pottery production and exchange",
+      "url": "https://digitalcommons.montclair.edu/anthropology-facpubs/88/",
+      "access": "Institutional abstract and indexed author-hosted PDF discussion p.16 read. Direct author PDF fetch failed; not a full-text audit.",
+      "disposition": "Tested-sample provenance; exchange versus procurement qualified.",
+      "source": {
+        "id": "jm-siegel2025",
+        "authors": "Peter E. Siegel; Simon F. Mitchell; Jeffrey R. Ferguson; et al.",
+        "title": "Source to sink in precolonial Jamaica: Tracing geochemistry and mineralogy from the rocks to the pots in understanding White Marl pottery production and exchange",
+        "year": 2025,
+        "venue": "Journal of Archaeological Science: Reports",
+        "url": "https://digitalcommons.montclair.edu/anthropology-facpubs/88/",
+        "access": "Institutional abstract and indexed author-hosted PDF discussion p.16 read. Direct author PDF fetch failed; not a full-text audit.",
+        "referenceType": "journal-article",
+        "volume": "61",
+        "pages": "104899",
+        "doi": "10.1016/j.jasrep.2024.104899"
+      }
+    },
+    {
+      "inputRows": [
+        9
+      ],
+      "title": "Precolonial/early colonial human burials from the site of White Marl, Jamaica: New findings from recent rescue excavations",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/oa.2707",
+      "access": "Publisher abstract read; first online 7 September 2018, issue publication 2019. No full osteological tables consulted.",
+      "disposition": "Three burials, diet and tentative cacao. Online 2018, issue 2019.",
+      "source": {
+        "id": "jm-mickleburgh2019",
+        "authors": "Hayley L. Mickleburgh; Jason E. Laffoon; Jaime R. Pagán Jiménez; Angus A. A. Mol; Selvenious Walters; Zachary J. M. Beier; Corinne L. Hofman",
+        "title": "Precolonial/early colonial human burials from the site of White Marl, Jamaica: New findings from recent rescue excavations",
+        "year": 2019,
+        "venue": "International Journal of Osteoarchaeology",
+        "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/oa.2707",
+        "access": "Publisher abstract read; first online 7 September 2018, issue publication 2019. No full osteological tables consulted.",
+        "referenceType": "journal-article",
+        "volume": "29",
+        "issue": "1",
+        "pages": "155–161",
+        "doi": "10.1002/oa.2707"
+      }
+    },
+    {
+      "inputRows": [
+        10
+      ],
+      "title": "The legacy of 1300 years of land use in Jamaica",
+      "url": "https://eprints.bournemouth.ac.uk/37236/7/The%20legacy%20of%201300%20years%20of%20land%20use%20in%20Jamaica.pdf",
+      "access": "Institutional published PDF: abstract and selected results/discussion read. First online 2022, issue 2024. Internal contact-era wording/date mismatch is flagged below.",
+      "disposition": "Village and vegetation proxies. Online 2022, issue 2024.",
+      "source": {
+        "id": "jm-elliott2024",
+        "authors": "Sarah Elliott; S. Yoshi Maezumi; Mark Robinson; Michael Burn; William D. Gosling; Hayley L. Mickleburgh; Selvenious Walters; Zachary J. M. Beier",
+        "title": "The legacy of 1300 years of land use in Jamaica",
+        "year": 2024,
+        "venue": "The Journal of Island and Coastal Archaeology",
+        "url": "https://eprints.bournemouth.ac.uk/37236/7/The%20legacy%20of%201300%20years%20of%20land%20use%20in%20Jamaica.pdf",
+        "access": "Institutional published PDF: abstract and selected results/discussion read. First online 2022, issue 2024. Internal contact-era wording/date mismatch is flagged below.",
+        "referenceType": "journal-article",
+        "volume": "19",
+        "issue": "2",
+        "pages": "312–343",
+        "doi": "10.1080/15564894.2022.2078448"
+      }
+    },
+    {
+      "inputRows": [
+        11
+      ],
+      "title": "Archaeological History, Memory, and Heritage at the White Marl Site, Central Village, St Catherine Parish, Jamaica",
+      "url": "https://researchwith.montclair.edu/en/publications/archaeological-history-memory-and-heritage-at-the-white-marl-site/",
+      "access": "Primary author-institution abstract and metadata read. Volume dated 2022; online/DOI publication 2023.",
+      "disposition": "Community heritage. Volume 2022, online 2023.",
+      "source": {
+        "id": "jm-siegel-beier-kaiman2022",
+        "authors": "Peter E. Siegel; Zachary J. M. Beier; Kalaan Nibonrix Kaiman",
+        "title": "Archaeological History, Memory, and Heritage at the White Marl Site, Central Village, St Catherine Parish, Jamaica",
+        "year": 2022,
+        "venue": "Public Archaeology",
+        "url": "https://researchwith.montclair.edu/en/publications/archaeological-history-memory-and-heritage-at-the-white-marl-site/",
+        "access": "Primary author-institution abstract and metadata read. Volume dated 2022; online/DOI publication 2023.",
+        "referenceType": "journal-article",
+        "volume": "21",
+        "issue": "1–4",
+        "pages": "3–33",
+        "doi": "10.1080/14655187.2023.2279414"
+      }
+    },
+    {
+      "inputRows": [
+        12
+      ],
+      "title": "Radiocarbon dates from Curaçao’s oldest Archaic site extend earliest island settlement to ca. 5700 cal BP",
+      "url": "https://www.shh.mpg.de/2391434/human-activity-on-curacao",
+      "access": "Primary institutional report and identity checked.",
+      "disposition": "C-1426 Curaçao handled by ABC intake; no duplicate or Jamaica date.",
+      "authors": "Claudia T. Kraan; Michiel Kappers; Kelsey M. Lowe; S. Yoshi Maezumi; Christina M. Giovas",
+      "year": 2024,
+      "doi": "10.1080/15564894.2024.2321575"
+    },
+    {
+      "inputRows": [
+        13
+      ],
+      "title": "New Archaeological Books and Journals",
+      "url": "https://www.tandfonline.com/toc/yjfa20/33/3",
+      "access": "2008 publisher contents checked; exact issue/listing unresolved.",
+      "disposition": "Bibliographic listing, not primary field evidence.",
+      "year": 2008,
+      "venue": "Journal of Field Archaeology"
+    },
+    {
+      "inputRows": [
+        14
+      ],
+      "title": "Review of P. Allsworth-Jones, Pre-Columbian Jamaica",
+      "url": "https://doi.org/10.1017/S0003598X00099609",
+      "access": "Cambridge publisher identity checked; book review.",
+      "disposition": "Secondary review of 2008 book, no independent field evidence.",
+      "authors": "José R. Oliver",
+      "year": 2009,
+      "venue": "Antiquity",
+      "volume": "83",
+      "issue": "322",
+      "pages": "1202–1203",
+      "doi": "10.1017/S0003598X00099609"
+    },
+    {
+      "inputRows": [
+        15
+      ],
+      "title": "Excavations in Jamaica",
+      "url": "https://www.cambridge.org/core/journals/american-antiquity/article/abs/excavations-in-jamaica/81D1BCA9FCFCD4953305B736B5851F12",
+      "access": "Publisher extract and selected reproduced original paper consulted; no full chronology audit.",
+      "disposition": "1933 fieldwork report published 1953; no new absolute dates extracted.",
+      "authors": "Marian DeWolf",
+      "year": 1953,
+      "venue": "American Antiquity",
+      "volume": "18",
+      "issue": "3",
+      "pages": "230–238",
+      "doi": "10.2307/277038",
+      "note": "Four-culture framework describes West Indies, not four demonstrated Jamaican occupations."
+    }
+  ],
+  "unresolved": [
+    "Numerical public archaeological coordinates not verified for Paradise Wes-15a, Sweetwater Wes-15b or White Marl. Keep separate named records unmapped; tourist, school, town and property centroids are not substitutes.",
+    "No present-day exhaustive survey inventory established. Callaghan 2008 and Rampersad 2009 describe publication-era knowledge; no proof of pre-5000 cal BP nonoccupation.",
+    "Paradise Table 1 has disjoint ranges and later charcoal beginning 1312; narrative shorthand sometimes says 1390. Table retained; later cultural attribution unresolved.",
+    "Elliott abstract/conclusion calls the after-670 cal BP phase European colonization, but 670 cal BP is about AD 1280. Results distinguish later sugarcane after about 440 cal BP and upper plow disturbance. Do not equate that phase boundary with European arrival.",
+    "JFA 2008 book-list row lacks issue, author and DOI. Exact entry unresolved; no field claims extracted.",
+    "White Marl tentative cacao and possible nonlocal individual require corroboration/baselines. No confirmed first cacao or migration route.",
+    "Blue Marlin cultural-period chronology is not every site occupation. DeWolf sites need direct contextual chronology review before adding dated records.",
+    "No resident population totals follow from sherd percentages, burials, midden area or title duration. No population estimate assigned."
+  ],
+  "corrections": [
+    "Reported absence is not demonstrated absence of people. Categorical no-pre-5000-cal-BP conclusion and inconsistent 500 BCE threshold not adopted.",
+    "Rampersad explicitly reported lack of comprehensive coastline survey in 2009; extensive exhaustive island surveys are not established.",
+    "Callaghan rough-seas and large-canoe explanation is a hypothesis, not proven cause.",
+    "Paradise Table 1: charcoal 673–778/785–838, shell 710–896, later charcoal 1312–1362/1386–1428 cal AD. Combined envelope is not continuous occupation or one ceramic tradition.",
+    "Sweetwater charcoal 1396–1466 cal AD is a sample range, not foundation/abandonment dates; post-contact activity separately open-ended.",
+    "White Marl village 1050–450 cal BP = approximately AD 900–1500, around 600 years. 1300-year land-use legacy is not 1300 years uninterrupted village life.",
+    "Three White Marl burials collectively span cal AD 1221–1641; late burial does not extend continuous village life through 1641.",
+    "97% concerns 75 sampled sherds and clay provenance, not all pottery production. Imported vessels versus distant clay procurement remain interpretations; exports unquantified.",
+    "Cacao identification tentative. Different sediment and calculus proxies yield different plants; absence in one proxy does not prove crop absence.",
+    "Hackenberger concerns Barbuda; Kraan Curaçao. Fitzpatrick around 7000 cal BP is not 7000 BCE.",
+    "Oliver is book review; JFA bibliographic listing. DeWolf regional framework is not four demonstrated Jamaican populations.",
+    "Publication versions retained: Oxford 2017 versus supplied 2016; Mickleburgh online 2018/issue 2019; Elliott online 2022/issue 2024; Public Archaeology volume 2022/online 2023.",
+    "Consensus meters, citations and automated method labels are not evidence-quality measures. Working intake only; no website deployment or shared dataset mutation."
+  ]
+}
