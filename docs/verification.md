@@ -59,3 +59,8 @@ Browser checks on the built local atlas verified individual Hovenweep-area recor
 ## v0.3.3 consolidated intake release
 
 500 records and 759 claims; all 482 prior record IDs retained. Twenty original uploads are archived with verified SHA-256 hashes. Eighteen reviewed additions and five existing-record context updates preserve unresolved claims separately. All 67 tests, validation, typecheck, offline and hosted browser checks pass. Workbook round-trip preserves the complete snapshot. Proposal packages are bounded at 8 MB and 1000 proposals, allowing the full workbook plus existing local suggestions. Published app bytes and three download hashes verified after atomic deployment to NODE01 CT101 release 20261029T052034Z. Previous release 20261029T005925Z remains available for rollback.
+
+
+## v0.3.4 consolidated research release
+
+Validated 515 records and 774 claims. All 67 tests, TypeScript checks, production build, and hosted Chromium checks passed. Browser checks covered full-snapshot import/export, persistence, deep links, CSP and no data uploads. Independent review checked preservation of the previous 500 records, four intended contextual updates, chronology and citation metadata. Corrections included Angi 3900 BCE encoded as astronomical year -3899 and three exact citation titles. Public deployment bytes match the tested build (apart from the disclosed Cloudflare beacon); all three download SHA-256 checksums passed. NODE01 CT101 release: 20261029T060245Z; rollback: 20261029T052034Z.

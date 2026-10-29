@@ -2,10 +2,14 @@
 
 A fully offline browser atlas of archaeological and historical evidence in the Americas. Explore the earliest included evidence through 1934, inspect the science behind every row, and exchange proposed updates as files.
 
+## Current release
+
+v0.3.4 publishes 515 records and 774 claims, including 15 new round5 records and context updates to four existing records. All 500 previous records are retained. The intake archive preserves 23 synthesis topics from 31 original files; unresolved leads remain explicitly pending. Synthesis uploads are secondary provenance, not primary research.
+
 ## Downloads and bulk contributions
 
-- [Download v0.2.1 — offline application ZIP](https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/tags/v0.2.1/downloads/americas-peoples-v0.2.1-offline.zip)
-- [Release filenames, sizes and SHA-256 checksums](https://github.com/gavinfischer-keenan/americaspeoples/blob/v0.2.1/downloads/v0.2.1-artifacts.json)
+- [Download v0.3.4 — offline application ZIP](https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/tags/v0.3.4/downloads/americas-peoples-v0.3.4-offline.zip)
+- [Release filenames, sizes and SHA-256 checksums](https://github.com/gavinfischer-keenan/americaspeoples/blob/v0.3.4/downloads/v0.3.4-artifacts.json)
 - [Read the bulk import and reference guide](docs/bulk-import-guide.md)
 - [Download the XLSX template](https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/heads/main/templates/americas-peoples-import.xlsx)
 - [Original v0.1 download](https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/heads/main/downloads/americas-peoples-v0.1-offline.zip)

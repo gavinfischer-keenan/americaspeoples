@@ -12306,7 +12306,7 @@
       "baseRecord": null,
       "record": {
         "id": "central-belize-southern-ancestry",
-        "revision": 2,
+        "revision": 3,
         "type": "event",
         "title": "Southern Belize — ancestry shift across a sampling gap",
         "culture": {
@@ -12358,6 +12358,12 @@
                 "stance": "context",
                 "locator": "Existing cited source; round4 scope reconciliation",
                 "note": "Round4 reconciliation: affinity to present-day Chibchan speakers does not identify the language of ancient migrants; modeled ancestry proportion is sample-specific."
+              },
+              {
+                "sourceId": "kennett2022",
+                "stance": "context",
+                "locator": "Round5 scope reconciliation",
+                "note": "Round5: the Belize ancestry result cannot be assigned wholesale to ancient Honduras, Nicaragua or southern Mexico; present-day language affinity is not a direct ancient language observation."
               }
             ]
           }
@@ -12385,6 +12391,7 @@
           "reviewedAt": "2026-10-28",
           "history": [
             "2026-10-28: Reviewed intake; published corpus unchanged.",
+            "2026-10-28: supplementary source and interpretation context added.",
             "2026-10-28: supplementary source and interpretation context added."
           ],
           "relatedIds": [
@@ -13055,7 +13062,7 @@
       "baseRecord": null,
       "record": {
         "id": "central-elcoyote-late-phase",
-        "revision": 1,
+        "revision": 2,
         "type": "event",
         "title": "Western Honduras — El Coyote late-phase exchange",
         "culture": {
@@ -13101,6 +13108,12 @@
                 "locator": "Abstract",
                 "stance": "supports",
                 "note": "Supports this finding within the stated scope and chronological limits."
+              },
+              {
+                "sourceId": "mcfarlane2024",
+                "stance": "context",
+                "locator": "Round5 scope reconciliation",
+                "note": "Round5: an occupation interval cannot automatically date the introduction of metallurgy; maritime relay models require independent source-to-site evidence."
               }
             ]
           }
@@ -13128,7 +13141,8 @@
           "provenance": "User-supplied Central America literature intake checked against linked publications; automated methods labels not treated as evidence. Full author-supplied synthesis archive: docs/intake/index.html. Original synthesis is secondary provenance, not a substitute for the cited primary study.",
           "reviewedAt": "2026-10-28",
           "history": [
-            "2026-10-28: Reviewed intake; published corpus unchanged."
+            "2026-10-28: Reviewed intake; published corpus unchanged.",
+            "2026-10-28: supplementary source and interpretation context added."
           ],
           "relatedIds": []
         }
@@ -36708,7 +36722,7 @@
       "baseRecord": null,
       "record": {
         "id": "hawaii-athens2014-model",
-        "revision": 1,
+        "revision": 2,
         "type": "event",
         "title": "Hawaiʻi: combined archaeological and environmental arrival model",
         "culture": {
@@ -36754,6 +36768,12 @@
                 "locator": "Abstract; conclusion pp. 151–152",
                 "stance": "supports",
                 "note": "Primary source inspected to the access level recorded in its citation."
+              },
+              {
+                "sourceId": "athens2014-hawaii",
+                "stance": "context",
+                "locator": "Round5 scope reconciliation",
+                "note": "Modeled colonization probability is not occupation duration. The additional Kawela onset is a site-specific model, not a replacement date for the whole archipelago."
               }
             ]
           },
@@ -36816,7 +36836,8 @@
           "reviewedAt": "2026-10-28",
           "history": [
             "2026-10-28: Source-intake review only; no website build, push or deployment.",
-            "2026-10-28: Added explicitly schematic regional geography anchor; no exact site coordinate or geographic extent asserted."
+            "2026-10-28: Added explicitly schematic regional geography anchor; no exact site coordinate or geographic extent asserted.",
+            "2026-10-28: supplementary source and interpretation context added."
           ],
           "relatedIds": []
         }
@@ -50879,7 +50900,7 @@
       "baseRecord": null,
       "record": {
         "id": "r4-uros-altiplano",
-        "revision": 1,
+        "revision": 2,
         "type": "event",
         "title": "Uros — distinct ancestry within the Altiplano",
         "culture": {
@@ -50911,6 +50932,12 @@
                 "stance": "supports",
                 "locator": "Abstract and source access notes",
                 "note": "Supports the scoped finding; dates, interpretation and access limits are retained."
+              },
+              {
+                "sourceId": "r4-sandoval2013",
+                "stance": "context",
+                "locator": "Round5 scope reconciliation",
+                "note": "Round5 Bolivian uploads overlap this study. Mitochondrial or Y-chromosome histories do not establish continuous habitation of every Altiplano locality."
               }
             ]
           }
@@ -50935,7 +50962,8 @@
           "provenance": "Round4 author-supplied research leads reconciled against the cited sources on 2026-10-28. Full author-supplied synthesis archive: docs/intake/index.html. Original synthesis is secondary provenance.",
           "reviewedAt": "2026-10-28",
           "history": [
-            "2026-10-28: reviewed for v0.3.3."
+            "2026-10-28: reviewed for v0.3.3.",
+            "2026-10-28: supplementary source and interpretation context added."
           ],
           "relatedIds": []
         },
@@ -51045,6 +51073,1433 @@
       "state": "ready",
       "createdAt": "2026-10-29T05:14:17.524Z",
       "updatedAt": "2026-10-29T05:14:17.524Z"
+    },
+    {
+      "id": "author-r5-kawela-onset",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r5-kawela-onset",
+        "revision": 1,
+        "type": "event",
+        "title": "Kawela Mound — modeled beginning of habitation",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r5-kawela-onset-region",
+          "name": "Kawela Stream mouth, south-central Molokai",
+          "lon": -156.9,
+          "lat": 21.07,
+          "precision": "Approximate Kawela Stream mouth, south-central Molokai anchor; 8 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Named regional setting in cited source; coarse editorial anchor."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": 1121,
+          "end": 1262,
+          "approximate": true,
+          "original": "Modeled onset AD 1121–1262; median 1210",
+          "method": "Published calendar dates",
+          "interpretation": "Uncertain date of onset, not a 141-year occupation or an abandonment date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "The earliest habitation at Kawela Mound is modeled to begin within AD 1121–1262, with a median of AD 1210.",
+            "status": "under discussion",
+            "explanation": "Approximate named locality. The probability interval dates establishment, not the full duration of habitation.",
+            "support": [
+              {
+                "sourceId": "r5-weisler2023",
+                "stance": "supports",
+                "locator": "Abstract and source access notes",
+                "note": "Supports the scoped finding; dates, interpretation and access limits are retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r5-weisler2023",
+            "authors": "Marshall I. Weisler; Quan Hua; Sara L. Collins; Ashleigh J. Rogers; Walter P. Mendes",
+            "title": "Dry, leeward regions support Colonization Period sites: Stratigraphy, dating, and geomorphological setting of one of the earliest habitations in the Hawaiian Islands",
+            "year": 2023,
+            "venue": "The Journal of Island and Coastal Archaeology",
+            "doi": "10.1080/15564894.2023.2165200",
+            "url": "https://doi.org/10.1080/15564894.2023.2165200",
+            "access": "Publisher chronology checked; modeled onset, not occupation duration.",
+            "referenceType": "journal-article"
+          }
+        ],
+        "review": {
+          "summary": "The earliest habitation at Kawela Mound is modeled to begin within AD 1121–1262, with a median of AD 1210.",
+          "limitations": "Approximate named locality. The probability interval dates establishment, not the full duration of habitation.",
+          "discussion": "Population size is unknown. Archaeological culture, ancestry, language and present-day identity are not interchangeable.",
+          "provenance": "Round5 author-supplied research leads reconciled against the cited sources on 2026-10-28.",
+          "reviewedAt": "2026-10-28",
+          "history": [
+            "2026-10-28: reviewed for v0.3.4."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "regional-evidence",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -156.9,
+              21.07
+            ]
+          },
+          "precision": "Approximate Kawela Stream mouth, south-central Molokai anchor; 8 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Fuzzy setting only; no exact site coordinates or boundaries inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T05:57:05.984Z",
+      "updatedAt": "2026-10-29T05:57:05.984Z"
+    },
+    {
+      "id": "author-r5-hawaii-conflict-conventions",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r5-hawaii-conflict-conventions",
+        "revision": 1,
+        "type": "event",
+        "title": "Hawaiʻi — warfare conventions",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r5-hawaii-conflict-conventions-region",
+          "name": "Hawaiian archipelago",
+          "lon": -157,
+          "lat": 20.7,
+          "precision": "Approximate Hawaiian archipelago anchor; 300 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Named regional setting in cited source; coarse editorial anchor."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "unplaced",
+          "start": null,
+          "end": null,
+          "original": "Comparative archaeological and historical interpretation; no single battle interval",
+          "method": "Original chronology retained without unsupported calendar conversion",
+          "interpretation": "The accessed evidence does not define a calibrated calendar interval for this claim. Available in the evidence index; not a fabricated occupation date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "The authors interpret Hawaiian conflict as involving ritualized conquest and conventions of warfare, with relatively limited investment in long-term civilian fortifications.",
+            "status": "under discussion",
+            "explanation": "An interpretation of architecture and traditions does not establish the absence of violence. California weapon studies and synthetic trauma experiments are not Hawaiian skeletal evidence.",
+            "support": [
+              {
+                "sourceId": "r5-kolb2002",
+                "stance": "supports",
+                "locator": "Abstract and source access notes",
+                "note": "Supports the scoped finding; dates, interpretation and access limits are retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r5-kolb2002",
+            "authors": "Kolb, M. J.; Dixon, B.",
+            "title": "Landscapes of War: Rules and Conventions of Conflict in Ancient Hawai'i (And Elsewhere)",
+            "year": 2002,
+            "venue": "See linked primary publication",
+            "doi": "10.2307/1593824",
+            "url": "https://doi.org/10.2307/1593824",
+            "access": "Primary publisher abstract inspected; full text not claimed.",
+            "referenceType": "journal-article"
+          }
+        ],
+        "review": {
+          "summary": "The authors interpret Hawaiian conflict as involving ritualized conquest and conventions of warfare, with relatively limited investment in long-term civilian fortifications.",
+          "limitations": "An interpretation of architecture and traditions does not establish the absence of violence. California weapon studies and synthetic trauma experiments are not Hawaiian skeletal evidence.",
+          "discussion": "Population size is unknown. Archaeological culture, ancestry, language and present-day identity are not interchangeable.",
+          "provenance": "Round5 author-supplied research leads reconciled against the cited sources on 2026-10-28.",
+          "reviewedAt": "2026-10-28",
+          "history": [
+            "2026-10-28: reviewed for v0.3.4."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "conflict",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -157,
+              20.7
+            ]
+          },
+          "precision": "Approximate Hawaiian archipelago anchor; 300 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Fuzzy setting only; no exact site coordinates or boundaries inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T05:57:05.984Z",
+      "updatedAt": "2026-10-29T05:57:05.984Z"
+    },
+    {
+      "id": "author-r5-angi-burial",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r5-angi-burial",
+        "revision": 1,
+        "type": "event",
+        "title": "Angi — shell-matrix burial",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r5-angi-burial-region",
+          "name": "Monkey Point, Caribbean Nicaragua",
+          "lon": -83.7,
+          "lat": 11.6,
+          "precision": "Approximate Monkey Point, Caribbean Nicaragua anchor; 20 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Named regional setting in cited source; coarse editorial anchor."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -3899,
+          "end": -3899,
+          "approximate": true,
+          "original": "Approximately 3900 BC, contextual assignment",
+          "method": "Published calendar dates",
+          "interpretation": "Approximate published envelope, not proof of continuous residence throughout every year."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "A human burial at Angi on Nicaragua’s Caribbean coast is assigned approximately 3900 BC from the surrounding deposits; preservation did not allow direct collagen dating.",
+            "status": "under discussion",
+            "explanation": "The date belongs to associated deposits, not a direct human measurement. This does not date first arrival in all Nicaragua.",
+            "support": [
+              {
+                "sourceId": "r5-roksandic2018",
+                "stance": "supports",
+                "locator": "Abstract and source access notes",
+                "note": "Supports the scoped finding; dates, interpretation and access limits are retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r5-roksandic2018",
+            "authors": "Roksandic, M.; et al.",
+            "title": "The earliest burial from the Caribbean coast of Nicaragua: the Angi shell-matrix site",
+            "year": 2018,
+            "venue": "See linked primary publication",
+            "doi": "10.15184/aqy.2018.142",
+            "url": "https://doi.org/10.15184/aqy.2018.142",
+            "access": "Primary publisher abstract inspected; full text not claimed.",
+            "referenceType": "journal-article"
+          }
+        ],
+        "review": {
+          "summary": "A human burial at Angi on Nicaragua’s Caribbean coast is assigned approximately 3900 BC from the surrounding deposits; preservation did not allow direct collagen dating.",
+          "limitations": "The date belongs to associated deposits, not a direct human measurement. This does not date first arrival in all Nicaragua.",
+          "discussion": "Population size is unknown. Archaeological culture, ancestry, language and present-day identity are not interchangeable.",
+          "provenance": "Round5 author-supplied research leads reconciled against the cited sources on 2026-10-28.",
+          "reviewedAt": "2026-10-28",
+          "history": [
+            "2026-10-28: reviewed for v0.3.4."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "regional-evidence",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -83.7,
+              11.6
+            ]
+          },
+          "precision": "Approximate Monkey Point, Caribbean Nicaragua anchor; 20 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Fuzzy setting only; no exact site coordinates or boundaries inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T05:57:05.984Z",
+      "updatedAt": "2026-10-29T05:57:05.984Z"
+    },
+    {
+      "id": "author-r5-mayales-early-date",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r5-mayales-early-date",
+        "revision": 1,
+        "type": "event",
+        "title": "Mayales microregion — early dated context",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r5-mayales-early-date-region",
+          "name": "Mayales River microregion, Chontales",
+          "lon": -85.4,
+          "lat": 12.1,
+          "precision": "Approximate Mayales River microregion, Chontales anchor; 55 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Named regional setting in cited source; coarse editorial anchor."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": 263,
+          "end": 536,
+          "approximate": true,
+          "original": "1645 ±25 radiocarbon BP; cal AD 263–536, two sigma",
+          "method": "Published calendar dates",
+          "interpretation": "Approximate published envelope, not proof of continuous residence throughout every year."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "The second date list reports eleven new determinations, including an earliest calibrated range of AD 263–536 at two sigma.",
+            "status": "well-supported",
+            "explanation": "Regional dated-context evidence; not continuous occupation of every site or an assignment of the earliest date to Aguas Buenas.",
+            "support": [
+              {
+                "sourceId": "r5-donner2020",
+                "stance": "supports",
+                "locator": "Abstract and source access notes",
+                "note": "Supports the scoped finding; dates, interpretation and access limits are retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r5-donner2020",
+            "authors": "Donner, M.; Geurds, A.",
+            "title": "Valley of Juigalpa, Mayales River Subbasin Microregion (Chontales, Nicaragua) Date List II",
+            "year": 2020,
+            "venue": "See linked primary publication",
+            "doi": "10.1017/RDC.2020.36",
+            "url": "https://doi.org/10.1017/RDC.2020.36",
+            "access": "Primary publisher abstract inspected; full text not claimed.",
+            "referenceType": "journal-article"
+          }
+        ],
+        "review": {
+          "summary": "The second date list reports eleven new determinations, including an earliest calibrated range of AD 263–536 at two sigma.",
+          "limitations": "Regional dated-context evidence; not continuous occupation of every site or an assignment of the earliest date to Aguas Buenas.",
+          "discussion": "Population size is unknown. Archaeological culture, ancestry, language and present-day identity are not interchangeable.",
+          "provenance": "Round5 author-supplied research leads reconciled against the cited sources on 2026-10-28.",
+          "reviewedAt": "2026-10-28",
+          "history": [
+            "2026-10-28: reviewed for v0.3.4."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "regional-evidence",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -85.4,
+              12.1
+            ]
+          },
+          "precision": "Approximate Mayales River microregion, Chontales anchor; 55 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Fuzzy setting only; no exact site coordinates or boundaries inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T05:57:05.984Z",
+      "updatedAt": "2026-10-29T05:57:05.984Z"
+    },
+    {
+      "id": "author-r5-hoyo-negro-individual",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r5-hoyo-negro-individual",
+        "revision": 1,
+        "type": "event",
+        "title": "Hoyo Negro — Late Pleistocene individual",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r5-hoyo-negro-individual-region",
+          "name": "Hoyo Negro, Tulum area, Yucatan Peninsula",
+          "lon": -87.5,
+          "lat": 20.2,
+          "precision": "Approximate Hoyo Negro, Tulum area, Yucatan Peninsula anchor; 30 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Named regional setting in cited source; coarse editorial anchor."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -11050,
+          "end": -10050,
+          "approximate": true,
+          "original": "13,000–12,000 cal BP; BP epoch AD 1950",
+          "method": "Published calibrated BP converted with AD 1950 epoch",
+          "interpretation": "Approximate published envelope, not proof of continuous residence throughout every year."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "The Hoyo Negro study reports a human skeleton dated to 13,000–12,000 calibrated years BP.",
+            "status": "well-supported",
+            "explanation": "Chronology of an individual does not demonstrate a continuously occupied town. The published D1 mitochondrial assignment concerns a maternal lineage, not whole-genome or unbroken local ancestry.",
+            "support": [
+              {
+                "sourceId": "r5-chatters2014",
+                "stance": "supports",
+                "locator": "Abstract and source access notes",
+                "note": "Supports the scoped finding; dates, interpretation and access limits are retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r5-chatters2014",
+            "authors": "James C. Chatters; Douglas J. Kennett; Yemane Asmerom; Brian M. Kemp; Victor Polyak; Alberto Nava Blank; Patricia A. Beddows; Eduard Reinhardt; Joaquin Arroyo-Cabrales; Deborah A. Bolnick; Ripan S. Malhi; Brendan J. Culleton; Pilar Luna Erreguerena; Dominique Rissolo; Shanti Morell-Hart; Thomas W. Stafford",
+            "title": "Late Pleistocene Human Skeleton and mtDNA Link Paleoamericans and Modern Native Americans",
+            "year": 2014,
+            "venue": "Science",
+            "doi": "10.1126/science.1252619",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/24833392/",
+            "access": "Primary publisher abstract inspected; full text not claimed.",
+            "referenceType": "journal-article"
+          }
+        ],
+        "review": {
+          "summary": "The Hoyo Negro study reports a human skeleton dated to 13,000–12,000 calibrated years BP.",
+          "limitations": "Chronology of an individual does not demonstrate a continuously occupied town. The published D1 mitochondrial assignment concerns a maternal lineage, not whole-genome or unbroken local ancestry.",
+          "discussion": "Population size is unknown. Archaeological culture, ancestry, language and present-day identity are not interchangeable.",
+          "provenance": "Round5 author-supplied research leads reconciled against the cited sources on 2026-10-28.",
+          "reviewedAt": "2026-10-28",
+          "history": [
+            "2026-10-28: reviewed for v0.3.4."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "regional-evidence",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -87.5,
+              20.2
+            ]
+          },
+          "precision": "Approximate Hoyo Negro, Tulum area, Yucatan Peninsula anchor; 30 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Fuzzy setting only; no exact site coordinates or boundaries inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T05:57:05.984Z",
+      "updatedAt": "2026-10-29T05:57:05.984Z"
+    },
+    {
+      "id": "author-r5-cerro-pedregoso",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r5-cerro-pedregoso",
+        "revision": 1,
+        "type": "event",
+        "title": "Cerro Pedregoso — repeated early occupations",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r5-cerro-pedregoso-region",
+          "name": "Cedros Island, Baja California",
+          "lon": -115.2,
+          "lat": 28.2,
+          "precision": "Approximate Cedros Island, Baja California anchor; 35 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Named regional setting in cited source; coarse editorial anchor."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "interval",
+          "start": -10050,
+          "end": -7650,
+          "approximate": true,
+          "original": "Approximately 12,000–9,600 cal BP",
+          "method": "Published calibrated BP converted with AD 1950 epoch",
+          "interpretation": "Approximate published envelope, not proof of continuous residence throughout every year."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Dated archaeological deposits at Cerro Pedregoso on Cedros Island indicate repeated occupations approximately 12,000–9,600 calibrated years BP.",
+            "status": "well-supported",
+            "explanation": "Island-scale anchor pending precise public site coordinates. The older underlying soil does not independently demonstrate an earlier human occupation. Repeated visits are not uninterrupted residence.",
+            "support": [
+              {
+                "sourceId": "r5-davis2025",
+                "stance": "supports",
+                "locator": "Abstract and source access notes",
+                "note": "Supports the scoped finding; dates, interpretation and access limits are retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r5-davis2025",
+            "authors": "Loren G. Davis; Matthew R. Des Lauriers; Antonio Porcayo‐Michelini; David B. Madsen; David Rhode",
+            "title": "The Geoarchaeological Context of Early Holocene Human Occupation at the Cerro Pedregoso Site, Cedros Island, Mexico",
+            "year": 2025,
+            "venue": "Geoarchaeology",
+            "doi": "10.1002/gea.70017",
+            "url": "https://doi.org/10.1002/gea.70017",
+            "access": "Publisher abstract consulted; repeated occupation and older soil distinguished.",
+            "referenceType": "journal-article"
+          }
+        ],
+        "review": {
+          "summary": "Dated archaeological deposits at Cerro Pedregoso on Cedros Island indicate repeated occupations approximately 12,000–9,600 calibrated years BP.",
+          "limitations": "Island-scale anchor pending precise public site coordinates. The older underlying soil does not independently demonstrate an earlier human occupation. Repeated visits are not uninterrupted residence.",
+          "discussion": "Population size is unknown. Archaeological culture, ancestry, language and present-day identity are not interchangeable.",
+          "provenance": "Round5 author-supplied research leads reconciled against the cited sources on 2026-10-28.",
+          "reviewedAt": "2026-10-28",
+          "history": [
+            "2026-10-28: reviewed for v0.3.4."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "regional-evidence",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -115.2,
+              28.2
+            ]
+          },
+          "precision": "Approximate Cedros Island, Baja California anchor; 35 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Fuzzy setting only; no exact site coordinates or boundaries inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T05:57:05.984Z",
+      "updatedAt": "2026-10-29T05:57:05.984Z"
+    },
+    {
+      "id": "author-r5-cuncaicha-early",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r5-cuncaicha-early",
+        "revision": 1,
+        "type": "event",
+        "title": "Cuncaicha — high-altitude occupation",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r5-cuncaicha-early-region",
+          "name": "Pucuncho Basin, southern Peru",
+          "lon": -72.6,
+          "lat": -15.3,
+          "precision": "Approximate Pucuncho Basin, southern Peru anchor; 45 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Named regional setting in cited source; coarse editorial anchor."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "unplaced",
+          "start": null,
+          "end": null,
+          "original": "About 12.4 ka; twenty-one dates older than 11.5 ka, as reported in abstract",
+          "method": "Original chronology retained without unsupported calendar conversion",
+          "interpretation": "The accessed evidence does not define a calibrated calendar interval for this claim. Available in the evidence index; not a fabricated occupation date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Cuncaicha rockshelter at 4,480 m contains an occupation sequence extending back about 12.4 thousand years, with twenty-one dates older than 11.5 thousand years.",
+            "status": "well-supported",
+            "explanation": "Rounded basin anchor; date-by-date calibration and occupational hiatuses require full contextual extraction. The source says highland entry within two millennia, not two years, of initial South American entry.",
+            "support": [
+              {
+                "sourceId": "r5-rademaker2014",
+                "stance": "supports",
+                "locator": "Abstract and source access notes",
+                "note": "Supports the scoped finding; dates, interpretation and access limits are retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r5-rademaker2014",
+            "authors": "Kurt Rademaker; Gregory Hodgins; Katherine Moore; Sonia Zarrillo; Christopher Miller; Gordon R. M. Bromley; Peter Leach; David A. Reid; Willy Yépez Álvarez; Daniel H. Sandweiss",
+            "title": "Paleoindian settlement of the high-altitude Peruvian Andes",
+            "year": 2014,
+            "venue": "Science",
+            "doi": "10.1126/science.1258260",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/25342802/",
+            "access": "Primary publisher abstract inspected; full text not claimed.",
+            "referenceType": "journal-article"
+          }
+        ],
+        "review": {
+          "summary": "Cuncaicha rockshelter at 4,480 m contains an occupation sequence extending back about 12.4 thousand years, with twenty-one dates older than 11.5 thousand years.",
+          "limitations": "Rounded basin anchor; date-by-date calibration and occupational hiatuses require full contextual extraction. The source says highland entry within two millennia, not two years, of initial South American entry.",
+          "discussion": "Population size is unknown. Archaeological culture, ancestry, language and present-day identity are not interchangeable.",
+          "provenance": "Round5 author-supplied research leads reconciled against the cited sources on 2026-10-28.",
+          "reviewedAt": "2026-10-28",
+          "history": [
+            "2026-10-28: reviewed for v0.3.4."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "regional-evidence",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -72.6,
+              -15.3
+            ]
+          },
+          "precision": "Approximate Pucuncho Basin, southern Peru anchor; 45 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Fuzzy setting only; no exact site coordinates or boundaries inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T05:57:05.985Z",
+      "updatedAt": "2026-10-29T05:57:05.985Z"
+    },
+    {
+      "id": "author-r5-pucuncho-workshop",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r5-pucuncho-workshop",
+        "revision": 1,
+        "type": "event",
+        "title": "Pucuncho Basin — stone-tool workshop",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r5-pucuncho-workshop-region",
+          "name": "Pucuncho Basin, southern Peru",
+          "lon": -72.6,
+          "lat": -15.3,
+          "precision": "Approximate Pucuncho Basin, southern Peru anchor; 45 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Named regional setting in cited source; coarse editorial anchor."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "unplaced",
+          "start": null,
+          "end": null,
+          "original": "Approximately 12.8–11.5 ka; abstract chronology retained",
+          "method": "Original chronology retained without unsupported calendar conversion",
+          "interpretation": "The accessed evidence does not define a calibrated calendar interval for this claim. Available in the evidence index; not a fabricated occupation date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "A workshop at 4,355 m in the Pucuncho Basin contains fishtail projectile points associated in the study with approximately 12.8–11.5 ka.",
+            "status": "well-supported",
+            "explanation": "A workshop is not necessarily a permanent residential settlement. Artifact transport alone does not establish an exact migration route.",
+            "support": [
+              {
+                "sourceId": "r5-rademaker2014",
+                "stance": "supports",
+                "locator": "Abstract and source access notes",
+                "note": "Supports the scoped finding; dates, interpretation and access limits are retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r5-rademaker2014",
+            "authors": "Kurt Rademaker; Gregory Hodgins; Katherine Moore; Sonia Zarrillo; Christopher Miller; Gordon R. M. Bromley; Peter Leach; David A. Reid; Willy Yépez Álvarez; Daniel H. Sandweiss",
+            "title": "Paleoindian settlement of the high-altitude Peruvian Andes",
+            "year": 2014,
+            "venue": "Science",
+            "doi": "10.1126/science.1258260",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/25342802/",
+            "access": "Primary publisher abstract inspected; full text not claimed.",
+            "referenceType": "journal-article"
+          }
+        ],
+        "review": {
+          "summary": "A workshop at 4,355 m in the Pucuncho Basin contains fishtail projectile points associated in the study with approximately 12.8–11.5 ka.",
+          "limitations": "A workshop is not necessarily a permanent residential settlement. Artifact transport alone does not establish an exact migration route.",
+          "discussion": "Population size is unknown. Archaeological culture, ancestry, language and present-day identity are not interchangeable.",
+          "provenance": "Round5 author-supplied research leads reconciled against the cited sources on 2026-10-28.",
+          "reviewedAt": "2026-10-28",
+          "history": [
+            "2026-10-28: reviewed for v0.3.4."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "regional-evidence",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -72.6,
+              -15.3
+            ]
+          },
+          "precision": "Approximate Pucuncho Basin, southern Peru anchor; 45 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Fuzzy setting only; no exact site coordinates or boundaries inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T05:57:05.985Z",
+      "updatedAt": "2026-10-29T05:57:05.985Z"
+    },
+    {
+      "id": "author-r5-bolivian-forest-islands",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r5-bolivian-forest-islands",
+        "revision": 1,
+        "type": "event",
+        "title": "Bolivian Amazon — early forest-island middens",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r5-bolivian-forest-islands-region",
+          "name": "Llanos de Moxos, Bolivia",
+          "lon": -65,
+          "lat": -14.8,
+          "precision": "Approximate Llanos de Moxos, Bolivia anchor; 180 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Named regional setting in cited source; coarse editorial anchor."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "unplaced",
+          "start": null,
+          "end": null,
+          "original": "Early and Middle Holocene; individual phase dates not extracted",
+          "method": "Original chronology retained without unsupported calendar conversion",
+          "interpretation": "The accessed evidence does not define a calibrated calendar interval for this claim. Available in the evidence index; not a fabricated occupation date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Investigation of three forest islands, including Isla del Tesoro, identifies shell middens indicating Early and Middle Holocene hunter-gatherer activity in western Amazonia.",
+            "status": "well-supported",
+            "explanation": "The regional synthesis is not a single settlement. Separate dated site locations remain to be extracted; no shared occupation interval or population count is inferred.",
+            "support": [
+              {
+                "sourceId": "r5-lombardo2013",
+                "stance": "supports",
+                "locator": "Abstract and source access notes",
+                "note": "Supports the scoped finding; dates, interpretation and access limits are retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r5-lombardo2013",
+            "authors": "Umberto Lombardo; Katherine Szabo; José M. Capriles; Jan-Hendrik May; Wulf Amelung; Rainer Hutterer; Eva Lehndorff; Anna Plotzki; Heinz Veit",
+            "title": "Early and Middle Holocene Hunter-Gatherer Occupations in Western Amazonia: The Hidden Shell Middens",
+            "year": 2013,
+            "venue": "PLoS ONE",
+            "doi": "10.1371/journal.pone.0072746",
+            "url": "https://doi.org/10.1371/journal.pone.0072746",
+            "access": "Primary publisher abstract inspected; full text not claimed.",
+            "referenceType": "journal-article"
+          }
+        ],
+        "review": {
+          "summary": "Investigation of three forest islands, including Isla del Tesoro, identifies shell middens indicating Early and Middle Holocene hunter-gatherer activity in western Amazonia.",
+          "limitations": "The regional synthesis is not a single settlement. Separate dated site locations remain to be extracted; no shared occupation interval or population count is inferred.",
+          "discussion": "Population size is unknown. Archaeological culture, ancestry, language and present-day identity are not interchangeable.",
+          "provenance": "Round5 author-supplied research leads reconciled against the cited sources on 2026-10-28.",
+          "reviewedAt": "2026-10-28",
+          "history": [
+            "2026-10-28: reviewed for v0.3.4."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "regional-evidence",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -65,
+              -14.8
+            ]
+          },
+          "precision": "Approximate Llanos de Moxos, Bolivia anchor; 180 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Fuzzy setting only; no exact site coordinates or boundaries inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T05:57:05.985Z",
+      "updatedAt": "2026-10-29T05:57:05.985Z"
+    },
+    {
+      "id": "author-r5-brazil-sambaqui-diversity",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r5-brazil-sambaqui-diversity",
+        "revision": 1,
+        "type": "event",
+        "title": "Brazil — ancestry diversity among coastal societies",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": null,
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "unplaced",
+          "start": null,
+          "end": null,
+          "original": "Ancient samples spanning up to approximately 10,000 years; no single occupation interval",
+          "method": "Original chronology retained without unsupported calendar conversion",
+          "interpretation": "The accessed evidence does not define a calibrated calendar interval for this claim. Available in the evidence index; not a fabricated occupation date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Analysis of 34 ancient individuals from four Brazilian regions documents substantial ancestry heterogeneity among sambaqui societies despite similarities in material culture.",
+            "status": "well-supported",
+            "explanation": "Shared material culture is not genetic homogeneity. These sampled genomes do not establish continuity from disputed occupations older than 20,000 years.",
+            "support": [
+              {
+                "sourceId": "r5-ferraz2023",
+                "stance": "supports",
+                "locator": "Abstract and source access notes",
+                "note": "Supports the scoped finding; dates, interpretation and access limits are retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r5-ferraz2023",
+            "authors": "Ferraz, T.; et al.",
+            "title": "Genomic history of coastal societies from eastern South America",
+            "year": 2023,
+            "venue": "See linked primary publication",
+            "doi": "10.1038/s41559-023-02114-9",
+            "url": "https://doi.org/10.1038/s41559-023-02114-9",
+            "access": "Primary publisher abstract inspected; full text not claimed.",
+            "referenceType": "journal-article"
+          }
+        ],
+        "review": {
+          "summary": "Analysis of 34 ancient individuals from four Brazilian regions documents substantial ancestry heterogeneity among sambaqui societies despite similarities in material culture.",
+          "limitations": "Shared material culture is not genetic homogeneity. These sampled genomes do not establish continuity from disputed occupations older than 20,000 years.",
+          "discussion": "Population size is unknown. Archaeological culture, ancestry, language and present-day identity are not interchangeable.",
+          "provenance": "Round5 author-supplied research leads reconciled against the cited sources on 2026-10-28.",
+          "reviewedAt": "2026-10-28",
+          "history": [
+            "2026-10-28: reviewed for v0.3.4."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "population-history",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -43,
+              -20
+            ]
+          },
+          "precision": "Approximate Eastern Brazil anchor; 1000 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Fuzzy setting only; no exact site coordinates or boundaries inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T05:57:05.985Z",
+      "updatedAt": "2026-10-29T05:57:05.985Z"
+    },
+    {
+      "id": "author-r5-argentina-central-lineage",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r5-argentina-central-lineage",
+        "revision": 1,
+        "type": "event",
+        "title": "Central Argentina — long-lived ancestry lineage",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": null,
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "unplaced",
+          "start": null,
+          "end": null,
+          "original": "Approximately eight millennia of sampled lineage continuity; not continuous settlement",
+          "method": "Original chronology retained without unsupported calendar conversion",
+          "interpretation": "The accessed evidence does not define a calibrated calendar interval for this claim. Available in the evidence index; not a fabricated occupation date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "A study of 238 ancient individuals identifies a previously uncharacterized central Argentine lineage persisting across roughly eight millennia.",
+            "status": "under discussion",
+            "explanation": "Regional lineage persistence does not establish that every settlement was continuously inhabited, that languages were unchanged, or that later gene flow was absent.",
+            "support": [
+              {
+                "sourceId": "r5-maravall2025",
+                "stance": "supports",
+                "locator": "Abstract and source access notes",
+                "note": "Supports the scoped finding; dates, interpretation and access limits are retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r5-maravall2025",
+            "authors": "Javier Maravall-López; Josefina M. B. Motti; Nicolás Pastor; María Pía Tavella; Mariana Fabra; Pilar Babot; Mariano Bonomo; Silvia E. Cornero; Guillermo N. Lamenza; Diego Catriel Leon; Paula C. Miranda de Zela; Gustavo G. Politis; Sofía C. Angeletti; G. Roxana Cattáneo; Mariana Dantas; Hilton Drube; Lucia G. Gonzalez Baroni; Salomón Hocsman; Andrés D. Izeta; Reinaldo A. Moralejo; Verónica Aldazabal; Diego M. Basso; Cristina Bayón; María Guillermina Couso; Ulises D’Andrea; Paula Del Río; Germán G. Figueroa; Romina Frontini; Mariela Edith Gonzalez; Andrés G. Laguens; Jorge G. Martínez; Pablo G. Messineo; Beatriz Nores; Daniel E. Olivera; Gisela M. Sario; Analía Sbattella; Clara Scabuzzo; Aldana M. Tavarone; Rodrigo Vecchi; Kim Callan; Ella Caughran; Oscar Estrada; Trudi Frost; Lora Iliev; Aisling Kearns; Jack Kellogg; Kim-Louise Krettek; Ann Marie Lawson; Matthew Mah; Nihal Manjila; Adam Micco; Iris Patterson; Lijun Qiu; Xavier Roca-Rada; Gregory Soos; Peter A. Webb; J. Noah Workman; Nadin Rohland; Nick Patterson; Iosif Lazaridis; Lars Fehren-Schmitz; Cosimo Posth; Bastien Llamas; Swapan Mallick; Darío A. Demarchi; Graciela S. Cabana; David Reich; Rodrigo Nores",
+            "title": "Eight millennia of continuity of a previously unknown lineage in Argentina",
+            "year": 2025,
+            "venue": "Nature",
+            "doi": "10.1038/s41586-025-09731-3",
+            "url": "https://doi.org/10.1038/s41586-025-09731-3",
+            "access": "Primary publisher abstract inspected; full text not claimed.",
+            "referenceType": "journal-article"
+          }
+        ],
+        "review": {
+          "summary": "A study of 238 ancient individuals identifies a previously uncharacterized central Argentine lineage persisting across roughly eight millennia.",
+          "limitations": "Regional lineage persistence does not establish that every settlement was continuously inhabited, that languages were unchanged, or that later gene flow was absent.",
+          "discussion": "Population size is unknown. Archaeological culture, ancestry, language and present-day identity are not interchangeable.",
+          "provenance": "Round5 author-supplied research leads reconciled against the cited sources on 2026-10-28.",
+          "reviewedAt": "2026-10-28",
+          "history": [
+            "2026-10-28: reviewed for v0.3.4."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "population-history",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -64,
+              -33
+            ]
+          },
+          "precision": "Approximate Central Argentina anchor; 550 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Fuzzy setting only; no exact site coordinates or boundaries inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T05:57:05.985Z",
+      "updatedAt": "2026-10-29T05:57:05.985Z"
+    },
+    {
+      "id": "author-r5-jicaro-maternal-lineages",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r5-jicaro-maternal-lineages",
+        "revision": 1,
+        "type": "event",
+        "title": "Jícaro — ancient maternal lineages",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": null,
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "interval",
+          "start": 800,
+          "end": 1250,
+          "approximate": true,
+          "original": "Jícaro and La Cascabel sample contexts reported AD 800–1250",
+          "method": "Published calendar dates",
+          "interpretation": "Approximate published envelope, not proof of continuous residence throughout every year."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Reconstructed mitochondrial genomes from Jícaro include B2d lineages, providing evidence about maternal relationships among the sampled individuals.",
+            "status": "under discussion",
+            "explanation": "Sample-context envelope is not the lifespan of the village. Mitochondrial ancestry does not identify spoken language or prove Pleistocene-to-modern local continuity.",
+            "support": [
+              {
+                "sourceId": "r5-mitogenomes2017",
+                "stance": "supports",
+                "locator": "Abstract and source access notes",
+                "note": "Supports the scoped finding; dates, interpretation and access limits are retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r5-mitogenomes2017",
+            "authors": "Morales-Arce, A. Y.; et al.",
+            "title": "Successful reconstruction of whole mitochondrial genomes from ancient Central America and Mexico",
+            "year": 2017,
+            "venue": "See linked primary publication",
+            "doi": "10.1038/s41598-017-18356-0",
+            "url": "https://doi.org/10.1038/s41598-017-18356-0",
+            "access": "Primary publisher abstract inspected; full text not claimed.",
+            "referenceType": "journal-article"
+          }
+        ],
+        "review": {
+          "summary": "Reconstructed mitochondrial genomes from Jícaro include B2d lineages, providing evidence about maternal relationships among the sampled individuals.",
+          "limitations": "Sample-context envelope is not the lifespan of the village. Mitochondrial ancestry does not identify spoken language or prove Pleistocene-to-modern local continuity.",
+          "discussion": "Population size is unknown. Archaeological culture, ancestry, language and present-day identity are not interchangeable.",
+          "provenance": "Round5 author-supplied research leads reconciled against the cited sources on 2026-10-28.",
+          "reviewedAt": "2026-10-28",
+          "history": [
+            "2026-10-28: reviewed for v0.3.4."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "population-history",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -85.6,
+              10.5
+            ]
+          },
+          "precision": "Approximate Guanacaste, Costa Rica anchor; 70 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Fuzzy setting only; no exact site coordinates or boundaries inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T05:57:05.985Z",
+      "updatedAt": "2026-10-29T05:57:05.985Z"
+    },
+    {
+      "id": "author-r5-huron-obsidian",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r5-huron-obsidian",
+        "revision": 1,
+        "type": "event",
+        "title": "Lake Huron — obsidian from Oregon",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r5-huron-obsidian-region",
+          "name": "Lake Huron, Alpena-Amberley Ridge",
+          "lon": -82.5,
+          "lat": 44.9,
+          "precision": "Approximate Lake Huron, Alpena-Amberley Ridge anchor; 120 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Named regional setting in cited source; coarse editorial anchor."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "unplaced",
+          "start": null,
+          "end": null,
+          "original": "Approximately 9,000 years BP; chronology wording retained pending context-specific calibration",
+          "method": "Original chronology retained without unsupported calendar conversion",
+          "interpretation": "The accessed evidence does not define a calibrated calendar interval for this claim. Available in the evidence index; not a fabricated occupation date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Two obsidian flakes recovered from an early Holocene submerged Lake Huron context were geochemically sourced to Wagontire in central Oregon, more than 4,000 km away.",
+            "status": "well-supported",
+            "explanation": "Source and find location establish material movement, not a mapped travel route, direct trade between endpoints or a journey by one person.",
+            "support": [
+              {
+                "sourceId": "r5-oshea2021",
+                "stance": "supports",
+                "locator": "Abstract and source access notes",
+                "note": "Supports the scoped finding; dates, interpretation and access limits are retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r5-oshea2021",
+            "authors": "O’Shea, J. M.; et al.",
+            "title": "Central Oregon obsidian from a submerged early Holocene archaeological site beneath Lake Huron",
+            "year": 2021,
+            "venue": "See linked primary publication",
+            "doi": "10.1371/journal.pone.0250840",
+            "url": "https://doi.org/10.1371/journal.pone.0250840",
+            "access": "Primary publisher abstract inspected; full text not claimed.",
+            "referenceType": "journal-article"
+          }
+        ],
+        "review": {
+          "summary": "Two obsidian flakes recovered from an early Holocene submerged Lake Huron context were geochemically sourced to Wagontire in central Oregon, more than 4,000 km away.",
+          "limitations": "Source and find location establish material movement, not a mapped travel route, direct trade between endpoints or a journey by one person.",
+          "discussion": "Population size is unknown. Archaeological culture, ancestry, language and present-day identity are not interchangeable.",
+          "provenance": "Round5 author-supplied research leads reconciled against the cited sources on 2026-10-28.",
+          "reviewedAt": "2026-10-28",
+          "history": [
+            "2026-10-28: reviewed for v0.3.4."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "trade",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -82.5,
+              44.9
+            ]
+          },
+          "precision": "Approximate Lake Huron, Alpena-Amberley Ridge anchor; 120 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Fuzzy setting only; no exact site coordinates or boundaries inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T05:57:05.985Z",
+      "updatedAt": "2026-10-29T05:57:05.985Z"
+    },
+    {
+      "id": "author-r5-andean-parrot-trade",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r5-andean-parrot-trade",
+        "revision": 1,
+        "type": "event",
+        "title": "Andes — parrot transport and modeled connections",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r5-andean-parrot-trade-region",
+          "name": "Peruvian coast and Andes",
+          "lon": -75,
+          "lat": -12,
+          "precision": "Approximate Peruvian coast and Andes anchor; 550 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Named regional setting in cited source; coarse editorial anchor."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "unplaced",
+          "start": null,
+          "end": null,
+          "original": "Pre-Inca contexts; specimen-specific calendar dates not extracted",
+          "method": "Original chronology retained without unsupported calendar conversion",
+          "interpretation": "The accessed evidence does not define a calibrated calendar interval for this claim. Available in the evidence index; not a fabricated occupation date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Ancient parrot DNA and spatial modeling investigate transport between Amazonian source regions and the pre-Inca Peruvian coast.",
+            "status": "under discussion",
+            "explanation": "Modeled corridors are hypotheses, not excavated roads. Bird DNA is not human ancestry and this study does not establish Andes–Mesoamerica maritime routes.",
+            "support": [
+              {
+                "sourceId": "r5-olah2026",
+                "stance": "supports",
+                "locator": "Abstract and source access notes",
+                "note": "Supports the scoped finding; dates, interpretation and access limits are retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r5-olah2026",
+            "authors": "Olah, G.; et al.",
+            "title": "Ancient DNA and spatial modeling reveal a pre-Inca trans-Andean parrot trade",
+            "year": 2026,
+            "venue": "Nature Communications",
+            "doi": "10.1038/s41467-026-69167-9",
+            "url": "https://doi.org/10.1038/s41467-026-69167-9",
+            "access": "Primary publication identified; interpretation limited to animal transport and modeled connections.",
+            "referenceType": "journal-article"
+          }
+        ],
+        "review": {
+          "summary": "Ancient parrot DNA and spatial modeling investigate transport between Amazonian source regions and the pre-Inca Peruvian coast.",
+          "limitations": "Modeled corridors are hypotheses, not excavated roads. Bird DNA is not human ancestry and this study does not establish Andes–Mesoamerica maritime routes.",
+          "discussion": "Population size is unknown. Archaeological culture, ancestry, language and present-day identity are not interchangeable.",
+          "provenance": "Round5 author-supplied research leads reconciled against the cited sources on 2026-10-28.",
+          "reviewedAt": "2026-10-28",
+          "history": [
+            "2026-10-28: reviewed for v0.3.4."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "trade",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -75,
+              -12
+            ]
+          },
+          "precision": "Approximate Peruvian coast and Andes anchor; 550 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Fuzzy setting only; no exact site coordinates or boundaries inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T05:57:05.985Z",
+      "updatedAt": "2026-10-29T05:57:05.985Z"
+    },
+    {
+      "id": "author-r5-falklands-visits",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r5-falklands-visits",
+        "revision": 1,
+        "type": "event",
+        "title": "Falklands — disputed pre-European visits",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r5-falklands-visits-region",
+          "name": "New Island, Falkland Islands",
+          "lon": -61.3,
+          "lat": -51.7,
+          "precision": "Approximate New Island, Falkland Islands anchor; 12 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Named regional setting in cited source; coarse editorial anchor."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "unplaced",
+          "start": null,
+          "end": null,
+          "original": "Pre-European activity hypothesis; proxy dates are not an occupation duration",
+          "method": "Original chronology retained without unsupported calendar conversion",
+          "interpretation": "The accessed evidence does not define a calibrated calendar interval for this claim. Available in the evidence index; not a fabricated occupation date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Charcoal, faunal remains and a lithic find have been interpreted as evidence of pre-European human activity in the Falkland Islands.",
+            "status": "disputed",
+            "explanation": "Natural and human explanations for fire and bone accumulations remain contested. Possible visitation is not established permanent settlement.",
+            "support": [
+              {
+                "sourceId": "r5-hamley2021",
+                "stance": "supports",
+                "locator": "Abstract and source access notes",
+                "note": "Supports the scoped finding; dates, interpretation and access limits are retained."
+              },
+              {
+                "sourceId": "r5-zangrando2022",
+                "stance": "challenges",
+                "locator": "Abstract",
+                "note": "Questions anthropogenic interpretation of the proposed evidence; retain natural alternatives."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r5-hamley2021",
+            "authors": "Hamley, K. M.; et al.",
+            "title": "Evidence of prehistoric human activity in the Falkland Islands",
+            "year": 2021,
+            "venue": "See linked primary publication",
+            "doi": "10.1126/sciadv.abh3803",
+            "url": "https://doi.org/10.1126/sciadv.abh3803",
+            "access": "Primary publisher abstract inspected; full text not claimed.",
+            "referenceType": "journal-article"
+          },
+          {
+            "id": "r5-zangrando2022",
+            "authors": "Zangrando, A. F.; Borrero, L. A.",
+            "title": "A pre-European archaeology in Malvinas/Falkland Islands? A review",
+            "year": 2022,
+            "venue": "See linked primary publication",
+            "doi": "10.1080/15564894.2022.2077484",
+            "url": "https://doi.org/10.1080/15564894.2022.2077484",
+            "access": "Primary critique abstract inspected.",
+            "referenceType": "journal-article"
+          }
+        ],
+        "review": {
+          "summary": "Charcoal, faunal remains and a lithic find have been interpreted as evidence of pre-European human activity in the Falkland Islands.",
+          "limitations": "Natural and human explanations for fire and bone accumulations remain contested. Possible visitation is not established permanent settlement.",
+          "discussion": "Population size is unknown. Archaeological culture, ancestry, language and present-day identity are not interchangeable.",
+          "provenance": "Round5 author-supplied research leads reconciled against the cited sources on 2026-10-28.",
+          "reviewedAt": "2026-10-28",
+          "history": [
+            "2026-10-28: reviewed for v0.3.4."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "regional-evidence",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -61.3,
+              -51.7
+            ]
+          },
+          "precision": "Approximate New Island, Falkland Islands anchor; 12 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
+          "provenance": "Fuzzy setting only; no exact site coordinates or boundaries inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T05:57:05.985Z",
+      "updatedAt": "2026-10-29T05:57:05.985Z"
     }
   ]
 }

@@ -5,7 +5,7 @@ const ledger=JSON.parse(fs.readFileSync('data/literature-intake-2026-10-28.json'
 ledger.batches??=[];
 const all=()=>[...starter.records,...pkg.proposals.map(p=>p.record)];
 const requested=new Set(process.argv.slice(2));
-for(const batch of ['central','southeast','sealevel','alaska','southwest','caribbean','empires','fourcorners','hovenweep','site-locations','greatlakes','patagonia-north','patagonia-south','louisiana','cuba','abcislands','jamaica','hawaii','polynesian-origins','atlantic-canada','amazon-isolation','lapita-followup','northeast-dump2','midwest-dump2','atlantic-models-dump2','climate-dump3','languages-dump3','corridor-dump3','round4']){
+for(const batch of ['central','southeast','sealevel','alaska','southwest','caribbean','empires','fourcorners','hovenweep','site-locations','greatlakes','patagonia-north','patagonia-south','louisiana','cuba','abcislands','jamaica','hawaii','polynesian-origins','atlantic-canada','amazon-isolation','lapita-followup','northeast-dump2','midwest-dump2','atlantic-models-dump2','climate-dump3','languages-dump3','corridor-dump3','round4','round5']){
  if(requested.size&&!requested.has(batch))continue;
  const path=batch==='hovenweep'?'data/intake-hovenweep-sites.json':batch==='site-locations'?'data/intake-site-locations-review.json':`data/intake-${batch}-reviewed.json`;if(!fs.existsSync(path))continue;
  const d=JSON.parse(fs.readFileSync(path,'utf8'));
