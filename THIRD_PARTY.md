@@ -312,3 +312,18 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+## NADI-1 physical context and hazard catalogs(v0.3.7)
+
+Dalton et al.(2023), North American Deglacial Isochrones1, QSR321:108345, https://doi.org/10.1016/j.quascirev.2023.108345. GIS dataset https://doi.org/10.5281/zenodo.8161764, CC BY4.0. Modified: simplified WGS84 polygons at0.12degrees, ring orientation adapted for d3, nearest dated snapshot; author minimum/maximum/optimal scenarios preserved. No interpolated boundary or open-water reconstruction.
+
+Gergis and Fowler(2009), A history of ENSO events since A.D.1525, Climatic Change92:343–387, https://doi.org/10.1007/s10584-008-9476-z. NOAA/WDS data https://doi.org/10.25921/ebpz-a913;1525–1934 subset. Original data fields retained. Investigator attribution and NOAA use constraints apply; no NOAA endorsement.
+
+NOAA/NCEI/WDS Global Historical Tsunami Database, https://doi.org/10.7289/V5PN93H7; paginated source-event extract, geographic subset and dates through1934. Validity codes and original facts retained. Not a wave/inundation simulation.
+
+Global Volcanism Program,2026, Volcanoes of the World, Smithsonian Institution, compiled by Venzke,E., https://doi.org/10.5479/si.GVP.VOTW5-2026.5.4. Holocene eruption WFS extract; source fields and status retained. Database compilation is a product of US employees; attribution/terms at https://volcano.si.edu/gvp_termsofuse.cfm. No photographs or third-party publication text copied.
+
+NOAA JetStream / Ocean Service guidance for modern major-current and trade-wind schematic arrows: https://www.noaa.gov/jetstream/ocean/circulations/jetstream-max-major-ocean-currents and https://oceanservice.noaa.gov/facts/tradewinds.html. Editorial geometry, not a paleo-reconstruction. ENSO mechanism https://www.noaa.gov/understanding-el-nino.
+
+All data retrieved2026-10-29. Acquisition parameters, hashes, source coverage and limitations are retained in the physical source manifest and in-app source reviews. Scientific dataset facts and paraphrased explanations are distinguished from copyrighted publications.

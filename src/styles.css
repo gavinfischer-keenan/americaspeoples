@@ -1473,3 +1473,36 @@ dd:last-child {
   .atlas-layout .map-caption { font-size:8px; left:12px; bottom:8px; }
   .site-panel .visible-heading, .detail-panel .visible-heading { position:sticky; top:0; background:#13232c; z-index:1; padding-bottom:10px; }
 }
+
+/* Date ticks use the same transform as the thumb, not evenly spaced labels. */
+.time-ticks { position: relative; height: 18px; margin: 0 8px; color: var(--muted); font-size: 9px; }
+.time-ticks span { position: absolute; transform: translateX(-50%); white-space: nowrap; border-top: 1px solid var(--line); padding-top: 3px; }
+@media (max-width: 1450px) and (min-width: 1001px) {
+  .time-top { gap: 12px; }
+  .year-display { min-width: 190px; }
+  .timeline { padding-left: 20px; padding-right: 20px; }
+}
+@media (max-width: 1000px) {
+  .timeline { height: 255px; }
+  .shell { padding-bottom: 255px; }
+  .playback { flex-wrap: wrap; gap: 6px; }
+  .playback label { display: grid; }
+  .playback select { max-width: 180px; }
+  .time-ticks { font-size: 8px; }
+}
+@media (max-width: 480px) {
+  .playback { width: 100%; }
+  .playback select { font-size: 10px; max-width: 145px; padding: 4px; }
+  .playback .play-button { min-width: 65px; }
+  .time-ticks span:nth-child(even) { visibility: hidden; }
+}
+
+@media (max-width: 480px) { .timeline { height: 275px; } .shell { padding-bottom: 275px; } }
+/* Physical context is separate from archaeological markers and temporal support. */
+.context-list{padding:12px;border-top:1px solid #71828a}.context-list h3{font-size:14px}.context-choice{border-left:3px dashed #aebbc2}.context-choice span{color:#c1ccd0;font-size:11px}
+.undated-context circle{fill:#aebbc2;fill-opacity:.13;stroke:#bdc7cc;stroke-dasharray:3 3;vector-effect:non-scaling-stroke}.undated-context text{fill:#d9e1e4;font-weight:bold;paint-order:stroke;stroke:#122730;stroke-width:2px}
+.ice-context path{fill:#c9eafa;fill-opacity:.5;stroke:#e5f7ff;stroke-width:1;vector-effect:non-scaling-stroke}
+.flow-line,.flow-halo{fill:none;vector-effect:non-scaling-stroke}.flow-halo{stroke:#102029;stroke-width:5;opacity:.8}.flow-line{stroke-width:2}.flow-warm .flow-line{stroke:#ffb48a}.flow-cold .flow-line{stroke:#8ed8ff}.flow-wind .flow-line{stroke:#f1df9b;stroke-dasharray:5 5}
+.hazard-marker{cursor:pointer}.hazard-marker circle{fill:#182d36;stroke:#ffc18c;stroke-width:2}.hazard-marker text{fill:#ffe1bd;font-size:13px;font-weight:bold}.hazard-tsunami circle{stroke:#93e8ee}.hazard-tsunami text{fill:#bcfaff}.hazard-la-nina circle{stroke:#a9b9ff}.hazard-la-nina text{fill:#d0d8ff}.hazard-uncertain circle{stroke-dasharray:3 3}
+#layer-options section{padding-bottom:14px;margin-bottom:14px;border-bottom:1px solid #41545e}#layer-options select{width:100%;margin-top:7px}.review-page dt{font-weight:bold;margin-top:9px}.review-page dd{overflow-wrap:anywhere}
+@media(max-width:760px){.topbar nav{min-width:0;overflow-x:auto;gap:16px}.topbar nav a{flex:0 0 auto;white-space:nowrap}}

@@ -76,3 +76,16 @@ Audited map symbol and label palettes against ocean #122730 and land #2d454d. Op
 ## v0.3.6 Pacific intake and map workspace
 
 All19 original uploads are archived with hashes and complete secondary-provenance text.32 new records plus7 contextual updates yield547 records and818 claims; all515 previous records preserved. Fresh review caught and fixes resolved desktop hidden-panel grid placement, explicit Bapot BCE encoding, and disjoint Tangatatau tool dates. Bayesian site-method metadata is explicit for model filtering.73 tests, typecheck, build, complete-workbook import/export, hosted-browser privacy/CSP/deep links, viewport zoom/pan/reset, all8 panel-toggle combinations at2 desktop widths and mobile overflow checks passed. Live asset comparison and three download hashes verified. Reconciliation register identifies exclusions and source leads still pending.
+
+## Pending release: Smart timeline (2026-10-29)
+
+78 unit tests and typecheck pass. Dedicated browser checks confirm Smart/log defaults, changing scale preserves the date, exact BCE/CE keyboard steps, local windows, pointer seeking, playback and responsive controls at1440/1100/768/390px. Map panel regression passes. Sparse/dense pacing is coverage-based and independent of scholarly status. No source dates or published dataset records changed; deployment held with open round7 intake.
+
+
+## v0.3.7 release candidate
+
+Authoritative hosted structured data, optional spreadsheet export, Smart/log timeline,280-record chronology review(64 recovered windows and5 disjoint additions), default-on separate unresolved-context geography, and a geographic/time audit.565 archaeological/context records,861 claims.13 full-review skeletal contexts integrated; latest19 intake items all captured/screened, additional synthesis claims explicitly pending original-source verification. Physical data are separate:49 NADI-1 snapshots with3 scenarios, NOAA ENSO reconstruction1525–1934, NOAA tsunami source catalog and GVP Holocene eruptions within documented bounds. Complete NOAA pagination is checked; open eruption-date modifiers are excluded from annual animation and retained in catalog review. Uncertain/discredited reports are opt-in. Current/wind arrows are modern schematic orientation, not a historical simulation. No unsupported human-impact causality or open-water area is fabricated.
+
+Final candidate verification:86 unit tests, typecheck and complete dataset validation pass. Dedicated physical-layer browser, Smart/log timeline, map-panel/viewport regression, file:// offline operations and hosted privacy/CSP/import-export checks pass. Independent review findings on numeric eruption uncertainty and supported ongoing eruptions were fixed with regression tests. Release payload switches only NODE01 CT101 public-web content; the existing release remains available for rollback.
+
+Public release verified2026-10-29: NODE01 CT101 /srv/tripofisch/releases/20261029T220044Z; rollback /srv/tripofisch/releases/20261029T194704Z. Public app, audit and physical-catalog files match built bytes; CSP/cache/MIME and404 checks pass. Three hosted downloads match SHA256 manifests. Live product-page launch, Smart/log defaults, ENSO/source review and public coverage report pass. Git release tag:v0.3.7.

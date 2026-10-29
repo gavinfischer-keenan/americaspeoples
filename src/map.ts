@@ -7,6 +7,8 @@ import { OVERLAY_LABELS } from "./overlays";
 import { esc, $ } from "./dom";
 import { disputeLevel, disputeLabel } from "./disputes";
 import { boundsInViewport } from "./map-filters";
+import {iceSnapshot,eventsAt,oceanPaths,isUncertainHazard} from './physical';
+export interface PhysicalOptions {ice:boolean; iceScenario:string; currents:boolean; winds:boolean; hidden:ReadonlySet<string>; uncertain:boolean}
 export class MapView {
   readonly element = document.createElement("div");
   private scope: MapScope = "pacific";
@@ -15,6 +17,10 @@ export class MapView {
   private tx = 0;
   private ty = 0;
   private records: DisplayRecord[] = [];
+  private contextRecords: DisplayRecord[] = [];
+  private contextAnchors=new Map<string,DisplayRecord[]>();
+  private physical:PhysicalOptions={ice:false,iceScenario:'optimal',currents:false,winds:false,hidden:new Set(),uncertain:true};
+  private icePaths=new Map<string,string>();
   private year = END_YEAR;
   private selected: string | null = null;
   constructor(
@@ -95,7 +101,7 @@ export class MapView {
     });
     this.element.addEventListener("click", (e) => {
       const target = (e.target as Element).closest<HTMLElement>(
-        "[data-zoom],[data-point],[data-overlay]",
+        "[data-zoom],[data-point],[data-overlay],[data-context]",
       );
       if (!target) return;
       if (target.dataset.zoom) {
@@ -105,6 +111,8 @@ export class MapView {
           this.transform();
           this.draw();
         } else this.zoom(target.dataset.zoom === "in" ? 1.35 : 1 / 1.35);
+      } else if(!moved && target.dataset.context!==undefined){
+        this.onSelect(this.contextAnchors.get(target.dataset.context)??[]);
       } else if (!moved && target.dataset.overlay !== undefined) {
         this.onSelect([this.records[Number(target.dataset.overlay)]]);
       } else if (!moved) {
@@ -157,8 +165,12 @@ export class MapView {
   }
   /** Same projected geometry and transform as the map; unmapped records stay out. */
   visibleRecords(): DisplayRecord[] {
+    return this.recordsInView(this.records);
+  }
+  visibleContextRecords():DisplayRecord[]{return this.recordsInView(this.contextRecords);}
+  private recordsInView(records:DisplayRecord[]):DisplayRecord[]{
     const path = geoPath(this.projection);
-    return this.records.filter(r => {
+    return records.filter(r => {
       const overlay = r.overlay;
       if (overlay) {
         if (!overlay.geometry) return false;
@@ -175,8 +187,10 @@ export class MapView {
       return !!p && p[0] >= 0 && p[0] <= 1000 && p[1] >= 0 && p[1] <= 800 && boundsInViewport([p, p], this.scale, this.tx, this.ty);
     });
   }
-  update(records: DisplayRecord[], year: number) {
+  update(records: DisplayRecord[], year: number, context:DisplayRecord[]=[],physical?:PhysicalOptions) {
     this.records = records;
+    this.contextRecords=context;
+    if(physical)this.physical=physical;
     this.year = year;
     this.draw();
   }
@@ -212,6 +226,31 @@ export class MapView {
   }
   private draw() {
     const symbolScale = 1 / (this.scale * this.viewportFit());
+    const path=geoPath(this.projection);
+    let background='';
+    const ice=this.physical.ice?iceSnapshot(this.year,this.physical.iceScenario):null;
+    if(ice){const key=`${this.scope}-${ice.scenario}-${ice.ageCalBP}`;if(!this.icePaths.has(key))this.icePaths.set(key,path(ice.geometry as any)??'');background+=`<g class="ice-context"><title>NADI-1 ${ice.scenario}: ${ice.ageCalBP.toLocaleString()} cal BP snapshot, not an interpolated boundary. See Climate sources.</title><path d="${this.icePaths.get(key)}"/></g>`;}
+    for(const flow of oceanPaths){
+      if(flow.kind==='wind'?!this.physical.winds:!this.physical.currents)continue;
+      const d=path({type:'LineString',coordinates:flow.coordinates});
+      background+=`<g class="ocean-flow flow-${flow.kind}"><title>${esc(flow.name)} — modern schematic reference, not conditions at selected year</title><path class="flow-halo" d="${d}"/><path class="flow-line" d="${d}" marker-end="url(#flow-${flow.kind})"/></g>`;
+    }
+    // Chronologically unresolved context remains visibly distinct from active evidence.
+    const contextGroups=new Map<string,DisplayRecord[]>();
+    for(const r of this.contextRecords){const g=r.overlay?.geometry;const p=g?.type==='Point'?g.coordinates:g?.type==='LineString'?g.coordinates[0]:r.location?[r.location.lon,r.location.lat]:null;if(!p)continue;const key=p.join(',');contextGroups.set(key,[...(contextGroups.get(key)??[]),r]);}
+    this.contextAnchors=contextGroups;
+    for(const [key,rs] of contextGroups){const p=this.projection(key.split(',').map(Number) as [number,number]);if(!p)continue;background+=`<g data-context="${key}" class="undated-context" transform="translate(${p[0]},${p[1]})"><title>${rs.length} context records: dates unresolved; not evidence at selected year</title><circle r="${16*symbolScale}"/><text style="font-size:${12*symbolScale}px" text-anchor="middle" dy=".35em">?</text></g>`;}
+    let physicalMarkers='';
+    for(const event of eventsAt(this.year,this.physical.hidden,this.physical.uncertain)){
+      const p=this.projection(event.coordinates as [number,number]);if(!p)continue;
+      const symbol=event.kind==='volcano'?'▲':event.kind==='tsunami'?'≋':event.kind==='el-nino'?'E':'L';
+      physicalMarkers+=`<a href="#physical/${event.id}" class="hazard-marker hazard-${event.kind} ${isUncertainHazard(event)?'hazard-uncertain':''}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><title>${esc(event.title)} — ${esc(event.status)}; open catalog details</title><circle r="11"/><text text-anchor="middle" dy=".35em">${symbol}</text></a>`;
+    }
+    if(!this.element.querySelector('.physical-features')){
+      const g=document.createElementNS('http://www.w3.org/2000/svg','g');g.setAttribute('class','physical-features');$('.world',this.element).insertBefore(g,$('.features',this.element));
+      const defs=$('defs',this.element);defs.insertAdjacentHTML('beforeend',['warm','cold','wind'].map(k=>`<marker id="flow-${k}" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="${k==='warm'?'#ffb48a':k==='cold'?'#8ed8ff':'#f1df9b'}"/></marker>`).join(''));
+    }
+    $('.physical-features',this.element).innerHTML=background;
     const groups = new Map<string, DisplayRecord[]>();
     let arrows = "",
       overlays = "";
@@ -297,6 +336,6 @@ export class MapView {
       const population = populationAt(rows, this.year);
       markers += `<g data-point="${key}" style="opacity:${Math.max(...rows.map((x) => temporalOpacity(x.time, this.year)))}" class="site ${possible ? "possible" : ""} ${rows.some((x) => x.proposalKey) ? "proposal-point" : ""}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><title>${esc(rows.map((x) => x.title + " — " + x.culture.name + " — " + timeLabel(x.time)).join("; "))} — ${esc(population.label)}${possible ? " — uncertain time" : ""}</title><circle class="site-halo" r="${Math.max(13, population.outerRadius + 4)}"/>${population.outerRadius > population.radius ? `<circle class="population-range" r="${population.outerRadius}" style="fill:${r.culture.color}"/>` : ""}<circle class="site-dot" r="${population.radius}" style="--site-color:${r.culture.color}"/>${population.unknown ? `<circle class="population-unknown" r="${population.radius}" fill="url(#population-unknown)"/>` : ""}${this.scale >= 32 ? `<text class="settlement-label" x="${population.outerRadius + 5}" y="4">${esc(r.location!.name)}</text>` : ""}${rows.length > 1 ? `<text class="site-count" x="11" y="-8">${rows.length}</text>` : ""}${rows.some(isDisputed) ? `<text class="site-star asterisk dispute-${rows.some((x) => disputeLevel(x) === "disputed") ? "disputed" : "discussion"}" x="-13" y="-8">*</text>` : ""}</g>`;
     }
-    $(".features", this.element).innerHTML = overlays + arrows + markers;
+    $(".features", this.element).innerHTML = overlays + arrows + markers + physicalMarkers;
   }
 }

@@ -87,7 +87,7 @@ export function isDisputed(r: EvidenceRecord): boolean {
   return r.claims.some((c) => c.status !== "well-supported");
 }
 export function advancePlayback(
-  records: EvidenceRecord[],
+  records: Pick<EvidenceRecord,'time'>[],
   current: number,
   step: number,
 ): { year: number; boundary: boolean } {

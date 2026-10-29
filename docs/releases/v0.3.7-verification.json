@@ -1,0 +1,120 @@
+{
+  "version": "0.3.7",
+  "deployedAt": "2026-10-29T22:00:44Z",
+  "host": "NODE01 CT101 public-web",
+  "release": "/srv/tripofisch/releases/20261029T220044Z",
+  "rollback": "/srv/tripofisch/releases/20261029T194704Z",
+  "unitTests": 86,
+  "archaeologicalRecords": 565,
+  "claims": 861,
+  "physicalCatalogEntries": 7316,
+  "publicChecks": [
+    {
+      "url": "https://americaspeoples.11mosswood.us/",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "csp": "default-src 'none'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "cache": "no-store, max-age=0"
+    },
+    {
+      "url": "https://americaspeoples.11mosswood.us/app.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8",
+      "csp": "default-src 'none'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "cache": "no-store, max-age=0"
+    },
+    {
+      "url": "https://americaspeoples.11mosswood.us/app.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8",
+      "csp": "default-src 'none'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "cache": "no-store, max-age=0"
+    },
+    {
+      "url": "https://americaspeoples.11mosswood.us/evidence-appendix.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "csp": "default-src 'none'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "cache": "no-store, max-age=0"
+    },
+    {
+      "url": "https://americaspeoples.11mosswood.us/evidence-appendix.json",
+      "status": 200,
+      "type": "application/json",
+      "csp": "default-src 'none'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "cache": "no-store, max-age=0"
+    },
+    {
+      "url": "https://americaspeoples.11mosswood.us/docs/bulk-import-guide.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "csp": "default-src 'none'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "cache": "no-store, max-age=0"
+    },
+    {
+      "url": "https://americaspeoples.11mosswood.us/docs/intake/index.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "csp": "default-src 'none'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "cache": "no-store, max-age=0"
+    },
+    {
+      "url": "https://americaspeoples.11mosswood.us/literature-intake.json",
+      "status": 200,
+      "type": "application/json",
+      "csp": "default-src 'none'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "cache": "no-store, max-age=0"
+    },
+    {
+      "url": "https://americaspeoples.11mosswood.us/docs/coverage-audit.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "csp": "default-src 'none'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "cache": "no-store, max-age=0"
+    },
+    {
+      "url": "https://americaspeoples.11mosswood.us/coverage-audit.json",
+      "status": 200,
+      "type": "application/json",
+      "csp": "default-src 'none'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "cache": "no-store, max-age=0"
+    },
+    {
+      "url": "https://americaspeoples.11mosswood.us/temporal-review.json",
+      "status": 200,
+      "type": "application/json",
+      "csp": "default-src 'none'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "cache": "no-store, max-age=0"
+    },
+    {
+      "url": "https://americaspeoples.11mosswood.us/hazard-events.json",
+      "status": 200,
+      "type": "application/json",
+      "csp": "default-src 'none'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "cache": "no-store, max-age=0"
+    },
+    {
+      "url": "https://americaspeoples.11mosswood.us/physical-source-manifest.json",
+      "status": 200,
+      "type": "application/json",
+      "csp": "default-src 'none'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "cache": "no-store, max-age=0"
+    },
+    {
+      "url": "https://tripofisch.com/downloads/americaspeoples/v0.3.7/americas-peoples-v0.3.7-offline.zip?release=b5ea3098bf70",
+      "status": 200,
+      "sha256": "b5ea3098bf7098770d7fd39a6bf7fa2c6ea22d802d0854798ec95d76377f2abb"
+    },
+    {
+      "url": "https://tripofisch.com/downloads/americaspeoples/v0.3.7/americas-peoples-import.xlsx?release=ed0abc070fc5",
+      "status": 200,
+      "sha256": "ed0abc070fc522e4ad2e3a7c97d3f7f109ed6265c4735ed186559a4e6079c794"
+    },
+    {
+      "url": "https://tripofisch.com/downloads/americaspeoples/v0.3.7/americas-peoples-researched-import.xlsx?release=090bf94ab6cb",
+      "status": 200,
+      "sha256": "090bf94ab6cb2183be8472744c93d80bc5bd7d001e8919f0e7c347eed50cfc31"
+    }
+  ],
+  "scopeLimits": "Additional synthesized research remains source-check leads; ice only North America25\u20131.5ka; annual ENSO reconstruction1525\u20131934; no open-water/paleocoastline model or inferred human disaster impacts."
+}

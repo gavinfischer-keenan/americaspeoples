@@ -71,6 +71,15 @@ await copyFile(
 );
 names.push("literature-intake.json");
 await mkdir("dist/docs", { recursive: true });
+for(const [from,to] of [
+ ["docs/coverage-audit.html","docs/coverage-audit.html"],
+ ["docs/hosted-architecture.md","docs/hosted-architecture.md"],
+ ["data/coverage-audit.json","coverage-audit.json"],
+ ["data/temporal-review-2026-10-29.json","temporal-review.json"],
+ ["data/intake-queue-round7.json","intake-queue-round7.json"],
+ ["data/hazard-events.json","hazard-events.json"],
+ ["data/physical-sources/fetch-manifest.json","physical-source-manifest.json"],
+]){await copyFile(from,`dist/${to}`);names.push(to);}
 await mkdir("dist/templates", { recursive: true });
 for (const name of [
   "README.md",

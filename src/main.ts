@@ -20,7 +20,9 @@ import {
   temporalState,
   advancePlayback,
 } from "./time";
+import { timelinePosition, timelineYear, smartYearsPerSecond, type TimelineScale } from "./timeline";
 import { MapView } from "./map";
+import {climateKinds,climateLabels,climateCategory,physicalHTML,iceSnapshot,eventsAt,hazardTimes,hazardEvents,openHazardDate} from "./physical";
 import { isModeledRecord, filterMapRecords } from "./map-filters";
 import { esc, $, downloadJSON } from "./dom";
 import { reviewHTML, recordHref, comparisonHTML } from "./review";
@@ -43,11 +45,14 @@ import { contextHTML } from "./context";
 const minYear = earliestYear(dataset.records);
 let year = minYear,
   playing = false,
-  speed = 250,
+  speed: number | "smart" = "smart",
   lastTick = 0,
   fraction = 0,
   dirty = false,
   holdUntil = 0;
+let timelineScale: TimelineScale = "log";
+let rangeStart = minYear, rangeEnd = END_YEAR;
+const SLIDER_STEPS = 1000000;
 let proposals: Proposal[] = [],
   pending: SharePackage | null = null,
   storageAvailable = true;
@@ -61,7 +66,10 @@ let selected: DisplayRecord[] = [];
 const hiddenCultures = new Set<string>();
 const hiddenLayers = new Set<string>();
 let showModeled = true;
-const mapRows = () => filterMapRecords(rows(), hiddenLayers, showModeled);
+let showUndated=true,showIce=true,showCurrents=false,showWinds=false,showUncertainHazards=false;
+let iceScenario="optimal";
+const hiddenClimate=new Set<string>();
+const mapRows = () => filterMapRecords(rows(), hiddenLayers, showModeled).filter(r=>!hiddenClimate.has(climateCategory(r)??""));
 const storeKey = "americas-peoples-proposals-v1";
 try {
   const saved = localStorage.getItem(storeKey);
@@ -97,7 +105,7 @@ const rows = (): DisplayRecord[] => {
   return base.filter((r) => !hiddenCultures.has(r.culture.id));
 };
 const app = $("#app");
-app.innerHTML = `<header class="topbar"><a class="brand" href="#map"><span class="brand-mark">◈</span><span><h1>Americas Peoples</h1><small>AN ATLAS OF HUMAN EVIDENCE</small></span></a><nav aria-label="Main navigation"><a href="#map">Map</a><a href="#evidence">Events / Evidence</a><a href="#context">Movement &amp; context</a><a href="#proposals">Suggestions <span id="proposal-count">${proposals.length}</span></a><a href="#about">About</a>${location.protocol === "file:" ? "" : '<a href="https://tripofisch.com/privacy/">Privacy &amp; analytics</a>'}</nav><span class="offline-badge"><i></i> ${location.protocol === "file:" ? "Fully offline" : "Local processing"}</span></header><div class="shell"><main id="main" tabindex="-1"></main></div><footer class="timeline"><div class="time-top"><div class="year-display"><span class="eyebrow">EXPLORING THE RECORD AT</span><strong id="current-year"></strong></div><div class="playback"><button id="restart" title="Earliest evidence" aria-label="Earliest evidence">↤</button><button id="play" class="play-button" aria-label="Play">▶ Play</button><label>Speed<select id="speed" aria-label="Playback speed" title="Years per second between evidence boundaries; a brief hold keeps short events visible"><option value="10">10 years / sec</option><option value="50">50 years / sec</option><option value="250" selected>250 years / sec</option><option value="1000">1,000 years / sec</option></select></label></div><form id="year-form" class="year-form"><label class="sr-only" for="year-number">Year number</label><input id="year-number" type="number" min="1" step="1" aria-label="Year number"><select id="era" aria-label="Era"><option>BCE</option><option>CE</option></select><button type="submit" aria-label="Go to year">Go</button></form><label class="range-window">Timeline window<select id="window" aria-label="Timeline window"><option value="all">Entire record</option><option value="1000">± 1,000 years</option><option value="100">± 100 years</option><option value="10">± 10 years</option></select></label></div><div id="time-error" role="alert"></div><div class="slider-wrap"><input type="range" id="time-slider" min="${minYear}" max="${END_YEAR}" step="1" value="${year}" aria-label="Timeline year"><div class="range-labels"><span id="range-start"></span><span>Drag to travel through time <span class="keyhint">← →</span></span><span id="range-end">${END_YEAR} CE · Indian Reorganization Act</span></div></div></footer><div id="toast" role="status"></div>`;
+app.innerHTML = `<header class="topbar"><a class="brand" href="#map"><span class="brand-mark">◈</span><span><h1>Americas Peoples</h1><small>AN ATLAS OF HUMAN EVIDENCE</small></span></a><nav aria-label="Main navigation"><a href="#map">Map</a><a href="#evidence">Events / Evidence</a><a href="#context">Movement &amp; context</a><a href="#proposals">Suggestions <span id="proposal-count">${proposals.length}</span></a><a href="#about">About</a>${location.protocol === "file:" ? "" : '<a href="https://tripofisch.com/privacy/">Privacy &amp; analytics</a>'}</nav><span class="offline-badge"><i></i> ${location.protocol === "file:" ? "Fully offline" : "Local processing"}</span></header><div class="shell"><main id="main" tabindex="-1"></main></div><footer class="timeline"><div class="time-top"><div class="year-display"><span class="eyebrow">EXPLORING THE RECORD AT</span><strong id="current-year"></strong></div><div class="playback"><button id="restart" title="Earliest evidence" aria-label="Earliest evidence">↤</button><button id="play" class="play-button" aria-label="Play">▶ Play</button><label>Speed<select id="speed" aria-label="Playback speed" title="Smart adapts to evidence density in enabled layers; brief events still pause"><option value="smart" selected>Smart · evidence density</option><option value="10">10 years / sec</option><option value="50">50 years / sec</option><option value="250">250 years / sec</option><option value="1000">1,000 years / sec</option></select></label><label>Scale<select id="time-scale" aria-label="Timeline scale"><option value="log" selected>Logarithmic</option><option value="linear">Linear</option></select></label></div><form id="year-form" class="year-form"><label class="sr-only" for="year-number">Year number</label><input id="year-number" type="number" min="1" step="1" aria-label="Year number"><select id="era" aria-label="Era"><option>BCE</option><option>CE</option></select><button type="submit" aria-label="Go to year">Go</button></form><label class="range-window">Timeline window<select id="window" aria-label="Timeline window"><option value="all">Entire record</option><option value="1000">± 1,000 years</option><option value="100">± 100 years</option><option value="10">± 10 years</option></select></label></div><div id="time-error" role="alert"></div><div class="slider-wrap"><input type="range" id="time-slider" min="0" max="1000000" step="1" value="0" aria-label="Timeline year" aria-describedby="timeline-note"><div id="time-ticks" class="time-ticks" aria-hidden="true"></div><div class="range-labels"><span id="range-start"></span><span><span id="timeline-note">Logarithmic scale · equal distances cover unequal years</span> <span class="keyhint">← →</span></span><span id="range-end">${END_YEAR} CE · Indian Reorganization Act</span></div></div></footer><div id="toast" role="status"></div>`;
 const main = $("#main");
 const map = new MapView(land, (items) => {
   selected = items;
@@ -128,26 +136,32 @@ function stop() {
   $("#play").setAttribute("aria-label", "Play");
 }
 function bounds(recenter = false) {
-  const input = $<HTMLInputElement>("#time-slider"),
-    w = $<HTMLSelectElement>("#window").value;
-  if (w === "all") {
-    input.min = String(minYear);
-    input.max = String(END_YEAR);
-  } else if (recenter) {
-    input.min = String(Math.max(minYear, year - Number(w)));
-    input.max = String(Math.min(END_YEAR, year + Number(w)));
+  const w = $<HTMLSelectElement>("#window").value;
+  if (w === "all") { rangeStart = minYear; rangeEnd = END_YEAR; }
+  else if (recenter) {
+    rangeStart = Math.max(minYear, year - Number(w));
+    rangeEnd = Math.min(END_YEAR, year + Number(w));
   }
-  $("#range-start").textContent = formatYear(Number(input.min));
-  $("#range-end").textContent =
-    formatYear(Number(input.max)) +
-    (Number(input.max) === END_YEAR ? " · Indian Reorganization Act" : "");
+  $("#range-start").textContent = formatYear(rangeStart);
+  $("#range-end").textContent = formatYear(rangeEnd) + (rangeEnd === END_YEAR ? " · Indian Reorganization Act" : "");
+  $("#timeline-note").textContent = timelineScale === "log"
+    ? "Logarithmic scale · equal distances cover unequal years"
+    : "Linear scale · equal distances cover equal years";
+  const ticks = [-100000, -50000, -25000, -10000, -5000, -1000, 1, 1000];
+  let last = -1;
+  $("#time-ticks").innerHTML = ticks.filter(y => y > rangeStart && y < rangeEnd).map(y => {
+    const p = timelinePosition(y, rangeStart, rangeEnd, timelineScale);
+    if (p < .06 || p > .94 || p - last < .11) return "";
+    last = p;
+    return `<span style="left:${p * 100}%">${formatYear(y)}</span>`;
+  }).join("");
 }
 function setYear(next: number, manual = true) {
   if (manual) stop();
   year = Math.round(Math.max(minYear, Math.min(END_YEAR, next)));
   const slider = $<HTMLInputElement>("#time-slider");
-  if (year < Number(slider.min) || year > Number(slider.max)) bounds(true);
-  slider.value = String(year);
+  if (year < rangeStart || year > rangeEnd) bounds(true);
+  slider.value = String(Math.round(SLIDER_STEPS * timelinePosition(year, rangeStart, rangeEnd, timelineScale)));
   slider.setAttribute("aria-valuetext", formatYear(year));
   $("#current-year").textContent = formatYear(year);
   $<HTMLInputElement>("#year-number").value = String(
@@ -160,11 +174,12 @@ function setYear(next: number, manual = true) {
 function tick(now: number) {
   if (playing && now >= holdUntil) {
     const dt = Math.min((now - lastTick) / 1000, 0.25);
-    fraction += dt * speed;
+    const playbackRows = [...mapRows(),...hazardTimes(hiddenClimate,showUncertainHazards)];
+    fraction += dt * (speed === "smart" ? smartYearsPerSecond(playbackRows, year) : speed);
     if (fraction >= 1) {
       const n = Math.floor(fraction);
       fraction -= n;
-      const next = advancePlayback(mapRows(), year, n);
+      const next = advancePlayback(playbackRows, year, n);
       setYear(next.year, false);
       if (next.boundary) {
         holdUntil = now + 700;
@@ -192,15 +207,36 @@ $("#play").addEventListener("click", () => {
 $("#restart").addEventListener("click", () => setYear(minYear));
 $("#speed").addEventListener(
   "change",
-  () => (speed = Number($<HTMLSelectElement>("#speed").value)),
+  () => {
+    const value = $<HTMLSelectElement>("#speed").value;
+    speed = value === "smart" ? "smart" : Number(value);
+    fraction = 0;
+  },
 );
 $("#window").addEventListener("change", () => {
   bounds(true);
   setYear(year);
 });
 $("#time-slider").addEventListener("input", () =>
-  setYear(Number($<HTMLInputElement>("#time-slider").value)),
+  setYear(timelineYear(Number($<HTMLInputElement>("#time-slider").value) / SLIDER_STEPS, rangeStart, rangeEnd, timelineScale)),
 );
+$("#time-scale").addEventListener("change", () => {
+  timelineScale = $<HTMLSelectElement>("#time-scale").value as TimelineScale;
+  bounds();
+  setYear(year);
+});
+$("#time-slider").addEventListener("keydown", (event) => {
+  const e = event as KeyboardEvent;
+  const step = e.shiftKey ? 10 : 1;
+  let next: number;
+  if (e.key === "ArrowLeft" || e.key === "ArrowDown") next = year - step;
+  else if (e.key === "ArrowRight" || e.key === "ArrowUp") next = year + step;
+  else if (e.key === "Home") next = rangeStart;
+  else if (e.key === "End") next = rangeEnd;
+  else return;
+  e.preventDefault();
+  setYear(Math.max(rangeStart, Math.min(rangeEnd, next)));
+});
 $("#year-form").addEventListener("submit", (e) => {
   e.preventDefault();
   try {
@@ -233,7 +269,7 @@ function mapPage() {
   const languageLinks = languageModels.length
     ? `<section aria-labelledby="language-relationships-heading"><h4 id="language-relationships-heading">Language relationships</h4><p class="fine">All published language models, independent of the selected year. Models without dates remain outside the dated map.</p><ul>${languageModels.map((r) => `<li><a href="${esc(recordHref(r))}">${esc(r.title)}</a><br><small>${r.time.kind === "unplaced" ? "Chronology unresolved" : esc(timeLabel(r.time))}</small></li>`).join("")}</ul></section>`
     : "";
-  main.innerHTML = `<div class="atlas-toolbar" aria-label="Map panels"><button id="toggle-sites" aria-controls="site-panel" aria-expanded="true">Hide site list</button><button id="toggle-details" aria-controls="detail-panel" aria-expanded="true">Hide details</button></div><div class="map-layout atlas-layout"><aside id="site-panel" class="site-panel" aria-label="Visible site list"><div class="visible-heading"><h3 id="visible-heading">Visible evidence</h3><span id="visible-count"></span></div><p class="panel-hint">At this year, inside the current map view. Select a record to inspect it.</p><details class="culture-disclosure"><summary>Cultures &amp; map information</summary><div class="map-sidebar"><div class="eyebrow">ASIA-PACIFIC &amp; AMERICAS / ${dataset.records.length} EVIDENCE RECORDS</div><h2>Places hold<br>the evidence.</h2><p class="intro">Explore a changing record of human presence, one source at a time.</p><div class="scope-note">${esc(dataset.coverage)}</div><div class="legend-head"><h3>Cultures & peoples</h3><button id="show-all" class="text-button">Show all</button></div><input id="legend-search" type="search" placeholder="Find a culture or people…" aria-label="Search cultures" value="${esc(legendSearch)}"><div id="legend"></div><div class="map-key"><span>→ Directed movement · ↔ Two-way exchange · ⤧ Four-headed arrow: multiple directions, not four literal routes</span><span><i class="key-dot"></i> Documented interval / dated event</span><span>Population dots: 1–500 · 501–2,500 · 2,501–10,000 · 10,001–50,000 · 50,001+</span><span><b>◩</b> Striped smallest dot = unknown population; display size only</span><span>Outer population halo = upper estimate; estimates are never added together</span><span><i class="key-ring"></i> Possible time / broadly dated occurrence</span><span><b>☁</b> Broad regional / genomic / environment / language evidence</span><span>Fading = illustrative temporal support, not probability</span><span><b class="asterisk dispute-discussion">*</b> Under discussion (lighter)</span><span><b class="asterisk dispute-disputed">*</b> Explicitly disputed (stronger)</span><span><i class="key-dash"></i> Unreviewed suggestion (opt-in)</span></div><label class="check"><input id="preview" type="checkbox" ${preview ? "checked" : ""}> Preview complete suggestions</label><p class="fine">A dot ending means the displayed evidence ends. It does not establish abandonment or a population's fate.</p></div></details><div id="visible-records"></div></aside><section class="map-stage" aria-label="Map and active evidence"><div class="map-topline"><span id="active-count"></span><span>Pan · Scroll to zoom</span></div><div id="map-host"></div></section><aside id="detail-panel" class="detail-panel" aria-label="Selected evidence details"><div class="visible-heading"><h3>Selected evidence</h3><button id="clear-selection" class="text-button">Clear selection</button></div><div id="selected-records"></div></aside><aside class="layers-panel" aria-label="Map layers"><button id="toggle-layers" aria-expanded="false" aria-controls="layer-options">Show layers</button><div id="layer-options" hidden><label class="check"><input id="show-modeled" type="checkbox" ${showModeled ? "checked" : ""}> Show modeled evidence</label><p class="fine">Includes schematic overlays and records whose dating method explicitly names a model or simulation. Scholarly disagreement alone does not make a record modeled.</p><div class="overlay-controls"><h3>Overlays</h3><p>Language layers use record dates and sourced reconstructions; distributions and relationships are approximate. Descent, borrowing and contact are distinct from culture or genetic ancestry.</p>${Object.entries(
+  main.innerHTML = `<div class="atlas-toolbar" aria-label="Map panels"><button id="toggle-sites" aria-controls="site-panel" aria-expanded="true">Hide site list</button><button id="toggle-details" aria-controls="detail-panel" aria-expanded="true">Hide details</button></div><div class="map-layout atlas-layout"><aside id="site-panel" class="site-panel" aria-label="Visible site list"><div class="visible-heading"><h3 id="visible-heading">Visible evidence</h3><span id="visible-count"></span></div><p class="panel-hint">At this year, inside the current map view. Select a record to inspect it.</p><details class="culture-disclosure"><summary>Cultures &amp; map information</summary><div class="map-sidebar"><div class="eyebrow">ASIA-PACIFIC &amp; AMERICAS / ${dataset.records.length} EVIDENCE RECORDS</div><h2>Places hold<br>the evidence.</h2><p class="intro">Explore a changing record of human presence, one source at a time.</p><div class="scope-note">${esc(dataset.coverage)}</div><div class="legend-head"><h3>Cultures & peoples</h3><button id="show-all" class="text-button">Show all</button></div><input id="legend-search" type="search" placeholder="Find a culture or people…" aria-label="Search cultures" value="${esc(legendSearch)}"><div id="legend"></div><div class="map-key"><span>→ Directed movement · ↔ Two-way exchange · ⤧ Four-headed arrow: multiple directions, not four literal routes</span><span><i class="key-dot"></i> Documented interval / dated event</span><span>Population dots: 1–500 · 501–2,500 · 2,501–10,000 · 10,001–50,000 · 50,001+</span><span><b>◩</b> Striped smallest dot = unknown population; display size only</span><span>Outer population halo = upper estimate; estimates are never added together</span><span><i class="key-ring"></i> Possible time / broadly dated occurrence</span><span><b>☁</b> Broad regional / genomic / environment / language evidence</span><span>Fading = illustrative temporal support, not probability</span><span><b class="asterisk dispute-discussion">*</b> Under discussion (lighter)</span><span><b class="asterisk dispute-disputed">*</b> Explicitly disputed (stronger)</span><span><i class="key-dash"></i> Unreviewed suggestion (opt-in)</span></div><label class="check"><input id="preview" type="checkbox" ${preview ? "checked" : ""}> Preview complete suggestions</label><p class="fine">A dot ending means the displayed evidence ends. It does not establish abandonment or a population's fate.</p></div></details><div id="visible-records"></div><section class="context-list"><h3>Chronology context <span id="context-count"></span></h3><p class="fine">Gray ? symbols are geographically associated records whose event dates remain unresolved. They are independent of the selected year and do not establish human presence at that year. Empty map space is not evidence of absence.</p><div id="context-records"></div></section></aside><section class="map-stage" aria-label="Map and active evidence"><div class="map-topline"><span id="active-count"></span><span>Pan · Scroll to zoom</span></div><div id="map-host"></div></section><aside id="detail-panel" class="detail-panel" aria-label="Selected evidence details"><div class="visible-heading"><h3>Selected evidence</h3><button id="clear-selection" class="text-button">Clear selection</button></div><div id="selected-records"></div></aside><aside class="layers-panel" aria-label="Map layers"><button id="toggle-layers" aria-expanded="false" aria-controls="layer-options">Show layers</button><div id="layer-options" hidden><section><h3>Chronology context</h3><label class="check"><input id="show-undated" type="checkbox" ${showUndated?'checked':''}> Show unresolved chronology</label><a href="docs/coverage-audit.html" target="_blank">Coverage &amp; collection gaps ↗</a></section><section><h3>Climate &amp; natural hazards</h3><label class="check"><input id="show-ice" type="checkbox" ${showIce?'checked':''}> North American ice sheets</label><label>Ice boundary scenario<select id="ice-scenario" aria-label="Ice boundary scenario">${['optimal','min','max'].map(x=>`<option value="${x}" ${iceScenario===x?'selected':''}>${x.toUpperCase()}</option>`).join('')}</select></label><p id="ice-status" class="fine"></p>${climateKinds.map(k=>`<label class="check"><input data-climate="${k}" type="checkbox" ${hiddenClimate.has(k)?'':'checked'}> ${climateLabels[k]}</label>`).join('')}<label class="check"><input id="uncertain-hazards" type="checkbox" ${showUncertainHazards?'checked':''}> Include uncertain / discredited reports</label><p class="fine">Dashed hazard symbols = uncertain/questionable catalog reports. No symbol at a year means no included matching report, not hazard absence.</p><div id="hazard-status"></div><a href="#physical">Sources, methods &amp; limits</a></section><section><h3>Ocean &amp; sailing</h3><label class="check"><input id="show-currents" type="checkbox" ${showCurrents?'checked':''}> Usual surface currents</label><label class="check"><input id="show-winds" type="checkbox" ${showWinds?'checked':''}> Usual trade winds</label><p class="fine">Modern schematic reference, independent of selected year. Warm currents: coral; cold currents: blue; wind: gold dashed arrows. ENSO can disrupt these patterns. The ENSO layer flags reconstructed event years, without assigning unsupported local impacts. Open-water / ancient coastlines are not yet reconstructed.</p></section><label class="check"><input id="show-modeled" type="checkbox" ${showModeled ? "checked" : ""}> Show modeled evidence</label><p class="fine">Includes schematic overlays and records whose dating method explicitly names a model or simulation. Scholarly disagreement alone does not make a record modeled.</p><div class="overlay-controls"><h3>Overlays</h3><p>Language layers use record dates and sourced reconstructions; distributions and relationships are approximate. Descent, borrowing and contact are distinct from culture or genetic ancestry.</p>${Object.entries(
     OVERLAY_LABELS,
   )
     .map(
@@ -260,6 +296,11 @@ function mapPage() {
     $("#toggle-layers").textContent = options.hidden ? "Show layers" : "Hide layers";
     $("#toggle-layers").setAttribute("aria-expanded", String(!options.hidden));
   });
+  for(const [id,change] of [
+    ['show-undated',(v:boolean)=>showUndated=v],['show-ice',(v:boolean)=>showIce=v],['show-currents',(v:boolean)=>showCurrents=v],['show-winds',(v:boolean)=>showWinds=v],['uncertain-hazards',(v:boolean)=>showUncertainHazards=v],
+  ] as const)$('#'+id).addEventListener('change',e=>{change((e.target as HTMLInputElement).checked);renderMapData();});
+  $('#ice-scenario').addEventListener('change',e=>{iceScenario=(e.target as HTMLSelectElement).value;renderMapData();});
+  main.querySelectorAll<HTMLInputElement>('[data-climate]').forEach(el=>el.addEventListener('change',()=>{if(el.checked)hiddenClimate.delete(el.dataset.climate!);else hiddenClimate.add(el.dataset.climate!);renderMapData();}));
   $("#show-modeled").addEventListener("change", (e) => {
     showModeled = (e.target as HTMLInputElement).checked;
     renderMapData();
@@ -315,7 +356,11 @@ function renderLegend() {
 }
 function renderMapData() {
   const active = activeRecords(mapRows(), year);
-  map.update(active, year);
+  map.update(active, year,showUndated?mapRows().filter(r=>r.time.kind==='unplaced'):[],{ice:showIce,iceScenario,currents:showCurrents,winds:showWinds,hidden:hiddenClimate,uncertain:showUncertainHazards});
+  const ice=showIce?iceSnapshot(year,iceScenario):null;
+  $('#ice-status').textContent=ice?`NADI-1 ${ice.scenario.toUpperCase()} snapshot: ${ice.ageCalBP.toLocaleString()} cal BP (${formatYear(1950-ice.ageCalBP)}). Nearest source snapshot; no interpolated edge. Age difference ${Math.abs(1950-year-ice.ageCalBP).toLocaleString()} years.`:showIce?'No NADI-1 snapshot for this year (coverage25,000–1,500cal BP). This does not mean ice absence.':'Ice boundaries hidden.';
+  const hazards=eventsAt(year,hiddenClimate,showUncertainHazards);
+  $('#hazard-status').innerHTML=hazards.length?`<p>${hazards.length} catalog / reconstructed events this year:</p>`+hazards.map(e=>`<p><a href="#physical/${e.id}">${esc(e.title)} · ${esc(e.status)}</a></p>`).join(''):'<p class="fine">No included catalog / ENSO events at this year. ENSO reconstruction covers1525–1934CE only; earlier ENSO evidence requires other sources.</p>';
   $("#active-count").textContent =
     `${active.filter((r) => (r.overlay ? r.overlay.geometry : r.location)).length} mapped records at this time`;
   renderVisible();
@@ -330,12 +375,24 @@ function renderVisible() {
     selected = [visible[Number(el.dataset.visibleIndex)]];
     renderVisible();
   }));
+  const context=map.visibleContextRecords();
+  $('#context-count').textContent=String(context.length);
+  $('#context-records').innerHTML=context.map((r,i)=>`<button class="evidence-card context-choice" data-context-index="${i}"><div><strong>${esc(r.title)}</strong><span>${esc(r.time.original)}</span></div></button>`).join('');
+  main.querySelectorAll<HTMLButtonElement>('[data-context-index]').forEach(el=>el.addEventListener('click',()=>{selected=[context[Number(el.dataset.contextIndex)]];renderVisible();}));
   const active = activeRecords(mapRows(), year);
   $("#selected-records").innerHTML = selected.length ? selected.map(r => {
     const included = active.some(a => a.id === r.id && a.proposalKey === r.proposalKey);
     const inView = visible.some(a => a.id === r.id && a.proposalKey === r.proposalKey);
-    return `<article class="selected-detail"><h4>${esc(r.title)}</h4><p class="fine">${esc(r.culture.name)} · ${esc(timeLabel(r.time))}</p>${!included ? '<p class="selection-status">Outside the current year or filters.</p>' : !inView ? '<p class="selection-status">Outside the current map view.</p>' : ""}<p>${esc(r.review.summary)}</p>${!r.overlay && r.type !== "movement" ? `<p class="fine">${esc(populationAt([r], year).label)}</p>` : ""}<p class="fine">${temporalState(r.time, year) === "possible" ? "Possible time" : "Documented time"}${isModeledRecord(r) ? " · Modeled / schematic evidence" : ""}</p><p class="fine">${esc(r.review.limitations)}</p><a class="button" href="${recordHref(r)}">Full review &amp; sources ↗</a></article>`;
+    return `<article class="selected-detail"><h4>${esc(r.title)}</h4><p class="fine">${esc(r.culture.name)} · ${esc(timeLabel(r.time))}</p>${!included ? '<p class="selection-status">Not active evidence at the current year / filters.</p>' : !inView ? '<p class="selection-status">Outside the current map view.</p>' : ""}<p>${esc(r.review.summary)}</p>${!r.overlay && r.type !== "movement" ? `<p class="fine">${esc(populationAt([r], year).label)}</p>` : ""}<p class="fine">${r.time.kind === "unplaced" ? "Chronology unresolved · independent of selected year" : temporalState(r.time, year) === "possible" ? "Possible time / context window" : "Documented time"}${isModeledRecord(r) ? " · Modeled / schematic evidence" : ""}</p><p class="fine">${esc(r.review.limitations)}</p>${r.time.kind==='unplaced'?`<p class="fine"><strong>Source date guidance:</strong> ${esc(r.time.original)}<br>${esc(r.time.interpretation)}</p>`:''}<a class="button" href="${recordHref(r)}">Full review &amp; sources ↗</a></article>`;
   }).join("") : '<p class="empty">Select a site from the list or a marker on the map to see its evidence, dates, and sources here.</p>';
+}
+function physicalPage(id?:string){
+  main.innerHTML=physicalHTML(id);
+  if(id)return;
+  main.querySelector('article')!.insertAdjacentHTML('beforeend',`<section><h3>Catalog browser</h3><p>${hazardEvents.length.toLocaleString()} source-linked catalog / reconstructed annual entries in this edition. These are separate from archaeological evidence counts. Open-ended eruption-date constraints remain accessible here and are not assigned to an invented year.</p><a href="hazard-events.json" download>Download structured catalog extract</a><label>Search event / volcano / year<input id="hazard-search" type="search" aria-label="Search natural hazards"></label><label>Kind<select id="hazard-kind" aria-label="Natural hazard kind"><option value="">All</option>${['el-nino','la-nina','volcano','tsunami'].map(k=>`<option value="${k}">${climateLabels[k]}</option>`).join('')}</select></label><p id="hazard-results-count"></p><div id="hazard-results"></div><button id="hazard-more">Show more</button></section>`);
+  let limit=100;
+  const render=()=>{const q=$<HTMLInputElement>('#hazard-search').value.toLowerCase();const kind=$<HTMLSelectElement>('#hazard-kind').value;const matches=hazardEvents.filter(e=>(!kind||e.kind===kind)&&`${e.title} ${e.start} ${e.status} ${e.detail.StartDateYear??''}`.toLowerCase().includes(q));$('#hazard-results-count').textContent=`${matches.length.toLocaleString()} matching entries; showing first ${Math.min(limit,matches.length)}.`;$('#hazard-results').innerHTML=matches.slice(0,limit).map(e=>`<p><a href="#physical/${e.id}">${esc(e.title)}</a> · ${esc(climateLabels[e.kind])} · ${openHazardDate(e)?'Open date constraint — see source fields':formatYear(e.start)+(e.start!==e.end?' – '+formatYear(e.end):'')} · ${esc(e.status)}</p>`).join('');$('#hazard-more').toggleAttribute('hidden',limit>=matches.length);};
+  for(const id of ['hazard-search','hazard-kind'])$('#'+id).addEventListener('input',()=>{limit=100;render();});$('#hazard-more').addEventListener('click',()=>{limit+=100;render();});render();
 }
 function tablePage() {
   main.innerHTML = `<article class="table-page"><div class="page-heading"><div><div class="eyebrow">THE EVIDENCE INDEX</div><h2>Every row has a source.</h2><p class="lead">Occupation, occurrences, movements, and events. Open a row for its full review.</p></div><a class="button primary" href="#new">+ Suggest new evidence</a></div><div class="table-filters"><input id="table-search" type="search" aria-label="Search evidence" placeholder="Search places, cultures, claims…" value="${esc(search)}"><label>Period<select id="period" aria-label="Table period"><option value="all" ${period === "all" ? "selected" : ""}>All records</option><option value="current" ${period === "current" ? "selected" : ""}>At selected year</option></select></label><label>Type<select id="type-filter" aria-label="Record type filter">${["all", "occupation", "occurrence", "movement", "event", ...Object.keys(OVERLAY_LABELS)].map((t) => `<option value="${t}" ${t === typeFilter ? "selected" : ""}>${esc(OVERLAY_LABELS[t as keyof typeof OVERLAY_LABELS] ?? t)}</option>`).join("")}</select></label><label>Sort<select id="sort" aria-label="Sort evidence"><option value="oldest" ${sort === "oldest" ? "selected" : ""}>Earliest first</option><option value="newest" ${sort === "newest" ? "selected" : ""}>Latest first</option><option value="name" ${sort === "name" ? "selected" : ""}>Name</option></select></label><label class="check"><input id="table-preview" type="checkbox" ${preview ? "checked" : ""}> Preview suggestions</label></div><p id="table-caption" class="muted"></p><div class="table-scroll"><table><thead><tr><th>Dates / occupation</th><th>Evidence & location</th><th>Culture / people</th><th>Type</th><th>Evidence status</th><th>Supporting page</th></tr></thead><tbody></tbody></table></div><p class="fine">* A particular claim is under discussion or disputed. Open its review to see which claim and why. Culture filters from the map also apply here.</p></article>`;
@@ -425,6 +482,7 @@ function reviewPage(r: DisplayRecord, p?: Proposal, index?: number) {
     exportProposals([share]);
   });
   $('[data-action="locate"]', main).addEventListener("click", () => {
+    if(r.time.kind==='unplaced')showUndated=true;
     if (r.time.start !== null) setYear(r.time.start);
     if (p) preview = true;
     hiddenCultures.delete(r.culture.id);
@@ -510,7 +568,7 @@ function importPage() {
   });
 }
 function aboutPage() {
-  main.innerHTML = `<article class="review-page"><div class="eyebrow">METHOD & COVERAGE</div><h2>The record, with its uncertainties.</h2><p class="lead">A fully offline atlas of archaeological and verified historical evidence, from the earliest included finding through ${END_YEAR}.</p><section><h3>A deliberately small beginning</h3><p>${esc(dataset.coverage)}</p><p>App ${appVersion} · Dataset ${esc(dataset.version)} · source check ${esc(dataset.reviewedAt)}</p><p>“Bundled evidence” means the included sources were checked to the extent described on each review page. It is not an independent peer review or a guarantee of scholarly consensus. The record is not a population census.</p></section><section><h3>How to read the map</h3><p>Filled dots show documented intervals or precisely dated events. Outlined dots show a broadly dated occurrence or uncertain interval edge. An asterisk marks a claim under discussion or dispute. Open the detailed review to see which claim and why. Culture colors are descriptive classifications, not racial categories.</p><p>Clouds show schematic regional connections or environmental context, not excavated settlements, precise routes, affected-area boundaries or statistical confidence regions. Uncertain dates fade within their stated bounds; supported certain cores stay fully visible. With no certain core, the fade is symmetric and illustrative, not a probability estimate or population size. Single rounded dates remain reference dates rather than invented ranges. Dates are inclusive. An occurrence window means something is dated within that window; it does not imply continuous settlement. A blank year means no included matching record, not human absence. Arrow paths are schematic unless separately supported.</p></section><section><h3>Why the timeline ends in 1934</h3><p>The Indian Reorganization Act is a policy boundary chosen for this edition. It does not mark the end of dispossession, forced relocation, or Indigenous history. Native nations and communities continued beyond the displayed periods. A disappearing marker indicates the end of an included evidence interval, never extinction by itself.</p><p>Epidemics, massacres and forced removals have separate layers. Mortality estimates belong to specific sources, populations and date ranges; the map does not turn them into an unsupported population census or disease-spread animation.</p></section><section><h3>Academic evidence</h3><p>Each claim maps to specific scholarly or archival sources. Critical historical reading and corroboration matter: repeated assertions are not independent evidence. Original dating, methods, calendar interpretation and limitations stay attached to the record. Uncalibrated radiocarbon ages are not silently converted into calendar years.</p></section><section><h3>Your local workspace</h3><p>Suggest new rows or corrections, then save as drafts or complete suggestions. “Complete” means required fields are present, not academically verified. “Send to others” downloads selected rows with their review content and bibliography. A recipient imports and previews the package. Corrections preserve the original and base revision. No proposal automatically replaces reviewed data.</p><p>Browser storage may vary by browser and file location. Export files are the portable backup. Copying or moving index.html does not transfer browser storage. Import your saved files into the new copy.</p></section><section><h3>Offline and hosted use</h3><p>All map geometry, code, evidence and review pages are bundled. The downloaded ZIP works fully offline after extraction. A hosted page needs its initial files from the host; future offline reloads are not guaranteed. Source links open online only when selected. Processing and suggestions stay in your browser. There is no account, application backend or automatic update check. Your research drafts are not uploaded. ${location.protocol === "file:" ? "This extracted offline copy does not receive hosting analytics." : 'The hosted edition uses Cloudflare Web Analytics for usage and performance measurements. These are separate from your research drafts. The host and Cloudflare also receive ordinary web-request information. <a href="https://tripofisch.com/privacy/">Privacy notice</a>.'}</p></section><section><h3>Attribution and licensing</h3><p>Made with Natural Earth. Generalized reference coastlines are public domain and represent modern geography, not ancient coastlines or ice sheets. ${esc(dataset.license)}</p><p>See README and THIRD_PARTY files in the download for build instructions, dependency licenses and dataset maintenance.</p></section></article>`;
+  main.innerHTML = `<article class="review-page"><div class="eyebrow">METHOD & COVERAGE</div><h2>The record, with its uncertainties.</h2><p class="lead">A fully offline atlas of archaeological and verified historical evidence, from the earliest included finding through ${END_YEAR}.</p><section><h3>A deliberately small beginning</h3><p>${esc(dataset.coverage)}</p><p>App ${appVersion} · Dataset ${esc(dataset.version)} · source check ${esc(dataset.reviewedAt)}</p><p>“Bundled evidence” means the included sources were checked to the extent described on each review page. It is not an independent peer review or a guarantee of scholarly consensus. The record is not a population census.</p></section><section><h3>How to read the map</h3><p>Filled dots show documented intervals or precisely dated events. Outlined dots show a broadly dated occurrence or uncertain interval edge. An asterisk marks a claim under discussion or dispute. Open the detailed review to see which claim and why. Culture colors are descriptive classifications, not racial categories.</p><p>Clouds show schematic regional connections or environmental context, not excavated settlements, precise routes, affected-area boundaries or statistical confidence regions. Uncertain dates fade within their stated bounds; supported certain cores stay fully visible. With no certain core, the fade is symmetric and illustrative, not a probability estimate or population size. Single rounded dates remain reference dates rather than invented ranges. Dates are inclusive. An occurrence window means something is dated within that window; it does not imply continuous settlement. A blank year means no included matching record, not human absence. Arrow paths are schematic unless separately supported.</p></section><section><h3>Why the timeline ends in 1934</h3><p>The Indian Reorganization Act is a policy boundary chosen for this edition. It does not mark the end of dispossession, forced relocation, or Indigenous history. Native nations and communities continued beyond the displayed periods. A disappearing marker indicates the end of an included evidence interval, never extinction by itself.</p><p>Epidemics, massacres and forced removals have separate layers. Mortality estimates belong to specific sources, populations and date ranges; the map does not turn them into an unsupported population census or disease-spread animation.</p></section><section><h3>Timeline scale and playback</h3><p>The default logarithmic scale compresses deep time and gives recent millennia more space. Equal slider distances therefore represent unequal year spans; choose Linear for equal spacing. Smart playback moves faster through sparse stretches and slows around denser enabled evidence. It measures this atlas’s coverage, not population size, human absence, or scientific certainty. Disputed records retain their source dates and visibility. Fixed years-per-second options and exact year entry remain available.</p></section><section><h3>Academic evidence</h3><p>Each claim maps to specific scholarly or archival sources. Critical historical reading and corroboration matter: repeated assertions are not independent evidence. Original dating, methods, calendar interpretation and limitations stay attached to the record. Uncalibrated radiocarbon ages are not silently converted into calendar years.</p></section><section><h3>Hosted atlas and data stewardship</h3><p>The hosted atlas uses versioned structured data as its authoritative store. Spreadsheets are optional import/export and suggestion channels, not the storage model or a limit on map features. Visitor suggestions still require editorial review. Climate, natural-hazard and geometry data have their own attributed collections. <a href="#physical">Climate sources and methods</a> · <a href="docs/coverage-audit.html">Coverage audit</a>.</p></section><section><h3>Your local workspace</h3><p>Suggest new rows or corrections, then save as drafts or complete suggestions. “Complete” means required fields are present, not academically verified. “Send to others” downloads selected rows with their review content and bibliography. A recipient imports and previews the package. Corrections preserve the original and base revision. No proposal automatically replaces reviewed data.</p><p>Browser storage may vary by browser and file location. Export files are the portable backup. Copying or moving index.html does not transfer browser storage. Import your saved files into the new copy.</p></section><section><h3>Offline and hosted use</h3><p>All map geometry, code, evidence and review pages are bundled. The downloaded ZIP works fully offline after extraction. A hosted page needs its initial files from the host; future offline reloads are not guaranteed. Source links open online only when selected. Processing and suggestions stay in your browser. There is no account, application backend or automatic update check. Your research drafts are not uploaded. ${location.protocol === "file:" ? "This extracted offline copy does not receive hosting analytics." : 'The hosted edition uses Cloudflare Web Analytics for usage and performance measurements. These are separate from your research drafts. The host and Cloudflare also receive ordinary web-request information. <a href="https://tripofisch.com/privacy/">Privacy notice</a>.'}</p></section><section><h3>Attribution and licensing</h3><p>Made with Natural Earth. Generalized reference coastlines are public domain and represent modern geography, not ancient coastlines or ice sheets. ${esc(dataset.license)}</p><p>See README and THIRD_PARTY files in the download for build instructions, dependency licenses and dataset maintenance.</p></section></article>`;
 }
 let previousHash = location.hash || "#map";
 let reverting = false;
@@ -544,6 +602,7 @@ function route() {
     else if (hash === "#context") main.innerHTML = contextHTML(rows());
     else if (hash === "#proposals") proposalsPage();
     else if (hash === "#about") aboutPage();
+    else if (hash === "#physical" || hash.startsWith("#physical/")) physicalPage(hash.slice(10));
     else if (hash === "#import") importPage();
     else if (hash.startsWith("#review/")) {
       const r = dataset.records.find(

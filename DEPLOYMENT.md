@@ -1,13 +1,15 @@
 # Americas Peoples — deployment handoff
 
-Prepared for the TripoFisch / 11 Mosswood deployment agent. **This repository preparation does not deploy a public website.** Hosting, DNS, tunnel configuration, routing, product-page integration and public verification belong to that agent.
+Hosted edition: Americas Peoples at https://americaspeoples.11mosswood.us/, launched through https://tripofisch.com/free-utilities/americaspeoples/. Animal identity: Alaska Blackfish. This document also describes self-hosting the current static implementation; it does not itself confirm a deployment. Release verification is recorded in docs/verification.md.
+
+The author has authorized a fully hosted application and richer future services. Versioned structured collections are the current authoritative store; spreadsheets are optional import/export and suggestion channels. Current builds still run mapping and visitor draft processing in the browser. A server database, shared accounts or submission API have not been invented merely by changing this direction. See docs/hosted-architecture.md.
 
 ## Identity and destination
 
 - App: **Americas Peoples**.
-- Proposed origin: **https://americaspeoples.11mosswood.us/**. This is a proposal, not a verified live URL.
+- Public origin: **https://americaspeoples.11mosswood.us/**.
 - Layer: **Utilities**.
-- Animal name and logo: **to be provided**. The existing geometric atlas mark is not an animal logo. No animal or external endorsement has been invented.
+- Animal name and logo: **Alaska Blackfish**; linked product page supplies the logo and animal article.
 - Description: A browser atlas of archaeological and historical evidence in the Americas, from the earliest included findings through 1934, with source-linked reviews and time-dependent overlays.
 - Source: https://github.com/gavinfischer-keenan/americaspeoples, published branch `main`; handoff release `v0.2.1`. Resolve the exact immutable revision with `git rev-parse v0.2.1^{commit}` or the supplied handoff report.
 

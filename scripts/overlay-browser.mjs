@@ -175,7 +175,8 @@ try {
     await page.getByLabel(label, { exact: true }).check();
     assert.equal(await page.locator("[data-overlay]").count(), 3);
   }
-  assert.equal(await page.locator("#time-slider").getAttribute("max"), "1934");
+  assert.equal(await page.locator("#time-slider").getAttribute("max"), "1000000");
+  assert.ok((await page.locator("#range-end").innerText()).includes("1,934 CE"));
   await go(1935);
   assert.match(await page.locator("#time-error").innerText(), /1934/);
   await go(1933);

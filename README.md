@@ -1,8 +1,12 @@
 # Americas Peoples
 
-A fully offline browser atlas of archaeological and historical evidence in the Americas. Explore the earliest included evidence through 1934, inspect the science behind every row, and exchange proposed updates as files.
+A hosted browser atlas of archaeological and historical evidence in the Americas and Asia-Pacific. Explore the earliest included evidence through1934, inspect source-linked reviews, and exchange proposed updates. Versioned structured data is authoritative; spreadsheets are optional contribution/export formats. See [hosted architecture](docs/hosted-architecture.md).
 
 ## Current release
+
+v0.3.7 adds Smart playback and a logarithmic timeline, individually reviews280 formerly unplaced chronologies(64 recovered windows plus5 separated disjoint windows), and separates unresolved geographic context from dated evidence. The coverage audit identifies collection gaps without interpreting blank cells as absence.565 archaeological/historical/context records and861 claims are included;13 newly reviewed skeletal contexts retain source/method limitations. All19 round7 inputs are captured and screened; additional generated syntheses remain explicitly pending original-source checks.
+
+Physical context has separate attributed structured collections:49 NADI-1 dated North American ice-sheet snapshots with three boundary scenarios; NOAA-archived ENSO reconstructions; NOAA/NCEI historical tsunami source events; Smithsonian GVP Holocene eruptions; and schematic NOAA-guided usual currents/trade winds. Catalog entries retain source fields and uncertainty; open-ended dates are not forced into exact years. Source completeness and geographical limits are explicit. Conditions do not automatically establish impacts on settlements. Drought/heat/cold toggles classify existing sourced environmental findings, not continuous global grids. Open-water and paleocoastline reconstructions remain a data gap.
 
 v0.3.6 reconciles19 Pacific research uploads:32 new records and7 existing-record context updates,547 records and818 claims total. All515 prior records remain. The map has a viewport-aware list on the left, selected evidence on the right, a central map and collapsible far-right layer controls. Modeled/schematic evidence can be hidden. The research reconciliation register preserves unresolved source leads and corrections.
 
@@ -12,8 +16,8 @@ v0.3.4 publishes 515 records and 774 claims, including 15 new round5 records and
 
 ## Downloads and bulk contributions
 
-- [Download v0.3.6 — offline application ZIP](https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/tags/v0.3.6/downloads/americas-peoples-v0.3.6-offline.zip)
-- [Release filenames, sizes and SHA-256 checksums](https://github.com/gavinfischer-keenan/americaspeoples/blob/v0.3.6/downloads/v0.3.6-artifacts.json)
+- [Download v0.3.7 — offline application ZIP](https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/tags/v0.3.7/downloads/americas-peoples-v0.3.7-offline.zip)
+- [Release filenames, sizes and SHA-256 checksums](https://github.com/gavinfischer-keenan/americaspeoples/blob/v0.3.7/downloads/v0.3.7-artifacts.json)
 - [Read the bulk import and reference guide](docs/bulk-import-guide.md)
 - [Download the XLSX template](https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/heads/main/templates/americas-peoples-import.xlsx)
 - [Original v0.1 download](https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/heads/main/downloads/americas-peoples-v0.1-offline.zip)
