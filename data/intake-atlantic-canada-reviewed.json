@@ -1,0 +1,1751 @@
+{
+  "records": [
+    {
+      "id": "atlantic-debert-calibrated-context",
+      "revision": 1,
+      "type": "event",
+      "title": "Debert — calibrated chronology and archaeological context",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": {
+        "id": "debert-public",
+        "name": "Debert Palaeo-Indian Site National Historic Site, Nova Scotia, Canada",
+        "lon": -63.41614,
+        "lat": 45.418808,
+        "precision": "Official public site locator at 1:50,000 mapping scale; not an excavated feature.",
+        "provenance": "https://geonames.nrcan.gc.ca/search-place-names/unique?id=CBVVF&wbdisable=true"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -10815,
+        "end": -10545,
+        "approximate": true,
+        "original": "12,630 ± 135 cal BP, published 2σ summary; raw pooled age 10,600 ± 47 radiocarbon BP",
+        "method": "Lothrop et al. Table 3: IntCal13 / OxCal 4.2 published summary; no independent recalibration",
+        "interpretation": "Reported dated evidence envelope; neither an exact founding date nor proof of continuous occupation throughout the range."
+      },
+      "claims": [
+        {
+          "id": "chronology",
+          "text": "Lothrop and colleagues report a pooled Debert age of 12,630 ± 135 cal BP at 2σ, distinct from the uncalibrated 10,600 ± 47 radiocarbon BP result.",
+          "status": "well-supported",
+          "explanation": "The displayed interval translates the authors’ published calibrated summary, not a duration of occupation. The review pools a suite of 12 determinations; older accounts describe 13 site dates.",
+          "support": [
+            {
+              "sourceId": "lothrop2016-northeast",
+              "locator": "Table 3; section 3.4",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        },
+        {
+          "id": "preservation",
+          "text": "The early excavation account describes disturbed deposits and no recovered faunal bones; proposed caribou hunting therefore exceeds direct faunal evidence at Debert.",
+          "status": "under discussion",
+          "explanation": "Acidic soils and disturbance limit preservation. A plausible subsistence interpretation is not a recovered animal assemblage.",
+          "support": [
+            {
+              "sourceId": "stuckenrath1964-debert",
+              "locator": "Excavation narrative; radiocarbon and subsistence discussion",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            },
+            {
+              "sourceId": "nrcan-debert-location",
+              "locator": "Official geographical-name record CBVVF",
+              "stance": "context",
+              "note": "Public site locator only; not an excavation coordinate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "lothrop2016-northeast",
+          "authors": "Jonathan C. Lothrop; Darrin L. Lowery; Arthur E. Spiess; Christopher J. Ellis",
+          "title": "Early Human Settlement of Northeastern North America",
+          "year": 2016,
+          "venue": "PaleoAmerica",
+          "url": "https://doi.org/10.1080/20555563.2016.1212178",
+          "access": "Primary author-uploaded full-text sections 2.2,3.4 and Table 3 inspected; earlier Great Lakes record already cites this review. No independent recalibration.",
+          "doi": "10.1080/20555563.2016.1212178"
+        },
+        {
+          "id": "stuckenrath1964-debert",
+          "authors": "Robert Stuckenrath Jr.",
+          "title": "The Debert Site: Early Man in the Northeast",
+          "year": 1964,
+          "venue": "Expedition7(1)",
+          "url": "https://www.penn.museum/sites/expedition/the-debert-site/",
+          "access": "Primary excavation-participant narrative read in full; preliminary chronology, stratigraphic disturbance, hearths and absence of preserved bone distinguished from later analyses."
+        },
+        {
+          "id": "nrcan-debert-location",
+          "authors": "Natural Resources Canada / Canadian Geographical Names Database",
+          "title": "Debert Palaeo-Indian Site National Historic Site of Canada (CBVVF)",
+          "year": null,
+          "venue": "Official Canadian geographical-name record",
+          "url": "https://geonames.nrcan.gc.ca/search-place-names/unique?id=CBVVF&wbdisable=true",
+          "access": "Official public site record inspected:45.418808 N,63.41614 W, scale 1:50000; not an individual excavation coordinate."
+        }
+      ],
+      "review": {
+        "summary": "Lothrop and colleagues report a pooled Debert age of 12,630 ± 135 cal BP at 2σ, distinct from the uncalibrated 10,600 ± 47 radiocarbon BP result. The early excavation account describes disturbed deposits and no recovered faunal bones; proposed caribou hunting therefore exceeds direct faunal evidence at Debert.",
+        "limitations": "A pooled radiocarbon summary does not establish uninterrupted residence. Initial excavation interpretations and later calibrated summaries have different evidentiary roles.",
+        "discussion": "Dating, archaeological classification, and migration inference are distinguished.",
+        "provenance": "Atlantic Canada intake: both supplied PDF syntheses and all 29 RIS occurrences reconciled against primary publications or explicitly limited access. Supplied syntheses are research leads, not primary evidence.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Source intake reviewed; shared corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "atlantic-lanse-amour-burial-context",
+      "revision": 1,
+      "type": "event",
+      "title": "L’Anse Amour — burial context and legacy charcoal date",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": {
+        "id": "lanse-amour-public",
+        "name": "L’Anse Amour National Historic Site, Labrador, Canada",
+        "lon": -56.868388,
+        "lat": 51.480403,
+        "precision": "Official public visitor locator; not the individual grave coordinate.",
+        "provenance": "https://www.newfoundlandlabrador.com/plan-and-book/attractions/212021"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "7530 ± 140 BP (I-8099), associated charcoal; not a directly dated human burial or explicitly calibrated age",
+        "method": "Source-specific chronology or dating limitation",
+        "interpretation": "No closed, independently supported calendar interval is assigned."
+      },
+      "claims": [
+        {
+          "id": "burial",
+          "text": "McGhee and Tuck describe a burial under a stone mound with ochre and marine-related artifacts, accompanied by a charcoal determination of 7530 ± 140 BP.",
+          "status": "well-supported",
+          "explanation": "The charcoal was associated with the grave context, rather than directly sampled from the human remains. No calendar conversion is assigned.",
+          "support": [
+            {
+              "sourceId": "mcghee-tuck1975-belle-isle",
+              "locator": "L’Anse Amour burial chapter; Radiocarbon Dates",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            },
+            {
+              "sourceId": "nl-lanse-amour-public-site",
+              "locator": "Official attraction record",
+              "stance": "context",
+              "note": "Public visitor location only; promotional rounded age is not used as calibrated chronology."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "mcghee-tuck1975-belle-isle",
+          "authors": "Robert McGhee; James A. Tuck",
+          "title": "An Archaic Sequence from the Strait of Belle Isle, Labrador",
+          "year": 1975,
+          "venue": "National Museum of Man Mercury Series, Archaeological Survey of Canada Paper34",
+          "url": "https://doi.org/10.2307/j.ctt22zmcws",
+          "access": "Original 1975 report abstract and openly available 16-page excerpt read, including L’Anse Amour burial chapter and radiocarbon entry; remaining monograph not inspected.",
+          "doi": "10.2307/j.ctt22zmcws",
+          "referenceType": "book",
+          "publisher": "National Museums of Canada"
+        },
+        {
+          "id": "nl-lanse-amour-public-site",
+          "authors": "Newfoundland and Labrador Tourism",
+          "title": "L’Anse Amour National Historic Site of Canada",
+          "year": null,
+          "venue": "Official provincial public heritage attraction record",
+          "url": "https://www.newfoundlandlabrador.com/plan-and-book/attractions/212021",
+          "access": "Official public visitor-site coordinates 51.480403,-56.868388 inspected. Public site marker, not a skeletal or grave coordinate; promotional age wording not used as calibrated chronology."
+        }
+      ],
+      "review": {
+        "summary": "McGhee and Tuck describe a burial under a stone mound with ochre and marine-related artifacts, accompanied by a charcoal determination of 7530 ± 140 BP.",
+        "limitations": "Source-specific observations do not establish an exact arrival, continuous occupation, or biological ancestry.",
+        "discussion": "Dating, archaeological classification, and migration inference are distinguished.",
+        "provenance": "Atlantic Canada intake: both supplied PDF syntheses and all 29 RIS occurrences reconciled against primary publications or explicitly limited access. Supplied syntheses are research leads, not primary evidence.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Source intake reviewed; shared corpus unchanged."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "atlantic-cowpath-context",
+      "revision": 1,
+      "type": "event",
+      "title": "Cowpath — southern Labrador archaeological context",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "8600 ± 325 BP in the institutional retrospective; original dating methods not accessed",
+        "method": "Source-specific chronology or dating limitation",
+        "interpretation": "No closed, independently supported calendar interval is assigned."
+      },
+      "claims": [
+        {
+          "id": "context",
+          "text": "The provincial archaeology office identifies Cowpath as a southern Labrador site studied by Renouf and reports a legacy age of 8600 ± 325 BP.",
+          "status": "well-supported",
+          "explanation": "The original thesis and calibration details were unavailable. The reported BP age is retained without a calendar conversion.",
+          "support": [
+            {
+              "sourceId": "nl-pao2014-renouf",
+              "locator": "Renouf retrospective: Cowpath sites and regional geography",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "nl-pao2014-renouf",
+          "authors": "Newfoundland and Labrador Provincial Archaeology Office",
+          "title": "Dr. Priscilla Renouf",
+          "year": 2014,
+          "venue": "Inside Newfoundland and Labrador Archaeology",
+          "url": "https://nlarchaeology.wordpress.com/2014/04/14/dr-priscilla-renouf/",
+          "access": "Institutional retrospective read for named project sites and recorded geography. Renouf 1976 original thesis and methods remain unavailable; legacy 8600±325 BP not recalibrated."
+        }
+      ],
+      "review": {
+        "summary": "The provincial archaeology office identifies Cowpath as a southern Labrador site studied by Renouf and reports a legacy age of 8600 ± 325 BP.",
+        "limitations": "Source-specific observations do not establish an exact arrival, continuous occupation, or biological ancestry.",
+        "discussion": "Dating, archaeological classification, and migration inference are distinguished.",
+        "provenance": "Atlantic Canada intake: both supplied PDF syntheses and all 29 RIS occurrences reconciled against primary publications or explicitly limited access. Supplied syntheses are research leads, not primary evidence.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Source intake reviewed; shared corpus unchanged."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -57,
+            52
+          ]
+        },
+        "precision": "Rounded regional anchor for the named source geography; not an archaeological coordinate, route, territory, or confidence boundary.",
+        "provenance": "The provincial archaeology office places these sites between West St. Modeste and Pinware. Rounded regional anchor only; no original site coordinates accessed."
+      }
+    },
+    {
+      "id": "atlantic-cowpath-east-context",
+      "revision": 1,
+      "type": "event",
+      "title": "Cowpath East — southern Labrador archaeological context",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "No independently verified calendar interval for this named site",
+        "method": "Source-specific chronology or dating limitation",
+        "interpretation": "No closed, independently supported calendar interval is assigned."
+      },
+      "claims": [
+        {
+          "id": "context",
+          "text": "The provincial archaeology office identifies Cowpath East among the separate southern Labrador sites studied by Renouf.",
+          "status": "well-supported",
+          "explanation": "The Cowpath determination is not assigned to this separate site; its own chronology requires the original excavation report.",
+          "support": [
+            {
+              "sourceId": "nl-pao2014-renouf",
+              "locator": "Renouf retrospective: Cowpath sites and regional geography",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "nl-pao2014-renouf",
+          "authors": "Newfoundland and Labrador Provincial Archaeology Office",
+          "title": "Dr. Priscilla Renouf",
+          "year": 2014,
+          "venue": "Inside Newfoundland and Labrador Archaeology",
+          "url": "https://nlarchaeology.wordpress.com/2014/04/14/dr-priscilla-renouf/",
+          "access": "Institutional retrospective read for named project sites and recorded geography. Renouf 1976 original thesis and methods remain unavailable; legacy 8600±325 BP not recalibrated."
+        }
+      ],
+      "review": {
+        "summary": "The provincial archaeology office identifies Cowpath East among the separate southern Labrador sites studied by Renouf.",
+        "limitations": "Source-specific observations do not establish an exact arrival, continuous occupation, or biological ancestry.",
+        "discussion": "Dating, archaeological classification, and migration inference are distinguished.",
+        "provenance": "Atlantic Canada intake: both supplied PDF syntheses and all 29 RIS occurrences reconciled against primary publications or explicitly limited access. Supplied syntheses are research leads, not primary evidence.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Source intake reviewed; shared corpus unchanged."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -57,
+            52
+          ]
+        },
+        "precision": "Rounded regional anchor for the named source geography; not an archaeological coordinate, route, territory, or confidence boundary.",
+        "provenance": "The provincial archaeology office places these sites between West St. Modeste and Pinware. Rounded regional anchor only; no original site coordinates accessed."
+      }
+    },
+    {
+      "id": "atlantic-cowpath-west-context",
+      "revision": 1,
+      "type": "event",
+      "title": "Cowpath West — southern Labrador archaeological context",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "No independently verified calendar interval for this named site",
+        "method": "Source-specific chronology or dating limitation",
+        "interpretation": "No closed, independently supported calendar interval is assigned."
+      },
+      "claims": [
+        {
+          "id": "context",
+          "text": "The provincial archaeology office identifies Cowpath West among the separate southern Labrador sites studied by Renouf.",
+          "status": "well-supported",
+          "explanation": "The Cowpath determination is not assigned to this separate site; its own chronology requires the original excavation report.",
+          "support": [
+            {
+              "sourceId": "nl-pao2014-renouf",
+              "locator": "Renouf retrospective: Cowpath sites and regional geography",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "nl-pao2014-renouf",
+          "authors": "Newfoundland and Labrador Provincial Archaeology Office",
+          "title": "Dr. Priscilla Renouf",
+          "year": 2014,
+          "venue": "Inside Newfoundland and Labrador Archaeology",
+          "url": "https://nlarchaeology.wordpress.com/2014/04/14/dr-priscilla-renouf/",
+          "access": "Institutional retrospective read for named project sites and recorded geography. Renouf 1976 original thesis and methods remain unavailable; legacy 8600±325 BP not recalibrated."
+        }
+      ],
+      "review": {
+        "summary": "The provincial archaeology office identifies Cowpath West among the separate southern Labrador sites studied by Renouf.",
+        "limitations": "Source-specific observations do not establish an exact arrival, continuous occupation, or biological ancestry.",
+        "discussion": "Dating, archaeological classification, and migration inference are distinguished.",
+        "provenance": "Atlantic Canada intake: both supplied PDF syntheses and all 29 RIS occurrences reconciled against primary publications or explicitly limited access. Supplied syntheses are research leads, not primary evidence.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Source intake reviewed; shared corpus unchanged."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -57,
+            52
+          ]
+        },
+        "precision": "Rounded regional anchor for the named source geography; not an archaeological coordinate, route, territory, or confidence boundary.",
+        "provenance": "The provincial archaeology office places these sites between West St. Modeste and Pinware. Rounded regional anchor only; no original site coordinates accessed."
+      }
+    },
+    {
+      "id": "atlantic-iceberg-context",
+      "revision": 1,
+      "type": "event",
+      "title": "Iceberg — southern Labrador excavation context",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "Combined Iceberg / Black Rock Brook sequence described as approximately 3500–2000 years ago; site-specific calibrated bounds not verified",
+        "method": "Source-specific chronology or dating limitation",
+        "interpretation": "No closed, independently supported calendar interval is assigned."
+      },
+      "claims": [
+        {
+          "id": "context",
+          "text": "The provincial archaeology office identifies Iceberg as a site excavated by Madden. Its retrospective describes at least ten dated components across Iceberg and Black Rock Brook together.",
+          "status": "well-supported",
+          "explanation": "The combined sequence is not a separate occupation envelope for each site. The original thesis chronology and calibration were not independently accessed.",
+          "support": [
+            {
+              "sourceId": "nl-pao2020-wrinkle",
+              "locator": "Madden excavation discussion; Iceberg relocation account",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "nl-pao2020-wrinkle",
+          "authors": "Newfoundland and Labrador Provincial Archaeology Office",
+          "title": "Wrinkle",
+          "year": 2020,
+          "venue": "Inside Newfoundland and Labrador Archaeology",
+          "url": "https://nlarchaeology.wordpress.com/2020/10/08/wrinkle/",
+          "access": "Original provincial-archaeologist revisit account read, including Iceberg relocation and discussion of Madden 1976; not independent access to original thesis dating tables."
+        }
+      ],
+      "review": {
+        "summary": "The provincial archaeology office identifies Iceberg as a site excavated by Madden. Its retrospective describes at least ten dated components across Iceberg and Black Rock Brook together.",
+        "limitations": "Source-specific observations do not establish an exact arrival, continuous occupation, or biological ancestry.",
+        "discussion": "Dating, archaeological classification, and migration inference are distinguished.",
+        "provenance": "Atlantic Canada intake: both supplied PDF syntheses and all 29 RIS occurrences reconciled against primary publications or explicitly limited access. Supplied syntheses are research leads, not primary evidence.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Source intake reviewed; shared corpus unchanged."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -57,
+            52
+          ]
+        },
+        "precision": "Rounded regional anchor for the named source geography; not an archaeological coordinate, route, territory, or confidence boundary.",
+        "provenance": "Southern Labrador / L’Anse au Diable regional context in the provincial archaeology account; rounded regional anchor, not a site coordinate."
+      }
+    },
+    {
+      "id": "atlantic-black-rock-brook-context",
+      "revision": 1,
+      "type": "event",
+      "title": "Black Rock Brook — southern Labrador excavation context",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "Combined Iceberg / Black Rock Brook sequence described as approximately 3500–2000 years ago; site-specific calibrated bounds not verified",
+        "method": "Source-specific chronology or dating limitation",
+        "interpretation": "No closed, independently supported calendar interval is assigned."
+      },
+      "claims": [
+        {
+          "id": "context",
+          "text": "The provincial archaeology office identifies Black Rock Brook as a site excavated by Madden. Its retrospective describes at least ten dated components across Iceberg and Black Rock Brook together.",
+          "status": "well-supported",
+          "explanation": "The combined sequence is not a separate occupation envelope for each site. The original thesis chronology and calibration were not independently accessed.",
+          "support": [
+            {
+              "sourceId": "nl-pao2020-wrinkle",
+              "locator": "Madden excavation discussion; Iceberg relocation account",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "nl-pao2020-wrinkle",
+          "authors": "Newfoundland and Labrador Provincial Archaeology Office",
+          "title": "Wrinkle",
+          "year": 2020,
+          "venue": "Inside Newfoundland and Labrador Archaeology",
+          "url": "https://nlarchaeology.wordpress.com/2020/10/08/wrinkle/",
+          "access": "Original provincial-archaeologist revisit account read, including Iceberg relocation and discussion of Madden 1976; not independent access to original thesis dating tables."
+        }
+      ],
+      "review": {
+        "summary": "The provincial archaeology office identifies Black Rock Brook as a site excavated by Madden. Its retrospective describes at least ten dated components across Iceberg and Black Rock Brook together.",
+        "limitations": "Source-specific observations do not establish an exact arrival, continuous occupation, or biological ancestry.",
+        "discussion": "Dating, archaeological classification, and migration inference are distinguished.",
+        "provenance": "Atlantic Canada intake: both supplied PDF syntheses and all 29 RIS occurrences reconciled against primary publications or explicitly limited access. Supplied syntheses are research leads, not primary evidence.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Source intake reviewed; shared corpus unchanged."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -57,
+            52
+          ]
+        },
+        "precision": "Rounded regional anchor for the named source geography; not an archaeological coordinate, route, territory, or confidence boundary.",
+        "provenance": "Southern Labrador / L’Anse au Diable regional context in the provincial archaeology account; rounded regional anchor, not a site coordinate."
+      }
+    },
+    {
+      "id": "atlantic-factory-cove-context",
+      "revision": 1,
+      "type": "event",
+      "title": "Factory Cove — Cow Head archaeological component",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "Early Dorset typological comparison; original thesis radiocarbon chronology not independently accessed",
+        "method": "Source-specific chronology or dating limitation",
+        "interpretation": "No closed, independently supported calendar interval is assigned."
+      },
+      "claims": [
+        {
+          "id": "assemblage",
+          "text": "Auger’s preliminary field report describes a Factory Cove habitation and workshop assemblage with abundant stone-working debris, historically classified as Early Dorset.",
+          "status": "well-supported",
+          "explanation": "Historical terminology and typological comparisons are retained as the author’s classification. They are not independently calibrated settlement dates.",
+          "support": [
+            {
+              "sourceId": "auger1981-fieldreport",
+              "locator": "Abstract and introductory site description",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "auger1981-fieldreport",
+          "authors": "Réginald Auger",
+          "title": "A Preliminary Report on Early Dorset Occupations on the West Coast of Newfoundland",
+          "year": null,
+          "venue": "Archaeology in Newfoundland and Labrador1981, pp.130–151",
+          "url": "https://www.gov.nl.ca/tcar/files/archaeology_in_NL_1981.pdf",
+          "access": "Primary field-report abstract and introduction inspected through indexed text; institutional report downloaded/extracted in memory, but initial chapter extraction hit table-of-contents; no claim of complete chapter/table audit. Field season 1981, publication year not independently resolved."
+        }
+      ],
+      "review": {
+        "summary": "Auger’s preliminary field report describes a Factory Cove habitation and workshop assemblage with abundant stone-working debris, historically classified as Early Dorset.",
+        "limitations": "The supplied thesis is variously cited as 1984 or 1985. The separately accessed preliminary field report does not substitute for its complete dating tables.",
+        "discussion": "Dating, archaeological classification, and migration inference are distinguished.",
+        "provenance": "Atlantic Canada intake: both supplied PDF syntheses and all 29 RIS occurrences reconciled against primary publications or explicitly limited access. Supplied syntheses are research leads, not primary evidence.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Source intake reviewed; shared corpus unchanged."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -58,
+            50
+          ]
+        },
+        "precision": "Rounded regional anchor for the named source geography; not an archaeological coordinate, route, territory, or confidence boundary.",
+        "provenance": "Cow Head peninsula, western Newfoundland, named in the field report; approximate regional anchor only."
+      }
+    },
+    {
+      "id": "atlantic-belle-isle-1975-model",
+      "revision": 1,
+      "type": "event",
+      "title": "Strait of Belle Isle — proposed Archaic development",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "Authors’ legacy chronology: immigration 8000–9000 years ago and continuity to 3000–2000 years ago; not explicitly calibrated",
+        "method": "Source-specific chronology or dating limitation",
+        "interpretation": "No closed, independently supported calendar interval is assigned."
+      },
+      "claims": [
+        {
+          "id": "model",
+          "text": "McGhee and Tuck proposed local Maritime Archaic development following late Palaeo-Indian immigration, with later change potentially involving environment and Dorset immigration.",
+          "status": "under discussion",
+          "explanation": "This is a historical archaeological model from surveyed assemblages and relative elevations. It does not demonstrate genetic continuity or establish one cause for later cultural change.",
+          "support": [
+            {
+              "sourceId": "mcghee-tuck1975-belle-isle",
+              "locator": "Abstract; comparative sequence and synthesis",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "mcghee-tuck1975-belle-isle",
+          "authors": "Robert McGhee; James A. Tuck",
+          "title": "An Archaic Sequence from the Strait of Belle Isle, Labrador",
+          "year": 1975,
+          "venue": "National Museum of Man Mercury Series, Archaeological Survey of Canada Paper34",
+          "url": "https://doi.org/10.2307/j.ctt22zmcws",
+          "access": "Original 1975 report abstract and openly available 16-page excerpt read, including L’Anse Amour burial chapter and radiocarbon entry; remaining monograph not inspected.",
+          "doi": "10.2307/j.ctt22zmcws",
+          "referenceType": "book",
+          "publisher": "National Museums of Canada"
+        }
+      ],
+      "review": {
+        "summary": "McGhee and Tuck proposed local Maritime Archaic development following late Palaeo-Indian immigration, with later change potentially involving environment and Dorset immigration.",
+        "limitations": "Legacy units and open interpretive boundaries remain unplaced. Archaeological classification is not equivalent to a biological population.",
+        "discussion": "Dating, archaeological classification, and migration inference are distinguished.",
+        "provenance": "Atlantic Canada intake: both supplied PDF syntheses and all 29 RIS occurrences reconciled against primary publications or explicitly limited access. Supplied syntheses are research leads, not primary evidence.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Source intake reviewed; shared corpus unchanged."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -57,
+            52
+          ]
+        },
+        "precision": "Rounded regional anchor for the named source geography; not an archaeological coordinate, route, territory, or confidence boundary.",
+        "provenance": "Editorial schematic anchor for the named study region in the cited source."
+      }
+    },
+    {
+      "id": "atlantic-newfoundland-shoreline-preservation",
+      "revision": 1,
+      "type": "event",
+      "title": "Newfoundland — shoreline preservation and survey visibility",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "Holocene relative-sea-level histories; no single occupation interval assigned",
+        "method": "Source-specific chronology or dating limitation",
+        "interpretation": "No closed, independently supported calendar interval is assigned."
+      },
+      "claims": [
+        {
+          "id": "preservation",
+          "text": "Lothrop and colleagues contrast northern Newfoundland’s raised-shore visibility with more complex southern shoreline histories, noting 84 northern and five southern Maritime Archaic sites in the cited inventory.",
+          "status": "under discussion",
+          "explanation": "These are Maritime Archaic inventory counts, not Pleistocene populations. Preservation and survey visibility can shape the contrast without demonstrating absence of people.",
+          "support": [
+            {
+              "sourceId": "lothrop2016-northeast",
+              "locator": "Section 2.2, preservation and relative sea level",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "lothrop2016-northeast",
+          "authors": "Jonathan C. Lothrop; Darrin L. Lowery; Arthur E. Spiess; Christopher J. Ellis",
+          "title": "Early Human Settlement of Northeastern North America",
+          "year": 2016,
+          "venue": "PaleoAmerica",
+          "url": "https://doi.org/10.1080/20555563.2016.1212178",
+          "access": "Primary author-uploaded full-text sections 2.2,3.4 and Table 3 inspected; earlier Great Lakes record already cites this review. No independent recalibration.",
+          "doi": "10.1080/20555563.2016.1212178"
+        }
+      ],
+      "review": {
+        "summary": "Lothrop and colleagues contrast northern Newfoundland’s raised-shore visibility with more complex southern shoreline histories, noting 84 northern and five southern Maritime Archaic sites in the cited inventory.",
+        "limitations": "An archaeological inventory is not a resident census. Local shoreline histories vary and do not justify a universal drowned-coast explanation.",
+        "discussion": "Dating, archaeological classification, and migration inference are distinguished.",
+        "provenance": "Atlantic Canada intake: both supplied PDF syntheses and all 29 RIS occurrences reconciled against primary publications or explicitly limited access. Supplied syntheses are research leads, not primary evidence.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Source intake reviewed; shared corpus unchanged."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "environment",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -56,
+            49
+          ]
+        },
+        "precision": "Rounded regional anchor for the named source geography; not an archaeological coordinate, route, territory, or confidence boundary.",
+        "provenance": "Editorial schematic anchor for the named study region in the cited source."
+      }
+    },
+    {
+      "id": "atlantic-kitchel-forest-hiatus",
+      "revision": 1,
+      "type": "event",
+      "title": "Northern New England and southern Quebec — forest change and settlement debate",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -9750,
+        "end": -9750,
+        "approximate": true,
+        "original": "Approximately 11,700 cal BP: end of the Younger Dryas / forest-change context",
+        "method": "Published regional environmental and archaeological synthesis",
+        "interpretation": "Reported dated evidence envelope; neither an exact founding date nor proof of continuous occupation throughout the range."
+      },
+      "claims": [
+        {
+          "id": "change",
+          "text": "Kitchel and colleagues connect rapid forest closure near the end of the Younger Dryas with subsequent changes in mobility and stone technology in northern New England and southern Quebec.",
+          "status": "under discussion",
+          "explanation": "The displayed environmental boundary is approximate; it does not date an individual migration.",
+          "support": [
+            {
+              "sourceId": "atlantic-a17",
+              "locator": "Abstract and introduction",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        },
+        {
+          "id": "hiatus",
+          "text": "The authors favor resettlement after a radiocarbon hiatus, while identifying published continuity and record-bias alternatives.",
+          "status": "under discussion",
+          "explanation": "Adovasio and Carr are cited for continuity and Deal for archaeological visibility concerns; those separate works were not independently inspected. A gap in dates alone does not prove depopulation.",
+          "support": [
+            {
+              "sourceId": "atlantic-a17",
+              "locator": "Introduction: competing interpretations of the approximately 1500-year radiocarbon gap",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "atlantic-a17",
+          "authors": "Kitchel, Nathaniel",
+          "title": "Facing the Forest: Climate Change and Human Adaptation Across the Pleistocene–Holocene Transition in Northern New England and Eastern Canada",
+          "year": 2024,
+          "venue": "PaleoAmerica",
+          "url": "https://doi.org/10.1080/20555563.2024.2414630",
+          "access": "Primary NSF-deposited PDF abstract and introduction read, including named competing explanations; no full raw-date reanalysis.",
+          "doi": "10.1080/20555563.2024.2414630"
+        }
+      ],
+      "review": {
+        "summary": "Kitchel and colleagues connect rapid forest closure near the end of the Younger Dryas with subsequent changes in mobility and stone technology in northern New England and southern Quebec. The authors favor resettlement after a radiocarbon hiatus, while identifying published continuity and record-bias alternatives.",
+        "limitations": "The study region is northern New England and southern Quebec. Its model is not a demonstrated Labrador abandonment or an Atlantic coastal route.",
+        "discussion": "Dating, archaeological classification, and migration inference are distinguished.",
+        "provenance": "Atlantic Canada intake: both supplied PDF syntheses and all 29 RIS occurrences reconciled against primary publications or explicitly limited access. Supplied syntheses are research leads, not primary evidence.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Source intake reviewed; shared corpus unchanged."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "environment",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -72,
+            46
+          ]
+        },
+        "precision": "Rounded regional anchor for the named source geography; not an archaeological coordinate, route, territory, or confidence boundary.",
+        "provenance": "Editorial schematic anchor for the named study region in the cited source."
+      }
+    },
+    {
+      "id": "pacific-calvert-island-footprints",
+      "revision": 1,
+      "type": "event",
+      "title": "Calvert Island — human footprints in coastal sediment",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -11367,
+        "end": -10683,
+        "approximate": true,
+        "original": "13,317–12,633 cal BP, conservative associated-wood chronology",
+        "method": "Associated pine wood; Calib 7.0.2 / IntCal13 reported by McLaren et al.",
+        "interpretation": "Reported dated evidence envelope; neither an exact founding date nor proof of continuous occupation throughout the range."
+      },
+      "claims": [
+        {
+          "id": "tracks",
+          "text": "McLaren and colleagues report 29 human footprints representing at least three people, including a juvenile, on Calvert Island.",
+          "status": "well-supported",
+          "explanation": "Minimum track-makers are not a resident population estimate. Associated wood and stratigraphy constrain the conservative chronology; the footprints themselves were not directly radiocarbon dated.",
+          "support": [
+            {
+              "sourceId": "atlantic-a3",
+              "locator": "Results; discussion; conclusion",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        },
+        {
+          "id": "dating",
+          "text": "The conservative published envelope is 13,317–12,633 cal BP; narrower rounded wording elsewhere in the paper should not replace that full envelope.",
+          "status": "well-supported",
+          "explanation": "Bioturbated overlying sediment produced discordant dates. The accepted lower footprint surface and associated wood require stratigraphic interpretation.",
+          "support": [
+            {
+              "sourceId": "atlantic-a3",
+              "locator": "Radiocarbon results and conclusion",
+              "stance": "supports",
+              "note": "Primary source inspected to the access level recorded in its citation."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "atlantic-a3",
+          "authors": "McLaren, D.; Fedje, D.; Dyck, Angela; Mackie, Q.; Gauvreau, Alisha; Cohen, J.",
+          "title": "Terminal Pleistocene epoch human footprints from the Pacific coast of Canada",
+          "year": 2018,
+          "venue": "PLoS ONE",
+          "url": "https://doi.org/10.1371/journal.pone.0193522",
+          "access": "Primary PLOS full text inspected: abstract, stratigraphy, dating Table 2, discussion and conclusion; coordinates not extracted from a figure.",
+          "doi": "10.1371/journal.pone.0193522"
+        }
+      ],
+      "review": {
+        "summary": "McLaren and colleagues report 29 human footprints representing at least three people, including a juvenile, on Calvert Island. The conservative published envelope is 13,317–12,633 cal BP; narrower rounded wording elsewhere in the paper should not replace that full envelope.",
+        "limitations": "This is Pacific coastal presence. It is not evidence for the route into Atlantic Canada, uninterrupted coastal movement, or a village population.",
+        "discussion": "Dating, archaeological classification, and migration inference are distinguished.",
+        "provenance": "Atlantic Canada intake: both supplied PDF syntheses and all 29 RIS occurrences reconciled against primary publications or explicitly limited access. Supplied syntheses are research leads, not primary evidence.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Source intake reviewed; shared corpus unchanged."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "regional-evidence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -128,
+            52
+          ]
+        },
+        "precision": "Rounded regional anchor for the named source geography; not an archaeological coordinate, route, territory, or confidence boundary.",
+        "provenance": "Calvert Island, British Columbia, named in the primary paper. Rounded island-region anchor, not coordinates for site EjTa-4."
+      }
+    }
+  ],
+  "updates": [
+    {
+      "recordId": "submerged-coastal-record",
+      "source": {
+        "id": "atlantic-a5",
+        "authors": "Luternauer, J.; Clague, J.; Conway, K.; Barrie, J.; Blaise, B.; Mathewes, R.",
+        "title": "Late Pleistocene terrestrial deposits on the continental shelf of western Canada: Evidence for rapid sea-level change at the end of the last glaciation",
+        "year": 1989,
+        "venue": "Geology",
+        "url": "https://doi.org/10.1130/0091-7613(1989)017%3C0357:LPTDOT%3E2.3.CO;2",
+        "access": "Abstract only: primary-author uploaded abstract inspected; wood/root dates are legacy radiocarbon BP, not asserted calibrated dates."
+      },
+      "claimId": "finding",
+      "stance": "context",
+      "locator": "Abstract only",
+      "note": "Continental-shelf terrestrial deposits and wood reported at 10,500 radiocarbon years BP support local former land surfaces and transgression. This legacy age is not a calibrated occupation date or evidence of human presence."
+    },
+    {
+      "recordId": "submerged-coastal-record",
+      "source": {
+        "id": "atlantic-a6",
+        "authors": "Fedje, D.; McLaren, D.; James, T.; Mackie, Q.; Smith, N.; Southon, J.; Mackie, Alexander",
+        "title": "A revised sea level history for the northern Strait of Georgia, British Columbia, Canada",
+        "year": 2018,
+        "venue": "Quaternary Science Reviews",
+        "url": "https://doi.org/10.1016/j.quascirev.2018.05.018",
+        "access": "Primary institutional deposited published PDF abstract and introductory regional context inspected; no independent shoreline reconstruction.",
+        "doi": "10.1016/j.quascirev.2018.05.018"
+      },
+      "claimId": "finding",
+      "stance": "context",
+      "locator": "Abstract and introductory relative-sea-level sequence",
+      "note": "Quadra Island provides a geographic counterpoint: raised shorelines were at least 197 m above present around 14,300 calendar BP and 2–3 m above present by 12,000 calendar BP. Local uplift means coastal archaeological visibility cannot universally be modeled as drowning."
+    },
+    {
+      "recordId": "pacific-corridor-hypothesis",
+      "source": {
+        "id": "atlantic-a19",
+        "authors": "Robert Gustas; Kisha Supernant",
+        "title": "Coastal migration into the Americas and least cost path analysis",
+        "year": 2019,
+        "venue": "Journal of Anthropological Archaeology",
+        "url": "https://doi.org/10.1016/j.jaa.2019.04.006",
+        "access": "Primary ScienceDirect abstract, introduction, case-study setting and methods snippets inspected; no independently reproduced model.",
+        "doi": "10.1016/j.jaa.2019.04.006"
+      },
+      "claimId": "finding",
+      "stance": "context",
+      "locator": "Abstract and Prince Rupert / Dundas Islands model context",
+      "note": "Least-cost watercraft routes are modeled for a reconstructed Pacific landscape, including a 16,000 cal BP scenario. These are testable cost-model predictions, not observed journeys or evidence for an Atlantic route."
+    },
+    {
+      "recordId": "pacific-corridor-hypothesis",
+      "source": {
+        "id": "atlantic-a20",
+        "authors": "Letham, Bryn",
+        "title": "Perspectives on a Post-White Sands Coast: Re-Evaluating Research into Early Peopling of the Northwest Coast of North America",
+        "year": 2024,
+        "venue": "PaleoAmerica",
+        "url": "https://doi.org/10.1080/20555563.2024.2318129",
+        "access": "Abstract only: primary publisher abstract inspected, essay/Perspective rather than a new Atlantic excavation.",
+        "doi": "10.1080/20555563.2024.2318129"
+      },
+      "claimId": "finding",
+      "stance": "context",
+      "locator": "Abstract only, Perspective",
+      "note": "Post–White Sands discussion proposes extending coastal research through the Last Glacial Maximum; a research agenda does not supply a dated Atlantic occupation or establish the actual migration route."
+    },
+    {
+      "recordId": "preclovis-review-context",
+      "source": {
+        "id": "atlantic-b9",
+        "authors": "Madsen, David; Davis, Loren; Williams, Thomas; Izuho, Masami; Iizuka, F.",
+        "title": "Characterizing the American Upper Paleolithic",
+        "year": 2025,
+        "venue": "Science Advances",
+        "url": "https://doi.org/10.1126/sciadv.ady9545",
+        "access": "Primary PMC abstract/discussion and publisher metadata inspected; review/model proposal, not a directly observed source population or Atlantic route.",
+        "doi": "10.1126/sciadv.ady9545"
+      },
+      "claimId": "finding",
+      "stance": "context",
+      "locator": "Abstract and discussion",
+      "note": "The proposed Paleo-Sakhalin–Hokkaido technological connection is explicitly speculative and requires testing. Technological resemblance does not establish a genetic source population, a unique migration route, or a local Atlantic chronology."
+    }
+  ],
+  "sourceRegister": [
+    {
+      "sourceId": "lothrop2016-northeast",
+      "inputRows": [
+        "A1"
+      ],
+      "inputFiles": [
+        "How do late Pleistocene coastal migration models explain Atlantic Canada archaeological sequences - Oct 28, 2026.ris"
+      ],
+      "title": "Early Human Settlement of Northeastern North America",
+      "authors": "Jonathan C. Lothrop; Darrin L. Lowery; Arthur E. Spiess; Christopher J. Ellis",
+      "year": 2016,
+      "url": "https://doi.org/10.1080/20555563.2016.1212178",
+      "doi": "10.1080/20555563.2016.1212178",
+      "access": "Primary author-uploaded full-text sections 2.2,3.4 and Table 3 inspected; earlier Great Lakes record already cites this review. No independent recalibration.",
+      "disposition": "records-and-existing",
+      "note": "Debert calibrated summary and Newfoundland preservation context; existing northeastern synthesis deduplicated."
+    },
+    {
+      "sourceId": "atlantic-a2",
+      "inputRows": [
+        "A2"
+      ],
+      "inputFiles": [
+        "How do late Pleistocene coastal migration models explain Atlantic Canada archaeological sequences - Oct 28, 2026.ris"
+      ],
+      "title": "The coastal migration theory: Formulation and testable hypotheses",
+      "authors": "Davis, L.; Madsen, D.",
+      "year": 2020,
+      "url": "https://doi.org/10.1016/j.quascirev.2020.106605",
+      "doi": "10.1016/j.quascirev.2020.106605",
+      "access": "Previously reviewed primary publisher/author abstract; existing scenario retained without a new duplicate.",
+      "disposition": "already-covered",
+      "note": "Existing coastal-migration-davis-window; no duplicate scenario."
+    },
+    {
+      "sourceId": "atlantic-a3",
+      "inputRows": [
+        "A3"
+      ],
+      "inputFiles": [
+        "How do late Pleistocene coastal migration models explain Atlantic Canada archaeological sequences - Oct 28, 2026.ris"
+      ],
+      "title": "Terminal Pleistocene epoch human footprints from the Pacific coast of Canada",
+      "authors": "McLaren, D.; Fedje, D.; Dyck, Angela; Mackie, Q.; Gauvreau, Alisha; Cohen, J.",
+      "year": 2018,
+      "url": "https://doi.org/10.1371/journal.pone.0193522",
+      "doi": "10.1371/journal.pone.0193522",
+      "access": "Primary PLOS full text inspected: abstract, stratigraphy, dating Table 2, discussion and conclusion; coordinates not extracted from a figure.",
+      "disposition": "new-record",
+      "note": "Distinct Calvert Island footprint observation, explicitly Pacific comparison."
+    },
+    {
+      "sourceId": "atlantic-a4",
+      "inputRows": [
+        "A4"
+      ],
+      "inputFiles": [
+        "How do late Pleistocene coastal migration models explain Atlantic Canada archaeological sequences - Oct 28, 2026.ris"
+      ],
+      "title": "Fladmark + 40: What Have We Learned about a Potential Pacific Coast Peopling of the Americas?",
+      "authors": "Braje, T.; Erlandson, J.; Rick, T.; Davis, L.; Dillehay, T.; Fedje, D.; Froese, D.; Gusick, A.; Mackie, Q.; McLaren, D.; Pitblado, B.; Raff, J.; Reeder-Myers, L.; Waters, M.",
+      "year": 2020,
+      "url": "https://doi.org/10.1017/aaq.2019.80",
+      "doi": "10.1017/aaq.2019.80",
+      "access": "Previously reviewed primary synthesis; already represented in several current records. No newly independent excavation evidence.",
+      "disposition": "already-covered",
+      "note": "Braje synthesis already cited by multiple coastal and pre-Clovis records."
+    },
+    {
+      "sourceId": "atlantic-a5",
+      "inputRows": [
+        "A5"
+      ],
+      "inputFiles": [
+        "How do late Pleistocene coastal migration models explain Atlantic Canada archaeological sequences - Oct 28, 2026.ris"
+      ],
+      "title": "Late Pleistocene terrestrial deposits on the continental shelf of western Canada: Evidence for rapid sea-level change at the end of the last glaciation",
+      "authors": "Luternauer, J.; Clague, J.; Conway, K.; Barrie, J.; Blaise, B.; Mathewes, R.",
+      "year": 1989,
+      "url": "https://doi.org/10.1130/0091-7613(1989)017%3C0357:LPTDOT%3E2.3.CO;2",
+      "doi": "10.1130/0091-7613(1989)017<0357:lptdot>2.3.co;2",
+      "access": "Abstract only: primary-author uploaded abstract inspected; wood/root dates are legacy radiocarbon BP, not asserted calibrated dates.",
+      "disposition": "citation-update",
+      "note": "Local shelf preservation context; uncalibrated legacy dates retained in note."
+    },
+    {
+      "sourceId": "atlantic-a6",
+      "inputRows": [
+        "A6"
+      ],
+      "inputFiles": [
+        "How do late Pleistocene coastal migration models explain Atlantic Canada archaeological sequences - Oct 28, 2026.ris"
+      ],
+      "title": "A revised sea level history for the northern Strait of Georgia, British Columbia, Canada",
+      "authors": "Fedje, D.; McLaren, D.; James, T.; Mackie, Q.; Smith, N.; Southon, J.; Mackie, Alexander",
+      "year": 2018,
+      "url": "https://doi.org/10.1016/j.quascirev.2018.05.018",
+      "doi": "10.1016/j.quascirev.2018.05.018",
+      "access": "Primary institutional deposited published PDF abstract and introductory regional context inspected; no independent shoreline reconstruction.",
+      "disposition": "citation-update",
+      "note": "Raised-shoreline counterpoint to universal drowning; not direct occupation evidence."
+    },
+    {
+      "sourceId": "atlantic-a7",
+      "inputRows": [
+        "A7"
+      ],
+      "inputFiles": [
+        "How do late Pleistocene coastal migration models explain Atlantic Canada archaeological sequences - Oct 28, 2026.ris"
+      ],
+      "title": "Late Pleistocene Archaeological Discovery Models on the Pacific Coast of North America",
+      "authors": "McLaren, D.; Fedje, D.; Mackie, Q.; Davis, L.; Erlandson, J.; Gauvreau, Alisha; Vogelaar, Colton",
+      "year": 2020,
+      "url": "https://doi.org/10.1080/20555563.2019.1670512",
+      "doi": "10.1080/20555563.2019.1670512",
+      "access": "Publisher access failed 403; primary bibliographic identity corroborated by author/research bibliography; substantive methods not independently audited.",
+      "disposition": "unresolved",
+      "note": "Bibliographic identity verified; original substantive methods were not independently accessed. No new discovery-model claim adopted."
+    },
+    {
+      "sourceId": "atlantic-a8",
+      "inputRows": [
+        "A8"
+      ],
+      "inputFiles": [
+        "How do late Pleistocene coastal migration models explain Atlantic Canada archaeological sequences - Oct 28, 2026.ris"
+      ],
+      "title": "Late Pleistocene coastal paleogeography of the Queen Charlotte Islands, British Columbia, Canada, and its implications for terrestrial biogeography and early postglacial human occupation",
+      "authors": "Hetherington, R.; Barrie, J.; Reid, R.; Macleod, R.; Smith, Dan; James, T.; Kung, R.",
+      "year": 2003,
+      "url": "https://doi.org/10.1139/e03-071",
+      "doi": "10.1139/e03-071",
+      "access": "Primary publisher bibliographic metadata checked; full article/abstract not independently retrieved in this review.",
+      "disposition": "unresolved",
+      "note": "Primary publication identity verified; full abstract or methods not retrieved. No reconstructed route adopted."
+    },
+    {
+      "sourceId": "atlantic-a9",
+      "inputRows": [
+        "A9"
+      ],
+      "inputFiles": [
+        "How do late Pleistocene coastal migration models explain Atlantic Canada archaeological sequences - Oct 28, 2026.ris"
+      ],
+      "title": "Identifying sites of high geoarchaeological potential using aerial LIDAR and GIS on Quadra Island, Canada",
+      "authors": "Lausanne, Alexandra; Fedje, D.; Mackie, Q.; Walker, I.",
+      "year": 2021,
+      "url": "https://doi.org/10.1080/15564894.2019.1659884",
+      "doi": "10.1080/15564894.2019.1659884",
+      "access": "Abstract only: primary author-institution abstract inspected; original model tables and field validation not independently audited.",
+      "disposition": "related-not-added",
+      "note": "Primary institutional abstract describes LIDAR/GIS screening potential, not a dated occupation. Kept as Pacific methodological context; no duplicate regional layer."
+    },
+    {
+      "sourceId": "atlantic-a10",
+      "inputRows": [
+        "A10"
+      ],
+      "inputFiles": [
+        "How do late Pleistocene coastal migration models explain Atlantic Canada archaeological sequences - Oct 28, 2026.ris"
+      ],
+      "title": "Late Wisconsinan Port Eliza Cave deposits and their implications for human coastal migration, Vancouver Island, Canada",
+      "authors": "Al-Suwaidi, M.; Ward, B.; Wilson, M.; Hebda, R.; Nagorsen, D.; Marshall, D.; Ghaleb, B.; Wigen, R.; Enkin, R.",
+      "year": 2006,
+      "url": "https://doi.org/10.1002/gea.20106",
+      "doi": "10.1002/gea.20106",
+      "access": "Abstract only: primary Wiley abstract inspected; dated fauna and environment, no directly established human presence.",
+      "disposition": "related-not-added",
+      "note": "Abstract only: fauna and environmental feasibility at Port Eliza are not human occupation. Legacy age units are not independently calibrated here."
+    },
+    {
+      "sourceId": "atlantic-a11",
+      "inputRows": [
+        "A11"
+      ],
+      "inputFiles": [
+        "How do late Pleistocene coastal migration models explain Atlantic Canada archaeological sequences - Oct 28, 2026.ris"
+      ],
+      "title": "Deglaciation of the Pacific coastal corridor directly preceded the human colonization of the Americas",
+      "authors": "Lesnek, A.; Briner, J.; Lindqvist, Charlotte; Baichtal, J.; Heaton, T.",
+      "year": 2018,
+      "url": "https://doi.org/10.1126/sciadv.aar5040",
+      "doi": "10.1126/sciadv.aar5040",
+      "access": "Previously reviewed primary article, already included in existing southeast Alaska model record.",
+      "disposition": "already-covered",
+      "note": "Existing northwest-lesnek-deglaciation; no duplicate exposure-age record."
+    },
+    {
+      "sourceId": "atlantic-a12",
+      "inputRows": [
+        "A12",
+        "B3"
+      ],
+      "inputFiles": [
+        "How do late Pleistocene coastal migration models explain Atlantic Canada archaeological sequences - Oct 28, 2026.ris",
+        "what is the the paleolithic record in labrodor and nova scotia - Oct 28, 2026.ris"
+      ],
+      "title": "Across Beringia: The Palaeolithic Peopling of Canada",
+      "authors": "Chlachula, J.",
+      "year": 2019,
+      "url": "https://doi.org/10.21638/11701/spbu02.2019.202",
+      "doi": "10.21638/11701/spbu02.2019.202",
+      "access": "Bibliographic identity and scope checked; direct publisher retrieval failed. Original text not independently audited here.",
+      "disposition": "unresolved",
+      "note": "Broad Beringian review, not local Atlantic chronology; substantive primary analysis not independently accessed."
+    },
+    {
+      "sourceId": "atlantic-a13",
+      "inputRows": [
+        "A13"
+      ],
+      "inputFiles": [
+        "How do late Pleistocene coastal migration models explain Atlantic Canada archaeological sequences - Oct 28, 2026.ris"
+      ],
+      "title": "New age constraints for human entry into the Americas on the north Pacific coast",
+      "authors": "Steffen, Martina",
+      "year": 2024,
+      "url": "https://doi.org/10.1038/s41598-024-54592-x",
+      "doi": "10.1038/s41598-024-54592-x",
+      "access": "Primary publisher-deposited abstract and existing full-text access scope checked; existing ice/resource record retained.",
+      "disposition": "already-covered",
+      "note": "Existing northwest-steffen-ice-constraints and northwest-praetorius-opportunities."
+    },
+    {
+      "sourceId": "atlantic-a14",
+      "inputRows": [
+        "A14"
+      ],
+      "inputFiles": [
+        "How do late Pleistocene coastal migration models explain Atlantic Canada archaeological sequences - Oct 28, 2026.ris"
+      ],
+      "title": "Late Pleistocene aeolian deposition and human occupation on the eastern edge of the deglacial corridor, northeastern Alberta, Canada",
+      "authors": "Woywitka, R.; Froese, D.; Lamothe, M.; Wolfe, S.",
+      "year": 2022,
+      "url": "https://doi.org/10.1017/qua.2022.14",
+      "doi": "10.1017/qua.2022.14",
+      "access": "Primary publisher full-text methods, results and author-institution abstract inspected; no independent IRSL calculations.",
+      "disposition": "related-not-added",
+      "note": "Primary Alberta IRSL study is outside Atlantic Canada. Sediment ages and artifact association are distinguished; no invented 1950-based calendar conversion."
+    },
+    {
+      "sourceId": "atlantic-a15",
+      "inputRows": [
+        "A15"
+      ],
+      "inputFiles": [
+        "How do late Pleistocene coastal migration models explain Atlantic Canada archaeological sequences - Oct 28, 2026.ris"
+      ],
+      "title": "A Circum-Pacific Perspective on the Origin of Stemmed Points in North America",
+      "authors": "Pratt, J.; Goebel, T.; Graf, K.; Izuho, Masami",
+      "year": 2020,
+      "url": "https://doi.org/10.1080/20555563.2019.1695500",
+      "doi": "10.1080/20555563.2019.1695500",
+      "access": "Author CV and DOI registry metadata checked; corrected pages 64–108. Full comparative analysis unavailable.",
+      "disposition": "unresolved",
+      "note": "Circum-Pacific technological comparison; original methods unavailable. Correct bibliography pages to 64–108, not supplied 108–164. No Atlantic chronology adopted."
+    },
+    {
+      "sourceId": "atlantic-a16",
+      "inputRows": [
+        "A16"
+      ],
+      "inputFiles": [
+        "How do late Pleistocene coastal migration models explain Atlantic Canada archaeological sequences - Oct 28, 2026.ris"
+      ],
+      "title": "Works in stone: contemporary perspectives on lithic analysis",
+      "authors": "Miller, S.",
+      "year": 2018,
+      "url": "https://doi.org/10.1080/01977261.2018.1439292",
+      "doi": "10.1080/01977261.2018.1439292",
+      "access": "Bibliographic title/author and underlying publisher book verified. Short item is a book review, not a Newfoundland sequence analysis.",
+      "disposition": "excluded-as-primary",
+      "note": "Book review of Works in Stone, not original local archaeological chronology or field methods."
+    },
+    {
+      "sourceId": "atlantic-a17",
+      "inputRows": [
+        "A17"
+      ],
+      "inputFiles": [
+        "How do late Pleistocene coastal migration models explain Atlantic Canada archaeological sequences - Oct 28, 2026.ris"
+      ],
+      "title": "Facing the Forest: Climate Change and Human Adaptation Across the Pleistocene–Holocene Transition in Northern New England and Eastern Canada",
+      "authors": "Kitchel, Nathaniel",
+      "year": 2024,
+      "url": "https://doi.org/10.1080/20555563.2024.2414630",
+      "doi": "10.1080/20555563.2024.2414630",
+      "access": "Primary NSF-deposited PDF abstract and introduction read, including named competing explanations; no full raw-date reanalysis.",
+      "disposition": "new-record",
+      "note": "Forest change and competing hiatus interpretations restricted to northern New England / southern Quebec."
+    },
+    {
+      "sourceId": "atlantic-a18",
+      "inputRows": [
+        "A18"
+      ],
+      "inputFiles": [
+        "How do late Pleistocene coastal migration models explain Atlantic Canada archaeological sequences - Oct 28, 2026.ris"
+      ],
+      "title": "Routes: Alternate Migration Corridors for Early Man in North America",
+      "authors": "Fladmark, K.",
+      "year": 1979,
+      "url": "https://doi.org/10.2307/279189",
+      "doi": "10.2307/279189",
+      "access": "Original hypothesis identified bibliographically; substantive original article not independently accessed. Historical context only.",
+      "disposition": "historical-context",
+      "note": "Original coastal-route hypothesis; no direct evidence for an Atlantic sequence imported from this Pacific proposal."
+    },
+    {
+      "sourceId": "atlantic-a19",
+      "inputRows": [
+        "A19"
+      ],
+      "inputFiles": [
+        "How do late Pleistocene coastal migration models explain Atlantic Canada archaeological sequences - Oct 28, 2026.ris"
+      ],
+      "title": "Coastal migration into the Americas and least cost path analysis",
+      "authors": "Robert Gustas; Kisha Supernant",
+      "year": 2019,
+      "url": "https://doi.org/10.1016/j.jaa.2019.04.006",
+      "doi": "10.1016/j.jaa.2019.04.006",
+      "access": "Primary ScienceDirect abstract, introduction, case-study setting and methods snippets inspected; no independently reproduced model.",
+      "disposition": "citation-update",
+      "note": "Local Pacific watercraft least-cost model explicitly separated from observed migration."
+    },
+    {
+      "sourceId": "atlantic-a20",
+      "inputRows": [
+        "A20"
+      ],
+      "inputFiles": [
+        "How do late Pleistocene coastal migration models explain Atlantic Canada archaeological sequences - Oct 28, 2026.ris"
+      ],
+      "title": "Perspectives on a Post-White Sands Coast: Re-Evaluating Research into Early Peopling of the Northwest Coast of North America",
+      "authors": "Letham, Bryn",
+      "year": 2024,
+      "url": "https://doi.org/10.1080/20555563.2024.2318129",
+      "doi": "10.1080/20555563.2024.2318129",
+      "access": "Abstract only: primary publisher abstract inspected, essay/Perspective rather than a new Atlantic excavation.",
+      "disposition": "citation-update",
+      "note": "Perspective / research agenda, not a newly dated occupation."
+    },
+    {
+      "sourceId": "atlantic-b1",
+      "inputRows": [
+        "B1"
+      ],
+      "inputFiles": [
+        "what is the the paleolithic record in labrodor and nova scotia - Oct 28, 2026.ris"
+      ],
+      "title": "Debert: A Paleo-Indian Site in Central Nova Scotia. George F. MacDonald. Anthropology Papers, No. 16, National Museum of Canada, Ottawa, 1968. x + 207 pp., 16 tables, 24 pis., 26 figs., French resume, appendix. No prive given.",
+      "authors": "Tuck, J.",
+      "year": 1971,
+      "url": "https://doi.org/10.2307/278687",
+      "doi": "10.2307/278687",
+      "access": "Primary publisher metadata identifies this as a one-page 1971 review of MacDonald 1968; no abstract. It is not the original excavation monograph.",
+      "disposition": "bibliographic-correction",
+      "note": "Tuck 1971 is a review of MacDonald 1968, not the original Debert excavation monograph. Debert chronology uses the accessed Lothrop table and firsthand Stuckenrath account."
+    },
+    {
+      "sourceId": "mcghee-tuck1975-belle-isle",
+      "inputRows": [
+        "B2"
+      ],
+      "inputFiles": [
+        "what is the the paleolithic record in labrodor and nova scotia - Oct 28, 2026.ris"
+      ],
+      "title": "An Archaic Sequence from the Strait of Belle Isle, Labrador",
+      "authors": "Robert McGhee; James A. Tuck",
+      "year": 1975,
+      "url": "https://doi.org/10.2307/j.ctt22zmcws",
+      "doi": "10.2307/j.ctt22zmcws",
+      "access": "Original 1975 report abstract and openly available 16-page excerpt read, including L’Anse Amour burial chapter and radiocarbon entry; remaining monograph not inspected.",
+      "disposition": "records",
+      "note": "Original regional monograph and accessed burial excerpt support qualified Belle Isle and L’Anse Amour records."
+    },
+    {
+      "sourceId": "atlantic-b4",
+      "inputRows": [
+        "B4"
+      ],
+      "inputFiles": [
+        "what is the the paleolithic record in labrodor and nova scotia - Oct 28, 2026.ris"
+      ],
+      "title": "Archaeological Research in Newfoundland and Labrador",
+      "authors": "Tuck, J.",
+      "year": 1978,
+      "url": "https://doi.org/10.1086/202092",
+      "doi": "10.1086/202092",
+      "access": "Primary journal issue contents identify a one-page 1978 item; full notice unavailable. No original dates extracted.",
+      "disposition": "unresolved",
+      "note": "One-page 1978 Current Anthropology notice at p. 396, not an independently accessed regional chronological synthesis."
+    },
+    {
+      "sourceId": "atlantic-b5",
+      "inputRows": [
+        "B5"
+      ],
+      "inputFiles": [
+        "what is the the paleolithic record in labrodor and nova scotia - Oct 28, 2026.ris"
+      ],
+      "title": "A late paleo-Indian and early archaic sequence in southern Labrador",
+      "authors": "Renouf, M.",
+      "year": 1976,
+      "url": "https://www.mun.ca/archaeology/programs/graduate/dissertations-and-theses/",
+      "doi": null,
+      "access": "Memorial institutional thesis catalogue confirms 1976 MA thesis; original thesis not retrieved.1977 Man in the Northeast article is a separate published version.",
+      "disposition": "records-with-access-limit",
+      "note": "MUN thesis identity verified. Original thesis unavailable; later provincial office descriptions explicitly cited for Cowpath site contexts. Distinct 1977 article not conflated."
+    },
+    {
+      "sourceId": "atlantic-b6",
+      "inputRows": [
+        "B6"
+      ],
+      "inputFiles": [
+        "what is the the paleolithic record in labrodor and nova scotia - Oct 28, 2026.ris"
+      ],
+      "title": "A late archaic sequence in southern Labrador",
+      "authors": "Madden, M.",
+      "year": 1976,
+      "url": "https://www.mun.ca/archaeology/programs/graduate/dissertations-and-theses/",
+      "doi": null,
+      "access": "Memorial institutional thesis catalogue confirms 1976 MA thesis; original thesis not retrieved. Later provincial site-revisit account inspected separately.",
+      "disposition": "records-with-access-limit",
+      "note": "Thesis unavailable; provincial archaeology account supports named Iceberg and Black Rock Brook contexts, not independently verified calendar spans."
+    },
+    {
+      "sourceId": "atlantic-b7",
+      "inputRows": [
+        "B7"
+      ],
+      "inputFiles": [
+        "what is the the paleolithic record in labrodor and nova scotia - Oct 28, 2026.ris"
+      ],
+      "title": "Factory Cove: recognition and definition of the early palaeo-eskimo period in Newfoundland",
+      "authors": "Auger, R.",
+      "year": 1984,
+      "url": "https://www.mun.ca/archaeology/programs/graduate/dissertations-and-theses/",
+      "doi": null,
+      "access": "Original thesis not retrieved. Primary bibliographies conflict 1984/1985; inspected separate 1981 field-report abstract and 2015 provincial revisit context instead.",
+      "disposition": "records-with-access-limit",
+      "note": "Original Factory Cove thesis unavailable; separate preliminary field report used with its own access limits. 1984/1985 thesis date remains unresolved."
+    },
+    {
+      "sourceId": "atlantic-b8",
+      "inputRows": [
+        "B8"
+      ],
+      "inputFiles": [
+        "what is the the paleolithic record in labrodor and nova scotia - Oct 28, 2026.ris"
+      ],
+      "title": "The Upper Palaeolithic and the New World",
+      "authors": "Greenman, E.",
+      "year": 1963,
+      "url": "https://doi.org/10.1086/200337",
+      "doi": "10.1086/200337",
+      "access": "Original historical hypothesis identified bibliographically; original analysis not independently audited. No evidence of transatlantic peopling adopted.",
+      "disposition": "historical-context",
+      "note": "Historical transatlantic hypothesis; no directly verified route or modern population ancestry claim adopted."
+    },
+    {
+      "sourceId": "atlantic-b9",
+      "inputRows": [
+        "B9"
+      ],
+      "inputFiles": [
+        "what is the the paleolithic record in labrodor and nova scotia - Oct 28, 2026.ris"
+      ],
+      "title": "Characterizing the American Upper Paleolithic",
+      "authors": "Madsen, David; Davis, Loren; Williams, Thomas; Izuho, Masami; Iizuka, F.",
+      "year": 2025,
+      "url": "https://doi.org/10.1126/sciadv.ady9545",
+      "doi": "10.1126/sciadv.ady9545",
+      "access": "Primary PMC abstract/discussion and publisher metadata inspected; review/model proposal, not a directly observed source population or Atlantic route.",
+      "disposition": "citation-update",
+      "note": "Speculative technological source model retained as qualified context; not genetic source proof."
+    },
+    {
+      "sourceId": "stuckenrath1964-debert",
+      "inputRows": [],
+      "title": "The Debert Site: Early Man in the Northeast",
+      "url": "https://www.penn.museum/sites/expedition/the-debert-site/",
+      "access": "Primary excavation-participant narrative read in full; preliminary chronology, stratigraphic disturbance, hearths and absence of preserved bone distinguished from later analyses.",
+      "disposition": "additional-source",
+      "note": "Separately accessed source; not silently substituted for an unavailable original thesis or review."
+    },
+    {
+      "sourceId": "nrcan-debert-location",
+      "inputRows": [],
+      "title": "Debert Palaeo-Indian Site National Historic Site of Canada (CBVVF)",
+      "url": "https://geonames.nrcan.gc.ca/search-place-names/unique?id=CBVVF&wbdisable=true",
+      "access": "Official public site record inspected:45.418808 N,63.41614 W, scale 1:50000; not an individual excavation coordinate.",
+      "disposition": "additional-source",
+      "note": "Separately accessed source; not silently substituted for an unavailable original thesis or review."
+    },
+    {
+      "sourceId": "nl-lanse-amour-public-site",
+      "inputRows": [],
+      "title": "L’Anse Amour National Historic Site of Canada",
+      "url": "https://www.newfoundlandlabrador.com/plan-and-book/attractions/212021",
+      "access": "Official public visitor-site coordinates 51.480403,-56.868388 inspected. Public site marker, not a skeletal or grave coordinate; promotional age wording not used as calibrated chronology.",
+      "disposition": "additional-source",
+      "note": "Separately accessed source; not silently substituted for an unavailable original thesis or review."
+    },
+    {
+      "sourceId": "nl-pao2014-renouf",
+      "inputRows": [],
+      "title": "Dr. Priscilla Renouf",
+      "url": "https://nlarchaeology.wordpress.com/2014/04/14/dr-priscilla-renouf/",
+      "access": "Institutional retrospective read for named project sites and recorded geography. Renouf 1976 original thesis and methods remain unavailable; legacy 8600±325 BP not recalibrated.",
+      "disposition": "additional-source",
+      "note": "Separately accessed source; not silently substituted for an unavailable original thesis or review."
+    },
+    {
+      "sourceId": "nl-pao2020-wrinkle",
+      "inputRows": [],
+      "title": "Wrinkle",
+      "url": "https://nlarchaeology.wordpress.com/2020/10/08/wrinkle/",
+      "access": "Original provincial-archaeologist revisit account read, including Iceberg relocation and discussion of Madden 1976; not independent access to original thesis dating tables.",
+      "disposition": "additional-source",
+      "note": "Separately accessed source; not silently substituted for an unavailable original thesis or review."
+    },
+    {
+      "sourceId": "auger1981-fieldreport",
+      "inputRows": [],
+      "title": "A Preliminary Report on Early Dorset Occupations on the West Coast of Newfoundland",
+      "url": "https://www.gov.nl.ca/tcar/files/archaeology_in_NL_1981.pdf",
+      "access": "Primary field-report abstract and introduction inspected through indexed text; institutional report downloaded/extracted in memory, but initial chapter extraction hit table-of-contents; no claim of complete chapter/table audit. Field season 1981, publication year not independently resolved.",
+      "disposition": "additional-source",
+      "note": "Separately accessed source; not silently substituted for an unavailable original thesis or review."
+    }
+  ],
+  "unresolved": [
+    {
+      "sourceId": "atlantic-a7",
+      "inputRows": [
+        "A7"
+      ],
+      "issue": "Bibliographic identity verified; original substantive methods were not independently accessed. No new discovery-model claim adopted.",
+      "nextStep": "Obtain the original publication before extracting additional methods or chronology."
+    },
+    {
+      "sourceId": "atlantic-a8",
+      "inputRows": [
+        "A8"
+      ],
+      "issue": "Primary publication identity verified; full abstract or methods not retrieved. No reconstructed route adopted.",
+      "nextStep": "Obtain the original publication before extracting additional methods or chronology."
+    },
+    {
+      "sourceId": "atlantic-a9",
+      "inputRows": [
+        "A9"
+      ],
+      "issue": "Primary institutional abstract describes LIDAR/GIS screening potential, not a dated occupation. Kept as Pacific methodological context; no duplicate regional layer.",
+      "nextStep": "No new Atlantic chronological record justified by the accessed scope."
+    },
+    {
+      "sourceId": "atlantic-a10",
+      "inputRows": [
+        "A10"
+      ],
+      "issue": "Abstract only: fauna and environmental feasibility at Port Eliza are not human occupation. Legacy age units are not independently calibrated here.",
+      "nextStep": "No new Atlantic chronological record justified by the accessed scope."
+    },
+    {
+      "sourceId": "atlantic-a12",
+      "inputRows": [
+        "A12",
+        "B3"
+      ],
+      "issue": "Broad Beringian review, not local Atlantic chronology; substantive primary analysis not independently accessed.",
+      "nextStep": "Obtain the original publication before extracting additional methods or chronology."
+    },
+    {
+      "sourceId": "atlantic-a14",
+      "inputRows": [
+        "A14"
+      ],
+      "issue": "Primary Alberta IRSL study is outside Atlantic Canada. Sediment ages and artifact association are distinguished; no invented 1950-based calendar conversion.",
+      "nextStep": "No new Atlantic chronological record justified by the accessed scope."
+    },
+    {
+      "sourceId": "atlantic-a15",
+      "inputRows": [
+        "A15"
+      ],
+      "issue": "Circum-Pacific technological comparison; original methods unavailable. Correct bibliography pages to 64–108, not supplied 108–164. No Atlantic chronology adopted.",
+      "nextStep": "Obtain the original publication before extracting additional methods or chronology."
+    },
+    {
+      "sourceId": "atlantic-a16",
+      "inputRows": [
+        "A16"
+      ],
+      "issue": "Book review of Works in Stone, not original local archaeological chronology or field methods.",
+      "nextStep": "No new Atlantic chronological record justified by the accessed scope."
+    },
+    {
+      "sourceId": "atlantic-a18",
+      "inputRows": [
+        "A18"
+      ],
+      "issue": "Original coastal-route hypothesis; no direct evidence for an Atlantic sequence imported from this Pacific proposal.",
+      "nextStep": "No new Atlantic chronological record justified by the accessed scope."
+    },
+    {
+      "sourceId": "atlantic-b4",
+      "inputRows": [
+        "B4"
+      ],
+      "issue": "One-page 1978 Current Anthropology notice at p. 396, not an independently accessed regional chronological synthesis.",
+      "nextStep": "Obtain the original publication before extracting additional methods or chronology."
+    },
+    {
+      "sourceId": "atlantic-b8",
+      "inputRows": [
+        "B8"
+      ],
+      "issue": "Historical transatlantic hypothesis; no directly verified route or modern population ancestry claim adopted.",
+      "nextStep": "No new Atlantic chronological record justified by the accessed scope."
+    },
+    {
+      "sourceId": "atlantic-b5",
+      "issue": "Original Renouf thesis chronology and individual Cowpath East / West dates not accessed; distinct public site coordinates unverified.",
+      "nextStep": "Retain separate named contexts at a schematic regional anchor until original dating and location documentation is available."
+    },
+    {
+      "sourceId": "atlantic-b6",
+      "issue": "Combined Iceberg / Black Rock Brook ages cannot be allocated to individual components or converted to calendar years from the accessed retrospective.",
+      "nextStep": "Consult original component and radiocarbon tables."
+    },
+    {
+      "sourceId": "atlantic-b7",
+      "issue": "Factory Cove original thesis publication year and full calibrated chronology unresolved.",
+      "nextStep": "Obtain the thesis title page and dating tables; do not substitute a typological interval for calibrated occupation."
+    },
+    {
+      "sourceId": "atlantic-newfoundland-shoreline-preservation",
+      "issue": "Additional named sites in the 1975 Belle Isle survey map lack independently checked occupation dates and exact public coordinates.",
+      "nextStep": "Audit individual original entries rather than copying one regional sequence to every named site."
+    }
+  ],
+  "corrections": [
+    {
+      "issue": "Debert reference misidentification",
+      "correction": "Tuck 1971 is a review of George F. MacDonald’s 1968 excavation monograph. It is not the original field report. Calibrated chronology here follows Lothrop et al. 2016 Table 3; firsthand observations use Stuckenrath 1964."
+    },
+    {
+      "issue": "Radiocarbon and calendar age conflation",
+      "correction": "Debert 10,600 ± 47 radiocarbon BP is distinguished from its published 12,630 ± 135 cal BP summary. Labrador 7530 ± 140 BP and 8600 ± 325 BP remain unplaced without an independently verified calibration."
+    },
+    {
+      "issue": "A pooled date is not an occupation duration",
+      "correction": "Debert’s displayed interval is the published 2σ summary translated from calendar BP, not an occupation lasting throughout the interval. The pooled suite count differs between the review and older accounts."
+    },
+    {
+      "issue": "Chronology transferred between separate sites",
+      "correction": "Cowpath’s legacy age is not copied to Cowpath East or Cowpath West. The combined Iceberg / Black Rock Brook sequence is not assigned as each site’s occupation span."
+    },
+    {
+      "issue": "Historical continuity and causation model overstated",
+      "correction": "McGhee and Tuck’s proposed local development and possible environmental / Dorset-related change remain interpretive hypotheses, not demonstrated genetic continuity or single-cause displacement."
+    },
+    {
+      "issue": "Pacific comparisons presented as Atlantic evidence",
+      "correction": "Pacific raised shorelines, submerged deposits, footprints, LIDAR screening and watercraft least-cost models do not establish an Atlantic migration route. Model scenarios and environmental opportunities remain distinct from observed human presence."
+    },
+    {
+      "issue": "Calvert conservative dating envelope",
+      "correction": "Use the primary conclusion’s 13,317–12,633 cal BP associated-wood envelope. The track-makers are a minimum of three individuals, not a resident population census."
+    },
+    {
+      "issue": "Pratt 2020 bibliographic pagination",
+      "correction": "Primary author CV and DOI metadata give pages 64–108; supplied 108–164 is not retained."
+    },
+    {
+      "issue": "Factory Cove publication conflation",
+      "correction": "Original MA thesis, preliminary field report and later published chapter are separate works. The thesis year remains unresolved between 1984 and 1985 in accessed bibliographies."
+    },
+    {
+      "issue": "One-page notices and book reviews used as original analyses",
+      "correction": "Tuck 1978 and the Works in Stone review do not provide independently accessed field methods or a local archaeological chronology."
+    },
+    {
+      "issue": "Legacy DOI syntax",
+      "correction": "The Luternauer DOI contains angle brackets. The citation URL percent-encodes those characters and omits the strict DOI field; the original identifier remains in the source register."
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "records": [],
+  "updates": [
+    {
+      "recordId": "coastal-migration-davis-window",
+      "claimId": "finding",
+      "source": {
+        "id": "davis2020",
+        "authors": "Loren G. Davis; David B. Madsen",
+        "year": 2020,
+        "title": "The coastal migration theory: Formulation and testable hypotheses",
+        "venue": "Quaternary Science Reviews 249, 106605",
+        "doi": "10.1016/j.quascirev.2020.106605",
+        "url": "https://repository.library.noaa.gov/view/noaa/57365",
+        "access": "NOAA author-manuscript repository abstract and indexed NSF manuscript abstract inspected for Pacific geographic scope; not a new exhaustive Atlantic review.",
+        "referenceType": "journal-article"
+      },
+      "stance": "context",
+      "locator": "NOAA repository abstract / Pacific model scope",
+      "note": "The supplied Atlantic-Canada synopsis cites this Pacific model. Its scope does not establish the absence of early Atlantic sites or disprove local Atlantic coastal movement."
+    },
+    {
+      "recordId": "northwest-steffen-ice-constraints",
+      "claimId": "finding",
+      "source": {
+        "id": "steffen2024",
+        "authors": "Martina L. Steffen",
+        "title": "New age constraints for human entry into the Americas on the north Pacific coast",
+        "year": 2024,
+        "venue": "Scientific Reports",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10881565/",
+        "doi": "10.1038/s41598-024-54592-x",
+        "access": "Indexed primary publisher/PMC abstract and regional conclusions checked for geographic scope. No new calibration performed.",
+        "referenceType": "journal-article",
+        "volume": "14",
+        "pages": "4291"
+      },
+      "stance": "context",
+      "locator": "Abstract and north Pacific subregional study scope",
+      "note": "Chronological constraints concern the Cordilleran margin and north Pacific subregions. Applying their archaeological gaps to Atlantic Canada would exceed this study."
+    }
+  ],
+  "sourceRegister": [
+    {
+      "source": {
+        "id": "davis2020",
+        "authors": "Loren G. Davis; David B. Madsen",
+        "year": 2020,
+        "title": "The coastal migration theory: Formulation and testable hypotheses",
+        "venue": "Quaternary Science Reviews 249, 106605",
+        "doi": "10.1016/j.quascirev.2020.106605",
+        "url": "https://repository.library.noaa.gov/view/noaa/57365",
+        "access": "NOAA author-manuscript repository abstract and indexed NSF manuscript abstract inspected for Pacific geographic scope; not a new exhaustive Atlantic review.",
+        "referenceType": "journal-article"
+      },
+      "disposition": "Existing model retained; scope qualification added.",
+      "inputOccurrences": 1
+    },
+    {
+      "source": {
+        "id": "steffen2024",
+        "authors": "Martina L. Steffen",
+        "title": "New age constraints for human entry into the Americas on the north Pacific coast",
+        "year": 2024,
+        "venue": "Scientific Reports",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10881565/",
+        "doi": "10.1038/s41598-024-54592-x",
+        "access": "Indexed primary publisher/PMC abstract and regional conclusions checked for geographic scope. No new calibration performed.",
+        "referenceType": "journal-article",
+        "volume": "14",
+        "pages": "4291"
+      },
+      "disposition": "Existing regional constraints retained; scope qualification added.",
+      "inputOccurrences": 1
+    },
+    {
+      "source": {
+        "id": "atlantic-a19",
+        "authors": "Robert Gustas; Kisha Supernant",
+        "title": "Coastal migration into the Americas and least cost path analysis",
+        "year": 2019,
+        "venue": "Journal of Anthropological Archaeology",
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S0278416518301995",
+        "access": "Primary ScienceDirect abstract, introduction, case-study setting and methods snippets inspected; no independently reproduced model.",
+        "doi": "10.1016/j.jaa.2019.04.006"
+      },
+      "disposition": "Already staged in intake-atlantic-canada-reviewed.json, pacific-corridor-hypothesis. No duplicate update; reconstructed British Columbia routes are model predictions.",
+      "inputOccurrences": 1
+    }
+  ],
+  "unresolved": [
+    "No Atlantic-specific site inventory is cited by this three-paper synopsis, so its blanket assertion of no pre-14 ka coastal complexes is not accepted as a demonstrated negative finding.",
+    "Lack of confirmation is not refutation. The Atlantic question remains to be evaluated against regional archaeological and palaeoshoreline evidence.",
+    "Do not infer that all early coastal travel required a single specialized toolkit; diagnostic criteria in one proposed model are not universal proof requirements."
+  ],
+  "corrections": [
+    "All three cited studies concern Pacific contexts; the synopsis overextends their scope to Atlantic Canada.",
+    "The synopsis has only three sources and itself states that the consensus meter lacks the minimum five papers; no consensus percentage is inferred.",
+    "Steffen figure sample counts are dated specimens and archaeological material, not human population counts.",
+    "Davis model chronology is a testable proposal, not directly dated movement by a known population.",
+    "Gustas reconstructed travel costs are not archaeological observations of routes."
+  ],
+  "provenance": {
+    "batch": "round3-dump2",
+    "pdf": "Do_Atlantic_Canada_archaeological_sequences_suppor.pdf",
+    "pagesRead": 3,
+    "risEntriesReconciled": 3,
+    "archive": "../intake-2026-10-28-round3/dump2/manifest.json",
+    "deployment": "held"
+  }
+}

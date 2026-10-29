@@ -1,0 +1,714 @@
+{
+  "records": [
+    {
+      "id": "solomons-munda-isshiki2020-selection",
+      "revision": 1,
+      "type": "event",
+      "title": "Munda, Solomon Islands — ancestry and proposed selection",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Research context: sampled individuals and genetic model ages have different temporal scopes.",
+        "method": "Source-specific genomic analyses; no closed local occupation or language date inferred.",
+        "interpretation": "Unplaced comparative evidence, not a Fiji highland settlement or dated language distribution."
+      },
+      "claims": [
+        {
+          "id": "sample-scope",
+          "text": "The study analyzed 21 Munda individuals from New Georgia in the western Solomon Islands; these are not Fiji-highland samples.",
+          "status": "well-supported",
+          "explanation": "Geographic scope matters before transferring population-specific results.",
+          "support": [
+            {
+              "sourceId": "isshiki2020-munda",
+              "stance": "supports",
+              "locator": "Abstract; introduction",
+              "note": "Geographic scope matters before transferring population-specific results."
+            }
+          ]
+        },
+        {
+          "id": "local-selection",
+          "text": "Munda HLA class II has elevated Papuan-related local ancestry; the authors favor selection but consider drift and recombination.",
+          "status": "under discussion",
+          "explanation": "Local-locus ancestry is not a whole-genome percentage or proof that a specified pathogen caused adaptation.",
+          "support": [
+            {
+              "sourceId": "isshiki2020-munda",
+              "stance": "supports",
+              "locator": "Results; discussion",
+              "note": "Local-locus ancestry is not a whole-genome percentage or proof that a specified pathogen caused adaptation."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "isshiki2020-munda",
+          "authors": "Mariko Isshiki; Izumi Naka; Yusuke Watanabe; Nao Nishida; Ryosuke Kimura; Takuro Furusawa; Kazumi Natsuhara; Taro Yamauchi; Minato Nakazawa; Takafumi Ishida; Ricky Eddie; Ryutaro Ohtsuka; Jun Ohashi",
+          "title": "Admixture and natural selection shaped genomes of an Austronesian-speaking population in the Solomon Islands",
+          "year": 2020,
+          "venue": "Scientific Reports",
+          "doi": "10.1038/s41598-020-62866-3",
+          "url": "https://www.nature.com/articles/s41598-020-62866-3",
+          "access": "Open publisher abstract, introduction, results and discussion consulted: Munda sampling, local versus genome-wide ancestry, drift/selection alternatives.",
+          "referenceType": "journal-article",
+          "volume": "10",
+          "pages": "6872"
+        }
+      ],
+      "review": {
+        "summary": "This comparative record keeps the studied population, ancestry model and interpretive limitations distinct from the Fiji-highland claims in the supplied synthesis.",
+        "limitations": "Modern population study, not ancient Fiji DNA. Locus statistics are not resident population estimates, clinical predictions or universal adaptive history.",
+        "discussion": "Ancestry estimates depend on reference populations, methods and sampling. Genetic affinity, language affiliation, archaeological culture and contemporary identity are distinct evidence types.",
+        "provenance": "Independent review of five-page Lapita follow-up PDF and its 13 references. Working intake only; live v0.3.1 unchanged.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Primary-source scope checked; no shared dataset integration or deployment."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "population-history",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No location, route, distribution boundary or ancestry-percentage map asserted.",
+        "provenance": "Geography follows the primary study; no evidence-bounded geometry extracted."
+      }
+    },
+    {
+      "id": "palau-liu2026-presettlement-admixture",
+      "revision": 1,
+      "type": "event",
+      "title": "Palau — admixture before initial settlement",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "original": "Research context: sampled individuals and genetic model ages have different temporal scopes.",
+        "method": "Source-specific genomic analyses; no closed local occupation or language date inferred.",
+        "interpretation": "Unplaced comparative evidence, not a Fiji highland settlement or dated language distribution."
+      },
+      "claims": [
+        {
+          "id": "sample-history",
+          "text": "Twenty-one individuals from four Palauan sites show approximately 60% East Asian-related and 40% Papuan-related ancestry, unlike earliest sampled southwest-Pacific Lapita individuals.",
+          "status": "well-supported",
+          "explanation": "A Palauan sample result, not all Remote Oceanians or Fiji highland groups.",
+          "support": [
+            {
+              "sourceId": "liu2026-palau",
+              "stance": "supports",
+              "locator": "Abstract",
+              "note": "A Palauan sample result, not all Remote Oceanians or Fiji highland groups."
+            }
+          ]
+        },
+        {
+          "id": "before-settlement",
+          "text": "Ancestry-tract modelling places major mixture before archaeologically inferred initial Palauan settlement.",
+          "status": "under discussion",
+          "explanation": "Depends on dated individuals, generation time, calibration and settlement chronology; not an observed migration route.",
+          "support": [
+            {
+              "sourceId": "liu2026-palau",
+              "stance": "supports",
+              "locator": "Results: Papuan and East Asian ancestry in Palauans admixed before initial peopling",
+              "note": "Depends on dated individuals, generation time, calibration and settlement chronology; not an observed migration route."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "liu2026-palau",
+          "authors": "Yue-Chen Liu; Joanne Eakin; Jolie Liston; Rosalind Hunter-Anderson; Calvin Emesiochel; Kiblas Soaladaob; Sunny O. Ngirmang; Olivia Cheronet; Carla S. Hadden; Alexander Cherkinsky; Matthew Spriggs; Keith M. Prufer; Swapan Mallick; Nadin Rohland; Ron Pinhasi; David Reich",
+          "title": "Papuan admixture predated the settlement of Palau",
+          "year": 2026,
+          "venue": "Cell",
+          "doi": "10.1016/j.cell.2026.02.011",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41812661/",
+          "access": "Primary abstract/metadata and indexed PMC results on oldest Ucheliungs date, DATES model and sensitivity checked. Direct PMC later browser-blocked; no full supplement audit.",
+          "referenceType": "journal-article",
+          "volume": "189",
+          "issue": "9",
+          "pages": "2573–2581.e10"
+        }
+      ],
+      "review": {
+        "summary": "This comparative record keeps the studied population, ancestry model and interpretive limitations distinct from the Fiji-highland claims in the supplied synthesis.",
+        "limitations": "Sample coverage roughly 2900–500 BP is not continuous residence at every site. Oldest Ucheliungs individual I41048: 2924–2710 cal BP. Modelled mixture age differs from sample age and first occupation. No new site coordinates or definitive origin route.",
+        "discussion": "Ancestry estimates depend on reference populations, methods and sampling. Genetic affinity, language affiliation, archaeological culture and contemporary identity are distinct evidence types.",
+        "provenance": "Independent review of five-page Lapita follow-up PDF and its 13 references. Working intake only; live v0.3.1 unchanged.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Primary-source scope checked; no shared dataset integration or deployment."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "population-history",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No location, route, distribution boundary or ancestry-percentage map asserted.",
+        "provenance": "Geography follows the primary study; no evidence-bounded geometry extracted."
+      }
+    }
+  ],
+  "updates": [
+    {
+      "recordId": "fiji-feldman2026-dispersals",
+      "claimId": "fiji-dispersals",
+      "source": {
+        "id": "feldman2026",
+        "authors": "Michal Feldman et al.",
+        "title": "Ancient genomes reveal distinct human dispersals and social stratification in the settlement history of western Remote Oceania",
+        "year": 2026,
+        "venue": "Cell 189:6882–6897",
+        "url": "https://research.usc.edu.au/esploro/outputs/journalArticle/Ancient-genomes-reveal-distinct-human-dispersals/991250406502621",
+        "access": "Primary author institutional abstract and metadata read; full archaeological community/sample table not accessed.",
+        "referenceType": "journal-article",
+        "doi": "10.1016/j.cell.2026.07.044"
+      },
+      "stance": "context",
+      "locator": "Institutional abstract",
+      "note": "At least two Fiji dispersals do not establish 70–90% ancestry for all highland groups or a dated climate-isolation sequence. The one-community status finding must not be generalized to all mataqali."
+    },
+    {
+      "recordId": "fiji-burley2013-polygenesis",
+      "claimId": "fiji-polygenesis",
+      "source": {
+        "id": "cochrane2017-fiji",
+        "authors": "Ethan E. Cochrane",
+        "title": "Ancient Fiji: Melting Pot of the Southwest Pacific",
+        "year": 2017,
+        "venue": "The Oxford Handbook of Prehistoric Oceania",
+        "publisher": "Oxford University Press",
+        "editors": "Ethan E. Cochrane and Terry L. Hunt",
+        "pages": "206–230",
+        "doi": "10.1093/oxfordhb/9780199925070.013.016",
+        "url": "https://academic.oup.com/edited-volume/34645/chapter-abstract/295209329",
+        "access": "Indexed primary Oxford chapter abstract, author, pages and 6 December 2017 online date checked; direct chapter fetch blocked. Full chapter not read.",
+        "referenceType": "book-chapter"
+      },
+      "stance": "context",
+      "locator": "Oxford chapter abstract",
+      "note": "Cochrane uses cultural transmission and links chiefdom development to competition, fortifications and defendable agricultural resources. Contextual synthesis is not proof that AD 1300 cooling caused every highland relocation."
+    },
+    {
+      "recordId": "vanuatu-lipson2020-transformations",
+      "claimId": "vanuatu-phases",
+      "source": {
+        "id": "lipson2018-turnover",
+        "authors": "Mark Lipson; Pontus Skoglund; Matthew Spriggs; Frédérique Valentin; Stuart Bedford; Richard Shing; Hallie Buckley; Isabelle Phillip; Graeme Ward; et al.",
+        "title": "Population Turnover in Remote Oceania Shortly after Initial Settlement",
+        "year": 2018,
+        "venue": "Current Biology",
+        "doi": "10.1016/j.cub.2018.02.051",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5882562/",
+        "access": "Publisher summary and indexed PMC discussion excerpts checked; no full sample-table audit. Supplied 10.1101/268037 is preprint DOI.",
+        "referenceType": "journal-article",
+        "volume": "28",
+        "issue": "8",
+        "pages": "1157–1165.e7"
+      },
+      "stance": "context",
+      "locator": "Publisher summary; indexed discussion",
+      "note": "Earlier Vanuatu ancestry-change evidence must not be relabelled Fiji highlands. Its supplied preprint DOI differs from the final journal DOI."
+    },
+    {
+      "recordId": "vanuatu-lipson2020-transformations",
+      "claimId": "vanuatu-source-model",
+      "source": {
+        "id": "pugach2018-gateway",
+        "authors": "Irina Pugach; Ana T. Duggan; D. Andrew Merriwether; Françoise R. Friedlaender; Jonathan S. Friedlaender; Mark Stoneking",
+        "title": "The Gateway from Near into Remote Oceania: New Insights from Genome-Wide Data",
+        "year": 2018,
+        "venue": "Molecular Biology and Evolution",
+        "doi": "10.1093/molbev/msx333",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5889034/",
+        "access": "Indexed primary introduction, ancestry-date comparison and discussion read; direct PMC later browser-blocked. No supplement audit.",
+        "referenceType": "journal-article",
+        "volume": "35",
+        "issue": "4",
+        "pages": "871–886"
+      },
+      "stance": "context",
+      "locator": "Introduction; discussion; date-method comparison",
+      "note": "Fine-scale histories and admixture-date methods vary; repeated exchanges affect inferred dates. Source affinity is not a literal route or a fixed Fiji-highland ancestry percentage."
+    },
+    {
+      "recordId": "language-vanuatu-oceanic-continuity",
+      "claimId": "language-continuity",
+      "source": {
+        "id": "liu2022-micronesia",
+        "authors": "Yue-Chen Liu; Rosalind Hunter-Anderson; Olivia Cheronet; Joanne E. Eakin; et al.",
+        "title": "Ancient DNA reveals five streams of migration into Micronesia and matrilocality in early Pacific seafarers",
+        "year": 2022,
+        "venue": "Science",
+        "doi": "10.1126/science.abm6536",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9983687/",
+        "access": "Primary abstract and indexed results/discussion consulted: Micronesian streams, Palau estimates and matrilocality inference. No sample-level chronology extraction.",
+        "referenceType": "journal-article",
+        "volume": "377",
+        "issue": "6601",
+        "pages": "72–79"
+      },
+      "stance": "context",
+      "locator": "Abstract; discussion",
+      "note": "Comparative Micronesian evidence infers matrilocal residence from mitochondrial patterns. Matrilocality differs from matrilineal descent and does not establish the same practice in every Fijian community."
+    },
+    {
+      "recordId": "vanuatu-teouma-dated-individuals",
+      "claimId": "teouma-ancestry",
+      "source": {
+        "id": "skoglund2016",
+        "title": "Ancient Genomics and the Peopling of the Southwest Pacific",
+        "authors": "Pontus Skoglund et al.",
+        "year": 2016,
+        "venue": "Nature 538:510–513",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5515717/",
+        "access": "Primary results and Extended Data Table 1, including calibration notes, read.",
+        "referenceType": "journal-article",
+        "doi": "10.1038/nature19844"
+      },
+      "stance": "context",
+      "locator": "Extended Data Figures 3–4; discussion",
+      "note": "Reproduced date and TreeMix examples concern Tongans. The 25% edge uses a New Guinean-related proxy; it is not a Fiji-highland estimate. Early Vanuatu/Tonga samples do not establish all Remote Oceanian founders were unadmixed."
+    }
+  ],
+  "sourceRegister": [
+    {
+      "inputRows": [
+        1
+      ],
+      "inputPage": 4,
+      "sourceId": "burley2013",
+      "source": {
+        "id": "burley2013",
+        "authors": "David V. Burley",
+        "title": "Fijian Polygenesis and the Melanesian/Polynesian Divide",
+        "year": 2013,
+        "venue": "Current Anthropology 54(4):436–462",
+        "url": "https://www.journals.uchicago.edu/doi/10.1086/671195",
+        "access": "Primary abstract read; article is an archaeological/anthropological argument, not epidemiology.",
+        "referenceType": "journal-article",
+        "doi": "10.1086/671195"
+      },
+      "disposition": "duplicate-context-no-new-record",
+      "canonicalRecordIds": [
+        "fiji-burley2013-polygenesis"
+      ],
+      "recordIds": [],
+      "verification": "Primary scope rechecked; earlier corpus citation/access metadata retained where reused. Follow-up-specific access notes below.",
+      "followUpAccess": "Publisher abstract and publication metadata rechecked. Full article/commentaries not read."
+    },
+    {
+      "inputRows": [
+        2
+      ],
+      "inputPage": 4,
+      "sourceId": "choin2021",
+      "source": {
+        "id": "choin2021",
+        "authors": "Jeremy Choin et al.",
+        "title": "Genomic insights into population history and biological adaptation in Oceania",
+        "year": 2021,
+        "venue": "Nature 592:583–589",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33854233/",
+        "access": "Primary abstract read; 317 present-day genomes from 20 populations.",
+        "referenceType": "journal-article",
+        "doi": "10.1038/s41586-021-03236-5"
+      },
+      "disposition": "duplicate-context-no-new-record",
+      "canonicalRecordIds": [
+        "oceania-choin2021-recurrent-mixture"
+      ],
+      "recordIds": [],
+      "verification": "Primary scope rechecked; earlier corpus citation/access metadata retained where reused. Follow-up-specific access notes below.",
+      "followUpAccess": "PubMed primary abstract/metadata rechecked. Direct Nature article fetch blocked; no sample-by-sample ancestry audit."
+    },
+    {
+      "inputRows": [
+        3
+      ],
+      "inputPage": 5,
+      "sourceId": "cochrane2017-fiji",
+      "source": {
+        "id": "cochrane2017-fiji",
+        "authors": "Ethan E. Cochrane",
+        "title": "Ancient Fiji: Melting Pot of the Southwest Pacific",
+        "year": 2017,
+        "venue": "The Oxford Handbook of Prehistoric Oceania",
+        "publisher": "Oxford University Press",
+        "editors": "Ethan E. Cochrane and Terry L. Hunt",
+        "pages": "206–230",
+        "doi": "10.1093/oxfordhb/9780199925070.013.016",
+        "url": "https://academic.oup.com/edited-volume/34645/chapter-abstract/295209329",
+        "access": "Indexed primary Oxford chapter abstract, author, pages and 6 December 2017 online date checked; direct chapter fetch blocked. Full chapter not read.",
+        "referenceType": "book-chapter"
+      },
+      "disposition": "qualified-existing-update",
+      "canonicalRecordIds": [],
+      "recordIds": [],
+      "verification": "Primary scope rechecked; earlier corpus citation/access metadata retained where reused. Follow-up-specific access notes below.",
+      "followUpAccess": "Indexed Oxford chapter abstract and contents metadata read; full chapter blocked/unread.",
+      "note": "Resolves previously unverified chapter identity: Oxford online date 6 December 2017, pp. 206–230. Abstract links fortifications to competition and defendable resources, not a demonstrated universal climate trigger."
+    },
+    {
+      "inputRows": [
+        4
+      ],
+      "inputPage": 5,
+      "sourceId": "feldman2026",
+      "source": {
+        "id": "feldman2026",
+        "authors": "Michal Feldman et al.",
+        "title": "Ancient genomes reveal distinct human dispersals and social stratification in the settlement history of western Remote Oceania",
+        "year": 2026,
+        "venue": "Cell 189:6882–6897",
+        "url": "https://research.usc.edu.au/esploro/outputs/journalArticle/Ancient-genomes-reveal-distinct-human-dispersals/991250406502621",
+        "access": "Primary author institutional abstract and metadata read; full archaeological community/sample table not accessed.",
+        "referenceType": "journal-article",
+        "doi": "10.1016/j.cell.2026.07.044"
+      },
+      "disposition": "qualified-existing-update",
+      "canonicalRecordIds": [
+        "fiji-feldman2026-dispersals",
+        "vanuatu-feldman2026-later-input"
+      ],
+      "recordIds": [],
+      "verification": "Primary scope rechecked; earlier corpus citation/access metadata retained where reused. Follow-up-specific access notes below.",
+      "followUpAccess": "Author-institution abstract and metadata rechecked. Primary PDF download attempted but fetch failed; no new full-text/community-specific audit."
+    },
+    {
+      "inputRows": [
+        5
+      ],
+      "inputPage": 5,
+      "sourceId": "isshiki2020-munda",
+      "source": {
+        "id": "isshiki2020-munda",
+        "authors": "Mariko Isshiki; Izumi Naka; Yusuke Watanabe; Nao Nishida; Ryosuke Kimura; Takuro Furusawa; Kazumi Natsuhara; Taro Yamauchi; Minato Nakazawa; Takafumi Ishida; Ricky Eddie; Ryutaro Ohtsuka; Jun Ohashi",
+        "title": "Admixture and natural selection shaped genomes of an Austronesian-speaking population in the Solomon Islands",
+        "year": 2020,
+        "venue": "Scientific Reports",
+        "doi": "10.1038/s41598-020-62866-3",
+        "url": "https://www.nature.com/articles/s41598-020-62866-3",
+        "access": "Open publisher abstract, introduction, results and discussion consulted: Munda sampling, local versus genome-wide ancestry, drift/selection alternatives.",
+        "referenceType": "journal-article",
+        "volume": "10",
+        "pages": "6872"
+      },
+      "disposition": "new-comparative-context",
+      "canonicalRecordIds": [],
+      "recordIds": [
+        "solomons-munda-isshiki2020-selection"
+      ],
+      "verification": "Primary scope rechecked; earlier corpus citation/access metadata retained where reused. Follow-up-specific access notes below.",
+      "followUpAccess": "Open publisher abstract, introduction, results and discussion read, including alternative drift explanation."
+    },
+    {
+      "inputRows": [
+        6
+      ],
+      "inputPage": 5,
+      "sourceId": "lipson2020",
+      "source": {
+        "id": "lipson2020",
+        "title": "Three phases of ancient migration shaped the ancestry of human populations in Vanuatu",
+        "authors": "Mark Lipson et al.",
+        "year": 2020,
+        "venue": "Current Biology",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7755836/",
+        "access": "Primary summary and population-history discussion read; sample-specific dates not copied without tables.",
+        "referenceType": "journal-article",
+        "doi": "10.1016/j.cub.2020.09.035"
+      },
+      "disposition": "duplicate-context-no-new-record",
+      "canonicalRecordIds": [
+        "tonga-talasiu-sampled-individual",
+        "vanuatu-lipson2020-transformations",
+        "vanuatu-feldman2026-later-input"
+      ],
+      "recordIds": [],
+      "verification": "Primary scope rechecked; earlier corpus citation/access metadata retained where reused. Follow-up-specific access notes below.",
+      "followUpAccess": "Indexed primary summary/discussion excerpts checked. Direct PMC later browser-blocked; no supplement audit."
+    },
+    {
+      "inputRows": [
+        7
+      ],
+      "inputPage": 5,
+      "sourceId": "lipson2018-turnover",
+      "source": {
+        "id": "lipson2018-turnover",
+        "authors": "Mark Lipson; Pontus Skoglund; Matthew Spriggs; Frédérique Valentin; Stuart Bedford; Richard Shing; Hallie Buckley; Isabelle Phillip; Graeme Ward; et al.",
+        "title": "Population Turnover in Remote Oceania Shortly after Initial Settlement",
+        "year": 2018,
+        "venue": "Current Biology",
+        "doi": "10.1016/j.cub.2018.02.051",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5882562/",
+        "access": "Publisher summary and indexed PMC discussion excerpts checked; no full sample-table audit. Supplied 10.1101/268037 is preprint DOI.",
+        "referenceType": "journal-article",
+        "volume": "28",
+        "issue": "8",
+        "pages": "1157–1165.e7"
+      },
+      "disposition": "qualified-existing-update",
+      "canonicalRecordIds": [],
+      "recordIds": [],
+      "verification": "Primary scope rechecked; earlier corpus citation/access metadata retained where reused. Follow-up-specific access notes below.",
+      "followUpAccess": "Primary publisher summary and indexed PMC discussion checked. Final journal DOI verified; supplied preprint not separately read.",
+      "note": "Submitted 10.1101/268037 is the preprint DOI; final Current Biology DOI is 10.1016/j.cub.2018.02.051."
+    },
+    {
+      "inputRows": [
+        8
+      ],
+      "inputPage": 5,
+      "sourceId": "liu2026-palau",
+      "source": {
+        "id": "liu2026-palau",
+        "authors": "Yue-Chen Liu; Joanne Eakin; Jolie Liston; Rosalind Hunter-Anderson; Calvin Emesiochel; Kiblas Soaladaob; Sunny O. Ngirmang; Olivia Cheronet; Carla S. Hadden; Alexander Cherkinsky; Matthew Spriggs; Keith M. Prufer; Swapan Mallick; Nadin Rohland; Ron Pinhasi; David Reich",
+        "title": "Papuan admixture predated the settlement of Palau",
+        "year": 2026,
+        "venue": "Cell",
+        "doi": "10.1016/j.cell.2026.02.011",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41812661/",
+        "access": "Primary abstract/metadata and indexed PMC results on oldest Ucheliungs date, DATES model and sensitivity checked. Direct PMC later browser-blocked; no full supplement audit.",
+        "referenceType": "journal-article",
+        "volume": "189",
+        "issue": "9",
+        "pages": "2573–2581.e10"
+      },
+      "disposition": "new-comparative-context",
+      "canonicalRecordIds": [],
+      "recordIds": [
+        "palau-liu2026-presettlement-admixture"
+      ],
+      "verification": "Primary scope rechecked; earlier corpus citation/access metadata retained where reused. Follow-up-specific access notes below.",
+      "followUpAccess": "Primary abstract, author-institution abstract and indexed primary results checked. No complete supplemental dating audit.",
+      "note": "This paper is a counterexample to the synopsis universalizing minimally admixed founders across Remote Oceania; it concerns Palau, not Fiji."
+    },
+    {
+      "inputRows": [
+        9
+      ],
+      "inputPage": 5,
+      "sourceId": "liu2022-micronesia",
+      "source": {
+        "id": "liu2022-micronesia",
+        "authors": "Yue-Chen Liu; Rosalind Hunter-Anderson; Olivia Cheronet; Joanne E. Eakin; et al.",
+        "title": "Ancient DNA reveals five streams of migration into Micronesia and matrilocality in early Pacific seafarers",
+        "year": 2022,
+        "venue": "Science",
+        "doi": "10.1126/science.abm6536",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9983687/",
+        "access": "Primary abstract and indexed results/discussion consulted: Micronesian streams, Palau estimates and matrilocality inference. No sample-level chronology extraction.",
+        "referenceType": "journal-article",
+        "volume": "377",
+        "issue": "6601",
+        "pages": "72–79"
+      },
+      "disposition": "qualified-existing-update",
+      "canonicalRecordIds": [],
+      "recordIds": [],
+      "verification": "Primary scope rechecked; earlier corpus citation/access metadata retained where reused. Follow-up-specific access notes below.",
+      "followUpAccess": "Primary abstract and indexed discussion read, specifically the scope of matrilocality inference and older Palau date model.",
+      "note": "Matrilocality concerns residence, not matrilineal descent. Earlier Palau admixture-age estimates must be distinguished from direct ancient-DNA evidence in Liu (2026)."
+    },
+    {
+      "inputRows": [
+        10
+      ],
+      "inputPage": 5,
+      "sourceId": "posth2018",
+      "source": {
+        "id": "posth2018",
+        "title": "Language continuity despite population replacement in Remote Oceania",
+        "authors": "Cosimo Posth et al.",
+        "year": 2018,
+        "venue": "Nature Ecology & Evolution 2:731–740",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5868730/",
+        "access": "Primary abstract and concluding discussion read.",
+        "referenceType": "journal-article",
+        "doi": "10.1038/s41559-018-0498-2"
+      },
+      "disposition": "duplicate-context-no-new-record",
+      "canonicalRecordIds": [
+        "vanuatu-lipson2020-transformations",
+        "language-vanuatu-oceanic-continuity"
+      ],
+      "recordIds": [],
+      "verification": "Primary scope rechecked; earlier corpus citation/access metadata retained where reused. Follow-up-specific access notes below.",
+      "followUpAccess": "Primary Nature publisher abstract and PubMed identity rechecked; full PMC fetch later blocked. Existing corpus access statement retains earlier review history."
+    },
+    {
+      "inputRows": [
+        11
+      ],
+      "inputPage": 5,
+      "sourceId": "pugach2018-gateway",
+      "source": {
+        "id": "pugach2018-gateway",
+        "authors": "Irina Pugach; Ana T. Duggan; D. Andrew Merriwether; Françoise R. Friedlaender; Jonathan S. Friedlaender; Mark Stoneking",
+        "title": "The Gateway from Near into Remote Oceania: New Insights from Genome-Wide Data",
+        "year": 2018,
+        "venue": "Molecular Biology and Evolution",
+        "doi": "10.1093/molbev/msx333",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5889034/",
+        "access": "Indexed primary introduction, ancestry-date comparison and discussion read; direct PMC later browser-blocked. No supplement audit.",
+        "referenceType": "journal-article",
+        "volume": "35",
+        "issue": "4",
+        "pages": "871–886"
+      },
+      "disposition": "qualified-existing-update",
+      "canonicalRecordIds": [],
+      "recordIds": [],
+      "verification": "Primary scope rechecked; earlier corpus citation/access metadata retained where reused. Follow-up-specific access notes below.",
+      "followUpAccess": "Indexed primary introduction, discussion and admixture-method comparison read; full supplement not read."
+    },
+    {
+      "inputRows": [
+        12
+      ],
+      "inputPage": 5,
+      "sourceId": "matisoo-smith2004-rats",
+      "source": {
+        "id": "matisoo-smith2004-rats",
+        "authors": "Elizabeth Matisoo-Smith and Judith H. Robins",
+        "title": "Origins and dispersals of Pacific peoples: Evidence from mtDNA phylogenies of the Pacific rat",
+        "year": 2004,
+        "venue": "PNAS 101:9167–9172",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/15184658/",
+        "access": "Primary abstract and metadata read; input omits first author Matisoo-Smith.",
+        "referenceType": "journal-article",
+        "doi": "10.1073/pnas.0403120101"
+      },
+      "disposition": "duplicate-context-no-new-record",
+      "canonicalRecordIds": [
+        "pacific-rat-lineage-proxies"
+      ],
+      "recordIds": [],
+      "verification": "Primary scope rechecked; earlier corpus citation/access metadata retained where reused. Follow-up-specific access notes below.",
+      "followUpAccess": "Primary PMC abstract, author order and metadata checked. Animal mtDNA proxy, not human genomes.",
+      "note": "Supplied Robins (2004) omits first author Elizabeth Matisoo-Smith. Rat phylogenies do not establish human ancestry percentages."
+    },
+    {
+      "inputRows": [
+        13
+      ],
+      "inputPage": 5,
+      "sourceId": "skoglund2016",
+      "source": {
+        "id": "skoglund2016",
+        "title": "Ancient Genomics and the Peopling of the Southwest Pacific",
+        "authors": "Pontus Skoglund et al.",
+        "year": 2016,
+        "venue": "Nature 538:510–513",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5515717/",
+        "access": "Primary results and Extended Data Table 1, including calibration notes, read.",
+        "referenceType": "journal-article",
+        "doi": "10.1038/nature19844"
+      },
+      "disposition": "qualified-existing-update",
+      "canonicalRecordIds": [
+        "vanuatu-teouma-dated-individuals",
+        "tonga-talasiu-sampled-individual"
+      ],
+      "recordIds": [],
+      "verification": "Primary scope rechecked; earlier corpus citation/access metadata retained where reused. Follow-up-specific access notes below.",
+      "followUpAccess": "Primary PMC results, Extended Data Figures 3–4 captions and Table 1 dating note checked; not all supplementary analyses reread.",
+      "note": "PMC author-manuscript title Ancient Genomics and the Peopling of the Southwest Pacific differs from published title Genomic insights into the peopling of the Southwest Pacific; same DOI. Figure captions name Tongans."
+    },
+    {
+      "kind": "reference-file-provenance",
+      "inputFile": "C:\\Users\\gavin\\Downloads\\10.1023_A_1009400309773-references.ris",
+      "bytes": 94563,
+      "sha256": "b8548a9b3be59379af67ee1b0ada523cb1a59a52091ce25a7efc8e718742cee7",
+      "sourceId": "fiedel2000",
+      "source": {
+        "id": "fiedel2000",
+        "authors": "Stuart J. Fiedel",
+        "year": 2000,
+        "title": "The Peopling of the New World: Present Evidence, New Theories, and Future Directions",
+        "venue": "Journal of Archaeological Research 8",
+        "doi": "10.1023/A:1009400309773",
+        "url": "https://doi.org/10.1023/A:1009400309773",
+        "access": "Abstract only: supplied by the app author or available from the publisher. No claim of reviewing unavailable methods, tables or supplementary data. Supplied RIS contains the cited bibliography, not the full article.",
+        "referenceType": "journal-article",
+        "pages": "39–103"
+      },
+      "disposition": "duplicate-bibliographic-context-not-full-text",
+      "verification": "Springer primary title, author, March 2000 issue and DOI match existing Fiedel source and ledger.ris filename/scope. No earlier file checksum exists in that ledger, so byte identity to its historical upload is not asserted.",
+      "counts": {
+        "risOccurrences": 390,
+        "normalizedUniqueEntries": 389,
+        "entriesWithTITitle": 388,
+        "uniqueTITitles": 385,
+        "doiFields": 0
+      },
+      "bibliographicLimitations": [
+        "Yesner (1998) entry occurs twice verbatim after whitespace normalization.",
+        "Two entries have no TI field: de Acosta (1604) has a book title in BT; Taylor (1998) has journal/letter metadata only.",
+        "Repeated ID strings are not sufficient unique publication identifiers. No referenced work is treated as read because it appears in this bibliography."
+      ]
+    },
+    {
+      "kind": "synthesis-file-provenance",
+      "inputFile": "C:\\Users\\gavin\\Downloads\\How_did_Lapita-related_admixture_and_later_Austron.pdf",
+      "bytes": 425407,
+      "sha256": "d3ebba7b905dd72f6838367481a0c17ae0a1a02e00ff3d574e7274223c31a046",
+      "pages": 5,
+      "title": "How did Lapita-related admixture and later Austronesian gene flow shape Fiji Highlands?",
+      "disposition": "secondary-AI-synthesis-not-primary-study",
+      "access": "All five pages extracted with pypdf and read, including text, phase table, figure captions and 13-item bibliography. No copied figure image treated as new field data.",
+      "note": "The PDF identifies Consensus as its synthesis tool. Root archives the original file and complete extraction; this sidecar records reviewed facts only. No deployment authorized."
+    }
+  ],
+  "unresolved": [
+    "No cited primary evidence reviewed here establishes a uniform 70–90% Papuan-related genome-wide ancestry proportion for Viti Levu highland groups. Obtain community-specific sampling, model definitions and tables before any such estimate.",
+    "Feldman (2026) full-text download failed. Its abstract supports distinct Fiji dispersals and a status/kinship association in one community, not a highland-wide lineage or climatic-isolation sequence.",
+    "The synopsis phase ranges 3000–2700, 2500–2000 and 2000–1200 BP are not accepted as synchronized Fiji highland occupation/genetic events. Model ages, sample dates and ceramic horizons need separate contextual chronologies.",
+    "AD 1300–1700 fortification and AD 1000–1800 Polynesian back-flow ranges need explicit local dates and archaeological/genomic evidence. Cochrane abstract alone does not supply them; Skoglund (2016) does not test AD 1300 climate-driven relocation.",
+    "The assertion that later Tongan voyagers strongly reshaped eastern Fiji while western highland clans remained isolated is not established by the accessed sources. No exact route, tribe boundary or ancestry gradient added.",
+    "Liu (2026) Palau dating depends on radiocarbon dietary/reservoir assumptions and model generation time. No fresh calibration performed and no detailed dated Palauan site distribution added.",
+    "Posth (2018) incremental process and Lipson (2018)/2020 demographic interpretations must remain separately attributed. Broad agreement on ancestry transformation does not settle its tempo or exact source-route history.",
+    "RIS semantic identity with existing Fiedel (2000) bibliography is confirmed; historical byte-for-byte identity cannot be established without the previous-upload checksum. Its 390 entries are references, not 390 reviewed studies."
+  ],
+  "corrections": [
+    "The PDF question concerns Fiji highlands, but its cited populations span Vanuatu, Tonga, Palau, Micronesia and Munda. Findings cannot be transferred simply because all are Oceanian.",
+    "Early Vanuatu/Tonga individuals had little detectable Papuan-related ancestry. This does not demonstrate bypass of every Near Oceanian community or absence of early admixture throughout Remote Oceania; Palau differs.",
+    "Feldman (2026) later Polynesian-related gene flow around a millennium ago specifically concerns southern Vanuatu Outlier communities in the abstract; it does not independently date Fiji highland back-migration.",
+    "Isshiki (2020) sampled Munda, Solomon Islands. Elevated Papuan-related HLA local ancestry and proposed selection are not Fiji-highland genome-wide ancestry or direct proof of one endemic pathogen.",
+    "The reproduced Skoglund Extended Data Figure 3 shows Tongan admixture dates and Figure 4 models a 25% contribution to Tongans. New Guinean Highlander proxy is not a sample of Fiji highlanders.",
+    "Liu (2022) supports a Micronesian matrilocality interpretation. Matrilocal residence is not matrilineal descent or demonstrated uniform Pacific social organization.",
+    "Cochrane (2017) is a book chapter, now verified at Oxford, not an independently dated fortification survey. Burley (2013) is an argued polygenesis model; retain qualifications.",
+    "Lipson (2018) journal/preprint identifiers and Matisoo-Smith/Robins (2004) authorship corrected in the register. Rat mitochondrial genealogy is not human genomic admixture.",
+    "Fiedel (2000) RIS matches existing American-peopling bibliography context. It is unrelated to Fiji field evidence and is not the full Fiedel paper; no automatic new archaeological claim follows.",
+    "No resident counts, precisely bounded settlement/distribution dates, exact voyage paths, archaeological coordinates or language-divergence ages are inferred from these summaries."
+  ]
+}

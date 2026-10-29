@@ -5,13 +5,13 @@ const ledger=JSON.parse(fs.readFileSync('data/literature-intake-2026-10-28.json'
 ledger.batches??=[];
 const all=()=>[...starter.records,...pkg.proposals.map(p=>p.record)];
 const requested=new Set(process.argv.slice(2));
-for(const batch of ['central','southeast','sealevel','alaska','southwest','caribbean','empires','fourcorners','hovenweep','site-locations','greatlakes','patagonia-north','patagonia-south','louisiana','cuba','abcislands','jamaica','hawaii','polynesian-origins']){
+for(const batch of ['central','southeast','sealevel','alaska','southwest','caribbean','empires','fourcorners','hovenweep','site-locations','greatlakes','patagonia-north','patagonia-south','louisiana','cuba','abcislands','jamaica','hawaii','polynesian-origins','atlantic-canada','amazon-isolation','lapita-followup','northeast-dump2','midwest-dump2','atlantic-models-dump2','climate-dump3','languages-dump3','corridor-dump3']){
  if(requested.size&&!requested.has(batch))continue;
  const path=batch==='hovenweep'?'data/intake-hovenweep-sites.json':batch==='site-locations'?'data/intake-site-locations-review.json':`data/intake-${batch}-reviewed.json`;if(!fs.existsSync(path))continue;
  const d=JSON.parse(fs.readFileSync(path,'utf8'));
  for(const r of d.records){
   if(all().some(x=>x.id===r.id))continue;
-  r.review.provenance+=' Full author-supplied synthesis archive: docs/intake/index.html. Original synthesis is secondary provenance, not a substitute for the cited primary study.';
+  r.review.provenance+=['atlantic-canada','amazon-isolation','lapita-followup','northeast-dump2','midwest-dump2','atlantic-models-dump2','climate-dump3','languages-dump3','corridor-dump3'].includes(batch)?' Author-supplied PDF/RIS originals preserved in the local round3 intake archive. Reviewed citations and limitations are public; original synthesis PDFs are not republished.':' Full author-supplied synthesis archive: docs/intake/index.html. Original synthesis is secondary provenance, not a substitute for the cited primary study.';
   if(['central-landbridge-cultigens','central-landbridge-chiefdoms'].includes(r.id)){
    r.time={...r.time,kind:'unplaced',start:null,end:null};r.time.interpretation='Reported BP wording is retained. Calendar calibration and epoch are not confirmed from the accessed abstract; no automatic conversion to calendar BCE is plotted.';
   }

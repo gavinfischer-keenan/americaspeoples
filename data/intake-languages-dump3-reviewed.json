@@ -1,0 +1,767 @@
+{
+  "records": [
+    {
+      "id": "language-north-american-diversity",
+      "revision": 1,
+      "type": "event",
+      "title": "North America — language-family and structural diversity",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "No independently verified absolute language distribution interval.",
+        "method": "Historical linguistic or methodological interpretation; no date inferred from publication year or genetics.",
+        "interpretation": "Unplaced context or model, not a dated occupation or migration."
+      },
+      "claims": [
+        {
+          "id": "finding",
+          "text": "Kilarski discusses distinct Algonquian, Iroquoian and Eskimo–Aleut traditions through examples of grammatical and sound-system diversity. These examples do not establish one common American language ancestor.",
+          "status": "well-supported",
+          "explanation": "Publisher summary supports these examples; no family count, divergence date or ancestral territory is established.",
+          "support": [
+            {
+              "sourceId": "kilarski2021-history",
+              "locator": "Abstract or publisher description (see source access)",
+              "stance": "supports",
+              "note": "Supports the bounded attributed finding; not a territorial or genetic identity assignment."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "kilarski2021-history",
+          "authors": "Marcin Kilarski",
+          "title": "A History of the Study of the Indigenous Languages of North America",
+          "year": 2021,
+          "venue": "Studies in the History of the Language Sciences 129",
+          "url": "https://www.benjamins.com/catalog/sihols.129",
+          "access": "Publisher description and contents read; chapters not read.",
+          "doi": "10.1075/sihols.129",
+          "referenceType": "book",
+          "publisher": "John Benjamins"
+        }
+      ],
+      "overlay": {
+        "kind": "language",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No language borders or movement geometry asserted.",
+        "provenance": "Only the cited study scope is retained."
+      },
+      "linguistics": {
+        "languages": [
+          {
+            "id": "algonquian",
+            "name": "Algonquian languages",
+            "family": "Algonquian"
+          },
+          {
+            "id": "iroquoian",
+            "name": "Iroquoian languages",
+            "family": "Iroquoian"
+          },
+          {
+            "id": "eskimo-aleut",
+            "name": "Eskimo–Aleut languages",
+            "family": "Eskimo–Aleut"
+          }
+        ],
+        "claimId": "finding",
+        "scope": "Illustrative North American language families; not a complete family catalogue.",
+        "uncertainty": "Publisher summary supports these examples; no family count, divergence date or ancestral territory is established."
+      },
+      "review": {
+        "summary": "Kilarski discusses distinct Algonquian, Iroquoian and Eskimo–Aleut traditions through examples of grammatical and sound-system diversity. These examples do not establish one common American language ancestor.",
+        "limitations": "Publisher summary supports these examples; no family count, divergence date or ancestral territory is established.",
+        "discussion": "Separate established affiliations from proposed remote connections. Language history does not identify the language of an ancient genetic sample.",
+        "provenance": "Supplied three-page linguistic-roots synopsis and all 15 RIS entries reconciled with primary metadata/abstracts on 2026-10-28. Access limits are recorded per source.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Staged separately for review; no integration or deployment."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "language-dene-yeniseian-beringia-model",
+      "revision": 1,
+      "type": "event",
+      "title": "Dene–Yeniseian — proposed Beringian radiation",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "No independently verified absolute language distribution interval.",
+        "method": "Historical linguistic or methodological interpretation; no date inferred from publication year or genetics.",
+        "interpretation": "Unplaced context or model, not a dated occupation or migration."
+      },
+      "claims": [
+        {
+          "id": "finding",
+          "text": "Sicoli and Holton’s typological phylogenetic analysis favors Beringian radiation with movement back toward Asia over their tested central/western Asian origin topology.",
+          "status": "under discussion",
+          "explanation": "This is a model comparison, not consensus proof of remote descent. Fewer than 100 informative characters and competing topologies limit inference; no migration date is adopted.",
+          "support": [
+            {
+              "sourceId": "sicoli-holton2014",
+              "locator": "Abstract; model comparison; Figure 2; Discussion",
+              "stance": "supports",
+              "note": "Supports the bounded attributed finding; not a territorial or genetic identity assignment."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "sicoli-holton2014",
+          "authors": "Mark A. Sicoli; Gary Holton",
+          "title": "Linguistic Phylogenies Support Back-Migration from Beringia to Asia",
+          "year": 2014,
+          "venue": "PLOS ONE 9(3), e91722",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0091722",
+          "access": "Primary publisher abstract, model-comparison results, Figure 2 caption and discussion limitations inspected; data not reanalysed.",
+          "doi": "10.1371/journal.pone.0091722",
+          "referenceType": "journal-article"
+        }
+      ],
+      "overlay": {
+        "kind": "language",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No language borders or movement geometry asserted.",
+        "provenance": "Only the cited study scope is retained."
+      },
+      "linguistics": {
+        "languages": [
+          {
+            "id": "na-dene",
+            "name": "Na-Dené languages",
+            "family": "Athabaskan–Eyak–Tlingit"
+          },
+          {
+            "id": "yeniseian",
+            "name": "Yeniseian languages",
+            "family": "Yeniseian"
+          }
+        ],
+        "claimId": "finding",
+        "scope": "Proposed historical connection between Na-Dené and Yeniseian; neither is represented as descending directly from the other.",
+        "uncertainty": "This is a model comparison, not consensus proof of remote descent. Fewer than 100 informative characters and competing topologies limit inference; no migration date is adopted.",
+        "relationship": {
+          "kind": "unclassified",
+          "from": "na-dene",
+          "to": "yeniseian"
+        }
+      },
+      "review": {
+        "summary": "Sicoli and Holton’s typological phylogenetic analysis favors Beringian radiation with movement back toward Asia over their tested central/western Asian origin topology.",
+        "limitations": "This is a model comparison, not consensus proof of remote descent. Fewer than 100 informative characters and competing topologies limit inference; no migration date is adopted.",
+        "discussion": "Separate established affiliations from proposed remote connections. Language history does not identify the language of an ancient genetic sample.",
+        "provenance": "Supplied three-page linguistic-roots synopsis and all 15 RIS entries reconciled with primary metadata/abstracts on 2026-10-28. Access limits are recorded per source.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Staged separately for review; no integration or deployment."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "language-americas-structural-gradient",
+      "revision": 1,
+      "type": "event",
+      "title": "Americas — modeled gradient in language structure",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "No independently verified absolute language distribution interval.",
+        "method": "Historical linguistic or methodological interpretation; no date inferred from publication year or genetics.",
+        "interpretation": "Unplaced context or model, not a dated occupation or migration."
+      },
+      "claims": [
+        {
+          "id": "finding",
+          "text": "Urban and Guzmán Naranjo report a north–south gradient in sound and grammatical features after accounting for known genealogy and local contact, and interpret it in relation to dispersal history.",
+          "status": "under discussion",
+          "explanation": "Statistical association is not a dated route or proof of a macrofamily. Known affiliation, contact and proposed deeper history remain distinct.",
+          "support": [
+            {
+              "sourceId": "urban-naranjo2025",
+              "locator": "Abstract or publisher description (see source access)",
+              "stance": "supports",
+              "note": "Supports the bounded attributed finding; not a territorial or genetic identity assignment."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "urban-naranjo2025",
+          "authors": "Matthias Urban; Matías Guzmán Naranjo",
+          "title": "Gradient in grammatical structure of indigenous languages reflects pathway of human expansion in the Americas",
+          "year": 2025,
+          "venue": "Scientific Reports",
+          "url": "https://www.nature.com/articles/s41598-025-86265-8",
+          "access": "Primary publisher abstract and indexed results discussion inspected; spatial model not independently reproduced.",
+          "doi": "10.1038/s41598-025-86265-8",
+          "referenceType": "journal-article"
+        }
+      ],
+      "overlay": {
+        "kind": "language",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No language borders or movement geometry asserted.",
+        "provenance": "Only the cited study scope is retained."
+      },
+      "linguistics": {
+        "languages": [
+          {
+            "id": "sampled-american-languages",
+            "name": "Sampled Indigenous languages of the Americas"
+          }
+        ],
+        "claimId": "finding",
+        "scope": "Continental statistical comparison across multiple language families; no single ancestral language asserted.",
+        "uncertainty": "Statistical association is not a dated route or proof of a macrofamily. Known affiliation, contact and proposed deeper history remain distinct."
+      },
+      "review": {
+        "summary": "Urban and Guzmán Naranjo report a north–south gradient in sound and grammatical features after accounting for known genealogy and local contact, and interpret it in relation to dispersal history.",
+        "limitations": "Statistical association is not a dated route or proof of a macrofamily. Known affiliation, contact and proposed deeper history remain distinct.",
+        "discussion": "Separate established affiliations from proposed remote connections. Language history does not identify the language of an ancient genetic sample.",
+        "provenance": "Supplied three-page linguistic-roots synopsis and all 15 RIS entries reconciled with primary metadata/abstracts on 2026-10-28. Access limits are recorded per source.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Staged separately for review; no integration or deployment."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "language-pacific-northwest-genetic-comparison",
+      "revision": 1,
+      "type": "event",
+      "title": "Pacific Northwest — genes and language do not map one-to-one",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "No independently verified absolute language distribution interval.",
+        "method": "Historical linguistic or methodological interpretation; no date inferred from publication year or genetics.",
+        "interpretation": "Unplaced context or model, not a dated occupation or migration."
+      },
+      "claims": [
+        {
+          "id": "finding",
+          "text": "Ward and colleagues’ mitochondrial comparison of Nuu-chah-nulth, Bella Coola and Haida samples found no clustering that matched the linguistic grouping used in their study.",
+          "status": "well-supported",
+          "explanation": "Limited mtDNA comparison; the paper’s Amerind and Na-Dene labels are historical classifications and are not adopted here. No ancient sample is assigned a language.",
+          "support": [
+            {
+              "sourceId": "ward1993-differentiation",
+              "locator": "Abstract or publisher description (see source access)",
+              "stance": "supports",
+              "note": "Supports the bounded attributed finding; not a territorial or genetic identity assignment."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "ward1993-differentiation",
+          "authors": "R. H. Ward; A. Redd; D. Valencia; B. L. Frazier; S. Pääbo",
+          "title": "Genetic and linguistic differentiation in the Americas.",
+          "year": 1993,
+          "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC47837/",
+          "access": "Primary PMC abstract read; full page-image paper not read. Historical Amerind/Na-Dene labels in this abstract are not adopted as current classification.",
+          "doi": "10.1073/pnas.90.22.10663",
+          "referenceType": "journal-article"
+        }
+      ],
+      "overlay": {
+        "kind": "language",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No language borders or movement geometry asserted.",
+        "provenance": "Only the cited study scope is retained."
+      },
+      "linguistics": {
+        "languages": [
+          {
+            "id": "nuuchahnulth",
+            "name": "Nuu-chah-nulth"
+          },
+          {
+            "id": "bella-coola",
+            "name": "Bella Coola (Nuxalk)"
+          },
+          {
+            "id": "haida",
+            "name": "Haida"
+          }
+        ],
+        "claimId": "finding",
+        "scope": "Methodological observation about the three sampled communities; not a genealogy of their languages.",
+        "uncertainty": "Limited mtDNA comparison; the paper’s Amerind and Na-Dene labels are historical classifications and are not adopted here. No ancient sample is assigned a language."
+      },
+      "review": {
+        "summary": "Ward and colleagues’ mitochondrial comparison of Nuu-chah-nulth, Bella Coola and Haida samples found no clustering that matched the linguistic grouping used in their study.",
+        "limitations": "Limited mtDNA comparison; the paper’s Amerind and Na-Dene labels are historical classifications and are not adopted here. No ancient sample is assigned a language.",
+        "discussion": "Separate established affiliations from proposed remote connections. Language history does not identify the language of an ancient genetic sample.",
+        "provenance": "Supplied three-page linguistic-roots synopsis and all 15 RIS entries reconciled with primary metadata/abstracts on 2026-10-28. Access limits are recorded per source.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Staged separately for review; no integration or deployment."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "language-aleut-utian-hypothesis",
+      "revision": 1,
+      "type": "event",
+      "title": "Aleut–Utian — proposed remote linguistic relationship",
+      "culture": {
+        "id": "unknown",
+        "name": "Unknown attribution",
+        "kind": "unknown",
+        "color": "#9babb5"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "unplaced",
+        "start": null,
+        "end": null,
+        "original": "No independently verified absolute language distribution interval.",
+        "method": "Historical linguistic or methodological interpretation; no date inferred from publication year or genetics.",
+        "interpretation": "Unplaced context or model, not a dated occupation or migration."
+      },
+      "claims": [
+        {
+          "id": "finding",
+          "text": "Brown and colleagues propose an Aleut–Utian connection and a coastal dispersal interpretation; the publisher describes a hypothesis challenging familiar classifications.",
+          "status": "under discussion",
+          "explanation": "Publisher description only; full comparative evidence and independent reception not reviewed. This proposal does not replace established classifications or equate mtDNA with language descent.",
+          "support": [
+            {
+              "sourceId": "brown2024-aleut-utian",
+              "locator": "Abstract or publisher description (see source access)",
+              "stance": "supports",
+              "note": "Supports the bounded attributed finding; not a territorial or genetic identity assignment."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "brown2024-aleut-utian",
+          "authors": "Cecil H. Brown; Kent G. Lightfoot; Nancy J. Turner; Dana Lepofsky",
+          "title": "Linguistic and Genetic (mtDNA) Connections between Native Peoples of Alaska and California: Ancient Mariners of the Middle Holocene",
+          "year": 2024,
+          "venue": "Lexington Books",
+          "url": "https://www.bloomsbury.com/au/linguistic-and-genetic-mtdna-connections-between-native-peoples-of-alaska-and-california-9781978796065/",
+          "access": "Primary publisher description, contents and authors checked. Full comparative argument not read; proposed affiliation is retained only as attributed hypothesis. RIS DOI retained as supplied, not independently resolved.",
+          "doi": "10.5040/9798881890735",
+          "referenceType": "book",
+          "publisher": "Lexington Books"
+        }
+      ],
+      "overlay": {
+        "kind": "language",
+        "basis": "unmapped",
+        "geometry": null,
+        "precision": "No language borders or movement geometry asserted.",
+        "provenance": "Only the cited study scope is retained."
+      },
+      "linguistics": {
+        "languages": [
+          {
+            "id": "aleut",
+            "name": "Aleut (Unangam Tunuu)"
+          },
+          {
+            "id": "utian",
+            "name": "Utian languages"
+          }
+        ],
+        "claimId": "finding",
+        "scope": "Proposed Alaska–California linguistic relationship; no direct descent arrow or voyage route encoded.",
+        "uncertainty": "Publisher description only; full comparative evidence and independent reception not reviewed. This proposal does not replace established classifications or equate mtDNA with language descent.",
+        "relationship": {
+          "kind": "unclassified",
+          "from": "aleut",
+          "to": "utian"
+        }
+      },
+      "review": {
+        "summary": "Brown and colleagues propose an Aleut–Utian connection and a coastal dispersal interpretation; the publisher describes a hypothesis challenging familiar classifications.",
+        "limitations": "Publisher description only; full comparative evidence and independent reception not reviewed. This proposal does not replace established classifications or equate mtDNA with language descent.",
+        "discussion": "Separate established affiliations from proposed remote connections. Language history does not identify the language of an ancient genetic sample.",
+        "provenance": "Supplied three-page linguistic-roots synopsis and all 15 RIS entries reconciled with primary metadata/abstracts on 2026-10-28. Access limits are recorded per source.",
+        "reviewedAt": "2026-10-28",
+        "history": [
+          "2026-10-28: Staged separately for review; no integration or deployment."
+        ],
+        "relatedIds": []
+      }
+    }
+  ],
+  "updates": [
+    {
+      "recordId": "sw-utoaztecan-language-inference",
+      "claimId": "northern-linguistic-model",
+      "source": {
+        "id": "greenhill2023-utoaztecan",
+        "authors": "Simon J. Greenhill; Hannah J. Haynie; Robert M. Ross; Angela M. Chira; Johann-Mattis List; Lyle Campbell; Carlos A. Botero; Russell D. Gray",
+        "title": "A recent northern origin for the Uto-Aztecan family",
+        "year": 2023,
+        "venue": "Language 99(1):81–107",
+        "url": "https://researchers.mq.edu.au/en/publications/a-recent-northern-origin-for-the-uto-aztecan-family/",
+        "access": "Author institutional abstract and bibliographic record read; DOI and pages follow institutional record rather than supplied RIS. Full analysis and absolute time convention not independently checked.",
+        "doi": "10.1353/lan.2023.0006",
+        "referenceType": "journal-article",
+        "pages": "81–107"
+      },
+      "stance": "supports",
+      "locator": "Author institutional abstract",
+      "note": "Adds an alternative linguistic reconstruction alongside the existing ancestry-based southern-origin interpretation. A model age is not an archaeological occupation date.",
+      "newClaim": {
+        "id": "northern-linguistic-model",
+        "text": "Greenhill and colleagues infer a northern Uto-Aztecan homeland near Southern California and an ancestor age around 4,100 years (reported range 3,258–5,025) from Bayesian lexical analysis; their reconstruction favors foraging rather than cultivation.",
+        "status": "under discussion",
+        "explanation": "Attributed linguistic model, not decisive rejection of all alternatives. DNA cannot identify the languages spoken by sampled ancestors; the existing Nakatsuka interpretation remains separately documented.",
+        "support": []
+      }
+    }
+  ],
+  "sourceRegister": [
+    {
+      "source": {
+        "id": "rice2001-review",
+        "authors": "Keren Rice",
+        "title": "The Languages of Native North America (review)",
+        "year": 2001,
+        "venue": "Language",
+        "url": "https://doi.org/10.1353/lan.2001.0104",
+        "access": "Cambridge publisher metadata and review scope inspected; no abstract supplied. Review of Marianne Mithun (1999), not the original monograph.",
+        "doi": "10.1353/lan.2001.0104",
+        "referenceType": "journal-article"
+      },
+      "inputOccurrences": 1,
+      "risEntry": 1,
+      "disposition": "Register only: review of a reference work, not independently verified support for the synopsis family count.",
+      "suppliedDOI": "10.1353/lan.2001.0104"
+    },
+    {
+      "source": {
+        "id": "campbell2024-languages",
+        "authors": "Lyle Campbell",
+        "title": "The Indigenous Languages of the Americas: History and Classification",
+        "year": 2024,
+        "venue": "Oxford University Press",
+        "url": "https://academic.oup.com/book/57386",
+        "access": "Oxford publisher book abstract and contents inspected; chapter-specific family counts and detailed reconstructions not independently read.",
+        "doi": "10.1093/oso/9780197673461.001.0001",
+        "referenceType": "book",
+        "publisher": "Oxford University Press"
+      },
+      "inputOccurrences": 1,
+      "risEntry": 2,
+      "disposition": "Background source for plurality, classification and unresolved remote relationships; precise counts withheld.",
+      "suppliedDOI": "10.1093/oso/9780197673461.001.0001"
+    },
+    {
+      "source": {
+        "id": "bolnick2004-classification",
+        "authors": "Deborah A. Weiss Bolnick; Beth A. Schultz Shook; Lyle Campbell; Ives Goddard",
+        "title": "Problematic use of Greenberg's linguistic classification of the Americas in studies of Native American genetic variation.",
+        "year": 2004,
+        "venue": "American journal of human genetics",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/15284953/",
+        "access": "PubMed primary bibliographic record checked (no abstract); PMC full-text endpoint returned a browser challenge. Detailed statistical claim not verified.",
+        "doi": "10.1086/423452",
+        "referenceType": "journal-article"
+      },
+      "inputOccurrences": 1,
+      "risEntry": 3,
+      "disposition": "Register only pending primary full-text inspection; criticism identified but 40.4% statistic not promoted.",
+      "suppliedDOI": "10.1086/423452"
+    },
+    {
+      "source": {
+        "id": "kilarski2021-history",
+        "authors": "Marcin Kilarski",
+        "title": "A History of the Study of the Indigenous Languages of North America",
+        "year": 2021,
+        "venue": "Studies in the History of the Language Sciences 129",
+        "url": "https://www.benjamins.com/catalog/sihols.129",
+        "access": "Publisher description and contents read; chapters not read.",
+        "doi": "10.1075/sihols.129",
+        "referenceType": "book",
+        "publisher": "John Benjamins"
+      },
+      "inputOccurrences": 1,
+      "risEntry": 4,
+      "disposition": "Used for bounded typological/family examples, not inferred migration dates.",
+      "suppliedDOI": "10.1075/sihols.129"
+    },
+    {
+      "source": {
+        "id": "sicoli-holton2014",
+        "authors": "Mark A. Sicoli; Gary Holton",
+        "title": "Linguistic Phylogenies Support Back-Migration from Beringia to Asia",
+        "year": 2014,
+        "venue": "PLOS ONE 9(3), e91722",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0091722",
+        "access": "Primary publisher abstract, model-comparison results, Figure 2 caption and discussion limitations inspected; data not reanalysed.",
+        "doi": "10.1371/journal.pone.0091722",
+        "referenceType": "journal-article"
+      },
+      "inputOccurrences": 1,
+      "risEntry": 5,
+      "disposition": "New unplaced attributed Dene–Yeniseian dispersal-model record.",
+      "suppliedDOI": "10.1371/journal.pone.0091722"
+    },
+    {
+      "source": {
+        "id": "thomason2006-review",
+        "authors": "Sarah G. Thomason",
+        "title": "Handbook of North American Indians, vol. 17: Languages (review)",
+        "year": 2006,
+        "venue": "Language 82(4):912–915",
+        "url": "https://doi.org/10.1353/lan.2006.0231",
+        "access": "Cambridge publisher review metadata checked. Publication year corrected to December 2006 issue; reviewed work is Goddard (ed.), 1996.",
+        "doi": "10.1353/lan.2006.0231",
+        "referenceType": "journal-article"
+      },
+      "inputOccurrences": 1,
+      "risEntry": 6,
+      "disposition": "Register only: bibliography corrected; review is not the handbook itself.",
+      "suppliedDOI": "10.1353/lan.2006.0231"
+    },
+    {
+      "source": {
+        "id": "bartholomew1999-review",
+        "authors": "Doris Bartholomew",
+        "title": "Review of American Indian languages: The historical linguistics of Native America, by Lyle Campbell (1997)",
+        "year": 1999,
+        "venue": "Language 75(3):596–600",
+        "url": "https://doi.org/10.2307/417069",
+        "access": "Cambridge publisher metadata checked. RIS incorrectly credits reviewed-book author Campbell as review author; review is by Doris Bartholomew.",
+        "doi": "10.2307/417069",
+        "referenceType": "journal-article"
+      },
+      "inputOccurrences": 1,
+      "risEntry": 7,
+      "disposition": "Register only: review authorship and pages corrected; not treated as Campbell’s monograph.",
+      "suppliedDOI": "10.2307/417069"
+    },
+    {
+      "source": {
+        "id": "greenberg1986-settlement",
+        "authors": "Joseph H. Greenberg; Christy G. Turner II; Stephen L. Zegura; with comments by Lyle Campbell, James A. Fox, W. S. Laughlin, Emöke J. E. Szathmary, Kenneth M. Weiss and Ellen Woolford",
+        "title": "The Settlement of the Americas: A Comparison of the Linguistic, Dental, and Genetic Evidence [and Comments and Reply]",
+        "year": 1986,
+        "venue": "Current Anthropology",
+        "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/203472",
+        "access": "Primary publisher abstract and metadata read; commenters are not treated as endorsers of the proposed three-stock hypothesis.",
+        "doi": "10.1086/203472",
+        "referenceType": "journal-article"
+      },
+      "inputOccurrences": 1,
+      "risEntry": 8,
+      "disposition": "Register only: historical Amerind/three-migration proposal, not accepted family taxonomy or endorsement by commenters.",
+      "suppliedDOI": "10.1086/203472"
+    },
+    {
+      "source": {
+        "id": "ward1993-differentiation",
+        "authors": "R. H. Ward; A. Redd; D. Valencia; B. L. Frazier; S. Pääbo",
+        "title": "Genetic and linguistic differentiation in the Americas.",
+        "year": 1993,
+        "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC47837/",
+        "access": "Primary PMC abstract read; full page-image paper not read. Historical Amerind/Na-Dene labels in this abstract are not adopted as current classification.",
+        "doi": "10.1073/pnas.90.22.10663",
+        "referenceType": "journal-article"
+      },
+      "inputOccurrences": 1,
+      "risEntry": 9,
+      "disposition": "New methodological comparison record; outdated language-group labels excluded.",
+      "suppliedDOI": "10.1073/pnas.90.22.10663"
+    },
+    {
+      "source": {
+        "id": "urban-naranjo2025",
+        "authors": "Matthias Urban; Matías Guzmán Naranjo",
+        "title": "Gradient in grammatical structure of indigenous languages reflects pathway of human expansion in the Americas",
+        "year": 2025,
+        "venue": "Scientific Reports",
+        "url": "https://www.nature.com/articles/s41598-025-86265-8",
+        "access": "Primary publisher abstract and indexed results discussion inspected; spatial model not independently reproduced.",
+        "doi": "10.1038/s41598-025-86265-8",
+        "referenceType": "journal-article"
+      },
+      "inputOccurrences": 1,
+      "risEntry": 10,
+      "disposition": "New unplaced typological-gradient model record; does not verify Dene–Yeniseian.",
+      "suppliedDOI": "10.1038/s41598-025-86265-8"
+    },
+    {
+      "source": {
+        "id": "brown2024-aleut-utian",
+        "authors": "Cecil H. Brown; Kent G. Lightfoot; Nancy J. Turner; Dana Lepofsky",
+        "title": "Linguistic and Genetic (mtDNA) Connections between Native Peoples of Alaska and California: Ancient Mariners of the Middle Holocene",
+        "year": 2024,
+        "venue": "Lexington Books",
+        "url": "https://www.bloomsbury.com/au/linguistic-and-genetic-mtdna-connections-between-native-peoples-of-alaska-and-california-9781978796065/",
+        "access": "Primary publisher description, contents and authors checked. Full comparative argument not read; proposed affiliation is retained only as attributed hypothesis. RIS DOI retained as supplied, not independently resolved.",
+        "doi": "10.5040/9798881890735",
+        "referenceType": "book",
+        "publisher": "Lexington Books"
+      },
+      "inputOccurrences": 1,
+      "risEntry": 11,
+      "disposition": "New attributed Aleut–Utian hypothesis record; no consensus status or dated sea route.",
+      "suppliedDOI": "10.5040/9798881890735"
+    },
+    {
+      "source": {
+        "id": "harvey2018-native-views",
+        "authors": "Sean P. Harvey",
+        "title": "Native Views of Native Languages: Communication and Kinship in Eastern North America, ca. 1800–1830",
+        "year": 2018,
+        "venue": "The William and Mary Quarterly",
+        "url": "https://shu.elsevierpure.com/en/publications/native-views-of-native-languages-communication-and-kinship-in-eas/",
+        "access": "Author institutional abstract read; scope is Indigenous conceptions of language and relationship circa 1800–1830, not deep-time phylogenetic reconstruction.",
+        "doi": "10.5309/willmaryquar.75.4.0651",
+        "referenceType": "journal-article"
+      },
+      "inputOccurrences": 1,
+      "risEntry": 12,
+      "disposition": "Register only: historical Indigenous language concepts, distinct from family origins.",
+      "suppliedDOI": "10.5309/willmaryquar.75.4.0651"
+    },
+    {
+      "source": {
+        "id": "perley2025-sovereignty",
+        "authors": "Bernard C. Perley",
+        "title": "Documenting the Unexpected: Repatriating Native American Linguistic Sovereignty in Northeastern Ancestral Lands",
+        "year": 2025,
+        "venue": "American Indian Culture and Research Journal",
+        "url": "https://escholarship.org/content/qt8pc9j2gg/qt8pc9j2gg_noSplash_2d2f78481f852a6f2976effa14f374d8.pdf",
+        "access": "Primary institutional full-text opening and indexed conclusion excerpts inspected; scope is language sovereignty, revitalization and emergent vitality, not a prehistoric family tree.",
+        "doi": "10.17953/a3.6556",
+        "referenceType": "journal-article"
+      },
+      "inputOccurrences": 1,
+      "risEntry": 13,
+      "disposition": "Register only: linguistic sovereignty and revitalization; not source for ancient boundaries.",
+      "suppliedDOI": "10.17953/a3.6556"
+    },
+    {
+      "source": {
+        "id": "silver-miller1998",
+        "authors": "Shirley Silver; Wick R. Miller",
+        "title": "American Indian Languages: Cultural and Social Contexts",
+        "year": 1998,
+        "venue": "University of Arizona Press",
+        "url": "https://uapress.arizona.edu/book/american-indian-languages",
+        "access": "Primary publisher description and edition metadata read; publisher gives January 1998 ebook and July 2000 paperback. No dated prehistoric distributions extracted.",
+        "referenceType": "book",
+        "publisher": "University of Arizona Press"
+      },
+      "inputOccurrences": 1,
+      "risEntry": 14,
+      "disposition": "Register only: general language/cultural diversity context, not a dated dispersal.",
+      "suppliedDOI": null
+    },
+    {
+      "source": {
+        "id": "greenhill2023-utoaztecan",
+        "authors": "Simon J. Greenhill; Hannah J. Haynie; Robert M. Ross; Angela M. Chira; Johann-Mattis List; Lyle Campbell; Carlos A. Botero; Russell D. Gray",
+        "title": "A recent northern origin for the Uto-Aztecan family",
+        "year": 2023,
+        "venue": "Language 99(1):81–107",
+        "url": "https://researchers.mq.edu.au/en/publications/a-recent-northern-origin-for-the-uto-aztecan-family/",
+        "access": "Author institutional abstract and bibliographic record read; DOI and pages follow institutional record rather than supplied RIS. Full analysis and absolute time convention not independently checked.",
+        "doi": "10.1353/lan.2023.0006",
+        "referenceType": "journal-article",
+        "pages": "81–107"
+      },
+      "inputOccurrences": 1,
+      "risEntry": 15,
+      "disposition": "New alternative linguistic-model claim attached to existing Uto-Aztecan inference record; existing ancestry-based interpretation retained.",
+      "suppliedDOI": "10.1353/lan.0.0276"
+    }
+  ],
+  "unresolved": [
+    "Bolnick full text was inaccessible through the attempted primary endpoint. The 40.4% variance comparison is not independently verified and is omitted from accepted findings; even a valid AMOVA comparison would not prove language descent.",
+    "No universal 8,000–10,000-year ceiling for comparative linguistics is accepted from this synopsis; dating and recoverability depend on evidence and methods.",
+    "No chapter-level count of families versus isolates was checked. “Around 50 families and numerous isolates” risks conflating categories and is not used.",
+    "Brown’s supplied DOI remains unresolved independently; the publisher title, authors, year and scope were verified through its book page.",
+    "Greenhill’s abstract age range is a model estimate; its reference year and full calibration assumptions were not checked, so no calendar conversion or closed language-distribution interval is assigned."
+  ],
+  "corrections": [
+    "Na-Dené and proposed Dene–Yeniseian relationship are not equivalent levels of classification. The PDF’s “linked by consensus” and “confirm” wording is replaced by attributed model language.",
+    "Urban and Guzmán Naranjo investigate a continental structural gradient; that result is not a demonstration of Dene–Yeniseian descent or an observed migration.",
+    "Greenhill’s northern Uto-Aztecan origin is one model, not a disproof of every southern or agricultural scenario. Preserve the existing Nakatsuka alternative and distinguish genes from language.",
+    "Greenhill pages are 81–107, not RIS 107–181 or PDF 107–81. Institutional DOI is 10.1353/lan.2023.0006; supplied 10.1353/lan.0.0276 remains in provenance.",
+    "10.2307/417069 identifies Doris Bartholomew’s 1999 review of Campbell’s 1997 book, not a Campbell-authored 1999 original study.",
+    "Thomason’s handbook review belongs to Language 82(4), December 2006, not 2007.",
+    "Kilarski and Silver–Miller are books, although the RIS labels them JOUR; Brown author initials are expanded from publisher metadata.",
+    "Brown’s book proposes Aleut–Utian and challenges familiar affiliations; its publisher description cannot be recast as general consensus support for the synopsis family table.",
+    "Ward’s historical use of Amerind and placement of Haida in Na-Dene are not adopted. Sicoli–Holton explicitly treat Haida as an unrelated isolate outgroup.",
+    "Typological traits, genetic correlations, language family membership and community identities are separate evidence categories. No family is assigned to ancient genomic samples."
+  ],
+  "provenance": {
+    "batch": "round3-dump3",
+    "pdf": "what_are_the_linguistic_roots_of_the_languages_of_.pdf",
+    "pagesRead": 3,
+    "risEntriesReconciled": 15,
+    "archive": "../intake-2026-10-28-round3/dump3/manifest.json",
+    "comparison": "Compared evidence.json, research-proposals.json and staged intake sidecars including atlantic-canada, amazon-isolation, lapita-followup, northeast-dump2, midwest-dump2 and atlantic-models-dump2. Only Uto-Aztecan candidate overlaps materially.",
+    "deployment": "held"
+  }
+}

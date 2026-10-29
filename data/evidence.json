@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "0.3.1",
+  "version": "0.3.2",
   "reviewedAt": "2026-10-28",
   "coverage": "Eight source-traceable examples, not comprehensive coverage. Many years and regions have no included records. No migration routes are asserted in this starter release.",
   "license": "Original summaries are supplied with the application. Scholarly works retain their own copyrights; only citation metadata, links and short original explanations are bundled.",
@@ -692,7 +692,7 @@
     },
     {
       "id": "cahokia-urban",
-      "revision": 3,
+      "revision": 4,
       "type": "occupation",
       "title": "Cahokia — urban archaeological complex",
       "culture": {
@@ -768,6 +768,20 @@
               "note": "Lohmann 1050–1100 CE; Stirling 1100–1200 CE. Fecal stanols are an independent trend proxy, not absolute resident counts."
             }
           ]
+        },
+        {
+          "id": "climate-context-bird2017",
+          "text": "Bird and colleagues propose that sustained midcontinental drought contributed to agricultural instability and population reorganization alongside sociopolitical factors.",
+          "status": "under discussion",
+          "explanation": "The regional sequence places instability in 1250–1350 and staggered settlement abandonment in 1350–1450. It does not replace Cahokia’s site chronology or prove sole climatic causation; the introduction also acknowledges flooding evidence.",
+          "support": [
+            {
+              "sourceId": "climate-d3-9",
+              "stance": "supports",
+              "locator": "Abstract; Introduction",
+              "note": "The regional sequence places instability in 1250–1350 and staggered settlement abandonment in 1350–1450. It does not replace Cahokia’s site chronology or prove sole climatic causation; the introduction also acknowledges flooding evidence."
+            }
+          ]
         }
       ],
       "sources": [
@@ -811,6 +825,18 @@
           "url": "https://doi.org/10.1016/j.jas.2018.03.009",
           "access": "Publisher abstract and indexed article introductory passage read; phase chronology checked. Full article tables were not accessed. Author-hosted PDF identified but robot verification prevented full access.",
           "doi": "10.1016/j.jas.2018.03.009"
+        },
+        {
+          "id": "climate-d3-9",
+          "authors": "Bird, B.; Wilson, Jeremy; Gilhooly, W.; Steinman, B.; Stamps, Lucas",
+          "title": "Midcontinental Native American population dynamics and late Holocene hydroclimate extremes",
+          "year": 2017,
+          "venue": "Scientific Reports",
+          "url": "https://doi.org/10.1038/srep41628",
+          "doi": "10.1038/srep41628",
+          "referenceType": "journal-article",
+          "access": "Nature primary abstract and introduction inspected. Climate-demographic mechanism remains an explicit hypothesis; lake proxy is not a site population census.",
+          "volume": "7"
         }
       ],
       "review": {
@@ -822,7 +848,8 @@
         "history": [
           "2026-10-28: Initial source-traceable starter entry.",
           "2026-10-28: linked existing official geographic references explicitly as location context, without changing archaeological dating.",
-          "2026-10-28: UNESCO coordinate and qualified sourced population phases added."
+          "2026-10-28: UNESCO coordinate and qualified sourced population phases added.",
+          "2026-10-28: supplementary source and interpretation context added."
         ],
         "relatedIds": [
           "river-labbe-mission"

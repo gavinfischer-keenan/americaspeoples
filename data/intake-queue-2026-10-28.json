@@ -1,15 +1,15 @@
 {
   "publicRelease": {
-    "version": "0.3.0",
-    "records": 267,
-    "tag": "4fb65d166576cb2295f53e3f0b560fb603ca8e97",
-    "releaseDirectory": "/srv/tripofisch/releases/20261028T234637Z",
+    "version": "0.3.2",
+    "records": 482,
+    "tag": "v0.3.2",
+    "releaseDirectory": "/srv/tripofisch/releases/20261029T005925Z",
     "verified": true
   },
-  "workingVersion": "0.3.1",
-  "deployment": "Author closed intake and authorized full update and deployment, including language overlay, on 2026-10-28.",
+  "workingVersion": "0.3.2",
+  "deployment": "Round3 deployed and publicly verified; author authorized with dump3.",
   "archivedExports": 37,
-  "workingRecords": 405,
+  "workingRecords": 482,
   "batches": [
     {
       "name": "patagonia-north",
@@ -83,12 +83,65 @@
   ],
   "batchClosed": true,
   "preparedRelease": {
-    "version": "0.3.1",
-    "records": 405,
-    "claims": 624,
-    "sourceMappings": 779,
-    "archivedExports": 37,
+    "version": "0.3.2",
+    "records": 482,
+    "claims": 741,
+    "sourceMappings": 914,
     "testsPassed": 67,
-    "visualVerification": "Blocked by computer-use browser URL policy support; no screenshot claimed."
+    "visualVerification": "Browser visual verification unavailable due previously reported computer-use policy limitation; public HTTP, byte and checksum checks passed."
+  },
+  "nextRound": {
+    "id": "round3",
+    "state": "all three dumps integrated and deployed",
+    "archive": "../intake-2026-10-28-round3/manifest.json",
+    "receivedFiles": 36,
+    "pdfPages": 53,
+    "risOccurrences": 586,
+    "deployment": "complete",
+    "newRecords": 77,
+    "newClaims": 117,
+    "contextUpdates": 23,
+    "candidateRecords": 482,
+    "integrated": true,
+    "validationErrors": 0,
+    "reviewFiles": [
+      "data/intake-atlantic-canada-reviewed.json",
+      "data/intake-amazon-isolation-reviewed.json",
+      "data/intake-lapita-followup-reviewed.json",
+      "data/intake-northeast-dump2-reviewed.json",
+      "data/intake-midwest-dump2-reviewed.json",
+      "data/intake-atlantic-models-dump2-reviewed.json",
+      "data/intake-climate-dump3-reviewed.json",
+      "data/intake-languages-dump3-reviewed.json",
+      "data/intake-corridor-dump3-reviewed.json"
+    ],
+    "summary": "../intake-2026-10-28-round3/processed-summary.json",
+    "dumps": [
+      {
+        "batch": "round3-dump1",
+        "files": 10,
+        "pdfPages": 23,
+        "risOccurrences": 487,
+        "summary": "../intake-2026-10-28-round3/processed-summary.json"
+      },
+      {
+        "batch": "round3-dump2",
+        "files": 10,
+        "pdfPages": 15,
+        "risOccurrences": 43,
+        "summary": "../intake-2026-10-28-round3/dump2/processed-summary.json"
+      },
+      {
+        "batch": "round3-dump3",
+        "files": 16,
+        "newFiles": 8,
+        "duplicateFiles": 8,
+        "newPDFPages": 15,
+        "newRISEntries": 56,
+        "validation": "../intake-2026-10-28-round3/dump3/validation.json"
+      }
+    ],
+    "uniqueFiles": 28,
+    "duplicateFiles": 8
   }
 }
