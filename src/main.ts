@@ -462,7 +462,7 @@ function proposalsPage() {
         );
       } else if (file.name.toLowerCase().endsWith(".json")) {
         if (file.size > MAX_PACKAGE_BYTES)
-          throw new Error("Package exceeds the 4 MB limit.");
+          throw new Error("Package exceeds the 8 MB limit.");
         pending = parsePackage(await file.text());
       } else
         throw new Error(

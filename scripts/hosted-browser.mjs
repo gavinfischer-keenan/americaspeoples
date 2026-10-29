@@ -76,7 +76,7 @@ try {
   await page
     .getByRole("heading", { name: "Your suggestions", exact: true })
     .waitFor();
-  assert.equal(await page.locator("[data-proposal-card]").count(), expectedRecords);
+  assert.equal(await page.locator("[data-proposal-card]").count(), expectedRecords + saved.proposals.length);
   const savedAfter = await page.evaluate(() =>
     localStorage.getItem("americas-peoples-proposals-v1"),
   );
@@ -84,7 +84,7 @@ try {
   await page
     .getByRole("heading", { name: "Your suggestions", exact: true })
     .waitFor();
-  assert.equal(await page.locator("[data-proposal-card]").count(), expectedRecords);
+  assert.equal(await page.locator("[data-proposal-card]").count(), expectedRecords + saved.proposals.length);
   assert.equal(
     await page.evaluate(() =>
       localStorage.getItem("americas-peoples-proposals-v1"),
@@ -102,10 +102,11 @@ try {
   assert.equal(
     JSON.parse(await readFile("test-results/hosted-proposals.json", "utf8"))
       .proposals.length,
-    expectedRecords,
+    expectedRecords + saved.proposals.length,
   );
   await page.getByRole("link", { name: "Map", exact: true }).click();
-  await page.getByLabel("Preview complete suggestions").check();
+  // Check the published map independently of the preserved local draft.
+  await page.getByLabel("Preview complete suggestions").uncheck();
   await page.getByLabel("Year number", { exact: true }).fill("1864");
   await page.getByLabel("Era", { exact: true }).selectOption("CE");
   await page.getByRole("button", { name: "Go to year", exact: true }).click();

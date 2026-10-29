@@ -190,7 +190,7 @@ Identical workbook content produces stable bulk proposal identities: repeat impo
 | Evidence data rows | 500 |
 | Data rows in each supporting sheet | 2,000 each in Claims, References, and ClaimSources |
 | Characters in one cell | 32,767 |
-| Resulting native proposal JSON package | 4 MB UTF-8, at most 500 proposals |
+| Resulting native proposal JSON package | 8 MB UTF-8, at most 1000 proposals |
 | Per-record claims and sources | 100 of each |
 | Source mappings per claim | 100 |
 
@@ -228,4 +228,4 @@ Use `forced-removal` for supported coerced displacement, with directed schematic
 
 `reach_radius_km` is an optional Overlays column used only with `overlay_type=cultural-reach`, `geometry_basis=schematic` and a Point center. It is an illustrative geographic envelope, not an established historical border. Population and reach columns are accepted without making older schema-1/schema-2 workbooks obsolete.
 
-The native JSON limit is now 4 MB and the proposal count limit 500, so the complete published correction snapshot fits. Compressed XLSX remains limited to 5 MB, expanded ZIP content to 20 MB, archive entries to 200, rows to 2000 and columns to 100. Formula, macro, external-link, unsafe-URL and prototype-key checks remain enabled.
+The native JSON limit is now 8 MB and the proposal count limit 1000, so the complete published correction snapshot fits. Compressed XLSX remains limited to 5 MB, expanded ZIP content to 20 MB, archive entries to 200, rows to 2000 and columns to 100. Formula, macro, external-link, unsafe-URL and prototype-key checks remain enabled.

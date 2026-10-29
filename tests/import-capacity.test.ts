@@ -19,14 +19,14 @@ test("larger evidence snapshots can import without removing byte and count prote
     201,
   );
   assert.throws(
-    () => parsePackage(JSON.stringify(makePackage(batch(501)))),
-    /500|4 MB/,
+    () => parsePackage(JSON.stringify(makePackage(batch(1001)))),
+    /1000|8 MB/,
   );
 });
 
 test("byte limit remains enforced for large valid JSON", () => {
   assert.throws(
-    () => parsePackage(JSON.stringify({ payload: "x".repeat(4_000_001) })),
-    /4 MB/,
+    () => parsePackage(JSON.stringify({ payload: "x".repeat(8_000_001) })),
+    /8 MB/,
   );
 });

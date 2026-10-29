@@ -1,7 +1,7 @@
 import type { EvidenceRecord, Proposal, SharePackage } from "./model";
 import { validateRecord } from "./validation";
-export const MAX_PACKAGE_BYTES = 4_000_000;
-export const MAX_PROPOSALS = 500;
+export const MAX_PACKAGE_BYTES = 8_000_000;
+export const MAX_PROPOSALS = 1000;
 export function canonical(value: unknown): string {
   if (Array.isArray(value)) return "[" + value.map(canonical).join(",") + "]";
   if (value && typeof value === "object")
@@ -82,7 +82,7 @@ export function makePackage(proposals: Proposal[]): SharePackage {
 export function parsePackage(raw: string): SharePackage {
   if (new TextEncoder().encode(raw).length > MAX_PACKAGE_BYTES)
     throw new Error(
-      "Package exceeds the 4 MB limit. Export fewer rows at a time.",
+      "Package exceeds the 8 MB limit. Export fewer rows at a time.",
     );
   let p: SharePackage;
   try {
