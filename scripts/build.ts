@@ -13,6 +13,7 @@ import { createHash } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { zipSync } from "fflate";
+import { execFileSync } from 'node:child_process';
 import { validateDataset } from "../src/validation";
 import { marked } from "marked";
 import { createAppendix, renderAppendix } from "./appendix";
@@ -77,6 +78,10 @@ for(const [from,to] of [
  ["data/coverage-audit.json","coverage-audit.json"],
  ["data/temporal-review-2026-10-29.json","temporal-review.json"],
  ["data/intake-queue-round7.json","intake-queue-round7.json"],
+ ["data/round8-synthesis.json","round8-synthesis.json"],
+ ["docs/round8-synthesis.html","docs/round8-synthesis.html"],
+ ["data/colonial-ai-registry.json","colonial-ai-registry.json"],
+ ["docs/colonial-ai-registry.html","docs/colonial-ai-registry.html"],
  ["data/hazard-events.json","hazard-events.json"],
  ["data/physical-sources/fetch-manifest.json","physical-source-manifest.json"],
 ]){await copyFile(from,`dist/${to}`);names.push(to);}
@@ -115,12 +120,16 @@ for (const [name, content] of Object.entries({
 }
 const files: Record<string, Uint8Array> = {};
 for (const name of names)
-  files[`americas-peoples/${name}`] = new Uint8Array(
+  files[`americas-peoples/web/${name}`] = new Uint8Array(
     await readFile("dist/" + name),
   );
+execFileSync(process.env.PYTHON_PATH || 'python', ['server/database.py','--dataset','dist/dataset.json','--hazards','data/hazard-events.json','--ice','data/ice-snapshots.json','--target','release/atlas.sqlite3'],{stdio:'inherit'});
+for(const name of ['server/app.py','server/database.py'])files['americas-peoples/'+name]=new Uint8Array(await readFile(name));
+files['americas-peoples/data/atlas.sqlite3']=new Uint8Array(await readFile('release/atlas.sqlite3'));
+files['americas-peoples/DEPLOYMENT.md']=new Uint8Array(await readFile('DEPLOYMENT.md'));
 const zip = zipSync(files, { level: 9 });
-const releaseName = `americas-peoples-v${version}-offline.zip`;
-await writeFile("release/americas-peoples-offline.zip", zip);
+const releaseName = `americas-peoples-v${version}-selfhost.zip`;
+await writeFile("release/americas-peoples-selfhost.zip", zip);
 await writeFile(`release/${releaseName}`, zip);
 const artifactFiles = [
   {
@@ -157,5 +166,5 @@ await writeFile(
   artifacts.map((a) => `${a.sha256}  ${a.filename}`).join("\n") + "\n",
 );
 console.log(
-  `Built offline file:// release with ${published.records.length} evidence reviews.`,
+  `Built hybrid self-host release with ${published.records.length} evidence reviews.`,
 );

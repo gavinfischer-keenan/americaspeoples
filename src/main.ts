@@ -1,6 +1,6 @@
 import "./styles.css";
 import { version as appVersion } from "../package.json";
-import { dataset } from "./published-data";
+import { dataset, fullRecord, completeDataset, searchRecordIds } from "./client-data";
 import land from "../data/land.geojson";
 import type {
   Dataset,
@@ -22,7 +22,7 @@ import {
 } from "./time";
 import { timelinePosition, timelineYear, smartYearsPerSecond, type TimelineScale } from "./timeline";
 import { MapView } from "./map";
-import {climateKinds,climateLabels,climateCategory,physicalHTML,iceSnapshot,eventsAt,hazardTimes,hazardEvents,openHazardDate} from "./physical";
+import {climateKinds,climateLabels,climateCategory,physicalHTML,iceSnapshot,iceTarget,requestIce,eventsAt,hazardTimes,hazardEvents,openHazardDate,fullHazard} from "./physical";
 import { isModeledRecord, filterMapRecords } from "./map-filters";
 import { esc, $, downloadJSON } from "./dom";
 import { reviewHTML, recordHref, comparisonHTML } from "./review";
@@ -37,6 +37,7 @@ import {
 } from "./proposals";
 import { validateRecord } from "./validation";
 import { importWorkbook } from "./xlsx-import";
+import { encodeLocalCollection, decodeLocalCollection } from "./local-storage";
 import { disputeLevel, disputeLabel } from "./disputes";
 import { populationAt } from "./population";
 import { OVERLAY_LABELS } from "./overlays";
@@ -73,7 +74,7 @@ const mapRows = () => filterMapRecords(rows(), hiddenLayers, showModeled).filter
 const storeKey = "americas-peoples-proposals-v1";
 try {
   const saved = localStorage.getItem(storeKey);
-  if (saved) proposals = parsePackage(saved).proposals;
+  if (saved) proposals = parsePackage(decodeLocalCollection(saved)).proposals;
   localStorage.setItem("ap-storage-check", "1");
   localStorage.removeItem("ap-storage-check");
 } catch {
@@ -105,7 +106,7 @@ const rows = (): DisplayRecord[] => {
   return base.filter((r) => !hiddenCultures.has(r.culture.id));
 };
 const app = $("#app");
-app.innerHTML = `<header class="topbar"><a class="brand" href="#map"><span class="brand-mark">◈</span><span><h1>Americas Peoples</h1><small>AN ATLAS OF HUMAN EVIDENCE</small></span></a><nav aria-label="Main navigation"><a href="#map">Map</a><a href="#evidence">Events / Evidence</a><a href="#context">Movement &amp; context</a><a href="#proposals">Suggestions <span id="proposal-count">${proposals.length}</span></a><a href="#about">About</a>${location.protocol === "file:" ? "" : '<a href="https://tripofisch.com/privacy/">Privacy &amp; analytics</a>'}</nav><span class="offline-badge"><i></i> ${location.protocol === "file:" ? "Fully offline" : "Local processing"}</span></header><div class="shell"><main id="main" tabindex="-1"></main></div><footer class="timeline"><div class="time-top"><div class="year-display"><span class="eyebrow">EXPLORING THE RECORD AT</span><strong id="current-year"></strong></div><div class="playback"><button id="restart" title="Earliest evidence" aria-label="Earliest evidence">↤</button><button id="play" class="play-button" aria-label="Play">▶ Play</button><label>Speed<select id="speed" aria-label="Playback speed" title="Smart adapts to evidence density in enabled layers; brief events still pause"><option value="smart" selected>Smart · evidence density</option><option value="10">10 years / sec</option><option value="50">50 years / sec</option><option value="250">250 years / sec</option><option value="1000">1,000 years / sec</option></select></label><label>Scale<select id="time-scale" aria-label="Timeline scale"><option value="log" selected>Logarithmic</option><option value="linear">Linear</option></select></label></div><form id="year-form" class="year-form"><label class="sr-only" for="year-number">Year number</label><input id="year-number" type="number" min="1" step="1" aria-label="Year number"><select id="era" aria-label="Era"><option>BCE</option><option>CE</option></select><button type="submit" aria-label="Go to year">Go</button></form><label class="range-window">Timeline window<select id="window" aria-label="Timeline window"><option value="all">Entire record</option><option value="1000">± 1,000 years</option><option value="100">± 100 years</option><option value="10">± 10 years</option></select></label></div><div id="time-error" role="alert"></div><div class="slider-wrap"><input type="range" id="time-slider" min="0" max="1000000" step="1" value="0" aria-label="Timeline year" aria-describedby="timeline-note"><div id="time-ticks" class="time-ticks" aria-hidden="true"></div><div class="range-labels"><span id="range-start"></span><span><span id="timeline-note">Logarithmic scale · equal distances cover unequal years</span> <span class="keyhint">← →</span></span><span id="range-end">${END_YEAR} CE · Indian Reorganization Act</span></div></div></footer><div id="toast" role="status"></div>`;
+app.innerHTML = `<header class="topbar"><a class="brand" href="#map"><span class="brand-mark">◈</span><span><h1>Americas Peoples</h1><small>AN ATLAS OF HUMAN EVIDENCE</small></span></a><nav aria-label="Main navigation"><a href="#map">Map</a><a href="#evidence">Events / Evidence</a><a href="#context">Movement &amp; context</a><a href="#proposals">Suggestions <span id="proposal-count">${proposals.length}</span></a><a href="#about">About</a>${location.protocol === "file:" ? "" : '<a href="https://tripofisch.com/privacy/">Privacy &amp; analytics</a>'}</nav><span class="offline-badge"><i></i> ${location.protocol === "file:" ? "Fully offline" : "Server-backed atlas"}</span></header><div class="shell"><main id="main" tabindex="-1"></main></div><footer class="timeline"><div class="time-top"><div class="year-display"><span class="eyebrow">EXPLORING THE RECORD AT</span><strong id="current-year"></strong></div><div class="playback"><button id="restart" title="Earliest evidence" aria-label="Earliest evidence">↤</button><button id="play" class="play-button" aria-label="Play">▶ Play</button><label>Speed<select id="speed" aria-label="Playback speed" title="Smart adapts to evidence density in enabled layers; brief events still pause"><option value="smart" selected>Smart · evidence density</option><option value="10">10 years / sec</option><option value="50">50 years / sec</option><option value="250">250 years / sec</option><option value="1000">1,000 years / sec</option></select></label><label>Scale<select id="time-scale" aria-label="Timeline scale"><option value="log" selected>Logarithmic</option><option value="linear">Linear</option></select></label></div><form id="year-form" class="year-form"><label class="sr-only" for="year-number">Year number</label><input id="year-number" type="number" min="1" step="1" aria-label="Year number"><select id="era" aria-label="Era"><option>BCE</option><option>CE</option></select><button type="submit" aria-label="Go to year">Go</button></form><label class="range-window">Timeline window<select id="window" aria-label="Timeline window"><option value="all">Entire record</option><option value="1000">± 1,000 years</option><option value="100">± 100 years</option><option value="10">± 10 years</option></select></label></div><div id="time-error" role="alert"></div><div class="slider-wrap"><input type="range" id="time-slider" min="0" max="1000000" step="1" value="0" aria-label="Timeline year" aria-describedby="timeline-note"><div id="time-ticks" class="time-ticks" aria-hidden="true"></div><div class="range-labels"><span id="range-start"></span><span><span id="timeline-note">Logarithmic scale · equal distances cover unequal years</span> <span class="keyhint">← →</span></span><span id="range-end">${END_YEAR} CE · Indian Reorganization Act</span></div></div></footer><div id="toast" role="status"></div>`;
 const main = $("#main");
 const map = new MapView(land, (items) => {
   selected = items;
@@ -121,7 +122,7 @@ function saveLocal() {
   try {
     const text = JSON.stringify(makePackage(proposals));
     parsePackage(text);
-    localStorage.setItem(storeKey, text);
+    localStorage.setItem(storeKey, encodeLocalCollection(text));
   } catch {
     storageAvailable = false;
     announce(
@@ -355,10 +356,11 @@ function renderLegend() {
     );
 }
 function renderMapData() {
+  if(showIce)requestIce(year,iceScenario,()=>{if(mountedMap)renderMapData();},()=>{if(mountedMap)$('#ice-status').textContent='Ice snapshot could not load. Retry in30seconds or reload; missing geometry is not ice absence.';});
   const active = activeRecords(mapRows(), year);
   map.update(active, year,showUndated?mapRows().filter(r=>r.time.kind==='unplaced'):[],{ice:showIce,iceScenario,currents:showCurrents,winds:showWinds,hidden:hiddenClimate,uncertain:showUncertainHazards});
   const ice=showIce?iceSnapshot(year,iceScenario):null;
-  $('#ice-status').textContent=ice?`NADI-1 ${ice.scenario.toUpperCase()} snapshot: ${ice.ageCalBP.toLocaleString()} cal BP (${formatYear(1950-ice.ageCalBP)}). Nearest source snapshot; no interpolated edge. Age difference ${Math.abs(1950-year-ice.ageCalBP).toLocaleString()} years.`:showIce?'No NADI-1 snapshot for this year (coverage25,000–1,500cal BP). This does not mean ice absence.':'Ice boundaries hidden.';
+  $('#ice-status').textContent=ice?`NADI-1 ${ice.scenario.toUpperCase()} snapshot: ${ice.ageCalBP.toLocaleString()} cal BP (${formatYear(1950-ice.ageCalBP)}). Nearest source snapshot; no interpolated edge. Age difference ${Math.abs(1950-year-ice.ageCalBP).toLocaleString()} years.`:showIce&&iceTarget(year,iceScenario)?'Loading the dated ice snapshot from the atlas server.':showIce?'No NADI-1 snapshot for this year (coverage25,000–1,500cal BP). This does not mean ice absence.':'Ice boundaries hidden.';
   const hazards=eventsAt(year,hiddenClimate,showUncertainHazards);
   $('#hazard-status').innerHTML=hazards.length?`<p>${hazards.length} catalog / reconstructed events this year:</p>`+hazards.map(e=>`<p><a href="#physical/${e.id}">${esc(e.title)} · ${esc(e.status)}</a></p>`).join(''):'<p class="fine">No included catalog / ENSO events at this year. ENSO reconstruction covers1525–1934CE only; earlier ENSO evidence requires other sources.</p>';
   $("#active-count").textContent =
@@ -416,13 +418,21 @@ function tablePage() {
   });
   renderTableBody();
 }
-function renderTableBody() {
+let tableSearchGeneration=0;
+async function renderTableBody() {
+  const generation=++tableSearchGeneration;
+  let matchingIds:Set<string>|null=null;
+  if(search.trim()){
+    try{matchingIds=await searchRecordIds(search.slice(0,200));}
+    catch(error){if(generation===tableSearchGeneration&&location.hash==='#evidence')$('#table-caption').textContent=(error as Error).message;return;}
+    if(generation!==tableSearchGeneration||location.hash!=='#evidence')return;
+  }
   let records = rows().filter(
     (r) =>
       (typeFilter === "all" || (r.overlay?.kind ?? r.type) === typeFilter) &&
-      `${r.title} ${r.location?.name ?? ""} ${r.culture.name} ${r.linguistics?.languages.map(l => `${l.name} ${l.family ?? ""}`).join(" ") ?? ""} ${r.linguistics?.relationship?.kind ?? ""} ${r.claims.map((c) => c.text).join(" ")}`
+      (matchingIds&&!r.proposalKey ? matchingIds.has(r.id) : `${r.title} ${r.location?.name ?? ""} ${r.culture.name} ${r.linguistics?.languages.map(l => `${l.name} ${l.family ?? ""}`).join(" ") ?? ""} ${r.linguistics?.relationship?.kind ?? ""} ${r.claims.map((c) => c.text).join(" ")}`
         .toLowerCase()
-        .includes(search.toLowerCase()),
+        .includes(search.toLowerCase())),
   );
   if (period === "current") records = activeRecords(records, year);
   records.sort((a, b) =>
@@ -529,6 +539,7 @@ function proposalsPage() {
     control.disabled = true;
     $("#import-error").textContent = "Reading and validating the file…";
     try {
+      await completeDataset();
       if (file.name.toLowerCase().endsWith(".xlsx")) {
         if (file.size > 5_000_000)
           throw new Error("Workbook exceeds the 5 MB file limit.");
@@ -568,11 +579,13 @@ function importPage() {
   });
 }
 function aboutPage() {
-  main.innerHTML = `<article class="review-page"><div class="eyebrow">METHOD & COVERAGE</div><h2>The record, with its uncertainties.</h2><p class="lead">A fully offline atlas of archaeological and verified historical evidence, from the earliest included finding through ${END_YEAR}.</p><section><h3>A deliberately small beginning</h3><p>${esc(dataset.coverage)}</p><p>App ${appVersion} · Dataset ${esc(dataset.version)} · source check ${esc(dataset.reviewedAt)}</p><p>“Bundled evidence” means the included sources were checked to the extent described on each review page. It is not an independent peer review or a guarantee of scholarly consensus. The record is not a population census.</p></section><section><h3>How to read the map</h3><p>Filled dots show documented intervals or precisely dated events. Outlined dots show a broadly dated occurrence or uncertain interval edge. An asterisk marks a claim under discussion or dispute. Open the detailed review to see which claim and why. Culture colors are descriptive classifications, not racial categories.</p><p>Clouds show schematic regional connections or environmental context, not excavated settlements, precise routes, affected-area boundaries or statistical confidence regions. Uncertain dates fade within their stated bounds; supported certain cores stay fully visible. With no certain core, the fade is symmetric and illustrative, not a probability estimate or population size. Single rounded dates remain reference dates rather than invented ranges. Dates are inclusive. An occurrence window means something is dated within that window; it does not imply continuous settlement. A blank year means no included matching record, not human absence. Arrow paths are schematic unless separately supported.</p></section><section><h3>Why the timeline ends in 1934</h3><p>The Indian Reorganization Act is a policy boundary chosen for this edition. It does not mark the end of dispossession, forced relocation, or Indigenous history. Native nations and communities continued beyond the displayed periods. A disappearing marker indicates the end of an included evidence interval, never extinction by itself.</p><p>Epidemics, massacres and forced removals have separate layers. Mortality estimates belong to specific sources, populations and date ranges; the map does not turn them into an unsupported population census or disease-spread animation.</p></section><section><h3>Timeline scale and playback</h3><p>The default logarithmic scale compresses deep time and gives recent millennia more space. Equal slider distances therefore represent unequal year spans; choose Linear for equal spacing. Smart playback moves faster through sparse stretches and slows around denser enabled evidence. It measures this atlas’s coverage, not population size, human absence, or scientific certainty. Disputed records retain their source dates and visibility. Fixed years-per-second options and exact year entry remain available.</p></section><section><h3>Academic evidence</h3><p>Each claim maps to specific scholarly or archival sources. Critical historical reading and corroboration matter: repeated assertions are not independent evidence. Original dating, methods, calendar interpretation and limitations stay attached to the record. Uncalibrated radiocarbon ages are not silently converted into calendar years.</p></section><section><h3>Hosted atlas and data stewardship</h3><p>The hosted atlas uses versioned structured data as its authoritative store. Spreadsheets are optional import/export and suggestion channels, not the storage model or a limit on map features. Visitor suggestions still require editorial review. Climate, natural-hazard and geometry data have their own attributed collections. <a href="#physical">Climate sources and methods</a> · <a href="docs/coverage-audit.html">Coverage audit</a>.</p></section><section><h3>Your local workspace</h3><p>Suggest new rows or corrections, then save as drafts or complete suggestions. “Complete” means required fields are present, not academically verified. “Send to others” downloads selected rows with their review content and bibliography. A recipient imports and previews the package. Corrections preserve the original and base revision. No proposal automatically replaces reviewed data.</p><p>Browser storage may vary by browser and file location. Export files are the portable backup. Copying or moving index.html does not transfer browser storage. Import your saved files into the new copy.</p></section><section><h3>Offline and hosted use</h3><p>All map geometry, code, evidence and review pages are bundled. The downloaded ZIP works fully offline after extraction. A hosted page needs its initial files from the host; future offline reloads are not guaranteed. Source links open online only when selected. Processing and suggestions stay in your browser. There is no account, application backend or automatic update check. Your research drafts are not uploaded. ${location.protocol === "file:" ? "This extracted offline copy does not receive hosting analytics." : 'The hosted edition uses Cloudflare Web Analytics for usage and performance measurements. These are separate from your research drafts. The host and Cloudflare also receive ordinary web-request information. <a href="https://tripofisch.com/privacy/">Privacy notice</a>.'}</p></section><section><h3>Attribution and licensing</h3><p>Made with Natural Earth. Generalized reference coastlines are public domain and represent modern geography, not ancient coastlines or ice sheets. ${esc(dataset.license)}</p><p>See README and THIRD_PARTY files in the download for build instructions, dependency licenses and dataset maintenance.</p></section></article>`;
+ main.innerHTML=`<article class="review-page"><div class="eyebrow">METHOD &amp; COVERAGE</div><h2>The record, with its uncertainties.</h2><p class="lead">A hybrid atlas: server-held evidence, responsive maps in your browser.</p><section><h3>Sources and uncertainty</h3><p>${esc(dataset.coverage)}</p><p>App ${appVersion} · Dataset ${esc(dataset.version)} · source check ${esc(dataset.reviewedAt)}</p><p>Each full review retains the claim, dating, citation, source-access limits and disagreement. A source-checked record is not an independent scientific peer review. The separate colonial registry is visibly labelled <strong>AI generated facts</strong>, published by author request; known conflicting fields and population series are excluded. Regional totals are not populations of individual settlements.</p><p>A blank map is not evidence of human absence. Unresolved dates have separate context markers, independent of the selected year. Fading illustrates the stated bounds, not a numerical probability. Schematic routes, language distributions and cultural areas are interpretations, not surveyed borders. Genomic ancestry does not identify a spoken language. Population estimates, unknowns, and disagreements retain their own labels.</p></section><section><h3>How this hosted app works</h3><p>The server keeps a versioned SQLite database of evidence, full source records, natural hazards and dated ice snapshots. It handles evidence search and data requests. Your browser receives a compact map catalog for smooth timeline playback; full reviews, hazard details and ice geometry load when needed. Not every map movement sends a request.</p><p>The initial compact catalog still contains all map records. This edition is not a claim of complete viewport streaming. Source geometry and observed dates remain separate from display anchors. Climate and disaster coincidences do not establish human consequences. Modern current and wind arrows are schematic orientation, not reconstructed ancient weather.</p><p>Smart playback speeds through sparse evidence and slows at denser dates. Logarithmic scale gives recent periods more space; equal slider distances cover unequal years. Choose Linear for equal spacing. The1934endpoint is a policy boundary, not the end of Indigenous history.</p></section><section><h3>Research and publication</h3><p>The server database is the public authority for this release. Spreadsheets and JSON remain import/export and suggestion formats. A publication imports validated records into a new versioned database; anonymous visitors cannot write into it. Visitor suggestions remain private in their browser and can be downloaded. Saving a suggestion does not publish it or upload it. Browser storage is a convenience, not a backup.</p><p><a href="docs/coverage-audit.html">Coverage audit</a> · <a href="docs/round8-synthesis.html">Research source decisions</a> · <a href="docs/colonial-ai-registry.html">AI generated colonial facts</a> · <a href="#physical">Climate sources and limits</a></p></section><section><h3>Privacy and hosting</h3><p>API requests send the record or snapshot requested and evidence search terms to our server. The host and Cloudflare receive ordinary request information. The hosted edition uses Cloudflare Web Analytics for usage and performance measurement. Imported files and private suggestion contents are processed locally and are not uploaded by the app. There is no account or shared private workspace in this edition. <a href="https://tripofisch.com/privacy/">Privacy and analytics notice</a>.</p></section><section><h3>Self-hosting and attribution</h3><p>This edition requires an HTTP server and the atlas API; opening index.html directly is not supported. The download includes a Python server, a versioned database, frontend assets, source/license notes and installation instructions. Python3.11+ with SQLite FTS5 and RTree is sufficient; Node is a build tool. Natural Earth supplies public-domain generalized modern coastlines, not ancient shorelines. ${esc(dataset.license)}</p></section></article>`;
 }
 let previousHash = location.hash || "#map";
 let reverting = false;
-function route() {
+let routeGeneration=0;
+async function route() {
+  const generation=++routeGeneration;
   const hash = location.hash || "#map";
   if (reverting) {
     reverting = false;
@@ -602,13 +615,14 @@ function route() {
     else if (hash === "#context") main.innerHTML = contextHTML(rows());
     else if (hash === "#proposals") proposalsPage();
     else if (hash === "#about") aboutPage();
-    else if (hash === "#physical" || hash.startsWith("#physical/")) physicalPage(hash.slice(10));
+    else if (hash === "#physical" || hash.startsWith("#physical/")) {
+      const id=hash.slice(10);if(id){await fullHazard(id);if(generation!==routeGeneration)return;}physicalPage(id);
+    }
     else if (hash === "#import") importPage();
     else if (hash.startsWith("#review/")) {
-      const r = dataset.records.find(
-        (r) => r.id === decodeURIComponent(hash.slice(8)),
-      );
-      if (!r) throw new Error("This evidence record is not in this dataset.");
+      main.innerHTML='<article class="review-page"><p role="status">Loading the full source-linked record…</p></article>';
+      const r = await fullRecord(decodeURIComponent(hash.slice(8)));
+      if(generation!==routeGeneration)return;
       reviewPage(r);
     } else if (hash.startsWith("#proposal/")) {
       const i = Number(hash.slice(10)),
@@ -646,6 +660,7 @@ function route() {
       );
     } else throw new Error("Page not found.");
   } catch (error) {
+    if(generation!==routeGeneration)return;
     main.innerHTML = `<article class="review-page"><h2>Unable to open this page</h2><p>${esc((error as Error).message)}</p><a href="#map">Return to map</a></article>`;
   }
   window.scrollTo(0, 0);

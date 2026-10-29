@@ -1,6 +1,9 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {climateKinds, iceSnapshot, eventsAt, climateCategory,hazardEvents,isUncertainHazard,openHazardDate} from '../src/physical';
+import {climateKinds, iceSnapshot, eventsAt, climateCategory,hazardEvents,isUncertainHazard,openHazardDate,setPhysicalData} from '../src/physical';
+import ice from '../data/ice-snapshots.json';
+import hazards from '../data/hazard-events.json';
+setPhysicalData(hazards,ice);
 import {dataset} from '../src/published-data';
 test('ice boundaries use an explicitly dated nearest snapshot, never extrapolation',()=>{
  assert.equal(iceSnapshot(-30000),null);assert.equal(iceSnapshot(1500),null);

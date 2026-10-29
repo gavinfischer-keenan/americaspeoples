@@ -51,7 +51,7 @@ try {
     .waitFor();
   assert.match(
     await page.locator(".offline-badge").innerText(),
-    /Local processing/,
+    /Server-backed atlas/,
   );
   await page.reload();
   await page
@@ -124,12 +124,22 @@ try {
     "/templates/americas-peoples-researched-import.xlsx",
     "/docs/bulk-import-guide.html",
     "/research-proposals.json",
+    "/docs/round8-synthesis.html",
+    "/round8-synthesis.json",
+    "/docs/colonial-ai-registry.html",
+    "/colonial-ai-registry.json",
   ]) {
     const response = await fetch(origin + url);
     assert.equal(response.status, 200, url);
     assert.equal(response.headers.get("x-content-type-options"), "nosniff");
   }
   assert.equal((await fetch(origin + "/not-a-real-route")).status, 404);
+  await page.goto(origin+'/#review/ai-colony-16');
+  await page.getByRole('heading',{name:'Bibliography',exact:true}).waitFor();
+  assert.match(await page.locator('main').innerText(),/AI generated facts/);
+  assert.match(await page.locator('main').innerText(),/1610/);
+  await page.goto(origin+'/docs/round8-synthesis.html');
+  assert.equal(await page.locator('details').count(),339);
   assert.equal(
     (await fetch(origin, { method: "POST", body: "synthetic" })).status,
     405,
@@ -137,11 +147,8 @@ try {
   assert.ok(
     requests.every((r) => r.url.startsWith(origin + "/") && r.method === "GET"),
   );
-  assert.ok(
-    requests.every(
-      (r) => !["fetch", "xhr", "websocket", "eventsource"].includes(r.type),
-    ),
-  );
+  assert.ok(requests.some(r=>r.url.includes('/api/records/ai-colony-16')));
+  assert.ok(requests.filter(r=>r.type==='fetch').every(r=>new URL(r.url).pathname.startsWith('/api/')));
   assert.deepEqual(errors, []);
   assert.deepEqual(violations, []);
   const unsupported = await browser.newContext();

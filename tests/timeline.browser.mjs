@@ -4,13 +4,15 @@ import assert from 'node:assert/strict';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
 import path from 'node:path';
+import {createStaticServer} from '../scripts/static-server.mjs';
+const server=createStaticServer('dist');await new Promise(r=>server.listen(0,'127.0.0.1',r));
 const out=path.resolve('test-results/timeline-app'); await mkdir(out,{recursive:true});
 await build({entryPoints:['src/bootstrap.ts'],bundle:true,format:'iife',platform:'browser',target:'chrome110',outfile:path.join(out,'app.js'),loader:{'.geojson':'json'}});
 await writeFile(path.join(out,'index.html'),await readFile('index.html','utf8'));
 const browser=await chromium.launch({executablePath:process.env.BROWSER_PATH||'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',headless:true});
 const page=await browser.newPage({viewport:{width:1440,height:1000}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
 try {
- await page.goto(pathToFileURL(path.join(out,'index.html')).href);
+ await page.goto(`http://127.0.0.1:${server.address().port}`);
  assert.equal(await page.getByLabel('Playback speed').inputValue(),'smart');
  assert.equal(await page.getByLabel('Timeline scale').inputValue(),'log');
  const jump=async(y,era)=>{await page.getByLabel('Year number',{exact:true}).fill(String(y));await page.getByLabel('Era',{exact:true}).selectOption(era);await page.getByRole('button',{name:'Go to year',exact:true}).click();};
@@ -35,4 +37,4 @@ try {
    await page.screenshot({path:`test-results/timeline-${width}.png`,fullPage:false});
  }
  assert.deepEqual(errors,[]);console.log('PASS: Smart/log defaults, scale change retains year, BCE/CE keyboard, local windows, pointer drag, playback, responsive timeline.');
-} finally {await browser.close();}
+} finally {await browser.close();await new Promise(r=>server.close(r));}

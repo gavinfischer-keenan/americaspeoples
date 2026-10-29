@@ -89,3 +89,21 @@ Authoritative hosted structured data, optional spreadsheet export, Smart/log tim
 Final candidate verification:86 unit tests, typecheck and complete dataset validation pass. Dedicated physical-layer browser, Smart/log timeline, map-panel/viewport regression, file:// offline operations and hosted privacy/CSP/import-export checks pass. Independent review findings on numeric eruption uncertainty and supported ongoing eruptions were fixed with regression tests. Release payload switches only NODE01 CT101 public-web content; the existing release remains available for rollback.
 
 Public release verified2026-10-29: NODE01 CT101 /srv/tripofisch/releases/20261029T220044Z; rollback /srv/tripofisch/releases/20261029T194704Z. Public app, audit and physical-catalog files match built bytes; CSP/cache/MIME and404 checks pass. Three hosted downloads match SHA256 manifests. Live product-page launch, Smart/log defaults, ENSO/source review and public coverage report pass. Git release tag:v0.3.7.
+
+
+## Research batch candidate — superseded by the0.4.0hybrid release
+
+Round8 source synthesis with complete339-candidate decisions;37 source-checked additions and49 visibly labelled author-authorized AI colonial entries. Disjoint Checua burials remain separate, one-sided Ocmulgee constraints remain unplaced, source-to-recipient arrows are schematic, and conflicting population cells are excluded. Prior climate catalogs and hosting behavior are preserved. Validation results are recorded after final checks.
+
+
+Pre-deployment verification:92 unit tests, strict typecheck and dataset validation pass. Offline, hosted, map panels, Smart/log timeline and physical-layer browser suites pass. Complete651-record workbook import/export and reload persistence pass; a bounded compressed local-storage envelope preserves legacy JSON and ordinary JSON exports. Independent review found and corrected Checua DOI, Darien/New Jersey conflicting wording and partial Tonga/Samoa reconciliation. Browser checks include visible AI attribution and339 decision entries.
+
+
+## v0.4.0hybrid release candidate
+
+92unit tests and strict type/data checks pass. Actual Python/SQLite API integration verifies exact full-source export, paginated summaries, indexed time/bounding-box/search queries, destination bounds, metadata-only search, invalid-query rejection, read-only methods and private-path exclusions. The API and browser keep published source dates and AI attribution. Full review/hazard details and dated ice geometry are loaded on demand; map/hazard summary indexes preload for smooth animation. App JavaScript reduced from21,517,688bytes to about666KB, a97%reduction before HTTP compression. This is not a complete viewport-streaming implementation.
+
+Current browser checks use HTTP plus the actual Python API, not file://. Map panels/zoom/pan, Smart/log timeline, ice/scenario changes, hazards/source reviews, mobile width, full-workbook import/export, local collection reload, version consistency, source-decision pages and visible AI labels are exercised. A focused independent pre-deploy review found FTS location/language omissions and movement-destination bounds, now fixed with integration regressions. Full performance/modularity audit is next, after this deployment.
+
+
+Hybrid public release verified2026-10-29: NODE01 CT101 static/API releases20261029T234257Z. Public API, bytes/headers, source-decision pages, three hosted download hashes and live product-page launch pass. Extracted self-host bundle starts independently and serves frontend, full record and ice requests. Proxmox64GBhost remains low-load with about60GBavailable; CT101memory increased1024→2048MiB,2cores unchanged, no partition change. Atlas dedicated non-root service:512MiBmemory ceiling,100%CPUquota,8requests,read-only SQLite; observed~13MiBservice memory. Twelve neighboring public app homepages remained byte-identical. Rollback static release20261029T220044Z and Caddy backupCaddyfile.before-americas-20261029T234257Z retained. Whaling/census intake held for next content round; complete code/performance/modularity audit follows this release.

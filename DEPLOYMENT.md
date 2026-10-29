@@ -1,113 +1,43 @@
-# Americas Peoples — deployment handoff
+# Americas Peoples — hybrid hosting
 
-Hosted edition: Americas Peoples at https://americaspeoples.11mosswood.us/, launched through https://tripofisch.com/free-utilities/americaspeoples/. Animal identity: Alaska Blackfish. This document also describes self-hosting the current static implementation; it does not itself confirm a deployment. Release verification is recorded in docs/verification.md.
+Version0.4.0 requires Python3.11+ with SQLite FTS5/RTree and an HTTP origin. No Python package installation is required on Debian13. Node22+ is needed only to build from source. The public API is read-only; do not expose the editorial import command as a public write endpoint.
 
-The author has authorized a fully hosted application and richer future services. Versioned structured collections are the current authoritative store; spreadsheets are optional import/export and suggestion channels. Current builds still run mapping and visitor draft processing in the browser. A server database, shared accounts or submission API have not been invented merely by changing this direction. See docs/hosted-architecture.md.
+## Run the self-host download
 
-## Identity and destination
+Extract the selfhost ZIP. From its `americas-peoples` folder:
 
-- App: **Americas Peoples**.
-- Public origin: **https://americaspeoples.11mosswood.us/**.
-- Layer: **Utilities**.
-- Animal name and logo: **Alaska Blackfish**; linked product page supplies the logo and animal article.
-- Description: A browser atlas of archaeological and historical evidence in the Americas, from the earliest included findings through 1934, with source-linked reviews and time-dependent overlays.
-- Source: https://github.com/gavinfischer-keenan/americaspeoples, published branch `main`; handoff release `v0.2.1`. Resolve the exact immutable revision with `git rev-parse v0.2.1^{commit}` or the supplied handoff report.
+    python server/app.py --db data/atlas.sqlite3 --root web --host 127.0.0.1 --port 8105
 
-## Architecture and hardware
+Open http://127.0.0.1:8105/. Keep the database outside the public web directory. A normal static-only host or file:// launch is insufficient.
 
-The production application is static HTML, CSS and bundled JavaScript. Mapping, animation, filtering, detailed reviews, XLSX/JSON parsing, validation, editing, local persistence and file export run in the visitor's browser. There is no application backend, server computation, database, authentication, API key, account, telemetry, external map-tile server or runtime environment configuration.
+For production, run the service as a non-root systemd user on loopback, behind Caddy with HTTPS supplied by Cloudflare. Static frontend files may be served directly by Caddy; proxy only `/api/*` to the service. This server binds loopback by default, caps concurrent requests at8, validates query bounds, restricts methods and opens SQLite in immutable read-only mode. It is intended behind a reverse proxy, not as an Internet-facing general-purpose server.
 
-Your hardware serves static files through the existing Caddy/Cloudflare Tunnel setup. It does not process uploaded spreadsheets or maintain user research collections. Node.js/npm are build and test tools; do not run a Node process in production for this app.
+## Build and publish
 
-## Install, test and build
+    npm ci
+    npm test
+    npm run typecheck
+    npm run build
+    python server/test_api.py
+    npm run test:hosted
 
-Use Node.js 22 or newer and npm. The verified build environment was Node.js 24.19.0. Run in the repository root:
+Set `PYTHON_PATH` to the Python executable if `python` is not on PATH. The build creates frontend `dist/`, a release database `release/atlas.sqlite3`, a self-host ZIP and SHA256 manifest. The database contains the full published evidence, hazard catalog and ice snapshots. Check `PRAGMA integrity_check` before publication; the importer does this automatically.
 
-```sh
-npm ci
-npm test
-npm run typecheck
-npm run validate
-npm run build
-```
+Production publication makes a new immutable app/database release, validates health and switches symlinks. Restart the atlas service when changing its database pointer: each running process pins one release path. Keep the earlier app/database pair for rollback. Never modify the database under an active immutable reader. Back up versioned DB files outside the public root. Editorial source JSON and import scripts are publication inputs; spreadsheets are exchange formats.
 
-The committed `package-lock.json` pins dependencies. Installation needs access to the npm registry and the official SheetJS package at `cdn.sheetjs.com`. These are build-time downloads only. All runtime vendor code and basemap data are bundled. Dependency attribution is in `THIRD_PARTY.md` and remains in every download.
+## API
 
-**Deploy exactly the contents of `dist/` as the subdomain's document root.** The build recreates that generated directory and refuses a symlinked `dist`. Do not serve the repository, `node_modules`, scripts, tests, `.git`, private files or development servers.
+- GET `/api/manifest`: version, counts, dated ice index.
+- GET `/api/catalog?limit=1000&offset=0`: compact map records, paging cursor.
+- GET `/api/records?from=0&to=1000&bbox=-120,20,-60,60&q=maize&layer=trade`: indexed temporal/geographic/full-text filtering. Bounding boxes are conservative candidates, not exact route intersections; west>east crosses the dateline. Maximum1000rows per response, integer pagination.
+- GET `/api/records/{id}`: full evidence and all claim/source links.
+- GET `/api/hazards/index`: paginated event summaries; `/api/hazards/{id}` retains the full catalog fields.
+- GET `/api/ice/{optimal|min|max}/{ageCalBP}`: one original dated snapshot. No server-generated interpolation.
+- GET `/api/export`: complete evidence snapshot for optional bulk import/export.
+- GET `/api/health`: release and evidence count.
 
-The directory includes `index.html`, `app.js`, `app.css`, documentation, the two XLSX workbooks, `dataset.json`, `research-proposals.json`, `evidence-appendix.json` and `evidence-appendix.html`. The map data and default evidence are also compiled into the app; no runtime data-fetch API is needed. The ZIP contains the same deployable files in an `americas-peoples/` folder.
+The browser preloads the compact map and hazard indexes, then draws and animates locally. Full records and ice snapshots are separate requests, with an8-snapshot browser cache. Initial catalog loading is deliberately global to preserve instant timeline changes; it is not yet vector-tile/viewport streaming. Public API requests contain selection/search parameters, not private suggestion contents. Cloudflare analytics is disclosed on the site.
 
-For local verification only:
+## Resource isolation
 
-```sh
-npm run preview
-# prints http://127.0.0.1:4173/ ; PORT can override the local port
-npm run test:hosted
-```
-
-The hosted browser test starts and stops its own loopback HTTP server with the documented security headers. Set `BROWSER_PATH` to an installed Chromium-family browser executable. It defaults to Windows Edge; Playwright browser downloads are not needed. Optional `DIST_PATH` lets the hosted test check an extracted release directory.
-
-Offline suites accept `APP_PATH` pointing to the extracted ZIP's `index.html`:
-
-```sh
-npm run test:browser
-node scripts/regression-browser.mjs
-node scripts/bulk-browser.mjs
-node scripts/overlay-browser.mjs
-node scripts/research-browser.mjs
-```
-
-## Routing and response headers
-
-Deploy at the **root of its own subdomain**. Asset and guide URLs are relative. Application routes use URL fragments: `/#map`, `/#evidence`, `/#proposals`, `/#about` and `/#review/lanse-1021`. Refreshing a deep link requests `/`; the fragment stays in the browser. **No SPA fallback is required.** Unknown file paths should return 404, not `index.html`. There are no workers or service-worker paths. Permit GET/HEAD; the app does not require POST or uploads.
-
-Serve correct MIME types: HTML `text/html`, JS `text/javascript` or `application/javascript`, CSS `text/css`, JSON `application/json`, XLSX `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`, ZIP `application/zip`. UTF-8 applies to text. Ordinary Caddy `file_server` MIME detection is suitable.
-
-Recommended app-host response policy, for the deployment agent to apply to this origin only:
-
-```text
-Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
-X-Content-Type-Options: nosniff
-Referrer-Policy: no-referrer
-X-Frame-Options: DENY
-Cache-Control: no-cache
-```
-
-Inline styles are required for map colors/SVG rendering and the bundled guide/appendix. Inline scripts and eval are not required. A stricter conflicting upstream CSP can break the app. HTTPS should be supplied by the existing hosting system. No CORS, WebSocket, cross-origin-isolation or special rewrite rule is required for the app. Launch it as a normal page/new tab, not an iframe.
-
-Publish a complete versioned static directory, then switch the active release atomically using the established deployment workflow. Keep the previous release for rollback. Because filenames are not content-hashed, revalidate files and do not apply a Cloudflare Cache Everything/immutable policy. Preserve the app origin and storage key. Do not send `Clear-Site-Data` during updates. Open tabs keep their loaded code until the visitor reloads; there is no forced-update worker.
-
-## Data appendix and product page
-
-Use `docs/landing-page-content.md` for the explanation, launch/download labels and appendix instructions. `evidence-appendix.json` contains full records, claims, bibliographies, provenance and collection labels. `evidence-appendix.html` is a readable, script-free rendering of the same material. The source package is `data/research-proposals.json`.
-
-There are **eight default bundled records** and **51 optional research proposals**. The latter include 21 overlays, 145 claims and 123 bibliography entries. They are not automatically shown or promoted to reviewed evidence: visitors import the supplied workbook or JSON under Suggestions and enable Preview complete suggestions. An appendix must retain this distinction. Bibliographic entry counts can include separate documents hosted on the same web page.
-
-For an appendix below a product page on `tripofisch.com`, render/copy the JSON at site-build time or copy it to that page's origin. Do not introduce a cross-origin runtime fetch requirement for the app. `reviewPath` links are valid only for default records; proposal indices in a visitor's local collection are not portable URLs. Use each record's stable `appendixPath` for public supporting detail. Do not add corporate left-side section navigation inside the working atlas; its existing sidebar contains map controls.
-
-## Storage and privacy
-
-Suggestions are stored as a JSON proposal package under localStorage key `americas-peoples-proposals-v1`. Import reads only the files the visitor selects, in memory. Export/Send to others creates a browser Blob download: it does not upload, email or contact recipients. No app code uses fetch, XHR, WebSocket, EventSource or sendBeacon for user data. Runtime CSP blocks connections. Static assets and downloads are ordinary same-origin GETs; opening a scholarly/GitHub source link deliberately navigates to that external site.
-
-The hosting server and Cloudflare can see ordinary request metadata such as IP address and user agent; the app's privacy claim is that it does not send research drafts, imports or edits to them. Do not inject analytics, third-party scripts or account integrations without revisiting that claim.
-
-LocalStorage is origin- and browser-profile-specific. A different subdomain, browser or local file copy does not receive existing drafts automatically. Export JSON from the old copy and import it in the new one. Browser data clearing, private browsing, quota limits and storage restrictions can remove or prevent persistence. The app reports storage failures and keeps the current in-memory collection available for export. There is no cloud backup or cross-device sync. Same-origin reload/update preservation is covered by the hosted test.
-
-## Offline use, PWA and downloads
-
-This is **not an installable PWA**: no web manifest, install icons or service worker is registered. A hosted page needs its initial assets from the host; future offline reloads of a web URL are not guaranteed. The supported fully offline mode is the ZIP: extract it and open `americas-peoples/index.html` directly. All app features and included explanations work locally; publication links need internet.
-
-`npm run build` creates `release/americas-peoples-v0.2.1-offline.zip`, `release/artifacts.json` and `release/SHA256SUMS.txt`. The manifest records exact filenames, byte sizes, SHA-256 digests and immutable tag download links. Published copies live in `downloads/americas-peoples-v0.2.1-offline.zip`, `downloads/v0.2.1-artifacts.json` and `downloads/v0.2.1-SHA256SUMS.txt`. The two workbooks are in `templates/`. The deployment agent may mirror these exact bytes for local download links and verify the supplied hashes. No EXE is needed.
-
-## Verification and limitations
-
-See `docs/verification.md` for actual test results. The hosted test checks the built files with response headers, deep-link reloads, preservation of a prior collection, import/export of all 51 research proposals, visible 1864 overlays, all 59 appendix records, no application data uploads, unsupported-feature messaging and JavaScript-disabled help. Offline suites verify the extracted build separately. This is local validation, **not verification of the public origin**.
-
-Current Edge and Chrome are tested; Firefox/Safari and physical mobile devices have not been exhaustively tested. Essential missing browser APIs produce an explanatory startup message. File-location storage behavior varies. Imports remain bounded to 5 MB compressed XLSX / 20 MB expanded, or 2 MB JSON, with at most 200 proposals. The dataset is selected and incomplete; no population simulation, reconstructed disease-spread model, inferred ethnic borders or blanket extinction claim is provided. Five research overlays remain unmapped. The 1934 endpoint is a policy/display boundary, not the end of dispossession.
-
-The deployment agent still needs to integrate the utility card and product/animal pages, choose final branding and hostname, publish through the established Caddy/tunnel workflow, and verify the actual public URL, headers and downloads. None of that infrastructure work has been performed in this handoff.
-
-
-## TripoFisch hosted deployment privacy update — October 28, 2026
-
-The owner authorizes Cloudflare Web Analytics on the hosted edition. Its CSP permits `https://static.cloudflareinsights.com` scripts and same-origin / `https://cloudflareinsights.com` analytics connections. The hosted About page and Privacy link disclose this. Research files and drafts remain local; no application upload endpoint is added. The tagged v0.2.1 offline download remains immutable and does not receive injected hosting analytics. Hosted app.js has a privacy-copy update relative to that tag.
+Use a dedicated systemd service, restricted user, `NoNewPrivileges`, `ProtectSystem`, bounded memory/tasks and CPU quota. NODE01 CT101 also serves other public sites, so changes must be scoped to the atlas service and hostname. Check Proxmox memory/load/storage and container headroom before increasing allocation. Do not change other nodes, tunnels, app processes or storage partitions unless a measured need exists.

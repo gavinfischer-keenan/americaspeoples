@@ -9,8 +9,8 @@ try{
  await page.goto(origin);await page.locator('#time-slider').waitFor();
  const jump=async(y,era='CE')=>{await page.getByLabel('Year number',{exact:true}).fill(String(y));await page.getByLabel('Era',{exact:true}).selectOption(era);await page.getByRole('button',{name:'Go to year',exact:true}).click();};
  await page.locator('#toggle-layers').click();
- await jump(18050,'BCE');assert.ok(await page.locator('.ice-context path').count());assert.match(await page.locator('#ice-status').innerText(),/20,000/);
- await page.getByLabel('Ice boundary scenario').selectOption('max');assert.match(await page.locator('#ice-status').innerText(),/MAX/);
+ await jump(18050,'BCE');await page.locator('.ice-context path').first().waitFor();assert.ok(await page.locator('.ice-context path').count());assert.match(await page.locator('#ice-status').innerText(),/20,000/);
+ await page.getByLabel('Ice boundary scenario').selectOption('max');await page.waitForFunction(()=>document.querySelector('#ice-status').textContent.includes('MAX'));assert.match(await page.locator('#ice-status').innerText(),/MAX/);
  await page.locator('#show-currents').check();await page.locator('#show-winds').check();assert.ok(await page.locator('.flow-warm').count()>5);assert.equal(await page.locator('.flow-wind').count(),10);
  assert.ok(Number(await page.locator('#context-count').innerText())>20);
  const before=await page.locator('#context-count').innerText();await page.locator('[data-context-index]').first().click();assert.match(await page.locator('#selected-records').innerText(),/Chronology unresolved/);assert.doesNotMatch(await page.locator('#selected-records').innerText(),/Documented time/);

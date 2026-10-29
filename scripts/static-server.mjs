@@ -2,9 +2,10 @@
 import http from "node:http";
 import fs from "node:fs/promises";
 import path from "node:path";
+import {spawn} from 'node:child_process';
 export const hostingHeaders = {
   "Content-Security-Policy":
-    "default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+    "default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
   "X-Content-Type-Options": "nosniff",
   "Referrer-Policy": "no-referrer",
   "X-Frame-Options": "DENY",
@@ -21,7 +22,14 @@ const mime = {
 };
 export function createStaticServer(directory) {
   const root = path.resolve(directory);
-  return http.createServer(async (req, res) => {
+  // Actual production Python/SQLite API behind the test static frontend.
+  const backend=spawn(process.env.PYTHON_PATH||'python',['server/app.py','--db','release/atlas.sqlite3','--root',root,'--port','0'],{windowsHide:true,stdio:['ignore','pipe','pipe']});
+  const ready=new Promise((resolve,reject)=>{
+    let output='';
+    backend.stdout.on('data',chunk=>{output+=chunk;try{resolve(JSON.parse(output.trim()).port);}catch{}});
+    backend.on('error',reject);backend.on('exit',code=>{if(code)reject(new Error('Atlas test backend exited '+code));});
+  });
+  const server=http.createServer(async (req, res) => {
     for (const [name, value] of Object.entries(hostingHeaders))
       res.setHeader(name, value);
     if (!["GET", "HEAD"].includes(req.method)) {
@@ -30,6 +38,13 @@ export function createStaticServer(directory) {
       return;
     }
     try {
+      if(req.url.startsWith('/api/')){
+        const port=await ready;
+        const upstream=await fetch(`http://127.0.0.1:${port}${req.url}`,{method:req.method});
+        const bytes=Buffer.from(await upstream.arrayBuffer());
+        for(const key of ['content-type','x-atlas-version'])if(upstream.headers.has(key))res.setHeader(key,upstream.headers.get(key));
+        res.writeHead(upstream.status);res.end(req.method==='HEAD'?undefined:bytes);return;
+      }
       const pathname = decodeURIComponent(
         new URL(req.url, "http://localhost").pathname,
       );
@@ -55,4 +70,6 @@ export function createStaticServer(directory) {
       res.end("Not found");
     }
   });
+  server.on('close',()=>backend.kill());
+  return server;
 }

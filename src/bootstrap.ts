@@ -19,9 +19,11 @@ if (!supported) {
     "This browser is missing features required by Americas Peoples. Open it in a current version of Chrome, Edge, Firefox or Safari. Your saved suggestions have not been changed.",
   );
 } else {
-  import("./main").catch(() =>
+  initializeDataset().then(initializePhysical).then(()=>import("./main")).catch(() =>
     startupMessage(
-      "Americas Peoples could not start. Reload the page, or extract the complete download and keep its files together. Your browser's saved suggestions have not been deleted.",
+      "Americas Peoples could not reach its atlas service. Check your connection and reload. Your saved suggestions have not been deleted.",
     ),
   );
 }
+import {initializeDataset} from './client-data';
+import {initializePhysical} from './physical';

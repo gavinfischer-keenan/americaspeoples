@@ -1,16 +1,17 @@
 {
   "name": "americas-peoples",
-  "version": "0.3.7",
+  "version": "0.4.0",
   "private": true,
   "type": "module",
   "scripts": {
     "test": "node --import tsx --test tests/*.test.ts",
     "typecheck": "tsc --noEmit",
     "build": "node --import tsx scripts/build.ts",
-    "test:browser": "node scripts/browser-test.mjs",
+    "test:browser": "node scripts/hosted-browser.mjs",
     "validate": "node --import tsx scripts/validate.ts",
     "preview": "node scripts/preview.mjs",
-    "test:hosted": "node scripts/hosted-browser.mjs"
+    "test:hosted": "node scripts/hosted-browser.mjs",
+    "test:api": "python server/test_api.py"
   },
   "dependencies": {
     "d3-geo": "3.1.1",

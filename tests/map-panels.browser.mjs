@@ -4,6 +4,7 @@ import assert from "node:assert/strict";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { pathToFileURL } from "node:url";
 import path from "node:path";
+import {createStaticServer} from '../scripts/static-server.mjs';
 
 const out = path.resolve("test-results/map-panels-app");
 await mkdir(out, { recursive: true });
@@ -12,9 +13,10 @@ await writeFile(path.join(out, "index.html"), await readFile("index.html", "utf8
 const browser = await chromium.launch({ executablePath: process.env.BROWSER_PATH || "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe", headless: true });
 const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
 const errors = [];
+const server=createStaticServer(out);await new Promise(r=>server.listen(0,'127.0.0.1',r));
 page.on("pageerror", error => errors.push(error.message));
 try {
-  await page.goto(pathToFileURL(path.join(out, "index.html")).href);
+  await page.goto(`http://127.0.0.1:${server.address().port}`);
   await page.getByLabel("Year number", { exact: true }).fill("1000");
   await page.getByLabel("Era", { exact: true }).selectOption("CE");
   await page.getByRole("button", { name: "Go to year", exact: true }).click();
@@ -84,4 +86,4 @@ try {
   await page.screenshot({ path: "test-results/map-panels-mobile.png", fullPage: true });
   assert.deepEqual(errors, []);
   console.log(`PASS: map panels, selection, viewport zoom/pan/reset, modeled filter, panel toggles, mobile overflow (${initial} initial / ${zoomed} zoomed records).`);
-} finally { await browser.close(); }
+} finally { await browser.close();await new Promise(r=>server.close(r)); }

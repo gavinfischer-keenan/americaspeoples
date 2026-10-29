@@ -1,12 +1,48 @@
-import ice from '../data/ice-snapshots.json';
-import hazards from '../data/hazard-events.json';
+import type iceArchive from '../data/ice-snapshots.json';
+import type hazardArchive from '../data/hazard-events.json';
+import {getJSON,pages,manifest} from './client-data';
 import type {EvidenceRecord} from './model';
 import {esc} from './dom';
 import {formatYear} from './time';
 export const climateKinds=['drought','cold','heat','other-climate','el-nino','la-nina','volcano','tsunami'] as const;
 export const climateLabels:Record<string,string>={drought:'Drought / dry conditions',cold:'Cold episodes',heat:'Warm episodes','other-climate':'Other environment context','el-nino':'El Niño reconstructions','la-nina':'La Niña reconstructions',volcano:'Volcanic eruptions',tsunami:'Tsunami source events'};
-export const hazardEvents=hazards.events;
-export type HazardEvent=typeof hazards.events[number];
+export type HazardEvent=typeof hazardArchive.events[number];
+type IceSnapshot=typeof iceArchive.snapshots[number];
+export let hazardEvents:HazardEvent[]=[];
+let iceIndex:{scenario:string;ageCalBP:number}[]=[];
+const snapshots=new Map<string,IceSnapshot>();
+const pendingIce=new Set<string>();
+const failedIce=new Map<string,number>();
+export function setPhysicalData(hazards:typeof hazardArchive,ice:typeof iceArchive){
+ hazardEvents=hazards.events;iceIndex=ice.snapshots.map(s=>({scenario:s.scenario,ageCalBP:s.ageCalBP}));
+ snapshots.clear();for(const s of ice.snapshots)snapshots.set(s.scenario+'/'+s.ageCalBP,s);
+}
+export async function initializePhysical(){
+ hazardEvents=await pages<HazardEvent>('/api/hazards/index');
+ iceIndex=manifest.iceIndex;
+}
+export async function fullHazard(id:string){
+ const event=await getJSON<HazardEvent>('/api/hazards/'+encodeURIComponent(id));
+ const index=hazardEvents.findIndex(e=>e.id===id);if(index>=0)hazardEvents[index]=event;
+ return event;
+}
+export function iceTarget(year:number,scenario='optimal'){
+ const age=1950-year,all=iceIndex.filter(s=>s.scenario===scenario);
+ if(!all.length||age<Math.min(...all.map(s=>s.ageCalBP))||age>Math.max(...all.map(s=>s.ageCalBP)))return null;
+ return all.reduce((best,s)=>Math.abs(s.ageCalBP-age)<Math.abs(best.ageCalBP-age)?s:best);
+}
+export function requestIce(year:number,scenario:string,ready:()=>void,failed:()=>void){
+ const target=iceTarget(year,scenario);if(!target)return;
+ const key=target.scenario+'/'+target.ageCalBP;
+ if(snapshots.has(key)||pendingIce.has(key)||(failedIce.get(key)??0)>Date.now())return;
+ if(pendingIce.size>=2)return;
+ pendingIce.add(key);
+ getJSON<IceSnapshot>('/api/ice/'+key).then(snapshot=>{
+  snapshots.set(key,snapshot);
+  while(snapshots.size>8)snapshots.delete(snapshots.keys().next().value!);
+  pendingIce.delete(key);failedIce.delete(key);ready();
+ }).catch(()=>{pendingIce.delete(key);failedIce.set(key,Date.now()+30000);failed();});
+}
 export const physicalSources=[
  {id:'nadi1',title:'North American Deglacial Isochrones, NADI-1',authors:'Dalton et al. (2023)',url:'https://doi.org/10.1016/j.quascirev.2023.108345',data:'https://doi.org/10.5281/zenodo.8161764',method:'49 dated ice-sheet polygon snapshots, 25,000–1,500 calendar years BP (epoch1950). Author MIN, MAX and OPTIMAL scenarios retained. Nearest snapshot is used, with its own age shown; no interpolation. WGS84 polygons simplified at0.12° for display.',limits:'North American ice sheets only; reconstructed boundaries, not measured certainty. Does not reconstruct sea ice, shorelines or navigable open water. Outside dataset dates, no ice geometry is shown; that does not mean ice absence.',license:'CC BY4.0. GIS snapshot downloaded2026-10-29; processing script and checksums retained.'},
  {id:'gergis2009',title:'Multiproxy ENSO Event Reconstructions',authors:'Gergis, J. and Fowler, A.M. (2009)',url:'https://doi.org/10.1007/s10584-008-9476-z',data:'https://doi.org/10.25921/ebpz-a913',method:'NOAA/WDS dataset noaa-recon-8408, Table9 annual classifications1525–2002CE; atlas subset1525–1934. Tree-ring, coral, ice-core and documentary proxies. Original proxy ratio, mean skill, quality-adjusted magnitude and class are retained per event.',limits:'One reconstruction, not agreement among all reconstructions. Both ENSO phases can appear in one calendar year. Classes reflect this reconstruction, not modern ONI thresholds. Earlier years are not assessed by this dataset; no local drought or social impact is inferred.',license:'Cite investigators, publication and NOAA archive; retrieved2026-10-29. No NOAA endorsement implied.'},
@@ -16,22 +52,20 @@ export const physicalSources=[
  {id:'enso-mechanism',title:'Understanding El Niño & ENSO',authors:'NOAA',url:'https://www.noaa.gov/understanding-el-nino',data:'https://www.noaa.gov/jetstream/tropical/enso/enso-patterns',method:'Physical mechanism guidance: El Niño can weaken or sometimes reverse tropical trade winds, redistribute warm water eastward and change rainfall patterns.',limits:'Different regions can experience drought or increased rainfall. A reconstructed ENSO year alone cannot identify where drought occurred or prove that voyaging, trade or settlement collapsed.',license:'Paraphrased NOAA guidance; accessed2026-10-29.'},
 ];
 export function iceSnapshot(year:number,scenario='optimal'){
- const age=1950-year;
- const all=ice.snapshots.filter(s=>s.scenario===scenario);
- if(!all.length||age<Math.min(...all.map(s=>s.ageCalBP))||age>Math.max(...all.map(s=>s.ageCalBP)))return null;
- return all.reduce((best,s)=>Math.abs(s.ageCalBP-age)<Math.abs(best.ageCalBP-age)?s:best);
+ const target=iceTarget(year,scenario);
+ return target?snapshots.get(target.scenario+'/'+target.ageCalBP)??null:null;
 }
 export function openHazardDate(e:HazardEvent){const d=e.detail as Record<string,unknown>;return ['<','>'].includes(String(d.StartDateYearModifier))||d.EndDateYearModifier==='<';}
-export function eventsAt(year:number,hidden:ReadonlySet<string>,includeUncertain=true){return hazards.events.filter(e=>!openHazardDate(e)&&!hidden.has(e.kind)&&e.start<=year&&e.end>=year&&(includeUncertain||!isUncertainHazard(e)));}
+export function eventsAt(year:number,hidden:ReadonlySet<string>,includeUncertain=true){return hazardEvents.filter(e=>!openHazardDate(e)&&!hidden.has(e.kind)&&e.start<=year&&e.end>=year&&(includeUncertain||!isUncertainHazard(e)));}
 export function isUncertainHazard(e:HazardEvent){const d=e.detail as Record<string,unknown>;return /uncertain|discredited|doubtful|questionable|erroneous|unspecified/i.test(e.status)||d.StartDateYearModifier==='?'||d.EndDateYearModifier==='?'||Number(d.StartDateYearUncertainty)>0||Number(d.EndDateYearUncertainty)>0;}
-export function hazardTimes(hidden:ReadonlySet<string>,includeUncertain=true):Pick<EvidenceRecord,'time'>[]{return hazards.events.filter(e=>!openHazardDate(e)&&!hidden.has(e.kind)&&(includeUncertain||!isUncertainHazard(e))).map(e=>({time:{kind:'occurrence',start:e.start,end:e.end,approximate:true,original:'Source catalog dates',method:'Catalog / reconstructed context',interpretation:'No human impact inferred'}}));}
+export function hazardTimes(hidden:ReadonlySet<string>,includeUncertain=true):Pick<EvidenceRecord,'time'>[]{return hazardEvents.filter(e=>!openHazardDate(e)&&!hidden.has(e.kind)&&(includeUncertain||!isUncertainHazard(e))).map(e=>({time:{kind:'occurrence',start:e.start,end:e.end,approximate:true,original:'Source catalog dates',method:'Catalog / reconstructed context',interpretation:'No human impact inferred'}}));}
 export function climateCategory(r:EvidenceRecord):string|null{
  if(r.overlay?.kind!=='environment')return null;
  const text=r.title+' '+r.claims.map(c=>c.text).join(' ');
  return /drought|arid|drying|dry conditions/i.test(text)?'drought':/cold|cooling|glacial|ice sheet/i.test(text)?'cold':/warming|warm period|heat|hot conditions/i.test(text)?'heat':'other-climate';
 }
 export function physicalHTML(id?:string){
- const event=hazards.events.find(e=>e.id===id);
+ const event=hazardEvents.find(e=>e.id===id);
  const sources=event?physicalSources.filter(s=>s.id===event.sourceId):physicalSources;
  return `<article class="review-page"><a href="#map">← Map</a><h2>${event?esc(event.title):'Climate, natural hazards & sailing context'}</h2>${event?`<p class="lead">${esc(climateLabels[event.kind])} · ${formatYear(event.start)}${event.start!==event.end?' – '+formatYear(event.end):''}</p><p><strong>${esc(event.status)}</strong></p><p>${esc(event.limitations)}</p><p><a href="${esc(event.url)}" target="_blank" rel="noopener">Original catalog / dataset ↗</a></p><h3>Original data fields</h3><dl>${Object.entries(event.detail).filter(([,v])=>v!==null).map(([k,v])=>`<dt>${esc(k)}</dt><dd>${esc(String(v))}</dd>`).join('')}</dl>`:'<p>Conditions and hazards are evidence in their own right. A coincidence with a settlement change does not establish a cause. Climate layers retain their own scientific source, time coverage, method and uncertainty. Human consequences require a separate sourced claim.</p><p>Warm/cold current colors describe relative water transport, not a reconstructed climate anomaly. Ice-free land is not open water. Paleocoastlines and navigable-water reconstructions are not yet included.</p><p>Sources do not cover all known events or all periods. Catalog layers are separate from archaeological settlement counts. The atlas ends in1934CE.</p>'}${sources.map(s=>`<section id="physical-${s.id}"><h3>${esc(s.title)}</h3><p>${esc(s.authors)}</p><p>${esc(s.method)}</p><p><strong>Limits:</strong> ${esc(s.limits)}</p><p>${esc(s.license)}</p><a href="${s.url}" target="_blank" rel="noopener">Publication / source</a> · <a href="${s.data}" target="_blank" rel="noopener">Data / documentation</a></section>`).join('')}</article>`;
 }

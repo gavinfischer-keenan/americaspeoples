@@ -327,3 +327,8 @@ Global Volcanism Program,2026, Volcanoes of the World, Smithsonian Institution, 
 NOAA JetStream / Ocean Service guidance for modern major-current and trade-wind schematic arrows: https://www.noaa.gov/jetstream/ocean/circulations/jetstream-max-major-ocean-currents and https://oceanservice.noaa.gov/facts/tradewinds.html. Editorial geometry, not a paleo-reconstruction. ENSO mechanism https://www.noaa.gov/understanding-el-nino.
 
 All data retrieved2026-10-29. Acquisition parameters, hashes, source coverage and limitations are retained in the physical source manifest and in-app source reviews. Scientific dataset facts and paraphrased explanations are distinguished from copyrighted publications.
+
+
+## Round8 research provenance(v0.3.8)
+
+Scholarly works are linked by DOI with access limitations in each record; short original paraphrases and bibliographic metadata are supplied, not article figures or full text. User-provided Consensus reports remain in a private archive. The Gemini Argon colonial registry is author-supplied AI-generated material, explicitly labelled in titles, claims, source access notes and the public report. This attribution does not imply verification or endorsement by any model provider. Conflicting population series are excluded. See docs/round8-synthesis.html and docs/colonial-ai-registry.html.
