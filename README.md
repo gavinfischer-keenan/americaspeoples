@@ -4,14 +4,16 @@ A fully offline browser atlas of archaeological and historical evidence in the A
 
 ## Current release
 
+v0.3.6 reconciles19 Pacific research uploads:32 new records and7 existing-record context updates,547 records and818 claims total. All515 prior records remain. The map has a viewport-aware list on the left, selected evidence on the right, a central map and collapsible far-right layer controls. Modeled/schematic evidence can be hidden. The research reconciliation register preserves unresolved source leads and corrections.
+
 v0.3.5 improves map contrast and adds explicit schematic direction symbols for supported dispersal interpretations. Forward, reverse, two-way and multidirectional metadata are supported; unknown directions remain unspecified.
 
 v0.3.4 publishes 515 records and 774 claims, including 15 new round5 records and context updates to four existing records. All 500 previous records are retained. The intake archive preserves 23 synthesis topics from 31 original files; unresolved leads remain explicitly pending. Synthesis uploads are secondary provenance, not primary research.
 
 ## Downloads and bulk contributions
 
-- [Download v0.3.5 — offline application ZIP](https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/tags/v0.3.5/downloads/americas-peoples-v0.3.5-offline.zip)
-- [Release filenames, sizes and SHA-256 checksums](https://github.com/gavinfischer-keenan/americaspeoples/blob/v0.3.5/downloads/v0.3.5-artifacts.json)
+- [Download v0.3.6 — offline application ZIP](https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/tags/v0.3.6/downloads/americas-peoples-v0.3.6-offline.zip)
+- [Release filenames, sizes and SHA-256 checksums](https://github.com/gavinfischer-keenan/americaspeoples/blob/v0.3.6/downloads/v0.3.6-artifacts.json)
 - [Read the bulk import and reference guide](docs/bulk-import-guide.md)
 - [Download the XLSX template](https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/heads/main/templates/americas-peoples-import.xlsx)
 - [Original v0.1 download](https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/heads/main/downloads/americas-peoples-v0.1-offline.zip)

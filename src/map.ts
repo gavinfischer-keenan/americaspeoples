@@ -6,6 +6,7 @@ import { temporalState, temporalOpacity, timeLabel, isDisputed, END_YEAR } from 
 import { OVERLAY_LABELS } from "./overlays";
 import { esc, $ } from "./dom";
 import { disputeLevel, disputeLabel } from "./disputes";
+import { boundsInViewport } from "./map-filters";
 export class MapView {
   readonly element = document.createElement("div");
   private scope: MapScope = "pacific";
@@ -19,6 +20,7 @@ export class MapView {
   constructor(
     private readonly land: any,
     private onSelect: (rows: DisplayRecord[]) => void,
+    private onViewportChange: () => void = () => {},
   ) {
     this.element.className = "map-canvas";
     const path = geoPath(this.projection);
@@ -61,6 +63,12 @@ export class MapView {
     window.addEventListener("resize", () => {
       if (this.element.isConnected) this.draw();
     });
+    new ResizeObserver(() => {
+      if (this.element.isConnected) {
+        this.draw();
+        this.onViewportChange();
+      }
+    }).observe(this.element);
     svg.addEventListener(
       "wheel",
       (e) => {
@@ -145,6 +153,27 @@ export class MapView {
       "transform",
       `translate(${this.tx},${this.ty}) scale(${this.scale})`,
     );
+    this.onViewportChange();
+  }
+  /** Same projected geometry and transform as the map; unmapped records stay out. */
+  visibleRecords(): DisplayRecord[] {
+    const path = geoPath(this.projection);
+    return this.records.filter(r => {
+      const overlay = r.overlay;
+      if (overlay) {
+        if (!overlay.geometry) return false;
+        const geometry = overlay.geometry.type === "Point" && overlay.radiusKm
+          ? geoCircle().center(overlay.geometry.coordinates).radius(overlay.radiusKm / 6371 * 180 / Math.PI)()
+          : overlay.geometry;
+        return boundsInViewport(path.bounds(geometry), this.scale, this.tx, this.ty);
+      }
+      if (!r.location) return false;
+      if (r.type === "movement" && r.destination) {
+        return boundsInViewport(path.bounds({type: "LineString", coordinates: [[r.location.lon, r.location.lat], [r.destination.lon, r.destination.lat]]}), this.scale, this.tx, this.ty);
+      }
+      const p = this.projection([r.location.lon, r.location.lat]);
+      return !!p && p[0] >= 0 && p[0] <= 1000 && p[1] >= 0 && p[1] <= 800 && boundsInViewport([p, p], this.scale, this.tx, this.ty);
+    });
   }
   update(records: DisplayRecord[], year: number) {
     this.records = records;

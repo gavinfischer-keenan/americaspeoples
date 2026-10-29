@@ -21,6 +21,7 @@ import {
   advancePlayback,
 } from "./time";
 import { MapView } from "./map";
+import { isModeledRecord, filterMapRecords } from "./map-filters";
 import { esc, $, downloadJSON } from "./dom";
 import { reviewHTML, recordHref, comparisonHTML } from "./review";
 import { mountEditor, newProposal } from "./editor";
@@ -59,8 +60,8 @@ let preview = false,
 let selected: DisplayRecord[] = [];
 const hiddenCultures = new Set<string>();
 const hiddenLayers = new Set<string>();
-const mapRows = () =>
-  rows().filter((r) => !r.overlay || !hiddenLayers.has(r.overlay.kind));
+let showModeled = true;
+const mapRows = () => filterMapRecords(rows(), hiddenLayers, showModeled);
 const storeKey = "americas-peoples-proposals-v1";
 try {
   const saved = localStorage.getItem(storeKey);
@@ -101,7 +102,7 @@ const main = $("#main");
 const map = new MapView(land, (items) => {
   selected = items;
   renderVisible();
-});
+}, () => renderVisible());
 let mountedMap = false;
 function announce(message: string) {
   $("#toast").textContent = message;
@@ -163,7 +164,7 @@ function tick(now: number) {
     if (fraction >= 1) {
       const n = Math.floor(fraction);
       fraction -= n;
-      const next = advancePlayback(rows(), year, n);
+      const next = advancePlayback(mapRows(), year, n);
       setYear(next.year, false);
       if (next.boundary) {
         holdUntil = now + 700;
@@ -232,7 +233,7 @@ function mapPage() {
   const languageLinks = languageModels.length
     ? `<section aria-labelledby="language-relationships-heading"><h4 id="language-relationships-heading">Language relationships</h4><p class="fine">All published language models, independent of the selected year. Models without dates remain outside the dated map.</p><ul>${languageModels.map((r) => `<li><a href="${esc(recordHref(r))}">${esc(r.title)}</a><br><small>${r.time.kind === "unplaced" ? "Chronology unresolved" : esc(timeLabel(r.time))}</small></li>`).join("")}</ul></section>`
     : "";
-  main.innerHTML = `<div class="map-layout"><aside class="map-sidebar"><div class="eyebrow">ASIA-PACIFIC &amp; AMERICAS / ${dataset.records.length} EVIDENCE RECORDS</div><h2>Places hold<br>the evidence.</h2><p class="intro">Explore a changing record of human presence, one source at a time.</p><div class="scope-note">${esc(dataset.coverage)}</div><div class="legend-head"><h3>Cultures & peoples</h3><button id="show-all" class="text-button">Show all</button></div><input id="legend-search" type="search" placeholder="Find a culture or people…" aria-label="Search cultures" value="${esc(legendSearch)}"><div id="legend"></div><div class="map-key"><span>→ Directed movement · ↔ Two-way exchange · ⤧ Four-headed arrow: multiple directions, not four literal routes</span><span><i class="key-dot"></i> Documented interval / dated event</span><span>Population dots: 1–500 · 501–2,500 · 2,501–10,000 · 10,001–50,000 · 50,001+</span><span><b>◩</b> Striped smallest dot = unknown population; display size only</span><span>Outer population halo = upper estimate; estimates are never added together</span><span><i class="key-ring"></i> Possible time / broadly dated occurrence</span><span><b>☁</b> Broad regional / genomic / environment / language evidence</span><span>Fading = illustrative temporal support, not probability</span><span><b class="asterisk dispute-discussion">*</b> Under discussion (lighter)</span><span><b class="asterisk dispute-disputed">*</b> Explicitly disputed (stronger)</span><span><i class="key-dash"></i> Unreviewed suggestion (opt-in)</span></div><div class="overlay-controls"><h3>Overlays</h3><p>Language layers use record dates and sourced reconstructions; distributions and relationships are approximate. Descent, borrowing and contact are distinct from culture or genetic ancestry.</p>${Object.entries(
+  main.innerHTML = `<div class="atlas-toolbar" aria-label="Map panels"><button id="toggle-sites" aria-controls="site-panel" aria-expanded="true">Hide site list</button><button id="toggle-details" aria-controls="detail-panel" aria-expanded="true">Hide details</button></div><div class="map-layout atlas-layout"><aside id="site-panel" class="site-panel" aria-label="Visible site list"><div class="visible-heading"><h3 id="visible-heading">Visible evidence</h3><span id="visible-count"></span></div><p class="panel-hint">At this year, inside the current map view. Select a record to inspect it.</p><details class="culture-disclosure"><summary>Cultures &amp; map information</summary><div class="map-sidebar"><div class="eyebrow">ASIA-PACIFIC &amp; AMERICAS / ${dataset.records.length} EVIDENCE RECORDS</div><h2>Places hold<br>the evidence.</h2><p class="intro">Explore a changing record of human presence, one source at a time.</p><div class="scope-note">${esc(dataset.coverage)}</div><div class="legend-head"><h3>Cultures & peoples</h3><button id="show-all" class="text-button">Show all</button></div><input id="legend-search" type="search" placeholder="Find a culture or people…" aria-label="Search cultures" value="${esc(legendSearch)}"><div id="legend"></div><div class="map-key"><span>→ Directed movement · ↔ Two-way exchange · ⤧ Four-headed arrow: multiple directions, not four literal routes</span><span><i class="key-dot"></i> Documented interval / dated event</span><span>Population dots: 1–500 · 501–2,500 · 2,501–10,000 · 10,001–50,000 · 50,001+</span><span><b>◩</b> Striped smallest dot = unknown population; display size only</span><span>Outer population halo = upper estimate; estimates are never added together</span><span><i class="key-ring"></i> Possible time / broadly dated occurrence</span><span><b>☁</b> Broad regional / genomic / environment / language evidence</span><span>Fading = illustrative temporal support, not probability</span><span><b class="asterisk dispute-discussion">*</b> Under discussion (lighter)</span><span><b class="asterisk dispute-disputed">*</b> Explicitly disputed (stronger)</span><span><i class="key-dash"></i> Unreviewed suggestion (opt-in)</span></div><label class="check"><input id="preview" type="checkbox" ${preview ? "checked" : ""}> Preview complete suggestions</label><p class="fine">A dot ending means the displayed evidence ends. It does not establish abandonment or a population's fate.</p></div></details><div id="visible-records"></div></aside><section class="map-stage" aria-label="Map and active evidence"><div class="map-topline"><span id="active-count"></span><span>Pan · Scroll to zoom</span></div><div id="map-host"></div></section><aside id="detail-panel" class="detail-panel" aria-label="Selected evidence details"><div class="visible-heading"><h3>Selected evidence</h3><button id="clear-selection" class="text-button">Clear selection</button></div><div id="selected-records"></div></aside><aside class="layers-panel" aria-label="Map layers"><button id="toggle-layers" aria-expanded="false" aria-controls="layer-options">Show layers</button><div id="layer-options" hidden><label class="check"><input id="show-modeled" type="checkbox" ${showModeled ? "checked" : ""}> Show modeled evidence</label><p class="fine">Includes schematic overlays and records whose dating method explicitly names a model or simulation. Scholarly disagreement alone does not make a record modeled.</p><div class="overlay-controls"><h3>Overlays</h3><p>Language layers use record dates and sourced reconstructions; distributions and relationships are approximate. Descent, borrowing and contact are distinct from culture or genetic ancestry.</p>${Object.entries(
     OVERLAY_LABELS,
   )
     .map(
@@ -241,8 +242,28 @@ function mapPage() {
     )
     .join(
       "",
-    )}<p class="fine">Teal diamond: trade. Coral cross: conflict. Red crossed square: violence. Purple ring: epidemic. Amber square or arrow: forced removal. Dashed lines connect sourced endpoints; they do not reconstruct a route. Symbols do not encode death tolls.</p>${languageLinks}</div><label class="check"><input id="preview" type="checkbox" ${preview ? "checked" : ""}> Preview complete suggestions</label><p class="fine">A dot ending means the displayed evidence ends. It does not establish abandonment or a population's fate.</p></aside><section class="map-stage" aria-label="Map and active evidence"><div class="map-topline"><span id="active-count"></span><span>Pan · Scroll to zoom</span></div><div id="map-host"></div><section class="visible-panel"><div class="visible-heading"><h3 id="visible-heading">Visible evidence</h3><button id="clear-selection" class="text-button">Show all visible</button></div><div id="visible-records"></div></section></section></div>`;
+    )}<p class="fine">Teal diamond: trade. Coral cross: conflict. Red crossed square: violence. Purple ring: epidemic. Amber square or arrow: forced removal. Dashed lines connect sourced endpoints; they do not reconstruct a route. Symbols do not encode death tolls.</p>${languageLinks}</div></div></aside></div>`;
   $("#map-host").append(map.element);
+  for (const [button, panel, noun] of [["toggle-sites", "site-panel", "site list"], ["toggle-details", "detail-panel", "details"]]) {
+    $("#" + button).addEventListener("click", () => {
+      const target = $("#" + panel);
+      target.hidden = !target.hidden;
+      $("#" + button).setAttribute("aria-expanded", String(!target.hidden));
+      $("#" + button).textContent = `${target.hidden ? "Show" : "Hide"} ${noun}`;
+      $(".atlas-layout").classList.toggle(panel + "-hidden", target.hidden);
+    });
+  }
+  $("#toggle-layers").addEventListener("click", () => {
+    const options = $("#layer-options");
+    options.hidden = !options.hidden;
+    $(".atlas-layout").classList.toggle("layers-open", !options.hidden);
+    $("#toggle-layers").textContent = options.hidden ? "Show layers" : "Hide layers";
+    $("#toggle-layers").setAttribute("aria-expanded", String(!options.hidden));
+  });
+  $("#show-modeled").addEventListener("change", (e) => {
+    showModeled = (e.target as HTMLInputElement).checked;
+    renderMapData();
+  });
   main.querySelectorAll<HTMLInputElement>("[data-layer]").forEach((el) =>
     el.addEventListener("change", () => {
       if (el.checked) hiddenLayers.delete(el.dataset.layer!);
@@ -301,23 +322,20 @@ function renderMapData() {
 }
 function renderVisible() {
   if (!mountedMap) return;
+  const visible = map.visibleRecords();
+  $("#visible-count").textContent = String(visible.length);
+  $("#active-count").textContent = `${visible.length} mapped records in view`;
+  $("#visible-records").innerHTML = visible.length ? visible.map((r, index) => `<button class="evidence-card site-choice ${selected.some(s => s.id === r.id && s.proposalKey === r.proposalKey) ? "is-selected" : ""}" data-visible-index="${index}"><i style="background:${r.culture.color}"></i><div><strong>${esc(r.title)}${isDisputed(r) ? `<span class="asterisk dispute-${disputeLevel(r)}" title="${esc(disputeLabel(r))}"> *</span>` : ""}</strong><span>${esc(r.culture.name)} · ${esc(timeLabel(r.time))}${isModeledRecord(r) ? " · Modeled / schematic" : ""}</span></div></button>`).join("") : '<p class="empty">No included records in this map view at this year. Pan, zoom out, change the year, or show more layers.</p>';
+  main.querySelectorAll<HTMLButtonElement>("[data-visible-index]").forEach(el => el.addEventListener("click", () => {
+    selected = [visible[Number(el.dataset.visibleIndex)]];
+    renderVisible();
+  }));
   const active = activeRecords(mapRows(), year);
-  const chosen = selected.length
-    ? active.filter((r) =>
-        selected.some((s) => s.id === r.id && s.proposalKey === r.proposalKey),
-      )
-    : active;
-  $("#visible-heading").textContent = selected.length
-    ? "Selected location"
-    : "Visible evidence";
-  $("#visible-records").innerHTML = chosen.length
-    ? chosen
-        .map(
-          (r) =>
-            `<a class="evidence-card" href="${recordHref(r)}"><i style="background:${r.culture.color}"></i><div><strong>${esc(r.title)}${isDisputed(r) ? `<span class="asterisk dispute-${disputeLevel(r)}" title="${esc(disputeLabel(r))}"> *</span>` : ""}${r.proposalKey ? " · Proposal" : ""}</strong><span>${esc(r.culture.name)} · ${esc(timeLabel(r.time))}${!r.overlay && r.type !== "movement" ? " · " + esc(populationAt([r], year).label) : ""} · ${temporalState(r.time, year) === "possible" ? "Possible time" : "Documented time"}</span></div><span class="card-arrow">↗</span></a>`,
-        )
-        .join("")
-    : `<p class="empty">${selected.length ? "No selected records intersect this year. Use “Show all visible” to clear the selection." : "No included evidence intersects this year and these filters. This is a gap in this small dataset, not evidence of an uninhabited continent."}</p>`;
+  $("#selected-records").innerHTML = selected.length ? selected.map(r => {
+    const included = active.some(a => a.id === r.id && a.proposalKey === r.proposalKey);
+    const inView = visible.some(a => a.id === r.id && a.proposalKey === r.proposalKey);
+    return `<article class="selected-detail"><h4>${esc(r.title)}</h4><p class="fine">${esc(r.culture.name)} · ${esc(timeLabel(r.time))}</p>${!included ? '<p class="selection-status">Outside the current year or filters.</p>' : !inView ? '<p class="selection-status">Outside the current map view.</p>' : ""}<p>${esc(r.review.summary)}</p>${!r.overlay && r.type !== "movement" ? `<p class="fine">${esc(populationAt([r], year).label)}</p>` : ""}<p class="fine">${temporalState(r.time, year) === "possible" ? "Possible time" : "Documented time"}${isModeledRecord(r) ? " · Modeled / schematic evidence" : ""}</p><p class="fine">${esc(r.review.limitations)}</p><a class="button" href="${recordHref(r)}">Full review &amp; sources ↗</a></article>`;
+  }).join("") : '<p class="empty">Select a site from the list or a marker on the map to see its evidence, dates, and sources here.</p>';
 }
 function tablePage() {
   main.innerHTML = `<article class="table-page"><div class="page-heading"><div><div class="eyebrow">THE EVIDENCE INDEX</div><h2>Every row has a source.</h2><p class="lead">Occupation, occurrences, movements, and events. Open a row for its full review.</p></div><a class="button primary" href="#new">+ Suggest new evidence</a></div><div class="table-filters"><input id="table-search" type="search" aria-label="Search evidence" placeholder="Search places, cultures, claims…" value="${esc(search)}"><label>Period<select id="period" aria-label="Table period"><option value="all" ${period === "all" ? "selected" : ""}>All records</option><option value="current" ${period === "current" ? "selected" : ""}>At selected year</option></select></label><label>Type<select id="type-filter" aria-label="Record type filter">${["all", "occupation", "occurrence", "movement", "event", ...Object.keys(OVERLAY_LABELS)].map((t) => `<option value="${t}" ${t === typeFilter ? "selected" : ""}>${esc(OVERLAY_LABELS[t as keyof typeof OVERLAY_LABELS] ?? t)}</option>`).join("")}</select></label><label>Sort<select id="sort" aria-label="Sort evidence"><option value="oldest" ${sort === "oldest" ? "selected" : ""}>Earliest first</option><option value="newest" ${sort === "newest" ? "selected" : ""}>Latest first</option><option value="name" ${sort === "name" ? "selected" : ""}>Name</option></select></label><label class="check"><input id="table-preview" type="checkbox" ${preview ? "checked" : ""}> Preview suggestions</label></div><p id="table-caption" class="muted"></p><div class="table-scroll"><table><thead><tr><th>Dates / occupation</th><th>Evidence & location</th><th>Culture / people</th><th>Type</th><th>Evidence status</th><th>Supporting page</th></tr></thead><tbody></tbody></table></div><p class="fine">* A particular claim is under discussion or disputed. Open its review to see which claim and why. Culture filters from the map also apply here.</p></article>`;

@@ -15264,7 +15264,7 @@
       "baseRecord": null,
       "record": {
         "id": "north-america-prelgm-model",
-        "revision": 1,
+        "revision": 2,
         "type": "event",
         "title": "Pre-LGM human presence — explicitly disputed inference",
         "culture": {
@@ -15310,6 +15310,20 @@
                 "note": "Anthropological argument for preLGMentry, not independently dated occupation at a specified site."
               }
             ]
+          },
+          {
+            "id": "round6-geographic-scope",
+            "text": "Claims about 25000 BCE in the Americas and Pacific must distinguish disputed American evidence from much older Near Oceanian occupation.",
+            "status": "under discussion",
+            "explanation": "Near Oceania evidence cannot be used to establish Remote Oceania or American occupation, nor can an unqualified Pacific headline erase it.",
+            "support": [
+              {
+                "sourceId": "r6-gaffney2024",
+                "stance": "context",
+                "locator": "Round6 source reconciliation",
+                "note": "Near Oceania evidence cannot be used to establish Remote Oceania or American occupation, nor can an unqualified Pacific headline erase it."
+              }
+            ]
           }
         ],
         "sources": [
@@ -15352,6 +15366,17 @@
             "volume": "9",
             "issue": "3",
             "pages": "167–173"
+          },
+          {
+            "id": "r6-gaffney2024",
+            "authors": "Dylan Gaffney; Daud Tanudirjo; Erlin N. I. Djami; et al.",
+            "title": "Human dispersal and plant processing in the Pacific 55 000–50 000 years ago",
+            "year": 2024,
+            "venue": "See linked primary publication",
+            "url": "https://ora.ox.ac.uk/objects/uuid:36fa5e76-a85b-4982-8885-4fa8b3a1517e",
+            "access": "Primary author-university abstract and publisher study summary inspected; full assay calibration not reanalyzed.",
+            "referenceType": "journal-article",
+            "doi": "10.15184/aqy.2024.83"
           }
         ],
         "review": {
@@ -15361,7 +15386,8 @@
           "provenance": "2026-10-28 author-supplied Consensus literature batch, PDFs and publisher abstracts; reconciled against source metadata.",
           "reviewedAt": "2026-10-28",
           "history": [
-            "Added from the 2026-10-28 literature intake; included in the published dataset by default."
+            "Added from the 2026-10-28 literature intake; included in the published dataset by default.",
+            "2026-10-29: round6 source and interpretation context added."
           ],
           "relatedIds": [
             "preclovis-review-context",
@@ -37089,7 +37115,7 @@
       "baseRecord": null,
       "record": {
         "id": "pacific-wilmshurst2011-chronology",
-        "revision": 3,
+        "revision": 4,
         "type": "event",
         "title": "East Polynesia: two-phase short-chronology model and debate",
         "culture": {
@@ -37209,6 +37235,20 @@
                 "note": "NASA metadata places a Society Islands image around151.5°W16.5°S. Rounded151°W17°S serves only as a central East Polynesian annotation for the broader regional synthesis/network."
               }
             ]
+          },
+          {
+            "id": "round6-ureia-scope",
+            "text": "The Ureia revision dates a specific occupation on Aitutaki and explicitly describes a previously modified landscape.",
+            "status": "under discussion",
+            "explanation": "The 1225–1430 CE site range must not be equated with initial settlement of the entire island.",
+            "support": [
+              {
+                "sourceId": "r6-allen2007",
+                "stance": "context",
+                "locator": "Round6 source reconciliation",
+                "note": "The1225–1430CE site range must not be equated with initial settlement of the entire island."
+              }
+            ]
           }
         ],
         "sources": [
@@ -37297,6 +37337,17 @@
             "access": "Primary author-uploaded abstract/model discussion read; publisher issue abstract additionally verified in coordinated review.",
             "referenceType": "journal-article",
             "doi": "10.1353/ol.2014.0021"
+          },
+          {
+            "id": "r6-allen2007",
+            "authors": "Melinda S. Allen; Rod Wallace",
+            "title": "New Evidence from the East Polynesian Gateway: Substantive and Methodological Results from Aitutaki, Southern Cook Islands",
+            "year": 2007,
+            "venue": "See linked primary publication",
+            "url": "https://doi.org/10.1017/S0033822200043095",
+            "access": "Primary publisher abstract inspected; full methods not independently audited.",
+            "referenceType": "journal-article",
+            "doi": "10.1017/S0033822200043095"
           }
         ],
         "review": {
@@ -37309,7 +37360,8 @@
             "2026-10-28: Source-intake review only; no website build, push or deployment.",
             "2026-10-28: Added explicitly schematic regional geography anchor; no exact site coordinate or geographic extent asserted.",
             "2026-10-28: supplementary source and interpretation context added.",
-            "2026-10-28: supplementary source and interpretation context added."
+            "2026-10-28: supplementary source and interpretation context added.",
+            "2026-10-29: round6 source and interpretation context added."
           ],
           "relatedIds": []
         }
@@ -37504,7 +37556,7 @@
       "baseRecord": null,
       "record": {
         "id": "pacific-sear2020-atiu",
-        "revision": 1,
+        "revision": 2,
         "type": "event",
         "title": "Atiu: early human-or-pig indicators and later disturbance",
         "culture": {
@@ -37572,6 +37624,20 @@
                 "note": "Sear et al. publish Lake Te Roto20°0′34.99″S158°7′24.83″W. Coordinates rounded to158°W20°S for an island-region overlay, not a settlement point or exact coring coordinate."
               }
             ]
+          },
+          {
+            "id": "round6-climate-mechanism",
+            "text": "The 2026 study proposes that drying sending islands and wetter receiving islands helped shape eastward migration decisions.",
+            "status": "under discussion",
+            "explanation": "Socio-hydrological scenarios and climate reconstructions support a proposed mechanism, not a uniquely proven cause.",
+            "support": [
+              {
+                "sourceId": "r6-sear2026",
+                "stance": "context",
+                "locator": "Round6 source reconciliation",
+                "note": "Socio-hydrological scenarios and climate reconstructions support a proposed mechanism, not a uniquely proven cause."
+              }
+            ]
           }
         ],
         "sources": [
@@ -37596,6 +37662,17 @@
             "doi": "10.1073/pnas.2008788117",
             "access": "Open institutional deposited correction read: adds Emma Pearson, contributions and grant acknowledgment; no chronological-results correction.",
             "referenceType": "journal-article"
+          },
+          {
+            "id": "r6-sear2026",
+            "authors": "David Sear; M. Peaple; P. Langdon; et al.",
+            "title": "How did a changing climate in the tropical South Pacific contribute to the eastward migration and settlement of Polynesia?",
+            "year": 2026,
+            "venue": "See linked primary publication",
+            "url": "https://ueaeprints.uea.ac.uk/id/eprint/102930/1/399_Sear_et_al.pdf",
+            "access": "Primary open author-institution abstract inspected; socio-hydrological scenarios distinguished from observations.",
+            "referenceType": "journal-article",
+            "doi": "10.70460/jpa.v16i2.399"
           }
         ],
         "review": {
@@ -37606,7 +37683,8 @@
           "reviewedAt": "2026-10-28",
           "history": [
             "2026-10-28: Source-intake review only; no website build, push or deployment.",
-            "2026-10-28: Added explicitly schematic regional geography anchor; no exact site coordinate or geographic extent asserted."
+            "2026-10-28: Added explicitly schematic regional geography anchor; no exact site coordinate or geographic extent asserted.",
+            "2026-10-29: round6 source and interpretation context added."
           ],
           "relatedIds": []
         }
@@ -38503,7 +38581,7 @@
       "baseRecord": null,
       "record": {
         "id": "guam-pugach2021-ancestry",
-        "revision": 1,
+        "revision": 2,
         "type": "event",
         "title": "Ancient Guam: Philippine-related ancestry and Lapita affinity",
         "culture": {
@@ -38552,6 +38630,20 @@
                 "note": "Marianas participation in later Polynesian settlement is raised as a possibility, not established."
               }
             ]
+          },
+          {
+            "id": "round6-sampled-ancestry",
+            "text": "The 2022 Micronesia study notes that Middle/Late Unai burials postdate initial Mariana settlement.",
+            "status": "under discussion",
+            "explanation": "Later sampled ancestry must not be treated as a direct genome of every initial colonist.",
+            "support": [
+              {
+                "sourceId": "r6-liu2022",
+                "stance": "context",
+                "locator": "Round6 source reconciliation",
+                "note": "Later sampled ancestry must not be treated as a direct genome of every initial colonist."
+              }
+            ]
           }
         ],
         "sources": [
@@ -38565,6 +38657,17 @@
             "access": "Primary full-text burial context, results and methods read.",
             "referenceType": "journal-article",
             "doi": "10.1073/pnas.2022112118"
+          },
+          {
+            "id": "r6-liu2022",
+            "authors": "Yue-Chen Liu; Rosalind Hunter-Anderson; et al.",
+            "title": "Ancient DNA reveals five streams of migration into Micronesia and matrilocality in early Pacific seafarers",
+            "year": 2022,
+            "venue": "See linked primary publication",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9983687/",
+            "access": "Primary abstract and open author manuscript inspected; sampled groups and dates retained.",
+            "referenceType": "journal-article",
+            "doi": "10.1126/science.abm6536"
           }
         ],
         "review": {
@@ -38573,7 +38676,9 @@
           "discussion": "Different evidence types address different questions; model results do not become direct observations of an arrival or language boundary.",
           "provenance": "Reviewed against primary material from three overlapping Pacific-origins exports and one Fiji export; canonical Hawaiʻi chronology/network records belong to the coordinated reviewer. Full author-supplied synthesis archive: docs/intake/index.html. Original synthesis is secondary provenance, not a substitute for the cited primary study.",
           "reviewedAt": "2026-10-28",
-          "history": [],
+          "history": [
+            "2026-10-29: round6 source and interpretation context added."
+          ],
           "relatedIds": [
             "guam-ritidian-beach-cave-burials"
           ]
@@ -39346,7 +39451,7 @@
       "baseRecord": null,
       "record": {
         "id": "pacific-ioannidis2020-nativeamerican-contact",
-        "revision": 1,
+        "revision": 2,
         "type": "event",
         "title": "East Polynesia: inferred pre-European Native American admixture",
         "culture": {
@@ -39395,6 +39500,20 @@
                 "note": "Rapa Nui is particularly complicated by later Chilean-related admixture."
               }
             ]
+          },
+          {
+            "id": "round6-ancient-rapanui",
+            "text": "The 2024 ancient-genome study provides additional evidence for pre-European American ancestry with modeled admixture at 1250–1430 CE.",
+            "status": "under discussion",
+            "explanation": "Retain sample dates and study power. These results do not settle contact direction, count or exact location.",
+            "support": [
+              {
+                "sourceId": "r6-morenomayar2024",
+                "stance": "context",
+                "locator": "Round6 source reconciliation",
+                "note": "Retain sample dates and study power. These results do not settle contact direction, count or exact location."
+              }
+            ]
           }
         ],
         "sources": [
@@ -39408,6 +39527,17 @@
             "access": "Primary dating-results section read; alternative Tracts and ALDER estimates retained as model outputs.",
             "referenceType": "journal-article",
             "doi": "10.1038/s41586-020-2487-2"
+          },
+          {
+            "id": "r6-morenomayar2024",
+            "authors": "J. Víctor Moreno-Mayar; Bárbara Sousa da Mota; et al.",
+            "title": "Ancient Rapanui genomes reveal resilience and pre-European contact with the Americas",
+            "year": 2024,
+            "venue": "See linked primary publication",
+            "url": "https://www.nature.com/articles/s41586-024-07881-4",
+            "access": "Open primary abstract/discussion inspected, including sampling, admixture uncertainty and earlier low-coverage comparison.",
+            "referenceType": "journal-article",
+            "doi": "10.1038/s41586-024-07881-4"
           }
         ],
         "review": {
@@ -39416,7 +39546,9 @@
           "discussion": "Different evidence types address different questions; model results do not become direct observations of an arrival or language boundary.",
           "provenance": "Reviewed against primary material from three overlapping Pacific-origins exports and one Fiji export; canonical Hawaiʻi chronology/network records belong to the coordinated reviewer. Full author-supplied synthesis archive: docs/intake/index.html. Original synthesis is secondary provenance, not a substitute for the cited primary study.",
           "reviewedAt": "2026-10-28",
-          "history": [],
+          "history": [
+            "2026-10-29: round6 source and interpretation context added."
+          ],
           "relatedIds": []
         },
         "overlay": {
@@ -39945,7 +40077,7 @@
       "baseRecord": null,
       "record": {
         "id": "tikopia-mccoy2020-tongan-glass",
-        "revision": 1,
+        "revision": 2,
         "type": "event",
         "title": "Tikopia: later Tongan volcanic-glass imports",
         "culture": {
@@ -39994,6 +40126,20 @@
                 "note": "Political targeting is an interpretation, not directly measured by glass chemistry."
               }
             ]
+          },
+          {
+            "id": "round6-object-movement",
+            "text": "Tongan-source glass at Tikopia establishes material movement; political expansion remains an interpretation.",
+            "status": "under discussion",
+            "explanation": "Rare imports do not determine frequency, direction or social purpose of all journeys.",
+            "support": [
+              {
+                "sourceId": "mccoy2020-tikopia",
+                "stance": "context",
+                "locator": "Round6 source reconciliation",
+                "note": "Rare imports do not determine frequency, direction or social purpose of all journeys."
+              }
+            ]
           }
         ],
         "sources": [
@@ -40015,7 +40161,9 @@
           "discussion": "Different evidence types address different questions; model results do not become direct observations of an arrival or language boundary.",
           "provenance": "Reviewed against primary material from three overlapping Pacific-origins exports and one Fiji export; canonical Hawaiʻi chronology/network records belong to the coordinated reviewer. Full author-supplied synthesis archive: docs/intake/index.html. Original synthesis is secondary provenance, not a substitute for the cited primary study.",
           "reviewedAt": "2026-10-28",
-          "history": [],
+          "history": [
+            "2026-10-29: round6 source and interpretation context added."
+          ],
           "relatedIds": []
         },
         "overlay": {
@@ -40239,7 +40387,7 @@
       "baseRecord": null,
       "record": {
         "id": "polynesian-canoe-performance-model",
-        "revision": 1,
+        "revision": 2,
         "type": "event",
         "title": "Polynesian canoes: experimentally modeled sailing performance",
         "culture": {
@@ -40288,6 +40436,20 @@
                 "note": "Feasibility does not prove identical performance or possession by every early colonizing canoe."
               }
             ]
+          },
+          {
+            "id": "round6-feasibility-limit",
+            "text": "Experimental sailing performance and modeled accessibility do not independently identify an actual prehistoric route.",
+            "status": "under discussion",
+            "explanation": "Keep intentional navigation knowledge, modeled feasibility, incidental landfalls and excavated occupation as distinct evidence.",
+            "support": [
+              {
+                "sourceId": "irwin2022-canoes",
+                "stance": "context",
+                "locator": "Round6 source reconciliation",
+                "note": "Keep intentional navigation knowledge, modeled feasibility, incidental landfalls and excavated occupation as distinct evidence."
+              }
+            ]
           }
         ],
         "sources": [
@@ -40309,7 +40471,9 @@
           "discussion": "Different evidence types address different questions; model results do not become direct observations of an arrival or language boundary.",
           "provenance": "Reviewed against primary material from three overlapping Pacific-origins exports and one Fiji export; canonical Hawaiʻi chronology/network records belong to the coordinated reviewer. Full author-supplied synthesis archive: docs/intake/index.html. Original synthesis is secondary provenance, not a substitute for the cited primary study.",
           "reviewedAt": "2026-10-28",
-          "history": [],
+          "history": [
+            "2026-10-29: round6 source and interpretation context added."
+          ],
           "relatedIds": []
         },
         "overlay": {
@@ -52507,6 +52671,2873 @@
       "state": "ready",
       "createdAt": "2026-10-29T05:57:05.985Z",
       "updatedAt": "2026-10-29T05:57:05.985Z"
+    },
+    {
+      "id": "author-r6-te-bakoa",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-te-bakoa",
+        "revision": 1,
+        "type": "occurrence",
+        "title": "Te Bakoa, Nikunau — dated earth ovens",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r6-te-bakoa-place",
+          "name": "Te Bakoa area, Nikunau",
+          "lon": 176.45,
+          "lat": -1.35,
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Named geographic setting in the cited study; editorial approximate placement."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "unplaced",
+          "start": null,
+          "end": null,
+          "original": "About 2000 BP; calibration not specified in accessed abstract",
+          "method": "Reported chronology retained without unsupported conversion",
+          "interpretation": "No justified closed calendar interval was extracted; this context remains in the evidence index."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Di Piazza reports two excavated ovens with pandanus remains dated to about 2000 BP.",
+            "status": "well-supported",
+            "explanation": "Do not automatically convert an unspecified radiocarbon BP age to 50 BCE. This was the oldest known Kiribati evidence reported in 1999, not a timeless archipelago-wide first-arrival claim.",
+            "support": [
+              {
+                "sourceId": "r6-dipiazza1999",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-dipiazza1999",
+            "authors": "Anne Di Piazza",
+            "title": "Te Bakoa site. Two old earth ovens from Nikunau Island (Republic of Kiribati)",
+            "year": 1999,
+            "venue": "See linked primary publication",
+            "url": "https://doi.org/10.1002/j.1834-4453.1999.tb00425.x",
+            "access": "Primary publisher abstract inspected; full methods not independently audited.",
+            "referenceType": "journal-article",
+            "doi": "10.1002/j.1834-4453.1999.tb00425.x"
+          }
+        ],
+        "review": {
+          "summary": "Di Piazza reports two excavated ovens with pandanus remains dated to about 2000 BP.",
+          "limitations": "Do not automatically convert an unspecified radiocarbon BP age to 50 BCE. This was the oldest known Kiribati evidence reported in 1999, not a timeless archipelago-wide first-arrival claim.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": []
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.569Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-utrok-onset",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-utrok-onset",
+        "revision": 1,
+        "type": "occurrence",
+        "title": "Utrōk — oldest cultural date",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r6-utrok-onset-place",
+          "name": "Utrōk Atoll",
+          "lon": 169.85,
+          "lat": 11.23,
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Named geographic setting in the cited study; editorial approximate placement."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": 100,
+          "end": 100,
+          "approximate": true,
+          "original": "Oldest cultural date about 1850 calBP",
+          "method": "Published calendar interval; calibrated BP uses the AD 1950 epoch where explicitly stated.",
+          "interpretation": "An uncertain occurrence/onset envelope unless explicitly described as an interval; not proof of continuous settlement or an abandonment date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "The oldest cultural date reported for Utrōk is 1850 calBP; islet development is older.",
+            "status": "well-supported",
+            "explanation": "Approximate atoll reference, not an individual hearth coordinate. Islet development around 2750 calBP is not human occupation.",
+            "support": [
+              {
+                "sourceId": "r6-weisler2012",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-weisler2012",
+            "authors": "Marshall I. Weisler; Hiroya Yamano; Quan Hua",
+            "title": "A Multidisciplinary Approach for Dating Human Colonization of Pacific Atolls",
+            "year": 2012,
+            "venue": "See linked primary publication",
+            "url": "https://doi.org/10.1080/15564894.2011.616923",
+            "access": "Primary publisher abstract inspected; full methods not independently audited.",
+            "referenceType": "journal-article",
+            "doi": "10.1080/15564894.2011.616923"
+          }
+        ],
+        "review": {
+          "summary": "The oldest cultural date reported for Utrōk is 1850 calBP; islet development is older.",
+          "limitations": "Approximate atoll reference, not an individual hearth coordinate. Islet development around 2750 calBP is not human occupation.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": []
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-maloelap-onset",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-maloelap-onset",
+        "revision": 1,
+        "type": "occurrence",
+        "title": "Maloelap — oldest cultural date",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r6-maloelap-onset-place",
+          "name": "Maloelap Atoll",
+          "lon": 170.17,
+          "lat": 8.75,
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Named geographic setting in the cited study; editorial approximate placement."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": 160,
+          "end": 160,
+          "approximate": true,
+          "original": "Oldest cultural date about 1790 calBP",
+          "method": "Published calendar interval; calibrated BP uses the AD 1950 epoch where explicitly stated.",
+          "interpretation": "An uncertain occurrence/onset envelope unless explicitly described as an interval; not proof of continuous settlement or an abandonment date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "The oldest cultural date reported for Maloelap is 1790 calBP, following islet development around 2400 calBP.",
+            "status": "well-supported",
+            "explanation": "Approximate atoll reference. Geomorphic ages and cultural dates must remain distinct.",
+            "support": [
+              {
+                "sourceId": "r6-weisler2012",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-weisler2012",
+            "authors": "Marshall I. Weisler; Hiroya Yamano; Quan Hua",
+            "title": "A Multidisciplinary Approach for Dating Human Colonization of Pacific Atolls",
+            "year": 2012,
+            "venue": "See linked primary publication",
+            "url": "https://doi.org/10.1080/15564894.2011.616923",
+            "access": "Primary publisher abstract inspected; full methods not independently audited.",
+            "referenceType": "journal-article",
+            "doi": "10.1080/15564894.2011.616923"
+          }
+        ],
+        "review": {
+          "summary": "The oldest cultural date reported for Maloelap is 1790 calBP, following islet development around 2400 calBP.",
+          "limitations": "Approximate atoll reference. Geomorphic ages and cultural dates must remain distinct.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": []
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-majuro-onset",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-majuro-onset",
+        "revision": 1,
+        "type": "occurrence",
+        "title": "Majuro — settlement following emergence",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r6-majuro-onset-place",
+          "name": "Majuro Atoll",
+          "lon": 171.37,
+          "lat": 7.1,
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Named geographic setting in the cited study; editorial approximate placement."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -50,
+          "end": -50,
+          "approximate": true,
+          "original": "Approximately 2000 calBP; source-rounded onset",
+          "method": "Published calendar interval; calibrated BP uses the AD 1950 epoch where explicitly stated.",
+          "interpretation": "An uncertain occurrence/onset envelope unless explicitly described as an interval; not proof of continuous settlement or an abandonment date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "The study places colonization near 2000 calBP, shortly after islet emergence and before dense vegetation developed.",
+            "status": "well-supported",
+            "explanation": "A source-rounded onset, not a one-year occupation. This local sequence does not prove synchronous settlement of all Marshall atolls.",
+            "support": [
+              {
+                "sourceId": "r6-kayanne2011",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-kayanne2011",
+            "authors": "Hajime Kayanne; Toru Yasukochi; Toru Yamaguchi; Hiroya Yamano; Minoru Yoneda",
+            "title": "Rapid settlement of Majuro Atoll, central Pacific, following its emergence at 2000 years CalBP",
+            "year": 2011,
+            "venue": "See linked primary publication",
+            "url": "https://doi.org/10.1029/2011GL049163",
+            "access": "Primary publisher and author-institution abstracts inspected.",
+            "referenceType": "journal-article",
+            "doi": "10.1029/2011GL049163"
+          }
+        ],
+        "review": {
+          "summary": "The study places colonization near 2000 calBP, shortly after islet emergence and before dense vegetation developed.",
+          "limitations": "A source-rounded onset, not a one-year occupation. This local sequence does not prove synchronous settlement of all Marshall atolls.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": []
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-mwoakilloa-onset",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-mwoakilloa-onset",
+        "revision": 1,
+        "type": "occurrence",
+        "title": "Mwoakilloa — early occupation horizon",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r6-mwoakilloa-onset-place",
+          "name": "Kahlap village area, Mwoakilloa",
+          "lon": 159.79,
+          "lat": 6.67,
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Named geographic setting in the cited study; editorial approximate placement."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": 250,
+          "end": 390,
+          "approximate": true,
+          "original": "Modeled/dated beginning 1700–1560 calBP,2σ",
+          "method": "Published calendar interval; calibrated BP uses the AD 1950 epoch where explicitly stated.",
+          "interpretation": "An uncertain occurrence/onset envelope unless explicitly described as an interval; not proof of continuous settlement or an abandonment date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Ten radiocarbon determinations support an occupation beginning within 1700–1560 calBP at 2σ.",
+            "status": "well-supported",
+            "explanation": "An onset window, not occupation ending at 1560 calBP. Whether use was continuous requires further investigation. This is a Caroline atoll, not in the Marshalls.",
+            "support": [
+              {
+                "sourceId": "r6-poteate2016",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          },
+          {
+            "id": "animals",
+            "text": "Dog and Pacific rat remains occur with early settlement evidence.",
+            "status": "well-supported",
+            "explanation": "Translocated animal evidence; not human genomic ancestry.",
+            "support": [
+              {
+                "sourceId": "r6-poteate2016",
+                "stance": "supports",
+                "locator": "Source abstract/results",
+                "note": "Translocated animal evidence; not human genomic ancestry."
+              }
+            ]
+          },
+          {
+            "id": "mound",
+            "text": "The study identifies a substantial artificial mound made of accumulated debris and platforms.",
+            "status": "well-supported",
+            "explanation": "Physical mound evidence is not a census or direct population estimate.",
+            "support": [
+              {
+                "sourceId": "r6-poteate2016",
+                "stance": "supports",
+                "locator": "Source abstract/results",
+                "note": "Physical mound evidence is not a census or direct population estimate."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-poteate2016",
+            "authors": "Aaron S. Poteate; Scott M. Fitzpatrick; William S. Ayres; Adam Thompson",
+            "title": "First Radiocarbon Chronology for Mwoakilloa (Mokil) Atoll, Eastern Caroline Islands, Micronesia",
+            "year": 2016,
+            "venue": "See linked primary publication",
+            "url": "https://doi.org/10.1017/RDC.2015.16",
+            "access": "Primary publisher abstract inspected; full methods not independently audited.",
+            "referenceType": "journal-article",
+            "doi": "10.1017/RDC.2015.16"
+          }
+        ],
+        "review": {
+          "summary": "Ten radiocarbon determinations support an occupation beginning within 1700–1560 calBP at 2σ.",
+          "limitations": "An onset window, not occupation ending at 1560 calBP. Whether use was continuous requires further investigation. This is a Caroline atoll, not in the Marshalls.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": []
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-nukuleka-onset",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-nukuleka-onset",
+        "revision": 1,
+        "type": "occurrence",
+        "title": "Nukuleka — coral-file founder horizon",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r6-nukuleka-onset-place",
+          "name": "Nukuleka, Tongatapu",
+          "lon": -175.12,
+          "lat": -21.14,
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Named geographic setting in the cited study; editorial approximate placement."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -896,
+          "end": -880,
+          "approximate": true,
+          "original": "2846–2830 calBP,2σ,as reported byBurley 2015",
+          "method": "Published calendar interval; calibrated BP uses the AD 1950 epoch where explicitly stated.",
+          "interpretation": "An uncertain occurrence/onset envelope unless explicitly described as an interval; not proof of continuous settlement or an abandonment date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "A worked coral file associated with basal Lapita material dates to 2838±8 BP; the 2015 study reports 2846–2830 calBP at 2σ for the founder horizon.",
+            "status": "well-supported",
+            "explanation": "Dates a proposed initial-landfall horizon. It is not the late 29th centuryBCE. Exact lab intervals and model probabilities are not interchangeable.",
+            "support": [
+              {
+                "sourceId": "r6-burley2012",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          },
+          {
+            "id": "model-comparison",
+            "text": "The Tongatapu overlap model estimates first settlement at 2863–2835 calBP at 68.2%.",
+            "status": "under discussion",
+            "explanation": "Different method/confidence level from the coral-file 2σ interval; not a competing occupation duration.",
+            "support": [
+              {
+                "sourceId": "r6-burley2015",
+                "stance": "supports",
+                "locator": "Source abstract/results",
+                "note": "Different method/confidence level from the coral-file2σ interval; not a competing occupation duration."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-burley2012",
+            "authors": "David Burley; Marshall I. Weisler; Jian-xin Zhao",
+            "title": "High Precision U/Th Dating of First Polynesian Settlement",
+            "year": 2012,
+            "venue": "See linked primary publication",
+            "url": "https://doi.org/10.1371/journal.pone.0048769",
+            "access": "Open PLOS full text inspected: sample context, results and discussion; no independent dating analysis.",
+            "referenceType": "journal-article",
+            "doi": "10.1371/journal.pone.0048769"
+          },
+          {
+            "id": "r6-burley2015",
+            "authors": "David Burley; Kevan Edinborough; Marshall I. Weisler; Jian-xin Zhao",
+            "title": "Bayesian Modeling and Chronological Precision for Polynesian Settlement of Tonga",
+            "year": 2015,
+            "venue": "See linked primary publication",
+            "url": "https://doi.org/10.1371/journal.pone.0120795",
+            "access": "Open PLOS full text inspected: overlap/contiguous models, Fig.5 and probability intervals; no independent modeling.",
+            "referenceType": "journal-article",
+            "doi": "10.1371/journal.pone.0120795"
+          }
+        ],
+        "review": {
+          "summary": "A worked coral file associated with basal Lapita material dates to 2838±8 BP; the 2015 study reports 2846–2830 calBP at 2σ for the founder horizon.",
+          "limitations": "Dates a proposed initial-landfall horizon. It is not the late 29th centuryBCE. Exact lab intervals and model probabilities are not interchangeable.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": [
+            "tonga-talasiu-sampled-individual"
+          ]
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-haapai-onset",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-haapai-onset",
+        "revision": 1,
+        "type": "occurrence",
+        "title": "Haʻapai — modeled Lapita beginning",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r6-haapai-onset-place",
+          "name": "Haʻapai island group",
+          "lon": -174.37,
+          "lat": -19.78,
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Named geographic setting in the cited study; editorial approximate placement."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -822,
+          "end": -809,
+          "approximate": true,
+          "original": "Overlap-model onset 2772–2759 calBP,68.2%",
+          "method": "Bayesian overlap model; calibrated BP dates retain stated probability levels.",
+          "interpretation": "An uncertain occurrence/onset envelope unless explicitly described as an interval; not proof of continuous settlement or an abandonment date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "The overlap model estimates initial settlement in Haʻapai at 2772–2759 calBP,68.2%.",
+            "status": "well-supported",
+            "explanation": "Island-group model from sampled sites; keep distinct from exact site dates or full occupation. A modeled 70–90 year lag does not specify a canoe itinerary.",
+            "support": [
+              {
+                "sourceId": "r6-burley2015",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          },
+          {
+            "id": "ceramic-phase",
+            "text": "The overlap model estimates 32–49 years for the decorated-Lapita phase in Haʻapai.",
+            "status": "under discussion",
+            "explanation": "Ceramic-phase duration is not the lifespan of the population or the settlement.",
+            "support": [
+              {
+                "sourceId": "r6-burley2015",
+                "stance": "supports",
+                "locator": "Source abstract/results",
+                "note": "Ceramic-phase duration is not the lifespan of the population or the settlement."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-burley2015",
+            "authors": "David Burley; Kevan Edinborough; Marshall I. Weisler; Jian-xin Zhao",
+            "title": "Bayesian Modeling and Chronological Precision for Polynesian Settlement of Tonga",
+            "year": 2015,
+            "venue": "See linked primary publication",
+            "url": "https://doi.org/10.1371/journal.pone.0120795",
+            "access": "Open PLOS full text inspected: overlap/contiguous models, Fig.5 and probability intervals; no independent modeling.",
+            "referenceType": "journal-article",
+            "doi": "10.1371/journal.pone.0120795"
+          }
+        ],
+        "review": {
+          "summary": "The overlap model estimates initial settlement in Haʻapai at 2772–2759 calBP,68.2%.",
+          "limitations": "Island-group model from sampled sites; keep distinct from exact site dates or full occupation. A modeled 70–90 year lag does not specify a canoe itinerary.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": []
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-vavau-onset",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-vavau-onset",
+        "revision": 1,
+        "type": "occurrence",
+        "title": "Vavaʻu — modeled Lapita beginning",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r6-vavau-onset-place",
+          "name": "Vavaʻu island group",
+          "lon": -173.98,
+          "lat": -18.65,
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Named geographic setting in the cited study; editorial approximate placement."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -855,
+          "end": -810,
+          "approximate": true,
+          "original": "First-settlement estimate 2805–2760 calBP,68.2%",
+          "method": "Bayesian overlap model; calibrated BP dates retain stated probability levels.",
+          "interpretation": "An uncertain occurrence/onset envelope unless explicitly described as an interval; not proof of continuous settlement or an abandonment date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "First settlement is modeled at 2805–2760 calBP at 68.2%, overlapping the Haʻapai estimate.",
+            "status": "well-supported",
+            "explanation": "Few accepted dates constrain this group. A strict Haʻapai-then-Vavaʻu sequence remains a hypothesis, not a resolved ordering.",
+            "support": [
+              {
+                "sourceId": "r6-burley2015",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-burley2015",
+            "authors": "David Burley; Kevan Edinborough; Marshall I. Weisler; Jian-xin Zhao",
+            "title": "Bayesian Modeling and Chronological Precision for Polynesian Settlement of Tonga",
+            "year": 2015,
+            "venue": "See linked primary publication",
+            "url": "https://doi.org/10.1371/journal.pone.0120795",
+            "access": "Open PLOS full text inspected: overlap/contiguous models, Fig.5 and probability intervals; no independent modeling.",
+            "referenceType": "journal-article",
+            "doi": "10.1371/journal.pone.0120795"
+          }
+        ],
+        "review": {
+          "summary": "First settlement is modeled at 2805–2760 calBP at 68.2%, overlapping the Haʻapai estimate.",
+          "limitations": "Few accepted dates constrain this group. A strict Haʻapai-then-Vavaʻu sequence remains a hypothesis, not a resolved ordering.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": []
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-tonga-northward-model",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-tonga-northward-model",
+        "revision": 1,
+        "type": "event",
+        "title": "Tonga — proposed early northward dispersal",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": null,
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -855,
+          "end": -809,
+          "approximate": true,
+          "original": "Northern onset-envelope from separate model outputs; not a travel duration",
+          "method": "Bayesian overlap model; calibrated BP dates retain stated probability levels.",
+          "interpretation": "An uncertain occurrence/onset envelope unless explicitly described as an interval; not proof of continuous settlement or an abandonment date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "The authors interpret settlement expansion from Tongatapu toward Haʻapai, with overlapping northern-island estimates.",
+            "status": "under discussion",
+            "explanation": "Schematic connection between island groups; no exact route, travel time or compulsory founding genealogy is inferred.",
+            "support": [
+              {
+                "sourceId": "r6-burley2015",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-burley2015",
+            "authors": "David Burley; Kevan Edinborough; Marshall I. Weisler; Jian-xin Zhao",
+            "title": "Bayesian Modeling and Chronological Precision for Polynesian Settlement of Tonga",
+            "year": 2015,
+            "venue": "See linked primary publication",
+            "url": "https://doi.org/10.1371/journal.pone.0120795",
+            "access": "Open PLOS full text inspected: overlap/contiguous models, Fig.5 and probability intervals; no independent modeling.",
+            "referenceType": "journal-article",
+            "doi": "10.1371/journal.pone.0120795"
+          }
+        ],
+        "review": {
+          "summary": "The authors interpret settlement expansion from Tongatapu toward Haʻapai, with overlapping northern-island estimates.",
+          "limitations": "Schematic connection between island groups; no exact route, travel time or compulsory founding genealogy is inferred.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": [
+            "r6-nukuleka-onset",
+            "r6-haapai-onset",
+            "r6-vavau-onset"
+          ]
+        },
+        "overlay": {
+          "kind": "regional-evidence",
+          "basis": "schematic",
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -175.12,
+                -21.14
+              ],
+              [
+                -174.37,
+                -19.78
+              ]
+            ]
+          },
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Illustrative geographic context only; no precise route or boundary inferred.",
+          "direction": "forward"
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-nukuleka-pit",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-nukuleka-pit",
+        "revision": 1,
+        "type": "occurrence",
+        "title": "Nukuleka — cultivation-pit infilling",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r6-nukuleka-pit-place",
+          "name": "Nukuleka, Tongatapu",
+          "lon": -175.12,
+          "lat": -21.14,
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Named geographic setting in the cited study; editorial approximate placement."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -740,
+          "end": -440,
+          "approximate": true,
+          "original": "Pit infilling dated 2690–2390 calBP",
+          "method": "Published calendar interval; calibrated BP uses the AD 1950 epoch where explicitly stated.",
+          "interpretation": "An uncertain occurrence/onset envelope unless explicitly described as an interval; not proof of continuous settlement or an abandonment date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "A cultivation pit associated with early settlement was filled between 2690 and 2390 calBP; microfossils include introduced aroids and other cultigens.",
+            "status": "well-supported",
+            "explanation": "This interval dates infilling, not first planting or continuous cultivation. Proposed moisture/nutrient roles of ceramic sherds are interpretations.",
+            "support": [
+              {
+                "sourceId": "r6-burley2020",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-burley2020",
+            "authors": "David V. Burley; Mark Horrocks; Marshall I. Weisler",
+            "title": "Earliest Evidence for Pit Cultivation Provides Insight on the Nature of First Polynesian Settlement",
+            "year": 2020,
+            "venue": "See linked primary publication",
+            "url": "https://doi.org/10.1080/15564894.2018.1501441",
+            "access": "Publisher abstract inspected. Online 2018; issue 15(1),2020,127–147.",
+            "referenceType": "journal-article",
+            "doi": "10.1080/15564894.2018.1501441"
+          }
+        ],
+        "review": {
+          "summary": "A cultivation pit associated with early settlement was filled between 2690 and 2390 calBP; microfossils include introduced aroids and other cultigens.",
+          "limitations": "This interval dates infilling, not first planting or continuous cultivation. Proposed moisture/nutrient roles of ceramic sherds are interpretations.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": [
+            "r6-nukuleka-onset"
+          ]
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-ureia",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-ureia",
+        "revision": 1,
+        "type": "occurrence",
+        "title": "Ureia, Aitutaki — revised occupation chronology",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r6-ureia-place",
+          "name": "Ureia, Aitutaki",
+          "lon": -159.78,
+          "lat": -18.85,
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Named geographic setting in the cited study; editorial approximate placement."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "interval",
+          "start": 1225,
+          "end": 1430,
+          "approximate": true,
+          "original": "calAD 1225–1430,1σ; dated site occupation",
+          "method": "Published calendar interval; calibrated BP uses the AD 1950 epoch where explicitly stated.",
+          "interpretation": "An uncertain occurrence/onset envelope unless explicitly described as an interval; not proof of continuous settlement or an abandonment date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Fourteen new dates place Ureia occupation within calAD 1225–1430 at 1σ; the associated biota indicate an already modified landscape.",
+            "status": "well-supported",
+            "explanation": "A site chronology, not first arrival on the entire island or an exact settlement-duration guarantee.",
+            "support": [
+              {
+                "sourceId": "r6-allen2007",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-allen2007",
+            "authors": "Melinda S. Allen; Rod Wallace",
+            "title": "New Evidence from the East Polynesian Gateway: Substantive and Methodological Results from Aitutaki, Southern Cook Islands",
+            "year": 2007,
+            "venue": "See linked primary publication",
+            "url": "https://doi.org/10.1017/S0033822200043095",
+            "access": "Primary publisher abstract inspected; full methods not independently audited.",
+            "referenceType": "journal-article",
+            "doi": "10.1017/S0033822200043095"
+          }
+        ],
+        "review": {
+          "summary": "Fourteen new dates place Ureia occupation within calAD 1225–1430 at 1σ; the associated biota indicate an already modified landscape.",
+          "limitations": "A site chronology, not first arrival on the entire island or an exact settlement-duration guarantee.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": []
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-tangatatau-coral",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-tangatatau-coral",
+        "revision": 1,
+        "type": "occurrence",
+        "title": "Tangatatau — early coral tool",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r6-tangatatau-coral-place",
+          "name": "Tangatatau Rockshelter, Mangaia",
+          "lon": -157.94,
+          "lat": -21.93,
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Named geographic setting in the cited study; editorial approximate placement."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": 1005,
+          "end": 1017,
+          "approximate": true,
+          "original": "AD 1011±5.8; integer-year display rounded outward",
+          "method": "Published calendar interval; calibrated BP uses the AD 1950 epoch where explicitly stated.",
+          "interpretation": "An uncertain occurrence/onset envelope unless explicitly described as an interval; not proof of continuous settlement or an abandonment date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Sear and colleagues report a coral-tool age of AD 1011±5.8 from early Tangatatau strata.",
+            "status": "well-supported",
+            "explanation": "A dated tool context, not continuous settlement. The checked 2020 paper synthesizes the original dating study.",
+            "support": [
+              {
+                "sourceId": "sear2020-polynesia",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "sear2020-polynesia",
+            "authors": "David A. Sear; Melinda S. Allen; Jonathan D. Hassall; Ashley E. Maloney; et al., including Emma Pearson (corrected authorship)",
+            "title": "Human settlement of East Polynesia earlier, incremental, and coincident with prolonged South Pacific drought",
+            "year": 2020,
+            "venue": "PNAS 117(16):8813–8819",
+            "url": "https://doi.org/10.1073/pnas.1920975117",
+            "doi": "10.1073/pnas.1920975117",
+            "access": "Primary PMC full text now inspected: Study Sites, Table1, anthropogenic signatures, climate and discussion. No independent recalibration. Authorship correction inspected.",
+            "referenceType": "journal-article"
+          }
+        ],
+        "review": {
+          "summary": "Sear and colleagues report a coral-tool age of AD 1011±5.8 from early Tangatatau strata.",
+          "limitations": "A dated tool context, not continuous settlement. The checked 2020 paper synthesizes the original dating study.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": []
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-bapot-revised",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-bapot-revised",
+        "revision": 1,
+        "type": "event",
+        "title": "Bapot-1, Saipan — revised arrival estimate",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": null,
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -1249,
+          "end": -1129,
+          "approximate": true,
+          "original": "3200–3080 calBP; source gives 1250–1130 BC; BCE labels encoded without year zero",
+          "method": "Published calendar interval; calibrated BP uses the AD 1950 epoch where explicitly stated.",
+          "interpretation": "An uncertain occurrence/onset envelope unless explicitly described as an interval; not proof of continuous settlement or an abandonment date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Stable-isotope and radiocarbon work identifies hardwater effects in basal marine shells and places arrival at 3200–3080 calBP.",
+            "status": "under discussion",
+            "explanation": "Site-specific revision; do not apply it automatically to all Mariana settlements or erase older competing models. Approximate bay-area placement.",
+            "support": [
+              {
+                "sourceId": "r6-petchey2017",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-petchey2017",
+            "authors": "Fiona Petchey; Geoffrey Clark; Olaf Winter; Patrick O’Day; Mirani Litster",
+            "title": "Colonisation of Remote Oceania: New dates for the Bapot-1 site in the Mariana Islands",
+            "year": 2017,
+            "venue": "See linked primary publication",
+            "url": "https://researchcommons.waikato.ac.nz/server/api/core/bitstreams/df472b43-a869-40d9-9c89-9d185a970f16/content",
+            "access": "Author-university manuscript abstract and chronology discussion inspected.",
+            "referenceType": "journal-article",
+            "doi": "10.1002/arco.5108"
+          }
+        ],
+        "review": {
+          "summary": "Stable-isotope and radiocarbon work identifies hardwater effects in basal marine shells and places arrival at 3200–3080 calBP.",
+          "limitations": "Site-specific revision; do not apply it automatically to all Mariana settlements or erase older competing models. Approximate bay-area placement.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "regional-evidence",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              145.78,
+              15.17
+            ]
+          },
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Illustrative geographic context only; no precise route or boundary inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-alamagan",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-alamagan",
+        "revision": 1,
+        "type": "occurrence",
+        "title": "Alamagan — Latte-period settlement",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r6-alamagan-place",
+          "name": "Alamagan, northern Marianas",
+          "lon": 145.84,
+          "lat": 17.6,
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Named geographic setting in the cited study; editorial approximate placement."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": 1200,
+          "end": 1399,
+          "approximate": true,
+          "original": "Late 1200s or early 1300sCE; coarse century envelope for display",
+          "method": "Published calendar interval; calibrated BP uses the AD 1950 epoch where explicitly stated.",
+          "interpretation": "An uncertain occurrence/onset envelope unless explicitly described as an interval; not proof of continuous settlement or an abandonment date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Survey recorded fourteen latte sets and tested two features; the authors favor settlement in the late 1200s or early 1300sCE.",
+            "status": "well-supported",
+            "explanation": "The broad display envelope intentionally avoids invented decade bounds. Fourteen structures are not fourteen people or a contemporaneous census. No Wake settlement is inferred.",
+            "support": [
+              {
+                "sourceId": "r6-athens2019",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-athens2019",
+            "authors": "J. Stephen Athens; Thomas P. Leppard",
+            "title": "Settlement and Subsistence in the Remote Western Pacific: Archaeological and Radiocarbon Data from Alamagan, Northern Mariana Islands",
+            "year": 2019,
+            "venue": "See linked primary publication",
+            "url": "https://doi.org/10.1080/00934690.2019.1571856",
+            "access": "Primary publisher abstract inspected; full methods not independently audited.",
+            "referenceType": "journal-article",
+            "doi": "10.1080/00934690.2019.1571856"
+          }
+        ],
+        "review": {
+          "summary": "Survey recorded fourteen latte sets and tested two features; the authors favor settlement in the late 1200s or early 1300sCE.",
+          "limitations": "The broad display envelope intentionally avoids invented decade bounds. Fourteen structures are not fourteen people or a contemporaneous census. No Wake settlement is inferred.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": []
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-nan-madol-sealevel",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-nan-madol-sealevel",
+        "revision": 1,
+        "type": "event",
+        "title": "Nan Madol — construction and relative sea level",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": null,
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": 1180,
+          "end": 1200,
+          "approximate": true,
+          "original": "Construction context around 770–750 BP in study",
+          "method": "Published calendar interval; calibrated BP uses the AD 1950 epoch where explicitly stated.",
+          "interpretation": "An uncertain occurrence/onset envelope unless explicitly described as an interval; not proof of continuous settlement or an abandonment date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "The reconstruction places monument construction around 770–750 BP when relative sea level was about 0.94 m lower.",
+            "status": "under discussion",
+            "explanation": "A monument-phase context, not initial island settlement. Lower sea level informs the interpretation of later inundation.",
+            "support": [
+              {
+                "sourceId": "r6-sefton2022",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-sefton2022",
+            "authors": "Juliet P. Sefton; Andrew C. Kemp; Simon E. Engelhart; Joanna C. Ellison; Makan A. Karegar; Blair Charley; Mark D. McCoy",
+            "title": "Implications of anomalous relative sea-level rise for the peopling of Remote Oceania",
+            "year": 2022,
+            "venue": "See linked primary publication",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9907147/",
+            "access": "Open primary full text inspected: abstract, sea-level results and monument implications.",
+            "referenceType": "journal-article",
+            "doi": "10.1073/pnas.2210863119"
+          }
+        ],
+        "review": {
+          "summary": "The reconstruction places monument construction around 770–750 BP when relative sea level was about 0.94 m lower.",
+          "limitations": "A monument-phase context, not initial island settlement. Lower sea level informs the interpretation of later inundation.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "regional-evidence",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              158.33,
+              6.84
+            ]
+          },
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Illustrative geographic context only; no precise route or boundary inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-leluh-sealevel",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-leluh-sealevel",
+        "revision": 1,
+        "type": "event",
+        "title": "Leluh — construction and relative sea level",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": null,
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": 1310,
+          "end": 1390,
+          "approximate": true,
+          "original": "Construction context around 640–560 BP in study",
+          "method": "Published calendar interval; calibrated BP uses the AD 1950 epoch where explicitly stated.",
+          "interpretation": "An uncertain occurrence/onset envelope unless explicitly described as an interval; not proof of continuous settlement or an abandonment date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "The reconstruction places monument construction around 640–560 BP when relative sea level was about 0.77 m lower.",
+            "status": "under discussion",
+            "explanation": "A monument context rather than first occupation. Original canal/islet interpretation is reassessed by this model.",
+            "support": [
+              {
+                "sourceId": "r6-sefton2022",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-sefton2022",
+            "authors": "Juliet P. Sefton; Andrew C. Kemp; Simon E. Engelhart; Joanna C. Ellison; Makan A. Karegar; Blair Charley; Mark D. McCoy",
+            "title": "Implications of anomalous relative sea-level rise for the peopling of Remote Oceania",
+            "year": 2022,
+            "venue": "See linked primary publication",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9907147/",
+            "access": "Open primary full text inspected: abstract, sea-level results and monument implications.",
+            "referenceType": "journal-article",
+            "doi": "10.1073/pnas.2210863119"
+          }
+        ],
+        "review": {
+          "summary": "The reconstruction places monument construction around 640–560 BP when relative sea level was about 0.77 m lower.",
+          "limitations": "A monument context rather than first occupation. Original canal/islet interpretation is reassessed by this model.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "regional-evidence",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              163.03,
+              5.33
+            ]
+          },
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Illustrative geographic context only; no precise route or boundary inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-pohnpei-kosrae-subsidence",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-pohnpei-kosrae-subsidence",
+        "revision": 1,
+        "type": "event",
+        "title": "Pohnpei and Kosrae — submerged-record bias",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": null,
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "unplaced",
+          "start": null,
+          "end": null,
+          "original": "Holocene sea-level context extending to modern observations",
+          "method": "Reported chronology retained without unsupported conversion",
+          "interpretation": "No justified closed calendar interval was extracted; this context remains in the evidence index."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Mangrove-based reconstruction estimates about 4.3±0.4 m of relative sea-level rise over 5700 years; early coastal evidence may now be submerged.",
+            "status": "under discussion",
+            "explanation": "A preservation-bias mechanism, not discovery of an unlocated submerged settlement or proof of earlier arrival.",
+            "support": [
+              {
+                "sourceId": "r6-sefton2022",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-sefton2022",
+            "authors": "Juliet P. Sefton; Andrew C. Kemp; Simon E. Engelhart; Joanna C. Ellison; Makan A. Karegar; Blair Charley; Mark D. McCoy",
+            "title": "Implications of anomalous relative sea-level rise for the peopling of Remote Oceania",
+            "year": 2022,
+            "venue": "See linked primary publication",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9907147/",
+            "access": "Open primary full text inspected: abstract, sea-level results and monument implications.",
+            "referenceType": "journal-article",
+            "doi": "10.1073/pnas.2210863119"
+          }
+        ],
+        "review": {
+          "summary": "Mangrove-based reconstruction estimates about 4.3±0.4 m of relative sea-level rise over 5700 years; early coastal evidence may now be submerged.",
+          "limitations": "A preservation-bias mechanism, not discovery of an unlocated submerged settlement or proof of earlier arrival.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": [
+            "r6-nan-madol-sealevel",
+            "r6-leluh-sealevel"
+          ]
+        },
+        "overlay": {
+          "kind": "environment",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              160.5,
+              6.1
+            ]
+          },
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Illustrative geographic context only; no precise route or boundary inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-micronesia-five-streams",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-micronesia-five-streams",
+        "revision": 1,
+        "type": "event",
+        "title": "Micronesia — five inferred ancestry streams",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": null,
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "unplaced",
+          "start": null,
+          "end": null,
+          "original": "Multiple sample periods; no single dated dispersal event",
+          "method": "Reported chronology retained without unsupported conversion",
+          "interpretation": "No justified closed calendar interval was extracted; this context remains in the evidence index."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "The study analyzes 164 ancient and 112 modern individuals and infers three East-Asian-related streams, one Polynesian-related and one mainland-New-Guinea-related stream.",
+            "status": "under discussion",
+            "explanation": "Model-specific ancestry sources are not five exact routes, five languages or five synchronous colonizations.",
+            "support": [
+              {
+                "sourceId": "r6-liu2022",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          },
+          {
+            "id": "matrilocality",
+            "text": "Strong between-community maternal differentiation in sampled early groups is interpreted as consistent with matrilocal practices.",
+            "status": "under discussion",
+            "explanation": "An inference about sampled communities, not a universal residence rule.",
+            "support": [
+              {
+                "sourceId": "r6-liu2022",
+                "stance": "supports",
+                "locator": "Source abstract/results",
+                "note": "An inference about sampled communities, not a universal residence rule."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-liu2022",
+            "authors": "Yue-Chen Liu; Rosalind Hunter-Anderson; et al.",
+            "title": "Ancient DNA reveals five streams of migration into Micronesia and matrilocality in early Pacific seafarers",
+            "year": 2022,
+            "venue": "See linked primary publication",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9983687/",
+            "access": "Primary abstract and open author manuscript inspected; sampled groups and dates retained.",
+            "referenceType": "journal-article",
+            "doi": "10.1126/science.abm6536"
+          }
+        ],
+        "review": {
+          "summary": "The study analyzes 164 ancient and 112 modern individuals and infers three East-Asian-related streams, one Polynesian-related and one mainland-New-Guinea-related stream.",
+          "limitations": "Model-specific ancestry sources are not five exact routes, five languages or five synchronous colonizations.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": [
+            "guam-pugach2021-ancestry"
+          ]
+        },
+        "overlay": {
+          "kind": "population-history",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              152,
+              8
+            ]
+          },
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Illustrative geographic context only; no precise route or boundary inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-micronesia-papuan-input",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-micronesia-papuan-input",
+        "revision": 1,
+        "type": "event",
+        "title": "Central Micronesia — inferred male-mediated ancestry input",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": null,
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "unplaced",
+          "start": null,
+          "end": null,
+          "original": "Approximately 2500–2000 years ago in demographic model; exact dating baseline not extracted",
+          "method": "Reported chronology retained without unsupported conversion",
+          "interpretation": "No justified closed calendar interval was extracted; this context remains in the evidence index."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "A mainland-New-Guinea-related ancestry source is inferred to have arrived through male migrants about 2500–2000 years ago.",
+            "status": "under discussion",
+            "explanation": "Human genetic inference differs from rat, pig and chicken pathways. No exact route or date of first island settlement is claimed.",
+            "support": [
+              {
+                "sourceId": "r6-liu2022",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-liu2022",
+            "authors": "Yue-Chen Liu; Rosalind Hunter-Anderson; et al.",
+            "title": "Ancient DNA reveals five streams of migration into Micronesia and matrilocality in early Pacific seafarers",
+            "year": 2022,
+            "venue": "See linked primary publication",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9983687/",
+            "access": "Primary abstract and open author manuscript inspected; sampled groups and dates retained.",
+            "referenceType": "journal-article",
+            "doi": "10.1126/science.abm6536"
+          }
+        ],
+        "review": {
+          "summary": "A mainland-New-Guinea-related ancestry source is inferred to have arrived through male migrants about 2500–2000 years ago.",
+          "limitations": "Human genetic inference differs from rat, pig and chicken pathways. No exact route or date of first island settlement is claimed.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "population-history",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              151,
+              7
+            ]
+          },
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Illustrative geographic context only; no precise route or boundary inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-anakena-onset",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-anakena-onset",
+        "revision": 1,
+        "type": "event",
+        "title": "Anakena — late-colonization evidence",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": null,
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": 1200,
+          "end": 1200,
+          "approximate": true,
+          "original": "AboutAD 1200; rounded source onset",
+          "method": "Published calendar interval; calibrated BP uses the AD 1950 epoch where explicitly stated.",
+          "interpretation": "An uncertain occurrence/onset envelope unless explicitly described as an interval; not proof of continuous settlement or an abandonment date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Basal cultural strata and reanalysis of earlier dates support an arrival model nearAD 1200.",
+            "status": "under discussion",
+            "explanation": "Rounded date of an onset interpretation, not one-year occupation or proof that earlier visits were impossible.",
+            "support": [
+              {
+                "sourceId": "r6-hunt2006",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-hunt2006",
+            "authors": "Terry L. Hunt; Carl P. Lipo",
+            "title": "Late Colonization of Easter Island",
+            "year": 2006,
+            "venue": "See linked primary publication",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/?term=10.1126%2Fscience.1121879",
+            "access": "Primary article abstract and publisher-indexed chronology checked; no reassessment of every assay.",
+            "referenceType": "journal-article",
+            "doi": "10.1126/science.1121879"
+          }
+        ],
+        "review": {
+          "summary": "Basal cultural strata and reanalysis of earlier dates support an arrival model nearAD 1200.",
+          "limitations": "Rounded date of an onset interpretation, not one-year occupation or proof that earlier visits were impossible.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": [
+            "pacific-wilmshurst2011-chronology"
+          ]
+        },
+        "overlay": {
+          "kind": "regional-evidence",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -109.32,
+              -27.07
+            ]
+          },
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Illustrative geographic context only; no precise route or boundary inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-rapanui-admixture",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-rapanui-admixture",
+        "revision": 1,
+        "type": "event",
+        "title": "Rapa Nui — modeled American ancestry admixture",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": null,
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": 1250,
+          "end": 1430,
+          "approximate": true,
+          "original": "Modeled admixture interval 1250–1430 CE",
+          "method": "Joint Bayesian genetic/radiocarbon admixture model.",
+          "interpretation": "An uncertain occurrence/onset envelope unless explicitly described as an interval; not proof of continuous settlement or an abandonment date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Fifteen ancient Rapanui genomes carry about 10% Native American ancestry; joint genetic/radiocarbon modeling estimates admixture atAD 1250–1430.",
+            "status": "under discussion",
+            "explanation": "The sampled individuals date 1670–1950 CE. Admixture estimates do not determine a voyage direction, number of contacts or exact American landfall.",
+            "support": [
+              {
+                "sourceId": "r6-morenomayar2024",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-morenomayar2024",
+            "authors": "J. Víctor Moreno-Mayar; Bárbara Sousa da Mota; et al.",
+            "title": "Ancient Rapanui genomes reveal resilience and pre-European contact with the Americas",
+            "year": 2024,
+            "venue": "See linked primary publication",
+            "url": "https://www.nature.com/articles/s41586-024-07881-4",
+            "access": "Open primary abstract/discussion inspected, including sampling, admixture uncertainty and earlier low-coverage comparison.",
+            "referenceType": "journal-article",
+            "doi": "10.1038/s41586-024-07881-4"
+          }
+        ],
+        "review": {
+          "summary": "Fifteen ancient Rapanui genomes carry about 10% Native American ancestry; joint genetic/radiocarbon modeling estimates admixture atAD 1250–1430.",
+          "limitations": "The sampled individuals date 1670–1950 CE. Admixture estimates do not determine a voyage direction, number of contacts or exact American landfall.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": [
+            "pacific-ioannidis2020-nativeamerican-contact"
+          ]
+        },
+        "overlay": {
+          "kind": "population-history",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -109.35,
+              -27.12
+            ]
+          },
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Illustrative geographic context only; no precise route or boundary inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-rapanui-bottleneck",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-rapanui-bottleneck",
+        "revision": 1,
+        "type": "event",
+        "title": "Rapa Nui — severe seventeenth-century bottleneck rejected",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": null,
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": 1600,
+          "end": 1699,
+          "approximate": true,
+          "original": "The 1600s; demographic hypothesis tested",
+          "method": "Genomic demographic model and simulation tests.",
+          "interpretation": "An uncertain occurrence/onset envelope unless explicitly described as an interval; not proof of continuous settlement or an abandonment date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "The genomic study rejects its tested scenario of a severe population bottleneck during the 1600s.",
+            "status": "under discussion",
+            "explanation": "Effective population-size inference is not a census and does not establish absence of environmental or social disruption.",
+            "support": [
+              {
+                "sourceId": "r6-morenomayar2024",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-morenomayar2024",
+            "authors": "J. Víctor Moreno-Mayar; Bárbara Sousa da Mota; et al.",
+            "title": "Ancient Rapanui genomes reveal resilience and pre-European contact with the Americas",
+            "year": 2024,
+            "venue": "See linked primary publication",
+            "url": "https://www.nature.com/articles/s41586-024-07881-4",
+            "access": "Open primary abstract/discussion inspected, including sampling, admixture uncertainty and earlier low-coverage comparison.",
+            "referenceType": "journal-article",
+            "doi": "10.1038/s41586-024-07881-4"
+          }
+        ],
+        "review": {
+          "summary": "The genomic study rejects its tested scenario of a severe population bottleneck during the 1600s.",
+          "limitations": "Effective population-size inference is not a census and does not establish absence of environmental or social disruption.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": [
+            "r6-rapanui-admixture"
+          ]
+        },
+        "overlay": {
+          "kind": "population-history",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -109.35,
+              -27.12
+            ]
+          },
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Illustrative geographic context only; no precise route or boundary inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-rapanui-drought",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-rapanui-drought",
+        "revision": 1,
+        "type": "event",
+        "title": "Rapa Nui — prolonged rainfall deficit",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": null,
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "interval",
+          "start": 1550,
+          "end": 1720,
+          "approximate": true,
+          "original": "Study comparison interval 1550–1720 CE",
+          "method": "Published calendar interval; calibrated BP uses the AD 1950 epoch where explicitly stated.",
+          "interpretation": "An uncertain occurrence/onset envelope unless explicitly described as an interval; not proof of continuous settlement or an abandonment date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Leaf-wax isotope reconstructions indicate sustained drying from about 1550 CE; the 1550–1720 comparison implies roughly 600–800 mm less annual precipitation.",
+            "status": "under discussion",
+            "explanation": "Proxy reconstruction with model uncertainty. Cultural reorganization is a proposed response, not proof of warfare or demographic collapse.",
+            "support": [
+              {
+                "sourceId": "r6-stein2025",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-stein2025",
+            "authors": "R. Stein; L. Curtin; N. L. Balascio; et al.",
+            "title": "Prolonged drought on Rapa Nui during the decline of megalithic monument construction",
+            "year": 2025,
+            "venue": "See linked primary publication",
+            "url": "https://www.nature.com/articles/s43247-025-02801-4",
+            "access": "Open primary results and discussion inspected:1550–1720 comparison, isotope estimates and qualified social interpretations.",
+            "referenceType": "journal-article",
+            "doi": "10.1038/s43247-025-02801-4"
+          }
+        ],
+        "review": {
+          "summary": "Leaf-wax isotope reconstructions indicate sustained drying from about 1550 CE; the 1550–1720 comparison implies roughly 600–800 mm less annual precipitation.",
+          "limitations": "Proxy reconstruction with model uncertainty. Cultural reorganization is a proposed response, not proof of warfare or demographic collapse.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": [
+            "r6-rapanui-bottleneck"
+          ]
+        },
+        "overlay": {
+          "kind": "environment",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -109.35,
+              -27.12
+            ]
+          },
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Illustrative geographic context only; no precise route or boundary inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-cook-drought-early",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-cook-drought-early",
+        "revision": 1,
+        "type": "event",
+        "title": "Southern Cook Islands — early drought reconstruction",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": null,
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "interval",
+          "start": 885,
+          "end": 1075,
+          "approximate": true,
+          "original": "Reconstructed dry interval 885–1075 CE",
+          "method": "Published calendar interval; calibrated BP uses the AD 1950 epoch where explicitly stated.",
+          "interpretation": "An uncertain occurrence/onset envelope unless explicitly described as an interval; not proof of continuous settlement or an abandonment date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "A lake-sediment reconstruction identifies a dry period around 885–1075 CE.",
+            "status": "under discussion",
+            "explanation": "Climate context is distinct from an excavated settlement or demonstrated cause of migration.",
+            "support": [
+              {
+                "sourceId": "r6-hipkiss2026",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-hipkiss2026",
+            "authors": "Charlotte V. Hipkiss; Peter Langdon; Justin Sheffield; Melanie J. Leng; Constance Temple-Brown; David Sear",
+            "title": "Connecting climate and human settlement in the tropical South Pacific: Insights from a lake sediment archive from the Southern Cook Islands",
+            "year": 2026,
+            "venue": "See linked primary publication",
+            "url": "https://nora.nerc.ac.uk/id/eprint/541682/1/S0277379126002155main.pdf",
+            "access": "Primary open institutional manuscript abstract and dated drought windows inspected.",
+            "referenceType": "journal-article",
+            "doi": "10.1016/j.quascirev.2026.110006"
+          }
+        ],
+        "review": {
+          "summary": "A lake-sediment reconstruction identifies a dry period around 885–1075 CE.",
+          "limitations": "Climate context is distinct from an excavated settlement or demonstrated cause of migration.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": [
+            "pacific-sear2020-atiu"
+          ]
+        },
+        "overlay": {
+          "kind": "environment",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -157.92,
+              -21.94
+            ]
+          },
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Illustrative geographic context only; no precise route or boundary inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-cook-drought-later",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-cook-drought-later",
+        "revision": 1,
+        "type": "event",
+        "title": "Southern Cook Islands — later drought reconstruction",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": null,
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "interval",
+          "start": 1320,
+          "end": 1460,
+          "approximate": true,
+          "original": "Reconstructed dry interval 1320–1460 CE",
+          "method": "Published calendar interval; calibrated BP uses the AD 1950 epoch where explicitly stated.",
+          "interpretation": "An uncertain occurrence/onset envelope unless explicitly described as an interval; not proof of continuous settlement or an abandonment date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "The same reconstruction identifies another dry period around 1320–1460 CE, during agricultural intensification.",
+            "status": "under discussion",
+            "explanation": "Co-occurrence does not establish drought as the sole cause of changed land use.",
+            "support": [
+              {
+                "sourceId": "r6-hipkiss2026",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-hipkiss2026",
+            "authors": "Charlotte V. Hipkiss; Peter Langdon; Justin Sheffield; Melanie J. Leng; Constance Temple-Brown; David Sear",
+            "title": "Connecting climate and human settlement in the tropical South Pacific: Insights from a lake sediment archive from the Southern Cook Islands",
+            "year": 2026,
+            "venue": "See linked primary publication",
+            "url": "https://nora.nerc.ac.uk/id/eprint/541682/1/S0277379126002155main.pdf",
+            "access": "Primary open institutional manuscript abstract and dated drought windows inspected.",
+            "referenceType": "journal-article",
+            "doi": "10.1016/j.quascirev.2026.110006"
+          }
+        ],
+        "review": {
+          "summary": "The same reconstruction identifies another dry period around 1320–1460 CE, during agricultural intensification.",
+          "limitations": "Co-occurrence does not establish drought as the sole cause of changed land use.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "environment",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -157.92,
+              -21.94
+            ]
+          },
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Illustrative geographic context only; no precise route or boundary inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-png-ancestry-interactions",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-png-ancestry-interactions",
+        "revision": 1,
+        "type": "event",
+        "title": "Coastal Papua New Guinea — ancestry and interaction",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": null,
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "unplaced",
+          "start": null,
+          "end": null,
+          "original": "Samples span 2500 years; distinct admixture and interaction episodes",
+          "method": "Reported chronology retained without unsupported conversion",
+          "interpretation": "No justified closed calendar interval was extracted; this context remains in the evidence index."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Forty-two ancient genomes reveal varying East-Asian-related ancestry in individuals from about 2100 BP and different later interaction histories.",
+            "status": "under discussion",
+            "explanation": "Regional study of people, not universal evidence that ceramic trade carried particular genes or caused every coastal relocation.",
+            "support": [
+              {
+                "sourceId": "r6-nagele2025",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-nagele2025",
+            "authors": "Kathrin Nägele; Rebecca Kinaston; Dylan Gaffney; et al.",
+            "title": "The impact of human dispersals and local interactions on the genetic diversity of coastal Papua New Guinea over the past 2,500 years",
+            "year": 2025,
+            "venue": "See linked primary publication",
+            "url": "https://www.nature.com/articles/s41559-025-02710-x",
+            "access": "Primary open abstract inspected; no universal extension of local ancestry or trade conclusions.",
+            "referenceType": "journal-article",
+            "doi": "10.1038/s41559-025-02710-x"
+          }
+        ],
+        "review": {
+          "summary": "Forty-two ancient genomes reveal varying East-Asian-related ancestry in individuals from about 2100 BP and different later interaction histories.",
+          "limitations": "Regional study of people, not universal evidence that ceramic trade carried particular genes or caused every coastal relocation.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "population-history",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              148,
+              -8
+            ]
+          },
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Illustrative geographic context only; no precise route or boundary inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-paper-mulberry-networks",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-paper-mulberry-networks",
+        "revision": 1,
+        "type": "event",
+        "title": "Pacific paper mulberry — plant dispersal networks",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": null,
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "unplaced",
+          "start": null,
+          "end": null,
+          "original": "Plant genetic relationships; no single dated human migration event",
+          "method": "Reported chronology retained without unsupported conversion",
+          "interpretation": "No justified closed calendar interval was extracted; this context remains in the evidence index."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "The plant study identifies 64 genotypes and inferred dispersal hubs centered on Fiji, Tonga and Pitcairn.",
+            "status": "under discussion",
+            "explanation": "Plant genetic hubs do not establish human ancestry, routes or dates of first settlement.",
+            "support": [
+              {
+                "sourceId": "r6-olivares2019",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-olivares2019",
+            "authors": "Gabriela Olivares; et al.",
+            "title": "Human mediated translocation of Pacific paper mulberry [Broussonetia papyrifera (L.) L’Hér. ex Vent. (Moraceae)]: Genetic evidence of dispersal routes in Remote Oceania",
+            "year": 2019,
+            "venue": "See linked primary publication",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/31216291/",
+            "access": "Primary publisher abstract inspected; full methods not independently audited.",
+            "referenceType": "journal-article",
+            "doi": "10.1371/journal.pone.0217107"
+          }
+        ],
+        "review": {
+          "summary": "The plant study identifies 64 genotypes and inferred dispersal hubs centered on Fiji, Tonga and Pitcairn.",
+          "limitations": "Plant genetic hubs do not establish human ancestry, routes or dates of first settlement.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "trade",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -177,
+              -19
+            ]
+          },
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Illustrative geographic context only; no precise route or boundary inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-cook-adze-exchange",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-cook-adze-exchange",
+        "revision": 1,
+        "type": "event",
+        "title": "Cook Islands — sourced basalt exchange",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": null,
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "unplaced",
+          "start": null,
+          "end": null,
+          "original": "Pre-European exchange sequence; exact artifact contexts not extracted",
+          "method": "Reported chronology retained without unsupported conversion",
+          "interpretation": "No justified closed calendar interval was extracted; this context remains in the evidence index."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Artifact trace-element and isotope analyses identify nonlocal basalt sources, supporting interarchipelago object movement.",
+            "status": "well-supported",
+            "explanation": "Material provenance is not proof of direct nonstop voyages, traded volume, direction or population migration.",
+            "support": [
+              {
+                "sourceId": "r6-weisler2016",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-weisler2016",
+            "authors": "Marshall I. Weisler; Robert Bolhar; Jinlong Ma; et al.",
+            "title": "Cook Island artifact geochemistry demonstrates spatial and temporal extent of pre-European interarchipelago voyaging in East Polynesia",
+            "year": 2016,
+            "venue": "See linked primary publication",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/27382159/",
+            "access": "Primary publisher abstract inspected; full methods not independently audited.",
+            "referenceType": "journal-article",
+            "doi": "10.1073/pnas.1608130113"
+          }
+        ],
+        "review": {
+          "summary": "Artifact trace-element and isotope analyses identify nonlocal basalt sources, supporting interarchipelago object movement.",
+          "limitations": "Material provenance is not proof of direct nonstop voyages, traded volume, direction or population migration.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "trade",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -158,
+              -20
+            ]
+          },
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Illustrative geographic context only; no precise route or boundary inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-galapagos-reevaluation",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-galapagos-reevaluation",
+        "revision": 1,
+        "type": "event",
+        "title": "Galápagos — pre-Columbian claims reassessed",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": null,
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "unplaced",
+          "start": null,
+          "end": null,
+          "original": "Historical site ages; absence claim has no prehistoric occupation interval",
+          "method": "Reported chronology retained without unsupported conversion",
+          "interpretation": "No justified closed calendar interval was extracted; this context remains in the evidence index."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Re-excavation and OSL/radiocarbon analysis favor historical-age deposits at the investigated sites, challenging earlier pre-Columbian interpretations.",
+            "status": "under discussion",
+            "explanation": "This does not rule out every unrecorded visit; no prehistoric settlement dot is invented from an absence assessment.",
+            "support": [
+              {
+                "sourceId": "r6-anderson2016",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-anderson2016",
+            "authors": "Atholl Anderson; Karen Stothert; Helene Martinsson-Wallin; Paul Wallin; Iona Flett; Simon Haberle; Henk Heijnis; Edward Rhodes",
+            "title": "Reconsidering Precolumbian Human Colonization in the Galápagos Islands, Republic of Ecuador",
+            "year": 2016,
+            "venue": "See linked primary publication",
+            "url": "https://eprints.whiterose.ac.uk/id/eprint/159894/",
+            "access": "Author-university abstract and primary re-excavation summary inspected.",
+            "referenceType": "journal-article",
+            "doi": "10.7183/1045-6635.27.2.169"
+          }
+        ],
+        "review": {
+          "summary": "Re-excavation and OSL/radiocarbon analysis favor historical-age deposits at the investigated sites, challenging earlier pre-Columbian interpretations.",
+          "limitations": "This does not rule out every unrecorded visit; no prehistoric settlement dot is invented from an absence assessment.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "regional-evidence",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -90.5,
+              -0.5
+            ]
+          },
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Illustrative geographic context only; no precise route or boundary inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-ebon-foraging",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-ebon-foraging",
+        "revision": 1,
+        "type": "event",
+        "title": "Ebon — sustained mollusc harvesting",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": null,
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "unplaced",
+          "start": null,
+          "end": null,
+          "original": "About 2000 years of sampled foraging; individual site calendar intervals not extracted",
+          "method": "Reported chronology retained without unsupported conversion",
+          "interpretation": "No justified closed calendar interval was extracted; this context remains in the evidence index."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Analysis of four sites finds locally adapted foraging across habitats and no observable impact on the studied molluscs and nearshore intertidal ecosystems over about 2000 years.",
+            "status": "well-supported",
+            "explanation": "Do not infer no impacts on every species, no terrestrial change or a particular population size.",
+            "support": [
+              {
+                "sourceId": "r6-harris2018",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-harris2018",
+            "authors": "Matthew Harris; Marshall Weisler",
+            "title": "Two millennia of mollusc foraging on Ebon Atoll, Marshall Islands: Sustained marine resource use on a Pacific atoll",
+            "year": 2018,
+            "venue": "See linked primary publication",
+            "url": "https://doi.org/10.1002/arco.5134",
+            "access": "Publisher abstract inspected; online2017, issue2018. Four-site mollusc study, not all-ecosystem assessment.",
+            "referenceType": "journal-article",
+            "doi": "10.1002/arco.5134"
+          }
+        ],
+        "review": {
+          "summary": "Analysis of four sites finds locally adapted foraging across habitats and no observable impact on the studied molluscs and nearshore intertidal ecosystems over about 2000 years.",
+          "limitations": "Do not infer no impacts on every species, no terrestrial change or a particular population size.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "environment",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              168.7,
+              4.6
+            ]
+          },
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Illustrative geographic context only; no precise route or boundary inferred."
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-mololo-early",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-mololo-early",
+        "revision": 1,
+        "type": "occurrence",
+        "title": "Mololo, Raja Ampat — early Pacific occupation",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r6-mololo-early-place",
+          "name": "Mololo Cave region, Waigeo",
+          "lon": 130.8,
+          "lat": -0.2,
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Named geographic setting in the cited study; editorial approximate placement."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "unplaced",
+          "start": null,
+          "end": null,
+          "original": "More than 55–50ka in published synthesis; no automatic calendar conversion",
+          "method": "Reported chronology retained without unsupported conversion",
+          "interpretation": "No justified closed calendar interval was extracted; this context remains in the evidence index."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Archaeological investigations in Raja Ampat report human presence more than 55–50 thousandyears ago, including forest-resource use and plant processing.",
+            "status": "well-supported",
+            "explanation": "This is Near Oceania/Island Southeast Asian context, not evidence of Pleistocene Polynesian or Micronesian settlement. Approximate island reference pending source-coordinate extraction.",
+            "support": [
+              {
+                "sourceId": "r6-gaffney2024",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r6-gaffney2024",
+            "authors": "Dylan Gaffney; Daud Tanudirjo; Erlin N. I. Djami; et al.",
+            "title": "Human dispersal and plant processing in the Pacific 55 000–50 000 years ago",
+            "year": 2024,
+            "venue": "See linked primary publication",
+            "url": "https://ora.ox.ac.uk/objects/uuid:36fa5e76-a85b-4982-8885-4fa8b3a1517e",
+            "access": "Primary author-university abstract and publisher study summary inspected; full assay calibration not reanalyzed.",
+            "referenceType": "journal-article",
+            "doi": "10.15184/aqy.2024.83"
+          }
+        ],
+        "review": {
+          "summary": "Archaeological investigations in Raja Ampat report human presence more than 55–50 thousandyears ago, including forest-resource use and plant processing.",
+          "limitations": "This is Near Oceania/Island Southeast Asian context, not evidence of Pleistocene Polynesian or Micronesian settlement. Approximate island reference pending source-coordinate extraction.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": []
+        }
+      },
+      "rationale": "Author-supplied literature intake with primary source/access checks.",
+      "state": "ready",
+      "createdAt": "2026-10-29T19:39:05.570Z",
+      "updatedAt": "2026-10-29T19:39:05.570Z"
+    },
+    {
+      "id": "author-r6-tangatatau-coral-later",
+      "version": 1,
+      "kind": "new",
+      "targetId": null,
+      "baseRevision": null,
+      "baseRecord": null,
+      "record": {
+        "id": "r6-tangatatau-coral-later",
+        "revision": 1,
+        "type": "occurrence",
+        "title": "Tangatatau — later coral tool",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r6-tangatatau-coral-later-place",
+          "name": "Tangatatau Rockshelter, Mangaia",
+          "lon": -157.94,
+          "lat": -21.93,
+          "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
+          "provenance": "Named geographic setting in the cited study; editorial approximate placement."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": 1155,
+          "end": 1179,
+          "approximate": true,
+          "original": "AD 1167±12",
+          "method": "Published calendar interval; calibrated BP uses the AD 1950 epoch where explicitly stated.",
+          "interpretation": "An uncertain occurrence/onset envelope unless explicitly described as an interval; not proof of continuous settlement or an abandonment date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "A second reported Tangatatau coral-tool date is AD 1167±12.",
+            "status": "well-supported",
+            "explanation": "Separate from the earlier tool; no temporal support is invented between the two dated intervals.",
+            "support": [
+              {
+                "sourceId": "sear2020-polynesia",
+                "stance": "supports",
+                "locator": "Abstract/results as specified in source access",
+                "note": "Source supports this scoped finding; access and interpretation limits retained."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "sear2020-polynesia",
+            "authors": "David A. Sear; Melinda S. Allen; Jonathan D. Hassall; Ashley E. Maloney; et al., including Emma Pearson (corrected authorship)",
+            "title": "Human settlement of East Polynesia earlier, incremental, and coincident with prolonged South Pacific drought",
+            "year": 2020,
+            "venue": "PNAS 117(16):8813–8819",
+            "url": "https://doi.org/10.1073/pnas.1920975117",
+            "doi": "10.1073/pnas.1920975117",
+            "access": "Primary PMC full text now inspected: Study Sites, Table1, anthropogenic signatures, climate and discussion. No independent recalibration. Authorship correction inspected.",
+            "referenceType": "journal-article"
+          }
+        ],
+        "review": {
+          "summary": "A second reported Tangatatau coral-tool date is AD 1167±12.",
+          "limitations": "Separate from the earlier tool; no temporal support is invented between the two dated intervals.",
+          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: reconciled for v0.3.6."
+          ],
+          "relatedIds": [
+            "r6-tangatatau-coral"
+          ]
+        }
+      },
+      "rationale": "Round6 reviewed dating context",
+      "state": "ready",
+      "createdAt": "2026-10-29T00:00:00Z",
+      "updatedAt": "2026-10-29T00:00:00Z"
     }
   ]
 }

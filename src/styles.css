@@ -1417,3 +1417,59 @@ dd:last-child {
 .direction-symbol path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
 .direction-symbol .direction-halo { stroke: #122730; stroke-width: 5; }
 .direction-symbol .direction-ink { stroke: #f4edce; stroke-width: 1.8; }
+/* Atlas panels reserve their own space; the SVG fits the center column. */
+.atlas-toolbar { display:flex; gap:8px; padding:8px 14px; border-bottom:1px solid var(--line); background:var(--panel); }
+.atlas-toolbar button { font-size:11px; min-height:30px; padding:5px 10px; }
+.atlas-layout { --sites:260px; --details:280px; --layers:62px; grid-template-columns:var(--sites) minmax(180px,1fr) var(--details) var(--layers); height:calc(100vh - 305px); min-height:450px; }
+/* Hidden panels leave empty tracks; explicit placement keeps remaining panels stable. */
+.atlas-layout > .site-panel { grid-column:1; grid-row:1; }
+.atlas-layout > .map-stage { grid-column:2; grid-row:1; }
+.atlas-layout > .detail-panel { grid-column:3; grid-row:1; }
+.atlas-layout > .layers-panel { grid-column:4; grid-row:1; }
+.atlas-layout.layers-open { --layers:250px; }
+.atlas-layout.site-panel-hidden { --sites:0px; }
+.atlas-layout.detail-panel-hidden { --details:0px; }
+.atlas-layout > [hidden], [hidden] { display:none !important; }
+.site-panel, .detail-panel, .layers-panel { min-width:0; overflow:auto; background:#13232c; border-right:1px solid var(--line); }
+.detail-panel, .layers-panel { border-left:1px solid var(--line); border-right:0; }
+.panel-hint { font-size:11px; color:var(--muted); margin:6px 14px 12px; }
+.culture-disclosure { margin:0 12px 12px; border:1px solid var(--line); border-radius:4px; }
+.culture-disclosure > summary { cursor:pointer; font-size:11px; padding:10px; color:var(--accent); }
+.culture-disclosure .map-sidebar { padding:15px; border:0; overflow:visible; max-height:none; }
+.culture-disclosure .map-sidebar h2 { font-size:27px; }
+.culture-disclosure .eyebrow { font-size:8px; }
+.atlas-layout .map-stage, .atlas-layout #map-host, .atlas-layout .map-canvas { height:100%; min-height:0; }
+.atlas-layout .map-topline { left:12px; right:12px; top:12px; gap:10px; }
+.atlas-layout .map-controls { top:48px; right:12px; }
+.atlas-layout .map-scope { font-size:10px; }
+.atlas-layout .map-scope select { max-width:145px; font-size:10px; }
+.site-choice { width:100%; border-radius:0; border-left:0; border-right:0; border-bottom:0; text-align:left; background:transparent; font-family:inherit; }
+.site-choice div { min-width:0; }
+.site-choice.is-selected { background:#29414a; box-shadow:inset 3px 0 var(--accent); }
+.selected-detail { padding:16px; border-top:1px solid var(--line); font-size:12px; overflow-wrap:anywhere; }
+.selected-detail h4 { font:23px Georgia,serif; margin:0 0 12px; }
+.selected-detail .button { font-size:11px; }
+.selection-status { border-left:2px solid var(--accent); padding-left:8px; color:var(--accent); font-size:11px; }
+.layers-panel { padding:10px; }
+#toggle-layers { font-size:11px; padding:6px; width:100%; }
+.layers-panel:has(#layer-options[hidden]) #toggle-layers { writing-mode:vertical-rl; width:36px; min-height:100px; }
+#layer-options { margin-top:15px; font-size:12px; }
+#layer-options h3 { font-size:15px; }
+#layer-options .check { align-items:flex-start; }
+#layer-options .fine, #layer-options p { font-size:11px; }
+@media (min-width:761px) and (max-width:1200px) {
+  .atlas-layout { --sites:220px; --details:235px; }
+  .atlas-layout.layers-open { --layers:215px; }
+}
+@media (max-width:1000px) {
+  .atlas-toolbar { position:sticky; top:0; z-index:4; }
+  .atlas-layout { display:flex; flex-direction:column; height:auto; min-height:0; }
+  .atlas-layout > .site-panel, .atlas-layout > .map-stage, .atlas-layout > .detail-panel, .atlas-layout > .layers-panel { grid-column:auto; grid-row:auto; }
+  .atlas-layout .map-stage { order:0; height:55vh; min-height:300px; }
+  .site-panel { order:1; max-height:300px; }
+  .detail-panel { order:2; max-height:360px; }
+  .layers-panel { order:3; max-height:400px; border-top:1px solid var(--line); }
+  .layers-panel:has(#layer-options[hidden]) #toggle-layers { writing-mode:horizontal-tb; width:100%; min-height:36px; }
+  .atlas-layout .map-caption { font-size:8px; left:12px; bottom:8px; }
+  .site-panel .visible-heading, .detail-panel .visible-heading { position:sticky; top:0; background:#13232c; z-index:1; padding-bottom:10px; }
+}
