@@ -229,3 +229,6 @@ Use `forced-removal` for supported coerced displacement, with directed schematic
 `reach_radius_km` is an optional Overlays column used only with `overlay_type=cultural-reach`, `geometry_basis=schematic` and a Point center. It is an illustrative geographic envelope, not an established historical border. Population and reach columns are accepted without making older schema-1/schema-2 workbooks obsolete.
 
 The native JSON limit is now 8 MB and the proposal count limit 1000, so the complete published correction snapshot fits. Compressed XLSX remains limited to 5 MB, expanded ZIP content to 20 MB, archive entries to 200, rows to 2000 and columns to 100. Formula, macro, external-link, unsafe-URL and prototype-key checks remain enabled.
+
+
+Overlay `direction` is optional: `forward` follows the first endpoint to the last, `reverse` reverses it, `both` denotes two-way exchange, and `multidirectional` displays a four-headed symbol for broad dispersal. Set it only when the cited evidence supports that interpretation; a blank cell means direction is unspecified. Arrows are schematic cues, not reconstructed itineraries.

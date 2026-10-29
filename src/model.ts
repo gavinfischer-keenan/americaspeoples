@@ -70,6 +70,7 @@ export interface Review {
   relatedIds: string[];
 }
 export interface Overlay {
+  direction?: "forward" | "reverse" | "both" | "multidirectional";
   radiusKm?: number;
   kind:
     | "trade"

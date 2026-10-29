@@ -69,5 +69,7 @@ export function validateOverlay(value: unknown): string[] {
     errors.push(
       "Schematic connections require exactly two endpoints; intermediate waypoints imply a documented route.",
     );
+  if (o.direction !== undefined && !["forward", "reverse", "both", "multidirectional"].includes(o.direction)) errors.push("Invalid overlay direction.");
+  if (o.direction && o.geometry?.type !== "LineString") errors.push("Direction requires a connection with endpoints.");
   return errors;
 }

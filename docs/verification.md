@@ -64,3 +64,10 @@ Browser checks on the built local atlas verified individual Hovenweep-area recor
 ## v0.3.4 consolidated research release
 
 Validated 515 records and 774 claims. All 67 tests, TypeScript checks, production build, and hosted Chromium checks passed. Browser checks covered full-snapshot import/export, persistence, deep links, CSP and no data uploads. Independent review checked preservation of the previous 500 records, four intended contextual updates, chronology and citation metadata. Corrections included Angi 3900 BCE encoded as astronomical year -3899 and three exact citation titles. Public deployment bytes match the tested build (apart from the disclosed Cloudflare beacon); all three download SHA-256 checksums passed. NODE01 CT101 release: 20261029T060245Z; rollback: 20261029T052034Z.
+
+
+## v0.3.5 contrast and direction cues
+
+Audited map symbol and label palettes against ocean #122730 and land #2d454d. Opaque symbol colors meet 3:1 and labels meet 4.5:1. Temporal fade intentionally lowers contrast at uncertain date boundaries; qualitative glows remain soft. Bright dashed cloud centers, dotted cultural-area contours and dark-backed text/direction symbols improve visibility. Explicit direction supports forward, reverse, two-way and multidirectional; missing metadata remains unspecified. Seven source-described dispersal records have direction cues, including the Davis and Madsen scenario. Multiple directions are schematic, not four literal routes.
+
+69 tests pass, typecheck/build and hosted browser checks pass, and the target scenario with direction symbol was checked in a 1600x1000 screenshot. Legacy workbooks import without the optional direction column. Full snapshot retains 515 records and 774 claims. Public app matches built bytes and all three download checksums pass. NODE01 CT101 release 20261029T185850Z; rollback 20261029T060245Z.

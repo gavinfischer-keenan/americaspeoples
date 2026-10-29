@@ -107,6 +107,7 @@ for (const r of dataset.records) {
       geometry_precision: r.overlay.precision,
       geometry_source: r.overlay.provenance,
       reach_radius_km: r.overlay.radiusKm ?? "",
+      direction: r.overlay.direction ?? "",
     });
   tables[key].push(headers.map((h) => row[h] ?? ""));
   // Scope reference IDs by record; historical batches may use the same short ID for different references.

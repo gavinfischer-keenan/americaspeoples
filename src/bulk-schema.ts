@@ -96,6 +96,7 @@ export const OVERLAY_HEADERS = [
   "geometry_precision",
   "geometry_source",
   "reach_radius_km",
+  "direction",
 ] as const;
 export const REFERENCE_TYPES = [
   "journal-article",

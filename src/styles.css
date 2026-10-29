@@ -445,13 +445,13 @@ main:focus {
 .map-labels text {
   font: 9px Arial;
   letter-spacing: 2px;
-  fill: #9ab0b6;
-  opacity: 0.6;
+  fill: #c1d0d5;
+  opacity: 1;
   text-anchor: middle;
   pointer-events: none;
 }
 .map-labels .ocean-label {
-  fill: #6b919c;
+  fill: #afc5ce;
   font-style: italic;
   letter-spacing: 3px;
 }
@@ -1324,13 +1324,13 @@ dd:last-child {
 /* Broad qualitative extents: not site markers or reconstructed itineraries. */
 .regional-cloud {
   cursor: pointer;
-  --cloud: #8eb8f5;
+  --cloud: #a9ceff;
 }
 .cloud-regional-evidence {
-  --cloud: #58c8bd;
+  --cloud: #70ead5;
 }
 .cloud-environment {
-  --cloud: #c3c378;
+  --cloud: #f1d975;
 }
 .regional-cloud path {
   fill: none;
@@ -1347,9 +1347,10 @@ dd:last-child {
   stroke: none;
 }
 .regional-cloud .cloud-core {
-  stroke-width: 22;
-  opacity: 0.23;
-  filter: blur(5px);
+  stroke-width: 3;
+  opacity: 1;
+  stroke-dasharray: 6 5;
+  vector-effect: non-scaling-stroke;
 }
 .regional-cloud .cloud-hit {
   stroke: transparent;
@@ -1401,4 +1402,18 @@ dd:last-child {
 
 .settlement-label{font:11px system-ui;fill:#edf7f8;paint-order:stroke;stroke:#102e38;stroke-width:3px;pointer-events:none}
 
-.map-scope{display:flex;flex-direction:column;font-size:12px;gap:3px}.map-scope select{max-width:160px;background:var(--panel);color:inherit}.cloud-language{--cloud:#caa5f1}.language-review{border-left:3px solid #caa5f1;padding-left:14px}.language-area path{stroke:#caa5f1}
+.map-scope{display:flex;flex-direction:column;font-size:12px;gap:3px}.map-scope select{max-width:160px;background:var(--panel);color:inherit}.cloud-language{--cloud:#dfbaff}.language-review{border-left:3px solid #caa5f1;padding-left:14px}.language-area path{stroke:#caa5f1}
+
+/* Keep qualitative extents feathered; dashed centers are visibility cues, not exact routes.
+   Temporal fading remains on the parent so uncertain dates still fade in/out. */
+.regional-cloud .cloud-glow { opacity: .3; }
+.regional-cloud circle.cloud-glow { opacity: .5; }
+.cultural-reach .reach-contour { fill: none; stroke: #edf3ed; stroke-width: 1.5; stroke-dasharray: 2 6; opacity: .85; filter: none; vector-effect: non-scaling-stroke; }
+.language-area .reach-contour { stroke: #dfbaff; }
+.map-canvas .asterisk { paint-order: stroke; stroke: var(--water); stroke-width: 2px; stroke-linejoin: round; }
+.map-labels text { paint-order: stroke; stroke: var(--water); stroke-width: 2px; stroke-linejoin: round; }
+
+.direction-symbol { pointer-events: none; }
+.direction-symbol path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.direction-symbol .direction-halo { stroke: #122730; stroke-width: 5; }
+.direction-symbol .direction-ink { stroke: #f4edce; stroke-width: 1.8; }

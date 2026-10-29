@@ -368,6 +368,7 @@ function buildPackage(
         kind: str(o, "overlay_type") as any,
         basis: str(o, "geometry_basis") as any,
         geometry,
+        ...(str(o, "direction") ? { direction: str(o, "direction") as any } : {}),
         precision: str(o, "geometry_precision"),
         provenance: str(o, "geometry_source"),
         ...(str(o, "reach_radius_km")

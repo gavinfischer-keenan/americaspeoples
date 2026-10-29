@@ -196,12 +196,24 @@ export class MapView {
           `${r.title} — ${OVERLAY_LABELS[o.kind]}, ${o.basis}${r.linguistics ? " — " + r.linguistics.languages.map(x => x.name).join(" / ") + " — " + (r.linguistics.relationship?.kind ?? "affiliation") : ""}${isDisputed(r) ? " *" : ""}`,
         );
         const opacity = temporalOpacity(r.time, this.year);
+        // Arrows are explicit editorial metadata; coordinate order alone does not establish travel.
+        let directionSymbol = "";
+        if (o.direction && g.type === "LineString") {
+          const a = this.projection(g.coordinates[0]);
+          const b = this.projection(g.coordinates[g.coordinates.length - 1]);
+          if (a && b) {
+            const angle = Math.atan2(b[1] - a[1], b[0] - a[0]) * 180 / Math.PI;
+            const multi = o.direction === "multidirectional";
+            const arrows = multi ? "M-9,0H9 M5,-4L9,0L5,4 M-5,-4L-9,0L-5,4 M0,-9V9 M-4,-5L0,-9L4,-5 M-4,5L0,9L4,5" : o.direction === "both" ? "M-9,0H9 M5,-4L9,0L5,4 M-5,-4L-9,0L-5,4" : "M-8,0H8 M3,-5L8,0L3,5";
+            directionSymbol = `<g class="direction-symbol" transform="translate(${(a[0]+b[0])/2},${(a[1]+b[1])/2}) rotate(${multi ? 0 : angle + (o.direction === "reverse" ? 180 : 0)}) scale(${symbolScale})"><title>${multi ? "Multiple directions; not four literal routes" : o.direction === "both" ? "Two-way connection" : "Direction of movement"} — schematic</title><path class="direction-halo" d="${arrows}"/><path class="direction-ink" d="${arrows}"/></g>`;
+          }
+        }
         if (["cultural-reach", "language"].includes(o.kind) && g.type === "Point" && o.radiusKm) {
           const shape = geoCircle()
             .center(g.coordinates)
             .radius(((o.radiusKm / 6371) * 180) / Math.PI)();
           const d = geoPath(this.projection)(shape);
-          overlays += `<g data-overlay="${index}" class="cultural-reach ${o.kind === "language" ? "language-area" : ""}" style="opacity:${opacity};--reach-color:${o.kind === "language" ? "#caa5f1" : r.culture.color}"><title>${title} — feathered illustrative area, not a surveyed border or exclusive territory</title><path d="${d}"/>${isDisputed(r) ? `<text class="asterisk dispute-${disputeLevel(r)}" x="${this.projection(g.coordinates)![0]}" y="${this.projection(g.coordinates)![1]}" style="font-size:${20 * symbolScale}px">*</text>` : ""}</g>`;
+          overlays += `<g data-overlay="${index}" class="cultural-reach ${o.kind === "language" ? "language-area" : ""}" style="opacity:${opacity};--reach-color:${o.kind === "language" ? "#caa5f1" : r.culture.color}"><title>${title} — feathered illustrative area, not a surveyed border or exclusive territory</title><path d="${d}"/><path class="reach-contour" d="${d}"/>${isDisputed(r) ? `<text class="asterisk dispute-${disputeLevel(r)}" x="${this.projection(g.coordinates)![0]}" y="${this.projection(g.coordinates)![1]}" style="font-size:${20 * symbolScale}px">*</text>` : ""}</g>`;
           continue;
         }
         const anchor = this.projection(
@@ -221,7 +233,7 @@ export class MapView {
           const d =
             g.type === "LineString" ? geoPath(this.projection)(g) : null;
           const p = g.type === "Point" ? this.projection(g.coordinates) : null;
-          overlays += `<g data-overlay="${index}" class="regional-cloud cloud-${o.kind}" style="opacity:${opacity}"><title>${title} — illustrative extent; not a site, precise route or probability boundary</title>${d ? `<path class="cloud-glow" d="${d}"/><path class="cloud-core" d="${d}"/><path class="cloud-hit" d="${d}"/>` : p ? `<circle class="cloud-glow" cx="${p[0]}" cy="${p[1]}" r="35"/><circle class="cloud-hit" cx="${p[0]}" cy="${p[1]}" r="35"/>` : ""}${star}</g>`;
+          overlays += `<g data-overlay="${index}" class="regional-cloud cloud-${o.kind}" style="opacity:${opacity}"><title>${title} — illustrative extent; not a site, precise route or probability boundary</title>${d ? `<path class="cloud-glow" d="${d}"/><path class="cloud-core" d="${d}"/><path class="cloud-hit" d="${d}"/>` : p ? `<circle class="cloud-glow" cx="${p[0]}" cy="${p[1]}" r="35"/><circle class="cloud-hit" cx="${p[0]}" cy="${p[1]}" r="35"/>` : ""}${star}${directionSymbol}</g>`;
           continue;
         }
         if (g.type === "Point") {
@@ -231,7 +243,7 @@ export class MapView {
         } else {
           const d = geoPath(this.projection)(g);
           if (d)
-            overlays += `<g data-overlay="${index}" class="${cls}" style="opacity:${opacity}"><title>${title}</title><path d="${d}" ${o.kind === "forced-removal" ? 'marker-end="url(#arrow)"' : ""} style="stroke-width:${3 / this.scale}"/><path class="overlay-line-hit" d="${d}" style="stroke-width:${15 / this.scale}"/></g>`;
+            overlays += `<g data-overlay="${index}" class="${cls}" style="opacity:${opacity}"><title>${title}</title><path d="${d}" ${o.kind === "forced-removal" ? 'marker-end="url(#arrow)"' : ""} style="stroke-width:${3 / this.scale}"/><path class="overlay-line-hit" d="${d}" style="stroke-width:${15 / this.scale}"/>${directionSymbol}</g>`;
         }
         continue;
       }
