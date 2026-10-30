@@ -1,0 +1,1938 @@
+{
+  "batch": "round9",
+  "reviewedAt": "2026-10-29",
+  "intakeFiles": 35,
+  "pdfPages": 125,
+  "referenceOccurrences": 521,
+  "uniqueReferenceKeys": 484,
+  "additionalQueuedInputs": [
+    "Nuu-chah-nulth whaling synthesis",
+    "Official US colonial population compilation",
+    "Statistics Canada census history"
+  ],
+  "groups": [
+    {
+      "id": "inca",
+      "recordIds": [
+        "r9v-inca-cusco-formation",
+        "r9v-inca-huanuco-provisioning",
+        "r9v-inca-huanuco-road-scale",
+        "r9v-inca-machupicchu-bayesian-alternative",
+        "r9v-inca-machupicchu-retainers",
+        "r9v-inca-akawillay-early-sector",
+        "r9v-inca-sanco-1572-count",
+        "r9v-inca-atacama-road-exchange",
+        "r9v-inca-quechua-diffusion",
+        "r9v-inca-court-language-hypothesis",
+        "r9v-inca-inkawasi-accounting",
+        "r9v-inca-tambo-viejo-model",
+        "r9v-inca-cajamarca-1532",
+        "r9v-inca-cusco-revolt-1536",
+        "r9v-inca-vilcabamba-1572",
+        "r9v-inca-huanuco-colonial-plaza"
+      ],
+      "sourceChecks": [
+        {
+          "sourceId": "r9-inca-formation",
+          "reportPages": [
+            1,
+            6
+          ],
+          "url": "https://www.itzaarchaeology.com/wp-content/uploads/2016/02/Bauer-and-Covey-2002-Processes-of-State-Formation-in-the-Inca-Heartland.pdf",
+          "doi": "10.1525/aa.2002.104.3.846",
+          "access": "Original scholarly PDF abstract and opening read; no independent survey reanalysis.",
+          "checkedLocators": "Abstract; pp.846–847",
+          "disposition": "Only narrower checked claims admitted; generated report is a lead."
+        },
+        {
+          "sourceId": "r9-inca-hp1970",
+          "reportPages": [
+            2,
+            3,
+            9
+          ],
+          "url": "https://www.cambridge.org/core/journals/american-antiquity/article/abs/huanuco-viejo-an-inca-administrative-center/8ED04ECF496596A05C70E656197C5C08",
+          "doi": "10.2307/278344",
+          "access": "Publisher abstract read; full article not accessed. Online digitization 2017 is not publication year.",
+          "checkedLocators": "Abstract",
+          "disposition": "Only narrower checked claims admitted; generated report is a lead."
+        },
+        {
+          "sourceId": "r9-inca-hp-inventory",
+          "reportPages": [
+            2,
+            3
+          ],
+          "url": "https://consultasenlinea.mincetur.gob.pe/fichaInventario/index.aspx?cod_ficha=688",
+          "doi": "",
+          "access": "Official description read. Built scale, highway setting and colonial interval checked; historical reign attribution not a radiocarbon result.",
+          "checkedLocators": "Descripción",
+          "disposition": "Only narrower checked claims admitted; generated report is a lead."
+        },
+        {
+          "sourceId": "r9-inca-lane-marsh",
+          "reportPages": [
+            3,
+            8
+          ],
+          "url": "https://www.sciencedirect.com/science/article/pii/S1040618223003373?dgcid=rss_sd_all",
+          "doi": "10.1016/j.quaint.2023.11.006",
+          "access": "Publisher abstract and indexed Introduction read. Full model/code and sample priors not independently assessed. Online 2023; issue 2024.",
+          "checkedLocators": "Abstract; Introduction",
+          "disposition": "Only narrower checked claims admitted; generated report is a lead."
+        },
+        {
+          "sourceId": "r9-inca-mp-genetics",
+          "reportPages": [
+            3,
+            9
+          ],
+          "url": "https://www.science.org/doi/pdf/10.1126/sciadv.adg3377?download=true",
+          "doi": "10.1126/sciadv.adg3377",
+          "access": "Original abstract and introduction read through indexed published PDF; genomes not independently reanalyzed.",
+          "checkedLocators": "Abstract; Introduction",
+          "disposition": "Only narrower checked claims admitted; generated report is a lead."
+        },
+        {
+          "sourceId": "r9-inca-akawillay",
+          "reportPages": [
+            1,
+            3,
+            7
+          ],
+          "url": "https://www.cambridge.org/core/journals/antiquity/article/settlement-discontinuity-at-akawillay-and-the-development-of-the-inca-imperial-capital-region/6B5177903D92CCFDC05F520CE36CC60B",
+          "doi": "10.15184/aqy.2024.236",
+          "access": "Open original article Results, dating note and local-group discussion read. Numerical site coordinates not recovered; regional overlays retained.",
+          "checkedLocators": "Local groups in the Xaquixaguana Valley; Results; Table 2 calibration note",
+          "disposition": "Only narrower checked claims admitted; generated report is a lead."
+        },
+        {
+          "sourceId": "r9-inca-road-exchange",
+          "reportPages": [
+            4,
+            8
+          ],
+          "url": "https://www.sciencedirect.com/science/article/pii/S0278416516300599",
+          "doi": "10.1016/j.jaa.2016.06.001",
+          "access": "Publisher abstract, highlights and indexed Introduction read; camp coordinates and phase tables not accessed.",
+          "checkedLocators": "Abstract; Highlights; Introduction",
+          "disposition": "Only narrower checked claims admitted; generated report is a lead."
+        },
+        {
+          "sourceId": "r9-inca-quechua",
+          "reportPages": [
+            4,
+            6
+          ],
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5727115/",
+          "doi": "10.1038/s41598-017-17728-w",
+          "access": "Original abstract and Introduction/Results read. Modern genetic comparisons do not directly date ancient speech.",
+          "checkedLocators": "Abstract; Introduction; Results",
+          "disposition": "Only narrower checked claims admitted; generated report is a lead."
+        },
+        {
+          "sourceId": "r9-inca-court-language",
+          "reportPages": [
+            4,
+            7
+          ],
+          "url": "https://academic.oup.com/british-academy-scholarship-online/book/28526/chapter-abstract/230338295",
+          "doi": "10.5871/bacad/9780197265031.003.0011",
+          "access": "Publisher chapter abstract read; full chapter unavailable. Puquina is the author’s hypothesis from sparse names.",
+          "checkedLocators": "Abstract",
+          "disposition": "Only narrower checked claims admitted; generated report is a lead."
+        },
+        {
+          "sourceId": "r9-inca-inkawasi",
+          "reportPages": [
+            4,
+            10
+          ],
+          "url": "https://www.cambridge.org/core/journals/latin-american-antiquity/article/abs/accounting-in-the-kings-storehouse-the-inkawasi-khipu-archive/417CED6AB7ED0F6D37DC7A3E84F698D5",
+          "doi": "10.7183/1045-6635.26.4.512",
+          "access": "Publisher abstract read. Print 2015; online digitization 2017. Full cord-by-cord analysis not accessed.",
+          "checkedLocators": "Abstract",
+          "disposition": "Only narrower checked claims admitted; generated report is a lead."
+        },
+        {
+          "sourceId": "r9-inca-tambo",
+          "reportPages": [
+            2,
+            10
+          ],
+          "url": "https://www.tandfonline.com/doi/abs/10.1080/00776297.2022.2102317",
+          "doi": "10.1080/00776297.2022.2102317",
+          "access": "Publisher abstract and indexed note 5 read; online 2022, print 2023. Latest Inca contexts disturbed by reuse; posterior intervals not checked.",
+          "checkedLocators": "Abstract; note 5",
+          "disposition": "Only narrower checked claims admitted; generated report is a lead."
+        },
+        {
+          "sourceId": "r9-inca-apocalypse",
+          "reportPages": [
+            5,
+            6,
+            7
+          ],
+          "url": "https://academic.oup.com/book/36754?searchresult=1",
+          "doi": "10.1093/oso/9780190299125.001.0001",
+          "access": "Publisher book abstract read; full book not accessed. Narrow capture/continuing transformation claims only.",
+          "checkedLocators": "Abstract",
+          "disposition": "Only narrower checked claims admitted; generated report is a lead."
+        },
+        {
+          "sourceId": "r9-inca-conquests",
+          "reportPages": [
+            5,
+            6,
+            8
+          ],
+          "url": "https://academic.oup.com/edited-volume/61800/chapter-abstract/546397602?login=false",
+          "doi": "10.1093/acrefore/9780199366439.013.61",
+          "access": "Publisher reference-article abstract read; full essay restricted. Distinguishes 1532 encounter,1536 revolt and 1572 end of independent resistance.",
+          "checkedLocators": "Abstract",
+          "disposition": "Only narrower checked claims admitted; generated report is a lead."
+        }
+      ],
+      "held": [
+        {
+          "reportPages": [
+            2,
+            3
+          ],
+          "finding": "Cusco>100000; empire 10–14 million; Machu Picchu water capacity 2400",
+          "reason": "No date-specific checked resident scope; capacity is not residents."
+        },
+        {
+          "reportPages": [
+            2,
+            3,
+            7,
+            9
+          ],
+          "finding": "Incahullo 2 ha/50 buildings; Choquequirao sectors; Xaquixaguana 20 ha;60 sites/300 km roads",
+          "reason": "Numeric tables and verified individual locality coordinates not checked."
+        },
+        {
+          "reportPages": [
+            2,
+            3,
+            7,
+            9
+          ],
+          "finding": "Huánuco 2011 planned center on formerly unpopulated grasslands",
+          "reason": "Original monograph inaccessible.1970 abstract and official inventory support narrower claims only. Attempted https://digitallibrary.amnh.org/handle/2246/6136 returned 403; https://doi.org/10.5531/sp.anth.0096 inaccessible."
+        },
+        {
+          "reportPages": [
+            3,
+            10
+          ],
+          "finding": "40000 km roads;2000 facilities;50 m Tinkuqchaka bridge",
+          "reason": "Original numeric chronology/geometry not checked; no synthetic road map invented."
+        },
+        {
+          "reportPages": [
+            5,
+            6
+          ],
+          "finding": "Huayna Capac specifically smallpox; one-third resettlement; collapse-model causation",
+          "reason": "No firm retrospective diagnosis, empire-wide census or historical causal proof established."
+        },
+        {
+          "reportPages": [
+            3,
+            8
+          ],
+          "finding": "Ollantaytambo vernacular architecture/plant-use persistence",
+          "reason": "Original specific studies unread; no eternal-continuity occupation interval inferred."
+        },
+        {
+          "reportPages": [
+            1,
+            2,
+            5,
+            6,
+            7,
+            9
+          ],
+          "finding": "Book-review citations and online/print-year confusion",
+          "reason": "Kosiba 2022, Morgado 2021, Pérez-Miguel 2021 and Chase 2021 are book reviews. Substantive claims routed to originals where accessible. Lane/Marsh online 2023 issue 2024; Valdez/Bettcher online 2022 issue 2023."
+        }
+      ],
+      "reconciled": [
+        {
+          "reportPages": [
+            3,
+            6
+          ],
+          "existingIds": [
+            "south-machupicchu-ams-occupation"
+          ],
+          "finding": "Burger 2021 AMS 1420–1532 estimate already published; new entry adds alternative model."
+        },
+        {
+          "reportPages": [
+            1,
+            3,
+            7
+          ],
+          "existingIds": [
+            "empire-akawillay-discontinuity"
+          ],
+          "finding": "Decline/hiatus already published; new early-sector occurrence and Sanco 1572 count are different claims."
+        },
+        {
+          "reportPages": [
+            1,
+            7
+          ],
+          "existingIds": [
+            "empire-cuzco-survey-counts"
+          ],
+          "finding": "Variable integration and 1500 sites with imperial pottery already represented."
+        },
+        {
+          "reportPages": [
+            2,
+            9
+          ],
+          "existingIds": [
+            "empire-mendoza-onset",
+            "empire-chamical-onset"
+          ],
+          "finding": "Marsh 2017 onset models already published."
+        },
+        {
+          "reportPages": [
+            5,
+            8
+          ],
+          "existingIds": [
+            "empire-yanawilka-resettlement",
+            "empire-copiapo-stages"
+          ],
+          "finding": "Mitmaq spatial and staged expansion findings already represented; narrower food/obsidian claims held."
+        },
+        {
+          "reportPages": [
+            2
+          ],
+          "existingIds": [
+            "south-chanchan-chimu-apogee"
+          ],
+          "finding": "Existing Chimú record retained; Chan Chan not represented as Inca-founded."
+        }
+      ]
+    },
+    {
+      "id": "root",
+      "recordIds": [
+        "r9v-montana-billy-early-charcoal",
+        "r9v-montana-billy-later-charcoal",
+        "r9v-montana-billy-refugium",
+        "r9v-florida-aucilla-inventory",
+        "r9v-florida-apalachee-detection",
+        "r9v-nevada-pueblo-grande",
+        "r9v-montana-projectile-networks",
+        "r9v-census-new-hampshire",
+        "r9v-census-massachusetts",
+        "r9v-census-rhode-island",
+        "r9v-census-connecticut",
+        "r9v-census-new-york",
+        "r9v-census-new-jersey",
+        "r9v-census-pennsylvania",
+        "r9v-census-delaware",
+        "r9v-census-maryland",
+        "r9v-census-virginia",
+        "r9v-census-north-carolina",
+        "r9v-census-south-carolina",
+        "r9v-census-georgia",
+        "r9v-census-new-france1666"
+      ],
+      "sourceChecks": [
+        {
+          "source": {
+            "id": "r9-lanoe2021",
+            "authors": "François B. Lanoë; M. Nieves Zedeño; Anna M. Jansson; Vance T. Holliday; Joshua D. Reuther",
+            "title": "Glacial kettles as archives of early human settlement along the Northern Rocky Mountain Front",
+            "year": 2022,
+            "venue": "Source publication / issuing institution",
+            "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/DE95CD99889DF633685D408B5568B201/S0033589421000405a.pdf/glacial_kettles_as_archives_of_early_human_settlement_along_the_northern_rocky_mountain_front.pdf",
+            "access": "Checked 2026-10-29: Full original Results, Fig.3, Tables2–3 and Discussion read. Published online2021, issue2022.",
+            "referenceType": "journal-article",
+            "doi": "10.1017/qua.2021.40"
+          },
+          "locator": "Fig.3; Table3; Discussion pp144–145"
+        },
+        {
+          "source": {
+            "id": "r9-filoromo2024",
+            "authors": "Steven J. Filoromo; Emily K. Dale; Paul D. Jackson",
+            "title": "Landscape Histories and the Search for Early Settlements along Louisiana's Bayous",
+            "year": 2024,
+            "venue": "Source publication / issuing institution",
+            "url": "https://experts.nau.edu/en/publications/landscape-histories-and-the-search-for-early-settlements-along-lo-2/",
+            "access": "Checked 2026-10-29: Author-university original abstract and metadata read; full excavation tables not accessed.",
+            "referenceType": "journal-article",
+            "doi": "10.1017/aap.2024.9"
+          },
+          "locator": "Abstract; Iberville Parish landform and survey methods"
+        },
+        {
+          "source": {
+            "id": "r9-halligan2022",
+            "authors": "Jessie J. Halligan",
+            "title": "Submerged inland landscapes of the Aucilla basin, Northwest Florida, USA: populating the Late Pleistocene and Early Holocene landscape",
+            "year": 2022,
+            "venue": "Source publication / issuing institution",
+            "url": "https://www.tandfonline.com/doi/abs/10.1080/00438243.2022.2077826",
+            "access": "Checked 2026-10-29: Publisher-indexed original abstract read; full site-by-site catalog not accessed.",
+            "referenceType": "journal-article",
+            "doi": "10.1080/00438243.2022.2077826"
+          },
+          "locator": "Abstract; geospatial sample of92sites"
+        },
+        {
+          "source": {
+            "id": "r9-hale2023",
+            "authors": "Jessica W. Cook Hale; Dylan S. Davis; Matthew C. Sanger",
+            "title": "Evaluating the Archaeological Efficacy of Bathymetric LiDAR across Oceanographic Contexts: A Case Study from Apalachee Bay, Florida",
+            "year": 2023,
+            "venue": "Source publication / issuing institution",
+            "url": "https://par.nsf.gov/servlets/purl/10428762",
+            "access": "Checked 2026-10-29: Original author manuscript abstract in NSF repository read.",
+            "referenceType": "journal-article",
+            "doi": "10.3390/heritage6020051"
+          },
+          "locator": "Abstract; preliminary survey results"
+        },
+        {
+          "source": {
+            "id": "r9-haynes2022",
+            "authors": "Gregory M. Haynes",
+            "title": "Inundation and Emergence at Pueblo Grande de Nevada, an Eleventh-Century Ancestral Puebloan Village",
+            "year": 2022,
+            "venue": "Source publication / issuing institution",
+            "url": "https://doi.org/10.1017/aap.2022.23",
+            "access": "Checked 2026-10-29: Publisher-indexed original abstract and table of contents read. Limited to stated eleventh-century village and reservoir-study methods.",
+            "referenceType": "journal-article",
+            "doi": "10.1017/aap.2022.23"
+          },
+          "locator": "Abstract; Advances in Archaeological Practice10(4):414–427"
+        },
+        {
+          "source": {
+            "id": "r9-lanoe-projectiles",
+            "authors": "François B. Lanoë and collaborators",
+            "title": "Projectile points across the Northern Rocky Mountain front: the Billy Big Spring Site (Blackfeet Reservation, Montana)",
+            "year": 2024,
+            "venue": "Source publication / issuing institution",
+            "url": "https://experts.arizona.edu/en/publications/projectile-points-across-the-northern-rocky-mountain-front-the-bi/",
+            "access": "Checked 2026-10-29: Author-university abstract read. Repository lists2024 issue with2025 DOI; publication chronology ambiguity retained.",
+            "referenceType": "journal-article",
+            "doi": "10.1080/00320447.2025.2450202"
+          },
+          "locator": "Abstract; landscape-level raw material and typological comparison"
+        },
+        {
+          "source": {
+            "id": "r9-census-colonial",
+            "authors": "United States Bureau of the Census; Stella H. Sutherland, compiler",
+            "title": "Historical Statistics of the United States, Colonial Times to1957 — ChapterZ, Colonial Statistics",
+            "year": 1960,
+            "venue": "Source publication / issuing institution",
+            "url": "https://www2.census.gov/library/publications/1960/compendia/hist_stats_colonial-1957/hist_stats_colonial-1957-chZ.pdf",
+            "access": "Checked 2026-10-29: Official compilation downloaded; p743source/method note and p756SeriesZ1–19 read. Table page visually checked against transcription.",
+            "referenceType": "web-resource"
+          },
+          "locator": "Printed p756, SeriesZ1–19; source and estimation note p743"
+        },
+        {
+          "source": {
+            "id": "r9-statcan1666",
+            "authors": "Statistics Canada",
+            "title": "A brief history of Statistics Canada: Better data, better decisions",
+            "year": 2015,
+            "venue": "Source publication / issuing institution",
+            "url": "https://www150.statcan.gc.ca/n1/pub/98-503-x/98-503-x2015002-eng.pdf",
+            "access": "Checked 2026-10-29: Official publication downloaded and first-census section read.",
+            "referenceType": "web-resource"
+          },
+          "locator": "Section: The first Canadian census;1666JeanTalon enumeration"
+        }
+      ],
+      "held": [
+        {
+          "topic": "louisiana/florida/nevada/montana inventories",
+          "reason": "Survey counts and diagnostic periods require site-level catalogs, public locations and individual phase chronologies before creating further settlement dots. Survey publication dates do not date occupation."
+        },
+        {
+          "topic": "montana historical affiliations",
+          "reason": "Goshen/McKean and point traditions cannot automatically be mapped as Blackfeet, Crow, Kiowa or Athabaskan speech. Book-review citations do not substitute for excavation reports."
+        },
+        {
+          "topic": "colonial census language and boundaries",
+          "reason": "Nationality estimates are not language data. No historical boundary polygons or county extracts have been fabricated from this regional compilation."
+        }
+      ],
+      "reconciled": [
+        {
+          "topic": "Florida early occupation",
+          "recordIds": [
+            "early-page-ladson-unit3c"
+          ],
+          "reason": "Existing Page-Ladson context retained; basin-wide survey totals do not create duplicates."
+        },
+        {
+          "topic": "Louisiana hidden bayou landscapes",
+          "recordIds": [
+            "la-bayou-survey-bias"
+          ],
+          "reason": "Same source and substantive claim already published; no duplicate added."
+        }
+      ]
+    },
+    {
+      "id": "southwest",
+      "recordIds": [
+        "r9v-sw-taos-cultivation",
+        "r9v-sw-taos-adobe",
+        "r9v-sw-taos-ancestral-ruin",
+        "r9v-sw-pot-earlier",
+        "r9v-sw-pot-construction",
+        "r9v-sw-pot-decommission",
+        "r9v-sw-pot-obsidian",
+        "r9v-sw-tijeras-early",
+        "r9v-sw-tijeras-layout",
+        "r9v-sw-tijeras-consolidation",
+        "r9v-sw-tijeras-rebuild",
+        "r9v-sw-sanmarcos-mobility",
+        "r9v-sw-sanmarcos-aggregation",
+        "r9v-sw-sanmarcos-terminal",
+        "r9v-sw-sand-canyon-violence",
+        "r9v-sw-castle-rock-violence",
+        "r9v-sw-cave29-ice-harvest",
+        "r9v-sw-cave29-late",
+        "r9v-sw-hidden-cave-aridity",
+        "r9v-sw-drought-statistics",
+        "r9v-sw-orendorf-trauma",
+        "r9v-sw-crow-creek-massacre"
+      ],
+      "sourceChecks": [
+        {
+          "sourceId": "r9-sw-taos",
+          "url": "https://taospueblo.com/about/",
+          "access": "Tribal About page read; community chronology distinguished from a single founding year.",
+          "locator": "About Taos Pueblo, opening paragraph",
+          "decision": "Admit only the narrow findings supported by the accessed original source."
+        },
+        {
+          "sourceId": "r9-sw-ellis1964",
+          "url": "https://doi.org/10.2307/277870",
+          "access": "Publisher abstract read; full excavation paper not accessed. Historical interpretation retains attribution.",
+          "locator": "Abstract; ancestral ruin chronology",
+          "decision": "Admit only the narrow findings supported by the accessed original source."
+        },
+        {
+          "sourceId": "r9-sw-pot2022",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9189273/",
+          "access": "Publisher abstract and indexed original full-text sections on chronology, burning and sourcing read; direct PMC open returned a browser challenge.",
+          "locator": "Introduction/site history; midden chronology; sourcing discussion",
+          "decision": "Admit only the narrow findings supported by the accessed original source."
+        },
+        {
+          "sourceId": "r9-sw-tijeras2021",
+          "url": "https://doi.org/10.1017/aaq.2021.60",
+          "access": "Original publisher PDF read, especially settlement chronology pp.754–755.",
+          "locator": "pp.754–755, settlement history; Figure 3",
+          "decision": "Admit only the narrow findings supported by the accessed original source."
+        },
+        {
+          "sourceId": "r9-sw-sanmarcos2009",
+          "url": "https://doi.org/10.1017/S0002731600048733",
+          "access": "Publisher abstract read; full phase tables not accessed.",
+          "locator": "Abstract; relative population and four abandonments",
+          "decision": "Admit only the narrow findings supported by the accessed original source."
+        },
+        {
+          "sourceId": "r9-sw-violence2002",
+          "url": "https://doi.org/10.2307/1593823",
+          "access": "Publisher abstract read; numerical minimum deaths kept separate from settlement residents.",
+          "locator": "Abstract; events around AD 1280",
+          "decision": "Admit only the narrow findings supported by the accessed original source."
+        },
+        {
+          "sourceId": "r9-sw-onac2020",
+          "url": "https://www.nature.com/articles/s41598-020-76988-1",
+          "access": "Original article Results, Discussion and Table 1 read; calibrated ranges retained rather than turning point estimates into exact events.",
+          "locator": "Table 1; Results; Discussion",
+          "decision": "Admit only the narrow findings supported by the accessed original source."
+        },
+        {
+          "sourceId": "r9-sw-polyak2022",
+          "url": "https://doi.org/10.1038/s41598-022-12220-6",
+          "access": "Original abstract and indexed climate discussion read; B2K epoch is 2000, not 1950 BP.",
+          "locator": "Abstract; HC-1 climate intervals",
+          "decision": "Admit only the narrow findings supported by the accessed original source."
+        },
+        {
+          "sourceId": "r9-sw-kintigh2018",
+          "url": "https://asu.elsevierpure.com/en/publications/was-the-drought-really-responsible-assessing-statistical-relation/",
+          "access": "Original authors’ university abstract read. Online 2017; issue January 2018. Full PDF redirected to institutional login.",
+          "locator": "Abstract; seven-tradition statistical comparison",
+          "decision": "Admit only the narrow findings supported by the accessed original source."
+        },
+        {
+          "sourceId": "r9-sw-steadman2008",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18186503/",
+          "access": "Original author abstract indexed by PubMed read; full paper not accessed.",
+          "locator": "Abstract; site chronology and trauma denominator",
+          "decision": "Admit only the narrow findings supported by the accessed original source."
+        },
+        {
+          "sourceId": "r9-sw-willey1982",
+          "url": "https://trace.tennessee.edu/entities/publication/7e0657c5-f596-497b-872a-c26d33648433",
+          "access": "Original dissertation abstract in university repository read; full dissertation not read.",
+          "locator": "Abstract; minimum individuals and approximate date",
+          "decision": "Admit only the narrow findings supported by the accessed original source."
+        },
+        {
+          "sourceId": "r9-sw-mccool2026",
+          "url": "https://doi.org/10.1017/aaq.2025.10107",
+          "access": "Original publisher PDF abstract and Results read. Online 2025, issue 2026. Existing record reconciled.",
+          "locator": "Results pp.108–110; defensibility and climate-shock variables",
+          "decision": "Admit only the narrow findings supported by the accessed original source."
+        }
+      ],
+      "held": [
+        {
+          "topic": "Taos founding and battle",
+          "reason": "Do not turn 1964 legendary battle/fire chronology into an established 1450 founding. Tribal construction estimate 1000–1450 and earlier valley cultivation are preserved separately."
+        },
+        {
+          "topic": "Taos trade fairs",
+          "reason": "Specific Apaches/Comanches, goods, annual schedules and Spanish/French links not admitted from report synthesis; direct source-specific chronology still required. A 2021 book review is not primary evidence for precontact Taos commerce."
+        },
+        {
+          "topic": "Southwest population and language",
+          "reason": "No absolute Taos, Pot Creek, Tijeras or San Marcos residents recovered in accessed sources. No room-to-people conversion, annual curves, ethnic census or inferred ancient language territory."
+        },
+        {
+          "topic": "Nationwide warfare and climatic causation",
+          "reason": "Only original-source-checked local conflict findings admitted. Cave 7 chronology, continental battle inventories, ENSO-caused individual attacks and eruption-driven warfare remain unverified here."
+        },
+        {
+          "topic": "Regional Southwest synthesis",
+          "reason": "Hohokam/Fremont coastal California regional summaries are not converted into invented settlements. Detailed site phases, census estimates and routes require additional original sources."
+        }
+      ],
+      "reconciled": [
+        {
+          "existingId": "hovenweep-sand-canyon-pueblo",
+          "decision": "Keep existing occupation chronology and 400–600 estimated residents; no duplicate habitation record. Add distinct violence finding linked by relatedIds. Rooms do not replace its sourced resident estimate."
+        },
+        {
+          "existingId": "r8v-picuris-continuity",
+          "decision": "Existing Picuris-led genomic comparison retained. It is not evidence that Taos was founded by a particular migration or that all Northern Tiwa villages share an identical pedigree."
+        },
+        {
+          "existingId": "climate-bears-ears-conflict-model",
+          "sourceId": "r9-sw-mccool2026",
+          "decision": "Existing model already covers warm/dry conditions, inequality, population and defensibility. No duplicate. Original Results further state climate-shock variables had weak effects and were dropped; potential later refinement, not an observed catalogue of battles."
+        }
+      ]
+    },
+    {
+      "id": "caribbean-central",
+      "recordIds": [
+        "r9v-cc-trants-carnelian-production",
+        "r9v-cc-trants-exotic-ornaments",
+        "r9v-cc-morel-necklace",
+        "r9v-cc-vive-minerals",
+        "r9v-cc-anse-gourde-materialchange",
+        "r9v-cc-gare-maritime-production",
+        "r9v-cc-panama-ancient-genomes",
+        "r9v-cc-isthmian-ancestry-model",
+        "r9v-cc-altiplano-ancestry-shift",
+        "r9v-cc-altiplano-herrera-muisca",
+        "r9v-cc-panama-paternal-directionality",
+        "r9v-cc-las-mercedes-chacmool",
+        "r9v-cc-aguas-buenas-residue",
+        "r9v-cc-barillas-mound61",
+        "r9v-cc-barillas-mound27",
+        "r9v-cc-guacimo-early-metals"
+      ],
+      "sourceChecks": [
+        {
+          "sourceId": "r9cc-watters1994",
+          "url": "https://www.researchgate.net/publication/286891850_Beads_and_Pendants_from_Trants_Montserrat_Implications_for_the_Prehistoric_Lapidary_Industry_of_the_Caribbean_Annals_of_the_Carnegie_Museum_63215-237_1994",
+          "doi": null,
+          "access": "Author-uploaded abstract read, Annals 63(3):215–237. DOI conflicts unresolved; no artifact tables accessed.",
+          "locator": "Author-uploaded Abstract",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "sourceId": "r9cc-queffelec2020",
+          "url": "https://www.floridamuseum.ufl.edu/wp-content/uploads/sites/44/2019/09/JCA_Soulat_FINAL2.pdf",
+          "doi": null,
+          "access": "Original Table 1, Results and comparison read. Table dates differ from broad title dates.",
+          "locator": "Table 1 p.6; Results pp.9–18; comparison pp.25–26",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "sourceId": "r9cc-queffelec2018",
+          "url": "https://www.growkudos.com/publications/10.1016%25252Fj.jasrep.2018.07.011/reader",
+          "doi": "10.1016/j.jasrep.2018.07.011",
+          "access": "Scholarly abstract on author-contributed Kudos page read; full excavation not reviewed.",
+          "locator": "Author-contributed publication abstract",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "sourceId": "r9cc-capodiferro2021",
+          "url": "https://iris.unipv.it/retrieve/e1f104fd-1874-8c6e-e053-1005fe0aa0dd/Capodiferro2021_Archaeogenomic%20distinctiveness%20of%20the%20IsthmoColombian%20area_Cell-PIIS0092867421002294.pdf",
+          "doi": "10.1016/j.cell.2021.02.040",
+          "access": "Original Cell article summary and discussion read. Corrects intake 2020 preprint citation to Cell 184:1706–1723.e24 (2021).",
+          "locator": "Summary; Discussion p.1717",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "sourceId": "r9cc-krettek2025",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12118548/",
+          "doi": "10.1126/sciadv.ads6284",
+          "access": "Original open Results and Discussion read; 21 sampled individuals, large sampling gap.",
+          "locator": "Results: Genetic replacement on the Altiplano by at least 2000 years ago; Discussion",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "sourceId": "r9cc-grugni2015",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0144223",
+          "doi": "10.1371/journal.pone.0144223",
+          "access": "Original discussion of Q-DYS391-6 comparative variation read.",
+          "locator": "Q-DYS391-6 discussion including two Nicaraguan samples",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "sourceId": "r9cc-rosenswig2021",
+          "url": "https://www.cambridge.org/core/journals/antiquity/article/abs/chacmools-in-costa-rica-longdistance-interaction-between-lower-central-america-and-mesoamerica-c-ad-1000/57AB85366D5A1F472B1831880A5D8844",
+          "doi": "10.15184/aqy.2020.227",
+          "access": "Publisher abstract read; online2020, issue2021.",
+          "locator": "Abstract",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "sourceId": "r9cc-donner2020",
+          "url": "https://www.cambridge.org/core/journals/radiocarbon/article/valley-of-juigalpa-mayales-river-subbasin-microregion-chontales-nicaragua-date-list-ii/2AD48A7A267B027F7ED5E978DA3ADB17",
+          "doi": "10.1017/rdc.2020.36",
+          "access": "Original sample descriptions/context cautions read; calibrated ranges distinguished from conventional BP.",
+          "locator": "UCI-205414, Beta-443734 and Beta-457276; Discussion",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "sourceId": "r9cc-gassmann2024",
+          "url": "https://fis.uni-bamberg.de/server/api/core/bitstreams/99874cce-23fd-4cd8-9eae-58c27c53b84a/content",
+          "doi": "10.46586/metalla.v27.2023.i2.149-166",
+          "access": "Repository version of record introduction and chronology read; issue2023, explicitly published January22,2024.",
+          "locator": "pp.149–153, Guácimo and chronology caveats",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "topic": "north-south-trade",
+          "filename": "please provide a review of the evidence and locations for north_south trade through central america in the time span 1000bce to 1300ce - what was being traded - from where and to where - by whom - why - and by what means and .ris",
+          "sha256": "e8f81e8bf225740d159abff6b7a2061a1fe0ebd3864ddcce78c9b1b9b902113a",
+          "exactPriorCopies": [
+            "work\\intake-2026-10-29-round8\\please provide a review of the evidence and locations for north_south trade through central america in the time span 1000bce to 1300ce - what was being traded - from where and to where - by whom - why - and by what means and .ris"
+          ]
+        },
+        {
+          "topic": "north-south-trade",
+          "filename": "please_provide_a_review_of_the_evidence_and_locati.pdf",
+          "sha256": "ff539c90d85d801b8d874e98ab1ccaba392d22fe8b2be905848da7cb16e7abe7",
+          "exactPriorCopies": [
+            "work\\intake-2026-10-29-round8\\please_provide_a_review_of_the_evidence_and_locati.pdf"
+          ]
+        },
+        {
+          "sourceId": "r9cc-watters1997-denominator-check",
+          "title": "Stone Beads in the Prehistoric Caribbean",
+          "authors": "David R. Watters",
+          "year": 1997,
+          "url": "https://www.societyofjewelleryhistorians.ac.uk/BST_029_1997.pdf",
+          "access": "Author original discussion indexed from Bead Study Trust Newsletter29, pp.7–8 read; used only to check the report denominator, not to date Trants materials.",
+          "locator": "Trants frequencies: 1.1%(n=4) of regular rounded finished beads;22.2%(n=4) of regular faceted beads;90%(n=18) raw material and69.4%(n=50) blanks.",
+          "finding": "The intake wrongly treats a category percentage as site-assemblage percentage. Frequencies do not alone quantify exports.",
+          "checkedAt": "2026-10-29"
+        }
+      ],
+      "held": [
+        {
+          "topic": "trants",
+          "claim": "All imported materials securely pre100CE / deepest beads before480BCE",
+          "reason": "Original stratigraphic/radiocarbon tables not accessed; surface-collection abstract cannot establish these precise early assertions."
+        },
+        {
+          "topic": "trants",
+          "claim": "Finished carnelian1.1% proves most ornaments exported",
+          "reason": "Denominator is not the entire assemblage; low fraction alone does not establish exports, volume or destination."
+        },
+        {
+          "topic": "trants",
+          "claim": "Watters/Scaglion DOI10.5962/p.330547",
+          "reason": "Author-upload metadata says .330549, but BHL indexing conflicts. Omit DOI until original title/DOI resolution."
+        },
+        {
+          "topic": "central-america",
+          "claim": "Herrera2022 supports Fishtail archaeology",
+          "reason": "Cited DOI identifies a conquest-book review, not original Fishtail archaeology."
+        },
+        {
+          "topic": "central-america",
+          "claim": "Craddock1994 supports Nicarao migration",
+          "reason": "Cited work is a mining-book review, not Nicarao migration research."
+        },
+        {
+          "topic": "isthmo-colombian",
+          "claim": "All ancestry arose in situ; only one prominent south-to-north migration",
+          "reason": "Overgeneralizes samples and models; no exhaustive migration inventory or exclusive directionality established."
+        },
+        {
+          "topic": "caribbean-trade",
+          "claim": "Saladoid ancestry proves ancient Arawakan speech or exact trade route",
+          "reason": "Language, archaeological culture, genomic affinity, colonization and exchange are distinct inferences."
+        },
+        {
+          "topic": "central-america",
+          "claim": "Geological metal deposits establish named prehistoric mine-to-site routes",
+          "reason": "Gassmann retains major context/provenance gaps; ore abundance is not proof of prehistoric mining."
+        }
+      ],
+      "reconciled": [
+        {
+          "topic": "caribbean-trade",
+          "recordIds": [
+            "barbados-heywoods-early-shell",
+            "barbados-heywoods-shell-adze"
+          ],
+          "reason": "Existing Fitzpatrick2011 dates retained; early occupation does not establish trade or continuity within1000BCE–100CE."
+        },
+        {
+          "topic": "isthmo-colombian",
+          "recordIds": [
+            "central-belize-early-lineage",
+            "central-belize-southern-ancestry"
+          ],
+          "reason": "Existing Kennett2022 findings retained, including7300–5600calBP gap; no instantaneous5600BP migration or proven ancient speech."
+        },
+        {
+          "topic": "caribbean-trade",
+          "recordIds": [
+            "caribbean-fernandes-ancestryshift",
+            "caribbean-fernandes-connectivity",
+            "caribbean-naegele-dispersals",
+            "caribbean-napolitano-routepattern"
+          ],
+          "reason": "Existing genomic/chronometric models retain disagreements; no duplicate generic network records."
+        },
+        {
+          "topic": "north-south-trade",
+          "recordIds": [
+            "r8v-los-naranjos-jaral",
+            "r8v-los-naranjos-eden",
+            "r8v-ixtepeque-naranjos",
+            "r8v-tiguilotada-early",
+            "r8v-tiguilotada-late",
+            "r8v-gualorita",
+            "r8v-fonseca-routes",
+            "r8v-el-cano-emeralds",
+            "r8v-sitio-conte-emeralds",
+            "r8v-colombia-panama-emeralds",
+            "r8v-nicoya-greenstones",
+            "r8v-caribbean-greenstones",
+            "r8v-la-regla-grave2",
+            "r8v-huiscoyol-grave11"
+          ],
+          "reason": "Exact-repeat PDF/RIS per manifest SHA256; reuse round8 source checks and candidate dispositions, no redo/duplicate."
+        },
+        {
+          "topic": "central-america",
+          "recordIds": [
+            "r5-mayales-early-date"
+          ],
+          "reason": "Existing Alberto Obando/Mayales date retained; new Aguas Buenas and Barillas contexts are distinct."
+        }
+      ]
+    },
+    {
+      "id": "northwest",
+      "recordIds": [
+        "r9v-nw-tsishaa-early-terrace",
+        "r9v-nw-huu7ii-early-terrace",
+        "r9v-nw-chuumata-early-terrace",
+        "r9v-nw-tsishaa-hunted-whale",
+        "r9v-nw-huu7ii-house-valves",
+        "r9v-nw-xweetay-obsidian",
+        "r9v-nw-stsailes-camas",
+        "r9v-nw-fishtraps-cooperation",
+        "r9v-nw-harrison-growth",
+        "r9v-nw-harrison-population-model",
+        "r9v-nw-katzie-wapato",
+        "r9v-nw-gitxsan-wetsuweten-trails"
+      ],
+      "sourceChecks": [
+        {
+          "sourceId": "r9nw-mcmillan2015",
+          "title": "Whales and Whalers in Nuu-chah-nulth Archaeology",
+          "url": "https://ojs.library.ubc.ca/index.php/bcstudies/article/download/186163/185688",
+          "doi": "10.14288/bcs.v0i187.186163",
+          "access": "Original33-page article read in relevant sections. Early terraces began4500–5000years ago and continued until2500–3000years ago; relative-year basis not explicitly calibrated.",
+          "locator": "pp.234–235; pp.248–250; Fig.2; Fig.6",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "sourceId": "r9nw-xweetay-obsidian",
+          "title": "Obsidian (Volcanic Glass) and Ancient Trade Relations on Xwe’etay",
+          "url": "https://www.sfu.ca/rem/lasqueti/archaeology/obsidian-and-ancient-trade-relations-on-xwe-etay.html",
+          "doi": null,
+          "access": "Project/community research page read. Eight sourced objects, not140; no secure object-level dates supplied.",
+          "locator": "Sourced sample and regional comparison paragraphs",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "sourceId": "r9nw-lyons2017",
+          "title": "The Archaeology of Camas Production and Exchange on the Northwest Coast: With Evidence from a Sts’ailes (Chehalis) Village on the Harrison River, British Columbia",
+          "url": "https://journals.sagepub.com/doi/abs/10.2993/0278-0771-37.2.346?download=true",
+          "doi": "10.2993/0278-0771-37.2.346",
+          "access": "Original publisher abstract read. Journal volume37(2),2017; platform online posting2023 is not original publication year.",
+          "locator": "Abstract",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "sourceId": "r9nw-cullon2026",
+          "title": "Fish traps as evidence of changing social cooperation and investment on the Pacific Northwest Coast",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0278416525000881",
+          "doi": "10.1016/j.jaa.2025.101743",
+          "access": "Original indexed publisher abstract read; author names cross-checked against author publication page. Volume81,March2026; DOI year2025 differs. No full dating tables accessed.",
+          "locator": "Abstract; Highlights",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "sourceId": "r9nw-ritchie2024",
+          "title": "Settling the record:3,000years of continuity and growth in a Coast Salish settlement constellation",
+          "url": "https://www.researchgate.net/publication/378644636_Settling_the_record_3000_years_of_continuity_and_growth_in_a_Coast_Salish_settlement_constellation",
+          "doi": "10.1016/j.jaa.2024.101570",
+          "access": "Original author-uploaded full article read: sections4.2 and population methods. IntCal20 calibration;250-year bins combine direct dating and inferred occupations.",
+          "locator": "Sections4.2.2–4.2.3; population estimates and250-year-bin cautions",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "sourceId": "r9nw-lyons2021",
+          "title": "Were the Ancient Coast Salish Farmers? A Story of Origins",
+          "url": "https://pdxscholar.library.pdx.edu/anth_fac/249/",
+          "doi": "10.1017/aaq.2020.115",
+          "access": "Original scholarly abstract on author-institution repository read; full garden excavation and calibration tables not accessed.",
+          "locator": "Abstract",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "sourceId": "r9nw-armstrong2023",
+          "title": "Liberating trails and travel routes in Gitxsan and Wet’suwet’en Territories from the tyrannies of heritage resource management regimes",
+          "url": "https://anthrosource.onlinelibrary.wiley.com/doi/full/10.1111/aman.13817",
+          "doi": "10.1111/aman.13817",
+          "access": "Original open article trail methods, local laws and conclusion read. Oral texts, fieldwork and remote sensing integrated; CMT ages treated as minimum use dates.",
+          "locator": "Gitxsan/Wet’suwet’en Trails; Trail Archaeology; Conclusions",
+          "checkedAt": "2026-10-29"
+        }
+      ],
+      "held": [
+        {
+          "topic": "whaling",
+          "claim": "All whale remains demonstrate active whale hunting",
+          "reason": "Drift/scavenged whales can produce archaeological bones; specific embedded harpoon blades offer stronger direct evidence."
+        },
+        {
+          "topic": "whaling",
+          "claim": "Early terrace relative years/BP automatically map to calendar dates",
+          "reason": "McMillan does not explicitly calibrate these narrative or Table3 bins; no forced conversion or precise onset of hunting."
+        },
+        {
+          "topic": "whaling",
+          "claim": "One integrated polity or documented whale-product route to the Plateau",
+          "reason": "Accessed archaeological evidence does not establish this governance scale or commodity route."
+        },
+        {
+          "topic": "pacific-northwest",
+          "claim": "Xwe’etay analyzed140obsidian objects",
+          "reason": "Project page explicitly describes eight sourced artifacts; it supplies no secure date for each."
+        },
+        {
+          "topic": "pacific-northwest",
+          "claim": "Taylor2023 proves early1600s horses on Columbia Plateau",
+          "reason": "Study concerns Great Plains/northern Rockies. Geographic transfer cannot establish a Columbia Plateau arrival date."
+        },
+        {
+          "topic": "pacific-northwest",
+          "claim": "Maternal continuity proves unchanged ethnic/language boundaries",
+          "reason": "Genomic continuity concerns sampled ancestry; it does not fix language, political identity or immutable territories."
+        },
+        {
+          "topic": "pacific-northwest",
+          "claim": "Unverified regional population totals or city-sized counts",
+          "reason": "Settlement estimates depend on contemporaneity, survey visibility and household assumptions; only explicit sourced models admitted."
+        },
+        {
+          "topic": "pacific-northwest",
+          "claim": "Book-review DOIs provide original slavery, disease or Secwépemc evidence",
+          "reason": "Several report citations identify reviews. Their target books or original community sources must be checked before specific historical admission."
+        }
+      ],
+      "reconciled": [
+        {
+          "topic": "pacific-northwest",
+          "recordIds": [
+            "alaska-tyys-ancestry",
+            "northwest-lindo-regional-lineage",
+            "northwest-cui-maternal-continuity",
+            "language-pacific-northwest-genetic-comparison"
+          ],
+          "reason": "Existing regional and maternal genomic findings retained without duplicate records or automatic ancient-language identification."
+        }
+      ]
+    }
+  ],
+  "held": [
+    {
+      "id": "r9-held-inca-1",
+      "topic": "Cusco>100000; empire 10–14 million; Machu Picchu water capacity 2400",
+      "reason": "No date-specific checked resident scope; capacity is not residents.",
+      "status": "held-source-check",
+      "details": {
+        "reportPages": [
+          2,
+          3
+        ],
+        "finding": "Cusco>100000; empire 10–14 million; Machu Picchu water capacity 2400",
+        "reason": "No date-specific checked resident scope; capacity is not residents."
+      }
+    },
+    {
+      "id": "r9-held-inca-2",
+      "topic": "Incahullo 2 ha/50 buildings; Choquequirao sectors; Xaquixaguana 20 ha;60 sites/300 km roads",
+      "reason": "Numeric tables and verified individual locality coordinates not checked.",
+      "status": "held-source-check",
+      "details": {
+        "reportPages": [
+          2,
+          3,
+          7,
+          9
+        ],
+        "finding": "Incahullo 2 ha/50 buildings; Choquequirao sectors; Xaquixaguana 20 ha;60 sites/300 km roads",
+        "reason": "Numeric tables and verified individual locality coordinates not checked."
+      }
+    },
+    {
+      "id": "r9-held-inca-3",
+      "topic": "Huánuco 2011 planned center on formerly unpopulated grasslands",
+      "reason": "Original monograph inaccessible.1970 abstract and official inventory support narrower claims only. Attempted https://digitallibrary.amnh.org/handle/2246/6136 returned 403; https://doi.org/10.5531/sp.anth.0096 inaccessible.",
+      "status": "held-source-check",
+      "details": {
+        "reportPages": [
+          2,
+          3,
+          7,
+          9
+        ],
+        "finding": "Huánuco 2011 planned center on formerly unpopulated grasslands",
+        "reason": "Original monograph inaccessible.1970 abstract and official inventory support narrower claims only. Attempted https://digitallibrary.amnh.org/handle/2246/6136 returned 403; https://doi.org/10.5531/sp.anth.0096 inaccessible."
+      }
+    },
+    {
+      "id": "r9-held-inca-4",
+      "topic": "40000 km roads;2000 facilities;50 m Tinkuqchaka bridge",
+      "reason": "Original numeric chronology/geometry not checked; no synthetic road map invented.",
+      "status": "held-source-check",
+      "details": {
+        "reportPages": [
+          3,
+          10
+        ],
+        "finding": "40000 km roads;2000 facilities;50 m Tinkuqchaka bridge",
+        "reason": "Original numeric chronology/geometry not checked; no synthetic road map invented."
+      }
+    },
+    {
+      "id": "r9-held-inca-5",
+      "topic": "Huayna Capac specifically smallpox; one-third resettlement; collapse-model causation",
+      "reason": "No firm retrospective diagnosis, empire-wide census or historical causal proof established.",
+      "status": "held-source-check",
+      "details": {
+        "reportPages": [
+          5,
+          6
+        ],
+        "finding": "Huayna Capac specifically smallpox; one-third resettlement; collapse-model causation",
+        "reason": "No firm retrospective diagnosis, empire-wide census or historical causal proof established."
+      }
+    },
+    {
+      "id": "r9-held-inca-6",
+      "topic": "Ollantaytambo vernacular architecture/plant-use persistence",
+      "reason": "Original specific studies unread; no eternal-continuity occupation interval inferred.",
+      "status": "held-source-check",
+      "details": {
+        "reportPages": [
+          3,
+          8
+        ],
+        "finding": "Ollantaytambo vernacular architecture/plant-use persistence",
+        "reason": "Original specific studies unread; no eternal-continuity occupation interval inferred."
+      }
+    },
+    {
+      "id": "r9-held-inca-7",
+      "topic": "Book-review citations and online/print-year confusion",
+      "reason": "Kosiba 2022, Morgado 2021, Pérez-Miguel 2021 and Chase 2021 are book reviews. Substantive claims routed to originals where accessible. Lane/Marsh online 2023 issue 2024; Valdez/Bettcher online 2022 issue 2023.",
+      "status": "held-source-check",
+      "details": {
+        "reportPages": [
+          1,
+          2,
+          5,
+          6,
+          7,
+          9
+        ],
+        "finding": "Book-review citations and online/print-year confusion",
+        "reason": "Kosiba 2022, Morgado 2021, Pérez-Miguel 2021 and Chase 2021 are book reviews. Substantive claims routed to originals where accessible. Lane/Marsh online 2023 issue 2024; Valdez/Bettcher online 2022 issue 2023."
+      }
+    },
+    {
+      "id": "r9-held-root-1",
+      "topic": "louisiana/florida/nevada/montana inventories",
+      "reason": "Survey counts and diagnostic periods require site-level catalogs, public locations and individual phase chronologies before creating further settlement dots. Survey publication dates do not date occupation.",
+      "status": "held-source-check",
+      "details": {
+        "topic": "louisiana/florida/nevada/montana inventories",
+        "reason": "Survey counts and diagnostic periods require site-level catalogs, public locations and individual phase chronologies before creating further settlement dots. Survey publication dates do not date occupation."
+      }
+    },
+    {
+      "id": "r9-held-root-2",
+      "topic": "montana historical affiliations",
+      "reason": "Goshen/McKean and point traditions cannot automatically be mapped as Blackfeet, Crow, Kiowa or Athabaskan speech. Book-review citations do not substitute for excavation reports.",
+      "status": "held-source-check",
+      "details": {
+        "topic": "montana historical affiliations",
+        "reason": "Goshen/McKean and point traditions cannot automatically be mapped as Blackfeet, Crow, Kiowa or Athabaskan speech. Book-review citations do not substitute for excavation reports."
+      }
+    },
+    {
+      "id": "r9-held-root-3",
+      "topic": "colonial census language and boundaries",
+      "reason": "Nationality estimates are not language data. No historical boundary polygons or county extracts have been fabricated from this regional compilation.",
+      "status": "held-source-check",
+      "details": {
+        "topic": "colonial census language and boundaries",
+        "reason": "Nationality estimates are not language data. No historical boundary polygons or county extracts have been fabricated from this regional compilation."
+      }
+    },
+    {
+      "id": "r9-held-southwest-1",
+      "topic": "Taos founding and battle",
+      "reason": "Do not turn 1964 legendary battle/fire chronology into an established 1450 founding. Tribal construction estimate 1000–1450 and earlier valley cultivation are preserved separately.",
+      "status": "held-source-check",
+      "details": {
+        "topic": "Taos founding and battle",
+        "reason": "Do not turn 1964 legendary battle/fire chronology into an established 1450 founding. Tribal construction estimate 1000–1450 and earlier valley cultivation are preserved separately."
+      }
+    },
+    {
+      "id": "r9-held-southwest-2",
+      "topic": "Taos trade fairs",
+      "reason": "Specific Apaches/Comanches, goods, annual schedules and Spanish/French links not admitted from report synthesis; direct source-specific chronology still required. A 2021 book review is not primary evidence for precontact Taos commerce.",
+      "status": "held-source-check",
+      "details": {
+        "topic": "Taos trade fairs",
+        "reason": "Specific Apaches/Comanches, goods, annual schedules and Spanish/French links not admitted from report synthesis; direct source-specific chronology still required. A 2021 book review is not primary evidence for precontact Taos commerce."
+      }
+    },
+    {
+      "id": "r9-held-southwest-3",
+      "topic": "Southwest population and language",
+      "reason": "No absolute Taos, Pot Creek, Tijeras or San Marcos residents recovered in accessed sources. No room-to-people conversion, annual curves, ethnic census or inferred ancient language territory.",
+      "status": "held-source-check",
+      "details": {
+        "topic": "Southwest population and language",
+        "reason": "No absolute Taos, Pot Creek, Tijeras or San Marcos residents recovered in accessed sources. No room-to-people conversion, annual curves, ethnic census or inferred ancient language territory."
+      }
+    },
+    {
+      "id": "r9-held-southwest-4",
+      "topic": "Nationwide warfare and climatic causation",
+      "reason": "Only original-source-checked local conflict findings admitted. Cave 7 chronology, continental battle inventories, ENSO-caused individual attacks and eruption-driven warfare remain unverified here.",
+      "status": "held-source-check",
+      "details": {
+        "topic": "Nationwide warfare and climatic causation",
+        "reason": "Only original-source-checked local conflict findings admitted. Cave 7 chronology, continental battle inventories, ENSO-caused individual attacks and eruption-driven warfare remain unverified here."
+      }
+    },
+    {
+      "id": "r9-held-southwest-5",
+      "topic": "Regional Southwest synthesis",
+      "reason": "Hohokam/Fremont coastal California regional summaries are not converted into invented settlements. Detailed site phases, census estimates and routes require additional original sources.",
+      "status": "held-source-check",
+      "details": {
+        "topic": "Regional Southwest synthesis",
+        "reason": "Hohokam/Fremont coastal California regional summaries are not converted into invented settlements. Detailed site phases, census estimates and routes require additional original sources."
+      }
+    },
+    {
+      "id": "r9-held-caribbean-central-1",
+      "topic": "trants",
+      "reason": "Original stratigraphic/radiocarbon tables not accessed; surface-collection abstract cannot establish these precise early assertions.",
+      "status": "held-source-check",
+      "details": {
+        "topic": "trants",
+        "claim": "All imported materials securely pre100CE / deepest beads before480BCE",
+        "reason": "Original stratigraphic/radiocarbon tables not accessed; surface-collection abstract cannot establish these precise early assertions."
+      }
+    },
+    {
+      "id": "r9-held-caribbean-central-2",
+      "topic": "trants",
+      "reason": "Denominator is not the entire assemblage; low fraction alone does not establish exports, volume or destination.",
+      "status": "held-source-check",
+      "details": {
+        "topic": "trants",
+        "claim": "Finished carnelian1.1% proves most ornaments exported",
+        "reason": "Denominator is not the entire assemblage; low fraction alone does not establish exports, volume or destination."
+      }
+    },
+    {
+      "id": "r9-held-caribbean-central-3",
+      "topic": "trants",
+      "reason": "Author-upload metadata says .330549, but BHL indexing conflicts. Omit DOI until original title/DOI resolution.",
+      "status": "held-source-check",
+      "details": {
+        "topic": "trants",
+        "claim": "Watters/Scaglion DOI10.5962/p.330547",
+        "reason": "Author-upload metadata says .330549, but BHL indexing conflicts. Omit DOI until original title/DOI resolution."
+      }
+    },
+    {
+      "id": "r9-held-caribbean-central-4",
+      "topic": "central-america",
+      "reason": "Cited DOI identifies a conquest-book review, not original Fishtail archaeology.",
+      "status": "held-source-check",
+      "details": {
+        "topic": "central-america",
+        "claim": "Herrera2022 supports Fishtail archaeology",
+        "reason": "Cited DOI identifies a conquest-book review, not original Fishtail archaeology."
+      }
+    },
+    {
+      "id": "r9-held-caribbean-central-5",
+      "topic": "central-america",
+      "reason": "Cited work is a mining-book review, not Nicarao migration research.",
+      "status": "held-source-check",
+      "details": {
+        "topic": "central-america",
+        "claim": "Craddock1994 supports Nicarao migration",
+        "reason": "Cited work is a mining-book review, not Nicarao migration research."
+      }
+    },
+    {
+      "id": "r9-held-caribbean-central-6",
+      "topic": "isthmo-colombian",
+      "reason": "Overgeneralizes samples and models; no exhaustive migration inventory or exclusive directionality established.",
+      "status": "held-source-check",
+      "details": {
+        "topic": "isthmo-colombian",
+        "claim": "All ancestry arose in situ; only one prominent south-to-north migration",
+        "reason": "Overgeneralizes samples and models; no exhaustive migration inventory or exclusive directionality established."
+      }
+    },
+    {
+      "id": "r9-held-caribbean-central-7",
+      "topic": "caribbean-trade",
+      "reason": "Language, archaeological culture, genomic affinity, colonization and exchange are distinct inferences.",
+      "status": "held-source-check",
+      "details": {
+        "topic": "caribbean-trade",
+        "claim": "Saladoid ancestry proves ancient Arawakan speech or exact trade route",
+        "reason": "Language, archaeological culture, genomic affinity, colonization and exchange are distinct inferences."
+      }
+    },
+    {
+      "id": "r9-held-caribbean-central-8",
+      "topic": "central-america",
+      "reason": "Gassmann retains major context/provenance gaps; ore abundance is not proof of prehistoric mining.",
+      "status": "held-source-check",
+      "details": {
+        "topic": "central-america",
+        "claim": "Geological metal deposits establish named prehistoric mine-to-site routes",
+        "reason": "Gassmann retains major context/provenance gaps; ore abundance is not proof of prehistoric mining."
+      }
+    },
+    {
+      "id": "r9-held-northwest-1",
+      "topic": "whaling",
+      "reason": "Drift/scavenged whales can produce archaeological bones; specific embedded harpoon blades offer stronger direct evidence.",
+      "status": "held-source-check",
+      "details": {
+        "topic": "whaling",
+        "claim": "All whale remains demonstrate active whale hunting",
+        "reason": "Drift/scavenged whales can produce archaeological bones; specific embedded harpoon blades offer stronger direct evidence."
+      }
+    },
+    {
+      "id": "r9-held-northwest-2",
+      "topic": "whaling",
+      "reason": "McMillan does not explicitly calibrate these narrative or Table3 bins; no forced conversion or precise onset of hunting.",
+      "status": "held-source-check",
+      "details": {
+        "topic": "whaling",
+        "claim": "Early terrace relative years/BP automatically map to calendar dates",
+        "reason": "McMillan does not explicitly calibrate these narrative or Table3 bins; no forced conversion or precise onset of hunting."
+      }
+    },
+    {
+      "id": "r9-held-northwest-3",
+      "topic": "whaling",
+      "reason": "Accessed archaeological evidence does not establish this governance scale or commodity route.",
+      "status": "held-source-check",
+      "details": {
+        "topic": "whaling",
+        "claim": "One integrated polity or documented whale-product route to the Plateau",
+        "reason": "Accessed archaeological evidence does not establish this governance scale or commodity route."
+      }
+    },
+    {
+      "id": "r9-held-northwest-4",
+      "topic": "pacific-northwest",
+      "reason": "Project page explicitly describes eight sourced artifacts; it supplies no secure date for each.",
+      "status": "held-source-check",
+      "details": {
+        "topic": "pacific-northwest",
+        "claim": "Xwe’etay analyzed140obsidian objects",
+        "reason": "Project page explicitly describes eight sourced artifacts; it supplies no secure date for each."
+      }
+    },
+    {
+      "id": "r9-held-northwest-5",
+      "topic": "pacific-northwest",
+      "reason": "Study concerns Great Plains/northern Rockies. Geographic transfer cannot establish a Columbia Plateau arrival date.",
+      "status": "held-source-check",
+      "details": {
+        "topic": "pacific-northwest",
+        "claim": "Taylor2023 proves early1600s horses on Columbia Plateau",
+        "reason": "Study concerns Great Plains/northern Rockies. Geographic transfer cannot establish a Columbia Plateau arrival date."
+      }
+    },
+    {
+      "id": "r9-held-northwest-6",
+      "topic": "pacific-northwest",
+      "reason": "Genomic continuity concerns sampled ancestry; it does not fix language, political identity or immutable territories.",
+      "status": "held-source-check",
+      "details": {
+        "topic": "pacific-northwest",
+        "claim": "Maternal continuity proves unchanged ethnic/language boundaries",
+        "reason": "Genomic continuity concerns sampled ancestry; it does not fix language, political identity or immutable territories."
+      }
+    },
+    {
+      "id": "r9-held-northwest-7",
+      "topic": "pacific-northwest",
+      "reason": "Settlement estimates depend on contemporaneity, survey visibility and household assumptions; only explicit sourced models admitted.",
+      "status": "held-source-check",
+      "details": {
+        "topic": "pacific-northwest",
+        "claim": "Unverified regional population totals or city-sized counts",
+        "reason": "Settlement estimates depend on contemporaneity, survey visibility and household assumptions; only explicit sourced models admitted."
+      }
+    },
+    {
+      "id": "r9-held-northwest-8",
+      "topic": "pacific-northwest",
+      "reason": "Several report citations identify reviews. Their target books or original community sources must be checked before specific historical admission.",
+      "status": "held-source-check",
+      "details": {
+        "topic": "pacific-northwest",
+        "claim": "Book-review DOIs provide original slavery, disease or Secwépemc evidence",
+        "reason": "Several report citations identify reviews. Their target books or original community sources must be checked before specific historical admission."
+      }
+    }
+  ],
+  "topicDecisions": [
+    {
+      "topic": "inca",
+      "reviewGroup": "inca",
+      "filesReceived": 3,
+      "status": "screened; narrower source-checked findings integrated; unresolved claims retained",
+      "relatedRecordIds": [
+        "r9v-inca-cusco-formation",
+        "r9v-inca-huanuco-provisioning",
+        "r9v-inca-huanuco-road-scale",
+        "r9v-inca-machupicchu-bayesian-alternative",
+        "r9v-inca-machupicchu-retainers",
+        "r9v-inca-akawillay-early-sector",
+        "r9v-inca-sanco-1572-count",
+        "r9v-inca-atacama-road-exchange",
+        "r9v-inca-quechua-diffusion",
+        "r9v-inca-court-language-hypothesis",
+        "r9v-inca-inkawasi-accounting",
+        "r9v-inca-tambo-viejo-model",
+        "r9v-inca-cajamarca-1532",
+        "r9v-inca-cusco-revolt-1536",
+        "r9v-inca-vilcabamba-1572",
+        "r9v-inca-huanuco-colonial-plaza"
+      ],
+      "limitation": "Group record links provide related reviewed context, not a claim that every report statement or bibliography entry was verified."
+    },
+    {
+      "topic": "warfare-climate",
+      "reviewGroup": "southwest",
+      "filesReceived": 2,
+      "status": "screened; narrower source-checked findings integrated; unresolved claims retained",
+      "relatedRecordIds": [
+        "r9v-sw-taos-cultivation",
+        "r9v-sw-taos-adobe",
+        "r9v-sw-taos-ancestral-ruin",
+        "r9v-sw-pot-earlier",
+        "r9v-sw-pot-construction",
+        "r9v-sw-pot-decommission",
+        "r9v-sw-pot-obsidian",
+        "r9v-sw-tijeras-early",
+        "r9v-sw-tijeras-layout",
+        "r9v-sw-tijeras-consolidation",
+        "r9v-sw-tijeras-rebuild",
+        "r9v-sw-sanmarcos-mobility",
+        "r9v-sw-sanmarcos-aggregation",
+        "r9v-sw-sanmarcos-terminal",
+        "r9v-sw-sand-canyon-violence",
+        "r9v-sw-castle-rock-violence",
+        "r9v-sw-cave29-ice-harvest",
+        "r9v-sw-cave29-late",
+        "r9v-sw-hidden-cave-aridity",
+        "r9v-sw-drought-statistics",
+        "r9v-sw-orendorf-trauma",
+        "r9v-sw-crow-creek-massacre"
+      ],
+      "limitation": "Group record links provide related reviewed context, not a claim that every report statement or bibliography entry was verified."
+    },
+    {
+      "topic": "louisiana",
+      "reviewGroup": "root",
+      "filesReceived": 2,
+      "status": "screened; narrower source-checked findings integrated; unresolved claims retained",
+      "relatedRecordIds": [
+        "r9v-montana-billy-early-charcoal",
+        "r9v-montana-billy-later-charcoal",
+        "r9v-montana-billy-refugium",
+        "r9v-florida-aucilla-inventory",
+        "r9v-florida-apalachee-detection",
+        "r9v-nevada-pueblo-grande",
+        "r9v-montana-projectile-networks",
+        "r9v-census-new-hampshire",
+        "r9v-census-massachusetts",
+        "r9v-census-rhode-island",
+        "r9v-census-connecticut",
+        "r9v-census-new-york",
+        "r9v-census-new-jersey",
+        "r9v-census-pennsylvania",
+        "r9v-census-delaware",
+        "r9v-census-maryland",
+        "r9v-census-virginia",
+        "r9v-census-north-carolina",
+        "r9v-census-south-carolina",
+        "r9v-census-georgia",
+        "r9v-census-new-france1666"
+      ],
+      "limitation": "Group record links provide related reviewed context, not a claim that every report statement or bibliography entry was verified."
+    },
+    {
+      "topic": "florida",
+      "reviewGroup": "root",
+      "filesReceived": 2,
+      "status": "screened; narrower source-checked findings integrated; unresolved claims retained",
+      "relatedRecordIds": [
+        "r9v-montana-billy-early-charcoal",
+        "r9v-montana-billy-later-charcoal",
+        "r9v-montana-billy-refugium",
+        "r9v-florida-aucilla-inventory",
+        "r9v-florida-apalachee-detection",
+        "r9v-nevada-pueblo-grande",
+        "r9v-montana-projectile-networks",
+        "r9v-census-new-hampshire",
+        "r9v-census-massachusetts",
+        "r9v-census-rhode-island",
+        "r9v-census-connecticut",
+        "r9v-census-new-york",
+        "r9v-census-new-jersey",
+        "r9v-census-pennsylvania",
+        "r9v-census-delaware",
+        "r9v-census-maryland",
+        "r9v-census-virginia",
+        "r9v-census-north-carolina",
+        "r9v-census-south-carolina",
+        "r9v-census-georgia",
+        "r9v-census-new-france1666"
+      ],
+      "limitation": "Group record links provide related reviewed context, not a claim that every report statement or bibliography entry was verified."
+    },
+    {
+      "topic": "nevada",
+      "reviewGroup": "root",
+      "filesReceived": 2,
+      "status": "screened; narrower source-checked findings integrated; unresolved claims retained",
+      "relatedRecordIds": [
+        "r9v-montana-billy-early-charcoal",
+        "r9v-montana-billy-later-charcoal",
+        "r9v-montana-billy-refugium",
+        "r9v-florida-aucilla-inventory",
+        "r9v-florida-apalachee-detection",
+        "r9v-nevada-pueblo-grande",
+        "r9v-montana-projectile-networks",
+        "r9v-census-new-hampshire",
+        "r9v-census-massachusetts",
+        "r9v-census-rhode-island",
+        "r9v-census-connecticut",
+        "r9v-census-new-york",
+        "r9v-census-new-jersey",
+        "r9v-census-pennsylvania",
+        "r9v-census-delaware",
+        "r9v-census-maryland",
+        "r9v-census-virginia",
+        "r9v-census-north-carolina",
+        "r9v-census-south-carolina",
+        "r9v-census-georgia",
+        "r9v-census-new-france1666"
+      ],
+      "limitation": "Group record links provide related reviewed context, not a claim that every report statement or bibliography entry was verified."
+    },
+    {
+      "topic": "montana-inventory",
+      "reviewGroup": "root",
+      "filesReceived": 2,
+      "status": "screened; narrower source-checked findings integrated; unresolved claims retained",
+      "relatedRecordIds": [
+        "r9v-montana-billy-early-charcoal",
+        "r9v-montana-billy-later-charcoal",
+        "r9v-montana-billy-refugium",
+        "r9v-florida-aucilla-inventory",
+        "r9v-florida-apalachee-detection",
+        "r9v-nevada-pueblo-grande",
+        "r9v-montana-projectile-networks",
+        "r9v-census-new-hampshire",
+        "r9v-census-massachusetts",
+        "r9v-census-rhode-island",
+        "r9v-census-connecticut",
+        "r9v-census-new-york",
+        "r9v-census-new-jersey",
+        "r9v-census-pennsylvania",
+        "r9v-census-delaware",
+        "r9v-census-maryland",
+        "r9v-census-virginia",
+        "r9v-census-north-carolina",
+        "r9v-census-south-carolina",
+        "r9v-census-georgia",
+        "r9v-census-new-france1666"
+      ],
+      "limitation": "Group record links provide related reviewed context, not a claim that every report statement or bibliography entry was verified."
+    },
+    {
+      "topic": "montana-history",
+      "reviewGroup": "root",
+      "filesReceived": 2,
+      "status": "screened; narrower source-checked findings integrated; unresolved claims retained",
+      "relatedRecordIds": [
+        "r9v-montana-billy-early-charcoal",
+        "r9v-montana-billy-later-charcoal",
+        "r9v-montana-billy-refugium",
+        "r9v-florida-aucilla-inventory",
+        "r9v-florida-apalachee-detection",
+        "r9v-nevada-pueblo-grande",
+        "r9v-montana-projectile-networks",
+        "r9v-census-new-hampshire",
+        "r9v-census-massachusetts",
+        "r9v-census-rhode-island",
+        "r9v-census-connecticut",
+        "r9v-census-new-york",
+        "r9v-census-new-jersey",
+        "r9v-census-pennsylvania",
+        "r9v-census-delaware",
+        "r9v-census-maryland",
+        "r9v-census-virginia",
+        "r9v-census-north-carolina",
+        "r9v-census-south-carolina",
+        "r9v-census-georgia",
+        "r9v-census-new-france1666"
+      ],
+      "limitation": "Group record links provide related reviewed context, not a claim that every report statement or bibliography entry was verified."
+    },
+    {
+      "topic": "trants",
+      "reviewGroup": "caribbean-central",
+      "filesReceived": 2,
+      "status": "screened; narrower source-checked findings integrated; unresolved claims retained",
+      "relatedRecordIds": [
+        "r9v-cc-trants-carnelian-production",
+        "r9v-cc-trants-exotic-ornaments",
+        "r9v-cc-morel-necklace",
+        "r9v-cc-vive-minerals",
+        "r9v-cc-anse-gourde-materialchange",
+        "r9v-cc-gare-maritime-production",
+        "r9v-cc-panama-ancient-genomes",
+        "r9v-cc-isthmian-ancestry-model",
+        "r9v-cc-altiplano-ancestry-shift",
+        "r9v-cc-altiplano-herrera-muisca",
+        "r9v-cc-panama-paternal-directionality",
+        "r9v-cc-las-mercedes-chacmool",
+        "r9v-cc-aguas-buenas-residue",
+        "r9v-cc-barillas-mound61",
+        "r9v-cc-barillas-mound27",
+        "r9v-cc-guacimo-early-metals"
+      ],
+      "limitation": "Group record links provide related reviewed context, not a claim that every report statement or bibliography entry was verified."
+    },
+    {
+      "topic": "caribbean-trade",
+      "reviewGroup": "caribbean-central",
+      "filesReceived": 2,
+      "status": "screened; narrower source-checked findings integrated; unresolved claims retained",
+      "relatedRecordIds": [
+        "r9v-cc-trants-carnelian-production",
+        "r9v-cc-trants-exotic-ornaments",
+        "r9v-cc-morel-necklace",
+        "r9v-cc-vive-minerals",
+        "r9v-cc-anse-gourde-materialchange",
+        "r9v-cc-gare-maritime-production",
+        "r9v-cc-panama-ancient-genomes",
+        "r9v-cc-isthmian-ancestry-model",
+        "r9v-cc-altiplano-ancestry-shift",
+        "r9v-cc-altiplano-herrera-muisca",
+        "r9v-cc-panama-paternal-directionality",
+        "r9v-cc-las-mercedes-chacmool",
+        "r9v-cc-aguas-buenas-residue",
+        "r9v-cc-barillas-mound61",
+        "r9v-cc-barillas-mound27",
+        "r9v-cc-guacimo-early-metals"
+      ],
+      "limitation": "Group record links provide related reviewed context, not a claim that every report statement or bibliography entry was verified."
+    },
+    {
+      "topic": "pueblo-climate",
+      "reviewGroup": "southwest",
+      "filesReceived": 2,
+      "status": "screened; narrower source-checked findings integrated; unresolved claims retained",
+      "relatedRecordIds": [
+        "r9v-sw-taos-cultivation",
+        "r9v-sw-taos-adobe",
+        "r9v-sw-taos-ancestral-ruin",
+        "r9v-sw-pot-earlier",
+        "r9v-sw-pot-construction",
+        "r9v-sw-pot-decommission",
+        "r9v-sw-pot-obsidian",
+        "r9v-sw-tijeras-early",
+        "r9v-sw-tijeras-layout",
+        "r9v-sw-tijeras-consolidation",
+        "r9v-sw-tijeras-rebuild",
+        "r9v-sw-sanmarcos-mobility",
+        "r9v-sw-sanmarcos-aggregation",
+        "r9v-sw-sanmarcos-terminal",
+        "r9v-sw-sand-canyon-violence",
+        "r9v-sw-castle-rock-violence",
+        "r9v-sw-cave29-ice-harvest",
+        "r9v-sw-cave29-late",
+        "r9v-sw-hidden-cave-aridity",
+        "r9v-sw-drought-statistics",
+        "r9v-sw-orendorf-trauma",
+        "r9v-sw-crow-creek-massacre"
+      ],
+      "limitation": "Group record links provide related reviewed context, not a claim that every report statement or bibliography entry was verified."
+    },
+    {
+      "topic": "taos",
+      "reviewGroup": "southwest",
+      "filesReceived": 2,
+      "status": "screened; narrower source-checked findings integrated; unresolved claims retained",
+      "relatedRecordIds": [
+        "r9v-sw-taos-cultivation",
+        "r9v-sw-taos-adobe",
+        "r9v-sw-taos-ancestral-ruin",
+        "r9v-sw-pot-earlier",
+        "r9v-sw-pot-construction",
+        "r9v-sw-pot-decommission",
+        "r9v-sw-pot-obsidian",
+        "r9v-sw-tijeras-early",
+        "r9v-sw-tijeras-layout",
+        "r9v-sw-tijeras-consolidation",
+        "r9v-sw-tijeras-rebuild",
+        "r9v-sw-sanmarcos-mobility",
+        "r9v-sw-sanmarcos-aggregation",
+        "r9v-sw-sanmarcos-terminal",
+        "r9v-sw-sand-canyon-violence",
+        "r9v-sw-castle-rock-violence",
+        "r9v-sw-cave29-ice-harvest",
+        "r9v-sw-cave29-late",
+        "r9v-sw-hidden-cave-aridity",
+        "r9v-sw-drought-statistics",
+        "r9v-sw-orendorf-trauma",
+        "r9v-sw-crow-creek-massacre"
+      ],
+      "limitation": "Group record links provide related reviewed context, not a claim that every report statement or bibliography entry was verified."
+    },
+    {
+      "topic": "pueblo-demography",
+      "reviewGroup": "southwest",
+      "filesReceived": 2,
+      "status": "screened; narrower source-checked findings integrated; unresolved claims retained",
+      "relatedRecordIds": [
+        "r9v-sw-taos-cultivation",
+        "r9v-sw-taos-adobe",
+        "r9v-sw-taos-ancestral-ruin",
+        "r9v-sw-pot-earlier",
+        "r9v-sw-pot-construction",
+        "r9v-sw-pot-decommission",
+        "r9v-sw-pot-obsidian",
+        "r9v-sw-tijeras-early",
+        "r9v-sw-tijeras-layout",
+        "r9v-sw-tijeras-consolidation",
+        "r9v-sw-tijeras-rebuild",
+        "r9v-sw-sanmarcos-mobility",
+        "r9v-sw-sanmarcos-aggregation",
+        "r9v-sw-sanmarcos-terminal",
+        "r9v-sw-sand-canyon-violence",
+        "r9v-sw-castle-rock-violence",
+        "r9v-sw-cave29-ice-harvest",
+        "r9v-sw-cave29-late",
+        "r9v-sw-hidden-cave-aridity",
+        "r9v-sw-drought-statistics",
+        "r9v-sw-orendorf-trauma",
+        "r9v-sw-crow-creek-massacre"
+      ],
+      "limitation": "Group record links provide related reviewed context, not a claim that every report statement or bibliography entry was verified."
+    },
+    {
+      "topic": "southwest",
+      "reviewGroup": "southwest",
+      "filesReceived": 2,
+      "status": "screened; narrower source-checked findings integrated; unresolved claims retained",
+      "relatedRecordIds": [
+        "r9v-sw-taos-cultivation",
+        "r9v-sw-taos-adobe",
+        "r9v-sw-taos-ancestral-ruin",
+        "r9v-sw-pot-earlier",
+        "r9v-sw-pot-construction",
+        "r9v-sw-pot-decommission",
+        "r9v-sw-pot-obsidian",
+        "r9v-sw-tijeras-early",
+        "r9v-sw-tijeras-layout",
+        "r9v-sw-tijeras-consolidation",
+        "r9v-sw-tijeras-rebuild",
+        "r9v-sw-sanmarcos-mobility",
+        "r9v-sw-sanmarcos-aggregation",
+        "r9v-sw-sanmarcos-terminal",
+        "r9v-sw-sand-canyon-violence",
+        "r9v-sw-castle-rock-violence",
+        "r9v-sw-cave29-ice-harvest",
+        "r9v-sw-cave29-late",
+        "r9v-sw-hidden-cave-aridity",
+        "r9v-sw-drought-statistics",
+        "r9v-sw-orendorf-trauma",
+        "r9v-sw-crow-creek-massacre"
+      ],
+      "limitation": "Group record links provide related reviewed context, not a claim that every report statement or bibliography entry was verified."
+    },
+    {
+      "topic": "pacific-northwest",
+      "reviewGroup": "northwest",
+      "filesReceived": 2,
+      "status": "screened; narrower source-checked findings integrated; unresolved claims retained",
+      "relatedRecordIds": [
+        "r9v-nw-tsishaa-early-terrace",
+        "r9v-nw-huu7ii-early-terrace",
+        "r9v-nw-chuumata-early-terrace",
+        "r9v-nw-tsishaa-hunted-whale",
+        "r9v-nw-huu7ii-house-valves",
+        "r9v-nw-xweetay-obsidian",
+        "r9v-nw-stsailes-camas",
+        "r9v-nw-fishtraps-cooperation",
+        "r9v-nw-harrison-growth",
+        "r9v-nw-harrison-population-model",
+        "r9v-nw-katzie-wapato",
+        "r9v-nw-gitxsan-wetsuweten-trails"
+      ],
+      "limitation": "Group record links provide related reviewed context, not a claim that every report statement or bibliography entry was verified."
+    },
+    {
+      "topic": "isthmo-colombian",
+      "reviewGroup": "caribbean-central",
+      "filesReceived": 2,
+      "status": "screened; narrower source-checked findings integrated; unresolved claims retained",
+      "relatedRecordIds": [
+        "r9v-cc-trants-carnelian-production",
+        "r9v-cc-trants-exotic-ornaments",
+        "r9v-cc-morel-necklace",
+        "r9v-cc-vive-minerals",
+        "r9v-cc-anse-gourde-materialchange",
+        "r9v-cc-gare-maritime-production",
+        "r9v-cc-panama-ancient-genomes",
+        "r9v-cc-isthmian-ancestry-model",
+        "r9v-cc-altiplano-ancestry-shift",
+        "r9v-cc-altiplano-herrera-muisca",
+        "r9v-cc-panama-paternal-directionality",
+        "r9v-cc-las-mercedes-chacmool",
+        "r9v-cc-aguas-buenas-residue",
+        "r9v-cc-barillas-mound61",
+        "r9v-cc-barillas-mound27",
+        "r9v-cc-guacimo-early-metals"
+      ],
+      "limitation": "Group record links provide related reviewed context, not a claim that every report statement or bibliography entry was verified."
+    },
+    {
+      "topic": "central-america",
+      "reviewGroup": "caribbean-central",
+      "filesReceived": 2,
+      "status": "screened; narrower source-checked findings integrated; unresolved claims retained",
+      "relatedRecordIds": [
+        "r9v-cc-trants-carnelian-production",
+        "r9v-cc-trants-exotic-ornaments",
+        "r9v-cc-morel-necklace",
+        "r9v-cc-vive-minerals",
+        "r9v-cc-anse-gourde-materialchange",
+        "r9v-cc-gare-maritime-production",
+        "r9v-cc-panama-ancient-genomes",
+        "r9v-cc-isthmian-ancestry-model",
+        "r9v-cc-altiplano-ancestry-shift",
+        "r9v-cc-altiplano-herrera-muisca",
+        "r9v-cc-panama-paternal-directionality",
+        "r9v-cc-las-mercedes-chacmool",
+        "r9v-cc-aguas-buenas-residue",
+        "r9v-cc-barillas-mound61",
+        "r9v-cc-barillas-mound27",
+        "r9v-cc-guacimo-early-metals"
+      ],
+      "limitation": "Group record links provide related reviewed context, not a claim that every report statement or bibliography entry was verified."
+    },
+    {
+      "topic": "north-south-trade",
+      "reviewGroup": "caribbean-central",
+      "filesReceived": 2,
+      "status": "duplicate-receipt-reconciled",
+      "relatedRecordIds": [
+        "r9v-cc-trants-carnelian-production",
+        "r9v-cc-trants-exotic-ornaments",
+        "r9v-cc-morel-necklace",
+        "r9v-cc-vive-minerals",
+        "r9v-cc-anse-gourde-materialchange",
+        "r9v-cc-gare-maritime-production",
+        "r9v-cc-panama-ancient-genomes",
+        "r9v-cc-isthmian-ancestry-model",
+        "r9v-cc-altiplano-ancestry-shift",
+        "r9v-cc-altiplano-herrera-muisca",
+        "r9v-cc-panama-paternal-directionality",
+        "r9v-cc-las-mercedes-chacmool",
+        "r9v-cc-aguas-buenas-residue",
+        "r9v-cc-barillas-mound61",
+        "r9v-cc-barillas-mound27",
+        "r9v-cc-guacimo-early-metals"
+      ],
+      "limitation": "Group record links provide related reviewed context, not a claim that every report statement or bibliography entry was verified."
+    }
+  ],
+  "release": "0.4.2",
+  "recordIds": [
+    "r9v-inca-cusco-formation",
+    "r9v-inca-huanuco-provisioning",
+    "r9v-inca-huanuco-road-scale",
+    "r9v-inca-machupicchu-bayesian-alternative",
+    "r9v-inca-machupicchu-retainers",
+    "r9v-inca-akawillay-early-sector",
+    "r9v-inca-sanco-1572-count",
+    "r9v-inca-atacama-road-exchange",
+    "r9v-inca-quechua-diffusion",
+    "r9v-inca-court-language-hypothesis",
+    "r9v-inca-inkawasi-accounting",
+    "r9v-inca-tambo-viejo-model",
+    "r9v-inca-cajamarca-1532",
+    "r9v-inca-cusco-revolt-1536",
+    "r9v-inca-vilcabamba-1572",
+    "r9v-inca-huanuco-colonial-plaza",
+    "r9v-montana-billy-early-charcoal",
+    "r9v-montana-billy-later-charcoal",
+    "r9v-montana-billy-refugium",
+    "r9v-florida-aucilla-inventory",
+    "r9v-florida-apalachee-detection",
+    "r9v-nevada-pueblo-grande",
+    "r9v-montana-projectile-networks",
+    "r9v-census-new-hampshire",
+    "r9v-census-massachusetts",
+    "r9v-census-rhode-island",
+    "r9v-census-connecticut",
+    "r9v-census-new-york",
+    "r9v-census-new-jersey",
+    "r9v-census-pennsylvania",
+    "r9v-census-delaware",
+    "r9v-census-maryland",
+    "r9v-census-virginia",
+    "r9v-census-north-carolina",
+    "r9v-census-south-carolina",
+    "r9v-census-georgia",
+    "r9v-census-new-france1666",
+    "r9v-sw-taos-cultivation",
+    "r9v-sw-taos-adobe",
+    "r9v-sw-taos-ancestral-ruin",
+    "r9v-sw-pot-earlier",
+    "r9v-sw-pot-construction",
+    "r9v-sw-pot-decommission",
+    "r9v-sw-pot-obsidian",
+    "r9v-sw-tijeras-early",
+    "r9v-sw-tijeras-layout",
+    "r9v-sw-tijeras-consolidation",
+    "r9v-sw-tijeras-rebuild",
+    "r9v-sw-sanmarcos-mobility",
+    "r9v-sw-sanmarcos-aggregation",
+    "r9v-sw-sanmarcos-terminal",
+    "r9v-sw-sand-canyon-violence",
+    "r9v-sw-castle-rock-violence",
+    "r9v-sw-cave29-ice-harvest",
+    "r9v-sw-cave29-late",
+    "r9v-sw-hidden-cave-aridity",
+    "r9v-sw-drought-statistics",
+    "r9v-sw-orendorf-trauma",
+    "r9v-sw-crow-creek-massacre",
+    "r9v-cc-trants-carnelian-production",
+    "r9v-cc-trants-exotic-ornaments",
+    "r9v-cc-morel-necklace",
+    "r9v-cc-vive-minerals",
+    "r9v-cc-anse-gourde-materialchange",
+    "r9v-cc-gare-maritime-production",
+    "r9v-cc-panama-ancient-genomes",
+    "r9v-cc-isthmian-ancestry-model",
+    "r9v-cc-altiplano-ancestry-shift",
+    "r9v-cc-altiplano-herrera-muisca",
+    "r9v-cc-panama-paternal-directionality",
+    "r9v-cc-las-mercedes-chacmool",
+    "r9v-cc-aguas-buenas-residue",
+    "r9v-cc-barillas-mound61",
+    "r9v-cc-barillas-mound27",
+    "r9v-cc-guacimo-early-metals",
+    "r9v-nw-tsishaa-early-terrace",
+    "r9v-nw-huu7ii-early-terrace",
+    "r9v-nw-chuumata-early-terrace",
+    "r9v-nw-tsishaa-hunted-whale",
+    "r9v-nw-huu7ii-house-valves",
+    "r9v-nw-xweetay-obsidian",
+    "r9v-nw-stsailes-camas",
+    "r9v-nw-fishtraps-cooperation",
+    "r9v-nw-harrison-growth",
+    "r9v-nw-harrison-population-model",
+    "r9v-nw-katzie-wapato",
+    "r9v-nw-gitxsan-wetsuweten-trails"
+  ],
+  "newSourceCheckedRecords": 87,
+  "publishedRecordCount": 738,
+  "localEvidenceRecords": 17,
+  "datedRecords": 60,
+  "method": "Narrow original-source findings admitted, prior claims reconciled, specific unresolved interpretations held. Topic accounting is comprehensive for receipts, not an assertion that every generated sentence or bibliography entry is verified. Raw reports remain private."
+}

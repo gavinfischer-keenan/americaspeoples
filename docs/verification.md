@@ -1,6 +1,16 @@
 # Current release verification
 
-Version 0.4.1maintenance release follows the publicly verified0.4.0hybrid release. Current runtime requires HTTP and the Python/SQLite API; file:// checks are historical only.
+Version 0.4.2 is the current research release. It follows the verified 0.4.1 maintenance and 0.4.0 hybrid releases. Current runtime requires HTTP and the Python/SQLite API; file:// checks are historical only.
+
+Round-nine verification, October 29, 2026 (America/Los_Angeles):
+- All 18 ordered release phases passed: 120 unit tests, 10 Python API tests, strict TypeScript, full dataset validation, actual workbook import and all 738 full review pages, privacy/CSP, map/timeline/mobile/physical layers, network failures and extracted self-host bundle.
+- 87 new source-checked records; 651 preceding full records byte-identical. Hazards and ice geometry unchanged. Repeated Louisiana and Central American trade findings reconciled. Source-access limits and 31 held interpretation groups are explicit in the public round-nine report.
+- Public build/assets, four new report/data files, five sampled new API reviews, 53-region coverage audit, launch flow, ENSO sources, latest-research link and all three hosted download checksums passed.
+- Static release: `/srv/tripofisch/releases/20261030T005513Z`. API/database release: `/srv/americaspeoples/releases/20261030T005513Z`. Both preceding rollback directories end in `20261030T002228Z`.
+- All 12 neighboring public app responses remained byte-identical. Proxmox had about 60 GB available memory and low load; public container storage 61% used. API service active at approximately 14 MB memory. No Caddy, resource or other-app changes in this release.
+- [Future issue #1](https://github.com/gavinfischer-keenan/americaspeoples/issues/1) and [future issue #2](https://github.com/gavinfischer-keenan/americaspeoples/issues/2) created and independently read back with the exact `feature request` label. These features were not implemented.
+
+The following observations describe the preceding 0.4.1 maintenance release.
 
 Run `npm run verify:release` for the ordered current checks, including the extracted self-host bundle and actual API/browser tests. [Code audit](code-audit-2026-10-29.md) records findings and measurements. [Developer guide](developer-guide.md) explains module contracts. [Historical verification](release-verification-history.md) preserves earlier observations without treating them as current guarantees.
 
