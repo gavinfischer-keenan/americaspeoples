@@ -6,6 +6,7 @@ import { isModeledRecord } from "./map-filters";
 import { populationAt } from "./population";
 import { recordHref } from "./review";
 import { guideForRecord, guideLink } from "./site-guides";
+import { formatYear } from "./time";
 
 export interface MapPanelState {
   visible: readonly DisplayRecord[];
@@ -13,6 +14,8 @@ export interface MapPanelState {
   selected: readonly DisplayRecord[];
   active: readonly DisplayRecord[];
   year: number;
+  exploring?: boolean;
+  interactionLocked?: boolean;
 }
 
 const recordKey = (r: DisplayRecord) =>
@@ -32,6 +35,7 @@ export class MapPanels {
   private contextButtons = new Map<string, ButtonEntry>();
   private choices = new Map<string, DisplayRecord>();
   private detailsState: string | null = null;
+  private interactionLocked = false;
 
   constructor(
     private root: HTMLElement,
@@ -41,6 +45,7 @@ export class MapPanels {
     this.contextHost = $("#context-records", root);
     this.detailsHost = $("#selected-records", root);
     const select = (event: Event) => {
+      if(this.interactionLocked) return;
       const button = (event.target as Element).closest<HTMLButtonElement>(
         "button[data-map-record-key]",
       );
@@ -53,7 +58,8 @@ export class MapPanels {
   }
 
   update(state: MapPanelState): void {
-    const { visible, context, selected, active, year } = state;
+    const { visible, context, selected, active, year, exploring = false, interactionLocked = false } = state;
+    this.interactionLocked = interactionLocked;
     const selectedKeys = new Set(selected.map(recordKey));
     this.choices = new Map(
       [...visible, ...context].map((r) => [recordKey(r), r]),
@@ -77,10 +83,11 @@ export class MapPanels {
     );
 
     const activeKeys = new Set(active.map(recordKey));
-    const visibleKeys = new Set(visible.map(recordKey));
+    const visibleKeys = new Set([...visible,...context].map(recordKey));
     // Include the consumed catalog fields so loading a full record or editing a
     // proposal refreshes content even when its stable identity stays the same.
     const nextDetailsState = JSON.stringify([
+      exploring, interactionLocked,
       selected.length ? year : null,
       selected.map((r) => [
         recordKey(r),
@@ -102,12 +109,12 @@ export class MapPanels {
     this.detailsHost.innerHTML = selected.length
       ? selected
           .map((r) => {
-            const included = activeKeys.has(recordKey(r));
+            const included = exploring || activeKeys.has(recordKey(r));
             const inView = visibleKeys.has(recordKey(r));
-            return `<article class="selected-detail"><h4>${esc(r.title)}</h4><p class="fine">${esc(r.culture.name)} · ${esc(timeLabel(r.time))}</p>${!included ? '<p class="selection-status">Not active evidence at the current year / filters.</p>' : !inView ? '<p class="selection-status">Outside the current map view.</p>' : ""}<p>${esc(r.review.summary)}</p>${!r.overlay && r.type !== "movement" ? `<p class="fine">${esc(populationAt([r], year).label)}</p>` : ""}<p class="fine">${r.time.kind === "unplaced" ? "Chronology unresolved · independent of selected year" : temporalState(r.time, year) === "possible" ? "Possible time / context window" : "Documented time"}${isModeledRecord(r) ? " · Modeled / schematic evidence" : ""}</p><p class="fine">${esc(r.review.limitations)}</p>${r.time.kind === "unplaced" ? `<p class="fine"><strong>Source date guidance:</strong> ${esc(r.time.original)}<br>${esc(r.time.interpretation)}</p>` : ""}<a class="button" href="${recordHref(r)}">Full review &amp; sources ↗</a>${guideLink(r.id)}</article>`;
+            return `<article class="selected-detail"><h4>${esc(r.title)}</h4><p class="fine">${esc(r.culture.name)} · ${esc(timeLabel(r.time))}</p>${!included ? '<p class="selection-status">Not active evidence at the current year / filters.</p>' : !inView ? '<p class="selection-status">Outside the current map view.</p>' : ""}<p>${esc(r.review.summary)}</p>${!r.overlay && r.type !== "movement" ? `<p class="fine">${exploring ? r.population?.length ? r.population.map(p=>`${p.min.toLocaleString()}–${p.max.toLocaleString()} residents · ${formatYear(p.start)}–${formatYear(p.end)}`).map(esc).join("<br>") : "Population unknown in this record; Explore marker size is a reference." : esc(populationAt([r], year).label)}</p>` : ""}<p class="fine">${r.time.kind === "unplaced" ? "Chronology unresolved · independent of selected year" : exploring ? "All-period Explore view · inspect the published date range" : temporalState(r.time, year) === "possible" ? "Possible time / context window" : "Documented time"}${isModeledRecord(r) ? " · Modeled / schematic evidence" : ""}</p><p class="fine">${esc(r.review.limitations)}</p>${r.time.kind === "unplaced" ? `<p class="fine"><strong>Source date guidance:</strong> ${esc(r.time.original)}<br>${esc(r.time.interpretation)}</p>` : ""}<a class="button" href="${recordHref(r)}">Full review &amp; sources ↗</a>${guideLink(r.id)}</article>`;
           })
           .join("")
-      : '<p class="empty">Select a site from the list or a marker on the map to see its evidence, dates, and sources here.</p>';
+      : interactionLocked ? '<p class="empty">Movie playing. Hover for a summary; click the map to pause, then select a record.</p>' : '<p class="empty">Select a site from the list or a marker on the map to see its evidence, dates, and sources here.</p>';
   }
 
   private count(selector: string, text: string) {
@@ -169,6 +176,8 @@ export class MapPanels {
         entries.set(key, entry);
       }
       const { button } = entry;
+      if(button.getAttribute("aria-disabled") !== String(this.interactionLocked))
+        button.setAttribute("aria-disabled", String(this.interactionLocked));
       // Only fields displayed on a card affect its content. Year, membership and
       // selection changes do not replace the button or regenerate its children.
       const content = JSON.stringify(

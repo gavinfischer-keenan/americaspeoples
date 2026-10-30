@@ -84,7 +84,7 @@ try {
   await page
     .getByRole("button", { name: "Add to local collection", exact: true })
     .click();
-  await page.getByRole("link", { name: "Map", exact: true }).click();
+  await page.getByRole("link", { name: "Movie", exact: true }).click();
   await page.getByLabel("Year number", { exact: true }).fill("100");
   await page.getByLabel("Era", { exact: true }).selectOption("CE");
   await page.getByRole("button", { name: "Go to year" }).click();
@@ -115,7 +115,7 @@ try {
     .getByRole("heading", { name: "Overlay geometry", exact: true })
     .waitFor();
   assert.match(await page.locator("main").innerText(), /schematic/);
-  await page.getByRole("link", { name: "Map", exact: true }).click();
+  await page.getByRole("link", { name: "Movie", exact: true }).click();
   await layerOptions(page);
   await page.getByLabel("Trade overlays", { exact: true }).uncheck();
   await page.evaluate(() => (location.hash = "#proposal/0"));
@@ -137,7 +137,7 @@ try {
   const stored = await localPackage(page);
   assert.deepEqual(stored.proposals[0].record.overlay, r.overlay);
   assert.equal(stored.schemaVersion, 2);
-  await page.getByRole("link", { name: "Map", exact: true }).click();
+  await page.getByRole("link", { name: "Movie", exact: true }).click();
   await layerOptions(page);
   const go = async (y) => {
     await page.getByLabel("Year number", { exact: true }).fill(String(y));

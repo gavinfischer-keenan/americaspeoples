@@ -104,7 +104,7 @@ try {
       .proposals.length,
     expectedRecords + saved.proposals.length,
   );
-  await page.getByRole("link", { name: "Map", exact: true }).click();
+  await page.getByRole("link", { name: "Movie", exact: true }).click();
   // Check the published map independently of the preserved local draft.
   await page.getByLabel("Preview complete suggestions").uncheck();
   await page.getByLabel("Year number", { exact: true }).fill("1864");

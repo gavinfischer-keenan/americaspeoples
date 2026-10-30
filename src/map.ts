@@ -10,6 +10,8 @@ import { esc, $ } from "./dom";
 import { disputeLevel, disputeLabel } from "./disputes";
 import { boundsInViewport } from "./map-filters";
 import {iceSnapshot,eventsAt,oceanPaths,isUncertainHazard} from './physical';
+import {MapTooltip,tooltipForRecords,tooltipForHazard,type MapTooltipContent,type MapMode} from './map-tooltip';
+export interface MapInteraction {mode:MapMode;playing:boolean;onPause:()=>void}
 export interface PhysicalOptions {ice:boolean; iceScenario:string; currents:boolean; winds:boolean; hidden:ReadonlySet<string>; uncertain:boolean}
 export class MapView {
   readonly element = document.createElement("div");
@@ -28,6 +30,10 @@ export class MapView {
   private flowPaths=new Map<string,string>();
   private year = END_YEAR;
   private selected: string | null = null;
+  private interaction:MapInteraction|null=null;
+  private readonly tooltip=new MapTooltip();
+  private tips=new Map<string,MapTooltipContent>();
+  private hovered:{key:string;x:number;y:number}|null=null;
   constructor(
     private readonly land: any,
     private onSelect: (rows: DisplayRecord[]) => void,
@@ -37,6 +43,38 @@ export class MapView {
     const path = geoPath(this.projection);
     this.element.innerHTML = `<svg viewBox="0 0 1000 800" role="img" aria-label="Map of the Americas and Pacific. Use the visible records list for keyboard access to evidence." tabindex="0"><defs><pattern id="population-unknown" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V5" stroke="#fff" stroke-width="1.8" opacity=".8"/></pattern><radialGradient id="reach-fade"><stop offset="0%" stop-color="white" stop-opacity=".35"/><stop offset="40%" stop-color="white" stop-opacity=".22"/><stop offset="100%" stop-color="white" stop-opacity="0"/></radialGradient><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#e5c78c"/></marker></defs><g class="world"><path class="graticule" d="${path(geoGraticule10())}"/><path class="land" d="${path(land)}"/><g class="map-labels">${this.labels()}</g><g class="features"></g></g></svg><div class="map-controls"><label class="map-scope">Map region<select aria-label="Map region"><option value="pacific">Asia-Pacific / Americas</option><option value="americas">Americas focus</option></select></label><button data-zoom="in" aria-label="Zoom in">+</button><button data-zoom="out" aria-label="Zoom out">−</button><button data-zoom="reset" aria-label="Reset map view">⌖</button></div><div class="map-caption">Present-day reference coastlines · Not an Ice Age reconstruction<br>Made with Natural Earth · Public domain</div>`;
     const svg = $<SVGSVGElement>("svg", this.element);
+    // Capture before feature listeners or native anchor navigation. A pause click
+    // is consumed even when onPause synchronously redraws/reconfigures the map.
+    const pauseClick=(e:MouseEvent)=>{
+      if(this.interaction?.mode!=='movie'||!this.interaction.playing)return;
+      const target=e.target instanceof Element?e.target:null;
+      if(!target||target.closest('.map-controls'))return;
+      const feature=target.closest('[data-point],[data-overlay],[data-context],.hazard-marker');
+      if(!feature&&(e.button!==0||e.altKey||e.ctrlKey||e.metaKey||e.shiftKey))return;
+      e.preventDefault();e.stopPropagation();
+      const onPause=this.interaction.onPause;
+      this.interaction={...this.interaction,playing:false};
+      onPause();
+    };
+    this.element.addEventListener('click',pauseClick,true);
+    this.element.addEventListener('auxclick',pauseClick,true);
+    const showTip=(target:EventTarget|null,x:number,y:number)=>{
+      const feature=target instanceof Element?target.closest<SVGElement>('[data-map-tip]'):null;
+      const key=feature?.dataset.mapTip,content=key?this.tips.get(key):null;
+      if(!feature||!key||!content){this.hideTooltip();return;}
+      this.hovered={key,x,y};this.tooltip.show(content,{x,y},feature);
+    };
+    svg.addEventListener('pointerover',e=>showTip(e.target,e.clientX,e.clientY));
+    svg.addEventListener('pointermove',e=>{if(!e.buttons)showTip(e.target,e.clientX,e.clientY);});
+    svg.addEventListener('pointerleave',()=>this.hideTooltip());
+    svg.addEventListener('focusin',e=>{
+      const box=(e.target as Element).getBoundingClientRect();showTip(e.target,box.left+box.width/2,box.bottom);
+    });
+    svg.addEventListener('focusout',()=>this.hideTooltip());
+    svg.addEventListener('keydown',e=>{if(e.key==='Escape')this.hideTooltip();});
+    // Body-mounted tooltips must not outlive a map page or a viewport change.
+    const life=new MutationObserver(()=>{if(!this.element.isConnected){this.hideTooltip();life.disconnect();}});
+    life.observe(document.body,{childList:true,subtree:true});
     $(".map-scope select", this.element).addEventListener("change", (e) => {
       this.setScope((e.target as HTMLSelectElement).value as MapScope);
     });
@@ -44,6 +82,7 @@ export class MapView {
     let moved = false;
     const pixels = () => 1 / this.viewportFit();
     svg.addEventListener("pointerdown", (e) => {
+      this.hideTooltip();
       moved = false;
       drag = { x: e.clientX, y: e.clientY, tx: this.tx, ty: this.ty };
       moved = false;
@@ -122,12 +161,30 @@ export class MapView {
         this.onSelect(
           this.records.filter(
             (r) =>
+              !r.overlay &&
               r.location &&
               `${r.location.lon},${r.location.lat}` === this.selected,
           ),
         );
       }
     });
+  }
+  setInteraction(interaction:MapInteraction):void{
+    const changed=this.interaction?.mode!==interaction.mode;
+    this.interaction=interaction;
+    if(changed)this.draw();
+  }
+  private hideTooltip(){this.hovered=null;this.tooltip.hide();}
+  /** Route owners can clear body-mounted hover content when reusing this map. */
+  clearHover():void{this.hideTooltip();}
+  private opacity(r:DisplayRecord){return this.interaction?.mode==='explore'?1:temporalOpacity(r.time,this.year);}
+  private uncertainty(r:DisplayRecord):boolean{
+    if(this.interaction?.mode!=='explore')return temporalState(r.time,this.year)==='possible';
+    const time=r.time;
+    if(time.kind==='unplaced'||time.start===null||time.end===null)return false;
+    return !!time.approximate || (time.kind==='occurrence'&&time.start!==time.end) ||
+      (time.certainStart!==undefined&&time.certainEnd!==undefined&&
+        (time.certainStart>time.start||time.certainEnd<time.end));
   }
   private labels() {
     return this.scope === "pacific"
@@ -162,6 +219,7 @@ export class MapView {
     this.draw();
   }
   private transform() {
+    this.hideTooltip();
     this.tx = Math.max(-1000 * this.scale + 100, Math.min(900, this.tx));
     this.ty = Math.max(-800 * this.scale + 80, Math.min(720, this.ty));
     $(".world", this.element).setAttribute(
@@ -247,11 +305,12 @@ export class MapView {
     this.contextAnchors=contextGroups;
     for(const [key,rs] of contextGroups){const p=this.geometry.get(rs[0]).contextPoint;if(!p)continue;background+=`<g data-context="${key}" class="undated-context" transform="translate(${p[0]},${p[1]})"><title>${rs.length} context records: dates unresolved; not evidence at selected year</title><circle r="${16*symbolScale}"/><text style="font-size:${12*symbolScale}px" text-anchor="middle" dy=".35em">?</text></g>`;}
     let physicalMarkers='';
-    for(const event of eventsAt(this.year,this.physical.hidden,this.physical.uncertain)){
+    const hazards=eventsAt(this.year,this.physical.hidden,this.physical.uncertain);
+    for(const event of hazards){
       const p=this.projection(event.coordinates as [number,number]);if(!p)continue;
       const symbol=event.kind==='volcano'?'▲':event.kind==='tsunami'?'≋':event.kind==='earthquake'?'ϟ':event.kind==='el-nino'?'E':'L';
       const earthquake=event.kind==='earthquake';
-      physicalMarkers+=`<a href="#physical/${event.id}" class="hazard-marker hazard-${event.kind} ${isUncertainHazard(event)?'hazard-uncertain':''}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><title>${esc(event.title)} — ${esc(event.status)}; open catalog details</title><circle r="11"${earthquake?' style="fill:#30233c;stroke:#ffe36b"':''}/><text text-anchor="middle" dy=".35em"${earthquake?' style="fill:#fff0a6;font-size:18px"':''}>${symbol}</text></a>`;
+      physicalMarkers+=`<a data-hazard="${esc(event.id)}" href="#physical/${event.id}" class="hazard-marker hazard-${event.kind} ${isUncertainHazard(event)?'hazard-uncertain':''}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><title>${esc(event.title)} — ${esc(event.status)}; open catalog details</title><circle r="11"${earthquake?' style="fill:#30233c;stroke:#ffe36b"':''}/><text text-anchor="middle" dy=".35em"${earthquake?' style="fill:#fff0a6;font-size:18px"':''}>${symbol}</text></a>`;
     }
     if(!this.element.querySelector('.physical-features')){
       const g=document.createElementNS('http://www.w3.org/2000/svg','g');g.setAttribute('class','physical-features');$('.world',this.element).insertBefore(g,$('.features',this.element));
@@ -266,11 +325,11 @@ export class MapView {
         const o = r.overlay,
           g = o.geometry;
         if (!g) continue;
-        const cls = `overlay-feature overlay-${o.kind} ${o.basis === "schematic" ? "overlay-schematic" : ""} ${temporalState(r.time, this.year) === "possible" ? "overlay-uncertain" : ""}`;
+        const cls = `overlay-feature overlay-${o.kind} ${o.basis === "schematic" ? "overlay-schematic" : ""} ${this.uncertainty(r) ? "overlay-uncertain" : ""}`;
         const title = esc(
           `${r.title} — ${OVERLAY_LABELS[o.kind]}, ${o.basis}${r.linguistics ? " — " + r.linguistics.languages.map(x => x.name).join(" / ") + " — " + (r.linguistics.relationship?.kind ?? "affiliation") : ""}${isDisputed(r) ? " *" : ""}`,
         );
-        const opacity = temporalOpacity(r.time, this.year);
+        const opacity = this.opacity(r);
         // Arrows are explicit editorial metadata; coordinate order alone does not establish travel.
         let directionSymbol = "";
         if (o.direction && g.type === "LineString") {
@@ -327,7 +386,7 @@ export class MapView {
         const a = this.projection([r.location.lon, r.location.lat]),
           b = this.projection([r.destination.lon, r.destination.lat]);
         if (a && b)
-          arrows += `<path style="opacity:${temporalOpacity(r.time, this.year)}" class="movement ${r.proposalKey ? "proposal-path" : ""}" d="${this.geometry.get(r).path}" marker-end="url(#arrow)"><title>${esc(r.title)} — ${esc(r.routeKind)} connection</title></path>`;
+          arrows += `<path data-overlay="${index}" style="opacity:${this.opacity(r)}" class="movement ${r.proposalKey ? "proposal-path" : ""}" d="${this.geometry.get(r).path}" marker-end="url(#arrow)"><title>${esc(r.title)} — ${esc(r.routeKind)} connection</title></path>`;
       }
     }
     let markers = "";
@@ -336,11 +395,39 @@ export class MapView {
         p = this.projection([r.location!.lon, r.location!.lat]);
       if (!p) continue;
       const possible = rows.every(
-        (x) => temporalState(x.time, this.year) === "possible",
+        (x) => this.uncertainty(x),
       );
-      const population = populationAt(rows, this.year);
-      markers += `<g data-point="${key}" style="opacity:${Math.max(...rows.map((x) => temporalOpacity(x.time, this.year)))}" class="site ${possible ? "possible" : ""} ${rows.some((x) => x.proposalKey) ? "proposal-point" : ""}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><title>${esc(rows.map((x) => x.title + " — " + x.culture.name + " — " + timeLabel(x.time)).join("; "))} — ${esc(population.label)}${possible ? " — uncertain time" : ""}${rows.some(x => guideForRecord(x.id)) ? " — Site guide available" : ""}</title>${rows.some(x => guideForRecord(x.id)) ? `<text class="site-guide-marker" x="-17" y="17" aria-hidden="true">◈</text>` : ""}<circle class="site-halo" r="${Math.max(13, population.outerRadius + 4)}"/>${population.outerRadius > population.radius ? `<circle class="population-range" r="${population.outerRadius}" style="fill:${r.culture.color}"/>` : ""}<circle class="site-dot" r="${population.radius}" style="--site-color:${r.culture.color}"/>${population.unknown ? `<circle class="population-unknown" r="${population.radius}" fill="url(#population-unknown)"/>` : ""}${this.scale >= 32 ? `<text class="settlement-label" x="${population.outerRadius + 5}" y="4">${esc(r.location!.name)}</text>` : ""}${rows.length > 1 ? `<text class="site-count" x="11" y="-8">${rows.length}</text>` : ""}${rows.some(isDisputed) ? `<text class="site-star asterisk dispute-${rows.some((x) => disputeLevel(x) === "disputed") ? "disputed" : "discussion"}" x="-13" y="-8">*</text>` : ""}</g>`;
+      const population = this.interaction?.mode==='explore'
+        ? {radius:6,outerRadius:6,unknown:false,label:'Explore size is a reference; inspect dated estimates'}
+        : populationAt(rows, this.year);
+      markers += `<g data-point="${key}" style="opacity:${Math.max(...rows.map((x) => this.opacity(x)))}" class="site ${possible ? "possible" : ""} ${rows.some((x) => x.proposalKey) ? "proposal-point" : ""}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><title>${esc(rows.map((x) => x.title + " — " + x.culture.name + " — " + timeLabel(x.time)).join("; "))} — ${esc(population.label)}${possible ? " — uncertain time" : ""}${rows.some(x => guideForRecord(x.id)) ? " — Site guide available" : ""}</title>${rows.some(x => guideForRecord(x.id)) ? `<text class="site-guide-marker" x="-17" y="17" aria-hidden="true">◈</text>` : ""}<circle class="site-halo" r="${Math.max(13, population.outerRadius + 4)}"/>${population.outerRadius > population.radius ? `<circle class="population-range" r="${population.outerRadius}" style="fill:${r.culture.color}"/>` : ""}<circle class="site-dot" r="${population.radius}" style="--site-color:${r.culture.color}"/>${population.unknown ? `<circle class="population-unknown" r="${population.radius}" fill="url(#population-unknown)"/>` : ""}${this.scale >= 32 ? `<text class="settlement-label" x="${population.outerRadius + 5}" y="4">${esc(r.location!.name)}</text>` : ""}${rows.length > 1 ? `<text class="site-count" x="11" y="-8">${rows.length}</text>` : ""}${rows.some(isDisputed) ? `<text class="site-star asterisk dispute-${rows.some((x) => disputeLevel(x) === "disputed") ? "disputed" : "discussion"}" x="-13" y="-8">*</text>` : ""}</g>`;
     }
     $(".features", this.element).innerHTML = overlays + arrows + markers + physicalMarkers;
+    // Rebuild catalog-only tooltip lookup with the rendered feature identities.
+    // Retain hover across a redraw only when the same records remain visible.
+    this.tips.clear();
+    const hazardById=new Map(hazards.map(event=>[event.id,event]));
+    let hoveredFeature:SVGElement|null=null;
+    for(const feature of this.element.querySelectorAll<SVGElement>('[data-point],[data-overlay],[data-context],[data-hazard]')){
+      let rows:DisplayRecord[]=[],content:MapTooltipContent|null=null,key='';
+      if(feature.dataset.hazard){
+        const event=hazardById.get(feature.dataset.hazard);
+        if(event){content=tooltipForHazard(event);key='hazard:'+event.id;}
+      }else{
+        if(feature.dataset.context!==undefined)rows=this.contextAnchors.get(feature.dataset.context)??[];
+        else if(feature.dataset.overlay!==undefined){const row=this.records[Number(feature.dataset.overlay)];if(row)rows=[row];}
+        else rows=groups.get(feature.dataset.point!)??[];
+        content=tooltipForRecords(rows,this.interaction?.mode??'movie',this.year);
+        key=(feature.dataset.context!==undefined?'context:':'records:')+JSON.stringify(rows.map(row=>JSON.stringify([row.id,row.proposalKey??null])).sort());
+      }
+      if(!content)continue;
+      feature.dataset.mapTip=key;
+      feature.setAttribute('aria-label',content.title+'. '+content.summary+' '+content.dates);
+      this.tips.set(key,content);
+      if(this.hovered?.key===key)hoveredFeature=feature;
+    }
+    if(this.hovered&&hoveredFeature){
+      const {key,x,y}=this.hovered;this.tooltip.show(this.tips.get(key)!,{x,y},hoveredFeature);
+    }else this.hideTooltip();
   }
 }

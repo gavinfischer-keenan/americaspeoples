@@ -68,7 +68,7 @@ try {
         `Checked ${i + 1}/${pack.proposals.length} imported review pages`,
       );
   }
-  await page.getByRole("link", { name: "Map", exact: true }).click();
+  await page.getByRole("link", { name: "Movie", exact: true }).click();
   await previewSuggestions(page);
   await page.getByLabel("Era", { exact: true }).selectOption("CE");
   const go = async (y) => {

@@ -209,7 +209,7 @@ try {
       await page
         .getByRole("heading", { name: "Your suggestions", exact: true })
         .waitFor();
-      await page.getByRole("link", { name: "Map", exact: true }).click();
+      await page.getByRole("link", { name: "Movie", exact: true }).click();
       await previewSuggestions(page);
       for (const [year, count] of [
         [100, 2],

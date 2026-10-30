@@ -1508,3 +1508,32 @@ dd:last-child {
 @media(max-width:760px){.topbar nav{min-width:0;overflow-x:auto;gap:16px}.topbar nav a{flex:0 0 auto;white-space:nowrap}}
 
 .site-guide-link{display:block;margin:1rem 0;padding:.75rem;border:1px solid #85cbd6;color:#bceef5;border-radius:.35rem}.site-guide-marker{fill:#bceef5;stroke:#101c2c;stroke-width:2px;paint-order:stroke;font-size:15px;font-weight:bold}.guide-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}.guide-grid section{padding:1rem;border:1px solid #426070}
+
+/* Catalog-only map hover summaries: body-mounted to avoid SVG/panel clipping. */
+.map-hover-tooltip {
+  position: fixed;
+  z-index: 2000;
+  width: max-content;
+  max-width: min(23rem, calc(100vw - 16px));
+  max-height: calc(100dvh - 16px);
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: .75rem .9rem;
+  border: 1px solid #7d9da7;
+  border-radius: .6rem;
+  background: #102630;
+  color: #f0f7f5;
+  box-shadow: 0 6px 24px #0007;
+  pointer-events: none;
+  overflow-wrap: anywhere;
+  font-size: .84rem;
+  line-height: 1.45;
+}
+.map-hover-tooltip strong { display: block; color: #fff0c6; }
+.map-hover-tooltip p { margin: .45rem 0 0; color: inherit; }
+.map-hover-tooltip .map-hover-dates { color: #bbd4dd; font-size: .78rem; }
+
+/* Explore is independent of the movie clock and can use its reserved space. */
+body.exploring .shell{padding-bottom:0}body.exploring .atlas-layout{height:calc(100dvh - 145px)}
+.movie-playing .evidence-card[aria-disabled="true"]{cursor:pointer;opacity:.82}
+@media(max-width:900px){body.exploring .atlas-layout{height:auto}}

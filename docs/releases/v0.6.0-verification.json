@@ -1,0 +1,37 @@
+{
+  "version": "0.6.0",
+  "change": "Separate Movie playback from all-period Explore navigation",
+  "publishedEvidenceRecordsUnchanged": 962,
+  "hazardAndIceRecordsUnchanged": true,
+  "behavior": {
+    "defaultView": "movie",
+    "movieEligibility": "Supported date range includes selected year; unresolved chronology excluded",
+    "playbackSelection": "Starting playback clears selection; first map/evidence click pauses and is consumed; subsequent click selects",
+    "hover": "Catalog-only title, paragraph and date guidance; no request or navigation",
+    "explore": "All-period enabled evidence and unresolved context, clipped by current viewport; hidden Movie clock cannot filter its records or uncertainty styling",
+    "explorePopulationSymbols": "Constant reference size; dated population estimates remain in details",
+    "physicalContexts": "Dated physical events/ice in Movie; timeless currents/winds in Explore",
+    "proposalIdentity": "Published base and correction preview distinguished by id plus proposalKey"
+  },
+  "verification": {
+    "unitTests": {"passed":144,"failed":0},
+    "pythonApiTests": {"passed":10,"failed":0},
+    "releaseStages": {"passed":21,"failed":0},
+    "liveMovieExploreBrowserChecks": true,
+    "liveProductLaunchAndSourceReviews": true,
+    "publicJavaScriptAndCssMatchBuild": true,
+    "sqliteIntegrityAndDataPreservation": true,
+    "independentCodeReviewIssuesFixed": ["stale correction selection sharing base ID", "hover identity collision for corrections", "Explore uncertainty depending on hidden Movie year"],
+    "keyedPanelIdentityFocusAndNoOpDomChecks": true
+  },
+  "deployment": {
+    "host":"NODE01",
+    "container":101,
+    "staticRelease":"/srv/tripofisch/releases/20261030T174501Z",
+    "apiRelease":"/srv/americaspeoples/releases/20261030T174501Z",
+    "rollbackStatic":"/srv/tripofisch/releases/20261030T052426Z",
+    "rollbackApi":"/srv/americaspeoples/releases/20261030T051715Z",
+    "service":"americas-atlas.service",
+    "observedServiceMemoryBytes":12759040
+  }
+}

@@ -1,6 +1,6 @@
 # Americas Peoples · Alaska Blackfish
 
-Version 0.5.0: a hybrid, source-linked atlas hosted at https://americaspeoples.11mosswood.us/ and launched from https://tripofisch.com/free-utilities/americaspeoples/.
+Version 0.6.0: a hybrid, source-linked atlas hosted at https://americaspeoples.11mosswood.us/ and launched from https://tripofisch.com/free-utilities/americaspeoples/.
 
 The server holds962 published records. Ten regional Consensus DEEP reviews were run sequentially, followed by original-source checks and geographic reconciliation:68 new findings and7 explicit revisions, including corrections to site classification and chronology.64 additions have supported calendar windows and36 have named-locality anchors; these are records, not68 new settlements.442 bibliographic leads retain their discovery trail, with held claims and source-access limitations explicit. Full generated reports and quotations remain private; published records cite the underlying sources. The separate author-supplied colonial registry remains visibly marked **AI generated facts**, with conflicting population columns excluded. See docs/round12-synthesis.html and docs/coverage-audit.html.
 
@@ -22,3 +22,7 @@ The scaling audit separates compact/full API contracts, cancels/debounces IDs-on
 ## Site-guide maintenance
 
 Stable map IDs link through data/site-guides.json, while independently sourced editorial sections live in data/site-guide-content.json. Complete research documents stay byte-exact in sites/reports/*.md, with SHA-256 records in data/site-research-reviews.json. scripts/site-guide-build.ts validates report integrity and populated pages, escapes report HTML and builds the linked static guides. It does not convert regional research dates into map occupation intervals.
+
+## Movie and Explore
+
+Movie is the default time-filtered view. It excludes unresolved chronology and timeless wind/current references. Playback clears selection: hover reads the catalog summary; a map/evidence click pauses and consumes the click, then another click may select current evidence. Changing year removes stale selections. Explore is an all-period research view with viewport-filtered lists, unresolved question marks and contextual areas; its timeline is hidden and marker sizes are reference symbols, not a population at the movie year. Dated physical catalog events/ice remain in Movie; the full catalog is accessible separately. Layer preferences survive switching views.
