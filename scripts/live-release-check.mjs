@@ -11,8 +11,8 @@ try{
  await page.locator('#toggle-layers').click();await page.getByLabel('Year number',{exact:true}).fill('1877');await page.getByLabel('Era',{exact:true}).selectOption('CE');await page.getByRole('button',{name:'Go to year',exact:true}).click();await page.locator('.hazard-el-nino').first().waitFor({state:'visible',timeout:30000});
  await page.locator('.hazard-el-nino').click();await page.getByRole('heading',{name:'Original data fields'}).waitFor();assert.match(await page.locator('main').innerText(),/Gergis/);
  await page.goto('https://americaspeoples.11mosswood.us/docs/coverage-audit.html');assert.ok(await page.locator('tbody tr').count()>40);
- await page.screenshot({path:'test-results/live-coverage-round11.png',fullPage:false});
+ await page.screenshot({path:'test-results/live-coverage-round12.png',fullPage:false});
  await page.goto('https://americaspeoples.11mosswood.us/#review/r9v-sw-pot-decommission');await page.getByRole('heading',{name:/Pot Creek/}).first().waitFor();assert.match(await page.locator('main').innerText(),/no evidence of conflict/);
- await page.goto('https://americaspeoples.11mosswood.us/#about');await page.getByRole('link',{name:'Latest research source decisions',exact:true}).click();await page.getByRole('heading',{name:/Round eleven/}).waitFor();assert.match(await page.locator('body').innerText(),/\d+ new findings/);
- assert.deepEqual(errors,[]);console.log(`PASS: live product page v${version} launches the app; Smart/log defaults; ENSO cited review; refreshed coverage; new Pot Creek review; discoverable round-eleven report.`);
+ await page.goto('https://americaspeoples.11mosswood.us/#about');await page.getByRole('link',{name:'Latest research source decisions',exact:true}).click();await page.getByRole('heading',{name:/Round twelve/}).waitFor();assert.match(await page.locator('body').innerText(),/\d+ new findings/);
+ assert.deepEqual(errors,[]);console.log(`PASS: live product page v${version} launches the app; Smart/log defaults; ENSO cited review; refreshed coverage; new Pot Creek review; discoverable round-twelve report.`);
 }finally{await browser.close();}

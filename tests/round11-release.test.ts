@@ -24,13 +24,18 @@ test('round11 keeps original chronology limits and debate distinct from dated se
 test('round11 preserves preceding release evidence and accounts for all archived topics',()=>{
  const report=read('data/round11-synthesis.json');
  const records=dataset.records.filter(r=>r.id.startsWith('r11v-'));
- assert.equal(dataset.records.length,792+records.length);
+ assert.equal(report.publishedRecordCount,792+records.length);assert.ok(dataset.records.length>=report.publishedRecordCount);
  assert.equal(report.newSourceCheckedRecords,records.length);
  assert.equal(report.intakeFiles,16);assert.equal(report.uniqueFileHashes,16);
  assert.equal(report.pdfPagesIncludingRepeatReceipts,82);
  for(const topic of ['california','great-lakes','paraguay-uruguay','argentina-chile-deep'])assert.ok(report.intakeTopics.some((x:any)=>x.id===topic));
  const prior=read('data/round10-reviewed.json').records;
- for(const old of prior)assert.deepEqual(dataset.records.find(r=>r.id===old.id),old);
+ for(const old of prior){
+  const current=dataset.records.find(r=>r.id===old.id)!;
+  const update=read('data/round12-reviewed.json').proposedUpdates.find((u:any)=>u.targetId===old.id);
+  if(update){assert.deepEqual(update.beforeRecord,old);assert.ok(current.revision>=update.record.revision);}
+  else assert.deepEqual(current,old);
+ }
  const page=readFileSync('docs/round11-synthesis.html','utf8');
  assert.match(page,/coverage-audit.html/);assert.doesNotMatch(page,/C:\\|C:\/Users|\.codex\/attachments/);
  assert.equal(read('data/intake-queue-round11.json').status,'release-screened');

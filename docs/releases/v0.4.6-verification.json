@@ -1,0 +1,40 @@
+{
+  "version": "0.4.6",
+  "batch": "round12",
+  "publishedRecords": 962,
+  "precedingRecordIdsPreserved": 894,
+  "approvedExistingRecordRevisions": 7,
+  "newFindings": 68,
+  "newDatedRecords": 64,
+  "newNamedLocalityRecords": 36,
+  "sequentialConsensusDeepQueries": 10,
+  "distinctBibliographicLeads": 442,
+  "heldSourceOrInterpretationLeads": 235,
+  "verification": {
+    "unitTests": { "passed": 127, "failed": 0 },
+    "pythonApiTests": { "passed": 10, "failed": 0 },
+    "releaseStages": { "passed": 18, "failed": 0 },
+    "researchWorkbookRecordsImported": 962,
+    "publicAppAndSourceReportsMatchBuild": true,
+    "localDownloadsSha256Verified": 3,
+    "neighboringHomepagesUnchangedAndHealthy": 12,
+    "sqliteIntegrityAndPrecedingEvidencePreservation": true,
+    "hazardsAndIceSnapshotsUnchanged": true
+  },
+  "deployment": {
+    "host": "NODE01",
+    "container": 101,
+    "staticRelease": "/srv/tripofisch/releases/20261030T043041Z",
+    "apiRelease": "/srv/americaspeoples/releases/20261030T043041Z",
+    "rollbackRelease": "20261030T022645Z",
+    "service": "americas-atlas.service",
+    "observedServiceMemoryBytes": 12431360
+  },
+  "limits": [
+    "Findings are not an equal number of new settlements.",
+    "Bibliographic leads are not all independently verified sources; held interpretations remain explicit.",
+    "Raw Consensus documents and responses are archived privately, unchanged.",
+    "Geographic context references do not independently establish archaeological dates, populations or languages.",
+    "Regional models and undated context do not close dated-locality coverage gaps."
+  ]
+}

@@ -15,18 +15,18 @@ const batch = (n: number) =>
   });
 test("larger evidence snapshots can import without removing byte and count protections", () => {
   assert.equal(
-    parsePackage(JSON.stringify(makePackage(batch(201)))).proposals.length,
-    201,
+    parsePackage(JSON.stringify(makePackage(batch(1001)))).proposals.length,
+    1001,
   );
   assert.throws(
-    () => parsePackage(JSON.stringify(makePackage(batch(1001)))),
-    /1000|8 MB/,
+    () => parsePackage(JSON.stringify(makePackage(batch(5001)))),
+    /5000/,
   );
 });
 
 test("byte limit remains enforced for large valid JSON", () => {
   assert.throws(
-    () => parsePackage(JSON.stringify({ payload: "x".repeat(8_000_001) })),
-    /8 MB/,
+    () => parsePackage(JSON.stringify({ payload: "x".repeat(32_000_001) })),
+    /32 MB/,
   );
 });

@@ -31,7 +31,7 @@ A place includes ID, name, longitude, latitude, precision and provenance. Null l
 
 A proposal includes ID, version, kind (new/correction), target ID and base revision or null, preserved baseRecord or null, proposed record, rationale, state (draft/ready), and timestamps. Drafts may have incomplete prose or missing citations but must still have safe, structurally valid fields. Ready requires all evidence fields; readiness is not verification.
 
-Share packages contain `format: "americas-peoples-proposals"`, `schemaVersion: 1 | 2`, export time and proposals. A package is limited to 8 MB UTF-8 and 1000 proposals. Source and place dependencies are embedded. HTTP(S) links only; markup is rendered as escaped text. Prototype-related JSON keys are rejected.
+Share packages contain `format: "americas-peoples-proposals"`, `schemaVersion: 1 | 2`, export time and proposals. A package is limited to 32 MB UTF-8 and 5000 proposals. Source and place dependencies are embedded. HTTP(S) links only; markup is rendered as escaped text. Prototype-related JSON keys are rejected.
 
 Duplicate detection compares canonical full proposal contents, ignoring object key ordering. Identical copies are skipped. Different content with the same ID/version is a conflict and is retained separately; different versions are retained as separate proposals. Corrections whose original or revision differs from the recipient dataset are marked as conflicts in the import preview. Previewing a proposal never promotes it to the dataset.
 
