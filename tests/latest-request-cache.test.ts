@@ -32,7 +32,11 @@ test("latest desired snapshot is drained after stale failures without inheriting
     cache.dispose();
   }
 });
-test("a failed current snapshot retries automatically and bounded cache retains the selection", async () => {
+test("a failed current snapshot retries automatically and bounded cache retains the selection", async (t) => {
+  // The error state lasts only five milliseconds in this fixture. Control the
+  // clock so parallel test load cannot expire it before the assertion runs.
+  t.mock.timers.enable({ apis: ["Date", "setTimeout"], now: 1000 });
+  const settle = async () => { for (let i = 0; i < 8; i++) await Promise.resolve(); };
   let tries = 0;
   const cache = new LatestRequestCache(
     async () => {
@@ -45,9 +49,10 @@ test("a failed current snapshot retries automatically and bounded cache retains 
   );
   try {
     cache.request("current");
-    await flush();
+    await settle();
     assert.equal(cache.state(), "error");
-    await new Promise((r) => setTimeout(r, 25));
+    t.mock.timers.tick(6);
+    await settle();
     assert.equal(tries, 2);
     assert.equal(cache.state(), "ready");
   } finally {
