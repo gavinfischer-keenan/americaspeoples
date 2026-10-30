@@ -1,16 +1,16 @@
 {
   "batch": "round11",
-  "status": "open-next-deploy",
+  "status": "release-screened",
   "receivedLocalDate": "2026-10-29",
   "previousRelease": "0.4.4",
   "items": [
     {
       "id": "andean-amazonian-settlement",
       "title": "Andean and Amazonian settlement patterns",
-      "status": "received-awaiting-source-check",
+      "status": "screened-see-round11-source-decisions",
       "paperRows": 20,
       "candidateFindingGroups": 13,
-      "coverageAssessment": "Targets inland Brazil/Amazonia, Bolivian lowlands, Upper Amazon and eastern Andean interaction gaps; no new map evidence yet.",
+      "coverageAssessment": "Source-screened for this release; admitted findings and held interpretations are accounted for in the round11 decisions. Only admitted dated localities affect dated-site counts.",
       "reviewFlags": "Preserve regional exceptions, dated phases, statistical versus observed findings and source-review distinctions. One source has missing year metadata; a Huallaga reference is a book review.",
       "files": [
         {
@@ -22,12 +22,12 @@
     {
       "id": "peru-brazil",
       "title": "Peru and Brazil, 10000 BCE–1200 CE",
-      "status": "received-awaiting-source-check",
+      "status": "screened-see-round11-source-decisions",
       "batch": "round11-batch2",
       "reportPages": 14,
       "referenceOccurrences": 70,
       "candidateFindingGroups": 13,
-      "coverageAssessment": "Targets regional dated sites, settlement phases, interactions, conflict and linguistic uncertainties; overlap with prior evidence will be reconciled during synthesis.",
+      "coverageAssessment": "Source-screened for this release; admitted findings and held interpretations are accounted for in the round11 decisions. Only admitted dated localities affect dated-site counts.",
       "reviewFlags": "Do not substitute query bounds for site occupation, extrapolate ancient languages from styles/genetics, or use sampled/architectural totals as residents. Full candidate-specific flags retained privately.",
       "files": [
         {
@@ -43,12 +43,12 @@
     {
       "id": "colombia-venezuela-ecuador",
       "title": "Colombia, Venezuela and Ecuador, 10000 BCE–1200 CE",
-      "status": "received-awaiting-source-check",
+      "status": "screened-see-round11-source-decisions",
       "batch": "round11-batch2",
       "reportPages": 16,
       "referenceOccurrences": 60,
       "candidateFindingGroups": 14,
-      "coverageAssessment": "Targets regional dated sites, settlement phases, interactions, conflict and linguistic uncertainties; overlap with prior evidence will be reconciled during synthesis.",
+      "coverageAssessment": "Source-screened for this release; admitted findings and held interpretations are accounted for in the round11 decisions. Only admitted dated localities affect dated-site counts.",
       "reviewFlags": "Do not substitute query bounds for site occupation, extrapolate ancient languages from styles/genetics, or use sampled/architectural totals as residents. Full candidate-specific flags retained privately.",
       "files": [
         {
@@ -64,12 +64,12 @@
     {
       "id": "central-america",
       "title": "Central America, 10000 BCE–1200 CE",
-      "status": "received-awaiting-source-check",
+      "status": "screened-see-round11-source-decisions",
       "batch": "round11-batch2",
       "reportPages": 13,
       "referenceOccurrences": 48,
       "candidateFindingGroups": 12,
-      "coverageAssessment": "Targets regional dated sites, settlement phases, interactions, conflict and linguistic uncertainties; overlap with prior evidence will be reconciled during synthesis.",
+      "coverageAssessment": "Source-screened for this release; admitted findings and held interpretations are accounted for in the round11 decisions. Only admitted dated localities affect dated-site counts.",
       "reviewFlags": "Do not substitute query bounds for site occupation, extrapolate ancient languages from styles/genetics, or use sampled/architectural totals as residents. Full candidate-specific flags retained privately.",
       "files": [
         {
@@ -86,11 +86,11 @@
       "id": "great-lakes",
       "title": "Great Lakes, United States and Canada, 15000 BCE–1200 CE",
       "batch": "round11-batch3",
-      "status": "received-awaiting-source-check",
+      "status": "screened-see-round11-source-decisions",
       "reportPages": 4,
       "referenceOccurrences": 3,
       "candidateFindingGroups": 10,
-      "coverageAssessment": "Named-site, regional settlement, material exchange and linguistic-history leads queued; original-source checking and reconciliation with published records remain pending.",
+      "coverageAssessment": "Source-screened for this release; admitted findings and held interpretations are accounted for in the round11 decisions. Only admitted dated localities affect dated-site counts.",
       "reviewFlags": "Mixed calendars, period and place scope, disputed language/contact models and review/chronology mismatches retained explicitly. No new map claims or live deployment.",
       "files": [
         {
@@ -107,11 +107,11 @@
       "id": "california",
       "title": "California, 15000 BCE–1200 CE",
       "batch": "round11-batch3",
-      "status": "received-awaiting-source-check",
+      "status": "screened-see-round11-source-decisions",
       "reportPages": 5,
       "referenceOccurrences": 20,
       "candidateFindingGroups": 11,
-      "coverageAssessment": "Named-site, regional settlement, material exchange and linguistic-history leads queued; original-source checking and reconciliation with published records remain pending.",
+      "coverageAssessment": "Source-screened for this release; admitted findings and held interpretations are accounted for in the round11 decisions. Only admitted dated localities affect dated-site counts.",
       "reviewFlags": "Mixed calendars, period and place scope, disputed language/contact models and review/chronology mismatches retained explicitly. No new map claims or live deployment.",
       "files": [
         {
@@ -121,6 +121,53 @@
         {
           "filename": "I would like a deep review of the inhabitation of california 15000bce to 1200ce. who lived where and for how long. who did they trade with. who did they fight with. where did they go. what language did they speak. - Oct 29, 2.ris",
           "sha256": "4ba41e6b6483990d6e40576fe58c1e6ebf3ad0e1215b7b9f481a63ce0f3ba0da"
+        }
+      ]
+    },
+    {
+      "id": "argentina-chile-short",
+      "title": "Argentina and Chile short review",
+      "status": "screened-see-round11-source-decisions",
+      "coverageAssessment": "Source-screened for this release; admitted findings and held interpretations are accounted for in the round11 decisions. Only admitted dated localities affect dated-site counts.",
+      "reviewFlags": "Named sites, phases and regional hypotheses separated; ancient language and population assignments require independent evidence.",
+      "files": [
+        {
+          "filename": "I_would_like_a_deep_review_of_the_inhabitation_of_.pdf",
+          "sha256": "4c18caaa59f44c3d4d4ceeba221a59f974baf6c75c9dda70964e07dfb23745cf"
+        }
+      ]
+    },
+    {
+      "id": "argentina-chile-deep",
+      "title": "Argentina and Chile deep review",
+      "status": "screened-see-round11-source-decisions",
+      "coverageAssessment": "Source-screened for this release; admitted findings and held interpretations are accounted for in the round11 decisions. Only admitted dated localities affect dated-site counts.",
+      "reviewFlags": "Named sites, phases and regional hypotheses separated; ancient language and population assignments require independent evidence.",
+      "files": [
+        {
+          "filename": "I_would_like_a_deep_review_of_the_inhabitation_of_-2.pdf",
+          "sha256": "6cc59e7b9825e4e79015fc923111f91479544df1d456391cc77768c9793b72af"
+        },
+        {
+          "filename": "I would like a deep review of the inhabitation of Argentina and Chile 10000bce to 1200ce. who lived where and for how long. who did they trade with. who did they fight with. where did they go. what language did they speak. - .ris",
+          "sha256": "316d31bb3eb7ce91347d7630994900bc19334a65d2a9df3b17f6d2b8f90c4834"
+        }
+      ]
+    },
+    {
+      "id": "paraguay-uruguay",
+      "title": "Paraguay and Uruguay review",
+      "status": "screened-see-round11-source-decisions",
+      "coverageAssessment": "Source-screened for this release; admitted findings and held interpretations are accounted for in the round11 decisions. Only admitted dated localities affect dated-site counts.",
+      "reviewFlags": "Named sites, phases and regional hypotheses separated; ancient language and population assignments require independent evidence.",
+      "files": [
+        {
+          "filename": "I_would_like_a_deep_review_of_the_inhabitation_of_-1.pdf",
+          "sha256": "7dc1d53f226f51290b23005e5611b63cbcf3958577aa1361f679d19071bf6843"
+        },
+        {
+          "filename": "I would like a deep review of the inhabitation of paraguay and urugay 10000bce to 1200ce. who lived where and for how long. who did they trade with. who did they fight with. where did they go. what language did they speak. - .ris",
+          "sha256": "a571957d741d6565f8e2cc6bb54984da823fd34ba5f57bf603762c18df5cca1d"
         }
       ]
     }
@@ -144,5 +191,6 @@
       "candidateFindingGroups": 21,
       "exactDuplicateFiles": 0
     }
-  ]
+  ],
+  "release": "0.4.5"
 }

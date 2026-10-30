@@ -1,8 +1,8 @@
 # Americas Peoples · Alaska Blackfish
 
-Version 0.4.1: a hybrid, source-linked atlas hosted at https://americaspeoples.11mosswood.us/ and launched from https://tripofisch.com/free-utilities/americaspeoples/.
+Version 0.4.5: a hybrid, source-linked atlas hosted at https://americaspeoples.11mosswood.us/ and launched from https://tripofisch.com/free-utilities/americaspeoples/.
 
-The server holds651 published evidence records, including37 new source-checked records and49 author-authorized entries visibly marked **AI generated facts**.339 research candidates have explicit release decisions;298 remain research leads pending source checks. Known conflicting colonial population columns and assertions are excluded. New whaling/census intake is held for the next content round.
+The server holds894 published records, including102 round11 findings across the Andes, Amazonia, Central America, northern South America, Southern Cone, California and Great Lakes. Twenty-nine additions have named-locality evidence anchors;73 have supported calendar windows. These are records, not102 newly discovered settlements. The round11 source report accounts for16 distinct receipts,82PDF pages,244 bibliographic leads and112 held source/interpretation leads. Original access and chronology limits remain explicit. The earlier author-supplied colonial registry remains visibly marked **AI generated facts**, with conflicting population columns excluded from map sizing. See docs/round11-synthesis.html and docs/coverage-audit.html.
 
 The browser renders a compact map catalog and handles smooth timeline playback. SQLite handles authoritative evidence/source storage and indexed queries. Full reviews and large climate snapshots are loaded on demand, rather than compiled into JavaScript. The separately sourced physical catalog contains7316 hazard/ENSO entries and147 ice-scenario snapshots. Geographic/time coverage, uncertainties and source-access limits remain explicit.
 

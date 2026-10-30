@@ -1,0 +1,42 @@
+{
+  "version": "0.4.5",
+  "batch": "round11",
+  "publishedRecords": 894,
+  "precedingRecordsPreserved": 792,
+  "newFindings": 102,
+  "newNamedLocalityRecords": 29,
+  "newDatedRecords": 73,
+  "distinctIntakeReceipts": 16,
+  "pdfPages": 82,
+  "bibliographicLeads": 244,
+  "heldSourceOrInterpretationLeads": 112,
+  "verification": {
+    "unitTests": { "passed": 124, "failed": 0 },
+    "pythonApiTests": { "passed": 10, "failed": 0 },
+    "releaseStages": { "passed": 18, "failed": 0 },
+    "researchWorkbookRecordsImported": 894,
+    "publicAppAndSourceReportsMatchBuild": true,
+    "localDownloadsSha256Verified": 3,
+    "liveBrowserLaunchAndLatestSourceReport": true,
+    "neighboringHomepagesUnchangedAndHealthy": 12,
+    "sqliteIntegrityAndPrecedingEvidencePreservation": true,
+    "hazardsAndIceSnapshotsUnchanged": true
+  },
+  "deployment": {
+    "host": "NODE01",
+    "container": 101,
+    "staticRelease": "/srv/tripofisch/releases/20261030T022645Z",
+    "apiRelease": "/srv/americaspeoples/releases/20261030T022645Z",
+    "rollbackRelease": "20261030T014333Z",
+    "service": "americas-atlas.service",
+    "observedServiceMemoryBytes": 13524992,
+    "resourceOrRoutingChanges": false
+  },
+  "limits": [
+    "Records are not an equal number of new settlements.",
+    "Unplaced context and regional models do not fill dated-locality coverage cells.",
+    "Bibliography membership is not verification; source access limits and held interpretations remain explicit.",
+    "Raw uploaded reports remain private. No resident population or ancient speech inferred from artifact or sample counts.",
+    "Three duplicate proposed findings were reconciled to existing IDs before release."
+  ]
+}
