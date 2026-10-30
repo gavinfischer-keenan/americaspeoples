@@ -1,5 +1,6 @@
 import { mapProjection, type MapScope } from "./map-projection";
-import { geoPath, geoGraticule10, geoCircle } from "d3-geo";
+import { geoPath, geoGraticule10 } from "d3-geo";
+import { MapGeometry } from "./map-geometry";
 import { populationAt } from "./population";
 import type { DisplayRecord } from "./model";
 import { temporalState, temporalOpacity, timeLabel, isDisputed, END_YEAR } from "./time";
@@ -13,6 +14,8 @@ export class MapView {
   readonly element = document.createElement("div");
   private scope: MapScope = "pacific";
   private projection = mapProjection(this.scope);
+  private geometry = new MapGeometry(this.projection);
+  private viewportFrame: number | null = null;
   private scale = 1;
   private tx = 0;
   private ty = 0;
@@ -21,6 +24,7 @@ export class MapView {
   private contextAnchors=new Map<string,DisplayRecord[]>();
   private physical:PhysicalOptions={ice:false,iceScenario:'optimal',currents:false,winds:false,hidden:new Set(),uncertain:true};
   private icePaths=new Map<string,string>();
+  private flowPaths=new Map<string,string>();
   private year = END_YEAR;
   private selected: string | null = null;
   constructor(
@@ -66,13 +70,10 @@ export class MapView {
     svg.addEventListener("pointercancel", () => {
       drag = null;
     });
-    window.addEventListener("resize", () => {
-      if (this.element.isConnected) this.draw();
-    });
     new ResizeObserver(() => {
       if (this.element.isConnected) {
         this.draw();
-        this.onViewportChange();
+        this.notifyViewportChange();
       }
     }).observe(this.element);
     svg.addEventListener(
@@ -132,9 +133,13 @@ export class MapView {
       ? '<text x="110" y="285">ISLAND ASIA</text><text x="435" y="345">HAWAII</text><text class="ocean-label" x="385" y="500">PACIFIC OCEAN</text><text x="615" y="240">NORTH AMERICA</text><text x="800" y="570">SOUTH AMERICA</text>'
       : '<text x="390" y="230">NORTH AMERICA</text><text x="680" y="610">SOUTH AMERICA</text><text x="810" y="90">GREENLAND</text><text x="100" y="110">BERING STRAIT</text><text class="ocean-label" x="160" y="480">PACIFIC OCEAN</text><text class="ocean-label" x="830" y="390">ATLANTIC OCEAN</text>';
   }
-  private setScope(scope: MapScope) {
+  private setScope(scope: MapScope, redraw = true) {
+    if (scope === this.scope) return;
     this.scope = scope;
     this.projection = mapProjection(scope);
+    this.geometry.setProjection(this.projection);
+    this.flowPaths.clear();
+    this.geometry.update([...this.records, ...this.contextRecords]);
     this.scale = 1;
     this.tx = this.ty = 0;
     const path = geoPath(this.projection);
@@ -143,11 +148,12 @@ export class MapView {
     $(".map-labels", this.element).innerHTML = this.labels();
     ($(".map-scope select", this.element) as HTMLSelectElement).value = scope;
     this.transform();
-    this.draw();
+    if (redraw) this.draw();
   }
   private zoom(factor: number) {
     const old = this.scale;
     this.scale = Math.max(1, Math.min(4096, this.scale * factor));
+    if (this.scale === old) return;
     const ratio = this.scale / old;
     this.tx = 500 - (500 - this.tx) * ratio;
     this.ty = 400 - (400 - this.ty) * ratio;
@@ -161,35 +167,32 @@ export class MapView {
       "transform",
       `translate(${this.tx},${this.ty}) scale(${this.scale})`,
     );
-    this.onViewportChange();
+    this.notifyViewportChange();
+  }
+  /** Pointer events may outpace paint; notify panels once with the final view. */
+  private notifyViewportChange() {
+    if (this.viewportFrame !== null) return;
+    this.viewportFrame = requestAnimationFrame(() => {
+      this.viewportFrame = null;
+      if (this.element.isConnected) this.onViewportChange();
+    });
   }
   /** Same projected geometry and transform as the map; unmapped records stay out. */
   visibleRecords(): DisplayRecord[] {
     return this.recordsInView(this.records);
   }
-  visibleContextRecords():DisplayRecord[]{return this.recordsInView(this.contextRecords);}
-  private recordsInView(records:DisplayRecord[]):DisplayRecord[]{
-    const path = geoPath(this.projection);
+  visibleContextRecords():DisplayRecord[]{return this.recordsInView(this.contextRecords, true);}
+  private recordsInView(records:DisplayRecord[], context = false):DisplayRecord[]{
     return records.filter(r => {
-      const overlay = r.overlay;
-      if (overlay) {
-        if (!overlay.geometry) return false;
-        const geometry = overlay.geometry.type === "Point" && overlay.radiusKm
-          ? geoCircle().center(overlay.geometry.coordinates).radius(overlay.radiusKm / 6371 * 180 / Math.PI)()
-          : overlay.geometry;
-        return boundsInViewport(path.bounds(geometry), this.scale, this.tx, this.ty);
-      }
-      if (!r.location) return false;
-      if (r.type === "movement" && r.destination) {
-        return boundsInViewport(path.bounds({type: "LineString", coordinates: [[r.location.lon, r.location.lat], [r.destination.lon, r.destination.lat]]}), this.scale, this.tx, this.ty);
-      }
-      const p = this.projection([r.location.lon, r.location.lat]);
-      return !!p && p[0] >= 0 && p[0] <= 1000 && p[1] >= 0 && p[1] <= 800 && boundsInViewport([p, p], this.scale, this.tx, this.ty);
+      const shape = this.geometry.get(r);
+      const bounds = context ? shape.contextBounds : shape.bounds;
+      return !!bounds && boundsInViewport(bounds, this.scale, this.tx, this.ty);
     });
   }
   update(records: DisplayRecord[], year: number, context:DisplayRecord[]=[],physical?:PhysicalOptions) {
     this.records = records;
     this.contextRecords=context;
+    this.geometry.update([...records, ...context]);
     if(physical)this.physical=physical;
     this.year = year;
     this.draw();
@@ -206,10 +209,10 @@ export class MapView {
             : null;
     if (!position) return;
     if (position[0] > 90 || position[0] < -145) {
-      if (this.scope !== "pacific") this.setScope("pacific");
+      if (this.scope !== "pacific") this.setScope("pacific", false);
     } else {
       const current = this.projection(position as [number, number]);
-      if (this.scope === "pacific" && current && (current[0] < 0 || current[0] > 1000)) this.setScope("americas");
+      if (this.scope === "pacific" && current && (current[0] < 0 || current[0] > 1000)) this.setScope("americas", false);
     }
     const p = this.projection(position as [number, number]);
     if (!p) return;
@@ -232,14 +235,16 @@ export class MapView {
     if(ice){const key=`${this.scope}-${ice.scenario}-${ice.ageCalBP}`;if(!this.icePaths.has(key))this.icePaths.set(key,path(ice.geometry as any)??'');background+=`<g class="ice-context"><title>NADI-1 ${ice.scenario}: ${ice.ageCalBP.toLocaleString()} cal BP snapshot, not an interpolated boundary. See Climate sources.</title><path d="${this.icePaths.get(key)}"/></g>`;}
     for(const flow of oceanPaths){
       if(flow.kind==='wind'?!this.physical.winds:!this.physical.currents)continue;
-      const d=path({type:'LineString',coordinates:flow.coordinates});
+      // Reference flows never change with the selected year, only projection.
+      let d=this.flowPaths.get(flow.name);
+      if(d===undefined){d=path({type:'LineString',coordinates:flow.coordinates})??'';this.flowPaths.set(flow.name,d);}
       background+=`<g class="ocean-flow flow-${flow.kind}"><title>${esc(flow.name)} — modern schematic reference, not conditions at selected year</title><path class="flow-halo" d="${d}"/><path class="flow-line" d="${d}" marker-end="url(#flow-${flow.kind})"/></g>`;
     }
     // Chronologically unresolved context remains visibly distinct from active evidence.
     const contextGroups=new Map<string,DisplayRecord[]>();
-    for(const r of this.contextRecords){const g=r.overlay?.geometry;const p=g?.type==='Point'?g.coordinates:g?.type==='LineString'?g.coordinates[0]:r.location?[r.location.lon,r.location.lat]:null;if(!p)continue;const key=p.join(',');contextGroups.set(key,[...(contextGroups.get(key)??[]),r]);}
+    for(const r of this.contextRecords){const key=this.geometry.get(r).contextKey;if(!key)continue;const group=contextGroups.get(key);if(group)group.push(r);else contextGroups.set(key,[r]);}
     this.contextAnchors=contextGroups;
-    for(const [key,rs] of contextGroups){const p=this.projection(key.split(',').map(Number) as [number,number]);if(!p)continue;background+=`<g data-context="${key}" class="undated-context" transform="translate(${p[0]},${p[1]})"><title>${rs.length} context records: dates unresolved; not evidence at selected year</title><circle r="${16*symbolScale}"/><text style="font-size:${12*symbolScale}px" text-anchor="middle" dy=".35em">?</text></g>`;}
+    for(const [key,rs] of contextGroups){const p=this.geometry.get(rs[0]).contextPoint;if(!p)continue;background+=`<g data-context="${key}" class="undated-context" transform="translate(${p[0]},${p[1]})"><title>${rs.length} context records: dates unresolved; not evidence at selected year</title><circle r="${16*symbolScale}"/><text style="font-size:${12*symbolScale}px" text-anchor="middle" dy=".35em">?</text></g>`;}
     let physicalMarkers='';
     for(const event of eventsAt(this.year,this.physical.hidden,this.physical.uncertain)){
       const p=this.projection(event.coordinates as [number,number]);if(!p)continue;
@@ -277,10 +282,7 @@ export class MapView {
           }
         }
         if (["cultural-reach", "language"].includes(o.kind) && g.type === "Point" && o.radiusKm) {
-          const shape = geoCircle()
-            .center(g.coordinates)
-            .radius(((o.radiusKm / 6371) * 180) / Math.PI)();
-          const d = geoPath(this.projection)(shape);
+          const d = this.geometry.get(r).areaPath;
           overlays += `<g data-overlay="${index}" class="cultural-reach ${o.kind === "language" ? "language-area" : ""}" style="opacity:${opacity};--reach-color:${o.kind === "language" ? "#caa5f1" : r.culture.color}"><title>${title} — feathered illustrative area, not a surveyed border or exclusive territory</title><path d="${d}"/><path class="reach-contour" d="${d}"/>${isDisputed(r) ? `<text class="asterisk dispute-${disputeLevel(r)}" x="${this.projection(g.coordinates)![0]}" y="${this.projection(g.coordinates)![1]}" style="font-size:${20 * symbolScale}px">*</text>` : ""}</g>`;
           continue;
         }
@@ -299,7 +301,7 @@ export class MapView {
           )
         ) {
           const d =
-            g.type === "LineString" ? geoPath(this.projection)(g) : null;
+            g.type === "LineString" ? this.geometry.get(r).path : null;
           const p = g.type === "Point" ? this.projection(g.coordinates) : null;
           overlays += `<g data-overlay="${index}" class="regional-cloud cloud-${o.kind}" style="opacity:${opacity}"><title>${title} — illustrative extent; not a site, precise route or probability boundary</title>${d ? `<path class="cloud-glow" d="${d}"/><path class="cloud-core" d="${d}"/><path class="cloud-hit" d="${d}"/>` : p ? `<circle class="cloud-glow" cx="${p[0]}" cy="${p[1]}" r="35"/><circle class="cloud-hit" cx="${p[0]}" cy="${p[1]}" r="35"/>` : ""}${star}${directionSymbol}</g>`;
           continue;
@@ -309,7 +311,7 @@ export class MapView {
           if (p)
             overlays += `<g data-overlay="${index}" class="${cls}" style="opacity:${opacity}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><title>${title}</title><circle class="overlay-hit" r="14"/><path d="${o.kind === "conflict" ? "M-7,-7 L7,7 M7,-7 L-7,7" : o.kind === "violence" ? "M-8,-8 H8 V8 H-8 Z M-6,-6 L6,6 M6,-6 L-6,6" : o.kind === "epidemic" ? "M0,-8 A8,8 0 1,1 0,8 A8,8 0 1,1 0,-8 M0,-12 V-9 M0,9 V12 M-12,0 H-9 M9,0 H12" : o.kind === "forced-removal" ? "M-8,-8 H8 V8 H-8 Z" : "M0,-9 L9,0 L0,9 L-9,0 Z"}"/>${isDisputed(r) ? `<text class="asterisk dispute-${disputeLevel(r)}" x="10" y="-9"><title>${esc(disputeLabel(r))}</title>*</text>` : ""}</g>`;
         } else {
-          const d = geoPath(this.projection)(g);
+          const d = this.geometry.get(r).path;
           if (d)
             overlays += `<g data-overlay="${index}" class="${cls}" style="opacity:${opacity}"><title>${title}</title><path d="${d}" ${o.kind === "forced-removal" ? 'marker-end="url(#arrow)"' : ""} style="stroke-width:${3 / this.scale}"/><path class="overlay-line-hit" d="${d}" style="stroke-width:${15 / this.scale}"/>${directionSymbol}</g>`;
         }
@@ -317,12 +319,13 @@ export class MapView {
       }
       if (!r.location) continue;
       const key = `${r.location.lon},${r.location.lat}`;
-      groups.set(key, [...(groups.get(key) ?? []), r]);
+      const group = groups.get(key);
+      if (group) group.push(r); else groups.set(key, [r]);
       if (r.type === "movement" && r.destination) {
         const a = this.projection([r.location.lon, r.location.lat]),
           b = this.projection([r.destination.lon, r.destination.lat]);
         if (a && b)
-          arrows += `<path style="opacity:${temporalOpacity(r.time, this.year)}" class="movement ${r.proposalKey ? "proposal-path" : ""}" d="${geoPath(this.projection)({type: "LineString", coordinates: [[r.location.lon, r.location.lat], [r.destination.lon, r.destination.lat]]})}" marker-end="url(#arrow)"><title>${esc(r.title)} — ${esc(r.routeKind)} connection</title></path>`;
+          arrows += `<path style="opacity:${temporalOpacity(r.time, this.year)}" class="movement ${r.proposalKey ? "proposal-path" : ""}" d="${this.geometry.get(r).path}" marker-end="url(#arrow)"><title>${esc(r.title)} — ${esc(r.routeKind)} connection</title></path>`;
       }
     }
     let markers = "";

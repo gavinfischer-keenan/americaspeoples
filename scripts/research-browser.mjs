@@ -1,32 +1,25 @@
-import fsSnapshot from "node:fs";
-const snapshot=JSON.parse(fsSnapshot.readFileSync("dist/evidence-appendix.json","utf8"));
-const expectedRecords=snapshot.records.length;
-const expectedOverlays=snapshot.records.filter(x=>x.record.overlay).length;
-import { chromium } from "playwright";
-import { pathToFileURL } from "node:url";
-import path from "node:path";
 import assert from "node:assert/strict";
-const browser = await chromium.launch({
-  executablePath:
-    process.env.BROWSER_PATH ||
-    "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
-  headless: true,
-});
+import { mkdir } from "node:fs/promises";
+import {
+  browserFixture,
+  localPackage,
+  previewSuggestions,
+} from "./browser-fixture.mjs";
+const fixture = await browserFixture();
+const { browser, page, dataset, url } = fixture;
+const expectedRecords = dataset.records.length;
+const expectedOverlays = dataset.records.filter((r) => r.overlay).length;
+const overlayCount = (kind, year) =>
+  dataset.records.filter(
+    (r) =>
+      r.overlay?.kind === kind &&
+      r.overlay.geometry &&
+      r.time.start <= year &&
+      r.time.end >= year,
+  ).length * 2;
 try {
-  const context = await browser.newContext({
-    offline: true,
-    acceptDownloads: true,
-  });
-  const page = await context.newPage();
-  const errors = [],
-    network = [];
-  page.on("pageerror", (e) => errors.push(e.message));
-  page.on("request", (r) => {
-    if (/^https?:/.test(r.url())) network.push(r.url());
-  });
-  await page.goto(
-    pathToFileURL(path.resolve(process.env.APP_PATH || "dist/index.html")).href,
-  );
+  await mkdir("test-results", { recursive: true });
+  await page.goto(url + "#map");
   await page.getByRole("link", { name: /^Suggestions/ }).click();
   await page
     .getByLabel("Import suggestions")
@@ -36,7 +29,7 @@ try {
     .waitFor();
   assert.deepEqual(
     await page.locator(".proposal-card>.tag").allTextContents(),
-    Array(expectedRecords).fill("correction"),
+    Array(expectedRecords).fill("new"),
   );
   await page
     .getByRole("button", { name: "Add to local collection", exact: true })
@@ -44,12 +37,17 @@ try {
   await page
     .getByRole("heading", { name: "Your suggestions", exact: true })
     .waitFor();
-  const pack = await page.evaluate(() =>
-    JSON.parse(localStorage.getItem("americas-peoples-proposals-v1")),
-  );
+  const pack = await localPackage(page);
   assert.equal(pack.proposals.length, expectedRecords);
-  assert.equal(pack.proposals.filter((p) => p.record.overlay).length, expectedOverlays);
-  assert.equal(await page.locator("[data-proposal-card]").count(), expectedRecords);
+  assert.ok(pack.proposals.every((proposal) => proposal.kind === "correction"));
+  assert.equal(
+    pack.proposals.filter((p) => p.record.overlay).length,
+    expectedOverlays,
+  );
+  assert.equal(
+    await page.locator("[data-proposal-card]").count(),
+    expectedRecords,
+  );
   for (let i = 0; i < pack.proposals.length; i++) {
     const r = pack.proposals[i].record;
     await page.evaluate((i) => (location.hash = "#proposal/" + i), i);
@@ -65,24 +63,40 @@ try {
       r.sources.length,
     );
     assert.equal(await page.locator(".claim").count(), r.claims.length);
+    if ((i + 1) % 100 === 0)
+      console.log(
+        `Checked ${i + 1}/${pack.proposals.length} imported review pages`,
+      );
   }
   await page.getByRole("link", { name: "Map", exact: true }).click();
-  await page.getByLabel("Preview complete suggestions").check();
+  await previewSuggestions(page);
   await page.getByLabel("Era", { exact: true }).selectOption("CE");
   const go = async (y) => {
     await page.getByLabel("Year number", { exact: true }).fill(String(y));
     await page.getByRole("button", { name: "Go to year", exact: true }).click();
   };
   await go(1864);
-  assert.equal(await page.locator(".overlay-forced-removal").count(), 1);
-  assert.equal(await page.locator(".overlay-violence").count(), 1);
+  assert.equal(
+    await page.locator(".overlay-forced-removal").count(),
+    overlayCount("forced-removal", 1864),
+  );
+  assert.equal(
+    await page.locator(".overlay-violence").count(),
+    overlayCount("violence", 1864),
+  );
   await page.screenshot({
     path: "test-results/researched-map-1864.png",
     fullPage: true,
   });
   await go(1837);
-  assert.equal(await page.locator(".overlay-epidemic").count(), 1);
-  assert.equal(await page.locator(".overlay-forced-removal").count(), 1);
+  assert.equal(
+    await page.locator(".overlay-epidemic").count(),
+    overlayCount("epidemic", 1837),
+  );
+  assert.equal(
+    await page.locator(".overlay-forced-removal").count(),
+    overlayCount("forced-removal", 1837),
+  );
   await go(1934);
   assert.match(
     await page.locator("#visible-records").innerText(),
@@ -91,11 +105,9 @@ try {
   await page
     .getByRole("link", { name: "Events / Evidence", exact: true })
     .click();
-  for (const [kind, count] of [
-    ["forced-removal", 6],
-    ["epidemic", 5],
-    ["violence", 6],
-  ]) {
+  for (const kind of ["forced-removal", "epidemic", "violence"]) {
+    const count =
+      dataset.records.filter((r) => r.overlay?.kind === kind).length * 2;
     await page.getByLabel("Record type filter").selectOption(kind);
     assert.equal(await page.locator("tbody tr[data-href]").count(), count);
   }
@@ -113,13 +125,15 @@ try {
   await page
     .getByRole("heading", { name: "Your suggestions", exact: true })
     .waitFor();
-  assert.equal(await page.locator("[data-proposal-card]").count(), expectedRecords);
-  assert.deepEqual(errors, []);
-  assert.deepEqual(network, []);
+  assert.equal(
+    await page.locator("[data-proposal-card]").count(),
+    expectedRecords,
+  );
+  fixture.assertPrivacy();
   console.log(
-    "PASS: actual researched workbook imports expectedRecords proposals, renders every claim and bibliography, and reimports without duplicates. " +
+    "PASS: actual researched workbook imports the full current snapshot, renders every claim and bibliography, and reimports without duplicates. " +
       (await browser.version()),
   );
 } finally {
-  await browser.close();
+  await fixture.close();
 }

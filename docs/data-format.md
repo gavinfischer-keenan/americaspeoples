@@ -1,12 +1,12 @@
 # Evidence and proposal format
 
-The runtime contracts are in `src/model.ts`; validation is in `src/validation.ts` and `src/proposals.ts`. Schema version is 1. Dataset version is independent (initially 0.1.0). Run `npm run validate` after editing.
+The runtime contracts are in `src/model.ts`; validation is in `src/validation.ts` and `src/proposals.ts`. Evidence/dataset schema is 1; the proposal envelope uses 2 for overlays or linguistic metadata (1 remains readable for ordinary rows). API protocol version 1is separate from both. Dataset/app release version is independent. Run `npm run validate` after editing.
 
 ## Identity and self-contained rows
 
 Each evidence record has a stable `id`, positive `revision`, `type`, title, culture, location or null, destination or null, time, claims, sources and review. Supported types are occupation, occurrence, movement and event. IDs use letters, digits, dots, underscores and hyphens, up to 120 characters.
 
-Sources and site/culture metadata travel inside each row to make offline sharing self-contained. Within a reviewed dataset, a reused culture or site ID must keep consistent metadata. Related record IDs refer to other bundled reviews. A source has authors, title, publication year (null for undated), venue, a safe HTTP(S) URL and access notes. Publication date is never substituted for the event date.
+Full evidence exports embed source and site/culture metadata to make file sharing self-contained. Within a reviewed dataset, a reused culture or site ID must keep consistent metadata. Related record IDs refer to other bundled reviews. A source has authors, title, publication year (null for undated), venue, a safe HTTP(S) URL and access notes. Publication date is never substituted for the event date.
 
 Each claim has an ID, text, status, an editorial explanation, and source mappings. A mapping identifies a source, locator, stance (supports/challenges/context), and interpretation. Scholarly status is well-supported, under discussion, or disputed. Every completed row must have at least one sourced claim, source and substantive review; disputed claims require discussion.
 
@@ -31,7 +31,7 @@ A place includes ID, name, longitude, latitude, precision and provenance. Null l
 
 A proposal includes ID, version, kind (new/correction), target ID and base revision or null, preserved baseRecord or null, proposed record, rationale, state (draft/ready), and timestamps. Drafts may have incomplete prose or missing citations but must still have safe, structurally valid fields. Ready requires all evidence fields; readiness is not verification.
 
-Share packages contain `format: "americas-peoples-proposals"`, `schemaVersion: 1`, export time and proposals. A package is limited to 8 MB UTF-8 and 1000 proposals. Source and place dependencies are embedded. HTTP(S) links only; markup is rendered as escaped text. Prototype-related JSON keys are rejected.
+Share packages contain `format: "americas-peoples-proposals"`, `schemaVersion: 1 | 2`, export time and proposals. A package is limited to 8 MB UTF-8 and 1000 proposals. Source and place dependencies are embedded. HTTP(S) links only; markup is rendered as escaped text. Prototype-related JSON keys are rejected.
 
 Duplicate detection compares canonical full proposal contents, ignoring object key ordering. Identical copies are skipped. Different content with the same ID/version is a conflict and is retained separately; different versions are retained as separate proposals. Corrections whose original or revision differs from the recipient dataset are marked as conflicts in the import preview. Previewing a proposal never promotes it to the dataset.
 
@@ -39,7 +39,7 @@ Editor revisions replace the corresponding local draft slot with an incremented 
 
 ## Bulk workbooks and structured bibliography
 
-See [the bulk import guide](bulk-import-guide.md) for the exact five-tab XLSX schema, supported reference types, required fields and worked examples. App 0.1.1 imports XLSX locally and converts it to the same proposal model. Optional source fields are referenceType, doi, volume, issue, pages, publisher, editors, edition, archive, collection and identifier. Existing v0.1 source records remain compatible. Citations use a consistent author-year display, not a full CSL style engine.
+See [the bulk import guide](bulk-import-guide.md) for the XLSX table schema, supported reference types, required fields and worked examples. App 0.1.1 imports XLSX locally and converts it to the same proposal model. Optional source fields are referenceType, doi, volume, issue, pages, publisher, editors, edition, archive, collection and identifier. Existing v0.1 source records remain compatible. Citations use a consistent author-year display, not a full CSL style engine.
 
 Bulk proposal IDs derive from the evidence record ID. For IDs beginning `bulk-`, duplicate comparison ignores import timestamps, so reimporting unchanged workbook content is idempotent. Substantive changes retain conflict handling. XLSX corrections require a current matching base revision and contain complete replacement records; blank fields are not sparse patches. Native JSON sharing retains the original proposal timestamps and history.
 
@@ -62,3 +62,10 @@ Optional `population` entries contain `start`, `end`, `min`, `max`, `claimId` an
 Dot-radius bands: 1–500, 501–2,500, 2,501–10,000, 10,001–50,000 and 50,001+. Unknown population shares the smallest symbol and is striped. This size is a display convention, **not an estimate of 1–500 residents**. A translucent outer population halo shows an upper estimate crossing a band; alternative estimates are shown as an envelope, not added. Site sample counts, artifacts, building counts and genetic effective population are never automatically converted to resident counts.
 
 `cultural-reach` overlays use a schematic Point center with `radiusKm` (greater than zero, at most 3000). The very soft geographic envelope is an editorial illustration of the named cultural context, not a surveyed border, exclusive territory, statistical confidence area or claim about modern identity. Cite the cultural interpretation and explain the editorial geographic choice separately. It has its own map toggle.
+
+
+## API catalog and complete records
+
+`CatalogRecord` is a compact map/index contract with `detailLevel: "catalog"`. Its claims carry ID/text/status only; its review carries summary, limitations, reviewedAt and related IDs. It has no bibliography, complete support mappings or record provenance. It is never a valid replacement for an `EvidenceRecord`.
+
+`/api/records/{id}` and `/api/export` return complete records; correction creation, comparison and file export require these. Catalog and full-record caches stay separate and release-version checked. `/api/search` returns IDs only. API time/bbox queries exclude unplaced chronology unless separately requested through the catalog. Bounding matches are conservative candidates for schematic spherical connections, not surveyed route evidence. See api-contracts.ts and DEPLOYMENT.md.

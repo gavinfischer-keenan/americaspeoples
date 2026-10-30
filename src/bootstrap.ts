@@ -19,11 +19,16 @@ if (!supported) {
     "This browser is missing features required by Americas Peoples. Open it in a current version of Chrome, Edge, Firefox or Safari. Your saved suggestions have not been changed.",
   );
 } else {
-  initializeDataset().then(initializePhysical).then(()=>import("./main")).catch(() =>
-    startupMessage(
-      "Americas Peoples could not reach its atlas service. Check your connection and reload. Your saved suggestions have not been deleted.",
-    ),
-  );
+  initializeDataset()
+    .then(() => import("./main"))
+    .then(() => {
+      void initializePhysical();
+    })
+    .catch(() =>
+      startupMessage(
+        "Americas Peoples could not reach its atlas service. Check your connection and reload. Your saved suggestions have not been deleted.",
+      ),
+    );
 }
-import {initializeDataset} from './client-data';
-import {initializePhysical} from './physical';
+import { initializeDataset } from "./client-data";
+import { initializePhysical } from "./physical";

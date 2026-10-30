@@ -1,29 +1,9 @@
-import { chromium } from "playwright";
-import { pathToFileURL } from "node:url";
 import { readFile, mkdir } from "node:fs/promises";
-import path from "node:path";
 import assert from "node:assert/strict";
-const browser = await chromium.launch({
-  executablePath:
-    process.env.BROWSER_PATH ||
-    "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
-  headless: true,
-});
-const context = await browser.newContext({
-  offline: true,
-  viewport: { width: 1440, height: 1000 },
-});
-const page = await context.newPage();
-const network = [],
-  errors = [];
-page.on("request", (r) => {
-  if (/^https?:/.test(r.url())) network.push(r.url());
-});
-page.on("pageerror", (e) => errors.push(e.message));
+import { browserFixture } from "./browser-fixture.mjs";
+const fixture = await browserFixture();
+const { browser, page, url } = fixture;
 try {
-  const url = pathToFileURL(
-    path.resolve(process.env.APP_PATH || "dist/index.html"),
-  ).href;
   await page.goto(url + "#proposals");
   await page
     .getByRole("link", { name: "Bulk import guide", exact: true })
@@ -115,12 +95,11 @@ try {
       exact: true,
     })
     .waitFor();
-  assert.deepEqual(network, []);
-  assert.deepEqual(errors, []);
+  fixture.assertPrivacy();
   console.log(
-    "PASS: offline XLSX import, structured bibliography, editing/sharing, duplicate detection, packaged guide/template links. Browser " +
+    "PASS: HTTP/API XLSX import, structured bibliography, editing/sharing, duplicate detection, packaged guide/template links. Browser " +
       (await browser.version()),
   );
 } finally {
-  await browser.close();
+  await fixture.close();
 }

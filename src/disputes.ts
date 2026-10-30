@@ -1,7 +1,7 @@
-import type { EvidenceRecord } from "./model";
+import type { EvidenceRecord, MapRecord } from "./model";
 import { esc } from "./dom";
 export function disputeLevel(
-  r: EvidenceRecord,
+  r: Pick<MapRecord, "claims">,
 ): "none" | "discussion" | "disputed" {
   return r.claims.some((c) => c.status === "disputed")
     ? "disputed"
@@ -9,7 +9,7 @@ export function disputeLevel(
       ? "discussion"
       : "none";
 }
-export function disputeLabel(r: EvidenceRecord): string {
+export function disputeLabel(r: Pick<MapRecord, "claims">): string {
   return disputeLevel(r) === "disputed"
     ? "Explicitly disputed claim — open the sources and competing interpretations"
     : disputeLevel(r) === "discussion"

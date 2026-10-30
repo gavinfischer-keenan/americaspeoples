@@ -3,7 +3,10 @@ export function populationRadius(n: number): number {
   return n <= 500 ? 5 : n <= 2500 ? 7 : n <= 10000 ? 10 : n <= 50000 ? 13 : 17;
 }
 /** No interpolation, extrapolation, or addition of overlapping estimates. */
-export function populationAt(rows: EvidenceRecord[], year: number) {
+export function populationAt(
+  rows: readonly Pick<EvidenceRecord, "population">[],
+  year: number,
+) {
   const estimates = [
     ...new Map(
       rows

@@ -130,46 +130,67 @@ export function inspectImport(
   status: "new" | "duplicate" | "conflict";
   reason: string;
 }[] {
-  const seen = [...existing];
+  // Preserve first-match semantics while encoding each proposal only once.
+  const contents = new Set(existing.map(proposalContent));
+  const identities = new Set(existing.map(p => `${p.id}|${p.version}`));
+  const reviewed = new Map<string, EvidenceRecord>();
+  const cultures = new Map<string, string>();
+  for (const r of records) {
+    if (!reviewed.has(r.id)) reviewed.set(r.id, r);
+    if (!cultures.has(r.culture.id)) cultures.set(r.culture.id, canonical(r.culture));
+  }
+  for (const p of existing)
+    if (!cultures.has(p.record.culture.id))
+      cultures.set(p.record.culture.id, canonical(p.record.culture));
+  const originals = new Map<string, string>();
   return incoming.map((p) => {
+    const content = proposalContent(p);
+    const identity = `${p.id}|${p.version}`;
     let status: "new" | "duplicate" | "conflict" = "new",
       reason = "New local proposal; not reviewed evidence.";
-    if (seen.some((x) => proposalContent(x) === proposalContent(p))) {
+    if (contents.has(content)) {
       status = "duplicate";
       reason = "An identical proposal is already in your collection.";
-    } else if (seen.some((x) => x.id === p.id && x.version === p.version)) {
+    } else if (identities.has(identity)) {
       status = "conflict";
       reason =
         "Same proposal ID/version with different content; both copies will be kept.";
     } else if (p.kind === "correction") {
-      const base = records.find((r) => r.id === p.targetId);
+      const base = reviewed.get(p.targetId!);
+      if (base && !originals.has(base.id)) originals.set(base.id, canonical(base));
       if (
         !base ||
         base.revision !== p.baseRevision ||
-        canonical(base) !== canonical(p.baseRecord)
+        originals.get(base.id) !== canonical(p.baseRecord)
       ) {
         status = "conflict";
         reason =
           "The original differs from this dataset or is missing. Review the preserved original before using this proposal.";
       }
-    } else if (records.some((r) => r.id === p.record.id)) {
+    } else if (reviewed.has(p.record.id)) {
       status = "conflict";
       reason = "New record ID already exists in the reviewed dataset.";
     }
     if (status === "new") {
-      const culture =
-        records.find((r) => r.culture.id === p.record.culture.id)?.culture ??
-        seen.find((x) => x.record.culture.id === p.record.culture.id)?.record
-          .culture;
-      if (culture && canonical(culture) !== canonical(p.record.culture)) {
+      const culture = cultures.get(p.record.culture.id);
+      if (culture !== undefined && culture !== canonical(p.record.culture)) {
         status = "conflict";
         reason =
           "Culture metadata differs from an existing dataset or proposal category. Preview retains the existing category color; review the proposed classification.";
       }
     }
-    seen.push(p);
+    contents.add(content);
+    identities.add(identity);
+    if (!cultures.has(p.record.culture.id))
+      cultures.set(p.record.culture.id, canonical(p.record.culture));
     return { proposal: p, status, reason };
   });
+}
+/** Preflight a complete local collection before committing editor/import state. */
+export function validateCollection(proposals: Proposal[]): void {
+  if (proposals.length > MAX_PROPOSALS)
+    throw new Error(`A local collection can contain at most ${MAX_PROPOSALS} proposals. Export a selection before adding more.`);
+  parsePackage(JSON.stringify(makePackage(proposals)));
 }
 export function mergeImport(
   incoming: Proposal[],
@@ -184,5 +205,6 @@ export function mergeImport(
       keys.add(key);
     }
   }
+  validateCollection(result);
   return result;
 }

@@ -1,4 +1,4 @@
-import type { Dataset, DisplayRecord, Proposal } from "./model";
+import type { FullDisplayRecord, Proposal } from "./model";
 import { esc } from "./dom";
 import { formatYear, timeLabel, isDisputed } from "./time";
 import { safeURL } from "./validation";
@@ -6,13 +6,13 @@ import { OVERLAY_LABELS } from "./overlays";
 import { disputeBox, disputeLevel, disputeLabel } from "./disputes";
 import { linguisticsHTML } from "./languages";
 import { formatReference } from "./citations";
-export const recordHref = (r: DisplayRecord) =>
+export const recordHref = (r: {id:string;proposalKey?:string}) =>
   r.proposalKey
     ? `#proposal/${r.proposalKey}`
     : `#review/${encodeURIComponent(r.id)}`;
 export function reviewHTML(
-  r: DisplayRecord,
-  d: Dataset,
+  r: FullDisplayRecord,
+  d: {version:string;records:readonly {id:string;title:string}[]},
   proposal?: Proposal,
 ): string {
   const canLocate = Boolean(r.overlay ? r.overlay.geometry : r.location);

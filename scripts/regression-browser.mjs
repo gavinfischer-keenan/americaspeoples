@@ -1,22 +1,12 @@
-import { chromium } from "playwright";
 import assert from "node:assert/strict";
-import { pathToFileURL } from "node:url";
-import path from "node:path";
-import { readFile, writeFile } from "node:fs/promises";
-const browser = await chromium.launch({
-  executablePath:
-    process.env.BROWSER_PATH ||
-    "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
-  headless: true,
-});
-const context = await browser.newContext({
-  offline: true,
-  viewport: { width: 1440, height: 1000 },
-});
-const page = await context.newPage();
-const url = pathToFileURL(
-  path.resolve(process.env.APP_PATH || "dist/index.html"),
-).href;
+import { readFile, writeFile, mkdir } from "node:fs/promises";
+import {
+  browserFixture,
+  localPackage,
+  previewSuggestions,
+} from "./browser-fixture.mjs";
+const fixture = await browserFixture();
+const { page, url } = fixture;
 const failed = [];
 const check = async (name, fn) => {
   try {
@@ -28,16 +18,21 @@ const check = async (name, fn) => {
   }
 };
 try {
+  await mkdir("test-results", { recursive: true });
   await page.goto(url + "#map");
+  await page.locator(".map-canvas svg").waitFor();
   await check("the full map viewport fits above the timeline", async () => {
-    const svg = await page.locator('.map-canvas svg').boundingBox();
-    const stage = await page.locator('.map-stage').boundingBox();
-    assert.ok(svg.height <= stage.height, `SVG ${svg.height} exceeds stage ${stage.height}`);
+    const svg = await page.locator(".map-canvas svg").boundingBox();
+    const stage = await page.locator(".map-stage").boundingBox();
+    assert.ok(
+      svg.height <= stage.height,
+      `SVG ${svg.height} exceeds stage ${stage.height}`,
+    );
   });
   await check(
     "visible evidence panel is not covered by fixed timeline",
     async () => {
-      const panel = await page.locator(".visible-panel").boundingBox(),
+      const panel = await page.locator("#site-panel").boundingBox(),
         footer = await page.locator(".timeline").boundingBox();
       assert.ok(
         panel.y + panel.height <= footer.y,
@@ -46,6 +41,10 @@ try {
     },
   );
   await check("map markers still select after panning", async () => {
+    // The earliest published date now has regional context, not a site dot.
+    await page.getByLabel("Year number", { exact: true }).fill("1021");
+    await page.getByLabel("Era", { exact: true }).selectOption("CE");
+    await page.getByRole("button", { name: "Go to year", exact: true }).click();
     const svg = page.locator(".map-canvas svg");
     const rect = await svg.boundingBox();
     await page.mouse.move(rect.x + 200, rect.y + 200);
@@ -53,9 +52,8 @@ try {
     await page.mouse.move(rect.x + 230, rect.y + 220);
     await page.mouse.up();
     await page.locator("[data-point]").first().click();
-    assert.equal(
-      await page.locator("#visible-heading").innerText(),
-      "Selected location",
+    assert.ok(
+      (await page.locator("#selected-records .selected-detail").count()) > 0,
     );
   });
   await check("editing preserves approximate date classification", async () => {
@@ -70,9 +68,7 @@ try {
     await page
       .getByRole("heading", { name: "Your suggestions", exact: true })
       .waitFor();
-    const local = await page.evaluate(() =>
-      JSON.parse(localStorage.getItem("americas-peoples-proposals-v1")),
-    );
+    const local = await localPackage(page);
     assert.equal(local.proposals[0].record.time.approximate, true);
   });
   await check(
@@ -214,7 +210,7 @@ try {
         .getByRole("heading", { name: "Your suggestions", exact: true })
         .waitFor();
       await page.getByRole("link", { name: "Map", exact: true }).click();
-      await page.getByLabel("Preview complete suggestions").check();
+      await previewSuggestions(page);
       for (const [year, count] of [
         [100, 2],
         [110, 2],
@@ -229,14 +225,26 @@ try {
         await page
           .getByRole("button", { name: "Go to year", exact: true })
           .click();
-        assert.equal(await page.locator(".movement").count(), count);
+        assert.equal(
+          await page.locator(".movement.proposal-path").count(),
+          count,
+        );
       }
-      assert.equal(await page.locator(".site-count").textContent(), "2");
+      assert.equal(
+        await page.locator(".proposal-point .site-count").textContent(),
+        "2",
+      );
       assert.match(
-        await page.locator(".site-dot").getAttribute("style"),
+        await page.locator(".proposal-point .site-dot").getAttribute("style"),
         /#ff0000/,
       );
-      assert.equal(await page.locator(".evidence-card").count(), 2);
+      assert.equal(
+        await page
+          .locator("#visible-records .evidence-card")
+          .filter({ hasText: "SYNTHETIC movement" })
+          .count(),
+        2,
+      );
     },
   );
   await check("mobile layout stays within viewport", async () => {
@@ -249,7 +257,8 @@ try {
     );
     await page.screenshot({ path: "test-results/mobile.png", fullPage: true });
   });
+  fixture.assertPrivacy();
   if (failed.length) throw new Error(failed.join("; "));
 } finally {
-  await browser.close();
+  await fixture.close();
 }

@@ -1,6 +1,6 @@
 {
   "name": "americas-peoples",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "private": true,
   "type": "module",
   "scripts": {
@@ -11,7 +11,9 @@
     "validate": "node --import tsx scripts/validate.ts",
     "preview": "node scripts/preview.mjs",
     "test:hosted": "node scripts/hosted-browser.mjs",
-    "test:api": "python server/test_api.py"
+    "test:api": "python server/test_api.py",
+    "verify:release": "node scripts/verify-release.mjs",
+    "benchmark": "node --import tsx scripts/benchmark-scalability.ts"
   },
   "dependencies": {
     "d3-geo": "3.1.1",

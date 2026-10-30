@@ -1,4 +1,4 @@
-import type { EvidenceRecord, TimeExtent } from "./model";
+import type { EvidenceRecord, TimeExtent, MapRecord } from "./model";
 export const END_YEAR = 1934;
 export function formatYear(year: number): string {
   return `${(year <= 0 ? 1 - year : year).toLocaleString("en-US")} ${year <= 0 ? "BCE" : "CE"}`;
@@ -37,8 +37,8 @@ export function temporalState(
     return "possible";
   return "certain";
 }
-export function activeRecords<T extends EvidenceRecord>(
-  records: T[],
+export function activeRecords<T extends Pick<EvidenceRecord, "time">>(
+  records: readonly T[],
   year: number,
 ): T[] {
   return records.filter((r) => temporalState(r.time, year) !== "absent");
@@ -67,12 +67,15 @@ export function temporalOpacity(t: TimeExtent, year: number): number {
   const phase = (year - start) / (end - start);
   return 0.22 + 0.53 * Math.sin(Math.PI * phase);
 }
-export function earliestYear(records: EvidenceRecord[]): number {
-  return Math.min(
+export function earliestYear(
+  records: readonly Pick<EvidenceRecord, "time">[],
+): number {
+  return records.reduce(
+    (year, r) =>
+      r.time.kind !== "unplaced" && r.time.start !== null
+        ? Math.min(year, r.time.start)
+        : year,
     END_YEAR,
-    ...records
-      .filter((r) => r.time.kind !== "unplaced" && r.time.start !== null)
-      .map((r) => r.time.start!),
   );
 }
 export function timeLabel(t: TimeExtent): string {
@@ -83,11 +86,11 @@ export function timeLabel(t: TimeExtent): string {
           ? formatYear(t.start)
           : `${formatYear(t.start)} – ${formatYear(t.end)}`);
 }
-export function isDisputed(r: EvidenceRecord): boolean {
+export function isDisputed(r: Pick<MapRecord, "claims">): boolean {
   return r.claims.some((c) => c.status !== "well-supported");
 }
 export function advancePlayback(
-  records: Pick<EvidenceRecord,'time'>[],
+  records: Pick<EvidenceRecord, "time">[],
   current: number,
   step: number,
 ): { year: number; boundary: boolean } {

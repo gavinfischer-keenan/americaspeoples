@@ -21,6 +21,12 @@ def number(params,key,default=None):
     return value
 
 class AtlasServer(ThreadingHTTPServer):
+    """A pinned read-only release, with bounded readers for shared-host isolation.
+
+    Connections are request-local and closed explicitly. Publication restarts the
+    service against a different immutable database; readers never see a partial
+    editorial transaction or an in-place database replacement.
+    """
     daemon_threads=True
     allow_reuse_address=True
     def __init__(self,address,db,root):
@@ -49,6 +55,7 @@ class AtlasServer(ThreadingHTTPServer):
         finally:self.slots.release()
 
 class AtlasHandler(SimpleHTTPRequestHandler):
+    """HTTP adapter only: no anonymous mutation or private-directory serving."""
     server_version='AtlasAPI/1'
     def __init__(self,*args,**kwargs):
         super().__init__(*args,directory=str(args[2].webroot),**kwargs)
@@ -102,7 +109,7 @@ class AtlasHandler(SimpleHTTPRequestHandler):
             data={k:v for k,v in self.server.manifest.items() if k not in ('apiVersion','recordCount','hazardCount','iceIndex')}
             data['records']=[json.loads(r[0]) for r in con.execute('SELECT full FROM records ORDER BY n')]
             return self.send_json(data)
-        if path in ('/api/catalog','/api/records','/api/hazards/index'):
+        if path in ('/api/catalog','/api/records','/api/search','/api/hazards/index'):
             return self.query(con,path,params)
         match=re.fullmatch(r'/api/(records|hazards)/([A-Za-z0-9._-]{1,150})',path)
         if match:
@@ -116,11 +123,15 @@ class AtlasHandler(SimpleHTTPRequestHandler):
             return self.send_json(json.loads(row[0])) if row else self.send_json({'error':'Snapshot not found'},404)
         return self.send_json({'error':'API route not found'},404)
     def query(self,con,path,params):
+        # All user values are bound parameters. Only fixed table/field names are
+        # composed here; bounding-box results are conservative display candidates.
         limit=number(params,'limit',500)
         offset=number(params,'offset',0)
         if limit!=int(limit) or offset!=int(offset) or not 1<=limit<=1000 or offset<0:raise ValueError('Pagination')
         limit,offset=int(limit),int(offset)
         hazard=path=='/api/hazards/index'
+        ids_only=path=='/api/search'
+        result_key='ids' if ids_only else 'records'
         table='hazards' if hazard else 'records'
         joins='';where=[];values=[]
         start,end=number(params,'from'),number(params,'to')
@@ -141,16 +152,23 @@ class AtlasHandler(SimpleHTTPRequestHandler):
         q=params.get('q',[''])[0]
         if q:
             if len(q)>200:raise ValueError('Search length')
-            if hazard:where.append('r.summary LIKE ?');values.append('%'+q.replace('%','\\%').replace('_','\\_')+'%')
+            if hazard:
+                # Match literal text within compact JSON string values, including
+                # JSON-escaped backslashes/quotes; retain LIKE's ASCII case folding.
+                where.append('instr(lower(r.summary),lower(?))>0')
+                values.append(compact(q)[1:-1])
             else:
                 tokens=re.findall(r'[^\W_]+',q,flags=re.UNICODE)[:12]
-                if not tokens:return self.send_json({'records':[],'total':0,'nextOffset':None,'version':self.server.manifest['version']})
+                if not tokens:return self.send_json({result_key:[],'total':0,'nextOffset':None,'version':self.server.manifest['version']})
                 joins+=' JOIN record_search s ON s.rowid=r.n '
                 where.append('record_search MATCH ?');values.append(' AND '.join('"'+t+'"*' for t in tokens))
         sql=' FROM '+table+' r '+joins+(' WHERE '+' AND '.join(where) if where else '')
         total=con.execute('SELECT count(*)'+sql,values).fetchone()[0]
-        rows=[json.loads(row[0]) for row in con.execute('SELECT r.summary'+sql+' ORDER BY r.n LIMIT ? OFFSET ?',values+[limit,offset])]
-        return self.send_json({'records':rows,'total':total,'nextOffset':offset+limit if offset+limit<total else None,'version':self.server.manifest['version']})
+        # Search returns identities only; selection/detail data stays in the
+        # catalog and full-record routes, with the same filtering/order contract.
+        projection='r.id' if ids_only else 'r.summary'
+        rows=[row[0] if ids_only else json.loads(row[0]) for row in con.execute('SELECT '+projection+sql+' ORDER BY r.n LIMIT ? OFFSET ?',values+[limit,offset])]
+        return self.send_json({result_key:rows,'total':total,'nextOffset':offset+limit if offset+limit<total else None,'version':self.server.manifest['version']})
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser()

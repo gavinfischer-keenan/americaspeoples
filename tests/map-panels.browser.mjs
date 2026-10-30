@@ -42,6 +42,8 @@ try {
   const pannedIds = await choices.allTextContents();
   assert.notDeepEqual(pannedIds, zoomedIds, "panning updates which records are visible");
   await page.getByRole("button", { name: "Reset map view", exact: true }).click();
+  // Viewport notifications are intentionally coalesced to the next animation frame.
+  await page.waitForFunction(expected=>document.querySelectorAll('[data-visible-index]').length===expected,initial);
   assert.equal(await choices.count(), initial, "zooming out restores visible records");
   assert.notDeepEqual(await choices.allTextContents(), pannedIds);
   await page.getByRole("button", { name: "Show layers", exact: true }).click();

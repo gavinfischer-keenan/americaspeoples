@@ -1,25 +1,17 @@
-import { chromium } from "playwright";
 import { readFile } from "node:fs/promises";
-import { pathToFileURL } from "node:url";
-import path from "node:path";
 import assert from "node:assert/strict";
-const browser = await chromium.launch({
-  executablePath:
-    process.env.BROWSER_PATH ||
-    "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
-  headless: true,
-});
+import {
+  browserFixture,
+  localPackage,
+  previewSuggestions,
+  layerOptions,
+} from "./browser-fixture.mjs";
+const fixture = await browserFixture();
+const { browser, page, url } = fixture;
+const synthetic = () =>
+  page.locator("[data-overlay]").filter({ hasText: /Synthetic/ });
 try {
-  const context = await browser.newContext({
-    offline: true,
-    acceptDownloads: true,
-  });
-  const page = await context.newPage();
-  const errors = [];
-  page.on("pageerror", (e) => errors.push(e.message));
-  await page.goto(
-    pathToFileURL(path.resolve(process.env.APP_PATH || "dist/index.html")).href,
-  );
+  await page.goto(url + "#map");
   const d = JSON.parse(await readFile("data/evidence.json", "utf8"));
   const r = structuredClone(d.records[4]);
   r.id = "test-trade-overlay";
@@ -96,12 +88,13 @@ try {
   await page.getByLabel("Year number", { exact: true }).fill("100");
   await page.getByLabel("Era", { exact: true }).selectOption("CE");
   await page.getByRole("button", { name: "Go to year" }).click();
-  assert.equal(await page.locator("[data-overlay]").count(), 0);
-  await page.getByLabel("Preview complete suggestions").check();
-  assert.equal(await page.locator("[data-overlay]").count(), 1);
-  assert.equal(await page.locator("path.movement").count(), 0);
+  assert.equal(await synthetic().count(), 0);
+  await previewSuggestions(page);
+  await layerOptions(page);
+  assert.equal(await synthetic().count(), 1);
+  assert.equal(await page.locator("path.movement.proposal-path").count(), 0);
   await page.getByLabel("Trade overlays", { exact: true }).uncheck();
-  assert.equal(await page.locator("[data-overlay]").count(), 0);
+  assert.equal(await synthetic().count(), 0);
   await page.getByLabel("Trade overlays", { exact: true }).check();
   for (const [y, n] of [
     [111, 0],
@@ -111,28 +104,29 @@ try {
   ]) {
     await page.getByLabel("Year number", { exact: true }).fill(String(y));
     await page.getByRole("button", { name: "Go to year" }).click();
-    assert.equal(await page.locator("[data-overlay]").count(), n);
+    assert.equal(await synthetic().count(), n);
   }
-  await page.locator("[data-overlay]").click();
+  await synthetic().click();
   await page
-    .locator("#visible-records a")
-    .filter({ hasText: "Synthetic exchange overlay" })
+    .locator("#selected-records")
+    .getByRole("link", { name: /Full review/ })
     .click();
   await page
     .getByRole("heading", { name: "Overlay geometry", exact: true })
     .waitFor();
   assert.match(await page.locator("main").innerText(), /schematic/);
   await page.getByRole("link", { name: "Map", exact: true }).click();
+  await layerOptions(page);
   await page.getByLabel("Trade overlays", { exact: true }).uncheck();
   await page.evaluate(() => (location.hash = "#proposal/0"));
   await page
     .getByRole("button", { name: "Show on map at this time", exact: true })
     .click();
-  await page.locator("[data-overlay]").waitFor();
-  assert.equal(await page.locator("[data-overlay]").count(), 1);
+  await synthetic().waitFor();
+  assert.equal(await synthetic().count(), 1);
   await page
-    .locator("#visible-records a")
-    .filter({ hasText: "Synthetic exchange overlay" })
+    .locator("#selected-records")
+    .getByRole("link", { name: /Full review/ })
     .click();
   await page
     .getByRole("button", { name: "Edit suggestion", exact: true })
@@ -140,12 +134,11 @@ try {
   await page
     .getByRole("button", { name: "Save complete suggestion", exact: true })
     .click();
-  const stored = await page.evaluate(() =>
-    JSON.parse(localStorage.getItem("americas-peoples-proposals-v1")),
-  );
+  const stored = await localPackage(page);
   assert.deepEqual(stored.proposals[0].record.overlay, r.overlay);
   assert.equal(stored.schemaVersion, 2);
   await page.getByRole("link", { name: "Map", exact: true }).click();
+  await layerOptions(page);
   const go = async (y) => {
     await page.getByLabel("Year number", { exact: true }).fill(String(y));
     await page.getByRole("button", { name: "Go to year" }).click();
@@ -157,11 +150,13 @@ try {
     [1864, 3],
   ]) {
     await go(y);
-    assert.equal(await page.locator("[data-overlay]").count(), n);
+    assert.equal(await synthetic().count(), n);
   }
   assert.equal(
     await page
-      .locator('.overlay-forced-removal path[marker-end="url(#arrow)"]')
+      .locator(".overlay-forced-removal")
+      .filter({ hasText: "Synthetic forced-removal" })
+      .locator('path[marker-end="url(#arrow)"]')
       .count(),
     1,
   );
@@ -171,12 +166,17 @@ try {
     "Forced removal overlays",
   ]) {
     await page.getByLabel(label, { exact: true }).uncheck();
-    assert.equal(await page.locator("[data-overlay]").count(), 2);
+    assert.equal(await synthetic().count(), 2);
     await page.getByLabel(label, { exact: true }).check();
-    assert.equal(await page.locator("[data-overlay]").count(), 3);
+    assert.equal(await synthetic().count(), 3);
   }
-  assert.equal(await page.locator("#time-slider").getAttribute("max"), "1000000");
-  assert.ok((await page.locator("#range-end").innerText()).includes("1,934 CE"));
+  assert.equal(
+    await page.locator("#time-slider").getAttribute("max"),
+    "1000000",
+  );
+  assert.ok(
+    (await page.locator("#range-end").innerText()).includes("1,934 CE"),
+  );
   await go(1935);
   assert.match(await page.locator("#time-error").innerText(), /1934/);
   await go(1933);
@@ -193,11 +193,11 @@ try {
     await page.locator("#range-end").innerText(),
     /Indian Reorganization Act/,
   );
-  assert.deepEqual(errors, []);
+  fixture.assertPrivacy();
   console.log(
-    "PASS: overlays import offline, remain opt-in, filter by layer/time, open reviews and survive editing. " +
+    "PASS: overlays import through HTTP/API, remain opt-in, filter by layer/time, open reviews and survive editing. " +
       (await browser.version()),
   );
 } finally {
-  await browser.close();
+  await fixture.close();
 }

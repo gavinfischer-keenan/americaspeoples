@@ -153,4 +153,15 @@ export interface SharePackage {
   exportedAt: string;
   proposals: Proposal[];
 }
-export type DisplayRecord = EvidenceRecord & { proposalKey?: string };
+/** Catalog rows lack source/support detail. Full review/edit/export must load it. */
+export type CatalogRecord = Omit<
+  EvidenceRecord,
+  "claims" | "sources" | "review"
+> & {
+  detailLevel: "catalog";
+  claims: Pick<Claim, "id" | "text" | "status">[];
+  review: Pick<Review, "summary" | "limitations" | "reviewedAt" | "relatedIds">;
+};
+export type MapRecord = EvidenceRecord | CatalogRecord;
+export type DisplayRecord = MapRecord & { proposalKey?: string };
+export type FullDisplayRecord = EvidenceRecord & { proposalKey?: string };

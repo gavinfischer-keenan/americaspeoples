@@ -1,6 +1,6 @@
 # Americas Peoples — hybrid hosting
 
-Version0.4.0 requires Python3.11+ with SQLite FTS5/RTree and an HTTP origin. No Python package installation is required on Debian13. Node22+ is needed only to build from source. The public API is read-only; do not expose the editorial import command as a public write endpoint.
+Version0.4.0 requires Python 3.11+ with SQLite FTS5/RTree and an HTTP origin. No Python package installation is required on Debian 13. Node 22+ is needed only to build from source. The public API is read-only; do not expose the editorial import command as a public write endpoint.
 
 ## Run the self-host download
 
@@ -20,6 +20,7 @@ For production, run the service as a non-root systemd user on loopback, behind C
     npm run build
     python server/test_api.py
     npm run test:hosted
+    npm run verify:release
 
 Set `PYTHON_PATH` to the Python executable if `python` is not on PATH. The build creates frontend `dist/`, a release database `release/atlas.sqlite3`, a self-host ZIP and SHA256 manifest. The database contains the full published evidence, hazard catalog and ice snapshots. Check `PRAGMA integrity_check` before publication; the importer does this automatically.
 
@@ -29,7 +30,8 @@ Production publication makes a new immutable app/database release, validates hea
 
 - GET `/api/manifest`: version, counts, dated ice index.
 - GET `/api/catalog?limit=1000&offset=0`: compact map records, paging cursor.
-- GET `/api/records?from=0&to=1000&bbox=-120,20,-60,60&q=maize&layer=trade`: indexed temporal/geographic/full-text filtering. Bounding boxes are conservative candidates, not exact route intersections; west>east crosses the dateline. Maximum1000rows per response, integer pagination.
+- GET `/api/records?from=0&to=1000&bbox=-120,20,-60,60&q=maize&layer=trade`: indexed temporal/geographic/full-text filtering. Bounding boxes are conservative candidates, not exact route intersections; west>east crosses the dateline. Maximum1000 rows per response, integer pagination.
+- GET `/api/search?q=...`: paginated IDs only for cancellable evidence search; supports the same time/layer/bbox filters.
 - GET `/api/records/{id}`: full evidence and all claim/source links.
 - GET `/api/hazards/index`: paginated event summaries; `/api/hazards/{id}` retains the full catalog fields.
 - GET `/api/ice/{optimal|min|max}/{ageCalBP}`: one original dated snapshot. No server-generated interpolation.
@@ -41,3 +43,6 @@ The browser preloads the compact map and hazard indexes, then draws and animates
 ## Resource isolation
 
 Use a dedicated systemd service, restricted user, `NoNewPrivileges`, `ProtectSystem`, bounded memory/tasks and CPU quota. NODE01 CT101 also serves other public sites, so changes must be scoped to the atlas service and hostname. Check Proxmox memory/load/storage and container headroom before increasing allocation. Do not change other nodes, tunnels, app processes or storage partitions unless a measured need exists.
+
+
+Current module boundaries and cache/publication invariants: docs/developer-guide.md. Currentverification is in docs/verification.md; olderrelease observations are in docs/release-verification-history.md and do not override this runtime contract.
