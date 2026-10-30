@@ -5,6 +5,7 @@ import { disputeLabel, disputeLevel } from "./disputes";
 import { isModeledRecord } from "./map-filters";
 import { populationAt } from "./population";
 import { recordHref } from "./review";
+import { guideForRecord, guideLink } from "./site-guides";
 
 export interface MapPanelState {
   visible: readonly DisplayRecord[];
@@ -103,7 +104,7 @@ export class MapPanels {
           .map((r) => {
             const included = activeKeys.has(recordKey(r));
             const inView = visibleKeys.has(recordKey(r));
-            return `<article class="selected-detail"><h4>${esc(r.title)}</h4><p class="fine">${esc(r.culture.name)} · ${esc(timeLabel(r.time))}</p>${!included ? '<p class="selection-status">Not active evidence at the current year / filters.</p>' : !inView ? '<p class="selection-status">Outside the current map view.</p>' : ""}<p>${esc(r.review.summary)}</p>${!r.overlay && r.type !== "movement" ? `<p class="fine">${esc(populationAt([r], year).label)}</p>` : ""}<p class="fine">${r.time.kind === "unplaced" ? "Chronology unresolved · independent of selected year" : temporalState(r.time, year) === "possible" ? "Possible time / context window" : "Documented time"}${isModeledRecord(r) ? " · Modeled / schematic evidence" : ""}</p><p class="fine">${esc(r.review.limitations)}</p>${r.time.kind === "unplaced" ? `<p class="fine"><strong>Source date guidance:</strong> ${esc(r.time.original)}<br>${esc(r.time.interpretation)}</p>` : ""}<a class="button" href="${recordHref(r)}">Full review &amp; sources ↗</a></article>`;
+            return `<article class="selected-detail"><h4>${esc(r.title)}</h4><p class="fine">${esc(r.culture.name)} · ${esc(timeLabel(r.time))}</p>${!included ? '<p class="selection-status">Not active evidence at the current year / filters.</p>' : !inView ? '<p class="selection-status">Outside the current map view.</p>' : ""}<p>${esc(r.review.summary)}</p>${!r.overlay && r.type !== "movement" ? `<p class="fine">${esc(populationAt([r], year).label)}</p>` : ""}<p class="fine">${r.time.kind === "unplaced" ? "Chronology unresolved · independent of selected year" : temporalState(r.time, year) === "possible" ? "Possible time / context window" : "Documented time"}${isModeledRecord(r) ? " · Modeled / schematic evidence" : ""}</p><p class="fine">${esc(r.review.limitations)}</p>${r.time.kind === "unplaced" ? `<p class="fine"><strong>Source date guidance:</strong> ${esc(r.time.original)}<br>${esc(r.time.interpretation)}</p>` : ""}<a class="button" href="${recordHref(r)}">Full review &amp; sources ↗</a>${guideLink(r.id)}</article>`;
           })
           .join("")
       : '<p class="empty">Select a site from the list or a marker on the map to see its evidence, dates, and sources here.</p>';
@@ -185,7 +186,7 @@ export class MapPanels {
         entry.content = content;
         button.innerHTML = context
           ? `<div><strong>${esc(r.title)}</strong><span>${esc(r.time.original)}</span></div>`
-          : `<i style="background:${r.culture.color}"></i><div><strong>${esc(r.title)}${isDisputed(r) ? `<span class="asterisk dispute-${disputeLevel(r)}" title="${esc(disputeLabel(r))}"> *</span>` : ""}</strong><span>${esc(r.culture.name)} · ${esc(timeLabel(r.time))}${isModeledRecord(r) ? " · Modeled / schematic" : ""}</span></div>`;
+          : `<i style="background:${r.culture.color}"></i><div><strong>${esc(r.title)}${isDisputed(r) ? `<span class="asterisk dispute-${disputeLevel(r)}" title="${esc(disputeLabel(r))}"> *</span>` : ""}</strong><span>${esc(r.culture.name)} · ${esc(timeLabel(r.time))}${guideForRecord(r.id) ? " · ◈ Site guide available" : ""}${isModeledRecord(r) ? " · Modeled / schematic" : ""}</span></div>`;
       }
       const indexName = context ? "contextIndex" : "visibleIndex";
       if (button.dataset[indexName] !== String(index))

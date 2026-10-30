@@ -2,3 +2,5 @@
 docs/intake/*.txt -text -whitespace
 # Raw scientific downloads must match the acquisition SHA-256 manifest on any OS.
 data/physical-sources/* -text -whitespace
+# Preserve original cited research documents and their generated rendering.
+sites/reports/* -text -whitespace

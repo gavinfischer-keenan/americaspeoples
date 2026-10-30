@@ -1,0 +1,201 @@
+{
+  "guides": [
+    {
+      "id": "chaco",
+      "title": "Chaco Canyon",
+      "href": "sites/chaco.html",
+      "region": "Four Corners · New Mexico",
+      "description": "Great houses, small houses, regional outliers and roads.",
+      "recordIds": [
+        "chaco-regional-center",
+        "fc-chaco-early-network",
+        "fc-chaco-late-network",
+        "fc-chaco-woodland-causation",
+        "fc-chaco-early-maize-pollen",
+        "fc-chaco-early-inequality",
+        "fc-chaco-centrality-reorganization",
+        "fc-chaco-community-scale",
+        "fc-chaco-community-residential-mobility",
+        "reach-chaco-communities"
+      ],
+      "report": "four-corners",
+      "kind": "site",
+      "relatedGuideIds": [
+        "chaco-culture"
+      ]
+    },
+    {
+      "id": "hovenweep",
+      "title": "Hovenweep",
+      "href": "sites/hovenweep.html",
+      "region": "Four Corners · Utah / Colorado",
+      "description": "Separate settlement groups, towers, springs and agricultural landscape.",
+      "recordIds": [
+        "hovenweep-square-tower",
+        "hovenweep-holly",
+        "hovenweep-horseshoe",
+        "hovenweep-hackberry",
+        "hovenweep-cutthroat-castle",
+        "hovenweep-cajon",
+        "hovenweep-goodman-point-pueblo"
+      ],
+      "report": "four-corners",
+      "kind": "site",
+      "relatedGuideIds": [
+        "chaco-culture"
+      ]
+    },
+    {
+      "id": "mesa-verde",
+      "title": "Mesa Verde",
+      "href": "sites/mesa-verde.html",
+      "region": "Four Corners · Colorado",
+      "description": "Cliff dwellings, mesa-top villages and changing settlement patterns.",
+      "recordIds": [
+        "mesa-verde-settlement",
+        "fc-mesaverde-depopulation-model"
+      ],
+      "report": "four-corners",
+      "kind": "site",
+      "relatedGuideIds": [
+        "chaco-culture"
+      ]
+    },
+    {
+      "id": "canyons-of-the-ancients",
+      "title": "Canyons of the Ancients",
+      "href": "sites/canyons-of-the-ancients.html",
+      "region": "Four Corners · Colorado",
+      "description": "Lowry, Sand Canyon and the settlements around them.",
+      "recordIds": [
+        "hovenweep-lowry-pueblo",
+        "hovenweep-sand-canyon-pueblo",
+        "r9v-sw-sand-canyon-violence"
+      ],
+      "report": "four-corners",
+      "kind": "site",
+      "relatedGuideIds": [
+        "chaco-culture"
+      ]
+    },
+    {
+      "id": "machu-picchu",
+      "title": "Machu Picchu and the Inca heartland",
+      "href": "sites/machu-picchu.html",
+      "region": "Andes · Peru",
+      "description": "Architecture, engineering, dated occupation and wider settlement / road connections.",
+      "recordIds": [
+        "south-machupicchu-ams-occupation",
+        "r9v-inca-machupicchu-bayesian-alternative",
+        "r9v-inca-machupicchu-retainers",
+        "r9v-inca-cusco-formation",
+        "r9v-inca-court-language-hypothesis",
+        "r9v-inca-cusco-revolt-1536",
+        "r11v-cusco-obsidian-continuity"
+      ],
+      "report": "inca",
+      "kind": "site",
+      "relatedGuideIds": [
+        "inca-civilization"
+      ]
+    },
+    {
+      "id": "maya-centers",
+      "title": "Maya centers and networks",
+      "href": "sites/maya-centers.html",
+      "region": "Mesoamerica",
+      "description": "Individual centers, their civic buildings, reservoirs and inter-site connections.",
+      "recordIds": [
+        "south-tikal-corriental-sediments",
+        "south-overlay-tikal-entrada-378"
+      ],
+      "report": "maya",
+      "kind": "site",
+      "relatedGuideIds": [
+        "maya-culture"
+      ]
+    },
+    {
+      "id": "cahokia",
+      "title": "Cahokia and the American Bottom",
+      "href": "sites/cahokia.html",
+      "region": "North America · Mississippi Valley",
+      "description": "Mounds, plazas, neighborhoods, satellite communities and changing urban scale.",
+      "recordIds": [
+        "cahokia-urban"
+      ],
+      "report": "cahokia",
+      "kind": "site",
+      "relatedGuideIds": [
+        "mississippian-cultures"
+      ]
+    },
+    {
+      "id": "pacific-complexes",
+      "title": "Pacific complexes and island networks",
+      "href": "sites/pacific-complexes.html",
+      "region": "Pacific · Micronesia / Polynesia",
+      "description": "Nan Madol, monumental centers and island connections examined separately.",
+      "recordIds": [
+        "r6-nan-madol-sealevel"
+      ],
+      "report": "pacific",
+      "kind": "site"
+    },
+    {
+      "id": "chaco-culture",
+      "title": "Chaco culture and regional connections",
+      "region": "Four Corners",
+      "description": "Ritual, language questions, growth and transformation, with a road-network map.",
+      "href": "sites/chaco-culture.html",
+      "recordIds": [],
+      "kind": "culture",
+      "report": "four-corners",
+      "relatedGuideIds": [
+        "chaco",
+        "hovenweep",
+        "mesa-verde",
+        "canyons-of-the-ancients"
+      ]
+    },
+    {
+      "id": "inca-civilization",
+      "title": "Inca civilization and Qhapaq Ñan",
+      "region": "Andes",
+      "description": "Religion, languages, imperial growth and transformation, and the road system.",
+      "href": "sites/inca-civilization.html",
+      "recordIds": [],
+      "kind": "culture",
+      "report": "inca",
+      "relatedGuideIds": [
+        "machu-picchu"
+      ]
+    },
+    {
+      "id": "maya-culture",
+      "title": "Maya cultures and histories",
+      "region": "Mesoamerica",
+      "description": "Ritual, languages and changing political centers, distinguished from individual cities.",
+      "href": "sites/maya-culture.html",
+      "recordIds": [],
+      "kind": "culture",
+      "report": "maya",
+      "relatedGuideIds": [
+        "maya-centers"
+      ]
+    },
+    {
+      "id": "mississippian-cultures",
+      "title": "Mississippian cultures and networks",
+      "region": "North America",
+      "description": "Diverse communities and traditions, ritual evidence, language limits, growth and transformation.",
+      "href": "sites/mississippian-cultures.html",
+      "recordIds": [],
+      "kind": "culture",
+      "report": "cahokia",
+      "relatedGuideIds": [
+        "cahokia"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "sourceId": "noaa-earthquake",
+  "doi": "https://doi.org/10.7289/V5TD9V7K",
+  "documentation": "https://www.ncei.noaa.gov/products/natural-hazards/tsunamis-earthquakes-volcanoes/earthquakes",
+  "api": "https://www.ngdc.noaa.gov/hazel/hazard-service/api/v1/earthquakes",
+  "catalogRows": 6697,
+  "archivedPages": 34,
+  "selectedEvents": 1580,
+  "scope": "Americas(-170..-30longitude,-60..85latitude) plus northern/tropical Pacific(>=120 or <=-140longitude,-25..70latitude), and western Island Asia(95..120longitude,-12..25latitude), through1934CE. Geography filter is an editorial bounding envelope; no claim of exhaustive historical detection.",
+  "method": "Deduplicate exact catalog IDs; reject conflicting duplicates. Preserve original rows. Historical negative BCE years become astronomical year+1 (1 BCE = 0); no historical year zero is accepted. Source year <=1934; same geographic envelope as existing hazards. No inferred date intervals or settlement impacts.",
+  "limitations": "Catalog epicenter only, not a shaking footprint or affected settlement. Historical dates, locations and magnitudes can be uncertain; missing uncertainty fields do not establish precision. Original source fields and publication status are retained. This selective significant-event catalog is not an exhaustive earthquake history; completeness varies by region and period. Source casualty or damage fields describe the catalog event and are not assigned to atlas sites. No settlement impact is inferred."
+}

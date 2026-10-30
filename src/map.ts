@@ -1,6 +1,7 @@
 import { mapProjection, type MapScope } from "./map-projection";
 import { geoPath, geoGraticule10 } from "d3-geo";
 import { MapGeometry } from "./map-geometry";
+import { guideForRecord } from "./site-guides";
 import { populationAt } from "./population";
 import type { DisplayRecord } from "./model";
 import { temporalState, temporalOpacity, timeLabel, isDisputed, END_YEAR } from "./time";
@@ -248,8 +249,9 @@ export class MapView {
     let physicalMarkers='';
     for(const event of eventsAt(this.year,this.physical.hidden,this.physical.uncertain)){
       const p=this.projection(event.coordinates as [number,number]);if(!p)continue;
-      const symbol=event.kind==='volcano'?'▲':event.kind==='tsunami'?'≋':event.kind==='el-nino'?'E':'L';
-      physicalMarkers+=`<a href="#physical/${event.id}" class="hazard-marker hazard-${event.kind} ${isUncertainHazard(event)?'hazard-uncertain':''}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><title>${esc(event.title)} — ${esc(event.status)}; open catalog details</title><circle r="11"/><text text-anchor="middle" dy=".35em">${symbol}</text></a>`;
+      const symbol=event.kind==='volcano'?'▲':event.kind==='tsunami'?'≋':event.kind==='earthquake'?'ϟ':event.kind==='el-nino'?'E':'L';
+      const earthquake=event.kind==='earthquake';
+      physicalMarkers+=`<a href="#physical/${event.id}" class="hazard-marker hazard-${event.kind} ${isUncertainHazard(event)?'hazard-uncertain':''}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><title>${esc(event.title)} — ${esc(event.status)}; open catalog details</title><circle r="11"${earthquake?' style="fill:#30233c;stroke:#ffe36b"':''}/><text text-anchor="middle" dy=".35em"${earthquake?' style="fill:#fff0a6;font-size:18px"':''}>${symbol}</text></a>`;
     }
     if(!this.element.querySelector('.physical-features')){
       const g=document.createElementNS('http://www.w3.org/2000/svg','g');g.setAttribute('class','physical-features');$('.world',this.element).insertBefore(g,$('.features',this.element));
@@ -337,7 +339,7 @@ export class MapView {
         (x) => temporalState(x.time, this.year) === "possible",
       );
       const population = populationAt(rows, this.year);
-      markers += `<g data-point="${key}" style="opacity:${Math.max(...rows.map((x) => temporalOpacity(x.time, this.year)))}" class="site ${possible ? "possible" : ""} ${rows.some((x) => x.proposalKey) ? "proposal-point" : ""}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><title>${esc(rows.map((x) => x.title + " — " + x.culture.name + " — " + timeLabel(x.time)).join("; "))} — ${esc(population.label)}${possible ? " — uncertain time" : ""}</title><circle class="site-halo" r="${Math.max(13, population.outerRadius + 4)}"/>${population.outerRadius > population.radius ? `<circle class="population-range" r="${population.outerRadius}" style="fill:${r.culture.color}"/>` : ""}<circle class="site-dot" r="${population.radius}" style="--site-color:${r.culture.color}"/>${population.unknown ? `<circle class="population-unknown" r="${population.radius}" fill="url(#population-unknown)"/>` : ""}${this.scale >= 32 ? `<text class="settlement-label" x="${population.outerRadius + 5}" y="4">${esc(r.location!.name)}</text>` : ""}${rows.length > 1 ? `<text class="site-count" x="11" y="-8">${rows.length}</text>` : ""}${rows.some(isDisputed) ? `<text class="site-star asterisk dispute-${rows.some((x) => disputeLevel(x) === "disputed") ? "disputed" : "discussion"}" x="-13" y="-8">*</text>` : ""}</g>`;
+      markers += `<g data-point="${key}" style="opacity:${Math.max(...rows.map((x) => temporalOpacity(x.time, this.year)))}" class="site ${possible ? "possible" : ""} ${rows.some((x) => x.proposalKey) ? "proposal-point" : ""}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><title>${esc(rows.map((x) => x.title + " — " + x.culture.name + " — " + timeLabel(x.time)).join("; "))} — ${esc(population.label)}${possible ? " — uncertain time" : ""}${rows.some(x => guideForRecord(x.id)) ? " — Site guide available" : ""}</title>${rows.some(x => guideForRecord(x.id)) ? `<text class="site-guide-marker" x="-17" y="17" aria-hidden="true">◈</text>` : ""}<circle class="site-halo" r="${Math.max(13, population.outerRadius + 4)}"/>${population.outerRadius > population.radius ? `<circle class="population-range" r="${population.outerRadius}" style="fill:${r.culture.color}"/>` : ""}<circle class="site-dot" r="${population.radius}" style="--site-color:${r.culture.color}"/>${population.unknown ? `<circle class="population-unknown" r="${population.radius}" fill="url(#population-unknown)"/>` : ""}${this.scale >= 32 ? `<text class="settlement-label" x="${population.outerRadius + 5}" y="4">${esc(r.location!.name)}</text>` : ""}${rows.length > 1 ? `<text class="site-count" x="11" y="-8">${rows.length}</text>` : ""}${rows.some(isDisputed) ? `<text class="site-star asterisk dispute-${rows.some((x) => disputeLevel(x) === "disputed") ? "disputed" : "discussion"}" x="-13" y="-8">*</text>` : ""}</g>`;
     }
     $(".features", this.element).innerHTML = overlays + arrows + markers + physicalMarkers;
   }

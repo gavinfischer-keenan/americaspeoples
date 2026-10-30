@@ -1,0 +1,58 @@
+{
+  "version": "0.5.0",
+  "publishedArchaeologicalEvidenceRecords": 962,
+  "existingEvidenceRecordsUnchanged": 962,
+  "siteAndComplexPages": 8,
+  "culturePages": 4,
+  "completeSequentialConsensusDeepReviews": 5,
+  "citedPaperOccurrencesAcrossReviews": 359,
+  "schematicGeographicRoadNetworkMaps": 2,
+  "newSourceFrozenEarthquakeEntries": 1580,
+  "verification": {
+    "unitTests": {
+      "passed": 139,
+      "failed": 0
+    },
+    "pythonApiTests": {
+      "passed": 10,
+      "failed": 0
+    },
+    "earthquakeImporterPythonTests": {
+      "passed": 3,
+      "failed": 0
+    },
+    "standardReleaseStages": {
+      "passed": 18,
+      "failed": 0
+    },
+    "additionalSiteGuideBrowserChecks": true,
+    "liveSiteGuideAndNaturalEventBrowserChecks": true,
+    "liveProductLaunchAndExistingSourceReviews": true,
+    "researchWorkbookRecordsImported": 962,
+    "publicAppAndPriorReportsMatchBuild": true,
+    "localDownloadsSha256Verified": 3,
+    "neighboringHomepagesUnchangedAndHealthy": 12,
+    "sqliteIntegrityVerified": true,
+    "priorHazardsAndIceSnapshotsUnchanged": true,
+    "publicGuidePagesMatchRelease": 12,
+    "originalResearchDocumentsSha256Verified": 5
+  },
+  "deployment": {
+    "host": "NODE01",
+    "container": 101,
+    "staticRelease": "/srv/tripofisch/releases/20261030T052426Z",
+    "apiRelease": "/srv/americaspeoples/releases/20261030T051715Z",
+    "rollbackRelease": "20261030T043041Z",
+    "service": "americas-atlas.service",
+    "observedServiceMemoryBytes": 12427264,
+    "rollbackStaticRelease": "/srv/tripofisch/releases/20261030T051715Z",
+    "rollbackApiRelease": "/srv/americaspeoples/releases/20261030T043041Z"
+  },
+  "limits": [
+    "Research reviews are AI-assisted discovery and synthesis, with original citation markers and access limitations retained; their claims are not silently admitted as new map occupations.",
+    "Page editorial summaries use separately checked official and primary sources; place pages and culture histories remain distinct.",
+    "Both road maps use source-qualified geographic anchors and schematic connections, not surveyed route polylines or a claim of complete synchronous road networks.",
+    "The NOAA significant earthquake catalog is selective. Epicenters do not encode damage footprints or establish impacts on nearby settlements.",
+    "The collection is an initial regional batch; the next complex research queue is explicit. No 3D model is included."
+  ]
+}

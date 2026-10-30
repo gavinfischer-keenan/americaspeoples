@@ -6,6 +6,7 @@ import {
   hazardEvents,
   openHazardDate,
   climateLabels,
+  climateKinds,
 } from "./physical";
 export function mountPhysicalPage(main: HTMLElement, id?: string) {
   main.innerHTML = physicalHTML(id);
@@ -23,7 +24,7 @@ export function mountPhysicalPage(main: HTMLElement, id?: string) {
     .querySelector("article")!
     .insertAdjacentHTML(
       "beforeend",
-      `<section><h3>Catalog browser</h3><p>${hazardEvents.length.toLocaleString()} source-linked catalog / reconstructed annual entries in this edition. These are separate from archaeological evidence counts. Open-ended eruption-date constraints remain accessible here and are not assigned to an invented year.</p><a href="hazard-events.json" download>Download structured catalog extract</a><label>Search event / volcano / year<input id="hazard-search" type="search" aria-label="Search natural hazards"></label><label>Kind<select id="hazard-kind" aria-label="Natural hazard kind"><option value="">All</option>${["el-nino", "la-nina", "volcano", "tsunami"].map((k) => `<option value="${k}">${climateLabels[k]}</option>`).join("")}</select></label><p id="hazard-results-count"></p><div id="hazard-results"></div><button id="hazard-more">Show more</button></section>`,
+      `<section><h3>Catalog browser</h3><p>${hazardEvents.length.toLocaleString()} source-linked catalog / reconstructed annual entries in this edition. These are separate from archaeological evidence counts. Open-ended eruption-date constraints remain accessible here and are not assigned to an invented year.</p><a href="hazard-events.json" download>Download structured catalog extract</a><label>Search event / volcano / year<input id="hazard-search" type="search" aria-label="Search natural hazards"></label><label>Kind<select id="hazard-kind" aria-label="Natural hazard kind"><option value="">All</option>${climateKinds.filter(k=>['el-nino','la-nina','volcano','earthquake','tsunami'].includes(k)).map((k) => `<option value="${k}">${climateLabels[k]}</option>`).join("")}</select></label><p id="hazard-results-count"></p><div id="hazard-results"></div><button id="hazard-more">Show more</button></section>`,
     );
   let limit = 100;
   const render = () => {

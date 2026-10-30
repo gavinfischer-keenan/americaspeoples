@@ -1,5 +1,10 @@
 import type { MapRecord } from "./model";
 import type { HazardEvent } from "./physical-data";
+/** Master visibility is derived, so turning events back on restores the user's
+ * individual selections. Climate reconstructions remain independent. */
+export function effectiveClimateHidden(hidden: ReadonlySet<string>, showNaturalEvents: boolean): Set<string> {
+  return new Set([...hidden, ...(showNaturalEvents ? [] : ['volcano', 'earthquake', 'tsunami'])]);
+}
 // Pure classification: uncertainty is distinct from date presence and from human impact.
 export function openHazardDate(e: HazardEvent) {
   const d = e.detail as Record<string, unknown>;

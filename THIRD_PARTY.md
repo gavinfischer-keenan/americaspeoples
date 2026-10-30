@@ -332,3 +332,7 @@ All data retrieved2026-10-29. Acquisition parameters, hashes, source coverage an
 ## Round8 research provenance(v0.3.8)
 
 Scholarly works are linked by DOI with access limitations in each record; short original paraphrases and bibliographic metadata are supplied, not article figures or full text. User-provided Consensus reports remain in a private archive. The Gemini Argon colonial registry is author-supplied AI-generated material, explicitly labelled in titles, claims, source access notes and the public report. This attribution does not imply verification or endorsement by any model provider. Conflicting population series are excluded. See docs/round8-synthesis.html and docs/colonial-ai-registry.html.
+
+## NOAA/NCEI historical earthquake catalog
+
+The Significant Earthquake Database (DOI 10.7289/V5TD9V7K) is credited in the physical-source catalog. The standalone scripts/fetch-earthquakes.py importer freezes 34 API pages with SHA-256 hashes, preserves original fields, and applies the documented geographic/time selection. The 1,580 selected epicenters are not damage footprints or an exhaustive earthquake chronology. See data/physical-sources/noaa-earthquake-import.json for provenance and limitations.

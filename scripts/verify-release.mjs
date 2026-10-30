@@ -69,6 +69,7 @@ const phases = [
   ],
   ["Smart timeline and keyboard control", node, ["tests/timeline.browser.mjs"]],
   ["Physical layers and source reviews", node, ["tests/physical.browser.mjs"]],
+  ["Site and culture guides, road maps and natural events", node, ["tests/site-guides.browser.mjs"]],
   [
     "Map rendering and interaction contracts",
     node,

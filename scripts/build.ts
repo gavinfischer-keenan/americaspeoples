@@ -17,6 +17,7 @@ import { execFileSync } from 'node:child_process';
 import { validateDataset } from "../src/validation";
 import { marked } from "marked";
 import { createAppendix, renderAppendix } from "./appendix";
+import { buildSiteGuides } from "./site-guide-build";
 const { version } = JSON.parse(await readFile("package.json", "utf8"));
 const d = JSON.parse(await readFile("data/evidence.json", "utf8"));
 const research = JSON.parse(
@@ -138,6 +139,8 @@ for (const [name, content] of Object.entries({
   await writeFile(`dist/${name}`, content);
   names.push(name);
 }
+await buildSiteGuides();
+await includeDirectory("sites");
 const files: Record<string, Uint8Array> = {};
 for (const name of names)
   files[`americas-peoples/web/${name}`] = new Uint8Array(

@@ -8,6 +8,7 @@ export const climateKinds = [
   "la-nina",
   "volcano",
   "tsunami",
+  "earthquake",
 ] as const;
 export const climateLabels: Record<string, string> = {
   drought: "Drought / dry conditions",
@@ -18,6 +19,7 @@ export const climateLabels: Record<string, string> = {
   "la-nina": "La Niña reconstructions",
   volcano: "Volcanic eruptions",
   tsunami: "Tsunami source events",
+  earthquake: "Significant earthquake epicenters",
 };
 export const physicalSources = [
   {
@@ -59,6 +61,20 @@ export const physicalSources = [
       "Includes doubtful and questionable historical reports; those are separately marked. Source-event points are not inundation maps. Catalog completeness varies by region and period. No causal link to abandonment is assumed.",
     license:
       "NOAA/NCEI factual catalog extract, retrieved2026-10-29; cite database and original event references through the linked catalog.",
+  },
+  {
+    id: "noaa-earthquake",
+    title: "NCEI/WDS Global Significant Earthquake Database",
+    authors:
+      "NOAA National Centers for Environmental Information / World Data Service",
+    url: "https://doi.org/10.7289/V5TD9V7K",
+    data: "https://www.ngdc.noaa.gov/hazel/view/hazards/earthquake/search",
+    method:
+      "All 34 API pages frozen and checked against 6,697 unique catalog IDs, then subset by atlas geography and source year<=1934. Original source dates, coordinates, publication status and all available fields retained. Negative historical BCE dates converted to astronomical numbering (1 BCE = year0). No date uncertainty or duration is invented where the catalog supplies none.",
+    limits:
+      "Selective significant-event catalog, not an exhaustive earthquake history. Historical coverage depends on documentary survival and reporting; missing events do not establish absence. Epicenters are approximate source points, not shaking footprints. Source casualty and damage fields are event-level reports, never impacts assigned to atlas settlements. No causal link to abandonment is inferred.",
+    license:
+      "NOAA/NCEI factual catalog extract, retrieved2026-10-29; cite database DOI and original event references. Reproducible standalone importer, raw API pages and SHA-256 checksums retained. No NOAA endorsement implied.",
   },
   {
     id: "gvp",
