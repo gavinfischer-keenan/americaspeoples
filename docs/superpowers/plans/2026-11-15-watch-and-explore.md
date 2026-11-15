@@ -49,4 +49,6 @@
 ### Task 4: Review and release candidate
 - [x] Independent code review against the spec; address actionable findings.
 - [x] Full ordered release verification; browser accessibility/responsive/visual review.
-- [ ] Save UI audit/result screenshots, document changed behavior and limits, and create a reviewable PR.
+- [x] Save UI audit/result screenshots, document changed behavior and limits, and create a reviewable PR.
+
+Completed as PR #4: https://github.com/gavinfischer-keenan/americaspeoples/pull/4. The 24-phase release suite and final affected checks passed; v0.7.1 remains the production release.
