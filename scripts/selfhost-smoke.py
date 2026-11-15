@@ -3,9 +3,10 @@ from pathlib import Path
 import json,subprocess,sys,urllib.request,uuid,zipfile
 root=Path(__file__).resolve().parent.parent
 version=json.loads((root/'package.json').read_text())['version']
-out=root/'test-results'/('selfhost-'+str(uuid.uuid4()))
+# Keep the extracted bundle below Windows' legacy path-length limit.
+out=root.parent/('verify-'+uuid.uuid4().hex[:8])
 out.mkdir(parents=True)
-assert out.resolve().is_relative_to((root/'test-results').resolve())
+assert out.resolve().is_relative_to(root.parent.resolve())
 with zipfile.ZipFile(root/f'release/americas-peoples-v{version}-selfhost.zip') as z:
  for name in z.namelist():assert (out/name).resolve().is_relative_to(out.resolve())
  z.extractall(out)

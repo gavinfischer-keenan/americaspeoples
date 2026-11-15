@@ -30,10 +30,16 @@ try {
  const slider=await page.locator('#time-slider').boundingBox();await page.mouse.click(slider.x+slider.width*.65,slider.y+slider.height/2);
  const pointerYear=await page.locator('#current-year').innerText();assert.notEqual(pointerYear,'1,010 CE');
  await page.getByRole('button',{name:'Play',exact:true}).click();await page.waitForTimeout(1100);await page.getByRole('button',{name:'Pause',exact:true}).click();assert.notEqual(await page.locator('#current-year').innerText(),pointerYear);
- for(const width of [1440,1100,768,390]) {
+ for(const width of [1440,1100,768,390,304]) {
    await page.setViewportSize({width,height:1000});
-   const rects=await page.locator('.timeline').evaluate(el=>{const box=el.getBoundingClientRect();return [...el.querySelectorAll('select,input,button,#time-ticks,.range-labels')].filter(x=>x.getBoundingClientRect().width>0).map(x=>{const b=x.getBoundingClientRect();return {name:x.id||x.textContent,x:b.x,y:b.y,right:b.right,bottom:b.bottom,container:box.toJSON()};});});
+   const rects=await page.locator('.timeline').evaluate(el=>{const box=el.getBoundingClientRect();return [...el.querySelectorAll('select,input,button,#time-ticks,.range-labels')].filter(x=>x.getBoundingClientRect().width>0&&!x.closest(".era-shortcuts")).map(x=>{const b=x.getBoundingClientRect();return {name:x.id||x.textContent,x:b.x,y:b.y,right:b.right,bottom:b.bottom,container:box.toJSON()};});});
    for(const r of rects)assert.ok(r.x>=-1&&r.right<=width+1&&r.y>=r.container.y-1&&r.bottom<=r.container.bottom+1,`timeline controls fit at${width}: ${JSON.stringify(r)}`);
+   // Chapter shortcuts intentionally scroll horizontally; verify the target can be revealed.
+   await page.locator('#previous-change').focus();
+   await page.keyboard.press('Tab');
+   await page.locator('#next-change').scrollIntoViewIfNeeded();
+   const chapter=await page.locator('#next-change').boundingBox();
+   assert.ok(chapter.x>=-1&&chapter.x+chapter.width<=width+1,`chapter control can be revealed at ${width}: ${JSON.stringify(chapter)}`);
    await page.screenshot({path:`test-results/timeline-${width}.png`,fullPage:false});
  }
  assert.deepEqual(errors,[]);console.log('PASS: Smart/log defaults, scale change retains year, BCE/CE keyboard, local windows, pointer drag, playback, responsive timeline.');

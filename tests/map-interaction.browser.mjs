@@ -144,7 +144,7 @@ try {
     configure("explore", false);
     map.update([record, overlay], 1900, [context]);
   });
-  for (const selector of ["[data-point]", "[data-overlay]"])
+  for (const [selector,expectedOpacity] of [["[data-point]",0.48],["[data-overlay]",0]])
     assert.equal(
       await page
         .locator(selector)
@@ -187,14 +187,15 @@ try {
     configure("movie", false);
     map.update([record, overlay], 1900, []);
   });
-  for (const selector of ["[data-point]", "[data-overlay]"])
+  for (const [selector,expectedOpacity] of [["[data-point]",0.48],["[data-overlay]",0]])
     assert.equal(
       await page
         .locator(selector)
         .first()
         .evaluate((el) => Number(el.style.opacity)),
-      0,
+      expectedOpacity,
     );
+  assert.ok(await page.locator('[data-point]').evaluate(el=>el.classList.contains('past-place')));
   // Catalog-only hover: title/summary/date are shown as literal text with no route/hash/selection change.
   await page.evaluate(() => {
     reset();

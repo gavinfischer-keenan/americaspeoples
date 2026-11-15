@@ -41,6 +41,7 @@ import {
   iceLoadState,
 } from "./physical";
 import { filterMapRecords } from "./map-filters";
+import { HISTORY_LABELS, historyDates } from "./history";
 import { esc, $, downloadJSON } from "./dom";
 import { reviewHTML, recordHref, comparisonHTML } from "./review";
 import { mountEditor, newProposal } from "./editor";
@@ -60,7 +61,7 @@ import { OVERLAY_LABELS } from "./overlays";
 import { contextHTML } from "./context";
 
 const minYear = earliestYear(dataset.records);
-let year = minYear,
+let year = 1200,
   playing = false,
   speed: number | "smart" = "smart",
   lastTick = 0,
@@ -82,6 +83,9 @@ let selected: DisplayRecord[] = [];
 let atlasMode: AtlasMode = "movie";
 let panels: MapPanels | null = null;
 let currentActive: DisplayRecord[] = [];
+let currentVisible: DisplayRecord[] = [];
+const hiddenHistory = new Set<string>();
+let showPastPlaces = true;
 let tableController: EvidenceTable | undefined;
 const tableState: EvidenceTableState = {
   search: "",
@@ -103,7 +107,7 @@ let iceScenario = "optimal";
 const hiddenClimate = new Set<string>();
 const mapRows = () =>
   filterMapRecords(rows(), hiddenLayers, showModeled).filter(
-    (r) => !hiddenClimate.has(climateCategory(r) ?? ""),
+    (r) => !hiddenClimate.has(climateCategory(r) ?? "") && (!r.history || !hiddenHistory.has(r.history.kind)),
   );
 const storeKey = "americas-peoples-proposals-v1";
 try {
@@ -131,11 +135,12 @@ function playbackIndex() {
     [...hiddenCultures].sort().join(","),
     [...hiddenLayers].sort().join(","),
     [...hiddenClimate].sort().join(","),
+    [...hiddenHistory].sort().join(","),
   ].join("|");
   if (key !== playbackKey) {
     playbackKey = key;
     playback = new PlaybackIndex([
-      ...mapRows(),
+      ...mapRows().flatMap(r=>r.history?.windows?.map(w=>({...r,time:{...r.time,start:w.start,end:w.end,certainStart:undefined,certainEnd:undefined}}))??[r]),
       ...hazardTimes(currentClimateHidden(), showUncertainHazards),
     ]);
   }
@@ -148,7 +153,8 @@ const map = new MapView(
   land,
   (items) => {
     if (!canSelect(atlasMode, playing)) { stop(); return; }
-    selected = retainCurrentSelection(items, currentActive, atlasMode);
+    selected = retainCurrentSelection(items, currentVisible, atlasMode);
+    if(selected.length)openDetails();
     renderVisible();
   },
   () => renderVisible(),
@@ -275,6 +281,11 @@ $("#play").addEventListener("click", () => {
   $("#play").setAttribute("aria-label", "Pause");
 });
 $("#restart").addEventListener("click", () => setYear(minYear));
+$('.timeline').insertAdjacentHTML('afterbegin', `<div class="era-shortcuts" aria-label="Timeline chapters"><span>Jump to</span><button data-era-year="-13999">Peopling the Americas</button><button data-era-year="-799">Lapita Pacific</button><button data-era-year="1250">Polynesian voyaging</button><button data-era-year="1600">Colonial connections</button><button data-era-year="1715">Treasure fleets</button><span class="change-controls"><button id="previous-change" aria-label="Previous historical change">← Previous change</button><button id="next-change" aria-label="Next historical change">Next change →</button></span></div>`);
+document.querySelectorAll<HTMLButtonElement>('[data-era-year]').forEach(button=>button.addEventListener('click',()=>{setYear(Number(button.dataset.eraYear));map.setScope(Number(button.dataset.eraYear)===1715?'atlantic':'pacific');if(atlasMode!=='movie')location.hash='#movie';}));
+for(const [id,forward] of [['next-change',true],['previous-change',false]] as const)$('#'+id).addEventListener('click',()=>{
+  const dates=historyDates(mapRows());const next=forward?dates.find(d=>d>year):dates.reverse().find(d=>d<year);if(next!==undefined)setYear(next);
+});
 $("#speed").addEventListener("change", () => {
   const value = $<HTMLSelectElement>("#speed").value;
   speed = value === "smart" ? "smart" : Number(value);
@@ -343,7 +354,7 @@ function mapPage() {
   const languageLinks = atlasMode === "explore" && languageModels.length
     ? `<section aria-labelledby="language-relationships-heading"><h4 id="language-relationships-heading">Language relationships</h4><p class="fine">All published language models, independent of the selected year. Models without dates remain outside the dated map.</p><ul>${languageModels.map((r) => `<li><a href="${esc(recordHref(r))}">${esc(r.title)}</a><br><small>${r.time.kind === "unplaced" ? "Chronology unresolved" : esc(timeLabel(r.time))}</small></li>`).join("")}</ul></section>`
     : "";
-  main.innerHTML = `<div class="atlas-toolbar" aria-label="Map panels"><button id="toggle-sites" aria-controls="site-panel" aria-expanded="true">Hide site list</button><button id="toggle-details" aria-controls="detail-panel" aria-expanded="true">Hide details</button></div><div class="map-layout atlas-layout"><aside id="site-panel" class="site-panel" aria-label="Visible site list"><div class="visible-heading"><h3 id="visible-heading">${atlasMode === "movie" ? "Current evidence" : "Explore evidence · all periods"}</h3><span id="visible-count"></span></div><p class="panel-hint">${atlasMode === "movie" ? "Only evidence at the movie year. While playing, hover for a summary; click to pause before selecting." : "All periods inside the current map view. Select a place, area or question mark to inspect its dates and sources."}</p><details class="culture-disclosure"><summary>Cultures &amp; map information</summary><div class="map-sidebar"><div class="eyebrow">ASIA-PACIFIC &amp; AMERICAS / ${dataset.records.length} EVIDENCE RECORDS</div><h2>Places hold<br>the evidence.</h2><p class="intro">Explore a changing record of human presence, one source at a time.</p><div class="scope-note">${esc(dataset.coverage)}</div><div class="legend-head"><h3>Cultures & peoples</h3><button id="show-all" class="text-button">Show all</button></div><input id="legend-search" type="search" placeholder="Find a culture or people…" aria-label="Search cultures" value="${esc(legendSearch)}"><div id="legend"></div><div class="map-key"><span>→ Directed movement · ↔ Two-way exchange · ⤧ Four-headed arrow: multiple directions, not four literal routes</span><span><i class="key-dot"></i> Documented interval / dated event</span><span>${atlasMode === "explore" ? "Explore marker size is a constant reference; inspect dated population estimates." : "Population dots: 1–500 · 501–2,500 · 2,501–10,000 · 10,001–50,000 · 50,001+"}</span><span><b>◩</b> Movie only: striped smallest dot = unknown population; display size only</span><span>Movie only: outer population halo = upper estimate; estimates are never added together</span><span><i class="key-ring"></i> Possible time / broadly dated occurrence</span><span><b>☁</b> Broad regional / genomic / environment / language evidence</span><span>Movie fading = illustrative temporal support, not probability</span><span><b class="asterisk dispute-discussion">*</b> Under discussion (lighter)</span><span><b class="asterisk dispute-disputed">*</b> Explicitly disputed (stronger)</span><span><i class="key-dash"></i> Unreviewed suggestion (opt-in)</span></div><label class="check"><input id="preview" type="checkbox" ${preview ? "checked" : ""}> Preview complete suggestions</label><p class="fine">A dot ending means the displayed evidence ends. It does not establish abandonment or a population's fate.</p></div></details><div id="visible-records"></div><section class="context-list"><h3>Chronology context <span id="context-count"></span></h3><p class="fine">Gray ? symbols are geographically associated records whose event dates remain unresolved. They are independent of the selected year and do not establish human presence at that year. Empty map space is not evidence of absence.</p><div id="context-records"></div></section></aside><section class="map-stage" aria-label="Map and active evidence"><div class="map-topline"><span id="active-count"></span><span>Pan · Scroll to zoom</span></div><div id="map-host"></div></section><aside id="detail-panel" class="detail-panel" aria-label="Selected evidence details"><div class="visible-heading"><h3>Selected evidence</h3><button id="clear-selection" class="text-button">Clear selection</button></div><div id="selected-records"></div></aside><aside class="layers-panel" aria-label="Map layers"><button id="toggle-layers" aria-expanded="false" aria-controls="layer-options">Show layers</button><div id="layer-options" hidden><section><h3>Chronology context</h3><label class="check"><input id="show-undated" type="checkbox" ${showUndated ? "checked" : ""}> Show unresolved chronology</label><a href="docs/coverage-audit.html" target="_blank">Coverage &amp; collection gaps ↗</a></section><section><h3>Climate &amp; natural hazards</h3><label class="check"><input id="show-natural-events" type="checkbox" ${showNaturalEvents ? "checked" : ""}> Natural events · eruptions, earthquakes &amp; tsunamis</label><p class="fine">Events appear at their source dates. Symbols locate catalog events, not damage footprints or demonstrated settlement impacts.</p><label class="check"><input id="show-ice" type="checkbox" ${showIce ? "checked" : ""}> North American ice sheets</label><label>Ice boundary scenario<select id="ice-scenario" aria-label="Ice boundary scenario">${["optimal", "min", "max"].map((x) => `<option value="${x}" ${iceScenario === x ? "selected" : ""}>${x.toUpperCase()}</option>`).join("")}</select></label><p id="ice-status" class="fine"></p>${climateKinds.map((k) => `<label class="check"><input data-climate="${k}" type="checkbox" ${hiddenClimate.has(k) ? "" : "checked"}> ${climateLabels[k]}</label>`).join("")}<label class="check"><input id="uncertain-hazards" type="checkbox" ${showUncertainHazards ? "checked" : ""}> Include uncertain / discredited reports</label><p class="fine">Dashed hazard symbols = uncertain/questionable catalog reports. No symbol at a year means no included matching report, not hazard absence.</p><div id="hazard-status"></div><a href="#physical">Sources, methods &amp; limits</a></section><section><h3>Ocean &amp; sailing</h3><label class="check"><input id="show-currents" type="checkbox" ${showCurrents ? "checked" : ""}> Usual surface currents</label><label class="check"><input id="show-winds" type="checkbox" ${showWinds ? "checked" : ""}> Usual trade winds</label><p class="fine">Modern schematic reference, independent of selected year. Warm currents: coral; cold currents: blue; wind: gold dashed arrows. ENSO can disrupt these patterns. The ENSO layer flags reconstructed event years, without assigning unsupported local impacts. Open-water / ancient coastlines are not yet reconstructed.</p></section><label class="check"><input id="show-modeled" type="checkbox" ${showModeled ? "checked" : ""}> Show modeled evidence</label><p class="fine">Includes schematic overlays and records whose dating method explicitly names a model or simulation. Scholarly disagreement alone does not make a record modeled.</p><div class="overlay-controls"><h3>Overlays</h3><p>Language layers use record dates and sourced reconstructions; distributions and relationships are approximate. Descent, borrowing and contact are distinct from culture or genetic ancestry.</p>${Object.entries(
+  main.innerHTML = `<div class="atlas-toolbar" aria-label="Map panels"><button id="toggle-sites" aria-controls="site-panel" aria-expanded="true">Hide site list</button><button id="toggle-details" aria-controls="detail-panel" aria-expanded="false">Show details</button><div class="history-switches">${Object.entries(HISTORY_LABELS).map(([key,label])=>`<label><input type="checkbox" data-history-layer="${key}" ${hiddenHistory.has(key)?"":"checked"}> ${label}</label>`).join("")}</div><label class="history-memory"><input id="show-past-places" type="checkbox" ${showPastPlaces?"checked":""}> Earlier places</label></div><div class="map-layout atlas-layout detail-panel-hidden"><aside id="site-panel" class="site-panel" aria-label="Visible site list"><div class="visible-heading"><h3 id="visible-heading">${atlasMode === "movie" ? "Places & connections" : "Explore evidence · all periods"}</h3><span id="visible-count"></span></div><p class="panel-hint">${atlasMode === "movie" ? "Evidence at this year, with founded settlements, accumulated losses and earlier places. Select any record for its meaning and sources." : "All periods inside the current map view. Select a place, area or question mark to inspect its dates and sources."}</p><details class="culture-disclosure"><summary>Cultures &amp; map information</summary><div class="map-sidebar"><div class="eyebrow">ASIA-PACIFIC &amp; AMERICAS / ${dataset.records.length} EVIDENCE RECORDS</div><h2>Places hold<br>the evidence.</h2><p class="intro">Explore a changing record of human presence, one source at a time.</p><div class="scope-note">${esc(dataset.coverage)}</div><div class="legend-head"><h3>Cultures & peoples</h3><button id="show-all" class="text-button">Show all</button></div><input id="legend-search" type="search" placeholder="Find a culture or people…" aria-label="Search cultures" value="${esc(legendSearch)}"><div id="legend"></div><div class="map-key"><span>→ Directed movement · ↔ Two-way exchange · ⤧ Four-headed arrow: multiple directions, not four literal routes</span><span><i class="key-dot"></i> Documented interval / dated event</span><span>${atlasMode === "explore" ? "Explore marker size is a constant reference; inspect dated population estimates." : "Population dots: 1–500 · 501–2,500 · 2,501–10,000 · 10,001–50,000 · 50,001+"}</span><span><b>◩</b> Movie only: striped smallest dot = unknown population; display size only</span><span>Movie only: outer population halo = upper estimate; estimates are never added together</span><span><i class="key-ring"></i> Possible time / broadly dated occurrence</span><span><b>☁</b> Broad regional / genomic / environment / language evidence</span><span>Movie fading = illustrative temporal support, not probability</span><span><b class="asterisk dispute-discussion">*</b> Under discussion (lighter)</span><span><b class="asterisk dispute-disputed">*</b> Explicitly disputed (stronger)</span><span><i class="key-dash"></i> Unreviewed suggestion (opt-in)</span></div><label class="check"><input id="preview" type="checkbox" ${preview ? "checked" : ""}> Preview complete suggestions</label><p class="fine">A dot ending means the displayed evidence ends. It does not establish abandonment or a population's fate.</p></div></details><div id="visible-records"></div><section class="context-list"><h3>Chronology context <span id="context-count"></span></h3><p class="fine">Gray ? symbols are geographically associated records whose event dates remain unresolved. They are independent of the selected year and do not establish human presence at that year. Empty map space is not evidence of absence.</p><div id="context-records"></div></section></aside><section class="map-stage" aria-label="Map and active evidence"><div class="map-topline"><span id="active-count"></span><span>Pan · Scroll to zoom</span></div><div id="map-host"></div><div id="history-summary" class="history-summary" aria-label="History at this year"></div><div class="history-map-key"><span class="key-settlement">◆ Founded settlement</span><span class="key-migration">→ Migration window</span><span class="key-exchange">↔ Exchange window</span><span class="key-wreck">⚓ Historical loss</span><span>◌ Earlier place · later occupation unknown</span></div></section><aside id="detail-panel" hidden class="detail-panel" aria-label="Selected evidence details"><div class="visible-heading"><h3>Selected evidence</h3><button id="clear-selection" class="text-button">Clear selection</button></div><div id="selected-records"></div></aside><aside class="layers-panel" aria-label="Map layers"><button id="toggle-layers" aria-expanded="false" aria-controls="layer-options">Show layers</button><div id="layer-options" hidden><section><h3>Chronology context</h3><a href="docs/history-update.html" target="_blank">History layers &amp; source limits ↗</a><label class="check"><input id="show-undated" type="checkbox" ${showUndated ? "checked" : ""}> Show unresolved chronology</label><a href="docs/coverage-audit.html" target="_blank">Coverage &amp; collection gaps ↗</a></section><section><h3>Climate &amp; natural hazards</h3><label class="check"><input id="show-natural-events" type="checkbox" ${showNaturalEvents ? "checked" : ""}> Natural events · eruptions, earthquakes &amp; tsunamis</label><p class="fine">Events appear at their source dates. Symbols locate catalog events, not damage footprints or demonstrated settlement impacts.</p><label class="check"><input id="show-ice" type="checkbox" ${showIce ? "checked" : ""}> North American ice sheets</label><label>Ice boundary scenario<select id="ice-scenario" aria-label="Ice boundary scenario">${["optimal", "min", "max"].map((x) => `<option value="${x}" ${iceScenario === x ? "selected" : ""}>${x.toUpperCase()}</option>`).join("")}</select></label><p id="ice-status" class="fine"></p>${climateKinds.map((k) => `<label class="check"><input data-climate="${k}" type="checkbox" ${hiddenClimate.has(k) ? "" : "checked"}> ${climateLabels[k]}</label>`).join("")}<label class="check"><input id="uncertain-hazards" type="checkbox" ${showUncertainHazards ? "checked" : ""}> Include uncertain / discredited reports</label><p class="fine">Dashed hazard symbols = uncertain/questionable catalog reports. No symbol at a year means no included matching report, not hazard absence.</p><div id="hazard-status"></div><a href="#physical">Sources, methods &amp; limits</a></section><section><h3>Ocean &amp; sailing</h3><label class="check"><input id="show-currents" type="checkbox" ${showCurrents ? "checked" : ""}> Usual surface currents</label><label class="check"><input id="show-winds" type="checkbox" ${showWinds ? "checked" : ""}> Usual trade winds</label><p class="fine">Modern schematic reference, independent of selected year. Warm currents: coral; cold currents: blue; wind: gold dashed arrows. ENSO can disrupt these patterns. The ENSO layer flags reconstructed event years, without assigning unsupported local impacts. Open-water / ancient coastlines are not yet reconstructed.</p></section><label class="check"><input id="show-modeled" type="checkbox" ${showModeled ? "checked" : ""}> Show modeled evidence</label><p class="fine">Includes schematic overlays and records whose dating method explicitly names a model or simulation. Scholarly disagreement alone does not make a record modeled.</p><div class="overlay-controls"><h3>Overlays</h3><p>Language layers use record dates and sourced reconstructions; distributions and relationships are approximate. Descent, borrowing and contact are distinct from culture or genetic ancestry.</p>${Object.entries(
     OVERLAY_LABELS,
   )
     .map(
@@ -353,6 +364,11 @@ function mapPage() {
     .join(
       "",
     )}<p class="fine">Teal diamond: trade. Coral cross: conflict. Red crossed square: violence. Purple ring: epidemic. Amber square or arrow: forced removal. Dashed lines connect sourced endpoints; they do not reconstruct a route. Symbols do not encode death tolls.</p>${languageLinks}</div></div></aside></div>`;
+  main.querySelectorAll<HTMLInputElement>('[data-history-layer]').forEach(input=>input.addEventListener('change',()=>{
+    if(input.checked)hiddenHistory.delete(input.dataset.historyLayer!);else hiddenHistory.add(input.dataset.historyLayer!);
+    renderMapData();
+  }));
+  $('#show-past-places').addEventListener('change',e=>{showPastPlaces=(e.target as HTMLInputElement).checked;renderMapData();});
   $("#show-undated").closest("section")!.hidden = atlasMode === "movie";
   $(".context-list").hidden = atlasMode === "movie";
   $("#show-currents").closest("section")!.hidden = atlasMode === "movie";
@@ -363,7 +379,8 @@ function mapPage() {
   $("#map-host").append(map.element);
   panels = new MapPanels(main, (items) => {
     if (!canSelect(atlasMode, playing)) { stop(); return; }
-    selected = retainCurrentSelection(items, currentActive, atlasMode);
+    selected = retainCurrentSelection(items, currentVisible, atlasMode);
+    if(selected.length)openDetails();
     renderVisible();
   });
   for (const [button, panel, noun] of [
@@ -469,11 +486,13 @@ function renderMapData() {
   const view = recordsForView(mapRows(), atlasMode, year);
   const active = view.dated;
   currentActive = active;
-  selected = retainCurrentSelection(selected, active, atlasMode);
+  const historical=view.history.filter(r=>r.history?.kind==='wreck'||r.history?.kind==='settlement'||showPastPlaces);
+  currentVisible=[...active,...historical];
+  selected = retainCurrentSelection(selected, currentVisible, atlasMode);
   document.body.classList.toggle("movie-playing", atlasMode === "movie" && playing);
   map.setInteraction({mode: atlasMode, playing, onPause: stop});
   map.update(
-    active,
+    currentVisible,
     year,
     showUndated ? view.context : [],
     {
@@ -510,7 +529,19 @@ function renderMapData() {
         : '<p class="fine">No included catalog / ENSO events at this year. ENSO reconstruction covers1525–1934CE only; earlier ENSO evidence requires other sources.</p>';
   $("#active-count").textContent =
     `${active.filter((r) => (r.overlay ? r.overlay.geometry : r.location)).length} mapped records at this time`;
+  const summary=$('#history-summary');
+  summary.hidden=atlasMode==='explore';
+  const count=(kind:string)=>currentVisible.filter(r=>r.history?.kind===kind).length;
+  const possibleFoundations=currentVisible.filter(r=>r.history?.kind==='settlement'&&year<r.time.end!).length;
+  summary.innerHTML=`<span><b>${count('settlement')-possibleFoundations}</b> established places${possibleFoundations?` + ${possibleFoundations} possible`:''}</span><span><b>${active.filter(r=>r.history?.windows).length}</b> active connections</span><span><b>${count('wreck')}</b> recorded losses</span><small>Selected collection · not population totals</small>`;
   renderVisible();
+}
+function openDetails(){
+  if(!mountedMap)return;
+  $('#detail-panel').hidden=false;
+  $('.atlas-layout').classList.remove('detail-panel-hidden');
+  $('#toggle-details').setAttribute('aria-expanded','true');
+  $('#toggle-details').textContent='Hide details';
 }
 function renderVisible() {
   if (!mountedMap || !panels) return;

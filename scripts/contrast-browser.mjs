@@ -15,6 +15,7 @@ try {
   });
   await page.goto(`http://127.0.0.1:${server.address().port}`);
   await page.getByLabel("Year number", { exact: true }).fill("17000");
+  await page.getByLabel("Era", { exact: true }).selectOption("BCE");
   await page.getByRole("button", { name: "Go to year", exact: true }).click();
   const audit = await page.evaluate(() =>
     [...document.querySelectorAll(".cloud-core")].map((e) => ({

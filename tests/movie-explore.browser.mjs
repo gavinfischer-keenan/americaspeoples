@@ -13,8 +13,11 @@ try {
  await page.goto(origin);await page.locator('#time-slider').waitFor();assert.equal(await page.getByRole('link',{name:'Movie',exact:true}).count(),1);
  await jump(1200);assert.equal(await page.locator('.undated-context').count(),0);assert.ok(await page.locator('.context-list').isHidden());
  const movie=await ids();assert.ok(movie.length>0);
- for(const id of movie){const t=byId.get(id).time;assert.ok(t.start!==null&&t.start<=1200&&t.end>=1200,id);}
- const stale=movie.find(id=>byId.get(id).time.end<1500);assert.ok(stale);
+ const current=await page.locator('#visible-records button[data-temporal-status="current"]').evaluateAll(nodes=>nodes.map(n=>JSON.parse(n.dataset.mapRecordKey)[0]));
+ for(const id of current){const r=byId.get(id),t=r.time;assert.ok(t.start!==null&&t.start<=1200&&t.end>=1200,id);if(r.history?.windows)assert.ok(r.history.windows.some(w=>w.start<=1200&&w.end>=1200));}
+ const historical=movie.filter(id=>!current.includes(id));assert.ok(historical.length>0);
+ for(const id of historical){const r=byId.get(id);assert.ok(r.time.end<1200&&(r.type==='occupation'||['settlement','wreck'].includes(r.history?.kind)),id);}
+ const stale=movie.find(id=>{const r=byId.get(id);return r.time.end<1500&&r.type!=='occupation'&&!r.history;});assert.ok(stale);
  await page.locator('#visible-records button').nth(movie.indexOf(stale)).click();assert.equal(await page.locator('#selected-records article').count(),1);
  await jump(1877);assert.equal(await page.locator('#selected-records article').count(),0);
  await jump(1200);await page.getByRole('button',{name:'Play',exact:true}).click();assert.ok(await page.locator('body').evaluate(n=>n.classList.contains('movie-playing')));
