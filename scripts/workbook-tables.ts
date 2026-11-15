@@ -68,6 +68,7 @@ for (const r of dataset.records) {
     record_type: r.type,
     time_model: r.time.kind,
     approximate: r.time.approximate ?? false,
+    event_date: r.time.eventDate ?? '',
     culture_id: r.culture.id,
     culture_kind: r.culture.kind,
     culture_color: r.culture.color,

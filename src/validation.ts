@@ -5,6 +5,7 @@ import type { Dataset, EvidenceRecord } from "./model";
 import { validateCitation } from "./citations";
 import { END_YEAR } from "./time";
 import { validateHistory } from "./history";
+import {dateValue} from './voyages';
 export function safeURL(value: unknown): boolean {
   if (typeof value !== "string") return false;
   try {
@@ -93,6 +94,10 @@ export function validateRecord(value: unknown, complete = true): string[] {
       add("Original dating, method and interpretation are required.");
     if (t.approximate !== undefined && typeof t.approximate !== "boolean")
       add("Approximate flag must be boolean.");
+    if(t.eventDate!==undefined){
+      const value=typeof t.eventDate==='string'?dateValue(t.eventDate):NaN;
+      if(!Number.isFinite(value)||t.kind==='unplaced'||t.start===null||t.end===null||Math.floor(value)<t.start||Math.floor(value)>t.end)add('Calendar event date must be a valid YYYY-MM-DD inside the dated years.');
+    }
     if (t.kind === "unplaced") {
       if (t.start !== null || t.end !== null)
         add("Unplaced records must have null dates.");

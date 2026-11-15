@@ -73,6 +73,7 @@ const phases = [
   ["Site and culture guides, road maps and natural events", node, ["tests/site-guides.browser.mjs"]],
   ["Dated geography, journeys, local selection and mobile", node, ["tests/expansion.browser.mjs"]],
   ["Guided stories, discovery and responsive UI", node, ["tests/watch-explore.browser.mjs"]],
+  ["Shared world movie, scoped expeditions and local terrain", node, ["tests/shared-movie.browser.mjs"]],
   ["Map picking, camera, touch and label usability", node, ["tests/map-ux.browser.mjs"]],
   ["Movie and Explore separation", node, ["tests/movie-explore.browser.mjs"]],
   ["Map playback interaction and hover", node, ["tests/map-interaction.browser.mjs"]],

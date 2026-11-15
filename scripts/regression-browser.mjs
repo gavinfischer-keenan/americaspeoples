@@ -26,10 +26,10 @@ const check = async (name, fn) => {
 try {
   await mkdir("test-results", { recursive: true });
   await page.goto(url + "#map");
-  await page.locator(".map-canvas svg").waitFor();
+  await page.locator(".map-canvas > svg").waitFor();
   await freeTimeline();
   await check("the full map viewport fits above the timeline", async () => {
-    const svg = await page.locator(".map-canvas svg").boundingBox();
+    const svg = await page.locator(".map-canvas > svg").boundingBox();
     const stage = await page.locator(".map-stage").boundingBox();
     assert.ok(
       svg.height <= stage.height,
@@ -53,7 +53,7 @@ try {
     await page.getByLabel("Era", { exact: true }).selectOption("CE");
     await page.getByRole("button", { name: "Go to year", exact: true }).click();
     await page.locator("#time-settings-toggle").click();
-    const svg = page.locator(".map-canvas svg");
+    const svg = page.locator(".map-canvas > svg");
     const rect = await svg.boundingBox();
     await page.mouse.move(rect.x + 200, rect.y + 200);
     await page.mouse.down();

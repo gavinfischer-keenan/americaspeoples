@@ -1,5 +1,17 @@
 # Third party notices
 
+## Self-hosted topographic relief
+
+`data/terrain/natural-earth-relief.webp` is derived from Natural Earth II, 1:50m shaded relief (10800 × 5400). Source: https://www.naturalearthdata.com/downloads/50m-raster-data/50m-natural-earth-2/ and https://naciscdn.org/naturalearth/50m/raster/NE2_50M_SR.zip. Natural Earth material is public domain: https://www.naturalearthdata.com/about/terms-of-use/.
+
+The Hawaiian Islands, Four Corners, Chaco, Mesa Verde and Hovenweep rasters are derived from the USGS National Map 3DEP elevation service, using its Hillshade Gray rendering: https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer. USGS-produced elevation material is public domain. Exact requests, extents, image sizes and hashes are recorded in `data/terrain/sources.json`; `scripts/prepare-terrain.py` reproduces the assets with Pillow. These are modern terrain references, not ancient shorelines, vegetation or historical reconstructions. No visitor requests go to an outside map/tile service.
+
+These public-domain assets remain public domain; the atlas's noncommercial licenses do not restrict their independent reuse.
+
+## Archaeological place references
+
+The 0.10 additions use factual coordinates from NPS NPMap public archaeological point features, USGS GNIS, official INAH site metadata, Georgia DNR and UNESCO property reference coordinates. Each record states the source and distinguishes a building/site locator from a regional or visitor reference. No third-party photographs, floor plans, reconstructed building meshes or descriptive essays have been copied into these additions. Original summaries and curation follow the atlas content license; underlying facts remain unrestricted. UNESCO's descriptions have their own CC BY-SA IGO 3.0 terms and are linked, not republished as atlas prose.
+
 ## Natural Earth land geometry
 
 Public domain generalized land geometry from https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_land.geojson, retrieved 2026-10-28. Terms: https://www.naturalearthdata.com/about/terms-of-use/. Modern reference coastlines only. Original file is stored in data/land.geojson; dependency/network access is unnecessary at runtime.

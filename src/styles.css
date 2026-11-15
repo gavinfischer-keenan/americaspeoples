@@ -421,13 +421,13 @@ main:focus {
   min-height: 550px;
   position: relative;
 }
-.map-canvas svg {
+.map-canvas > svg {
   width: 100%;
   height: 100%;
   touch-action: none;
   cursor: grab;
 }
-.map-canvas svg:active {
+.map-canvas > svg:active {
   cursor: grabbing;
 }
 .land {

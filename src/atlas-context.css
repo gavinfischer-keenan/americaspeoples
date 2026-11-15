@@ -1,4 +1,10 @@
 .historical-context,.historical-context *,.journey-context,.journey-context *{pointer-events:none}
+.whole-movie-button{width:100%;margin-top:12px;font-size:11px;background:#dce7df;color:#21595b;border-color:#a6beb5}
+.whole-intro h2{font-size:28px}.whole-intro>p{font-size:13px;line-height:1.65}.movie-starts{display:flex;flex-wrap:wrap;gap:6px}.movie-starts button{font-size:11px;min-height:32px;color:#24595b;background:#e1e9df;border-color:#b4c7bb}
+.concurrent-context{padding:16px 24px;border-top:1px solid #c8d4c8;color:#284d4e}.context-kicker{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:11px}.context-explainer{font-size:12px;line-height:1.5}.concurrent-records{display:grid;gap:8px}.concurrent-records a{display:block;border:1px solid #c0d0c3;background:#e5ebdf;padding:10px 12px;border-radius:8px;text-decoration:none}.concurrent-records small{display:block;font-size:9px;line-height:1.5;color:#54736b}.concurrent-records strong{font-size:12px;line-height:1.5;display:block;margin-top:3px}.concurrent-context>.fine{font-size:10px;line-height:1.5}
+.voyage-tracks>path.selected-voyage{stroke:#ffda7d;stroke-width:2.5}.selected-traveler circle{stroke:#ffe398;stroke-width:3}
+.focus-view.whole-movie #cinema-caption{display:block;position:absolute;left:18px;bottom:104px;padding:12px 16px;background:#f2eee4ed;color:#264647;border-radius:10px;max-width:330px;pointer-events:none}.focus-view.whole-movie #cinema-caption h3{font-size:22px}.focus-view.whole-movie #cinema-caption p{font-size:11px;margin:0}
+@media(max-width:700px){.story-intro>.whole-movie-button{flex:0 0 100%;margin:0;min-height:26px;font-size:10px}.concurrent-context{padding:12px 16px}.whole-intro h2{font-size:22px}.context-date-status{font-size:9px!important;top:38px!important;max-width:calc(100% - 170px)!important}.focus-view.whole-movie #cinema-caption{display:none}}
 .political-boundaries path{fill:none;stroke:#e4bd88;stroke-width:1.3;stroke-dasharray:2 4;vector-effect:non-scaling-stroke;opacity:.8}
 .political-boundaries .boundary-reservation{stroke:#f5a5c6;stroke-dasharray:1 3}
 .boundary-label{fill:#eed5ac;text-anchor:middle;paint-order:stroke;stroke:#13282e;stroke-width:3px;stroke-linejoin:round;vector-effect:non-scaling-stroke;font-weight:600}
@@ -17,3 +23,16 @@
 .context-date-status{position:absolute;top:32px;left:14px;z-index:3;max-width:calc(100% - 175px);padding:3px 7px;background:#17333bd9;border-radius:4px;pointer-events:none}.journey-picker{color:#4d6869}.voyage-controls{margin:14px 18px;background:#e3e9df;border-color:#aebfba;color:#233f44}.voyage-controls strong{color:#224c52}.voyage-controls .context-catalog{max-height:none}.voyage-controls details{margin:10px 0}.voyage-stop.future-stop{fill:#16353c;opacity:.7}.voyage-controls button{margin-top:6px}
 
 @media(max-width:700px){.story-intro{flex-wrap:wrap}.story-intro>.journey-picker{flex:0 0 100%;min-width:0;margin:0;display:grid;grid-template-columns:100px minmax(0,1fr);align-items:center;gap:8px;font-size:10px}.story-intro .journey-picker select{width:100%;max-width:100%;min-width:0}.voyage-controls{margin:10px 16px;padding:10px 12px}.voyage-controls strong{font-size:12px}.voyage-controls p{font-size:11px}}
+
+.terrain,.terrain *{pointer-events:none}.terrain{opacity:1}.terrain image{filter:none}.map-labels text{paint-order:stroke;stroke:#15313b;stroke-width:2px;vector-effect:non-scaling-stroke}
+.local-phases{display:grid;gap:10px;margin:16px 0;max-height:45vh;overflow:auto;overscroll-behavior:contain}
+.local-phase{display:grid;gap:5px;padding:12px;border:1px solid #b6cac4;border-radius:8px;background:#e6ece1}
+.local-phase small{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#356769}
+.local-phase strong{font:600 15px Georgia,serif}
+.local-phase button{text-align:left;padding:7px;border:1px solid #8bafaa;border-radius:5px;background:#fffdf2;color:#164b50;font-size:12px}
+.local-phase a{font-size:11px}.local-phase.future-phase{background:transparent;border-style:dashed}
+
+.record-precision{padding:12px;background:#e3eadf;border-left:3px solid #658f8b;font-size:12px;line-height:1.5}.record-precision dt{font-weight:700;color:#1e6567}.record-precision dd{margin:2px 0 9px}.record-precision dd:last-child{margin-bottom:0}
+.map-canvas.local-detail .regional-cloud circle.cloud-glow{stroke-dasharray:none}
+.atlas-layout .map-caption{opacity:1;background:#102e3be8;color:#d3e2e0;padding:3px 6px;border-radius:4px;width:fit-content;max-width:calc(100% - 140px)}
+.map-controls .map-scope{text-shadow:0 1px 3px #102e3b}

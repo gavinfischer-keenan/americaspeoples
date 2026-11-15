@@ -36,7 +36,8 @@ export function tooltipForRecords(
         ? "Dates unresolved: context only; no occupation at a selected year is established."
         : mode === "explore"
           ? "All-time Explore context: compare these source dates; visibility does not establish occupation at the movie year."
-          : `Movie year ${formatYear(year)}. Source ranges can describe possible dates rather than continuous occupation.`),
+          : `Movie year ${formatYear(year)}. Source ranges can describe possible dates rather than continuous occupation.`) +
+      '\nLocation: '+[...new Set(rows.map(r=>r.location?.precision??r.overlay?.precision).filter(Boolean))].join(' '),
   };
 }
 export function tooltipForHazard(event: HazardEvent): MapTooltipContent {

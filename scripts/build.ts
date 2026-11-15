@@ -24,7 +24,7 @@ const research = JSON.parse(
   await readFile("data/research-proposals.json", "utf8"),
 );
 const history = JSON.parse(await readFile("data/history-records.json", "utf8"));
-const expansion=(await Promise.all(['settlement','mission','pacific','violence','voyage','transport','atlantic'].map(async name=>JSON.parse(await readFile(`data/${name}-expansion-records.json`,'utf8')).records))).flat();
+const expansion=(await Promise.all(['settlement','mission','pacific','violence','voyage','transport','atlantic','local-places','shared-context','hawaii-local'].map(async name=>JSON.parse(await readFile(`data/${name}-expansion-records.json`,'utf8')).records))).flat();
 const appendix = createAppendix({...d,license:published.license,records:[...d.records,...history.records,...expansion]}, research, version);
 const errors = validateDataset(published);
 if (errors.length) throw new Error(errors.join("\n"));
@@ -59,6 +59,8 @@ await writeFile(
     .replace('href="app.css"', `href="app.css?v=${version}"`),
 );
 const names = ["index.html", "app.js", "app.css"];
+await mkdir("dist/terrain",{recursive:true});
+for(const name of await readdir("data/terrain")){await copyFile("data/terrain/"+name,"dist/terrain/"+name);names.push("terrain/"+name);}
 async function includeDirectory(dir: string) {
   await mkdir(`dist/${dir}`, { recursive: true });
   for (const item of await readdir(dir, { withFileTypes: true })) {
@@ -130,6 +132,7 @@ for (const name of [
   "CONTRIBUTING.md",
   "docs/reuse-and-contributing.md",
   "docs/atlas-expansion.md",
+  "docs/shared-history-update.md",
   "docs/early-national-boundary-source-decisions.md",
   "docs/reservation-source-decisions.md",
   "docs/pacific-violence-source-decisions.md",

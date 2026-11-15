@@ -38,8 +38,10 @@ try {
   const zoomed = await choices.count();
   const zoomedIds = await choices.allTextContents();
   assert.ok(zoomed < initial, "offscreen records leave the list on zoom");
-  await page.locator(".map-canvas svg").focus();
+  await page.locator(".map-canvas > svg").focus();
   for (let i = 0; i < 16; i++) await page.keyboard.press("ArrowLeft");
+  // The viewport list follows the coalesced redraw, not the keydown itself.
+  await page.waitForFunction(before=>JSON.stringify([...document.querySelectorAll('[data-visible-index]')].map(n=>n.textContent))!==JSON.stringify(before),zoomedIds);
   const pannedIds = await choices.allTextContents();
   assert.notDeepEqual(pannedIds, zoomedIds, "panning updates which records are visible");
   await page.getByRole("button", { name: "Reset map view", exact: true }).click();

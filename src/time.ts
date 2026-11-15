@@ -79,6 +79,7 @@ export function earliestYear(
   );
 }
 export function timeLabel(t: TimeExtent): string {
+  if(t.eventDate)return `${t.eventDate} · documented onset`;
   return t.kind === "unplaced" || t.start === null || t.end === null
     ? "Not placed on timeline"
     : (t.approximate ? "≈ " : "") +

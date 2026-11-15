@@ -8,6 +8,9 @@ import violence from '../data/violence-expansion-records.json';
 import voyages from '../data/voyage-expansion-records.json';
 import transport from '../data/transport-expansion-records.json';
 import atlantic from '../data/atlantic-expansion-records.json';
+import localPlaces from '../data/local-places-expansion-records.json';
+import sharedContext from '../data/shared-context-expansion-records.json';
+import hawaiiLocal from '../data/hawaii-local-expansion-records.json';
 import { version as appVersion } from "../package.json";
 import type { Dataset, EvidenceRecord } from "./model";
 import { validateDataset } from "./validation";
@@ -41,5 +44,7 @@ export const dataset = publishedDataset(
     ...voyages.records,
     ...transport.records,
     ...atlantic.records,
+    ...localPlaces.records,
+    ...hawaiiLocal.records, ...sharedContext.records,
   ] as EvidenceRecord[],
 );
