@@ -51,7 +51,7 @@
 - [x] Add reviewed records, correction revisions, journeys/itinerary playback and truthful labels/controls; bump next release candidate to 0.9.0.
 - [x] Run all units, validation, typecheck, API, workbook roundtrip, browser picking/playback/mobile and extracted release checks. Update only obsolete fixed-count assumptions with dataset-derived assertions.
 - [x] Visually inspect desktop/mobile and representative dated boundary/voyage states; save screenshots and coverage report.
-- [ ] Obtain fresh whole-branch review, fix material findings, commit/push and create reviewable PR. Production deployment remains a separate release step.
+- [x] Obtain fresh whole-branch review, fix material findings, commit/push and create reviewable PR. Production deployment remains a separate release step.
 
 ## Scope incorporated during implementation
 
@@ -62,3 +62,5 @@ Validation includes source-linked record integrity, schema/geometry/date checks,
 ## Implementation record
 
 The planned combined evidence file was split into seven source-reviewed expansion collections; correction decisions are recorded in `docs/history-source-corrections.md` and the regional source-decision guides. Boundary rendering is implemented in `src/atlas-context.ts` with loading in `src/atlas-assets.ts`; browser coverage is in `tests/expansion.browser.mjs`. The final collection contains 1,266 evidence records, 1,243 dated boundary versions, nine stories (49 scenes), ten expedition itineraries (69 anchors), and 1,755 U.S. rail display groups plus 20 regional built segments. Coverage remains selective. Fresh independent review and delta review found no remaining material findings after fixes. Desktop and 390-pixel mobile layouts were visually inspected.
+
+Source release is committed and available in [PR #5](https://github.com/gavinfischer-keenan/americaspeoples/pull/5). All 25 release checks passed after corrections and focused reruns; the final package was rebuilt and checked. Production deployment has not been performed.
