@@ -1,0 +1,48 @@
+# Free education, noncommercial reuse
+
+Americas Peoples is intended to remain free to access, without advertising or paid tiers. We welcome redistribution, classroom use, community review, translations, and corrections. Our license choice preserves noncommercial restrictions while allowing people to improve and share the project.
+
+## The chosen licenses
+
+| Component | License | Practical effect |
+| --- | --- | --- |
+| Original software | PolyForm Noncommercial 1.0.0 | Permits noncommercial use, copying, distribution, and modification; retains notices; contains software-specific patent provisions. |
+| Original educational text and copyrightable curated data | CC BY-NC-SA 4.0 | Permits attributed noncommercial redistribution and adaptation; shared adaptations retain compatible NonCommercial and ShareAlike terms. |
+| HGIS de las Indias and CShapes boundary derivatives | Their own CC BY-NC-SA 4.0 terms | Original attribution and notices remain; our license cannot remove their restrictions. |
+| Other external components | Their individual licenses | Public-domain geography stays public domain; dependency licenses and other dataset terms remain attached. |
+
+The full terms and scope are in [LICENSE.md](../LICENSE.md). Software and educational content are separate works with separate permissions; this is not a choice to apply a more permissive license to the whole bundle. Neither license is a mechanism for claiming ownership over historical facts or public-domain works.
+
+## Why this fits the project
+
+An MIT, Apache, GPL, or AGPL software license would permit commercial redistribution. A blanket CC BY or CC BY-SA license would likewise permit commercial reuse and could not replace the NonCommercial restrictions on imported boundary datasets. Those choices would not express this project's requested restriction. A NoDerivatives license would obstruct the corrections and translations we want.
+
+Creative Commons recommends software-specific licenses for code. PolyForm Noncommercial provides a standard software license that permits distribution and changes while limiting permitted purposes. CC BY-NC-SA suits the educational material and matches the principal restricted boundary datasets. We use both standard texts unchanged.
+
+There are tradeoffs. This is source-available, not open source under the Open Source Initiative definition. Some commercial educational services and projects that require unrestricted open data cannot reuse the restricted components. CC BY-NC-SA material generally cannot be incorporated into a work that must be offered solely under CC BY-SA. Licenses encourage contributions but do not force a recipient to submit improvements to this particular repository.
+
+“Noncommercial” also does not mean that every receipt of money in every context is prohibited. CC assesses the purpose of the use, and PolyForm expressly permits certain institutional uses regardless of funding. The official atlas's zero-charge commitment is a project policy. A nonprofit label alone does not clear a third-party dataset use. Reusers must check the actual terms; we do not grant a commercial exception for other rights holders' material.
+
+## Consensus and scholarly sources
+
+Consensus is used to discover literature and organize private research. Its Terms of Service, reviewed on 15 November 2026 and dated 25 June 2025, give limited personal copying permissions for Site Content and prohibit broader redistribution and systematic compilation without authorization. They do not provide a clear general open-publication license for generated research reports. The broad User Materials clause is not an explicit grant to us to relicense all output.
+
+Accordingly, full generated reports, quoted passages, and raw research responses stay out of the public atlas and redistributable packages unless an applicable written permission is obtained. Research records use original explanations checked against the underlying publications, archives, or institutional sources, with honest access notes. Paper copyrights and dataset licenses are independent of a paid Consensus subscription. A citation is not permission to reproduce a paper. The atlas has no live Consensus dependency and gives visitors no access to the owner's account.
+
+This is a conservative publication practice based on the terms available to us, not a claim that Consensus has prohibited every possible use of an AI answer. Any connector-specific written publication grant would need separate verification. We do not imply endorsement by Consensus or cited researchers.
+
+## How to help
+
+Use the Library's contribution tools to prepare and download a suggestion, or submit an issue or pull request at the project repository. Drafts stay local until you choose to share them. Contributors keep ownership and submit their original contributions under the applicable project license. See [CONTRIBUTING.md](../CONTRIBUTING.md) for evidence standards and rights requirements.
+
+## Primary terms consulted
+
+- [PolyForm Noncommercial 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0)
+- [Creative Commons BY-NC-SA 4.0 legal code](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.en)
+- [Creative Commons FAQ: software, databases, NonCommercial, and compatibility](https://creativecommons.org/faq/)
+- [Open Source Initiative definition](https://opensource.org/osd)
+- [Consensus Terms of Service](https://consensus.app/home/terms-of-service/)
+- [HGIS source service and licensing](https://www.arcgis.com/home/item.html?id=c79002d305f74820b27be4233e2d0d76)
+- [CShapes source and licensing](https://icr.ethz.ch/data/cshapes/)
+
+License choices cannot resolve uncertain ownership, authorize sensitive disclosures, or retroactively revoke rights already granted. New third-party imports must be reviewed individually.

@@ -1,0 +1,1957 @@
+{
+  "records": [
+    {
+      "id": "post-pony-express-1860-1861",
+      "revision": 1,
+      "type": "event",
+      "title": "Pony Express: documented service, 1860–1861",
+      "culture": {
+        "id": "historical-transport",
+        "name": "Historical transport",
+        "kind": "unknown",
+        "color": "#8a5a35"
+      },
+      "location": {
+        "id": "post-pony-express-1860-1861-from",
+        "name": "St. Joseph",
+        "lon": -94.85,
+        "lat": 39.77,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "destination": {
+        "id": "post-pony-express-1860-1861-to",
+        "name": "Sacramento",
+        "lon": -121.5,
+        "lat": 38.58,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1860,
+        "end": 1861,
+        "approximate": false,
+        "original": "April 1860–26 October 1861 official service; last letters arrived in November 1861",
+        "method": "Dated historical source; mapped at the atlas’s whole-year resolution.",
+        "interpretation": "Documented service interval; ends in 1861. Last deliveries and formal termination differ; no continuation to the atlas cutoff is inferred."
+      },
+      "claims": [
+        {
+          "id": "post-pony-express-1860-1861-claim",
+          "text": "The Pony Express carried mail between St. Joseph and Sacramento during 1860–1861; official termination was 26 October 1861, with final letters delivered in November.",
+          "status": "well-supported",
+          "explanation": "This service interval is documented. The line connects endpoints schematically; it does not recreate station changes, individual rides, or uncertain traces.",
+          "support": [
+            {
+              "sourceId": "transport-pony-nps",
+              "locator": "A Brief History, operation and termination paragraphs",
+              "stance": "supports",
+              "note": "Source supports the dated event or interval; schematic coordinates and intervening travel are not claimed as measured evidence."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "transport-pony-nps",
+          "authors": "National Park Service",
+          "title": "History and culture: Pony Express National Historic Trail",
+          "year": 2025,
+          "venue": "National Park Service",
+          "url": "https://www.nps.gov/poex/learn/historyculture/index.htm",
+          "access": "Public institutional or archival text, checked 15 November 2026."
+        }
+      ],
+      "review": {
+        "summary": "This service interval is documented. The line connects endpoints schematically; it does not recreate station changes, individual rides, or uncertain traces.",
+        "limitations": "Location is approximate. The two-point line connects named endpoints and is not a surveyed alignment. The cited event does not establish settlement, sovereignty, uninterrupted occupation, or service after the documented period.",
+        "discussion": "The record keeps a narrow dated claim. Other stops, communities and changes require their own evidence; absence from this selection does not mean historical absence.",
+        "provenance": "Curated from the identified primary or institutional source; research reports were used as leads, not as claim evidence.",
+        "reviewedAt": "2026-11-15",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -94.85,
+              39.77
+            ],
+            [
+              -121.5,
+              38.58
+            ]
+          ]
+        },
+        "precision": "Two named endpoints only; a schematic connection, never an actual track or daily trajectory.",
+        "provenance": "Endpoints manually located from the cited named places. Opening or documented operation does not establish the line’s exact alignment."
+      }
+    },
+    {
+      "id": "rail-central-pacific-completion-1869",
+      "revision": 1,
+      "type": "event",
+      "title": "Central Pacific: Sacramento–Promontory connection completed",
+      "culture": {
+        "id": "historical-transport",
+        "name": "Historical transport",
+        "kind": "unknown",
+        "color": "#8a5a35"
+      },
+      "location": {
+        "id": "rail-central-pacific-completion-1869-from",
+        "name": "Sacramento",
+        "lon": -121.5,
+        "lat": 38.58,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "destination": {
+        "id": "rail-central-pacific-completion-1869-to",
+        "name": "Promontory Summit",
+        "lon": -112.55,
+        "lat": 41.62,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1869,
+        "end": 1869,
+        "approximate": false,
+        "original": "1869",
+        "method": "Dated historical source; mapped at the atlas’s whole-year resolution.",
+        "interpretation": "Documented infrastructure opening or completion year only. Later service, closure, and uninterrupted operation are not inferred."
+      },
+      "claims": [
+        {
+          "id": "rail-central-pacific-completion-1869-claim",
+          "text": "The Central Pacific and Union Pacific connection was completed at Promontory Summit on 10 May 1869.",
+          "status": "well-supported",
+          "explanation": "Completion milestone for the western connection; the earlier opening years of component tracks are represented separately in the Atack network. This two-point schematic is not track geometry.",
+          "support": [
+            {
+              "sourceId": "transport-transcontinental-nps",
+              "locator": "Golden Spike history, 10 May 1869 meeting",
+              "stance": "supports",
+              "note": "Source supports the dated event or interval; schematic coordinates and intervening travel are not claimed as measured evidence."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "transport-transcontinental-nps",
+          "authors": "National Park Service",
+          "title": "History and culture: Golden Spike National Historical Park",
+          "year": 2025,
+          "venue": "National Park Service",
+          "url": "https://www.nps.gov/gosp/learn/historyculture/index.htm",
+          "access": "Public institutional or archival text, checked 15 November 2026."
+        }
+      ],
+      "review": {
+        "summary": "Completion milestone for the western connection; the earlier opening years of component tracks are represented separately in the Atack network. This two-point schematic is not track geometry.",
+        "limitations": "Location is approximate. The two-point line connects named endpoints and is not a surveyed alignment. The cited event does not establish settlement, sovereignty, uninterrupted occupation, or service after the documented period.",
+        "discussion": "The record keeps a narrow dated claim. Other stops, communities and changes require their own evidence; absence from this selection does not mean historical absence.",
+        "provenance": "Curated from the identified primary or institutional source; research reports were used as leads, not as claim evidence.",
+        "reviewedAt": "2026-11-15",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -121.5,
+              38.58
+            ],
+            [
+              -112.55,
+              41.62
+            ]
+          ]
+        },
+        "precision": "Two named endpoints only; a schematic connection, never an actual track or daily trajectory.",
+        "provenance": "Endpoints manually located from the cited named places. Opening or documented operation does not establish the line’s exact alignment."
+      }
+    },
+    {
+      "id": "rail-union-pacific-completion-1869",
+      "revision": 1,
+      "type": "event",
+      "title": "Union Pacific: Omaha–Promontory connection completed",
+      "culture": {
+        "id": "historical-transport",
+        "name": "Historical transport",
+        "kind": "unknown",
+        "color": "#8a5a35"
+      },
+      "location": {
+        "id": "rail-union-pacific-completion-1869-from",
+        "name": "Omaha",
+        "lon": -95.93,
+        "lat": 41.26,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "destination": {
+        "id": "rail-union-pacific-completion-1869-to",
+        "name": "Promontory Summit",
+        "lon": -112.55,
+        "lat": 41.62,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1869,
+        "end": 1869,
+        "approximate": false,
+        "original": "1869",
+        "method": "Dated historical source; mapped at the atlas’s whole-year resolution.",
+        "interpretation": "Documented infrastructure opening or completion year only. Later service, closure, and uninterrupted operation are not inferred."
+      },
+      "claims": [
+        {
+          "id": "rail-union-pacific-completion-1869-claim",
+          "text": "The Union Pacific and Central Pacific connection was completed at Promontory Summit on 10 May 1869.",
+          "status": "well-supported",
+          "explanation": "Completion milestone for the eastern connection; not a claim that every part opened simultaneously. The Atack dataset supplies dated historical segment alignments.",
+          "support": [
+            {
+              "sourceId": "transport-transcontinental-nps",
+              "locator": "Golden Spike history, 10 May 1869 meeting",
+              "stance": "supports",
+              "note": "Source supports the dated event or interval; schematic coordinates and intervening travel are not claimed as measured evidence."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "transport-transcontinental-nps",
+          "authors": "National Park Service",
+          "title": "History and culture: Golden Spike National Historical Park",
+          "year": 2025,
+          "venue": "National Park Service",
+          "url": "https://www.nps.gov/gosp/learn/historyculture/index.htm",
+          "access": "Public institutional or archival text, checked 15 November 2026."
+        }
+      ],
+      "review": {
+        "summary": "Completion milestone for the eastern connection; not a claim that every part opened simultaneously. The Atack dataset supplies dated historical segment alignments.",
+        "limitations": "Location is approximate. The two-point line connects named endpoints and is not a surveyed alignment. The cited event does not establish settlement, sovereignty, uninterrupted occupation, or service after the documented period.",
+        "discussion": "The record keeps a narrow dated claim. Other stops, communities and changes require their own evidence; absence from this selection does not mean historical absence.",
+        "provenance": "Curated from the identified primary or institutional source; research reports were used as leads, not as claim evidence.",
+        "reviewedAt": "2026-11-15",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -95.93,
+              41.26
+            ],
+            [
+              -112.55,
+              41.62
+            ]
+          ]
+        },
+        "precision": "Two named endpoints only; a schematic connection, never an actual track or daily trajectory.",
+        "provenance": "Endpoints manually located from the cited named places. Opening or documented operation does not establish the line’s exact alignment."
+      }
+    },
+    {
+      "id": "rail-oahu-honolulu-aiea-1889",
+      "revision": 1,
+      "type": "event",
+      "title": "Oʻahu Railway: Honolulu–ʻAiea opening",
+      "culture": {
+        "id": "historical-transport",
+        "name": "Historical transport",
+        "kind": "unknown",
+        "color": "#8a5a35"
+      },
+      "location": {
+        "id": "rail-oahu-honolulu-aiea-1889-from",
+        "name": "Honolulu",
+        "lon": -157.87,
+        "lat": 21.32,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "destination": {
+        "id": "rail-oahu-honolulu-aiea-1889-to",
+        "name": "ʻAiea",
+        "lon": -157.93,
+        "lat": 21.38,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1889,
+        "end": 1889,
+        "approximate": false,
+        "original": "1889",
+        "method": "Dated historical source; mapped at the atlas’s whole-year resolution.",
+        "interpretation": "Documented infrastructure opening or completion year only. Later service, closure, and uninterrupted operation are not inferred."
+      },
+      "claims": [
+        {
+          "id": "rail-oahu-honolulu-aiea-1889-claim",
+          "text": "Oahu Railway’s initial nine-mile Honolulu–Aiea line opened on 16 November 1889.",
+          "status": "well-supported",
+          "explanation": "Documented opening of the initial segment. Endpoint coordinates are regional references; the historical waterfront alignment is not reconstructed.",
+          "support": [
+            {
+              "sourceId": "transport-hawaii-senate",
+              "locator": "SR26 SD1, opening recital",
+              "stance": "supports",
+              "note": "Source supports the dated event or interval; schematic coordinates and intervening travel are not claimed as measured evidence."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "transport-hawaii-senate",
+          "authors": "Hawaiʻi State Senate",
+          "title": "Senate Resolution 26, Senate Draft 1: Oahu Railway and Land Company",
+          "year": 2004,
+          "venue": "Hawaiʻi State Legislature",
+          "url": "https://data.capitol.hawaii.gov/sessions/session2004/Bills/SR26_SD1_.htm",
+          "access": "Public institutional or archival text, checked 15 November 2026."
+        }
+      ],
+      "review": {
+        "summary": "Documented opening of the initial segment. Endpoint coordinates are regional references; the historical waterfront alignment is not reconstructed.",
+        "limitations": "Location is approximate. The two-point line connects named endpoints and is not a surveyed alignment. The cited event does not establish settlement, sovereignty, uninterrupted occupation, or service after the documented period.",
+        "discussion": "The record keeps a narrow dated claim. Other stops, communities and changes require their own evidence; absence from this selection does not mean historical absence.",
+        "provenance": "Curated from the identified primary or institutional source; research reports were used as leads, not as claim evidence.",
+        "reviewedAt": "2026-11-15",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -157.87,
+              21.32
+            ],
+            [
+              -157.93,
+              21.38
+            ]
+          ]
+        },
+        "precision": "Two named endpoints only; a schematic connection, never an actual track or daily trajectory.",
+        "provenance": "Endpoints manually located from the cited named places. Opening or documented operation does not establish the line’s exact alignment."
+      }
+    },
+    {
+      "id": "rail-oahu-aiea-pearl-city-1890",
+      "revision": 1,
+      "type": "event",
+      "title": "Oʻahu Railway: extension to Pearl City",
+      "culture": {
+        "id": "historical-transport",
+        "name": "Historical transport",
+        "kind": "unknown",
+        "color": "#8a5a35"
+      },
+      "location": {
+        "id": "rail-oahu-aiea-pearl-city-1890-from",
+        "name": "ʻAiea",
+        "lon": -157.93,
+        "lat": 21.38,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "destination": {
+        "id": "rail-oahu-aiea-pearl-city-1890-to",
+        "name": "Pearl City",
+        "lon": -157.97,
+        "lat": 21.4,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1890,
+        "end": 1890,
+        "approximate": false,
+        "original": "1890",
+        "method": "Dated historical source; mapped at the atlas’s whole-year resolution.",
+        "interpretation": "Documented infrastructure opening or completion year only. Later service, closure, and uninterrupted operation are not inferred."
+      },
+      "claims": [
+        {
+          "id": "rail-oahu-aiea-pearl-city-1890-claim",
+          "text": "The Oahu Railway reached Pearl City by 1 January 1890.",
+          "status": "well-supported",
+          "explanation": "The resolution provides this extension milestone. This is evidence of an existing segment by the stated date, not its first construction day.",
+          "support": [
+            {
+              "sourceId": "transport-hawaii-senate",
+              "locator": "SR26 SD1, Pearl City recital",
+              "stance": "supports",
+              "note": "Source supports the dated event or interval; schematic coordinates and intervening travel are not claimed as measured evidence."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "transport-hawaii-senate",
+          "authors": "Hawaiʻi State Senate",
+          "title": "Senate Resolution 26, Senate Draft 1: Oahu Railway and Land Company",
+          "year": 2004,
+          "venue": "Hawaiʻi State Legislature",
+          "url": "https://data.capitol.hawaii.gov/sessions/session2004/Bills/SR26_SD1_.htm",
+          "access": "Public institutional or archival text, checked 15 November 2026."
+        }
+      ],
+      "review": {
+        "summary": "The resolution provides this extension milestone. This is evidence of an existing segment by the stated date, not its first construction day.",
+        "limitations": "Location is approximate. The two-point line connects named endpoints and is not a surveyed alignment. The cited event does not establish settlement, sovereignty, uninterrupted occupation, or service after the documented period.",
+        "discussion": "The record keeps a narrow dated claim. Other stops, communities and changes require their own evidence; absence from this selection does not mean historical absence.",
+        "provenance": "Curated from the identified primary or institutional source; research reports were used as leads, not as claim evidence.",
+        "reviewedAt": "2026-11-15",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -157.93,
+              21.38
+            ],
+            [
+              -157.97,
+              21.4
+            ]
+          ]
+        },
+        "precision": "Two named endpoints only; a schematic connection, never an actual track or daily trajectory.",
+        "provenance": "Endpoints manually located from the cited named places. Opening or documented operation does not establish the line’s exact alignment."
+      }
+    },
+    {
+      "id": "rail-oahu-pearl-city-ewa-1890",
+      "revision": 1,
+      "type": "event",
+      "title": "Oʻahu Railway: extension to ʻEwa Mill",
+      "culture": {
+        "id": "historical-transport",
+        "name": "Historical transport",
+        "kind": "unknown",
+        "color": "#8a5a35"
+      },
+      "location": {
+        "id": "rail-oahu-pearl-city-ewa-1890-from",
+        "name": "Pearl City",
+        "lon": -157.97,
+        "lat": 21.4,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "destination": {
+        "id": "rail-oahu-pearl-city-ewa-1890-to",
+        "name": "ʻEwa Mill",
+        "lon": -158.03,
+        "lat": 21.35,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1890,
+        "end": 1890,
+        "approximate": false,
+        "original": "1890",
+        "method": "Dated historical source; mapped at the atlas’s whole-year resolution.",
+        "interpretation": "Documented infrastructure opening or completion year only. Later service, closure, and uninterrupted operation are not inferred."
+      },
+      "claims": [
+        {
+          "id": "rail-oahu-pearl-city-ewa-1890-claim",
+          "text": "The Oahu Railway reached Ewa Mill in August 1890.",
+          "status": "well-supported",
+          "explanation": "Documented extension milestone. The mapped straight link is schematic, not the railway’s shoreline alignment.",
+          "support": [
+            {
+              "sourceId": "transport-hawaii-senate",
+              "locator": "SR26 SD1, Ewa Mill recital",
+              "stance": "supports",
+              "note": "Source supports the dated event or interval; schematic coordinates and intervening travel are not claimed as measured evidence."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "transport-hawaii-senate",
+          "authors": "Hawaiʻi State Senate",
+          "title": "Senate Resolution 26, Senate Draft 1: Oahu Railway and Land Company",
+          "year": 2004,
+          "venue": "Hawaiʻi State Legislature",
+          "url": "https://data.capitol.hawaii.gov/sessions/session2004/Bills/SR26_SD1_.htm",
+          "access": "Public institutional or archival text, checked 15 November 2026."
+        }
+      ],
+      "review": {
+        "summary": "Documented extension milestone. The mapped straight link is schematic, not the railway’s shoreline alignment.",
+        "limitations": "Location is approximate. The two-point line connects named endpoints and is not a surveyed alignment. The cited event does not establish settlement, sovereignty, uninterrupted occupation, or service after the documented period.",
+        "discussion": "The record keeps a narrow dated claim. Other stops, communities and changes require their own evidence; absence from this selection does not mean historical absence.",
+        "provenance": "Curated from the identified primary or institutional source; research reports were used as leads, not as claim evidence.",
+        "reviewedAt": "2026-11-15",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -157.97,
+              21.4
+            ],
+            [
+              -158.03,
+              21.35
+            ]
+          ]
+        },
+        "precision": "Two named endpoints only; a schematic connection, never an actual track or daily trajectory.",
+        "provenance": "Endpoints manually located from the cited named places. Opening or documented operation does not establish the line’s exact alignment."
+      }
+    },
+    {
+      "id": "rail-oahu-ewa-kahuku-1899",
+      "revision": 1,
+      "type": "event",
+      "title": "Oʻahu Railway: completed western-coast connection to Kahuku",
+      "culture": {
+        "id": "historical-transport",
+        "name": "Historical transport",
+        "kind": "unknown",
+        "color": "#8a5a35"
+      },
+      "location": {
+        "id": "rail-oahu-ewa-kahuku-1899-from",
+        "name": "ʻEwa Mill",
+        "lon": -158.03,
+        "lat": 21.35,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "destination": {
+        "id": "rail-oahu-ewa-kahuku-1899-to",
+        "name": "Kahuku",
+        "lon": -157.95,
+        "lat": 21.68,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1899,
+        "end": 1899,
+        "approximate": false,
+        "original": "1899",
+        "method": "Dated historical source; mapped at the atlas’s whole-year resolution.",
+        "interpretation": "Documented infrastructure opening or completion year only. Later service, closure, and uninterrupted operation are not inferred."
+      },
+      "claims": [
+        {
+          "id": "rail-oahu-ewa-kahuku-1899-claim",
+          "text": "The Oahu Railway had extended around the western and northern coasts to Kahuku by 1 January 1899.",
+          "status": "well-supported",
+          "explanation": "The actual line ran around Kaʻena Point. This two-endpoint connection does not imply a direct inland crossing; intermediate openings are not dated here.",
+          "support": [
+            {
+              "sourceId": "transport-hawaii-senate",
+              "locator": "SR26 SD1, Kahuku recital",
+              "stance": "supports",
+              "note": "Source supports the dated event or interval; schematic coordinates and intervening travel are not claimed as measured evidence."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "transport-hawaii-senate",
+          "authors": "Hawaiʻi State Senate",
+          "title": "Senate Resolution 26, Senate Draft 1: Oahu Railway and Land Company",
+          "year": 2004,
+          "venue": "Hawaiʻi State Legislature",
+          "url": "https://data.capitol.hawaii.gov/sessions/session2004/Bills/SR26_SD1_.htm",
+          "access": "Public institutional or archival text, checked 15 November 2026."
+        }
+      ],
+      "review": {
+        "summary": "The actual line ran around Kaʻena Point. This two-endpoint connection does not imply a direct inland crossing; intermediate openings are not dated here.",
+        "limitations": "Location is approximate. The two-point line connects named endpoints and is not a surveyed alignment. The cited event does not establish settlement, sovereignty, uninterrupted occupation, or service after the documented period.",
+        "discussion": "The record keeps a narrow dated claim. Other stops, communities and changes require their own evidence; absence from this selection does not mean historical absence.",
+        "provenance": "Curated from the identified primary or institutional source; research reports were used as leads, not as claim evidence.",
+        "reviewedAt": "2026-11-15",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -158.03,
+              21.35
+            ],
+            [
+              -157.95,
+              21.68
+            ]
+          ]
+        },
+        "precision": "Two named endpoints only; a schematic connection, never an actual track or daily trajectory.",
+        "provenance": "Endpoints manually located from the cited named places. Opening or documented operation does not establish the line’s exact alignment."
+      }
+    },
+    {
+      "id": "rail-alaska-seward-fairbanks-1923",
+      "revision": 1,
+      "type": "event",
+      "title": "Alaska Railroad: Seward–Fairbanks completion",
+      "culture": {
+        "id": "historical-transport",
+        "name": "Historical transport",
+        "kind": "unknown",
+        "color": "#8a5a35"
+      },
+      "location": {
+        "id": "rail-alaska-seward-fairbanks-1923-from",
+        "name": "Seward",
+        "lon": -149.44,
+        "lat": 60.1,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "destination": {
+        "id": "rail-alaska-seward-fairbanks-1923-to",
+        "name": "Fairbanks",
+        "lon": -147.72,
+        "lat": 64.84,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1923,
+        "end": 1923,
+        "approximate": false,
+        "original": "1923",
+        "method": "Dated historical source; mapped at the atlas’s whole-year resolution.",
+        "interpretation": "Documented infrastructure opening or completion year only. Later service, closure, and uninterrupted operation are not inferred."
+      },
+      "claims": [
+        {
+          "id": "rail-alaska-seward-fairbanks-1923-claim",
+          "text": "Construction of the Alaska Railroad was completed and the railroad opened on 15 July 1923.",
+          "status": "well-supported",
+          "explanation": "The completion date is documented, while earlier purchased and constructed sections had different dates. No full track alignment or uninterrupted later service is inferred.",
+          "support": [
+            {
+              "sourceId": "transport-alaska-nara",
+              "locator": "Record Group 322, section 322.2 administrative history",
+              "stance": "supports",
+              "note": "Source supports the dated event or interval; schematic coordinates and intervening travel are not claimed as measured evidence."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "transport-alaska-nara",
+          "authors": "National Archives and Records Administration",
+          "title": "Records of the Alaska Railroad, Record Group 322",
+          "year": null,
+          "venue": "National Archives",
+          "url": "https://www.archives.gov/research/guide-fed-records/groups/322.html",
+          "access": "Public institutional or archival text, checked 15 November 2026."
+        }
+      ],
+      "review": {
+        "summary": "The completion date is documented, while earlier purchased and constructed sections had different dates. No full track alignment or uninterrupted later service is inferred.",
+        "limitations": "Location is approximate. The two-point line connects named endpoints and is not a surveyed alignment. The cited event does not establish settlement, sovereignty, uninterrupted occupation, or service after the documented period.",
+        "discussion": "The record keeps a narrow dated claim. Other stops, communities and changes require their own evidence; absence from this selection does not mean historical absence.",
+        "provenance": "Curated from the identified primary or institutional source; research reports were used as leads, not as claim evidence.",
+        "reviewedAt": "2026-11-15",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -149.44,
+              60.1
+            ],
+            [
+              -147.72,
+              64.84
+            ]
+          ]
+        },
+        "precision": "Two named endpoints only; a schematic connection, never an actual track or daily trajectory.",
+        "provenance": "Endpoints manually located from the cited named places. Opening or documented operation does not establish the line’s exact alignment."
+      }
+    },
+    {
+      "id": "rail-copper-river-1911-1934",
+      "revision": 1,
+      "type": "event",
+      "title": "Copper River and Northwestern: documented operation, atlas portion",
+      "culture": {
+        "id": "historical-transport",
+        "name": "Historical transport",
+        "kind": "unknown",
+        "color": "#8a5a35"
+      },
+      "location": {
+        "id": "rail-copper-river-1911-1934-from",
+        "name": "Cordova",
+        "lon": -145.76,
+        "lat": 60.54,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "destination": {
+        "id": "rail-copper-river-1911-1934-to",
+        "name": "Kennecott",
+        "lon": -142.89,
+        "lat": 61.49,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1911,
+        "end": 1934,
+        "approximate": false,
+        "original": "1911–1934",
+        "method": "Dated historical source; mapped at the atlas’s whole-year resolution.",
+        "interpretation": "Source documents operation beyond the atlas cutoff; 1934 is a display cutoff, not a closure date."
+      },
+      "claims": [
+        {
+          "id": "rail-copper-river-1911-1934-claim",
+          "text": "The Copper River and Northwestern Railway carried ore and supplies between Cordova and Kennecott from 1911 until 1938.",
+          "status": "well-supported",
+          "explanation": "The source gives an explicit operating span. The atlas displays 1911–1934 because its historical window ends in 1934; the railway did not close in that year.",
+          "support": [
+            {
+              "sourceId": "transport-copper-nps",
+              "locator": "Opening paragraphs; last train in 1938",
+              "stance": "supports",
+              "note": "Source supports the dated event or interval; schematic coordinates and intervening travel are not claimed as measured evidence."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "transport-copper-nps",
+          "authors": "National Park Service",
+          "title": "Copper River and Northwestern Railway",
+          "year": 2023,
+          "venue": "Wrangell–St. Elias National Park and Preserve",
+          "url": "https://www.nps.gov/articles/000/copper-river-and-northwestern-railway.htm",
+          "access": "Public institutional or archival text, checked 15 November 2026."
+        }
+      ],
+      "review": {
+        "summary": "The source gives an explicit operating span. The atlas displays 1911–1934 because its historical window ends in 1934; the railway did not close in that year.",
+        "limitations": "Location is approximate. The two-point line connects named endpoints and is not a surveyed alignment. The cited event does not establish settlement, sovereignty, uninterrupted occupation, or service after the documented period.",
+        "discussion": "The record keeps a narrow dated claim. Other stops, communities and changes require their own evidence; absence from this selection does not mean historical absence.",
+        "provenance": "Curated from the identified primary or institutional source; research reports were used as leads, not as claim evidence.",
+        "reviewedAt": "2026-11-15",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -145.76,
+              60.54
+            ],
+            [
+              -142.89,
+              61.49
+            ]
+          ]
+        },
+        "precision": "Two named endpoints only; a schematic connection, never an actual track or daily trajectory.",
+        "provenance": "Endpoints manually located from the cited named places. Opening or documented operation does not establish the line’s exact alignment."
+      }
+    },
+    {
+      "id": "rail-mexico-veracruz-capital-1873",
+      "revision": 1,
+      "type": "event",
+      "title": "Mexican Railway: Veracruz–Mexico City through opening",
+      "culture": {
+        "id": "historical-transport",
+        "name": "Historical transport",
+        "kind": "unknown",
+        "color": "#8a5a35"
+      },
+      "location": {
+        "id": "rail-mexico-veracruz-capital-1873-from",
+        "name": "Veracruz",
+        "lon": -96.13,
+        "lat": 19.2,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "destination": {
+        "id": "rail-mexico-veracruz-capital-1873-to",
+        "name": "Mexico City, Buenavista",
+        "lon": -99.15,
+        "lat": 19.45,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1873,
+        "end": 1873,
+        "approximate": false,
+        "original": "1873",
+        "method": "Dated historical source; mapped at the atlas’s whole-year resolution.",
+        "interpretation": "Documented infrastructure opening or completion year only. Later service, closure, and uninterrupted operation are not inferred."
+      },
+      "claims": [
+        {
+          "id": "rail-mexico-veracruz-capital-1873-claim",
+          "text": "The through railway between Veracruz and Mexico City was inaugurated in 1873.",
+          "status": "well-supported",
+          "explanation": "This records the completed through connection, not an 1837 concession or the start of all railway activity in Mexico. The mountainous alignment is not represented by the straight link.",
+          "support": [
+            {
+              "sourceId": "transport-mexico-agn",
+              "locator": "AGN article, inauguration of Ferrocarril Mexicano",
+              "stance": "supports",
+              "note": "Source supports the dated event or interval; schematic coordinates and intervening travel are not claimed as measured evidence."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "transport-mexico-agn",
+          "authors": "Archivo General de la Nación",
+          "title": "El Álbum del Ferrocarril Mexicano: una obra sobre la expansión del ferrocarril en México",
+          "year": null,
+          "venue": "Gobierno de México",
+          "url": "https://www.gob.mx/agn/es/articulos/el-album-del-ferrocarril-mexicano-una-obra-sobre-la-expansion-del-ferrocarril-en-mexico-en-maravillas-de-la-historia-348516?idiom=es",
+          "access": "Public institutional or archival text, checked 15 November 2026."
+        }
+      ],
+      "review": {
+        "summary": "This records the completed through connection, not an 1837 concession or the start of all railway activity in Mexico. The mountainous alignment is not represented by the straight link.",
+        "limitations": "Location is approximate. The two-point line connects named endpoints and is not a surveyed alignment. The cited event does not establish settlement, sovereignty, uninterrupted occupation, or service after the documented period.",
+        "discussion": "The record keeps a narrow dated claim. Other stops, communities and changes require their own evidence; absence from this selection does not mean historical absence.",
+        "provenance": "Curated from the identified primary or institutional source; research reports were used as leads, not as claim evidence.",
+        "reviewedAt": "2026-11-15",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -96.13,
+              19.2
+            ],
+            [
+              -99.15,
+              19.45
+            ]
+          ]
+        },
+        "precision": "Two named endpoints only; a schematic connection, never an actual track or daily trajectory.",
+        "provenance": "Endpoints manually located from the cited named places. Opening or documented operation does not establish the line’s exact alignment."
+      }
+    },
+    {
+      "id": "rail-chile-caldera-copiapo-1851",
+      "revision": 1,
+      "type": "event",
+      "title": "Caldera–Copiapó railway opening",
+      "culture": {
+        "id": "historical-transport",
+        "name": "Historical transport",
+        "kind": "unknown",
+        "color": "#8a5a35"
+      },
+      "location": {
+        "id": "rail-chile-caldera-copiapo-1851-from",
+        "name": "Caldera",
+        "lon": -70.82,
+        "lat": -27.07,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "destination": {
+        "id": "rail-chile-caldera-copiapo-1851-to",
+        "name": "Copiapó",
+        "lon": -70.33,
+        "lat": -27.37,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1851,
+        "end": 1851,
+        "approximate": false,
+        "original": "1851",
+        "method": "Dated historical source; mapped at the atlas’s whole-year resolution.",
+        "interpretation": "Documented infrastructure opening or completion year only. Later service, closure, and uninterrupted operation are not inferred."
+      },
+      "claims": [
+        {
+          "id": "rail-chile-caldera-copiapo-1851-claim",
+          "text": "The Caldera–Copiapó railway opened in 1851; the initial Caldera–Monte Amargo section opened in July.",
+          "status": "well-supported",
+          "explanation": "The whole-year event avoids conflating the July partial opening with the complete connection. It records construction achieved, not subsequent service continuity.",
+          "support": [
+            {
+              "sourceId": "transport-chile-bn",
+              "locator": "Presentation and chronology for Ferrocarril Caldera–Copiapó",
+              "stance": "supports",
+              "note": "Source supports the dated event or interval; schematic coordinates and intervening travel are not claimed as measured evidence."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "transport-chile-bn",
+          "authors": "Biblioteca Nacional de Chile",
+          "title": "Ferrocarril Caldera–Copiapó",
+          "year": null,
+          "venue": "Memoria Chilena",
+          "url": "https://www.memoriachilena.gob.cl/602/w3-article-3401.html",
+          "access": "Public institutional or archival text, checked 15 November 2026."
+        }
+      ],
+      "review": {
+        "summary": "The whole-year event avoids conflating the July partial opening with the complete connection. It records construction achieved, not subsequent service continuity.",
+        "limitations": "Location is approximate. The two-point line connects named endpoints and is not a surveyed alignment. The cited event does not establish settlement, sovereignty, uninterrupted occupation, or service after the documented period.",
+        "discussion": "The record keeps a narrow dated claim. Other stops, communities and changes require their own evidence; absence from this selection does not mean historical absence.",
+        "provenance": "Curated from the identified primary or institutional source; research reports were used as leads, not as claim evidence.",
+        "reviewedAt": "2026-11-15",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -70.82,
+              -27.07
+            ],
+            [
+              -70.33,
+              -27.37
+            ]
+          ]
+        },
+        "precision": "Two named endpoints only; a schematic connection, never an actual track or daily trajectory.",
+        "provenance": "Endpoints manually located from the cited named places. Opening or documented operation does not establish the line’s exact alignment."
+      }
+    },
+    {
+      "id": "rail-argentina-buenos-aires-floresta-1857",
+      "revision": 1,
+      "type": "event",
+      "title": "Buenos Aires Western Railway: initial line opening",
+      "culture": {
+        "id": "historical-transport",
+        "name": "Historical transport",
+        "kind": "unknown",
+        "color": "#8a5a35"
+      },
+      "location": {
+        "id": "rail-argentina-buenos-aires-floresta-1857-from",
+        "name": "Buenos Aires, Plaza Lavalle",
+        "lon": -58.384,
+        "lat": -34.601,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "destination": {
+        "id": "rail-argentina-buenos-aires-floresta-1857-to",
+        "name": "La Floresta",
+        "lon": -58.488,
+        "lat": -34.63,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1857,
+        "end": 1857,
+        "approximate": false,
+        "original": "1857",
+        "method": "Dated historical source; mapped at the atlas’s whole-year resolution.",
+        "interpretation": "Documented infrastructure opening or completion year only. Later service, closure, and uninterrupted operation are not inferred."
+      },
+      "claims": [
+        {
+          "id": "rail-argentina-buenos-aires-floresta-1857-claim",
+          "text": "The initial Buenos Aires railway connected the Parque station area with La Floresta in 1857.",
+          "status": "well-supported",
+          "explanation": "Year-level opening evidence; ceremonial and public-service dates should not be collapsed into an invented exact-day itinerary. Station-area coordinates are approximate.",
+          "support": [
+            {
+              "sourceId": "transport-argentina",
+              "locator": "Government commemorative history, initial route",
+              "stance": "supports",
+              "note": "Source supports the dated event or interval; schematic coordinates and intervening travel are not claimed as measured evidence."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "transport-argentina",
+          "authors": "Ministerio de Cultura, Argentina",
+          "title": "30 de agosto de 1857: Día de los Ferrocarriles",
+          "year": null,
+          "venue": "Gobierno de Argentina",
+          "url": "https://www.argentina.gob.ar/noticias/30-de-agosto-de-1857-dia-de-los-ferrocarriles",
+          "access": "Public institutional or archival text, checked 15 November 2026."
+        }
+      ],
+      "review": {
+        "summary": "Year-level opening evidence; ceremonial and public-service dates should not be collapsed into an invented exact-day itinerary. Station-area coordinates are approximate.",
+        "limitations": "Location is approximate. The two-point line connects named endpoints and is not a surveyed alignment. The cited event does not establish settlement, sovereignty, uninterrupted occupation, or service after the documented period.",
+        "discussion": "The record keeps a narrow dated claim. Other stops, communities and changes require their own evidence; absence from this selection does not mean historical absence.",
+        "provenance": "Curated from the identified primary or institutional source; research reports were used as leads, not as claim evidence.",
+        "reviewedAt": "2026-11-15",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -58.384,
+              -34.601
+            ],
+            [
+              -58.488,
+              -34.63
+            ]
+          ]
+        },
+        "precision": "Two named endpoints only; a schematic connection, never an actual track or daily trajectory.",
+        "provenance": "Endpoints manually located from the cited named places. Opening or documented operation does not establish the line’s exact alignment."
+      }
+    },
+    {
+      "id": "rail-brazil-maua-fragoso-1854",
+      "revision": 1,
+      "type": "event",
+      "title": "Estrada de Ferro Mauá: initial segment opening",
+      "culture": {
+        "id": "historical-transport",
+        "name": "Historical transport",
+        "kind": "unknown",
+        "color": "#8a5a35"
+      },
+      "location": {
+        "id": "rail-brazil-maua-fragoso-1854-from",
+        "name": "Porto Mauá",
+        "lon": -43.17,
+        "lat": -22.68,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "destination": {
+        "id": "rail-brazil-maua-fragoso-1854-to",
+        "name": "Fragoso",
+        "lon": -43.19,
+        "lat": -22.59,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1854,
+        "end": 1854,
+        "approximate": false,
+        "original": "1854",
+        "method": "Dated historical source; mapped at the atlas’s whole-year resolution.",
+        "interpretation": "Documented infrastructure opening or completion year only. Later service, closure, and uninterrupted operation are not inferred."
+      },
+      "claims": [
+        {
+          "id": "rail-brazil-maua-fragoso-1854-claim",
+          "text": "The initial Mauá railway segment between the port and Fragoso opened in 1854.",
+          "status": "well-supported",
+          "explanation": "Only the initial completed segment is represented; the later extension toward Petrópolis is not backdated to 1854.",
+          "support": [
+            {
+              "sourceId": "transport-brazil-iphan",
+              "locator": "História das ferrovias no Brasil, Mauá railway",
+              "stance": "supports",
+              "note": "Source supports the dated event or interval; schematic coordinates and intervening travel are not claimed as measured evidence."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "transport-brazil-iphan",
+          "authors": "Instituto do Patrimônio Histórico e Artístico Nacional",
+          "title": "História das ferrovias no Brasil",
+          "year": null,
+          "venue": "IPHAN, Governo do Brasil",
+          "url": "https://www.gov.br/iphan/pt-br/patrimonio-cultural/patrimonio-material/patrimonio-ferroviario/historia-das-ferrovias-no-brasil",
+          "access": "Public institutional or archival text, checked 15 November 2026."
+        }
+      ],
+      "review": {
+        "summary": "Only the initial completed segment is represented; the later extension toward Petrópolis is not backdated to 1854.",
+        "limitations": "Location is approximate. The two-point line connects named endpoints and is not a surveyed alignment. The cited event does not establish settlement, sovereignty, uninterrupted occupation, or service after the documented period.",
+        "discussion": "The record keeps a narrow dated claim. Other stops, communities and changes require their own evidence; absence from this selection does not mean historical absence.",
+        "provenance": "Curated from the identified primary or institutional source; research reports were used as leads, not as claim evidence.",
+        "reviewedAt": "2026-11-15",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -43.17,
+              -22.68
+            ],
+            [
+              -43.19,
+              -22.59
+            ]
+          ]
+        },
+        "precision": "Two named endpoints only; a schematic connection, never an actual track or daily trajectory.",
+        "provenance": "Endpoints manually located from the cited named places. Opening or documented operation does not establish the line’s exact alignment."
+      }
+    },
+    {
+      "id": "rail-brazil-recife-cabo-1858",
+      "revision": 1,
+      "type": "event",
+      "title": "Recife–São Francisco Railway: Recife–Cabo opening",
+      "culture": {
+        "id": "historical-transport",
+        "name": "Historical transport",
+        "kind": "unknown",
+        "color": "#8a5a35"
+      },
+      "location": {
+        "id": "rail-brazil-recife-cabo-1858-from",
+        "name": "Recife",
+        "lon": -34.88,
+        "lat": -8.06,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "destination": {
+        "id": "rail-brazil-recife-cabo-1858-to",
+        "name": "Cabo",
+        "lon": -35.03,
+        "lat": -8.28,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1858,
+        "end": 1858,
+        "approximate": false,
+        "original": "1858",
+        "method": "Dated historical source; mapped at the atlas’s whole-year resolution.",
+        "interpretation": "Documented infrastructure opening or completion year only. Later service, closure, and uninterrupted operation are not inferred."
+      },
+      "claims": [
+        {
+          "id": "rail-brazil-recife-cabo-1858-claim",
+          "text": "The Recife–São Francisco Railway inaugurated its initial Recife–Cabo section on 8 February 1858.",
+          "status": "well-supported",
+          "explanation": "The company name does not mean the track reached the São Francisco River in 1858. This record limits the geometry to its completed first section.",
+          "support": [
+            {
+              "sourceId": "transport-brazil-dnit",
+              "locator": "Ferrovias históricas, Recife ao São Francisco; initial section description",
+              "stance": "supports",
+              "note": "Source supports the dated event or interval; schematic coordinates and intervening travel are not claimed as measured evidence."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "transport-brazil-dnit",
+          "authors": "Departamento Nacional de Infraestrutura de Transportes",
+          "title": "Histórico: ferrovias",
+          "year": null,
+          "venue": "DNIT, Governo do Brasil",
+          "url": "https://www.gov.br/dnit/pt-br/assuntos/ferrovias/historico/historico",
+          "access": "Public institutional or archival text, checked 15 November 2026."
+        }
+      ],
+      "review": {
+        "summary": "The company name does not mean the track reached the São Francisco River in 1858. This record limits the geometry to its completed first section.",
+        "limitations": "Location is approximate. The two-point line connects named endpoints and is not a surveyed alignment. The cited event does not establish settlement, sovereignty, uninterrupted occupation, or service after the documented period.",
+        "discussion": "The record keeps a narrow dated claim. Other stops, communities and changes require their own evidence; absence from this selection does not mean historical absence.",
+        "provenance": "Curated from the identified primary or institutional source; research reports were used as leads, not as claim evidence.",
+        "reviewedAt": "2026-11-15",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -34.88,
+              -8.06
+            ],
+            [
+              -35.03,
+              -8.28
+            ]
+          ]
+        },
+        "precision": "Two named endpoints only; a schematic connection, never an actual track or daily trajectory.",
+        "provenance": "Endpoints manually located from the cited named places. Opening or documented operation does not establish the line’s exact alignment."
+      }
+    },
+    {
+      "id": "rail-brazil-santos-jundiai-1867",
+      "revision": 1,
+      "type": "event",
+      "title": "São Paulo Railway: Santos–Jundiaí opening",
+      "culture": {
+        "id": "historical-transport",
+        "name": "Historical transport",
+        "kind": "unknown",
+        "color": "#8a5a35"
+      },
+      "location": {
+        "id": "rail-brazil-santos-jundiai-1867-from",
+        "name": "Santos",
+        "lon": -46.33,
+        "lat": -23.95,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "destination": {
+        "id": "rail-brazil-santos-jundiai-1867-to",
+        "name": "Jundiaí",
+        "lon": -46.88,
+        "lat": -23.19,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1867,
+        "end": 1867,
+        "approximate": false,
+        "original": "1867",
+        "method": "Dated historical source; mapped at the atlas’s whole-year resolution.",
+        "interpretation": "Documented infrastructure opening or completion year only. Later service, closure, and uninterrupted operation are not inferred."
+      },
+      "claims": [
+        {
+          "id": "rail-brazil-santos-jundiai-1867-claim",
+          "text": "The Santos–Jundiaí railway was inaugurated on 16 February 1867.",
+          "status": "well-supported",
+          "explanation": "The institutional chronology dates the completed line. A straight endpoint connection does not reproduce the Serra do Mar inclines or their alignments.",
+          "support": [
+            {
+              "sourceId": "transport-brazil-dnit",
+              "locator": "Ferrovias históricas, Santos a Jundiaí entry",
+              "stance": "supports",
+              "note": "Source supports the dated event or interval; schematic coordinates and intervening travel are not claimed as measured evidence."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "transport-brazil-dnit",
+          "authors": "Departamento Nacional de Infraestrutura de Transportes",
+          "title": "Histórico: ferrovias",
+          "year": null,
+          "venue": "DNIT, Governo do Brasil",
+          "url": "https://www.gov.br/dnit/pt-br/assuntos/ferrovias/historico/historico",
+          "access": "Public institutional or archival text, checked 15 November 2026."
+        }
+      ],
+      "review": {
+        "summary": "The institutional chronology dates the completed line. A straight endpoint connection does not reproduce the Serra do Mar inclines or their alignments.",
+        "limitations": "Location is approximate. The two-point line connects named endpoints and is not a surveyed alignment. The cited event does not establish settlement, sovereignty, uninterrupted occupation, or service after the documented period.",
+        "discussion": "The record keeps a narrow dated claim. Other stops, communities and changes require their own evidence; absence from this selection does not mean historical absence.",
+        "provenance": "Curated from the identified primary or institutional source; research reports were used as leads, not as claim evidence.",
+        "reviewedAt": "2026-11-15",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -46.33,
+              -23.95
+            ],
+            [
+              -46.88,
+              -23.19
+            ]
+          ]
+        },
+        "precision": "Two named endpoints only; a schematic connection, never an actual track or daily trajectory.",
+        "provenance": "Endpoints manually located from the cited named places. Opening or documented operation does not establish the line’s exact alignment."
+      }
+    },
+    {
+      "id": "rail-jamaica-kingston-angels-1845",
+      "revision": 1,
+      "type": "event",
+      "title": "Jamaica Railway: Kingston–Angels opening",
+      "culture": {
+        "id": "historical-transport",
+        "name": "Historical transport",
+        "kind": "unknown",
+        "color": "#8a5a35"
+      },
+      "location": {
+        "id": "rail-jamaica-kingston-angels-1845-from",
+        "name": "Kingston",
+        "lon": -76.8,
+        "lat": 17.97,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "destination": {
+        "id": "rail-jamaica-kingston-angels-1845-to",
+        "name": "Angels, St. Catherine",
+        "lon": -76.99,
+        "lat": 18.04,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1845,
+        "end": 1845,
+        "approximate": false,
+        "original": "1845",
+        "method": "Dated historical source; mapped at the atlas’s whole-year resolution.",
+        "interpretation": "Documented infrastructure opening or completion year only. Later service, closure, and uninterrupted operation are not inferred."
+      },
+      "claims": [
+        {
+          "id": "rail-jamaica-kingston-angels-1845-claim",
+          "text": "The first Jamaican railway opened between Kingston and Angels in 1845.",
+          "status": "well-supported",
+          "explanation": "Only the initial built route is included. Later island branches and their operation are not inferred from this first opening.",
+          "support": [
+            {
+              "sourceId": "transport-jamaica-nlj",
+              "locator": "History notes, railway opening on 21 November 1845",
+              "stance": "supports",
+              "note": "Source supports the dated event or interval; schematic coordinates and intervening travel are not claimed as measured evidence."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "transport-jamaica-nlj",
+          "authors": "National Library of Jamaica",
+          "title": "History notes: Jamaica’s railway",
+          "year": null,
+          "venue": "National Library of Jamaica",
+          "url": "https://nlj.gov.jm/history-notes-jamaica/",
+          "access": "Public institutional or archival text, checked 15 November 2026."
+        }
+      ],
+      "review": {
+        "summary": "Only the initial built route is included. Later island branches and their operation are not inferred from this first opening.",
+        "limitations": "Location is approximate. The two-point line connects named endpoints and is not a surveyed alignment. The cited event does not establish settlement, sovereignty, uninterrupted occupation, or service after the documented period.",
+        "discussion": "The record keeps a narrow dated claim. Other stops, communities and changes require their own evidence; absence from this selection does not mean historical absence.",
+        "provenance": "Curated from the identified primary or institutional source; research reports were used as leads, not as claim evidence.",
+        "reviewedAt": "2026-11-15",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -76.8,
+              17.97
+            ],
+            [
+              -76.99,
+              18.04
+            ]
+          ]
+        },
+        "precision": "Two named endpoints only; a schematic connection, never an actual track or daily trajectory.",
+        "provenance": "Endpoints manually located from the cited named places. Opening or documented operation does not establish the line’s exact alignment."
+      }
+    },
+    {
+      "id": "rail-cuba-havana-bejucal-1837",
+      "revision": 1,
+      "type": "event",
+      "title": "Havana–Bejucal railway: archival evidence of the first segment",
+      "culture": {
+        "id": "historical-transport",
+        "name": "Historical transport",
+        "kind": "unknown",
+        "color": "#8a5a35"
+      },
+      "location": {
+        "id": "rail-cuba-havana-bejucal-1837-from",
+        "name": "Havana, Garcini terminal area",
+        "lon": -82.38,
+        "lat": 23.11,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "destination": {
+        "id": "rail-cuba-havana-bejucal-1837-to",
+        "name": "Bejucal",
+        "lon": -82.39,
+        "lat": 22.93,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1837,
+        "end": 1837,
+        "approximate": false,
+        "original": "1837",
+        "method": "Dated historical source; mapped at the atlas’s whole-year resolution.",
+        "interpretation": "Documented infrastructure opening or completion year only. Later service, closure, and uninterrupted operation are not inferred."
+      },
+      "claims": [
+        {
+          "id": "rail-cuba-havana-bejucal-1837-claim",
+          "text": "An 1837 tariff in the Spanish archival record documents the Garcini–Bejucal first segment of the Havana–Güines railway.",
+          "status": "well-supported",
+          "explanation": "The archival file includes charges, construction accounts and traffic records, not just a concession. The record is bounded to the first segment; the full Güines extension is not backdated.",
+          "support": [
+            {
+              "sourceId": "transport-cuba-pares",
+              "locator": "PARES description 1333846, 1837 tariff and January 1838 accident",
+              "stance": "supports",
+              "note": "Source supports the dated event or interval; schematic coordinates and intervening travel are not claimed as measured evidence."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "transport-cuba-pares",
+          "authors": "Archivo Histórico Nacional",
+          "title": "Ferrocarril de La Habana a Güines: construction, tariffs and traffic records",
+          "year": null,
+          "venue": "PARES, Ministerio de Cultura, Spain",
+          "url": "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/1333846",
+          "access": "Archival description includes 1837 Garcini–Bejucal tariffs, January 1838 accident, 1838 construction accounts and 1839–1840 traffic records. Used as dated evidence of the first segment; no proposal is mapped as built."
+        }
+      ],
+      "review": {
+        "summary": "The archival file includes charges, construction accounts and traffic records, not just a concession. The record is bounded to the first segment; the full Güines extension is not backdated.",
+        "limitations": "Location is approximate. The two-point line connects named endpoints and is not a surveyed alignment. The cited event does not establish settlement, sovereignty, uninterrupted occupation, or service after the documented period.",
+        "discussion": "The record keeps a narrow dated claim. Other stops, communities and changes require their own evidence; absence from this selection does not mean historical absence.",
+        "provenance": "Curated from the identified primary or institutional source; research reports were used as leads, not as claim evidence.",
+        "reviewedAt": "2026-11-15",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -82.38,
+              23.11
+            ],
+            [
+              -82.39,
+              22.93
+            ]
+          ]
+        },
+        "precision": "Two named endpoints only; a schematic connection, never an actual track or daily trajectory.",
+        "provenance": "Endpoints manually located from the cited named places. Opening or documented operation does not establish the line’s exact alignment."
+      }
+    },
+    {
+      "id": "rail-panama-colon-panama-1855",
+      "revision": 1,
+      "type": "event",
+      "title": "Panama Railroad: completed isthmus crossing",
+      "culture": {
+        "id": "historical-transport",
+        "name": "Historical transport",
+        "kind": "unknown",
+        "color": "#8a5a35"
+      },
+      "location": {
+        "id": "rail-panama-colon-panama-1855-from",
+        "name": "Colón",
+        "lon": -79.9,
+        "lat": 9.36,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "destination": {
+        "id": "rail-panama-colon-panama-1855-to",
+        "name": "Panama City",
+        "lon": -79.53,
+        "lat": 8.96,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1855,
+        "end": 1855,
+        "approximate": false,
+        "original": "1855",
+        "method": "Dated historical source; mapped at the atlas’s whole-year resolution.",
+        "interpretation": "Documented infrastructure opening or completion year only. Later service, closure, and uninterrupted operation are not inferred."
+      },
+      "claims": [
+        {
+          "id": "rail-panama-colon-panama-1855-claim",
+          "text": "The Panama Railroad was completed across the isthmus in 1855.",
+          "status": "well-supported",
+          "explanation": "The historical railroad predates the canal. This line records its two termini and completion year, not a modern canal-era railway alignment.",
+          "support": [
+            {
+              "sourceId": "transport-panama-lhl",
+              "locator": "Panama Railroad exhibition, completion at Summit in 1855",
+              "stance": "supports",
+              "note": "Source supports the dated event or interval; schematic coordinates and intervening travel are not claimed as measured evidence."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "transport-panama-lhl",
+          "authors": "Linda Hall Library",
+          "title": "Panama Railroad",
+          "year": null,
+          "venue": "The Land Divided, The World United exhibition",
+          "url": "https://www.lindahall.org/experience/digital-exhibitions/the-land-divided-the-world-united/05-panama-railroad/",
+          "access": "Public institutional or archival text, checked 15 November 2026."
+        }
+      ],
+      "review": {
+        "summary": "The historical railroad predates the canal. This line records its two termini and completion year, not a modern canal-era railway alignment.",
+        "limitations": "Location is approximate. The two-point line connects named endpoints and is not a surveyed alignment. The cited event does not establish settlement, sovereignty, uninterrupted occupation, or service after the documented period.",
+        "discussion": "The record keeps a narrow dated claim. Other stops, communities and changes require their own evidence; absence from this selection does not mean historical absence.",
+        "provenance": "Curated from the identified primary or institutional source; research reports were used as leads, not as claim evidence.",
+        "reviewedAt": "2026-11-15",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -79.9,
+              9.36
+            ],
+            [
+              -79.53,
+              8.96
+            ]
+          ]
+        },
+        "precision": "Two named endpoints only; a schematic connection, never an actual track or daily trajectory.",
+        "provenance": "Endpoints manually located from the cited named places. Opening or documented operation does not establish the line’s exact alignment."
+      }
+    },
+    {
+      "id": "rail-peru-callao-lima-1851",
+      "revision": 1,
+      "type": "event",
+      "title": "Lima–Callao railway opening",
+      "culture": {
+        "id": "historical-transport",
+        "name": "Historical transport",
+        "kind": "unknown",
+        "color": "#8a5a35"
+      },
+      "location": {
+        "id": "rail-peru-callao-lima-1851-from",
+        "name": "Callao",
+        "lon": -77.14,
+        "lat": -12.06,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "destination": {
+        "id": "rail-peru-callao-lima-1851-to",
+        "name": "Lima, San Juan de Dios station area",
+        "lon": -77.035,
+        "lat": -12.052,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1851,
+        "end": 1851,
+        "approximate": false,
+        "original": "1851",
+        "method": "Dated historical source; mapped at the atlas’s whole-year resolution.",
+        "interpretation": "Documented infrastructure opening or completion year only. Later service, closure, and uninterrupted operation are not inferred."
+      },
+      "claims": [
+        {
+          "id": "rail-peru-callao-lima-1851-claim",
+          "text": "The railway joining Lima and Callao opened in 1851.",
+          "status": "well-supported",
+          "explanation": "Only the well-supported year is used: institutional and period accounts differ over ceremonial and operating dates. No claim to continental priority or later continuity is required.",
+          "support": [
+            {
+              "sourceId": "transport-peru-inei",
+              "locator": "Conociendo Callao, historical chronology for 1851",
+              "stance": "supports",
+              "note": "Source supports the dated event or interval; schematic coordinates and intervening travel are not claimed as measured evidence."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "transport-peru-inei",
+          "authors": "Instituto Nacional de Estadística e Informática",
+          "title": "Conociendo Callao: historical overview",
+          "year": null,
+          "venue": "INEI, Perú",
+          "url": "https://proyectos.inei.gob.pe/web/biblioineipub/bancopub/est/lib0275/cap-01.htm",
+          "access": "Public institutional or archival text, checked 15 November 2026."
+        }
+      ],
+      "review": {
+        "summary": "Only the well-supported year is used: institutional and period accounts differ over ceremonial and operating dates. No claim to continental priority or later continuity is required.",
+        "limitations": "Location is approximate. The two-point line connects named endpoints and is not a surveyed alignment. The cited event does not establish settlement, sovereignty, uninterrupted occupation, or service after the documented period.",
+        "discussion": "The record keeps a narrow dated claim. Other stops, communities and changes require their own evidence; absence from this selection does not mean historical absence.",
+        "provenance": "Curated from the identified primary or institutional source; research reports were used as leads, not as claim evidence.",
+        "reviewedAt": "2026-11-15",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -77.14,
+              -12.06
+            ],
+            [
+              -77.035,
+              -12.052
+            ]
+          ]
+        },
+        "precision": "Two named endpoints only; a schematic connection, never an actual track or daily trajectory.",
+        "provenance": "Endpoints manually located from the cited named places. Opening or documented operation does not establish the line’s exact alignment."
+      }
+    },
+    {
+      "id": "rail-ecuador-duran-quito-1908",
+      "revision": 1,
+      "type": "event",
+      "title": "Ferrocarril del Sur: Durán–Quito through connection",
+      "culture": {
+        "id": "historical-transport",
+        "name": "Historical transport",
+        "kind": "unknown",
+        "color": "#8a5a35"
+      },
+      "location": {
+        "id": "rail-ecuador-duran-quito-1908-from",
+        "name": "Durán",
+        "lon": -79.853,
+        "lat": -2.17,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "destination": {
+        "id": "rail-ecuador-duran-quito-1908-to",
+        "name": "Quito, Chimbacalle",
+        "lon": -78.516,
+        "lat": -0.251,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1908,
+        "end": 1908,
+        "approximate": false,
+        "original": "1908",
+        "method": "Dated historical source; mapped at the atlas’s whole-year resolution.",
+        "interpretation": "Documented infrastructure opening or completion year only. Later service, closure, and uninterrupted operation are not inferred."
+      },
+      "claims": [
+        {
+          "id": "rail-ecuador-duran-quito-1908-claim",
+          "text": "A through train from Durán reached Quito on 25 June 1908, inaugurating the coastal–highland connection.",
+          "status": "well-supported",
+          "explanation": "The coastal rail terminal was Durán across the Guayas from Guayaquil; this record does not invent a railway bridge to Guayaquil. Earlier sections are not backdated from this milestone.",
+          "support": [
+            {
+              "sourceId": "transport-ecuador-flacso",
+              "locator": "Repository description, first direct Durán–Quito arrival",
+              "stance": "supports",
+              "note": "Source supports the dated event or interval; schematic coordinates and intervening travel are not claimed as measured evidence."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "transport-ecuador-flacso",
+          "authors": "FLACSO Ecuador repository",
+          "title": "Historia del ferrocarril del Sur",
+          "year": null,
+          "venue": "FLACSO Andes institutional repository",
+          "url": "https://repositorio.flacsoandes.edu.ec/items/ffa05d59-5c64-4fa3-8451-8016c4e054c2",
+          "access": "Repository abstract quotes the documented 25 June 1908 through arrival from Durán at Quito; not evidence of a rail crossing of the Guayas from Guayaquil."
+        }
+      ],
+      "review": {
+        "summary": "The coastal rail terminal was Durán across the Guayas from Guayaquil; this record does not invent a railway bridge to Guayaquil. Earlier sections are not backdated from this milestone.",
+        "limitations": "Location is approximate. The two-point line connects named endpoints and is not a surveyed alignment. The cited event does not establish settlement, sovereignty, uninterrupted occupation, or service after the documented period.",
+        "discussion": "The record keeps a narrow dated claim. Other stops, communities and changes require their own evidence; absence from this selection does not mean historical absence.",
+        "provenance": "Curated from the identified primary or institutional source; research reports were used as leads, not as claim evidence.",
+        "reviewedAt": "2026-11-15",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -79.853,
+              -2.17
+            ],
+            [
+              -78.516,
+              -0.251
+            ]
+          ]
+        },
+        "precision": "Two named endpoints only; a schematic connection, never an actual track or daily trajectory.",
+        "provenance": "Endpoints manually located from the cited named places. Opening or documented operation does not establish the line’s exact alignment."
+      }
+    },
+    {
+      "id": "rail-costarica-limon-sanjose-1890",
+      "revision": 1,
+      "type": "event",
+      "title": "Costa Rica Atlantic Railway: completed connection",
+      "culture": {
+        "id": "historical-transport",
+        "name": "Historical transport",
+        "kind": "unknown",
+        "color": "#8a5a35"
+      },
+      "location": {
+        "id": "rail-costarica-limon-sanjose-1890-from",
+        "name": "Puerto Limón",
+        "lon": -83.03,
+        "lat": 10.0,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "destination": {
+        "id": "rail-costarica-limon-sanjose-1890-to",
+        "name": "San José",
+        "lon": -84.08,
+        "lat": 9.94,
+        "precision": "Approximate named-place anchor; not an exact historical feature boundary.",
+        "provenance": "Modern geographic reference for the named location in the cited source; manually selected and explicitly approximate."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1890,
+        "end": 1890,
+        "approximate": false,
+        "original": "1890",
+        "method": "Dated historical source; mapped at the atlas’s whole-year resolution.",
+        "interpretation": "Documented infrastructure opening or completion year only. Later service, closure, and uninterrupted operation are not inferred."
+      },
+      "claims": [
+        {
+          "id": "rail-costarica-limon-sanjose-1890-claim",
+          "text": "Construction of the San José–Limón railway connection was completed in 1890; the cited history dates inauguration of service to the following year.",
+          "status": "well-supported",
+          "explanation": "Completion and regular service are kept distinct. The event records the built connection in 1890, without assuming a continuously operating route from that date.",
+          "support": [
+            {
+              "sourceId": "transport-costarica-mep",
+              "locator": "Informe Limón, railway chronology",
+              "stance": "supports",
+              "note": "Source supports the dated event or interval; schematic coordinates and intervening travel are not claimed as measured evidence."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "transport-costarica-mep",
+          "authors": "Ministerio de Educación Pública, Costa Rica",
+          "title": "Informe: Limón",
+          "year": null,
+          "venue": "Ministerio de Educación Pública",
+          "url": "https://www.mep.go.cr/sites/default/files/2024-05/InformeLimon.pdf",
+          "access": "Institutional history distinguishes 1890 construction completion from inauguration of service in the following year."
+        }
+      ],
+      "review": {
+        "summary": "Completion and regular service are kept distinct. The event records the built connection in 1890, without assuming a continuously operating route from that date.",
+        "limitations": "Location is approximate. The two-point line connects named endpoints and is not a surveyed alignment. The cited event does not establish settlement, sovereignty, uninterrupted occupation, or service after the documented period.",
+        "discussion": "The record keeps a narrow dated claim. Other stops, communities and changes require their own evidence; absence from this selection does not mean historical absence.",
+        "provenance": "Curated from the identified primary or institutional source; research reports were used as leads, not as claim evidence.",
+        "reviewedAt": "2026-11-15",
+        "history": [],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -83.03,
+              10.0
+            ],
+            [
+              -84.08,
+              9.94
+            ]
+          ]
+        },
+        "precision": "Two named endpoints only; a schematic connection, never an actual track or daily trajectory.",
+        "provenance": "Endpoints manually located from the cited named places. Opening or documented operation does not establish the line’s exact alignment."
+      }
+    }
+  ]
+}

@@ -4,6 +4,10 @@ export type ExploreCategory='all'|'places'|'connections'|'conflict'|'research'|'
 export const exploreCategories:Record<ExploreCategory,string>={all:'Everything',places:'Places',connections:'Connections',conflict:'Conflict & violence',research:'Regional research',wrecks:'Shipwrecks'};
 export const regions:{id:string;name:string;center:[number,number];zoom:number;scope:MapScope}[]=[
  {id:'pacific',name:'Pacific Ocean',center:[-155,-12],zoom:1.35,scope:'pacific'},
+ {id:'asia',name:'Mainland & Island Southeast Asia',center:[118,8],zoom:3,scope:'pacific'},
+ {id:'australia',name:'Australia & Sahul',center:[136,-24],zoom:3.5,scope:'pacific'},
+ {id:'melanesia',name:'New Guinea & Melanesia',center:[155,-9],zoom:4,scope:'pacific'},
+ {id:'micronesia',name:'Micronesia',center:[150,10],zoom:4,scope:'pacific'},
  {id:'polynesia',name:'Polynesia',center:[-159,-15],zoom:3,scope:'pacific'},
  {id:'hawaii',name:'Hawaiʻi',center:[-157.2,20.7],zoom:22,scope:'pacific'},
  {id:'aotearoa',name:'Aotearoa / New Zealand',center:[173,-41],zoom:9,scope:'pacific'},

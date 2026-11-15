@@ -3,6 +3,9 @@ import { effectiveClimateHidden } from "./physical-rules";
 import { siteGuideIndex } from "./site-guides";
 import "./styles.css";
 import "./atlas-ui.css";
+import './atlas-context.css';
+import { atlasAssets, loadAtlasAssets } from './atlas-assets';
+import { dateValue, sampleVoyage, voyageDate, arrivedVoyageRecords } from './voyages';
 import { appShell, mapShell, libraryHTML } from "./atlas-shell";
 import { stories } from "./stories";
 import { sampleStory, sceneStartMs, storyDurationMs } from "./story-player";
@@ -109,6 +112,8 @@ const currentStory=()=>stories.find(s=>s.id===storyId)??stories[0];
 const isGuidedStory=()=>mountedMap&&atlasMode==='movie'&&storyId!=='free';
 const hiddenHistory = new Set<string>();
 let showPastPlaces = true;
+let showBoundaries=true,showRails=true,showVoyages=true,voyageId='',voyageClock=0;
+const selectedVoyage=()=>atlasAssets.voyages.find(v=>v.id===voyageId);
 let tableController: EvidenceTable | undefined;
 const tableState: EvidenceTableState = {
   search: "",
@@ -177,7 +182,7 @@ const map = new MapView(
   (items) => {
     selectEvidence(items);
   },
-  () => renderVisible(),
+  () => {renderVisible();renderBoundaryCatalog();},
 );
 let mountedMap = false;
 main.addEventListener("click", event => {
@@ -220,11 +225,11 @@ function syncTransport(){
   document.body.classList.toggle('guided-story',guided);
   document.body.classList.toggle('local-date',atlasMode==='explore'&&explorePeriod==='current');
   $('#story-position').hidden=!guided;
-  $('.story-speed').hidden=!guided;
+  $('.story-speed').hidden=!guided&&!voyageId;
   $('#previous-scene').hidden=!guided;
   $('#next-scene').hidden=!guided;
   $('#time-settings-toggle').textContent=guided?'Date & pace':'Date & speed';
-  $('#restart').setAttribute('aria-label',guided?'Restart story':'Earliest evidence');
+  $('#restart').setAttribute('aria-label',voyageId?'Restart expedition':guided?'Restart story':'Earliest evidence');
   const selector=document.querySelector<HTMLSelectElement>('#story-select');if(selector)selector.value=storyId;
   if(guided)updateStoryProgress();
 }
@@ -311,7 +316,7 @@ function mountAtlasControls(){
   $('#focus-selection').addEventListener('click',()=>{if(selected.length)map.focusRecords(selected);});
   $('#show-selection-year').addEventListener('click',()=>{const r=selected[0];if(!r||r.time.start===null)return;setYear(r.time.start);if(atlasMode==='explore'){explorePeriod='current';$<HTMLSelectElement>('#explore-period').value='current';$('.timeline').hidden=false;syncTransport();renderMapData();}map.focusRecords([r]);selectEvidence([r]);});
   $('#selection-choices').addEventListener('click',e=>{const button=(e.target as Element).closest<HTMLButtonElement>('[data-pick-record]');if(!button)return;const r=selectionCandidates[Number(button.dataset.pickRecord)];if(r){selected=[r];map.setHighlighted([r.id]);renderSelectionChoices();renderVisible();}});
-  $('#story-select').addEventListener('change',e=>{stop();storyId=(e.target as HTMLSelectElement).value;storyElapsed=0;storySceneIndex=-1;placeQuery='';placeCategory='all';if(storyId==='free'){renderStory();renderMapData();}else showStoryScene(0);syncTransport();});
+  $('#story-select').addEventListener('change',e=>{stop();voyageId='';storyId=(e.target as HTMLSelectElement).value;storyElapsed=0;storySceneIndex=-1;placeQuery='';placeCategory='all';if(storyId==='free'){renderStory();renderMapData();}else showStoryScene(0);syncTransport();});
   $('#story-chapters').addEventListener('click',e=>{const b=(e.target as Element).closest<HTMLButtonElement>('[data-scene]');if(b)seekScene(Number(b.dataset.scene));});
   $('#layer-options').insertAdjacentHTML('afterbegin',`<label class="check wider-evidence"><input id="story-wider" type="checkbox" ${storyWider?'checked':''}> Show evidence beyond this story</label>`);
   $('.wider-evidence').hidden=atlasMode!=='movie';
@@ -348,7 +353,7 @@ function bounds(recenter = false) {
     .join("");
 }
 function setYear(next: number, manual = true) {
-  if (manual) { stop(); if (mountedMap && atlasMode === "movie") useFreeTimeline(); }
+  if (manual) { stop(); voyageId=''; if (mountedMap && atlasMode === "movie") useFreeTimeline(); }
   year = Math.round(Math.max(minYear, Math.min(END_YEAR, next)));
   const slider = $<HTMLInputElement>("#time-slider");
   if (year < rangeStart || year > rangeEnd) bounds(true);
@@ -369,7 +374,16 @@ function setYear(next: number, manual = true) {
     renderTableBody();
 }
 function tick(now: number) {
-  if (playing && isGuidedStory()) {
+  const voyage=selectedVoyage();
+  if(playing&&voyage){
+    const start=dateValue(voyage.stops[0].arrival),end=dateValue(voyage.stops.at(-1)!.departure);
+    const previousArrivals=arrivedVoyageRecords(voyage,voyageClock).size;
+    voyageClock=Math.min(end,voyageClock+Math.min(Math.max(now-lastTick,0),250)/90000*(end-start)*storyRate);
+    if(Math.floor(voyageClock)!==year)setYear(Math.floor(voyageClock),false);
+    else if(arrivedVoyageRecords(voyage,voyageClock).size!==previousArrivals)renderMapData();
+    syncVoyage();
+    if(voyageClock>=end)stop();
+  } else if (playing && isGuidedStory()) {
     storyElapsed += Math.min(Math.max(now-lastTick,0),250) * storyRate;
     const frame=sampleStory(currentStory(),storyElapsed);
     if(frame.sceneIndex!==storySceneIndex) showStoryScene(frame.sceneIndex);
@@ -401,8 +415,10 @@ $("#play").addEventListener("click", () => {
     stop();
     return;
   }
+  const voyage=selectedVoyage();
+  if(voyage&&voyageClock>=dateValue(voyage.stops.at(-1)!.departure)){voyageClock=dateValue(voyage.stops[0].arrival);setYear(Math.floor(voyageClock),false);syncVoyage();}
   if (isGuidedStory() && sampleStory(currentStory(),storyElapsed).completed) seekScene(0);
-  else if (!isGuidedStory() && year === END_YEAR) setYear(minYear);
+  else if (!voyage && !isGuidedStory() && year === END_YEAR) setYear(minYear);
   playing = true;
   selected = [];
   renderMapData();
@@ -413,7 +429,7 @@ $("#play").addEventListener("click", () => {
   $("#play").setAttribute("aria-label", "Pause");
   if(isGuidedStory())updateStoryProgress();
 });
-$("#restart").addEventListener("click", () => isGuidedStory() ? seekScene(0) : setYear(minYear));
+$("#restart").addEventListener("click", () => {const v=selectedVoyage();if(v){stop();voyageClock=dateValue(v.stops[0].arrival);setYear(Math.floor(voyageClock),false);syncVoyage();}else if(isGuidedStory())seekScene(0);else setYear(minYear);});
 $('#previous-scene').addEventListener('click',()=>seekScene(storySceneIndex-1));
 $('#next-scene').addEventListener('click',()=>seekScene(storySceneIndex+1));
 for(const id of ['story-speed','story-speed-compact'])$('#'+id).addEventListener('change',e=>{storyRate=Number((e.target as HTMLSelectElement).value);for(const other of ['story-speed','story-speed-compact'])$<HTMLSelectElement>('#'+other).value=String(storyRate);});
@@ -502,6 +518,7 @@ function mapPage() {
     ? `<section aria-labelledby="language-relationships-heading"><h4 id="language-relationships-heading">Language relationships</h4><p class="fine">All published language models, independent of the selected year. Models without dates remain outside the dated map.</p><ul>${languageModels.map((r) => `<li><a href="${esc(recordHref(r))}">${esc(r.title)}</a><br><small>${r.time.kind === "unplaced" ? "Chronology unresolved" : esc(timeLabel(r.time))}</small></li>`).join("")}</ul></section>`
     : "";
   main.innerHTML = mapShell({atlasMode,hiddenHistory,showPastPlaces,showUndated,showNaturalEvents,showIce,iceScenario,hiddenClimate,showUncertainHazards,showCurrents,showWinds,showModeled,hiddenLayers,preview,legendSearch,languageLinks});
+  mountHistoricalContext();
   main.querySelectorAll<HTMLInputElement>('[data-history-layer]').forEach(input=>input.addEventListener('change',()=>{
     if(input.checked)hiddenHistory.delete(input.dataset.historyLayer!);else hiddenHistory.add(input.dataset.historyLayer!);
     renderMapData();
@@ -618,15 +635,62 @@ function renderLegend() {
       }),
     );
 }
+function mountHistoricalContext(){
+  $('#layer-options > .visible-heading').insertAdjacentHTML('afterend',`<section class="historical-options"><h3>Borders, journeys &amp; railways</h3><label class="check"><input id="show-boundaries" type="checkbox" ${showBoundaries?'checked':''}> Dotted historical boundaries</label><label class="check"><input id="show-rails" type="checkbox" ${showRails?'checked':''}> Accumulated railway construction</label><label class="check"><input id="show-voyages" type="checkbox" ${showVoyages?'checked':''}> Expeditions active this year</label><form id="context-year-form" class="context-year"><label for="context-year">Map year · CE</label><input id="context-year" type="number" min="1" max="1934" value="${Math.max(1,year)}"><button>Go</button></form><p class="fine">Borders are the dated administrative record at year end, not exclusive occupation or proof of control. Railway lines accumulate built or attested infrastructure; continued service is not implied.</p><label>Follow a dated journey<select id="voyage-select"><option value="">Choose an expedition…</option></select></label><p id="context-load-status" role="status"></p><details><summary>Boundaries in this view &amp; sources</summary><div id="context-catalog" class="context-catalog"></div></details><a href="docs/atlas-expansion.html" target="_blank">Dates, sources &amp; remaining gaps ↗</a></section>`);
+  $('#story-scene').insertAdjacentHTML('beforebegin','<section id="voyage-controls" class="voyage-controls" aria-label="Dated expedition" hidden><strong id="voyage-title"></strong><p id="voyage-position"></p><input id="voyage-progress" type="range" min="0" max="10000" value="0" aria-label="Expedition date"><details><summary>Itinerary &amp; evidence</summary><p id="voyage-precision"></p><div id="voyage-evidence" class="context-catalog"></div></details><button id="close-voyage">Return to timeline</button></section>');
+  for(const [id,change] of [['show-boundaries',(v:boolean)=>showBoundaries=v],['show-rails',(v:boolean)=>showRails=v],['show-voyages',(v:boolean)=>showVoyages=v]] as const)$('#'+id).addEventListener('change',e=>{change((e.target as HTMLInputElement).checked);renderMapData();});
+  $('#context-year-form').addEventListener('submit',e=>{e.preventDefault();const value=Number($<HTMLInputElement>('#context-year').value);if(Number.isInteger(value)&&value>=1&&value<=END_YEAR)setYear(value);});
+  for(const id of ['voyage-select','watch-voyage'])$('#'+id).addEventListener('change',e=>{
+    stop();useFreeTimeline();voyageId=(e.target as HTMLSelectElement).value;
+    const v=selectedVoyage();if(!v){renderMapData();return;}
+    showVoyages=true;voyageClock=dateValue(v.stops[0].arrival);setYear(Math.floor(voyageClock),false);map.setScope('world');
+    if(atlasMode!=='movie'){location.hash='#movie';return;}
+    renderStory();syncTransport();syncVoyage();
+  });
+  $('#voyage-progress').addEventListener('input',e=>{const v=selectedVoyage();if(!v)return;stop();const start=dateValue(v.stops[0].arrival),end=dateValue(v.stops.at(-1)!.departure);voyageClock=start+Number((e.target as HTMLInputElement).value)/10000*(end-start);setYear(Math.floor(voyageClock),false);syncVoyage();});
+  $('#close-voyage').addEventListener('click',()=>{stop();voyageId='';renderMapData();syncTransport();});
+  renderHistoricalContext();
+}
+function renderHistoricalContext(){
+  const status=document.querySelector('#context-load-status');if(!status)return;
+  status.textContent=!atlasAssets.ready?'Loading dated geography…':atlasAssets.errors.length?`Could not load: ${atlasAssets.errors.join(', ')}. Missing layers do not mean historical absence.`:`${atlasAssets.boundaries.length.toLocaleString()} dated boundary versions · ${atlasAssets.voyages.length} itineraries.`;
+  const selector=$<HTMLSelectElement>('#voyage-select');
+  if(selector.options.length!==atlasAssets.voyages.length+1)selector.innerHTML='<option value="">Choose an expedition…</option>'+atlasAssets.voyages.map(v=>`<option value="${esc(v.id)}">${esc(v.name)}</option>`).join('');
+  const watch=$<HTMLSelectElement>('#watch-voyage');watch.innerHTML=selector.innerHTML;watch.value=voyageId;
+  $('#boundary-date-status').textContent=showBoundaries?`Dotted boundaries · ${formatYear(year)} year-end · gaps are missing coverage`:showRails?`Rail construction recorded through ${formatYear(year)}`:'';
+  selector.value=voyageId;$<HTMLInputElement>('#show-voyages').checked=showVoyages;$<HTMLInputElement>('#context-year').value=String(Math.max(1,year));
+  renderBoundaryCatalog();
+  const v=selectedVoyage();$('#voyage-controls').hidden=!v;$('#story-scene').hidden=!!v;$('#story-chapters').hidden=!!v;
+  if(v){
+    $('#voyage-title').textContent=v.name;
+    $('#voyage-precision').textContent=v.precision+' The moving symbol interpolates between dated stops; it is not a daily position log. Hollow stops are later in the itinerary. Canoe and walking symbols distinguish river and land legs.';
+    $('#voyage-evidence').innerHTML=`<p>${esc(v.summary)}</p>`+v.stops.map(s=>`<p><b>${esc(s.name)}</b> · ${esc(s.arrival)}–${esc(s.departure)}<br>${esc(s.note)}</p>`).join('')+v.sourceIds.map(id=>{const source=atlasAssets.voyageSources.find(s=>s.id===id);return source?`<p><a href="${esc(source.url)}" target="_blank" rel="noopener">${esc(source.title)} ↗</a></p>`:'';}).join('');
+    syncVoyage();
+  }
+}
+function renderBoundaryCatalog(){
+  const host=document.querySelector('#context-catalog');if(!host)return;
+  host.innerHTML=map.visibleBoundaries().map(b=>`<p><strong>${esc(b.name)}</strong> · ${esc(b.start)}–${esc(b.end)}<br>${esc(b.note)}<br>${esc(b.precision)}${b.labelSource?`<br><a href="${esc(b.labelSource)}" target="_blank" rel="noopener">Historical name source ↗</a>`:''}<br>${b.sourceIds.map(id=>{const s=atlasAssets.boundarySources.find(s=>s.id===id);return s?`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)} ↗</a>`:esc(id);}).join(' · ')}</p>`).join('')||'<p>No included boundary outlines in this view and year, or the layer is hidden. Missing coverage does not establish historical absence.</p>';
+}
+function syncVoyage(){
+  const v=selectedVoyage();if(!v||!mountedMap)return;
+  const frame=sampleVoyage(v.stops,voyageClock),start=dateValue(v.stops[0].arrival),end=dateValue(v.stops.at(-1)!.departure);
+  $('#voyage-position').textContent=`${voyageDate(voyageClock)} · ${frame?.status==='stopped'?'At':'Traveling: '} ${frame?.stopName??''} · ${playing?'Following journey':'Press Play to follow the journey'}.`;
+  $<HTMLInputElement>('#voyage-progress').value=String(Math.round((voyageClock-start)/(end-start)*10000));
+  $('#voyage-progress').setAttribute('aria-valuetext',voyageDate(voyageClock));
+  map.context.options.voyageDate=voyageClock;map.context.options.voyageId=voyageId;map.refreshVoyage();
+}
 function renderMapData() {
+  map.context.options={boundaries:showBoundaries,rails:showRails,voyages:showVoyages,voyageId,voyageDate:voyageId?voyageClock:null};
   requestIce(atlasMode === "movie" && showIce ? year : -1000000, iceScenario);
   let candidates=mapRows();
+  const journey=selectedVoyage();if(journey){const ids=new Set(journey.recordIds),arrived=arrivedVoyageRecords(journey,voyageClock);candidates=candidates.filter(r=>arrived.has(r.id)||(storyWider&&!ids.has(r.id)));}
   if(isGuidedStory()&&!storyWider){const ids=new Set(currentStory().scenes.flatMap(s=>s.recordIds));candidates=candidates.filter(r=>ids.has(r.id));}
   if(atlasMode==='explore'&&placeCategory!=='all')candidates=candidates.filter(r=>exploreCategory(r)===placeCategory);
   const view = recordsForView(candidates, atlasMode==='explore'&&explorePeriod==='current'?'movie':atlasMode, year);
   const active = view.dated;
   currentActive = active;
-  const historical=view.history.filter(r=>r.history?.kind==='wreck'||r.history?.kind==='settlement'||showPastPlaces);
+  const historical=view.history.filter(r=>r.history?.kind==='wreck'||r.history?.kind==='settlement'||r.history?.kind==='visit'||showPastPlaces);
   currentVisible=[...active,...historical];
   selected = retainCurrentSelection(selected, currentVisible, atlasMode);
   document.body.classList.toggle("movie-playing", atlasMode === "movie" && playing);
@@ -674,6 +738,7 @@ function renderMapData() {
   const possibleFoundations=currentVisible.filter(r=>r.history?.kind==='settlement'&&year<r.time.end!).length;
   summary.hidden=atlasMode==='explore'||(isGuidedStory()&&!count('settlement')&&!count('wreck')&&!active.some(r=>r.history?.windows));
   summary.innerHTML=`<span><b>${count('settlement')-possibleFoundations}</b> established places${possibleFoundations?` + ${possibleFoundations} possible`:''}</span><span><b>${active.filter(r=>r.history?.windows).length}</b> active connections</span><span><b>${count('wreck')}</b> recorded losses</span><small>Selected collection · not population totals</small>`;
+  renderHistoricalContext();
   renderVisible();
 }
 function openDetails(){
@@ -984,4 +1049,8 @@ window.addEventListener("hashchange", route);
 bounds(true);
 setYear(year);
 route();
+void loadAtlasAssets(()=>{
+  map.context.boundaries=atlasAssets.boundaries;map.context.rails=atlasAssets.rails;map.context.voyages=atlasAssets.voyages;
+  if(mountedMap)renderMapData();
+},value=>map.setDetailedLand(value));
 requestAnimationFrame(tick);

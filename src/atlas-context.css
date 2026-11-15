@@ -1,0 +1,19 @@
+.historical-context,.historical-context *,.journey-context,.journey-context *{pointer-events:none}
+.political-boundaries path{fill:none;stroke:#e4bd88;stroke-width:1.3;stroke-dasharray:2 4;vector-effect:non-scaling-stroke;opacity:.8}
+.political-boundaries .boundary-reservation{stroke:#f5a5c6;stroke-dasharray:1 3}
+.boundary-label{fill:#eed5ac;text-anchor:middle;paint-order:stroke;stroke:#13282e;stroke-width:3px;stroke-linejoin:round;vector-effect:non-scaling-stroke;font-weight:600}
+.historical-rails path{fill:none;stroke:#abc5bd;stroke-width:1;vector-effect:non-scaling-stroke;opacity:.65}
+.voyage-tracks>path{fill:none;stroke:#f5e9b5;stroke-width:1.5;stroke-dasharray:5 5;vector-effect:non-scaling-stroke}
+.voyage-stop{fill:#f5e9b5;stroke:#142a30;stroke-width:1;vector-effect:non-scaling-stroke}
+.voyage-traveler circle{fill:#173b43;stroke:#fff0b9;stroke-width:1.5}
+.voyage-traveler text{font-size:19px;fill:#fff0b9}
+.voyage-controls{background:#18343c;border:1px solid #47615e;border-radius:12px;padding:12px 16px;margin:8px 16px;color:#edf3e5}
+.voyage-controls input{width:100%}.voyage-controls p{margin:4px 0;font-size:13px}
+.voyage-controls strong{color:#f8d99a}.context-catalog{max-height:220px;overflow:auto}.context-catalog p{font-size:12px;border-top:1px solid #4a5f5b;padding-top:7px}
+.context-year{display:flex;gap:8px;align-items:center}.context-year input{width:85px}
+
+.context-date-status{font-size:11px;color:#b9ccc8;margin:0;padding:2px 14px 6px;min-height:1em}.journey-picker{display:block;font-size:12px;color:#bfd2cc;margin-top:14px}.journey-picker select{margin-top:6px}
+
+.context-date-status{position:absolute;top:32px;left:14px;z-index:3;max-width:calc(100% - 175px);padding:3px 7px;background:#17333bd9;border-radius:4px;pointer-events:none}.journey-picker{color:#4d6869}.voyage-controls{margin:14px 18px;background:#e3e9df;border-color:#aebfba;color:#233f44}.voyage-controls strong{color:#224c52}.voyage-controls .context-catalog{max-height:none}.voyage-controls details{margin:10px 0}.voyage-stop.future-stop{fill:#16353c;opacity:.7}.voyage-controls button{margin-top:6px}
+
+@media(max-width:700px){.story-intro{flex-wrap:wrap}.story-intro>.journey-picker{flex:0 0 100%;min-width:0;margin:0;display:grid;grid-template-columns:100px minmax(0,1fr);align-items:center;gap:8px;font-size:10px}.story-intro .journey-picker select{width:100%;max-width:100%;min-width:0}.voyage-controls{margin:10px 16px;padding:10px 12px}.voyage-controls strong{font-size:12px}.voyage-controls p{font-size:11px}}

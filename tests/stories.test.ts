@@ -8,7 +8,7 @@ import { END_YEAR } from "../src/time";
 const records = new Map(dataset.records.map(record => [record.id, record]));
 
 test("journeys can resolve source-linked evidence without inventing record IDs or reversing chronology", () => {
-  assert.ok(stories.length >= 4 && stories.length <= 6);
+  assert.ok(stories.length >= 7);
   assert.equal(new Set(stories.map(story => story.id)).size, stories.length);
   for (const story of stories) {
     assert.ok(story.scenes.length >= 3, story.id);

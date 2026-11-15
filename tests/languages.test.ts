@@ -71,9 +71,9 @@ test("Pacific projection exposes island Asia, the dateline and Hawaii without cl
   }
   assert.ok(Math.abs(p([179,0])![0]-p([-179,0])![0])<10);
 });
-test("default combined frame centers 145W and crops Africa, Iceland and eastern Greenland", () => {
+test("default combined frame includes island Asia and Australia while cropping Africa and Iceland", () => {
   const p = mapProjection();
-  assert.ok(Math.abs(p([-145,15])![0] - 500) < .01);
+  assert.ok(Math.abs(p([-147.5,10])![0] - 500) < .01);
   for (const position of [[101,15],[-31,15],[-70,-40],[-100,60]]) {
     const xy=p(position as [number,number])!;
     assert.ok(xy[0]>=0 && xy[0]<=1000, String(position));
