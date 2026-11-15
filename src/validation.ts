@@ -4,6 +4,7 @@ import { validatePopulation } from "./population";
 import type { Dataset, EvidenceRecord } from "./model";
 import { validateCitation } from "./citations";
 import { END_YEAR } from "./time";
+import { validateHistory } from "./history";
 export function safeURL(value: unknown): boolean {
   if (typeof value !== "string") return false;
   try {
@@ -27,6 +28,7 @@ export function validateRecord(value: unknown, complete = true): string[] {
   const add = (s: string) => errors.push(s);
   const r = value as EvidenceRecord;
   if (!object(r)) return ["Record must be an object."];
+  errors.push(...validateHistory(r));
   errors.push(...validatePopulation(r));
   errors.push(...validateLinguistics(r, complete));
   if (r.overlay !== undefined) {

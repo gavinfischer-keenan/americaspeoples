@@ -102,7 +102,23 @@ export interface Linguistics {
     to: string;
   };
 }
+export interface HistoryMetadata {
+  kind: "settlement" | "migration" | "exchange" | "wreck";
+  claimId: string;
+  foundingPower?: string;
+  eventDate?: string;
+  group?: string;
+  endYear?: number;
+  endMeaning?: "unknown" | "abandoned" | "relocated";
+  windows?: {
+    start: number;
+    end: number;
+    certainty: "documented" | "approximate";
+    note: string;
+  }[];
+}
 export interface EvidenceRecord {
+  history?: HistoryMetadata;
   linguistics?: Linguistics;
   population?: {
     start: number;

@@ -51,7 +51,7 @@ try {
     await page.mouse.down();
     await page.mouse.move(rect.x + 230, rect.y + 220);
     await page.mouse.up();
-    await page.locator("[data-point]").first().click();
+    await page.locator(".site:not(.past-place)").first().click();
     assert.ok(
       (await page.locator("#selected-records .selected-detail").count()) > 0,
     );

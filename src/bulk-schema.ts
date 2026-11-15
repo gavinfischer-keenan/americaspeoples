@@ -44,6 +44,7 @@ export const BULK_HEADERS = {
     "summary",
     "limitations",
     "discussion",
+    "history_json",
     "population_json",
     "language_json",
   ],

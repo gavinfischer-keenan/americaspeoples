@@ -334,6 +334,10 @@ function buildPackage(
         relatedIds: related,
       },
     };
+    if (str(r, "history_json")) {
+      try { const value = JSON.parse(str(r, "history_json")); if(value!==null) record.history=value; }
+      catch { fail("Evidence", row, "history_json is not valid JSON."); }
+    } else if(operation === "correction" && base?.history) record.history=structuredClone(base.history);
     if (str(r, "population_json")) {
       try {
         record.population = JSON.parse(str(r, "population_json"));

@@ -7,6 +7,7 @@ import { populationAt } from "./population";
 import { recordHref } from "./review";
 import { guideForRecord, guideLink } from "./site-guides";
 import { formatYear } from "./time";
+import { historyLabel, historyState } from "./history";
 
 export interface MapPanelState {
   visible: readonly DisplayRecord[];
@@ -66,20 +67,20 @@ export class MapPanels {
     );
     this.count("#visible-count", String(visible.length));
     this.count("#context-count", String(context.length));
-    this.count("#active-count", `${visible.length} mapped records in view`);
+    this.count("#active-count", `${visible.length} mapped records · ${visible.filter(r=>historyState(r,year)==='active').length} current`);
     this.reconcile(
       this.visibleHost,
       this.visibleButtons,
       visible,
       selectedKeys,
-      false,
+      false, year, exploring,
     );
     this.reconcile(
       this.contextHost,
       this.contextButtons,
       context,
       selectedKeys,
-      true,
+      true, year, exploring,
     );
 
     const activeKeys = new Set(active.map(recordKey));
@@ -97,6 +98,7 @@ export class MapPanels {
         r.review.summary,
         r.review.limitations,
         r.population,
+        r.history,
         r.type,
         !!r.overlay,
         r.overlay?.basis,
@@ -111,7 +113,7 @@ export class MapPanels {
           .map((r) => {
             const included = exploring || activeKeys.has(recordKey(r));
             const inView = visibleKeys.has(recordKey(r));
-            return `<article class="selected-detail"><h4>${esc(r.title)}</h4><p class="fine">${esc(r.culture.name)} · ${esc(timeLabel(r.time))}</p>${!included ? '<p class="selection-status">Not active evidence at the current year / filters.</p>' : !inView ? '<p class="selection-status">Outside the current map view.</p>' : ""}<p>${esc(r.review.summary)}</p>${!r.overlay && r.type !== "movement" ? `<p class="fine">${exploring ? r.population?.length ? r.population.map(p=>`${p.min.toLocaleString()}–${p.max.toLocaleString()} residents · ${formatYear(p.start)}–${formatYear(p.end)}`).map(esc).join("<br>") : "Population unknown in this record; Explore marker size is a reference." : esc(populationAt([r], year).label)}</p>` : ""}<p class="fine">${r.time.kind === "unplaced" ? "Chronology unresolved · independent of selected year" : exploring ? "All-period Explore view · inspect the published date range" : temporalState(r.time, year) === "possible" ? "Possible time / context window" : "Documented time"}${isModeledRecord(r) ? " · Modeled / schematic evidence" : ""}</p><p class="fine">${esc(r.review.limitations)}</p>${r.time.kind === "unplaced" ? `<p class="fine"><strong>Source date guidance:</strong> ${esc(r.time.original)}<br>${esc(r.time.interpretation)}</p>` : ""}<a class="button" href="${recordHref(r)}">Full review &amp; sources ↗</a>${guideLink(r.id)}</article>`;
+            return `<article class="selected-detail"><h4>${esc(r.title)}</h4><p class="fine">${esc(r.culture.name)} · ${esc(timeLabel(r.time))}</p>${!exploring && historyLabel(r,year) ? `<p class="selection-status">${esc(historyLabel(r,year))}</p>` : !included ? '<p class="selection-status">Not active evidence at the current year / filters.</p>' : !inView ? '<p class="selection-status">Outside the current map view.</p>' : ""}<p>${esc(r.review.summary)}</p>${!r.overlay && r.type !== "movement" && !r.history && (exploring || historyState(r,year)==='active') ? `<p class="fine">${exploring ? r.population?.length ? r.population.map(p=>`${p.min.toLocaleString()}–${p.max.toLocaleString()} residents · ${formatYear(p.start)}–${formatYear(p.end)}`).map(esc).join("<br>") : "Population unknown in this record; Explore marker size is a reference." : esc(populationAt([r], year).label)}</p>` : ""}<p class="fine">${!exploring && historyState(r,year)!=='active' ? "Historical context · not current occupation evidence" : r.time.kind === "unplaced" ? "Chronology unresolved · independent of selected year" : exploring ? "All-period Explore view · inspect the published date range" : temporalState(r.time, year) === "possible" ? "Possible time / context window" : "Documented time"}${isModeledRecord(r) ? " · Modeled / schematic evidence" : ""}</p><p class="fine">${esc(r.review.limitations)}</p>${r.time.kind === "unplaced" ? `<p class="fine"><strong>Source date guidance:</strong> ${esc(r.time.original)}<br>${esc(r.time.interpretation)}</p>` : ""}<a class="button" href="${recordHref(r)}">Full review &amp; sources ↗</a>${guideLink(r.id)}</article>`;
           })
           .join("")
       : interactionLocked ? '<p class="empty">Movie playing. Hover for a summary; click the map to pause, then select a record.</p>' : '<p class="empty">Select a site from the list or a marker on the map to see its evidence, dates, and sources here.</p>';
@@ -128,6 +130,7 @@ export class MapPanels {
     rows: readonly DisplayRecord[],
     selected: ReadonlySet<string>,
     context: boolean,
+    year: number, exploring: boolean,
   ) {
     const keys = new Set(rows.map(recordKey));
     const structureChanged =
@@ -197,6 +200,10 @@ export class MapPanels {
           ? `<div><strong>${esc(r.title)}</strong><span>${esc(r.time.original)}</span></div>`
           : `<i style="background:${r.culture.color}"></i><div><strong>${esc(r.title)}${isDisputed(r) ? `<span class="asterisk dispute-${disputeLevel(r)}" title="${esc(disputeLabel(r))}"> *</span>` : ""}</strong><span>${esc(r.culture.name)} · ${esc(timeLabel(r.time))}${guideForRecord(r.id) ? " · ◈ Site guide available" : ""}${isModeledRecord(r) ? " · Modeled / schematic" : ""}</span></div>`;
       }
+      const past=!context&&!exploring&&historyState(r,year)!=="active";
+      button.classList.toggle("historical-card",past);
+      const status=past?"history":"current";
+      if(button.dataset.temporalStatus!==status)button.dataset.temporalStatus=status;
       const indexName = context ? "contextIndex" : "visibleIndex";
       if (button.dataset[indexName] !== String(index))
         button.dataset[indexName] = String(index);

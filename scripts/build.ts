@@ -23,9 +23,11 @@ const d = JSON.parse(await readFile("data/evidence.json", "utf8"));
 const research = JSON.parse(
   await readFile("data/research-proposals.json", "utf8"),
 );
-const appendix = createAppendix(d, research, version);
+const history = JSON.parse(await readFile("data/history-records.json", "utf8"));
+const appendix = createAppendix({...d,records:[...d.records,...history.records]}, research, version);
 const errors = validateDataset(published);
 if (errors.length) throw new Error(errors.join("\n"));
+await import("./workbook-tables");
 // Delete only this repository's generated directory, never a symlink or a caller-selected path.
 const projectRoot = path.resolve(fileURLToPath(new URL("..", import.meta.url)));
 const distRoot = path.resolve("dist");
@@ -107,6 +109,7 @@ for (const name of [
   "README.md",
   "THIRD_PARTY.md",
   "docs/data-format.md",
+  "docs/history-update.md",
   "docs/evidence-policy.md",
   "docs/verification.md",
   "docs/release-verification-history.md",

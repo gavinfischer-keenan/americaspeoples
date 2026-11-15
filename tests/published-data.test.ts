@@ -1,16 +1,18 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import starter from "../data/evidence.json";
+import history from "../data/history-records.json";
 import research from "../data/research-proposals.json";
 import { dataset } from "../src/published-data";
 import { activeRecords } from "../src/time";
 test("all author research ships by default without changing its claims or citations", () => {
   assert.equal(
     dataset.records.length,
-    starter.records.length + research.proposals.length,
+    starter.records.length + research.proposals.length + history.records.length,
   );
   for (const row of [
     ...starter.records,
+    ...history.records,
     ...research.proposals.map((p) => p.record),
   ])
     assert.deepEqual(
@@ -19,7 +21,7 @@ test("all author research ships by default without changing its claims or citati
     );
   assert.equal(
     new Set(dataset.records.map((r) => r.id)).size,
-    starter.records.length + research.proposals.length,
+    starter.records.length + research.proposals.length + history.records.length,
   );
 });
 test("published research overlays are available at 1864 without a visitor preview switch", () => {

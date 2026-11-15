@@ -232,3 +232,6 @@ Native JSON is bounded to 32 MB and 5000 proposals. Corrections preserve both th
 
 
 Overlay `direction` is optional: `forward` follows the first endpoint to the last, `reverse` reverses it, `both` denotes two-way exchange, and `multidirectional` displays a four-headed symbol for broad dispersal. Set it only when the cited evidence supports that interpretation; a blank cell means direction is unspecified. Arrows are schematic cues, not reconstructed itineraries.
+
+
+The optional `history_json` column preserves source-linked founding/loss history and explicit route activity windows. Blank values on corrections retain existing metadata; `null` removes it. Only migration/exchange records accept windows. See [history metadata](history-update.md).

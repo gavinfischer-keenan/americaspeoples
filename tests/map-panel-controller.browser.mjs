@@ -121,7 +121,7 @@ try {
   });
   assert.match(
     await page.locator(".selection-status").innerText(),
-    /Not active evidence/,
+    /Earlier occupation evidence ends/,
   );
   assert.equal(await page.locator("#visible-count").innerText(), "21");
   assert.equal(await page.locator("#context-count").innerText(), "1");

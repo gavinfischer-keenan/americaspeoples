@@ -1,6 +1,7 @@
 import type { DisplayRecord } from "./model";
 import type { HazardEvent } from "./physical-data";
 import { formatYear, timeLabel } from "./time";
+import { historyLabel } from './history';
 
 export interface MapTooltipContent {
   title: string;
@@ -30,7 +31,7 @@ export function tooltipForRecords(
       .join(" "),
     dates:
       rows.map((r) => timeLabel(r.time)).join("; ") +
-      ". " +
+      ". " + (mode==='movie'?rows.map(r=>historyLabel(r,year)).filter(Boolean).join(' ')+ ' ':'') +
       (unresolved
         ? "Dates unresolved: context only; no occupation at a selected year is established."
         : mode === "explore"

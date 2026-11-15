@@ -94,6 +94,7 @@ for (const r of dataset.records) {
     summary: r.review.summary,
     limitations: r.review.limitations,
     discussion: r.review.discussion,
+    history_json: r.history ? JSON.stringify(r.history) : "",
     population_json: r.population ? JSON.stringify(r.population) : "",
     language_json: r.linguistics ? JSON.stringify(r.linguistics) : "",
   };
@@ -139,6 +140,10 @@ for (const r of dataset.records) {
   }
 }
 await writeFile("data/workbook-tables.json", JSON.stringify(tables));
+const XLSX = await import("xlsx");
+const workbook = XLSX.utils.book_new();
+for(const [name,rows] of Object.entries(tables)) XLSX.utils.book_append_sheet(workbook,XLSX.utils.aoa_to_sheet(rows),name);
+await writeFile("templates/americas-peoples-researched-import.xlsx", XLSX.write(workbook,{type:"buffer",bookType:"xlsx",compression:true}));
 console.log(
   Object.fromEntries(Object.entries(tables).map(([k, v]) => [k, v.length - 1])),
 );
