@@ -1,6 +1,6 @@
 # Americas Peoples · Alaska Blackfish
 
-Version 0.7.0 source release. The production atlas is hosted at https://americaspeoples.11mosswood.us/ and launched from https://tripofisch.com/free-utilities/americaspeoples/.
+Version 0.7.1 source release. The production atlas is hosted at https://americaspeoples.11mosswood.us/ and launched from https://tripofisch.com/free-utilities/americaspeoples/.
 
 The server holds 1,016 published records. The new history collection adds 25 foundation/arrival milestones, 16 migration/exchange records, eight maritime loss records, and five regional habitation intervals. Earlier occupation markers remain as explicitly labeled history; active routes respect separate activity windows, and losses accumulate only after their dates. Colonial colors identify founding attribution, not ongoing sovereignty. See [the history update](docs/history-update.md) for source and display limits.
 

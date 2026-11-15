@@ -125,14 +125,16 @@ for (const name of [
   await copyFile(name, `dist/${name}`);
   names.push(name);
 }
+for (const document of ["bulk-import-guide", "history-update"]) {
 const guide = await marked.parse(
-  await readFile("docs/bulk-import-guide.md", "utf8"),
+  await readFile(`docs/${document}.md`, "utf8"),
 );
 await writeFile(
-  "dist/docs/bulk-import-guide.html",
-  `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'"><title>Americas Peoples bulk import guide</title><style>body{font:16px/1.65 system-ui,sans-serif;color:#20313a;max-width:1100px;margin:40px auto;padding:0 24px 60px}h1,h2,h3{line-height:1.25;margin-top:1.6em}h1{font-size:36px}a{color:#086b7b}table{border-collapse:collapse;width:100%;font-size:14px;display:block;overflow:auto}td,th{border:1px solid #cbd6d9;padding:10px;text-align:left;min-width:140px}th{background:#e6f0f1}code{background:#edf1f2;padding:2px 4px;border-radius:3px}pre{padding:16px;background:#edf1f2;overflow:auto}pre code{padding:0}blockquote{border-left:3px solid #25818e;margin-left:0;padding-left:20px}li{margin:6px 0}</style></head><body><a href="../index.html#proposals">← Back to Americas Peoples</a>${guide}</body></html>`,
+  `dist/docs/${document}.html`,
+  `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'"><title>Americas Peoples — ${document === "history-update" ? "History layers" : "Bulk import guide"}</title><style>body{font:16px/1.65 system-ui,sans-serif;color:#20313a;max-width:1100px;margin:40px auto;padding:0 24px 60px}h1,h2,h3{line-height:1.25;margin-top:1.6em}h1{font-size:36px}a{color:#086b7b}table{border-collapse:collapse;width:100%;font-size:14px;display:block;overflow:auto}td,th{border:1px solid #cbd6d9;padding:10px;text-align:left;min-width:140px}th{background:#e6f0f1}code{background:#edf1f2;padding:2px 4px;border-radius:3px}pre{padding:16px;background:#edf1f2;overflow:auto}pre code{padding:0}blockquote{border-left:3px solid #25818e;margin-left:0;padding-left:20px}li{margin:6px 0}</style></head><body><a href="../index.html#proposals">← Back to Americas Peoples</a>${guide}</body></html>`,
 );
-names.push("docs/bulk-import-guide.html");
+names.push(`docs/${document}.html`);
+}
 for (const [name, content] of Object.entries({
   "dataset.json": JSON.stringify(published, null, 2),
   "research-proposals.json": JSON.stringify(research, null, 2),
