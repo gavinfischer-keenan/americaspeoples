@@ -8,10 +8,10 @@ const browser=await chromium.launch({executablePath:process.env.BROWSER_PATH||'C
 const page=await browser.newPage({viewport:{width:1600,height:1000}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
 const records=JSON.parse(await readFile('dist/dataset.json','utf8')).records,byId=new Map(records.map(r=>[r.id,r]));
 const ids=()=>page.locator('#visible-records button').evaluateAll(nodes=>nodes.map(n=>JSON.parse(n.dataset.mapRecordKey)[0]));
-const jump=async(y)=>{await page.getByLabel('Year number',{exact:true}).fill(String(y));await page.getByLabel('Era',{exact:true}).selectOption('CE');await page.getByRole('button',{name:'Go to year',exact:true}).click();};
+const jump=async(y)=>{if(!(await page.locator('#time-settings').isVisible()))await page.locator('#time-settings-toggle').click();await page.getByLabel('Year number',{exact:true}).fill(String(y));await page.getByLabel('Era',{exact:true}).selectOption('CE');await page.getByRole('button',{name:'Go to year',exact:true}).click();};
 try {
- await page.goto(origin);await page.locator('#time-slider').waitFor();assert.equal(await page.getByRole('link',{name:'Movie',exact:true}).count(),1);
- await jump(1200);assert.equal(await page.locator('.undated-context').count(),0);assert.ok(await page.locator('.context-list').isHidden());
+ await page.goto(origin);await page.locator('#story-select').selectOption('free');await page.getByRole('button',{name:'Reset map view',exact:true}).click();await page.locator('#toggle-sites').click();assert.equal(await page.getByRole('link',{name:'Watch',exact:true}).count(),1);
+ await jump(1200);await page.locator('#time-settings-toggle').click();assert.equal(await page.locator('.undated-context').count(),0);assert.ok(await page.locator('.context-list').isHidden());
  const movie=await ids();assert.ok(movie.length>0);
  const current=await page.locator('#visible-records button[data-temporal-status="current"]').evaluateAll(nodes=>nodes.map(n=>JSON.parse(n.dataset.mapRecordKey)[0]));
  for(const id of current){const r=byId.get(id),t=r.time;assert.ok(t.start!==null&&t.start<=1200&&t.end>=1200,id);if(r.history?.windows)assert.ok(r.history.windows.some(w=>w.start<=1200&&w.end>=1200));}
@@ -20,7 +20,7 @@ try {
  const stale=movie.find(id=>{const r=byId.get(id);return r.time.end<1500&&r.type!=='occupation'&&!r.history;});assert.ok(stale);
  await page.locator('#visible-records button').nth(movie.indexOf(stale)).click();assert.equal(await page.locator('#selected-records article').count(),1);
  await jump(1877);assert.equal(await page.locator('#selected-records article').count(),0);
- await jump(1200);await page.getByRole('button',{name:'Play',exact:true}).click();assert.ok(await page.locator('body').evaluate(n=>n.classList.contains('movie-playing')));
+ await jump(1200);await page.locator('#time-settings-toggle').click();await page.getByRole('button',{name:'Play',exact:true}).click();assert.ok(await page.locator('body').evaluate(n=>n.classList.contains('movie-playing')));
  await page.locator('#visible-records button').first().click({force:true});assert.equal(await page.getByRole('button',{name:'Play',exact:true}).count(),1);assert.equal(await page.locator('#selected-records article').count(),0);
  await page.locator('#visible-records button').first().click();assert.equal(await page.locator('#selected-records article').count(),1);
  await page.getByRole('button',{name:'Play',exact:true}).click();assert.equal(await page.locator('#selected-records article').count(),0);
@@ -29,8 +29,9 @@ try {
  await page.getByRole('link',{name:'Explore',exact:true}).click();await page.locator('.timeline').waitFor({state:'hidden'});assert.ok(await page.locator('.timeline').isHidden());
  await page.locator('[data-context]').first().waitFor();const exploration=await ids();assert.ok(exploration.some(id=>{const t=byId.get(id).time;return t.end<1200||t.start>1200;}));
  await page.locator('#context-records button').first().click();assert.match(await page.locator('#selected-records').innerText(),/Chronology unresolved/);
+ await page.getByRole('button',{name:'Close details',exact:true}).click();
  const before=await page.locator('#visible-count').innerText();await page.getByRole('button',{name:'Zoom in',exact:true}).click();await page.getByRole('button',{name:'Zoom in',exact:true}).click();await page.getByRole('button',{name:'Zoom in',exact:true}).click();await page.waitForFunction(previous=>document.querySelector('#visible-count').textContent!==previous,before);
- await page.getByRole('link',{name:'Movie',exact:true}).click();await page.locator('.timeline').waitFor({state:'visible'});assert.ok(await page.locator('.timeline').isVisible());assert.equal(await page.locator('.undated-context').count(),0);assert.ok(await page.locator('.context-list').isHidden());
+ await page.getByRole('link',{name:'Watch',exact:true}).click();await page.locator('#story-select').selectOption('free');await page.locator('.timeline').waitFor({state:'visible'});assert.ok(await page.locator('.timeline').isVisible());assert.equal(await page.locator('.undated-context').count(),0);assert.ok(await page.locator('.context-list').isHidden());
  await page.setViewportSize({width:390,height:844});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  assert.deepEqual(errors,[]);console.log('PASS: Movie temporal isolation, stale selection, first-click pause, subsequent selection, hover, all-period Explore/context details, viewport list and mobile layout.');
 } finally {await browser.close();server.close();}

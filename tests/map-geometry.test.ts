@@ -86,3 +86,11 @@ test("an unmapped overlay does not borrow an ordinary site descriptor", () => {
   assert.ok(cache.get(site).bounds);
   assert.equal(cache.get(overlay).bounds, null);
 });
+
+test('regional cloud remains in the viewport list when its center is just offscreen',()=>{
+ const r=fixture();r.overlay={kind:'regional-evidence',basis:'schematic',geometry:{type:'Point',coordinates:[-100,40]},precision:'Regional context',provenance:'Synthetic'};
+ const cache=new MapGeometry(mapProjection());cache.update([r]);
+ const shape=cache.get(r),p=shape.point!;
+ // The displayed 35-unit radius intersects the view although the anchor is 20 units outside.
+ assert.equal(boundsInViewport(shape.bounds!,1,-p[0]-20,-p[1]+200),true);
+});

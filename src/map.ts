@@ -1,6 +1,9 @@
 import { mapProjection, type MapScope } from "./map-projection";
 import { geoPath, geoGraticule10 } from "d3-geo";
 import { MapGeometry } from "./map-geometry";
+import {pickCandidates,type HitCandidate,type MapPoint} from './map-picking';
+import {clampZoom,fitMapBounds,geographicCenter} from './map-viewport';
+import {routeEndpointLabels,routeDirectionLabels} from './map-route-labels';
 import { guideForRecord } from "./site-guides";
 import { populationAt } from "./population";
 import type { DisplayRecord } from "./model";
@@ -14,9 +17,13 @@ import {iceSnapshot,eventsAt,oceanPaths,isUncertainHazard} from './physical';
 import {MapTooltip,tooltipForRecords,tooltipForHazard,type MapTooltipContent,type MapMode} from './map-tooltip';
 export interface MapInteraction {mode:MapMode;playing:boolean;onPause:()=>void}
 export interface PhysicalOptions {ice:boolean; iceScenario:string; currents:boolean; winds:boolean; hidden:ReadonlySet<string>; uncertain:boolean}
+const compactPlaceName=(name:string)=>name.length<=40?name:name.slice(0,39).trimEnd()+'…';
 export class MapView {
   readonly element = document.createElement("div");
   private scope: MapScope = "pacific";
+  private width=1000;
+  private height=800;
+  private hasViewport=false;
   private projection = mapProjection(this.scope);
   private geometry = new MapGeometry(this.projection);
   private viewportFrame: number | null = null;
@@ -30,7 +37,8 @@ export class MapView {
   private icePaths=new Map<string,string>();
   private flowPaths=new Map<string,string>();
   private year = END_YEAR;
-  private selected: string | null = null;
+  private highlighted=new Set<string>();
+  private focusTargets:{feature:SVGElement;rows:DisplayRecord[]}[]=[];
   private interaction:MapInteraction|null=null;
   private readonly tooltip=new MapTooltip();
   private tips=new Map<string,MapTooltipContent>();
@@ -44,6 +52,8 @@ export class MapView {
     const path = geoPath(this.projection);
     this.element.innerHTML = `<svg viewBox="0 0 1000 800" role="img" aria-label="Map of the Americas and Pacific. Use the visible records list for keyboard access to evidence." tabindex="0"><defs><pattern id="population-unknown" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V5" stroke="#fff" stroke-width="1.8" opacity=".8"/></pattern><radialGradient id="reach-fade"><stop offset="0%" stop-color="white" stop-opacity=".35"/><stop offset="40%" stop-color="white" stop-opacity=".22"/><stop offset="100%" stop-color="white" stop-opacity="0"/></radialGradient><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#e5c78c"/></marker></defs><g class="world"><path class="graticule" d="${path(geoGraticule10())}"/><path class="land" d="${path(land)}"/><g class="map-labels">${this.labels()}</g><g class="features"></g></g></svg><div class="map-controls"><label class="map-scope">Map region<select aria-label="Map region"><option value="pacific">Asia-Pacific / Americas</option><option value="americas">Americas focus</option><option value="atlantic">Atlantic connections</option><option value="world">Whole world</option></select></label><button data-zoom="in" aria-label="Zoom in">+</button><button data-zoom="out" aria-label="Zoom out">−</button><button data-zoom="reset" aria-label="Reset map view">⌖</button></div><div class="map-caption">Present-day reference coastlines · Not an Ice Age reconstruction<br>Made with Natural Earth · Public domain</div>`;
     const svg = $<SVGSVGElement>("svg", this.element);
+    svg.setAttribute('role','group');
+    svg.setAttribute('aria-roledescription','interactive map');
     // Capture before feature listeners or native anchor navigation. A pause click
     // is consumed even when onPause synchronously redraws/reconfigures the map.
     const pauseClick=(e:MouseEvent)=>{
@@ -80,23 +90,34 @@ export class MapView {
       this.setScope((e.target as HTMLSelectElement).value as MapScope);
     });
     let drag: { x: number; y: number; tx: number; ty: number } | null = null;
+    const pointers=new Map<number,MapPoint>();
+    let pinch:{distance:number;scale:number;world:MapPoint}|null=null;
     let moved = false;
-    const pixels = () => 1 / this.viewportFit();
     svg.addEventListener("pointerdown", (e) => {
+      if(e.button!==0)return;
       this.hideTooltip();
-      moved = false;
-      drag = { x: e.clientX, y: e.clientY, tx: this.tx, ty: this.ty };
-      moved = false;
-      // Keep tap targets intact. Capture only after a real drag, including over clouds.
+      const point=this.clientPoint(e.clientX,e.clientY);
+      pointers.set(e.pointerId,point);
+      if(pointers.size===1){moved=false;drag={x:point[0],y:point[1],tx:this.tx,ty:this.ty};}
+      else if(pointers.size===2){
+        const [a,b]=[...pointers.values()],mid:MapPoint=[(a[0]+b[0])/2,(a[1]+b[1])/2];
+        pinch={distance:Math.hypot(a[0]-b[0],a[1]-b[1]),scale:this.scale,world:[(mid[0]-this.tx)/this.scale,(mid[1]-this.ty)/this.scale]};
+        moved=true;drag=null;
+      }
     });
     svg.addEventListener("pointermove", (e) => {
-      if (!drag) return;
-      if (e.buttons === 0) {
-        drag = null;
-        return;
+      if(!pointers.has(e.pointerId))return;
+      if(e.buttons===0&&e.pointerType!=='touch'){pointers.delete(e.pointerId);drag=null;return;}
+      const point=this.clientPoint(e.clientX,e.clientY);pointers.set(e.pointerId,point);
+      if(pinch&&pointers.size===2){
+        const [a,b]=[...pointers.values()],mid:MapPoint=[(a[0]+b[0])/2,(a[1]+b[1])/2];
+        this.scale=clampZoom(pinch.scale*Math.hypot(a[0]-b[0],a[1]-b[1])/Math.max(1,pinch.distance));
+        this.tx=mid[0]-pinch.world[0]*this.scale;this.ty=mid[1]-pinch.world[1]*this.scale;
+        this.transform();this.draw();return;
       }
-      const dx = (e.clientX - drag.x) * pixels(),
-        dy = (e.clientY - drag.y) * pixels();
+      if(!drag)return;
+      const dx = point[0] - drag.x,
+        dy = point[1] - drag.y;
       moved ||= Math.abs(dx) + Math.abs(dy) > 4;
       if (!moved) return;
       if (!svg.hasPointerCapture(e.pointerId))
@@ -105,27 +126,27 @@ export class MapView {
       this.ty = drag.ty + dy;
       this.transform();
     });
-    svg.addEventListener("pointerup", () => {
-      drag = null;
-    });
-    svg.addEventListener("pointercancel", () => {
-      drag = null;
-    });
+    const endPointer=(e:PointerEvent)=>{pointers.delete(e.pointerId);drag=null;pinch=null;};
+    svg.addEventListener("pointerup",endPointer);
+    svg.addEventListener("pointercancel",endPointer);
     new ResizeObserver(() => {
       if (this.element.isConnected) {
-        this.draw();
-        this.notifyViewportChange();
+        this.resize();
       }
     }).observe(this.element);
     svg.addEventListener(
       "wheel",
       (e) => {
         e.preventDefault();
-        this.zoom(e.deltaY < 0 ? 1.15 : 1 / 1.15);
+        this.zoom(Math.exp(-Math.max(-150,Math.min(150,e.deltaY))*.0025),this.clientPoint(e.clientX,e.clientY));
       },
       { passive: false },
     );
     svg.addEventListener("keydown", (e) => {
+      if((e.key==='Enter'||e.key===' ')&&e.target!==svg){
+        const feature=(e.target as Element).closest<SVGElement>('[data-point],[data-overlay],[data-context]');
+        if(feature){e.preventDefault();if(this.interaction?.mode==='movie'&&this.interaction.playing){this.interaction.onPause();return;}this.selectRows(this.featureRows(feature));return;}
+      }
       const d = 35;
       if (e.key === "ArrowLeft") this.tx += d;
       else if (e.key === "ArrowRight") this.tx -= d;
@@ -145,29 +166,13 @@ export class MapView {
       const target = (e.target as Element).closest<HTMLElement>(
         "[data-zoom],[data-point],[data-overlay],[data-context]",
       );
-      if (!target) return;
-      if (target.dataset.zoom) {
+      if (target?.dataset.zoom) {
         if (target.dataset.zoom === "reset") {
-          this.scale = 1;
-          this.tx = this.ty = 0;
-          this.transform();
-          this.draw();
+          this.resetView();
         } else this.zoom(target.dataset.zoom === "in" ? 1.35 : 1 / 1.35);
-      } else if(!moved && target.dataset.context!==undefined){
-        this.onSelect(this.contextAnchors.get(target.dataset.context)??[]);
-      } else if (!moved && target.dataset.overlay !== undefined) {
-        const record=this.records[Number(target.dataset.overlay)];
-        this.onSelect(record.history && record.location ? this.records.filter(r=>r.history?.kind===record.history!.kind&&r.location?.lon===record.location!.lon&&r.location?.lat===record.location!.lat):[record]);
-      } else if (!moved) {
-        this.selected = target.dataset.point!;
-        this.onSelect(
-          this.records.filter(
-            (r) =>
-              !r.overlay &&
-              r.location &&
-              `${r.location.lon},${r.location.lat}` === this.selected,
-          ),
-        );
+      } else if (!moved&&svg.contains(e.target as Node)) {
+        const rows=e.detail===0&&target?this.featureRows(target):this.pick(this.clientPoint(e.clientX,e.clientY),(e as PointerEvent).pointerType==='touch');
+        if(rows.length){e.preventDefault();this.selectRows(rows);}
       }
     });
   }
@@ -189,42 +194,69 @@ export class MapView {
         (time.certainStart>time.start||time.certainEnd<time.end));
   }
   private labels() {
-    if(this.scope==='atlantic'||this.scope==='world')return [['NORTH AMERICA',-105,50],['SOUTH AMERICA',-62,-20],['EUROPE',15,53],['AFRICA',20,8],['ATLANTIC',-35,12],['PACIFIC',-140,-5]].map(([name,lon,lat])=>{const p=this.projection([Number(lon),Number(lat)]);return p?`<text x="${p[0]}" y="${p[1]}">${name}</text>`:'';}).join('');
-    return this.scope === "pacific"
-      ? '<text x="110" y="285">ISLAND ASIA</text><text x="435" y="345">HAWAII</text><text class="ocean-label" x="385" y="500">PACIFIC OCEAN</text><text x="615" y="240">NORTH AMERICA</text><text x="800" y="570">SOUTH AMERICA</text>'
-      : '<text x="390" y="230">NORTH AMERICA</text><text x="680" y="610">SOUTH AMERICA</text><text x="810" y="90">GREENLAND</text><text x="100" y="110">BERING STRAIT</text><text class="ocean-label" x="160" y="480">PACIFIC OCEAN</text><text class="ocean-label" x="830" y="390">ATLANTIC OCEAN</text>';
+    if(this.scale>4||this.records.some(r=>this.highlighted.has(r.id)&&(r.history?.kind==='migration'||r.history?.kind==='exchange')))return '';
+    return [['NORTH AMERICA',-105,50],['SOUTH AMERICA',-62,-20],['EUROPE',15,53],['AFRICA',20,8],['ATLANTIC',-35,12],['PACIFIC',-140,-5],['ISLAND ASIA',130,5]].map(([name,lon,lat])=>{const p=this.projection([Number(lon),Number(lat)]);return p?`<text x="${p[0]}" y="${p[1]}" style="font-size:${10/this.scale}px">${name}</text>`:'';}).join('');
   }
   setScope(scope: MapScope, redraw = true) {
     if (scope === this.scope) return;
     this.scope = scope;
-    this.projection = mapProjection(scope);
+    this.resetView(redraw);
+  }
+  private rebuildProjection(rotation?:[number,number,number],extra:DisplayRecord[]=[]){
+    this.projection=mapProjection(this.scope,this.width,this.height);
+    if(rotation)this.projection.rotate(rotation);
     this.geometry.setProjection(this.projection);
     this.flowPaths.clear();
-    this.geometry.update([...this.records, ...this.contextRecords]);
-    this.scale = 1;
-    this.tx = this.ty = 0;
+    this.icePaths.clear();
+    this.geometry.update([...this.records, ...this.contextRecords,...extra]);
     const path = geoPath(this.projection);
     $(".land", this.element).setAttribute("d", path(this.land) ?? "");
     $(".graticule", this.element).setAttribute("d", path(geoGraticule10()) ?? "");
     $(".map-labels", this.element).innerHTML = this.labels();
-    ($(".map-scope select", this.element) as HTMLSelectElement).value = scope;
+    ($(".map-scope select", this.element) as HTMLSelectElement).value = this.scope;
+  }
+  private resetView(redraw=true){
+    this.scale=1;this.tx=this.ty=0;
+    this.rebuildProjection();
     this.transform();
     if (redraw) this.draw();
   }
-  private zoom(factor: number) {
+  private resize(redraw=true){
+    const box=$('svg',this.element).getBoundingClientRect();
+    const width=Math.max(1,Math.round(box.width)),height=Math.max(1,Math.round(box.height));
+    if(box.width<1||box.height<1)return;
+    if(width===this.width&&height===this.height){this.hasViewport=true;if(redraw){this.draw();this.notifyViewportChange();}return;}
+    const center=this.projection.invert!([(this.width/2-this.tx)/this.scale,(this.height/2-this.ty)/this.scale]);
+    const pixelScale=this.projection.scale()*this.scale,rotation=this.projection.rotate();
+    this.width=width;this.height=height;
+    $('svg',this.element).setAttribute('viewBox',`0 0 ${width} ${height}`);
+    this.rebuildProjection(rotation);
+    if(this.hasViewport)this.scale=clampZoom(pixelScale/this.projection.scale());
+    this.hasViewport=true;
+    const p=center?this.projection(center):null;
+    if(p){this.tx=width/2-p[0]*this.scale;this.ty=height/2-p[1]*this.scale;}
+    this.transform();if(redraw)this.draw();
+  }
+  private clientPoint(x:number,y:number):MapPoint{
+    const svg=$<SVGSVGElement>('svg',this.element),matrix=svg.getScreenCTM();
+    if(!matrix)return [x,y];
+    const p=new DOMPoint(x,y).matrixTransform(matrix.inverse());return [p.x,p.y];
+  }
+  private zoom(factor: number,anchor:MapPoint=[this.width/2,this.height/2]) {
     const old = this.scale;
-    this.scale = Math.max(1, Math.min(4096, this.scale * factor));
+    this.scale = clampZoom(this.scale * factor);
     if (this.scale === old) return;
     const ratio = this.scale / old;
-    this.tx = 500 - (500 - this.tx) * ratio;
-    this.ty = 400 - (400 - this.ty) * ratio;
+    this.tx = anchor[0] - (anchor[0] - this.tx) * ratio;
+    this.ty = anchor[1] - (anchor[1] - this.ty) * ratio;
     this.transform();
     this.draw();
   }
   private transform() {
     this.hideTooltip();
-    this.tx = Math.max(-1000 * this.scale + 100, Math.min(900, this.tx));
-    this.ty = Math.max(-800 * this.scale + 80, Math.min(720, this.ty));
+    const [[x0,y0],[x1,y1]]=geoPath(this.projection).bounds({type:'Sphere'});
+    this.tx=Math.max(48-x1*this.scale,Math.min(this.width-48-x0*this.scale,this.tx));
+    this.ty=Math.max(48-y1*this.scale,Math.min(this.height-48-y0*this.scale,this.ty));
     $(".world", this.element).setAttribute(
       "transform",
       `translate(${this.tx},${this.ty}) scale(${this.scale})`,
@@ -236,8 +268,28 @@ export class MapView {
     if (this.viewportFrame !== null) return;
     this.viewportFrame = requestAnimationFrame(() => {
       this.viewportFrame = null;
-      if (this.element.isConnected) this.onViewportChange();
+      if (this.element.isConnected) {this.updateTabStops();this.declutterLabels();this.onViewportChange();}
     });
+  }
+  private updateTabStops(){
+    for(const {feature,rows} of this.focusTargets){
+      const visible=rows.some(r=>{const shape=this.geometry.get(r),bounds=r.time.kind==='unplaced'?shape.contextBounds:shape.bounds;return !!bounds&&boundsInViewport(bounds,this.scale,this.tx,this.ty,this.width,this.height);});
+      feature.setAttribute('tabindex',visible?'0':'-1');
+    }
+  }
+  /** Keep selected names readable; only optional labels may yield to a collision. */
+  private declutterLabels(){
+    const viewport=$('svg',this.element).getBoundingClientRect();
+    if(!viewport.width||!viewport.height)return;
+    const labels=[...this.element.querySelectorAll<SVGTextElement>('.settlement-label,.history-place-label,.route-endpoint-label text')].map(label=>({label,selected:!!label.closest('.is-highlighted,.route-endpoint-label'),bounds:label.getBoundingClientRect()}));
+    labels.sort((a,b)=>Number(b.selected)-Number(a.selected));
+    const placed:DOMRect[]=[];
+    for(const {label,selected,bounds} of labels){
+      const visible=bounds.right>=viewport.left&&bounds.left<=viewport.right&&bounds.bottom>=viewport.top&&bounds.top<=viewport.bottom;
+      const collides=placed.some(other=>bounds.left<other.right+6&&bounds.right>other.left-6&&bounds.top<other.bottom+4&&bounds.bottom>other.top-4);
+      label.style.visibility=selected||(visible&&!collides)?'visible':'hidden';
+      if(visible&&(selected||!collides))placed.push(bounds);
+    }
   }
   /** Same projected geometry and transform as the map; unmapped records stay out. */
   visibleRecords(): DisplayRecord[] {
@@ -248,7 +300,7 @@ export class MapView {
     return records.filter(r => {
       const shape = this.geometry.get(r);
       const bounds = context ? shape.contextBounds : shape.bounds;
-      return !!bounds && boundsInViewport(bounds, this.scale, this.tx, this.ty);
+      return !!bounds && boundsInViewport(bounds, this.scale, this.tx, this.ty,this.width,this.height);
     });
   }
   update(records: DisplayRecord[], year: number, context:DisplayRecord[]=[],physical?:PhysicalOptions) {
@@ -260,37 +312,96 @@ export class MapView {
     this.draw();
   }
   focus(r: DisplayRecord) {
-    const geometry = r.overlay?.geometry;
-    const position =
-      geometry?.type === "Point"
-        ? geometry.coordinates
-        : geometry?.type === "LineString"
-          ? geometry.coordinates[0]
-          : r.location
-            ? [r.location.lon, r.location.lat]
-            : null;
-    if (!position) return;
-    if (position[0] > 90 || position[0] < -145) {
-      if (this.scope !== "pacific") this.setScope("pacific", false);
-    } else {
-      const current = this.projection(position as [number, number]);
-      if (this.scope === "pacific" && current && (current[0] < 0 || current[0] > 1000)) this.setScope("americas", false);
-    }
-    const p = this.projection(position as [number, number]);
-    if (!p) return;
-    this.scale = r.overlay || r.type === "movement" ? 2 : r.history ? 6 : 256;
-    this.tx = 500 - p[0] * this.scale;
-    this.ty = 400 - p[1] * this.scale;
-    this.transform();
-    this.draw();
+    if(!r.location&&!r.overlay?.geometry)return;
+    this.focusRecords([r]);
     this.onSelect([r]);
+  }
+  /** Story framing does not change selection. Zoom is relative to the chosen scope. */
+  focusRegion(center:MapPoint,zoom:number,scope:MapScope=this.scope):void{
+    if(this.element.isConnected)this.resize(false);
+    this.scope=scope;this.rebuildProjection([-center[0],0,0]);
+    this.scale=clampZoom(zoom);
+    const p=this.projection(center);if(!p)return;
+    this.tx=this.width/2-p[0]*this.scale;this.ty=this.height/2-p[1]*this.scale;
+    this.transform();this.draw();
+  }
+  /** Fit every supplied place/route/area; no callback so the inspector can own selection. */
+  focusRecords(records:DisplayRecord[]):void{
+    if(this.element.isConnected)this.resize(false);
+    const points:MapPoint[]=records.flatMap(r=>{
+      const g=r.overlay?.geometry;
+      return g?.type==='Point'?[g.coordinates]:g?.type==='LineString'?g.coordinates:[r.location,r.destination].flatMap(p=>p?[[p.lon,p.lat] as MapPoint]:[]);
+    });
+    if(!points.length)return;
+    const center=geographicCenter(points);this.rebuildProjection([-center[0],0,0],records);
+    const boxes=records.map(r=>this.geometry.get(r).bounds).filter((b):b is [MapPoint,MapPoint]=>!!b&&b.flat().every(Number.isFinite));
+    if(!boxes.length)return;
+    const bounds:[MapPoint,MapPoint]=[[Math.min(...boxes.map(b=>b[0][0])),Math.min(...boxes.map(b=>b[0][1]))],[Math.max(...boxes.map(b=>b[1][0])),Math.max(...boxes.map(b=>b[1][1]))]];
+    const fit=fitMapBounds(bounds,this.width,this.height,Math.min(64,this.width*.12,this.height*.15),this.projection.scale()*Math.PI/180*1.4);
+    this.scale=fit.scale;this.tx=fit.tx;this.ty=fit.ty;
+    this.highlighted=new Set(records.map(r=>r.id));this.transform();this.draw();
+  }
+  setHighlighted(ids:string[]):void{this.highlighted=new Set(ids);this.draw();}
+  private featureRows(feature:Element):DisplayRecord[]{
+    const element=feature as SVGElement;
+    if(element.dataset.context!==undefined)return this.contextAnchors.get(element.dataset.context)??[];
+    if(element.dataset.overlay!==undefined){
+      const record=this.records[Number(element.dataset.overlay)];if(!record)return [];
+      return record.history&&record.location?this.records.filter(r=>r.history?.kind===record.history!.kind&&r.location?.lon===record.location!.lon&&r.location?.lat===record.location!.lat):[record];
+    }
+    if(element.dataset.point!==undefined)return this.records.filter(r=>!r.overlay&&r.location&&`${r.location.lon},${r.location.lat}`===element.dataset.point);
+    return [];
+  }
+  private selectRows(rows:DisplayRecord[]){
+    if(!rows.length)return;
+    this.highlighted=new Set(rows.map(r=>r.id));this.draw();this.onSelect(rows);
+  }
+  private pick(point:MapPoint,touch=false):DisplayRecord[]{
+    const screen=(p:MapPoint):MapPoint=>[p[0]*this.scale+this.tx,p[1]*this.scale+this.ty];
+    const candidates:HitCandidate<DisplayRecord>[]=[];
+    for(const r of this.records){
+      const shape=this.geometry.get(r),key=JSON.stringify([r.id,r.proposalKey??null]),g=r.overlay?.geometry;
+      const broad=r.overlay&&['population-history','regional-evidence','environment','language','cultural-reach'].includes(r.overlay.kind);
+      if(shape.areaRings.length){candidates.push({key,value:r,kind:'area',rings:shape.areaRings.map(line=>line.map(screen))});continue;}
+      if(broad&&g?.type==='Point'&&shape.point){candidates.push({key,value:r,kind:'area',point:screen(shape.point),radius:35*this.scale});continue;}
+      if(shape.lines.length)candidates.push({key,value:r,kind:broad?'area':'route',lines:shape.lines.map(line=>line.map(screen)),...(broad?{radius:30*this.scale}:{})});
+      if(shape.point&&!shape.lines.length)candidates.push({key,value:r,kind:'place',point:screen(shape.point)});
+      else if(!r.overlay&&shape.point)candidates.push({key,value:r,kind:'place',point:screen(shape.point)});
+    }
+    for(const r of this.contextRecords){const p=this.geometry.get(r).contextPoint;if(p)candidates.push({key:JSON.stringify([r.id,r.proposalKey??null]),value:r,kind:'context',point:screen(p)});}
+    return pickCandidates(candidates,point,touch);
   }
   private viewportFit() {
     const box = $("svg", this.element).getBoundingClientRect();
-    return Math.max(0.01, Math.min(box.width / 1000, box.height / 800));
+    return Math.max(0.01, Math.min(box.width / this.width, box.height / this.height));
+  }
+  /** Separate identical/reversed schematic paths by at most five screen pixels.
+   * Projection, source coordinates and coordinate-based hit testing stay intact.
+   */
+  private routeLanes(symbolScale:number):Map<DisplayRecord,MapPoint>{
+    const groups=new Map<string,{rows:DisplayRecord[];coordinates:MapPoint[]}>();
+    for(const r of this.records){
+      const g=r.overlay?.geometry;
+      if((r.history?.kind!=='migration'&&r.history?.kind!=='exchange')||g?.type!=='LineString'||g.coordinates.length<2)continue;
+      const forward=JSON.stringify(g.coordinates),reverse=JSON.stringify([...g.coordinates].reverse()),key=forward<reverse?forward:reverse;
+      const group=groups.get(key);
+      if(group)group.rows.push(r);else groups.set(key,{rows:[r],coordinates:forward===key?g.coordinates:[...g.coordinates].reverse()});
+    }
+    const offsets=new Map<DisplayRecord,MapPoint>();
+    for(const {rows,coordinates} of groups.values()){
+      if(rows.length<2)continue;
+      const a=this.projection(coordinates[0]),b=this.projection(coordinates[coordinates.length-1]);if(!a||!b)continue;
+      const dx=b[0]-a[0],dy=b[1]-a[1],length=Math.hypot(dx,dy);if(length<.001)continue;
+      rows.sort((a,b)=>a.id.localeCompare(b.id)||(a.proposalKey??'').localeCompare(b.proposalKey??''));
+      rows.forEach((r,i)=>{const offset=(i/(rows.length-1)-.5)*10*symbolScale;offsets.set(r,[-dy/length*offset,dx/length*offset]);});
+    }
+    return offsets;
   }
   private draw() {
+    const focused=document.activeElement instanceof SVGElement&&this.element.contains(document.activeElement)?document.activeElement.dataset.mapTip:undefined;
     const symbolScale = 1 / (this.scale * this.viewportFit());
+    const lanes=this.routeLanes(symbolScale);
+    $('.map-labels',this.element).innerHTML=this.labels();
     const path=geoPath(this.projection);
     let background='';
     const ice=this.physical.ice?iceSnapshot(this.year,this.physical.iceScenario):null;
@@ -321,6 +432,8 @@ export class MapView {
     }
     $('.physical-features',this.element).innerHTML=background;
     const groups = new Map<string, DisplayRecord[]>();
+    let endpointLabels='';
+    const labeledEndpoints=new Set<string>();
     let arrows = "",
       overlays = "";
     for (const [index, r] of this.records.entries()) {
@@ -329,7 +442,24 @@ export class MapView {
         if(d){
           const active=this.interaction?.mode==='movie'&&historyState(r,this.year)==='active';
           const both=r.overlay?.direction==='both';
-          arrows+=`<g data-overlay="${index}" data-history-route="${esc(r.id)}" class="history-route route-${r.history.kind} ${active?'route-active':''}" style="opacity:${this.opacity(r)}"><title>${esc(r.title)} — ${esc(historyLabel(r,this.year))}</title><path class="route-halo" d="${d}"/><path class="route-line" d="${d}" marker-end="url(#arrow)" ${both?'marker-start="url(#arrow)"':''}/><path class="route-flow" d="${d}"/><path class="overlay-line-hit" d="${d}" style="stroke-width:${16/this.scale}px"/></g>`;
+          const lane=lanes.get(r);
+          arrows+=`<g data-overlay="${index}" data-history-route="${esc(r.id)}" class="history-route route-${r.history.kind} ${active?'route-active':''}" ${lane?`transform="translate(${lane[0]},${lane[1]})"`:''} style="opacity:${this.opacity(r)}"><title>${esc(r.title)} — ${esc(historyLabel(r,this.year))}${lane?' — Separate display lane; source endpoints unchanged':''}</title><path class="route-halo" d="${d}"/><path class="route-line" d="${d}" marker-end="url(#arrow)" ${both?'marker-start="url(#arrow)"':''}/><path class="route-flow" d="${d}"/><path class="overlay-line-hit" d="${d}" style="stroke-width:${16/this.scale}px"/></g>`;
+          const directionLabel=routeDirectionLabels[r.id];
+          if(lane&&directionLabel&&this.highlighted.has(r.id)){
+            const line=this.geometry.get(r).lines.reduce((longest,line)=>line.length>longest.length?line:longest,[] as MapPoint[]),mid=line[Math.floor(line.length/2)];
+            if(mid)endpointLabels+=`<g class="route-direction-label" transform="translate(${mid[0]+lane[0]*4},${mid[1]+lane[1]*4}) scale(${symbolScale})" pointer-events="none"><text text-anchor="middle" dominant-baseline="central" style="font-size:11px;font-weight:600;fill:#fff8de;stroke:#183847;stroke-width:4px;paint-order:stroke">${directionLabel}</text></g>`;
+          }
+          const g=r.overlay?.geometry,names=routeEndpointLabels[r.id];
+          if(this.highlighted.has(r.id)&&names&&g?.type==='LineString'){
+            [g.coordinates[0],g.coordinates[g.coordinates.length-1]].forEach((coordinate,i)=>{
+              const key=names[i]+'|'+coordinate.join(',');
+              if(labeledEndpoints.has(key))return;
+              const p=this.projection(coordinate);if(!p)return;
+              labeledEndpoints.add(key);
+              const right=p[0]*this.scale+this.tx>this.width/2;
+              endpointLabels+=`<g class="route-endpoint-label" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})" pointer-events="none"><circle r="3.5" fill="#fff2c5" stroke="#183847" stroke-width="1.5"/><text x="${right?-9:9}" y="${i===0?-10:19}" text-anchor="${right?'end':'start'}" style="font-size:12px;font-weight:600;fill:#fff8de;stroke:#183847;stroke-width:4px;stroke-linejoin:round;paint-order:stroke;letter-spacing:0">${esc(names[i])}</text></g>`;
+            });
+          }
         }
         continue;
       }
@@ -339,7 +469,7 @@ export class MapView {
         const shared=this.records.filter(row=>row.history?.kind===r.history!.kind&&row.location?.lon===r.location!.lon&&row.location?.lat===r.location!.lat);
         if(shared[0]!==r)continue;
         const wreck=r.history.kind==='wreck';
-        arrows+=`<g data-overlay="${index}" data-history-kind="${r.history.kind}" class="history-marker history-${r.history.kind} ${this.interaction?.mode!=='explore'&&this.uncertainty(r)?'history-possible':''}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})" style="--history-color:${r.culture.color};opacity:${this.opacity(r)}"><title>${esc(r.title)} — ${esc(historyLabel(r,this.year))}</title><circle class="history-hit" r="13"/>${wreck?'<path class="wreck-symbol" d="M0,-7V7 M-7,2Q0,13 7,2 M-3,-4H3 M-7,2V6 M7,2V6"/><circle class="wreck-eye" cy="-9" r="2"/>':'<path class="settlement-symbol" d="M0,-7L7,0L0,7L-7,0Z"/>'}${shared.length>1?`<text class="site-count" x="10" y="-10">${shared.length}</text>`:''}${this.scale>=1.35?`<text class="history-place-label" x="12" y="4">${esc(r.location.name)}</text>`:''}</g>`;
+        arrows+=`<g data-overlay="${index}" data-history-kind="${r.history.kind}" class="history-marker history-${r.history.kind} ${this.interaction?.mode!=='explore'&&this.uncertainty(r)?'history-possible':''}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})" style="--history-color:${r.culture.color};opacity:${this.opacity(r)}"><title>${esc(r.title)} — ${esc(historyLabel(r,this.year))}</title><circle class="history-hit" r="13"/>${wreck?'<path class="wreck-symbol" d="M0,-7V7 M-7,2Q0,13 7,2 M-3,-4H3 M-7,2V6 M7,2V6"/><circle class="wreck-eye" cy="-9" r="2"/>':'<path class="settlement-symbol" d="M0,-7L7,0L0,7L-7,0Z"/>'}${shared.length>1?`<text class="site-count" x="10" y="-10">${shared.length}</text>`:''}${this.scale>=4||shared.some(x=>this.highlighted.has(x.id))?`<text class="history-place-label" x="12" y="4">${esc(compactPlaceName(r.location.name))}</text>`:''}</g>`;
         continue;
       }
       if (r.overlay) {
@@ -422,15 +552,17 @@ export class MapView {
       const population = this.interaction?.mode==='explore'
         ? {radius:6,outerRadius:6,unknown:false,label:'Explore size is a reference; inspect dated estimates'}
         : populationAt(rows.filter(x=>historyState(x,this.year)==='active'), this.year);
-      const marker = `<g data-point="${key}" style="opacity:${Math.max(...rows.map((x) => this.opacity(x)))}" class="site ${past ? "past-place" : ""} ${possible ? "possible" : ""} ${rows.some((x) => x.proposalKey) ? "proposal-point" : ""}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><title>${esc(rows.map((x) => x.title + " — " + x.culture.name + " — " + timeLabel(x.time)).join("; "))} — ${esc(population.label)}${possible ? " — uncertain time" : ""}${rows.some(x => guideForRecord(x.id)) ? " — Site guide available" : ""}</title>${rows.some(x => guideForRecord(x.id)) ? `<text class="site-guide-marker" x="-17" y="17" aria-hidden="true">◈</text>` : ""}<circle class="site-halo" r="${Math.max(13, population.outerRadius + 4)}"/>${population.outerRadius > population.radius ? `<circle class="population-range" r="${population.outerRadius}" style="fill:${r.culture.color}"/>` : ""}<circle class="site-dot" r="${population.radius}" style="--site-color:${r.culture.color}"/>${population.unknown ? `<circle class="population-unknown" r="${population.radius}" fill="url(#population-unknown)"/>` : ""}${this.scale >= 32 ? `<text class="settlement-label" x="${population.outerRadius + 5}" y="4">${esc(r.location!.name)}</text>` : ""}${rows.length > 1 ? `<text class="site-count" x="11" y="-8">${rows.length}</text>` : ""}${rows.some(isDisputed) ? `<text class="site-star asterisk dispute-${rows.some((x) => disputeLevel(x) === "disputed") ? "disputed" : "discussion"}" x="-13" y="-8">*</text>` : ""}</g>`;
+      const marker = `<g data-point="${key}" style="opacity:${Math.max(...rows.map((x) => this.opacity(x)))}" class="site ${past ? "past-place" : ""} ${possible ? "possible" : ""} ${rows.some((x) => x.proposalKey) ? "proposal-point" : ""}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><title>${esc(rows.map((x) => x.title + " — " + x.culture.name + " — " + timeLabel(x.time)).join("; "))} — ${esc(population.label)}${possible ? " — uncertain time" : ""}${rows.some(x => guideForRecord(x.id)) ? " — Site guide available" : ""}</title>${rows.some(x => guideForRecord(x.id)) ? `<text class="site-guide-marker" x="-17" y="17" aria-hidden="true">◈</text>` : ""}<circle class="site-halo" r="${Math.max(13, population.outerRadius + 4)}"/>${population.outerRadius > population.radius ? `<circle class="population-range" r="${population.outerRadius}" style="fill:${r.culture.color}"/>` : ""}<circle class="site-dot" r="${population.radius}" style="--site-color:${r.culture.color}"/>${population.unknown ? `<circle class="population-unknown" r="${population.radius}" fill="url(#population-unknown)"/>` : ""}${this.scale >= 16 || rows.some(x=>this.highlighted.has(x.id)) ? `<text class="settlement-label" x="${population.outerRadius + 5}" y="4">${esc(compactPlaceName(r.location!.name))}</text>` : ""}${rows.length > 1 ? `<text class="site-count" x="11" y="-8">${rows.length}</text>` : ""}${rows.some(isDisputed) ? `<text class="site-star asterisk dispute-${rows.some((x) => disputeLevel(x) === "disputed") ? "disputed" : "discussion"}" x="-13" y="-8">*</text>` : ""}</g>`;
       if(past)pastMarkers+=marker;else markers+=marker;
     }
-    $(".features", this.element).innerHTML = pastMarkers + overlays + arrows + markers + physicalMarkers;
+    $(".features", this.element).innerHTML = overlays + arrows + pastMarkers + markers + physicalMarkers + endpointLabels;
     // Rebuild catalog-only tooltip lookup with the rendered feature identities.
     // Retain hover across a redraw only when the same records remain visible.
     this.tips.clear();
+    this.focusTargets=[];
     const hazardById=new Map(hazards.map(event=>[event.id,event]));
     let hoveredFeature:SVGElement|null=null;
+    let focusedFeature:SVGElement|null=null;
     for(const feature of this.element.querySelectorAll<SVGElement>('[data-point],[data-overlay],[data-context],[data-hazard]')){
       let rows:DisplayRecord[]=[],content:MapTooltipContent|null=null,key='';
       if(feature.dataset.hazard){
@@ -446,11 +578,25 @@ export class MapView {
       if(!content)continue;
       feature.dataset.mapTip=key;
       feature.setAttribute('aria-label',content.title+'. '+content.summary+' '+content.dates);
+      if(!feature.dataset.hazard){
+        const highlighted=rows.some(r=>this.highlighted.has(r.id));
+        feature.classList.toggle('is-highlighted',highlighted);
+        feature.setAttribute('role','button');feature.setAttribute('aria-pressed',String(highlighted));
+        this.focusTargets.push({feature,rows});
+        if(highlighted&&(feature.dataset.point!==undefined||feature.classList.contains('history-marker'))){
+          feature.insertAdjacentHTML('afterbegin','<circle class="selection-ring" r="21" fill="none" stroke="#fff2b6" stroke-width="2.5" pointer-events="none"/>');
+        }
+        if(highlighted&&feature.dataset.overlay!==undefined&&!feature.classList.contains('history-marker'))feature.style.setProperty('filter','drop-shadow(0 0 3px #fff2b6)');
+      }
       this.tips.set(key,content);
       if(this.hovered?.key===key)hoveredFeature=feature;
+      if(focused===key)focusedFeature=feature;
     }
+    this.updateTabStops();
+    this.declutterLabels();
     if(this.hovered&&hoveredFeature){
       const {key,x,y}=this.hovered;this.tooltip.show(this.tips.get(key)!,{x,y},hoveredFeature);
     }else this.hideTooltip();
+    focusedFeature?.focus({preventScroll:true});
   }
 }

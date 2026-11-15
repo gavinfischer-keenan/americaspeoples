@@ -33,7 +33,7 @@ try {
  await page.setViewportSize({width:390,height:844});await page.goto(origin+'/sites/hovenweep.html');
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  await page.setViewportSize({width:1500,height:1000});await page.goto(origin+'/#map');
- await page.locator('#time-slider').waitFor();await page.locator('#toggle-layers').click();
+ await page.locator('#story-select').selectOption('free');await page.getByRole('button',{name:'Reset map view',exact:true}).click();await page.locator('#time-settings-toggle').click();await page.locator('#toggle-layers').click();
  await page.getByLabel('Year number',{exact:true}).fill('1877');await page.getByLabel('Era',{exact:true}).selectOption('CE');await page.getByRole('button',{name:'Go to year',exact:true}).click();
  await page.locator('.hazard-el-nino').first().waitFor();
  await page.locator('[data-climate="tsunami"]').uncheck();

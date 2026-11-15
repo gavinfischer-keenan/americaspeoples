@@ -6,7 +6,7 @@ const browser=await chromium.launch({executablePath:process.env.BROWSER_PATH||'C
 const page=await browser.newPage({viewport:{width:1600,height:1000}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
 const origin=`http://127.0.0.1:${server.address().port}`;
 try{
- await page.goto(origin);await page.locator('#time-slider').waitFor();
+ await page.goto(origin);await page.locator('#story-select').selectOption('free');await page.getByRole('button',{name:'Reset map view',exact:true}).click();await page.locator('#time-settings-toggle').click();
  const jump=async(y,era='CE')=>{await page.getByLabel('Year number',{exact:true}).fill(String(y));await page.getByLabel('Era',{exact:true}).selectOption(era);await page.getByRole('button',{name:'Go to year',exact:true}).click();};
  await page.locator('#toggle-layers').click();
  await jump(18050,'BCE');await page.locator('.ice-context path').first().waitFor();assert.ok(await page.locator('.ice-context path').count());assert.match(await page.locator('#ice-status').innerText(),/20,000/);
@@ -17,7 +17,7 @@ try{
  const before=await page.locator('#context-count').innerText();await page.locator('[data-context-index]').first().click();assert.match(await page.locator('#selected-records').innerText(),/Chronology unresolved/);assert.doesNotMatch(await page.locator('#selected-records').innerText(),/Documented time/);
  await page.locator('#show-undated').uncheck();assert.equal(await page.locator('.undated-context').count(),0);assert.equal(await page.locator('#context-count').innerText(),'0');await page.locator('#show-undated').check();assert.equal(await page.locator('#context-count').innerText(),before);
  await page.screenshot({path:'test-results/physical-ice-ocean.png',fullPage:true});
- await page.goto(origin+'/#movie');await page.locator('#toggle-layers').click();
+ await page.goto(origin+'/#movie');await page.locator('#story-select').selectOption('free');if(!(await page.locator('#time-settings').isVisible()))await page.locator('#time-settings-toggle').click();await page.locator('#toggle-layers').click();
  await jump(1877);assert.ok(await page.locator('.hazard-el-nino').count());assert.equal(await page.locator('.ice-context').count(),0);
  await page.locator('[data-climate="el-nino"]').uncheck();assert.equal(await page.locator('.hazard-el-nino').count(),0);await page.locator('[data-climate="el-nino"]').check();
  await page.locator('.hazard-el-nino').click();await page.getByRole('heading',{name:'Original data fields'}).waitFor();assert.match(await page.locator('main').innerText(),/Gergis/);

@@ -261,6 +261,9 @@ try {
   );
   assert.equal(await page.getByRole("tooltip").count(), 0);
   await page.setViewportSize({ width: 320, height: 560 });
+  // ResizeObserver commits the responsive projection asynchronously and clears
+  // old hover positions. Test the mobile tooltip after that viewport is ready.
+  await page.waitForFunction(()=>document.querySelector('svg').viewBox.baseVal.width===320);
   await page.evaluate(() => {
     reset();
     configure("explore", false);

@@ -49,10 +49,9 @@ try {
   await page
     .getByRole("heading", { name: "Bibliography", exact: true })
     .waitFor();
-  assert.match(
-    await page.locator(".offline-badge").innerText(),
-    /Server-backed atlas/,
-  );
+  assert.ok(requests.some(r => new URL(r.url).pathname === "/api/records/lanse-1021"),
+    "the hosted review loads its full source record from the API");
+  assert.equal(await page.locator(".timeline").isVisible(), false, "reading pages keep the map transport out of the way");
   await page.reload();
   await page
     .getByRole("heading", { name: "Bibliography", exact: true })
@@ -63,7 +62,8 @@ try {
     ),
     saved,
   );
-  await page.getByRole("link", { name: /^Suggestions/ }).click();
+  await page.getByRole("link", { name: "Library", exact: true }).click();
+  await page.locator('.library-card[href="#proposals"]').click();
   await page
     .getByLabel("Import suggestions")
     .setInputFiles("templates/americas-peoples-researched-import.xlsx");
@@ -104,9 +104,15 @@ try {
       .proposals.length,
     expectedRecords + saved.proposals.length,
   );
-  await page.getByRole("link", { name: "Movie", exact: true }).click();
+  await page.getByRole("link", { name: "Watch", exact: true }).click();
+  await page.locator("#story-select").selectOption("free");
+  await page.getByRole("button", { name: "Reset map view", exact: true }).click();
+  await page.locator("#toggle-layers").click();
+  await page.locator(".culture-disclosure summary").click();
   // Check the published map independently of the preserved local draft.
   await page.getByLabel("Preview complete suggestions").uncheck();
+  await page.locator("#close-layers").click();
+  await page.locator("#time-settings-toggle").click();
   await page.getByLabel("Year number", { exact: true }).fill("1864");
   await page.getByLabel("Era", { exact: true }).selectOption("CE");
   await page.getByRole("button", { name: "Go to year", exact: true }).click();

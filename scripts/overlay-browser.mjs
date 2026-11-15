@@ -4,10 +4,25 @@ import {
   browserFixture,
   localPackage,
   previewSuggestions,
-  layerOptions,
+  layerOptions as showLayers,
 } from "./browser-fixture.mjs";
 const fixture = await browserFixture();
 const { browser, page, url } = fixture;
+const dateOptions = async () => {
+  if (await page.locator("#layer-options").isVisible()) await page.locator("#close-layers").click();
+  if (!(await page.locator("#time-settings").isVisible())) await page.locator("#time-settings-toggle").click();
+};
+const freeTimeline = async () => {
+  await page.locator("#story-select").selectOption("free");
+  await page.getByRole("button", { name: "Reset map view", exact: true }).click();
+  await dateOptions();
+};
+const layerOptions = async () => {
+  if (await page.locator("#time-settings").isVisible()) await page.locator("#time-settings-toggle").click();
+  await showLayers(page);
+  if (!(await page.locator(".layer-disclosure").evaluate(el => el.open)))
+    await page.locator(".layer-disclosure summary").click();
+};
 const synthetic = () =>
   page.locator("[data-overlay]").filter({ hasText: /Synthetic/ });
 try {
@@ -44,7 +59,8 @@ try {
     createdAt: "2026-10-28T00:00:00Z",
     updatedAt: "2026-10-28T00:00:00Z",
   };
-  await page.getByRole("link", { name: /^Suggestions/ }).click();
+  await page.getByRole("link", { name: "Library", exact: true }).click();
+  await page.locator('.library-card[href="#proposals"]').click();
   await page.getByLabel("Import suggestions").setInputFiles({
     name: "overlay.json",
     mimeType: "application/json",
@@ -84,18 +100,22 @@ try {
   await page
     .getByRole("button", { name: "Add to local collection", exact: true })
     .click();
-  await page.getByRole("link", { name: "Movie", exact: true }).click();
+  await page.getByRole("link", { name: "Watch", exact: true }).click();
+  await freeTimeline();
   await page.getByLabel("Year number", { exact: true }).fill("100");
   await page.getByLabel("Era", { exact: true }).selectOption("CE");
   await page.getByRole("button", { name: "Go to year" }).click();
   assert.equal(await synthetic().count(), 0);
+  await page.locator("#time-settings-toggle").click();
+  await showLayers(page);
   await previewSuggestions(page);
-  await layerOptions(page);
+  await layerOptions();
   assert.equal(await synthetic().count(), 1);
   assert.equal(await page.locator("path.movement.proposal-path").count(), 0);
   await page.getByLabel("Trade overlays", { exact: true }).uncheck();
   assert.equal(await synthetic().count(), 0);
   await page.getByLabel("Trade overlays", { exact: true }).check();
+  await dateOptions();
   for (const [y, n] of [
     [111, 0],
     [110, 1],
@@ -106,6 +126,7 @@ try {
     await page.getByRole("button", { name: "Go to year" }).click();
     assert.equal(await synthetic().count(), n);
   }
+  await page.locator("#time-settings-toggle").click();
   await synthetic().click();
   await page
     .locator("#selected-records")
@@ -115,8 +136,9 @@ try {
     .getByRole("heading", { name: "Overlay geometry", exact: true })
     .waitFor();
   assert.match(await page.locator("main").innerText(), /schematic/);
-  await page.getByRole("link", { name: "Movie", exact: true }).click();
-  await layerOptions(page);
+  await page.getByRole("link", { name: "Watch", exact: true }).click();
+  await freeTimeline();
+  await layerOptions();
   await page.getByLabel("Trade overlays", { exact: true }).uncheck();
   await page.evaluate(() => (location.hash = "#proposal/0"));
   await page
@@ -137,9 +159,11 @@ try {
   const stored = await localPackage(page);
   assert.deepEqual(stored.proposals[0].record.overlay, r.overlay);
   assert.equal(stored.schemaVersion, 2);
-  await page.getByRole("link", { name: "Movie", exact: true }).click();
-  await layerOptions(page);
+  await page.getByRole("link", { name: "Watch", exact: true }).click();
+  await freeTimeline();
+  await layerOptions();
   const go = async (y) => {
+    await dateOptions();
     await page.getByLabel("Year number", { exact: true }).fill(String(y));
     await page.getByRole("button", { name: "Go to year" }).click();
   };
@@ -160,6 +184,7 @@ try {
       .count(),
     1,
   );
+  await layerOptions();
   for (const label of [
     "Epidemic overlays",
     "Massacre / violence overlays",
