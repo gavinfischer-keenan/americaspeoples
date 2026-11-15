@@ -1,6 +1,6 @@
 # Americas Peoples · Alaska Blackfish
 
-Version 0.7.1 source release. The production atlas is hosted at https://americaspeoples.11mosswood.us/ and launched from https://tripofisch.com/free-utilities/americaspeoples/.
+Version 0.8.0 source release candidate. The production atlas is hosted at https://americaspeoples.11mosswood.us/ and launched from https://tripofisch.com/free-utilities/americaspeoples/.
 
 The server holds 1,016 published records. The new history collection adds 25 foundation/arrival milestones, 16 migration/exchange records, eight maritime loss records, and five regional habitation intervals. Earlier occupation markers remain as explicitly labeled history; active routes respect separate activity windows, and losses accumulate only after their dates. Colonial colors identify founding attribution, not ongoing sovereignty. See [the history update](docs/history-update.md) for source and display limits.
 
@@ -25,6 +25,8 @@ The scaling audit separates compact/full API contracts, cancels/debounces IDs-on
 
 Stable map IDs link through data/site-guides.json, while independently sourced editorial sections live in data/site-guide-content.json. Complete research documents stay byte-exact in sites/reports/*.md, with SHA-256 records in data/site-research-reviews.json. scripts/site-guide-build.ts validates report integrity and populated pages, escapes report HTML and builds the linked static guides. It does not convert regional research dates into map occupation intervals.
 
-## Movie and Explore
+## Watch and Explore
 
-Movie is the default time-filtered view. It excludes unresolved chronology and timeless wind/current references. Playback clears selection: hover reads the catalog summary; a map/evidence click pauses and consumes the click, then another click may select current evidence. Changing year removes selections outside the current evidence and historical-context layers. Earlier places are historical memory, not evidence of current occupation. Explore is an all-period research view with viewport-filtered lists, unresolved question marks and contextual areas; its timeline is hidden and marker sizes are reference symbols, not a population at the movie year. Dated physical catalog events/ice remain in Movie; the full catalog is accessible separately. Layer preferences survive switching views.
+Watch opens with six source-linked journeys and 32 scenes. Playback pauses for reading, moves between representative years, and stops at the end. Scene notes preserve dating and interpretation limits. A free timeline remains available. Explore adds named regions, global place search, local chronology and explicit conflict/violence filters. Overlapping map records open a ranked choice; the map fits its actual viewport, supports pointer-centered zoom and pinch, and labels selected places and routes. See [the UI redesign](docs/ui-redesign.md).
+
+Movie is the default time-filtered view. It excludes unresolved chronology and timeless wind/current references. Playback clears selection: hover reads the catalog summary; a map/evidence click pauses and consumes the click, then another click may select current evidence. Changing year removes selections outside the current evidence and historical-context layers. Earlier places are historical memory, not evidence of current occupation. Explore is an all-period research view with viewport-filtered lists, unresolved question marks and contextual areas; its timeline appears when “At the map year” is selected, and marker sizes are reference symbols, not a population at the movie year. Dated physical catalog events/ice remain in Movie; the full catalog is accessible separately. Layer preferences survive switching views.

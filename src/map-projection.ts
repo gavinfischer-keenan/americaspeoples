@@ -2,7 +2,7 @@ import { geoEquirectangular } from "d3-geo";
 export type MapScope = "americas" | "pacific" | "atlantic" | "world";
 /** Combined frame spans approximately 100E to 330E, centered on 145W.
  * The dateline stays continuous; Africa, Iceland and eastern Greenland are cropped. */
-export function mapProjection(scope: MapScope = "pacific") {
+export function mapProjection(scope: MapScope = "pacific", width=1000, height=800) {
   return geoEquirectangular()
     .rotate(
       scope === "pacific"
@@ -15,17 +15,15 @@ export function mapProjection(scope: MapScope = "pacific") {
     )
     .center([0, 15])
     .scale(
-      scope === "pacific"
+      (scope === "pacific"
         ? 245
         : scope === "world"
           ? 155
           : scope === "atlantic"
             ? 280
-            : 300,
+            : 300) * width / 1000,
     )
-    .translate([500, 400])
-    .clipExtent([
-      [0, 0],
-      [1000, 800],
-    ]);
+    .translate([width/2, height/2]);
+  // The SVG viewport clips after camera transforms. Pre-clipping here would
+  // permanently discard geography that should enter the view during a pan.
 }

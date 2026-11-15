@@ -17,6 +17,9 @@ export interface MapPanelState {
   year: number;
   exploring?: boolean;
   interactionLocked?: boolean;
+  searching?:boolean;
+  categoryLabel?:string;
+  guided?:boolean;
 }
 
 const recordKey = (r: DisplayRecord) =>
@@ -67,7 +70,7 @@ export class MapPanels {
     );
     this.count("#visible-count", String(visible.length));
     this.count("#context-count", String(context.length));
-    this.count("#active-count", `${visible.length} mapped records · ${visible.filter(r=>historyState(r,year)==='active').length} current`);
+    this.count("#active-count", state.searching?`${visible.length} search results across the atlas`:exploring?`${visible.length} records in view · all periods`:`${visible.length} ${state.guided?'story ':''}record${visible.length===1?'':'s'} in view · ${visible.filter(r=>historyState(r,year)==='active').length} current`);
     this.reconcile(
       this.visibleHost,
       this.visibleButtons,
@@ -75,6 +78,8 @@ export class MapPanels {
       selectedKeys,
       false, year, exploring,
     );
+    const empty=this.visibleHost.querySelector('.empty');
+    if(empty)empty.textContent=state.searching?'No matching records. Try a place name or a broader search.':state.categoryLabel&&state.categoryLabel!=='Everything'?`No ${state.categoryLabel.toLowerCase()} records in this view and period. Try another region or show everything. This is a collection gap, not evidence of historical absence.`:'No included records in this view. Zoom out, choose a region, or change the date and layers.';
     this.reconcile(
       this.contextHost,
       this.contextButtons,
@@ -117,6 +122,8 @@ export class MapPanels {
           })
           .join("")
       : interactionLocked ? '<p class="empty">Movie playing. Hover for a summary; click the map to pause, then select a record.</p>' : '<p class="empty">Select a site from the list or a marker on the map to see its evidence, dates, and sources here.</p>';
+    const actions=this.root.querySelector<HTMLElement>('#selection-actions');if(actions)actions.hidden=!selected.length;
+    const timeButton=this.root.querySelector<HTMLButtonElement>('#show-selection-year');if(timeButton)timeButton.disabled=!selected.length||selected[0].time.start===null;
   }
 
   private count(selector: string, text: string) {

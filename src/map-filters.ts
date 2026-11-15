@@ -29,13 +29,15 @@ export function boundsInViewport(
   scale: number,
   tx: number,
   ty: number,
+  width=1000,
+  height=800,
 ): boolean {
   const [[x0, y0], [x1, y1]] = bounds;
   return (
     [x0, y0, x1, y1].every(Number.isFinite) &&
     x1 * scale + tx >= 0 &&
-    x0 * scale + tx <= 1000 &&
+    x0 * scale + tx <= width &&
     y1 * scale + ty >= 0 &&
-    y0 * scale + ty <= 800
+    y0 * scale + ty <= height
   );
 }

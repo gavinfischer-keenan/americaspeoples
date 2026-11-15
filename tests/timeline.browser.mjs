@@ -1,18 +1,15 @@
-import { build } from 'esbuild';
 import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
-import { pathToFileURL } from 'node:url';
-import path from 'node:path';
+import { mkdir } from 'node:fs/promises';
 import {createStaticServer} from '../scripts/static-server.mjs';
 const server=createStaticServer('dist');await new Promise(r=>server.listen(0,'127.0.0.1',r));
-const out=path.resolve('test-results/timeline-app'); await mkdir(out,{recursive:true});
-await build({entryPoints:['src/bootstrap.ts'],bundle:true,format:'iife',platform:'browser',target:'chrome110',outfile:path.join(out,'app.js'),loader:{'.geojson':'json'}});
-await writeFile(path.join(out,'index.html'),await readFile('index.html','utf8'));
+await mkdir('test-results',{recursive:true});
 const browser=await chromium.launch({executablePath:process.env.BROWSER_PATH||'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',headless:true});
 const page=await browser.newPage({viewport:{width:1440,height:1000}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
 try {
  await page.goto(`http://127.0.0.1:${server.address().port}`);
+ await page.locator('#story-select').selectOption('free');
+ await page.locator('#time-settings-toggle').click();
  assert.equal(await page.getByLabel('Playback speed').inputValue(),'smart');
  assert.equal(await page.getByLabel('Timeline scale').inputValue(),'log');
  const jump=async(y,era)=>{await page.getByLabel('Year number',{exact:true}).fill(String(y));await page.getByLabel('Era',{exact:true}).selectOption(era);await page.getByRole('button',{name:'Go to year',exact:true}).click();};
@@ -30,16 +27,16 @@ try {
  const slider=await page.locator('#time-slider').boundingBox();await page.mouse.click(slider.x+slider.width*.65,slider.y+slider.height/2);
  const pointerYear=await page.locator('#current-year').innerText();assert.notEqual(pointerYear,'1,010 CE');
  await page.getByRole('button',{name:'Play',exact:true}).click();await page.waitForTimeout(1100);await page.getByRole('button',{name:'Pause',exact:true}).click();assert.notEqual(await page.locator('#current-year').innerText(),pointerYear);
- for(const width of [1440,1100,768,390,304]) {
+ for(const width of [1440,1100,768,390,360,304]) {
    await page.setViewportSize({width,height:1000});
-   const rects=await page.locator('.timeline').evaluate(el=>{const box=el.getBoundingClientRect();return [...el.querySelectorAll('select,input,button,#time-ticks,.range-labels')].filter(x=>x.getBoundingClientRect().width>0&&!x.closest(".era-shortcuts")).map(x=>{const b=x.getBoundingClientRect();return {name:x.id||x.textContent,x:b.x,y:b.y,right:b.right,bottom:b.bottom,container:box.toJSON()};});});
+   const rects=await page.locator('.timeline').evaluate(el=>{return [...el.querySelectorAll('select,input,button,#time-ticks,.range-labels')].filter(x=>x.getBoundingClientRect().width>0&&!x.closest(".era-shortcuts")).map(x=>{const b=x.getBoundingClientRect(),box=(x.closest('#time-settings')||el).getBoundingClientRect();return {name:x.id||x.textContent,x:b.x,y:b.y,right:b.right,bottom:b.bottom,container:box.toJSON()};});});
    for(const r of rects)assert.ok(r.x>=-1&&r.right<=width+1&&r.y>=r.container.y-1&&r.bottom<=r.container.bottom+1,`timeline controls fit at${width}: ${JSON.stringify(r)}`);
-   // Chapter shortcuts intentionally scroll horizontally; verify the target can be revealed.
-   await page.locator('#previous-change').focus();
+   // The date disclosure is a floating panel; its controls remain keyboard reachable.
+   await page.getByLabel('Year number',{exact:true}).focus();
    await page.keyboard.press('Tab');
-   await page.locator('#next-change').scrollIntoViewIfNeeded();
-   const chapter=await page.locator('#next-change').boundingBox();
-   assert.ok(chapter.x>=-1&&chapter.x+chapter.width<=width+1,`chapter control can be revealed at ${width}: ${JSON.stringify(chapter)}`);
+   assert.equal(await page.evaluate(()=>document.activeElement?.id),'era');
+   await page.keyboard.press('Tab');
+   assert.equal(await page.getByRole('button',{name:'Go to year',exact:true}).evaluate(el=>el===document.activeElement),true);
    await page.screenshot({path:`test-results/timeline-${width}.png`,fullPage:false});
  }
  assert.deepEqual(errors,[]);console.log('PASS: Smart/log defaults, scale change retains year, BCE/CE keyboard, local windows, pointer drag, playback, responsive timeline.');

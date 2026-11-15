@@ -7,6 +7,12 @@ import {
 } from "./browser-fixture.mjs";
 const fixture = await browserFixture();
 const { page, url } = fixture;
+const freeTimeline = async () => {
+  await page.locator("#story-select").selectOption("free");
+  await page.getByRole("button", { name: "Reset map view", exact: true }).click();
+  if (!(await page.locator("#site-panel").isVisible())) await page.locator("#toggle-sites").click();
+  if (!(await page.locator("#time-settings").isVisible())) await page.locator("#time-settings-toggle").click();
+};
 const failed = [];
 const check = async (name, fn) => {
   try {
@@ -21,6 +27,7 @@ try {
   await mkdir("test-results", { recursive: true });
   await page.goto(url + "#map");
   await page.locator(".map-canvas svg").waitFor();
+  await freeTimeline();
   await check("the full map viewport fits above the timeline", async () => {
     const svg = await page.locator(".map-canvas svg").boundingBox();
     const stage = await page.locator(".map-stage").boundingBox();
@@ -45,13 +52,20 @@ try {
     await page.getByLabel("Year number", { exact: true }).fill("1021");
     await page.getByLabel("Era", { exact: true }).selectOption("CE");
     await page.getByRole("button", { name: "Go to year", exact: true }).click();
+    await page.locator("#time-settings-toggle").click();
     const svg = page.locator(".map-canvas svg");
     const rect = await svg.boundingBox();
     await page.mouse.move(rect.x + 200, rect.y + 200);
     await page.mouse.down();
     await page.mouse.move(rect.x + 230, rect.y + 220);
     await page.mouse.up();
-    await page.locator(".site:not(.past-place)").first().click();
+    const dots = page.locator(".site:not(.past-place) .site-dot");
+    const selectable = await dots.evaluateAll(nodes => nodes.findIndex(node => {
+      const box = node.getBoundingClientRect(), x = box.x + box.width / 2, y = box.y + box.height / 2;
+      return document.elementFromPoint(x, y)?.closest("[data-point]") === node.closest("[data-point]");
+    }));
+    assert.ok(selectable >= 0, "a current marker remains directly reachable after panning");
+    await dots.nth(selectable).click();
     assert.ok(
       (await page.locator("#selected-records .selected-detail").count()) > 0,
     );
@@ -209,8 +223,13 @@ try {
       await page
         .getByRole("heading", { name: "Your suggestions", exact: true })
         .waitFor();
-      await page.getByRole("link", { name: "Movie", exact: true }).click();
+      await page.getByRole("link", { name: "Watch", exact: true }).click();
+      await freeTimeline();
+      await page.locator("#time-settings-toggle").click();
+      await page.locator("#toggle-layers").click();
       await previewSuggestions(page);
+      await page.locator("#close-layers").click();
+      await page.locator("#time-settings-toggle").click();
       for (const [year, count] of [
         [100, 2],
         [110, 2],

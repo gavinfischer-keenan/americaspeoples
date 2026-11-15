@@ -1,4 +1,4 @@
-import { geoCircle, geoPath, type GeoProjection } from "d3-geo";
+import { geoCircle, geoPath, geoStream, type GeoProjection } from "d3-geo";
 import type { DisplayRecord } from "./model";
 
 type Point = [number, number];
@@ -11,6 +11,8 @@ export interface ProjectedRecord {
   contextKey: string | null;
   contextPoint: Point | null;
   contextBounds: Bounds | null;
+  lines: Point[][];
+  areaRings: Point[][];
 }
 
 /** Projection-only boundary: no dates, filters, DOM or source interpretation.
@@ -33,6 +35,7 @@ export class MapGeometry {
     for (const r of records) {
       const key = JSON.stringify([
         !!r.overlay,
+        r.overlay?.kind??null,
         r.overlay?.geometry ?? null,
         r.overlay?.radiusKm ?? null,
         r.location ? [r.location.lon, r.location.lat] : null,
@@ -85,20 +88,24 @@ export class MapGeometry {
             .center(g.coordinates)
             .radius(((r.overlay.radiusKm / 6371) * 180) / Math.PI)()
         : null;
-    // Point symbols use their centers, matching the original viewport rule.
-    const pointInFrame =
-      point &&
-      point[0] >= 0 &&
-      point[0] <= 1000 &&
-      point[1] >= 0 &&
-      point[1] <= 800;
+    const projectLines=(shape:unknown):Point[][]=>{
+      if(!shape)return [];
+      const lines:Point[][]=[];let line:Point[]=[];
+      geoStream(shape as any,this.projection.stream({point(x,y){line.push([x,y]);},lineStart(){line=[];},lineEnd(){if(line.length)lines.push(line);},polygonStart(){},polygonEnd(){},sphere(){}}));
+      return lines;
+    };
     const bounds = circle
       ? path.bounds(circle)
       : geometry
         ? path.bounds(geometry as any)
-        : pointInFrame
+        : point && !r.overlay
           ? ([point, point] as Bounds)
           : null;
+    if(bounds&&!circle&&r.overlay&&['population-history','regional-evidence','environment','language'].includes(r.overlay.kind)){
+      const padding=g?.type==='Point'?35:30;
+      bounds[0]=[bounds[0][0]-padding,bounds[0][1]-padding];
+      bounds[1]=[bounds[1][0]+padding,bounds[1][1]+padding];
+    }
     return {
       point,
       path: geometry ? path(geometry as any) : null,
@@ -108,6 +115,8 @@ export class MapGeometry {
       contextPoint,
       // Unresolved lines are rendered as a single ? at their first endpoint.
       contextBounds: contextPoint ? [contextPoint, contextPoint] : null,
+      lines: geometry?.type==='LineString'?projectLines(geometry):[],
+      areaRings:circle?projectLines(circle):[],
     };
   }
 }

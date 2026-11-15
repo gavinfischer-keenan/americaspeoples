@@ -15,6 +15,7 @@ async function until(predicate,message){
  throw new Error(message);
 }
 async function jump(page,number,era='BCE'){
+ if(!(await page.locator('#time-settings').isVisible()))await page.locator('#time-settings-toggle').click();
  await page.getByLabel('Year number',{exact:true}).fill(String(number));
  await page.getByLabel('Era',{exact:true}).selectOption(era);
  await page.getByRole('button',{name:'Go to year',exact:true}).click();

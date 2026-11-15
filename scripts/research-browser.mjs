@@ -20,7 +20,8 @@ const overlayCount = (kind, year) =>
 try {
   await mkdir("test-results", { recursive: true });
   await page.goto(url + "#map");
-  await page.getByRole("link", { name: /^Suggestions/ }).click();
+  await page.getByRole("link", { name: "Library", exact: true }).click();
+  await page.locator('.library-card[href="#proposals"]').click();
   await page
     .getByLabel("Import suggestions")
     .setInputFiles("templates/americas-peoples-researched-import.xlsx");
@@ -68,8 +69,14 @@ try {
         `Checked ${i + 1}/${pack.proposals.length} imported review pages`,
       );
   }
-  await page.getByRole("link", { name: "Movie", exact: true }).click();
+  await page.getByRole("link", { name: "Watch", exact: true }).click();
+  await page.locator("#story-select").selectOption("free");
+  await page.getByRole("button", { name: "Reset map view", exact: true }).click();
+  await page.locator("#toggle-sites").click();
+  await page.locator("#toggle-layers").click();
   await previewSuggestions(page);
+  await page.locator("#close-layers").click();
+  await page.locator("#time-settings-toggle").click();
   await page.getByLabel("Era", { exact: true }).selectOption("CE");
   const go = async (y) => {
     await page.getByLabel("Year number", { exact: true }).fill(String(y));
@@ -102,16 +109,16 @@ try {
     await page.locator("#visible-records").innerText(),
     /Indian Reorganization Act/,
   );
-  await page
-    .getByRole("link", { name: "Events / Evidence", exact: true })
-    .click();
+  await page.getByRole("link", { name: "Library", exact: true }).click();
+  await page.locator('.library-card[href="#evidence"]').click();
   for (const kind of ["forced-removal", "epidemic", "violence"]) {
     const count =
       dataset.records.filter((r) => r.overlay?.kind === kind).length * 2;
     await page.getByLabel("Record type filter").selectOption(kind);
     assert.equal(await page.locator("tbody tr[data-href]").count(), count);
   }
-  await page.getByRole("link", { name: /^Suggestions/ }).click();
+  await page.getByRole("link", { name: "Library", exact: true }).click();
+  await page.locator('.library-card[href="#proposals"]').click();
   await page
     .getByLabel("Import suggestions")
     .setInputFiles("templates/americas-peoples-researched-import.xlsx");
