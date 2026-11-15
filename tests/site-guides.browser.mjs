@@ -17,7 +17,7 @@ try {
  const catalog=JSON.parse(await readFile('data/site-guides.json','utf8'));
  for(const g of catalog.guides) {
    await page.goto(origin+'/'+g.href);assert.ok(await page.locator('h1').innerText());
-   const link=page.getByRole('link',{name:/Read the complete/});
+   const link=page.getByRole('link',{name:/Research source and access status/});
    const response=await page.request.get(await link.getAttribute('href').then(p=>new URL(p,page.url()).href));assert.equal(response.status(),200);
  }
  for(const id of ['chaco-culture','inca-civilization']) {
@@ -29,7 +29,8 @@ try {
    await page.locator('.road-map > svg').screenshot({path:`test-results/${id}-guide.png`});
  }
  await page.goto(origin+'/sites/reports/four-corners.html');
- assert.ok(await page.locator('a[href^="https://consensus.app/papers/"]').count()>60);
+ assert.match(await page.locator('body').innerText(),/retained privately|not included in this public distribution/i);
+ assert.equal(await page.locator('a[download]').count(),0);
  await page.setViewportSize({width:390,height:844});await page.goto(origin+'/sites/hovenweep.html');
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  await page.setViewportSize({width:1500,height:1000});await page.goto(origin+'/#map');

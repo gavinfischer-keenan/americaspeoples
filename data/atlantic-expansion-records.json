@@ -1,0 +1,1730 @@
+{
+  "records": [
+    {
+      "id": "ax-luanda-virginia-1619",
+      "revision": 1,
+      "type": "event",
+      "title": "Enslaved Africans - Luanda to Virginia through capture and transfer",
+      "culture": {
+        "id": "atlantic-enslaved-people",
+        "name": "People subjected to enslavement and forced transport",
+        "kind": "unknown",
+        "color": "#dc83b1"
+      },
+      "location": {
+        "id": "ax-luanda-virginia-1619-origin",
+        "name": "Luanda coastal departure region",
+        "lon": 13.2,
+        "lat": -8.8,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "destination": {
+        "id": "ax-luanda-virginia-1619-destination",
+        "name": "Point Comfort, Virginia",
+        "lon": -76.3,
+        "lat": 37,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1619,
+        "end": 1619,
+        "approximate": false,
+        "original": "Atlantic departure and arrival episode in 1619; White Lion arrival at Point Comfort in August.",
+        "method": "Dates from documented voyages, settlement assignments or identified service operations; no study screening range promoted to continuous activity.",
+        "interpretation": "Schematic endpoint connection for the supported episode or named operation. It does not measure annual volume or recreate a ship track."
+      },
+      "overlay": {
+        "kind": "forced-removal",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              13.2,
+              -8.8
+            ],
+            [
+              -76.3,
+              37
+            ]
+          ]
+        },
+        "direction": "forward",
+        "precision": "Two regional anchors only; intermediate journeys are explained in text, not invented as a surveyed path.",
+        "provenance": "Source establishes the endpoint relationship and category. Enslaved people are represented as people subjected to coercion, never as voluntary migrants or generic goods."
+      },
+      "claims": [
+        {
+          "id": "forced-transport",
+          "text": "Africans embarked under enslavement at Luanda reached Virginia after English privateers seized them from the San Juan Bautista and transferred them to other vessels.",
+          "status": "well-supported",
+          "explanation": "This combines a documented staged journey: the original ship was bound for Veracruz, not Virginia. The straight connector is not a direct voyage. Coastal embarkation does not identify every captive birthplace.",
+          "support": [
+            {
+              "sourceId": "source-1",
+              "locator": "Luanda embarkation, Gulf interception and Virginia arrival",
+              "stance": "supports",
+              "note": "Supports this dated relationship and the distinction between coercion, resettlement and commerce."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source-1",
+          "authors": "Historic Jamestowne",
+          "title": "The First Africans",
+          "year": null,
+          "venue": "Jamestown Rediscovery Foundation",
+          "url": "https://historicjamestowne.org/history/the-first-africans/",
+          "access": "Primary publication or institutional text and relevant chronological passages inspected 2026-11-15; research-report summary used only as a lead."
+        }
+      ],
+      "review": {
+        "summary": "Africans embarked under enslavement at Luanda reached Virginia after English privateers seized them from the San Juan Bautista and transferred them to other vessels. The marker preserves the category and limits of this movement.",
+        "limitations": "This combines a documented staged journey: the original ship was bound for Veracruz, not Virginia. The straight connector is not a direct voyage. Coastal embarkation does not identify every captive birthplace.",
+        "discussion": "This is a specific historical connection, not a claim about the free choice, ancestry or fate of every person in either region.",
+        "provenance": "Independent source verification on 2026-11-15; completed Deep report preserved unchanged.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added source-linked episode with explicit endpoint and movement-type limitations."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "ax-henrietta-biafra-jamaica",
+      "revision": 1,
+      "type": "event",
+      "title": "Henrietta Marie - forced transport from Biafra to Jamaica",
+      "culture": {
+        "id": "atlantic-enslaved-people",
+        "name": "People subjected to enslavement and forced transport",
+        "kind": "unknown",
+        "color": "#dc83b1"
+      },
+      "location": {
+        "id": "ax-henrietta-biafra-jamaica-origin",
+        "name": "Bight of Biafra region",
+        "lon": 8,
+        "lat": 4,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "destination": {
+        "id": "ax-henrietta-biafra-jamaica-destination",
+        "name": "Jamaica",
+        "lon": -76.8,
+        "lat": 18,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1699,
+        "end": 1700,
+        "approximate": true,
+        "original": "Historical movement in 1699-1700.",
+        "method": "Dates from documented voyages, settlement assignments or identified service operations; no study screening range promoted to continuous activity.",
+        "interpretation": "Schematic endpoint connection for the supported episode or named operation. It does not measure annual volume or recreate a ship track."
+      },
+      "overlay": {
+        "kind": "forced-removal",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              8,
+              4
+            ],
+            [
+              -76.8,
+              18
+            ]
+          ]
+        },
+        "direction": "forward",
+        "precision": "Two regional anchors only; intermediate journeys are explained in text, not invented as a surveyed path.",
+        "provenance": "Source establishes the endpoint relationship and category. Enslaved people are represented as people subjected to coercion, never as voluntary migrants or generic goods."
+      },
+      "claims": [
+        {
+          "id": "forced-transport",
+          "text": "Henrietta Marie carried enslaved Africans from the Bight of Biafra to Jamaica during its 1699-1700 voyage.",
+          "status": "well-supported",
+          "explanation": "This is the forced transport before the later wreck. The Jamaican arrival was completed; neither the wreck location nor a return sailing transports the same people back to Africa.",
+          "support": [
+            {
+              "sourceId": "source-1",
+              "locator": "Image SI-OB-1057, caption and original report attribution",
+              "stance": "supports",
+              "note": "Supports this dated relationship and the distinction between coercion, resettlement and commerce."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source-1",
+          "authors": "David Moore; Slavery Images research team",
+          "title": "Shackles Recovered from Slave Ship Henrietta Marie",
+          "year": 1997,
+          "venue": "Mel Fisher Maritime Heritage Society report, reproduced by Slavery Images",
+          "url": "https://slaveryimages.org/database/image-result.php?objectid=1057",
+          "access": "Primary publication or institutional text and relevant chronological passages inspected 2026-11-15; research-report summary used only as a lead."
+        }
+      ],
+      "review": {
+        "summary": "Henrietta Marie carried enslaved Africans from the Bight of Biafra to Jamaica during its 1699-1700 voyage. The marker preserves the category and limits of this movement.",
+        "limitations": "This is the forced transport before the later wreck. The Jamaican arrival was completed; neither the wreck location nor a return sailing transports the same people back to Africa.",
+        "discussion": "This is a specific historical connection, not a claim about the free choice, ancestry or fate of every person in either region.",
+        "provenance": "Independent source verification on 2026-11-15; completed Deep report preserved unchanged.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added source-linked episode with explicit endpoint and movement-type limitations."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "ax-clotilda-ouidah-mobile",
+      "revision": 1,
+      "type": "event",
+      "title": "Clotilda - illegal forced transport to Alabama",
+      "culture": {
+        "id": "atlantic-enslaved-people",
+        "name": "People subjected to enslavement and forced transport",
+        "kind": "unknown",
+        "color": "#dc83b1"
+      },
+      "location": {
+        "id": "ax-clotilda-ouidah-mobile-origin",
+        "name": "Ouidah coastal departure region",
+        "lon": 2.1,
+        "lat": 6.3,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "destination": {
+        "id": "ax-clotilda-ouidah-mobile-destination",
+        "name": "Mobile Bay region",
+        "lon": -88.1,
+        "lat": 30.7,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1860,
+        "end": 1860,
+        "approximate": false,
+        "original": "Historical movement in 1860.",
+        "method": "Dates from documented voyages, settlement assignments or identified service operations; no study screening range promoted to continuous activity.",
+        "interpretation": "Schematic endpoint connection for the supported episode or named operation. It does not measure annual volume or recreate a ship track."
+      },
+      "overlay": {
+        "kind": "forced-removal",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              2.1,
+              6.3
+            ],
+            [
+              -88.1,
+              30.7
+            ]
+          ]
+        },
+        "direction": "forward",
+        "precision": "Two regional anchors only; intermediate journeys are explained in text, not invented as a surveyed path.",
+        "provenance": "Source establishes the endpoint relationship and category. Enslaved people are represented as people subjected to coercion, never as voluntary migrants or generic goods."
+      },
+      "claims": [
+        {
+          "id": "forced-transport",
+          "text": "Clotilda forcibly transported captive Africans from Ouidah to the Alabama coast in 1860, despite the United States prohibition on transatlantic slave importation.",
+          "status": "well-supported",
+          "explanation": "Departure port does not establish every captive ethnicity. The coastal arrival and later burning of the vessel are separate events; no present-day precise wreck coordinate is disclosed.",
+          "support": [
+            {
+              "sourceId": "source-1",
+              "locator": "Historical background: final voyage, Ouidah embarkation and July 1860 arrival",
+              "stance": "supports",
+              "note": "Supports this dated relationship and the distinction between coercion, resettlement and commerce."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source-1",
+          "authors": "James P. Delgado, Deborah E. Marx, Kyle Lent, Joseph Grinnan and Alexander J. DeCaro",
+          "title": "Archaeological Investigations of 1Ba704, a Nineteenth Century Shipwreck Site in the Mobile River, Baldwin and Mobile Counties, Alabama: Final Report",
+          "year": 2019,
+          "venue": "Alabama Historical Commission",
+          "url": "https://ahc.alabama.gov/press/final_1ba704%20report_search_redacted.pdf",
+          "access": "Primary publication or institutional text and relevant chronological passages inspected 2026-11-15; research-report summary used only as a lead."
+        }
+      ],
+      "review": {
+        "summary": "Clotilda forcibly transported captive Africans from Ouidah to the Alabama coast in 1860, despite the United States prohibition on transatlantic slave importation. The marker preserves the category and limits of this movement.",
+        "limitations": "Departure port does not establish every captive ethnicity. The coastal arrival and later burning of the vessel are separate events; no present-day precise wreck coordinate is disclosed.",
+        "discussion": "This is a specific historical connection, not a claim about the free choice, ancestry or fate of every person in either region.",
+        "provenance": "Independent source verification on 2026-11-15; completed Deep report preserved unchanged.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added source-linked episode with explicit endpoint and movement-type limitations."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "ax-wanderer-congo-jekyll",
+      "revision": 1,
+      "type": "event",
+      "title": "Wanderer - illegal forced transport to Jekyll Island",
+      "culture": {
+        "id": "atlantic-enslaved-people",
+        "name": "People subjected to enslavement and forced transport",
+        "kind": "unknown",
+        "color": "#dc83b1"
+      },
+      "location": {
+        "id": "ax-wanderer-congo-jekyll-origin",
+        "name": "Congo River mouth region",
+        "lon": 12.4,
+        "lat": -6,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "destination": {
+        "id": "ax-wanderer-congo-jekyll-destination",
+        "name": "Jekyll Island, Georgia",
+        "lon": -81.4,
+        "lat": 31.1,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1858,
+        "end": 1858,
+        "approximate": false,
+        "original": "African departure 18 October and Jekyll arrival 28 November 1858 in museum chronology.",
+        "method": "Dates from documented voyages, settlement assignments or identified service operations; no study screening range promoted to continuous activity.",
+        "interpretation": "Schematic endpoint connection for the supported episode or named operation. It does not measure annual volume or recreate a ship track."
+      },
+      "overlay": {
+        "kind": "forced-removal",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              12.4,
+              -6
+            ],
+            [
+              -81.4,
+              31.1
+            ]
+          ]
+        },
+        "direction": "forward",
+        "precision": "Two regional anchors only; intermediate journeys are explained in text, not invented as a surveyed path.",
+        "provenance": "Source establishes the endpoint relationship and category. Enslaved people are represented as people subjected to coercion, never as voluntary migrants or generic goods."
+      },
+      "claims": [
+        {
+          "id": "forced-transport",
+          "text": "Wanderer transported enslaved Africans from the Congo River mouth to Jekyll Island in 1858.",
+          "status": "well-supported",
+          "explanation": "The museum chronology identifies departure and arrival, not each person birthplace or the full onward dispersal. This illegal voyage occurred decades after the United States import ban.",
+          "support": [
+            {
+              "sourceId": "source-1",
+              "locator": "Conspiracy at Sea chronology: September-November 1858",
+              "stance": "supports",
+              "note": "Supports this dated relationship and the distinction between coercion, resettlement and commerce."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source-1",
+          "authors": "Jekyll Island Authority",
+          "title": "The Water and the Blood",
+          "year": null,
+          "venue": "31-81, the Magazine of Jekyll Island",
+          "url": "https://www.jekyllisland.com/magazine/the-water-and-the-blood/",
+          "access": "Primary publication or institutional text and relevant chronological passages inspected 2026-11-15; research-report summary used only as a lead."
+        }
+      ],
+      "review": {
+        "summary": "Wanderer transported enslaved Africans from the Congo River mouth to Jekyll Island in 1858. The marker preserves the category and limits of this movement.",
+        "limitations": "The museum chronology identifies departure and arrival, not each person birthplace or the full onward dispersal. This illegal voyage occurred decades after the United States import ban.",
+        "discussion": "This is a specific historical connection, not a claim about the free choice, ancestry or fate of every person in either region.",
+        "provenance": "Independent source verification on 2026-11-15; completed Deep report preserved unchanged.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added source-linked episode with explicit endpoint and movement-type limitations."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "ax-alexandria-new-orleans",
+      "revision": 1,
+      "type": "event",
+      "title": "Franklin and Armfield - forced transport to New Orleans",
+      "culture": {
+        "id": "atlantic-enslaved-people",
+        "name": "People subjected to enslavement and forced transport",
+        "kind": "unknown",
+        "color": "#dc83b1"
+      },
+      "location": {
+        "id": "ax-alexandria-new-orleans-origin",
+        "name": "Alexandria, Virginia",
+        "lon": -77.1,
+        "lat": 38.8,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "destination": {
+        "id": "ax-alexandria-new-orleans-destination",
+        "name": "New Orleans",
+        "lon": -90.1,
+        "lat": 30,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1828,
+        "end": 1836,
+        "approximate": true,
+        "original": "Historical movement in 1828-1836.",
+        "method": "Dates from documented voyages, settlement assignments or identified service operations; no study screening range promoted to continuous activity.",
+        "interpretation": "Schematic endpoint connection for the supported episode or named operation. It does not measure annual volume or recreate a ship track."
+      },
+      "overlay": {
+        "kind": "forced-removal",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -77.1,
+              38.8
+            ],
+            [
+              -90.1,
+              30
+            ]
+          ]
+        },
+        "direction": "forward",
+        "precision": "Two regional anchors only; intermediate journeys are explained in text, not invented as a surveyed path.",
+        "provenance": "Source establishes the endpoint relationship and category. Enslaved people are represented as people subjected to coercion, never as voluntary migrants or generic goods."
+      },
+      "claims": [
+        {
+          "id": "forced-transport",
+          "text": "Franklin and Armfield trafficked enslaved people from Alexandria to New Orleans during the partnership.",
+          "status": "well-supported",
+          "explanation": "The firm period brackets repeated forced movement, not a daily schedule or a single journey. Ending the partnership did not end the broader domestic slave trade.",
+          "support": [
+            {
+              "sourceId": "source-1",
+              "locator": "Partnership period and New Orleans/Natchez sales network",
+              "stance": "supports",
+              "note": "Supports this dated relationship and the distinction between coercion, resettlement and commerce."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source-1",
+          "authors": "National Park Service",
+          "title": "Franklin and Armfield Office",
+          "year": null,
+          "venue": "National Historic Landmark",
+          "url": "https://www.nps.gov/places/franklin-and-armfield-office.htm",
+          "access": "Primary publication or institutional text and relevant chronological passages inspected 2026-11-15; research-report summary used only as a lead."
+        }
+      ],
+      "review": {
+        "summary": "Franklin and Armfield trafficked enslaved people from Alexandria to New Orleans during the partnership. The marker preserves the category and limits of this movement.",
+        "limitations": "The firm period brackets repeated forced movement, not a daily schedule or a single journey. Ending the partnership did not end the broader domestic slave trade.",
+        "discussion": "This is a specific historical connection, not a claim about the free choice, ancestry or fate of every person in either region.",
+        "provenance": "Independent source verification on 2026-11-15; completed Deep report preserved unchanged.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added source-linked episode with explicit endpoint and movement-type limitations."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "ax-alexandria-natchez",
+      "revision": 1,
+      "type": "event",
+      "title": "Franklin and Armfield - forced transport to Natchez",
+      "culture": {
+        "id": "atlantic-enslaved-people",
+        "name": "People subjected to enslavement and forced transport",
+        "kind": "unknown",
+        "color": "#dc83b1"
+      },
+      "location": {
+        "id": "ax-alexandria-natchez-origin",
+        "name": "Alexandria, Virginia",
+        "lon": -77.1,
+        "lat": 38.8,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "destination": {
+        "id": "ax-alexandria-natchez-destination",
+        "name": "Natchez",
+        "lon": -91.4,
+        "lat": 31.6,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1828,
+        "end": 1836,
+        "approximate": true,
+        "original": "Historical movement in 1828-1836.",
+        "method": "Dates from documented voyages, settlement assignments or identified service operations; no study screening range promoted to continuous activity.",
+        "interpretation": "Schematic endpoint connection for the supported episode or named operation. It does not measure annual volume or recreate a ship track."
+      },
+      "overlay": {
+        "kind": "forced-removal",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -77.1,
+              38.8
+            ],
+            [
+              -91.4,
+              31.6
+            ]
+          ]
+        },
+        "direction": "forward",
+        "precision": "Two regional anchors only; intermediate journeys are explained in text, not invented as a surveyed path.",
+        "provenance": "Source establishes the endpoint relationship and category. Enslaved people are represented as people subjected to coercion, never as voluntary migrants or generic goods."
+      },
+      "claims": [
+        {
+          "id": "forced-transport",
+          "text": "Franklin and Armfield trafficked enslaved people from Alexandria to Natchez during the partnership.",
+          "status": "well-supported",
+          "explanation": "The firm period brackets repeated forced movement, not a daily schedule or a single journey. Ending the partnership did not end the broader domestic slave trade.",
+          "support": [
+            {
+              "sourceId": "source-1",
+              "locator": "Partnership period and New Orleans/Natchez sales network",
+              "stance": "supports",
+              "note": "Supports this dated relationship and the distinction between coercion, resettlement and commerce."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source-1",
+          "authors": "National Park Service",
+          "title": "Franklin and Armfield Office",
+          "year": null,
+          "venue": "National Historic Landmark",
+          "url": "https://www.nps.gov/places/franklin-and-armfield-office.htm",
+          "access": "Primary publication or institutional text and relevant chronological passages inspected 2026-11-15; research-report summary used only as a lead."
+        }
+      ],
+      "review": {
+        "summary": "Franklin and Armfield trafficked enslaved people from Alexandria to Natchez during the partnership. The marker preserves the category and limits of this movement.",
+        "limitations": "The firm period brackets repeated forced movement, not a daily schedule or a single journey. Ending the partnership did not end the broader domestic slave trade.",
+        "discussion": "This is a specific historical connection, not a claim about the free choice, ancestry or fate of every person in either region.",
+        "provenance": "Independent source verification on 2026-11-15; completed Deep report preserved unchanged.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added source-linked episode with explicit endpoint and movement-type limitations."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "ax-sierra-leone-havana-1839",
+      "revision": 1,
+      "type": "event",
+      "title": "Forced transport to Cuba - people later involved in the Amistad resistance",
+      "culture": {
+        "id": "atlantic-enslaved-people",
+        "name": "People subjected to enslavement and forced transport",
+        "kind": "unknown",
+        "color": "#dc83b1"
+      },
+      "location": {
+        "id": "ax-sierra-leone-havana-1839-origin",
+        "name": "Sierra Leone coastal region",
+        "lon": -12,
+        "lat": 8,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "destination": {
+        "id": "ax-sierra-leone-havana-1839-destination",
+        "name": "Havana, Cuba",
+        "lon": -82.4,
+        "lat": 23.1,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1839,
+        "end": 1839,
+        "approximate": false,
+        "original": "Historical movement in 1839.",
+        "method": "Dates from documented voyages, settlement assignments or identified service operations; no study screening range promoted to continuous activity.",
+        "interpretation": "Schematic endpoint connection for the supported episode or named operation. It does not measure annual volume or recreate a ship track."
+      },
+      "overlay": {
+        "kind": "forced-removal",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -12,
+              8
+            ],
+            [
+              -82.4,
+              23.1
+            ]
+          ]
+        },
+        "direction": "forward",
+        "precision": "Two regional anchors only; intermediate journeys are explained in text, not invented as a surveyed path.",
+        "provenance": "Source establishes the endpoint relationship and category. Enslaved people are represented as people subjected to coercion, never as voluntary migrants or generic goods."
+      },
+      "claims": [
+        {
+          "id": "forced-transport",
+          "text": "Africans abducted in the Sierra Leone region were forcibly shipped to Havana in 1839 before the subsequent Amistad resistance.",
+          "status": "well-supported",
+          "explanation": "This Atlantic transport is distinct from the later Cuban coastal journey, uprising and North American detention. The regional anchor does not identify an exact capture village or assign one ethnicity to everyone.",
+          "support": [
+            {
+              "sourceId": "source-1",
+              "locator": "Opening chronology, February 1839 abduction and Havana transport",
+              "stance": "supports",
+              "note": "Supports this dated relationship and the distinction between coercion, resettlement and commerce."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source-1",
+          "authors": "United States National Archives",
+          "title": "Trial of the Century: La Amistad",
+          "year": 2018,
+          "venue": "National Archives Catalog",
+          "url": "https://www.archives.gov/files/citizen-archivist/images/11-29-2018-amistad.pdf",
+          "access": "Primary publication or institutional text and relevant chronological passages inspected 2026-11-15; research-report summary used only as a lead."
+        }
+      ],
+      "review": {
+        "summary": "Africans abducted in the Sierra Leone region were forcibly shipped to Havana in 1839 before the subsequent Amistad resistance. The marker preserves the category and limits of this movement.",
+        "limitations": "This Atlantic transport is distinct from the later Cuban coastal journey, uprising and North American detention. The regional anchor does not identify an exact capture village or assign one ethnicity to everyone.",
+        "discussion": "This is a specific historical connection, not a claim about the free choice, ancestry or fate of every person in either region.",
+        "provenance": "Independent source verification on 2026-11-15; completed Deep report preserved unchanged.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added source-linked episode with explicit endpoint and movement-type limitations."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "ax-acadian-halifax-louisiana",
+      "revision": 1,
+      "type": "event",
+      "title": "Halifax exiles - onward resettlement in Louisiana",
+      "culture": {
+        "id": "atlantic-acadian-diaspora",
+        "name": "Acadian exiles and descendants",
+        "kind": "unknown",
+        "color": "#e8c57a"
+      },
+      "location": {
+        "id": "ax-acadian-halifax-louisiana-origin",
+        "name": "Halifax region",
+        "lon": -63.6,
+        "lat": 44.6,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "destination": {
+        "id": "ax-acadian-halifax-louisiana-destination",
+        "name": "New Orleans",
+        "lon": -90.1,
+        "lat": 30,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1765,
+        "end": 1765,
+        "approximate": false,
+        "original": "Historical movement in 1765.",
+        "method": "Dates from documented voyages, settlement assignments or identified service operations; no study screening range promoted to continuous activity.",
+        "interpretation": "Schematic endpoint connection for the supported episode or named operation. It does not measure annual volume or recreate a ship track."
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -63.6,
+              44.6
+            ],
+            [
+              -90.1,
+              30
+            ]
+          ]
+        },
+        "direction": "forward",
+        "precision": "Two regional anchors only; intermediate journeys are explained in text, not invented as a surveyed path.",
+        "provenance": "Source establishes the endpoint relationship and category. Enslaved people are represented as people subjected to coercion, never as voluntary migrants or generic goods."
+      },
+      "claims": [
+        {
+          "id": "connection",
+          "text": "Halifax Acadian refugees reached New Orleans via Saint-Domingue.",
+          "status": "well-supported",
+          "explanation": "This leg must be distinguished from the initial expulsion and other stages of exile.",
+          "support": [
+            {
+              "sourceId": "source-1",
+              "locator": "Halifax arrival paragraph",
+              "stance": "supports",
+              "note": "Supports this dated relationship and the distinction between coercion, resettlement and commerce."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source-1",
+          "authors": "Carl A. Brasseaux",
+          "title": "Acadian Immigration Into South Louisiana, 1764-1785",
+          "year": 2023,
+          "venue": "Acadian Memorial",
+          "url": "https://acadianmemorial.org/acadian-immigration-into-south-louisiana-1764-1785/",
+          "access": "Primary publication or institutional text and relevant chronological passages inspected 2026-11-15; research-report summary used only as a lead."
+        }
+      ],
+      "review": {
+        "summary": "Halifax Acadian refugees reached New Orleans via Saint-Domingue. The marker preserves the category and limits of this movement.",
+        "limitations": "This leg must be distinguished from the initial expulsion and other stages of exile.",
+        "discussion": "Resettlement after forced displacement includes refugee agency. It is not an assertion that the original expulsion was voluntary.",
+        "provenance": "Independent source verification on 2026-11-15; completed Deep report preserved unchanged.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added source-linked episode with explicit endpoint and movement-type limitations."
+        ],
+        "relatedIds": [
+          "acadian-deportation-boston1755"
+        ]
+      },
+      "history": {
+        "kind": "migration",
+        "claimId": "connection",
+        "group": "Acadian resettlement",
+        "windows": [
+          {
+            "start": 1765,
+            "end": 1765,
+            "certainty": "documented",
+            "note": "Single resettlement episode after exile; no recurring schedule inferred."
+          }
+        ],
+        "connection": {
+          "evidence": "The source identifies this resettlement leg.",
+          "lastEvidence": 1765,
+          "cessation": "unknown",
+          "note": "A single resettlement episode; no return voyage or annual migration frequency inferred.",
+          "claimId": "connection"
+        }
+      }
+    },
+    {
+      "id": "ax-acadian-attakapas",
+      "revision": 1,
+      "type": "event",
+      "title": "Acadian resettlement - New Orleans to Attakapas",
+      "culture": {
+        "id": "atlantic-acadian-diaspora",
+        "name": "Acadian exiles and descendants",
+        "kind": "unknown",
+        "color": "#e8c57a"
+      },
+      "location": {
+        "id": "ax-acadian-attakapas-origin",
+        "name": "New Orleans",
+        "lon": -90.1,
+        "lat": 30,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "destination": {
+        "id": "ax-acadian-attakapas-destination",
+        "name": "Attakapas district",
+        "lon": -91.8,
+        "lat": 30.1,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1765,
+        "end": 1765,
+        "approximate": false,
+        "original": "Historical movement in 1765.",
+        "method": "Dates from documented voyages, settlement assignments or identified service operations; no study screening range promoted to continuous activity.",
+        "interpretation": "Schematic endpoint connection for the supported episode or named operation. It does not measure annual volume or recreate a ship track."
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -90.1,
+              30
+            ],
+            [
+              -91.8,
+              30.1
+            ]
+          ]
+        },
+        "direction": "forward",
+        "precision": "Two regional anchors only; intermediate journeys are explained in text, not invented as a surveyed path.",
+        "provenance": "Source establishes the endpoint relationship and category. Enslaved people are represented as people subjected to coercion, never as voluntary migrants or generic goods."
+      },
+      "claims": [
+        {
+          "id": "connection",
+          "text": "The administration conducted these refugees to Attakapas.",
+          "status": "well-supported",
+          "explanation": "This leg must be distinguished from the initial expulsion and other stages of exile.",
+          "support": [
+            {
+              "sourceId": "source-1",
+              "locator": "Attakapas settlement paragraph",
+              "stance": "supports",
+              "note": "Supports this dated relationship and the distinction between coercion, resettlement and commerce."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source-1",
+          "authors": "Carl A. Brasseaux",
+          "title": "Acadian Immigration Into South Louisiana, 1764-1785",
+          "year": 2023,
+          "venue": "Acadian Memorial",
+          "url": "https://acadianmemorial.org/acadian-immigration-into-south-louisiana-1764-1785/",
+          "access": "Primary publication or institutional text and relevant chronological passages inspected 2026-11-15; research-report summary used only as a lead."
+        }
+      ],
+      "review": {
+        "summary": "The administration conducted these refugees to Attakapas. The marker preserves the category and limits of this movement.",
+        "limitations": "This leg must be distinguished from the initial expulsion and other stages of exile.",
+        "discussion": "Resettlement after forced displacement includes refugee agency. It is not an assertion that the original expulsion was voluntary.",
+        "provenance": "Independent source verification on 2026-11-15; completed Deep report preserved unchanged.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added source-linked episode with explicit endpoint and movement-type limitations."
+        ],
+        "relatedIds": [
+          "acadian-deportation-boston1755"
+        ]
+      },
+      "history": {
+        "kind": "migration",
+        "claimId": "connection",
+        "group": "Acadian resettlement",
+        "windows": [
+          {
+            "start": 1765,
+            "end": 1765,
+            "certainty": "documented",
+            "note": "Single resettlement episode after exile; no recurring schedule inferred."
+          }
+        ],
+        "connection": {
+          "evidence": "The source identifies this resettlement leg.",
+          "lastEvidence": 1765,
+          "cessation": "unknown",
+          "note": "A single resettlement episode; no return voyage or annual migration frequency inferred.",
+          "claimId": "connection"
+        }
+      }
+    },
+    {
+      "id": "ax-acadian-st-gabriel",
+      "revision": 1,
+      "type": "event",
+      "title": "Acadian forced assignment - Fort St Gabriel",
+      "culture": {
+        "id": "atlantic-acadian-diaspora",
+        "name": "Acadian exiles and descendants",
+        "kind": "unknown",
+        "color": "#e8c57a"
+      },
+      "location": {
+        "id": "ax-acadian-st-gabriel-origin",
+        "name": "New Orleans",
+        "lon": -90.1,
+        "lat": 30,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "destination": {
+        "id": "ax-acadian-st-gabriel-destination",
+        "name": "Fort St Gabriel region",
+        "lon": -91.1,
+        "lat": 30.3,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1767,
+        "end": 1767,
+        "approximate": false,
+        "original": "Historical movement in 1767.",
+        "method": "Dates from documented voyages, settlement assignments or identified service operations; no study screening range promoted to continuous activity.",
+        "interpretation": "Schematic endpoint connection for the supported episode or named operation. It does not measure annual volume or recreate a ship track."
+      },
+      "overlay": {
+        "kind": "forced-removal",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -90.1,
+              30
+            ],
+            [
+              -91.1,
+              30.3
+            ]
+          ]
+        },
+        "direction": "forward",
+        "precision": "Two regional anchors only; intermediate journeys are explained in text, not invented as a surveyed path.",
+        "provenance": "Source establishes the endpoint relationship and category. Enslaved people are represented as people subjected to coercion, never as voluntary migrants or generic goods."
+      },
+      "claims": [
+        {
+          "id": "forced-transport",
+          "text": "Spanish authorities assigned arriving Acadians to Fort St Gabriel.",
+          "status": "well-supported",
+          "explanation": "This leg must be distinguished from the initial expulsion and other stages of exile.",
+          "support": [
+            {
+              "sourceId": "source-1",
+              "locator": "July 1767 assignment paragraph",
+              "stance": "supports",
+              "note": "Supports this dated relationship and the distinction between coercion, resettlement and commerce."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source-1",
+          "authors": "Carl A. Brasseaux",
+          "title": "Acadian Immigration Into South Louisiana, 1764-1785",
+          "year": 2023,
+          "venue": "Acadian Memorial",
+          "url": "https://acadianmemorial.org/acadian-immigration-into-south-louisiana-1764-1785/",
+          "access": "Primary publication or institutional text and relevant chronological passages inspected 2026-11-15; research-report summary used only as a lead."
+        }
+      ],
+      "review": {
+        "summary": "Spanish authorities assigned arriving Acadians to Fort St Gabriel. The marker preserves the category and limits of this movement.",
+        "limitations": "This leg must be distinguished from the initial expulsion and other stages of exile.",
+        "discussion": "This is a specific historical connection, not a claim about the free choice, ancestry or fate of every person in either region.",
+        "provenance": "Independent source verification on 2026-11-15; completed Deep report preserved unchanged.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added source-linked episode with explicit endpoint and movement-type limitations."
+        ],
+        "relatedIds": [
+          "acadian-deportation-boston1755"
+        ]
+      }
+    },
+    {
+      "id": "ax-acadian-vidalia",
+      "revision": 1,
+      "type": "event",
+      "title": "Acadian forced assignment - San Luis de Natchez",
+      "culture": {
+        "id": "atlantic-acadian-diaspora",
+        "name": "Acadian exiles and descendants",
+        "kind": "unknown",
+        "color": "#e8c57a"
+      },
+      "location": {
+        "id": "ax-acadian-vidalia-origin",
+        "name": "New Orleans",
+        "lon": -90.1,
+        "lat": 30,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "destination": {
+        "id": "ax-acadian-vidalia-destination",
+        "name": "San Luis de Natchez near Vidalia",
+        "lon": -91.4,
+        "lat": 31.6,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1768,
+        "end": 1768,
+        "approximate": false,
+        "original": "Historical movement in 1768.",
+        "method": "Dates from documented voyages, settlement assignments or identified service operations; no study screening range promoted to continuous activity.",
+        "interpretation": "Schematic endpoint connection for the supported episode or named operation. It does not measure annual volume or recreate a ship track."
+      },
+      "overlay": {
+        "kind": "forced-removal",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -90.1,
+              30
+            ],
+            [
+              -91.4,
+              31.6
+            ]
+          ]
+        },
+        "direction": "forward",
+        "precision": "Two regional anchors only; intermediate journeys are explained in text, not invented as a surveyed path.",
+        "provenance": "Source establishes the endpoint relationship and category. Enslaved people are represented as people subjected to coercion, never as voluntary migrants or generic goods."
+      },
+      "claims": [
+        {
+          "id": "forced-transport",
+          "text": "Spanish authorities ordered immigrants to San Luis de Natchez.",
+          "status": "well-supported",
+          "explanation": "This leg must be distinguished from the initial expulsion and other stages of exile.",
+          "support": [
+            {
+              "sourceId": "source-1",
+              "locator": "February 1768 assignment paragraph",
+              "stance": "supports",
+              "note": "Supports this dated relationship and the distinction between coercion, resettlement and commerce."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source-1",
+          "authors": "Carl A. Brasseaux",
+          "title": "Acadian Immigration Into South Louisiana, 1764-1785",
+          "year": 2023,
+          "venue": "Acadian Memorial",
+          "url": "https://acadianmemorial.org/acadian-immigration-into-south-louisiana-1764-1785/",
+          "access": "Primary publication or institutional text and relevant chronological passages inspected 2026-11-15; research-report summary used only as a lead."
+        }
+      ],
+      "review": {
+        "summary": "Spanish authorities ordered immigrants to San Luis de Natchez. The marker preserves the category and limits of this movement.",
+        "limitations": "This leg must be distinguished from the initial expulsion and other stages of exile.",
+        "discussion": "This is a specific historical connection, not a claim about the free choice, ancestry or fate of every person in either region.",
+        "provenance": "Independent source verification on 2026-11-15; completed Deep report preserved unchanged.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added source-linked episode with explicit endpoint and movement-type limitations."
+        ],
+        "relatedIds": [
+          "acadian-deportation-boston1755"
+        ]
+      }
+    },
+    {
+      "id": "ax-acadian-france-louisiana",
+      "revision": 1,
+      "type": "event",
+      "title": "Acadian resettlement - France to Louisiana",
+      "culture": {
+        "id": "atlantic-acadian-diaspora",
+        "name": "Acadian exiles and descendants",
+        "kind": "unknown",
+        "color": "#e8c57a"
+      },
+      "location": {
+        "id": "ax-acadian-france-louisiana-origin",
+        "name": "Western France regional edge",
+        "lon": -2,
+        "lat": 47,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "destination": {
+        "id": "ax-acadian-france-louisiana-destination",
+        "name": "New Orleans",
+        "lon": -90.1,
+        "lat": 30,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1785,
+        "end": 1785,
+        "approximate": false,
+        "original": "Historical movement in 1785.",
+        "method": "Dates from documented voyages, settlement assignments or identified service operations; no study screening range promoted to continuous activity.",
+        "interpretation": "Schematic endpoint connection for the supported episode or named operation. It does not measure annual volume or recreate a ship track."
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -2,
+              47
+            ],
+            [
+              -90.1,
+              30
+            ]
+          ]
+        },
+        "direction": "forward",
+        "precision": "Two regional anchors only; intermediate journeys are explained in text, not invented as a surveyed path.",
+        "provenance": "Source establishes the endpoint relationship and category. Enslaved people are represented as people subjected to coercion, never as voluntary migrants or generic goods."
+      },
+      "claims": [
+        {
+          "id": "connection",
+          "text": "Seven Spanish-chartered ships carried Acadian refugees from France.",
+          "status": "well-supported",
+          "explanation": "This leg must be distinguished from the initial expulsion and other stages of exile.",
+          "support": [
+            {
+              "sourceId": "source-1",
+              "locator": "1785 ship-chartering paragraph",
+              "stance": "supports",
+              "note": "Supports this dated relationship and the distinction between coercion, resettlement and commerce."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source-1",
+          "authors": "Carl A. Brasseaux",
+          "title": "Acadian Immigration Into South Louisiana, 1764-1785",
+          "year": 2023,
+          "venue": "Acadian Memorial",
+          "url": "https://acadianmemorial.org/acadian-immigration-into-south-louisiana-1764-1785/",
+          "access": "Primary publication or institutional text and relevant chronological passages inspected 2026-11-15; research-report summary used only as a lead."
+        }
+      ],
+      "review": {
+        "summary": "Seven Spanish-chartered ships carried Acadian refugees from France. The marker preserves the category and limits of this movement.",
+        "limitations": "This leg must be distinguished from the initial expulsion and other stages of exile.",
+        "discussion": "Resettlement after forced displacement includes refugee agency. It is not an assertion that the original expulsion was voluntary.",
+        "provenance": "Independent source verification on 2026-11-15; completed Deep report preserved unchanged.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added source-linked episode with explicit endpoint and movement-type limitations."
+        ],
+        "relatedIds": [
+          "acadian-deportation-boston1755"
+        ]
+      },
+      "history": {
+        "kind": "migration",
+        "claimId": "connection",
+        "group": "Acadian resettlement",
+        "windows": [
+          {
+            "start": 1785,
+            "end": 1785,
+            "certainty": "documented",
+            "note": "Single resettlement episode after exile; no recurring schedule inferred."
+          }
+        ],
+        "connection": {
+          "evidence": "The source identifies this resettlement leg.",
+          "lastEvidence": 1785,
+          "cessation": "unknown",
+          "note": "A single resettlement episode; no return voyage or annual migration frequency inferred.",
+          "claimId": "connection"
+        }
+      }
+    },
+    {
+      "id": "ax-acadian-lafourche",
+      "revision": 1,
+      "type": "event",
+      "title": "Acadian resettlement - New Orleans to Bayou Lafourche",
+      "culture": {
+        "id": "atlantic-acadian-diaspora",
+        "name": "Acadian exiles and descendants",
+        "kind": "unknown",
+        "color": "#e8c57a"
+      },
+      "location": {
+        "id": "ax-acadian-lafourche-origin",
+        "name": "New Orleans",
+        "lon": -90.1,
+        "lat": 30,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "destination": {
+        "id": "ax-acadian-lafourche-destination",
+        "name": "Bayou Lafourche settlement corridor",
+        "lon": -90.7,
+        "lat": 29.9,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1785,
+        "end": 1785,
+        "approximate": false,
+        "original": "Historical movement in 1785.",
+        "method": "Dates from documented voyages, settlement assignments or identified service operations; no study screening range promoted to continuous activity.",
+        "interpretation": "Schematic endpoint connection for the supported episode or named operation. It does not measure annual volume or recreate a ship track."
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -90.1,
+              30
+            ],
+            [
+              -90.7,
+              29.9
+            ]
+          ]
+        },
+        "direction": "forward",
+        "precision": "Two regional anchors only; intermediate journeys are explained in text, not invented as a surveyed path.",
+        "provenance": "Source establishes the endpoint relationship and category. Enslaved people are represented as people subjected to coercion, never as voluntary migrants or generic goods."
+      },
+      "claims": [
+        {
+          "id": "connection",
+          "text": "Four passenger groups selected settlements along Bayou Lafourche.",
+          "status": "well-supported",
+          "explanation": "This leg must be distinguished from the initial expulsion and other stages of exile.",
+          "support": [
+            {
+              "sourceId": "source-1",
+              "locator": "1785 destination-selection paragraph",
+              "stance": "supports",
+              "note": "Supports this dated relationship and the distinction between coercion, resettlement and commerce."
+            }
+          ]
+        },
+        {
+          "id": "cajun-context",
+          "text": "Cajun culture developed through Acadian interaction with Indigenous communities, enslaved Africans and their descendants, free people of color and other immigrants.",
+          "status": "well-supported",
+          "explanation": "Cultural change is not biological purity, a single founding date, or evidence that the area was empty before Acadian settlement.",
+          "support": [
+            {
+              "sourceId": "cajun-context",
+              "locator": "Paragraph beginning The new arrivals learned new skills",
+              "stance": "context",
+              "note": "Explains the wider social setting; it does not independently date this specific journey."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source-1",
+          "authors": "Carl A. Brasseaux",
+          "title": "Acadian Immigration Into South Louisiana, 1764-1785",
+          "year": 2023,
+          "venue": "Acadian Memorial",
+          "url": "https://acadianmemorial.org/acadian-immigration-into-south-louisiana-1764-1785/",
+          "access": "Primary publication or institutional text and relevant chronological passages inspected 2026-11-15; research-report summary used only as a lead."
+        },
+        {
+          "id": "cajun-context",
+          "authors": "National Park Service",
+          "title": "From Acadian to Cajun",
+          "year": 2026,
+          "venue": "Jean Lafitte National Historical Park and Preserve",
+          "url": "https://www.nps.gov/jela/learn/historyculture/from-acadian-to-cajun.htm",
+          "access": "Institutional cultural-history synthesis inspected 2026-11-15; used for historical interaction, not a new exact origin date."
+        }
+      ],
+      "review": {
+        "summary": "Four passenger groups selected settlements along Bayou Lafourche. The marker preserves the category and limits of this movement.",
+        "limitations": "This leg must be distinguished from the initial expulsion and other stages of exile.",
+        "discussion": "Resettlement after forced displacement includes refugee agency. It is not an assertion that the original expulsion was voluntary.",
+        "provenance": "Independent source verification on 2026-11-15; completed Deep report preserved unchanged.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added source-linked episode with explicit endpoint and movement-type limitations."
+        ],
+        "relatedIds": [
+          "acadian-deportation-boston1755"
+        ]
+      },
+      "history": {
+        "kind": "migration",
+        "claimId": "connection",
+        "group": "Acadian resettlement",
+        "windows": [
+          {
+            "start": 1785,
+            "end": 1785,
+            "certainty": "documented",
+            "note": "Single resettlement episode after exile; no recurring schedule inferred."
+          }
+        ],
+        "connection": {
+          "evidence": "The source identifies this resettlement leg.",
+          "lastEvidence": 1785,
+          "cessation": "unknown",
+          "note": "A single resettlement episode; no return voyage or annual migration frequency inferred.",
+          "claimId": "connection"
+        }
+      }
+    },
+    {
+      "id": "ax-black-ball-packets",
+      "revision": 1,
+      "type": "event",
+      "title": "Black Ball packets - New York and Britain",
+      "culture": {
+        "id": "atlantic-commercial-networks",
+        "name": "Commercial shipping networks",
+        "kind": "unknown",
+        "color": "#85b3df"
+      },
+      "location": {
+        "id": "ax-black-ball-packets-origin",
+        "name": "New York",
+        "lon": -74,
+        "lat": 40.7,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "destination": {
+        "id": "ax-black-ball-packets-destination",
+        "name": "Britain regional edge",
+        "lon": -3,
+        "lat": 54,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1818,
+        "end": 1878,
+        "approximate": false,
+        "original": "Historical movement in 1818-1878.",
+        "method": "Dates from documented voyages, settlement assignments or identified service operations; no study screening range promoted to continuous activity.",
+        "interpretation": "Schematic endpoint connection for the supported episode or named operation. It does not measure annual volume or recreate a ship track."
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -74,
+              40.7
+            ],
+            [
+              -3,
+              54
+            ]
+          ]
+        },
+        "direction": "both",
+        "precision": "Two regional anchors only; intermediate journeys are explained in text, not invented as a surveyed path.",
+        "provenance": "Source establishes the endpoint relationship and category. Enslaved people are represented as people subjected to coercion, never as voluntary migrants or generic goods."
+      },
+      "claims": [
+        {
+          "id": "connection",
+          "text": "The American Black Ball Line operated scheduled packet service carrying goods and passengers between New York and Liverpool in both directions.",
+          "status": "well-supported",
+          "explanation": "Formation was announced in 1817; service is represented from 1818. The closure belongs to this named line, not all Atlantic commerce. The British endpoint is intentionally regional.",
+          "support": [
+            {
+              "sourceId": "source-1",
+              "locator": "Ship Courier and Outcomes sections",
+              "stance": "supports",
+              "note": "Supports this dated relationship and the distinction between coercion, resettlement and commerce."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source-1",
+          "authors": "Martina Caruso",
+          "title": "Packages, Papers and Packets",
+          "year": 2022,
+          "venue": "South Street Seaport Museum",
+          "url": "https://southstreetseaportmuseum.org/packages-papers-and-packets/",
+          "access": "Primary publication or institutional text and relevant chronological passages inspected 2026-11-15; research-report summary used only as a lead."
+        }
+      ],
+      "review": {
+        "summary": "The American Black Ball Line operated scheduled packet service carrying goods and passengers between New York and Liverpool in both directions. The marker preserves the category and limits of this movement.",
+        "limitations": "Formation was announced in 1817; service is represented from 1818. The closure belongs to this named line, not all Atlantic commerce. The British endpoint is intentionally regional.",
+        "discussion": "This is a specific historical connection, not a claim about the free choice, ancestry or fate of every person in either region.",
+        "provenance": "Independent source verification on 2026-11-15; completed Deep report preserved unchanged.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added source-linked episode with explicit endpoint and movement-type limitations."
+        ],
+        "relatedIds": []
+      },
+      "history": {
+        "kind": "exchange",
+        "claimId": "connection",
+        "group": "Commercial shipping",
+        "windows": [
+          {
+            "start": 1818,
+            "end": 1878,
+            "certainty": "documented",
+            "note": "Regular packet operation, not a claim every scheduled departure occurred. Named line closed in 1878."
+          }
+        ],
+        "connection": {
+          "evidence": "The American Black Ball Line operated scheduled packet service carrying goods and passengers between New York and Liverpool in both directions.",
+          "lastEvidence": 1878,
+          "cessation": "documented",
+          "note": "Regular packet operation, not a claim every scheduled departure occurred. Named line closed in 1878.",
+          "claimId": "connection"
+        }
+      }
+    },
+    {
+      "id": "ax-pacific-mail-china",
+      "revision": 1,
+      "type": "event",
+      "title": "Pacific Mail - California and the south China coast",
+      "culture": {
+        "id": "atlantic-commercial-networks",
+        "name": "Commercial shipping networks",
+        "kind": "unknown",
+        "color": "#85b3df"
+      },
+      "location": {
+        "id": "ax-pacific-mail-china-origin",
+        "name": "San Francisco",
+        "lon": -122.4,
+        "lat": 37.8,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "destination": {
+        "id": "ax-pacific-mail-china-destination",
+        "name": "South China coast regional edge",
+        "lon": 114,
+        "lat": 22.5,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1867,
+        "end": 1915,
+        "approximate": false,
+        "original": "Historical movement in 1867-1915.",
+        "method": "Dates from documented voyages, settlement assignments or identified service operations; no study screening range promoted to continuous activity.",
+        "interpretation": "Schematic endpoint connection for the supported episode or named operation. It does not measure annual volume or recreate a ship track."
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -122.4,
+              37.8
+            ],
+            [
+              114,
+              22.5
+            ]
+          ]
+        },
+        "direction": "both",
+        "precision": "Two regional anchors only; intermediate journeys are explained in text, not invented as a surveyed path.",
+        "provenance": "Source establishes the endpoint relationship and category. Enslaved people are represented as people subjected to coercion, never as voluntary migrants or generic goods."
+      },
+      "claims": [
+        {
+          "id": "connection",
+          "text": "Pacific Mail established steamship service linking San Francisco with Hong Kong in 1867, with travel in both directions.",
+          "status": "well-supported",
+          "explanation": "This is a commercial transport network, not a statement that all passenger migration was unrestricted or voluntary. Immigration exclusion changed access. The named company period is not the lifespan of all transpacific trade.",
+          "support": [
+            {
+              "sourceId": "source-1",
+              "locator": "Pacific Mail service and exclusion-policy discussion",
+              "stance": "supports",
+              "note": "Supports this dated relationship and the distinction between coercion, resettlement and commerce."
+            },
+            {
+              "sourceId": "source-2",
+              "locator": "Page 39, Pacific Mail transpacific employment and 1867-1915 span",
+              "stance": "supports",
+              "note": "Supports the named company period, not every individual departure."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source-1",
+          "authors": "Smithsonian National Museum of American History",
+          "title": "Pacific Crossings",
+          "year": null,
+          "venue": "On the Water",
+          "url": "https://americanhistory.si.edu/explore/exhibitions/on-the-water/online/ocean-crossings/liners-america/pacific-crossings",
+          "access": "Primary publication or institutional text and relevant chronological passages inspected 2026-11-15; research-report summary used only as a lead."
+        },
+        {
+          "id": "source-2",
+          "authors": "L. Eve Armentrout-Ma",
+          "title": "Chinese and GGNRA, 1849-1949: Guests of Choice, Guests of Necessity",
+          "year": null,
+          "venue": "National Park Service, archived report",
+          "url": "https://npshistory.com/publications/goga/chinese-am.pdf",
+          "access": "Institutional report page 39 inspected 2026-11-15; company service span explicit."
+        }
+      ],
+      "review": {
+        "summary": "Pacific Mail established steamship service linking San Francisco with Hong Kong in 1867, with travel in both directions. The marker preserves the category and limits of this movement.",
+        "limitations": "This is a commercial transport network, not a statement that all passenger migration was unrestricted or voluntary. Immigration exclusion changed access. The named company period is not the lifespan of all transpacific trade.",
+        "discussion": "This is a specific historical connection, not a claim about the free choice, ancestry or fate of every person in either region.",
+        "provenance": "Independent source verification on 2026-11-15; completed Deep report preserved unchanged.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added source-linked episode with explicit endpoint and movement-type limitations."
+        ],
+        "relatedIds": []
+      },
+      "history": {
+        "kind": "exchange",
+        "claimId": "connection",
+        "group": "Commercial shipping",
+        "windows": [
+          {
+            "start": 1867,
+            "end": 1915,
+            "certainty": "documented",
+            "note": "The institutional discussion brackets Pacific Mail transpacific activity at 1867-1915; this record does not establish the end of all service or commerce."
+          }
+        ],
+        "connection": {
+          "evidence": "Pacific Mail established steamship service linking San Francisco with Hong Kong in 1867, with travel in both directions.",
+          "lastEvidence": 1915,
+          "cessation": "unknown",
+          "note": "The institutional discussion brackets Pacific Mail transpacific activity at 1867-1915; this record does not establish the end of all service or commerce.",
+          "claimId": "connection"
+        }
+      }
+    },
+    {
+      "id": "ax-fujian-manila-1570s",
+      "revision": 1,
+      "type": "event",
+      "title": "Fujian to Manila - early silk and silver network",
+      "culture": {
+        "id": "atlantic-commercial-networks",
+        "name": "Commercial shipping networks",
+        "kind": "unknown",
+        "color": "#85b3df"
+      },
+      "location": {
+        "id": "ax-fujian-manila-1570s-origin",
+        "name": "Fujian coast regional edge",
+        "lon": 118,
+        "lat": 25,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "destination": {
+        "id": "ax-fujian-manila-1570s-destination",
+        "name": "Manila, Philippines",
+        "lon": 121,
+        "lat": 14.6,
+        "precision": "Approximate regional endpoint, uncertainty about 100 km; not a surveyed landing or individual birthplace.",
+        "provenance": "Editorial geographic approximation of the region named by the source. Detailed mainland European and Asian ports are represented by regional incoming edges."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1570,
+        "end": 1579,
+        "approximate": true,
+        "original": "Historical movement in 1570-1579.",
+        "method": "Dates from documented voyages, settlement assignments or identified service operations; no study screening range promoted to continuous activity.",
+        "interpretation": "Schematic endpoint connection for the supported episode or named operation. It does not measure annual volume or recreate a ship track."
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              118,
+              25
+            ],
+            [
+              121,
+              14.6
+            ]
+          ]
+        },
+        "direction": "forward",
+        "precision": "Two regional anchors only; intermediate journeys are explained in text, not invented as a surveyed path.",
+        "provenance": "Source establishes the endpoint relationship and category. Enslaved people are represented as people subjected to coercion, never as voluntary migrants or generic goods."
+      },
+      "claims": [
+        {
+          "id": "connection",
+          "text": "Chinese junks connected Fujian with Manila during the 1570s as part of the emerging silk-for-silver network linking Asia and the Americas.",
+          "status": "well-supported",
+          "explanation": "This edge joins the already represented Manila-Acapulco connection. Forward direction traces incoming Chinese commerce; no precise course or cessation after this decade is established.",
+          "support": [
+            {
+              "sourceId": "source-1",
+              "locator": "Abstract, recurring junk connections in the 1570s",
+              "stance": "supports",
+              "note": "Supports this dated relationship and the distinction between coercion, resettlement and commerce."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source-1",
+          "authors": "Ubaldo Iaccarino",
+          "title": "The Galleon System and Chinese Trade in Manila at the Turn of the 16th Century",
+          "year": 2011,
+          "venue": "Ming Qing Yanjiu 16:95-128",
+          "url": "https://doi.org/10.1163/24684791-01601005",
+          "access": "Primary publication or institutional text and relevant chronological passages inspected 2026-11-15; research-report summary used only as a lead."
+        }
+      ],
+      "review": {
+        "summary": "Chinese junks connected Fujian with Manila during the 1570s as part of the emerging silk-for-silver network linking Asia and the Americas. The marker preserves the category and limits of this movement.",
+        "limitations": "This edge joins the already represented Manila-Acapulco connection. Forward direction traces incoming Chinese commerce; no precise course or cessation after this decade is established.",
+        "discussion": "This is a specific historical connection, not a claim about the free choice, ancestry or fate of every person in either region.",
+        "provenance": "Independent source verification on 2026-11-15; completed Deep report preserved unchanged.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added source-linked episode with explicit endpoint and movement-type limitations."
+        ],
+        "relatedIds": []
+      },
+      "history": {
+        "kind": "exchange",
+        "claimId": "connection",
+        "group": "Commercial shipping",
+        "windows": [
+          {
+            "start": 1570,
+            "end": 1579,
+            "certainty": "approximate",
+            "note": "Attested decade of recurring connections; the decade end is a coverage boundary, not evidence trade ceased."
+          }
+        ],
+        "connection": {
+          "evidence": "Chinese junks connected Fujian with Manila during the 1570s as part of the emerging silk-for-silver network linking Asia and the Americas.",
+          "lastEvidence": 1579,
+          "cessation": "unknown",
+          "note": "Attested decade of recurring connections; the decade end is a coverage boundary, not evidence trade ceased.",
+          "claimId": "connection"
+        }
+      }
+    }
+  ]
+}

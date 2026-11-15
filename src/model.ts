@@ -103,13 +103,29 @@ export interface Linguistics {
   };
 }
 export interface HistoryMetadata {
-  kind: "settlement" | "migration" | "exchange" | "wreck";
+  kind: "settlement" | "habitation" | "migration" | "exchange" | "wreck" | "visit";
   claimId: string;
   foundingPower?: string;
   eventDate?: string;
   group?: string;
   endYear?: number;
   endMeaning?: "unknown" | "abandoned" | "relocated";
+  continuity?: "ongoing";
+  endEvidence?: {
+    start: number;
+    end: number;
+    meaning: "abandoned" | "relocated";
+    certainty: "documented" | "inferred";
+    claimId: string;
+    note: string;
+  };
+  connection?: {
+    evidence: string;
+    lastEvidence: number;
+    cessation: "documented" | "inferred" | "unknown" | "ongoing";
+    note: string;
+    claimId: string;
+  };
   windows?: {
     start: number;
     end: number;

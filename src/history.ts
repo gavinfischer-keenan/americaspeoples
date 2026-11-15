@@ -9,9 +9,11 @@ export type HistoryState =
   | "outside";
 export const HISTORY_LABELS = {
   settlement: "Settlements",
+  habitation: "Habitation & continuity",
   migration: "Migration",
   exchange: "Trade & exchange",
   wreck: "Shipwrecks",
+  visit: "Historical visits",
 } as const;
 
 /** Display memory is deliberately separate from the underlying evidence interval. */
@@ -31,6 +33,7 @@ export function historyState(record: MapRecord, year: number): HistoryState {
   if (temporalState(time, year) !== "absent") return "active";
   if (history?.kind === "wreck") return "loss";
   if (history?.kind === "settlement") return "founded";
+  if (history?.kind === "visit") return "past-place";
   if (record.type === "occupation" && record.location && !record.overlay)
     return "past-place";
   return "outside";
@@ -39,6 +42,14 @@ export function historyState(record: MapRecord, year: number): HistoryState {
 export function historyLabel(record: MapRecord, year: number): string {
   const state = historyState(record, year),
     h = record.history;
+  if(h?.kind==='visit'&&state!=='outside')return `${state==='active'?'Dated':'Historical'} visit · ${h.eventDate||record.time.original}. This visit marker does not establish settlement or continued presence afterward.`;
+  if (h?.endEvidence && state !== 'outside' && year >= h.endEvidence.start) {
+    const e=h.endEvidence, range=e.start===e.end?formatYear(e.start):`${formatYear(e.start)}–${formatYear(e.end)}`;
+    const action=e.meaning==='relocated'?'relocation':'local abandonment';
+    return `${year<e.end?'Possible':e.certainty==='inferred'?'Inferred':'Documented'} ${action} · ${range}. ${e.note} The earlier place remains historical context.`;
+  }
+  if(h?.kind==='habitation'&&state!=='outside'&&h.continuity==='ongoing')
+    return 'Evidence of continuing habitation; the display ends in 1934, while community history continues. This is not a year-by-year population count.';
   if (h?.kind === "wreck" && state !== "outside")
     return `Historical loss · ${h.eventDate || formatYear(record.time.start!)}${h.group ? " · " + h.group : ""}. Remains and salvage are separate from the sinking date.`;
   if (h?.endYear !== undefined && year >= h.endYear && state !== "outside")
@@ -97,6 +108,8 @@ export function historyDates(records: readonly MapRecord[]): number[] {
                 r.time.start,
                 r.time.end,
                 r.history?.endYear ?? null,
+                r.history?.endEvidence?.start ?? null,
+                r.history?.endEvidence?.end ?? null,
                 ...(r.history?.windows?.flatMap((w) => [
                   w.start,
                   w.end,
@@ -115,6 +128,7 @@ export function validateHistory(r: EvidenceRecord): string[] {
   if (!h || typeof h !== "object" || Array.isArray(h))
     return ["History metadata must be an object."];
   const errors: string[] = [];
+  const supported=(id:unknown)=>typeof id==='string'&&Array.isArray(r.claims)&&r.claims.some(c=>c?.id===id&&Array.isArray(c.support)&&c.support.some(s=>s?.stance==='supports'&&Array.isArray(r.sources)&&r.sources.some(source=>source?.id===s.sourceId)));
   if (!Object.hasOwn(HISTORY_LABELS, h.kind))
     errors.push("Invalid history kind.");
   const claim = Array.isArray(r.claims)
@@ -166,6 +180,21 @@ export function validateHistory(r: EvidenceRecord): string[] {
     (!r.location || r.overlay || r.time?.kind !== "occurrence")
   )
     errors.push("Settlement history requires a place.");
+  if(h.kind==='habitation'&&(!r.location||r.overlay||r.type!=='occupation'||r.time?.kind!=='interval'))
+    errors.push('Habitation history requires a located occupation interval.');
+  if(h.kind==='visit'&&(!r.location||r.overlay||r.type!=='event'))errors.push('Visit history requires a located event.');
+  if(h.continuity!==undefined&&(h.continuity!=='ongoing'||h.kind!=='habitation'||r.time?.end!==END_YEAR||h.endEvidence||h.endYear!==undefined))
+    errors.push('Ongoing habitation must reach the display horizon without an abandonment ending.');
+  if(h.endEvidence!==undefined){
+    const e=h.endEvidence;
+    if(!e||typeof e!=='object'||!Number.isSafeInteger(e.start)||!Number.isSafeInteger(e.end)||e.start>e.end||e.start<(r.time?.start??Infinity)||e.end>END_YEAR||!['abandoned','relocated'].includes(e.meaning)||!['documented','inferred'].includes(e.certainty)||!supported(e.claimId)||typeof e.note!=='string'||!e.note.trim()||!['habitation','settlement'].includes(h.kind)||h.endYear!==undefined)
+      errors.push('Invalid or unsupported history ending evidence.');
+  }
+  if(h.connection!==undefined){
+    const e=h.connection;
+    if(!e||typeof e!=='object'||!['migration','exchange'].includes(h.kind)||!Number.isSafeInteger(e.lastEvidence)||e.lastEvidence<(r.time?.start??Infinity)||e.lastEvidence>(r.time?.end??-Infinity)||!['documented','inferred','unknown','ongoing'].includes(e.cessation)||!supported(e.claimId)||typeof e.evidence!=='string'||!e.evidence.trim()||typeof e.note!=='string'||!e.note.trim())
+      errors.push('Invalid connection evidence or cessation metadata.');
+  }
   if (["migration", "exchange"].includes(h.kind) && !h.windows?.length)
     errors.push("Route history needs explicit activity windows.");
   if (

@@ -3,6 +3,7 @@ import { unzipSync, zipSync } from "fflate";
 import {
   BULK_HEADERS,
   BULK_SCHEMA_VERSION,
+  MAX_SUPPORT_ROWS,
   OVERLAY_HEADERS,
   type BulkRow,
   type BulkTables,
@@ -107,7 +108,8 @@ export async function importWorkbook(
     const sheet = workbook.Sheets[sheetName];
     if (!sheet) throw new Error(`Missing ${sheetName} sheet.`);
     const range = XLSX.utils.decode_range(sheet["!ref"] || "A1");
-    if (range.e.r > 2000 || range.e.c > 99)
+    const maxRows=sheetName==='Evidence'||sheetName==='Overlays'?2000:MAX_SUPPORT_ROWS;
+    if (range.e.r > maxRows || range.e.c > 99)
       throw new Error(
         `${sheetName}: too many rows or columns; remove extra formatting and split the batch.`,
       );

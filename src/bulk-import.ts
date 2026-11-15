@@ -1,3 +1,4 @@
+import { MAX_SUPPORT_ROWS } from "./bulk-schema";
 import type {
   EvidenceRecord,
   Proposal,
@@ -115,7 +116,7 @@ function buildPackage(
   for (const sheet of Object.keys(tables).filter(
     (s) => s !== "Overlays",
   ) as BulkSheetName[]) {
-    const max = sheet === "Evidence" ? MAX_PROPOSALS : 2000;
+    const max = sheet === "Evidence" ? MAX_PROPOSALS : MAX_SUPPORT_ROWS;
     if (tables[sheet].length > max)
       fail(
         sheet,

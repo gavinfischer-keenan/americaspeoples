@@ -24,7 +24,8 @@ const research = JSON.parse(
   await readFile("data/research-proposals.json", "utf8"),
 );
 const history = JSON.parse(await readFile("data/history-records.json", "utf8"));
-const appendix = createAppendix({...d,records:[...d.records,...history.records]}, research, version);
+const expansion=(await Promise.all(['settlement','mission','pacific','violence','voyage','transport','atlantic'].map(async name=>JSON.parse(await readFile(`data/${name}-expansion-records.json`,'utf8')).records))).flat();
+const appendix = createAppendix({...d,license:published.license,records:[...d.records,...history.records,...expansion]}, research, version);
 const errors = validateDataset(published);
 if (errors.length) throw new Error(errors.join("\n"));
 await import("./workbook-tables");
@@ -63,12 +64,19 @@ async function includeDirectory(dir: string) {
   for (const item of await readdir(dir, { withFileTypes: true })) {
     if (item.isDirectory()) await includeDirectory(`${dir}/${item.name}`);
     else if (item.isFile()) {
+      // Historical raw-provider paths now contain notices. A legacy intake script
+      // must not silently turn them back into redistributable research reports.
+      if((dir==='docs/intake'&&item.name.endsWith('.txt'))||dir==='sites/reports'){
+        const text=await readFile(`${dir}/${item.name}`,'utf8');
+        if(text.length>6000||!(/retained privately|not included in this public distribution|redistribution permission/i.test(text)))throw Error(`Uncleared research report cannot be packaged: ${dir}/${item.name}`);
+      }
       await copyFile(`${dir}/${item.name}`, `dist/${dir}/${item.name}`);
       names.push(`${dir}/${item.name}`);
     }
   }
 }
 await includeDirectory("docs/intake");
+await includeDirectory('licenses');
 await copyFile(
   "data/literature-intake-2026-10-28.json",
   "dist/literature-intake.json",
@@ -76,11 +84,22 @@ await copyFile(
 names.push("literature-intake.json");
 await mkdir("dist/docs", { recursive: true });
 for(const [from,to] of [
+ ["data/historical-boundaries.json","historical-boundaries.json"],
+ ["data/colonial-boundaries.json","colonial-boundaries.json"],
+ ["data/national-boundaries.json","national-boundaries.json"],
+ ["data/early-national-boundaries.json","early-national-boundaries.json"],
+ ["data/early-national-boundary-sources.json","early-national-boundary-sources.json"],
+ ["data/reservation-boundaries.json","reservation-boundaries.json"],
+ ["data/reservation-boundary-sources.json","reservation-boundary-sources.json"],
+ ["data/boundary-sources.json","boundary-sources.json"],
+ ["data/expanded-boundary-sources.json","expanded-boundary-sources.json"],
+ ["data/land-detailed.geojson","land-detailed.geojson"],
+ ["data/rail-network.json","rail-network.json"],
+ ["data/voyages.json","voyages.json"],
  ["docs/coverage-audit.html","docs/coverage-audit.html"],
  ["docs/hosted-architecture.md","docs/hosted-architecture.md"],
  ["data/coverage-audit.json","coverage-audit.json"],
  ["data/temporal-review-2026-10-29.json","temporal-review.json"],
- ["data/intake-queue-round7.json","intake-queue-round7.json"],
  ["data/round8-synthesis.json","round8-synthesis.json"],
  ["docs/round8-synthesis.html","docs/round8-synthesis.html"],
   ["data/round9-synthesis.json","round9-synthesis.json"],
@@ -107,6 +126,17 @@ for(const [from,to] of [
 await mkdir("dist/templates", { recursive: true });
 for (const name of [
   "README.md",
+  "LICENSE.md",
+  "CONTRIBUTING.md",
+  "docs/reuse-and-contributing.md",
+  "docs/atlas-expansion.md",
+  "docs/early-national-boundary-source-decisions.md",
+  "docs/reservation-source-decisions.md",
+  "docs/pacific-violence-source-decisions.md",
+  "docs/voyage-transport-source-decisions.md",
+  "docs/atlantic-source-decisions.md",
+  "docs/settlement-mission-source-decisions.md",
+  "docs/history-source-corrections.md",
   "THIRD_PARTY.md",
   "docs/data-format.md",
   "docs/history-update.md",
@@ -126,13 +156,13 @@ for (const name of [
   await copyFile(name, `dist/${name}`);
   names.push(name);
 }
-for (const document of ["bulk-import-guide", "history-update", "ui-redesign"]) {
+for (const document of ["bulk-import-guide", "history-update", "ui-redesign", "reuse-and-contributing", "atlas-expansion"]) {
 const guide = await marked.parse(
   await readFile(`docs/${document}.md`, "utf8"),
 );
 await writeFile(
   `dist/docs/${document}.html`,
-  `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'"><title>Americas Peoples — ${document === "history-update" ? "History layers" : document === "ui-redesign" ? "Watch and Explore" : "Bulk import guide"}</title><style>body{font:16px/1.65 system-ui,sans-serif;color:#20313a;max-width:1100px;margin:40px auto;padding:0 24px 60px}h1,h2,h3{line-height:1.25;margin-top:1.6em}h1{font-size:36px}a{color:#086b7b}table{border-collapse:collapse;width:100%;font-size:14px;display:block;overflow:auto}td,th{border:1px solid #cbd6d9;padding:10px;text-align:left;min-width:140px}th{background:#e6f0f1}code{background:#edf1f2;padding:2px 4px;border-radius:3px}pre{padding:16px;background:#edf1f2;overflow:auto}pre code{padding:0}blockquote{border-left:3px solid #25818e;margin-left:0;padding-left:20px}li{margin:6px 0}</style></head><body><a href="../index.html#proposals">← Back to Americas Peoples</a>${guide}</body></html>`,
+  `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'"><title>Americas Peoples — ${document === "history-update" ? "History layers" : document === "ui-redesign" ? "Watch and Explore" : document === "reuse-and-contributing" ? "Free education and reuse" : document === "atlas-expansion" ? "An expanding atlas" : "Bulk import guide"}</title><style>body{font:16px/1.65 system-ui,sans-serif;color:#20313a;max-width:1100px;margin:40px auto;padding:0 24px 60px}h1,h2,h3{line-height:1.25;margin-top:1.6em}h1{font-size:36px}a{color:#086b7b}table{border-collapse:collapse;width:100%;font-size:14px;display:block;overflow:auto}td,th{border:1px solid #cbd6d9;padding:10px;text-align:left;min-width:140px}th{background:#e6f0f1}code{background:#edf1f2;padding:2px 4px;border-radius:3px}pre{padding:16px;background:#edf1f2;overflow:auto}pre code{padding:0}blockquote{border-left:3px solid #25818e;margin-left:0;padding-left:20px}li{margin:6px 0}</style></head><body><a href="../index.html#proposals">← Back to Americas Peoples</a>${guide}</body></html>`,
 );
 names.push(`docs/${document}.html`);
 }

@@ -3,6 +3,7 @@ import { geoPath, geoGraticule10 } from "d3-geo";
 import { MapGeometry } from "./map-geometry";
 import {pickCandidates,type HitCandidate,type MapPoint} from './map-picking';
 import {clampZoom,fitMapBounds,geographicCenter} from './map-viewport';
+import { boundariesAt } from './boundaries';
 import {routeEndpointLabels,routeDirectionLabels} from './map-route-labels';
 import { guideForRecord } from "./site-guides";
 import { populationAt } from "./population";
@@ -15,10 +16,12 @@ import { boundsInViewport } from "./map-filters";
 import { historyState, historyOpacity, historyLabel } from './history';
 import {iceSnapshot,eventsAt,oceanPaths,isUncertainHazard} from './physical';
 import {MapTooltip,tooltipForRecords,tooltipForHazard,type MapTooltipContent,type MapMode} from './map-tooltip';
+import { AtlasContext } from './atlas-context';
 export interface MapInteraction {mode:MapMode;playing:boolean;onPause:()=>void}
 export interface PhysicalOptions {ice:boolean; iceScenario:string; currents:boolean; winds:boolean; hidden:ReadonlySet<string>; uncertain:boolean}
 const compactPlaceName=(name:string)=>name.length<=40?name:name.slice(0,39).trimEnd()+'…';
 export class MapView {
+  readonly context=new AtlasContext();
   readonly element = document.createElement("div");
   private scope: MapScope = "pacific";
   private width=1000;
@@ -44,7 +47,7 @@ export class MapView {
   private tips=new Map<string,MapTooltipContent>();
   private hovered:{key:string;x:number;y:number}|null=null;
   constructor(
-    private readonly land: any,
+    private land: any,
     private onSelect: (rows: DisplayRecord[]) => void,
     private onViewportChange: () => void = () => {},
   ) {
@@ -184,6 +187,18 @@ export class MapView {
   private hideTooltip(){this.hovered=null;this.tooltip.hide();}
   /** Route owners can clear body-mounted hover content when reusing this map. */
   clearHover():void{this.hideTooltip();}
+  setDetailedLand(land:any):void{this.land=land;$('.land',this.element).setAttribute('d',geoPath(this.projection)(land)??'');}
+  refreshContext():void{
+    let group=this.element.querySelector<SVGGElement>('.historical-context');
+    if(!group){group=document.createElementNS('http://www.w3.org/2000/svg','g');group.setAttribute('class','historical-context');group.setAttribute('aria-hidden','true');$('.world',this.element).insertBefore(group,$('.features',this.element));}
+    group.innerHTML=this.context.draw(this.projection,this.year,this.scale);
+    // Journeys sit above translucent evidence areas without intercepting clicks.
+    let journeys=this.element.querySelector<SVGGElement>('.journey-context');
+    if(!journeys){journeys=document.createElementNS('http://www.w3.org/2000/svg','g');journeys.setAttribute('class','journey-context');journeys.setAttribute('aria-hidden','true');$('.world',this.element).append(journeys);}
+    journeys.replaceChildren(...Array.from(group.querySelectorAll('.voyage-tracks')));
+    this.declutterLabels();
+  }
+  refreshVoyage():void{const group=this.element.querySelector('.voyage-tracks');if(group)group.outerHTML=this.context.draw(this.projection,this.year,this.scale,true);}
   private opacity(r:DisplayRecord){return this.interaction?.mode==='explore'?1:historyOpacity(r,this.year)??temporalOpacity(r.time,this.year);}
   private uncertainty(r:DisplayRecord):boolean{
     if(this.interaction?.mode!=='explore')return temporalState(r.time,this.year)==='possible';
@@ -195,7 +210,7 @@ export class MapView {
   }
   private labels() {
     if(this.scale>4||this.records.some(r=>this.highlighted.has(r.id)&&(r.history?.kind==='migration'||r.history?.kind==='exchange')))return '';
-    return [['NORTH AMERICA',-105,50],['SOUTH AMERICA',-62,-20],['EUROPE',15,53],['AFRICA',20,8],['ATLANTIC',-35,12],['PACIFIC',-140,-5],['ISLAND ASIA',130,5]].map(([name,lon,lat])=>{const p=this.projection([Number(lon),Number(lat)]);return p?`<text x="${p[0]}" y="${p[1]}" style="font-size:${10/this.scale}px">${name}</text>`:'';}).join('');
+    return [['NORTH AMERICA',-105,50],['SOUTH AMERICA',-62,-20],['EUROPE',15,53],['AFRICA',20,8],['ATLANTIC',-35,12],['PACIFIC',-140,-5],['ISLAND ASIA',130,5],['AUSTRALIA',134,-25]].map(([name,lon,lat])=>{const p=this.projection([Number(lon),Number(lat)]);return p?`<text x="${p[0]}" y="${p[1]}" style="font-size:${10/this.scale}px">${name}</text>`:'';}).join('');
   }
   setScope(scope: MapScope, redraw = true) {
     if (scope === this.scope) return;
@@ -281,7 +296,7 @@ export class MapView {
   private declutterLabels(){
     const viewport=$('svg',this.element).getBoundingClientRect();
     if(!viewport.width||!viewport.height)return;
-    const labels=[...this.element.querySelectorAll<SVGTextElement>('.settlement-label,.history-place-label,.route-endpoint-label text')].map(label=>({label,selected:!!label.closest('.is-highlighted,.route-endpoint-label'),bounds:label.getBoundingClientRect()}));
+    const labels=[...this.element.querySelectorAll<SVGTextElement>('.settlement-label,.history-place-label,.route-endpoint-label text,.boundary-label')].map(label=>({label,selected:!!label.closest('.is-highlighted,.route-endpoint-label'),bounds:label.getBoundingClientRect()}));
     labels.sort((a,b)=>Number(b.selected)-Number(a.selected));
     const placed:DOMRect[]=[];
     for(const {label,selected,bounds} of labels){
@@ -294,6 +309,10 @@ export class MapView {
   /** Same projected geometry and transform as the map; unmapped records stay out. */
   visibleRecords(): DisplayRecord[] {
     return this.recordsInView(this.records);
+  }
+  visibleBoundaries(){
+    if(!this.context.options.boundaries)return [];
+    return boundariesAt(this.context.boundaries,this.year).filter(b=>(b.detail!=='regional'||this.scale>=4)&&this.context.projectedBounds(b,this.projection).some(bounds=>boundsInViewport(bounds,this.scale,this.tx,this.ty,this.width,this.height)));
   }
   visibleContextRecords():DisplayRecord[]{return this.recordsInView(this.contextRecords, true);}
   private recordsInView(records:DisplayRecord[], context = false):DisplayRecord[]{
@@ -431,6 +450,7 @@ export class MapView {
       const defs=$('defs',this.element);defs.insertAdjacentHTML('beforeend',['warm','cold','wind'].map(k=>`<marker id="flow-${k}" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="${k==='warm'?'#ffb48a':k==='cold'?'#8ed8ff':'#f1df9b'}"/></marker>`).join(''));
     }
     $('.physical-features',this.element).innerHTML=background;
+    this.refreshContext();
     const groups = new Map<string, DisplayRecord[]>();
     let endpointLabels='';
     const labeledEndpoints=new Set<string>();

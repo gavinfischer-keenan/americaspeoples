@@ -35876,14 +35876,14 @@
     },
     {
       "id": "author-barbados-heywoods-early-shell",
-      "version": 1,
+      "version": 2,
       "kind": "new",
       "targetId": null,
       "baseRevision": null,
       "baseRecord": null,
       "record": {
         "id": "barbados-heywoods-early-shell",
-        "revision": 2,
+        "revision": 3,
         "type": "event",
         "title": "Heywoods, Barbados: earlier dated shell context",
         "culture": {
@@ -35916,6 +35916,12 @@
                 "locator": "Dating table; conclusions",
                 "stance": "supports",
                 "note": "Marine09 calibration, no local reservoir correction; old-shell and carbonate issues remain."
+              },
+              {
+                "sourceId": "who-barbados-geography-2009",
+                "locator": "Introduction, p. 10",
+                "stance": "context",
+                "note": "Published island coordinates support the regional map anchor only."
               }
             ]
           }
@@ -35927,20 +35933,32 @@
             "title": "Verification of an Archaic Age Occupation on Barbados, Southern Lesser Antilles",
             "year": 2011,
             "venue": "Radiocarbon 53(4):595–604",
-            "url": "https://journals.uair.arizona.edu/index.php/radiocarbon/article/download/13062/12305",
-            "access": "Primary full article accessed; abstract, sample contexts, dating table and cautionary conclusions read.",
+            "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/C28B75878B7BAD772ADBC91A966BCDB3/S0033822200039072a.pdf/verification-of-an-archaic-age-occupation-on-barbados-southern-lesser-antilles.pdf",
+            "access": "Publisher-hosted primary PDF inspected 2026-11-15, including p. 598 geographic context and pp. 599-600 dating table and results. The legacy Arizona URL now redirects to an access-denied page.",
             "referenceType": "journal-article",
             "doi": "10.1017/S0033822200039072"
+          },
+          {
+            "id": "who-barbados-geography-2009",
+            "authors": "World Health Organization; Ministry of Health, Barbados",
+            "title": "WHO-AIMS Report on Mental Health System in Barbados",
+            "year": 2009,
+            "venue": "WHO and Ministry of Health, Barbados",
+            "url": "https://cdn.who.int/media/docs/default-source/mental-health/who-aims-country-reports/barbados_who_aims_report.pdf",
+            "access": "Institutional PDF, Introduction p. 10, read 2026-11-15 solely for the published island coordinates; no health information used.",
+            "referenceType": "report",
+            "publisher": "World Health Organization and Ministry of Health, Barbados"
           }
         ],
         "review": {
           "summary": "This review distinguishes archaeological observations from interpretive models and preserves source access, location precision, dating units and limits of inference.",
-          "limitations": "Marine sample age is not automatically an occupation onset. No global site coordinate was verified; no broad 3280–2200 BC continuous occupation is fabricated.",
+          "limitations": "Marine sample age is not automatically an occupation onset. No global site coordinate was verified; no broad 3280–2200 BC continuous occupation is fabricated. The island marker has 30 km uncertainty and does not locate Trench 39.",
           "discussion": "Dated evidence represents sampled activities or contexts; it does not establish uninterrupted residence or a fixed population.",
           "provenance": "Primary-source review of the two ABC-islands exports; staged for a future combined working-data intake only, with no website publication. Full author-supplied synthesis archive: docs/intake/index.html. Original synthesis is secondary provenance, not a substitute for the cited primary study.",
-          "reviewedAt": "2026-10-28",
+          "reviewedAt": "2026-11-15",
           "history": [
-            "2026-10-28: Added explicitly schematic regional placement; no exact archaeological coordinate asserted."
+            "2026-10-28: Added explicitly schematic regional placement; no exact archaeological coordinate asserted.",
+            "2026-11-15: Replaced the offshore whole-degree marker with a published island anchor and explicit 30 km uncertainty; preserved sampled-context dates."
           ],
           "relatedIds": []
         },
@@ -35950,29 +35968,29 @@
           "geometry": {
             "type": "Point",
             "coordinates": [
-              -60,
-              13
+              -59.53,
+              13.17
             ]
           },
-          "precision": "Approximate Barbados island regional annotation only; whole-degree coordinates are deliberately broad and are not an archaeological site, excavation, grave, village center or measured distribution boundary.",
-          "provenance": "Geographic context: Scott M. Fitzpatrick, Verification of an Archaic Age Occupation on Barbados, Southern Lesser Antilles (https://journals.uair.arizona.edu/index.php/radiocarbon/article/download/13062/12305), Primary publication title/site-description context. The publication identifies the named region; the rounded annotation coordinate is an editorial map placement, not a coordinate reported for the archaeological site. Existing dating, status and source-access limits remain unchanged."
+          "precision": "Barbados island regional anchor, uncertainty 30 km; not an archaeological site coordinate, excavation or settlement boundary.",
+          "provenance": "WHO and Barbados Ministry of Health (2009), Introduction p. 10, gives island coordinates 13 degrees 10 minutes N, 59 degrees 32 minutes W, rounded here to [-59.53, 13.17]. Fitzpatrick (2011), p. 598, places Heywoods north of Speightstown on the northwest coast. This is an island annotation, not the site location."
         }
       },
       "rationale": "Author-supplied literature intake with primary source/access checks.",
       "state": "ready",
       "createdAt": "2026-10-29T00:11:40.634Z",
-      "updatedAt": "2026-10-29T00:11:40.634Z"
+      "updatedAt": "2026-11-15T20:40:06.000Z"
     },
     {
       "id": "author-barbados-heywoods-shell-adze",
-      "version": 1,
+      "version": 2,
       "kind": "new",
       "targetId": null,
       "baseRevision": null,
       "baseRecord": null,
       "record": {
         "id": "barbados-heywoods-shell-adze",
-        "revision": 2,
+        "revision": 3,
         "type": "event",
         "title": "Heywoods, Barbados: dated shell-adze context",
         "culture": {
@@ -35998,13 +36016,19 @@
             "id": "heywoods-adze",
             "text": "A conch-shell adze from Heywoods Context 7 dates to 2530–2200 cal BC, corroborating an Archaic component.",
             "status": "under discussion",
-            "explanation": "A shell artefact is cultural, but shell growth can precede manufacture and deposition.",
+            "explanation": "A shell artefact is cultural, but shell growth can precede manufacture and deposition. The abstract reports 2530-2200 cal BC; Table 1 and Results report 2530-2220 cal BC. This record retains the broader published abstract envelope.",
             "support": [
               {
                 "sourceId": "fitzpatrick2011-heywoods",
-                "locator": "Abstract; dating table",
+                "locator": "Abstract p. 595; Table 1 p. 599; Results p. 600 (end-bound discrepancy disclosed).",
                 "stance": "supports",
                 "note": "Older shell selection and marine reservoir assumptions constrain how closely the shell dates tool use."
+              },
+              {
+                "sourceId": "who-barbados-geography-2009",
+                "locator": "Introduction, p. 10",
+                "stance": "context",
+                "note": "Published island coordinates support the regional map anchor only."
               }
             ]
           }
@@ -36016,20 +36040,32 @@
             "title": "Verification of an Archaic Age Occupation on Barbados, Southern Lesser Antilles",
             "year": 2011,
             "venue": "Radiocarbon 53(4):595–604",
-            "url": "https://journals.uair.arizona.edu/index.php/radiocarbon/article/download/13062/12305",
-            "access": "Primary full article accessed; abstract, sample contexts, dating table and cautionary conclusions read.",
+            "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/C28B75878B7BAD772ADBC91A966BCDB3/S0033822200039072a.pdf/verification-of-an-archaic-age-occupation-on-barbados-southern-lesser-antilles.pdf",
+            "access": "Publisher-hosted primary PDF inspected 2026-11-15, including p. 598 geographic context and pp. 599-600 dating table and results. The legacy Arizona URL now redirects to an access-denied page.",
             "referenceType": "journal-article",
             "doi": "10.1017/S0033822200039072"
+          },
+          {
+            "id": "who-barbados-geography-2009",
+            "authors": "World Health Organization; Ministry of Health, Barbados",
+            "title": "WHO-AIMS Report on Mental Health System in Barbados",
+            "year": 2009,
+            "venue": "WHO and Ministry of Health, Barbados",
+            "url": "https://cdn.who.int/media/docs/default-source/mental-health/who-aims-country-reports/barbados_who_aims_report.pdf",
+            "access": "Institutional PDF, Introduction p. 10, read 2026-11-15 solely for the published island coordinates; no health information used.",
+            "referenceType": "report",
+            "publisher": "World Health Organization and Ministry of Health, Barbados"
           }
         ],
         "review": {
           "summary": "This review distinguishes archaeological observations from interpretive models and preserves source access, location precision, dating units and limits of inference.",
-          "limitations": "The two sample contexts are kept separate. The artefact date does not establish a thousand-year continuous camp.",
+          "limitations": "The two sample contexts are kept separate. The artefact date does not establish a thousand-year continuous camp. The island marker has 30 km uncertainty and does not locate Trench 39.",
           "discussion": "Dated evidence represents sampled activities or contexts; it does not establish uninterrupted residence or a fixed population.",
           "provenance": "Primary-source review of the two ABC-islands exports; staged for a future combined working-data intake only, with no website publication. Full author-supplied synthesis archive: docs/intake/index.html. Original synthesis is secondary provenance, not a substitute for the cited primary study.",
-          "reviewedAt": "2026-10-28",
+          "reviewedAt": "2026-11-15",
           "history": [
-            "2026-10-28: Added explicitly schematic regional placement; no exact archaeological coordinate asserted."
+            "2026-10-28: Added explicitly schematic regional placement; no exact archaeological coordinate asserted.",
+            "2026-11-15: Replaced the offshore whole-degree marker with a published island anchor and explicit 30 km uncertainty; preserved sampled-context dates."
           ],
           "relatedIds": [
             "barbados-heywoods-early-shell"
@@ -36041,18 +36077,18 @@
           "geometry": {
             "type": "Point",
             "coordinates": [
-              -60,
-              13
+              -59.53,
+              13.17
             ]
           },
-          "precision": "Approximate Barbados island regional annotation only; whole-degree coordinates are deliberately broad and are not an archaeological site, excavation, grave, village center or measured distribution boundary.",
-          "provenance": "Geographic context: Scott M. Fitzpatrick, Verification of an Archaic Age Occupation on Barbados, Southern Lesser Antilles (https://journals.uair.arizona.edu/index.php/radiocarbon/article/download/13062/12305), Primary publication title/site-description context. The publication identifies the named region; the rounded annotation coordinate is an editorial map placement, not a coordinate reported for the archaeological site. Existing dating, status and source-access limits remain unchanged."
+          "precision": "Barbados island regional anchor, uncertainty 30 km; not an archaeological site coordinate, excavation or settlement boundary.",
+          "provenance": "WHO and Barbados Ministry of Health (2009), Introduction p. 10, gives island coordinates 13 degrees 10 minutes N, 59 degrees 32 minutes W, rounded here to [-59.53, 13.17]. Fitzpatrick (2011), p. 598, places Heywoods north of Speightstown on the northwest coast. This is an island annotation, not the site location."
         }
       },
       "rationale": "Author-supplied literature intake with primary source/access checks.",
       "state": "ready",
       "createdAt": "2026-10-29T00:11:40.634Z",
-      "updatedAt": "2026-10-29T00:11:40.634Z"
+      "updatedAt": "2026-11-15T20:40:06.000Z"
     },
     {
       "id": "author-saba-plum-piece-archaic",

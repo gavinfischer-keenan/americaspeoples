@@ -3538,9 +3538,9 @@
     },
     {
       "id": "history-mangareva-pitcairn-henderson",
-      "revision": 1,
+      "revision": 2,
       "type": "event",
-      "title": "Mangareva–Pitcairn–Henderson exchange",
+      "title": "Pitcairn stone reaching Henderson - regional exchange evidence",
       "culture": {
         "id": "historical-exchange",
         "name": "Exchange networks",
@@ -3553,21 +3553,15 @@
       "claims": [
         {
           "id": "historical-basis",
-          "text": "Pitcairn stone and Mangarevan pearl shell supported exchanges among these small island communities.",
+          "text": "Pitcairn basalt and volcanic glass reached Henderson within a wider regional exchange network.",
           "status": "under discussion",
-          "explanation": "The chained line illustrates the network, not a mandatory itinerary. Decline around 1450 is supported; abrupt universal cessation is not. Henderson occupation continued later. Feather and turtle exports remain unverified archaeologically.",
+          "explanation": "Material provenance supports the forward transfer shown. It does not identify carriers, return voyages or a mandatory sailing itinerary. The approximate 1050-1450 envelope combines regional settlement context with a later contraction in imports; it does not date individual journeys.",
           "support": [
             {
               "sourceId": "source-1",
-              "locator": "The settlement of Pitcairn; Tracing ancient inter-island mobility and exchange; The abandonment of Pitcairn (2018)",
+              "locator": "The settlement of Pitcairn; Tracing ancient inter-island mobility and exchange; The abandonment of Pitcairn",
               "stance": "supports",
-              "note": "Supports the stated chronology and geographic relationship; coordinates and connecting paths are editorial approximations."
-            },
-            {
-              "sourceId": "source-2",
-              "locator": "Mangareva–Henderson–Pitcairn discussion and Figure 5; Temporal Variability (2025)",
-              "stance": "supports",
-              "note": "Supports the stated chronology and geographic relationship; coordinates and connecting paths are editorial approximations."
+              "note": "Geochemical sourcing identifies material origins. The absence of later exports supports an inferred contraction, not cessation of all contact."
             }
           ]
         }
@@ -3577,29 +3571,21 @@
           "id": "source-1",
           "authors": "Guillaume Molle; Aymeric Hermann",
           "title": "Pitcairn before the Mutineers: Revisiting the Isolation of a Polynesian Island",
-          "year": null,
-          "venue": "press-files.anu.edu.au",
+          "year": 2018,
+          "venue": "The Bounty from the Beach, chapter 2; ANU Press",
           "url": "https://press-files.anu.edu.au/downloads/press/n4467/html/ch02.xhtml",
-          "access": "ANU Press full chapter read."
-        },
-        {
-          "id": "source-2",
-          "authors": "Melinda S. Allen",
-          "title": "Reciprocity, Risk, and Rivalry: Variability in Central East Polynesian Exchange Networks",
-          "year": null,
-          "venue": "doi.org",
-          "url": "https://doi.org/10.1007/s10963-025-09189-1",
-          "access": "Open-access full text read."
+          "access": "Full ANU Press chapter inspected, including material-provenance and chronology sections, 2026-11-15."
         }
       ],
       "review": {
-        "summary": "Pitcairn stone and Mangarevan pearl shell supported exchanges among these small island communities.",
-        "limitations": "The chained line illustrates the network, not a mandatory itinerary. Decline around 1450 is supported; abrupt universal cessation is not. Henderson occupation continued later. Feather and turtle exports remain unverified archaeologically.",
-        "discussion": "Selected evidence; coverage is not a complete inventory.",
+        "summary": "Pitcairn basalt and volcanic glass reached Henderson within a wider regional exchange network.",
+        "limitations": "Material provenance supports the forward transfer shown. It does not identify carriers, return voyages or a mandatory sailing itinerary. The approximate 1050-1450 envelope combines regional settlement context with a later contraction in imports; it does not date individual journeys.",
+        "discussion": "The stable record ID retains the historical network name; the map now depicts only the supported Pitcairn-to-Henderson material transfer.",
         "provenance": "Source-linked editorial synthesis checked 2026-11-14. Access notes distinguish full text, abstracts, and indexed excerpts. No population estimates inferred.",
-        "reviewedAt": "2026-11-14",
+        "reviewedAt": "2026-11-15",
         "history": [
-          "Added dated history layer with source locators and explicit uncertainty."
+          "Added dated history layer with source locators and explicit uncertainty.",
+          "2026-11-15: Replaced the Mangareva-to-Henderson both-direction line with a forward Pitcairn material-transfer line; no return voyage inferred."
         ],
         "relatedIds": []
       },
@@ -3609,8 +3595,8 @@
         "end": 1450,
         "approximate": true,
         "original": "1050 CE to 1450 CE",
-        "method": "Explicit activity episodes derived from cited historical chronology or dated archaeological contexts.",
-        "interpretation": "Only the listed activity windows display. Gaps mean no supported window in this record, not proof all contact stopped. Flow animation indicates connection, not voyage frequency."
+        "method": "Approximate archaeological context envelope; the early bound is a settlement-context estimate, not a dated first transfer.",
+        "interpretation": "Only the listed approximate window displays. Its bounds are not first and last sailings; later missing imports do not demonstrate that every connection ceased."
       },
       "history": {
         "kind": "exchange",
@@ -3620,20 +3606,27 @@
             "start": 1050,
             "end": 1450,
             "certainty": "approximate",
-            "note": "Approximate early-settlement exchange network followed by declining imports around 1450; endpoints are inferred, not dated first/last sailings."
+            "note": "Broad regional archaeological context, not demonstrated annual service or dated first/last voyages."
           }
-        ]
+        ],
+        "connection": {
+          "evidence": "Sourced Pitcairn stone in Henderson contexts.",
+          "lastEvidence": 1450,
+          "cessation": "inferred",
+          "claimId": "historical-basis",
+          "note": "Approximate end of attested exports in the reviewed synthesis; no universal end to travel is established."
+        }
       },
       "overlay": {
         "kind": "trade",
         "basis": "schematic",
-        "direction": "both",
+        "direction": "forward",
         "geometry": {
           "type": "LineString",
           "coordinates": [
             [
-              -134.95,
-              -23.1
+              -130.1,
+              -25.07
             ],
             [
               -128.3,
@@ -3641,8 +3634,8 @@
             ]
           ]
         },
-        "precision": "Schematic regional connection, not a reconstructed sailing track.",
-        "provenance": "Editorial anchors join source-supported origins/destinations. No implication that travel followed a straight or constant path."
+        "precision": "Approximate island anchors, uncertainty 25 km at each end; schematic material-transfer connection, not a sailing track.",
+        "provenance": "Molle and Hermann, chapter 2, Figure 2.1 and material-provenance discussion identify Pitcairn and Henderson. Coordinates are geographic approximations; the arrow indicates material origin to recovery island, not proven vessel direction."
       }
     },
     {
@@ -4459,7 +4452,7 @@
     },
     {
       "id": "history-rapa-nui-regional-occupation",
-      "revision": 1,
+      "revision": 2,
       "type": "occupation",
       "title": "Rapa Nui — sustained habitation into the historical period",
       "culture": {
@@ -4510,11 +4503,14 @@
         "limitations": "This is an island-level inference from archaeology, historical context and demographic modeling, not proof of uninterrupted occupation at each site. The 1860 boundary limits this particular modeled interval before the slave-raiding crisis; it is not extinction, abandonment or an end to Rapanui presence. No census size is inferred from genetic effective population size.",
         "discussion": "Boundary of the study's pre-1860s demographic inference, not the end of habitation.",
         "provenance": "Source-linked editorial synthesis checked 2026-11-14. Access notes distinguish full text, abstracts, and indexed excerpts. No population estimates inferred.",
-        "reviewedAt": "2026-11-14",
+        "reviewedAt": "2026-11-15",
         "history": [
-          "Added dated history layer with source locators and explicit uncertainty."
+          "Added dated history layer with source locators and explicit uncertainty.",
+          "2026-11-15: Classified the unchanged genomic-model interval as habitation and linked separately sourced later continuity."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "history-rapa-nui-historical-continuity"
+        ]
       },
       "time": {
         "kind": "interval",
@@ -4524,6 +4520,10 @@
         "original": "1250 CE to 1860 CE",
         "method": "Primary genomic study's reconstructed demographic history, explicitly interpreted as island-level continued presence.",
         "interpretation": "Boundary of the study's pre-1860s demographic inference, not the end of habitation. Regional presence, not uninterrupted habitation of a single coordinate."
+      },
+      "history": {
+        "kind": "habitation",
+        "claimId": "historical-basis"
       }
     },
     {
@@ -4593,6 +4593,101 @@
         "original": "1300 CE to 1821 CE",
         "method": "Explicit continuous-occupation statement in a scholarly study's regional archaeological setting; cautiously generalized to island-level presence.",
         "interpretation": "Latest historical reference in the verified continuous-occupation passage; not an asserted end of habitation. Regional presence, not uninterrupted habitation of a single coordinate."
+      }
+    },
+    {
+      "id": "history-rapa-nui-historical-continuity",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Rapa Nui - community continuity through 1934",
+      "culture": {
+        "id": "rapa-nui-regional-occupation-communities",
+        "name": "Rapa Nui communities",
+        "kind": "unknown",
+        "color": "#b6d8af"
+      },
+      "location": {
+        "id": "history-rapa-nui-historical-continuity-place",
+        "name": "Rapa Nui - regional community presence",
+        "lon": -109.35,
+        "lat": -27.12,
+        "precision": "Approximate island anchor, uncertainty 25 km; not an individual house or village extent.",
+        "provenance": "Geographic approximation for Rapa Nui island; the cited historical and UNESCO accounts identify the island and Hanga Roa."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "history": {
+        "kind": "habitation",
+        "claimId": "historical-continuity",
+        "continuity": "ongoing"
+      },
+      "time": {
+        "kind": "interval",
+        "start": 1860,
+        "end": 1934,
+        "approximate": true,
+        "original": "Nineteenth-century community history continuing through 1934; display segment 1860-1934.",
+        "method": "Historical testimony and institutional heritage history; 1860 joins the earlier evidence segment, and 1934 is the application horizon.",
+        "interpretation": "Neither bound marks settlement or abandonment. Island-level continuity does not mean unchanged residence at every archaeological site."
+      },
+      "claims": [
+        {
+          "id": "historical-continuity",
+          "text": "Rapanui communities remained on the island through the nineteenth-century crisis and were present in 1934. Their habitation did not end at the earlier genetic model boundary.",
+          "status": "well-supported",
+          "explanation": "This regional continuity claim does not imply stable population size, freedom of movement or uninterrupted use of every settlement. Later colonial confinement at Hanga Roa changed where people could live.",
+          "support": [
+            {
+              "sourceId": "cristino-fuentes-2011",
+              "locator": "Printed pp. 21, 27-29 (PDF pp. 14, 20-22); 1934 testimony and nineteenth-century residents.",
+              "stance": "supports",
+              "note": "The historical account records surviving residents and quotes testimony from the 1934 visit; no census estimate is mapped."
+            },
+            {
+              "sourceId": "unesco-raraku-2023",
+              "locator": "Chapter 2, p. 15, nineteenth-century missions and 1895-1953 company period.",
+              "stance": "supports",
+              "note": "Documents the local population confined at Hanga Roa during a period spanning 1934."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "cristino-fuentes-2011",
+          "authors": "Claudio Cristino; Miguel Fuentes (editors)",
+          "title": "La Compañía Explotadora de Isla de Pascua: Patrimonio, Memoria e Identidad en Rapa Nui",
+          "year": 2011,
+          "venue": "Escaparate Ediciones; Biblioteca Nacional de Chile, Memoria Chilena",
+          "url": "https://www.memoriachilena.gob.cl/archivos2/pdfs/MC0062395.pdf",
+          "access": "National Library-hosted PDF title pages and printed pp. 20-22, 27-29 inspected 2026-11-15. Used only for historical residents and 1934 testimony, not its earlier collapse interpretation.",
+          "referenceType": "book",
+          "publisher": "Escaparate Ediciones"
+        },
+        {
+          "id": "unesco-raraku-2023",
+          "authors": "Daniela Meza Marchant; Tikitehatu Astete Paoa; Moana Gorman Edmunds; and colleagues",
+          "title": "Informe diagnóstico de conservación: Proyecto Fondo de Emergencia para el Patrimonio",
+          "year": 2023,
+          "venue": "UNESCO Santiago",
+          "url": "https://articles.unesco.org/sites/default/files/medias/fichiers/2024/05/uns-ranoraraku_diagnostico-04.pdf",
+          "access": "Institutional PDF publication page and p. 15 inspected 2026-11-15; the file upload path is 2024 but the publication identifies 2023.",
+          "referenceType": "report",
+          "publisher": "UNESCO"
+        }
+      ],
+      "review": {
+        "summary": "Separately sourced historical continuity carries Rapanui habitation to the 1934 display horizon.",
+        "limitations": "The earlier 1250-1860 modeled interval is preserved. This later regional segment is not an annual census or an assertion of uninterrupted occupation at every site; 1860 is an editorial join, not a new settlement. No abandonment is asserted.",
+        "discussion": "The historical sources are used for their dated resident communities. Earlier collapse narratives and uncertain nineteenth-century population counts are not adopted.",
+        "provenance": "Primary historical testimony reproduced in a National Library-held volume, cross-checked with an institutional UNESCO report; accessed 2026-11-15.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "2026-11-15: Added historical continuity separately from the genomic model."
+        ],
+        "relatedIds": [
+          "history-rapa-nui-regional-occupation"
+        ]
       }
     }
   ]

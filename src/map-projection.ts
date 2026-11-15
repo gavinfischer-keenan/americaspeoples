@@ -1,13 +1,14 @@
 import { geoEquirectangular } from "d3-geo";
 export type MapScope = "americas" | "pacific" | "atlantic" | "world";
-/** Combined frame spans approximately 100E to 330E, centered on 145W.
- * The dateline stays continuous; Africa, Iceland and eastern Greenland are cropped. */
+/** Pacific overview fits 95E–330E and 60S–80N in both wide and tall viewports.
+ * Mainland departure regions and southern Australia must not be lost to aspect ratio. */
 export function mapProjection(scope: MapScope = "pacific", width=1000, height=800) {
+  if(scope==='pacific')return geoEquirectangular().rotate([147.5,0]).center([0,10])
+    .scale(Math.min(width/(235*Math.PI/180),height/(140*Math.PI/180)))
+    .translate([width/2,height/2]);
   return geoEquirectangular()
     .rotate(
-      scope === "pacific"
-        ? [145, 0]
-        : scope === "atlantic"
+      scope === "atlantic"
           ? [40, 0]
           : scope === "world"
             ? [0, 0]
@@ -15,9 +16,7 @@ export function mapProjection(scope: MapScope = "pacific", width=1000, height=80
     )
     .center([0, 15])
     .scale(
-      (scope === "pacific"
-        ? 245
-        : scope === "world"
+      (scope === "world"
           ? 155
           : scope === "atlantic"
             ? 280

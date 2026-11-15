@@ -1,0 +1,127 @@
+[
+  {
+    "id": "cliopatria-data",
+    "title": "Bennett et al. / Seshat Global History Databank — Cliopatria",
+    "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/5f433377139a6eeaeacbdc894b70f8805b72c8b5",
+    "license": "CC BY 4.0; source geometry and this prepared geometry derivative retain CC BY 4.0. https://creativecommons.org/licenses/by/4.0/",
+    "note": "Official data LICENSE.md explicitly permits reuse under CC BY 4.0. This derivative selects source rows and whole American polygon components, omits contradictory periods, simplifies at 0.02 degrees, rounds to five decimals and reverses rings for D3. No endorsement implied. The CC BY source geometry is not made exclusively noncommercial by the atlas's separate licensing.",
+    "download": "https://raw.githubusercontent.com/Seshat-Global-History-Databank/cliopatria/5f433377139a6eeaeacbdc894b70f8805b72c8b5/cliopatria.geojson.zip",
+    "sha256": "e10a4e429fca708788ff9e7572a95fce801fae55852d217cffabc1c59cd4eed4",
+    "commit": "5f433377139a6eeaeacbdc894b70f8805b72c8b5",
+    "archiveMember": "cliopatria_polities_only_v021.geojson",
+    "downloadedAt": "2026-11-15",
+    "licenseURL": "https://github.com/Seshat-Global-History-Databank/cliopatria/blob/5f433377139a6eeaeacbdc894b70f8805b72c8b5/LICENSE.md"
+  },
+  {
+    "id": "cliopatria-methods",
+    "title": "Bennett et al. (2025), Cliopatria — a geospatial database of world-wide political entities, Scientific Data 12:247",
+    "url": "https://doi.org/10.1038/s41597-025-04516-9",
+    "license": "CC BY 4.0 (article); data reuse verified separately in repository LICENSE.md.",
+    "note": "Digitized historical-atlas reconstruction at irregular temporal resolution; approximate boundaries and territorial disputes are not encoded. Selection is not a map of every polity or Indigenous territory."
+  },
+  {
+    "id": "gran-colombia-chronology",
+    "title": "Banco de la República — El proyecto grancolombiano",
+    "url": "https://enciclopedia.banrepcultural.org/El_proyecto_grancolombiano",
+    "license": "Source linked for chronology/label checking; no source text or geometry reproduced.",
+    "note": "Gran Colombia dissolution is placed in 1831. The source dataset's 1830–1833 polygon is omitted rather than stretched over the breakup."
+  },
+  {
+    "id": "central-america-chronology",
+    "title": "U.S. Department of State, Office of the Historian — Central American Federation",
+    "url": "https://history.state.gov/countries/central-american-federation",
+    "license": "Source linked for chronology/label checking; no source text or geometry reproduced.",
+    "note": "Formation in 1823 and dissolution process during 1838–1840. Only source phases through 1837 are retained; no complete federation is shown after secessions begin."
+  },
+  {
+    "id": "peru-bolivia-chronology",
+    "title": "Congreso de la República del Perú — Archivo Digital de la Legislación del Perú",
+    "url": "https://leyes.congreso.gob.pe/constituciones.aspx",
+    "license": "Source linked for chronology/label checking; no source text or geometry reproduced.",
+    "note": "Confederation established 28 October 1836; separate 1839 Peruvian constitution. The transition year 1839 is omitted because the annual source cannot show the collapse precisely."
+  },
+  {
+    "id": "argentina-label",
+    "title": "Museo Histórico Sarmiento — Disolución de la Confederación Argentina",
+    "url": "https://museosarmiento.cultura.gob.ar/noticia/disolucion-de-la-confederacion-argentina/",
+    "license": "Source linked for chronology/label checking; no source text or geometry reproduced.",
+    "note": "Confederation dissolved in December 1861. Generic Argentina labels avoid carrying the source's Confederation name through 1885."
+  },
+  {
+    "id": "colombia-label",
+    "title": "Banco de la República — Constituciones de Colombia",
+    "url": "https://enciclopedia.banrepcultural.org/index.php/Constituciones_de_Colombia",
+    "license": "Source linked for chronology/label checking; no source text or geometry reproduced.",
+    "note": "Constitutional titles distinguish Estados Unidos de Colombia (1863) from República de Colombia (1886). The dataset's generic Republic of Colombia label for 1866–1885 is corrected without changing its polygon."
+  },
+  {
+    "id": "brazil-chronology",
+    "title": "Arquivo Nacional, Brasil — Período Imperial (1822 a 1889)",
+    "url": "https://mapa.an.gov.br/index.php/assuntos/79-producao/80-cronologia/509-periodo-imperial-1822-a-1889",
+    "license": "Source linked for chronology/label checking; no source text or geometry reproduced.",
+    "note": "Brazil's independence was proclaimed in 1822. The source Portuguese 1820–1823 phase is restricted to 1820–1821 to avoid extending the undifferentiated colonial polygon over the new empire."
+  },
+  {
+    "id": "hispaniola-chronology",
+    "title": "U.S. Department of State, Office of the Historian — Dominican Republic",
+    "url": "https://history.state.gov/countries/dominican-republic",
+    "license": "Source linked for chronology/label checking; no source text or geometry reproduced.",
+    "note": "Dominican independence in 1844 and Spanish rule 1861–1865. Omit source Haiti coverage in 1844–1845 and withhold Dominican colonial components rather than extend an undifferentiated Spanish source phase."
+  },
+  {
+    "id": "haiti-label",
+    "title": "Library of Congress, Federal Research Division — Country Profile: Haiti",
+    "url": "https://tile.loc.gov/storage-services/master/frd/copr/Haiti.pdf",
+    "license": "Source linked for chronology/label checking; no source text or geometry reproduced.",
+    "note": "The republic was suspended during the 1849–1859 empire. Generic Haiti labels avoid the source's Empire of Haiti label across incompatible regimes."
+  },
+  {
+    "id": "dutch-label",
+    "title": "Nationaal Archief — Koloniale geschiedenis",
+    "url": "https://www.nationaalarchief.nl/onderzoeken/zoekhulpen/koloniale-geschiedenis",
+    "license": "Source linked for chronology/label checking; no source text or geometry reproduced.",
+    "note": "Historical West Indies coverage includes Suriname and the Antilles. Generic Dutch American possessions avoids applying the source's Netherlands Antilles label to mainland Suriname."
+  },
+  {
+    "id": "spanish-caribbean-scope",
+    "title": "Ministerio de Cultura, España — The Last Territories",
+    "url": "https://www.cultura.gob.es/en/cultura/archivos/difusion/mc-difusion/bicentenarios/contexto-historico/las-ultimas-posesiones.html",
+    "license": "Source linked for chronology/label checking; no source text or geometry reproduced.",
+    "note": "Cuba and Puerto Rico remained Spanish after continental independence. From 1824 onward retain only their whole source components; reject stale Lima, La Paz, Chiloé, Río Negro and Falkland components. Dominican annexation is not reconstructed here."
+  },
+  {
+    "id": "mexico-first-empire-end",
+    "title": "Palacio Nacional, México — Abdicación de Agustín de Iturbide",
+    "url": "https://www.gob.mx/palacionacional/articulos/129906",
+    "license": "Source linked for chronology/label checking; no source text or geometry reproduced.",
+    "note": "Abdication in March 1823; omit the source's 1823 imperial year rather than show the empire in the December 31 snapshot."
+  },
+  {
+    "id": "mexico-second-empire-end",
+    "title": "Archivo General de la Nación, México — La toma de Querétaro",
+    "url": "https://www.gob.mx/agn/articulos/agnrecuerda-el-15-de-mayo-la-toma-de-queretaro?idiom=es",
+    "license": "Source linked for chronology/label checking; no source text or geometry reproduced.",
+    "note": "Collapse and execution of Maximilian in 1867; omit the terminal 1867 imperial source year."
+  },
+  {
+    "id": "mexico-centralism",
+    "title": "INEHRM — Centralismo",
+    "url": "https://www.inehrm.gob.mx/es/Constitucion1917/Centralismo",
+    "license": "Source linked for chronology/label checking; no source text or geometry reproduced.",
+    "note": "Centralist bases promulgated in December 1835 and regime lasted eleven years. Omit the 1835 federal transition and 1846–1847 centralist overrun; federalist source areas during centralism are labeled as territories rather than the national constitution."
+  },
+  {
+    "id": "riograndense-end",
+    "title": "Memorial do Rio Grande do Sul — A Paz dos Caramurus",
+    "url": "https://memorial.rs.gov.br/wp-content/uploads/tainacan-items/88/689/CAD018_-A-Paz-dos-Caramurus.pdf",
+    "license": "Source linked for chronology/label checking; no source text or geometry reproduced.",
+    "note": "Peace ended the conflict in 1845. Omit the 1845 terminal republican source year rather than assert continued year-end independence."
+  },
+  {
+    "id": "chile-reconquest",
+    "title": "Biblioteca Nacional de Chile, Memoria Chilena — La reconquista española (1814–1817)",
+    "url": "https://www.memoriachilena.gob.cl/602/w3-article-3671.html",
+    "license": "Source linked for chronology/label checking; no source text or geometry reproduced.",
+    "note": "Royalist victory at Rancagua in October 1814 began the reconquest. Omit the terminal 1814 independent Chile source snapshot."
+  }
+]

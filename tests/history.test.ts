@@ -117,8 +117,8 @@ test("a later abandonment is not shown at the foundation date", () => {
 });
 test("published historical layers preserve date gaps, losses and documented regional continuity", () => {
   const rows = dataset.records;
-  assert.equal(rows.filter((r) => r.history?.kind === "wreck").length, 8);
-  assert.equal(rows.filter((r) => r.history?.kind === "settlement").length, 25);
+  assert.equal(rows.filter((r) => r.id.startsWith("history-") && r.history?.kind === "wreck").length, 8);
+  assert.equal(rows.filter((r) => r.id.startsWith("history-") && r.history?.kind === "settlement").length, 25);
   const route = rows.find((r) => r.id === "history-samoa-tonga-exchange")!;
   assert.ok(route);
   assert.equal(recordsForView([route], "movie", 1400).dated.length, 0);

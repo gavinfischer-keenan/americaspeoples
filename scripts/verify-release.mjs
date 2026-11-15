@@ -71,6 +71,7 @@ const phases = [
   ["Smart timeline and keyboard control", node, ["tests/timeline.browser.mjs"]],
   ["Physical layers and source reviews", node, ["tests/physical.browser.mjs"]],
   ["Site and culture guides, road maps and natural events", node, ["tests/site-guides.browser.mjs"]],
+  ["Dated geography, journeys, local selection and mobile", node, ["tests/expansion.browser.mjs"]],
   ["Guided stories, discovery and responsive UI", node, ["tests/watch-explore.browser.mjs"]],
   ["Map picking, camera, touch and label usability", node, ["tests/map-ux.browser.mjs"]],
   ["Movie and Explore separation", node, ["tests/movie-explore.browser.mjs"]],

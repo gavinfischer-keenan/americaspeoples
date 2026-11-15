@@ -116,8 +116,8 @@ try {
   await page.getByLabel("Year number", { exact: true }).fill("1864");
   await page.getByLabel("Era", { exact: true }).selectOption("CE");
   await page.getByRole("button", { name: "Go to year", exact: true }).click();
-  assert.equal(await page.locator(".overlay-forced-removal").count(), 1);
-  assert.equal(await page.locator(".overlay-violence").count(), 1);
+  assert.equal(await page.locator(".overlay-forced-removal").count(), snapshot.records.filter(({record:r})=>r.overlay?.kind==="forced-removal"&&r.overlay.geometry&&r.time.start<=1864&&r.time.end>=1864).length);
+  assert.equal(await page.locator(".overlay-violence").count(), snapshot.records.filter(({record:r})=>r.overlay?.kind==="violence"&&r.overlay.geometry&&r.time.start<=1864&&r.time.end>=1864).length);
   await page.goto(origin + "/evidence-appendix.html");
   assert.equal(await page.locator("details[data-evidence-id]").count(), expectedRecords);
   const appendix = await (
@@ -154,7 +154,8 @@ try {
     requests.every((r) => r.url.startsWith(origin + "/") && r.method === "GET"),
   );
   assert.ok(requests.some(r=>r.url.includes('/api/records/ai-colony-16')));
-  assert.ok(requests.filter(r=>r.type==='fetch').every(r=>new URL(r.url).pathname.startsWith('/api/')));
+  const geographicAssets=new Set(['historical-boundaries.json','colonial-boundaries.json','national-boundaries.json','early-national-boundaries.json','reservation-boundaries.json','boundary-sources.json','expanded-boundary-sources.json','early-national-boundary-sources.json','reservation-boundary-sources.json','rail-network.json','voyages.json','land-detailed.geojson'].map(name=>'/'+name));
+  assert.ok(requests.filter(r=>r.type==='fetch').every(r=>new URL(r.url).pathname.startsWith('/api/')||geographicAssets.has(new URL(r.url).pathname)));
   assert.deepEqual(errors, []);
   assert.deepEqual(violations, []);
   const unsupported = await browser.newContext();

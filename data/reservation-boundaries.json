@@ -1,0 +1,70 @@
+[
+  {
+    "id": "reservation-navajo-1868",
+    "name": "Navajo treaty reservation, 1868 outline",
+    "kind": "reservation",
+    "start": "1868-08-12",
+    "end": "1878-10-28",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [[[-109.55,35.75],[-109.55,37],[-108.55,37],[-108.55,35.75],[-109.55,35.75]]]
+    },
+    "labelPoint": [-109.05,36.4],
+    "sourceIds": ["reservation-navajo-treaty-1868", "reservation-navajo-order-1878", "reservation-reference-chelly"],
+    "precision": "Approximate original reconstruction from Article II, not a surveyed legal boundary. North is the stated 37° parallel. Fort Defiance is generalized to 35.75°N and the Fort Lyon/Bear Spring meridian to 108.55°W. The western line is generalized to 109.55°W to include the Canyon de Chelly outlet required by the treaty; it is not an exact 109°30′ cadastral line. Named-place anchors and the historical survey remain uncertain by kilometres.",
+    "note": "Starts at treaty proclamation on 12 August 1868; signature on 1 June and the people's physical return from Bosque Redondo are different events. Article II reserved the area for Navajo use and occupation and specified admission of other friendly tribes or individuals by consent. This footprint is not the whole Diné homeland, a population distribution, or a claim that Navajo people first arrived in 1868. Replaced here by the 1878 expansion.",
+    "citation": "Treaty of 1 June 1868, 15 Stat. 667, Article II; proclamation 12 August 1868. Executive order of 29 October 1878, Kappler I, pp. 875–876.",
+    "detail": "regional"
+  },
+  {
+    "id": "reservation-navajo-1878",
+    "name": "Navajo reservation after the 1878 addition",
+    "kind": "reservation",
+    "start": "1878-10-29",
+    "end": "1880-01-05",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [[[-109.55,35.75],[-109.55,36],[-110,36],[-110,37],[-108.55,37],[-108.55,35.75],[-109.55,35.75]]]
+    },
+    "labelPoint": [-109.2,36.45],
+    "sourceIds": ["reservation-navajo-treaty-1868", "reservation-navajo-order-1878", "reservation-navajo-order-1880", "reservation-reference-chelly"],
+    "precision": "Approximate original reconstruction combining the generalized 1868 outline with the 1878 addition. The added western and southern edges use the order's explicit 110°W and 36°N; the northern edge uses the Arizona–Utah boundary generalized as 37°N. The earlier Fort Defiance, Fort Lyon and Canyon de Chelly anchors retain kilometre-scale uncertainty. No current reservation polygon was used.",
+    "note": "The 29 October 1878 executive order added the tract west of the original reservation, between 36°N, the Utah boundary and 110°W. This row represents the combined reserved footprint, not only the added tract and not a land cession polygon. The next version begins with the 6 January 1880 order. Legal reservation extent is separate from residence and Indigenous homelands.",
+    "citation": "Rutherford B. Hayes, Executive Order—Defining Boundaries for Navajo Indians, 29 October 1878; Kappler, Indian Affairs: Laws and Treaties I, pp. 875–876.",
+    "detail": "regional"
+  },
+  {
+    "id": "reservation-navajo-1880",
+    "name": "Navajo reservation after the 1880 addition",
+    "kind": "reservation",
+    "start": "1880-01-06",
+    "end": "1884-05-16",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [[[-110,35.66],[-110,37],[-108.55,37],[-108.55,36.78],[-108.28,36.73],[-108.28,35.66],[-110,35.66]]]
+    },
+    "labelPoint": [-109.15,36.35],
+    "sourceIds": ["reservation-navajo-treaty-1868", "reservation-navajo-order-1878", "reservation-navajo-order-1880", "reservation-navajo-change-1884", "reservation-reference-chelly"],
+    "precision": "Approximate original legal-description reconstruction, not surveyed geometry. The 1880 eastern extension is about 15 miles east of the generalized former eastern meridian, represented as 108.28°W; the southern extension is about 6 miles below the former southern line, represented as 35.66°N. The San Juan River limit is a coarse chord between regional anchors, not a traced historical river channel. Earlier anchors retain kilometre-scale uncertainty.",
+    "note": "The 6 January 1880 order added eastern and southern land to the existing reservation. This combined footprint ends immediately before the documented orders of 17 May 1884. Later expansions, exclusions and restorations are not reconstructed in this selection; disappearance after this coverage window must not be read as reservation abolition, abandonment or loss of tribal presence.",
+    "citation": "Rutherford B. Hayes, Executive Order: Navajo Reserve, 6 January 1880, in Kappler I; Chester A. Arthur, orders of 17 May 1884, including exclusion of portions of T29N R14–16W south of the San Juan River.",
+    "detail": "regional"
+  },
+  {
+    "id": "reservation-hopi-order-1882",
+    "name": "Hopi (Moqui) 1882 executive-order reservation",
+    "kind": "reservation",
+    "start": "1882-12-16",
+    "end": "1934-12-31",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [[[-111,35.5],[-111,36.5],[-110,36.5],[-110,35.5],[-111,35.5]]]
+    },
+    "labelPoint": [-110.5,36],
+    "sourceIds": ["reservation-hopi-order-1882", "reservation-navajo-act-1934"],
+    "precision": "Original reconstruction of the explicit meridian-and-parallel description: 110°–111°W and 35°30′–36°30′N. No modern Hopi boundary or later partition geometry was substituted. The legal description is rendered on modern longitude/latitude without asserting that later cadastral surveys coincide exactly with these ideal lines.",
+    "note": "The 16 December 1882 order set this area apart for the Moqui (Hopi) and other Indians whom the Secretary of the Interior might settle there. It is not an exclusive ethnic occupancy map and does not retroactively apply later Hopi–Navajo partitions or court decisions. The 14 June 1934 statute expressly preserved the existing status of this reservation; 31 December 1934 is the atlas cutoff, not termination.",
+    "citation": "Chester A. Arthur, Executive Order—Establishment of Moqui (Hopi) Reserve, 16 December 1882; Kappler I, p. 805. Act of 14 June 1934, 48 Stat. 960–962, especially p. 961.",
+    "detail": "regional"
+  }
+]
