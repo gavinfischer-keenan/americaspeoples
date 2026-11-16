@@ -70,4 +70,6 @@
 - [x] Update source documentation, coverage counts, version and generated distribution; include new browser contracts in release verification.
 - [x] Run required tests/build/package/browser checks and inspect desktop/mobile screenshots.
 - [x] Obtain one fresh-context whole-branch review, resolve material issues and verify affected behavior.
-- [ ] Commit, push and open a PR with accurate coverage limits and research budget; do not merge or deploy.
+- [x] Commit, push and open a PR with accurate coverage limits and research budget; do not merge or deploy.
+
+Release candidate opened as PR #7: https://github.com/gavinfischer-keenan/americaspeoples/pull/7. All 27 release phases and 248 unit tests passed; source remains unmerged and undeployed.
