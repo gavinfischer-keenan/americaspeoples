@@ -1,6 +1,6 @@
 # Current source verification
 
-Version **0.16.0 candidate**, prepared for review; not deployed. The [structured verification receipt](https://github.com/gavinfischer-keenan/americaspeoples/blob/feat/interior-frontiers/docs/releases/v0.16.0-verification.json) records commits, checks, research usage and review decisions. The previous live v0.15 deployment receipt remains in the repository.
+Version **0.16.0 source and packaged release**. Public activation is verified separately in the deployment receipt. The [structured verification receipt](https://github.com/gavinfischer-keenan/americaspeoples/blob/main/docs/releases/v0.16.0-verification.json) records commits, checks, research usage and review decisions. The previous live v0.15 deployment receipt remains in the repository.
 
 The atlas contains **2,038 records: 1,980 shared and 58 focused**. This campaign adds 35 shared Amazon, Gran Chaco and Guianas observations, including five dated exchange connections and five conflicts or violent events. All new evidence stays within the shared 1934 endpoint. Consensus Deep cumulative usage is **66/100**, including polls; full generated reports remain private.
 
