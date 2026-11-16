@@ -20,7 +20,7 @@ The immutable baseline is the completed v0.15 atlas: 2,003 total records and 1,9
 | Mexico | 9 | 18 | 21 | 46 | 40 | 29 | 22 | 33 | 19 |
 | Central America | 0 | 5 | 12 | 33 | 21 | 15 | 11 | 12 | 13 |
 | Caribbean | 0 | 7 | 10 | 20 | 20 | 53 | 21 | 31 | 21 |
-| Northern South America | 2 | 6 | 4 | 8 | 8 | 19 | 13 → 22 | 17 → 22 | 18 |
+| Northern South America | 2 | 6 | 4 | 8 | 8 | 19 | 13 → 21 | 17 → 22 | 18 |
 | Andes | 4 | 3 | 12 | 17 | 28 | 28 | 6 → 7 | 17 → 18 | 36 |
 | Amazon interior | 2 | 8 | 3 | 9 | 16 | 14 | 7 → 18 | 8 → 11 | 25 |
 | Brazil Atlantic | 0 | 0 | 2 | 1 | 1 | 12 | 6 | 14 → 15 | 4 |
@@ -95,8 +95,8 @@ All requested topic movies are now playable. These priorities are **continuing r
 | [Cuyuni — Spanish forces burn the Dutch post](../index.html#review/interior-cuyuni-1758) | [Constanze Weiske — Dutch Inland Posts and the Limits of Jurisdiction and Interference (1737–1790)](https://www.degruyterbrill.com/document/doi/10.1515/9783110690149-011/pdf?licenseType=open-access) |
 | [Fort Zeelandia — the brick fort is completed](../index.html#review/interior-zeelandia-1744) | [National Trust of Guyana — Fort Zeelandia](https://ntg.gov.gy/monument/fort-zeelandia/) |
 | [Maripaston — a Matawai village connected to the city](../index.html#review/interior-maripaston-1905) | [Alex van Stipriaan — Contact! Marrons en de transport- en communicatierevolutie in het Surinaamse binnenland](https://www.dbnl.org/tekst/_oso001201101_01/_oso001201101_01_0004.php) |
-| [Maripaston ↔ Paramaribo — goods reach the interior](../index.html#review/interior-maripaston-paramaribo-1905) | [Alex van Stipriaan — Contact! Marrons en de transport- en communicatierevolutie in het Surinaamse binnenland](https://www.dbnl.org/tekst/_oso001201101_01/_oso001201101_01_0004.php) |
+| [Paramaribo → Maripaston — imported goods reach the village](../index.html#review/interior-maripaston-paramaribo-1905) | [Alex van Stipriaan — Contact! Marrons en de transport- en communicatierevolutie in het Surinaamse binnenland](https://www.dbnl.org/tekst/_oso001201101_01/_oso001201101_01_0004.php) |
 | [Kuma’ka — a Kaliña village before the name Albina](../index.html#review/interior-kumaka-1846) | [Henry Zaalman and colleagues; Commissie Landrechten Inheemsen Beneden-Marowijne — Marauny Na’na Emandobo / Lokono Shikwabana: Marowijne, our territory](https://www.forestpeoples.org/fileadmin/uploads/fpp/migration/publication/2010/08/suriname10cfeb06eng.pdf) |
 | [Galibi — a school opens in an existing Kaliña community](../index.html#review/interior-galibi-1925) | [Rutu Foundation — Indigenous Peoples resilience to safeguard our earth and its diversity: from Suriname to Kenya](https://www.rutufoundation.org/indigenous-peoples-resilience-to-safeguard-our-earth-and-its-diversity-from-suriname-to-kenya/) |
-| [Cottica — competing dates for an Aluku village’s establishment](../index.html#review/interior-cottica-early) | [Marie Fleury — Gaan Mawina, le Marouini au cœur de l’histoire des Boni/Aluku et des Wayana](https://journals.openedition.org/ethnoecologie/3534) |
+| [Cottica — an Aluku village documented on the lower Lawa](../index.html#review/interior-cottica-early) | [Marie Fleury — Gaan Mawina, le Marouini au cœur de l’histoire des Boni/Aluku et des Wayana](https://journals.openedition.org/ethnoecologie/3534) |
 | [Marouini — Ndyuka attack Aluku refuges](../index.html#review/interior-marouini-1793) | [Marie Fleury — Gaan Mawina, le Marouini au cœur de l’histoire des Boni/Aluku et des Wayana](https://journals.openedition.org/ethnoecologie/3534) |

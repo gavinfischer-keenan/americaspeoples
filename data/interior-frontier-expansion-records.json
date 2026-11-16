@@ -2547,7 +2547,7 @@
       "id": "interior-maripaston-paramaribo-1905",
       "revision": 1,
       "type": "event",
-      "title": "Maripaston ↔ Paramaribo — goods reach the interior",
+      "title": "Paramaribo → Maripaston — imported goods reach the village",
       "culture": {
         "id": "interior-people-maripaston-paramaribo-1905",
         "name": "Matawai residents, river travelers and Paramaribo traders",
@@ -2555,20 +2555,20 @@
         "color": "#7e6847"
       },
       "location": {
-        "id": "interior-place-maripaston",
-        "name": "Historical Maripaston, Saramacca River",
-        "lon": -55.35,
-        "lat": 5.33,
-        "precision": "Rounded locality reference with approximately 6 km uncertainty; not a building footprint or territorial boundary.",
-        "provenance": "Historical village reference near 5.3305°N, 55.3530°W. The modern Maripaston mining concession is not used as the village location. https://en.wikipedia.org/wiki/Maripaston"
-      },
-      "destination": {
         "id": "settlement-place-paramaribo",
         "name": "Paramaribo",
         "lon": -55.15,
         "lat": 5.83,
         "precision": "Approximate Paramaribo riverfront urban-lineage anchor, about 3 km resolution; not the surveyed position of the 1613 trading post.",
         "provenance": "Editorial orientation anchor for the public locality named in the cited source. Coordinates are rounded geographic placement, not coordinates quoted from an excavation report; Approximate Paramaribo riverfront urban-lineage anchor, about 3 km resolution; not the surveyed position of the 1613 trading post."
+      },
+      "destination": {
+        "id": "interior-place-maripaston",
+        "name": "Historical Maripaston, Saramacca River",
+        "lon": -55.35,
+        "lat": 5.33,
+        "precision": "Rounded locality reference with approximately 6 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Historical village reference near 5.3305°N, 55.3530°W. The modern Maripaston mining concession is not used as the village location. https://en.wikipedia.org/wiki/Maripaston"
       },
       "routeKind": "schematic",
       "time": {
@@ -2578,14 +2578,14 @@
         "approximate": true,
         "original": "1905 CE",
         "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
-        "interpretation": "The connection is supported, but this schematic line is not a logged voyage or an exact river itinerary; earlier and later traffic are not dated here."
+        "interpretation": "The connection is supported, but this schematic line is not a logged voyage or an exact river itinerary; earlier and later traffic are not dated here. Only inward goods are evidenced in this passage; outward cargo is not inferred."
       },
       "claims": [
         {
           "id": "evidence",
           "text": "The 1905 account links Maripaston’s imported household goods to its easy communication with Paramaribo.",
           "status": "well-supported",
-          "explanation": "The connection is supported, but this schematic line is not a logged voyage or an exact river itinerary; earlier and later traffic are not dated here.",
+          "explanation": "The connection is supported, but this schematic line is not a logged voyage or an exact river itinerary; earlier and later traffic are not dated here. Only inward goods are evidenced in this passage; outward cargo is not inferred.",
           "support": [
             {
               "sourceId": "interior-stipriaan",
@@ -2610,12 +2610,13 @@
       ],
       "review": {
         "summary": "The 1905 account links Maripaston’s imported household goods to its easy communication with Paramaribo.",
-        "limitations": "The connection is supported, but this schematic line is not a logged voyage or an exact river itinerary; earlier and later traffic are not dated here.",
+        "limitations": "The connection is supported, but this schematic line is not a logged voyage or an exact river itinerary; earlier and later traffic are not dated here. Only inward goods are evidenced in this passage; outward cargo is not inferred.",
         "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
         "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
         "reviewedAt": "2026-11-16",
         "history": [
-          "Added dated shared context with explicit geographic and evidential limits."
+          "Added dated shared context with explicit geographic and evidential limits.",
+          "Whole-branch source review limited the trade arrow to the evidenced inward goods flow."
         ],
         "relatedIds": [
           "interior-maripaston-1905",
@@ -2630,7 +2631,7 @@
             "start": 1905,
             "end": 1905,
             "certainty": "approximate",
-            "note": "The connection is supported, but this schematic line is not a logged voyage or an exact river itinerary; earlier and later traffic are not dated here."
+            "note": "The connection is supported, but this schematic line is not a logged voyage or an exact river itinerary; earlier and later traffic are not dated here. Only inward goods are evidenced in this passage; outward cargo is not inferred."
           }
         ],
         "connection": {
@@ -2644,17 +2645,17 @@
       "overlay": {
         "kind": "trade",
         "basis": "schematic",
-        "direction": "both",
+        "direction": "forward",
         "geometry": {
           "type": "LineString",
           "coordinates": [
             [
-              -55.35,
-              5.33
-            ],
-            [
               -55.15,
               5.83
+            ],
+            [
+              -55.35,
+              5.33
             ]
           ]
         },
@@ -2818,8 +2819,8 @@
     {
       "id": "interior-cottica-early",
       "revision": 1,
-      "type": "event",
-      "title": "Cottica — competing dates for an Aluku village’s establishment",
+      "type": "occurrence",
+      "title": "Cottica — an Aluku village documented on the lower Lawa",
       "culture": {
         "id": "interior-people-cottica-early",
         "name": "Aluku residents and leaders",
@@ -2838,23 +2839,23 @@
       "routeKind": "schematic",
       "time": {
         "kind": "occurrence",
-        "start": 1791,
-        "end": 1815,
-        "approximate": true,
-        "original": "1791–1815 CE",
+        "start": 1861,
+        "end": 1861,
+        "approximate": false,
+        "original": "1861 CE",
         "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
-        "interpretation": "Two historical interpretations bound this approximate foundation window; it is not a claim of construction throughout the interval."
+        "interpretation": "A documented village observation, not its foundation. Earlier Cottica names and establishment hypotheses do not securely identify this modern locality."
       },
       "claims": [
         {
           "id": "evidence",
-          "text": "Fleury discusses alternative establishment dates of 1791 and 1815 for Cottica on the Lawa.",
-          "status": "under discussion",
-          "explanation": "Two historical interpretations bound this approximate foundation window; it is not a claim of construction throughout the interval.",
+          "text": "The 1861 Franco-Dutch boundary mission report names Cottica among existing Aluku villages on the lower Lawa.",
+          "status": "well-supported",
+          "explanation": "A documented village observation, not its foundation. Earlier Cottica names and establishment hypotheses do not securely identify this modern locality.",
           "support": [
             {
               "sourceId": "interior-fleury",
-              "locator": "§29 (1793 attack); §51–54 (Cottica chronology); author-uploaded full text read via Academia",
+              "locator": "§67: named villages in the 1861 boundary mission report; §§58–68 distinguish earlier Cottica names and later lower-Lawa settlement",
               "stance": "supports",
               "note": "Supports this observation within the stated limits."
             }
@@ -2874,13 +2875,14 @@
         }
       ],
       "review": {
-        "summary": "Fleury discusses alternative establishment dates of 1791 and 1815 for Cottica on the Lawa.",
-        "limitations": "Two historical interpretations bound this approximate foundation window; it is not a claim of construction throughout the interval.",
-        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "summary": "The 1861 Franco-Dutch boundary mission report names Cottica among existing Aluku villages on the lower Lawa.",
+        "limitations": "A documented village observation, not its foundation. Earlier Cottica names and establishment hypotheses do not securely identify this modern locality.",
+        "discussion": "Fleury discusses 1791/1815 hypotheses but also an earlier Cottica near Anapaïké and conflicting 1840–1860 estimates for the later lower-Lawa villages. The current pin uses the 1861 attestation; older names are not projected onto it.",
         "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
         "reviewedAt": "2026-11-16",
         "history": [
-          "Added dated shared context with explicit geographic and evidential limits."
+          "Added dated shared context with explicit geographic and evidential limits.",
+          "Whole-branch source review separated early Cottica names from the documented lower-Lawa village."
         ],
         "relatedIds": [
           "regional-kumako-1730",
@@ -2888,7 +2890,7 @@
         ]
       },
       "history": {
-        "kind": "settlement",
+        "kind": "attestation",
         "claimId": "evidence"
       }
     },

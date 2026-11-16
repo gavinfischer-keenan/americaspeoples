@@ -4,7 +4,7 @@ import {readFileSync} from 'node:fs';
 import {dataset} from '../src/published-data';
 import {topicOnlyIds} from '../src/topic-dives';
 import {recordsForView} from '../src/atlas-view';
-import {historyState} from '../src/history';
+import {historyState,historyLabel} from '../src/history';
 import {temporalState} from '../src/time';
 import baseline from '../data/interior-frontier-baseline.json';
 import expansion from '../data/interior-frontier-expansion-records.json';
@@ -61,4 +61,27 @@ test('pre-expansion snapshots remain distinct and immutable in meaning',()=>{
  const prior=JSON.parse(readFileSync('data/regional-gap-baseline.json','utf8'));
  assert.equal(prior.recordCount,1960);assert.equal(prior.sharedRecordCount,1902);
  assert.ok(Array.isArray(JSON.parse(readFileSync('data/world-coverage-baseline.json','utf8'))));
+});
+
+test('present lower-Lawa Cottica uses its 1861 attestation, not an ambiguous early namesake',()=>{
+ const r=get('interior-cottica-early');
+ assert.equal(r.time.start,1861);
+ assert.equal(r.time.end,1861);
+ assert.equal(r.history?.kind,'attestation');
+ assert.equal(historyState(r,1815),'outside');
+ assert.doesNotMatch(historyLabel(r,1815),/Established by/);
+ assert.equal(historyState(r,1861),'active');
+ assert.equal(historyState(r,1900),'past-place');
+ assert.match(r.review.discussion,/Anapa[iï]k[eé]/);
+});
+
+test('Maripaston imports show only the evidenced inward goods flow',()=>{
+ const r=get('interior-maripaston-paramaribo-1905');
+ assert.deepEqual(r.location,get('settlement-paramaribo').location);
+ assert.deepEqual(r.destination,get('interior-maripaston-1905').location);
+ assert.equal(r.overlay?.direction,'forward');
+ assert.deepEqual(r.overlay?.geometry?.coordinates,[[r.location!.lon,r.location!.lat],[r.destination!.lon,r.destination!.lat]]);
+ assert.equal(historyState(r,1905),'active');
+ assert.equal(historyState(r,1906),'outside');
+ assert.equal(r.history?.connection?.cessation,'unknown');
 });
