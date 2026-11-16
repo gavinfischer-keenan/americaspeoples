@@ -394,3 +394,7 @@ Cotoca and Landívar public coordinate facts come from Supplementary Table 1 of 
 Onondaga, Ganondagan and Garifuna community accounts, archival treaty scans, government archives and collection guides are individually attributed in records and docs/community-topic-dives.md. Citations do not relicense their publications, imagery or cultural knowledge. The Dutch National Archives emancipation-register index (CC BY-SA 3.0) is not copied or republished; only the documented emancipation date and archive coverage limitations are summarized. No source claims endorsement of this atlas.
 
 The new Consensus Deep dossier remains private. No generated report, long quotation or bulk source dataset was added to the public package. Project licenses cover original protected contributions; they do not create ownership over facts or remove upstream permissions.
+
+### New locality references in v0.17
+
+Uripiv uses the [GeoNames Uripiv Island reference](https://www.geonames.org/2134451/uripiv-island.html), credited to GeoNames under its [attribution terms](https://www.geonames.org/about.html). Named Peruvian archaeological places and the coarse Nimowa island setting use independently checked OpenStreetMap references credited in each location provenance field; OpenStreetMap data retains its existing ODbL terms. No source maps, figures, photographs or raw research reports are redistributed. Sangay/Huapula, Kilamope, Lake Cormorán and Pernil Alto reference the public archaeological inventory or original study listed in their records.
