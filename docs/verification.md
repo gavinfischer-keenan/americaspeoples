@@ -4,10 +4,10 @@ Version **0.11.0 source release candidate**, checked 15 November 2026. These obs
 
 ## Results
 
-All 27 required release phases passed after the review corrections. The final run passed phases 1–21. Phase 22 exposed an older test's list of permitted historical markers, which omitted the new attestation type; that test-only expectation was updated and phases 22–27 passed. Earlier full-year overlay-count assertions were also corrected to respect exact event dates. No production code changed during the resumed checks.
+All 27 required release phases passed in a complete run after the requested presentation and citation cleanup. Rolling-retention checks were then added and verified separately against real Linux directory symlinks; packaging and Python checks were rerun for that operational addition.
 
 - 248 unit tests, strict TypeScript and validation of all 1,809 published records.
-- 10 Python/SQLite API integration tests, full-data export and compact catalog contracts.
+- 10 Python/SQLite API integration tests, full-data export and compact catalog contracts, plus five Linux retention-safety tests. Windows skips the latter where directory-symlink creation is unavailable; all five ran and passed on the target Linux host.
 - The researched workbook imports all 1,809 records, including dates, history/linguistics metadata, geography, claims and references. Every imported review page rendered; reimport preserved correction/duplicate behavior.
 - Production build, packaged documentation/licenses, and an independently extracted self-host package serving frontend, evidence reviews and dated ice requests.
 - Shared Americas playback, simultaneous Columbus/Taos, contextual Beagle and regional stories, exact date gates, zoomed local places, relief, boundaries, rails, boats and loss history.
@@ -17,7 +17,7 @@ All 27 required release phases passed after the review corrections. The final ru
 
 The independent review led to corrections for Kitsissut’s specimen-date semantics, Ollantaytambo’s qualified construction attribution, and twelve imported encounter summaries. Source-described massacres and village attacks are distinguished from generic battle outcomes; Dakota/Lakota participants are not labeled Confederate from an inventory column heading. New regression tests failed before these fixes and passed afterward.
 
-Two minor presentation follow-ups remain: ordinary-story detail blocks do not receive one intended decorative CSS rule, and some scientific source entries use generic display titles/venues instead of full formal bibliography metadata. The explanations remain readable and source URLs remain available.
+The two presentation follow-ups were completed before deployment: ordinary-story detail styling now targets the rendered blocks, and 14 source entries covering 12 scientific papers have formal titles, authors, journal details and DOIs checked against publisher-deposited metadata. Publication years follow journal issues where available.
 
 ## Coverage and limits
 

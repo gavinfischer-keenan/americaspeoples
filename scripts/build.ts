@@ -188,7 +188,7 @@ for (const name of names)
     await readFile("dist/" + name),
   );
 execFileSync(process.env.PYTHON_PATH || 'python', ['server/database.py','--dataset','dist/dataset.json','--hazards','data/hazard-events.json','--ice','data/ice-snapshots.json','--target','release/atlas.sqlite3'],{stdio:'inherit'});
-for(const name of ['server/app.py','server/database.py'])files['americas-peoples/'+name]=new Uint8Array(await readFile(name));
+for(const name of ['server/app.py','server/database.py','server/release_retention.py'])files['americas-peoples/'+name]=new Uint8Array(await readFile(name));
 files['americas-peoples/data/atlas.sqlite3']=new Uint8Array(await readFile('release/atlas.sqlite3'));
 files['americas-peoples/DEPLOYMENT.md']=new Uint8Array(await readFile('DEPLOYMENT.md'));
 const zip = zipSync(files, { level: 9 });

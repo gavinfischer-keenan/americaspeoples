@@ -36,7 +36,7 @@ const phases = [
     ["--import", "tsx", "scripts/build.ts"],
   ],
   ["Packaged history documentation", node, ["--import", "tsx", "--test", "tests/history-release.artifact.ts"]],
-  ["Python API integration", null, ["server/test_api.py"]],
+  ["Python API integration and release retention", null, ["-m", "unittest", "discover", "-s", "server", "-p", "test_*.py"]],
   [
     "Hosted privacy, CSP and full snapshot",
     node,
