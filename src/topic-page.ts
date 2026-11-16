@@ -91,6 +91,7 @@ export function mountTopicPage(host:HTMLElement,topic:TopicDive,all:readonly Dis
  $('#topic-records').addEventListener('click',e=>{const b=(e.target as Element).closest<HTMLElement>('[data-topic-record]');if(!b)return;pause();selected=records.filter(r=>r.id===b.dataset.topicRecord);renderDetails();map.setHighlighted(selected.map(r=>r.id));});
  $('#topic-rate').addEventListener('change',()=>rate=Number($<HTMLSelectElement>('#topic-rate').value));
  $('#topic-date').addEventListener('input',()=>date(timelineYear(Number($<HTMLInputElement>('#topic-date').value)/10000,session.minYear,session.maxYear,'log')));
+ $('#topic-date-form').addEventListener('focusin',pause);
  $('#topic-date-form').addEventListener('submit',e=>{e.preventDefault();const n=Number($<HTMLInputElement>('#topic-year-input').value);const y=$<HTMLSelectElement>('#topic-era').value==='BCE'?1-n:n;if(!Number.isInteger(n)||n<1||y<session.minYear||y>session.maxYear){$('#topic-date-error').textContent=`Choose a date between ${formatYear(session.minYear)} and ${formatYear(session.maxYear)}.`;return;}$('#topic-date-error').textContent='';date(y);});
  $('#topic-1799')?.addEventListener('click',()=>date(1799));
  $('#topic-progress').addEventListener('input',()=>{pause();session.elapsed=0;session.guided=true;session.advance(Number($<HTMLInputElement>('#topic-progress').value)/1000*storyDurationMs(topic));render(true);});

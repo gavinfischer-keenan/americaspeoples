@@ -58,6 +58,29 @@ try{
   await until(async()=>await page.locator('#hazard-results a').count()>0,'Retry never published the complete physical catalog');
  });
 
+ await scenario('manual-date-pauses-playback',async page=>{
+  await page.goto(origin+'/#movie');await page.getByRole('button',{name:'Pause',exact:true}).waitFor();
+  await page.locator('#time-settings-toggle').click();
+  await page.getByLabel('Year number',{exact:true}).fill('20050');
+  await delay(400); // Several animation frames must not overwrite an in-progress edit.
+  assert.equal(await page.getByLabel('Year number',{exact:true}).inputValue(),'20050');
+  await page.getByRole('button',{name:'Play',exact:true}).waitFor();
+  await page.getByLabel('Era',{exact:true}).selectOption('BCE');
+  await page.getByRole('button',{name:'Go to year',exact:true}).click();
+  assert.match(await page.locator('#current-year').innerText(),/20,050 BCE/);
+ });
+
+ await scenario('topic-manual-date-pauses-playback',async page=>{
+  await page.goto(origin+'/#topic/horses');await page.locator('#topic-play').click();
+  await page.locator('.topic-date-controls summary').click();
+  await page.locator('#topic-year-input').fill('1700');
+  await delay(400);
+  assert.equal(await page.locator('#topic-year-input').inputValue(),'1700');
+  await page.getByRole('button',{name:'Play topic',exact:true}).waitFor();
+  await page.locator('#topic-era').selectOption('CE');await page.locator('#topic-date-form button').click();
+  assert.match(await page.locator('#topic-year').innerText(),/1,700 CE/);
+ });
+
  await scenario('latest-ice-after-failures',async page=>{
   const held=new Map(),started=[];
   await page.route('**/api/ice/optimal/*',async route=>{

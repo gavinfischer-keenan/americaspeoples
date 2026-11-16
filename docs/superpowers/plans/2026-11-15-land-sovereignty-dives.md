@@ -81,7 +81,7 @@ Finish all ten remaining dives in v0.14, plus an Australia/New Zealand archaeolo
 ### Task 4: Verified release and deployment
 
 **Files:** version/lock0.14.0, source guide/rights/README/verification, v0.13 deployment receipt, generated workbook.
-- [ ] Package linked source guide and current queue, document scope and limits.
-- [ ] Full release verification; inspect desktop/tablet output and actual record/source UI.
-- [ ] One fresh whole-branch review, then one material-fix pass with RED→GREEN and green full suite.
+- [x] Package linked source guide and current queue, document scope and limits.
+- [x] Full release verification; inspect desktop/tablet output and actual record/source UI.
+- [x] One fresh whole-branch review, then one material-fix pass with RED→GREEN and green full suite.
 - [ ] Commit/push/create PR; merge and deploy v0.14 after checks, preserving only v0.13 as the immediately previous rollback release. User authorization is explicit.
