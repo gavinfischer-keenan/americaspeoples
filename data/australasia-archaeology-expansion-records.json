@@ -1,0 +1,608 @@
+{
+  "reviewedAt": "2026-11-15",
+  "coverage": "Eight dated observations at six named places; selected coverage, not a comprehensive site inventory.",
+  "records": [
+    {
+      "id": "au-riwi-onset",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Riwi — early hearth and occupation evidence",
+      "culture": {
+        "id": "gooniyandi-country-early-inhabitants",
+        "name": "Gooniyandi Country; early inhabitants",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "au-riwi-onset-place",
+        "name": "Riwi, southern Kimberley",
+        "lon": 126.06,
+        "lat": -18.69,
+        "precision": "Published locality rounded to 0.01 degrees, about 2 km uncertainty; not an excavation square.",
+        "provenance": "Vannieuwenhuyse 2016, Appendix B, site 7: https://api.research-repository.uwa.edu.au/ws/portalfiles/portal/11811439/THESIS_DOCTOR_OF_PHILOSOPHY_VANNIEUWENHUYSE_Dorcas_Emmanuelle_Marie_Bernard_2016_Part_2.pdf"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -44450,
+        "end": -42650,
+        "approximate": true,
+        "original": "46.4–44.6 cal kBP (95.4%)",
+        "method": "Calibrated years BP use 1950 CE as their base; astronomical map year = 1950 minus cal BP. Range bounds are possible dates, not continuous occupation.",
+        "interpretation": "The 95.4% modeled onset window does not mean people occupied the cave every year. Lower artifacts may reflect older activity or downward movement; they do not establish an earlier secure date."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Dated hearth evidence places early human activity at Riwi within 46.4–44.6 thousand calibrated years BP. The study compares radiocarbon and luminescence sequences.",
+          "status": "well-supported",
+          "explanation": "The 95.4% modeled onset window does not mean people occupied the cave every year. Lower artifacts may reflect older activity or downward movement; they do not establish an earlier secure date.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Abstract; Discussion and conclusions; Fig. 1",
+              "stance": "supports",
+              "note": "Supports the dated observation, with its limits stated separately."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "authors": "Rachel Wood; Zenobia Jacobs; Dorcas Vannieuwenhuyse; Jane Balme; Sue O’Connor; Rose Whitau",
+          "title": "Towards an Accurate and Precise Chronology for the Colonization of Australia: The Example of Riwi",
+          "url": "https://doi.org/10.1371/journal.pone.0160123",
+          "year": 2016,
+          "venue": "Source publication linked by URL",
+          "referenceType": "journal-article",
+          "access": "Primary source checked 2026-11-15; original factual summary. No source images or full text redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Dated hearth evidence places early human activity at Riwi within 46.4–44.6 thousand calibrated years BP. The study compares radiocarbon and luminescence sequences.",
+        "limitations": "The 95.4% modeled onset window does not mean people occupied the cave every year. Lower artifacts may reflect older activity or downward movement; they do not establish an earlier secure date.",
+        "discussion": "A measured activity or construction phase does not give an uninterrupted population history. Earlier evidence stays visible as earlier evidence.",
+        "provenance": "Independent primary-source verification following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added a dated local observation with explicit precision and source limits."
+        ],
+        "relatedIds": []
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "au-karnatukul-onset",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Karnatukul — early occupation in the desert interior",
+      "culture": {
+        "id": "traditional-owners-of-katjarra-earlier-inhabitants",
+        "name": "Traditional Owners of Katjarra; earlier inhabitants",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "au-karnatukul-onset-place",
+        "name": "Katjarra / Carnarvon Ranges; generalized Karnatukul reference",
+        "lon": 120.5,
+        "lat": -25,
+        "precision": "Deliberately generalized regional anchor, about 50 km uncertainty. This is not the shelter location.",
+        "provenance": "Regional orientation from the paper Fig. 1. Traditional Owners request that precise locations not be disclosed: https://www.scienceinpublic.com.au/ancient-campfires/"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -48060,
+        "end": -43240,
+        "approximate": true,
+        "original": "50,010–45,190 cal BP; modeled onset",
+        "method": "Calibrated years BP use 1950 CE as their base; astronomical map year = 1950 minus cal BP. Range bounds are possible dates, not continuous occupation.",
+        "interpretation": "The estimate approaches radiocarbon’s practical limit and basal sediments resisted luminescence sampling. Episodic activity and later phases must not become one continuously occupied town."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The excavated sequence places initial occupation within a modeled 50,010–45,190 cal BP range. Stone artifacts document human activity in the desert interior.",
+          "status": "well-supported",
+          "explanation": "The estimate approaches radiocarbon’s practical limit and basal sediments resisted luminescence sampling. Episodic activity and later phases must not become one continuously occupied town.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Conclusions; Pleistocene occupation; Fig. 1",
+              "stance": "supports",
+              "note": "Supports the dated observation, with its limits stated separately."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "authors": "Jo McDonald; Wendy Reynen; Fiona Petchey; Kane Ditchfield; Claire Byrne; Dorcas Vannieuwenhuyse; Matthias Leopold; Peter Veth",
+          "title": "Karnatukul (Serpent’s Glen): A new chronology for the oldest site in Australia’s Western Desert",
+          "url": "https://doi.org/10.1371/journal.pone.0202511",
+          "year": 2018,
+          "venue": "Source publication linked by URL",
+          "referenceType": "journal-article",
+          "access": "Primary source checked 2026-11-15; original factual summary. No source images or full text redistributed."
+        }
+      ],
+      "review": {
+        "summary": "The excavated sequence places initial occupation within a modeled 50,010–45,190 cal BP range. Stone artifacts document human activity in the desert interior.",
+        "limitations": "The estimate approaches radiocarbon’s practical limit and basal sediments resisted luminescence sampling. Episodic activity and later phases must not become one continuously occupied town.",
+        "discussion": "A measured activity or construction phase does not give an uninterrupted population history. Earlier evidence stays visible as earlier evidence.",
+        "provenance": "Independent primary-source verification following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added a dated local observation with explicit precision and source limits."
+        ],
+        "relatedIds": [
+          "au-karnatukul-lgm"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "au-karnatukul-lgm",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Karnatukul — activity during the Last Glacial Maximum",
+      "culture": {
+        "id": "traditional-owners-of-katjarra-earlier-inhabitants",
+        "name": "Traditional Owners of Katjarra; earlier inhabitants",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "au-karnatukul-lgm-place",
+        "name": "Katjarra / Carnarvon Ranges; generalized Karnatukul reference",
+        "lon": 120.5,
+        "lat": -25,
+        "precision": "Deliberately generalized regional anchor, about 50 km uncertainty. This is not the shelter location.",
+        "provenance": "Regional orientation from the paper Fig. 1. Traditional Owners request that precise locations not be disclosed: https://www.scienceinpublic.com.au/ancient-campfires/"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -23420,
+        "end": -15980,
+        "approximate": true,
+        "original": "25,370–17,930 cal BP; LGM assemblage",
+        "method": "Calibrated years BP use 1950 CE as their base; astronomical map year = 1950 minus cal BP. Range bounds are possible dates, not continuous occupation.",
+        "interpretation": "This phase is separate from the earliest occupation model. The window is not a count of visitors or proof of continuous residence in every intervening year."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "A separate artifact-bearing phase at Karnatukul falls within 25,370–17,930 cal BP, showing human activity during glacial conditions.",
+          "status": "well-supported",
+          "explanation": "This phase is separate from the earliest occupation model. The window is not a count of visitors or proof of continuous residence in every intervening year.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Conclusions; Pleistocene occupation; Fig. 1",
+              "stance": "supports",
+              "note": "Supports the dated observation, with its limits stated separately."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "authors": "Jo McDonald; Wendy Reynen; Fiona Petchey; Kane Ditchfield; Claire Byrne; Dorcas Vannieuwenhuyse; Matthias Leopold; Peter Veth",
+          "title": "Karnatukul (Serpent’s Glen): A new chronology for the oldest site in Australia’s Western Desert",
+          "url": "https://doi.org/10.1371/journal.pone.0202511",
+          "year": 2018,
+          "venue": "Source publication linked by URL",
+          "referenceType": "journal-article",
+          "access": "Primary source checked 2026-11-15; original factual summary. No source images or full text redistributed."
+        }
+      ],
+      "review": {
+        "summary": "A separate artifact-bearing phase at Karnatukul falls within 25,370–17,930 cal BP, showing human activity during glacial conditions.",
+        "limitations": "This phase is separate from the earliest occupation model. The window is not a count of visitors or proof of continuous residence in every intervening year.",
+        "discussion": "A measured activity or construction phase does not give an uninterrupted population history. Earlier evidence stays visible as earlier evidence.",
+        "provenance": "Independent primary-source verification following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added a dated local observation with explicit precision and source limits."
+        ],
+        "relatedIds": [
+          "au-karnatukul-onset"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "au-gabarnmang-onset",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Nawarla Gabarnmang — early occupation evidence",
+      "culture": {
+        "id": "jawoyn-country-early-inhabitants",
+        "name": "Jawoyn Country; early inhabitants",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "au-gabarnmang-onset-place",
+        "name": "Jawoyn country; generalized regional reference",
+        "lon": 132.7,
+        "lat": -13.8,
+        "precision": "Generalized country anchor, approximately 200 km uncertainty; precise shelter location withheld.",
+        "provenance": "Regional orientation from the Aboriginal Message Stick Database, which explicitly withholds the shelter location: https://amsd.clld.org/contributions/NAWARLAGABARNMANG"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -44140,
+        "end": -42320,
+        "approximate": true,
+        "original": "45,180 ± 910 cal BP",
+        "method": "Calibrated years BP use 1950 CE as their base; astronomical map year = 1950 minus cal BP. Range bounds are possible dates, not continuous occupation.",
+        "interpretation": "The pin represents Jawoyn country, not the shelter. The source’s reported uncertainty is preserved; it does not date every painting or all later use."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "David and colleagues report early occupation evidence dated 45,180 ± 910 calibrated years BP at Nawarla Gabarnmang.",
+          "status": "well-supported",
+          "explanation": "The pin represents Jawoyn country, not the shelter. The source’s reported uncertainty is preserved; it does not date every painting or all later use.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Article title and bibliographic record; Australian Archaeology 73, pp. 73–77",
+              "stance": "supports",
+              "note": "Supports the dated observation, with its limits stated separately."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "authors": "Bruno David and colleagues",
+          "title": "Nawarla Gabarnmang, a 45,180±910 cal BP site in Jawoyn country, southwest Arnhem Land plateau",
+          "url": "https://research.monash.edu/en/publications/nawarla-gabarnmang-a-45180-910-cal-bp-site-in-jawoyn-country-sout/",
+          "year": 2011,
+          "venue": "Source publication linked by URL",
+          "referenceType": "journal-article",
+          "access": "Primary source checked 2026-11-15; original factual summary. No source images or full text redistributed."
+        }
+      ],
+      "review": {
+        "summary": "David and colleagues report early occupation evidence dated 45,180 ± 910 calibrated years BP at Nawarla Gabarnmang.",
+        "limitations": "The pin represents Jawoyn country, not the shelter. The source’s reported uncertainty is preserved; it does not date every painting or all later use.",
+        "discussion": "A measured activity or construction phase does not give an uninterrupted population history. Earlier evidence stays visible as earlier evidence.",
+        "provenance": "Independent primary-source verification following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added a dated local observation with explicit precision and source limits."
+        ],
+        "relatedIds": []
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "au-cloggs-installation-early",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Cloggs Cave — built fireplace installation XU11",
+      "culture": {
+        "id": "gunaikurnai-old-ancestors",
+        "name": "GunaiKurnai Old Ancestors",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "au-cloggs-installation-early-place",
+        "name": "Cloggs Cave / Buchan locality, GunaiKurnai Country",
+        "lon": 148.17,
+        "lat": -37.52,
+        "precision": "Approximate named cave locality, about 2 km uncertainty; no interior location or sacred-object coordinates.",
+        "provenance": "Public Buchan locality, rounded: https://en.wikipedia.org/wiki/Cloggs_Cave"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -11000,
+        "end": -9470,
+        "approximate": true,
+        "original": "11,420–12,950 cal BP; modeled installation boundaries (95%)",
+        "method": "Calibrated years BP use 1950 CE as their base; astronomical map year = 1950 minus cal BP. Range bounds are possible dates, not continuous occupation.",
+        "interpretation": "This is a built ritual installation, not a residential village. The modeled context range differs from the individual stick’s radiocarbon date; similar forms do not supply an observed event in every intervening generation."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Excavation revealed a small constructed fireplace with a trimmed wooden stick. GunaiKurnai-led collaborative research interprets its form alongside documented ritual knowledge.",
+          "status": "well-supported",
+          "explanation": "This is a built ritual installation, not a residential village. The modeled context range differs from the individual stick’s radiocarbon date; similar forms do not supply an observed event in every intervening generation.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Chronology; The excavated ritual installations; Fig. 2",
+              "stance": "supports",
+              "note": "Supports the dated observation, with its limits stated separately."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "authors": "Bruno David; Russell Mullett and colleagues",
+          "title": "Archaeological evidence of an ethnographically documented Australian Aboriginal ritual dated to the last ice age",
+          "url": "https://doi.org/10.1038/s41562-024-01912-w",
+          "year": 2024,
+          "venue": "Source publication linked by URL",
+          "referenceType": "journal-article",
+          "access": "Primary source checked 2026-11-15; original factual summary. No source images or full text redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Excavation revealed a small constructed fireplace with a trimmed wooden stick. GunaiKurnai-led collaborative research interprets its form alongside documented ritual knowledge.",
+        "limitations": "This is a built ritual installation, not a residential village. The modeled context range differs from the individual stick’s radiocarbon date; similar forms do not supply an observed event in every intervening generation.",
+        "discussion": "A measured activity or construction phase does not give an uninterrupted population history. Earlier evidence stays visible as earlier evidence.",
+        "provenance": "Independent primary-source verification following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added a dated local observation with explicit precision and source limits."
+        ],
+        "relatedIds": [
+          "au-cloggs-installation-later"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "au-cloggs-installation-later",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Cloggs Cave — built fireplace installation XU8–9",
+      "culture": {
+        "id": "gunaikurnai-old-ancestors",
+        "name": "GunaiKurnai Old Ancestors",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "au-cloggs-installation-later-place",
+        "name": "Cloggs Cave / Buchan locality, GunaiKurnai Country",
+        "lon": 148.17,
+        "lat": -37.52,
+        "precision": "Approximate named cave locality, about 2 km uncertainty; no interior location or sacred-object coordinates.",
+        "provenance": "Public Buchan locality, rounded: https://en.wikipedia.org/wiki/Cloggs_Cave"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -10470,
+        "end": -8770,
+        "approximate": true,
+        "original": "10,720–12,420 cal BP; modeled installation boundaries (95%)",
+        "method": "Calibrated years BP use 1950 CE as their base; astronomical map year = 1950 minus cal BP. Range bounds are possible dates, not continuous occupation.",
+        "interpretation": "This is a built ritual installation, not a residential village. The modeled context range differs from the individual stick’s radiocarbon date; similar forms do not supply an observed event in every intervening generation."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Excavation revealed a small constructed fireplace with a trimmed wooden stick. GunaiKurnai-led collaborative research interprets its form alongside documented ritual knowledge.",
+          "status": "well-supported",
+          "explanation": "This is a built ritual installation, not a residential village. The modeled context range differs from the individual stick’s radiocarbon date; similar forms do not supply an observed event in every intervening generation.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Chronology; The excavated ritual installations; Fig. 2",
+              "stance": "supports",
+              "note": "Supports the dated observation, with its limits stated separately."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "authors": "Bruno David; Russell Mullett and colleagues",
+          "title": "Archaeological evidence of an ethnographically documented Australian Aboriginal ritual dated to the last ice age",
+          "url": "https://doi.org/10.1038/s41562-024-01912-w",
+          "year": 2024,
+          "venue": "Source publication linked by URL",
+          "referenceType": "journal-article",
+          "access": "Primary source checked 2026-11-15; original factual summary. No source images or full text redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Excavation revealed a small constructed fireplace with a trimmed wooden stick. GunaiKurnai-led collaborative research interprets its form alongside documented ritual knowledge.",
+        "limitations": "This is a built ritual installation, not a residential village. The modeled context range differs from the individual stick’s radiocarbon date; similar forms do not supply an observed event in every intervening generation.",
+        "discussion": "A measured activity or construction phase does not give an uninterrupted population history. Earlier evidence stays visible as earlier evidence.",
+        "provenance": "Independent primary-source verification following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added a dated local observation with explicit precision and source limits."
+        ],
+        "relatedIds": [
+          "au-cloggs-installation-early"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "nz-purakaunui-stores",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Pūrākaunui — constructed seasonal kūmara stores",
+      "culture": {
+        "id": "m-ori-communities-of-southern-te-waipounamu",
+        "name": "Māori communities of southern Te Waipounamu",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "nz-purakaunui-stores-place",
+        "name": "Pūrākaunui Inlet, Otago; settlement locality",
+        "lon": 170.63,
+        "lat": -45.75,
+        "precision": "Settlement-locality anchor, about 2 km uncertainty; not a surveyed storage pit.",
+        "provenance": "Paper Fig. 1 and latitude S45.75; Pūrākaunui Inlet geographic orientation: https://fs.fish.govt.nz/NR/rdonlyres/A8143C49-ACA5-415C-B8B7-9E35EB6CD846/0/OtagoPeninsula.pdf"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1430,
+        "end": 1460,
+        "approximate": true,
+        "original": "1430–1460 CE (95% Bayesian interval)",
+        "method": "Calibrated calendar dates for construction/use contexts.",
+        "interpretation": "Starch supports sweet-potato storage, not certain local cultivation. The dates concern pit construction and use, not the full settlement lifespan or a demonstrated abandonment of the community."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Archaeological pits at Pūrākaunui were constructed and used as seasonal kūmara stores. The Bayesian model places the relevant activity within 1430–1460 CE.",
+          "status": "well-supported",
+          "explanation": "Starch supports sweet-potato storage, not certain local cultivation. The dates concern pit construction and use, not the full settlement lifespan or a demonstrated abandonment of the community.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Abstract; Archaeological site and excavation; Discussion; Conclusion; Fig. 1",
+              "stance": "supports",
+              "note": "Supports the dated observation, with its limits stated separately."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "authors": "Ian G. Barber; Thomas F. G. Higham",
+          "title": "Archaeological science meets Māori knowledge to model pre-Columbian sweet potato dispersal to Polynesia’s southernmost habitable margins",
+          "url": "https://doi.org/10.1371/journal.pone.0247643",
+          "year": 2021,
+          "venue": "Source publication linked by URL",
+          "referenceType": "journal-article",
+          "access": "Primary source checked 2026-11-15; original factual summary. No source images or full text redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Archaeological pits at Pūrākaunui were constructed and used as seasonal kūmara stores. The Bayesian model places the relevant activity within 1430–1460 CE.",
+        "limitations": "Starch supports sweet-potato storage, not certain local cultivation. The dates concern pit construction and use, not the full settlement lifespan or a demonstrated abandonment of the community.",
+        "discussion": "A measured activity or construction phase does not give an uninterrupted population history. Earlier evidence stays visible as earlier evidence.",
+        "provenance": "Independent primary-source verification following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added a dated local observation with explicit precision and source limits."
+        ],
+        "relatedIds": [
+          "context-triangle-flat"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "nz-otahau-palisade",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Otāhau Pā — a dated wooden palisade",
+      "culture": {
+        "id": "m-ori-communities-of-waikato",
+        "name": "Māori communities of Waikato",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "nz-otahau-palisade-place",
+        "name": "Otāhau Pā / Taupiri locality, Waikato",
+        "lon": 175.19,
+        "lat": -37.62,
+        "precision": "Taupiri-area locality, about 2 km uncertainty; not a reconstructed palisade footprint.",
+        "provenance": "Approximate orientation from source Fig. 1b, southeast of Taupiri. Open manuscript: https://researchcommons.waikato.ac.nz/server/api/core/bitstreams/8a967641-7926-42a9-962e-eeeb3e0ea18f/content"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1764,
+        "end": 1772,
+        "approximate": true,
+        "original": "1768 ± 4 CE (95%)",
+        "method": "Wiggle-match calendar date; 1768 represents the 1768–1769 growing season.",
+        "interpretation": "The 95% range dates post felling/construction, not the first arrival of Māori or every part of the pā. Sampling three posts cannot prove all defenses were built together."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Wiggle-matched radiocarbon dates on in-situ miro posts place palisade construction at approximately 1768 ± 4 CE. The timber is evidence of actual building.",
+          "status": "well-supported",
+          "explanation": "The 95% range dates post felling/construction, not the first arrival of Māori or every part of the pā. Sampling three posts cannot prove all defenses were built together.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Discussion; Fig. 1; author manuscript pp. 15–16",
+              "stance": "supports",
+              "note": "Supports the dated observation, with its limits stated separately."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "authors": "Alan Hogg; Warren Gumbley; Gretel Boswijk; Fiona Petchey; John Southon; Atholl Anderson; Tom Roa; Lloyd Donaldson",
+          "title": "The first accurate and precise calendar dating of New Zealand Māori Pā, using Otāhau Pā as a case study",
+          "url": "https://doi.org/10.1016/j.jasrep.2017.01.032",
+          "year": 2017,
+          "venue": "Source publication linked by URL",
+          "referenceType": "journal-article",
+          "access": "Primary source checked 2026-11-15; original factual summary. No source images or full text redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Wiggle-matched radiocarbon dates on in-situ miro posts place palisade construction at approximately 1768 ± 4 CE. The timber is evidence of actual building.",
+        "limitations": "The 95% range dates post felling/construction, not the first arrival of Māori or every part of the pā. Sampling three posts cannot prove all defenses were built together.",
+        "discussion": "A measured activity or construction phase does not give an uninterrupted population history. Earlier evidence stays visible as earlier evidence.",
+        "provenance": "Independent primary-source verification following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added a dated local observation with explicit precision and source limits."
+        ],
+        "relatedIds": []
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import australasiaArchaeology from '../data/australasia-archaeology-expansion-records.json';
 import sovereigntyTopics from '../data/sovereignty-topic-evidence-records.json';
 import sovereigntyContext from '../data/sovereignty-topic-context-records.json';
 import communityTopics from '../data/community-topic-evidence-records.json';
@@ -56,6 +57,6 @@ export const dataset = publishedDataset(
     ...atlantic.records,
     ...localPlaces.records,
     ...hawaiiLocal.records, ...sharedContext.records,
-    ...sovereigntyTopics.records, ...sovereigntyContext.records, ...communityTopics.records, ...communityContext.records, ...pacificTopics.records, ...pacificTopicContext.records, ...cities.records, ...conflicts.records, ...northern.records, ...topicEvidence.records,
+    ...australasiaArchaeology.records, ...sovereigntyTopics.records, ...sovereigntyContext.records, ...communityTopics.records, ...communityContext.records, ...pacificTopics.records, ...pacificTopicContext.records, ...cities.records, ...conflicts.records, ...northern.records, ...topicEvidence.records,
   ] as EvidenceRecord[],
 );

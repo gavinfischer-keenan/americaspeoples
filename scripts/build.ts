@@ -24,7 +24,7 @@ const research = JSON.parse(
   await readFile("data/research-proposals.json", "utf8"),
 );
 const history = JSON.parse(await readFile("data/history-records.json", "utf8"));
-const expansion=(await Promise.all([...['settlement','mission','pacific','violence','voyage','transport','atlantic','local-places','shared-context','hawaii-local','city','conflict','northern'].map(name=>`data/${name}-expansion-records.json`),'data/topic-evidence-records.json','data/pacific-topic-evidence-records.json','data/pacific-topic-context-records.json','data/community-topic-evidence-records.json','data/community-topic-context-records.json','data/sovereignty-topic-evidence-records.json','data/sovereignty-topic-context-records.json'].map(async name=>JSON.parse(await readFile(name,'utf8')).records))).flat();
+const expansion=(await Promise.all([...['australasia-archaeology','settlement','mission','pacific','violence','voyage','transport','atlantic','local-places','shared-context','hawaii-local','city','conflict','northern'].map(name=>`data/${name}-expansion-records.json`),'data/topic-evidence-records.json','data/pacific-topic-evidence-records.json','data/pacific-topic-context-records.json','data/community-topic-evidence-records.json','data/community-topic-context-records.json','data/sovereignty-topic-evidence-records.json','data/sovereignty-topic-context-records.json'].map(async name=>JSON.parse(await readFile(name,'utf8')).records))).flat();
 const appendix = createAppendix({...d,license:published.license,records:[...d.records,...history.records,...expansion]}, research, version);
 const errors = validateDataset(published);
 if (errors.length) throw new Error(errors.join("\n"));
