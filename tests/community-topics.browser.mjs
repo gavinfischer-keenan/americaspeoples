@@ -59,7 +59,7 @@ try{
  for(const [w,h,label] of [[1440,960,'desktop'],[1024,768,'tablet-landscape'],[768,1024,'tablet-portrait']]){
   await page.setViewportSize({width:w,height:h});
   await page.goto(base+'/#topic/amazonian-peoples');await page.locator('[data-topic-scene="2"]').click();
-  for(const id of ['community-cotoca','community-landivar'])assert.ok(await page.locator(`[data-topic-record="${id}"]`).count(),label+' '+id);
+  for(const id of ['r11v-cotoca-centre','r11v-landivar-centre'])assert.ok(await page.locator(`[data-topic-record="${id}"]`).count(),label+' '+id);
   await page.screenshot({path:`test-results/community-${label}.png`});
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),label+' horizontal overflow');
   await page.goto(base+'/#topic/caribbean-enslavement');await page.locator('[data-topic-scene="13"]').click();

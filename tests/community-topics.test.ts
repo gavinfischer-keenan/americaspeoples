@@ -9,6 +9,19 @@ import audit from '../data/topic-context-audit.json';
 const ids=['haudenosaunee','amazonian-peoples','caribbean-enslavement'];
 const row=(id:string)=>{const r=dataset.records.find(r=>r.id===id);assert.ok(r,'Missing '+id);return r;};
 
+test('Casarabe geography enriches the original centers without splitting their evidence',()=>{
+ for(const [name,id,area] of [['Cotoca','r11v-cotoca-centre','147'],['Landívar','r11v-landivar-centre','315']]){
+  const matches=dataset.records.filter(r=>r.title.startsWith(name+' '));
+  assert.equal(matches.length,1,name+' must have one canonical center');
+  const r=row(id);assert.equal(matches[0].id,id);assert.ok(r.location);
+  assert.ok(r.claims.some(c=>c.id==='finding'&&c.text.includes(area)),'preserve original site evidence');
+  assert.ok(r.review.relatedIds.includes('r11v-casarabe-network'));
+  assert.ok(row('r11v-casarabe-network').review.relatedIds.includes(id));
+  assert.ok(topics.find(t=>t.id==='amazonian-peoples')!.recordIds.includes(id));
+  assert.equal(topicOnlyIds.has(id),false);
+ }
+});
+
 test('three community movies have ordered, currently supported mapped evidence in every chapter',()=>{
  for(const id of ids){
   const topic=topics.find(t=>t.id===id);assert.ok(topic,'Missing '+id);assert.ok(topic.scenes.length>=7);
@@ -34,7 +47,7 @@ test('Mohawk village estimates retain model probability and are not a Confederac
 
 test('Amazon sites preserve distinct dated deposits and regional phase uncertainty',()=>{
  const sm=row('community-isla-tesoro-early');assert.deepEqual([sm.time.start,sm.time.end],[-8780,-8528]);
- const cotoca=row('community-cotoca');assert.deepEqual([cotoca.time.start,cotoca.time.end],[500,1400]);
+ const cotoca=row('r11v-cotoca-centre');assert.deepEqual([cotoca.time.start,cotoca.time.end],[500,1400]);
  assert.match(cotoca.time.interpretation,/regional|phase/i);assert.match(cotoca.location!.provenance,/185/);
  assert.equal(cotoca.history?.kind,'attestation');assert.equal(historyState(cotoca,1401),'past-place');
  assert.equal(row('community-putumayo-violence').overlay?.kind,'violence');
@@ -52,7 +65,7 @@ test('coercive routes and emancipation events keep their different clocks and ac
 });
 
 test('new shared places remain globally eligible and related records resolve reciprocally',()=>{
- for(const id of ['community-ganondagan','community-grand-river','community-cotoca','community-landivar','community-haiti-independence','community-putumayo-violence']){
+ for(const id of ['community-ganondagan','community-grand-river','r11v-cotoca-centre','r11v-landivar-centre','community-haiti-independence','community-putumayo-violence']){
   const r=row(id);assert.ok(!topicOnlyIds.has(id));assert.ok(sharedContextRecords([id],dataset.records).some(x=>x.id===id));
   for(const related of r.review.relatedIds)assert.ok(row(related).review.relatedIds.includes(id),id+' ↔ '+related);
  }

@@ -2,7 +2,7 @@
 
 Version 0.13 adds three separate topic movies: **Haudenosaunee history and lacrosse**, **Amazonian peoples and languages**, and **The Caribbean and forced African migration**. They add **31 chapters** to the seven existing movies, for **ten topics and 83 chapters**.
 
-The atlas contains **1,862 source-linked records**. This batch adds **28 records: 26 shared historical records and two subject-only lacrosse records**. Topic clocks and cameras remain separate. Watch and Explore still show the wider world at the chosen date. Each topic chapter offers links to shared evidence at that record’s own date; that date may differ from the chapter.
+The atlas contains **1,860 source-linked records**. This batch adds **26 records: 24 shared historical records and two subject-only lacrosse records**. Topic clocks and cameras remain separate. Watch and Explore still show the wider world at the chosen date. Each topic chapter offers links to shared evidence at that record’s own date; that date may differ from the chapter.
 
 ## What the movies cover
 
@@ -27,7 +27,7 @@ These are selected histories, **not exhaustive inventories** of towns, languages
 
 ## Cross-references and display
 
-All 26 new settlement, encounter, political and coercion records belong to the shared atlas. They are not duplicated into a disconnected topic dataset. Existing places and episodes—including Caguana, En Bas Saline, Belém, Upper Xingu, Vertières and Henrietta Marie—retain their canonical records.
+All 24 new settlement, encounter, political and coercion records belong to the shared atlas. They are not duplicated into a disconnected topic dataset. Cotoca and Landívar enrich their existing canonical records with verified public locations, retaining the original site claims and Casarabe network links. Existing places and episodes—including Caguana, En Bas Saline, Belém, Upper Xingu, Vertières and Henrietta Marie—retain their canonical records.
 
 The two lacrosse records remain subject-only. Their audit entries link relevant independently dated community history, without treating a game as a town’s foundation. All 46 subject-only records now have explicit shared-context decisions in the audit. Reciprocal related-record links let readers move in both directions.
 

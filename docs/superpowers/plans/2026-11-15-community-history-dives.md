@@ -64,5 +64,5 @@
 
 - [x] Bump source candidate to0.13.0, document selected coverage/limits and current livev0.12, and build final package.
 - [x] Run release verification, inspect tablet/desktop screenshots and inspect the actual public-claims/date/source output. Expected: required checks pass, declared skips explicit.
-- [ ] One fresh-context whole-branch review on the most capable available model, then one combined material-fix pass with reproducing RED→GREEN tests and green suite.
+- [x] One fresh-context whole-branch review on the most capable available model, then one combined material-fix pass with reproducing RED→GREEN tests and green suite.
 - [ ] Commit/push and create a reviewable PR with measured checks and cumulative research use; keep livev0.12 unchanged.

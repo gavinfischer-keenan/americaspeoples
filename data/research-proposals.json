@@ -81771,14 +81771,14 @@
     },
     {
       "id": "author-r11v-casarabe-network",
-      "version": 1,
+      "version": 2,
       "kind": "new",
       "targetId": null,
       "baseRevision": null,
       "baseRecord": null,
       "record": {
         "id": "r11v-casarabe-network",
-        "revision": 1,
+        "revision": 2,
         "type": "event",
         "title": "Casarabe — four-tier settlement and water networks",
         "culture": {
@@ -81835,9 +81835,13 @@
           "provenance": "Round11 original-source synthesis; supplied reports are private discovery leads, not evidence.",
           "reviewedAt": "2026-10-29",
           "history": [
-            "2026-10-29: Checked against accessed original or author-institution text with stated limits."
+            "2026-10-29: Checked against accessed original or author-institution text with stated limits.",
+            "2026-11-15: Added reciprocal links to the individually located canonical centers."
           ],
-          "relatedIds": []
+          "relatedIds": [
+            "r11v-cotoca-centre",
+            "r11v-landivar-centre"
+          ]
         },
         "overlay": {
           "kind": "regional-evidence",
@@ -81856,18 +81860,18 @@
       "rationale": "Round11 original-source finding with explicit chronology, geography and access limits.",
       "state": "ready",
       "createdAt": "2026-10-30T03:00:00Z",
-      "updatedAt": "2026-10-30T03:00:00Z"
+      "updatedAt": "2026-11-16T07:30:00Z"
     },
     {
       "id": "author-r11v-cotoca-centre",
-      "version": 1,
+      "version": 2,
       "kind": "new",
       "targetId": null,
       "baseRevision": null,
       "baseRecord": null,
       "record": {
         "id": "r11v-cotoca-centre",
-        "revision": 1,
+        "revision": 2,
         "type": "occurrence",
         "title": "Cotoca — large Casarabe settlement",
         "culture": {
@@ -81876,7 +81880,14 @@
           "kind": "unknown",
           "color": "#9babb5"
         },
-        "location": null,
+        "location": {
+          "id": "r11v-cotoca-centre-place",
+          "name": "Cotoca, Llanos de Mojos, Bolivia",
+          "lon": -64.59,
+          "lat": -14.98,
+          "precision": "Public site coordinate rounded to 0.01 degree, approximately 1 km; no household, burial or excavation footprint.",
+          "provenance": "Prümers et al. 2022 Supplementary Table 1, site 185: WGS84 UTM20S E328673/N8342813, transformed EPSG:32720 to EPSG:4326 and rounded."
+        },
         "destination": null,
         "routeKind": "schematic",
         "time": {
@@ -81886,20 +81897,34 @@
           "approximate": true,
           "original": "Casarabe horizon, around AD 500–1400; local duration unresolved",
           "method": "Published calendar dates retained; calibrated BP referenced to 1950. No recalibration. BCE converted to astronomical years (1 BCE = 0). Unspecified BP is not converted.",
-          "interpretation": "Cultural association rather than an independently bounded Cotoca occupation."
+          "interpretation": "Cultural association rather than an independently bounded Cotoca occupation. Regional phase association; this does not directly date every building or establish uninterrupted occupation."
         },
         "claims": [
           {
             "id": "finding",
             "text": "Cotoca covers about 147 hectares and contains a major raised civic-ceremonial core.",
             "status": "well-supported",
-            "explanation": "Area is not residents; no precise site locator or local founding/abandonment date is asserted.",
+            "explanation": "Area is not residents; the public site-table point is rounded to approximately 1 km. No local founding or abandonment date is asserted.",
             "support": [
               {
                 "sourceId": "r11-prumers2022",
                 "locator": "Large settlement sites section",
                 "stance": "supports",
                 "note": "Checked 2026-10-29: Publisher-indexed abstract and Large settlement sites / Low-density urbanism sections inspected; direct page/PDF fetching hit publisher redirect. Chronology is the Casarabe horizon, not a dated occupation for each centre."
+              }
+            ]
+          },
+          {
+            "id": "public-location",
+            "text": "Cotoca is a documented settlement center with substantial earthworks, connected to a wider Casarabe landscape by infrastructure.",
+            "status": "well-supported",
+            "explanation": "The 500–1400 CE range is the regional Casarabe phase supported by dated excavated sites; it is not direct dating of every building here. The language, population and exact local foundation or abandonment year remain unresolved.",
+            "support": [
+              {
+                "sourceId": "prumers-supplement-2022",
+                "locator": "Supplementary Table 1, site 185",
+                "stance": "supports",
+                "note": "Public site anchor; regional cultural phase is not direct dating of individual buildings."
               }
             ]
           }
@@ -81913,39 +81938,56 @@
             "venue": "Nature",
             "doi": "10.1038/s41586-022-04780-4",
             "url": "https://www.nature.com/articles/s41586-022-04780-4",
-            "access": "Checked 2026-10-29: Publisher-indexed abstract and Large settlement sites / Low-density urbanism sections inspected; direct page/PDF fetching hit publisher redirect. Chronology is the Casarabe horizon, not a dated occupation for each centre.",
+            "access": "Checked 2026-10-29: Publisher-indexed abstract and Large settlement sites / Low-density urbanism sections inspected; direct page/PDF fetching hit publisher redirect. Chronology is the Casarabe horizon, not a dated occupation for each centre. Updated 2026-11-15: full accessible article and Supplementary Information Table 1 inspected; WGS84 UTM20S site coordinates transformed and rounded to 0.01 degree.",
+            "referenceType": "journal-article"
+          },
+          {
+            "id": "prumers-supplement-2022",
+            "authors": "Heiko Prümers; Carla Jaimes Betancourt; José Iriarte; Mark Robinson; Martin Schaich",
+            "title": "Lidar reveals pre-Hispanic low-density urbanism in the Bolivian Amazon — Supplementary Information",
+            "year": 2022,
+            "venue": "Nature",
+            "doi": "10.1038/s41586-022-04780-4",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-022-04780-4/MediaObjects/41586_2022_4780_MOESM1_ESM.docx",
+            "access": "Supplementary Table 1 inspected 2026-11-15. Public coordinates transformed from WGS84 UTM zone 20S and rounded; no site plans reproduced.",
             "referenceType": "journal-article"
           }
         ],
         "review": {
           "summary": "Cotoca is treated as a named centre within a larger settlement network.",
-          "limitations": "Area is not residents; no precise site locator or local founding/abandonment date is asserted.",
-          "discussion": "Structures, artifacts and skeletal samples are not resident populations; archaeological traditions, ancestry and language require independent evidence.",
-          "provenance": "Round11 original-source synthesis; supplied reports are private discovery leads, not evidence.",
-          "reviewedAt": "2026-10-29",
+          "limitations": "The public site-table point is rounded to approximately 1 km. Area is not residents; the public site-table point is rounded to approximately 1 km. No local founding or abandonment date is asserted. The 500–1400 CE range is the regional Casarabe phase supported by dated excavated sites; it is not direct dating of every building here. The language, population and exact local foundation or abandonment year remain unresolved.",
+          "discussion": "Structures, artifacts and skeletal samples are not resident populations; archaeological traditions, ancestry and language require independent evidence. Place, event, date estimate and present-day community identity are separate claims. This record does not fill intervening evidence gaps with invented activity.",
+          "provenance": "Round11 original-source synthesis; supplied reports are private discovery leads, not evidence. Community topic expansion adds source-verified public geography to this existing canonical record.",
+          "reviewedAt": "2026-11-15",
           "history": [
-            "2026-10-29: Checked against accessed original or author-institution text with stated limits."
+            "2026-10-29: Checked against accessed original or author-institution text with stated limits.",
+            "2026-11-15: Added verified public site coordinates and supplementary source; retained original claims, identity and network links."
           ],
           "relatedIds": [
-            "r11v-casarabe-network"
+            "r11v-casarabe-network",
+            "r11v-landivar-centre"
           ]
+        },
+        "history": {
+          "kind": "attestation",
+          "claimId": "finding"
         }
       },
       "rationale": "Round11 original-source finding with explicit chronology, geography and access limits.",
       "state": "ready",
       "createdAt": "2026-10-30T03:00:00Z",
-      "updatedAt": "2026-10-30T03:00:00Z"
+      "updatedAt": "2026-11-16T07:30:00Z"
     },
     {
       "id": "author-r11v-landivar-centre",
-      "version": 1,
+      "version": 2,
       "kind": "new",
       "targetId": null,
       "baseRevision": null,
       "baseRecord": null,
       "record": {
         "id": "r11v-landivar-centre",
-        "revision": 1,
+        "revision": 2,
         "type": "occurrence",
         "title": "Landívar — large Casarabe settlement",
         "culture": {
@@ -81954,7 +81996,14 @@
           "kind": "unknown",
           "color": "#9babb5"
         },
-        "location": null,
+        "location": {
+          "id": "r11v-landivar-centre-place",
+          "name": "Landívar, Llanos de Mojos, Bolivia",
+          "lon": -64.47,
+          "lat": -15.2,
+          "precision": "Public site coordinate rounded to 0.01 degree, approximately 1 km; no household, burial or excavation footprint.",
+          "provenance": "Prümers et al. 2022 Supplementary Table 1, site 168: WGS84 UTM20S E342107/N8318852, transformed EPSG:32720 to EPSG:4326 and rounded."
+        },
         "destination": null,
         "routeKind": "schematic",
         "time": {
@@ -81964,7 +82013,7 @@
           "approximate": true,
           "original": "Casarabe horizon, around AD 500–1400; local duration unresolved",
           "method": "Published calendar dates retained; calibrated BP referenced to 1950. No recalibration. BCE converted to astronomical years (1 BCE = 0). Unspecified BP is not converted.",
-          "interpretation": "Cultural association rather than an independently bounded Landívar occupation."
+          "interpretation": "Cultural association rather than an independently bounded Landívar occupation. Regional phase association; this does not directly date every building or establish uninterrupted occupation."
         },
         "claims": [
           {
@@ -81980,6 +82029,20 @@
                 "note": "Checked 2026-10-29: Publisher-indexed abstract and Large settlement sites / Low-density urbanism sections inspected; direct page/PDF fetching hit publisher redirect. Chronology is the Casarabe horizon, not a dated occupation for each centre."
               }
             ]
+          },
+          {
+            "id": "public-location",
+            "text": "Landívar is a documented settlement center with substantial earthworks, connected to a wider Casarabe landscape by infrastructure.",
+            "status": "well-supported",
+            "explanation": "The 500–1400 CE range is the regional Casarabe phase supported by dated excavated sites; it is not direct dating of every building here. The language, population and exact local foundation or abandonment year remain unresolved.",
+            "support": [
+              {
+                "sourceId": "prumers-supplement-2022",
+                "locator": "Supplementary Table 1, site 168",
+                "stance": "supports",
+                "note": "Public site anchor; regional cultural phase is not direct dating of individual buildings."
+              }
+            ]
           }
         ],
         "sources": [
@@ -81991,28 +82054,45 @@
             "venue": "Nature",
             "doi": "10.1038/s41586-022-04780-4",
             "url": "https://www.nature.com/articles/s41586-022-04780-4",
-            "access": "Checked 2026-10-29: Publisher-indexed abstract and Large settlement sites / Low-density urbanism sections inspected; direct page/PDF fetching hit publisher redirect. Chronology is the Casarabe horizon, not a dated occupation for each centre.",
+            "access": "Checked 2026-10-29: Publisher-indexed abstract and Large settlement sites / Low-density urbanism sections inspected; direct page/PDF fetching hit publisher redirect. Chronology is the Casarabe horizon, not a dated occupation for each centre. Updated 2026-11-15: full accessible article and Supplementary Information Table 1 inspected; WGS84 UTM20S site coordinates transformed and rounded to 0.01 degree.",
+            "referenceType": "journal-article"
+          },
+          {
+            "id": "prumers-supplement-2022",
+            "authors": "Heiko Prümers; Carla Jaimes Betancourt; José Iriarte; Mark Robinson; Martin Schaich",
+            "title": "Lidar reveals pre-Hispanic low-density urbanism in the Bolivian Amazon — Supplementary Information",
+            "year": 2022,
+            "venue": "Nature",
+            "doi": "10.1038/s41586-022-04780-4",
+            "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-022-04780-4/MediaObjects/41586_2022_4780_MOESM1_ESM.docx",
+            "access": "Supplementary Table 1 inspected 2026-11-15. Public coordinates transformed from WGS84 UTM zone 20S and rounded; no site plans reproduced.",
             "referenceType": "journal-article"
           }
         ],
         "review": {
           "summary": "Landivar is treated as a named primary centre within a broader settlement network.",
-          "limitations": "Footprint is not resident population; mapped monumentality is not a count of simultaneously occupied houses.",
-          "discussion": "Structures, artifacts and skeletal samples are not resident populations; archaeological traditions, ancestry and language require independent evidence.",
-          "provenance": "Round11 original-source synthesis; supplied reports are private discovery leads, not evidence.",
-          "reviewedAt": "2026-10-29",
+          "limitations": "The public site-table point is rounded to approximately 1 km. Footprint is not resident population; mapped monumentality is not a count of simultaneously occupied houses. The 500–1400 CE range is the regional Casarabe phase supported by dated excavated sites; it is not direct dating of every building here. The language, population and exact local foundation or abandonment year remain unresolved.",
+          "discussion": "Structures, artifacts and skeletal samples are not resident populations; archaeological traditions, ancestry and language require independent evidence. Place, event, date estimate and present-day community identity are separate claims. This record does not fill intervening evidence gaps with invented activity.",
+          "provenance": "Round11 original-source synthesis; supplied reports are private discovery leads, not evidence. Community topic expansion adds source-verified public geography to this existing canonical record.",
+          "reviewedAt": "2026-11-15",
           "history": [
-            "2026-10-29: Checked against accessed original or author-institution text with stated limits."
+            "2026-10-29: Checked against accessed original or author-institution text with stated limits.",
+            "2026-11-15: Added verified public site coordinates and supplementary source; retained original claims, identity and network links."
           ],
           "relatedIds": [
-            "r11v-casarabe-network"
+            "r11v-casarabe-network",
+            "r11v-cotoca-centre"
           ]
+        },
+        "history": {
+          "kind": "attestation",
+          "claimId": "finding"
         }
       },
       "rationale": "Round11 original-source finding with explicit chronology, geography and access limits.",
       "state": "ready",
       "createdAt": "2026-10-30T03:00:00Z",
-      "updatedAt": "2026-10-30T03:00:00Z"
+      "updatedAt": "2026-11-16T07:30:00Z"
     },
     {
       "id": "author-r11v-acre-mound-network",
