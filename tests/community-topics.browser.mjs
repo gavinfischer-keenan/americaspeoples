@@ -19,9 +19,9 @@ try{
  }
  console.log('PASS promoted planned bookmarks open all three playable movies');
  await page.goto(base+'/#topics');
- assert.equal(await page.locator('.topic-index .library-card').count(),20);
+ assert.equal(await page.locator('.dive-card a[href^="#topic/"]').count(),17);
  assert.equal(await page.locator('[data-future-topic]').count(),0);
- assert.match(await page.locator('.topic-index .library-card').last().innerText(),/^20/);
+ assert.equal(await page.locator('a[href="#topic/languages"]').count(),0);
  assert.equal(await page.locator('[data-future-topic="haudenosaunee"]').count(),0);
  await page.goto(base+'/#topics/spanish-treasure');
  await page.locator('.related-dives a[href="#topic/caribbean-enslavement"]').click();
@@ -50,7 +50,7 @@ try{
  assert.equal(await page.locator('#year-number').inputValue(),'1794');
  assert.equal(await page.locator('#story-select').inputValue(),'free');
  assert.equal(await page.getByLabel('Follow an expedition',{exact:true}).inputValue(),'');
- await page.getByRole('link',{name:'Topic dives',exact:true}).click();
+ await page.getByRole('link',{name:'Deep dives',exact:true}).click();await page.locator('.dive-tabs a[href="#dives/cultures"]').click();
  await page.locator('a[href="#topic/haudenosaunee"]').click();await page.locator('#topic-play').waitFor();
  assert.equal(await page.locator('[data-topic-scene="8"]').getAttribute('aria-current'),'step');
  assert.match(await page.locator('#topic-year').innerText(),/1,932/);
@@ -66,7 +66,7 @@ try{
   assert.match(await page.locator('#topic-year').innerText(),/1,886/);
  }
  await page.setViewportSize({width:390,height:844});await page.goto(base+'/#topics');
- await page.locator('.topic-index .library-card').first().waitFor();
+ await page.locator('.dive-card').first().waitFor();
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
  console.log('PASS desktop/tablet chapters, named Amazon sites and simple phone index');
  assert.deepEqual(errors,[]);

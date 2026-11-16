@@ -78,6 +78,8 @@ const phases = [
   ["Community topics, queue promotion and tablet navigation", node, ["--import", "tsx", "tests/community-topics.browser.mjs"]],
   ["Land and sovereignty topics, later-date isolation and tablet navigation", node, ["--import", "tsx", "tests/sovereignty-topics.browser.mjs"]],
   ["Complete topic queue, current chapter evidence and packaged gap guides", node, ["--import", "tsx", "tests/remaining-topics.browser.mjs"]],
+  ["Categorized deep dives, existing content and legacy navigation", node, ["tests/deep-dives.browser.mjs"]],
+  ["Early continuity, contextual place movies and guide navigation", node, ["--import", "tsx", "tests/early-continuity.browser.mjs"]],
   ["Regional evidence in the shared movie and packaged source guide", node, ["tests/regional-gaps.browser.mjs"]],
   ["Interior communities, dated connections and conflict windows", node, ["tests/interior-frontiers.browser.mjs"]],
   ["Map picking, camera, touch and label usability", node, ["tests/map-ux.browser.mjs"]],

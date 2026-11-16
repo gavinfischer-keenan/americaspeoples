@@ -8,7 +8,7 @@ import { stories } from './stories';
 export function appShell(count:number,endYear:number):string{return `
 <a class="skip-link" href="#main" data-skip-content>Skip to content</a>
 <header class="topbar"><a class="brand" href="#movie"><span class="brand-mark" aria-hidden="true">◈</span><span><h1>Americas Peoples</h1><small>A HUMAN ATLAS</small></span></a>
-<nav aria-label="Main navigation"><a href="#movie">Watch</a><a href="#explore">Explore</a><a href="#topics">Topic dives</a><a href="#library">Library</a></nav>
+<nav aria-label="Main navigation"><a href="#movie">Watch</a><a href="#explore">Explore</a><a href="#dives">Deep dives</a><a href="#library">Library</a></nav>
 <a class="header-about" href="#about" aria-label="About this atlas">About the atlas ↗</a></header>
 <div class="shell"><main id="main" tabindex="-1"></main></div>
 <footer class="timeline" aria-label="Playback and date">
@@ -46,9 +46,9 @@ export function mapShell(o:MapShellOptions):string{
 }
 
 export function libraryHTML(count:number):string{return `<article class="library-page"><div class="eyebrow">THE RESEARCH BEHIND THE MAP</div><h2>Follow your curiosity.</h2><p class="lead">${count.toLocaleString()} records. Every claim has a context, a date, and a source to explore.</p><div class="library-grid">${[
- ['#topics','↗','Topic dives','Horses, maize, trade and languages: focused movies with their own clocks.'],
+ ['#dives','↗','Deep dives','Subjects, places, languages and cultures: movies, guides and what is coming next.'],
  ['#evidence','01','Evidence index','Search the complete collection of places, movements and events.'],
- ['#sites','02','Places & cultures','Buildings, settlements and the communities around them.'],
+ ['#dives/places','02','Places','Buildings, settlements and the communities around them.'],
  ['#context','03','Movement & context','Examine connections, language, and what the evidence can establish.'],
  ['#physical','04','The changing environment','Ice, ocean reference patterns, and natural-event sources.'],
  ['#proposals','05','Contribute evidence','Draft a suggestion, import research, or share a source-linked collection.'],
