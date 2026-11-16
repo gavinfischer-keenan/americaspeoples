@@ -1,3 +1,4 @@
+import {remainingTopics,remainingTopicOnlyIds} from './remaining-topic-dives';
 import {sovereigntyTopics,sovereigntyTopicOnlyIds} from './sovereignty-topic-dives';
 import {communityTopics,communityTopicOnlyIds} from './community-topic-dives';
 import {pacificTopics,pacificTopicOnlyIds} from './pacific-topic-dives';
@@ -10,10 +11,10 @@ const horseIds=['isabela','mexico','puerto-real','american-falls','patagonia'].m
 const maizeIds=['balsas','peru','belize','southwest','northeast'].map(id=>'topic-maize-'+id);
 const languageIds=['austronesian-model','molina','lima','tupi','guarani','massachusett','cumana','rapanui','tahiti','quechua','aymara','saliba','guatemala','wendat','mohawk','mutsun','unalaska'].map(id=>'topic-language-'+id);
 /** Only new focused material is omitted from the shared map. Existing evidence stays. */
-export const topicOnlyIds=new Set([...sovereigntyTopicOnlyIds,...communityTopicOnlyIds,...horseIds,...maizeIds,...languageIds,'topic-trade-balsa',...pacificTopicOnlyIds]);
+export const topicOnlyIds=new Set([...remainingTopicOnlyIds,...sovereigntyTopicOnlyIds,...communityTopicOnlyIds,...horseIds,...maizeIds,...languageIds,'topic-trade-balsa',...pacificTopicOnlyIds]);
 const sharedDateNote='The map shows included evidence at this date and explicitly dated earlier finds. Empty space is a coverage gap, not evidence of absence. Select a marker to see what was actually dated.';
 export const topics:TopicDive[]=[
- ...sovereigntyTopics,...communityTopics,...pacificTopics,
+ ...remainingTopics,...sovereigntyTopics,...communityTopics,...pacificTopics,
  {id:'horses',title:'Horses across the Americas',subtitle:'Ships, Indigenous husbandry, and very different regional histories',description:'Follow domestic horses from Caribbean landings into Indigenous networks and southern Patagonia.',recordIds:horseIds,method:'Dated specimens and documented arrivals are evidence points. They do not create an invented front of horses spreading uniformly over the land. Modern domestic horses and extinct native American horses have separate histories.',dateNote:sharedDateNote,scenes:[
   s('horses-atlantic',1493,'Horses cross the Atlantic','Horses arrived with Columbus’s second expedition. Ships carried living animals, whose feeding, watering and survival were part of establishing colonial settlements. This starts the domestic-horse thread; it does not erase the much older history of native American horses.','The La Isabela marker locates a documented arrival, not every landing or every animal.',[horseIds[0]],[-71,20],9),
   s('horses-mexico',1519,'Sixteen horses, many later pathways','Cortés brought horses to Mexico. Over subsequent generations, Indigenous people obtained, bred, exchanged and adapted horses to their own purposes. A story told only through Spanish expeditions misses that agency.','No single continuous northward route or universal adoption year is established.',[horseIds[1]],[-96,20],7),
