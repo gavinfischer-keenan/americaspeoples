@@ -51,5 +51,5 @@
 **Interfaces:** consumes integrated dataset; produces verified branch/PR.
 
 - [x] Run the full release gate and check representative shared-map points/routes through the browser. Expected: all pass and live-source review links resolve.
-- [ ] Obtain one fresh whole-branch review; resolve material findings in one fix pass with RED→GREEN and green suite. No second review.
-- [ ] Record final counts, source limitations, remaining gaps and cumulative calls; commit, push and create a PR.
+- [x] Obtain one fresh whole-branch review; resolve material findings in one fix pass with RED→GREEN and green suite. No second review.
+- [x] Record final counts, source limitations, remaining gaps and cumulative calls; commit, push and create a PR.
