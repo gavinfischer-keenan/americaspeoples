@@ -24,3 +24,12 @@ test('earlier evidence remains reachable without moving the opening chapter',()=
  s.seekScene(0);assert.equal(s.year,100);
  s.seekYear(-1e9);assert.equal(s.year,40);
 });
+
+test('only the approved Hawaii topic can seek and play through 1959',()=>{
+ const hawaii=new TopicSession({...story,id:'hawaii-statehood',scenes:[story.scenes[0],{...story.scenes[1],year:1959}]});
+ hawaii.seekYear(1959);assert.equal(hawaii.year,1959);
+ hawaii.seekYear(1960);assert.equal(hawaii.year,1959);
+ hawaii.seekYear(1958);hawaii.advance(1000);assert.equal(hawaii.year,1959);assert.equal(hawaii.completed,true);
+ hawaii.seekScene(0);hawaii.advance(1e9);assert.equal(hawaii.year,1959);assert.equal(hawaii.completed,true);
+ const other=new TopicSession({...story,id:'territorial-purchases'});other.seekYear(1959);assert.equal(other.year,1934);
+});
