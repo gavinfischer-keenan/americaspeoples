@@ -10,8 +10,8 @@ export class TopicSession {
   guided=true;
   completed=false;
   readonly minYear:number;
-  constructor(readonly story:Story){
-    this.minYear=Math.min(...story.scenes.map(s=>s.year));
+  constructor(readonly story:Story,evidenceStartYear?:number){
+    this.minYear=Math.min(...story.scenes.map(s=>s.year),Number.isFinite(evidenceStartYear)?evidenceStartYear!:Infinity);
     this.year=story.scenes[0].year;
   }
   seekYear(year:number){

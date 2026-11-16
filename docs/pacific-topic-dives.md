@@ -2,7 +2,7 @@
 
 Version 0.12.0 adds separate movies for **sweet potatoes, boats/voyaging and dogs**, alongside horses, maize, trade and languages. Each keeps its own clock and focused map. Ordinary Watch and Explore continue to show the shared historical world.
 
-This intake adds 16 topic evidence records and eight shared human-context records, bringing the published collection to 1,833. Seven topic movies contain 52 chapters. This is selected evidence, not a comprehensive inventory of Pacific archaeology, crop introductions, boats or dogs.
+This intake adds 16 topic evidence records and nine shared human-context records, bringing the published collection to 1,834. Seven topic movies contain 52 chapters. This is selected evidence, not a comprehensive inventory of Pacific archaeology, crop introductions, boats or dogs.
 
 ## What the dates mean
 
@@ -29,7 +29,7 @@ The boats movie also reuses existing Sahul, Wallacean, Arctic, Lapita, coastal t
 
 ## Shared context and reciprocal links
 
-All 44 subject-only records across the seven dives have a recorded context decision in `data/topic-context-audit.json`. Existing shared evidence used by a topic remains globally eligible. New shared records cover Wairau Bar, Triangle Flat, Anaho, Kohala land use, deliberate burials at Matja Kuru 2 and Stilwell II, the Ruiz expedition’s encounter with Indigenous merchants, and the Russian missionary arrival at Unalaska.
+All 44 subject-only records across the seven dives have a recorded context decision in `data/topic-context-audit.json`. Existing shared evidence used by a topic remains globally eligible. New shared records cover Hawaiian provisioning of the visiting expedition in 1779, Wairau Bar, Triangle Flat, Anaho, Kohala land use, deliberate burials at Matja Kuru 2 and Stilwell II, the Ruiz expedition’s encounter with Indigenous merchants, and the Russian missionary arrival at Unalaska.
 
 Subject records and their canonical context link in both directions. “In the shared history” displays each context record’s own date: a related earlier place is not silently made contemporary with the chapter. The explicit shared-map action selects that record’s supported date and clears expedition focus. Ordinary return preserves the previous shared time, camera and filters. A topical specimen remains outside the master map even when its associated human activity is included there.
 

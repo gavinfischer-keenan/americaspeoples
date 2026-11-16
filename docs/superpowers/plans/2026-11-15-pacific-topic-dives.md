@@ -57,5 +57,5 @@
 
 - [x] Update version, coverage notes, attribution, generated workbook and package.
 - [x] Run required unit/data/API/package/browser verification and inspect screenshots.
-- [ ] Obtain one fresh-context whole-branch review, then one combined material-fix pass with reproducing tests.
+- [x] Obtain one fresh-context whole-branch review, then one combined material-fix pass with reproducing tests.
 - [ ] Commit/push and open a PR with evidence limits and cumulative research usage; leave live release unchanged.

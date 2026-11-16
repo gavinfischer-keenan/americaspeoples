@@ -54,3 +54,14 @@ test('Kohala uses the primary publication’s specimen window rather than a late
  assert.equal(historyState(r,1431),'past-place');
  assert.equal(r.claims[0].status,'under discussion');
 });
+
+test('Hawaiian dog observations connect to independently attested human provisioning',()=>{
+ const dog=record('topic-dog-hawaii'),context=record('context-hawaii-provisioning-1779');
+ assert.ok(dog.review.relatedIds.includes(context.id));
+ assert.ok(context.review.relatedIds.includes(dog.id));
+ assert.equal(historyState(context,1778),'outside');
+ assert.equal(historyState(context,1779),'active');
+ assert.equal(historyState(context,1780),'past-place');
+ assert.ok(!topicOnlyIds.has(context.id));
+ assert.match(context.claims[0].text,/provision|suppl/i);
+});

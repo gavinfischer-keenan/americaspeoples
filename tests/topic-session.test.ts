@@ -16,3 +16,11 @@ test('topic playback stops at the final chapter and manual timeline uses its own
  s.seekYear(-1e9);assert.equal(s.year,s.minYear);s.seekYear(1e9);assert.equal(s.year,1934);
  s.seekScene(0);assert.equal(s.completed,false);assert.equal(s.year,100);
 });
+
+test('earlier evidence remains reachable without moving the opening chapter',()=>{
+ const s=new TopicSession(story,40);
+ assert.equal(s.year,100);
+ s.seekYear(40);assert.equal(s.year,40);
+ s.seekScene(0);assert.equal(s.year,100);
+ s.seekYear(-1e9);assert.equal(s.year,40);
+});

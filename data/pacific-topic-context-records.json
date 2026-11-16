@@ -1,6 +1,82 @@
 {
   "records": [
     {
+      "id": "context-hawaii-provisioning-1779",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Hawaiʻi — communities provisioning the visiting expedition",
+      "culture": {
+        "id": "hawaiian-communities-and-british-expedition-crews",
+        "name": "Hawaiian communities and British expedition crews",
+        "kind": "people",
+        "color": "#387e83"
+      },
+      "location": {
+        "id": "context-hawaii-provisioning-1779-place",
+        "name": "Hawaiʻi Island; Kealakekua orientation anchor",
+        "lon": -155.92,
+        "lat": 19.48,
+        "precision": "Rounded public regional/locality anchor for orientation; not an excavation, burial or surveyed structure coordinate.",
+        "provenance": "Named setting in the cited source; editorial geographic placement, with scale described in the record limitations."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1779,
+        "end": 1779,
+        "approximate": true,
+        "original": "1779 CE visit and provisioning observation; published in 1784",
+        "method": "Contemporary voyage account, Book V, p. 118; selected attestation within a longer visit.",
+        "interpretation": "This selected attestation is not a complete voyage schedule or a continuous trade route. The island-scale account is anchored near Kealakekua for orientation, not at the exact location of every exchange. The visiting British perspective does not establish Hawaiian consent or the terms of all provisioning."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "King’s account records Hawaiian communities supplying food to the Resolution and Discovery during the expedition’s presence around Hawaiʻi in 1779. The visiting crews depended on an already inhabited and productive island.",
+          "status": "well-supported",
+          "explanation": "This selected attestation is not a complete voyage schedule or a continuous trade route. The island-scale account is anchored near Kealakekua for orientation, not at the exact location of every exchange. The visiting British perspective does not establish Hawaiian consent or the terms of all provisioning.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "March 1779 account of Hawaiian animals, p. 118; a visiting European observer’s account, not an Indigenous statement of meaning",
+              "stance": "supports",
+              "note": "Supports the stated evidence and its particular chronology; not every inferred journey or nearby settlement."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "authors": "James King, in James Cook and James King",
+          "title": "A Voyage to the Pacific Ocean, Volume III",
+          "year": 1784,
+          "venue": "Institutional or historical source",
+          "url": "https://whalesite.org/cook/1784%20-%20Cook%20-%20v3.htm",
+          "referenceType": "web-resource",
+          "access": "Public primary/institutional source inspected 2026-11-15; original atlas prose."
+        }
+      ],
+      "review": {
+        "summary": "King’s account records Hawaiian communities supplying food to the Resolution and Discovery during the expedition’s presence around Hawaiʻi in 1779. The visiting crews depended on an already inhabited and productive island.",
+        "limitations": "This selected attestation is not a complete voyage schedule or a continuous trade route. The island-scale account is anchored near Kealakekua for orientation, not at the exact location of every exchange. The visiting British perspective does not establish Hawaiian consent or the terms of all provisioning.",
+        "discussion": "These evidence types date different things. The atlas separates findings from inferred movement and from settlement lifespans.",
+        "provenance": "Source-specific original synthesis for the Pacific topic expansion.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added in the Pacific topic and shared-context expansion."
+        ],
+        "relatedIds": [
+          "topic-dog-hawaii"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
       "id": "context-wairau-bar",
       "revision": 1,
       "type": "occurrence",
