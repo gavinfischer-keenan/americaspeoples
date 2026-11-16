@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 import type { EvidenceRecord } from "../src/model";
 import { validateRecord, validateDataset } from "../src/validation";
 import { historyLabel, historyState } from "../src/history";
+import { dataset } from "../src/published-data";
 
 const load = (name: string): EvidenceRecord[] => JSON.parse(readFileSync(new URL(`../data/${name}`, import.meta.url), "utf8")).records;
 const pacific = load("pacific-expansion-records.json");
@@ -19,7 +20,8 @@ test("Pacific and violence additions are complete, source-linked and internally 
   assert.ok(pacific.length >= 30);
   assert.ok(violence.length >= 25);
   for (const record of records) assert.deepEqual(validateRecord(record), [], record.id);
-  assert.deepEqual(validateDataset({schemaVersion: 1, version: "test", reviewedAt: "2026-11-15", coverage: "Pacific and violence additions", license: "Project license", records}), []);
+  // Related evidence can now cross collection boundaries into the shared atlas.
+  assert.deepEqual(validateDataset(dataset), []);
   for (const r of records) {
     assert.match(r.location!.precision, /\d+ km/);
     assert.match(r.location!.provenance, /approximation|Rounded public UNESCO/);
