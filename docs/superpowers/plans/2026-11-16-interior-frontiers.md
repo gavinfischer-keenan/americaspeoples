@@ -43,13 +43,13 @@
 - [x] Add meaningful tests for shared membership, activity-window endpoints, dated violence, canonical places, reciprocal links and unchanged earlier baselines; observe RED before integration.
 - [x] Author new records and links, add collection to publication/build manifests, update current campaign coverage and source guide.
 - [x] Regenerate workbook and coverage; run tests, validation and typecheck. Expected: all pass.
-- [ ] Commit integrated evidence.
+- [x] Commit integrated evidence.
 
 ### Task 3: Verification and reviewable delivery
 
 **Files:** browser checks and release verification documentation.
 **Interfaces:** consumes integrated dataset; produces verified branch/PR.
 
-- [ ] Run the full release gate and check representative shared-map points/routes through the browser. Expected: all pass and live-source review links resolve.
+- [x] Run the full release gate and check representative shared-map points/routes through the browser. Expected: all pass and live-source review links resolve.
 - [ ] Obtain one fresh whole-branch review; resolve material findings in one fix pass with RED→GREEN and green suite. No second review.
 - [ ] Record final counts, source limitations, remaining gaps and cumulative calls; commit, push and create a PR.
