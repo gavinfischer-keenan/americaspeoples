@@ -1,0 +1,157 @@
+{
+  "retrieved": "2026-11-15",
+  "license": "Public domain; original Natural Earth and USGS material remains public domain.",
+  "global": {
+    "url": "https://naciscdn.org/naturalearth/50m/raster/NE2_50M_SR.zip",
+    "sha256": "0e9838cb3acb10ce4674b74a8f79bd5aae02e4b715185d54f018afaf4d9451f4",
+    "terms": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "pixels": [
+      10800,
+      5400
+    ]
+  },
+  "local": [
+    {
+      "id": "hawaiian-islands",
+      "bounds": [
+        -160.5,
+        18.8,
+        -154.7,
+        22.4
+      ],
+      "pixels": [
+        1024,
+        636
+      ],
+      "request": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?f=json&bbox=-160.5%2C18.8%2C-154.7%2C22.4&bboxSR=4326&imageSR=4326&size=1024%2C636&format=png&adjustAspectRatio=false&interpolation=RSP_BilinearInterpolation&renderingRule=%7B%22rasterFunction%22%3A+%22Hillshade+Gray%22%7D",
+      "source": "USGS National Map 3DEP Bare Earth DEM; modern reference, not historical terrain.",
+      "rendering": "Hillshade Gray",
+      "sha256": "b8d7bc5f6321f1b8b7a703d264ae3d5dca81ea0cb7dcb2fcd71ee1bc35e6eb7e"
+    },
+    {
+      "id": "oahu",
+      "bounds": [
+        -158.35,
+        21.18,
+        -157.62,
+        21.75
+      ],
+      "pixels": [
+        1024,
+        800
+      ],
+      "request": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?f=json&bbox=-158.35%2C21.18%2C-157.62%2C21.75&bboxSR=4326&imageSR=4326&size=1024%2C800&format=png&adjustAspectRatio=false&interpolation=RSP_BilinearInterpolation&renderingRule=%7B%22rasterFunction%22%3A+%22Hillshade+Gray%22%7D",
+      "source": "USGS National Map 3DEP Bare Earth DEM; modern reference, not historical terrain.",
+      "rendering": "Hillshade Gray",
+      "sha256": "f93ebf64a504c4062e597986e9383702f1d68178ac7caf99cc47b897a0b77235"
+    },
+    {
+      "id": "maui",
+      "bounds": [
+        -156.75,
+        20.5,
+        -155.95,
+        21.08
+      ],
+      "pixels": [
+        1024,
+        742
+      ],
+      "request": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?f=json&bbox=-156.75%2C20.5%2C-155.95%2C21.08&bboxSR=4326&imageSR=4326&size=1024%2C742&format=png&adjustAspectRatio=false&interpolation=RSP_BilinearInterpolation&renderingRule=%7B%22rasterFunction%22%3A+%22Hillshade+Gray%22%7D",
+      "source": "USGS National Map 3DEP Bare Earth DEM; modern reference, not historical terrain.",
+      "rendering": "Hillshade Gray",
+      "sha256": "3eb9bf8f973aad0aacf9ed76cae3554a8a5b5c6aef11a9d1181ca59f350802f1"
+    },
+    {
+      "id": "north-hawaii",
+      "bounds": [
+        -156.05,
+        19.9,
+        -155.4,
+        20.28
+      ],
+      "pixels": [
+        1024,
+        599
+      ],
+      "request": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?f=json&bbox=-156.05%2C19.9%2C-155.4%2C20.28&bboxSR=4326&imageSR=4326&size=1024%2C599&format=png&adjustAspectRatio=false&interpolation=RSP_BilinearInterpolation&renderingRule=%7B%22rasterFunction%22%3A+%22Hillshade+Gray%22%7D",
+      "source": "USGS National Map 3DEP Bare Earth DEM; modern reference, not historical terrain.",
+      "rendering": "Hillshade Gray",
+      "sha256": "635b4e7359576c1999b18df3b0359b1603063088105cd47a54d2ad72386c5bd8"
+    },
+    {
+      "id": "four-corners",
+      "bounds": [
+        -110.5,
+        35,
+        -106.5,
+        38.5
+      ],
+      "pixels": [
+        1024,
+        896
+      ],
+      "request": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?f=json&bbox=-110.5%2C35%2C-106.5%2C38.5&bboxSR=4326&imageSR=4326&size=1024%2C896&format=png&adjustAspectRatio=false&interpolation=RSP_BilinearInterpolation&renderingRule=%7B%22rasterFunction%22%3A+%22Hillshade+Gray%22%7D",
+      "source": "USGS National Map 3DEP Bare Earth DEM; modern reference, not historical terrain.",
+      "rendering": "Hillshade Gray",
+      "sha256": "cff3aadd4a3fa8ae5a667a9b2789c241462ea52078acbcc3bd0ee02fd284e324"
+    },
+    {
+      "id": "chaco",
+      "bounds": [
+        -108.03,
+        36,
+        -107.88,
+        36.12
+      ],
+      "pixels": [
+        1024,
+        819
+      ],
+      "request": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?f=json&bbox=-108.03%2C36%2C-107.88%2C36.12&bboxSR=4326&imageSR=4326&size=1024%2C819&format=png&adjustAspectRatio=false&interpolation=RSP_BilinearInterpolation&renderingRule=%7B%22rasterFunction%22%3A+%22Hillshade+Gray%22%7D",
+      "source": "USGS National Map 3DEP Bare Earth DEM; modern reference, not historical terrain.",
+      "rendering": "Hillshade Gray",
+      "sha256": "215d00974255a6db743a53df8ba097bc39dff9e38295424c2e41dd8c88793149"
+    },
+    {
+      "id": "mesa-verde",
+      "bounds": [
+        -108.6,
+        37.1,
+        -108.35,
+        37.4
+      ],
+      "pixels": [
+        853,
+        1024
+      ],
+      "request": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?f=json&bbox=-108.6%2C37.1%2C-108.35%2C37.4&bboxSR=4326&imageSR=4326&size=853%2C1024&format=png&adjustAspectRatio=false&interpolation=RSP_BilinearInterpolation&renderingRule=%7B%22rasterFunction%22%3A+%22Hillshade+Gray%22%7D",
+      "source": "USGS National Map 3DEP Bare Earth DEM; modern reference, not historical terrain.",
+      "rendering": "Hillshade Gray",
+      "sha256": "bef53f0566d76c1d245e21c947b58251a5d0bf92cc82eeda8512e4b03b2e83ae"
+    },
+    {
+      "id": "hovenweep",
+      "bounds": [
+        -109.2,
+        37.3,
+        -108.65,
+        37.7
+      ],
+      "pixels": [
+        1024,
+        745
+      ],
+      "request": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?f=json&bbox=-109.2%2C37.3%2C-108.65%2C37.7&bboxSR=4326&imageSR=4326&size=1024%2C745&format=png&adjustAspectRatio=false&interpolation=RSP_BilinearInterpolation&renderingRule=%7B%22rasterFunction%22%3A+%22Hillshade+Gray%22%7D",
+      "source": "USGS National Map 3DEP Bare Earth DEM; modern reference, not historical terrain.",
+      "rendering": "Hillshade Gray",
+      "sha256": "4aed1b720982559ed2016ee51c258ec1b7136fe7e7934d0b71bbea32c530dde1"
+    }
+  ]
+}

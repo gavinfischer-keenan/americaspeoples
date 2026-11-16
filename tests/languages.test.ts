@@ -82,7 +82,9 @@ test("default combined frame includes island Asia and Australia while cropping A
     const xy=p(position as [number,number])!;
     assert.ok(xy[0]<0 || xy[0]>1000, String(position));
   }
-  assert.ok(Math.abs(mapProjection("americas")([-100,15])![0]-500)<.01);
+  assert.ok(Math.abs(mapProjection("americas")([-110,10])![0]-500)<.01);
+  const australia=mapProjection("americas")([132.89,-12.5])!;
+  assert.ok(australia[0]>=0&&australia[0]<=1000,'earliest Australian evidence stays in the Americas overview');
 });
 const tables = (overlay: boolean) => {
   const r = languageRecord();

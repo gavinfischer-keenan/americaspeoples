@@ -40,7 +40,7 @@ try{
     failures++;await route.fulfill({status:503,contentType:'application/json',body:JSON.stringify({error:'Injected middle-page failure'})});
    }else await route.continue();
   });
-  await page.goto(origin+'/#map');await page.locator('#map-host svg').waitFor();
+  await page.goto(origin+'/#map');await page.locator('.map-canvas > svg').waitFor();
   await until(()=>failures>0,'The middle hazard page was not requested');
   await page.locator('#toggle-layers').click();
   await page.getByRole('button',{name:'Retry climate catalog',exact:true}).waitFor();
@@ -67,7 +67,7 @@ try{
     await route.fulfill({status:503,contentType:'application/json',body:JSON.stringify({error:'Injected old snapshot failure'})});
    }else await route.continue();
   });
-  await page.goto(origin+'/#map');await page.locator('#map-host svg').waitFor();
+  await page.goto(origin+'/#map');await page.locator('.map-canvas > svg').waitFor();
   await page.locator('#toggle-layers').click();
   await jump(page,20050);await until(()=>held.has('22000'),'22000 snapshot was not held');
   await jump(page,22050);await until(()=>held.has('24000'),'24000 snapshot was not held');

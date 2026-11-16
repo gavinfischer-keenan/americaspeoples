@@ -13,7 +13,7 @@ try{
  const client=await page.context().newCDPSession(page);await client.send('Performance.enable');
  const metric=async()=>Object.fromEntries((await client.send('Performance.getMetrics')).metrics.map(m=>[m.name,m.value]));
  const before=await metric();
- const box=await page.locator('#map-host svg').boundingBox();
+ const box=await page.locator('.map-canvas > svg').boundingBox();
  await page.mouse.move(box.x+box.width*.5,box.y+box.height*.55);await page.mouse.down();
  await page.mouse.move(box.x+box.width*.55,box.y+box.height*.58,{steps:120});await page.mouse.up();
  const after=await metric();

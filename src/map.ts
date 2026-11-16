@@ -1,3 +1,4 @@
+import {terrainHTML,intersectsView,type ViewBounds} from './terrain';
 import { mapProjection, type MapScope } from "./map-projection";
 import { geoPath, geoGraticule10 } from "d3-geo";
 import { MapGeometry } from "./map-geometry";
@@ -23,13 +24,15 @@ const compactPlaceName=(name:string)=>name.length<=40?name:name.slice(0,39).trim
 export class MapView {
   readonly context=new AtlasContext();
   readonly element = document.createElement("div");
-  private scope: MapScope = "pacific";
+  private terrainKey="";
+  private scope: MapScope = "americas";
   private width=1000;
   private height=800;
   private hasViewport=false;
   private projection = mapProjection(this.scope);
   private geometry = new MapGeometry(this.projection);
   private viewportFrame: number | null = null;
+  private viewportDrawPending=false;
   private scale = 1;
   private tx = 0;
   private ty = 0;
@@ -53,7 +56,7 @@ export class MapView {
   ) {
     this.element.className = "map-canvas";
     const path = geoPath(this.projection);
-    this.element.innerHTML = `<svg viewBox="0 0 1000 800" role="img" aria-label="Map of the Americas and Pacific. Use the visible records list for keyboard access to evidence." tabindex="0"><defs><pattern id="population-unknown" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V5" stroke="#fff" stroke-width="1.8" opacity=".8"/></pattern><radialGradient id="reach-fade"><stop offset="0%" stop-color="white" stop-opacity=".35"/><stop offset="40%" stop-color="white" stop-opacity=".22"/><stop offset="100%" stop-color="white" stop-opacity="0"/></radialGradient><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#e5c78c"/></marker></defs><g class="world"><path class="graticule" d="${path(geoGraticule10())}"/><path class="land" d="${path(land)}"/><g class="map-labels">${this.labels()}</g><g class="features"></g></g></svg><div class="map-controls"><label class="map-scope">Map region<select aria-label="Map region"><option value="pacific">Asia-Pacific / Americas</option><option value="americas">Americas focus</option><option value="atlantic">Atlantic connections</option><option value="world">Whole world</option></select></label><button data-zoom="in" aria-label="Zoom in">+</button><button data-zoom="out" aria-label="Zoom out">−</button><button data-zoom="reset" aria-label="Reset map view">⌖</button></div><div class="map-caption">Present-day reference coastlines · Not an Ice Age reconstruction<br>Made with Natural Earth · Public domain</div>`;
+    this.element.innerHTML = `<svg viewBox="0 0 1000 800" role="img" aria-label="Map of the Americas and Pacific. Use the visible records list for keyboard access to evidence." tabindex="0"><defs><pattern id="population-unknown" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V5" stroke="#fff" stroke-width="1.8" opacity=".8"/></pattern><radialGradient id="reach-fade"><stop offset="0%" stop-color="white" stop-opacity=".35"/><stop offset="40%" stop-color="white" stop-opacity=".22"/><stop offset="100%" stop-color="white" stop-opacity="0"/></radialGradient><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#e5c78c"/></marker></defs><g class="world"><path class="graticule" d="${path(geoGraticule10())}"/><path class="land" d="${path(land)}"/><clipPath id="terrain-land-clip"><path class="terrain-land-mask" d="${path(land)}"/></clipPath><g class="terrain" clip-path="url(#terrain-land-clip)" aria-hidden="true"></g><g class="map-labels">${this.labels()}</g><g class="features"></g></g></svg><div class="map-controls"><label class="map-scope">Map region<select aria-label="Map region"><option value="pacific">Asia-Pacific / Americas</option><option value="americas">Americas focus</option><option value="atlantic">Atlantic connections</option><option value="world">Whole world</option></select></label><button data-zoom="in" aria-label="Zoom in">+</button><button data-zoom="out" aria-label="Zoom out">−</button><button data-zoom="reset" aria-label="Reset map view">⌖</button></div><div class="map-caption">Modern relief & coastlines · Not a reconstruction for this date<br>Natural Earth + USGS 3DEP · Public domain</div>`;
     const svg = $<SVGSVGElement>("svg", this.element);
     svg.setAttribute('role','group');
     svg.setAttribute('aria-roledescription','interactive map');
@@ -187,18 +190,18 @@ export class MapView {
   private hideTooltip(){this.hovered=null;this.tooltip.hide();}
   /** Route owners can clear body-mounted hover content when reusing this map. */
   clearHover():void{this.hideTooltip();}
-  setDetailedLand(land:any):void{this.land=land;$('.land',this.element).setAttribute('d',geoPath(this.projection)(land)??'');}
+  setDetailedLand(land:any):void{this.land=land;$('.land',this.element).setAttribute('d',geoPath(this.projection)(land)??'');$('.terrain-land-mask',this.element).setAttribute('d',geoPath(this.projection)(land)??'');}
   refreshContext():void{
     let group=this.element.querySelector<SVGGElement>('.historical-context');
     if(!group){group=document.createElementNS('http://www.w3.org/2000/svg','g');group.setAttribute('class','historical-context');group.setAttribute('aria-hidden','true');$('.world',this.element).insertBefore(group,$('.features',this.element));}
-    group.innerHTML=this.context.draw(this.projection,this.year,this.scale);
+    group.innerHTML=this.context.draw(this.projection,this.year,this.scale,false,this.viewBounds());
     // Journeys sit above translucent evidence areas without intercepting clicks.
     let journeys=this.element.querySelector<SVGGElement>('.journey-context');
     if(!journeys){journeys=document.createElementNS('http://www.w3.org/2000/svg','g');journeys.setAttribute('class','journey-context');journeys.setAttribute('aria-hidden','true');$('.world',this.element).append(journeys);}
     journeys.replaceChildren(...Array.from(group.querySelectorAll('.voyage-tracks')));
     this.declutterLabels();
   }
-  refreshVoyage():void{const group=this.element.querySelector('.voyage-tracks');if(group)group.outerHTML=this.context.draw(this.projection,this.year,this.scale,true);}
+  refreshVoyage():void{const group=this.element.querySelector('.voyage-tracks');if(group)group.outerHTML=this.context.draw(this.projection,this.year,this.scale,true,this.viewBounds());}
   private opacity(r:DisplayRecord){return this.interaction?.mode==='explore'?1:historyOpacity(r,this.year)??temporalOpacity(r.time,this.year);}
   private uncertainty(r:DisplayRecord):boolean{
     if(this.interaction?.mode!=='explore')return temporalState(r.time,this.year)==='possible';
@@ -212,6 +215,7 @@ export class MapView {
     if(this.scale>4||this.records.some(r=>this.highlighted.has(r.id)&&(r.history?.kind==='migration'||r.history?.kind==='exchange')))return '';
     return [['NORTH AMERICA',-105,50],['SOUTH AMERICA',-62,-20],['EUROPE',15,53],['AFRICA',20,8],['ATLANTIC',-35,12],['PACIFIC',-140,-5],['ISLAND ASIA',130,5],['AUSTRALIA',134,-25]].map(([name,lon,lat])=>{const p=this.projection([Number(lon),Number(lat)]);return p?`<text x="${p[0]}" y="${p[1]}" style="font-size:${10/this.scale}px">${name}</text>`:'';}).join('');
   }
+  overview(scope:MapScope="americas"){this.scope=scope;if(this.element.isConnected)this.resize(false);this.resetView();}
   setScope(scope: MapScope, redraw = true) {
     if (scope === this.scope) return;
     this.scope = scope;
@@ -220,12 +224,14 @@ export class MapView {
   private rebuildProjection(rotation?:[number,number,number],extra:DisplayRecord[]=[]){
     this.projection=mapProjection(this.scope,this.width,this.height);
     if(rotation)this.projection.rotate(rotation);
+    this.terrainKey="";
     this.geometry.setProjection(this.projection);
     this.flowPaths.clear();
     this.icePaths.clear();
     this.geometry.update([...this.records, ...this.contextRecords,...extra]);
     const path = geoPath(this.projection);
     $(".land", this.element).setAttribute("d", path(this.land) ?? "");
+    $(".terrain-land-mask",this.element).setAttribute("d",path(this.land)??"");
     $(".graticule", this.element).setAttribute("d", path(geoGraticule10()) ?? "");
     $(".map-labels", this.element).innerHTML = this.labels();
     ($(".map-scope select", this.element) as HTMLSelectElement).value = this.scope;
@@ -268,6 +274,7 @@ export class MapView {
     this.draw();
   }
   private transform() {
+    this.viewportDrawPending=true;
     this.hideTooltip();
     const [[x0,y0],[x1,y1]]=geoPath(this.projection).bounds({type:'Sphere'});
     this.tx=Math.max(48-x1*this.scale,Math.min(this.width-48-x0*this.scale,this.tx));
@@ -283,7 +290,7 @@ export class MapView {
     if (this.viewportFrame !== null) return;
     this.viewportFrame = requestAnimationFrame(() => {
       this.viewportFrame = null;
-      if (this.element.isConnected) {this.updateTabStops();this.declutterLabels();this.onViewportChange();}
+      if (this.element.isConnected) {if(this.viewportDrawPending)this.draw();this.onViewportChange();}
     });
   }
   private updateTabStops(){
@@ -315,6 +322,14 @@ export class MapView {
     return boundariesAt(this.context.boundaries,this.year).filter(b=>(b.detail!=='regional'||this.scale>=4)&&this.context.projectedBounds(b,this.projection).some(bounds=>boundsInViewport(bounds,this.scale,this.tx,this.ty,this.width,this.height)));
   }
   visibleContextRecords():DisplayRecord[]{return this.recordsInView(this.contextRecords, true);}
+  localChronology(records:DisplayRecord[]):DisplayRecord[]{
+    if(this.scale<80)return [];
+    return records.filter(r=>{
+      if(!r.location||r.time.start===null||!(r.type==='occupation'||r.history?.kind==='habitation'||r.history?.kind==='settlement'||['conflict','violence','forced-removal'].includes(r.overlay?.kind??'')))return false;
+      const p=this.projection([r.location.lon,r.location.lat]);return p&&boundsInViewport([p,p],this.scale,this.tx,this.ty,this.width,this.height);
+    });
+  }
+  private viewBounds(padding=48):ViewBounds{return [[(-this.tx-padding)/this.scale,(-this.ty-padding)/this.scale],[(this.width-this.tx+padding)/this.scale,(this.height-this.ty+padding)/this.scale]];}
   private recordsInView(records:DisplayRecord[], context = false):DisplayRecord[]{
     return records.filter(r => {
       const shape = this.geometry.get(r);
@@ -356,7 +371,7 @@ export class MapView {
     const boxes=records.map(r=>this.geometry.get(r).bounds).filter((b):b is [MapPoint,MapPoint]=>!!b&&b.flat().every(Number.isFinite));
     if(!boxes.length)return;
     const bounds:[MapPoint,MapPoint]=[[Math.min(...boxes.map(b=>b[0][0])),Math.min(...boxes.map(b=>b[0][1]))],[Math.max(...boxes.map(b=>b[1][0])),Math.max(...boxes.map(b=>b[1][1]))]];
-    const fit=fitMapBounds(bounds,this.width,this.height,Math.min(64,this.width*.12,this.height*.15),this.projection.scale()*Math.PI/180*1.4);
+    const fit=fitMapBounds(bounds,this.width,this.height,Math.min(64,this.width*.12,this.height*.15),this.projection.scale()*Math.PI/180*.035);
     this.scale=fit.scale;this.tx=fit.tx;this.ty=fit.ty;
     this.highlighted=new Set(records.map(r=>r.id));this.transform();this.draw();
   }
@@ -417,6 +432,12 @@ export class MapView {
     return offsets;
   }
   private draw() {
+    this.viewportDrawPending=false;
+    // Schematic regional rings can be millions of pixels around at local zoom.
+    // Keep their context, but avoid rasterizing hundreds of thousands of dashes.
+    this.element.classList.toggle('local-detail',this.scale>=80);
+    const viewport=this.viewBounds(),terrain=terrainHTML(this.projection,this.scale,viewport);
+    if(this.terrainKey!==terrain){$(".terrain",this.element).innerHTML=terrain;this.terrainKey=terrain;}
     const focused=document.activeElement instanceof SVGElement&&this.element.contains(document.activeElement)?document.activeElement.dataset.mapTip:undefined;
     const symbolScale = 1 / (this.scale * this.viewportFit());
     const lanes=this.routeLanes(symbolScale);
@@ -434,13 +455,13 @@ export class MapView {
     }
     // Chronologically unresolved context remains visibly distinct from active evidence.
     const contextGroups=new Map<string,DisplayRecord[]>();
-    for(const r of this.contextRecords){const key=this.geometry.get(r).contextKey;if(!key)continue;const group=contextGroups.get(key);if(group)group.push(r);else contextGroups.set(key,[r]);}
+    for(const r of this.contextRecords){const shape=this.geometry.get(r),key=shape.contextKey;if(!key||!shape.contextBounds||!intersectsView(shape.contextBounds,viewport))continue;const group=contextGroups.get(key);if(group)group.push(r);else contextGroups.set(key,[r]);}
     this.contextAnchors=contextGroups;
     for(const [key,rs] of contextGroups){const p=this.geometry.get(rs[0]).contextPoint;if(!p)continue;background+=`<g data-context="${key}" class="undated-context" transform="translate(${p[0]},${p[1]})"><title>${rs.length} context records: dates unresolved; not evidence at selected year</title><circle r="${16*symbolScale}"/><text style="font-size:${12*symbolScale}px" text-anchor="middle" dy=".35em">?</text></g>`;}
     let physicalMarkers='';
     const hazards=eventsAt(this.year,this.physical.hidden,this.physical.uncertain);
     for(const event of hazards){
-      const p=this.projection(event.coordinates as [number,number]);if(!p)continue;
+      const p=this.projection(event.coordinates as [number,number]);if(!p||!intersectsView([p,p],viewport))continue;
       const symbol=event.kind==='volcano'?'▲':event.kind==='tsunami'?'≋':event.kind==='earthquake'?'ϟ':event.kind==='el-nino'?'E':'L';
       const earthquake=event.kind==='earthquake';
       physicalMarkers+=`<a data-hazard="${esc(event.id)}" href="#physical/${event.id}" class="hazard-marker hazard-${event.kind} ${isUncertainHazard(event)?'hazard-uncertain':''}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><title>${esc(event.title)} — ${esc(event.status)}; open catalog details</title><circle r="11"${earthquake?' style="fill:#30233c;stroke:#ffe36b"':''}/><text text-anchor="middle" dy=".35em"${earthquake?' style="fill:#fff0a6;font-size:18px"':''}>${symbol}</text></a>`;
@@ -457,6 +478,7 @@ export class MapView {
     let arrows = "",
       overlays = "";
     for (const [index, r] of this.records.entries()) {
+      const bounds=this.geometry.get(r).bounds;if(!bounds||!intersectsView(bounds,viewport))continue;
       if(r.history?.kind==='migration'||r.history?.kind==='exchange'){
         const d=this.geometry.get(r).path;
         if(d){
@@ -489,7 +511,7 @@ export class MapView {
         const shared=this.records.filter(row=>row.history?.kind===r.history!.kind&&row.location?.lon===r.location!.lon&&row.location?.lat===r.location!.lat);
         if(shared[0]!==r)continue;
         const wreck=r.history.kind==='wreck';
-        arrows+=`<g data-overlay="${index}" data-history-kind="${r.history.kind}" class="history-marker history-${r.history.kind} ${this.interaction?.mode!=='explore'&&this.uncertainty(r)?'history-possible':''}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})" style="--history-color:${r.culture.color};opacity:${this.opacity(r)}"><title>${esc(r.title)} — ${esc(historyLabel(r,this.year))}</title><circle class="history-hit" r="13"/>${wreck?'<path class="wreck-symbol" d="M0,-7V7 M-7,2Q0,13 7,2 M-3,-4H3 M-7,2V6 M7,2V6"/><circle class="wreck-eye" cy="-9" r="2"/>':'<path class="settlement-symbol" d="M0,-7L7,0L0,7L-7,0Z"/>'}${shared.length>1?`<text class="site-count" x="10" y="-10">${shared.length}</text>`:''}${this.scale>=4||shared.some(x=>this.highlighted.has(x.id))?`<text class="history-place-label" x="12" y="4">${esc(compactPlaceName(r.location.name))}</text>`:''}</g>`;
+        arrows+=`<g data-overlay="${index}" data-record-id="${esc(r.id)}" data-history-kind="${r.history.kind}" class="history-marker history-${r.history.kind} ${this.interaction?.mode!=='explore'&&this.uncertainty(r)?'history-possible':''}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})" style="--history-color:${r.culture.color};opacity:${this.opacity(r)}"><title>${esc(r.title)} — ${esc(historyLabel(r,this.year))}</title><circle class="history-hit" r="13"/>${wreck?'<path class="wreck-symbol" d="M0,-7V7 M-7,2Q0,13 7,2 M-3,-4H3 M-7,2V6 M7,2V6"/><circle class="wreck-eye" cy="-9" r="2"/>':'<path class="settlement-symbol" d="M0,-7L7,0L0,7L-7,0Z"/>'}${shared.length>1?`<text class="site-count" x="10" y="-10">${shared.length}</text>`:''}${this.scale>=4||shared.some(x=>this.highlighted.has(x.id))?`<text class="history-place-label" x="12" y="4">${esc(compactPlaceName(r.location.name))}</text>`:''}</g>`;
         continue;
       }
       if (r.overlay) {

@@ -128,6 +128,10 @@ try {
   }
   await page.locator("#time-settings-toggle").click();
   await synthetic().click();
+  // Place-first picking may expose a nearby town before a route in an overview.
+  // The overlap chooser must still make the intended overlay selectable.
+  if(!(await page.locator('#selected-records').innerText()).includes('Synthetic exchange overlay'))
+    await page.locator('#selection-choices').getByRole('button',{name:'Synthetic exchange overlay',exact:true}).click();
   await page
     .locator("#selected-records")
     .getByRole("link", { name: /Full review/ })

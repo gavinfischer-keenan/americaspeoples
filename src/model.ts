@@ -17,6 +17,8 @@ export interface Place {
   provenance: string;
 }
 export interface TimeExtent {
+  /** Documented calendar onset, when known; never inferred from a year-only date. */
+  eventDate?: string;
   kind: "interval" | "occurrence" | "unplaced";
   start: number | null;
   end: number | null;

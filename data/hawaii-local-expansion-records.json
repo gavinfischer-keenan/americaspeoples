@@ -1,0 +1,1100 @@
+{
+  "reviewedAt": "2026-11-15",
+  "scope": "Selected Hawaiian places and inter-island conflicts. Known named places, uncertain event locations and date windows are kept distinct.",
+  "records": [
+    {
+      "id": "hawaii-local-puukohola",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Puʻukoholā Heiau — construction",
+      "culture": {
+        "id": "hawaiian-communities",
+        "name": "Hawaiian communities and polities",
+        "kind": "people",
+        "color": "#dfa965"
+      },
+      "location": {
+        "id": "hawaii-place-puukohola",
+        "name": "Puʻukoholā Heiau",
+        "lon": -155.82148,
+        "lat": 20.027588,
+        "precision": "Public NPS archaeological point for the heiau; building location, not a traced footprint.",
+        "provenance": "NPS NPMap point, unit_code=puhe, name=Puukohola Heiau; https://carto.nps.gov/user/parktiles/api/v2/sql"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1790,
+        "end": 1791,
+        "approximate": true,
+        "original": "1790–1791",
+        "method": "Historical accounts and official heritage interpretation; no day inferred from a year-only source.",
+        "interpretation": "Construction is documented. Whether it incorporated an older temple is unresolved; this is not household occupation."
+      },
+      "claims": [
+        {
+          "id": "event",
+          "text": "Kamehameha directed construction at Puʻukoholā in 1790–1791. The surviving ceremonial platform is a distinct building at Kawaihae.",
+          "status": "well-supported",
+          "explanation": "Construction is documented. Whether it incorporated an older temple is unresolved; this is not household occupation.",
+          "support": [
+            {
+              "sourceId": "history",
+              "stance": "supports",
+              "locator": "Named event / chronological discussion",
+              "note": "Supports event and parties; exact combat positions remain unresolved."
+            }
+          ]
+        },
+        {
+          "id": "location",
+          "text": "The map uses a public place reference for Puʻukoholā Heiau.",
+          "status": "well-supported",
+          "explanation": "Public NPS archaeological point for the heiau; building location, not a traced footprint.",
+          "support": [
+            {
+              "sourceId": "geography",
+              "stance": "supports",
+              "locator": "Named public feature",
+              "note": "Geographic reference only; separate from chronology."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "history",
+          "title": "Puʻukoholā Heiau — construction — historical evidence",
+          "authors": "National Park Service",
+          "year": null,
+          "venue": "National Park Service",
+          "url": "https://www.nps.gov/puhe/learn/historyculture/stories.htm",
+          "referenceType": "web-resource",
+          "access": "Public source checked 2026-11-15; original factual summary."
+        },
+        {
+          "id": "geography",
+          "title": "NPS NPMap — Puukohola Heiau",
+          "authors": "National Park Service",
+          "year": null,
+          "venue": "NPS",
+          "url": "https://carto.nps.gov/user/parktiles/api/v2/sql",
+          "referenceType": "dataset",
+          "identifier": "HI_Features_20210825",
+          "access": "Public-domain named-feature coordinates. Regional event positions are labeled schematic."
+        }
+      ],
+      "review": {
+        "summary": "Kamehameha directed construction at Puʻukoholā in 1790–1791. The surviving ceremonial platform is a distinct building at Kawaihae.",
+        "limitations": "Construction is documented. Whether it incorporated an older temple is unresolved; this is not household occupation.",
+        "discussion": "Hawaiian historical accounts preserve named leaders and changing alliances. Oral history, later written accounts and archaeology can have different levels of chronological and spatial precision.",
+        "provenance": "Official Hawaiian heritage sources, NPS historical synthesis and scholarly comparison of named historical accounts; USGS public geography.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added local Hawaiian place or conflict context."
+        ],
+        "relatedIds": []
+      },
+      "history": {
+        "kind": "settlement",
+        "claimId": "event"
+      }
+    },
+    {
+      "id": "hawaii-local-lapakahi",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Lapakahi — fishing and farming community",
+      "culture": {
+        "id": "hawaiian-communities",
+        "name": "Hawaiian communities and polities",
+        "kind": "people",
+        "color": "#dfa965"
+      },
+      "location": {
+        "id": "hawaii-place-lapakahi",
+        "name": "Lapakahi",
+        "lon": -155.900556,
+        "lat": 20.171667,
+        "precision": "USGS public historic-park reference for the coastal settlement; individual house locations are not yet included.",
+        "provenance": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/HI_Features_20210825.txt; public named geographic feature, with coordinate rounding for regional events. Exact combat positions are not reconstructed."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1300,
+        "end": 1300,
+        "approximate": true,
+        "original": "1300",
+        "method": "Historical accounts and official heritage interpretation; no day inferred from a year-only source.",
+        "interpretation": "Circa 1300 is an editorial century-scale reference derived from the brochure’s rounded age, not an excavated foundation year. This record does not date every house or bound later occupation."
+      },
+      "claims": [
+        {
+          "id": "event",
+          "text": "Lapakahi preserves a coastal community linked to upland farmers by exchange of fish, salt, crops and materials. The state brochure places settlement more than 700 years before its 2014 edition.",
+          "status": "under discussion",
+          "explanation": "Circa 1300 is an editorial century-scale reference derived from the brochure’s rounded age, not an excavated foundation year. This record does not date every house or bound later occupation.",
+          "support": [
+            {
+              "sourceId": "history",
+              "stance": "supports",
+              "locator": "Named event / chronological discussion",
+              "note": "Supports event and parties; exact combat positions remain unresolved."
+            }
+          ]
+        },
+        {
+          "id": "location",
+          "text": "The map uses a public place reference for Lapakahi.",
+          "status": "well-supported",
+          "explanation": "USGS public historic-park reference for the coastal settlement; individual house locations are not yet included.",
+          "support": [
+            {
+              "sourceId": "geography",
+              "stance": "supports",
+              "locator": "Named public feature",
+              "note": "Geographic reference only; separate from chronology."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "history",
+          "title": "Lapakahi — fishing and farming community — historical evidence",
+          "authors": "Hawaiʻi Department of Land and Natural Resources",
+          "year": null,
+          "venue": "Hawaiʻi Department of Land and Natural Resources",
+          "url": "https://dlnr.hawaii.gov/dsp/files/2022/12/Lapakahi-brochure_2014.pdf",
+          "referenceType": "web-resource",
+          "access": "Public source checked 2026-11-15; original factual summary."
+        },
+        {
+          "id": "geography",
+          "title": "USGS Geographic Names Information System — Hawaiʻi",
+          "authors": "US Geological Survey",
+          "year": 2021,
+          "venue": "USGS",
+          "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/HI_Features_20210825.txt",
+          "referenceType": "dataset",
+          "identifier": "HI_Features_20210825",
+          "access": "Public-domain named-feature coordinates. Regional event positions are labeled schematic."
+        }
+      ],
+      "review": {
+        "summary": "Lapakahi preserves a coastal community linked to upland farmers by exchange of fish, salt, crops and materials. The state brochure places settlement more than 700 years before its 2014 edition.",
+        "limitations": "Circa 1300 is an editorial century-scale reference derived from the brochure’s rounded age, not an excavated foundation year. This record does not date every house or bound later occupation.",
+        "discussion": "Hawaiian historical accounts preserve named leaders and changing alliances. Oral history, later written accounts and archaeology can have different levels of chronological and spatial precision.",
+        "provenance": "Official Hawaiian heritage sources, NPS historical synthesis and scholarly comparison of named historical accounts; USGS public geography.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added local Hawaiian place or conflict context."
+        ],
+        "relatedIds": []
+      },
+      "history": {
+        "kind": "settlement",
+        "claimId": "event"
+      }
+    },
+    {
+      "id": "hawaii-local-puna-rebellion",
+      "revision": 1,
+      "type": "event",
+      "title": "Puna — ʻĪmakakoloa’s rebellion",
+      "culture": {
+        "id": "hawaiian-communities",
+        "name": "Hawaiian communities and polities",
+        "kind": "people",
+        "color": "#dfa965"
+      },
+      "location": {
+        "id": "hawaii-place-puna-rebellion",
+        "name": "Puna",
+        "lon": -155.0,
+        "lat": 19.5,
+        "precision": "Regional Puna reference on Hawaiʻi Island, deliberately rounded to a tenth of a degree; not a site point.",
+        "provenance": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/HI_Features_20210825.txt; public named geographic feature, with coordinate rounding for regional events. Exact combat positions are not reconstructed."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1780,
+        "end": 1781,
+        "approximate": true,
+        "original": "1780–1781",
+        "method": "Historical accounts and official heritage interpretation; no day inferred from a year-only source.",
+        "interpretation": "One uncertain event window, not two years of continuous fighting. Puna is located regionally; the exact encounter position is unknown."
+      },
+      "claims": [
+        {
+          "id": "event",
+          "text": "Kalaniʻōpuʻu defeated the rebellion of ʻĪmakakoloa in Puna. The compared accounts leave the event in 1780 or 1781.",
+          "status": "under discussion",
+          "explanation": "One uncertain event window, not two years of continuous fighting. Puna is located regionally; the exact encounter position is unknown.",
+          "support": [
+            {
+              "sourceId": "history",
+              "stance": "supports",
+              "locator": "Named event / chronological discussion",
+              "note": "Supports event and parties; exact combat positions remain unresolved."
+            }
+          ]
+        },
+        {
+          "id": "location",
+          "text": "The map uses a public place reference for Puna.",
+          "status": "well-supported",
+          "explanation": "Regional Puna reference on Hawaiʻi Island, deliberately rounded to a tenth of a degree; not a site point.",
+          "support": [
+            {
+              "sourceId": "geography",
+              "stance": "supports",
+              "locator": "Named public feature",
+              "note": "Geographic reference only; separate from chronology."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "history",
+          "title": "Puna — ʻĪmakakoloa’s rebellion — historical evidence",
+          "authors": "Paul D’Arcy / ANU Press, comparing Kamakau and Fornander",
+          "year": null,
+          "venue": "Paul D’Arcy / ANU Press, comparing Kamakau and Fornander",
+          "url": "https://press-files.anu.edu.au/downloads/press/n4217/html/app01.xhtml",
+          "referenceType": "web-resource",
+          "access": "Public source checked 2026-11-15; original factual summary."
+        },
+        {
+          "id": "geography",
+          "title": "USGS Geographic Names Information System — Hawaiʻi",
+          "authors": "US Geological Survey",
+          "year": 2021,
+          "venue": "USGS",
+          "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/HI_Features_20210825.txt",
+          "referenceType": "dataset",
+          "identifier": "HI_Features_20210825",
+          "access": "Public-domain named-feature coordinates. Regional event positions are labeled schematic."
+        }
+      ],
+      "review": {
+        "summary": "Kalaniʻōpuʻu defeated the rebellion of ʻĪmakakoloa in Puna. The compared accounts leave the event in 1780 or 1781.",
+        "limitations": "One uncertain event window, not two years of continuous fighting. Puna is located regionally; the exact encounter position is unknown.",
+        "discussion": "Hawaiian historical accounts preserve named leaders and changing alliances. Oral history, later written accounts and archaeology can have different levels of chronological and spatial precision.",
+        "provenance": "Official Hawaiian heritage sources, NPS historical synthesis and scholarly comparison of named historical accounts; USGS public geography.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added local Hawaiian place or conflict context."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "conflict",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -155.0,
+            19.5
+          ]
+        },
+        "precision": "Regional Puna reference on Hawaiʻi Island, deliberately rounded to a tenth of a degree; not a site point.",
+        "provenance": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/HI_Features_20210825.txt; public named geographic feature, with coordinate rounding for regional events. Exact combat positions are not reconstructed."
+      }
+    },
+    {
+      "id": "hawaii-local-mokuohai",
+      "revision": 1,
+      "type": "event",
+      "title": "Mokuʻōhai — rival succession armies",
+      "culture": {
+        "id": "hawaiian-communities",
+        "name": "Hawaiian communities and polities",
+        "kind": "people",
+        "color": "#dfa965"
+      },
+      "location": {
+        "id": "hawaii-place-mokuohai",
+        "name": "Mokuʻōhai",
+        "lon": -155.92,
+        "lat": 19.47,
+        "precision": "South Kona / Kealakekua–Hōnaunau vicinity, rounded regional reference. No exact battlefield point is asserted.",
+        "provenance": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/HI_Features_20210825.txt; public named geographic feature, with coordinate rounding for regional events. Exact combat positions are not reconstructed."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1782,
+        "end": 1782,
+        "approximate": false,
+        "original": "1782",
+        "method": "Historical accounts and official heritage interpretation; no day inferred from a year-only source.",
+        "interpretation": "The date locates an event, not year-round fighting. The point represents its named locality, not a battle perimeter."
+      },
+      "claims": [
+        {
+          "id": "event",
+          "text": "Kamehameha and allied chiefs defeated Kīwalaʻō’s forces at Mokuʻōhai; Kīwalaʻō was killed. Control of Hawaiʻi Island remained divided.",
+          "status": "well-supported",
+          "explanation": "Parties and year are retained at the resolution of the source. Casualty totals are not inferred.",
+          "support": [
+            {
+              "sourceId": "history",
+              "stance": "supports",
+              "locator": "Named event / chronological discussion",
+              "note": "Supports event and parties; exact combat positions remain unresolved."
+            },
+            {
+              "sourceId": "compared-accounts",
+              "stance": "supports",
+              "locator": "Appendix 1, named campaign",
+              "note": "Chronology and named parties checked against the compared historical accounts."
+            }
+          ]
+        },
+        {
+          "id": "location",
+          "text": "The map uses a public place reference for Mokuʻōhai.",
+          "status": "well-supported",
+          "explanation": "South Kona / Kealakekua–Hōnaunau vicinity, rounded regional reference. No exact battlefield point is asserted.",
+          "support": [
+            {
+              "sourceId": "geography",
+              "stance": "supports",
+              "locator": "Named public feature",
+              "note": "Geographic reference only; separate from chronology."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "history",
+          "title": "Mokuʻōhai — rival succession armies — historical evidence",
+          "authors": "National Park Service",
+          "year": null,
+          "venue": "National Park Service",
+          "url": "https://www.nps.gov/puhe/learn/historyculture/kamehameha.htm",
+          "referenceType": "web-resource",
+          "access": "Public source checked 2026-11-15; original factual summary."
+        },
+        {
+          "id": "geography",
+          "title": "USGS Geographic Names Information System — Hawaiʻi",
+          "authors": "US Geological Survey",
+          "year": 2021,
+          "venue": "USGS",
+          "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/HI_Features_20210825.txt",
+          "referenceType": "dataset",
+          "identifier": "HI_Features_20210825",
+          "access": "Public-domain named-feature coordinates. Regional event positions are labeled schematic."
+        },
+        {
+          "id": "compared-accounts",
+          "title": "Hawaiian military activity 1778–1797: compared chronology",
+          "authors": "Paul D’Arcy",
+          "year": null,
+          "venue": "ANU Press",
+          "url": "https://press-files.anu.edu.au/downloads/press/n4217/html/app01.xhtml",
+          "referenceType": "web-resource",
+          "access": "Public source checked 2026-11-15; original factual summary."
+        }
+      ],
+      "review": {
+        "summary": "Kamehameha and allied chiefs defeated Kīwalaʻō’s forces at Mokuʻōhai; Kīwalaʻō was killed. Control of Hawaiʻi Island remained divided.",
+        "limitations": "Named locality; no precise battlefield, casualty census, or exact calendar day is asserted.",
+        "discussion": "Hawaiian historical accounts preserve named leaders and changing alliances. Oral history, later written accounts and archaeology can have different levels of chronological and spatial precision.",
+        "provenance": "Official Hawaiian heritage sources, NPS historical synthesis and scholarly comparison of named historical accounts; USGS public geography.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added local Hawaiian place or conflict context."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "conflict",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -155.92,
+            19.47
+          ]
+        },
+        "precision": "South Kona / Kealakekua–Hōnaunau vicinity, rounded regional reference. No exact battlefield point is asserted.",
+        "provenance": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/HI_Features_20210825.txt; public named geographic feature, with coordinate rounding for regional events. Exact combat positions are not reconstructed."
+      }
+    },
+    {
+      "id": "hawaii-local-kauiki",
+      "revision": 1,
+      "type": "event",
+      "title": "Kaʻuiki — siege and reconquest",
+      "culture": {
+        "id": "hawaiian-communities",
+        "name": "Hawaiian communities and polities",
+        "kind": "people",
+        "color": "#dfa965"
+      },
+      "location": {
+        "id": "hawaii-place-kauiki",
+        "name": "Kaʻuiki",
+        "lon": -155.98148,
+        "lat": 20.75431,
+        "precision": "USGS Kaʻuiki Head summit reference near Hāna; the stronghold occupied a wider headland.",
+        "provenance": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/HI_Features_20210825.txt; public named geographic feature, with coordinate rounding for regional events. Exact combat positions are not reconstructed."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1782,
+        "end": 1782,
+        "approximate": false,
+        "original": "1782",
+        "method": "Historical accounts and official heritage interpretation; no day inferred from a year-only source.",
+        "interpretation": "The synthesis places the prolonged siege in 1782; month-level reconstruction is interpretive. The named headland is known, but individual defensive works are not mapped."
+      },
+      "claims": [
+        {
+          "id": "event",
+          "text": "Kahekili’s forces retook the Kaʻuiki stronghold from the Hawaiʻi Island presence in east Maui.",
+          "status": "well-supported",
+          "explanation": "The synthesis places the prolonged siege in 1782; month-level reconstruction is interpretive. The named headland is known, but individual defensive works are not mapped.",
+          "support": [
+            {
+              "sourceId": "history",
+              "stance": "supports",
+              "locator": "Named event / chronological discussion",
+              "note": "Supports event and parties; exact combat positions remain unresolved."
+            }
+          ]
+        },
+        {
+          "id": "location",
+          "text": "The map uses a public place reference for Kaʻuiki.",
+          "status": "well-supported",
+          "explanation": "USGS Kaʻuiki Head summit reference near Hāna; the stronghold occupied a wider headland.",
+          "support": [
+            {
+              "sourceId": "geography",
+              "stance": "supports",
+              "locator": "Named public feature",
+              "note": "Geographic reference only; separate from chronology."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "history",
+          "title": "Kaʻuiki — siege and reconquest — historical evidence",
+          "authors": "Paul D’Arcy / ANU Press, comparing Kamakau and Fornander",
+          "year": null,
+          "venue": "Paul D’Arcy / ANU Press, comparing Kamakau and Fornander",
+          "url": "https://press-files.anu.edu.au/downloads/press/n4217/html/app01.xhtml",
+          "referenceType": "web-resource",
+          "access": "Public source checked 2026-11-15; original factual summary."
+        },
+        {
+          "id": "geography",
+          "title": "USGS Geographic Names Information System — Hawaiʻi",
+          "authors": "US Geological Survey",
+          "year": 2021,
+          "venue": "USGS",
+          "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/HI_Features_20210825.txt",
+          "referenceType": "dataset",
+          "identifier": "HI_Features_20210825",
+          "access": "Public-domain named-feature coordinates. Regional event positions are labeled schematic."
+        }
+      ],
+      "review": {
+        "summary": "Kahekili’s forces retook the Kaʻuiki stronghold from the Hawaiʻi Island presence in east Maui.",
+        "limitations": "The synthesis places the prolonged siege in 1782; month-level reconstruction is interpretive. The named headland is known, but individual defensive works are not mapped.",
+        "discussion": "Hawaiian historical accounts preserve named leaders and changing alliances. Oral history, later written accounts and archaeology can have different levels of chronological and spatial precision.",
+        "provenance": "Official Hawaiian heritage sources, NPS historical synthesis and scholarly comparison of named historical accounts; USGS public geography.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added local Hawaiian place or conflict context."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "conflict",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -155.98148,
+            20.75431
+          ]
+        },
+        "precision": "USGS Kaʻuiki Head summit reference near Hāna; the stronghold occupied a wider headland.",
+        "provenance": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/HI_Features_20210825.txt; public named geographic feature, with coordinate rounding for regional events. Exact combat positions are not reconstructed."
+      }
+    },
+    {
+      "id": "hawaii-local-oahu-conquest",
+      "revision": 1,
+      "type": "event",
+      "title": "Oʻahu — Kahekili’s conquest",
+      "culture": {
+        "id": "hawaiian-communities",
+        "name": "Hawaiian communities and polities",
+        "kind": "people",
+        "color": "#dfa965"
+      },
+      "location": {
+        "id": "hawaii-place-oahu-conquest",
+        "name": "Oʻahu",
+        "lon": -157.95,
+        "lat": 21.45,
+        "precision": "Island-scale Oʻahu reference, deliberately rounded; not a town or a claimed exact battlefield.",
+        "provenance": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/HI_Features_20210825.txt; public named geographic feature, with coordinate rounding for regional events. Exact combat positions are not reconstructed."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1783,
+        "end": 1783,
+        "approximate": false,
+        "original": "1783",
+        "method": "Historical accounts and official heritage interpretation; no day inferred from a year-only source.",
+        "interpretation": "The date locates an event, not year-round fighting. The point represents its named locality, not a battle perimeter."
+      },
+      "claims": [
+        {
+          "id": "event",
+          "text": "Kahekili invaded Oʻahu and defeated Kahahana’s rule. Subsequent resistance and reprisals are distinct from the initial conquest.",
+          "status": "well-supported",
+          "explanation": "Parties and year are retained at the resolution of the source. Casualty totals are not inferred.",
+          "support": [
+            {
+              "sourceId": "history",
+              "stance": "supports",
+              "locator": "Named event / chronological discussion",
+              "note": "Supports event and parties; exact combat positions remain unresolved."
+            }
+          ]
+        },
+        {
+          "id": "location",
+          "text": "The map uses a public place reference for Oʻahu.",
+          "status": "well-supported",
+          "explanation": "Island-scale Oʻahu reference, deliberately rounded; not a town or a claimed exact battlefield.",
+          "support": [
+            {
+              "sourceId": "geography",
+              "stance": "supports",
+              "locator": "Named public feature",
+              "note": "Geographic reference only; separate from chronology."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "history",
+          "title": "Oʻahu — Kahekili’s conquest — historical evidence",
+          "authors": "Paul D’Arcy / ANU Press, comparing Kamakau and Fornander",
+          "year": null,
+          "venue": "Paul D’Arcy / ANU Press, comparing Kamakau and Fornander",
+          "url": "https://press-files.anu.edu.au/downloads/press/n4217/html/app01.xhtml",
+          "referenceType": "web-resource",
+          "access": "Public source checked 2026-11-15; original factual summary."
+        },
+        {
+          "id": "geography",
+          "title": "USGS Geographic Names Information System — Hawaiʻi",
+          "authors": "US Geological Survey",
+          "year": 2021,
+          "venue": "USGS",
+          "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/HI_Features_20210825.txt",
+          "referenceType": "dataset",
+          "identifier": "HI_Features_20210825",
+          "access": "Public-domain named-feature coordinates. Regional event positions are labeled schematic."
+        }
+      ],
+      "review": {
+        "summary": "Kahekili invaded Oʻahu and defeated Kahahana’s rule. Subsequent resistance and reprisals are distinct from the initial conquest.",
+        "limitations": "Named locality; no precise battlefield, casualty census, or exact calendar day is asserted.",
+        "discussion": "Hawaiian historical accounts preserve named leaders and changing alliances. Oral history, later written accounts and archaeology can have different levels of chronological and spatial precision.",
+        "provenance": "Official Hawaiian heritage sources, NPS historical synthesis and scholarly comparison of named historical accounts; USGS public geography.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added local Hawaiian place or conflict context."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "conflict",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -157.95,
+            21.45
+          ]
+        },
+        "precision": "Island-scale Oʻahu reference, deliberately rounded; not a town or a claimed exact battlefield.",
+        "provenance": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/HI_Features_20210825.txt; public named geographic feature, with coordinate rounding for regional events. Exact combat positions are not reconstructed."
+      }
+    },
+    {
+      "id": "hawaii-local-kepaniwai",
+      "revision": 1,
+      "type": "event",
+      "title": "ʻĪao Valley — Kepaniwai",
+      "culture": {
+        "id": "hawaiian-communities",
+        "name": "Hawaiian communities and polities",
+        "kind": "people",
+        "color": "#dfa965"
+      },
+      "location": {
+        "id": "hawaii-place-kepaniwai",
+        "name": "ʻĪao Valley",
+        "lon": -156.513732,
+        "lat": 20.885135,
+        "precision": "USGS named ʻĪao Valley reference; correct valley, not a precise combat position or casualty location.",
+        "provenance": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/HI_Features_20210825.txt; public named geographic feature, with coordinate rounding for regional events. Exact combat positions are not reconstructed."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1790,
+        "end": 1790,
+        "approximate": false,
+        "original": "1790",
+        "method": "Historical accounts and official heritage interpretation; no day inferred from a year-only source.",
+        "interpretation": "The date locates an event, not year-round fighting. The point represents its named locality, not a battle perimeter."
+      },
+      "claims": [
+        {
+          "id": "event",
+          "text": "Kamehameha’s army defeated the Maui defenders at Kepaniwai. The fighting took place in ʻĪao Valley.",
+          "status": "well-supported",
+          "explanation": "Parties and year are retained at the resolution of the source. Casualty totals are not inferred.",
+          "support": [
+            {
+              "sourceId": "history",
+              "stance": "supports",
+              "locator": "Named event / chronological discussion",
+              "note": "Supports event and parties; exact combat positions remain unresolved."
+            }
+          ]
+        },
+        {
+          "id": "location",
+          "text": "The map uses a public place reference for ʻĪao Valley.",
+          "status": "well-supported",
+          "explanation": "USGS named ʻĪao Valley reference; correct valley, not a precise combat position or casualty location.",
+          "support": [
+            {
+              "sourceId": "geography",
+              "stance": "supports",
+              "locator": "Named public feature",
+              "note": "Geographic reference only; separate from chronology."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "history",
+          "title": "ʻĪao Valley — Kepaniwai — historical evidence",
+          "authors": "Hawaiʻi Department of Land and Natural Resources",
+          "year": null,
+          "venue": "Hawaiʻi Department of Land and Natural Resources",
+          "url": "https://dlnr.hawaii.gov/dsp/parks/maui/iao-valley-state-monument/",
+          "referenceType": "web-resource",
+          "access": "Public source checked 2026-11-15; original factual summary."
+        },
+        {
+          "id": "geography",
+          "title": "USGS Geographic Names Information System — Hawaiʻi",
+          "authors": "US Geological Survey",
+          "year": 2021,
+          "venue": "USGS",
+          "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/HI_Features_20210825.txt",
+          "referenceType": "dataset",
+          "identifier": "HI_Features_20210825",
+          "access": "Public-domain named-feature coordinates. Regional event positions are labeled schematic."
+        }
+      ],
+      "review": {
+        "summary": "Kamehameha’s army defeated the Maui defenders at Kepaniwai. The fighting took place in ʻĪao Valley.",
+        "limitations": "Named locality; no precise battlefield, casualty census, or exact calendar day is asserted.",
+        "discussion": "Hawaiian historical accounts preserve named leaders and changing alliances. Oral history, later written accounts and archaeology can have different levels of chronological and spatial precision.",
+        "provenance": "Official Hawaiian heritage sources, NPS historical synthesis and scholarly comparison of named historical accounts; USGS public geography.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added local Hawaiian place or conflict context."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "conflict",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -156.513732,
+            20.885135
+          ]
+        },
+        "precision": "USGS named ʻĪao Valley reference; correct valley, not a precise combat position or casualty location.",
+        "provenance": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/HI_Features_20210825.txt; public named geographic feature, with coordinate rounding for regional events. Exact combat positions are not reconstructed."
+      }
+    },
+    {
+      "id": "hawaii-local-waipio-sea-battle",
+      "revision": 1,
+      "type": "event",
+      "title": "Off Waipiʻo — Kepūwahaʻulaʻula",
+      "culture": {
+        "id": "hawaiian-communities",
+        "name": "Hawaiian communities and polities",
+        "kind": "people",
+        "color": "#dfa965"
+      },
+      "location": {
+        "id": "hawaii-place-waipio-sea-battle",
+        "name": "Off Waipiʻo",
+        "lon": -155.585,
+        "lat": 20.14,
+        "precision": "Approximate offshore reference near USGS Waipiʻo Bay on Hawaiʻi Island; not a recovered naval battle track.",
+        "provenance": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/HI_Features_20210825.txt; public named geographic feature, with coordinate rounding for regional events. Exact combat positions are not reconstructed."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1791,
+        "end": 1791,
+        "approximate": false,
+        "original": "1791",
+        "method": "Historical accounts and official heritage interpretation; no day inferred from a year-only source.",
+        "interpretation": "The date locates an event, not year-round fighting. The point represents its named locality, not a battle perimeter."
+      },
+      "claims": [
+        {
+          "id": "event",
+          "text": "Kamehameha’s fleet defeated the invading coalition associated with Kahekili and Kāʻeokūlani near Waipiʻo. Hawaiian canoes and Western firearms were involved.",
+          "status": "well-supported",
+          "explanation": "Parties and year are retained at the resolution of the source. Casualty totals are not inferred.",
+          "support": [
+            {
+              "sourceId": "history",
+              "stance": "supports",
+              "locator": "Named event / chronological discussion",
+              "note": "Supports event and parties; exact combat positions remain unresolved."
+            },
+            {
+              "sourceId": "compared-accounts",
+              "stance": "supports",
+              "locator": "Appendix 1, named campaign",
+              "note": "Chronology and named parties checked against the compared historical accounts."
+            }
+          ]
+        },
+        {
+          "id": "location",
+          "text": "The map uses a public place reference for Off Waipiʻo.",
+          "status": "well-supported",
+          "explanation": "Approximate offshore reference near USGS Waipiʻo Bay on Hawaiʻi Island; not a recovered naval battle track.",
+          "support": [
+            {
+              "sourceId": "geography",
+              "stance": "supports",
+              "locator": "Named public feature",
+              "note": "Geographic reference only; separate from chronology."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "history",
+          "title": "Off Waipiʻo — Kepūwahaʻulaʻula — historical evidence",
+          "authors": "National Park Service",
+          "year": null,
+          "venue": "National Park Service",
+          "url": "https://www.nps.gov/puhe/learn/historyculture/stories.htm",
+          "referenceType": "web-resource",
+          "access": "Public source checked 2026-11-15; original factual summary."
+        },
+        {
+          "id": "geography",
+          "title": "USGS Geographic Names Information System — Hawaiʻi",
+          "authors": "US Geological Survey",
+          "year": 2021,
+          "venue": "USGS",
+          "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/HI_Features_20210825.txt",
+          "referenceType": "dataset",
+          "identifier": "HI_Features_20210825",
+          "access": "Public-domain named-feature coordinates. Regional event positions are labeled schematic."
+        },
+        {
+          "id": "compared-accounts",
+          "title": "Hawaiian military activity 1778–1797: compared chronology",
+          "authors": "Paul D’Arcy",
+          "year": null,
+          "venue": "ANU Press",
+          "url": "https://press-files.anu.edu.au/downloads/press/n4217/html/app01.xhtml",
+          "referenceType": "web-resource",
+          "access": "Public source checked 2026-11-15; original factual summary."
+        }
+      ],
+      "review": {
+        "summary": "Kamehameha’s fleet defeated the invading coalition associated with Kahekili and Kāʻeokūlani near Waipiʻo. Hawaiian canoes and Western firearms were involved.",
+        "limitations": "Named locality; no precise battlefield, casualty census, or exact calendar day is asserted.",
+        "discussion": "Hawaiian historical accounts preserve named leaders and changing alliances. Oral history, later written accounts and archaeology can have different levels of chronological and spatial precision.",
+        "provenance": "Official Hawaiian heritage sources, NPS historical synthesis and scholarly comparison of named historical accounts; USGS public geography.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added local Hawaiian place or conflict context."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "conflict",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -155.585,
+            20.14
+          ]
+        },
+        "precision": "Approximate offshore reference near USGS Waipiʻo Bay on Hawaiʻi Island; not a recovered naval battle track.",
+        "provenance": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/HI_Features_20210825.txt; public named geographic feature, with coordinate rounding for regional events. Exact combat positions are not reconstructed."
+      }
+    },
+    {
+      "id": "hawaii-local-keoua-killed",
+      "revision": 1,
+      "type": "event",
+      "title": "Kawaihae — killing of Keōua and companions",
+      "culture": {
+        "id": "hawaiian-communities",
+        "name": "Hawaiian communities and polities",
+        "kind": "people",
+        "color": "#dfa965"
+      },
+      "location": {
+        "id": "hawaii-place-keoua-killed",
+        "name": "Kawaihae",
+        "lon": -155.83,
+        "lat": 20.03,
+        "precision": "Kawaihae shore vicinity below Puʻukoholā; rounded coastal reference, not the exact landing or killing spot.",
+        "provenance": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/HI_Features_20210825.txt; public named geographic feature, with coordinate rounding for regional events. Exact combat positions are not reconstructed."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1791,
+        "end": 1791,
+        "approximate": false,
+        "original": "1791",
+        "method": "Historical accounts and official heritage interpretation; no day inferred from a year-only source.",
+        "interpretation": "The killing is reported; versions differ about the invitation, immediate sequence and Kamehameha’s intentions. These disagreements do not erase the victims."
+      },
+      "claims": [
+        {
+          "id": "event",
+          "text": "Keōua Kūʻahuʻula and companions were killed by members of Kamehameha’s party on arrival at Kawaihae. Accounts disagree about planning and responsibility.",
+          "status": "well-supported",
+          "explanation": "The killing is reported; versions differ about the invitation, immediate sequence and Kamehameha’s intentions. These disagreements do not erase the victims.",
+          "support": [
+            {
+              "sourceId": "history",
+              "stance": "supports",
+              "locator": "Named event / chronological discussion",
+              "note": "Supports event and parties; exact combat positions remain unresolved."
+            }
+          ]
+        },
+        {
+          "id": "location",
+          "text": "The map uses a public place reference for Kawaihae.",
+          "status": "well-supported",
+          "explanation": "Kawaihae shore vicinity below Puʻukoholā; rounded coastal reference, not the exact landing or killing spot.",
+          "support": [
+            {
+              "sourceId": "geography",
+              "stance": "supports",
+              "locator": "Named public feature",
+              "note": "Geographic reference only; separate from chronology."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "history",
+          "title": "Kawaihae — killing of Keōua and companions — historical evidence",
+          "authors": "National Park Service",
+          "year": null,
+          "venue": "National Park Service",
+          "url": "https://www.nps.gov/puhe/learn/historyculture/stories.htm",
+          "referenceType": "web-resource",
+          "access": "Public source checked 2026-11-15; original factual summary."
+        },
+        {
+          "id": "geography",
+          "title": "USGS Geographic Names Information System — Hawaiʻi",
+          "authors": "US Geological Survey",
+          "year": 2021,
+          "venue": "USGS",
+          "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/HI_Features_20210825.txt",
+          "referenceType": "dataset",
+          "identifier": "HI_Features_20210825",
+          "access": "Public-domain named-feature coordinates. Regional event positions are labeled schematic."
+        }
+      ],
+      "review": {
+        "summary": "Keōua Kūʻahuʻula and companions were killed by members of Kamehameha’s party on arrival at Kawaihae. Accounts disagree about planning and responsibility.",
+        "limitations": "The killing is reported; versions differ about the invitation, immediate sequence and Kamehameha’s intentions. These disagreements do not erase the victims.",
+        "discussion": "Hawaiian historical accounts preserve named leaders and changing alliances. Oral history, later written accounts and archaeology can have different levels of chronological and spatial precision.",
+        "provenance": "Official Hawaiian heritage sources, NPS historical synthesis and scholarly comparison of named historical accounts; USGS public geography.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added local Hawaiian place or conflict context."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "violence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -155.83,
+            20.03
+          ]
+        },
+        "precision": "Kawaihae shore vicinity below Puʻukoholā; rounded coastal reference, not the exact landing or killing spot.",
+        "provenance": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/HI_Features_20210825.txt; public named geographic feature, with coordinate rounding for regional events. Exact combat positions are not reconstructed."
+      }
+    },
+    {
+      "id": "hawaii-local-nuuanu",
+      "revision": 1,
+      "type": "event",
+      "title": "Nuʻuanu — Kamehameha and Kalanikūpule",
+      "culture": {
+        "id": "hawaiian-communities",
+        "name": "Hawaiian communities and polities",
+        "kind": "people",
+        "color": "#dfa965"
+      },
+      "location": {
+        "id": "hawaii-place-nuuanu",
+        "name": "Nuʻuanu",
+        "lon": -157.79397,
+        "lat": 21.367568,
+        "precision": "USGS Nuʻuanu Pali named-cliff reference; the campaign extended through the valley, not just this point.",
+        "provenance": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/HI_Features_20210825.txt; public named geographic feature, with coordinate rounding for regional events. Exact combat positions are not reconstructed."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1795,
+        "end": 1795,
+        "approximate": false,
+        "original": "1795",
+        "method": "Historical accounts and official heritage interpretation; no day inferred from a year-only source.",
+        "interpretation": "The date locates an event, not year-round fighting. The point represents its named locality, not a battle perimeter."
+      },
+      "claims": [
+        {
+          "id": "event",
+          "text": "Kamehameha’s forces defeated Kalanikūpule’s army on Oʻahu in the Nuʻuanu campaign. Fighting culminated near the pali.",
+          "status": "well-supported",
+          "explanation": "Parties and year are retained at the resolution of the source. Casualty totals are not inferred.",
+          "support": [
+            {
+              "sourceId": "history",
+              "stance": "supports",
+              "locator": "Named event / chronological discussion",
+              "note": "Supports event and parties; exact combat positions remain unresolved."
+            }
+          ]
+        },
+        {
+          "id": "location",
+          "text": "The map uses a public place reference for Nuʻuanu.",
+          "status": "well-supported",
+          "explanation": "USGS Nuʻuanu Pali named-cliff reference; the campaign extended through the valley, not just this point.",
+          "support": [
+            {
+              "sourceId": "geography",
+              "stance": "supports",
+              "locator": "Named public feature",
+              "note": "Geographic reference only; separate from chronology."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "history",
+          "title": "Nuʻuanu — Kamehameha and Kalanikūpule — historical evidence",
+          "authors": "Paul D’Arcy / ANU Press",
+          "year": null,
+          "venue": "Paul D’Arcy / ANU Press",
+          "url": "https://press-files.anu.edu.au/downloads/press/n4217/html/ch05.xhtml",
+          "referenceType": "web-resource",
+          "access": "Public source checked 2026-11-15; original factual summary."
+        },
+        {
+          "id": "geography",
+          "title": "USGS Geographic Names Information System — Hawaiʻi",
+          "authors": "US Geological Survey",
+          "year": 2021,
+          "venue": "USGS",
+          "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/HI_Features_20210825.txt",
+          "referenceType": "dataset",
+          "identifier": "HI_Features_20210825",
+          "access": "Public-domain named-feature coordinates. Regional event positions are labeled schematic."
+        }
+      ],
+      "review": {
+        "summary": "Kamehameha’s forces defeated Kalanikūpule’s army on Oʻahu in the Nuʻuanu campaign. Fighting culminated near the pali.",
+        "limitations": "Named locality; no precise battlefield, casualty census, or exact calendar day is asserted.",
+        "discussion": "Hawaiian historical accounts preserve named leaders and changing alliances. Oral history, later written accounts and archaeology can have different levels of chronological and spatial precision.",
+        "provenance": "Official Hawaiian heritage sources, NPS historical synthesis and scholarly comparison of named historical accounts; USGS public geography.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added local Hawaiian place or conflict context."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "conflict",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -157.79397,
+            21.367568
+          ]
+        },
+        "precision": "USGS Nuʻuanu Pali named-cliff reference; the campaign extended through the valley, not just this point.",
+        "provenance": "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Archive/MainDomestic/HI_Features_20210825.txt; public named geographic feature, with coordinate rounding for regional events. Exact combat positions are not reconstructed."
+      }
+    }
+  ]
+}

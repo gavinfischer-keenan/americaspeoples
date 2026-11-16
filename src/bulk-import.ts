@@ -314,6 +314,7 @@ function buildPackage(
         start,
         end,
         approximate: bool(r, "approximate", row),
+        ...(str(r,'event_date')?{eventDate:str(r,'event_date')}:{}),
         ...(certainStart !== null ? { certainStart } : {}),
         ...(certainEnd !== null ? { certainEnd } : {}),
         original: str(r, "original_dates"),

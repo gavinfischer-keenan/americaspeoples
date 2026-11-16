@@ -1,5 +1,5 @@
 import type {MapPoint} from './map-picking';
-export const MAX_MAP_ZOOM=128;
+export const MAX_MAP_ZOOM=65536;
 export const clampZoom=(zoom:number)=>Math.max(1,Math.min(MAX_MAP_ZOOM,Number.isFinite(zoom)?zoom:1));
 
 /** The smallest longitude arc keeps Pacific connections on the nearby side of the globe. */

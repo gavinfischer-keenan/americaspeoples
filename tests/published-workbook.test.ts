@@ -20,6 +20,7 @@ test("complete published workbook retains dates, claims, sources and overlay geo
     assert.equal(p.record.time.start, r.time.start);
     assert.equal(p.record.time.end, r.time.end);
     assert.equal(p.record.time.kind, r.time.kind);
+    assert.equal(p.record.time.eventDate,r.time.eventDate);
     assert.deepEqual(p.record.overlay, r.overlay);
     assert.deepEqual(p.record.population, r.population);
     assert.deepEqual(p.record.linguistics, r.linguistics);

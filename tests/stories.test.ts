@@ -4,6 +4,7 @@ import { dataset } from "../src/published-data";
 import { stories } from "../src/stories";
 import { historyState } from "../src/history";
 import { END_YEAR } from "../src/time";
+import {MAX_MAP_ZOOM} from '../src/map-viewport';
 
 const records = new Map(dataset.records.map(record => [record.id, record]));
 
@@ -19,7 +20,7 @@ test("journeys can resolve source-linked evidence without inventing record IDs o
       previous = scene.year;
       assert.ok(scene.body.trim() && scene.note.trim() && scene.recordIds.length, scene.id);
       assert.ok(scene.center[0] >= -180 && scene.center[0] <= 180 && scene.center[1] >= -90 && scene.center[1] <= 90, scene.id);
-      assert.ok(scene.zoom >= 1 && scene.zoom <= 12, scene.id);
+      assert.ok(scene.zoom >= 1 && scene.zoom <= MAX_MAP_ZOOM, scene.id);
       assert.ok(scene.recordIds.some(id => {
         const record = records.get(id);
         return record && historyState(record, scene.year) !== "outside";

@@ -30,8 +30,26 @@ export const stories: Story[] = [
     id: "pacific-arrivals",
     title: "Across the Pacific",
     subtitle: "Arrivals, onward voyages, continuing communities",
-    description: "Follow selected founding evidence from the western Pacific into Polynesia, then distinguish the end of an arrival window from the lives that followed.",
+    description: "Begin with Pleistocene sea crossings and island occupation, then follow later Lapita and Polynesian settlement. These are different migrations, separated by many millennia.",
     scenes: [
+      {
+        id: "early-sahul", year: -63050, title: "Sea crossings long before Lapita",
+        body: "People had reached northern Australia tens of thousands of years before Lapita. The early occupation model at Madjedbebe belongs to this much older history. Reaching Sahul required sea crossings even when lower sea levels joined land that is separate today.",
+        note: "An archaeological arrival estimate does not recover a particular boat or a complete route. Today’s coastlines and relief are reference geography.",
+        recordIds: ["px-madjedbebe-onset", "comparative-sahul-purposeful-voyaging"], scope: "pacific", center: [132, -8], zoom: 4,
+      },
+      {
+        id: "raja-ampat-crossings", year: -51000, title: "Island life near New Guinea",
+        body: "Mololo Cave on Waigeo records early human activity around or before 55,000–50,000 years ago. People used both rainforest and marine resources. Seafaring simulations identify a viable northern crossing corridor through Raja Ampat; it is one possible pathway into Sahul.",
+        note: "The line is a modeled corridor. The cave is a published physical location; the precise journeys are not known.",
+        recordIds: ["context-mololo-early", "context-raja-ampat-crossings"], scope: "pacific", center: [130, -2], zoom: 12,
+      },
+      {
+        id: "early-timor", year: -42000, title: "People on Timor",
+        body: "Laili’s earliest intensive occupation is modeled around 44,000 years ago. It belongs to a southern island history with marine food, stone working and movement between islands. This dates one shelter, rather than proving the first human arrival anywhere on Timor.",
+        note: "The displayed window is uncertainty around occupation onset, not continuous residence through every year in it. The map uses a regional Laili locator.",
+        recordIds: ["context-laili-early"], scope: "pacific", center: [125, -8], zoom: 8,
+      },
       {
         id: "beyond-near-oceania", year: -1250, title: "Reaching Vanuatu",
         body: "Early Lapita settlement evidence connects the Bismarck region with islands farther east, including Vanuatu. The moving line introduces a broad founding pulse across this ocean geography. It represents inferred movement between regions, rather than the recorded track of a particular canoe.",
@@ -63,6 +81,12 @@ export const stories: Story[] = [
         recordIds: ["history-west-east-polynesia-migration"], scope: "pacific", center: [-160, -16], zoom: 3,
       },
       {
+        id: "hawaii-arrival", year: 1100, title: "A connection reaches Hawaiʻi",
+        body: "Hawaiian settlement required a long ocean crossing from East Polynesia. One combined archaeological and environmental model places arrival between 940 and 1130 CE. The line makes that relationship visible without choosing a certain homeland island or claiming a known canoe track.",
+        note: "Published arrival models differ. This is an arrival window; it does not date the end of later return voyages or exchange.",
+        recordIds: ["context-hawaii-arrival", "hawaii-athens2014-model"], scope: "pacific", center: [-153, 5], zoom: 3,
+      },
+      {
         id: "rapa-nui-arrival", year: 1250, title: "Toward Rapa Nui",
         body: "A later founding pulse reaches the far eastern Pacific in the chronology used here. Rapa Nui becomes the focus of this connection. The line expresses a central Polynesian relationship; its western anchor is an orientation aid, not an established departure port for every founder.",
         note: "The approximate regional window is not a measured duration of migration. Mangareva is a schematic origin proxy.",
@@ -74,6 +98,20 @@ export const stories: Story[] = [
         note: "Regional presence does not prove uninterrupted occupation at every site. The record’s later boundary is not extinction or abandonment.",
         recordIds: ["history-rapa-nui-regional-occupation", "history-tonga-regional-occupation", "history-american-samoa-regional-occupation"], scope: "pacific", center: [-148, -20], zoom: 1.8,
       },
+    ],
+  },
+  {
+    id: "hawaii-connections", title: "Hawaiʻi in a connected Pacific", subtitle: "Arrival, island exchange, and ocean trade",
+    description: "Hawaiian communities remained connected: distinguish settlement models, sourced tools, and documented maritime commerce.",
+    scenes: [
+      {id:"hawaii-founding",year:1100,title:"Across the open ocean",body:"An East Polynesian migration brought people to Hawaiʻi. One arrival model places settlement in 940–1130 CE; precise departure islands and individual voyages remain unresolved.",note:"The route is a regional relationship. Alternative chronologies remain in the evidence library.",recordIds:["context-hawaii-arrival"],scope:"pacific",center:[-154,8],zoom:3},
+      {id:"hawaii-valleys",year:1350,title:"Communities after arrival",body:"Pololū Valley provides evidence of continuing habitation on Hawaiʻi Island. A founding route can fade while the lives and work of island communities continue.",note:"One inhabited valley is positive evidence of people, not a map of every Hawaiian settlement.",recordIds:["history-hawaii-island-regional-occupation","hawaii-local-lapakahi"],scope:"pacific",center:[-156.4,20.5],zoom:45},
+      {id:"hawaii-island-exchange",year:1700,title:"Tools move between islands",body:"Basalt used at Kahikinui on Maui came from several islands. These sourced objects make interisland exchange visible alongside local settlement and agricultural growth.",note:"The archaeological contexts span roughly 1400–1800. They do not provide an annual shipping schedule or a known date when contact stopped.",recordIds:["context-hawaii-maui-adzes","context-lanai-maui-adzes","context-kahoolawe-maui-adzes","context-oahu-maui-adzes","context-kahikinui-community"],scope:"pacific",center:[-156.8,20.8],zoom:45},
+      {id:"hawaii-contested-islands",year:1782,title:"Rival rulers, connected islands",body:"Kamehameha and his allies fight Kīwalaʻō in south Kona while Kahekili retakes Kaʻuiki in east Maui. These are separate conflicts within a connected archipelago, not an inevitable march toward one kingdom.",note:"The named headland is known. Regional battle references do not pretend to locate every fighter or defensive wall.",recordIds:["hawaii-local-mokuohai","hawaii-local-kauiki"],scope:"pacific",center:[-156.3,20.3],zoom:65},
+      {id:"hawaii-kepaniwai",year:1790,title:"War in ʻĪao Valley",body:"Kamehameha’s army defeats the Maui defenders at Kepaniwai. On Hawaiʻi Island, work begins at Puʻukoholā. Communities and exchange networks remain on the same map around these events.",note:"A valley reference locates the event without inventing a battlefield boundary. The displayed year does not mean continuous fighting for twelve months.",recordIds:["hawaii-local-kepaniwai","hawaii-local-puukohola"],scope:"pacific",center:[-156.49,20.86],zoom:220},
+      {id:"hawaii-kawaihae",year:1791,title:"A temple, a naval battle, a killing",body:"Puʻukoholā is completed. Kamehameha’s fleet defeats the invading coalition near Waipiʻo. Keōua and companions are killed after arriving at Kawaihae; accounts differ about the planning and immediate circumstances.",note:"Documented construction, an approximate sea-battle location, and disputed responsibility are separate kinds of evidence.",recordIds:["hawaii-local-puukohola","hawaii-local-waipio-sea-battle","hawaii-local-keoua-killed"],scope:"pacific",center:[-155.72,20.06],zoom:230},
+      {id:"hawaii-nuuanu",year:1795,title:"The struggle for Oʻahu",body:"Kamehameha’s forces defeat Kalanikūpule in the Nuʻuanu campaign. The cliff marker locates the pali at the culmination of fighting; the campaign reached across a much wider inhabited landscape.",note:"We show the named parties and year. No precise casualty total or reconstructed tactical positions are added.",recordIds:["hawaii-local-nuuanu"],scope:"pacific",center:[-157.88,21.39],zoom:300},
+      {id:"hawaii-ocean-commerce",year:1828,title:"A Hawaiian port in a wider world",body:"Hawaiian ports provision whalers and China-trade vessels. Lumber and salmon travel from the Columbia River, while Hawaiian people, goods and labor connect the islands with the Pacific coast. Lahaina is the capital of the Hawaiian Kingdom.",note:"These are selected documented trade windows, not the complete network. The rest of the atlas remains visible at the same year.",recordIds:["context-hawaii-china","context-hawaii-columbia","context-hawaii-whaling","context-lahaina-capital"],scope:"pacific",center:[-160,29],zoom:2},
     ],
   },
   {
@@ -121,10 +159,10 @@ export const stories: Story[] = [
     description: "Follow changing Chaco connections through ceramics, scarlet macaws, regional building, and an interpretation of political reorganization.",
     scenes: [
       {
-        id: "early-chaco-ties", year: 850, title: "Connections to the west and south",
-        body: "A study of ceramic assemblages finds Chaco’s ninth-century connections primarily to the west and south. These relationships offer a way to see the emerging center within its wider region. They measure similarities and connections among assemblages, rather than identifying the journeys of individual people.",
-        note: "Ceramic networks do not prove that every connection involved migration or locate a particular migrant’s origin.",
-        recordIds: ["fc-chaco-early-network", "chaco-regional-center"], scope: "americas", center: [-110, 35], zoom: 5,
+        id: "early-chaco-ties", year: 850, title: "People build in the canyon",
+        body: "Pueblo Bonito and Una Vida begin around 850. Their separate points locate known great houses in the canyon landscape. Around them were smaller homes, fields and paths that this selected inventory does not yet map completely. Chaco already had connections to communities to the west and south.",
+        note: "Building locations are known. Approximate construction dates and interpretations of regional relationships are separate questions. Zoom out to see contemporary places elsewhere.",
+        recordIds: ["site-chaco-pueblo-bonito", "site-chaco-una-vida", "fc-chaco-early-network"], scope: "americas", center: [-107.94, 36.049], zoom: 1200,
       },
       {
         id: "macaws-at-chaco", year: 950, title: "Scarlet macaws arrive through exchange",
@@ -136,7 +174,7 @@ export const stories: Story[] = [
         id: "later-chaco-ties", year: 1090, title: "Stronger northern connections",
         body: "By the late eleventh century, the ceramic-network study finds strong Chaco ties with the Middle and Northern San Juan. The regional relationships have changed from the earlier pattern. This evidence describes integration among communities without demonstrating a single administrative transfer or a precisely dated migration.",
         note: "The record spans several network phases; its full date envelope does not mean identical ties persisted throughout.",
-        recordIds: ["fc-chaco-late-network"], scope: "americas", center: [-108, 36.5], zoom: 6,
+        recordIds: ["fc-chaco-late-network", "site-chaco-pueblo-alto", "site-chaco-chetro-ketl", "site-chaco-pueblo-del-arroyo"], scope: "americas", center: [-107.96, 36.06], zoom: 1500,
       },
       {
         id: "different-outliers", year: 1100, title: "New centers and existing communities",
@@ -146,9 +184,9 @@ export const stories: Story[] = [
       },
       {
         id: "chaco-reorganization", year: 1150, title: "A center changes; communities continue",
-        body: "One influential interpretation places the loss of Chaco Canyon’s central role around 1150 while broader community patterns continued. The map pauses at this approximate reference point. A change in institutional importance should not be read as the immediate disappearance of everyone connected with the region.",
-        note: "This is a historical interpretation of reorganization, not a direct date for every departure or a system-wide abandonment event.",
-        recordIds: ["fc-chaco-centrality-reorganization", "fc-chaco-late-network"], scope: "americas", center: [-108, 36], zoom: 5,
+        body: "By 1150 the canyon held many distinct great houses and community spaces. One interpretation places a change in Chaco’s regional importance around this time. That interpretation is shown alongside the actual built places; it does not erase them or establish when every resident left.",
+        note: "The broad regional marker describes an interpretation. The separate site points locate known structures; construction dates do not establish their entire occupation history.",
+        recordIds: ["fc-chaco-centrality-reorganization", "site-chaco-pueblo-bonito", "site-chaco-chetro-ketl", "site-chaco-kin-kletso", "site-chaco-new-alto"], scope: "americas", center: [-107.958, 36.056], zoom: 1400,
       },
     ],
   },

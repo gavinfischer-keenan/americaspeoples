@@ -16,6 +16,7 @@ export const BULK_HEADERS = {
     "record_type",
     "time_model",
     "approximate",
+    "event_date",
     "certain_start_year",
     "certain_start_era",
     "certain_end_year",

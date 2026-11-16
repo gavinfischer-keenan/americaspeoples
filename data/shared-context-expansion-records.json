@@ -1,0 +1,1611 @@
+{
+  "reviewedAt": "2026-11-15",
+  "scope": "Selected Pacific connections, early island occupation and contemporary nineteenth-century context. Dating and cessation limits are explicit.",
+  "records": [
+    {
+      "id": "context-hawaii-arrival",
+      "revision": 1,
+      "type": "event",
+      "title": "Central East Polynesia → Hawaiʻi — modeled settlement arrival",
+      "culture": {
+        "id": "historical-context",
+        "name": "Contemporary historical context",
+        "kind": "unknown",
+        "color": "#e1b67f"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 940,
+        "end": 1130,
+        "approximate": true,
+        "original": "940 to 1130 (astronomical calendar years); chronological scope below.",
+        "method": "Source-specific archaeological or historical chronology.",
+        "interpretation": "One published arrival model among alternatives. The date range estimates arrival, not annual migration; precise origin islands, voyages and intermediate stops are unresolved. It does not establish a return-traffic window."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "A 2014 combined archaeological/environmental model places initial Hawaiian settlement in 940–1130 CE (95% HPD), most probably 1000–1100. The line represents migration from East Polynesia; its southern endpoint is a regional reference, not an identified departure island.",
+          "status": "under discussion",
+          "explanation": "One published arrival model among alternatives. The date range estimates arrival, not annual migration; precise origin islands, voyages and intermediate stops are unresolved. It does not establish a return-traffic window.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Chronological and geographic discussion in the linked source",
+              "stance": "supports",
+              "note": "Supports the stated relationship or event; mapped geometry has the separate precision described below."
+            },
+            {
+              "sourceId": "origin",
+              "locator": "Discussion of Hawaiian origins and regional interaction",
+              "stance": "context",
+              "note": "The specific Marquesan homeland hypothesis is debated; no precise island of departure is asserted."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "title": "A Paleoenvironmental and Archaeological Model-Based Age Estimate for the Colonization of Hawaiʻi",
+          "url": "https://www.cambridge.org/core/journals/american-antiquity/article/abs/paleoenvironmental-and-archaeological-modelbased-age-estimate-for-the-colonization-of-hawail/A831E7C6BED967D22E33C905FE1CD3FA",
+          "authors": "J. Stephen Athens, Timothy M. Rieth and Thomas S. Dye",
+          "year": 2014,
+          "venue": "J. Stephen Athens, Timothy M. Rieth and Thomas S. Dye",
+          "referenceType": "web-resource",
+          "access": "Primary publication or official heritage/archive source inspected 2026-11-15. Original factual summary; no Consensus report text redistributed."
+        },
+        {
+          "id": "origin",
+          "title": "Marquesan colonisation chronologies and post-colonisation interaction: implications for Hawaiian origins and the “Marquesan Homeland” hypothesis",
+          "url": "https://doi.org/10.70460/jpa.v5i2.137",
+          "authors": "Melinda S. Allen",
+          "year": 2014,
+          "venue": "Melinda S. Allen",
+          "referenceType": "web-resource",
+          "access": "Primary publication or official heritage/archive source inspected 2026-11-15. Original factual summary; no Consensus report text redistributed."
+        }
+      ],
+      "review": {
+        "summary": "A 2014 combined archaeological/environmental model places initial Hawaiian settlement in 940–1130 CE (95% HPD), most probably 1000–1100. The line represents migration from East Polynesia; its southern endpoint is a regional reference, not an identified departure island.",
+        "limitations": "One published arrival model among alternatives. The date range estimates arrival, not annual migration; precise origin islands, voyages and intermediate stops are unresolved. It does not establish a return-traffic window.",
+        "discussion": "Coverage is selected. A latest attestation is not proof of cessation, abandonment or disappearance.",
+        "provenance": "Consensus Deep discovery followed by primary-source checks and original editorial synthesis. Historical context additions use official archives and heritage sources.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added to the shared-date atlas."
+        ],
+        "relatedIds": [
+          "hawaii-athens2014-model",
+          "pacific-allen2014-marquesas",
+          "history-hawaii-continuity"
+        ]
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "direction": "forward",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -148,
+              -12
+            ],
+            [
+              -155.6,
+              20
+            ]
+          ]
+        },
+        "precision": "Schematic relationship between named regions; not a recovered sailing track, port itinerary or measure of traffic frequency.",
+        "provenance": "Editorial geographic anchors for the source-supported relationship. Modern coastlines are reference only."
+      },
+      "history": {
+        "kind": "migration",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 940,
+            "end": 1130,
+            "certainty": "approximate",
+            "note": "One published arrival model among alternatives. The date range estimates arrival, not annual migration; precise origin islands, voyages and intermediate stops are unresolved. It does not establish a return-traffic window."
+          }
+        ],
+        "connection": {
+          "evidence": "A 2014 combined archaeological/environmental model places initial Hawaiian settlement in 940–1130 CE (95% HPD), most probably 1000–1100. The line represents migration from East Polynesia; its southern endpoint is a regional reference, not an identified departure island.",
+          "lastEvidence": 1130,
+          "cessation": "unknown",
+          "note": "The displayed evidence window is not a demonstrated date of last contact. One published arrival model among alternatives. The date range estimates arrival, not annual migration; precise origin islands, voyages and intermediate stops are unresolved. It does not establish a return-traffic window.",
+          "claimId": "evidence"
+        }
+      }
+    },
+    {
+      "id": "context-hawaii-maui-adzes",
+      "revision": 1,
+      "type": "event",
+      "title": "Hawaiʻi Island → Maui — Mauna Kea basalt",
+      "culture": {
+        "id": "historical-context",
+        "name": "Contemporary historical context",
+        "kind": "unknown",
+        "color": "#e1b67f"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1400,
+        "end": 1800,
+        "approximate": true,
+        "original": "1400 to 1800 (astronomical calendar years); chronological scope below.",
+        "method": "Source-specific archaeological or historical chronology.",
+        "interpretation": "Approximate context window of the sampled Kahikinui settlement, about 1400–1800. Individual transfers are not dated to every year of this span. Material provenance supports movement toward Maui; neither a direct sailing itinerary nor a return cargo is known. No cessation date is established."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Kahikinui stone tools include basalt attributed to Mauna Kea on Hawaiʻi Island.",
+          "status": "under discussion",
+          "explanation": "Approximate context window of the sampled Kahikinui settlement, about 1400–1800. Individual transfers are not dated to every year of this span. Material provenance supports movement toward Maui; neither a direct sailing itinerary nor a return cargo is known. No cessation date is established.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Chronological and geographic discussion in the linked source",
+              "stance": "supports",
+              "note": "Supports the stated relationship or event; mapped geometry has the separate precision described below."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "title": "Interpolity exchange of basalt tools facilitated via elite control in Hawaiian archaic states",
+          "url": "https://doi.org/10.1073/pnas.1119009109",
+          "authors": "Patrick V. Kirch and colleagues",
+          "year": 2012,
+          "venue": "Patrick V. Kirch and colleagues",
+          "referenceType": "web-resource",
+          "access": "Primary publication or official heritage/archive source inspected 2026-11-15. Original factual summary; no Consensus report text redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Kahikinui stone tools include basalt attributed to Mauna Kea on Hawaiʻi Island.",
+        "limitations": "Approximate context window of the sampled Kahikinui settlement, about 1400–1800. Individual transfers are not dated to every year of this span. Material provenance supports movement toward Maui; neither a direct sailing itinerary nor a return cargo is known. No cessation date is established.",
+        "discussion": "Coverage is selected. A latest attestation is not proof of cessation, abandonment or disappearance.",
+        "provenance": "Consensus Deep discovery followed by primary-source checks and original editorial synthesis. Historical context additions use official archives and heritage sources.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added to the shared-date atlas."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "direction": "forward",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -155.45,
+              19.8
+            ],
+            [
+              -156.25,
+              20.65
+            ]
+          ]
+        },
+        "precision": "Schematic relationship between named regions; not a recovered sailing track, port itinerary or measure of traffic frequency.",
+        "provenance": "Editorial geographic anchors for the source-supported relationship. Modern coastlines are reference only."
+      },
+      "history": {
+        "kind": "exchange",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 1400,
+            "end": 1800,
+            "certainty": "approximate",
+            "note": "Approximate context window of the sampled Kahikinui settlement, about 1400–1800. Individual transfers are not dated to every year of this span. Material provenance supports movement toward Maui; neither a direct sailing itinerary nor a return cargo is known. No cessation date is established."
+          }
+        ],
+        "connection": {
+          "evidence": "Kahikinui stone tools include basalt attributed to Mauna Kea on Hawaiʻi Island.",
+          "lastEvidence": 1800,
+          "cessation": "unknown",
+          "note": "The displayed evidence window is not a demonstrated date of last contact. Approximate context window of the sampled Kahikinui settlement, about 1400–1800. Individual transfers are not dated to every year of this span. Material provenance supports movement toward Maui; neither a direct sailing itinerary nor a return cargo is known. No cessation date is established.",
+          "claimId": "evidence"
+        }
+      }
+    },
+    {
+      "id": "context-lanai-maui-adzes",
+      "revision": 1,
+      "type": "event",
+      "title": "Lānaʻi → Maui — imported basalt",
+      "culture": {
+        "id": "historical-context",
+        "name": "Contemporary historical context",
+        "kind": "unknown",
+        "color": "#e1b67f"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1400,
+        "end": 1800,
+        "approximate": true,
+        "original": "1400 to 1800 (astronomical calendar years); chronological scope below.",
+        "method": "Source-specific archaeological or historical chronology.",
+        "interpretation": "Approximate context window of the sampled Kahikinui settlement, about 1400–1800. Individual transfers are not dated to every year of this span. Material provenance supports movement toward Maui; neither a direct sailing itinerary nor a return cargo is known. No cessation date is established."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Kahikinui tools include a geochemical group matching Kapohaku on Lānaʻi; some variation may reflect additional sources.",
+          "status": "under discussion",
+          "explanation": "Approximate context window of the sampled Kahikinui settlement, about 1400–1800. Individual transfers are not dated to every year of this span. Material provenance supports movement toward Maui; neither a direct sailing itinerary nor a return cargo is known. No cessation date is established.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Chronological and geographic discussion in the linked source",
+              "stance": "supports",
+              "note": "Supports the stated relationship or event; mapped geometry has the separate precision described below."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "title": "Interpolity exchange of basalt tools facilitated via elite control in Hawaiian archaic states",
+          "url": "https://doi.org/10.1073/pnas.1119009109",
+          "authors": "Patrick V. Kirch and colleagues",
+          "year": 2012,
+          "venue": "Patrick V. Kirch and colleagues",
+          "referenceType": "web-resource",
+          "access": "Primary publication or official heritage/archive source inspected 2026-11-15. Original factual summary; no Consensus report text redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Kahikinui tools include a geochemical group matching Kapohaku on Lānaʻi; some variation may reflect additional sources.",
+        "limitations": "Approximate context window of the sampled Kahikinui settlement, about 1400–1800. Individual transfers are not dated to every year of this span. Material provenance supports movement toward Maui; neither a direct sailing itinerary nor a return cargo is known. No cessation date is established.",
+        "discussion": "Coverage is selected. A latest attestation is not proof of cessation, abandonment or disappearance.",
+        "provenance": "Consensus Deep discovery followed by primary-source checks and original editorial synthesis. Historical context additions use official archives and heritage sources.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added to the shared-date atlas."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "direction": "forward",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -156.95,
+              20.85
+            ],
+            [
+              -156.25,
+              20.65
+            ]
+          ]
+        },
+        "precision": "Schematic relationship between named regions; not a recovered sailing track, port itinerary or measure of traffic frequency.",
+        "provenance": "Editorial geographic anchors for the source-supported relationship. Modern coastlines are reference only."
+      },
+      "history": {
+        "kind": "exchange",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 1400,
+            "end": 1800,
+            "certainty": "approximate",
+            "note": "Approximate context window of the sampled Kahikinui settlement, about 1400–1800. Individual transfers are not dated to every year of this span. Material provenance supports movement toward Maui; neither a direct sailing itinerary nor a return cargo is known. No cessation date is established."
+          }
+        ],
+        "connection": {
+          "evidence": "Kahikinui tools include a geochemical group matching Kapohaku on Lānaʻi; some variation may reflect additional sources.",
+          "lastEvidence": 1800,
+          "cessation": "unknown",
+          "note": "The displayed evidence window is not a demonstrated date of last contact. Approximate context window of the sampled Kahikinui settlement, about 1400–1800. Individual transfers are not dated to every year of this span. Material provenance supports movement toward Maui; neither a direct sailing itinerary nor a return cargo is known. No cessation date is established.",
+          "claimId": "evidence"
+        }
+      }
+    },
+    {
+      "id": "context-kahoolawe-maui-adzes",
+      "revision": 1,
+      "type": "event",
+      "title": "Kahoʻolawe → Maui — imported basalt",
+      "culture": {
+        "id": "historical-context",
+        "name": "Contemporary historical context",
+        "kind": "unknown",
+        "color": "#e1b67f"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1400,
+        "end": 1800,
+        "approximate": true,
+        "original": "1400 to 1800 (astronomical calendar years); chronological scope below.",
+        "method": "Source-specific archaeological or historical chronology.",
+        "interpretation": "Approximate context window of the sampled Kahikinui settlement, about 1400–1800. Individual transfers are not dated to every year of this span. Material provenance supports movement toward Maui; neither a direct sailing itinerary nor a return cargo is known. No cessation date is established."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "A nonlocal Kahikinui basalt group best matches the Puʻumoiwi source on Kahoʻolawe.",
+          "status": "under discussion",
+          "explanation": "Approximate context window of the sampled Kahikinui settlement, about 1400–1800. Individual transfers are not dated to every year of this span. Material provenance supports movement toward Maui; neither a direct sailing itinerary nor a return cargo is known. No cessation date is established.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Chronological and geographic discussion in the linked source",
+              "stance": "supports",
+              "note": "Supports the stated relationship or event; mapped geometry has the separate precision described below."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "title": "Interpolity exchange of basalt tools facilitated via elite control in Hawaiian archaic states",
+          "url": "https://doi.org/10.1073/pnas.1119009109",
+          "authors": "Patrick V. Kirch and colleagues",
+          "year": 2012,
+          "venue": "Patrick V. Kirch and colleagues",
+          "referenceType": "web-resource",
+          "access": "Primary publication or official heritage/archive source inspected 2026-11-15. Original factual summary; no Consensus report text redistributed."
+        }
+      ],
+      "review": {
+        "summary": "A nonlocal Kahikinui basalt group best matches the Puʻumoiwi source on Kahoʻolawe.",
+        "limitations": "Approximate context window of the sampled Kahikinui settlement, about 1400–1800. Individual transfers are not dated to every year of this span. Material provenance supports movement toward Maui; neither a direct sailing itinerary nor a return cargo is known. No cessation date is established.",
+        "discussion": "Coverage is selected. A latest attestation is not proof of cessation, abandonment or disappearance.",
+        "provenance": "Consensus Deep discovery followed by primary-source checks and original editorial synthesis. Historical context additions use official archives and heritage sources.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added to the shared-date atlas."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "direction": "forward",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -156.6,
+              20.55
+            ],
+            [
+              -156.25,
+              20.65
+            ]
+          ]
+        },
+        "precision": "Schematic relationship between named regions; not a recovered sailing track, port itinerary or measure of traffic frequency.",
+        "provenance": "Editorial geographic anchors for the source-supported relationship. Modern coastlines are reference only."
+      },
+      "history": {
+        "kind": "exchange",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 1400,
+            "end": 1800,
+            "certainty": "approximate",
+            "note": "Approximate context window of the sampled Kahikinui settlement, about 1400–1800. Individual transfers are not dated to every year of this span. Material provenance supports movement toward Maui; neither a direct sailing itinerary nor a return cargo is known. No cessation date is established."
+          }
+        ],
+        "connection": {
+          "evidence": "A nonlocal Kahikinui basalt group best matches the Puʻumoiwi source on Kahoʻolawe.",
+          "lastEvidence": 1800,
+          "cessation": "unknown",
+          "note": "The displayed evidence window is not a demonstrated date of last contact. Approximate context window of the sampled Kahikinui settlement, about 1400–1800. Individual transfers are not dated to every year of this span. Material provenance supports movement toward Maui; neither a direct sailing itinerary nor a return cargo is known. No cessation date is established.",
+          "claimId": "evidence"
+        }
+      }
+    },
+    {
+      "id": "context-oahu-maui-adzes",
+      "revision": 1,
+      "type": "event",
+      "title": "Oʻahu → Maui — imported basalt",
+      "culture": {
+        "id": "historical-context",
+        "name": "Contemporary historical context",
+        "kind": "unknown",
+        "color": "#e1b67f"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1400,
+        "end": 1800,
+        "approximate": true,
+        "original": "1400 to 1800 (astronomical calendar years); chronological scope below.",
+        "method": "Source-specific archaeological or historical chronology.",
+        "interpretation": "Approximate context window of the sampled Kahikinui settlement, about 1400–1800. Individual transfers are not dated to every year of this span. Material provenance supports movement toward Maui; neither a direct sailing itinerary nor a return cargo is known. No cessation date is established."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The Kahikinui study identifies Oʻahu sources among the imported basalt used on Maui.",
+          "status": "under discussion",
+          "explanation": "Approximate context window of the sampled Kahikinui settlement, about 1400–1800. Individual transfers are not dated to every year of this span. Material provenance supports movement toward Maui; neither a direct sailing itinerary nor a return cargo is known. No cessation date is established.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Chronological and geographic discussion in the linked source",
+              "stance": "supports",
+              "note": "Supports the stated relationship or event; mapped geometry has the separate precision described below."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "title": "Interpolity exchange of basalt tools facilitated via elite control in Hawaiian archaic states",
+          "url": "https://doi.org/10.1073/pnas.1119009109",
+          "authors": "Patrick V. Kirch and colleagues",
+          "year": 2012,
+          "venue": "Patrick V. Kirch and colleagues",
+          "referenceType": "web-resource",
+          "access": "Primary publication or official heritage/archive source inspected 2026-11-15. Original factual summary; no Consensus report text redistributed."
+        }
+      ],
+      "review": {
+        "summary": "The Kahikinui study identifies Oʻahu sources among the imported basalt used on Maui.",
+        "limitations": "Approximate context window of the sampled Kahikinui settlement, about 1400–1800. Individual transfers are not dated to every year of this span. Material provenance supports movement toward Maui; neither a direct sailing itinerary nor a return cargo is known. No cessation date is established.",
+        "discussion": "Coverage is selected. A latest attestation is not proof of cessation, abandonment or disappearance.",
+        "provenance": "Consensus Deep discovery followed by primary-source checks and original editorial synthesis. Historical context additions use official archives and heritage sources.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added to the shared-date atlas."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "direction": "forward",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -157.75,
+              21.45
+            ],
+            [
+              -156.25,
+              20.65
+            ]
+          ]
+        },
+        "precision": "Schematic relationship between named regions; not a recovered sailing track, port itinerary or measure of traffic frequency.",
+        "provenance": "Editorial geographic anchors for the source-supported relationship. Modern coastlines are reference only."
+      },
+      "history": {
+        "kind": "exchange",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 1400,
+            "end": 1800,
+            "certainty": "approximate",
+            "note": "Approximate context window of the sampled Kahikinui settlement, about 1400–1800. Individual transfers are not dated to every year of this span. Material provenance supports movement toward Maui; neither a direct sailing itinerary nor a return cargo is known. No cessation date is established."
+          }
+        ],
+        "connection": {
+          "evidence": "The Kahikinui study identifies Oʻahu sources among the imported basalt used on Maui.",
+          "lastEvidence": 1800,
+          "cessation": "unknown",
+          "note": "The displayed evidence window is not a demonstrated date of last contact. Approximate context window of the sampled Kahikinui settlement, about 1400–1800. Individual transfers are not dated to every year of this span. Material provenance supports movement toward Maui; neither a direct sailing itinerary nor a return cargo is known. No cessation date is established.",
+          "claimId": "evidence"
+        }
+      }
+    },
+    {
+      "id": "context-kahikinui-community",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Kahikinui, Maui — an inhabited and exchanging landscape",
+      "culture": {
+        "id": "historical-context",
+        "name": "Contemporary historical context",
+        "kind": "unknown",
+        "color": "#e1b67f"
+      },
+      "location": {
+        "id": "context-kahikinui-community-place",
+        "name": "Kahikinui district, Maui",
+        "lon": -156.25,
+        "lat": 20.65,
+        "precision": "Approximate named-place anchor; not a surveyed building footprint.",
+        "provenance": "Regional reference read against Figure 1 in https://www.pnas.org/content/pnas/109/4/1056.full.pdf; not an individual archaeological structure."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1400,
+        "end": 1800,
+        "approximate": true,
+        "original": "1400 to 1800 (astronomical calendar years); chronological scope below.",
+        "method": "Source-specific archaeological or historical chronology.",
+        "interpretation": "Regional settlement history; this point does not locate every home or assert constant population. The upper date is study coverage, not abandonment."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Dating places Kahikinui settlement around 1400, with later growth and a population peak around 1700–1800.",
+          "status": "under discussion",
+          "explanation": "Regional settlement history; this point does not locate every home or assert constant population. The upper date is study coverage, not abandonment.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Chronological and geographic discussion in the linked source",
+              "stance": "supports",
+              "note": "Supports the stated relationship or event; mapped geometry has the separate precision described below."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "title": "Interpolity exchange of basalt tools facilitated via elite control in Hawaiian archaic states",
+          "url": "https://doi.org/10.1073/pnas.1119009109",
+          "authors": "Patrick V. Kirch and colleagues",
+          "year": 2012,
+          "venue": "Patrick V. Kirch and colleagues",
+          "referenceType": "web-resource",
+          "access": "Primary publication or official heritage/archive source inspected 2026-11-15. Original factual summary; no Consensus report text redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Dating places Kahikinui settlement around 1400, with later growth and a population peak around 1700–1800.",
+        "limitations": "Regional settlement history; this point does not locate every home or assert constant population. The upper date is study coverage, not abandonment.",
+        "discussion": "Coverage is selected. A latest attestation is not proof of cessation, abandonment or disappearance.",
+        "provenance": "Consensus Deep discovery followed by primary-source checks and original editorial synthesis. Historical context additions use official archives and heritage sources.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added to the shared-date atlas."
+        ],
+        "relatedIds": []
+      },
+      "history": {
+        "kind": "habitation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "context-hawaii-china",
+      "revision": 1,
+      "type": "event",
+      "title": "Hawaiʻi ↔ China — Qing-era maritime trade",
+      "culture": {
+        "id": "historical-context",
+        "name": "Contemporary historical context",
+        "kind": "unknown",
+        "color": "#e1b67f"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1794,
+        "end": 1830,
+        "approximate": true,
+        "original": "1794 to 1830 (astronomical calendar years); chronological scope below.",
+        "method": "Source-specific archaeological or historical chronology.",
+        "interpretation": "Selected late-eighteenth/early-nineteenth-century trade window, not the complete life of the network. Mainland endpoint points toward today’s China, then under Qing rule; Canton was the commercial destination. Waypoints are schematic, not documented stops."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Hawaiian ports supplied ships trading with China; Honolulu joined these calls after 1794. Sandalwood, provisions, labor and imported goods linked Hawaiʻi with a wider maritime economy.",
+          "status": "under discussion",
+          "explanation": "Selected late-eighteenth/early-nineteenth-century trade window, not the complete life of the network. Mainland endpoint points toward today’s China, then under Qing rule; Canton was the commercial destination. Waypoints are schematic, not documented stops.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Chronological and geographic discussion in the linked source",
+              "stance": "supports",
+              "note": "Supports the stated relationship or event; mapped geometry has the separate precision described below."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "title": "Hawaiians at Fort Vancouver",
+          "url": "https://www.nps.gov/articles/hawaiiansatfortvancouver.htm",
+          "authors": "National Park Service",
+          "year": null,
+          "venue": "National Park Service",
+          "referenceType": "web-resource",
+          "access": "Primary publication or official heritage/archive source inspected 2026-11-15. Original factual summary; no Consensus report text redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Hawaiian ports supplied ships trading with China; Honolulu joined these calls after 1794. Sandalwood, provisions, labor and imported goods linked Hawaiʻi with a wider maritime economy.",
+        "limitations": "Selected late-eighteenth/early-nineteenth-century trade window, not the complete life of the network. Mainland endpoint points toward today’s China, then under Qing rule; Canton was the commercial destination. Waypoints are schematic, not documented stops.",
+        "discussion": "Coverage is selected. A latest attestation is not proof of cessation, abandonment or disappearance.",
+        "provenance": "Consensus Deep discovery followed by primary-source checks and original editorial synthesis. Historical context additions use official archives and heritage sources.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added to the shared-date atlas."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "direction": "both",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -157.86,
+              21.3
+            ],
+            [
+              117,
+              24
+            ]
+          ]
+        },
+        "precision": "Schematic relationship between named regions; not a recovered sailing track, port itinerary or measure of traffic frequency.",
+        "provenance": "Editorial geographic anchors for the source-supported relationship. Modern coastlines are reference only."
+      },
+      "history": {
+        "kind": "exchange",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 1794,
+            "end": 1830,
+            "certainty": "approximate",
+            "note": "Selected late-eighteenth/early-nineteenth-century trade window, not the complete life of the network. Mainland endpoint points toward today’s China, then under Qing rule; Canton was the commercial destination. Waypoints are schematic, not documented stops."
+          }
+        ],
+        "connection": {
+          "evidence": "Hawaiian ports supplied ships trading with China; Honolulu joined these calls after 1794. Sandalwood, provisions, labor and imported goods linked Hawaiʻi with a wider maritime economy.",
+          "lastEvidence": 1830,
+          "cessation": "unknown",
+          "note": "The displayed evidence window is not a demonstrated date of last contact. Selected late-eighteenth/early-nineteenth-century trade window, not the complete life of the network. Mainland endpoint points toward today’s China, then under Qing rule; Canton was the commercial destination. Waypoints are schematic, not documented stops.",
+          "claimId": "evidence"
+        }
+      }
+    },
+    {
+      "id": "context-hawaii-columbia",
+      "revision": 1,
+      "type": "event",
+      "title": "Hawaiʻi ↔ Columbia River — provisions, lumber and people",
+      "culture": {
+        "id": "historical-context",
+        "name": "Contemporary historical context",
+        "kind": "unknown",
+        "color": "#e1b67f"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1828,
+        "end": 1840,
+        "approximate": true,
+        "original": "1828 to 1840 (astronomical calendar years); chronological scope below.",
+        "method": "Source-specific archaeological or historical chronology.",
+        "interpretation": "Documented evidence window, including 1840 export activity; later operation is not bounded here. Connections are bidirectional, while the exact tracks and voyage schedules are not reconstructed."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Regular exports of lumber and salmon from Fort Vancouver to Honolulu were established by 1828. Hawaiian goods, workers and seafarers traveled through the same network.",
+          "status": "under discussion",
+          "explanation": "Documented evidence window, including 1840 export activity; later operation is not bounded here. Connections are bidirectional, while the exact tracks and voyage schedules are not reconstructed.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Chronological and geographic discussion in the linked source",
+              "stance": "supports",
+              "note": "Supports the stated relationship or event; mapped geometry has the separate precision described below."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "title": "Hawaiians at Fort Vancouver",
+          "url": "https://www.nps.gov/articles/hawaiiansatfortvancouver.htm",
+          "authors": "National Park Service",
+          "year": null,
+          "venue": "National Park Service",
+          "referenceType": "web-resource",
+          "access": "Primary publication or official heritage/archive source inspected 2026-11-15. Original factual summary; no Consensus report text redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Regular exports of lumber and salmon from Fort Vancouver to Honolulu were established by 1828. Hawaiian goods, workers and seafarers traveled through the same network.",
+        "limitations": "Documented evidence window, including 1840 export activity; later operation is not bounded here. Connections are bidirectional, while the exact tracks and voyage schedules are not reconstructed.",
+        "discussion": "Coverage is selected. A latest attestation is not proof of cessation, abandonment or disappearance.",
+        "provenance": "Consensus Deep discovery followed by primary-source checks and original editorial synthesis. Historical context additions use official archives and heritage sources.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added to the shared-date atlas."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "direction": "both",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -157.86,
+              21.3
+            ],
+            [
+              -122.66,
+              45.63
+            ]
+          ]
+        },
+        "precision": "Schematic relationship between named regions; not a recovered sailing track, port itinerary or measure of traffic frequency.",
+        "provenance": "Editorial geographic anchors for the source-supported relationship. Modern coastlines are reference only."
+      },
+      "history": {
+        "kind": "exchange",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 1828,
+            "end": 1840,
+            "certainty": "approximate",
+            "note": "Documented evidence window, including 1840 export activity; later operation is not bounded here. Connections are bidirectional, while the exact tracks and voyage schedules are not reconstructed."
+          }
+        ],
+        "connection": {
+          "evidence": "Regular exports of lumber and salmon from Fort Vancouver to Honolulu were established by 1828. Hawaiian goods, workers and seafarers traveled through the same network.",
+          "lastEvidence": 1840,
+          "cessation": "unknown",
+          "note": "The displayed evidence window is not a demonstrated date of last contact. Documented evidence window, including 1840 export activity; later operation is not bounded here. Connections are bidirectional, while the exact tracks and voyage schedules are not reconstructed.",
+          "claimId": "evidence"
+        }
+      }
+    },
+    {
+      "id": "context-hawaii-whaling",
+      "revision": 1,
+      "type": "event",
+      "title": "Hawaiʻi ↔ North Pacific whaling grounds",
+      "culture": {
+        "id": "historical-context",
+        "name": "Contemporary historical context",
+        "kind": "unknown",
+        "color": "#e1b67f"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1819,
+        "end": 1860,
+        "approximate": true,
+        "original": "1819 to 1860 (astronomical calendar years); chronological scope below.",
+        "method": "Source-specific archaeological or historical chronology.",
+        "interpretation": "The route points toward the North Pacific grounds, not a single port. The 1860 endpoint marks the beginning of documented decline, not a complete end to whaling or Hawaiian seafaring."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "American whalers reached Lahaina in 1819. The port became a major provisioning and shore-leave center; Hawaiian sailors also joined whaling crews.",
+          "status": "under discussion",
+          "explanation": "The route points toward the North Pacific grounds, not a single port. The 1860 endpoint marks the beginning of documented decline, not a complete end to whaling or Hawaiian seafaring.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Chronological and geographic discussion in the linked source",
+              "stance": "supports",
+              "note": "Supports the stated relationship or event; mapped geometry has the separate precision described below."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "title": "Lahaina Historic District",
+          "url": "https://www.nps.gov/places/lahaina-historic-district.htm",
+          "authors": "National Park Service",
+          "year": null,
+          "venue": "National Park Service",
+          "referenceType": "web-resource",
+          "access": "Primary publication or official heritage/archive source inspected 2026-11-15. Original factual summary; no Consensus report text redistributed."
+        }
+      ],
+      "review": {
+        "summary": "American whalers reached Lahaina in 1819. The port became a major provisioning and shore-leave center; Hawaiian sailors also joined whaling crews.",
+        "limitations": "The route points toward the North Pacific grounds, not a single port. The 1860 endpoint marks the beginning of documented decline, not a complete end to whaling or Hawaiian seafaring.",
+        "discussion": "Coverage is selected. A latest attestation is not proof of cessation, abandonment or disappearance.",
+        "provenance": "Consensus Deep discovery followed by primary-source checks and original editorial synthesis. Historical context additions use official archives and heritage sources.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added to the shared-date atlas."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "direction": "both",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -156.68,
+              20.88
+            ],
+            [
+              -172,
+              43
+            ]
+          ]
+        },
+        "precision": "Schematic relationship between named regions; not a recovered sailing track, port itinerary or measure of traffic frequency.",
+        "provenance": "Editorial geographic anchors for the source-supported relationship. Modern coastlines are reference only."
+      },
+      "history": {
+        "kind": "exchange",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 1819,
+            "end": 1860,
+            "certainty": "approximate",
+            "note": "The route points toward the North Pacific grounds, not a single port. The 1860 endpoint marks the beginning of documented decline, not a complete end to whaling or Hawaiian seafaring."
+          }
+        ],
+        "connection": {
+          "evidence": "American whalers reached Lahaina in 1819. The port became a major provisioning and shore-leave center; Hawaiian sailors also joined whaling crews.",
+          "lastEvidence": 1860,
+          "cessation": "unknown",
+          "note": "The displayed evidence window is not a demonstrated date of last contact. The route points toward the North Pacific grounds, not a single port. The 1860 endpoint marks the beginning of documented decline, not a complete end to whaling or Hawaiian seafaring.",
+          "claimId": "evidence"
+        }
+      }
+    },
+    {
+      "id": "context-lahaina-capital",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Lahaina — Hawaiian capital and Pacific port",
+      "culture": {
+        "id": "historical-context",
+        "name": "Contemporary historical context",
+        "kind": "unknown",
+        "color": "#e1b67f"
+      },
+      "location": {
+        "id": "context-lahaina-capital-place",
+        "name": "Lahaina, Maui",
+        "lon": -156.68,
+        "lat": 20.875,
+        "precision": "Approximate named-place anchor; not a surveyed building footprint.",
+        "provenance": "Town-scale geographic anchor for the district described at https://www.nps.gov/places/lahaina-historic-district.htm"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1820,
+        "end": 1845,
+        "approximate": true,
+        "original": "1820 to 1845 (astronomical calendar years); chronological scope below.",
+        "method": "Source-specific archaeological or historical chronology.",
+        "interpretation": "Capital-status phase only. Lahaina existed earlier and continued after the capital moved to Honolulu; it is not a foundation or abandonment interval."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Lahaina served as the capital of the Kingdom of Hawaiʻi from 1820 to 1845 while supporting a growing international port.",
+          "status": "under discussion",
+          "explanation": "Capital-status phase only. Lahaina existed earlier and continued after the capital moved to Honolulu; it is not a foundation or abandonment interval.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Chronological and geographic discussion in the linked source",
+              "stance": "supports",
+              "note": "Supports the stated relationship or event; mapped geometry has the separate precision described below."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "title": "Lahaina Historic District",
+          "url": "https://www.nps.gov/places/lahaina-historic-district.htm",
+          "authors": "National Park Service",
+          "year": null,
+          "venue": "National Park Service",
+          "referenceType": "web-resource",
+          "access": "Primary publication or official heritage/archive source inspected 2026-11-15. Original factual summary; no Consensus report text redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Lahaina served as the capital of the Kingdom of Hawaiʻi from 1820 to 1845 while supporting a growing international port.",
+        "limitations": "Capital-status phase only. Lahaina existed earlier and continued after the capital moved to Honolulu; it is not a foundation or abandonment interval.",
+        "discussion": "Coverage is selected. A latest attestation is not proof of cessation, abandonment or disappearance.",
+        "provenance": "Consensus Deep discovery followed by primary-source checks and original editorial synthesis. Historical context additions use official archives and heritage sources.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added to the shared-date atlas."
+        ],
+        "relatedIds": []
+      },
+      "history": {
+        "kind": "habitation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "context-lahaina-fort",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Lahaina Fort — built on the waterfront",
+      "culture": {
+        "id": "historical-context",
+        "name": "Contemporary historical context",
+        "kind": "unknown",
+        "color": "#e1b67f"
+      },
+      "location": {
+        "id": "context-lahaina-fort-place",
+        "name": "Lahaina waterfront",
+        "lon": -156.68,
+        "lat": 20.875,
+        "precision": "Approximate named-place anchor; not a surveyed building footprint.",
+        "provenance": "Town-scale reference; https://www.nps.gov/places/lahaina-historic-district.htm"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1832,
+        "end": 1832,
+        "approximate": true,
+        "original": "1832 to 1832 (astronomical calendar years); chronological scope below.",
+        "method": "Source-specific archaeological or historical chronology.",
+        "interpretation": "The year records actual construction. The town-scale anchor is not the fort’s surveyed footprint."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Maui’s Royal Governor built Lahaina Fort in 1832 amid tensions involving visiting whaling crews.",
+          "status": "under discussion",
+          "explanation": "The year records actual construction. The town-scale anchor is not the fort’s surveyed footprint.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Chronological and geographic discussion in the linked source",
+              "stance": "supports",
+              "note": "Supports the stated relationship or event; mapped geometry has the separate precision described below."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "title": "Lahaina Historic District",
+          "url": "https://www.nps.gov/places/lahaina-historic-district.htm",
+          "authors": "National Park Service",
+          "year": null,
+          "venue": "National Park Service",
+          "referenceType": "web-resource",
+          "access": "Primary publication or official heritage/archive source inspected 2026-11-15. Original factual summary; no Consensus report text redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Maui’s Royal Governor built Lahaina Fort in 1832 amid tensions involving visiting whaling crews.",
+        "limitations": "The year records actual construction. The town-scale anchor is not the fort’s surveyed footprint.",
+        "discussion": "Coverage is selected. A latest attestation is not proof of cessation, abandonment or disappearance.",
+        "provenance": "Consensus Deep discovery followed by primary-source checks and original editorial synthesis. Historical context additions use official archives and heritage sources.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added to the shared-date atlas."
+        ],
+        "relatedIds": []
+      },
+      "history": {
+        "kind": "settlement",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "context-mololo-early",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Mololo Cave, Waigeo — early island occupation",
+      "culture": {
+        "id": "historical-context",
+        "name": "Contemporary historical context",
+        "kind": "unknown",
+        "color": "#e1b67f"
+      },
+      "location": {
+        "id": "context-mololo-early-place",
+        "name": "Mololo Cave, Waigeo",
+        "lon": 130.91705555555555,
+        "lat": -0.30583333333333335,
+        "precision": "Published archaeological site coordinate; no claim of a measured building footprint.",
+        "provenance": "Published coordinate in Gaffney et al. 2024: 0°18′21.0″S, 130°55′01.4″E; https://doi.org/10.15184/aqy.2024.83"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -53050,
+        "end": -48050,
+        "approximate": true,
+        "original": "-53050 to -48050 (astronomical calendar years); chronological scope below.",
+        "method": "Source-specific archaeological or historical chronology.",
+        "interpretation": "Early evidence window, not the full occupation span. Some dated material is beyond radiocarbon limits, so 55,000 BP is not a hard earliest boundary. BP is referenced to 1950; converted display years are approximate."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Mololo Cave preserves human activity around or before 55,000–50,000 years ago, including plant processing and use of marine and rainforest resources.",
+          "status": "under discussion",
+          "explanation": "Early evidence window, not the full occupation span. Some dated material is beyond radiocarbon limits, so 55,000 BP is not a hard earliest boundary. BP is referenced to 1950; converted display years are approximate.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Chronological and geographic discussion in the linked source",
+              "stance": "supports",
+              "note": "Supports the stated relationship or event; mapped geometry has the separate precision described below."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "title": "Human dispersal and plant processing in the Pacific 55 000–50 000 years ago",
+          "url": "https://doi.org/10.15184/aqy.2024.83",
+          "authors": "Dylan Gaffney and colleagues",
+          "year": 2024,
+          "venue": "Dylan Gaffney and colleagues",
+          "referenceType": "web-resource",
+          "access": "Primary publication or official heritage/archive source inspected 2026-11-15. Original factual summary; no Consensus report text redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Mololo Cave preserves human activity around or before 55,000–50,000 years ago, including plant processing and use of marine and rainforest resources.",
+        "limitations": "Early evidence window, not the full occupation span. Some dated material is beyond radiocarbon limits, so 55,000 BP is not a hard earliest boundary. BP is referenced to 1950; converted display years are approximate.",
+        "discussion": "Coverage is selected. A latest attestation is not proof of cessation, abandonment or disappearance.",
+        "provenance": "Consensus Deep discovery followed by primary-source checks and original editorial synthesis. Historical context additions use official archives and heritage sources.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added to the shared-date atlas."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "context-raja-ampat-crossings",
+      "revision": 1,
+      "type": "event",
+      "title": "Wallacea → Raja Ampat — an early viable sea-crossing corridor",
+      "culture": {
+        "id": "historical-context",
+        "name": "Contemporary historical context",
+        "kind": "unknown",
+        "color": "#e1b67f"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": -53050,
+        "end": -48050,
+        "approximate": true,
+        "original": "-53050 to -48050 (astronomical calendar years); chronological scope below.",
+        "method": "Source-specific archaeological or historical chronology.",
+        "interpretation": "A modeled viable corridor, not an observed itinerary or proof that this was the only route. Dates follow the early archaeological context. Pleistocene coastlines differed; the animation does not imply repeated annual journeys."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Seafaring simulations show an Obi–Kofiau–Waitanta corridor could reach the Raja Ampat landmass associated with early Mololo occupation.",
+          "status": "under discussion",
+          "explanation": "A modeled viable corridor, not an observed itinerary or proof that this was the only route. Dates follow the early archaeological context. Pleistocene coastlines differed; the animation does not imply repeated annual journeys.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Chronological and geographic discussion in the linked source",
+              "stance": "supports",
+              "note": "Supports the stated relationship or event; mapped geometry has the separate precision described below."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "title": "Human dispersal and plant processing in the Pacific 55 000–50 000 years ago",
+          "url": "https://doi.org/10.15184/aqy.2024.83",
+          "authors": "Dylan Gaffney and colleagues",
+          "year": 2024,
+          "venue": "Dylan Gaffney and colleagues",
+          "referenceType": "web-resource",
+          "access": "Primary publication or official heritage/archive source inspected 2026-11-15. Original factual summary; no Consensus report text redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Seafaring simulations show an Obi–Kofiau–Waitanta corridor could reach the Raja Ampat landmass associated with early Mololo occupation.",
+        "limitations": "A modeled viable corridor, not an observed itinerary or proof that this was the only route. Dates follow the early archaeological context. Pleistocene coastlines differed; the animation does not imply repeated annual journeys.",
+        "discussion": "Coverage is selected. A latest attestation is not proof of cessation, abandonment or disappearance.",
+        "provenance": "Consensus Deep discovery followed by primary-source checks and original editorial synthesis. Historical context additions use official archives and heritage sources.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added to the shared-date atlas."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "direction": "forward",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              127.6,
+              -1.5
+            ],
+            [
+              130.92,
+              -0.306
+            ]
+          ]
+        },
+        "precision": "Schematic relationship between named regions; not a recovered sailing track, port itinerary or measure of traffic frequency.",
+        "provenance": "Editorial geographic anchors for the source-supported relationship. Modern coastlines are reference only."
+      },
+      "history": {
+        "kind": "migration",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": -53050,
+            "end": -48050,
+            "certainty": "approximate",
+            "note": "A modeled viable corridor, not an observed itinerary or proof that this was the only route. Dates follow the early archaeological context. Pleistocene coastlines differed; the animation does not imply repeated annual journeys."
+          }
+        ],
+        "connection": {
+          "evidence": "Seafaring simulations show an Obi–Kofiau–Waitanta corridor could reach the Raja Ampat landmass associated with early Mololo occupation.",
+          "lastEvidence": -48050,
+          "cessation": "unknown",
+          "note": "The displayed evidence window is not a demonstrated date of last contact. A modeled viable corridor, not an observed itinerary or proof that this was the only route. Dates follow the early archaeological context. Pleistocene coastlines differed; the animation does not imply repeated annual journeys.",
+          "claimId": "evidence"
+        }
+      }
+    },
+    {
+      "id": "context-laili-early",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Timor — Laili’s early occupation onset",
+      "culture": {
+        "id": "historical-context",
+        "name": "Contemporary historical context",
+        "kind": "unknown",
+        "color": "#e1b67f"
+      },
+      "location": {
+        "id": "context-laili-early-place",
+        "name": "Laili region, Timor-Leste",
+        "lon": 126.15,
+        "lat": -8.55,
+        "precision": "Regional locator within several kilometers; exact shelter coordinate not verified in this intake.",
+        "provenance": "Approximate regional anchor from the study’s Figure 1; https://doi.org/10.1038/s41467-024-48395-x"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": -46608,
+        "end": -40853,
+        "approximate": true,
+        "original": "-46608 to -40853 (astronomical calendar years); chronological scope below.",
+        "method": "Source-specific archaeological or historical chronology.",
+        "interpretation": "An initial-occupation probability window, not six millennia of demonstrated uninterrupted residence. It dates this shelter’s onset, not the first arrival anywhere on Timor. BP is referenced to 1950."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Laili’s initial intensive occupation has a modeled median age of 43,949 BP, with a 95.4% range of 48,558–42,803 BP.",
+          "status": "under discussion",
+          "explanation": "An initial-occupation probability window, not six millennia of demonstrated uninterrupted residence. It dates this shelter’s onset, not the first arrival anywhere on Timor. BP is referenced to 1950.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Chronological and geographic discussion in the linked source",
+              "stance": "supports",
+              "note": "Supports the stated relationship or event; mapped geometry has the separate precision described below."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "title": "Abrupt onset of intensive human occupation 44,000 years ago on the threshold of Sahul",
+          "url": "https://doi.org/10.1038/s41467-024-48395-x",
+          "authors": "Ceri Shipton and colleagues",
+          "year": 2024,
+          "venue": "Ceri Shipton and colleagues",
+          "referenceType": "web-resource",
+          "access": "Primary publication or official heritage/archive source inspected 2026-11-15. Original factual summary; no Consensus report text redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Laili’s initial intensive occupation has a modeled median age of 43,949 BP, with a 95.4% range of 48,558–42,803 BP.",
+        "limitations": "An initial-occupation probability window, not six millennia of demonstrated uninterrupted residence. It dates this shelter’s onset, not the first arrival anywhere on Timor. BP is referenced to 1950.",
+        "discussion": "Coverage is selected. A latest attestation is not proof of cessation, abandonment or disappearance.",
+        "provenance": "Consensus Deep discovery followed by primary-source checks and original editorial synthesis. Historical context additions use official archives and heritage sources.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added to the shared-date atlas."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "context-cabanagem",
+      "revision": 1,
+      "type": "event",
+      "title": "Grão-Pará — Cabanagem revolt and suppression",
+      "culture": {
+        "id": "historical-context",
+        "name": "Contemporary historical context",
+        "kind": "unknown",
+        "color": "#e1b67f"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1835,
+        "end": 1840,
+        "approximate": true,
+        "original": "1835 to 1840 (astronomical calendar years); chronological scope below.",
+        "method": "Source-specific archaeological or historical chronology.",
+        "interpretation": "Belém is a regional reference, not the location of every engagement. No casualty total is inferred."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The Cabanagem uprising and its suppression took place in Grão-Pará from 1835 to 1840, involving Indigenous, Black and other poor communities as well as competing provincial leaders.",
+          "status": "under discussion",
+          "explanation": "Belém is a regional reference, not the location of every engagement. No casualty total is inferred.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Chronological and geographic discussion in the linked source",
+              "stance": "supports",
+              "note": "Supports the stated relationship or event; mapped geometry has the separate precision described below."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "title": "Cabanagem",
+          "url": "https://pesquisaescolar.fundaj.gov.br/pt-br/artigo/cabanagem/",
+          "authors": "Fundação Joaquim Nabuco",
+          "year": null,
+          "venue": "Fundação Joaquim Nabuco",
+          "referenceType": "web-resource",
+          "access": "Primary publication or official heritage/archive source inspected 2026-11-15. Original factual summary; no Consensus report text redistributed."
+        }
+      ],
+      "review": {
+        "summary": "The Cabanagem uprising and its suppression took place in Grão-Pará from 1835 to 1840, involving Indigenous, Black and other poor communities as well as competing provincial leaders.",
+        "limitations": "Belém is a regional reference, not the location of every engagement. No casualty total is inferred.",
+        "discussion": "Coverage is selected. A latest attestation is not proof of cessation, abandonment or disappearance.",
+        "provenance": "Consensus Deep discovery followed by primary-source checks and original editorial synthesis. Historical context additions use official archives and heritage sources.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added to the shared-date atlas."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "conflict",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -48.5,
+            -1.45
+          ]
+        },
+        "precision": "Town/region reference only. The marker indicates contextual evidence, not the area occupied by fighting.",
+        "provenance": "Named geographic focus from the cited history, positioned with an approximate modern geographic anchor."
+      }
+    },
+    {
+      "id": "context-farroupilha",
+      "revision": 1,
+      "type": "event",
+      "title": "Rio Grande do Sul — Farroupilha War",
+      "culture": {
+        "id": "historical-context",
+        "name": "Contemporary historical context",
+        "kind": "unknown",
+        "color": "#e1b67f"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1835,
+        "end": 1845,
+        "approximate": true,
+        "original": "1835 to 1845 (astronomical calendar years); chronological scope below.",
+        "method": "Source-specific archaeological or historical chronology.",
+        "interpretation": "Regional conflict record; the Porto Alegre anchor is not a boundary or a precise battlefield."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Republican and separatist forces fought the Brazilian Empire in Rio Grande do Sul during the Farroupilha conflict, 1835–1845.",
+          "status": "under discussion",
+          "explanation": "Regional conflict record; the Porto Alegre anchor is not a boundary or a precise battlefield.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Chronological and geographic discussion in the linked source",
+              "stance": "supports",
+              "note": "Supports the stated relationship or event; mapped geometry has the separate precision described below."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "title": "Período Regencial — Cabanagem, Farroupilha and Malês",
+          "url": "https://www.gov.br/imprensanacional/pt-br/canais_atendimento/exposicao-especial-in-setembro-2025-texto-final-e-book-26-09-p.pdf",
+          "authors": "Imprensa Nacional",
+          "year": 2025,
+          "venue": "Imprensa Nacional",
+          "referenceType": "web-resource",
+          "access": "Primary publication or official heritage/archive source inspected 2026-11-15. Original factual summary; no Consensus report text redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Republican and separatist forces fought the Brazilian Empire in Rio Grande do Sul during the Farroupilha conflict, 1835–1845.",
+        "limitations": "Regional conflict record; the Porto Alegre anchor is not a boundary or a precise battlefield.",
+        "discussion": "Coverage is selected. A latest attestation is not proof of cessation, abandonment or disappearance.",
+        "provenance": "Consensus Deep discovery followed by primary-source checks and original editorial synthesis. Historical context additions use official archives and heritage sources.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added to the shared-date atlas."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "conflict",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -51.23,
+            -30.03
+          ]
+        },
+        "precision": "Town/region reference only. The marker indicates contextual evidence, not the area occupied by fighting.",
+        "provenance": "Named geographic focus from the cited history, positioned with an approximate modern geographic anchor."
+      }
+    },
+    {
+      "id": "context-males-revolt",
+      "revision": 1,
+      "type": "event",
+      "title": "Salvador — Malês revolt and repression",
+      "culture": {
+        "id": "historical-context",
+        "name": "Contemporary historical context",
+        "kind": "unknown",
+        "color": "#e1b67f"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1835,
+        "end": 1835,
+        "approximate": false,
+        "original": "1835 to 1835 (astronomical calendar years); chronological scope below.",
+        "method": "Source-specific archaeological or historical chronology.",
+        "interpretation": "The city anchor does not identify every confrontation. Named participants and penalties require the individual archival cases; no aggregate death count is invented.",
+        "eventDate": "1835-01-24"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Enslaved and free African Muslims rose in Salvador on the night of 24–25 January 1835. The state suppressed the revolt; the Bahia archive preserves criminal proceedings.",
+          "status": "under discussion",
+          "explanation": "The city anchor does not identify every confrontation. Named participants and penalties require the individual archival cases; no aggregate death count is invented.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Chronological and geographic discussion in the linked source",
+              "stance": "supports",
+              "note": "Supports the stated relationship or event; mapped geometry has the separate precision described below."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "title": "Revolta dos Malês: APEB preserva documentos",
+          "url": "https://www.ba.gov.br/fpc/noticias/2025-01/50809/revolta-dos-males-arquivo-publico-do-estado-da-bahia-preserva-documentos-do",
+          "authors": "Arquivo Público do Estado da Bahia / Fundação Pedro Calmon",
+          "year": 2025,
+          "venue": "Arquivo Público do Estado da Bahia / Fundação Pedro Calmon",
+          "referenceType": "web-resource",
+          "access": "Primary publication or official heritage/archive source inspected 2026-11-15. Original factual summary; no Consensus report text redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Enslaved and free African Muslims rose in Salvador on the night of 24–25 January 1835. The state suppressed the revolt; the Bahia archive preserves criminal proceedings.",
+        "limitations": "The city anchor does not identify every confrontation. Named participants and penalties require the individual archival cases; no aggregate death count is invented.",
+        "discussion": "Coverage is selected. A latest attestation is not proof of cessation, abandonment or disappearance.",
+        "provenance": "Consensus Deep discovery followed by primary-source checks and original editorial synthesis. Historical context additions use official archives and heritage sources.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added to the shared-date atlas."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "conflict",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -38.51,
+            -12.97
+          ]
+        },
+        "precision": "Town/region reference only. The marker indicates contextual evidence, not the area occupied by fighting.",
+        "provenance": "Named geographic focus from the cited history, positioned with an approximate modern geographic anchor."
+      }
+    },
+    {
+      "id": "context-confederation-war",
+      "revision": 1,
+      "type": "event",
+      "title": "Chile and the Peru–Bolivian Confederation — war",
+      "culture": {
+        "id": "historical-context",
+        "name": "Contemporary historical context",
+        "kind": "unknown",
+        "color": "#e1b67f"
+      },
+      "location": null,
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1836,
+        "end": 1839,
+        "approximate": true,
+        "original": "1836 to 1839 (astronomical calendar years); chronological scope below.",
+        "method": "Source-specific archaeological or historical chronology.",
+        "interpretation": "Lima is an approximate political reference. Campaigns ranged across multiple regions; this is not a battlefield perimeter."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Chile declared war on the Peru–Bolivian Confederation in 1836; the war ended after the 1839 victory at Yungay.",
+          "status": "under discussion",
+          "explanation": "Lima is an approximate political reference. Campaigns ranged across multiple regions; this is not a battlefield perimeter.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Chronological and geographic discussion in the linked source",
+              "stance": "supports",
+              "note": "Supports the stated relationship or event; mapped geometry has the separate precision described below."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "title": "José Joaquín Prieto Vial — presidency and the Confederation war",
+          "url": "https://www.memoriachilena.gob.cl/602/w3-article-661.html",
+          "authors": "Biblioteca Nacional de Chile",
+          "year": null,
+          "venue": "Biblioteca Nacional de Chile",
+          "referenceType": "web-resource",
+          "access": "Primary publication or official heritage/archive source inspected 2026-11-15. Original factual summary; no Consensus report text redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Chile declared war on the Peru–Bolivian Confederation in 1836; the war ended after the 1839 victory at Yungay.",
+        "limitations": "Lima is an approximate political reference. Campaigns ranged across multiple regions; this is not a battlefield perimeter.",
+        "discussion": "Coverage is selected. A latest attestation is not proof of cessation, abandonment or disappearance.",
+        "provenance": "Consensus Deep discovery followed by primary-source checks and original editorial synthesis. Historical context additions use official archives and heritage sources.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added to the shared-date atlas."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "conflict",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -77.04,
+            -12.05
+          ]
+        },
+        "precision": "Town/region reference only. The marker indicates contextual evidence, not the area occupied by fighting.",
+        "provenance": "Named geographic focus from the cited history, positioned with an approximate modern geographic anchor."
+      }
+    }
+  ]
+}
