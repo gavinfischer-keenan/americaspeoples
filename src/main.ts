@@ -1,3 +1,4 @@
+import {sharedContextHTML} from './topic-context';
 import { recordsForView, retainCurrentSelection, canSelect, type AtlasMode } from "./atlas-view";
 import { effectiveClimateHidden } from "./physical-rules";
 import { siteGuideIndex } from "./site-guides";
@@ -819,12 +820,16 @@ function tablePage() {
 function renderTableBody() {
   tableController?.refresh();
 }
-function reviewPage(r: FullDisplayRecord, p?: Proposal, index?: number) {
+function reviewPage(r: FullDisplayRecord, p?: Proposal, index?: number, shared=false) {
   main.innerHTML = reviewHTML(r, dataset, p);
-  const sourceTopic=topics.find(t=>t.id===reviewTopic&&t.recordIds.includes(r.id))??(topicOnlyIds.has(r.id)?topics.find(t=>t.recordIds.includes(r.id)):undefined);
-  if(sourceTopic){
-    const back=document.createElement('a');back.className='back-link topic-return';back.href='#topic/'+sourceTopic.id;back.textContent='← Return to '+sourceTopic.title;main.prepend(back);
-    if(r.time.kind==='unplaced'){const locate=$<HTMLButtonElement>('[data-action="locate"]',main);locate.disabled=true;locate.textContent='Chronology unresolved — read the relationship evidence';}
+  const originTopic=topics.find(t=>t.id===reviewTopic);
+  const sourceTopic=shared?undefined:(topics.find(t=>t.id===reviewTopic&&t.recordIds.includes(r.id))??(topicOnlyIds.has(r.id)?topics.find(t=>t.recordIds.includes(r.id)):undefined));
+  if(shared)$<HTMLButtonElement>('[data-action="locate"]',main).textContent='Show in shared atlas';
+  if(sourceTopic)main.insertAdjacentHTML('beforeend',sharedContextHTML([r.id],dataset.records));
+  if(sourceTopic||originTopic){
+    const returnTopic=sourceTopic??originTopic!;
+    const back=document.createElement('a');back.className='back-link topic-return';back.href='#topic/'+returnTopic.id;back.textContent='← Return to '+returnTopic.title;main.prepend(back);
+    if(sourceTopic&&r.time.kind==='unplaced'){const locate=$<HTMLButtonElement>('[data-action="locate"]',main);locate.disabled=true;locate.textContent='Chronology unresolved — read the relationship evidence';}
   }
   main
     .querySelectorAll<HTMLElement>("[data-source],[data-claim]")
@@ -995,12 +1000,13 @@ async function route() {
     return;
   }
   dirty = false;
-  if(hash.startsWith('#review/')&&previousHash.startsWith('#topic/'))reviewTopic=previousHash.slice(7);
-  else if(!hash.startsWith('#review/')&&!hash.startsWith('#topic/'))reviewTopic=undefined;
+  const evidenceRoute=hash.startsWith('#review/')||hash.startsWith('#context/');
+  if(evidenceRoute&&previousHash.startsWith('#topic/'))reviewTopic=previousHash.slice(7);
+  else if(!evidenceRoute&&!hash.startsWith('#topic/'))reviewTopic=undefined;
   // Reading pages may sit between the shared atlas and a topic. Keep the
   // last shared view before unmounting it, rather than capturing only direct entry.
   if(mountedMap){lastAtlasCamera=map.camera();lastAtlasRoute=atlasMode==='explore'?'#explore':'#movie';}
-  if((hash==='#topics'||hash.startsWith('#topic/'))&&!topicOriginCamera){topicOriginCamera=lastAtlasCamera;topicOriginRoute=lastAtlasRoute;}
+  if((hash==='#topics'||hash.startsWith('#topics/')||hash.startsWith('#topic/'))&&!topicOriginCamera){topicOriginCamera=lastAtlasCamera;topicOriginRoute=lastAtlasRoute;}
   disposeTopic?.();disposeTopic=undefined;
   previousHash = hash;
   tableController?.dispose();
@@ -1009,7 +1015,7 @@ async function route() {
   mountedMap = false;
   map.clearHover();
   stop();
-  const activeNav=hash==='#topics'||hash.startsWith('#topic/')?'#topics':hash==='#explore'?'#explore':['#map','#movie'].includes(hash)?'#movie':'#library';
+  const activeNav=hash==='#topics'||hash.startsWith('#topics/')||hash.startsWith('#topic/')?'#topics':hash==='#explore'?'#explore':['#map','#movie'].includes(hash)?'#movie':'#library';
   document
     .querySelectorAll("nav a")
     .forEach((a) =>
@@ -1033,7 +1039,12 @@ async function route() {
       if(topicOriginCamera){map.restoreCamera(topicOriginCamera);topicOriginCamera=undefined;}
       if(pendingLocation){const record=pendingLocation;pendingLocation=null;map.focus(record);}
     }
-    else if(hash==='#topics')main.innerHTML=topicIndexHTML(topicOriginRoute);
+    else if(hash==='#topics'||hash.startsWith('#topics/')){
+      main.innerHTML=topicIndexHTML(topicOriginRoute);
+      const requested=decodeURIComponent(hash.slice(8));
+      const item=[...main.querySelectorAll<HTMLElement>('[data-future-topic]')].find(el=>el.dataset.futureTopic===requested);
+      if(item){item.classList.add('future-selected');requestAnimationFrame(()=>{item.focus();item.scrollIntoView({block:'start'});});}
+    }
     else if(hash.startsWith('#topic/')){
       const topic=topics.find(t=>t.id===hash.slice(7));if(!topic)throw new Error('Topic not found.');
       disposeTopic=mountTopicPage(main,topic,dataset.records,land,topicOriginRoute,pendingTopicLocation);pendingTopicLocation=undefined;
@@ -1052,12 +1063,12 @@ async function route() {
       }
       physicalPage(id);
     } else if (hash === "#import") await importPage();
-    else if (hash.startsWith("#review/")) {
+    else if (evidenceRoute) {
       main.innerHTML =
         '<article class="review-page"><p role="status">Loading the full source-linked record…</p></article>';
-      const r = await fullRecord(decodeURIComponent(hash.slice(8)));
+      const r = await fullRecord(decodeURIComponent(hash.slice(hash.startsWith('#context/')?9:8)));
       if (generation !== routeGeneration) return;
-      reviewPage(r);
+      reviewPage(r,undefined,undefined,hash.startsWith('#context/')&&!topicOnlyIds.has(r.id));
     } else if (hash.startsWith("#proposal/")) {
       const i = Number(hash.slice(10)),
         p = proposals[i];

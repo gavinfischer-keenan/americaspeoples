@@ -14,7 +14,7 @@ try{
  await page.getByRole('button',{name:'Zoom in',exact:true}).click();await page.waitForTimeout(120);
  const camera=await world();
  await page.getByRole('link',{name:'Topic dives',exact:true}).click();
- await page.locator('a[href="#topic/languages"]').click();await page.locator('#topic-map .world').waitFor();
+ await page.locator('.library-card[href="#topic/languages"]').click();await page.locator('#topic-map .world').waitFor();
  assert.equal(await page.locator('.timeline').isVisible(),false);
  assert.equal(await page.locator('#topic-map [data-voyage]').count(),0);
  assert.equal(await page.locator('#topic-map [data-boundary]').count(),0);
@@ -42,16 +42,24 @@ try{
  await page.getByRole('link',{name:'Explore',exact:true}).click();
  await page.locator('#place-search').fill('Taos');
  const exploreCamera=await world();
- await page.getByRole('link',{name:'Topic dives',exact:true}).click();await page.locator('a[href="#topic/horses"]').click();
+ await page.getByRole('link',{name:'Topic dives',exact:true}).click();await page.locator('.library-card[href="#topic/horses"]').click();
  await page.locator('#topic-play').click();await page.waitForTimeout(500);await page.locator('#topic-play').click();
  await page.locator('#topic-next').click();assert.match(await page.locator('#topic-year').innerText(),/1,519/);
  await page.locator('.topic-toolbar a').click();
  assert.equal(page.url().split('#')[1],'explore');assert.equal(await page.locator('#place-search').inputValue(),'Taos');
  assert.equal(await world(),exploreCamera);
- for(const id of ['horses','maize','trade','languages']){
+ for(const id of ['sweet-potatoes','boats','dogs','horses','maize','trade','languages']){
   await page.goto(base+'/#topic/'+id);await page.locator('#topic-map .world').waitFor();
   const buttons=page.locator('[data-topic-scene]');
   for(let i=0;i<await buttons.count();i++){await buttons.nth(i).click();assert.ok(Number((await page.locator('#topic-count').innerText()).replace(/\D/g,''))>0,`${id} chapter ${i} has visible evidence`);}
+ }
+ for(const size of [{width:1024,height:768},{width:768,height:1024}]){
+  await page.setViewportSize(size);await page.goto(base+'/#topic/sweet-potatoes');await page.locator('#topic-play').waitFor();await page.locator('#topic-restart').click();
+  const box=await page.locator('#topic-map').boundingBox();assert.ok(box.width>300&&box.height>300,'tablet map retains usable space');
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'tablet has no horizontal overflow');
+  const play=await page.locator('#topic-play').boundingBox();assert.ok(play.y+play.height<=size.height,'tablet transport remains on screen');
+  await page.locator('#topic-next').click();assert.match(await page.locator('#topic-year').innerText(),/1,300/);
+  await page.screenshot({path:`test-results/topic-sweet-tablet-${size.width}.png`,fullPage:true});
  }
  await page.setViewportSize({width:390,height:844});await page.goto(base+'/#topic/trade');await page.locator('#topic-map .world').waitFor();
  await page.locator('#topic-restart').click();

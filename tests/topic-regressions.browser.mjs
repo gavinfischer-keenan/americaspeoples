@@ -25,5 +25,27 @@ try{
  await check('Topic panel colors do not darken header navigation',async p=>{
   await p.goto(base+'/#explore');const color=await p.locator('.header-about').evaluate(el=>getComputedStyle(el).color);await p.getByRole('link',{name:'Topic dives',exact:true}).click();await p.locator('a[href="#topic/horses"]').click();await p.locator('#topic-play').waitFor();assert.equal(await p.locator('.header-about').evaluate(el=>getComputedStyle(el).color),color);
  });
+ await check('Topic evidence opens its shared context and clears expedition focus',async p=>{
+  await p.goto(base);await p.getByRole('button',{name:'Pause',exact:true}).click();await p.getByLabel('Follow an expedition',{exact:true}).selectOption('beagle-1831-1836');
+  await p.getByRole('link',{name:'Topic dives',exact:true}).click();await p.locator('a[href="#topic/horses"]').click();await p.locator('#topic-play').waitFor();
+  assert.ok(await p.locator('.topic-context [data-shared-context]').count()>0,'linked shared history is available');
+  await p.locator('.topic-context a[href="#context/settlement-la-isabela"]').click();await p.locator('[data-action="locate"]').click();await p.locator('#map-host .world').waitFor();
+  assert.equal(p.url().split('#')[1],'movie');assert.equal(await p.locator('#year-number').inputValue(),'1493');assert.equal(await p.getByLabel('Follow an expedition',{exact:true}).inputValue(),'');
+  assert.equal(await p.locator('#story-select').inputValue(),'free');
+ });
+ await check('A shared record also in a topic can explicitly open the whole atlas',async p=>{
+  await p.goto(base+'/#topic/boats');await p.locator('#topic-play').waitFor();
+  assert.ok(await p.locator('.topic-context a[href="#context/px-madjedbebe-onset"]').count(),'reused record has a shared action');
+  await p.locator('.topic-context a[href="#context/px-madjedbebe-onset"]').click();await p.locator('.topic-return').waitFor();
+  await p.locator('[data-action="locate"]').click();await p.locator('#map-host .world').waitFor();assert.equal(p.url().split('#')[1],'movie');
+  assert.equal(await p.locator('#year-number').inputValue(),'68751');assert.equal(await p.locator('#era').inputValue(),'BCE');
+ });
+ await check('Planned related histories are clearly queued and linked by reason',async p=>{
+  await p.goto(base+'/#topic/trade');await p.locator('.related-dives a[href="#topics/spanish-treasure"]').click();
+  await p.locator('#future-spanish-treasure.future-selected').waitFor();assert.equal(await p.locator('#topic-play').count(),0);
+  await p.locator('#future-spanish-treasure a[href="#topics/caribbean-enslavement"]').click();await p.locator('#future-caribbean-enslavement.future-selected').waitFor();
+  await p.goto(base+'/#topics/missionaries');await p.locator('#future-missionaries.future-selected').waitFor();assert.match(await p.locator('#future-missionaries').innerText(),/forced schooling/);
+  await p.setViewportSize({width:390,height:844});assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+ });
  assert.deepEqual(failures,[]);
 }finally{await browser.close();await new Promise(r=>server.close(r));}

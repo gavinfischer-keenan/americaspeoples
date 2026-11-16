@@ -31,3 +31,13 @@
  .topic-narrative .scene-copy h2{font-size:23px}.topic-narrative p{font-size:13px}
 }
 @media(max-width:480px){.topbar .brand h1,.topbar .brand small{display:none}.topbar nav{flex:1;justify-content:space-between;margin-left:0}.topbar{padding:0 12px;gap:12px}.topbar nav a{padding:10px 9px}}
+
+.topic-context,.related-dives{border-top:1px solid #bbc7bd;margin-top:22px;padding-top:14px}
+.topic-context h3,.related-dives h3{font-size:20px;margin:0 0 10px}
+.topic-context a{display:block;padding:12px 0;border-bottom:1px solid #d4d9cd;overflow-wrap:anywhere}
+.topic-context small,.topic-context span,.related-dives small{display:block;font-size:12px;line-height:1.5;margin-top:5px}
+.related-dives p{margin:10px 0 16px}.related-dives a{font-weight:650}
+.future-dives{margin-top:40px}.future-dives>article{padding:22px;margin:16px 0;border:1px solid #b8c9c4;border-radius:8px;scroll-margin-top:24px}
+.future-dives>article>h3{margin-top:0}.future-dives .related-dives{margin-top:14px;padding-top:8px}
+.future-selected{outline:3px solid #bc8739;outline-offset:3px}
+.reading-page .topic-context{max-width:920px;margin:24px auto;padding:20px}.reading-page .topic-context a{color:#17666d}

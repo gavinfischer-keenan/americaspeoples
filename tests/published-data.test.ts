@@ -6,7 +6,7 @@ import history from "../data/history-records.json";
 import research from "../data/research-proposals.json";
 import { dataset } from "../src/published-data";
 import { activeRecords } from "../src/time";
-const expansion = readdirSync("data").filter(name=>name.endsWith("-expansion-records.json")||name==="topic-evidence-records.json").flatMap(name=>JSON.parse(readFileSync("data/"+name,"utf8")).records);
+const expansion = readdirSync("data").filter(name=>name.endsWith("-expansion-records.json")||["topic-evidence-records.json","pacific-topic-evidence-records.json","pacific-topic-context-records.json"].includes(name)).flatMap(name=>JSON.parse(readFileSync("data/"+name,"utf8")).records);
 test("all author research ships by default without changing its claims or citations", () => {
   assert.equal(
     dataset.records.length,

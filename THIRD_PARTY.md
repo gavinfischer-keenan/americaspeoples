@@ -374,3 +374,6 @@ Original software and educational material have separate scopes in LICENSE.md. N
 - Consensus outputs from the two new Deep runs remain private. New records contain independently written claims with underlying scientific or documentary sources. No complete generated report or borrowed quotation is shipped.
 
 See `docs/cities-conflicts-coverage.md` for exact coverage and unresolved cases. Project noncommercial terms apply to original protected contributions; they do not revoke more permissive rights in upstream components or create copyright in facts.
+
+
+Pacific topic expansion (v0.12): original factual syntheses cite the papers and historical sources listed in docs/pacific-topic-dives.md and each evidence record. No paper text, figures or generated Consensus report is distributed. The queue is original editorial planning, not a third-party dataset. Existing licenses remain unchanged.

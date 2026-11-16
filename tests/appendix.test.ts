@@ -1,9 +1,11 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import dataset from "../data/evidence.json";
+import {dataset as published} from "../src/published-data";
 import research from "../data/research-proposals.json";
 import { createAppendix, renderAppendix } from "../scripts/appendix";
 import { esc } from "../src/dom";
+const proposalIds=new Set(research.proposals.map(p=>p.record.id));
+const dataset={...published,records:published.records.filter(r=>!proposalIds.has(r.id))};
 
 test("readable appendix retains record and geographic provenance with uncertainty", () => {
   const appendix = createAppendix(dataset as any, research as any, "test");
@@ -40,7 +42,7 @@ test("the public appendix preserves all records and includes both author collect
   );
   assert.equal(
     appendix.records.filter((r) => r.collection === "bundled").length,
-    8,
+    dataset.records.length,
   );
   assert.equal(
     appendix.records.filter((r) => r.collection === "research-proposal").length,

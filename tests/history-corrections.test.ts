@@ -1,3 +1,4 @@
+import {dataset} from '../src/published-data';
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
@@ -17,7 +18,7 @@ const ids = ["history-mangareva-pitcairn-henderson", "history-rapa-nui-regional-
 test("corrected records retain valid source links and related-record references", () => {
   const records = ids.map(get);
   for (const r of records) assert.deepEqual(validateRecord(r), [], r.id);
-  assert.deepEqual(validateDataset({schemaVersion: 1, version: "test", reviewedAt: "2026-11-15", coverage: "Focused historical corrections", license: "Project license", records}), []);
+  assert.deepEqual(validateDataset({schemaVersion: 1, version: "test", reviewedAt: "2026-11-15", coverage: "Focused historical corrections", license: "Project license", records:dataset.records}), []);
 });
 
 test("Pitcairn material reaches Henderson without inventing a return voyage", () => {
