@@ -52,8 +52,8 @@
 
 - [x] Run `npm run verify:release`; expected all phases pass. Inspect master-map examples from each target region and dates before/during/after local events using browser checks.
 - [x] Obtain one fresh whole-branch review; resolve material findings in one fix pass with focused failing/passing tests and appropriate complete checks.
-- [ ] Record final research usage, exact coverage gains and remaining gaps. Commit, push and create the PR; finish applicable authorized delivery.
+- [x] Record final research usage, exact coverage gains and remaining gaps. Commit, push and create the PR; finish applicable authorized delivery.
 
 ## Verification outcome
 
-All 31 release phases passed, including 281 unit tests, the full 2,003-record workbook and rendered imported reviews, self-host/SQLite checks, and the three regional master-map examples. A fresh independent whole-branch review found no actionable findings. The implementation is verified at d1b24ae; this is a candidate, not a deployment. Consensus remains at 58/100 calls.
+All 31 release phases passed, including 281 unit tests, the full 2,003-record workbook and rendered imported reviews, self-host/SQLite checks, and the three regional master-map examples. A fresh independent whole-branch review found no actionable findings. The implementation is verified at d1b24ae; this is a candidate, not a deployment. Consensus remains at 58/100 calls. Delivery: [PR #11](https://github.com/gavinfischer-keenan/americaspeoples/pull/11).
