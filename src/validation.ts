@@ -3,7 +3,7 @@ import { validateOverlay } from "./overlays";
 import { validatePopulation } from "./population";
 import type { Dataset, EvidenceRecord } from "./model";
 import { validateCitation } from "./citations";
-import { END_YEAR } from "./time";
+import { recordEndYear } from "./topic-scope";
 import { validateHistory } from "./history";
 import {dateValue} from './voyages';
 export function safeURL(value: unknown): boolean {
@@ -22,13 +22,13 @@ const object = (x: any) =>
 const text = (x: any) => typeof x === "string" && x.length <= 100_000;
 const id = (x: any) =>
   typeof x === "string" && /^[a-zA-Z0-9][a-zA-Z0-9._-]{0,119}$/.test(x);
-const year = (x: any) =>
-  Number.isSafeInteger(x) && x >= -1_000_000 && x <= END_YEAR;
 export function validateRecord(value: unknown, complete = true): string[] {
   const errors: string[] = [];
   const add = (s: string) => errors.push(s);
   const r = value as EvidenceRecord;
   if (!object(r)) return ["Record must be an object."];
+  const maxYear=recordEndYear(r.id);
+  const year=(x:unknown)=>Number.isSafeInteger(x)&&typeof x==='number'&&x>=-1_000_000&&x<=maxYear;
   errors.push(...validateHistory(r));
   errors.push(...validatePopulation(r));
   errors.push(...validateLinguistics(r, complete));
@@ -103,7 +103,7 @@ export function validateRecord(value: unknown, complete = true): string[] {
         add("Unplaced records must have null dates.");
     } else if (!year(t.start) || !year(t.end) || t.start! > t.end!)
       add(
-        `Dates must be ordered whole astronomical years, at or before ${END_YEAR}.`,
+        `Dates must be ordered whole astronomical years, at or before ${maxYear}.`,
       );
     if (t.certainStart !== undefined || t.certainEnd !== undefined) {
       if (

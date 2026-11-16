@@ -19,12 +19,12 @@ try{
  }
  console.log('PASS promoted planned bookmarks open all three playable movies');
  await page.goto(base+'/#topics');
- assert.equal(await page.locator('.topic-index .library-card').count(),10);
- assert.equal(await page.locator('[data-future-topic]').count(),10);
- assert.match(await page.locator('.topic-index .library-card').last().innerText(),/^10/);
+ assert.equal(await page.locator('.topic-index .library-card').count(),20);
+ assert.equal(await page.locator('[data-future-topic]').count(),0);
+ assert.match(await page.locator('.topic-index .library-card').last().innerText(),/^20/);
  assert.equal(await page.locator('[data-future-topic="haudenosaunee"]').count(),0);
  await page.goto(base+'/#topics/spanish-treasure');
- await page.locator('#future-spanish-treasure a[href="#topic/caribbean-enslavement"]').click();
+ await page.locator('.related-dives a[href="#topic/caribbean-enslavement"]').click();
  await page.locator('#topic-play').waitFor();
  console.log('PASS queue promotion and related-history links');
 

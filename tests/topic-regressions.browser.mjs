@@ -40,11 +40,11 @@ try{
   await p.locator('[data-action="locate"]').click();await p.locator('#map-host .world').waitFor();assert.equal(p.url().split('#')[1],'movie');
   assert.equal(await p.locator('#year-number').inputValue(),'68751');assert.equal(await p.locator('#era').inputValue(),'BCE');
  });
- await check('Planned related histories are clearly queued and linked by reason',async p=>{
-  await p.goto(base+'/#topic/trade');await p.locator('.related-dives a[href="#topics/spanish-treasure"]').click();
-  await p.locator('#future-spanish-treasure.future-selected').waitFor();assert.equal(await p.locator('#topic-play').count(),0);
-  await p.locator('#future-spanish-treasure a[href="#topic/caribbean-enslavement"]').click();await p.locator('#topic-play').waitFor();assert.equal(p.url().split('#')[1],'topic/caribbean-enslavement');
-  await p.goto(base+'/#topics/missionaries');await p.locator('#future-missionaries.future-selected').waitFor();assert.match(await p.locator('#future-missionaries').innerText(),/forced schooling/);
+ await check('Completed related histories and old planned bookmarks open playable movies',async p=>{
+  await p.goto(base+'/#topic/trade');await p.locator('.related-dives a[href="#topic/spanish-treasure"]').click();
+  await p.locator('#topic-play').waitFor();assert.equal(p.url().split('#')[1],'topic/spanish-treasure');
+  await p.locator('.related-dives a[href="#topic/caribbean-enslavement"]').click();await p.locator('#topic-play').waitFor();assert.equal(p.url().split('#')[1],'topic/caribbean-enslavement');
+  await p.goto(base+'/#topics/missionaries');await p.waitForURL('**/#topic/missionaries');await p.locator('#topic-play').waitFor();assert.equal(await p.locator('[data-future-topic]').count(),0);
   await p.setViewportSize({width:390,height:844});assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
  });
  assert.deepEqual(failures,[]);

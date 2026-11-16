@@ -3,6 +3,21 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {unzipSync,strFromU8} from 'fflate';
 import {version} from '../package.json';
+
+test('the complete topic release includes the new guides and current coverage',async()=>{
+ const files=unzipSync(await readFile(`release/americas-peoples-v${version}-selfhost.zip`));
+ for(const name of ['remaining-topic-dives','world-coverage-audit','australasia-archaeology']){
+  assert.ok(files[`americas-peoples/web/docs/${name}.md`],name);
+  assert.ok(files[`americas-peoples/web/docs/${name}.html`],name);
+ }
+ assert.match(strFromU8(files['americas-peoples/web/docs/world-coverage-audit.html']),/not.*empty of people/);
+});
+test('the land and sovereignty guide ships with explicit timeline limits',async()=>{
+ const files=unzipSync(await readFile(`release/americas-peoples-v${version}-selfhost.zip`));
+ assert.ok(files['americas-peoples/web/docs/land-sovereignty-dives.md']);
+ const guide=files['americas-peoples/web/docs/land-sovereignty-dives.html'];assert.ok(guide);
+ for(const term of ['1934','1959','Kinchela','Parihaka','Sakakal'])assert.ok(strFromU8(guide).includes(term),term);
+});
 test('the community topic coverage link opens a packaged source guide',async()=>{
  const files=unzipSync(await readFile(`release/americas-peoples-v${version}-selfhost.zip`));
  const guide=files['americas-peoples/web/docs/community-topic-dives.html'];

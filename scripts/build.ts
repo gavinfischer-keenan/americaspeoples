@@ -24,7 +24,7 @@ const research = JSON.parse(
   await readFile("data/research-proposals.json", "utf8"),
 );
 const history = JSON.parse(await readFile("data/history-records.json", "utf8"));
-const expansion=(await Promise.all([...['settlement','mission','pacific','violence','voyage','transport','atlantic','local-places','shared-context','hawaii-local','city','conflict','northern'].map(name=>`data/${name}-expansion-records.json`),'data/topic-evidence-records.json','data/pacific-topic-evidence-records.json','data/pacific-topic-context-records.json','data/community-topic-evidence-records.json','data/community-topic-context-records.json'].map(async name=>JSON.parse(await readFile(name,'utf8')).records))).flat();
+const expansion=(await Promise.all([...['world-gap','australasia-archaeology','settlement','mission','pacific','violence','voyage','transport','atlantic','local-places','shared-context','hawaii-local','city','conflict','northern'].map(name=>`data/${name}-expansion-records.json`),'data/topic-evidence-records.json','data/pacific-topic-evidence-records.json','data/pacific-topic-context-records.json','data/community-topic-evidence-records.json','data/community-topic-context-records.json','data/sovereignty-topic-evidence-records.json','data/sovereignty-topic-context-records.json','data/remaining-topic-context-records.json','data/remaining-topic-evidence-records.json'].map(async name=>JSON.parse(await readFile(name,'utf8')).records))).flat();
 const appendix = createAppendix({...d,license:published.license,records:[...d.records,...history.records,...expansion]}, research, version);
 const errors = validateDataset(published);
 if (errors.length) throw new Error(errors.join("\n"));
@@ -101,6 +101,7 @@ for(const [from,to] of [
  ["docs/coverage-audit.html","docs/coverage-audit.html"],
  ["docs/hosted-architecture.md","docs/hosted-architecture.md"],
  ["data/coverage-audit.json","coverage-audit.json"],
+ ["data/world-coverage-audit.json","world-coverage-audit.json"],
  ["data/topic-context-audit.json","topic-context-audit.json"],
  ["data/temporal-review-2026-10-29.json","temporal-review.json"],
  ["data/round8-synthesis.json","round8-synthesis.json"],
@@ -137,6 +138,10 @@ for (const name of [
   "docs/cities-conflicts-topic-dives.md",
   "docs/pacific-topic-dives.md",
   "docs/community-topic-dives.md",
+  "docs/land-sovereignty-dives.md",
+  "docs/remaining-topic-dives.md",
+  "docs/australasia-archaeology.md",
+  "docs/world-coverage-audit.md",
   "docs/cities-conflicts-coverage.md",
   "docs/early-national-boundary-source-decisions.md",
   "docs/reservation-source-decisions.md",
@@ -164,13 +169,13 @@ for (const name of [
   await copyFile(name, `dist/${name}`);
   names.push(name);
 }
-for (const document of ["bulk-import-guide", "history-update", "ui-redesign", "reuse-and-contributing", "atlas-expansion", "cities-conflicts-topic-dives", "cities-conflicts-coverage", "pacific-topic-dives", "community-topic-dives"]) {
+for (const document of ["bulk-import-guide", "history-update", "ui-redesign", "reuse-and-contributing", "atlas-expansion", "cities-conflicts-topic-dives", "cities-conflicts-coverage", "pacific-topic-dives", "community-topic-dives", "land-sovereignty-dives", "remaining-topic-dives", "australasia-archaeology", "world-coverage-audit"]) {
 const guide = await marked.parse(
   await readFile(`docs/${document}.md`, "utf8"),
 );
 await writeFile(
   `dist/docs/${document}.html`,
-  `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'"><title>Americas Peoples — ${document === "community-topic-dives" ? "Community history topic movies" : document === "pacific-topic-dives" ? "Pacific topic movies and connected history" : document === "cities-conflicts-topic-dives" ? "Cities, encounters and topic dives" : document === "cities-conflicts-coverage" ? "Coverage and source decisions" : document === "history-update" ? "History layers" : document === "ui-redesign" ? "Watch and Explore" : document === "reuse-and-contributing" ? "Free education and reuse" : document === "atlas-expansion" ? "An expanding atlas" : "Bulk import guide"}</title><style>body{font:16px/1.65 system-ui,sans-serif;color:#20313a;max-width:1100px;margin:40px auto;padding:0 24px 60px}h1,h2,h3{line-height:1.25;margin-top:1.6em}h1{font-size:36px}a{color:#086b7b}table{border-collapse:collapse;width:100%;font-size:14px;display:block;overflow:auto}td,th{border:1px solid #cbd6d9;padding:10px;text-align:left;min-width:140px}th{background:#e6f0f1}code{background:#edf1f2;padding:2px 4px;border-radius:3px}pre{padding:16px;background:#edf1f2;overflow:auto}pre code{padding:0}blockquote{border-left:3px solid #25818e;margin-left:0;padding-left:20px}li{margin:6px 0}</style></head><body><a href="../index.html#proposals">← Back to Americas Peoples</a>${guide}</body></html>`,
+  `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'"><title>Americas Peoples — ${document === "remaining-topic-dives" ? "Trade, missions and material histories" : document === "australasia-archaeology" ? "Australia and Aotearoa archaeology" : document === "world-coverage-audit" ? "Where the map has gaps" : document === "land-sovereignty-dives" ? "Land and sovereignty topic movies" : document === "community-topic-dives" ? "Community history topic movies" : document === "pacific-topic-dives" ? "Pacific topic movies and connected history" : document === "cities-conflicts-topic-dives" ? "Cities, encounters and topic dives" : document === "cities-conflicts-coverage" ? "Coverage and source decisions" : document === "history-update" ? "History layers" : document === "ui-redesign" ? "Watch and Explore" : document === "reuse-and-contributing" ? "Free education and reuse" : document === "atlas-expansion" ? "An expanding atlas" : "Bulk import guide"}</title><style>body{font:16px/1.65 system-ui,sans-serif;color:#20313a;max-width:1100px;margin:40px auto;padding:0 24px 60px}h1,h2,h3{line-height:1.25;margin-top:1.6em}h1{font-size:36px}a{color:#086b7b}table{border-collapse:collapse;width:100%;font-size:14px;display:block;overflow:auto}td,th{border:1px solid #cbd6d9;padding:10px;text-align:left;min-width:140px}th{background:#e6f0f1}code{background:#edf1f2;padding:2px 4px;border-radius:3px}pre{padding:16px;background:#edf1f2;overflow:auto}pre code{padding:0}blockquote{border-left:3px solid #25818e;margin-left:0;padding-left:20px}li{margin:6px 0}</style></head><body><a href="../index.html#proposals">← Back to Americas Peoples</a>${guide}</body></html>`,
 );
 names.push(`docs/${document}.html`);
 }

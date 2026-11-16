@@ -21,5 +21,6 @@ export function relatedDivesHTML(id:string,links=topicConnections[id]??[]):strin
  return `<section class="related-dives"><h3>See also</h3>${links.map(([target,reason])=>{const t=topics.find(t=>t.id===target),f=futureDives.find(f=>f.id===target);if(!t&&!f)return '';return `<p><a href="${t?'#topic/':'#topics/'}${encodeURIComponent(target)}">${esc((t??f)!.title)}${t?' ↗':' · planned'}</a><small>${esc(reason)}</small></p>`;}).join('')}</section>`;
 }
 export function futureDivesHTML():string{
+ if(!futureDives.length)return '';
  return `<section class="future-dives"><span class="eyebrow">REQUESTED · NOT YET PLAYABLE</span><h2>Next histories to investigate</h2><p>Research priorities, with connections to the stories already here. Coverage will grow case by case.</p>${futureDives.map(f=>`<article id="future-${f.id}" tabindex="-1" data-future-topic="${f.id}"><h3>${esc(f.title)}</h3><p>${esc(f.description)}</p>${relatedDivesHTML(f.id,f.links)}</article>`).join('')}</section>`;
 }

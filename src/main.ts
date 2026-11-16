@@ -509,6 +509,8 @@ $("#time-slider").addEventListener("keydown", (event) => {
   e.preventDefault();
   setYear(Math.max(rangeStart, Math.min(rangeEnd, next)));
 });
+// Keep animation frames from replacing a date while it is being edited.
+$("#year-form").addEventListener("focusin", stop);
 $("#year-form").addEventListener("submit", (e) => {
   e.preventDefault();
   try {

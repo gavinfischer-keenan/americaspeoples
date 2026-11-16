@@ -8,8 +8,8 @@ import {storyDetailsHTML} from '../src/story-details';
 import {historyState,historyLabel,validateHistory} from '../src/history';
 import {historyHTML} from '../src/history-review';
 
-test('ten focused topics resolve dated chapters, map evidence and independent membership',()=>{
- assert.deepEqual(topics.map(t=>t.id),['haudenosaunee','amazonian-peoples','caribbean-enslavement','sweet-potatoes','boats','dogs','horses','maize','trade','languages']);
+test('twenty focused topics resolve dated chapters, map evidence and independent membership',()=>{
+ assert.deepEqual(topics.map(t=>t.id),['pacific-fur-trades','whaling','spanish-treasure','missionaries','pottery','obsidian','copper','forced-relocations','hawaii-statehood','territorial-purchases','haudenosaunee','amazonian-peoples','caribbean-enslavement','sweet-potatoes','boats','dogs','horses','maize','trade','languages']);
  for(const t of topics){
   const rows=topicRecords(t,dataset.records);assert.ok(rows.length>=5,t.id);
   assert.equal(rows.length,t.recordIds.length,t.id+' missing evidence');

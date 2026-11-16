@@ -34,6 +34,9 @@ test("coverage audit counts distinct dated places, separates context and uses cu
     const aleutianEast = record("aleutian-east", "occupation", { ...place("aleutian-east"), lon: -177, lat: 52 });
     write("data/evidence.json", { records: [first, context, undated, route, montanaOne, montanaTwo, aleutianWest, aleutianEast] });
     write("data/research-proposals.json", { proposals: [{ record: first }, { record: second }] });
+    write("data/new-expansion-records.json", {records:[record('new-expansion','event',{...place('new'),lon:0,lat:0})]});
+    write("data/history-records.json", {records:[record('new-history','event',{...place('hist'),lon:0,lat:0})]});
+    write("data/remaining-topic-evidence-records.json", {records:[record('focused-only')]});
     write("data/temporal-review-2026-10-29.json", {
       items: [{ id: first.id, originalTime: { kind: "unplaced" }, time: first.time }], splitRecords: ["split-phase"],
     });
@@ -49,8 +52,8 @@ test("coverage audit counts distinct dated places, separates context and uses cu
     const result = spawnSync(python, [resolve("scripts/coverage-audit.py"), "--root", root], { encoding: "utf8" });
     assert.equal(result.status, 0, result.stderr);
     const audit = JSON.parse(readFileSync(join(root, "data/coverage-audit.json"), "utf8"));
-    assert.equal(audit.recordCount, 9, "duplicate record IDs must not inflate coverage");
-    assert.equal(audit.broadRegionCount, 45); assert.equal(audit.regionCount, 62); assert.equal(audit.periodCount, 12);
+    assert.equal(audit.recordCount, 11, "shared expansions and history count; duplicates and focused material do not");
+    assert.equal(audit.broadRegionCount, 47); assert.equal(audit.regionCount, 64); assert.equal(audit.periodCount, 12);
     for (const [name, expected] of [["Aleutians — west of dateline", "aleutian-west"], ["Aleutians — east of dateline", "aleutian-east"]]) {
       const row = audit.matrix.find((r: any) => r.region === name);
       const dated = row.periods.find((p: any) => p.period === "501–1000CE");
@@ -74,7 +77,7 @@ test("coverage audit counts distinct dated places, separates context and uses cu
     assert.deepEqual(audit.intakeItems.map((i: any) => i.id), ["untested"]);
     assert.equal(audit.incomingResearch.batch, "round10-batch1");
     assert.equal(audit.incomingResearch.items[0].id, "idaho");
-    assert.equal(audit.recordCount, 9, "incoming research must not inflate integrated evidence");
+    assert.equal(audit.recordCount, 11, "incoming research must not inflate integrated evidence");
     assert.ok(audit.gapCells.some((g: any) => g.localityCount === 0 && g.classification === "no-included-dated-localities"));
     assert.ok(audit.gapCells.some((g: any) => g.localityCount === 1 && g.classification === "one-included-dated-locality"));
     assert.ok(audit.gapCells.some((g: any) => g.region === "Montana — western mountains" && g.localityCount === 2 && g.classification === "two-included-dated-localities"));
