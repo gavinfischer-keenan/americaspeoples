@@ -1,0 +1,11 @@
+# Regional evidence gaps: Central/South America and Australia
+
+The user requests the largest remaining gaps be researched with Consensus Deep and supported new evidence enter the master map. The established design and instruction to use judgment apply: shared dates show all contemporary human context; topic-only subjects remain separate. This is an additive evidence campaign, not a new movie or UI redesign.
+
+Prioritize Central and South America in 1700–1934 and Australia, especially named communities, local economies, exchange, Indigenous continuity, coercion and conflicts. Choose source-supported observations over arbitrary quotas. Review existing records before adding a locality; phases at the same named place share identical canonical location metadata. Nearby distinct features remain distinct. Events and archaeological date windows do not establish continuous habitation, abandonment, or extinction. Explain uncertainty in dates, actors, and geographic precision.
+
+Approach selected by the implementer under the user's standing direction: one combined Deep dossier, then independent source checking and a single shared expansion collection. Capital-only additions would perpetuate the current bias; unconstrained bulk import would outrun verification. The existing schema, map presentation, workbook and packaged database suffice.
+
+Constraints: shared endpoint 1934; no new topic-only records or dependencies; existing noncommercial terms and source permissions preserved. Original summaries only, no redistribution of raw Consensus reports, papers or source images. Starting Consensus usage is 53/100; conservatively count submissions and polls. Existing published places must not be silently displaced or duplicated. Actual public named locality references with explicit precision are preferred; do not expose protected coordinates. Preserve the v0.14 audit baseline and give this campaign an explicit before/after snapshot.
+
+Delivery: complete and verify the integrated source, generated outputs, coverage comparison and a source-decision guide; provide a reviewable PR. Publication beyond that follows applicable standing authorization, without assuming research success before verification.
