@@ -4,16 +4,17 @@ import { readFileSync } from "node:fs";
 import type { EvidenceRecord } from "../src/model";
 import { validateRecord, validateDataset } from "../src/validation";
 import { historyState } from "../src/history";
+import { dataset } from "../src/published-data";
 const records: EvidenceRecord[] = JSON.parse(readFileSync(new URL("../data/atlantic-expansion-records.json", import.meta.url), "utf8")).records;
 const get = (id: string) => { const r = records.find(r => r.id === id); assert.ok(r, id); return r; };
 
-test("Atlantic additions validate with their referenced existing Acadian event", () => {
+test("Atlantic additions validate with their cross-collection historical context", () => {
   assert.ok(records.length >= 15);
   const existing: EvidenceRecord[] = JSON.parse(readFileSync(new URL("../data/research-proposals.json", import.meta.url), "utf8")).proposals.map((p:any)=>p.record);
   const linked = existing.filter(r => r.id === "acadian-deportation-boston1755");
   assert.equal(linked.length, 1);
   for (const r of records) assert.deepEqual(validateRecord(r), [], r.id);
-  assert.deepEqual(validateDataset({schemaVersion: 1,version: "test",reviewedAt: "2026-11-15",coverage: "Atlantic additions",license: "Project license",records: [...records, ...linked]}), []);
+  assert.deepEqual(validateDataset(dataset), []);
   for (const r of records) {
     assert.ok(r.time.end! <= 1934);
     assert.equal(r.overlay?.geometry?.type, "LineString");

@@ -33,36 +33,36 @@
 **Files:** private `work/community-topic-research/` outside repo; `docs/community-topic-dives.md` for original public source decisions.
 **Interface:** validated source/date/location decisions consumed by Task2; complete private Deep dossier and call ledger.
 
-- [ ] Finish the one combined Deep review, preserve its verbatim report privately and count every call.
-- [ ] Inspect primary papers, community/institutional sources and documents behind selected claims; retain competing/unknown dates honestly.
-- [ ] Inventory/reuse existing canonical records; select chapter evidence and finalize exact dated assertions before production authoring.
-- [ ] Record source locators, public precision, shared/topic membership and withholding decisions. Expected: three defensible ordered chapter sets and no unsupported mapped chronology.
+- [x] Finish the one combined Deep review, preserve its verbatim report privately and count every call.
+- [x] Inspect primary papers, community/institutional sources and documents behind selected claims; retain competing/unknown dates honestly.
+- [x] Inventory/reuse existing canonical records; select chapter evidence and finalize exact dated assertions before production authoring.
+- [x] Record source locators, public precision, shared/topic membership and withholding decisions. Expected: three defensible ordered chapter sets and no unsupported mapped chronology.
 
 ### Task 2: Evidence and three movies
 
 **Files:** new `data/community-topic-evidence-records.json`, `data/community-topic-context-records.json`, `src/community-topic-dives.ts`, `tests/community-topics.test.ts`; modify published-data/topic-dives/build, canonical relatedIds and the context audit.
 **Interface:** `communityTopics: TopicDive[]`, `communityTopicOnlyIds: string[]`; ordinary EvidenceRecord arrays, canonical reciprocal `review.relatedIds`.
 
-- [ ] Write and run failing tests for all three IDs, at least7 chapters each, resolvable visible dated evidence, shared eligibility, reciprocal references and audited date/attribution cases. Expected: failures identify missing movies/records.
-- [ ] Add source-backed records and original chapter prose, reusing existing places. Keep unplaced traditions/models out of dated movie evidence.
-- [ ] Run focused evidence tests, typecheck, validation, build/workbook roundtrip. Expected: no errors, every chapter has mapped supported evidence, all sources and related IDs resolve.
-- [ ] Commit the evidence/movie change.
+- [x] Write and run failing tests for all three IDs, at least7 chapters each, resolvable visible dated evidence, shared eligibility, reciprocal references and audited date/attribution cases. Expected: failures identify missing movies/records.
+- [x] Add source-backed records and original chapter prose, reusing existing places. Keep unplaced traditions/models out of dated movie evidence.
+- [x] Run focused evidence tests, typecheck, validation, build/workbook roundtrip. Expected: no errors, every chapter has mapped supported evidence, all sources and related IDs resolve.
+- [x] Commit the evidence/movie change.
 
 ### Task 3: Queue promotion and connected navigation
 
 **Files:** `src/deep-dive-backlog.ts`, `src/main.ts`, `tests/community-topics.browser.mjs`, existing topic tests and release gate.
 **Interface:** live `#topic/<id>`; old `#topics/<id>` for promoted topics resolves to the live movie; related links retain explanatory reasons.
 
-- [ ] Add failing browser cases for a promoted bookmark, shared-map date/action, independent return state and tablet portrait/landscape. Expected: old planned URL cannot yet open the new movie.
-- [ ] Promote the three topics, preserve useful See also links, update available-topic expectations and wire the new browser suite into verification.
-- [ ] Verify every new chapter, records/reviews, shared actions and old topics. Expected: all chapter evidence visible; no horizon extension or shared clock leakage; ten playable topics and ten queued topics.
-- [ ] Commit navigation/queue integration.
+- [x] Add failing browser cases for a promoted bookmark, shared-map date/action, independent return state and tablet portrait/landscape. Expected: old planned URL cannot yet open the new movie.
+- [x] Promote the three topics, preserve useful See also links, update available-topic expectations and wire the new browser suite into verification.
+- [x] Verify every new chapter, records/reviews, shared actions and old topics. Expected: all chapter evidence visible; no horizon extension or shared clock leakage; ten playable topics and ten queued topics.
+- [x] Commit navigation/queue integration.
 
 ### Task 4: Verified candidate
 
 **Files:** package version/lock, README, THIRD_PARTY, docs/verification, release history and generated workbook; deployment receipt for v0.12.
 
-- [ ] Bump source candidate to0.13.0, document selected coverage/limits and current livev0.12, and build final package.
-- [ ] Run release verification, inspect tablet/desktop screenshots and inspect the actual public-claims/date/source output. Expected: required checks pass, declared skips explicit.
+- [x] Bump source candidate to0.13.0, document selected coverage/limits and current livev0.12, and build final package.
+- [x] Run release verification, inspect tablet/desktop screenshots and inspect the actual public-claims/date/source output. Expected: required checks pass, declared skips explicit.
 - [ ] One fresh-context whole-branch review on the most capable available model, then one combined material-fix pass with reproducing RED→GREEN tests and green suite.
 - [ ] Commit/push and create a reviewable PR with measured checks and cumulative research use; keep livev0.12 unchanged.
