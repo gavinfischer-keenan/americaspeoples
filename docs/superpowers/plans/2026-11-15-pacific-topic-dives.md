@@ -58,4 +58,4 @@
 - [x] Update version, coverage notes, attribution, generated workbook and package.
 - [x] Run required unit/data/API/package/browser verification and inspect screenshots.
 - [x] Obtain one fresh-context whole-branch review, then one combined material-fix pass with reproducing tests.
-- [ ] Commit/push and open a PR with evidence limits and cumulative research usage; leave live release unchanged.
+- [x] Commit/push and open a PR with evidence limits and cumulative research usage; leave live release unchanged. PR: https://github.com/gavinfischer-keenan/americaspeoples/pull/8
