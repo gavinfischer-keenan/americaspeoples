@@ -1,0 +1,2980 @@
+{
+  "reviewedAt": "2026-11-16",
+  "coverage": "Selected settlements, exchange and conflicts in Amazonia, the Gran Chaco and Guianas. Not a complete census or year-by-year occupation map.",
+  "records": [
+    {
+      "id": "interior-barcelos-labor",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Barcelos — Indigenous workers rebuild the colonial town",
+      "culture": {
+        "id": "interior-people-barcelos-labor",
+        "name": "Indigenous Rio Negro workers and Portuguese colonial authorities",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "r12-barcelos-town",
+        "name": "Barcelos, Amazonas",
+        "lon": -62.93,
+        "lat": -0.97,
+        "precision": "Rounded public town/locality anchor, kilometre-scale; not an historical mission building, grave or boundary.",
+        "provenance": "Historical source identifies locality; independently fetched OpenStreetMap Nominatim JSON provides modern town/village setting rounded to two decimals. https://www.openstreetmap.org/relation/332478 . No historical footprint asserted."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1755,
+        "end": 1761,
+        "approximate": true,
+        "original": "1755–1761 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "A documented work phase under coercive colonial conditions; not first settlement or proof of uninterrupted work each year."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Indigenous labor built and refitted Barcelos’s administrative and military buildings in 1755–1761.",
+          "status": "well-supported",
+          "explanation": "A documented work phase under coercive colonial conditions; not first settlement or proof of uninterrupted work each year.",
+          "support": [
+            {
+              "sourceId": "interior-borges",
+              "locator": "Urban works and provisioning; Livro de provedoria, 6 November 1758",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-borges",
+          "authors": "Ricardo Borges, Décio de Alencar Guzmán and Márcio Meira",
+          "title": "O papel estratégico da mão de obra indígena na urbanização da vila colonial de Barcelos (1755–1761)",
+          "url": "https://doi.org/10.1590/2178-2547-BGOELDI-2023-0105",
+          "year": 2024,
+          "venue": "Boletim do Museu Paraense Emílio Goeldi. Ciências Humanas 19(3)",
+          "referenceType": "journal-article",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Indigenous labor built and refitted Barcelos’s administrative and military buildings in 1755–1761.",
+        "limitations": "A documented work phase under coercive colonial conditions; not first settlement or proof of uninterrupted work each year.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "r12v-barcelos-fma-community1934",
+          "r12v-rionegro-directory-portuguese-policy",
+          "interior-barcelos-borba-1758"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "interior-borba-1756",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Borba — an existing mission becomes a colonial vila",
+      "culture": {
+        "id": "interior-people-borba-1756",
+        "name": "Trocano mission residents and Portuguese colonial authorities",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-borba",
+        "name": "Trocano / Borba, Madeira River",
+        "lon": -59.59,
+        "lat": -4.39,
+        "precision": "Rounded locality reference with approximately 4 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Named historical town; public town node https://www.openstreetmap.org/node/415524349 . The much larger municipal centroid is not used."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1756,
+        "end": 1756,
+        "approximate": false,
+        "original": "1756 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "Administrative change at an existing mission, not first human occupation or construction of every building."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The conversion of Trocano into Vila de Borba a Nova was completed in 1756.",
+          "status": "well-supported",
+          "explanation": "Administrative change at an existing mission, not first human occupation or construction of every building.",
+          "support": [
+            {
+              "sourceId": "interior-borba",
+              "locator": "Trocano mission and elevation to vila in 1755–1756",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-borba",
+          "authors": "Laboratório de História Social, Universidade de Brasília",
+          "title": "Vila de Borba a nova",
+          "url": "https://lhs.unb.br/atlas/index.php?title=Vila_de_Borba_a_nova",
+          "year": null,
+          "venue": "Laboratório de História Social, Universidade de Brasília",
+          "referenceType": "web-resource",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "The conversion of Trocano into Vila de Borba a Nova was completed in 1756.",
+        "limitations": "Administrative change at an existing mission, not first human occupation or construction of every building.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "interior-barcelos-borba-1758"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "interior-barcelos-borba-1758",
+      "revision": 1,
+      "type": "event",
+      "title": "Barcelos → Borba — supplies sent by river",
+      "culture": {
+        "id": "interior-people-barcelos-borba-1758",
+        "name": "Indigenous transport workers and Portuguese colonial officials",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "r12-barcelos-town",
+        "name": "Barcelos, Amazonas",
+        "lon": -62.93,
+        "lat": -0.97,
+        "precision": "Rounded public town/locality anchor, kilometre-scale; not an historical mission building, grave or boundary.",
+        "provenance": "Historical source identifies locality; independently fetched OpenStreetMap Nominatim JSON provides modern town/village setting rounded to two decimals. https://www.openstreetmap.org/relation/332478 . No historical footprint asserted."
+      },
+      "destination": {
+        "id": "interior-place-borba",
+        "name": "Trocano / Borba, Madeira River",
+        "lon": -59.59,
+        "lat": -4.39,
+        "precision": "Rounded locality reference with approximately 4 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Named historical town; public town node https://www.openstreetmap.org/node/415524349 . The much larger municipal centroid is not used."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1758,
+        "end": 1758,
+        "approximate": false,
+        "original": "1758 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "This is a dated supply movement, not annual trade volume or a claim that the connection ceased in 1759."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "A November 1758 dispatch sent gunpowder, lead and wine from Barcelos to Borba.",
+          "status": "well-supported",
+          "explanation": "This is a dated supply movement, not annual trade volume or a claim that the connection ceased in 1759.",
+          "support": [
+            {
+              "sourceId": "interior-borges",
+              "locator": "Urban works and provisioning; Livro de provedoria, 6 November 1758",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-borges",
+          "authors": "Ricardo Borges, Décio de Alencar Guzmán and Márcio Meira",
+          "title": "O papel estratégico da mão de obra indígena na urbanização da vila colonial de Barcelos (1755–1761)",
+          "url": "https://doi.org/10.1590/2178-2547-BGOELDI-2023-0105",
+          "year": 2024,
+          "venue": "Boletim do Museu Paraense Emílio Goeldi. Ciências Humanas 19(3)",
+          "referenceType": "journal-article",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "A November 1758 dispatch sent gunpowder, lead and wine from Barcelos to Borba.",
+        "limitations": "This is a dated supply movement, not annual trade volume or a claim that the connection ceased in 1759.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "interior-barcelos-labor",
+          "interior-borba-1756"
+        ]
+      },
+      "history": {
+        "kind": "exchange",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 1758,
+            "end": 1758,
+            "certainty": "documented",
+            "note": "This is a dated supply movement, not annual trade volume or a claim that the connection ceased in 1759."
+          }
+        ],
+        "connection": {
+          "evidence": "A November 1758 dispatch sent gunpowder, lead and wine from Barcelos to Borba.",
+          "lastEvidence": 1758,
+          "cessation": "unknown",
+          "note": "The end of this source window is not evidence that all exchange stopped.",
+          "claimId": "evidence"
+        }
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "direction": "forward",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -62.93,
+              -0.97
+            ],
+            [
+              -59.59,
+              -4.39
+            ]
+          ]
+        },
+        "precision": "Schematic connection between the named endpoints, not a surveyed river track or itinerary.",
+        "provenance": "Endpoints and activity are source-grounded; the connecting geometry is an editorial illustration."
+      }
+    },
+    {
+      "id": "interior-pauxis-1725",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Pauxis — Babuhi and Nhamundá residents recorded",
+      "culture": {
+        "id": "interior-people-pauxis-1725",
+        "name": "Babuhi (Uaboy) and Nhamundá people; Franciscan missionaries",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-obidos",
+        "name": "Pauxis / Óbidos, Amazon River",
+        "lon": -55.52,
+        "lat": -1.9,
+        "precision": "Rounded locality reference with approximately 4 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Public town reference https://www.openstreetmap.org/relation/185569 . Fort, mission and later town are located at town scale, not separate surveyed structures."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1725,
+        "end": 1725,
+        "approximate": false,
+        "original": "1725 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "The account does not establish free consent, a first settlement date or continuous residence by those families."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Manços brought Babuhi and Nhamundá people to the Pauxis mission in 1725.",
+          "status": "well-supported",
+          "explanation": "The account does not establish free consent, a first settlement date or continuous residence by those families.",
+          "support": [
+            {
+              "sourceId": "interior-harris",
+              "locator": "Author manuscript p.10: Manços and the 1725 arrivals",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-harris",
+          "authors": "Mark Harris",
+          "title": "The Making of Regional Systems: the Tapajós/Madeira and Trombetas/Nhamundá regions in the Lower Brazilian Amazon, 17th and 18th centuries",
+          "url": "https://research-repository.st-andrews.ac.uk/bitstream/handle/10023/16409/Harris_2018_Ethnohistory_regionalsystems_AAM.pdf?sequence=1",
+          "year": 2018,
+          "venue": "Ethnohistory 65(4)",
+          "referenceType": "journal-article",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Manços brought Babuhi and Nhamundá people to the Pauxis mission in 1725.",
+        "limitations": "The account does not establish free consent, a first settlement date or continuous residence by those families.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "interior-pauxis-1740s",
+          "interior-obidos-1758"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "interior-pauxis-1740s",
+      "revision": 1,
+      "type": "event",
+      "title": "Pauxis fort — an attack kills soldiers",
+      "culture": {
+        "id": "interior-people-pauxis-1740s",
+        "name": "Portuguese fort soldiers; attackers not securely identified here",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-obidos",
+        "name": "Pauxis / Óbidos, Amazon River",
+        "lon": -55.52,
+        "lat": -1.9,
+        "precision": "Rounded locality reference with approximately 4 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Public town reference https://www.openstreetmap.org/relation/185569 . Fort, mission and later town are located at town scale, not separate surveyed structures."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1741,
+        "end": 1749,
+        "approximate": true,
+        "original": "1741–1749 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "Approximate 1740s placement; attackers are not identified securely in this passage. No annual war or exact casualty count is inferred."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Harris reports an attack that killed soldiers at Pauxis a few years after 1740.",
+          "status": "well-supported",
+          "explanation": "Approximate 1740s placement; attackers are not identified securely in this passage. No annual war or exact casualty count is inferred.",
+          "support": [
+            {
+              "sourceId": "interior-harris",
+              "locator": "Author manuscript p.14: attack a few years after 1740",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-harris",
+          "authors": "Mark Harris",
+          "title": "The Making of Regional Systems: the Tapajós/Madeira and Trombetas/Nhamundá regions in the Lower Brazilian Amazon, 17th and 18th centuries",
+          "url": "https://research-repository.st-andrews.ac.uk/bitstream/handle/10023/16409/Harris_2018_Ethnohistory_regionalsystems_AAM.pdf?sequence=1",
+          "year": 2018,
+          "venue": "Ethnohistory 65(4)",
+          "referenceType": "journal-article",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Harris reports an attack that killed soldiers at Pauxis a few years after 1740.",
+        "limitations": "Approximate 1740s placement; attackers are not identified securely in this passage. No annual war or exact casualty count is inferred.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "interior-pauxis-1725"
+        ]
+      },
+      "overlay": {
+        "kind": "conflict",
+        "basis": "documented",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -55.52,
+            -1.9
+          ]
+        },
+        "precision": "Rounded locality reference with approximately 4 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Event locality supported by the source; no battle line or area of control inferred."
+      }
+    },
+    {
+      "id": "interior-obidos-1758",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Óbidos — Pauxis and neighboring villages reorganized",
+      "culture": {
+        "id": "interior-people-obidos-1758",
+        "name": "Indigenous Pauxis-area residents and Portuguese colonial authorities",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-obidos",
+        "name": "Pauxis / Óbidos, Amazon River",
+        "lon": -55.52,
+        "lat": -1.9,
+        "precision": "Rounded locality reference with approximately 4 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Public town reference https://www.openstreetmap.org/relation/185569 . Fort, mission and later town are located at town scale, not separate surveyed structures."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1758,
+        "end": 1758,
+        "approximate": false,
+        "original": "1758 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "This is reorganization of existing communities; it is not their first occupation or evidence of consent."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The colonial government combined village populations and renamed Pauxis as Óbidos in March 1758.",
+          "status": "well-supported",
+          "explanation": "This is reorganization of existing communities; it is not their first occupation or evidence of consent.",
+          "support": [
+            {
+              "sourceId": "interior-obidos",
+              "locator": "Entries for 25 March 1758 and 9 January 1853",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-obidos",
+          "authors": "Prefeitura Municipal de Óbidos",
+          "title": "História de Óbidos",
+          "url": "https://obidos.pa.gov.br/o-municipio/historia/",
+          "year": null,
+          "venue": "Prefeitura Municipal de Óbidos",
+          "referenceType": "web-resource",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "The colonial government combined village populations and renamed Pauxis as Óbidos in March 1758.",
+        "limitations": "This is reorganization of existing communities; it is not their first occupation or evidence of consent.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "interior-pauxis-1725",
+          "interior-belem-manaus-1853"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "interior-manaus-1853",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Barra do Rio Negro — a river port receives the Marajó",
+      "culture": {
+        "id": "interior-people-manaus-1853",
+        "name": "Residents of Barra do Rio Negro and the Marajó’s crew",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-manaus",
+        "name": "Barra do Rio Negro / Manaus",
+        "lon": -60.02,
+        "lat": -3.13,
+        "precision": "Rounded locality reference with approximately 4 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Editorial reference for the named public locality in the cited source. Historical features may lie elsewhere within this area."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1853,
+        "end": 1853,
+        "approximate": false,
+        "original": "1853 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "A port observation, not the founding of Manaus or the first river traffic."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The Marajó reached Barra do Rio Negro during the inaugural commercial steam voyage of January 1853.",
+          "status": "well-supported",
+          "explanation": "A port observation, not the founding of Manaus or the first river traffic.",
+          "support": [
+            {
+              "sourceId": "interior-steam",
+              "locator": "p.127: Marajó voyage, January 1853",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-steam",
+          "authors": "Vitor Marcos Gregório",
+          "title": "Mãos à obra: o governo provincial paraense e seus esforços para a navegação da região amazônica – 1850–1867",
+          "url": "https://revistas.usp.br/alb/pt_BR/article/download/11712/13485",
+          "year": 2009,
+          "venue": "Almanack Braziliense 9",
+          "referenceType": "journal-article",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "The Marajó reached Barra do Rio Negro during the inaugural commercial steam voyage of January 1853.",
+        "limitations": "A port observation, not the founding of Manaus or the first river traffic.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "interior-belem-manaus-1853"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "interior-belem-manaus-1853",
+      "revision": 1,
+      "type": "event",
+      "title": "Belém → Barra do Rio Negro — commercial steam navigation begins",
+      "culture": {
+        "id": "interior-people-belem-manaus-1853",
+        "name": "Amazonian river workers, passengers and Companhia de Navegação e Comércio do Amazonas",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "settlement-place-belem",
+        "name": "Belém",
+        "lon": -48.5,
+        "lat": -1.46,
+        "precision": "Approximate public settlement or monument locality, rounded coordinates; about 1–2 km spatial resolution, not a surveyed settlement boundary.",
+        "provenance": "Editorial orientation anchor for the public locality named in the cited source. Coordinates are rounded geographic placement, not coordinates quoted from an excavation report; Approximate public settlement or monument locality, rounded coordinates; about 1–2 km spatial resolution, not a surveyed settlement boundary."
+      },
+      "destination": {
+        "id": "interior-place-manaus",
+        "name": "Barra do Rio Negro / Manaus",
+        "lon": -60.02,
+        "lat": -3.13,
+        "precision": "Rounded locality reference with approximately 4 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Editorial reference for the named public locality in the cited source. Historical features may lie elsewhere within this area."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1853,
+        "end": 1853,
+        "approximate": false,
+        "original": "1853 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "The opening-year window is documented; later service needs additional dated records. It does not imply navigation stopped after 1853."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The Marajó inaugurated commercial steam service from Belém to Barra do Rio Negro in January 1853.",
+          "status": "well-supported",
+          "explanation": "The opening-year window is documented; later service needs additional dated records. It does not imply navigation stopped after 1853.",
+          "support": [
+            {
+              "sourceId": "interior-steam",
+              "locator": "p.127: Marajó voyage, January 1853",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            },
+            {
+              "sourceId": "interior-obidos",
+              "locator": "Entries for 25 March 1758 and 9 January 1853",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-steam",
+          "authors": "Vitor Marcos Gregório",
+          "title": "Mãos à obra: o governo provincial paraense e seus esforços para a navegação da região amazônica – 1850–1867",
+          "url": "https://revistas.usp.br/alb/pt_BR/article/download/11712/13485",
+          "year": 2009,
+          "venue": "Almanack Braziliense 9",
+          "referenceType": "journal-article",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        },
+        {
+          "id": "interior-obidos",
+          "authors": "Prefeitura Municipal de Óbidos",
+          "title": "História de Óbidos",
+          "url": "https://obidos.pa.gov.br/o-municipio/historia/",
+          "year": null,
+          "venue": "Prefeitura Municipal de Óbidos",
+          "referenceType": "web-resource",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "The Marajó inaugurated commercial steam service from Belém to Barra do Rio Negro in January 1853.",
+        "limitations": "The opening-year window is documented; later service needs additional dated records. It does not imply navigation stopped after 1853.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "settlement-belem",
+          "interior-manaus-1853",
+          "interior-obidos-1758"
+        ]
+      },
+      "history": {
+        "kind": "exchange",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 1853,
+            "end": 1853,
+            "certainty": "documented",
+            "note": "The opening-year window is documented; later service needs additional dated records. It does not imply navigation stopped after 1853."
+          }
+        ],
+        "connection": {
+          "evidence": "The Marajó inaugurated commercial steam service from Belém to Barra do Rio Negro in January 1853.",
+          "lastEvidence": 1853,
+          "cessation": "unknown",
+          "note": "The end of this source window is not evidence that all exchange stopped.",
+          "claimId": "evidence"
+        }
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "direction": "forward",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -48.5,
+              -1.46
+            ],
+            [
+              -60.02,
+              -3.13
+            ]
+          ]
+        },
+        "precision": "Schematic connection between the named endpoints, not a surveyed river track or itinerary.",
+        "provenance": "Endpoints and activity are source-grounded; the connecting geometry is an editorial illustration."
+      }
+    },
+    {
+      "id": "interior-iquitos-1864",
+      "revision": 1,
+      "type": "event",
+      "title": "Iquitos — naval base and workshops established",
+      "culture": {
+        "id": "interior-people-iquitos-1864",
+        "name": "Existing Iquitos residents, Peruvian naval personnel and workers",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-iquitos",
+        "name": "Iquitos riverfront, Peru",
+        "lon": -73.24,
+        "lat": -3.75,
+        "precision": "Rounded locality reference with approximately 4 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Town reference https://www.openstreetmap.org/node/27434277 . No naval-yard footprint is inferred."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1864,
+        "end": 1864,
+        "approximate": false,
+        "original": "1864 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "The commemorated date is 5 January. It does not date first Indigenous residence or imply every facility was finished that day."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Peruvian naval personnel established the Iquitos base and metalworking facilities in 1864.",
+          "status": "well-supported",
+          "explanation": "The commemorated date is 5 January. It does not date first Indigenous residence or imply every facility was finished that day.",
+          "support": [
+            {
+              "sourceId": "interior-iquitos",
+              "locator": "Comandancia General de Operaciones de la Amazonía: naval base and factory, 5 January 1864",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-iquitos",
+          "authors": "Marina de Guerra del Perú",
+          "title": "Compendio de Historia Marítima y Naval del Perú",
+          "url": "https://archivohistoricodemarina.mil.pe/repo/data/DOCUMENTOS/BIBLIOTECA/LIBROS%20Y%20MISCELANEOS/LIBROS/pdf/Compendio%20de%20Historia%20Mar%C3%ADtima%20y%20Naval%20del%20Per%C3%BA.pdf",
+          "year": null,
+          "venue": "Marina de Guerra del Perú",
+          "referenceType": "book",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed.",
+          "publisher": "Marina de Guerra del Perú"
+        }
+      ],
+      "review": {
+        "summary": "Peruvian naval personnel established the Iquitos base and metalworking facilities in 1864.",
+        "limitations": "The commemorated date is 5 January. It does not date first Indigenous residence or imply every facility was finished that day.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "regional-nauta-1830",
+          "regional-puerto-asis-1912",
+          "community-putumayo-violence"
+        ]
+      },
+      "history": {
+        "kind": "settlement",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "interior-cachuela-1882",
+      "revision": 1,
+      "type": "event",
+      "title": "Cachuela Esperanza — a rubber-company settlement develops",
+      "culture": {
+        "id": "interior-people-cachuela-1882",
+        "name": "Local Indigenous peoples, company workers and Nicolás Suárez’s enterprise",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-cachuela",
+        "name": "Cachuela Esperanza, Beni River",
+        "lon": -65.58,
+        "lat": -10.54,
+        "precision": "Rounded locality reference with approximately 4 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Public settlement area https://www.openstreetmap.org/way/102405476 ."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1882,
+        "end": 1882,
+        "approximate": true,
+        "original": "1882 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "Approximate establishment year; later infrastructure is not backdated to this moment, and company wealth does not demonstrate free labor."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Nicolás Suárez established the rubber-company center at Cachuela Esperanza around 1882.",
+          "status": "well-supported",
+          "explanation": "Approximate establishment year; later infrastructure is not backdated to this moment, and company wealth does not demonstrate free labor.",
+          "support": [
+            {
+              "sourceId": "interior-cachuela",
+              "locator": "Cachuela Esperanza: establishment around 1882",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-cachuela",
+          "authors": "Fundación Cultural del Banco Central de Bolivia",
+          "title": "Tejiendo Culturas, boletín 6",
+          "url": "https://www.fundacionculturalbcb.gob.bo/documentos/boletin-cultural/2021/boletin_06_2021.pdf",
+          "year": 2021,
+          "venue": "Fundación Cultural del Banco Central de Bolivia",
+          "referenceType": "report",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed.",
+          "publisher": "Fundación Cultural del Banco Central de Bolivia"
+        }
+      ],
+      "review": {
+        "summary": "Nicolás Suárez established the rubber-company center at Cachuela Esperanza around 1882.",
+        "limitations": "Approximate establishment year; later infrastructure is not backdated to this moment, and company wealth does not demonstrate free labor.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "community-putumayo-violence"
+        ]
+      },
+      "history": {
+        "kind": "settlement",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "interior-magdalena-1786",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Magdalena — frontier traders meet at the mission",
+      "culture": {
+        "id": "interior-people-magdalena-1786",
+        "name": "Mojos mission residents, friar Cayetano Pérez de Tudela and Portuguese/Spanish traders",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-magdalena",
+        "name": "Magdalena mission town, Beni",
+        "lon": -64.05,
+        "lat": -13.26,
+        "precision": "Rounded locality reference with approximately 5 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Public town node https://www.openstreetmap.org/node/1573616750 ."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1786,
+        "end": 1786,
+        "approximate": false,
+        "original": "1786 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "An attested community and transaction, not proof of a permanent market or first occupation."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Traders met at Magdalena during Easter 1786, with cloth implicated in the subsequent account.",
+          "status": "well-supported",
+          "explanation": "An attested community and transaction, not proof of a permanent market or first occupation.",
+          "support": [
+            {
+              "sourceId": "interior-carvalho",
+              "locator": "pp.612–613: Easter 1786 meeting and 1787 explanation",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-carvalho",
+          "authors": "Francismar Alex Lopes de Carvalho",
+          "title": "Imperial rivalry and frontier commerce: some aspects of contraband between Spanish missions of Mojos and Chiquitos and Portuguese capitania of Mato Grosso (c. 1767–1800)",
+          "url": "https://ojs.uel.br/revistas/uel/index.php/antiteses/article/download/7472/9713",
+          "year": 2011,
+          "venue": "Antíteses 4(8), 595–630",
+          "referenceType": "journal-article",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Traders met at Magdalena during Easter 1786, with cloth implicated in the subsequent account.",
+        "limitations": "An attested community and transaction, not proof of a permanent market or first occupation.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "interior-baures-principe-1787"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "interior-baures-1787",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Concepción de Baures — Indigenous leaders challenge illicit dealings",
+      "culture": {
+        "id": "interior-people-baures-1787",
+        "name": "Indigenous Concepción mission leaders and mission administrators",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-baures",
+        "name": "Concepción de Baures, Beni",
+        "lon": -63.7,
+        "lat": -13.65,
+        "precision": "Rounded locality reference with approximately 5 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Public Baures town node https://www.openstreetmap.org/node/1573616984 . This is the Mojos mission, not Concepción in Chiquitos."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1787,
+        "end": 1787,
+        "approximate": false,
+        "original": "1787 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "A local political intervention, not a battle or evidence of uniform acceptance of mission commerce."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Concepción’s Indigenous leaders denounced the curator’s shipments to Portuguese Forte Príncipe in July 1787.",
+          "status": "well-supported",
+          "explanation": "A local political intervention, not a battle or evidence of uniform acceptance of mission commerce.",
+          "support": [
+            {
+              "sourceId": "interior-carvalho",
+              "locator": "p.613, note 68: Representación de los Caciques, 20 July 1787",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-carvalho",
+          "authors": "Francismar Alex Lopes de Carvalho",
+          "title": "Imperial rivalry and frontier commerce: some aspects of contraband between Spanish missions of Mojos and Chiquitos and Portuguese capitania of Mato Grosso (c. 1767–1800)",
+          "url": "https://ojs.uel.br/revistas/uel/index.php/antiteses/article/download/7472/9713",
+          "year": 2011,
+          "venue": "Antíteses 4(8), 595–630",
+          "referenceType": "journal-article",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Concepción’s Indigenous leaders denounced the curator’s shipments to Portuguese Forte Príncipe in July 1787.",
+        "limitations": "A local political intervention, not a battle or evidence of uniform acceptance of mission commerce.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "interior-baures-principe-1787"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "interior-principe-1776",
+      "revision": 1,
+      "type": "event",
+      "title": "Forte Príncipe da Beira — construction begins",
+      "culture": {
+        "id": "interior-people-principe-1776",
+        "name": "Portuguese colonial authorities and fort construction workers",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-principe",
+        "name": "Forte Príncipe da Beira, Guaporé River",
+        "lon": -64.423,
+        "lat": -12.427,
+        "precision": "Rounded locality reference with approximately 2 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Fort locality https://www.openstreetmap.org/node/416643386 . The larger district centroid is excluded."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1776,
+        "end": 1776,
+        "approximate": false,
+        "original": "1776 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "This dates work begun, not completion or a territorial boundary."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Construction of Forte Príncipe da Beira began in 1776.",
+          "status": "well-supported",
+          "explanation": "This dates work begun, not completion or a territorial boundary.",
+          "support": [
+            {
+              "sourceId": "interior-carvalho",
+              "locator": "p.605: construction started in 1776",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-carvalho",
+          "authors": "Francismar Alex Lopes de Carvalho",
+          "title": "Imperial rivalry and frontier commerce: some aspects of contraband between Spanish missions of Mojos and Chiquitos and Portuguese capitania of Mato Grosso (c. 1767–1800)",
+          "url": "https://ojs.uel.br/revistas/uel/index.php/antiteses/article/download/7472/9713",
+          "year": 2011,
+          "venue": "Antíteses 4(8), 595–630",
+          "referenceType": "journal-article",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Construction of Forte Príncipe da Beira began in 1776.",
+        "limitations": "This dates work begun, not completion or a territorial boundary.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "regional-vila-bela-1752",
+          "interior-baures-principe-1787"
+        ]
+      },
+      "history": {
+        "kind": "settlement",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "interior-baures-principe-1787",
+      "revision": 1,
+      "type": "event",
+      "title": "Concepción → Forte Príncipe — canoe cargo crosses the imperial frontier",
+      "culture": {
+        "id": "interior-people-baures-principe-1787",
+        "name": "Mission producers and workers; Spanish traders and Portuguese officers",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-baures",
+        "name": "Concepción de Baures, Beni",
+        "lon": -63.7,
+        "lat": -13.65,
+        "precision": "Rounded locality reference with approximately 5 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Public Baures town node https://www.openstreetmap.org/node/1573616984 . This is the Mojos mission, not Concepción in Chiquitos."
+      },
+      "destination": {
+        "id": "interior-place-principe",
+        "name": "Forte Príncipe da Beira, Guaporé River",
+        "lon": -64.423,
+        "lat": -12.427,
+        "precision": "Rounded locality reference with approximately 2 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Fort locality https://www.openstreetmap.org/node/416643386 . The larger district centroid is excluded."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1787,
+        "end": 1787,
+        "approximate": false,
+        "original": "1787 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "A documented shipment window; its profits, consent and frequency must not be inferred from the route animation."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Canoes carried food, drink and textiles from Concepción to Forte Príncipe in 1787.",
+          "status": "well-supported",
+          "explanation": "A documented shipment window; its profits, consent and frequency must not be inferred from the route animation.",
+          "support": [
+            {
+              "sourceId": "interior-carvalho",
+              "locator": "p.605: 1787 canoe consignments; p.613: leaders’ complaint",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-carvalho",
+          "authors": "Francismar Alex Lopes de Carvalho",
+          "title": "Imperial rivalry and frontier commerce: some aspects of contraband between Spanish missions of Mojos and Chiquitos and Portuguese capitania of Mato Grosso (c. 1767–1800)",
+          "url": "https://ojs.uel.br/revistas/uel/index.php/antiteses/article/download/7472/9713",
+          "year": 2011,
+          "venue": "Antíteses 4(8), 595–630",
+          "referenceType": "journal-article",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Canoes carried food, drink and textiles from Concepción to Forte Príncipe in 1787.",
+        "limitations": "A documented shipment window; its profits, consent and frequency must not be inferred from the route animation.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "interior-baures-1787",
+          "interior-principe-1776",
+          "interior-magdalena-1786"
+        ]
+      },
+      "history": {
+        "kind": "exchange",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 1787,
+            "end": 1787,
+            "certainty": "documented",
+            "note": "A documented shipment window; its profits, consent and frequency must not be inferred from the route animation."
+          }
+        ],
+        "connection": {
+          "evidence": "Canoes carried food, drink and textiles from Concepción to Forte Príncipe in 1787.",
+          "lastEvidence": 1787,
+          "cessation": "unknown",
+          "note": "The end of this source window is not evidence that all exchange stopped.",
+          "claimId": "evidence"
+        }
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "direction": "forward",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -63.7,
+              -13.65
+            ],
+            [
+              -64.423,
+              -12.427
+            ]
+          ]
+        },
+        "precision": "Schematic connection between the named endpoints, not a surveyed river track or itinerary.",
+        "provenance": "Endpoints and activity are source-grounded; the connecting geometry is an editorial illustration."
+      }
+    },
+    {
+      "id": "interior-saogabriel-1761",
+      "revision": 1,
+      "type": "event",
+      "title": "São Gabriel — a Portuguese fort on an older Indigenous landscape",
+      "culture": {
+        "id": "interior-people-saogabriel-1761",
+        "name": "Indigenous upper Rio Negro peoples and Portuguese colonial forces",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "r12-saogabriel-town",
+        "name": "São Gabriel da Cachoeira",
+        "lon": -67.09,
+        "lat": -0.13,
+        "precision": "Rounded public town/locality anchor, kilometre-scale; not an historical mission building, grave or boundary.",
+        "provenance": "Historical source identifies locality; independently fetched OpenStreetMap Nominatim JSON provides modern town/village setting rounded to two decimals. https://www.openstreetmap.org/relation/332477 . No historical footprint asserted."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1761,
+        "end": 1761,
+        "approximate": false,
+        "original": "1761 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "The date belongs to the fort, not first occupation of this Indigenous landscape."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Archaeological heritage documentation identifies the Portuguese fortification of 1761 at São Gabriel.",
+          "status": "well-supported",
+          "explanation": "The date belongs to the fort, not first occupation of this Indigenous landscape.",
+          "support": [
+            {
+              "sourceId": "interior-gabriel",
+              "locator": "Pedra da Fortaleza: evidence of the Portuguese fortification of 1761",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-gabriel",
+          "authors": "Instituto do Patrimônio Histórico e Artístico Nacional",
+          "title": "Iphan vistoria sítios arqueológicos em São Gabriel da Cachoeira (AM)",
+          "url": "https://www.gov.br/iphan/pt-br/assuntos/noticias/iphan-vistoria-sitios-arqueologicos-em-sao-gabriel-da-cachoeira-am",
+          "year": null,
+          "venue": "Instituto do Patrimônio Histórico e Artístico Nacional",
+          "referenceType": "web-resource",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Archaeological heritage documentation identifies the Portuguese fortification of 1761 at São Gabriel.",
+        "limitations": "The date belongs to the fort, not first occupation of this Indigenous landscape.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "r12v-saogabriel-salesian-arrival1915",
+          "r12v-rionegro-directory-portuguese-policy",
+          "interior-marabitanas-1763"
+        ]
+      },
+      "history": {
+        "kind": "settlement",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "interior-marabitanas-1763",
+      "revision": 1,
+      "type": "event",
+      "title": "Marabitanas — fort construction begins on the upper Rio Negro",
+      "culture": {
+        "id": "interior-people-marabitanas-1763",
+        "name": "Marabitana-area Indigenous residents and Portuguese colonial forces",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-marabitanas",
+        "name": "São José de Marabitanas, upper Rio Negro",
+        "lon": -66.85,
+        "lat": 1.12,
+        "precision": "Rounded locality reference with approximately 20 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "UFSC places the former fort about 15 km downstream from Cucuí on the right bank. This is a generalized river-locality anchor, pending a public surveyed fort coordinate."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1763,
+        "end": 1763,
+        "approximate": false,
+        "original": "1763 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "A fort-building date and generalized river locality; it does not date first residence or establish consent."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Construction of São José de Marabitanas fort began in 1763.",
+          "status": "well-supported",
+          "explanation": "A fort-building date and generalized river locality; it does not date first residence or establish consent.",
+          "support": [
+            {
+              "sourceId": "interior-marabitanas",
+              "locator": "Start of construction in 1763; geographic location",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            },
+            {
+              "sourceId": "interior-marabitanas-geo",
+              "locator": "Right bank of the upper Rio Negro, about 15 km below Cucuí",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-marabitanas",
+          "authors": "Laboratório de História Social, Universidade de Brasília",
+          "title": "Forte de São José de Marabitanas",
+          "url": "https://lhs.unb.br/atlas/index.php?title=Forte_de_S%C3%A3o_Jos%C3%A9_de_Marabitanas",
+          "year": null,
+          "venue": "Laboratório de História Social, Universidade de Brasília",
+          "referenceType": "web-resource",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        },
+        {
+          "id": "interior-marabitanas-geo",
+          "authors": "Universidade Federal de Santa Catarina",
+          "title": "Forte de São José de Marabitanas",
+          "url": "https://www.fortalezasmultimidia.ufsc.br/impressao.php?ct=fortaleza&id_fortaleza=40",
+          "year": null,
+          "venue": "Universidade Federal de Santa Catarina",
+          "referenceType": "web-resource",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Construction of São José de Marabitanas fort began in 1763.",
+        "limitations": "A fort-building date and generalized river locality; it does not date first residence or establish consent.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "interior-saogabriel-1761"
+        ]
+      },
+      "history": {
+        "kind": "settlement",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "interior-san-fernando-1750",
+      "revision": 1,
+      "type": "event",
+      "title": "San Fernando del Río Negro — an Abipón mission town is built",
+      "culture": {
+        "id": "interior-people-san-fernando-1750",
+        "name": "Abipón communities under Naré Alaikín, Jesuits and Corrientes authorities",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-san-fernando",
+        "name": "San Fernando del Río Negro, present-day Resistencia area",
+        "lon": -58.98,
+        "lat": -27.45,
+        "precision": "Rounded locality reference with approximately 8 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Salinas pp.301–302 places the reduction south of the Río Negro, opposite Corrientes. Current Resistencia is orientation, not a surveyed mission footprint."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1750,
+        "end": 1750,
+        "approximate": false,
+        "original": "1750 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "Construction and formal foundation occurred at different stages of that year; no exact foundation day is asserted."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Abipón residents and Jesuits established San Fernando del Río Negro in 1750.",
+          "status": "well-supported",
+          "explanation": "Construction and formal foundation occurred at different stages of that year; no exact foundation day is asserted.",
+          "support": [
+            {
+              "sourceId": "interior-salinas",
+              "locator": "pp.301–302: site description, construction and foundation",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-salinas",
+          "authors": "María Laura Salinas",
+          "title": "San Fernando del Río Negro: un intento evangelizador jesuítico a los abipones",
+          "url": "https://www.redalyc.org/pdf/3055/305526878003.pdf",
+          "year": 2009,
+          "venue": "Diálogos 13(2), 293–322",
+          "referenceType": "journal-article",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Abipón residents and Jesuits established San Fernando del Río Negro in 1750.",
+        "limitations": "Construction and formal foundation occurred at different stages of that year; no exact foundation day is asserted.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "interior-san-fernando-asuncion-1763",
+          "interior-timbo-1763"
+        ]
+      },
+      "history": {
+        "kind": "settlement",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "interior-san-fernando-asuncion-1763",
+      "revision": 1,
+      "type": "event",
+      "title": "San Fernando ↔ Asunción — horses and yerba mate",
+      "culture": {
+        "id": "interior-people-san-fernando-asuncion-1763",
+        "name": "Abipón mission producers, Jesuits, river crews and Paraguayan traders",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-san-fernando",
+        "name": "San Fernando del Río Negro, present-day Resistencia area",
+        "lon": -58.98,
+        "lat": -27.45,
+        "precision": "Rounded locality reference with approximately 8 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Salinas pp.301–302 places the reduction south of the Río Negro, opposite Corrientes. Current Resistencia is orientation, not a surveyed mission footprint."
+      },
+      "destination": {
+        "id": "settlement-place-asuncion",
+        "name": "Asunción",
+        "lon": -57.64,
+        "lat": -25.28,
+        "precision": "Approximate public settlement or monument locality, rounded coordinates; about 1–2 km spatial resolution, not a surveyed settlement boundary.",
+        "provenance": "Editorial orientation anchor for the public locality named in the cited source. Coordinates are rounded geographic placement, not coordinates quoted from an excavation report; Approximate public settlement or monument locality, rounded coordinates; about 1–2 km spatial resolution, not a surveyed settlement boundary."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1763,
+        "end": 1763,
+        "approximate": false,
+        "original": "1763 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "One documented exchange window; no annual frequency or end of commerce is asserted. Transport used the Paraguay River; the line only connects the named endpoints."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Klein’s 1763 correspondence describes horse sales in Paraguay and purchases of yerba mate through Asunción.",
+          "status": "well-supported",
+          "explanation": "One documented exchange window; no annual frequency or end of commerce is asserted. Transport used the Paraguay River; the line only connects the named endpoints.",
+          "support": [
+            {
+              "sourceId": "interior-salinas",
+              "locator": "pp.308–309 and note 33, AGN 1763",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-salinas",
+          "authors": "María Laura Salinas",
+          "title": "San Fernando del Río Negro: un intento evangelizador jesuítico a los abipones",
+          "url": "https://www.redalyc.org/pdf/3055/305526878003.pdf",
+          "year": 2009,
+          "venue": "Diálogos 13(2), 293–322",
+          "referenceType": "journal-article",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Klein’s 1763 correspondence describes horse sales in Paraguay and purchases of yerba mate through Asunción.",
+        "limitations": "One documented exchange window; no annual frequency or end of commerce is asserted. Transport used the Paraguay River; the line only connects the named endpoints.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "interior-san-fernando-1750",
+          "settlement-asuncion"
+        ]
+      },
+      "history": {
+        "kind": "exchange",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 1763,
+            "end": 1763,
+            "certainty": "documented",
+            "note": "One documented exchange window; no annual frequency or end of commerce is asserted. Transport used the Paraguay River; the line only connects the named endpoints."
+          }
+        ],
+        "connection": {
+          "evidence": "Klein’s 1763 correspondence describes horse sales in Paraguay and purchases of yerba mate through Asunción.",
+          "lastEvidence": 1763,
+          "cessation": "unknown",
+          "note": "The end of this source window is not evidence that all exchange stopped.",
+          "claimId": "evidence"
+        }
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "direction": "both",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -58.98,
+              -27.45
+            ],
+            [
+              -57.64,
+              -25.28
+            ]
+          ]
+        },
+        "precision": "Schematic connection between the named endpoints, not a surveyed river track or itinerary.",
+        "provenance": "Endpoints and activity are source-grounded; the connecting geometry is an editorial illustration."
+      }
+    },
+    {
+      "id": "interior-timbo-1763",
+      "revision": 1,
+      "type": "event",
+      "title": "Timbó — a new Abipón reduction near today’s Herradura",
+      "culture": {
+        "id": "interior-people-timbo-1763",
+        "name": "Abipón communities and Jesuit Martín Dobrizhoffer",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-timbo",
+        "name": "San Carlos y Rosario del Timbó, Herradura area",
+        "lon": -58.31,
+        "lat": -26.49,
+        "precision": "Rounded locality reference with approximately 10 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Salinas p.302 note 22 identifies present-day Herradura. The historical reduction is not resolved to a surviving building."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1763,
+        "end": 1763,
+        "approximate": false,
+        "original": "1763 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "Present-day Herradura locates the vicinity; no church footprint or continuous post-1767 residence is inferred."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The Abipón reduction of San Carlos y Rosario del Timbó was established in 1763.",
+          "status": "well-supported",
+          "explanation": "Present-day Herradura locates the vicinity; no church footprint or continuous post-1767 residence is inferred.",
+          "support": [
+            {
+              "sourceId": "interior-salinas",
+              "locator": "p.302 note 22",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-salinas",
+          "authors": "María Laura Salinas",
+          "title": "San Fernando del Río Negro: un intento evangelizador jesuítico a los abipones",
+          "url": "https://www.redalyc.org/pdf/3055/305526878003.pdf",
+          "year": 2009,
+          "venue": "Diálogos 13(2), 293–322",
+          "referenceType": "journal-article",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "The Abipón reduction of San Carlos y Rosario del Timbó was established in 1763.",
+        "limitations": "Present-day Herradura locates the vicinity; no church footprint or continuous post-1767 residence is inferred.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "interior-san-fernando-1750"
+        ]
+      },
+      "history": {
+        "kind": "settlement",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "interior-laishi-1901",
+      "revision": 1,
+      "type": "event",
+      "title": "Laishí — a Franciscan mission among Qom communities",
+      "culture": {
+        "id": "interior-people-laishi-1901",
+        "name": "Qom residents and Franciscan missionaries",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-laishi",
+        "name": "San Francisco de Laishí, Formosa",
+        "lon": -58.63,
+        "lat": -26.24,
+        "precision": "Rounded locality reference with approximately 4 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Public locality reference https://www.openstreetmap.org/relation/3306878 ."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1901,
+        "end": 1901,
+        "approximate": false,
+        "original": "1901 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "Mission establishment is not first Indigenous occupation, nor evidence that all residents accepted its control."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Franciscans established the Laishí mission in 1901 beside the Salado stream.",
+          "status": "well-supported",
+          "explanation": "Mission establishment is not first Indigenous occupation, nor evidence that all residents accepted its control.",
+          "support": [
+            {
+              "sourceId": "interior-laishi",
+              "locator": "History: Franciscan mission established in 1901",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-laishi",
+          "authors": "Comisión Nacional de Monumentos, de Lugares y de Bienes Históricos",
+          "title": "Ex misión San Francisco de Asís",
+          "url": "https://www.argentina.gob.ar/capital-humano/cultura/monumentos/ex-mision-san-francisco-de-asis",
+          "year": null,
+          "venue": "Comisión Nacional de Monumentos, de Lugares y de Bienes Históricos",
+          "referenceType": "web-resource",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Franciscans established the Laishí mission in 1901 beside the Salado stream.",
+        "limitations": "Mission establishment is not first Indigenous occupation, nor evidence that all residents accepted its control.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "interior-laishi-1912"
+        ]
+      },
+      "history": {
+        "kind": "settlement",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "interior-laishi-1912",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Laishí — Indigenous residents and labor recorded",
+      "culture": {
+        "id": "interior-people-laishi-1912",
+        "name": "Qom residents, mission authorities and mill/forest employers",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-laishi",
+        "name": "San Francisco de Laishí, Formosa",
+        "lon": -58.63,
+        "lat": -26.24,
+        "precision": "Rounded locality reference with approximately 4 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Public locality reference https://www.openstreetmap.org/relation/3306878 ."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1912,
+        "end": 1912,
+        "approximate": false,
+        "original": "1912 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "A census observation, not a full population history or an endorsement of the contemporary civilizing rhetoric."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The 1912 census recorded Indigenous residents at Laishí within the mission labor system.",
+          "status": "well-supported",
+          "explanation": "A census observation, not a full population history or an endorsement of the contemporary civilizing rhetoric.",
+          "support": [
+            {
+              "sourceId": "interior-dalla-corte",
+              "locator": "p.236: 1912 census at Laishí",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-dalla-corte",
+          "authors": "Gabriela Dalla-Corte Caballero",
+          "title": "Indígenas y franciscanos en las misiones de Laishí y Tacaaglé del Territorio Nacional de Formosa. Estanislao Zeballos y los niños tobas del Chaco",
+          "url": "https://confluenze.unibo.it/article/download/3093/2479",
+          "year": 2012,
+          "venue": "Confluenze 4(1), 215–241",
+          "referenceType": "journal-article",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "The 1912 census recorded Indigenous residents at Laishí within the mission labor system.",
+        "limitations": "A census observation, not a full population history or an endorsement of the contemporary civilizing rhetoric.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "interior-laishi-1901"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "interior-napalpi-1911",
+      "revision": 1,
+      "type": "event",
+      "title": "Napalpí — state reduction established",
+      "culture": {
+        "id": "interior-people-napalpi-1911",
+        "name": "Qom, Moqoit and Vilela people; Argentine state authorities",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "sovereignty-napalpi-1924-place",
+        "name": "Quitilipi–Napalpí area, Chaco; regional orientation",
+        "lon": -60.22,
+        "lat": -26.87,
+        "precision": "Regional anchor near Quitilipi, about 30 km uncertainty; not a surveyed massacre footprint.",
+        "provenance": "Editorial locality anchor for the named place in the source; coordinates rounded for orientation. No historical boundary or detailed travel track is inferred."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1911,
+        "end": 1911,
+        "approximate": false,
+        "original": "1911 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "An institution for concentrating and controlling Indigenous labor; this is not first habitation or a consensual land transfer."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The Argentine state established the Napalpí reduction in 1911.",
+          "status": "well-supported",
+          "explanation": "An institution for concentrating and controlling Indigenous labor; this is not first habitation or a consensual land transfer.",
+          "support": [
+            {
+              "sourceId": "interior-discipline",
+              "locator": "State reductions section: Napalpí 1911 and Bartolomé de las Casas 1914",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-discipline",
+          "authors": "Valeria Iñigo Carrera and Marcelo Musante",
+          "title": "Concentrar para producir y disciplinar. Misiones religiosas y reducciones estatales en la región chaqueña en el siglo XX",
+          "url": "https://www.mundoagrario.unlp.edu.ar/article/download/MAe234/19047/55436",
+          "year": 2024,
+          "venue": "Mundo Agrario 25(58), e234",
+          "referenceType": "journal-article",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "The Argentine state established the Napalpí reduction in 1911.",
+        "limitations": "An institution for concentrating and controlling Indigenous labor; this is not first habitation or a consensual land transfer.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "sovereignty-napalpi-1924",
+          "interior-bartolome-1914"
+        ]
+      },
+      "history": {
+        "kind": "settlement",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "interior-bartolome-1914",
+      "revision": 1,
+      "type": "event",
+      "title": "Bartolomé de las Casas — a state reduction in Formosa",
+      "culture": {
+        "id": "interior-people-bartolome-1914",
+        "name": "Pilagá and Qom people; Argentine state authorities",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-bartolome",
+        "name": "Bartolomé de las Casas, Formosa",
+        "lon": -59.57,
+        "lat": -25.41,
+        "precision": "Rounded locality reference with approximately 5 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Public town node https://www.openstreetmap.org/node/198440535 . Excludes the unrelated street of this name in Clorinda."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1914,
+        "end": 1914,
+        "approximate": false,
+        "original": "1914 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "The date marks the coercive institution, not first Indigenous occupation or the end of independent communities."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The Bartolomé de las Casas state reduction was established in 1914.",
+          "status": "well-supported",
+          "explanation": "The date marks the coercive institution, not first Indigenous occupation or the end of independent communities.",
+          "support": [
+            {
+              "sourceId": "interior-discipline",
+              "locator": "State reductions section: Napalpí 1911 and Bartolomé de las Casas 1914",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-discipline",
+          "authors": "Valeria Iñigo Carrera and Marcelo Musante",
+          "title": "Concentrar para producir y disciplinar. Misiones religiosas y reducciones estatales en la región chaqueña en el siglo XX",
+          "url": "https://www.mundoagrario.unlp.edu.ar/article/download/MAe234/19047/55436",
+          "year": 2024,
+          "venue": "Mundo Agrario 25(58), e234",
+          "referenceType": "journal-article",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "The Bartolomé de las Casas state reduction was established in 1914.",
+        "limitations": "The date marks the coercive institution, not first Indigenous occupation or the end of independent communities.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "interior-napalpi-1911"
+        ]
+      },
+      "history": {
+        "kind": "settlement",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "interior-caiza-1846",
+      "revision": 1,
+      "type": "event",
+      "title": "Caiza hinterland — militia kill Chocoriqui and Toba families",
+      "culture": {
+        "id": "interior-people-caiza-1846",
+        "name": "Toba leader Chocoriqui and families; volunteer militia from Caiza",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-caiza",
+        "name": "Caiza–Pilcomayo hinterland, Tarija",
+        "lon": -63.55,
+        "lat": -21.82,
+        "precision": "Rounded locality reference with approximately 70 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Mendoza p.45 identifies Caiza militia and Chocoriqui’s camp, but does not provide the attack coordinate. This is a regional orientation marker, not an assertion that the killing occurred in Caiza town."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1846,
+        "end": 1846,
+        "approximate": false,
+        "original": "1846 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "Reported by missionary sources analyzed by Mendoza; exact camp location is unresolved, so this is a regional marker without a casualty total."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Caiza militia attacked Chocoriqui’s camp and killed its residents in late 1846.",
+          "status": "well-supported",
+          "explanation": "Reported by missionary sources analyzed by Mendoza; exact camp location is unresolved, so this is a regional marker without a casualty total.",
+          "support": [
+            {
+              "sourceId": "interior-mendoza",
+              "locator": "p.45, Violence on the Frontier; Corrado 1884, pp.399–400",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-mendoza",
+          "authors": "Marcela Mendoza",
+          "title": "Bolivian settlers and Toba peoples: Appropriation of Indigenous lands on the Chaco Plains in the 1800s",
+          "url": "https://www.hej-hermes.net/10-2/10.204",
+          "year": 2023,
+          "venue": "Historical Encounters 10(2), 38–51",
+          "referenceType": "journal-article",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Caiza militia attacked Chocoriqui’s camp and killed its residents in late 1846.",
+        "limitations": "Reported by missionary sources analyzed by Mendoza; exact camp location is unresolved, so this is a regional marker without a casualty total.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "violence",
+        "basis": "documented",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -63.55,
+            -21.82
+          ]
+        },
+        "precision": "Rounded locality reference with approximately 70 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Event locality supported by the source; no battle line or area of control inferred."
+      }
+    },
+    {
+      "id": "interior-boqueron-1932",
+      "revision": 1,
+      "type": "event",
+      "title": "Boquerón — Paraguay besieges the Bolivian-held fort",
+      "culture": {
+        "id": "interior-people-boqueron-1932",
+        "name": "Paraguayan and Bolivian armies",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-boqueron",
+        "name": "Fortín Boquerón battlefield, Paraguay",
+        "lon": -59.95,
+        "lat": -22.78,
+        "precision": "Rounded locality reference with approximately 5 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Public fort reference, also listed as 22°47′S 59°57′W in the NGA geographic names record. Broad battlefield marker, not a trench outline."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1932,
+        "end": 1932,
+        "approximate": false,
+        "original": "1932 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "The source dates fighting to 9–29 September. The Chaco War continued to 1935, beyond the master map’s 1934 endpoint."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Paraguayan forces besieged and captured Boquerón in September 1932.",
+          "status": "well-supported",
+          "explanation": "The source dates fighting to 9–29 September. The Chaco War continued to 1935, beyond the master map’s 1934 endpoint.",
+          "support": [
+            {
+              "sourceId": "interior-boqueron",
+              "locator": "Siege of Boquerón, 9–29 September 1932",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-boqueron",
+          "authors": "Secretaría Nacional de Cultura, Paraguay",
+          "title": "A 85 años, Páginas de Gloria",
+          "url": "https://cultura.gov.py/2017/09/a-85-anos-paginas-de-gloria/",
+          "year": 2017,
+          "venue": "Secretaría Nacional de Cultura, Paraguay",
+          "referenceType": "web-resource",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Paraguayan forces besieged and captured Boquerón in September 1932.",
+        "limitations": "The source dates fighting to 9–29 September. The Chaco War continued to 1935, beyond the master map’s 1934 endpoint.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "conflict",
+        "basis": "documented",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -59.95,
+            -22.78
+          ]
+        },
+        "precision": "Rounded locality reference with approximately 5 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Event locality supported by the source; no battle line or area of control inferred."
+      }
+    },
+    {
+      "id": "interior-pompeya-1900",
+      "revision": 1,
+      "type": "event",
+      "title": "Nueva Pompeya — mission buildings in the Chaco interior",
+      "culture": {
+        "id": "interior-people-pompeya-1900",
+        "name": "Local Wichí communities and Franciscan missionaries",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-pompeya",
+        "name": "Misión Nueva Pompeya, Chaco",
+        "lon": -61.49,
+        "lat": -24.93,
+        "precision": "Rounded locality reference with approximately 5 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Chaco mission locality, not the Buenos Aires neighborhood of the same name."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1900,
+        "end": 1900,
+        "approximate": false,
+        "original": "1900 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "This dates the mission building, not the first community or the entire surrounding Indigenous settlement network."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The mission at Nueva Pompeya was built in 1900.",
+          "status": "well-supported",
+          "explanation": "This dates the mission building, not the first community or the entire surrounding Indigenous settlement network.",
+          "support": [
+            {
+              "sourceId": "interior-pompeya",
+              "locator": "Mission building constructed in 1900",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-pompeya",
+          "authors": "Instituto de Turismo del Chaco",
+          "title": "Misión Nueva Pompeya",
+          "url": "https://turismo.chaco.gob.ar/destinations/mision-nueva-pompeya/",
+          "year": null,
+          "venue": "Instituto de Turismo del Chaco",
+          "referenceType": "web-resource",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "The mission at Nueva Pompeya was built in 1900.",
+        "limitations": "This dates the mission building, not the first community or the entire surrounding Indigenous settlement network.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": []
+      },
+      "history": {
+        "kind": "settlement",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "interior-cuyuni-1755",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Lower Cuyuni — a Dutch trading post is occupied",
+      "culture": {
+        "id": "interior-people-cuyuni-1755",
+        "name": "Dutch West India Company personnel and Indigenous Cuyuni peoples",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-cuyuni",
+        "name": "First Dutch Cuyuni post — lower-river regional reference",
+        "lon": -59.0,
+        "lat": 6.4,
+        "precision": "Rounded locality reference with approximately 75 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Weiske identifies the first post on Curamueru island in the lower Cuyuni. Precise correspondence with a modern island is unresolved; this broad reference must not be used for navigation or territorial claims."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1755,
+        "end": 1758,
+        "approximate": false,
+        "original": "1755–1758 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "Broad river reference; this small post is not a town or proof of colonial sovereignty over the surrounding peoples."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "A Dutch post operated on Curamueru island in the lower Cuyuni from 1755 until Spanish forces destroyed it in 1758.",
+          "status": "well-supported",
+          "explanation": "Broad river reference; this small post is not a town or proof of colonial sovereignty over the surrounding peoples.",
+          "support": [
+            {
+              "sourceId": "interior-weiske",
+              "locator": "Dialectics of the Global, chapter 11, pp.252–258 and 269: first Cuyuni post and Spanish attack",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-weiske",
+          "authors": "Constanze Weiske",
+          "title": "Dutch Inland Posts and the Limits of Jurisdiction and Interference (1737–1790)",
+          "url": "https://www.degruyterbrill.com/document/doi/10.1515/9783110690149-011/pdf?licenseType=open-access",
+          "year": 2021,
+          "venue": "De Gruyter",
+          "referenceType": "book",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed.",
+          "publisher": "De Gruyter"
+        }
+      ],
+      "review": {
+        "summary": "A Dutch post operated on Curamueru island in the lower Cuyuni from 1755 until Spanish forces destroyed it in 1758.",
+        "limitations": "Broad river reference; this small post is not a town or proof of colonial sovereignty over the surrounding peoples.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "interior-cuyuni-1758",
+          "interior-zeelandia-1744"
+        ]
+      },
+      "history": {
+        "kind": "habitation",
+        "claimId": "evidence",
+        "endEvidence": {
+          "start": 1758,
+          "end": 1758,
+          "meaning": "abandoned",
+          "certainty": "documented",
+          "claimId": "evidence",
+          "note": "The post was destroyed in the Spanish attack. Later Cuyuni posts had different locations; Indigenous life continued."
+        }
+      }
+    },
+    {
+      "id": "interior-cuyuni-1758",
+      "revision": 1,
+      "type": "event",
+      "title": "Cuyuni — Spanish forces burn the Dutch post",
+      "culture": {
+        "id": "interior-people-cuyuni-1758",
+        "name": "Spanish colonial forces; Dutch post personnel and their households",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-cuyuni",
+        "name": "First Dutch Cuyuni post — lower-river regional reference",
+        "lon": -59.0,
+        "lat": 6.4,
+        "precision": "Rounded locality reference with approximately 75 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Weiske identifies the first post on Curamueru island in the lower Cuyuni. Precise correspondence with a modern island is unresolved; this broad reference must not be used for navigation or territorial claims."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1758,
+        "end": 1758,
+        "approximate": false,
+        "original": "1758 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "Regional location only. The conflict does not establish a modern national boundary or extinction of nearby communities."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Spanish forces destroyed the Cuyuni post and took its occupants prisoner in August 1758.",
+          "status": "well-supported",
+          "explanation": "Regional location only. The conflict does not establish a modern national boundary or extinction of nearby communities.",
+          "support": [
+            {
+              "sourceId": "interior-weiske",
+              "locator": "Dialectics of the Global, chapter 11, pp.252–258 and 269: first Cuyuni post and Spanish attack",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-weiske",
+          "authors": "Constanze Weiske",
+          "title": "Dutch Inland Posts and the Limits of Jurisdiction and Interference (1737–1790)",
+          "url": "https://www.degruyterbrill.com/document/doi/10.1515/9783110690149-011/pdf?licenseType=open-access",
+          "year": 2021,
+          "venue": "De Gruyter",
+          "referenceType": "book",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed.",
+          "publisher": "De Gruyter"
+        }
+      ],
+      "review": {
+        "summary": "Spanish forces destroyed the Cuyuni post and took its occupants prisoner in August 1758.",
+        "limitations": "Regional location only. The conflict does not establish a modern national boundary or extinction of nearby communities.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "interior-cuyuni-1755"
+        ]
+      },
+      "overlay": {
+        "kind": "conflict",
+        "basis": "documented",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -59.0,
+            6.4
+          ]
+        },
+        "precision": "Rounded locality reference with approximately 75 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Event locality supported by the source; no battle line or area of control inferred."
+      }
+    },
+    {
+      "id": "interior-zeelandia-1744",
+      "revision": 1,
+      "type": "event",
+      "title": "Fort Zeelandia — the brick fort is completed",
+      "culture": {
+        "id": "interior-people-zeelandia-1744",
+        "name": "Dutch colonial authorities and fort workers in Essequibo",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-zeelandia",
+        "name": "Fort Zeelandia, Fort Island, Guyana",
+        "lon": -58.508,
+        "lat": 6.783,
+        "precision": "Rounded locality reference with approximately 1 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Public fort site https://www.openstreetmap.org/way/821959144 . Distinct from Fort Zeelandia in Paramaribo."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1744,
+        "end": 1744,
+        "approximate": false,
+        "original": "1744 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "This replaces an earlier wooden fort; a proposal in 1710 did not produce this building then. Laborers’ individual identities are not recovered here."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The brick Fort Zeelandia on Fort Island was completed in 1744.",
+          "status": "well-supported",
+          "explanation": "This replaces an earlier wooden fort; a proposal in 1710 did not produce this building then. Laborers’ individual identities are not recovered here.",
+          "support": [
+            {
+              "sourceId": "interior-zeelandia",
+              "locator": "Completion in 1744, following construction authorization in 1742",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-zeelandia",
+          "authors": "National Trust of Guyana",
+          "title": "Fort Zeelandia",
+          "url": "https://ntg.gov.gy/monument/fort-zeelandia/",
+          "year": 2021,
+          "venue": "National Trust of Guyana",
+          "referenceType": "web-resource",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "The brick Fort Zeelandia on Fort Island was completed in 1744.",
+        "limitations": "This replaces an earlier wooden fort; a proposal in 1710 did not produce this building then. Laborers’ individual identities are not recovered here.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "interior-cuyuni-1755"
+        ]
+      },
+      "history": {
+        "kind": "settlement",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "interior-maripaston-1905",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Maripaston — a Matawai village connected to the city",
+      "culture": {
+        "id": "interior-people-maripaston-1905",
+        "name": "Matawai residents and visiting expedition members",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-maripaston",
+        "name": "Historical Maripaston, Saramacca River",
+        "lon": -55.35,
+        "lat": 5.33,
+        "precision": "Rounded locality reference with approximately 6 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Historical village reference near 5.3305°N, 55.3530°W. The modern Maripaston mining concession is not used as the village location. https://en.wikipedia.org/wiki/Maripaston"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1905,
+        "end": 1905,
+        "approximate": false,
+        "original": "1905 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "An observation of village life, not its founding or evidence that residents lived in isolation before this date."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Van Stockum’s 1905 account describes Maripaston households using imported manufactured goods.",
+          "status": "well-supported",
+          "explanation": "An observation of village life, not its founding or evidence that residents lived in isolation before this date.",
+          "support": [
+            {
+              "sourceId": "interior-stipriaan",
+              "locator": "pp.30–31: Van Stockum’s 1905 observation at Maripaston",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-stipriaan",
+          "authors": "Alex van Stipriaan",
+          "title": "Contact! Marrons en de transport- en communicatierevolutie in het Surinaamse binnenland",
+          "url": "https://www.dbnl.org/tekst/_oso001201101_01/_oso001201101_01_0004.php",
+          "year": 2011,
+          "venue": "OSO 30",
+          "referenceType": "journal-article",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Van Stockum’s 1905 account describes Maripaston households using imported manufactured goods.",
+        "limitations": "An observation of village life, not its founding or evidence that residents lived in isolation before this date.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "interior-maripaston-paramaribo-1905"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "interior-maripaston-paramaribo-1905",
+      "revision": 1,
+      "type": "event",
+      "title": "Maripaston ↔ Paramaribo — goods reach the interior",
+      "culture": {
+        "id": "interior-people-maripaston-paramaribo-1905",
+        "name": "Matawai residents, river travelers and Paramaribo traders",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-maripaston",
+        "name": "Historical Maripaston, Saramacca River",
+        "lon": -55.35,
+        "lat": 5.33,
+        "precision": "Rounded locality reference with approximately 6 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Historical village reference near 5.3305°N, 55.3530°W. The modern Maripaston mining concession is not used as the village location. https://en.wikipedia.org/wiki/Maripaston"
+      },
+      "destination": {
+        "id": "settlement-place-paramaribo",
+        "name": "Paramaribo",
+        "lon": -55.15,
+        "lat": 5.83,
+        "precision": "Approximate Paramaribo riverfront urban-lineage anchor, about 3 km resolution; not the surveyed position of the 1613 trading post.",
+        "provenance": "Editorial orientation anchor for the public locality named in the cited source. Coordinates are rounded geographic placement, not coordinates quoted from an excavation report; Approximate Paramaribo riverfront urban-lineage anchor, about 3 km resolution; not the surveyed position of the 1613 trading post."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1905,
+        "end": 1905,
+        "approximate": true,
+        "original": "1905 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "The connection is supported, but this schematic line is not a logged voyage or an exact river itinerary; earlier and later traffic are not dated here."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The 1905 account links Maripaston’s imported household goods to its easy communication with Paramaribo.",
+          "status": "well-supported",
+          "explanation": "The connection is supported, but this schematic line is not a logged voyage or an exact river itinerary; earlier and later traffic are not dated here.",
+          "support": [
+            {
+              "sourceId": "interior-stipriaan",
+              "locator": "pp.30–31: Van Stockum’s 1905 observation at Maripaston",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-stipriaan",
+          "authors": "Alex van Stipriaan",
+          "title": "Contact! Marrons en de transport- en communicatierevolutie in het Surinaamse binnenland",
+          "url": "https://www.dbnl.org/tekst/_oso001201101_01/_oso001201101_01_0004.php",
+          "year": 2011,
+          "venue": "OSO 30",
+          "referenceType": "journal-article",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "The 1905 account links Maripaston’s imported household goods to its easy communication with Paramaribo.",
+        "limitations": "The connection is supported, but this schematic line is not a logged voyage or an exact river itinerary; earlier and later traffic are not dated here.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "interior-maripaston-1905",
+          "settlement-paramaribo"
+        ]
+      },
+      "history": {
+        "kind": "exchange",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 1905,
+            "end": 1905,
+            "certainty": "approximate",
+            "note": "The connection is supported, but this schematic line is not a logged voyage or an exact river itinerary; earlier and later traffic are not dated here."
+          }
+        ],
+        "connection": {
+          "evidence": "The 1905 account links Maripaston’s imported household goods to its easy communication with Paramaribo.",
+          "lastEvidence": 1905,
+          "cessation": "unknown",
+          "note": "The end of this source window is not evidence that all exchange stopped.",
+          "claimId": "evidence"
+        }
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "direction": "both",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -55.35,
+              5.33
+            ],
+            [
+              -55.15,
+              5.83
+            ]
+          ]
+        },
+        "precision": "Schematic connection between the named endpoints, not a surveyed river track or itinerary.",
+        "provenance": "Endpoints and activity are source-grounded; the connecting geometry is an editorial illustration."
+      }
+    },
+    {
+      "id": "interior-kumaka-1846",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Kuma’ka — a Kaliña village before the name Albina",
+      "culture": {
+        "id": "interior-people-kumaka-1846",
+        "name": "Kaliña inhabitants and August Kappler",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-kumaka",
+        "name": "Kuma’ka / Albina, Marowijne River",
+        "lon": -54.05,
+        "lat": 5.5,
+        "precision": "Rounded locality reference with approximately 5 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "CLIM identifies an existing Kaliña village at the later Albina site. Town-scale reference, not a reconstructed village perimeter."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1846,
+        "end": 1846,
+        "approximate": true,
+        "original": "1846 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "Presence at this date is supported; the village’s foundation and earlier occupation span remain undated."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The community history identifies an existing Kaliña village, Kuma’ka, when Kappler named the locality Albina around 1846.",
+          "status": "well-supported",
+          "explanation": "Presence at this date is supported; the village’s foundation and earlier occupation span remain undated.",
+          "support": [
+            {
+              "sourceId": "interior-clim",
+              "locator": "Historical account: existing Kaliña village Kuma’ka renamed Albina around 1846",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-clim",
+          "authors": "Henry Zaalman and colleagues; Commissie Landrechten Inheemsen Beneden-Marowijne",
+          "title": "Marauny Na’na Emandobo / Lokono Shikwabana: Marowijne, our territory",
+          "url": "https://www.forestpeoples.org/fileadmin/uploads/fpp/migration/publication/2010/08/suriname10cfeb06eng.pdf",
+          "year": 2006,
+          "venue": "CLIM",
+          "referenceType": "report",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed.",
+          "publisher": "CLIM"
+        }
+      ],
+      "review": {
+        "summary": "The community history identifies an existing Kaliña village, Kuma’ka, when Kappler named the locality Albina around 1846.",
+        "limitations": "Presence at this date is supported; the village’s foundation and earlier occupation span remain undated.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "interior-galibi-1925"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "interior-galibi-1925",
+      "revision": 1,
+      "type": "event",
+      "title": "Galibi — a school opens in an existing Kaliña community",
+      "culture": {
+        "id": "interior-people-galibi-1925",
+        "name": "Kaliña residents of Christiaankondre and Catholic educators",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-galibi",
+        "name": "Christiaankondre / Galibi, lower Marowijne",
+        "lon": -54.016,
+        "lat": 5.714,
+        "precision": "Rounded locality reference with approximately 3 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Public village node https://www.openstreetmap.org/node/8945031706 . The school is in Christiaankondre, one of Galibi’s villages; this is not the Galibi district centroid or a school-building footprint."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1925,
+        "end": 1925,
+        "approximate": false,
+        "original": "1925 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "This dates a school within an existing community, not the arrival of the Kaliña or the start of education in their society."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "A school was established in Galibi in April 1925.",
+          "status": "well-supported",
+          "explanation": "This dates a school within an existing community, not the arrival of the Kaliña or the start of education in their society.",
+          "support": [
+            {
+              "sourceId": "interior-galibi",
+              "locator": "Galibi school: established April 1925",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-galibi",
+          "authors": "Rutu Foundation",
+          "title": "Indigenous Peoples resilience to safeguard our earth and its diversity: from Suriname to Kenya",
+          "url": "https://www.rutufoundation.org/indigenous-peoples-resilience-to-safeguard-our-earth-and-its-diversity-from-suriname-to-kenya/",
+          "year": null,
+          "venue": "Rutu Foundation",
+          "referenceType": "web-resource",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "A school was established in Galibi in April 1925.",
+        "limitations": "This dates a school within an existing community, not the arrival of the Kaliña or the start of education in their society.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "interior-kumaka-1846"
+        ]
+      },
+      "history": {
+        "kind": "settlement",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "interior-cottica-early",
+      "revision": 1,
+      "type": "event",
+      "title": "Cottica — competing dates for an Aluku village’s establishment",
+      "culture": {
+        "id": "interior-people-cottica-early",
+        "name": "Aluku residents and leaders",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-cottica",
+        "name": "Cottica, Lawa River, Sipaliwini",
+        "lon": -54.23,
+        "lat": 3.85,
+        "precision": "Rounded locality reference with approximately 5 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Public village node https://www.openstreetmap.org/node/4587235777 . This is Cottica on the Lawa, not the Cottica River near the coast."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1791,
+        "end": 1815,
+        "approximate": true,
+        "original": "1791–1815 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "Two historical interpretations bound this approximate foundation window; it is not a claim of construction throughout the interval."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Fleury discusses alternative establishment dates of 1791 and 1815 for Cottica on the Lawa.",
+          "status": "under discussion",
+          "explanation": "Two historical interpretations bound this approximate foundation window; it is not a claim of construction throughout the interval.",
+          "support": [
+            {
+              "sourceId": "interior-fleury",
+              "locator": "§29 (1793 attack); §51–54 (Cottica chronology); author-uploaded full text read via Academia",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-fleury",
+          "authors": "Marie Fleury",
+          "title": "Gaan Mawina, le Marouini au cœur de l’histoire des Boni/Aluku et des Wayana",
+          "url": "https://journals.openedition.org/ethnoecologie/3534",
+          "year": 2018,
+          "venue": "Revue d’ethnoécologie 13",
+          "referenceType": "journal-article",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Fleury discusses alternative establishment dates of 1791 and 1815 for Cottica on the Lawa.",
+        "limitations": "Two historical interpretations bound this approximate foundation window; it is not a claim of construction throughout the interval.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "regional-kumako-1730",
+          "interior-marouini-1793"
+        ]
+      },
+      "history": {
+        "kind": "settlement",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "interior-marouini-1793",
+      "revision": 1,
+      "type": "event",
+      "title": "Marouini — Ndyuka attack Aluku refuges",
+      "culture": {
+        "id": "interior-people-marouini-1793",
+        "name": "Ndyuka fighters, Aluku residents and Dutch colonial bounty incentives",
+        "kind": "people",
+        "color": "#7e6847"
+      },
+      "location": {
+        "id": "interior-place-marouini",
+        "name": "Marouini River — 1793 attack area",
+        "lon": -54.05,
+        "lat": 2.8,
+        "precision": "Rounded locality reference with approximately 90 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Fleury §29 and figures 2, 5–7 place the attack among Marouini settlements. The pin represents the river region; individual burned villages are not precisely georeferenced here."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1793,
+        "end": 1793,
+        "approximate": false,
+        "original": "1793 CE",
+        "method": "Calendar date or source-specific observation window; construction, presence and activity are distinguished.",
+        "interpretation": "Accounts differ on survivors and details. A regional pin marks the violence without asserting an exact burned village or the disappearance of the Aluku."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Ndyuka fighters killed Boni and attacked Aluku settlements on the Marouini in February 1793.",
+          "status": "well-supported",
+          "explanation": "Accounts differ on survivors and details. A regional pin marks the violence without asserting an exact burned village or the disappearance of the Aluku.",
+          "support": [
+            {
+              "sourceId": "interior-fleury",
+              "locator": "§29 (1793 attack); §51–54 (Cottica chronology); author-uploaded full text read via Academia",
+              "stance": "supports",
+              "note": "Supports this observation within the stated limits."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "interior-fleury",
+          "authors": "Marie Fleury",
+          "title": "Gaan Mawina, le Marouini au cœur de l’histoire des Boni/Aluku et des Wayana",
+          "url": "https://journals.openedition.org/ethnoecologie/3534",
+          "year": 2018,
+          "venue": "Revue d’ethnoécologie 13",
+          "referenceType": "journal-article",
+          "access": "Underlying source checked 2026-11-16. Original factual summary; source prose and images are not redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Ndyuka fighters killed Boni and attacked Aluku settlements on the Marouini in February 1793.",
+        "limitations": "Accounts differ on survivors and details. A regional pin marks the violence without asserting an exact burned village or the disappearance of the Aluku.",
+        "discussion": "This mapped observation does not define a people’s territory or population. Related evidence gives independently dated historical context.",
+        "provenance": "Interior-frontier campaign: Consensus Deep research and underlying source checks.",
+        "reviewedAt": "2026-11-16",
+        "history": [
+          "Added dated shared context with explicit geographic and evidential limits."
+        ],
+        "relatedIds": [
+          "interior-cottica-early"
+        ]
+      },
+      "overlay": {
+        "kind": "violence",
+        "basis": "documented",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -54.05,
+            2.8
+          ]
+        },
+        "precision": "Rounded locality reference with approximately 90 km uncertainty; not a building footprint or territorial boundary.",
+        "provenance": "Event locality supported by the source; no battle line or area of control inferred."
+      }
+    }
+  ]
+}

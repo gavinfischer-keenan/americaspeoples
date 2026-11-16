@@ -1,5 +1,11 @@
 # Third party notices
 
+## Modern locality references
+
+Selected modern town/village coordinates were checked against OpenStreetMap through Nominatim. These references are credited in each affected location's provenance and on the map: © OpenStreetMap contributors, [Open Database License 1.0](https://opendatacommons.org/licenses/odbl/1-0/). See [OpenStreetMap copyright and attribution](https://www.openstreetmap.org/copyright).
+
+OpenStreetMap-derived geographic references retain those terms; the atlas's noncommercial terms do not replace them. Historical dates, claims and original educational summaries have independent sources and the atlas's content terms. These references do not make OSM a source for historical settlement boundaries. No OSM tiles are served and no visitor geocoding requests are sent.
+
 ## Self-hosted topographic relief
 
 `data/terrain/natural-earth-relief.webp` is derived from Natural Earth II, 1:50m shaded relief (10800 × 5400). Source: https://www.naturalearthdata.com/downloads/50m-raster-data/50m-natural-earth-2/ and https://naciscdn.org/naturalearth/50m/raster/NE2_50M_SR.zip. Natural Earth material is public domain: https://www.naturalearthdata.com/about/terms-of-use/.

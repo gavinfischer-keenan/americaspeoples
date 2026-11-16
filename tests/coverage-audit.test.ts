@@ -53,7 +53,8 @@ test("coverage audit counts distinct dated places, separates context and uses cu
     assert.equal(result.status, 0, result.stderr);
     const audit = JSON.parse(readFileSync(join(root, "data/coverage-audit.json"), "utf8"));
     assert.equal(audit.recordCount, 11, "shared expansions and history count; duplicates and focused material do not");
-    assert.equal(audit.broadRegionCount, 47); assert.equal(audit.regionCount, 64); assert.equal(audit.periodCount, 12);
+    assert.equal(audit.broadRegionCount, 48); assert.equal(audit.regionCount, 65); assert.equal(audit.periodCount, 12);
+    assert.ok(audit.matrix.some((r: any) => r.region === "Gran Chaco"), "interior gaps need an explicit audit region");
     for (const [name, expected] of [["Aleutians — west of dateline", "aleutian-west"], ["Aleutians — east of dateline", "aleutian-east"]]) {
       const row = audit.matrix.find((r: any) => r.region === name);
       const dated = row.periods.find((p: any) => p.period === "501–1000CE");

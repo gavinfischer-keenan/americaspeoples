@@ -1,6 +1,6 @@
 # Interior Frontiers Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** Fill supported settlement, exchange and conflict gaps in the shared Amazon/Chaco/Guianas atlas.
 
@@ -31,18 +31,18 @@
 **Files:** private `work/interior-frontiers/`; public `docs/interior-frontiers.md`; `data/interior-frontier-baseline.json`.
 **Interfaces:** consumes v0.15 published IDs/locations; produces verified candidates with date meaning, locations, sources and related IDs.
 
-- [ ] Complete the Deep dossier; preserve its document and citations privately; record all calls.
-- [ ] Inventory existing evidence; check candidate sources and geography, including route activity and unknown cessation.
-- [ ] Save source decisions, held leads and immutable baseline; commit research documentation.
+- [x] Complete the Deep dossier; preserve its document and citations privately; record all calls.
+- [x] Inventory existing evidence; check candidate sources and geography, including route activity and unknown cessation.
+- [x] Save source decisions, held leads and immutable baseline; commit research documentation.
 
 ### Task 2: Shared-map evidence integration
 
 **Files:** `data/interior-frontier-expansion-records.json`; `src/published-data.ts`; `scripts/build.ts`; `scripts/world-coverage-audit.ts`; generated workbook/coverage; `tests/interior-frontiers.test.ts`.
 **Interfaces:** consumes verified candidates; publishes shared records and complete exports.
 
-- [ ] Add meaningful tests for shared membership, activity-window endpoints, dated violence, canonical places, reciprocal links and unchanged earlier baselines; observe RED before integration.
-- [ ] Author new records and links, add collection to publication/build manifests, update current campaign coverage and source guide.
-- [ ] Regenerate workbook and coverage; run tests, validation and typecheck. Expected: all pass.
+- [x] Add meaningful tests for shared membership, activity-window endpoints, dated violence, canonical places, reciprocal links and unchanged earlier baselines; observe RED before integration.
+- [x] Author new records and links, add collection to publication/build manifests, update current campaign coverage and source guide.
+- [x] Regenerate workbook and coverage; run tests, validation and typecheck. Expected: all pass.
 - [ ] Commit integrated evidence.
 
 ### Task 3: Verification and reviewable delivery
