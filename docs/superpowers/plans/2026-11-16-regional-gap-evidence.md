@@ -57,3 +57,7 @@
 ## Verification outcome
 
 All 31 release phases passed, including 281 unit tests, the full 2,003-record workbook and rendered imported reviews, self-host/SQLite checks, and the three regional master-map examples. A fresh independent whole-branch review found no actionable findings. The implementation is verified at d1b24ae; this is a candidate, not a deployment. Consensus remains at 58/100 calls. Delivery: [PR #11](https://github.com/gavinfischer-keenan/americaspeoples/pull/11).
+
+## Authorized deployment
+
+PR #11 was merged and v0.15.0 deployed on 2026-11-16. The merged build passed 281 unit tests, five package checks, regional browser checks, and live desktop/tablet verification. Public assets and downloads match the build; the new evidence and source guide are available. Rolling retention keeps v0.15.0 and v0.14.0 only on the host, GitHub releases and local versioned archives. Full deployment evidence is in `docs/releases/v0.15.0-verification.json`.
