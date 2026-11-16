@@ -16,6 +16,8 @@ No 3D viewer, model ingestion or ancestry graph is implemented in this release. 
 
 ## Current research queue — 16 November 2026
 
+The owner selected **early Central/South America and Pacific continuity first** after the v0.16 coverage/movie review. See [the ranked gaps and archaeological-complex shortlist](coverage-priorities-2026-11-16.md). The two Australian movies below remain requested and queued, with links to forced Indigenous relocations; they are not yet implemented.
+
 The twenty topics requested before v0.14 are now playable: horses, maize, sweet potatoes, dogs, boats/voyaging, trade, languages, Haudenosaunee history and lacrosse, Amazonian peoples, Caribbean forced African migration, forced Indigenous relocations, Hawaiʻi and statehood, territorial purchases, Pacific fur trades, whaling, Spanish treasure shipments, missionaries, pottery, obsidian exchange, and copper working. Their research remains incomplete. The following new requests are recorded here for the next implementation; they are **not yet playable movies** and are not additions to the v0.16 dataset.
 
 ### 1. Australia: convict transportation, pastoral expansion and wool ships
