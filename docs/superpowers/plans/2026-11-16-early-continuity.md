@@ -62,4 +62,4 @@
 - [x] Check all three stories and guide links, representative early/post-settlement records, surrounding history after zoom-out and desktop/tablet usability. Check guide data and new records in self-host/SQLite/workbook artifacts.
 - [x] Run the full ordered release gate. Expected: every required phase passes; inspect representative screenshots.
 - [x] Obtain one fresh independent whole-branch review; resolve material findings in one tested fix pass, preserve source-access limitations and held leads.
-- [ ] Record source counts, site/observation distinctions, cumulative Consensus calls and review results; commit, push and create the candidate PR.
+- [x] Record source counts, site/observation distinctions, cumulative Consensus calls and review results; commit, push and create the candidate PR.

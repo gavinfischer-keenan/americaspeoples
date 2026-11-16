@@ -92,7 +92,15 @@
     "execution": "Stages 1–24 passed at 2139595. Stage 25 caught a browser-test synchronization race at a reused Kuk marker. Test-only ff8192a waits atomically for current evidence and screen geometry; all 19 scenes passed. Ordered stages 25–34 then passed. No application or data changes intervened.",
     "packagedImplementationCommit": "2139595",
     "firstAttemptLogSha256": "3baf4537d34e999143b7ca5b4bafdeb43b416a6074660d1221817546da2b62d0",
-    "resumedLogSha256": "5fd7e8b78cd2a45e609a55dcbad22f525cbaa19941bd66bb527d63180081175f"
+    "resumedLogSha256": "5fd7e8b78cd2a45e609a55dcbad22f525cbaa19941bd66bb527d63180081175f",
+    "finalDocumentationBuild": {
+      "commit": "022de1c",
+      "build": "passed",
+      "packageTests": 5,
+      "newGuidesAndVerificationTextMatchPackage": true,
+      "unchangedDatasetHash": true,
+      "all37RecordsMatchPackagedJsonAndSQLite": true
+    }
   },
   "review": {
     "status": "complete; no material findings",
@@ -118,5 +126,6 @@
     "Central America and post-Lapita island histories remain incomplete; held leads are listed in the evidence guide.",
     "Australian pastoral/wool and mining topics remain Coming soon.",
     "No live activation or retention change in this candidate."
-  ]
+  ],
+  "pullRequest": "https://github.com/gavinfischer-keenan/americaspeoples/pull/13"
 }
