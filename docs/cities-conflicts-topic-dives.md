@@ -15,7 +15,7 @@ The next endorsed subjects remain a research backlog: sweet potatoes, dogs, boat
 
 ## A fuller inhabited landscape
 
-Forty-one additional local city phases cover Inka/Wari/Cañari settings and multiple Mesoamerican traditions. A city can have several phases rather than one “built, then gone” interval. The three Machu Picchu records now share an archaeological-city anchor derived from a public Cusco plan, replacing the sanctuary proxy.
+Forty-one additional city and local-phase records cover Inka/Wari/Cañari settings and multiple Mesoamerican traditions. A city can have several phases rather than one “built, then gone” interval. The three Machu Picchu records now share an archaeological-city anchor derived from a public Cusco plan, replacing the sanctuary proxy.
 
 There are 401 additional locality encounter markers. The largest inventory is the NPS Civil War study-area collection, supplemented by independently sourced events in Canada, Mexico, Central America, the Caribbean and South America. Names and dates lead to claims about the participants and source-supported outcome. Points do not reconstruct tactical positions or imply year-long fighting.
 

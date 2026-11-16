@@ -2486,7 +2486,7 @@
       "id": "battle-cwsac-ar014",
       "revision": 1,
       "type": "event",
-      "title": "Poison Spring — 1864-04-18",
+      "title": "Poison Spring — battle and massacre — 1864-04-18",
       "culture": {
         "id": "civil-war-era-encounter",
         "name": "Civil War era encounter",
@@ -2510,27 +2510,33 @@
         "approximate": false,
         "original": "1864-04-18",
         "method": "Source-specific archaeological chronology or documentary event chronology; see cited passage.",
-        "interpretation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded.",
+        "interpretation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The marker includes killings associated with the attack and its aftermath; it does not locate each death or assign an exact casualty total.",
         "eventDate": "1864-04-18"
       },
       "claims": [
         {
           "id": "encounter",
-          "text": "Poison Spring, Ouachita County, AR: 1864-04-18. Union and Confederate forces fought here. The CWSAC summary classifies the result as Confederate success.",
+          "text": "Following the battle of 18 April 1864, Confederate troops killed wounded and captured Black soldiers of the First Kansas Colored Infantry. The killings after combat are part of this event, alongside the defeat of the Union foraging column.",
           "status": "well-supported",
-          "explanation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded.",
+          "explanation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The marker includes killings associated with the attack and its aftermath; it does not locate each death or assign an exact casualty total.",
           "support": [
             {
               "sourceId": "source",
-              "stance": "supports",
+              "stance": "context",
               "locator": "Named site, phase, event or evidence discussion",
-              "note": "Supports the stated claim and its dated scope; approximate map locator is not a footprint."
+              "note": "CWSAC event entry; source-specific interpretation is supported by the historical account."
             },
             {
               "sourceId": "transcription",
-              "stance": "supports",
+              "stance": "context",
               "locator": "CSV row battle=AR014",
-              "note": "Start/end date, place and outcome transcription from the CWSAC inventory."
+              "note": "Inventory identifier and date transcription only; does not establish victim identity or interpretation of the event."
+            },
+            {
+              "sourceId": "historical-account",
+              "stance": "supports",
+              "locator": "Named event discussion",
+              "note": "Supports the participants and violence described in the encounter claim."
             }
           ]
         },
@@ -2579,21 +2585,32 @@
           "url": "https://github.com/jrnold/acw_battle_data/blob/main/build/acw_battle_data/cwsac_battles.csv",
           "access": "Structured CWSAC factual transcription; BSD-3-Clause notice retained in licenses/acw-battle-data-BSD-3-Clause.txt. Original NPS factual source linked separately.",
           "referenceType": "web-resource"
+        },
+        {
+          "id": "historical-account",
+          "authors": "Mark K. Christ, Arkansas Historic Preservation Program / Encyclopedia of Arkansas",
+          "title": "Engagement at Poison Spring",
+          "year": null,
+          "venue": "Mark K. Christ, Arkansas Historic Preservation Program / Encyclopedia of Arkansas",
+          "url": "https://encyclopediaofarkansas.net/entries/engagement-at-poison-spring-37/",
+          "access": "Public source checked 2026-11-15; independent factual synthesis, no source images or full text redistributed.",
+          "referenceType": "web-resource"
         }
       ],
       "review": {
-        "summary": "Poison Spring, Ouachita County, AR: 1864-04-18. Union and Confederate forces fought here. The CWSAC summary classifies the result as Confederate success.",
-        "limitations": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded.",
+        "summary": "Following the battle of 18 April 1864, Confederate troops killed wounded and captured Black soldiers of the First Kansas Colored Infantry. The killings after combat are part of this event, alongside the defeat of the Union foraging column.",
+        "limitations": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The marker includes killings associated with the attack and its aftermath; it does not locate each death or assign an exact casualty total.",
         "discussion": "Local evidence is distinguished from regional culture labels. Coverage is selected, not a census of every community or encounter.",
         "provenance": "Source-specific factual synthesis; geographic precision and chronology are recorded separately.",
         "reviewedAt": "2026-11-15",
         "history": [
-          "Added in the cities, conflicts and topic-dives expansion."
+          "Added in the cities, conflicts and topic-dives expansion.",
+          "Review correction: named participants and source-described civilian or prisoner violence replace generic inventory battle prose."
         ],
         "relatedIds": []
       },
       "overlay": {
-        "kind": "conflict",
+        "kind": "violence",
         "basis": "documented",
         "geometry": {
           "type": "Point",
@@ -7198,7 +7215,7 @@
       "id": "battle-cwsac-ks001",
       "revision": 1,
       "type": "event",
-      "title": "Lawrence — 1863-08-21",
+      "title": "Lawrence massacre — 1863-08-21",
       "culture": {
         "id": "civil-war-era-encounter",
         "name": "Civil War era encounter",
@@ -7222,27 +7239,27 @@
         "approximate": false,
         "original": "1863-08-21",
         "method": "Source-specific archaeological chronology or documentary event chronology; see cited passage.",
-        "interpretation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded.",
+        "interpretation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The marker includes killings associated with the attack and its aftermath; it does not locate each death or assign an exact casualty total.",
         "eventDate": "1863-08-21"
       },
       "claims": [
         {
           "id": "encounter",
-          "text": "Lawrence, Douglas County, KS: 1863-08-21. Union and Confederate forces fought here. The CWSAC summary classifies the result as Confederate success.",
+          "text": "Quantrill’s Confederate-aligned raiders attacked Lawrence on 21 August 1863, killed civilian men and boys, and burned buildings. This point marks an attack on a town and its residents.",
           "status": "well-supported",
-          "explanation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded.",
+          "explanation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The marker includes killings associated with the attack and its aftermath; it does not locate each death or assign an exact casualty total.",
           "support": [
             {
               "sourceId": "source",
               "stance": "supports",
-              "locator": "Named site, phase, event or evidence discussion",
+              "locator": "Event description, not the campaign heading or US/CS table labels",
               "note": "Supports the stated claim and its dated scope; approximate map locator is not a footprint."
             },
             {
               "sourceId": "transcription",
-              "stance": "supports",
+              "stance": "context",
               "locator": "CSV row battle=KS001",
-              "note": "Start/end date, place and outcome transcription from the CWSAC inventory."
+              "note": "Inventory identifier and date transcription only; does not establish victim identity or interpretation of the event."
             }
           ]
         },
@@ -7294,18 +7311,19 @@
         }
       ],
       "review": {
-        "summary": "Lawrence, Douglas County, KS: 1863-08-21. Union and Confederate forces fought here. The CWSAC summary classifies the result as Confederate success.",
-        "limitations": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded.",
+        "summary": "Quantrill’s Confederate-aligned raiders attacked Lawrence on 21 August 1863, killed civilian men and boys, and burned buildings. This point marks an attack on a town and its residents.",
+        "limitations": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The marker includes killings associated with the attack and its aftermath; it does not locate each death or assign an exact casualty total.",
         "discussion": "Local evidence is distinguished from regional culture labels. Coverage is selected, not a census of every community or encounter.",
         "provenance": "Source-specific factual synthesis; geographic precision and chronology are recorded separately.",
         "reviewedAt": "2026-11-15",
         "history": [
-          "Added in the cities, conflicts and topic-dives expansion."
+          "Added in the cities, conflicts and topic-dives expansion.",
+          "Review correction: named participants and source-described civilian or prisoner violence replace generic inventory battle prose."
         ],
         "relatedIds": []
       },
       "overlay": {
-        "kind": "conflict",
+        "kind": "violence",
         "basis": "documented",
         "geometry": {
           "type": "Point",
@@ -12780,8 +12798,8 @@
       "type": "event",
       "title": "Fort Ridgely — 1862-08-20",
       "culture": {
-        "id": "civil-war-era-encounter",
-        "name": "Civil War era encounter",
+        "id": "us-dakota-lakota-encounter",
+        "name": "US army and Dakota/Lakota communities",
         "kind": "people",
         "color": "#ac7656"
       },
@@ -12802,27 +12820,27 @@
         "approximate": false,
         "original": "1862-08-20 through 1862-08-22",
         "method": "Source-specific archaeological chronology or documentary event chronology; see cited passage.",
-        "interpretation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side.",
+        "interpretation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side. The inventory’s US/CS column structure is not evidence that Dakota or Lakota participants belonged to the Confederacy.",
         "eventDate": "1862-08-20"
       },
       "claims": [
         {
           "id": "encounter",
-          "text": "Fort Ridgely, Nicollet County, MN: 1862-08-20 through 1862-08-22. Participants identified by the source: Fort Ridgely Garrison and refugee civilians [US]; Santee Sioux [I]. The CWSAC summary classifies the result as U.S. / Union success.",
+          "text": "Dakota warriors attacked Fort Ridgely on 20 and 22 August 1862. The US garrison and civilians sheltering there held the fort during the US–Dakota War.",
           "status": "well-supported",
-          "explanation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side.",
+          "explanation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side. The inventory’s US/CS column structure is not evidence that Dakota or Lakota participants belonged to the Confederacy.",
           "support": [
             {
               "sourceId": "source",
               "stance": "supports",
-              "locator": "Named site, phase, event or evidence discussion",
+              "locator": "Event description, not the campaign heading or US/CS table labels",
               "note": "Supports the stated claim and its dated scope; approximate map locator is not a footprint."
             },
             {
               "sourceId": "transcription",
-              "stance": "supports",
+              "stance": "context",
               "locator": "CSV row battle=MN001",
-              "note": "Start/end date, place and outcome transcription from the CWSAC inventory."
+              "note": "Inventory identifier and date transcription only; does not establish victim identity or interpretation of the event."
             }
           ]
         },
@@ -12874,13 +12892,14 @@
         }
       ],
       "review": {
-        "summary": "Fort Ridgely, Nicollet County, MN: 1862-08-20 through 1862-08-22. Participants identified by the source: Fort Ridgely Garrison and refugee civilians [US]; Santee Sioux [I]. The CWSAC summary classifies the result as U.S. / Union success.",
-        "limitations": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side.",
+        "summary": "Dakota warriors attacked Fort Ridgely on 20 and 22 August 1862. The US garrison and civilians sheltering there held the fort during the US–Dakota War.",
+        "limitations": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side. The inventory’s US/CS column structure is not evidence that Dakota or Lakota participants belonged to the Confederacy.",
         "discussion": "Local evidence is distinguished from regional culture labels. Coverage is selected, not a census of every community or encounter.",
         "provenance": "Source-specific factual synthesis; geographic precision and chronology are recorded separately.",
         "reviewedAt": "2026-11-15",
         "history": [
-          "Added in the cities, conflicts and topic-dives expansion."
+          "Added in the cities, conflicts and topic-dives expansion.",
+          "Review correction: named participants and source-described civilian or prisoner violence replace generic inventory battle prose."
         ],
         "relatedIds": []
       },
@@ -12904,8 +12923,8 @@
       "type": "event",
       "title": "Wood Lake — 1862-09-23",
       "culture": {
-        "id": "civil-war-era-encounter",
-        "name": "Civil War era encounter",
+        "id": "us-dakota-lakota-encounter",
+        "name": "US army and Dakota/Lakota communities",
         "kind": "people",
         "color": "#ac7656"
       },
@@ -12926,27 +12945,27 @@
         "approximate": false,
         "original": "1862-09-23",
         "method": "Source-specific archaeological chronology or documentary event chronology; see cited passage.",
-        "interpretation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side.",
+        "interpretation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side. The inventory’s US/CS column structure is not evidence that Dakota or Lakota participants belonged to the Confederacy.",
         "eventDate": "1862-09-23"
       },
       "claims": [
         {
           "id": "encounter",
-          "text": "Wood Lake, Yellow Medicine County, MN: 1862-09-23. Participants identified by the source: Volunteer troops (about 1,500) [US]; Santee Sioux [I]. The CWSAC summary classifies the result as U.S. / Union success.",
+          "text": "US troops under Henry Sibley defeated Dakota warriors associated with Little Crow at Wood Lake on 23 September 1862, during the US–Dakota War.",
           "status": "well-supported",
-          "explanation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side.",
+          "explanation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side. The inventory’s US/CS column structure is not evidence that Dakota or Lakota participants belonged to the Confederacy.",
           "support": [
             {
               "sourceId": "source",
               "stance": "supports",
-              "locator": "Named site, phase, event or evidence discussion",
+              "locator": "Event description, not the campaign heading or US/CS table labels",
               "note": "Supports the stated claim and its dated scope; approximate map locator is not a footprint."
             },
             {
               "sourceId": "transcription",
-              "stance": "supports",
+              "stance": "context",
               "locator": "CSV row battle=MN002",
-              "note": "Start/end date, place and outcome transcription from the CWSAC inventory."
+              "note": "Inventory identifier and date transcription only; does not establish victim identity or interpretation of the event."
             }
           ]
         },
@@ -12998,13 +13017,14 @@
         }
       ],
       "review": {
-        "summary": "Wood Lake, Yellow Medicine County, MN: 1862-09-23. Participants identified by the source: Volunteer troops (about 1,500) [US]; Santee Sioux [I]. The CWSAC summary classifies the result as U.S. / Union success.",
-        "limitations": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side.",
+        "summary": "US troops under Henry Sibley defeated Dakota warriors associated with Little Crow at Wood Lake on 23 September 1862, during the US–Dakota War.",
+        "limitations": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side. The inventory’s US/CS column structure is not evidence that Dakota or Lakota participants belonged to the Confederacy.",
         "discussion": "Local evidence is distinguished from regional culture labels. Coverage is selected, not a census of every community or encounter.",
         "provenance": "Source-specific factual synthesis; geographic precision and chronology are recorded separately.",
         "reviewedAt": "2026-11-15",
         "history": [
-          "Added in the cities, conflicts and topic-dives expansion."
+          "Added in the cities, conflicts and topic-dives expansion.",
+          "Review correction: named participants and source-described civilian or prisoner violence replace generic inventory battle prose."
         ],
         "relatedIds": []
       },
@@ -21088,8 +21108,8 @@
       "type": "event",
       "title": "Big Mound — 1863-07-24",
       "culture": {
-        "id": "civil-war-era-encounter",
-        "name": "Civil War era encounter",
+        "id": "us-dakota-lakota-encounter",
+        "name": "US army and Dakota/Lakota communities",
         "kind": "people",
         "color": "#ac7656"
       },
@@ -21110,27 +21130,33 @@
         "approximate": false,
         "original": "1863-07-24 through 1863-07-25",
         "method": "Source-specific archaeological chronology or documentary event chronology; see cited passage.",
-        "interpretation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side.",
+        "interpretation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side. The inventory’s US/CS column structure is not evidence that Dakota or Lakota participants belonged to the Confederacy.",
         "eventDate": "1863-07-24"
       },
       "claims": [
         {
           "id": "encounter",
-          "text": "Big Mound, Kidder County, ND: 1863-07-24 through 1863-07-25. Participants identified by the source: District of Minnesota [US]; Santee and Teton Sioux [I]. The CWSAC summary classifies the result as U.S. / Union success.",
+          "text": "US troops under Sibley fought Dakota/Lakota forces at Big Mound on 24 July 1863 during the army’s westward campaign.",
           "status": "well-supported",
-          "explanation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side.",
+          "explanation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side. The inventory’s US/CS column structure is not evidence that Dakota or Lakota participants belonged to the Confederacy.",
           "support": [
             {
               "sourceId": "source",
-              "stance": "supports",
+              "stance": "context",
               "locator": "Named site, phase, event or evidence discussion",
-              "note": "Supports the stated claim and its dated scope; approximate map locator is not a footprint."
+              "note": "CWSAC event entry; source-specific interpretation is supported by the historical account."
             },
             {
               "sourceId": "transcription",
-              "stance": "supports",
+              "stance": "context",
               "locator": "CSV row battle=ND001",
-              "note": "Start/end date, place and outcome transcription from the CWSAC inventory."
+              "note": "Inventory identifier and date transcription only; does not establish victim identity or interpretation of the event."
+            },
+            {
+              "sourceId": "historical-account",
+              "stance": "supports",
+              "locator": "Named event discussion",
+              "note": "Supports the participants and violence described in the encounter claim."
             }
           ]
         },
@@ -21179,16 +21205,27 @@
           "url": "https://github.com/jrnold/acw_battle_data/blob/main/build/acw_battle_data/cwsac_battles.csv",
           "access": "Structured CWSAC factual transcription; BSD-3-Clause notice retained in licenses/acw-battle-data-BSD-3-Clause.txt. Original NPS factual source linked separately.",
           "referenceType": "web-resource"
+        },
+        {
+          "id": "historical-account",
+          "authors": "State Historical Society of North Dakota",
+          "title": "Sibley & Sully Expeditions: History Part 3",
+          "year": null,
+          "venue": "State Historical Society of North Dakota",
+          "url": "https://history.nd.gov/historicsites/sibleysully/history3.html",
+          "access": "Public source checked 2026-11-15; independent factual synthesis, no source images or full text redistributed.",
+          "referenceType": "web-resource"
         }
       ],
       "review": {
-        "summary": "Big Mound, Kidder County, ND: 1863-07-24 through 1863-07-25. Participants identified by the source: District of Minnesota [US]; Santee and Teton Sioux [I]. The CWSAC summary classifies the result as U.S. / Union success.",
-        "limitations": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side.",
+        "summary": "US troops under Sibley fought Dakota/Lakota forces at Big Mound on 24 July 1863 during the army’s westward campaign.",
+        "limitations": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side. The inventory’s US/CS column structure is not evidence that Dakota or Lakota participants belonged to the Confederacy.",
         "discussion": "Local evidence is distinguished from regional culture labels. Coverage is selected, not a census of every community or encounter.",
         "provenance": "Source-specific factual synthesis; geographic precision and chronology are recorded separately.",
         "reviewedAt": "2026-11-15",
         "history": [
-          "Added in the cities, conflicts and topic-dives expansion."
+          "Added in the cities, conflicts and topic-dives expansion.",
+          "Review correction: named participants and source-described civilian or prisoner violence replace generic inventory battle prose."
         ],
         "relatedIds": []
       },
@@ -21212,8 +21249,8 @@
       "type": "event",
       "title": "Dead Buffalo Lake — 1863-07-26",
       "culture": {
-        "id": "civil-war-era-encounter",
-        "name": "Civil War era encounter",
+        "id": "us-dakota-lakota-encounter",
+        "name": "US army and Dakota/Lakota communities",
         "kind": "people",
         "color": "#ac7656"
       },
@@ -21234,27 +21271,33 @@
         "approximate": false,
         "original": "1863-07-26",
         "method": "Source-specific archaeological chronology or documentary event chronology; see cited passage.",
-        "interpretation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side.",
+        "interpretation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side. The inventory’s US/CS column structure is not evidence that Dakota or Lakota participants belonged to the Confederacy.",
         "eventDate": "1863-07-26"
       },
       "claims": [
         {
           "id": "encounter",
-          "text": "Dead Buffalo Lake, Kidder County, ND: 1863-07-26. Participants identified by the source: District of Minnesota [US]; Santee and Teton Sioux [I]. The CWSAC summary classifies the result as U.S. / Union success.",
+          "text": "US troops under Sibley fought Dakota/Lakota forces near Dead Buffalo Lake on 26 July 1863.",
           "status": "well-supported",
-          "explanation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side.",
+          "explanation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side. The inventory’s US/CS column structure is not evidence that Dakota or Lakota participants belonged to the Confederacy.",
           "support": [
             {
               "sourceId": "source",
-              "stance": "supports",
+              "stance": "context",
               "locator": "Named site, phase, event or evidence discussion",
-              "note": "Supports the stated claim and its dated scope; approximate map locator is not a footprint."
+              "note": "CWSAC event entry; source-specific interpretation is supported by the historical account."
             },
             {
               "sourceId": "transcription",
-              "stance": "supports",
+              "stance": "context",
               "locator": "CSV row battle=ND002",
-              "note": "Start/end date, place and outcome transcription from the CWSAC inventory."
+              "note": "Inventory identifier and date transcription only; does not establish victim identity or interpretation of the event."
+            },
+            {
+              "sourceId": "historical-account",
+              "stance": "supports",
+              "locator": "Named event discussion",
+              "note": "Supports the participants and violence described in the encounter claim."
             }
           ]
         },
@@ -21303,16 +21346,27 @@
           "url": "https://github.com/jrnold/acw_battle_data/blob/main/build/acw_battle_data/cwsac_battles.csv",
           "access": "Structured CWSAC factual transcription; BSD-3-Clause notice retained in licenses/acw-battle-data-BSD-3-Clause.txt. Original NPS factual source linked separately.",
           "referenceType": "web-resource"
+        },
+        {
+          "id": "historical-account",
+          "authors": "State Historical Society of North Dakota",
+          "title": "Sibley & Sully Expeditions: History Part 3",
+          "year": null,
+          "venue": "State Historical Society of North Dakota",
+          "url": "https://history.nd.gov/historicsites/sibleysully/history3.html",
+          "access": "Public source checked 2026-11-15; independent factual synthesis, no source images or full text redistributed.",
+          "referenceType": "web-resource"
         }
       ],
       "review": {
-        "summary": "Dead Buffalo Lake, Kidder County, ND: 1863-07-26. Participants identified by the source: District of Minnesota [US]; Santee and Teton Sioux [I]. The CWSAC summary classifies the result as U.S. / Union success.",
-        "limitations": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side.",
+        "summary": "US troops under Sibley fought Dakota/Lakota forces near Dead Buffalo Lake on 26 July 1863.",
+        "limitations": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side. The inventory’s US/CS column structure is not evidence that Dakota or Lakota participants belonged to the Confederacy.",
         "discussion": "Local evidence is distinguished from regional culture labels. Coverage is selected, not a census of every community or encounter.",
         "provenance": "Source-specific factual synthesis; geographic precision and chronology are recorded separately.",
         "reviewedAt": "2026-11-15",
         "history": [
-          "Added in the cities, conflicts and topic-dives expansion."
+          "Added in the cities, conflicts and topic-dives expansion.",
+          "Review correction: named participants and source-described civilian or prisoner violence replace generic inventory battle prose."
         ],
         "relatedIds": []
       },
@@ -21336,8 +21390,8 @@
       "type": "event",
       "title": "Stony Lake — 1863-07-28",
       "culture": {
-        "id": "civil-war-era-encounter",
-        "name": "Civil War era encounter",
+        "id": "us-dakota-lakota-encounter",
+        "name": "US army and Dakota/Lakota communities",
         "kind": "people",
         "color": "#ac7656"
       },
@@ -21358,27 +21412,33 @@
         "approximate": false,
         "original": "1863-07-28",
         "method": "Source-specific archaeological chronology or documentary event chronology; see cited passage.",
-        "interpretation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side.",
+        "interpretation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side. The inventory’s US/CS column structure is not evidence that Dakota or Lakota participants belonged to the Confederacy.",
         "eventDate": "1863-07-28"
       },
       "claims": [
         {
           "id": "encounter",
-          "text": "Stony Lake, Burleigh County, ND: 1863-07-28. Participants identified by the source: District of Minnesota [US]; Santee and Teton Sioux [I]. The CWSAC summary classifies the result as U.S. / Union success.",
+          "text": "US troops under Sibley fought Dakota/Lakota forces near Stony Lake on 28 July 1863, before pursuing families toward the Missouri.",
           "status": "well-supported",
-          "explanation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side.",
+          "explanation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side. The inventory’s US/CS column structure is not evidence that Dakota or Lakota participants belonged to the Confederacy.",
           "support": [
             {
               "sourceId": "source",
-              "stance": "supports",
+              "stance": "context",
               "locator": "Named site, phase, event or evidence discussion",
-              "note": "Supports the stated claim and its dated scope; approximate map locator is not a footprint."
+              "note": "CWSAC event entry; source-specific interpretation is supported by the historical account."
             },
             {
               "sourceId": "transcription",
-              "stance": "supports",
+              "stance": "context",
               "locator": "CSV row battle=ND003",
-              "note": "Start/end date, place and outcome transcription from the CWSAC inventory."
+              "note": "Inventory identifier and date transcription only; does not establish victim identity or interpretation of the event."
+            },
+            {
+              "sourceId": "historical-account",
+              "stance": "supports",
+              "locator": "Named event discussion",
+              "note": "Supports the participants and violence described in the encounter claim."
             }
           ]
         },
@@ -21427,16 +21487,27 @@
           "url": "https://github.com/jrnold/acw_battle_data/blob/main/build/acw_battle_data/cwsac_battles.csv",
           "access": "Structured CWSAC factual transcription; BSD-3-Clause notice retained in licenses/acw-battle-data-BSD-3-Clause.txt. Original NPS factual source linked separately.",
           "referenceType": "web-resource"
+        },
+        {
+          "id": "historical-account",
+          "authors": "State Historical Society of North Dakota",
+          "title": "Sibley & Sully Expeditions: History Part 3",
+          "year": null,
+          "venue": "State Historical Society of North Dakota",
+          "url": "https://history.nd.gov/historicsites/sibleysully/history3.html",
+          "access": "Public source checked 2026-11-15; independent factual synthesis, no source images or full text redistributed.",
+          "referenceType": "web-resource"
         }
       ],
       "review": {
-        "summary": "Stony Lake, Burleigh County, ND: 1863-07-28. Participants identified by the source: District of Minnesota [US]; Santee and Teton Sioux [I]. The CWSAC summary classifies the result as U.S. / Union success.",
-        "limitations": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side.",
+        "summary": "US troops under Sibley fought Dakota/Lakota forces near Stony Lake on 28 July 1863, before pursuing families toward the Missouri.",
+        "limitations": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side. The inventory’s US/CS column structure is not evidence that Dakota or Lakota participants belonged to the Confederacy.",
         "discussion": "Local evidence is distinguished from regional culture labels. Coverage is selected, not a census of every community or encounter.",
         "provenance": "Source-specific factual synthesis; geographic precision and chronology are recorded separately.",
         "reviewedAt": "2026-11-15",
         "history": [
-          "Added in the cities, conflicts and topic-dives expansion."
+          "Added in the cities, conflicts and topic-dives expansion.",
+          "Review correction: named participants and source-described civilian or prisoner violence replace generic inventory battle prose."
         ],
         "relatedIds": []
       },
@@ -21458,10 +21529,10 @@
       "id": "battle-cwsac-nd004",
       "revision": 1,
       "type": "event",
-      "title": "Whitestone Hill — 1863-09-03",
+      "title": "Whitestone Hill — attack on a village — 1863-09-03",
       "culture": {
-        "id": "civil-war-era-encounter",
-        "name": "Civil War era encounter",
+        "id": "us-dakota-lakota-encounter",
+        "name": "US army and Dakota/Lakota communities",
         "kind": "people",
         "color": "#ac7656"
       },
@@ -21482,27 +21553,33 @@
         "approximate": false,
         "original": "1863-09-03 through 1863-09-05",
         "method": "Source-specific archaeological chronology or documentary event chronology; see cited passage.",
-        "interpretation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side.",
+        "interpretation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side. The marker includes killings associated with the attack and its aftermath; it does not locate each death or assign an exact casualty total. The inventory’s US/CS column structure is not evidence that Dakota or Lakota participants belonged to the Confederacy.",
         "eventDate": "1863-09-03"
       },
       "claims": [
         {
           "id": "encounter",
-          "text": "Whitestone Hill, Dickey County, ND: 1863-09-03 through 1863-09-05. Participants identified by the source: Northwestern Expedition (600-700) [US]; Santee, Yankton, Cut-heads, Hunkapapa and Teton Sioux and Blackfeet (1,200-1,500) [I]. The CWSAC summary classifies the result as U.S. / Union success.",
+          "text": "Alfred Sully’s US troops attacked a Dakota/Lakota village on 3 September 1863. Men, women and children were killed; captives were taken and winter supplies destroyed.",
           "status": "well-supported",
-          "explanation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side.",
+          "explanation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side. The marker includes killings associated with the attack and its aftermath; it does not locate each death or assign an exact casualty total. The inventory’s US/CS column structure is not evidence that Dakota or Lakota participants belonged to the Confederacy.",
           "support": [
             {
               "sourceId": "source",
-              "stance": "supports",
+              "stance": "context",
               "locator": "Named site, phase, event or evidence discussion",
-              "note": "Supports the stated claim and its dated scope; approximate map locator is not a footprint."
+              "note": "CWSAC event entry; source-specific interpretation is supported by the historical account."
             },
             {
               "sourceId": "transcription",
-              "stance": "supports",
+              "stance": "context",
               "locator": "CSV row battle=ND004",
-              "note": "Start/end date, place and outcome transcription from the CWSAC inventory."
+              "note": "Inventory identifier and date transcription only; does not establish victim identity or interpretation of the event."
+            },
+            {
+              "sourceId": "historical-account",
+              "stance": "supports",
+              "locator": "Named event discussion",
+              "note": "Supports the participants and violence described in the encounter claim."
             }
           ]
         },
@@ -21551,21 +21628,32 @@
           "url": "https://github.com/jrnold/acw_battle_data/blob/main/build/acw_battle_data/cwsac_battles.csv",
           "access": "Structured CWSAC factual transcription; BSD-3-Clause notice retained in licenses/acw-battle-data-BSD-3-Clause.txt. Original NPS factual source linked separately.",
           "referenceType": "web-resource"
+        },
+        {
+          "id": "historical-account",
+          "authors": "State Historical Society of North Dakota",
+          "title": "Sibley & Sully Expeditions: History Part 3",
+          "year": null,
+          "venue": "State Historical Society of North Dakota",
+          "url": "https://history.nd.gov/historicsites/sibleysully/history3.html",
+          "access": "Public source checked 2026-11-15; independent factual synthesis, no source images or full text redistributed.",
+          "referenceType": "web-resource"
         }
       ],
       "review": {
-        "summary": "Whitestone Hill, Dickey County, ND: 1863-09-03 through 1863-09-05. Participants identified by the source: Northwestern Expedition (600-700) [US]; Santee, Yankton, Cut-heads, Hunkapapa and Teton Sioux and Blackfeet (1,200-1,500) [I]. The CWSAC summary classifies the result as U.S. / Union success.",
-        "limitations": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side.",
+        "summary": "Alfred Sully’s US troops attacked a Dakota/Lakota village on 3 September 1863. Men, women and children were killed; captives were taken and winter supplies destroyed.",
+        "limitations": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side. The marker includes killings associated with the attack and its aftermath; it does not locate each death or assign an exact casualty total. The inventory’s US/CS column structure is not evidence that Dakota or Lakota participants belonged to the Confederacy.",
         "discussion": "Local evidence is distinguished from regional culture labels. Coverage is selected, not a census of every community or encounter.",
         "provenance": "Source-specific factual synthesis; geographic precision and chronology are recorded separately.",
         "reviewedAt": "2026-11-15",
         "history": [
-          "Added in the cities, conflicts and topic-dives expansion."
+          "Added in the cities, conflicts and topic-dives expansion.",
+          "Review correction: named participants and source-described civilian or prisoner violence replace generic inventory battle prose."
         ],
         "relatedIds": []
       },
       "overlay": {
-        "kind": "conflict",
+        "kind": "violence",
         "basis": "documented",
         "geometry": {
           "type": "Point",
@@ -21582,10 +21670,10 @@
       "id": "battle-cwsac-nd005",
       "revision": 1,
       "type": "event",
-      "title": "Killdeer Mountain — 1864-07-28",
+      "title": "Killdeer Mountain — attack on a village — 1864-07-28",
       "culture": {
-        "id": "civil-war-era-encounter",
-        "name": "Civil War era encounter",
+        "id": "us-dakota-lakota-encounter",
+        "name": "US army and Dakota/Lakota communities",
         "kind": "people",
         "color": "#ac7656"
       },
@@ -21606,27 +21694,33 @@
         "approximate": false,
         "original": "1864-07-28 through 1864-07-29",
         "method": "Source-specific archaeological chronology or documentary event chronology; see cited passage.",
-        "interpretation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side.",
+        "interpretation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side. The marker includes killings associated with the attack and its aftermath; it does not locate each death or assign an exact casualty total. The inventory’s US/CS column structure is not evidence that Dakota or Lakota participants belonged to the Confederacy.",
         "eventDate": "1864-07-28"
       },
       "claims": [
         {
           "id": "encounter",
-          "text": "Killdeer Mountain, Dunn County, ND: 1864-07-28 through 1864-07-29. Participants identified by the source: Detachments from eight units (2,200) [US]; Santee and Teton Sioux [I]. The CWSAC summary classifies the result as U.S. / Union success.",
+          "text": "Sully’s US army attacked a mostly Lakota and Yanktonai village on 28 July 1864. People were killed and winter supplies destroyed; the point represents a village attack, not just a fight between soldiers.",
           "status": "well-supported",
-          "explanation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side.",
+          "explanation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side. The marker includes killings associated with the attack and its aftermath; it does not locate each death or assign an exact casualty total. The inventory’s US/CS column structure is not evidence that Dakota or Lakota participants belonged to the Confederacy.",
           "support": [
             {
               "sourceId": "source",
-              "stance": "supports",
+              "stance": "context",
               "locator": "Named site, phase, event or evidence discussion",
-              "note": "Supports the stated claim and its dated scope; approximate map locator is not a footprint."
+              "note": "CWSAC event entry; source-specific interpretation is supported by the historical account."
             },
             {
               "sourceId": "transcription",
-              "stance": "supports",
+              "stance": "context",
               "locator": "CSV row battle=ND005",
-              "note": "Start/end date, place and outcome transcription from the CWSAC inventory."
+              "note": "Inventory identifier and date transcription only; does not establish victim identity or interpretation of the event."
+            },
+            {
+              "sourceId": "historical-account",
+              "stance": "supports",
+              "locator": "Named event discussion",
+              "note": "Supports the participants and violence described in the encounter claim."
             }
           ]
         },
@@ -21675,21 +21769,32 @@
           "url": "https://github.com/jrnold/acw_battle_data/blob/main/build/acw_battle_data/cwsac_battles.csv",
           "access": "Structured CWSAC factual transcription; BSD-3-Clause notice retained in licenses/acw-battle-data-BSD-3-Clause.txt. Original NPS factual source linked separately.",
           "referenceType": "web-resource"
+        },
+        {
+          "id": "historical-account",
+          "authors": "State Historical Society of North Dakota",
+          "title": "Sibley & Sully Expeditions: History Part 3",
+          "year": null,
+          "venue": "State Historical Society of North Dakota",
+          "url": "https://history.nd.gov/historicsites/sibleysully/history3.html",
+          "access": "Public source checked 2026-11-15; independent factual synthesis, no source images or full text redistributed.",
+          "referenceType": "web-resource"
         }
       ],
       "review": {
-        "summary": "Killdeer Mountain, Dunn County, ND: 1864-07-28 through 1864-07-29. Participants identified by the source: Detachments from eight units (2,200) [US]; Santee and Teton Sioux [I]. The CWSAC summary classifies the result as U.S. / Union success.",
-        "limitations": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side.",
+        "summary": "Sully’s US army attacked a mostly Lakota and Yanktonai village on 28 July 1864. People were killed and winter supplies destroyed; the point represents a village attack, not just a fight between soldiers.",
+        "limitations": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The inventory uses historical collective labels for Indigenous participants; those labels are not a claim that all communities took the same side. The marker includes killings associated with the attack and its aftermath; it does not locate each death or assign an exact casualty total. The inventory’s US/CS column structure is not evidence that Dakota or Lakota participants belonged to the Confederacy.",
         "discussion": "Local evidence is distinguished from regional culture labels. Coverage is selected, not a census of every community or encounter.",
         "provenance": "Source-specific factual synthesis; geographic precision and chronology are recorded separately.",
         "reviewedAt": "2026-11-15",
         "history": [
-          "Added in the cities, conflicts and topic-dives expansion."
+          "Added in the cities, conflicts and topic-dives expansion.",
+          "Review correction: named participants and source-described civilian or prisoner violence replace generic inventory battle prose."
         ],
         "relatedIds": []
       },
       "overlay": {
-        "kind": "conflict",
+        "kind": "violence",
         "basis": "documented",
         "geometry": {
           "type": "Point",
@@ -28030,7 +28135,7 @@
       "id": "battle-cwsac-tn030",
       "revision": 1,
       "type": "event",
-      "title": "Fort Pillow — 1864-04-12",
+      "title": "Fort Pillow — battle and massacre — 1864-04-12",
       "culture": {
         "id": "civil-war-era-encounter",
         "name": "Civil War era encounter",
@@ -28054,27 +28159,33 @@
         "approximate": false,
         "original": "1864-04-12",
         "method": "Source-specific archaeological chronology or documentary event chronology; see cited passage.",
-        "interpretation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded.",
+        "interpretation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The marker includes killings associated with the attack and its aftermath; it does not locate each death or assign an exact casualty total.",
         "eventDate": "1864-04-12"
       },
       "claims": [
         {
           "id": "encounter",
-          "text": "Fort Pillow, Lauderdale County, TN: 1864-04-12. Union and Confederate forces fought here. The CWSAC summary classifies the result as Confederate success.",
+          "text": "Confederate troops under Nathan Bedford Forrest overran Fort Pillow on 12 April 1864. Members of its Black US Colored Troops and white Tennessee Unionist garrison were massacred while attempting to retreat, without an opportunity to surrender.",
           "status": "well-supported",
-          "explanation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded.",
+          "explanation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The marker includes killings associated with the attack and its aftermath; it does not locate each death or assign an exact casualty total.",
           "support": [
             {
               "sourceId": "source",
-              "stance": "supports",
+              "stance": "context",
               "locator": "Named site, phase, event or evidence discussion",
-              "note": "Supports the stated claim and its dated scope; approximate map locator is not a footprint."
+              "note": "CWSAC event entry; source-specific interpretation is supported by the historical account."
             },
             {
               "sourceId": "transcription",
-              "stance": "supports",
+              "stance": "context",
               "locator": "CSV row battle=TN030",
-              "note": "Start/end date, place and outcome transcription from the CWSAC inventory."
+              "note": "Inventory identifier and date transcription only; does not establish victim identity or interpretation of the event."
+            },
+            {
+              "sourceId": "historical-account",
+              "stance": "supports",
+              "locator": "Named event discussion",
+              "note": "Supports the participants and violence described in the encounter claim."
             }
           ]
         },
@@ -28123,21 +28234,32 @@
           "url": "https://github.com/jrnold/acw_battle_data/blob/main/build/acw_battle_data/cwsac_battles.csv",
           "access": "Structured CWSAC factual transcription; BSD-3-Clause notice retained in licenses/acw-battle-data-BSD-3-Clause.txt. Original NPS factual source linked separately.",
           "referenceType": "web-resource"
+        },
+        {
+          "id": "historical-account",
+          "authors": "National Park Service / Fort Pillow State Historic Park",
+          "title": "The Hard Reality of Fort Pillow: Interpreting the Massacre of US Colored Troops in 1864",
+          "year": null,
+          "venue": "National Park Service / Fort Pillow State Historic Park",
+          "url": "https://www.nps.gov/articles/000/hard-reality-of-fort-pillow.htm",
+          "access": "Public source checked 2026-11-15; independent factual synthesis, no source images or full text redistributed.",
+          "referenceType": "web-resource"
         }
       ],
       "review": {
-        "summary": "Fort Pillow, Lauderdale County, TN: 1864-04-12. Union and Confederate forces fought here. The CWSAC summary classifies the result as Confederate success.",
-        "limitations": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded.",
+        "summary": "Confederate troops under Nathan Bedford Forrest overran Fort Pillow on 12 April 1864. Members of its Black US Colored Troops and white Tennessee Unionist garrison were massacred while attempting to retreat, without an opportunity to surrender.",
+        "limitations": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The marker includes killings associated with the attack and its aftermath; it does not locate each death or assign an exact casualty total.",
         "discussion": "Local evidence is distinguished from regional culture labels. Coverage is selected, not a census of every community or encounter.",
         "provenance": "Source-specific factual synthesis; geographic precision and chronology are recorded separately.",
         "reviewedAt": "2026-11-15",
         "history": [
-          "Added in the cities, conflicts and topic-dives expansion."
+          "Added in the cities, conflicts and topic-dives expansion.",
+          "Review correction: named participants and source-described civilian or prisoner violence replace generic inventory battle prose."
         ],
         "relatedIds": []
       },
       "overlay": {
-        "kind": "conflict",
+        "kind": "violence",
         "basis": "documented",
         "geometry": {
           "type": "Point",
@@ -37950,7 +38072,7 @@
       "id": "battle-cwsac-va070",
       "revision": 1,
       "type": "event",
-      "title": "Crater — 1864-07-30",
+      "title": "The Crater — battle and killings at surrender — 1864-07-30",
       "culture": {
         "id": "civil-war-era-encounter",
         "name": "Civil War era encounter",
@@ -37974,27 +38096,33 @@
         "approximate": false,
         "original": "1864-07-30",
         "method": "Source-specific archaeological chronology or documentary event chronology; see cited passage.",
-        "interpretation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded.",
+        "interpretation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The marker includes killings associated with the attack and its aftermath; it does not locate each death or assign an exact casualty total.",
         "eventDate": "1864-07-30"
       },
       "claims": [
         {
           "id": "encounter",
-          "text": "Crater, Petersburg, VA: 1864-07-30. Union and Confederate forces fought here. The CWSAC summary classifies the result as Confederate success.",
+          "text": "During the battle of the Crater on 30 July 1864, Confederate soldiers killed Black US troops attempting to surrender. The cited historical essay also records some white US soldiers murdering Black comrades because they feared capture alongside them.",
           "status": "well-supported",
-          "explanation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded.",
+          "explanation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The marker includes killings associated with the attack and its aftermath; it does not locate each death or assign an exact casualty total.",
           "support": [
             {
               "sourceId": "source",
-              "stance": "supports",
+              "stance": "context",
               "locator": "Named site, phase, event or evidence discussion",
-              "note": "Supports the stated claim and its dated scope; approximate map locator is not a footprint."
+              "note": "CWSAC event entry; source-specific interpretation is supported by the historical account."
             },
             {
               "sourceId": "transcription",
-              "stance": "supports",
+              "stance": "context",
               "locator": "CSV row battle=VA070",
-              "note": "Start/end date, place and outcome transcription from the CWSAC inventory."
+              "note": "Inventory identifier and date transcription only; does not establish victim identity or interpretation of the event."
+            },
+            {
+              "sourceId": "historical-account",
+              "stance": "supports",
+              "locator": "Named event discussion",
+              "note": "Supports the participants and violence described in the encounter claim."
             }
           ]
         },
@@ -38043,21 +38171,32 @@
           "url": "https://github.com/jrnold/acw_battle_data/blob/main/build/acw_battle_data/cwsac_battles.csv",
           "access": "Structured CWSAC factual transcription; BSD-3-Clause notice retained in licenses/acw-battle-data-BSD-3-Clause.txt. Original NPS factual source linked separately.",
           "referenceType": "web-resource"
+        },
+        {
+          "id": "historical-account",
+          "authors": "Peter S. Carmichael / National Park Service",
+          "title": "The Changing War",
+          "year": null,
+          "venue": "Peter S. Carmichael / National Park Service",
+          "url": "https://www.nps.gov/articles/the-changing-war.htm",
+          "access": "Public source checked 2026-11-15; independent factual synthesis, no source images or full text redistributed.",
+          "referenceType": "web-resource"
         }
       ],
       "review": {
-        "summary": "Crater, Petersburg, VA: 1864-07-30. Union and Confederate forces fought here. The CWSAC summary classifies the result as Confederate success.",
-        "limitations": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded.",
+        "summary": "During the battle of the Crater on 30 July 1864, Confederate soldiers killed Black US troops attempting to surrender. The cited historical essay also records some white US soldiers murdering Black comrades because they feared capture alongside them.",
+        "limitations": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The marker includes killings associated with the attack and its aftermath; it does not locate each death or assign an exact casualty total.",
         "discussion": "Local evidence is distinguished from regional culture labels. Coverage is selected, not a census of every community or encounter.",
         "provenance": "Source-specific factual synthesis; geographic precision and chronology are recorded separately.",
         "reviewedAt": "2026-11-15",
         "history": [
-          "Added in the cities, conflicts and topic-dives expansion."
+          "Added in the cities, conflicts and topic-dives expansion.",
+          "Review correction: named participants and source-described civilian or prisoner violence replace generic inventory battle prose."
         ],
         "relatedIds": []
       },
       "overlay": {
-        "kind": "conflict",
+        "kind": "violence",
         "basis": "documented",
         "geometry": {
           "type": "Point",
@@ -38694,7 +38833,7 @@
       "id": "battle-cwsac-va076",
       "revision": 1,
       "type": "event",
-      "title": "Saltville — 1864-10-02",
+      "title": "Saltville — battle and subsequent massacre — 1864-10-02",
       "culture": {
         "id": "civil-war-era-encounter",
         "name": "Civil War era encounter",
@@ -38718,27 +38857,33 @@
         "approximate": false,
         "original": "1864-10-02",
         "method": "Source-specific archaeological chronology or documentary event chronology; see cited passage.",
-        "interpretation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded.",
+        "interpretation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The marker includes killings associated with the attack and its aftermath; it does not locate each death or assign an exact casualty total. The date is the battle onset; hospital murders continued afterward. The NPS body text gives 1864; an image caption’s 1863 is not used.",
         "eventDate": "1864-10-02"
       },
       "claims": [
         {
           "id": "encounter",
-          "text": "Saltville, Smyth County, VA: 1864-10-02. Union and Confederate forces fought here. The CWSAC summary classifies the result as Confederate success.",
+          "text": "After the 2 October 1864 battle at Saltville, Confederate soldiers murdered wounded Black US soldiers, including men of the 5th US Colored Cavalry, on the field and in hospitals. Champ Ferguson was later convicted for involvement in the massacre.",
           "status": "well-supported",
-          "explanation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded.",
+          "explanation": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The marker includes killings associated with the attack and its aftermath; it does not locate each death or assign an exact casualty total. The date is the battle onset; hospital murders continued afterward. The NPS body text gives 1864; an image caption’s 1863 is not used.",
           "support": [
             {
               "sourceId": "source",
-              "stance": "supports",
+              "stance": "context",
               "locator": "Named site, phase, event or evidence discussion",
-              "note": "Supports the stated claim and its dated scope; approximate map locator is not a footprint."
+              "note": "CWSAC event entry; source-specific interpretation is supported by the historical account."
             },
             {
               "sourceId": "transcription",
-              "stance": "supports",
+              "stance": "context",
               "locator": "CSV row battle=VA076",
-              "note": "Start/end date, place and outcome transcription from the CWSAC inventory."
+              "note": "Inventory identifier and date transcription only; does not establish victim identity or interpretation of the event."
+            },
+            {
+              "sourceId": "historical-account",
+              "stance": "supports",
+              "locator": "Named event discussion",
+              "note": "Supports the participants and violence described in the encounter claim."
             }
           ]
         },
@@ -38787,21 +38932,32 @@
           "url": "https://github.com/jrnold/acw_battle_data/blob/main/build/acw_battle_data/cwsac_battles.csv",
           "access": "Structured CWSAC factual transcription; BSD-3-Clause notice retained in licenses/acw-battle-data-BSD-3-Clause.txt. Original NPS factual source linked separately.",
           "referenceType": "web-resource"
+        },
+        {
+          "id": "historical-account",
+          "authors": "National Park Service / Camp Nelson National Monument",
+          "title": "Saltville Battle and Massacre",
+          "year": null,
+          "venue": "National Park Service / Camp Nelson National Monument",
+          "url": "https://www.nps.gov/cane/battle-of-saltville-and-massacre.htm",
+          "access": "Public source checked 2026-11-15; independent factual synthesis, no source images or full text redistributed.",
+          "referenceType": "web-resource"
         }
       ],
       "review": {
-        "summary": "Saltville, Smyth County, VA: 1864-10-02. Union and Confederate forces fought here. The CWSAC summary classifies the result as Confederate success.",
-        "limitations": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded.",
+        "summary": "After the 2 October 1864 battle at Saltville, Confederate soldiers murdered wounded Black US soldiers, including men of the 5th US Colored Cavalry, on the field and in hospitals. Champ Ferguson was later convicted for involvement in the massacre.",
+        "limitations": "A point represents the center of the NPS preservation study-area bounds, not an exact firing position. The symbol supplies context for the event year after its documented onset; it does not mean combat lasted all year. Casualty totals and tactical unit movements are not encoded. The marker includes killings associated with the attack and its aftermath; it does not locate each death or assign an exact casualty total. The date is the battle onset; hospital murders continued afterward. The NPS body text gives 1864; an image caption’s 1863 is not used.",
         "discussion": "Local evidence is distinguished from regional culture labels. Coverage is selected, not a census of every community or encounter.",
         "provenance": "Source-specific factual synthesis; geographic precision and chronology are recorded separately.",
         "reviewedAt": "2026-11-15",
         "history": [
-          "Added in the cities, conflicts and topic-dives expansion."
+          "Added in the cities, conflicts and topic-dives expansion.",
+          "Review correction: named participants and source-described civilian or prisoner violence replace generic inventory battle prose."
         ],
         "relatedIds": []
       },
       "overlay": {
-        "kind": "conflict",
+        "kind": "violence",
         "basis": "documented",
         "geometry": {
           "type": "Point",

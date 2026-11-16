@@ -5,7 +5,7 @@
     {
       "id": "north-kitsissut",
       "revision": 1,
-      "type": "occupation",
+      "type": "occurrence",
       "title": "Kitsissut — Early Paleo-Inuit island camp",
       "culture": {
         "id": "northern-communities-described-in-the-source",
@@ -24,7 +24,7 @@
       "destination": null,
       "routeKind": "schematic",
       "time": {
-        "kind": "interval",
+        "kind": "occurrence",
         "start": -2450,
         "end": -1988,
         "approximate": true,
@@ -67,12 +67,13 @@
         "provenance": "Source-specific factual synthesis; geographic precision and chronology are recorded separately.",
         "reviewedAt": "2026-11-15",
         "history": [
-          "Added in the cities, conflicts and topic-dives expansion."
+          "Added in the cities, conflicts and topic-dives expansion.",
+          "Review correction: a calibrated seabird specimen range is an attestation window, not a continuous camp occupation interval."
         ],
         "relatedIds": []
       },
       "history": {
-        "kind": "habitation",
+        "kind": "attestation",
         "claimId": "evidence"
       }
     },

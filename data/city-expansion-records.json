@@ -3255,8 +3255,8 @@
     {
       "id": "city-ollantaytambo",
       "revision": 1,
-      "type": "occupation",
-      "title": "Ollantaytambo — Inka urban and agricultural landscape",
+      "type": "occurrence",
+      "title": "Ollantaytambo — attributed Inka construction",
       "culture": {
         "id": "inka-communities",
         "name": "Inka communities",
@@ -3269,31 +3269,45 @@
         "lon": -72.26,
         "lat": -13.26,
         "precision": "Approximate public locality anchor; not an excavated building footprint or a reconstructed battle line.",
-        "provenance": "https://doi.org/10.15184/aqy.2024.200"
+        "provenance": "https://doi.org/10.15184/aqy.2024.200; https://www.culturacusco.gob.pe/parques/ollantaytambo/"
       },
       "destination": null,
       "routeKind": "schematic",
       "time": {
-        "kind": "interval",
-        "start": 1400,
-        "end": 1532,
+        "kind": "occurrence",
+        "start": 1438,
+        "end": 1471,
         "approximate": true,
-        "original": "1,400 CE–1,532 CE; approximate source window",
-        "method": "Source-specific archaeological chronology or documentary event chronology; see cited passage.",
-        "interpretation": "Approximate public locality (about a kilometer); finer building locations require published plans. The range is the cited local phase or construction estimate, not proof of an unchanged population or abandonment at the end."
+        "original": "1438–1471 CE; attributed reign, not an occupation interval",
+        "method": "Chronicle construction attribution reported by the Dirección Desconcentrada de Cultura de Cusco; competing attribution retained.",
+        "interpretation": "The displayed window is the reign associated with one chronicle attribution, not measured building dates. Garcilaso de la Vega instead attributed construction to Wiracocha. Earlier occupation, later rebuilding and colonial life are not bounded by this window. The rounded urban locality is not a building footprint or the extent of the archaeological park."
       },
       "claims": [
         {
           "id": "evidence",
-          "text": "Ollantaytambo combined residences, storage, terraces and water systems. Research places this Inka landscape in the fifteenth and early sixteenth centuries; colonial transformation was not an instantaneous abandonment.",
+          "text": "The Cusco culture authority reports that Sarmiento de Gamboa attributed construction at Ollantaytambo to Pachacútec (1438–1471). Its planned urban sectors, terraces and storage works are mapped here as a qualified construction attribution, not a complete occupation chronology.",
+          "status": "under discussion",
+          "explanation": "The displayed window is the reign associated with one chronicle attribution, not measured building dates. Garcilaso de la Vega instead attributed construction to Wiracocha. Earlier occupation, later rebuilding and colonial life are not bounded by this window. The rounded urban locality is not a building footprint or the extent of the archaeological park.",
+          "support": [
+            {
+              "sourceId": "construction",
+              "stance": "supports",
+              "locator": "Información: Sarmiento and Garcilaso attributions",
+              "note": "Supports the qualified construction attribution and its competing account."
+            }
+          ]
+        },
+        {
+          "id": "colonial-transformation",
+          "text": "Archaeological research describes transformation of the Inka landscape under Spanish rule, rather than an abrupt disappearance of the town in 1532.",
           "status": "well-supported",
-          "explanation": "Approximate public locality (about a kilometer); finer building locations require published plans. The range is the cited local phase or construction estimate, not proof of an unchanged population or abandonment at the end.",
+          "explanation": "The empire-wide dates are not used as local occupation bounds.",
           "support": [
             {
               "sourceId": "source",
               "stance": "supports",
-              "locator": "Named site, phase, event or evidence discussion",
-              "note": "Supports the stated claim and its dated scope; approximate map locator is not a footprint."
+              "locator": "Study of the Inka landscape and colonial transformation",
+              "note": "Supports continuity and transformation, not a foundation or abandonment date."
             }
           ]
         }
@@ -3308,21 +3322,32 @@
           "url": "https://doi.org/10.15184/aqy.2024.200",
           "access": "Public source consulted 2026-11-15; factual description independently written for this atlas.",
           "referenceType": "web-resource"
+        },
+        {
+          "id": "construction",
+          "authors": "Dirección Desconcentrada de Cultura de Cusco",
+          "title": "Ollantaytambo",
+          "year": null,
+          "venue": "Dirección Desconcentrada de Cultura de Cusco",
+          "url": "https://www.culturacusco.gob.pe/parques/ollantaytambo/",
+          "access": "Public source checked 2026-11-15; independent factual synthesis, no source images or full text redistributed.",
+          "referenceType": "web-resource"
         }
       ],
       "review": {
-        "summary": "Ollantaytambo combined residences, storage, terraces and water systems. Research places this Inka landscape in the fifteenth and early sixteenth centuries; colonial transformation was not an instantaneous abandonment.",
-        "limitations": "Approximate public locality (about a kilometer); finer building locations require published plans. The range is the cited local phase or construction estimate, not proof of an unchanged population or abandonment at the end.",
+        "summary": "The Cusco culture authority reports that Sarmiento de Gamboa attributed construction at Ollantaytambo to Pachacútec (1438–1471). Its planned urban sectors, terraces and storage works are mapped here as a qualified construction attribution, not a complete occupation chronology.",
+        "limitations": "The displayed window is the reign associated with one chronicle attribution, not measured building dates. Garcilaso de la Vega instead attributed construction to Wiracocha. Earlier occupation, later rebuilding and colonial life are not bounded by this window. The rounded urban locality is not a building footprint or the extent of the archaeological park.",
         "discussion": "Local evidence is distinguished from regional culture labels. Coverage is selected, not a census of every community or encounter.",
         "provenance": "Source-specific factual synthesis; geographic precision and chronology are recorded separately.",
         "reviewedAt": "2026-11-15",
         "history": [
-          "Added in the cities, conflicts and topic-dives expansion."
+          "Added in the cities, conflicts and topic-dives expansion.",
+          "Review correction: removed empire-wide 1400–1532 occupation bounds; replaced with explicitly contested local construction attribution."
         ],
         "relatedIds": []
       },
       "history": {
-        "kind": "habitation",
+        "kind": "attestation",
         "claimId": "evidence"
       }
     },

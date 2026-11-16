@@ -69,5 +69,5 @@
 
 - [x] Update source documentation, coverage counts, version and generated distribution; include new browser contracts in release verification.
 - [x] Run required tests/build/package/browser checks and inspect desktop/mobile screenshots.
-- [ ] Obtain one fresh-context whole-branch review, resolve material issues and verify affected behavior.
+- [x] Obtain one fresh-context whole-branch review, resolve material issues and verify affected behavior.
 - [ ] Commit, push and open a PR with accurate coverage limits and research budget; do not merge or deploy.

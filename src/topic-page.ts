@@ -63,6 +63,7 @@ export function mountTopicPage(host:HTMLElement,topic:TopicDive,all:readonly Dis
    drawnYear=year;renderVisible();
   }
   $('#topic-year').textContent=formatYear(year);$('#topic-date-label').textContent=`${formatYear(year)} · ${topic.title} only`;
+  if(!session.guided)$('#topic-scene h2').textContent=formatYear(year);
   $<HTMLInputElement>('#topic-date').value=String(Math.round(timelinePosition(year,session.minYear,END_YEAR,'log')*10000));
   $('#topic-date').setAttribute('aria-valuetext',formatYear(year));
   $<HTMLInputElement>('#topic-year-input').value=String(year<=0?1-year:year);$<HTMLSelectElement>('#topic-era').value=year<=0?'BCE':'CE';

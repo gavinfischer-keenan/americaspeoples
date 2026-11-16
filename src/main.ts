@@ -974,6 +974,8 @@ let routeGeneration = 0;
 let disposeTopic:(()=>void)|undefined;
 let topicOriginCamera:MapCamera|undefined;
 let topicOriginRoute='#movie';
+let lastAtlasCamera:MapCamera|undefined;
+let lastAtlasRoute='#movie';
 let reviewTopic:string|undefined;
 let pendingTopicLocation:DisplayRecord|undefined;
 async function route() {
@@ -995,7 +997,10 @@ async function route() {
   dirty = false;
   if(hash.startsWith('#review/')&&previousHash.startsWith('#topic/'))reviewTopic=previousHash.slice(7);
   else if(!hash.startsWith('#review/')&&!hash.startsWith('#topic/'))reviewTopic=undefined;
-  if((hash==='#topics'||hash.startsWith('#topic/'))&&mountedMap&&!topicOriginCamera){topicOriginCamera=map.camera();topicOriginRoute=atlasMode==='explore'?'#explore':'#movie';}
+  // Reading pages may sit between the shared atlas and a topic. Keep the
+  // last shared view before unmounting it, rather than capturing only direct entry.
+  if(mountedMap){lastAtlasCamera=map.camera();lastAtlasRoute=atlasMode==='explore'?'#explore':'#movie';}
+  if((hash==='#topics'||hash.startsWith('#topic/'))&&!topicOriginCamera){topicOriginCamera=lastAtlasCamera;topicOriginRoute=lastAtlasRoute;}
   disposeTopic?.();disposeTopic=undefined;
   previousHash = hash;
   tableController?.dispose();

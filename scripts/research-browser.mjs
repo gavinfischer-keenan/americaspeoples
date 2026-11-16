@@ -15,7 +15,9 @@ const overlayCount = (kind, year) =>
       r.overlay?.kind === kind &&
       r.overlay.geometry &&
       r.time.start <= year &&
-      r.time.end >= year,
+      r.time.end >= year &&
+      (!(r.time.eventDate ?? r.history?.eventDate) ||
+        (r.time.eventDate ?? r.history?.eventDate) <= `${year}-01-01`),
   ).length * 2;
 try {
   await mkdir("test-results", { recursive: true });
