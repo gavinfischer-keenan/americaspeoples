@@ -1,6 +1,6 @@
 {
   "version": "0.16.0",
-  "status": "reviewed pull request; not deployed",
+  "status": "merged and deployed; public verification and retention complete",
   "verifiedAt": "2026-11-16",
   "baseCommit": "8c717ea7c93a639862acfcd71a009abfb22afd26",
   "implementationCommit": "8cc035e",
@@ -123,5 +123,132 @@
     "Cofan/Siona, Chaco seasonal places and upper-river Guianas villages remain priorities.",
     "No production activation or release-retention change performed."
   ],
-  "pullRequest": "https://github.com/gavinfischer-keenan/americaspeoples/pull/12"
+  "pullRequest": "https://github.com/gavinfischer-keenan/americaspeoples/pull/12",
+  "deployment": {
+    "checkedAt": "2026-11-16T21:11:06.2085552Z",
+    "url": "https://americaspeoples.11mosswood.us/",
+    "release": "https://github.com/gavinfischer-keenan/americaspeoples/releases/tag/v0.16.0",
+    "mergeCommit": "0f36cd28e4442b8f374630732a4b5c9d25de832a",
+    "artifactCommit": "10ecd4c82446f19571fef611bcc6f447c8f554dc",
+    "id": "20261116T210655Z-americas-v0.16.0",
+    "health": {
+      "status": "ok",
+      "version": "0.16.0",
+      "records": 2038
+    },
+    "publicAssets": {
+      "app.js": "Exact SHA-256 match",
+      "app.css": "Exact SHA-256 match",
+      "index.html": "Matches release after excluding host analytics injection",
+      "LICENSE.md": "Exact SHA-256 match",
+      "CONTRIBUTING.md": "Exact SHA-256 match",
+      "THIRD_PARTY.md": "Exact SHA-256 match",
+      "licenses/PolyForm-Noncommercial-1.0.0.md": "Exact SHA-256 match",
+      "licenses/CC-BY-NC-SA-4.0.txt": "Exact SHA-256 match",
+      "docs/reuse-and-contributing.html": "Matches release after excluding host analytics injection",
+      "docs/atlas-expansion.html": "Matches release after excluding host analytics injection",
+      "sites/chaco.html": "Matches release after excluding host analytics injection",
+      "docs/intake/2026-10-28-01-reviews.txt": "Exact SHA-256 match",
+      "historical-boundaries.json": "Exact SHA-256 match",
+      "colonial-boundaries.json": "Exact SHA-256 match",
+      "national-boundaries.json": "Exact SHA-256 match",
+      "early-national-boundaries.json": "Exact SHA-256 match",
+      "reservation-boundaries.json": "Exact SHA-256 match",
+      "boundary-sources.json": "Exact SHA-256 match",
+      "expanded-boundary-sources.json": "Exact SHA-256 match",
+      "early-national-boundary-sources.json": "Exact SHA-256 match",
+      "reservation-boundary-sources.json": "Exact SHA-256 match",
+      "voyages.json": "Exact SHA-256 match",
+      "rail-network.json": "Exact SHA-256 match",
+      "land-detailed.geojson": "Exact SHA-256 match",
+      "templates/americas-peoples-researched-import.xlsx": "Exact SHA-256 match",
+      "docs/interior-frontiers.html": "Matches release after excluding host analytics injection",
+      "docs/regional-gap-evidence.html": "Matches release after excluding host analytics injection",
+      "docs/remaining-topic-dives.html": "Matches release after excluding host analytics injection",
+      "docs/world-coverage-audit.html": "Matches release after excluding host analytics injection",
+      "docs/australasia-archaeology.html": "Matches release after excluding host analytics injection",
+      "docs/land-sovereignty-dives.html": "Matches release after excluding host analytics injection",
+      "world-coverage-audit.json": "Exact SHA-256 match",
+      "coverage-audit.json": "Exact SHA-256 match",
+      "docs/community-topic-dives.html": "Matches release after excluding host analytics injection",
+      "docs/pacific-topic-dives.html": "Matches release after excluding host analytics injection",
+      "docs/cities-conflicts-topic-dives.html": "Matches release after excluding host analytics injection",
+      "docs/cities-conflicts-coverage.html": "Matches release after excluding host analytics injection",
+      "licenses/acw-battle-data-BSD-3-Clause.txt": "Exact SHA-256 match",
+      "docs/shared-history-update.md": "Exact SHA-256 match",
+      "terrain/natural-earth-relief.webp": "Exact SHA-256 match",
+      "terrain/chaco.webp": "Exact SHA-256 match",
+      "terrain/four-corners.webp": "Exact SHA-256 match",
+      "terrain/mesa-verde.webp": "Exact SHA-256 match",
+      "terrain/hovenweep.webp": "Exact SHA-256 match",
+      "terrain/hawaiian-islands.webp": "Exact SHA-256 match",
+      "terrain/oahu.webp": "Exact SHA-256 match",
+      "terrain/maui.webp": "Exact SHA-256 match",
+      "terrain/north-hawaii.webp": "Exact SHA-256 match",
+      "americas-peoples-v0.16.0-selfhost.zip": "Public download SHA-256 verified",
+      "americas-peoples-import.xlsx": "Public download SHA-256 verified",
+      "americas-peoples-researched-import.xlsx": "Public download SHA-256 verified"
+    },
+    "landing": "Expanded coverage, current download links, appendix and noncommercial policy verified",
+    "sourceReviews": 6,
+    "unrelatedOriginFilesUnchanged": 388,
+    "neighborPagesVerified": 3,
+    "neighborNote": "Home and utility responses exact; privacy content exact after decoding Cloudflare email protection and excluding analytics injection. Previous/current origin privacy files are byte-identical.",
+    "githubAssets": [
+      {
+        "name": "americas-peoples-import.xlsx",
+        "size": 302388,
+        "digest": "sha256:ed0abc070fc522e4ad2e3a7c97d3f7f109ed6265c4735ed186559a4e6079c794"
+      },
+      {
+        "name": "americas-peoples-researched-import.xlsx",
+        "size": 4182310,
+        "digest": "sha256:0cd2ba90530223eccd7ffee7f585cbfe2a311560fd5b8441e359e1db7bf57fe3"
+      },
+      {
+        "name": "americas-peoples-v0.16.0-selfhost.zip",
+        "size": 29303340,
+        "digest": "sha256:71cc7bccf8860171d4c3e3a3c1ad720067ed40452d89bfa6686e452b1e048e1f"
+      },
+      {
+        "name": "artifacts.json",
+        "size": 1219,
+        "digest": "sha256:607e655450d2b55f6738845bc9d1489f5660ffecdb227ee0edd8e4431716c348"
+      },
+      {
+        "name": "SHA256SUMS.txt",
+        "size": 305,
+        "digest": "sha256:4371ca41972c2c7fa3575388faf1f20499d5233b1f95e5685c2ff9069a9bea1d"
+      }
+    ],
+    "retention": {
+      "current": "0.16.0",
+      "previous": "0.15.0",
+      "serverCleanupComplete": true,
+      "githubReleases": [
+        {
+          "isLatest": true,
+          "tagName": "v0.16.0"
+        },
+        {
+          "isLatest": false,
+          "tagName": "v0.15.0"
+        }
+      ],
+      "localVersionedArchives": [
+        "0.16.0",
+        "0.15.0"
+      ],
+      "temporaryPayloadsRemoved": true
+    },
+    "mergedValidation": {
+      "unitTests": 287,
+      "packageTests": 5,
+      "interiorBrowserChecks": "passed",
+      "liveDesktopAndTabletChecks": "passed",
+      "linuxRetentionTests": 5,
+      "publicVerificationAfterCleanup": "passed",
+      "correctedCotticaDateAndCargoDirection": "verified through public API"
+    }
+  }
 }

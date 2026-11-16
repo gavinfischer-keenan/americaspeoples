@@ -53,3 +53,13 @@
 - [x] Run the full release gate and check representative shared-map points/routes through the browser. Expected: all pass and live-source review links resolve.
 - [x] Obtain one fresh whole-branch review; resolve material findings in one fix pass with RED→GREEN and green suite. No second review.
 - [x] Record final counts, source limitations, remaining gaps and cumulative calls; commit, push and create a PR.
+
+### Authorized publication and deployment
+
+The user subsequently authorized merging PR #12 and deploying it.
+
+- [x] Merge the reviewed pull request; build and verify the merged release.
+- [x] Publish v0.16.0 and activate its API, static app, evidence appendix and downloads.
+- [x] Verify live desktop/tablet behaviour, package hashes, new source records and unrelated pages.
+- [x] Keep only the current release and one previous rollback; pass Linux retention tests, clean staging payloads and recheck the public site.
+- [x] Record the deployment receipt and new research queue without claiming those future additions are already in the map.

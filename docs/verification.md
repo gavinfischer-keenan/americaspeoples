@@ -1,6 +1,6 @@
 # Current source verification
 
-Version **0.16.0 source and packaged release**. Public activation is verified separately in the deployment receipt. The [structured verification receipt](https://github.com/gavinfischer-keenan/americaspeoples/blob/main/docs/releases/v0.16.0-verification.json) records commits, checks, research usage and review decisions. The previous live v0.15 deployment receipt remains in the repository.
+Version **0.16.0 is merged and deployed** at [the live atlas](https://americaspeoples.11mosswood.us/). PR #12 was merged as `0f36cd28e4442b8f374630732a4b5c9d25de832a`; the published artifact commit is `10ecd4c82446f19571fef611bcc6f447c8f554dc`. The [structured verification receipt](https://github.com/gavinfischer-keenan/americaspeoples/blob/main/docs/releases/v0.16.0-verification.json) records commits, checks, research usage and review decisions. The previous live v0.15 deployment receipt remains in the repository.
 
 The atlas contains **2,038 records: 1,980 shared and 58 focused**. This campaign adds 35 shared Amazon, Gran Chaco and Guianas observations, including five dated exchange connections and five conflicts or violent events. All new evidence stays within the shared 1934 endpoint. Consensus Deep cumulative usage is **66/100**, including polls; full generated reports remain private.
 
@@ -13,3 +13,11 @@ The map tests verify shared-context placement, route disappearance outside the d
 The Windows gate ran ten passing Python cases and skipped five Linux symlink-retention cases. No retention implementation changed. Browser checks use installed Edge on Windows; they are not a claim of physical-device testing or exhaustive coverage of every browser.
 
 The reviewer checked selected underlying passages, not every historical source independently. No unresolved material findings or deferred minors remain. Research is incomplete: upper-river Guianas communities, Chaco seasonal places, and Cofán/Siona histories remain priorities. Blank map areas are collection gaps, not evidence of human absence. The [coverage audit](world-coverage-audit.html) preserves previous baselines and distinguishes observations from settlement counts.
+
+## Public deployment verification
+
+The public API reports v0.16.0 and 2,038 records. Published app assets, terrain, evidence guides and all three downloads match the built release; all five GitHub release assets match their local checksums. Live desktop and tablet checks passed for the automatic shared Americas movie, date-correct new records, all 20 topic cards, independent topic playback, and the 35 linked interior reviews. The corrected Cottica date and cargo direction were also checked through the public API.
+
+The merged release passed 287 unit tests and five package checks. Five Linux retention safety tests passed on the hosting platform. The server, GitHub releases and local versioned self-host archives retain **v0.16.0 and v0.15.0 only**; the previous database is retained for that one rollback. Public verification passed again after cleanup. The 388 unrelated origin files and three neighbouring public pages were verified unchanged.
+
+The newly requested Australian pastoral/wool and mining movies and early regional coverage pass are recorded in [the research queue](roadmap.md). They are not yet implemented and are not part of the 35 observations in this deployment. Consensus usage remains 66/100.
