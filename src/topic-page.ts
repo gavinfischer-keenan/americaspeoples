@@ -18,7 +18,7 @@ import { storyDurationMs } from './story-player';
 interface SavedTopic {session:TopicSession;camera?:MapCamera}
 const saved=new Map<string,SavedTopic>();
 export function topicIndexHTML(returnHref="#movie"):string{
- return `<article class="library-page topic-index"><span class="eyebrow">ONE SUBJECT · ITS OWN CLOCK</span><h2>Follow a thread through history.</h2><p class="lead">Watch how animals, crops, exchange and languages connect places. These focused maps show one topic. Watch and Explore keep the whole historical world together.</p><div class="library-grid">${topics.map((t,i)=>`<a class="library-card" href="#topic/${t.id}"><span>0${i+1} ↗</span><h3>${esc(t.title)}</h3><p>${esc(t.description)}</p></a>`).join('')}</div><p><a href="docs/pacific-topic-dives.html">Evidence, dates and coverage notes ↗</a></p>${futureDivesHTML()}<a href="${esc(returnHref)}">↔ Return to the shared atlas</a></article>`;
+ return `<article class="library-page topic-index"><span class="eyebrow">ONE SUBJECT · ITS OWN CLOCK</span><h2>Follow a thread through history.</h2><p class="lead">Watch how communities, animals, crops, exchange and languages connect places. These focused maps show one topic. Watch and Explore keep the whole historical world together.</p><div class="library-grid">${topics.map((t,i)=>`<a class="library-card" href="#topic/${t.id}"><span>${String(i+1).padStart(2,'0')} ↗</span><h3>${esc(t.title)}</h3><p>${esc(t.description)}</p></a>`).join('')}</div><p><a href="docs/community-topic-dives.html">Community history: evidence and coverage ↗</a> · <a href="docs/pacific-topic-dives.html">Pacific topics: evidence and coverage ↗</a></p>${futureDivesHTML()}<a href="${esc(returnHref)}">↔ Return to the shared atlas</a></article>`;
 }
 
 /** This controller never receives or changes the shared atlas clock or filters. */
@@ -60,7 +60,8 @@ export function mountTopicPage(host:HTMLElement,topic:TopicDive,all:readonly Dis
    map.setHighlighted(session.guided?s.recordIds:[]);sceneCopy();drawnScene=session.sceneIndex;
   }
   if(year!==drawnYear||reframe){
-   const eligible=availableVoyageRecords(records,[],session.year);
+   // Topic controls display a whole year; only expedition playback has a day-level clock.
+   const eligible=availableVoyageRecords(records,[],year+1-1e-9);
    const view=recordsForView(eligible,'movie',year);
    const shown=[...view.dated,...view.history];
    selected=selected.filter(r=>shown.some(v=>v.id===r.id));renderDetails();

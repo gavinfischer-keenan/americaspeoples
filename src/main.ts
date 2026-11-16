@@ -1040,8 +1040,9 @@ async function route() {
       if(pendingLocation){const record=pendingLocation;pendingLocation=null;map.focus(record);}
     }
     else if(hash==='#topics'||hash.startsWith('#topics/')){
-      main.innerHTML=topicIndexHTML(topicOriginRoute);
       const requested=decodeURIComponent(hash.slice(8));
+      if(topics.some(t=>t.id===requested)){location.replace('#topic/'+encodeURIComponent(requested));return;}
+      main.innerHTML=topicIndexHTML(topicOriginRoute);
       const item=[...main.querySelectorAll<HTMLElement>('[data-future-topic]')].find(el=>el.dataset.futureTopic===requested);
       if(item){item.classList.add('future-selected');requestAnimationFrame(()=>{item.focus();item.scrollIntoView({block:'start'});});}
     }
