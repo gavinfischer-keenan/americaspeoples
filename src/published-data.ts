@@ -1,3 +1,5 @@
+import pacificTopics from '../data/pacific-topic-evidence-records.json';
+import pacificTopicContext from '../data/pacific-topic-context-records.json';
 import starter from "../data/evidence.json";
 import history from "../data/history-records.json";
 import research from "../data/research-proposals.json";
@@ -50,6 +52,6 @@ export const dataset = publishedDataset(
     ...atlantic.records,
     ...localPlaces.records,
     ...hawaiiLocal.records, ...sharedContext.records,
-    ...cities.records, ...conflicts.records, ...northern.records, ...topicEvidence.records,
+    ...pacificTopics.records, ...pacificTopicContext.records, ...cities.records, ...conflicts.records, ...northern.records, ...topicEvidence.records,
   ] as EvidenceRecord[],
 );

@@ -4,7 +4,7 @@
   "records": [
     {
       "id": "topic-horse-isabela",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "La Isabela — horses brought across the Atlantic",
       "culture": {
@@ -14,12 +14,12 @@
         "color": "#ac7656"
       },
       "location": {
-        "id": "topic-horse-isabela-place",
+        "id": "settlement-place-la-isabela",
         "name": "La Isabela",
-        "lon": -71.08,
+        "lon": -71.06,
         "lat": 19.88,
-        "precision": "Approximate public locality anchor; not an excavated building footprint or a reconstructed battle line.",
-        "provenance": "https://doi.org/10.1371/journal.pone.0270600"
+        "precision": "Approximate public settlement or monument locality, rounded coordinates; about 1–2 km spatial resolution, not a surveyed settlement boundary.",
+        "provenance": "Editorial orientation anchor for the public locality named in the cited source. Coordinates are rounded geographic placement, not coordinates quoted from an excavation report; Approximate public settlement or monument locality, rounded coordinates; about 1–2 km spatial resolution, not a surveyed settlement boundary."
       },
       "destination": null,
       "routeKind": "schematic",
@@ -73,7 +73,9 @@
         "history": [
           "Added in the cities, conflicts and topic-dives expansion."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "settlement-la-isabela"
+        ]
       },
       "history": {
         "kind": "attestation",
@@ -82,7 +84,7 @@
     },
     {
       "id": "topic-horse-mexico",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "Gulf coast of Mexico — horses with Cortés",
       "culture": {
@@ -151,7 +153,9 @@
         "history": [
           "Added in the cities, conflicts and topic-dives expansion."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "history-veracruz-lineage"
+        ]
       },
       "history": {
         "kind": "attestation",
@@ -160,7 +164,7 @@
     },
     {
       "id": "topic-horse-puerto-real",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "Puerto Real — a Caribbean horse",
       "culture": {
@@ -170,12 +174,12 @@
         "color": "#ac7656"
       },
       "location": {
-        "id": "topic-horse-puerto-real-place",
+        "id": "settlement-place-puerto-real",
         "name": "Puerto Real",
-        "lon": -72.02,
-        "lat": 19.67,
-        "precision": "Approximate public locality anchor; not an excavated building footprint or a reconstructed battle line.",
-        "provenance": "https://doi.org/10.1371/journal.pone.0270600"
+        "lon": -72.12,
+        "lat": 19.68,
+        "precision": "Approximate public settlement or monument locality, rounded coordinates; about 1–2 km spatial resolution, not a surveyed settlement boundary.",
+        "provenance": "Editorial orientation anchor for the public locality named in the cited source. Coordinates are rounded geographic placement, not coordinates quoted from an excavation report; Approximate public settlement or monument locality, rounded coordinates; about 1–2 km spatial resolution, not a surveyed settlement boundary."
       },
       "destination": null,
       "routeKind": "schematic",
@@ -229,7 +233,9 @@
         "history": [
           "Added in the cities, conflicts and topic-dives expansion."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "settlement-puerto-real"
+        ]
       },
       "history": {
         "kind": "attestation",
@@ -394,7 +400,7 @@
     },
     {
       "id": "topic-maize-balsas",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "Xihuatoxtla — early maize evidence",
       "culture": {
@@ -404,12 +410,12 @@
         "color": "#ac7656"
       },
       "location": {
-        "id": "topic-maize-balsas-place",
-        "name": "Xihuatoxtla",
-        "lon": -99.6,
+        "id": "r12-geographic-setting-3",
+        "name": "Xihuatoxtla — generalized barranca setting, Guerrero",
+        "lon": -99.4,
         "lat": 18.3,
-        "precision": "Approximate public locality anchor; not an excavated building footprint or a reconstructed battle line.",
-        "provenance": "https://doi.org/10.1073/pnas.0812525106"
+        "precision": "Generalized named public landscape setting rounded to0.1degree (roughly10km scale); unsuitable for finding archaeological features.",
+        "provenance": "Ranere et al.2009 Results locates shelter260m from Barranca Xihuatoxtla near its opening onto a basin. Public named stream GeoNames11090140 is18.30919,-99.43415, rounded to0.1degree. Generalized stream/basin setting, not the shelter or excavation position. Public geography: https://mapcarta.com/34525958"
       },
       "destination": null,
       "routeKind": "schematic",
@@ -463,7 +469,9 @@
         "history": [
           "Added in the cities, conflicts and topic-dives expansion."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "r12v-xihuatoxtla-layer-d"
+        ]
       },
       "history": {
         "kind": "attestation",
@@ -472,7 +480,7 @@
     },
     {
       "id": "topic-maize-peru",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "Paredones and Huaca Prieta — maize on Peru’s coast",
       "culture": {
@@ -541,7 +549,9 @@
         "history": [
           "Added in the cities, conflicts and topic-dives expansion."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "early-huaca-prieta-unit9"
+        ]
       },
       "history": {
         "kind": "attestation",
@@ -550,7 +560,7 @@
     },
     {
       "id": "topic-maize-belize",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "Belize rock shelters — a changing diet",
       "culture": {
@@ -619,7 +629,9 @@
         "history": [
           "Added in the cities, conflicts and topic-dives expansion."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "central-belize-village-transition"
+        ]
       },
       "history": {
         "kind": "attestation",
@@ -784,7 +796,7 @@
     },
     {
       "id": "topic-language-molina",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "Mexico City — Nahuatl and Spanish vocabulary",
       "culture": {
@@ -849,7 +861,10 @@
         "history": [
           "Added in the cities, conflicts and topic-dives expansion."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "history-mexico-city-colonial-transition",
+          "settlement-tenochtitlan-habitation"
+        ]
       },
       "history": {
         "kind": "attestation",
@@ -875,7 +890,7 @@
     },
     {
       "id": "topic-language-tupi",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "Brazilian coast — Tupinambá described",
       "culture": {
@@ -940,7 +955,9 @@
         "history": [
           "Added in the cities, conflicts and topic-dives expansion."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "tupi-guarani-atlantic"
+        ]
       },
       "history": {
         "kind": "attestation",
@@ -961,7 +978,7 @@
     },
     {
       "id": "topic-language-massachusett",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "Cambridge — Massachusett language grammar",
       "culture": {
@@ -1026,7 +1043,9 @@
         "history": [
           "Added in the cities, conflicts and topic-dives expansion."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "history-boston-colonial"
+        ]
       },
       "history": {
         "kind": "attestation",
@@ -1136,7 +1155,7 @@
     },
     {
       "id": "topic-language-rapanui",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "Rapa Nui — vocabulary recorded in 1770",
       "culture": {
@@ -1201,7 +1220,9 @@
         "history": [
           "Added in the cities, conflicts and topic-dives expansion."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "history-rapa-nui-regional-occupation"
+        ]
       },
       "history": {
         "kind": "attestation",
@@ -1222,7 +1243,7 @@
     },
     {
       "id": "topic-language-tahiti",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "Tahiti — vocabulary recorded in 1775",
       "culture": {
@@ -1287,7 +1308,9 @@
         "history": [
           "Added in the cities, conflicts and topic-dives expansion."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "visit-cook-endeavour-1768-1770-4"
+        ]
       },
       "history": {
         "kind": "attestation",
@@ -1308,7 +1331,7 @@
     },
     {
       "id": "topic-language-quechua",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "Peru — Quechua vocabulary in 1788",
       "culture": {
@@ -1373,7 +1396,9 @@
         "history": [
           "Added in the cities, conflicts and topic-dives expansion."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "r9v-inca-quechua-diffusion"
+        ]
       },
       "history": {
         "kind": "attestation",
@@ -1667,7 +1692,7 @@
     },
     {
       "id": "topic-language-lima",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "Lima — Quechua and Spanish in print",
       "culture": {
@@ -1732,7 +1757,9 @@
         "history": [
           "Added in the cities, conflicts and topic-dives expansion."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "history-lima-colonial"
+        ]
       },
       "history": {
         "kind": "attestation",
@@ -1758,7 +1785,7 @@
     },
     {
       "id": "topic-language-guarani",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "Paraná–Paraguay region — Guaraní vocabulary",
       "culture": {
@@ -1823,7 +1850,10 @@
         "history": [
           "Added in the cities, conflicts and topic-dives expansion."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "settlement-asuncion",
+          "r11v-upper-uruguay-founders"
+        ]
       },
       "history": {
         "kind": "attestation",
@@ -1849,7 +1879,7 @@
     },
     {
       "id": "topic-language-austronesian-model",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "Austronesian — a reconstructed Taiwan root",
       "culture": {
@@ -1918,7 +1948,9 @@
         "history": [
           "Added in the cities, conflicts and topic-dives expansion."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "language-austronesian-taiwan-homeland"
+        ]
       },
       "history": {
         "kind": "attestation",
@@ -1939,7 +1971,7 @@
     },
     {
       "id": "topic-trade-balsa",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "Ecuadorian coast — a seagoing trading raft",
       "culture": {
@@ -2004,7 +2036,9 @@
         "history": [
           "Added in the cities, conflicts and topic-dives expansion."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "context-ruiz-merchants"
+        ]
       },
       "history": {
         "kind": "attestation",
@@ -2205,7 +2239,7 @@
     },
     {
       "id": "topic-language-mutsun",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "San Juan Bautista — Mutsun documented in the mission",
       "culture": {
@@ -2270,7 +2304,9 @@
         "history": [
           "Added in the cities, conflicts and topic-dives expansion."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "mission-san-juan-bautista"
+        ]
       },
       "history": {
         "kind": "attestation",
@@ -2301,7 +2337,7 @@
     },
     {
       "id": "topic-language-unalaska",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "Unalaska — Unangam Tunuu and Russian mission work",
       "culture": {
@@ -2366,7 +2402,9 @@
         "history": [
           "Added in the cities, conflicts and topic-dives expansion."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "context-unalaska-mission"
+        ]
       },
       "history": {
         "kind": "attestation",
