@@ -1,0 +1,127 @@
+{
+  "version": "0.16.0",
+  "status": "reviewed pull request; not deployed",
+  "verifiedAt": "2026-11-16",
+  "baseCommit": "8c717ea7c93a639862acfcd71a009abfb22afd26",
+  "implementationCommit": "8cc035e",
+  "records": 2038,
+  "sharedRecords": 1980,
+  "focusedRecords": 58,
+  "addedRecords": 35,
+  "observationOriginLocalityIds": 28,
+  "localityIdsIncludingDestinations": 29,
+  "regionalObservations": {
+    "Amazonia": 16,
+    "Gran Chaco": 10,
+    "Guianas": 9
+  },
+  "recordKinds": {
+    "establishment": 13,
+    "attestation": 11,
+    "habitation": 1,
+    "exchange": 5,
+    "conflictOrViolence": 5
+  },
+  "consensus": {
+    "mode": "Deep",
+    "campaignCalls": 8,
+    "cumulativeCalls": 66,
+    "cap": 100,
+    "remaining": 34,
+    "statusPollsIncluded": true,
+    "thread": "MdBUz2haRFu3yi2FF5Glug",
+    "interaction": "NJfNlo7mR-OVU-fPjdh8iw",
+    "rawReportPublished": false
+  },
+  "validation": {
+    "fullGate": {
+      "command": "npm run verify:release",
+      "packagedImplementationCommit": "6e4cbd1",
+      "unitTests": 285,
+      "releasePhases": [
+        "Unit tests",
+        "TypeScript contracts",
+        "Published evidence validation",
+        "Production build and self-host package",
+        "Packaged history documentation",
+        "Python API integration and release retention",
+        "Hosted privacy, CSP and full snapshot",
+        "Extracted self-host package",
+        "Spreadsheet import, editing and sharing",
+        "Layout, chronology and draft regressions",
+        "Complete researched workbook and reviews",
+        "Overlay selection, filters and persistence",
+        "Map panels, viewport and mobile layout",
+        "Smart timeline and keyboard control",
+        "Physical layers and source reviews",
+        "Site and culture guides, road maps and natural events",
+        "Dated geography, journeys, local selection and mobile",
+        "Guided stories, discovery and responsive UI",
+        "Shared world movie, scoped expeditions and local terrain",
+        "Independent topic movies, geography and state restoration",
+        "Community topics, queue promotion and tablet navigation",
+        "Land and sovereignty topics, later-date isolation and tablet navigation",
+        "Complete topic queue, current chapter evidence and packaged gap guides",
+        "Regional evidence in the shared movie and packaged source guide",
+        "Interior communities, dated connections and conflict windows",
+        "Map picking, camera, touch and label usability",
+        "Movie and Explore separation",
+        "Map playback interaction and hover",
+        "Map rendering and interaction contracts",
+        "Map contrast and direction cues",
+        "Keyed panel focus and DOM identity",
+        "Network failure, queue and search resilience"
+      ],
+      "allPassed": true,
+      "logSha256": "c93b3f66acf121d6735e006efca5257904e8b155cb9af478f69e1be4b4a81d59"
+    },
+    "afterSourceCorrections": {
+      "commit": "8cc035e",
+      "unitTests": 287,
+      "allPassed": true,
+      "typecheck": "passed",
+      "recordValidation": 2038,
+      "build": "passed",
+      "packagedGuideTests": 5,
+      "focusedDesktopAndTabletBrowser": "passed",
+      "all35RecordsMatchPublishedDatasetSelfhostAndSQLite": true,
+      "unitLogSha256": "d1f08678ffb17790fa93ce48e012561bc89e215e69cf6613ff670acf8af8e495",
+      "browserLogSha256": "11d55cc553286f3d89e146cb1b7b8abe91af96fc0afe38f652c2a4d591ec35ae"
+    },
+    "pythonPlatformLimit": "The full gate ran 15 Python cases on Windows: 10 passed and 5 Linux symlink-retention cases were skipped. No retention code changed in this candidate.",
+    "datasetSha256": "7bd56d528a654657f08d4a5e928c7e406246d303f9f77a6ccfaf37ed08b3084a",
+    "immutableBaselineSha256": "31dda3da4ec9267ec733abe75ab632c2bbc7a8589657256ec903653e12ab83f1"
+  },
+  "review": {
+    "method": "One fresh independent whole-branch review by gpt-6-astra; no re-review",
+    "reviewedRange": "8c717ea..6e4cbd1",
+    "materialFindingsFixed": [
+      {
+        "finding": "Present lower-Lawa Cottica was assigned ambiguous early namesake dates",
+        "correction": "Use the supported 1861 village attestation; retain earlier name ambiguity in discussion",
+        "verification": "New regression observed RED then GREEN; whole suite 287/287"
+      },
+      {
+        "finding": "Maripaston trade arrow implied unsupported outward cargo",
+        "correction": "Paramaribo to Maripaston, forward only, same approximate 1905 source window",
+        "verification": "New endpoint/direction regression observed RED then GREEN; whole suite 287/287"
+      }
+    ],
+    "deferredMinors": [],
+    "limits": "Selected source passages checked independently; this is not a complete re-research of all 24 references."
+  },
+  "rulings": [
+    "Ruling: Reuse the clean existing checkout on a feature branch — it is suitable and the desktop instructions prefer reuse — less isolation than another worktree.",
+    "Ruling: Continue the already authorized shared-map design without another design approval — this is evidence expansion within established behavior — presentation preferences may need later revision.",
+    "Ruling: Use native Windows ledger bookkeeping — Bash workflow helpers previously hung — traceability requires manual updates.",
+    "Final: Ruling: production deployment outside review — this task produces a reviewable evidence PR and does not activate the live site — user must separately request release activation.",
+    "Final: Ruling: exhaustive filling of every regional gap outside review — supported observations are integrated and remaining gaps documented — substantial unmapped community history remains for later research."
+  ],
+  "remainingLimits": [
+    "Regional rather than site coordinates for Cuyuni, Caiza, Marouini and Marabitanas.",
+    "One-date observations do not prove continuous occupation or a stop in exchange.",
+    "Cofan/Siona, Chaco seasonal places and upper-river Guianas villages remain priorities.",
+    "No production activation or release-retention change performed."
+  ],
+  "pullRequest": "https://github.com/gavinfischer-keenan/americaspeoples/pull/12"
+}
