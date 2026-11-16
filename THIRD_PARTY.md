@@ -377,3 +377,14 @@ See `docs/cities-conflicts-coverage.md` for exact coverage and unresolved cases.
 
 
 Pacific topic expansion (v0.12): original factual syntheses cite the papers and historical sources listed in docs/pacific-topic-dives.md and each evidence record. No paper text, figures or generated Consensus report is distributed. The queue is original editorial planning, not a third-party dataset. Existing licenses remain unchanged.
+
+
+## Community history topics (v0.13)
+
+New records and chapter text are original factual summaries. Mohawk chronology cites Manning, Lorentzen and Hart (2021), https://doi.org/10.1371/journal.pone.0258555; Isla del Tesoro cites Lombardo et al. (2013), https://doi.org/10.1371/journal.pone.0072746. Both publications are CC BY; no article text, figures, photographs or maps are reproduced.
+
+Cotoca and Landívar public coordinate facts come from Supplementary Table 1 of Prümers et al. (2022), https://doi.org/10.1038/s41586-022-04780-4, under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). The atlas transforms WGS84 UTM zone 20S coordinates to longitude/latitude and rounds them to two decimals, with approximately 1 km location precision. The regional cultural phase is distinguished from direct dates for every building. These source permissions remain effective; no source figures or site plans are bundled.
+
+Onondaga, Ganondagan and Garifuna community accounts, archival treaty scans, government archives and collection guides are individually attributed in records and docs/community-topic-dives.md. Citations do not relicense their publications, imagery or cultural knowledge. The Dutch National Archives emancipation-register index (CC BY-SA 3.0) is not copied or republished; only the documented emancipation date and archive coverage limitations are summarized. No source claims endorsement of this atlas.
+
+The new Consensus Deep dossier remains private. No generated report, long quotation or bulk source dataset was added to the public package. Project licenses cover original protected contributions; they do not create ownership over facts or remove upstream permissions.

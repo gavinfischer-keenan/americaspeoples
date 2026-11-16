@@ -43,7 +43,7 @@ try{
  await check('Planned related histories are clearly queued and linked by reason',async p=>{
   await p.goto(base+'/#topic/trade');await p.locator('.related-dives a[href="#topics/spanish-treasure"]').click();
   await p.locator('#future-spanish-treasure.future-selected').waitFor();assert.equal(await p.locator('#topic-play').count(),0);
-  await p.locator('#future-spanish-treasure a[href="#topics/caribbean-enslavement"]').click();await p.locator('#future-caribbean-enslavement.future-selected').waitFor();
+  await p.locator('#future-spanish-treasure a[href="#topic/caribbean-enslavement"]').click();await p.locator('#topic-play').waitFor();assert.equal(p.url().split('#')[1],'topic/caribbean-enslavement');
   await p.goto(base+'/#topics/missionaries');await p.locator('#future-missionaries.future-selected').waitFor();assert.match(await p.locator('#future-missionaries').innerText(),/forced schooling/);
   await p.setViewportSize({width:390,height:844});assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
  });

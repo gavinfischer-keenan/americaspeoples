@@ -75,6 +75,7 @@ const phases = [
   ["Guided stories, discovery and responsive UI", node, ["tests/watch-explore.browser.mjs"]],
   ["Shared world movie, scoped expeditions and local terrain", node, ["tests/shared-movie.browser.mjs"]],
   ["Independent topic movies, geography and state restoration", node, ["--test", "tests/topic-dives.browser.mjs", "tests/topic-regressions.browser.mjs", "tests/topic-geography.browser.mjs", "tests/topic-review-fixes.browser.mjs"]],
+  ["Community topics, queue promotion and tablet navigation", node, ["--import", "tsx", "tests/community-topics.browser.mjs"]],
   ["Map picking, camera, touch and label usability", node, ["tests/map-ux.browser.mjs"]],
   ["Movie and Explore separation", node, ["tests/movie-explore.browser.mjs"]],
   ["Map playback interaction and hover", node, ["tests/map-interaction.browser.mjs"]],
