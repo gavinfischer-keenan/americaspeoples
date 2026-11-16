@@ -1,3 +1,5 @@
+import sovereigntyTopics from '../data/sovereignty-topic-evidence-records.json';
+import sovereigntyContext from '../data/sovereignty-topic-context-records.json';
 import communityTopics from '../data/community-topic-evidence-records.json';
 import communityContext from '../data/community-topic-context-records.json';
 import pacificTopics from '../data/pacific-topic-evidence-records.json';
@@ -54,6 +56,6 @@ export const dataset = publishedDataset(
     ...atlantic.records,
     ...localPlaces.records,
     ...hawaiiLocal.records, ...sharedContext.records,
-    ...communityTopics.records, ...communityContext.records, ...pacificTopics.records, ...pacificTopicContext.records, ...cities.records, ...conflicts.records, ...northern.records, ...topicEvidence.records,
+    ...sovereigntyTopics.records, ...sovereigntyContext.records, ...communityTopics.records, ...communityContext.records, ...pacificTopics.records, ...pacificTopicContext.records, ...cities.records, ...conflicts.records, ...northern.records, ...topicEvidence.records,
   ] as EvidenceRecord[],
 );

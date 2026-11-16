@@ -6,6 +6,25 @@
 **Architecture:** Existing TypeScript/JSON topic registry and controller; pure narrow scope policy for record validation and topic clocks; no new dependencies or worksheet/server schema.
 **Spec:** docs/superpowers/specs/2026-11-15-land-sovereignty-dives.md
 
+## Superseding user expansion
+
+Finish all ten remaining dives in v0.14, plus an Australia/New Zealand archaeological coverage pass; the user explicitly authorizes merge/push/deploy after completion. The former new-PR-only and seven-left-queued constraints below are superseded. Reuse this feature branch and inline workflow. Tasks1–3 continue; add Task3b for Australasia sites and Task3c for the seven remaining topic modules. Task4 runs once after all content is complete: 20 playable topics, no remaining requested queue entries, one fresh final review, full release checks, merge and verified deployment, current+one previous retention. Keep 1934/1959 limits and research cap unchanged.
+
+### Task 3b: Australia and Aotearoa New Zealand coverage
+
+- [ ] Inventory canonical published sites, dates, precision and evidence gaps; one Deep audit plus underlying source checks.
+- [ ] Add supported missing archaeological localities/activity phases and reciprocal human-context links; no sensitive site coordinates or manufactured continuity.
+- [ ] Include mainland Australian child-removal institutions and Parihaka history in forced-relocations, with dated coercion evidence and country-specific distinctions.
+- [ ] Test publication, dates, geometry, shared membership and views.
+
+### Task 3c: Complete the seven remaining topics
+
+- [ ] Combined Deep dossier; primary/community source checks and canonical reuse inventory.
+- [ ] Implement Pacific fur trades, whaling, Spanish treasure, missionaries, pottery, obsidian, copper as independent movies with substantive chapters and source/uncertainty explanations.
+- [ ] Share independently supported human context, keep subject objects/technology/extraction evidence topic-only, audit every focused record.
+- [ ] Promote every requested queue link; verify all20movies, crosslinks, clocks, desktop/tablet and packaged source guides.
+- [ ] Commit green modules; final scope and counts replace earlier13/7 assumptions.
+
 ## Global constraints
 
 - IDs forced-relocations, hawaii-statehood, territorial-purchases.

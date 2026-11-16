@@ -1,0 +1,2543 @@
+{
+  "reviewedAt": "2026-11-15",
+  "coverage": "Selected sourced events; no comprehensive claim or new boundary geometry.",
+  "records": [
+    {
+      "id": "sovereignty-wybalenna",
+      "revision": 1,
+      "type": "event",
+      "title": "Wybalenna — confinement and continuing Palawa communities",
+      "culture": {
+        "id": "palawa-tasmanian-aboriginal-peoples",
+        "name": "Palawa / Tasmanian Aboriginal peoples",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-wybalenna-place",
+        "name": "Wybalenna, Flinders Island / Tayaritja",
+        "lon": 147.88,
+        "lat": -40.02,
+        "precision": "Approximate public locality, about 2 km uncertainty; not a surveyed building or incident footprint.",
+        "provenance": "Editorial locality anchor for the named place in the source; coordinates rounded for orientation. Coordinate orientation: https://en.wikipedia.org/wiki/Wybalenna_Aboriginal_Establishment"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1833,
+        "end": 1847,
+        "approximate": false,
+        "original": "1833–1847",
+        "method": "Documented event or explicitly identified source window.",
+        "interpretation": "1833–1847 dates this institution, not the whole exile system or one uninterrupted stay by every person. Earlier transfers to other island camps have separate histories."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "British colonial authorities confined Palawa people at Wybalenna from 1833. The Aboriginal Land Council describes resistance to assimilation and continuing community identity.",
+          "status": "well-supported",
+          "explanation": "1833–1847 dates this institution, not the whole exile system or one uninterrupted stay by every person. Earlier transfers to other island camps have separate histories.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "History; The Petition and 1847 transfer",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "authors": "Aboriginal Land Council of Tasmania",
+          "title": "Wybalenna: history and the 1846 petition",
+          "url": "https://alctas.org.au/project/wybalenna/",
+          "year": null,
+          "referenceType": "web-resource",
+          "id": "source",
+          "venue": "Aboriginal Land Council of Tasmania",
+          "access": "Public source checked 2026-11-15; original factual summary and link, no source article or images redistributed."
+        }
+      ],
+      "review": {
+        "summary": "British colonial authorities confined Palawa people at Wybalenna from 1833. The Aboriginal Land Council describes resistance to assimilation and continuing community identity.",
+        "limitations": "1833–1847 dates this institution, not the whole exile system or one uninterrupted stay by every person. Earlier transfers to other island camps have separate histories.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": [
+          "sovereignty-oyster-cove"
+        ]
+      },
+      "overlay": {
+        "kind": "forced-removal",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            147.88,
+            -40.02
+          ]
+        },
+        "precision": "Approximate public locality, about 2 km uncertainty; not a surveyed building or incident footprint.",
+        "provenance": "Locality or endpoint connection only. 1833–1847 dates this institution, not the whole exile system or one uninterrupted stay by every person. Earlier transfers to other island camps have separate histories."
+      }
+    },
+    {
+      "id": "sovereignty-oyster-cove",
+      "revision": 1,
+      "type": "event",
+      "title": "Putalina / Oyster Cove — another forced transfer",
+      "culture": {
+        "id": "palawa-tasmanian-aboriginal-peoples",
+        "name": "Palawa / Tasmanian Aboriginal peoples",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-oyster-cove-place",
+        "name": "Wybalenna; departure locality",
+        "lon": 147.88,
+        "lat": -40.02,
+        "precision": "Approximate public departure and destination localities, about 3 km uncertainty; schematic sea connection.",
+        "provenance": "Editorial locality anchor for the named place in the source; coordinates rounded for orientation. Coordinate orientation: https://en.wikipedia.org/wiki/Wybalenna_Aboriginal_Establishment"
+      },
+      "destination": {
+        "id": "sovereignty-oyster-cove-destination",
+        "name": "Putalina / Oyster Cove; destination locality",
+        "lon": 147.25,
+        "lat": -43.13,
+        "precision": "Approximate public departure and destination localities, about 3 km uncertainty; schematic sea connection.",
+        "provenance": "Named destination locality, not a recovered route."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1847,
+        "end": 1847,
+        "approximate": false,
+        "original": "1847-10-18",
+        "method": "Documented event or explicitly identified source window.",
+        "interpretation": "The Council dates a boat departure to 18 October 1847. Survivor totals differ between accounts; none is imposed here. The line connects localities, not the ship’s track or every stop.",
+        "eventDate": "1847-10-18"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "In 1847, colonial authorities moved Wybalenna survivors by boat to Putalina / Oyster Cove. Return to mainland Tasmania did not restore freedom from colonial control.",
+          "status": "well-supported",
+          "explanation": "The Council dates a boat departure to 18 October 1847. Survivor totals differ between accounts; none is imposed here. The line connects localities, not the ship’s track or every stop.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "History; The Petition and 1847 transfer",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "authors": "Aboriginal Land Council of Tasmania",
+          "title": "Wybalenna: history and the 1846 petition",
+          "url": "https://alctas.org.au/project/wybalenna/",
+          "year": null,
+          "referenceType": "web-resource",
+          "id": "source",
+          "venue": "Aboriginal Land Council of Tasmania",
+          "access": "Public source checked 2026-11-15; original factual summary and link, no source article or images redistributed."
+        }
+      ],
+      "review": {
+        "summary": "In 1847, colonial authorities moved Wybalenna survivors by boat to Putalina / Oyster Cove. Return to mainland Tasmania did not restore freedom from colonial control.",
+        "limitations": "The Council dates a boat departure to 18 October 1847. Survivor totals differ between accounts; none is imposed here. The line connects localities, not the ship’s track or every stop.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": [
+          "sovereignty-wybalenna"
+        ]
+      },
+      "overlay": {
+        "kind": "forced-removal",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              147.88,
+              -40.02
+            ],
+            [
+              147.25,
+              -43.13
+            ]
+          ]
+        },
+        "precision": "Approximate public departure and destination localities, about 3 km uncertainty; schematic sea connection.",
+        "provenance": "Locality or endpoint connection only. The Council dates a boat departure to 18 October 1847. Survivor totals differ between accounts; none is imposed here. The line connects localities, not the ship’s track or every stop.",
+        "direction": "forward"
+      }
+    },
+    {
+      "id": "sovereignty-martin-garcia",
+      "revision": 1,
+      "type": "event",
+      "title": "Martín García — detention and distribution of Indigenous prisoners",
+      "culture": {
+        "id": "indigenous-captives-from-the-pampas-and-patagonia",
+        "name": "Indigenous captives from the Pampas and Patagonia",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-martin-garcia-place",
+        "name": "Isla Martín García, Río de la Plata",
+        "lon": -58.25,
+        "lat": -34.18,
+        "precision": "Approximate public locality, about 2 km uncertainty; not a surveyed building or incident footprint.",
+        "provenance": "Editorial locality anchor for the named place in the source; coordinates rounded for orientation. No historical boundary or detailed travel track is inferred."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1871,
+        "end": 1886,
+        "approximate": false,
+        "original": "1871–1886",
+        "method": "Documented event or explicitly identified source window.",
+        "interpretation": "1871–1886 is the study’s principal documentary window, not every prisoner’s confinement dates. Recorded destinations do not supply one complete route for all captives."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Argentine naval records document Indigenous prisoners confined on Martín García and sent onward into domestic service, productive labor, the army and navy. Nagy and Papazian publish orders and correspondence showing this state-controlled system.",
+          "status": "well-supported",
+          "explanation": "1871–1886 is the study’s principal documentary window, not every prisoner’s confinement dates. Recorded destinations do not supply one complete route for all captives.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Section 1, paragraphs 1–8; transcribed naval documents",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "authors": "Mariano Nagy; Alexis Papazian",
+          "title": "El campo de concentración de Martín García",
+          "url": "https://doi.org/10.4000/corpusarchivos.1176",
+          "year": 2011,
+          "referenceType": "journal-article",
+          "id": "source",
+          "venue": "Corpus",
+          "access": "Public source checked 2026-11-15; original factual summary and link, no source article or images redistributed.",
+          "doi": "10.4000/corpusarchivos.1176"
+        }
+      ],
+      "review": {
+        "summary": "Argentine naval records document Indigenous prisoners confined on Martín García and sent onward into domestic service, productive labor, the army and navy. Nagy and Papazian publish orders and correspondence showing this state-controlled system.",
+        "limitations": "1871–1886 is the study’s principal documentary window, not every prisoner’s confinement dates. Recorded destinations do not supply one complete route for all captives.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "forced-removal",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -58.25,
+            -34.18
+          ]
+        },
+        "precision": "Approximate public locality, about 2 km uncertainty; not a surveyed building or incident footprint.",
+        "provenance": "Locality or endpoint connection only. 1871–1886 is the study’s principal documentary window, not every prisoner’s confinement dates. Recorded destinations do not supply one complete route for all captives."
+      }
+    },
+    {
+      "id": "sovereignty-carlisle-1879",
+      "revision": 1,
+      "type": "event",
+      "title": "Carlisle — children arrive at an assimilation school",
+      "culture": {
+        "id": "indigenous-children-from-multiple-native-nations",
+        "name": "Indigenous children from multiple Native nations",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-carlisle-1879-place",
+        "name": "Carlisle Barracks, Pennsylvania",
+        "lon": -77.18,
+        "lat": 40.21,
+        "precision": "Approximate public locality, about 2 km uncertainty; not a surveyed building or incident footprint.",
+        "provenance": "Editorial locality anchor for the named place in the source; coordinates rounded for orientation. No historical boundary or detailed travel track is inferred."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1879,
+        "end": 1879,
+        "approximate": false,
+        "original": "1879-10-06",
+        "method": "Documented event or explicitly identified source window.",
+        "interpretation": "This date marks the first arrivals, not every child’s journey. Recruitment and coercion need individual records; no single route represents all nations. The school continued until 1918.",
+        "eventDate": "1879-10-06"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Children first arrived at Carlisle on 6 October 1879. Federal schooling separated children from families and imposed English and military-style discipline; long journeys included boats, trains and military escorts.",
+          "status": "well-supported",
+          "explanation": "This date marks the first arrivals, not every child’s journey. Recruitment and coercion need individual records; no single route represents all nations. The school continued until 1918.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Children at the Carlisle School; Creating an Off-Reservation Boarding School",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "authors": "National Park Service",
+          "title": "Carlisle Federal Indian Boarding School: History & Culture",
+          "url": "https://home.nps.gov/cibs/learn/historyculture/index.htm",
+          "year": null,
+          "referenceType": "web-resource",
+          "id": "source",
+          "venue": "National Park Service",
+          "access": "Public source checked 2026-11-15; original factual summary and link, no source article or images redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Children first arrived at Carlisle on 6 October 1879. Federal schooling separated children from families and imposed English and military-style discipline; long journeys included boats, trains and military escorts.",
+        "limitations": "This date marks the first arrivals, not every child’s journey. Recruitment and coercion need individual records; no single route represents all nations. The school continued until 1918.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "forced-removal",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -77.18,
+            40.21
+          ]
+        },
+        "precision": "Approximate public locality, about 2 km uncertainty; not a surveyed building or incident footprint.",
+        "provenance": "Locality or endpoint connection only. This date marks the first arrivals, not every child’s journey. Recruitment and coercion need individual records; no single route represents all nations. The school continued until 1918."
+      }
+    },
+    {
+      "id": "sovereignty-yaqui-1905",
+      "revision": 1,
+      "type": "event",
+      "title": "Yaqui prisoners at Sakakal — resistance in Yucatán",
+      "culture": {
+        "id": "yaqui-yoeme-deportees",
+        "name": "Yaqui / Yoeme deportees",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-yaqui-1905-place",
+        "name": "Yucatán henequen region; Mérida orientation anchor",
+        "lon": -89.6,
+        "lat": 20.95,
+        "precision": "Regional orientation only, about 100 km uncertainty. Sakakal estate is not precisely located by this record.",
+        "provenance": "Editorial locality anchor for the named place in the source; coordinates rounded for orientation. No historical boundary or detailed travel track is inferred."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1905,
+        "end": 1905,
+        "approximate": false,
+        "original": "1905",
+        "method": "Documented event or explicitly identified source window.",
+        "interpretation": "The pin orients the Yucatán henequen region near Mérida, not Sakakal’s surveyed location. The 1905 episode does not date each person’s deportation or reconstruct the journey from Sonora."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Padilla Ramos examines Yaqui prisoners of war working at Sakakal in Yucatán. In September 1905, a group resisted and abandoned plantation work. This is evidence of deportation, coercive labor and agency, not a voluntary labor migration.",
+          "status": "well-supported",
+          "explanation": "The pin orients the Yucatán henequen region near Mérida, not Sakakal’s surveyed location. The 1905 episode does not date each person’s deportation or reconstruct the journey from Sonora.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Publisher abstract and indexed article p. 94: September 1905 Sakakal episode",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "authors": "Raquel Padilla Ramos",
+          "title": "La barbarie de México. Yaquis en la guerra y la deportación bajo la mirada de Turner",
+          "url": "https://revistas.inah.gob.mx/index.php/noroestedemexico/article/view/17178",
+          "year": 2020,
+          "referenceType": "journal-article",
+          "id": "source",
+          "venue": "Noroeste de México, nueva época",
+          "access": "Publisher abstract and indexed p. 94 extract checked; full PDF access failed. Original limited summary; no claimed full-text inspection.",
+          "issue": "2"
+        }
+      ],
+      "review": {
+        "summary": "Padilla Ramos examines Yaqui prisoners of war working at Sakakal in Yucatán. In September 1905, a group resisted and abandoned plantation work. This is evidence of deportation, coercive labor and agency, not a voluntary labor migration.",
+        "limitations": "The pin orients the Yucatán henequen region near Mérida, not Sakakal’s surveyed location. The 1905 episode does not date each person’s deportation or reconstruct the journey from Sonora.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "forced-removal",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -89.6,
+            20.95
+          ]
+        },
+        "precision": "Regional orientation only, about 100 km uncertainty. Sakakal estate is not precisely located by this record.",
+        "provenance": "Locality or endpoint connection only. The pin orients the Yucatán henequen region near Mérida, not Sakakal’s surveyed location. The 1905 episode does not date each person’s deportation or reconstruct the journey from Sonora."
+      }
+    },
+    {
+      "id": "sovereignty-rapanui-1914",
+      "revision": 1,
+      "type": "event",
+      "title": "Haŋa Roa — confinement and Angata’s resistance",
+      "culture": {
+        "id": "sovereignty-rapanui-communities",
+        "name": "Rapanui communities",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-rapanui-1914-place",
+        "name": "Haŋa Roa, Rapa Nui",
+        "lon": -109.43,
+        "lat": -27.15,
+        "precision": "Approximate public locality, about 2 km uncertainty; not a surveyed building or incident footprint.",
+        "provenance": "Editorial locality anchor for the named place in the source; coordinates rounded for orientation. No historical boundary or detailed travel track is inferred."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1914,
+        "end": 1914,
+        "approximate": false,
+        "original": "1914",
+        "method": "Documented event or explicitly identified source window.",
+        "interpretation": "1914 is a documented episode and observation, not the start or end of all confinement. The town anchor does not outline the wall, locate every confrontation or establish a casualty count."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The 1914 record places Rapanui residents under confinement around Haŋa Roa within a sheep-company regime. María Angata Veri Tahi led resistance that year; naval intervention followed. People continued to act within and against colonial restrictions.",
+          "status": "well-supported",
+          "explanation": "1914 is a documented episode and observation, not the start or end of all confinement. The town anchor does not outline the wall, locate every confrontation or establish a casualty count.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Historical context preceding the photographic analysis: confinement and 1914 rebellion",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "authors": "Josefina Arriagada Poblete; Théo Milin; Mario Tuki",
+          "title": "Una mirada fugaz al uso de máscaras en Rapa Nui (1914)",
+          "url": "https://www.scielo.cl/scielo.php?pid=S0718-71812023000200330&script=sci_arttext",
+          "year": 2023,
+          "referenceType": "journal-article",
+          "id": "source",
+          "venue": "Aisthesis",
+          "access": "Public source checked 2026-11-15; original factual summary and link, no source article or images redistributed.",
+          "doi": "10.7764/aisth.74.15"
+        }
+      ],
+      "review": {
+        "summary": "The 1914 record places Rapanui residents under confinement around Haŋa Roa within a sheep-company regime. María Angata Veri Tahi led resistance that year; naval intervention followed. People continued to act within and against colonial restrictions.",
+        "limitations": "1914 is a documented episode and observation, not the start or end of all confinement. The town anchor does not outline the wall, locate every confrontation or establish a casualty count.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": [
+          "history-rapa-nui-historical-continuity"
+        ]
+      },
+      "overlay": {
+        "kind": "forced-removal",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -109.43,
+            -27.15
+          ]
+        },
+        "precision": "Approximate public locality, about 2 km uncertainty; not a surveyed building or incident footprint.",
+        "provenance": "Locality or endpoint connection only. 1914 is a documented episode and observation, not the start or end of all confinement. The town anchor does not outline the wall, locate every confrontation or establish a casualty count."
+      }
+    },
+    {
+      "id": "sovereignty-napalpi-1924",
+      "revision": 1,
+      "type": "event",
+      "title": "Napalpí — massacre of Qom and Moqoit protestors",
+      "culture": {
+        "id": "qom-and-moqoit-communities",
+        "name": "Qom and Moqoit communities",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-napalpi-1924-place",
+        "name": "Quitilipi–Napalpí area, Chaco; regional orientation",
+        "lon": -60.22,
+        "lat": -26.87,
+        "precision": "Regional anchor near Quitilipi, about 30 km uncertainty; not a surveyed massacre footprint.",
+        "provenance": "Editorial locality anchor for the named place in the source; coordinates rounded for orientation. No historical boundary or detailed travel track is inferred."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1924,
+        "end": 1924,
+        "approximate": false,
+        "original": "1924-07-19",
+        "method": "Documented event or explicitly identified source window.",
+        "interpretation": "This point near Quitilipi orients the wider Napalpí / El Aguará episode, not an exact killing ground. Published victim estimates differ; no single total or tactical battlefield is invented.",
+        "eventDate": "1924-07-19"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "On 19 July 1924, police, gendarmes and armed colonists killed Qom and Moqoit people protesting living and labor conditions in the Napalpí reduction. Archival documents and the later truth trial identify state responsibility.",
+          "status": "well-supported",
+          "explanation": "This point near Quitilipi orients the wider Napalpí / El Aguará episode, not an exact killing ground. Published victim estimates differ; no single total or tactical battlefield is invented.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Introduction and 15 primary documents used by the truth trial",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "authors": "Archivo General de la Nación, Argentina",
+          "title": "Documentos históricos sobre la Masacre de Napalpí",
+          "url": "https://www.argentina.gob.ar/node/317245",
+          "year": null,
+          "referenceType": "web-resource",
+          "id": "source",
+          "venue": "Archivo General de la Nación, Argentina",
+          "access": "Public source checked 2026-11-15; original factual summary and link, no source article or images redistributed."
+        }
+      ],
+      "review": {
+        "summary": "On 19 July 1924, police, gendarmes and armed colonists killed Qom and Moqoit people protesting living and labor conditions in the Napalpí reduction. Archival documents and the later truth trial identify state responsibility.",
+        "limitations": "This point near Quitilipi orients the wider Napalpí / El Aguará episode, not an exact killing ground. Published victim estimates differ; no single total or tactical battlefield is invented.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "violence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -60.22,
+            -26.87
+          ]
+        },
+        "precision": "Regional anchor near Quitilipi, about 30 km uncertainty; not a surveyed massacre footprint.",
+        "provenance": "Locality or endpoint connection only. This point near Quitilipi orients the wider Napalpí / El Aguará episode, not an exact killing ground. Published victim estimates differ; no single total or tactical battlefield is invented."
+      }
+    },
+    {
+      "id": "sovereignty-iolani-palace",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "ʻIolani Palace — a built center of the kingdom",
+      "culture": {
+        "id": "hawaiian-kingdom-kanaka-maoli-and-other-residents",
+        "name": "Hawaiian Kingdom / Kanaka Maoli and other residents",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-iolani-palace-place",
+        "name": "ʻIolani Palace / Honolulu; public locality",
+        "lon": -157.86,
+        "lat": 21.31,
+        "precision": "Approximate public locality, about 2 km uncertainty; not a surveyed building or incident footprint.",
+        "provenance": "Editorial locality anchor for the named place in the source; coordinates rounded for orientation. No historical boundary or detailed travel track is inferred."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1882,
+        "end": 1882,
+        "approximate": false,
+        "original": "1882",
+        "method": "Documented event or explicitly identified source window.",
+        "interpretation": "1882 dates completion of this palace building, not the founding of Honolulu, the kingdom or the arrival of its inhabitants."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The present ʻIolani Palace was completed in 1882 as the royal residence and a place of diplomacy and government. The building makes an existing Hawaiian state visible before the overthrow.",
+          "status": "well-supported",
+          "explanation": "1882 dates completion of this palace building, not the founding of Honolulu, the kingdom or the arrival of its inhabitants.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "A Palace Fit for a King; construction completed in 1882",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "authors": "The Friends of ʻIolani Palace",
+          "title": "History of ʻIolani Palace",
+          "url": "https://www.iolanipalace.org/history/",
+          "year": null,
+          "referenceType": "web-resource",
+          "id": "source",
+          "venue": "The Friends of ʻIolani Palace",
+          "access": "Public source checked 2026-11-15; original factual summary and link, no source article or images redistributed."
+        }
+      ],
+      "review": {
+        "summary": "The present ʻIolani Palace was completed in 1882 as the royal residence and a place of diplomacy and government. The building makes an existing Hawaiian state visible before the overthrow.",
+        "limitations": "1882 dates completion of this palace building, not the founding of Honolulu, the kingdom or the arrival of its inhabitants.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": [
+          "context-lahaina-capital",
+          "sovereignty-hawaii-1887",
+          "sovereignty-hawaii-accession"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "sovereignty-hawaii-1887",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "1887 constitution — authority changed under coercion",
+      "culture": {
+        "id": "hawaiian-kingdom-kanaka-maoli-and-other-residents",
+        "name": "Hawaiian Kingdom / Kanaka Maoli and other residents",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-hawaii-1887-place",
+        "name": "ʻIolani Palace / Honolulu; public locality",
+        "lon": -157.86,
+        "lat": 21.31,
+        "precision": "Approximate public locality, about 2 km uncertainty; not a surveyed building or incident footprint.",
+        "provenance": "Editorial locality anchor for the named place in the source; coordinates rounded for orientation. No historical boundary or detailed travel track is inferred."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1887,
+        "end": 1887,
+        "approximate": false,
+        "original": "1887",
+        "method": "Documented event or explicitly identified source window.",
+        "interpretation": "This marks constitutional coercion in Honolulu, not a battle at the palace coordinates or a change unanimously accepted by residents."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Kalākaua was forced to accept the 1887 constitution, reducing royal authority and restricting political participation. Liliʻuokalani later sought to recover powers and rights lost through that constitution.",
+          "status": "well-supported",
+          "explanation": "This marks constitutional coercion in Honolulu, not a battle at the palace coordinates or a change unanimously accepted by residents.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Overthrow, imprisonment & resistance; linked Queen’s memoir and manuscripts",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "authors": "University of Hawaiʻi at Mānoa Library",
+          "title": "Queen Liliʻuokalani: Resources",
+          "url": "https://guides.library.manoa.hawaii.edu/c.php?g=1551307&p=11636162",
+          "year": null,
+          "referenceType": "web-resource",
+          "id": "source",
+          "venue": "University of Hawaiʻi at Mānoa Library",
+          "access": "Public source checked 2026-11-15; original factual summary and link, no source article or images redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Kalākaua was forced to accept the 1887 constitution, reducing royal authority and restricting political participation. Liliʻuokalani later sought to recover powers and rights lost through that constitution.",
+        "limitations": "This marks constitutional coercion in Honolulu, not a battle at the palace coordinates or a change unanimously accepted by residents.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": [
+          "sovereignty-iolani-palace",
+          "sovereignty-hawaii-overthrow"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "sovereignty-hawaii-accession",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Liliʻuokalani — accession to the throne",
+      "culture": {
+        "id": "hawaiian-kingdom-kanaka-maoli-and-other-residents",
+        "name": "Hawaiian Kingdom / Kanaka Maoli and other residents",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-hawaii-accession-place",
+        "name": "ʻIolani Palace / Honolulu; public locality",
+        "lon": -157.86,
+        "lat": 21.31,
+        "precision": "Approximate public locality, about 2 km uncertainty; not a surveyed building or incident footprint.",
+        "provenance": "Editorial locality anchor for the named place in the source; coordinates rounded for orientation. No historical boundary or detailed travel track is inferred."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1891,
+        "end": 1891,
+        "approximate": false,
+        "original": "1891",
+        "method": "Documented event or explicitly identified source window.",
+        "interpretation": "The year records succession. Kalākaua’s death on 20 January and the queen’s proclamation and oath on 29 January are separate dates; no exact day is assigned to the whole transition."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Liliʻuokalani became queen in 1891 after Kalākaua’s death. Her accession belongs to the continuing institutions of an inhabited kingdom, before the 1893 overthrow.",
+          "status": "well-supported",
+          "explanation": "The year records succession. Kalākaua’s death on 20 January and the queen’s proclamation and oath on 29 January are separate dates; no exact day is assigned to the whole transition.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Queen Liliʻuokalani and succession in 1891",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "authors": "The Friends of ʻIolani Palace",
+          "title": "History of ʻIolani Palace",
+          "url": "https://www.iolanipalace.org/history/",
+          "year": null,
+          "referenceType": "web-resource",
+          "id": "source",
+          "venue": "The Friends of ʻIolani Palace",
+          "access": "Public source checked 2026-11-15; original factual summary and link, no source article or images redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Liliʻuokalani became queen in 1891 after Kalākaua’s death. Her accession belongs to the continuing institutions of an inhabited kingdom, before the 1893 overthrow.",
+        "limitations": "The year records succession. Kalākaua’s death on 20 January and the queen’s proclamation and oath on 29 January are separate dates; no exact day is assigned to the whole transition.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": [
+          "sovereignty-iolani-palace"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "sovereignty-hawaii-overthrow",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Liliʻuokalani yields under protest during the overthrow",
+      "culture": {
+        "id": "hawaiian-kingdom-kanaka-maoli-and-other-residents",
+        "name": "Hawaiian Kingdom / Kanaka Maoli and other residents",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-hawaii-overthrow-place",
+        "name": "ʻIolani Palace / Honolulu; public locality",
+        "lon": -157.86,
+        "lat": 21.31,
+        "precision": "Approximate public locality, about 2 km uncertainty; not a surveyed building or incident footprint.",
+        "provenance": "Editorial locality anchor for the named place in the source; coordinates rounded for orientation. No historical boundary or detailed travel track is inferred."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1893,
+        "end": 1893,
+        "approximate": false,
+        "original": "1893-01-17",
+        "method": "Documented event or explicitly identified source window.",
+        "interpretation": "The source preserves the queen’s position. The Honolulu locality does not identify every deployment or confrontation; 1893, the 1894 Republic and 1898 annexation remain distinct.",
+        "eventDate": "1893-01-17"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "On 17 January 1893, Liliʻuokalani yielded authority under protest to avoid bloodshed and sought restoration of constitutional government. This was an overthrow, not a voluntary abdication or the later annexation.",
+          "status": "well-supported",
+          "explanation": "The source preserves the queen’s position. The Honolulu locality does not identify every deployment or confrontation; 1893, the 1894 Republic and 1898 annexation remain distinct.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Overthrow, imprisonment & resistance; linked Queen’s memoir and manuscripts",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        },
+        {
+          "id": "us-involvement",
+          "text": "Cleveland’s December 1893 message described U.S. forces landing at Honolulu on 16 January and Minister Stevens recognizing the provisional government on 17 January. He condemned U.S. participation in the overthrow.",
+          "status": "well-supported",
+          "explanation": "This is Cleveland’s stated finding after Blount’s investigation, not a claim that all contemporary U.S. inquiries agreed. The date of this source is later than the January events.",
+          "support": [
+            {
+              "sourceId": "cleveland",
+              "locator": "Opening chronology and account of the 16 January landing; conclusion concerning U.S. participation",
+              "stance": "supports",
+              "note": "Primary presidential statement, with its perspective identified."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "authors": "University of Hawaiʻi at Mānoa Library",
+          "title": "Queen Liliʻuokalani: Resources",
+          "url": "https://guides.library.manoa.hawaii.edu/c.php?g=1551307&p=11636162",
+          "year": null,
+          "referenceType": "web-resource",
+          "id": "source",
+          "venue": "University of Hawaiʻi at Mānoa Library",
+          "access": "Public source checked 2026-11-15; original factual summary and link, no source article or images redistributed."
+        },
+        {
+          "id": "cleveland",
+          "authors": "Grover Cleveland",
+          "title": "Message Regarding Hawaiian Annexation, 18 December 1893",
+          "year": 1893,
+          "venue": "Miller Center, University of Virginia; primary transcript",
+          "url": "https://millercenter.org/the-presidency/presidential-speeches/december-18-1893-message-regarding-hawaiian-annexation",
+          "referenceType": "web-resource",
+          "access": "Primary transcript inspected; original summary, no reproduced speech."
+        }
+      ],
+      "review": {
+        "summary": "On 17 January 1893, Liliʻuokalani yielded authority under protest to avoid bloodshed and sought restoration of constitutional government. This was an overthrow, not a voluntary abdication or the later annexation.",
+        "limitations": "The source preserves the queen’s position. The Honolulu locality does not identify every deployment or confrontation; 1893, the 1894 Republic and 1898 annexation remain distinct.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": [
+          "sovereignty-hawaii-1887",
+          "sovereignty-hawaii-imprisonment",
+          "sovereignty-hawaii-petitions"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "sovereignty-hawaii-imprisonment",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Liliʻuokalani — trial and confinement at ʻIolani Palace",
+      "culture": {
+        "id": "hawaiian-kingdom-kanaka-maoli-and-other-residents",
+        "name": "Hawaiian Kingdom / Kanaka Maoli and other residents",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-hawaii-imprisonment-place",
+        "name": "ʻIolani Palace / Honolulu; public locality",
+        "lon": -157.86,
+        "lat": 21.31,
+        "precision": "Approximate public locality, about 2 km uncertainty; not a surveyed building or incident footprint.",
+        "provenance": "Editorial locality anchor for the named place in the source; coordinates rounded for orientation. No historical boundary or detailed travel track is inferred."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1895,
+        "end": 1895,
+        "approximate": false,
+        "original": "1895",
+        "method": "Documented event or explicitly identified source window.",
+        "interpretation": "1895 is the year of trial and palace confinement, not an uninterrupted interval beginning with the 1893 overthrow. The exact arrest location and place of confinement are different."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "After the failed 1895 attempt to restore the monarchy, the Republic arrested and tried Liliʻuokalani. She was confined upstairs in ʻIolani Palace for nearly eight months and continued creative and intellectual work.",
+          "status": "well-supported",
+          "explanation": "1895 is the year of trial and palace confinement, not an uninterrupted interval beginning with the 1893 overthrow. The exact arrest location and place of confinement are different.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Queen’s arrest, trial and nearly eight-month confinement",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "authors": "The Friends of ʻIolani Palace",
+          "title": "Imprisonment Room",
+          "url": "https://www.iolanipalace.org/sacred-palace/the-palace/imprisonment-room/",
+          "year": null,
+          "referenceType": "web-resource",
+          "id": "source",
+          "venue": "The Friends of ʻIolani Palace",
+          "access": "Public source checked 2026-11-15; original factual summary and link, no source article or images redistributed."
+        }
+      ],
+      "review": {
+        "summary": "After the failed 1895 attempt to restore the monarchy, the Republic arrested and tried Liliʻuokalani. She was confined upstairs in ʻIolani Palace for nearly eight months and continued creative and intellectual work.",
+        "limitations": "1895 is the year of trial and palace confinement, not an uninterrupted interval beginning with the 1893 overthrow. The exact arrest location and place of confinement are different.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": [
+          "sovereignty-hawaii-overthrow"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "sovereignty-hawaii-petitions",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Kūʻē petitions — organized opposition to annexation",
+      "culture": {
+        "id": "hawaiian-kingdom-kanaka-maoli-and-other-residents",
+        "name": "Hawaiian Kingdom / Kanaka Maoli and other residents",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-hawaii-petitions-place",
+        "name": "ʻIolani Palace / Honolulu; public locality",
+        "lon": -157.86,
+        "lat": 21.31,
+        "precision": "Approximate public locality, about 2 km uncertainty; not a surveyed building or incident footprint.",
+        "provenance": "Editorial locality anchor for the named place in the source; coordinates rounded for orientation. No historical boundary or detailed travel track is inferred."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1897,
+        "end": 1897,
+        "approximate": false,
+        "original": "1897",
+        "method": "Documented event or explicitly identified source window.",
+        "interpretation": "Honolulu is an organizing locality, not the location of every signature. Petitions with different aims and overlapping signers must not be added together as a unique voter count."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Hui Aloha ʻĀina organizers collected 21,269 signatures opposing annexation in 1897. The surviving petitions document political action across the islands; delegates brought that opposition to Washington.",
+          "status": "well-supported",
+          "explanation": "Honolulu is an organizing locality, not the location of every signature. Petitions with different aims and overlapping signers must not be added together as a unique voter count.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "1897 petition campaign and digitized island collections",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "authors": "University of Hawaiʻi at Mānoa Library",
+          "title": "About the Kūʻē Petitions",
+          "url": "https://guides.library.manoa.hawaii.edu/kuepetitions",
+          "year": null,
+          "referenceType": "web-resource",
+          "id": "source",
+          "venue": "University of Hawaiʻi at Mānoa Library",
+          "access": "Public source checked 2026-11-15; original factual summary and link, no source article or images redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Hui Aloha ʻĀina organizers collected 21,269 signatures opposing annexation in 1897. The surviving petitions document political action across the islands; delegates brought that opposition to Washington.",
+        "limitations": "Honolulu is an organizing locality, not the location of every signature. Petitions with different aims and overlapping signers must not be added together as a unique voter count.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": [
+          "sovereignty-hawaii-overthrow",
+          "sovereignty-hawaii-annexation",
+          "topic-hawaii-statehood-vote-1959"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "sovereignty-hawaii-annexation",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Honolulu — annexation transfer ceremony",
+      "culture": {
+        "id": "hawaiian-kingdom-kanaka-maoli-and-other-residents",
+        "name": "Hawaiian Kingdom / Kanaka Maoli and other residents",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-hawaii-annexation-place",
+        "name": "ʻIolani Palace / Honolulu; public locality",
+        "lon": -157.86,
+        "lat": 21.31,
+        "precision": "Approximate public locality, about 2 km uncertainty; not a surveyed building or incident footprint.",
+        "provenance": "Editorial locality anchor for the named place in the source; coordinates rounded for orientation. No historical boundary or detailed travel track is inferred."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1898,
+        "end": 1898,
+        "approximate": false,
+        "original": "1898-08-12",
+        "method": "Documented event or explicitly identified source window.",
+        "interpretation": "This dates the local ceremony, not the July resolution. A marker for a government’s action is not a legal conclusion resolving all sovereignty disputes or a record of unanimous support.",
+        "eventDate": "1898-08-12"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The annexation transfer ceremony occurred at ʻIolani Palace on 12 August 1898 after the U.S. Newlands Resolution in July. The earlier anti-annexation petitions demonstrate organized opposition; the ceremony does not establish Hawaiian consent.",
+          "status": "well-supported",
+          "explanation": "This dates the local ceremony, not the July resolution. A marker for a government’s action is not a legal conclusion resolving all sovereignty disputes or a record of unanimous support.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Introductory note: 12 August 1898 transfer; compare Kūʻē petitions",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "authors": "Hawaiʻi Legislature",
+          "title": "Hawaiian Organic Act: introductory historical note",
+          "url": "https://data.capitol.hawaii.gov/hrscurrent/Vol01_Ch0001-0042F/03-ORG/ORG_0001.htm",
+          "year": null,
+          "referenceType": "web-resource",
+          "id": "source",
+          "venue": "Hawaiʻi Legislature",
+          "access": "Public source checked 2026-11-15; original factual summary and link, no source article or images redistributed."
+        }
+      ],
+      "review": {
+        "summary": "The annexation transfer ceremony occurred at ʻIolani Palace on 12 August 1898 after the U.S. Newlands Resolution in July. The earlier anti-annexation petitions demonstrate organized opposition; the ceremony does not establish Hawaiian consent.",
+        "limitations": "This dates the local ceremony, not the July resolution. A marker for a government’s action is not a legal conclusion resolving all sovereignty disputes or a record of unanimous support.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": [
+          "sovereignty-hawaii-petitions",
+          "sovereignty-hawaii-territory",
+          "topic-hawaii-admission-1959"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "sovereignty-hawaii-territory",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Territorial government takes effect in Hawaiʻi",
+      "culture": {
+        "id": "hawai-i-residents-under-u-s-territorial-government",
+        "name": "Hawaiʻi residents under U.S. territorial government",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-hawaii-territory-place",
+        "name": "ʻIolani Palace / Honolulu; public locality",
+        "lon": -157.86,
+        "lat": 21.31,
+        "precision": "Approximate public locality, about 2 km uncertainty; not a surveyed building or incident footprint.",
+        "provenance": "Editorial locality anchor for the named place in the source; coordinates rounded for orientation. No historical boundary or detailed travel track is inferred."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1900,
+        "end": 1900,
+        "approximate": false,
+        "original": "1900-06-14",
+        "method": "Documented event or explicitly identified source window.",
+        "interpretation": "Honolulu is the seat-of-government anchor. The legal effective date is separate from the 1898 transfer ceremony, residents’ individual experiences and the later statehood vote.",
+        "eventDate": "1900-06-14"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The Organic Act took effect on 14 June 1900, establishing U.S. territorial government in Hawaiʻi. This institutional change followed annexation; it did not begin settlement or erase the political history of the kingdom.",
+          "status": "well-supported",
+          "explanation": "Honolulu is the seat-of-government anchor. The legal effective date is separate from the 1898 transfer ceremony, residents’ individual experiences and the later statehood vote.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Introductory note and Chapter I",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "authors": "Hawaiʻi Legislature",
+          "title": "Hawaiian Organic Act: introductory historical note",
+          "url": "https://data.capitol.hawaii.gov/hrscurrent/Vol01_Ch0001-0042F/03-ORG/ORG_0001.htm",
+          "year": null,
+          "referenceType": "web-resource",
+          "id": "source",
+          "venue": "Hawaiʻi Legislature",
+          "access": "Public source checked 2026-11-15; original factual summary and link, no source article or images redistributed."
+        }
+      ],
+      "review": {
+        "summary": "The Organic Act took effect on 14 June 1900, establishing U.S. territorial government in Hawaiʻi. This institutional change followed annexation; it did not begin settlement or erase the political history of the kingdom.",
+        "limitations": "Honolulu is the seat-of-government anchor. The legal effective date is separate from the 1898 transfer ceremony, residents’ individual experiences and the later statehood vote.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": [
+          "sovereignty-hawaii-annexation",
+          "sovereignty-kalamaula-1923",
+          "topic-hawaii-martial-law-1941",
+          "topic-hawaii-martial-law-ends-1944"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "sovereignty-kalamaula-1923",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Kalamaʻula — homesteaders are on the land",
+      "culture": {
+        "id": "native-hawaiian-homesteading-families",
+        "name": "Native Hawaiian homesteading families",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-kalamaula-1923-place",
+        "name": "Lower Kalamaʻula, Molokaʻi",
+        "lon": -157.04,
+        "lat": 21.1,
+        "precision": "Approximate lower Kalamaʻula locality, about 3 km uncertainty; not a parcel boundary.",
+        "provenance": "Editorial locality anchor for the named place in the source; coordinates rounded for orientation. No historical boundary or detailed travel track is inferred."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1923,
+        "end": 1923,
+        "approximate": false,
+        "original": "1923",
+        "method": "Documented event or explicitly identified source window.",
+        "interpretation": "This is a dated observation, not a claim that settlement began in February 1923. The locality point does not recreate individual allotments or imply equal access for all Native Hawaiians."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "By February 1923, the Hawaiian Homes program’s Kalanianaʻole Settlement at lower Kalamaʻula had settlers on the land and cleared fields. This records actual habitation and work, beyond the earlier authorization of a program.",
+          "status": "well-supported",
+          "explanation": "This is a dated observation, not a claim that settlement began in February 1923. The locality point does not recreate individual allotments or imply equal access for all Native Hawaiians.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Early Molokaʻi program: lower Kalamaula and February 1923 settlers",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "authors": "Hawaiʻi Legislative Reference Bureau",
+          "title": "Land Aspects of the Hawaiian Homes Program",
+          "url": "https://lrb.hawaii.gov/wp-content/uploads/1964_LandAspectsOfTheHawaiianHomesProgram.pdf",
+          "year": 1964,
+          "referenceType": "report",
+          "id": "source",
+          "venue": "Hawaiʻi Legislative Reference Bureau",
+          "access": "Public source checked 2026-11-15; original factual summary and link, no source article or images redistributed.",
+          "publisher": "Hawaiʻi Legislative Reference Bureau"
+        }
+      ],
+      "review": {
+        "summary": "By February 1923, the Hawaiian Homes program’s Kalanianaʻole Settlement at lower Kalamaʻula had settlers on the land and cleared fields. This records actual habitation and work, beyond the earlier authorization of a program.",
+        "limitations": "This is a dated observation, not a claim that settlement began in February 1923. The locality point does not recreate individual allotments or imply equal access for all Native Hawaiians.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": [
+          "sovereignty-hawaii-territory"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "sovereignty-louisiana-transfer",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "New Orleans — transfer of lower Louisiana",
+      "culture": {
+        "id": "residents-of-louisiana-french-and-u-s-officials",
+        "name": "Residents of Louisiana; French and U.S. officials",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-louisiana-transfer-place",
+        "name": "The Cabildo, New Orleans",
+        "lon": -90.06,
+        "lat": 29.96,
+        "precision": "Approximate public locality, about 2 km uncertainty; not a surveyed building or incident footprint.",
+        "provenance": "Editorial locality anchor for the named place in the source; coordinates rounded for orientation. No historical boundary or detailed travel track is inferred."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1803,
+        "end": 1803,
+        "approximate": false,
+        "original": "1803-12-20",
+        "method": "Documented event or explicitly identified source window.",
+        "interpretation": "The point dates the New Orleans transfer, not the Paris signing, all transfers elsewhere, or the settlement of Indigenous land rights. A territorial claim is not a deed from every people living there.",
+        "eventDate": "1803-12-20"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "French and U.S. commissioners signed the transfer of lower Louisiana at the Cabildo on 20 December 1803. This local ceremony followed the purchase treaty negotiated in Paris.",
+          "status": "well-supported",
+          "explanation": "The point dates the New Orleans transfer, not the Paris signing, all transfers elsewhere, or the settlement of Indigenous land rights. A territorial claim is not a deed from every people living there.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Transfer ceremonies: 30 November and 20 December 1803",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "authors": "Louisiana State Museums",
+          "title": "Louisiana History — The Louisiana Purchase",
+          "url": "https://louisianastatemuseum.org/louisiana-history-louisiana-purchase",
+          "year": null,
+          "referenceType": "web-resource",
+          "id": "source",
+          "venue": "Louisiana State Museums",
+          "access": "Public source checked 2026-11-15; original factual summary and link, no source article or images redistributed."
+        }
+      ],
+      "review": {
+        "summary": "French and U.S. commissioners signed the transfer of lower Louisiana at the Cabildo on 20 December 1803. This local ceremony followed the purchase treaty negotiated in Paris.",
+        "limitations": "The point dates the New Orleans transfer, not the Paris signing, all transfers elsewhere, or the settlement of Indigenous land rights. A territorial claim is not a deed from every people living there.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": [
+          "louisiana-purchase"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "sovereignty-florida-signing",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Adams–Onís — a treaty, not a simple cash sale",
+      "culture": {
+        "id": "spanish-and-u-s-governments-peoples-of-florida",
+        "name": "Spanish and U.S. governments; peoples of Florida",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-florida-signing-place",
+        "name": "Washington, D.C.; government locality",
+        "lon": -77.04,
+        "lat": 38.9,
+        "precision": "Approximate public locality, about 2 km uncertainty; not a surveyed building or incident footprint.",
+        "provenance": "Editorial locality anchor for the named place in the source; coordinates rounded for orientation. No historical boundary or detailed travel track is inferred."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1819,
+        "end": 1819,
+        "approximate": false,
+        "original": "1819",
+        "method": "Documented event or explicitly identified source window.",
+        "interpretation": "The Washington point represents negotiation and signing, not occupation of Florida. The treaty did not establish Seminole consent; ratification and local transfer followed in 1821."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Spain and the United States agreed to the Adams–Onís treaty in 1819. The arrangement included Florida and a wider boundary settlement; the United States assumed claims rather than paying Spain a straightforward land price.",
+          "status": "well-supported",
+          "explanation": "The Washington point represents negotiation and signing, not occupation of Florida. The treaty did not establish Seminole consent; ratification and local transfer followed in 1821.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "1819 agreement, 1821 ratification and claims settlement",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "authors": "U.S. Department of State, Office of the Historian",
+          "title": "Acquisition of Florida: Treaty of Adams–Onís (1819) and Transcontinental Treaty (1821)",
+          "url": "https://history.state.gov/milestones/1801-1829/florida",
+          "year": null,
+          "referenceType": "web-resource",
+          "id": "source",
+          "venue": "U.S. Department of State, Office of the Historian",
+          "access": "Public source checked 2026-11-15; original factual summary and link, no source article or images redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Spain and the United States agreed to the Adams–Onís treaty in 1819. The arrangement included Florida and a wider boundary settlement; the United States assumed claims rather than paying Spain a straightforward land price.",
+        "limitations": "The Washington point represents negotiation and signing, not occupation of Florida. The treaty did not establish Seminole consent; ratification and local transfer followed in 1821.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": [
+          "sovereignty-florida-transfer"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "sovereignty-florida-transfer",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Pensacola — Spanish authority formally transferred",
+      "culture": {
+        "id": "residents-of-florida-spanish-and-u-s-officials",
+        "name": "Residents of Florida; Spanish and U.S. officials",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-florida-transfer-place",
+        "name": "Pensacola, Florida; ceremony locality",
+        "lon": -87.22,
+        "lat": 30.41,
+        "precision": "Approximate public locality, about 2 km uncertainty; not a surveyed building or incident footprint.",
+        "provenance": "Editorial locality anchor for the named place in the source; coordinates rounded for orientation. No historical boundary or detailed travel track is inferred."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1821,
+        "end": 1821,
+        "approximate": false,
+        "original": "1821-07-17",
+        "method": "Documented event or explicitly identified source window.",
+        "interpretation": "This is the Pensacola transfer date, not the earlier treaty signing or the date of every transfer elsewhere in Florida. Existing Native communities did not disappear when the flag changed.",
+        "eventDate": "1821-07-17"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Andrew Jackson was present at Pensacola on 17 July 1821 when the Spanish flag was lowered and the U.S. flag raised. The ceremony followed the treaty and its ratification.",
+          "status": "well-supported",
+          "explanation": "This is the Pensacola transfer date, not the earlier treaty signing or the date of every transfer elsewhere in Florida. Existing Native communities did not disappear when the flag changed.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "1818 occupation and 17 July 1821 transfer",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "authors": "National Park Service",
+          "title": "Andrew Jackson in Pensacola, Florida",
+          "url": "https://www.nps.gov/articles/jackson-pensacola.htm",
+          "year": null,
+          "referenceType": "web-resource",
+          "id": "source",
+          "venue": "National Park Service",
+          "access": "Public source checked 2026-11-15; original factual summary and link, no source article or images redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Andrew Jackson was present at Pensacola on 17 July 1821 when the Spanish flag was lowered and the U.S. flag raised. The ceremony followed the treaty and its ratification.",
+        "limitations": "This is the Pensacola transfer date, not the earlier treaty signing or the date of every transfer elsewhere in Florida. Existing Native communities did not disappear when the flag changed.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": [
+          "sovereignty-florida-signing"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "sovereignty-gadsden-signing",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Gadsden agreement — the initial terms",
+      "culture": {
+        "id": "mexican-and-u-s-governments-borderland-communities",
+        "name": "Mexican and U.S. governments; borderland communities",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-gadsden-signing-place",
+        "name": "Mexico City; negotiating locality",
+        "lon": -99.13,
+        "lat": 19.43,
+        "precision": "Approximate public locality, about 2 km uncertainty; not a surveyed building or incident footprint.",
+        "provenance": "Editorial locality anchor for the named place in the source; coordinates rounded for orientation. No historical boundary or detailed travel track is inferred."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1853,
+        "end": 1853,
+        "approximate": false,
+        "original": "1853-12-30",
+        "method": "Documented event or explicitly identified source window.",
+        "interpretation": "Mexico City locates the agreement, not the territory affected. The map does not draw a border from a modern outline or infer Indigenous agreement to the governments’ terms.",
+        "eventDate": "1853-12-30"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The initial Gadsden agreement was signed on 30 December 1853. Its proposed area and payment changed before the final agreement; a planned southern railroad was a negotiating motive, not an operating line.",
+          "status": "well-supported",
+          "explanation": "Mexico City locates the agreement, not the territory affected. The map does not draw a border from a modern outline or infer Indigenous agreement to the governments’ terms.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "30 December 1853 agreement; Senate revision; Santa Anna’s 8 June 1854 signature",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "authors": "U.S. Department of State, Office of the Historian",
+          "title": "Gadsden Purchase, 1853–1854",
+          "url": "https://history.state.gov/milestones/1830-1860/gadsden-purchase",
+          "year": null,
+          "referenceType": "web-resource",
+          "id": "source",
+          "venue": "U.S. Department of State, Office of the Historian",
+          "access": "Public source checked 2026-11-15; original factual summary and link, no source article or images redistributed."
+        }
+      ],
+      "review": {
+        "summary": "The initial Gadsden agreement was signed on 30 December 1853. Its proposed area and payment changed before the final agreement; a planned southern railroad was a negotiating motive, not an operating line.",
+        "limitations": "Mexico City locates the agreement, not the territory affected. The map does not draw a border from a modern outline or infer Indigenous agreement to the governments’ terms.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": [
+          "sovereignty-gadsden-revised"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "sovereignty-gadsden-revised",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Gadsden agreement — revised terms accepted",
+      "culture": {
+        "id": "mexican-and-u-s-governments-borderland-communities",
+        "name": "Mexican and U.S. governments; borderland communities",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-gadsden-revised-place",
+        "name": "Mexico City; government locality",
+        "lon": -99.13,
+        "lat": 19.43,
+        "precision": "Approximate public locality, about 2 km uncertainty; not a surveyed building or incident footprint.",
+        "provenance": "Editorial locality anchor for the named place in the source; coordinates rounded for orientation. No historical boundary or detailed travel track is inferred."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1854,
+        "end": 1854,
+        "approximate": false,
+        "original": "1854-06-08",
+        "method": "Documented event or explicitly identified source window.",
+        "interpretation": "This dates the Mexican signature on revised terms, not construction of the proposed railway or a single day of local border enforcement. The region’s communities had histories independent of the transaction.",
+        "eventDate": "1854-06-08"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "After U.S. Senate revisions, Santa Anna signed the revised Gadsden treaty on 8 June 1854. The final agreement reduced the area and payment to $10 million.",
+          "status": "well-supported",
+          "explanation": "This dates the Mexican signature on revised terms, not construction of the proposed railway or a single day of local border enforcement. The region’s communities had histories independent of the transaction.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "30 December 1853 agreement; Senate revision; Santa Anna’s 8 June 1854 signature",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "authors": "U.S. Department of State, Office of the Historian",
+          "title": "Gadsden Purchase, 1853–1854",
+          "url": "https://history.state.gov/milestones/1830-1860/gadsden-purchase",
+          "year": null,
+          "referenceType": "web-resource",
+          "id": "source",
+          "venue": "U.S. Department of State, Office of the Historian",
+          "access": "Public source checked 2026-11-15; original factual summary and link, no source article or images redistributed."
+        }
+      ],
+      "review": {
+        "summary": "After U.S. Senate revisions, Santa Anna signed the revised Gadsden treaty on 8 June 1854. The final agreement reduced the area and payment to $10 million.",
+        "limitations": "This dates the Mexican signature on revised terms, not construction of the proposed railway or a single day of local border enforcement. The region’s communities had histories independent of the transaction.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": [
+          "sovereignty-gadsden-signing"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "sovereignty-alaska-signing",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Alaska treaty — governments agree in Washington",
+      "culture": {
+        "id": "alaska-native-peoples-russian-and-u-s-governments",
+        "name": "Alaska Native peoples; Russian and U.S. governments",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-alaska-signing-place",
+        "name": "Washington, D.C.; government locality",
+        "lon": -77.04,
+        "lat": 38.9,
+        "precision": "Approximate public locality, about 2 km uncertainty; not a surveyed building or incident footprint.",
+        "provenance": "Editorial locality anchor for the named place in the source; coordinates rounded for orientation. No historical boundary or detailed travel track is inferred."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1867,
+        "end": 1867,
+        "approximate": false,
+        "original": "1867-03-30",
+        "method": "Documented event or explicitly identified source window.",
+        "interpretation": "Signing, exchange of ratifications on 20 June, the Sitka ceremony in October and payment in 1868 are distinct. Russia’s asserted rights were not a sale agreed to by every Indigenous landholder.",
+        "eventDate": "1867-03-30"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The United States and Russia signed the Alaska cession treaty in Washington on 30 March 1867. Article III excluded an Indigenous category from its citizenship promise; no Alaska Native nation was a signatory.",
+          "status": "well-supported",
+          "explanation": "Signing, exchange of ratifications on 20 June, the Sitka ceremony in October and payment in 1868 are distinct. Russia’s asserted rights were not a sale agreed to by every Indigenous landholder.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Treaty Articles III–VII, signature and ratification dates; check dated 1 August 1868",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "authors": "U.S. and Russian governments; National Archives",
+          "title": "Treaty of cession and check for the purchase of Alaska",
+          "url": "https://www.archives.gov/milestone-documents/check-for-the-purchase-of-alaska",
+          "year": 1867,
+          "referenceType": "web-resource",
+          "id": "source",
+          "venue": "U.S. and Russian governments; National Archives",
+          "access": "Public source checked 2026-11-15; original factual summary and link, no source article or images redistributed."
+        }
+      ],
+      "review": {
+        "summary": "The United States and Russia signed the Alaska cession treaty in Washington on 30 March 1867. Article III excluded an Indigenous category from its citizenship promise; no Alaska Native nation was a signatory.",
+        "limitations": "Signing, exchange of ratifications on 20 June, the Sitka ceremony in October and payment in 1868 are distinct. Russia’s asserted rights were not a sale agreed to by every Indigenous landholder.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": [
+          "sovereignty-alaska-transfer",
+          "sovereignty-alaska-payment"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "sovereignty-alaska-transfer",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Sitka — the Alaska transfer ceremony",
+      "culture": {
+        "id": "tlingit-communities-russian-and-u-s-officials",
+        "name": "Tlingit communities; Russian and U.S. officials",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-alaska-transfer-place",
+        "name": "Castle Hill, Sitka",
+        "lon": -135.34,
+        "lat": 57.05,
+        "precision": "Approximate public locality, about 2 km uncertainty; not a surveyed building or incident footprint.",
+        "provenance": "Editorial locality anchor for the named place in the source; coordinates rounded for orientation. No historical boundary or detailed travel track is inferred."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1867,
+        "end": 1867,
+        "approximate": false,
+        "original": "1867-10-18",
+        "method": "Documented event or explicitly identified source window.",
+        "interpretation": "The point locates the ceremony, not a survey of all Russian or U.S. control. Changing flags did not settle Indigenous ownership or constitute Native consent.",
+        "eventDate": "1867-10-18"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Russian and U.S. officials held the formal transfer ceremony at Castle Hill in Sitka on 18 October 1867. This was an occupied colonial center in Tlingit country, not an empty landscape awaiting a government.",
+          "status": "well-supported",
+          "explanation": "The point locates the ceremony, not a survey of all Russian or U.S. control. Changing flags did not settle Indigenous ownership or constitute Native consent.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Castle Hill: 18 October 1867 ceremony and earlier Russian-American Company center",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "authors": "National Park Service",
+          "title": "American Flag Raising Site National Historic Landmark",
+          "url": "https://home.nps.gov/places/american-flag-raising-site.htm",
+          "year": null,
+          "referenceType": "web-resource",
+          "id": "source",
+          "venue": "National Park Service",
+          "access": "Public source checked 2026-11-15; original factual summary and link, no source article or images redistributed."
+        }
+      ],
+      "review": {
+        "summary": "Russian and U.S. officials held the formal transfer ceremony at Castle Hill in Sitka on 18 October 1867. This was an occupied colonial center in Tlingit country, not an empty landscape awaiting a government.",
+        "limitations": "The point locates the ceremony, not a survey of all Russian or U.S. control. Changing flags did not settle Indigenous ownership or constitute Native consent.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": [
+          "sovereignty-alaska-signing",
+          "sovereignty-alaska-payment"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "sovereignty-alaska-payment",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Alaska payment — the check follows in 1868",
+      "culture": {
+        "id": "russian-and-u-s-governments-alaska-native-peoples",
+        "name": "Russian and U.S. governments; Alaska Native peoples",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-alaska-payment-place",
+        "name": "Washington, D.C.; government locality",
+        "lon": -77.04,
+        "lat": 38.9,
+        "precision": "Approximate public locality, about 2 km uncertainty; not a surveyed building or incident footprint.",
+        "provenance": "Editorial locality anchor for the named place in the source; coordinates rounded for orientation. No historical boundary or detailed travel track is inferred."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1868,
+        "end": 1868,
+        "approximate": false,
+        "original": "1868-08-01",
+        "method": "Documented event or explicitly identified source window.",
+        "interpretation": "Payment to one government is not evidence that Indigenous people sold their lands. The check’s date must not be substituted for the 1867 signing or transfer.",
+        "eventDate": "1868-08-01"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The U.S. Treasury check for the $7.2 million Alaska payment was issued on 1 August 1868. The surviving financial document dates a payment to Russia after the treaty and transfer ceremony.",
+          "status": "well-supported",
+          "explanation": "Payment to one government is not evidence that Indigenous people sold their lands. The check’s date must not be substituted for the 1867 signing or transfer.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Treaty Articles III–VII, signature and ratification dates; check dated 1 August 1868",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "authors": "U.S. and Russian governments; National Archives",
+          "title": "Treaty of cession and check for the purchase of Alaska",
+          "url": "https://www.archives.gov/milestone-documents/check-for-the-purchase-of-alaska",
+          "year": 1867,
+          "referenceType": "web-resource",
+          "id": "source",
+          "venue": "U.S. and Russian governments; National Archives",
+          "access": "Public source checked 2026-11-15; original factual summary and link, no source article or images redistributed."
+        }
+      ],
+      "review": {
+        "summary": "The U.S. Treasury check for the $7.2 million Alaska payment was issued on 1 August 1868. The surviving financial document dates a payment to Russia after the treaty and transfer ceremony.",
+        "limitations": "Payment to one government is not evidence that Indigenous people sold their lands. The check’s date must not be substituted for the 1867 signing or transfer.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": [
+          "sovereignty-alaska-signing",
+          "sovereignty-alaska-transfer"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "sovereignty-virgin-islands-transfer",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Danish West Indies — transfer to the United States",
+      "culture": {
+        "id": "virgin-islanders-danish-and-u-s-governments",
+        "name": "Virgin Islanders; Danish and U.S. governments",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-virgin-islands-transfer-place",
+        "name": "Charlotte Amalie, St. Thomas; administrative anchor",
+        "lon": -64.93,
+        "lat": 18.34,
+        "precision": "Approximate public locality, about 2 km uncertainty; not a surveyed building or incident footprint.",
+        "provenance": "Editorial locality anchor for the named place in the source; coordinates rounded for orientation. No historical boundary or detailed travel track is inferred."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1917,
+        "end": 1917,
+        "approximate": false,
+        "original": "1917-03-31",
+        "method": "Documented event or explicitly identified source window.",
+        "interpretation": "The point at Charlotte Amalie anchors the island group’s transfer, not every ceremony or a vote of all islanders. Treaty ratification, transfer and later citizenship legislation are separate dates.",
+        "eventDate": "1917-03-31"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The Danish West Indies were transferred to the United States on 31 March 1917 following the 1916 treaty. The transaction changed government over inhabited islands; citizenship and political status had their own later history.",
+          "status": "well-supported",
+          "explanation": "The point at Charlotte Amalie anchors the island group’s transfer, not every ceremony or a vote of all islanders. Treaty ratification, transfer and later citizenship legislation are separate dates.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Historical background: treaty, ratification and flags raised 31 March 1917",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "authors": "National Archives",
+          "title": "Guide to U.S. Virgin Islands Records",
+          "url": "https://www.archives.gov/philadelphia/finding-aids/us-virgin-islands",
+          "year": null,
+          "referenceType": "web-resource",
+          "id": "source",
+          "venue": "National Archives",
+          "access": "Public source checked 2026-11-15; original factual summary and link, no source article or images redistributed."
+        }
+      ],
+      "review": {
+        "summary": "The Danish West Indies were transferred to the United States on 31 March 1917 following the 1916 treaty. The transaction changed government over inhabited islands; citizenship and political status had their own later history.",
+        "limitations": "The point at Charlotte Amalie anchors the island group’s transfer, not every ceremony or a vote of all islanders. Treaty ratification, transfer and later citizenship legislation are separate dates.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": []
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "sovereignty-cootamundra",
+      "revision": 1,
+      "type": "event",
+      "title": "Cootamundra — girls removed from their families",
+      "culture": {
+        "id": "sovereignty-cootamundra-people",
+        "name": "Aboriginal girls from multiple First Nations",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-cootamundra-place",
+        "name": "Former Cootamundra Girls Home locality, New South Wales",
+        "lon": 148.05,
+        "lat": -34.64,
+        "precision": "Public named locality, about 3 km uncertainty; no individual building or incident footprint.",
+        "provenance": "Editorial rounded locality for the source’s named place. A historical institution is not located at its modern advocacy organization’s office."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1912,
+        "end": 1934,
+        "approximate": false,
+        "original": "1912–1934",
+        "method": "Institutional/community chronology; the date meaning is stated separately.",
+        "interpretation": "The displayed 1912–1934 window follows the survivor organization’s institutional chronology and stops at the atlas cutoff; 1934 is not the closure. Other administrative records begin in 1911. No date is assigned to every individual removal."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Coota Girls Aboriginal Corporation identifies the Cootamundra institution’s 1912–1969 period and its role in holding girls forcibly removed from their families under New South Wales policies.",
+          "status": "well-supported",
+          "explanation": "The displayed 1912–1934 window follows the survivor organization’s institutional chronology and stops at the atlas cutoff; 1934 is not the closure. Other administrative records begin in 1911. No date is assigned to every individual removal.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Coota Girls and Our History",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "authors": "Coota Girls Aboriginal Corporation",
+          "title": "Coota Girls: institution and survivor history",
+          "year": null,
+          "venue": "Coota Girls Aboriginal Corporation",
+          "url": "https://www.cootagirls.org.au/",
+          "referenceType": "web-resource",
+          "access": "Institutional or community source inspected 2026-11-15; original concise summary and link."
+        }
+      ],
+      "review": {
+        "summary": "Coota Girls Aboriginal Corporation identifies the Cootamundra institution’s 1912–1969 period and its role in holding girls forcibly removed from their families under New South Wales policies.",
+        "limitations": "The displayed 1912–1934 window follows the survivor organization’s institutional chronology and stops at the atlas cutoff; 1934 is not the closure. Other administrative records begin in 1911. No date is assigned to every individual removal.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "forced-removal",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            148.05,
+            -34.64
+          ]
+        },
+        "precision": "Public named locality, about 3 km uncertainty; no individual building or incident footprint.",
+        "provenance": "The displayed 1912–1934 window follows the survivor organization’s institutional chronology and stops at the atlas cutoff; 1934 is not the closure. Other administrative records begin in 1911. No date is assigned to every individual removal."
+      }
+    },
+    {
+      "id": "sovereignty-kinchela",
+      "revision": 1,
+      "type": "event",
+      "title": "Kinchela — children held under forced assimilation",
+      "culture": {
+        "id": "sovereignty-kinchela-people",
+        "name": "Aboriginal children from multiple First Nations; Dunghutti country",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-kinchela-place",
+        "name": "Former Kinchela Boys Home locality, New South Wales",
+        "lon": 152.98,
+        "lat": -30.99,
+        "precision": "Public named locality, about 3 km uncertainty; no individual building or incident footprint.",
+        "provenance": "Editorial rounded locality for the source’s named place. A historical institution is not located at its modern advocacy organization’s office."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1924,
+        "end": 1934,
+        "approximate": false,
+        "original": "1924–1934",
+        "method": "Institutional/community chronology; the date meaning is stated separately.",
+        "interpretation": "The displayed window stops at 1934, not the institution’s closure in 1970. It describes the institution, not the length of any child’s stay; some girls were also held in its first year."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The survivor-led Kinchela Boys Home Aboriginal Corporation dates the institution to 1924–1970 and documents children forcibly removed from families and subjected to an assimilation regime.",
+          "status": "well-supported",
+          "explanation": "The displayed window stops at 1934, not the institution’s closure in 1970. It describes the institution, not the length of any child’s stay; some girls were also held in its first year.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "The Boys Home; History of Kinchela Boys Home",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "authors": "Kinchela Boys Home Aboriginal Corporation",
+          "title": "History of Kinchela Boys Home",
+          "year": null,
+          "venue": "Kinchela Boys Home Aboriginal Corporation",
+          "url": "https://kinchelaboyshome.org.au/kinchela-boys-home/history-of-kinchela-boys-home/",
+          "referenceType": "web-resource",
+          "access": "Institutional or community source inspected 2026-11-15; original concise summary and link."
+        }
+      ],
+      "review": {
+        "summary": "The survivor-led Kinchela Boys Home Aboriginal Corporation dates the institution to 1924–1970 and documents children forcibly removed from families and subjected to an assimilation regime.",
+        "limitations": "The displayed window stops at 1934, not the institution’s closure in 1970. It describes the institution, not the length of any child’s stay; some girls were also held in its first year.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "forced-removal",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            152.98,
+            -30.99
+          ]
+        },
+        "precision": "Public named locality, about 3 km uncertainty; no individual building or incident footprint.",
+        "provenance": "The displayed window stops at 1934, not the institution’s closure in 1970. It describes the institution, not the length of any child’s stay; some girls were also held in its first year."
+      }
+    },
+    {
+      "id": "sovereignty-palm-island",
+      "revision": 1,
+      "type": "event",
+      "title": "Palm Island — the 1918 transfer into a removal settlement",
+      "culture": {
+        "id": "sovereignty-palm-island-people",
+        "name": "Manburra country; Aboriginal and Torres Strait Islander people removed to Palm Island",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-palm-island-place",
+        "name": "Palm Island settlement locality, Queensland",
+        "lon": 146.58,
+        "lat": -18.73,
+        "precision": "Public named locality, about 3 km uncertainty; no individual building or incident footprint.",
+        "provenance": "Editorial rounded locality for the source’s named place. A historical institution is not located at its modern advocacy organization’s office."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1918,
+        "end": 1918,
+        "approximate": false,
+        "original": "1918–1918",
+        "method": "Institutional/community chronology; the date meaning is stated separately.",
+        "interpretation": "1918 dates this transfer, not the reserve’s gazettal in 1914 or the first Aboriginal habitation of Palm Island. The point does not trace the journey or imply that all later removals occurred that year."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "After the 1918 cyclone destroyed Hull River Mission, its remaining residents were sent to Palm Island. Queensland’s historical account places this transfer within a settlement system established for people forcibly removed from across the state.",
+          "status": "well-supported",
+          "explanation": "1918 dates this transfer, not the reserve’s gazettal in 1914 or the first Aboriginal habitation of Palm Island. The point does not trace the journey or imply that all later removals occurred that year.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "Palm Island Aboriginal settlement: 1914 reserve and 1918 transfer",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "authors": "Queensland Government",
+          "title": "Palm Island community history",
+          "year": null,
+          "venue": "Queensland Government",
+          "url": "https://www.qld.gov.au/firstnations/cultural-awareness-heritage-arts/community-histories/community-histories-n-p/community-histories-palm-island",
+          "referenceType": "web-resource",
+          "access": "Institutional or community source inspected 2026-11-15; original concise summary and link."
+        }
+      ],
+      "review": {
+        "summary": "After the 1918 cyclone destroyed Hull River Mission, its remaining residents were sent to Palm Island. Queensland’s historical account places this transfer within a settlement system established for people forcibly removed from across the state.",
+        "limitations": "1918 dates this transfer, not the reserve’s gazettal in 1914 or the first Aboriginal habitation of Palm Island. The point does not trace the journey or imply that all later removals occurred that year.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": []
+      },
+      "overlay": {
+        "kind": "forced-removal",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            146.58,
+            -18.73
+          ]
+        },
+        "precision": "Public named locality, about 3 km uncertainty; no individual building or incident footprint.",
+        "provenance": "1918 dates this transfer, not the reserve’s gazettal in 1914 or the first Aboriginal habitation of Palm Island. The point does not trace the journey or imply that all later removals occurred that year."
+      }
+    },
+    {
+      "id": "sovereignty-parihaka-community",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Parihaka — a community of resistance and refuge",
+      "culture": {
+        "id": "sovereignty-parihaka-community-people",
+        "name": "Parihaka Māori community",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-parihaka-community-place",
+        "name": "Parihaka, Taranaki",
+        "lon": 173.84,
+        "lat": -39.29,
+        "precision": "Public named locality, about 3 km uncertainty; no individual building or incident footprint.",
+        "provenance": "Editorial rounded locality for the source’s named place. A historical institution is not located at its modern advocacy organization’s office."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1870,
+        "end": 1870,
+        "approximate": false,
+        "original": "1870–1870",
+        "method": "Institutional/community chronology; the date meaning is stated separately.",
+        "interpretation": "1870 is an observation of an established community, not a precise founding year or a claim that Māori settlement in Taranaki began then."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Parihaka’s community history describes a substantial village by 1870, led by Te Whiti o Rongomai and Tohu Kākahi and offering refuge amid land confiscations.",
+          "status": "well-supported",
+          "explanation": "1870 is an observation of an established community, not a precise founding year or a claim that Māori settlement in Taranaki began then.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "War, Confiscation & Invasion; The Visionary Leaders",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "authors": "Parihaka Papakāinga",
+          "title": "Parihaka — History",
+          "year": null,
+          "venue": "Parihaka Papakāinga",
+          "url": "https://parihaka.maori.nz/history/",
+          "referenceType": "web-resource",
+          "access": "Institutional or community source inspected 2026-11-15; original concise summary and link."
+        }
+      ],
+      "review": {
+        "summary": "Parihaka’s community history describes a substantial village by 1870, led by Te Whiti o Rongomai and Tohu Kākahi and offering refuge amid land confiscations.",
+        "limitations": "1870 is an observation of an established community, not a precise founding year or a claim that Māori settlement in Taranaki began then.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": [
+          "sovereignty-parihaka-prisoners",
+          "sovereignty-parihaka-invasion"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "sovereignty-parihaka-prisoners",
+      "revision": 1,
+      "type": "event",
+      "title": "Parihaka protestors — exile to South Island prisons",
+      "culture": {
+        "id": "sovereignty-parihaka-prisoners-people",
+        "name": "Parihaka Māori protestors",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-parihaka-prisoners-place",
+        "name": "Parihaka; community-of-origin anchor",
+        "lon": 173.84,
+        "lat": -39.29,
+        "precision": "Public named locality, about 3 km uncertainty; no individual building or incident footprint.",
+        "provenance": "Editorial rounded locality for the source’s named place. A historical institution is not located at its modern advocacy organization’s office."
+      },
+      "destination": {
+        "id": "sovereignty-parihaka-prisoners-destination",
+        "name": "Dunedin; one prison destination locality",
+        "lon": 170.5,
+        "lat": -45.87,
+        "precision": "Public named locality, about 3 km uncertainty; no individual building or incident footprint.",
+        "provenance": "Editorial rounded locality for the source’s named place. A historical institution is not located at its modern advocacy organization’s office."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1880,
+        "end": 1880,
+        "approximate": false,
+        "original": "1880–1880",
+        "method": "Institutional/community chronology; the date meaning is stated separately.",
+        "interpretation": "This is a documented stage in imprisonment that began before the 1881 invasion. The line joins Parihaka and Dunedin schematically; it omits intermediate custody and is not the route of every prisoner."
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "By September 1880, men and youths associated with the Parihaka resistance had been exiled to South Island prisons and forced into infrastructure labor. Dunedin is one documented destination.",
+          "status": "well-supported",
+          "explanation": "This is a documented stage in imprisonment that began before the 1881 invasion. The line joins Parihaka and Dunedin schematically; it omits intermediate custody and is not the route of every prisoner.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "1880: Imprisonment and Exile",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "authors": "Parihaka Papakāinga",
+          "title": "Parihaka — History",
+          "year": null,
+          "venue": "Parihaka Papakāinga",
+          "url": "https://parihaka.maori.nz/history/",
+          "referenceType": "web-resource",
+          "access": "Institutional or community source inspected 2026-11-15; original concise summary and link."
+        }
+      ],
+      "review": {
+        "summary": "By September 1880, men and youths associated with the Parihaka resistance had been exiled to South Island prisons and forced into infrastructure labor. Dunedin is one documented destination.",
+        "limitations": "This is a documented stage in imprisonment that began before the 1881 invasion. The line joins Parihaka and Dunedin schematically; it omits intermediate custody and is not the route of every prisoner.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": [
+          "sovereignty-parihaka-community",
+          "sovereignty-parihaka-invasion"
+        ]
+      },
+      "overlay": {
+        "kind": "forced-removal",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              173.84,
+              -39.29
+            ],
+            [
+              170.5,
+              -45.87
+            ]
+          ]
+        },
+        "precision": "Public named locality, about 3 km uncertainty; no individual building or incident footprint.",
+        "provenance": "This is a documented stage in imprisonment that began before the 1881 invasion. The line joins Parihaka and Dunedin schematically; it omits intermediate custody and is not the route of every prisoner.",
+        "direction": "forward"
+      }
+    },
+    {
+      "id": "sovereignty-parihaka-invasion",
+      "revision": 1,
+      "type": "event",
+      "title": "Parihaka — invasion, destruction and expulsion",
+      "culture": {
+        "id": "sovereignty-parihaka-invasion-people",
+        "name": "Parihaka Māori community; colonial government forces",
+        "kind": "people",
+        "color": "#80623d"
+      },
+      "location": {
+        "id": "sovereignty-parihaka-invasion-place",
+        "name": "Parihaka, Taranaki",
+        "lon": 173.84,
+        "lat": -39.29,
+        "precision": "Public named locality, about 3 km uncertainty; no individual building or incident footprint.",
+        "provenance": "Editorial rounded locality for the source’s named place. A historical institution is not located at its modern advocacy organization’s office."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1881,
+        "end": 1881,
+        "approximate": false,
+        "original": "1881-11-05",
+        "method": "Institutional/community chronology; the date meaning is stated separately.",
+        "interpretation": "The date marks the invasion; destruction and expulsion unfolded afterwards. This is distinct from the earlier prisoners’ exile. No tactical front or complete casualty count is supplied.",
+        "eventDate": "1881-11-05"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Government forces invaded Parihaka on 5 November 1881, arrested leaders and expelled residents. Homes and food supplies were destroyed in the aftermath of nonviolent resistance.",
+          "status": "well-supported",
+          "explanation": "The date marks the invasion; destruction and expulsion unfolded afterwards. This is distinct from the earlier prisoners’ exile. No tactical front or complete casualty count is supplied.",
+          "support": [
+            {
+              "sourceId": "source",
+              "locator": "5 November 1881 invasion and its aftermath",
+              "stance": "supports",
+              "note": "Supports this event or observation; dates of other stages are kept separate."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "source",
+          "authors": "Manatū Taonga — Ministry for Culture and Heritage",
+          "title": "Te rā o te pāhua — invasion of pacifist settlement at Parihaka",
+          "year": null,
+          "venue": "Manatū Taonga — Ministry for Culture and Heritage",
+          "url": "https://nzhistory.govt.nz/te-ra-o-te-pahua-invasion-pacifist-settlement-parihaka",
+          "referenceType": "web-resource",
+          "access": "Institutional or community source inspected 2026-11-15; original concise summary and link."
+        }
+      ],
+      "review": {
+        "summary": "Government forces invaded Parihaka on 5 November 1881, arrested leaders and expelled residents. Homes and food supplies were destroyed in the aftermath of nonviolent resistance.",
+        "limitations": "The date marks the invasion; destruction and expulsion unfolded afterwards. This is distinct from the earlier prisoners’ exile. No tactical front or complete casualty count is supplied.",
+        "discussion": "Political claims, actual occupation, individual experiences and Indigenous consent are separate questions. A locality marker is not a territorial boundary.",
+        "provenance": "Land and sovereignty expansion; archival and community checks following Consensus Deep discovery.",
+        "reviewedAt": "2026-11-15",
+        "history": [
+          "Added with a dated claim, public locality and explicit shared/topic membership."
+        ],
+        "relatedIds": [
+          "sovereignty-parihaka-community",
+          "sovereignty-parihaka-prisoners"
+        ]
+      },
+      "overlay": {
+        "kind": "violence",
+        "basis": "schematic",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            173.84,
+            -39.29
+          ]
+        },
+        "precision": "Public named locality, about 3 km uncertainty; no individual building or incident footprint.",
+        "provenance": "The date marks the invasion; destruction and expulsion unfolded afterwards. This is distinct from the earlier prisoners’ exile. No tactical front or complete casualty count is supplied."
+      }
+    }
+  ]
+}
