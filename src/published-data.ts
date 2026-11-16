@@ -11,6 +11,10 @@ import atlantic from '../data/atlantic-expansion-records.json';
 import localPlaces from '../data/local-places-expansion-records.json';
 import sharedContext from '../data/shared-context-expansion-records.json';
 import hawaiiLocal from '../data/hawaii-local-expansion-records.json';
+import cities from '../data/city-expansion-records.json';
+import conflicts from '../data/conflict-expansion-records.json';
+import northern from '../data/northern-expansion-records.json';
+import topicEvidence from '../data/topic-evidence-records.json';
 import { version as appVersion } from "../package.json";
 import type { Dataset, EvidenceRecord } from "./model";
 import { validateDataset } from "./validation";
@@ -46,5 +50,6 @@ export const dataset = publishedDataset(
     ...atlantic.records,
     ...localPlaces.records,
     ...hawaiiLocal.records, ...sharedContext.records,
+    ...cities.records, ...conflicts.records, ...northern.records, ...topicEvidence.records,
   ] as EvidenceRecord[],
 );

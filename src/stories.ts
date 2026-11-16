@@ -1,5 +1,6 @@
 import type { MapScope } from "./map-projection";
 import { expansionStories } from './expansion-stories';
+import { northernStory } from './northern-story';
 
 export interface StoryScene {
   id: string;
@@ -305,4 +306,5 @@ export const stories: Story[] = [
     ],
   },
   ...expansionStories,
+  northernStory,
 ];

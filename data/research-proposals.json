@@ -3249,7 +3249,7 @@
       "baseRecord": null,
       "record": {
         "id": "south-machupicchu-ams-occupation",
-        "revision": 3,
+        "revision": 4,
         "type": "occurrence",
         "title": "Machu Picchu: occupation estimate from AMS-dated burials",
         "culture": {
@@ -3260,11 +3260,11 @@
         },
         "location": {
           "id": "south-machu-picchu",
-          "name": "Machu Picchu sanctuary, public property proxy",
-          "lon": -72.533443,
-          "lat": -13.184934,
-          "precision": "Public World Heritage property reference point, rounded to six decimal degrees; site-area proxy, not an excavation coordinate or occupied-area boundary.",
-          "provenance": "UNESCO property 274 geographical metadata: S13 11 5.762 W72 32 0.395; DMS converted to decimal degrees. Sanctuary reference point, not a cemetery coordinate."
+          "name": "Machu Picchu archaeological city",
+          "lon": -72.54465,
+          "lat": -13.16493,
+          "precision": "Approximate city-center anchor derived from the published city delimitation; not a specific grave or building.",
+          "provenance": "DDC Cusco, 2014 draft visitor-use regulation, city delimitation table, WGS84 UTM18S vertices 1–31 averaged and converted to longitude/latitude. Vertex 32 excluded because its easting is inconsistent with the listed distances. https://www.culturacusco.gob.pe/documentos/comunicados/R.D._N%C2%B0_-2014-DDC-CUS-MC.PDF"
         },
         "destination": null,
         "routeKind": "schematic",
@@ -3300,15 +3300,21 @@
           },
           {
             "id": "location",
-            "text": "Machu Picchu’s site-area marker uses UNESCO’s public sanctuary reference point on the eastern Andean slopes.",
+            "text": "Machu Picchu is located at the archaeological city rather than at a broad sanctuary proxy.",
             "status": "well-supported",
-            "explanation": "The cited source explicitly states this bounded finding; this assessment does not certify the proposal.",
+            "explanation": "City-area reference derived from vertices 1–31 of the public 2014 DDC Cusco draft visitor-regulation plan, transformed from WGS84 UTM18S. One inconsistent vertex was excluded; no building footprint or legal boundary is claimed.",
             "support": [
               {
-                "sourceId": "south-unesco-machupicchu",
+                "sourceId": "city-geography-2014",
                 "stance": "supports",
-                "locator": "Description; property 274 geographical metadata",
-                "note": "Supports sanctuary setting and coordinates; does not locate the dated cemeteries."
+                "locator": "Draft plan, city delimitation vertices 1–31",
+                "note": "Public city geography only; the draft is not cited as an enacted regulation."
+              },
+              {
+                "sourceId": "south-unesco-machupicchu",
+                "stance": "context",
+                "locator": "Sanctuary listing",
+                "note": "Earlier broad sanctuary reference, retained for context; the displayed anchor now uses the city plan."
               }
             ]
           }
@@ -3351,17 +3357,28 @@
             "volume": "59",
             "issue": "1",
             "pages": "117–140"
+          },
+          {
+            "id": "city-geography-2014",
+            "authors": "Dirección Desconcentrada de Cultura de Cusco",
+            "title": "Draft regulation: Ciudad Inca de Machupicchu delimitation",
+            "year": 2014,
+            "venue": "Ministerio de Cultura, Perú",
+            "url": "https://www.culturacusco.gob.pe/documentos/comunicados/R.D._N%C2%B0_-2014-DDC-CUS-MC.PDF",
+            "access": "Public draft document used for geographic reference only; no legal status inferred.",
+            "referenceType": "web-resource"
           }
         ],
         "review": {
           "summary": "AMS dates from burials around Machu Picchu led Burger and colleagues to estimate activity around 1420–1532 CE. The result places the beginning earlier than a chronology based chiefly on colonial texts.",
-          "limitations": "The full paper and sample-level results were not accessed. Burial dates constrain human activity, but are not direct dates for every building or for the beginning of construction. The existing UNESCO point is the public reference of the 38,160.87 ha sanctuary, not an exact coordinate of the llaqta’s occupied urban core. Keep its honest sanctuary label until a verified city-specific institutional GIS point is acquired.",
+          "limitations": "The full paper and sample-level results were not accessed. Burial dates constrain human activity, but are not direct dates for every building or for the beginning of construction. The map now uses a city-area reference from the public 2014 DDC Cusco draft plan; it is not a surveyed individual building location.",
           "discussion": "The radiocarbon estimate and text-based imperial chronology use different evidence. The earlier beginning is retained as the study’s interpretation, without independently revising Pachacuti’s accession date.",
           "provenance": "Prepared by Codex research assistant from the cited material actually accessed on 2026-10-28. Bibliography, date semantics, public location provenance, and claim mappings checked. Ready denotes field completeness for human review, not expert certification.",
           "reviewedAt": "2026-10-28",
           "history": [
             "Suggested via bulk workbook; not reviewed.",
-            "2026-10-28: supplementary source and interpretation context added."
+            "2026-10-28: supplementary source and interpretation context added.",
+            "Replaced sanctuary-wide proxy with public archaeological-city anchor."
           ],
           "relatedIds": []
         }
@@ -4345,7 +4362,7 @@
       "baseRecord": null,
       "record": {
         "id": "south-overlay-templomayor-obsidian",
-        "revision": 1,
+        "revision": 2,
         "type": "event",
         "title": "Templo Mayor: multi-source obsidian supply and exchange",
         "culture": {
@@ -4383,15 +4400,15 @@
           },
           {
             "id": "spatial-limits",
-            "text": "No spatial geometry is supplied. The record remains in the evidence table and its detailed review; it is not drawn as a route or affected area.",
+            "text": "The point locates the public Templo Mayor site where the analyzed assemblage was recovered; no transport route is reconstructed.",
             "status": "well-supported",
-            "explanation": "Matadamas-Gomora et al. 2025, source assignments and diachronic archaeological contexts; insufficient evidence for route geometry.",
+            "explanation": "Known public site geography and unknown paths of exchange are separate questions.",
             "support": [
               {
-                "sourceId": "south-overlay-matadamas-2025",
-                "stance": "context",
-                "locator": "Abstract; pp. 3–8, Results and Discussion; Table 2",
-                "note": "Editorial mapping limitation: this source is context for the event or connection, not a source for coordinates. No spatial feature has been reconstructed."
+                "sourceId": "templo-geography",
+                "stance": "supports",
+                "locator": "Public site geographic metadata",
+                "note": "Site reference, not an individual artifact findspot."
               }
             ]
           }
@@ -4410,6 +4427,16 @@
             "volume": "122",
             "issue": "20",
             "pages": "e2500095122"
+          },
+          {
+            "id": "templo-geography",
+            "authors": "Instituto Nacional de Antropología e Historia",
+            "title": "Templo Mayor public site reference",
+            "year": null,
+            "venue": "Lugares INAH",
+            "url": "https://lugares.inah.gob.mx/es/node/4463",
+            "access": "Public institutional site location, checked November 2026. No photograph or map artwork copied.",
+            "referenceType": "web-resource"
           }
         ],
         "review": {
@@ -4419,16 +4446,23 @@
           "provenance": "AI-assisted research compilation from the named primary publications and institutional sources. Access limits are specified per reference. Not independent peer review.",
           "reviewedAt": "2026-10-28",
           "history": [
-            "Suggested via bulk workbook; not reviewed."
+            "Suggested via bulk workbook; not reviewed.",
+            "2026-11-15: Map the known public study locality, preserving the explicit absence of recovered trade paths."
           ],
           "relatedIds": []
         },
         "overlay": {
           "kind": "trade",
-          "basis": "unmapped",
-          "geometry": null,
-          "precision": "No route or geographic line is supplied: compositional provenance establishes source affiliations without the paths travelled.",
-          "provenance": "Matadamas-Gomora et al. 2025, source assignments and diachronic archaeological contexts; insufficient evidence for route geometry."
+          "basis": "documented",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -99.131348,
+              19.434929
+            ]
+          },
+          "precision": "Public Templo Mayor archaeological-site reference; not an exact artifact findspot or a supply route.",
+          "provenance": "INAH node 4463 geographic metadata: 19.434929 N, 99.131348 W. https://lugares.inah.gob.mx/es/node/4463"
         }
       },
       "rationale": "Add a separately filterable, sourced thematic overlay with explicit temporal and spatial limits.",
@@ -53642,12 +53676,13 @@
         "destination": null,
         "routeKind": "schematic",
         "time": {
-          "kind": "unplaced",
-          "start": null,
-          "end": null,
-          "original": "Approximately 9,000 years BP; chronology wording retained pending context-specific calibration",
-          "method": "Original chronology retained without unsupported calendar conversion",
-          "interpretation": "This comparative, methodological or multi-event finding has no one event date. Display its original chronological guidance and geographic context, without interpreting it as a contemporaneous settlement. Source guidance: Approximately 9,000 years BP; chronology wording retained pending context-specific calibration"
+          "kind": "occurrence",
+          "start": -7050,
+          "end": -6850,
+          "original": "Associated occupation context: 9000–8800 cal yr BP (7051–6851 BCE)",
+          "method": "O’Shea et al. 2021 full text, Archaeological context: radiocarbon determinations at the recovery depth/elevation. Calendar conversion is 1950 minus cal BP.",
+          "interpretation": "Dates the associated occupation context, not direct radiocarbon dating of obsidian or the duration of a trade service.",
+          "approximate": true
         },
         "claims": [
           {
@@ -53674,13 +53709,13 @@
             "venue": "See linked primary publication",
             "doi": "10.1371/journal.pone.0250840",
             "url": "https://doi.org/10.1371/journal.pone.0250840",
-            "access": "Primary publisher abstract inspected; full text not claimed.",
+            "access": "Publisher full text accessed via Europe PMC XML, including Archaeological context and associated 9000–8800 cal yr BP statement; no recalibration performed.",
             "referenceType": "journal-article"
           }
         ],
         "review": {
           "summary": "Two obsidian flakes recovered from an early Holocene submerged Lake Huron context were geochemically sourced to Wagontire in central Oregon, more than 4,000 km away.",
-          "limitations": "Source and find location establish material movement, not a mapped travel route, direct trade between endpoints or a journey by one person.",
+          "limitations": "Contextual age rather than a date measured on the stone. Source and find location establish material movement, not a mapped travel route, direct trade between endpoints or a journey by one person.",
           "discussion": "Population size is unknown. Archaeological culture, ancestry, language and present-day identity are not interchangeable.",
           "provenance": "Round5 author-supplied research leads reconciled against the cited sources on 2026-10-28.",
           "reviewedAt": "2026-10-29",
@@ -69356,7 +69391,7 @@
       "baseRecord": null,
       "record": {
         "id": "r9v-inca-machupicchu-bayesian-alternative",
-        "revision": 1,
+        "revision": 2,
         "type": "occurrence",
         "title": "Machu Picchu — alternative Bayesian occupation model",
         "culture": {
@@ -69367,11 +69402,11 @@
         },
         "location": {
           "id": "south-machu-picchu",
-          "name": "Machu Picchu sanctuary, public property proxy",
-          "lon": -72.533443,
-          "lat": -13.184934,
-          "precision": "Public World Heritage property reference point, rounded to six decimal degrees; site-area proxy, not an excavation coordinate or occupied-area boundary.",
-          "provenance": "UNESCO property 274 geographical metadata: S13 11 5.762 W72 32 0.395; DMS converted to decimal degrees. Sanctuary reference point, not a cemetery coordinate."
+          "name": "Machu Picchu archaeological city",
+          "lon": -72.54465,
+          "lat": -13.16493,
+          "precision": "Approximate city-center anchor derived from the published city delimitation; not a specific grave or building.",
+          "provenance": "DDC Cusco, 2014 draft visitor-use regulation, city delimitation table, WGS84 UTM18S vertices 1–31 averaged and converted to longitude/latitude. Vertex 32 excluded because its easting is inconsistent with the listed distances. https://www.culturacusco.gob.pe/documentos/comunicados/R.D._N%C2%B0_-2014-DDC-CUS-MC.PDF"
         },
         "destination": null,
         "routeKind": "schematic",
@@ -69404,6 +69439,20 @@
                 "note": "Alternative 1420–1532 estimate already represented by south-machupicchu-ams-occupation."
               }
             ]
+          },
+          {
+            "id": "location",
+            "text": "The map point refers to the archaeological city using the public DDC Cusco draft plan.",
+            "status": "well-supported",
+            "explanation": "Approximate city-center anchor derived from the published city delimitation; not a specific grave or building.",
+            "support": [
+              {
+                "sourceId": "city-geography-2014",
+                "stance": "supports",
+                "locator": "2014 draft plan, delimitation vertices 1–31",
+                "note": "Coordinate reference only; no enacted legal boundary is asserted."
+              }
+            ]
           }
         ],
         "sources": [
@@ -69431,6 +69480,16 @@
             "volume": "95",
             "issue": "383",
             "pages": "1265–1279"
+          },
+          {
+            "id": "city-geography-2014",
+            "authors": "Dirección Desconcentrada de Cultura de Cusco",
+            "title": "Draft regulation: Ciudad Inca de Machupicchu delimitation",
+            "year": 2014,
+            "venue": "Ministerio de Cultura, Perú",
+            "url": "https://www.culturacusco.gob.pe/documentos/comunicados/R.D._N%C2%B0_-2014-DDC-CUS-MC.PDF",
+            "access": "Public draft document used for geographic reference only; no legal status inferred.",
+            "referenceType": "web-resource"
           }
         ],
         "review": {
@@ -69440,7 +69499,8 @@
           "provenance": "Round9 Inca report checked against the original scholarly/institutional sources actually accessed. Private generated report is not redistributed or treated as independent evidence.",
           "reviewedAt": "2026-10-29",
           "history": [
-            "2026-10-29: Source-checked Inca finding with explicit access and chronology/geography limits."
+            "2026-10-29: Source-checked Inca finding with explicit access and chronology/geography limits.",
+            "Replaced sanctuary-wide proxy with public archaeological-city anchor."
           ],
           "relatedIds": [
             "south-machupicchu-ams-occupation"
@@ -69461,7 +69521,7 @@
       "baseRecord": null,
       "record": {
         "id": "r9v-inca-machupicchu-retainers",
-        "revision": 1,
+        "revision": 2,
         "type": "occurrence",
         "title": "Machu Picchu — diverse retainer community",
         "culture": {
@@ -69472,11 +69532,11 @@
         },
         "location": {
           "id": "south-machu-picchu",
-          "name": "Machu Picchu sanctuary, public property proxy",
-          "lon": -72.533443,
-          "lat": -13.184934,
-          "precision": "Public World Heritage property reference point, rounded to six decimal degrees; site-area proxy, not an excavation coordinate or occupied-area boundary.",
-          "provenance": "UNESCO property 274 geographical metadata: S13 11 5.762 W72 32 0.395; DMS converted to decimal degrees. Sanctuary reference point, not a cemetery coordinate."
+          "name": "Machu Picchu archaeological city",
+          "lon": -72.54465,
+          "lat": -13.16493,
+          "precision": "Approximate city-center anchor derived from the published city delimitation; not a specific grave or building.",
+          "provenance": "DDC Cusco, 2014 draft visitor-use regulation, city delimitation table, WGS84 UTM18S vertices 1–31 averaged and converted to longitude/latitude. Vertex 32 excluded because its easting is inconsistent with the listed distances. https://www.culturacusco.gob.pe/documentos/comunicados/R.D._N%C2%B0_-2014-DDC-CUS-MC.PDF"
         },
         "destination": null,
         "routeKind": "schematic",
@@ -69503,6 +69563,20 @@
                 "note": "Checked 2026-10-29: Original abstract and introduction read through indexed published PDF; genomes not independently reanalyzed."
               }
             ]
+          },
+          {
+            "id": "location",
+            "text": "The map point refers to the archaeological city using the public DDC Cusco draft plan.",
+            "status": "well-supported",
+            "explanation": "Approximate city-center anchor derived from the published city delimitation; not a specific grave or building.",
+            "support": [
+              {
+                "sourceId": "city-geography-2014",
+                "stance": "supports",
+                "locator": "2014 draft plan, delimitation vertices 1–31",
+                "note": "Coordinate reference only; no enacted legal boundary is asserted."
+              }
+            ]
           }
         ],
         "sources": [
@@ -69516,6 +69590,16 @@
             "access": "Checked 2026-10-29: Original abstract and introduction read through indexed published PDF; genomes not independently reanalyzed.",
             "referenceType": "journal-article",
             "doi": "10.1126/sciadv.adg3377"
+          },
+          {
+            "id": "city-geography-2014",
+            "authors": "Dirección Desconcentrada de Cultura de Cusco",
+            "title": "Draft regulation: Ciudad Inca de Machupicchu delimitation",
+            "year": 2014,
+            "venue": "Ministerio de Cultura, Perú",
+            "url": "https://www.culturacusco.gob.pe/documentos/comunicados/R.D._N%C2%B0_-2014-DDC-CUS-MC.PDF",
+            "access": "Public draft document used for geographic reference only; no legal status inferred.",
+            "referenceType": "web-resource"
           }
         ],
         "review": {
@@ -69525,7 +69609,8 @@
           "provenance": "Round9 Inca report checked against the original scholarly/institutional sources actually accessed. Private generated report is not redistributed or treated as independent evidence.",
           "reviewedAt": "2026-10-29",
           "history": [
-            "2026-10-29: Source-checked Inca finding with explicit access and chronology/geography limits."
+            "2026-10-29: Source-checked Inca finding with explicit access and chronology/geography limits.",
+            "Replaced sanctuary-wide proxy with public archaeological-city anchor."
           ],
           "relatedIds": [
             "south-machupicchu-ams-occupation",
