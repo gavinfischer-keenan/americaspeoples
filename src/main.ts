@@ -4,6 +4,11 @@ import { siteGuideIndex } from "./site-guides";
 import "./styles.css";
 import "./atlas-ui.css";
 import './atlas-context.css';
+import './topic-dives.css';
+import {topics,topicOnlyIds} from './topic-dives';
+import {mountTopicPage,topicIndexHTML} from './topic-page';
+import {storyDetailsHTML} from './story-details';
+import type {MapCamera} from './map';
 import { atlasAssets, loadAtlasAssets } from './atlas-assets';
 import { sampleVoyage, voyageDate } from './voyages';
 import { availableVoyageRecords, scopedVoyageDate, scopedVoyageProgress, advanceMovieClock, datedContextKey } from './shared-movie';
@@ -138,7 +143,7 @@ let showUndated = true,
 let iceScenario = "optimal";
 const hiddenClimate = new Set<string>();
 const mapRows = () =>
-  filterMapRecords(rows(), hiddenLayers, showModeled).filter(
+  filterMapRecords(rows().filter(r=>!topicOnlyIds.has(r.id)), hiddenLayers, showModeled).filter(
     (r) => !hiddenClimate.has(climateCategory(r) ?? "") && (!r.history || !hiddenHistory.has(r.history.kind)),
   );
 const storeKey = "americas-peoples-proposals-v1";
@@ -289,7 +294,7 @@ function renderStory(){
   const story=currentStory(),scene=story.scenes[Math.max(0,storySceneIndex)];
   description.textContent=story.subtitle;
   $('#cinema-caption').innerHTML=`<span class="eyebrow">${esc(formatYear(scene.year))} · ${esc(story.title)}</span><h3>${esc(scene.title)}</h3><p>${esc(scene.body)}</p><small>${esc(scene.note)}</small>`;
-  host.innerHTML=`<div class="scene-copy"><div class="scene-kicker"><span class="eyebrow">SCENE ${String(Math.max(0,storySceneIndex)+1).padStart(2,'0')} / ${String(story.scenes.length).padStart(2,'0')}</span><span>${esc(formatYear(scene.year))}</span></div><h2>${esc(scene.title)}</h2><p class="scene-body">${esc(scene.body)}</p><p class="scene-note">${esc(scene.note)}</p><details class="scene-sources"><summary>Read the evidence · ${scene.recordIds.length}</summary>${scene.recordIds.map(id=>{const r=dataset.records.find(r=>r.id===id);return r?`<a href="${recordHref(r)}">${esc(r.title)} ↗</a>`:'';}).join('')}</details></div>`;
+  host.innerHTML=`<div class="scene-copy"><div class="scene-kicker"><span class="eyebrow">SCENE ${String(Math.max(0,storySceneIndex)+1).padStart(2,'0')} / ${String(story.scenes.length).padStart(2,'0')}</span><span>${esc(formatYear(scene.year))}</span></div><h2>${esc(scene.title)}</h2><p class="scene-body">${esc(scene.body)}</p><p class="scene-note">${esc(scene.note)}</p>${storyDetailsHTML(scene,dataset.records)}<details class="scene-sources"><summary>Read the evidence · ${scene.recordIds.length}</summary>${scene.recordIds.map(id=>{const r=dataset.records.find(r=>r.id===id);return r?`<a href="${recordHref(r)}">${esc(r.title)} ↗</a>`:'';}).join('')}</details></div>`;
   chapters.innerHTML=story.scenes.map((s,i)=>`<button data-scene="${i}" aria-label="Scene ${i+1}: ${esc(s.title)}" aria-current="${i===storySceneIndex?'step':'false'}" title="${esc(s.title)}">${i+1}</button>`).join('');
 }
 function updateStoryProgress(){
@@ -816,6 +821,11 @@ function renderTableBody() {
 }
 function reviewPage(r: FullDisplayRecord, p?: Proposal, index?: number) {
   main.innerHTML = reviewHTML(r, dataset, p);
+  const sourceTopic=topics.find(t=>t.id===reviewTopic&&t.recordIds.includes(r.id))??(topicOnlyIds.has(r.id)?topics.find(t=>t.recordIds.includes(r.id)):undefined);
+  if(sourceTopic){
+    const back=document.createElement('a');back.className='back-link topic-return';back.href='#topic/'+sourceTopic.id;back.textContent='← Return to '+sourceTopic.title;main.prepend(back);
+    if(r.time.kind==='unplaced'){const locate=$<HTMLButtonElement>('[data-action="locate"]',main);locate.disabled=true;locate.textContent='Chronology unresolved — read the relationship evidence';}
+  }
   main
     .querySelectorAll<HTMLElement>("[data-source],[data-claim]")
     .forEach((a) =>
@@ -845,6 +855,7 @@ function reviewPage(r: FullDisplayRecord, p?: Proposal, index?: number) {
     exportProposals([share]);
   });
   $('[data-action="locate"]', main).addEventListener("click", () => {
+    if(sourceTopic){pendingTopicLocation=r;location.hash='#topic/'+sourceTopic.id;return;}
     storyId='free';storySceneIndex=-1;placeQuery='';placeCategory='all';explorePeriod='all';
     if (r.time.kind === "unplaced") showUndated = true;
     if (r.time.start !== null) setYear(r.time.start);
@@ -960,6 +971,13 @@ main.addEventListener("click", (event) => {
 let previousHash = location.hash || "#movie";
 let reverting = false;
 let routeGeneration = 0;
+let disposeTopic:(()=>void)|undefined;
+let topicOriginCamera:MapCamera|undefined;
+let topicOriginRoute='#movie';
+let lastAtlasCamera:MapCamera|undefined;
+let lastAtlasRoute='#movie';
+let reviewTopic:string|undefined;
+let pendingTopicLocation:DisplayRecord|undefined;
 async function route() {
   const generation = ++routeGeneration;
   const hash = location.hash || "#movie";
@@ -977,6 +995,13 @@ async function route() {
     return;
   }
   dirty = false;
+  if(hash.startsWith('#review/')&&previousHash.startsWith('#topic/'))reviewTopic=previousHash.slice(7);
+  else if(!hash.startsWith('#review/')&&!hash.startsWith('#topic/'))reviewTopic=undefined;
+  // Reading pages may sit between the shared atlas and a topic. Keep the
+  // last shared view before unmounting it, rather than capturing only direct entry.
+  if(mountedMap){lastAtlasCamera=map.camera();lastAtlasRoute=atlasMode==='explore'?'#explore':'#movie';}
+  if((hash==='#topics'||hash.startsWith('#topic/'))&&!topicOriginCamera){topicOriginCamera=lastAtlasCamera;topicOriginRoute=lastAtlasRoute;}
+  disposeTopic?.();disposeTopic=undefined;
   previousHash = hash;
   tableController?.dispose();
   tableController = undefined;
@@ -984,7 +1009,7 @@ async function route() {
   mountedMap = false;
   map.clearHover();
   stop();
-  const activeNav=hash==='#explore'?'#explore':['#map','#movie'].includes(hash)?'#movie':'#library';
+  const activeNav=hash==='#topics'||hash.startsWith('#topic/')?'#topics':hash==='#explore'?'#explore':['#map','#movie'].includes(hash)?'#movie':'#library';
   document
     .querySelectorAll("nav a")
     .forEach((a) =>
@@ -992,6 +1017,7 @@ async function route() {
     );
   document.body.classList.remove("movie-playing","focus-view");
   const mapRoute=["#map","#movie","#explore"].includes(hash);
+  document.body.classList.toggle('topic-page',hash.startsWith('#topic/'));
   document.body.classList.toggle('atlas-page',mapRoute);
   document.body.classList.toggle('reading-page',!mapRoute);
   $(".timeline").hidden=!mapRoute;
@@ -1004,7 +1030,13 @@ async function route() {
       document.body.classList.toggle("exploring", atlasMode === "explore");
       $(".timeline").hidden = atlasMode === "explore" && explorePeriod!=="current";
       mapPage();
+      if(topicOriginCamera){map.restoreCamera(topicOriginCamera);topicOriginCamera=undefined;}
       if(pendingLocation){const record=pendingLocation;pendingLocation=null;map.focus(record);}
+    }
+    else if(hash==='#topics')main.innerHTML=topicIndexHTML(topicOriginRoute);
+    else if(hash.startsWith('#topic/')){
+      const topic=topics.find(t=>t.id===hash.slice(7));if(!topic)throw new Error('Topic not found.');
+      disposeTopic=mountTopicPage(main,topic,dataset.records,land,topicOriginRoute,pendingTopicLocation);pendingTopicLocation=undefined;
     }
     else if (hash === "#library") main.innerHTML = libraryHTML(dataset.records.length);
     else if (hash === "#evidence") tablePage();

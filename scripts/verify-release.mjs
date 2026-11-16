@@ -36,7 +36,7 @@ const phases = [
     ["--import", "tsx", "scripts/build.ts"],
   ],
   ["Packaged history documentation", node, ["--import", "tsx", "--test", "tests/history-release.artifact.ts"]],
-  ["Python API integration", null, ["server/test_api.py"]],
+  ["Python API integration and release retention", null, ["-m", "unittest", "discover", "-s", "server", "-p", "test_*.py"]],
   [
     "Hosted privacy, CSP and full snapshot",
     node,
@@ -74,6 +74,7 @@ const phases = [
   ["Dated geography, journeys, local selection and mobile", node, ["tests/expansion.browser.mjs"]],
   ["Guided stories, discovery and responsive UI", node, ["tests/watch-explore.browser.mjs"]],
   ["Shared world movie, scoped expeditions and local terrain", node, ["tests/shared-movie.browser.mjs"]],
+  ["Independent topic movies, language evidence and state restoration", node, ["--test", "tests/topic-dives.browser.mjs", "tests/topic-regressions.browser.mjs"]],
   ["Map picking, camera, touch and label usability", node, ["tests/map-ux.browser.mjs"]],
   ["Movie and Explore separation", node, ["tests/movie-explore.browser.mjs"]],
   ["Map playback interaction and hover", node, ["tests/map-interaction.browser.mjs"]],

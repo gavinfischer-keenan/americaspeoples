@@ -69,3 +69,8 @@ Dot-radius bands: 1–500, 501–2,500, 2,501–10,000, 10,001–50,000 and 50,0
 `CatalogRecord` is a compact map/index contract with `detailLevel: "catalog"`. Its claims carry ID/text/status only; its review carries summary, limitations, reviewedAt and related IDs. It has no bibliography, complete support mappings or record provenance. It is never a valid replacement for an `EvidenceRecord`.
 
 `/api/records/{id}` and `/api/export` return complete records; correction creation, comparison and file export require these. Catalog and full-record caches stay separate and release-version checked. `/api/search` returns IDs only. API time/bbox queries exclude unplaced chronology unless separately requested through the catalog. Bounding matches are conservative candidates for schematic spherical connections, not surveyed route evidence. See api-contracts.ts and DEPLOYMENT.md.
+
+
+### Dated attestations
+
+`history.kind: "attestation"` identifies a located find, document or explicitly qualified model estimate. It requires supported dates, a location and a supporting claim; it cannot also be an overlay. After the source interval, it remains as labeled **earlier evidence**, not as continuous occupation, first arrival, settlement, language origin or language territory. Topic-only IDs are excluded from the shared map; the source records remain in the library and workbook.

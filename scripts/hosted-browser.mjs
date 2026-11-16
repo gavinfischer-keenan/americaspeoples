@@ -116,8 +116,10 @@ try {
   await page.getByLabel("Year number", { exact: true }).fill("1864");
   await page.getByLabel("Era", { exact: true }).selectOption("CE");
   await page.getByRole("button", { name: "Go to year", exact: true }).click();
-  assert.equal(await page.locator(".overlay-forced-removal").count(), snapshot.records.filter(({record:r})=>r.overlay?.kind==="forced-removal"&&r.overlay.geometry&&r.time.start<=1864&&r.time.end>=1864).length);
-  assert.equal(await page.locator(".overlay-violence").count(), snapshot.records.filter(({record:r})=>r.overlay?.kind==="violence"&&r.overlay.geometry&&r.time.start<=1864&&r.time.end>=1864).length);
+  // Manual year entry starts that year. Exact-day events must not appear early.
+  const activeAt1864Start=({record:r})=>r.overlay?.geometry&&r.time.start<=1864&&r.time.end>=1864&&(!(r.time.eventDate??r.history?.eventDate)||(r.time.eventDate??r.history?.eventDate)<='1864-01-01');
+  assert.equal(await page.locator(".overlay-forced-removal").count(), snapshot.records.filter(x=>x.record.overlay?.kind==="forced-removal"&&activeAt1864Start(x)).length);
+  assert.equal(await page.locator(".overlay-violence").count(), snapshot.records.filter(x=>x.record.overlay?.kind==="violence"&&activeAt1864Start(x)).length);
   await page.goto(origin + "/evidence-appendix.html");
   assert.equal(await page.locator("details[data-evidence-id]").count(), expectedRecords);
   const appendix = await (

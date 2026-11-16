@@ -14,6 +14,7 @@ export const HISTORY_LABELS = {
   exchange: "Trade & exchange",
   wreck: "Shipwrecks",
   visit: "Historical visits",
+  attestation: "Dated finds & language attestations",
 } as const;
 
 /** Display memory is deliberately separate from the underlying evidence interval. */
@@ -33,7 +34,7 @@ export function historyState(record: MapRecord, year: number): HistoryState {
   if (temporalState(time, year) !== "absent") return "active";
   if (history?.kind === "wreck") return "loss";
   if (history?.kind === "settlement") return "founded";
-  if (history?.kind === "visit") return "past-place";
+  if (history?.kind === "visit" || history?.kind === "attestation") return "past-place";
   if (record.type === "occupation" && record.location && !record.overlay)
     return "past-place";
   return "outside";
@@ -42,6 +43,7 @@ export function historyState(record: MapRecord, year: number): HistoryState {
 export function historyLabel(record: MapRecord, year: number): string {
   const state = historyState(record, year),
     h = record.history;
+  if(h?.kind==='attestation'&&state!=='outside')return `${state==='active'?'Evidence at its source date':'Earlier evidence'} · ${record.time.original}. This marker does not establish continuous presence or a first arrival.`;
   if(h?.kind==='visit'&&state!=='outside')return `${state==='active'?'Dated':'Historical'} visit · ${h.eventDate||record.time.original}. This visit marker does not establish settlement or continued presence afterward.`;
   if (h?.endEvidence && state !== 'outside' && year >= h.endEvidence.start) {
     const e=h.endEvidence, range=e.start===e.end?formatYear(e.start):`${formatYear(e.start)}–${formatYear(e.end)}`;
@@ -183,6 +185,7 @@ export function validateHistory(r: EvidenceRecord): string[] {
   if(h.kind==='habitation'&&(!r.location||r.overlay||r.type!=='occupation'||r.time?.kind!=='interval'))
     errors.push('Habitation history requires a located occupation interval.');
   if(h.kind==='visit'&&(!r.location||r.overlay||r.type!=='event'))errors.push('Visit history requires a located event.');
+  if(h.kind==='attestation'&&(!r.location||r.overlay))errors.push('Attestation history requires a located evidence point.');
   if(h.continuity!==undefined&&(h.continuity!=='ongoing'||h.kind!=='habitation'||r.time?.end!==END_YEAR||h.endEvidence||h.endYear!==undefined))
     errors.push('Ongoing habitation must reach the display horizon without an abandonment ending.');
   if(h.endEvidence!==undefined){

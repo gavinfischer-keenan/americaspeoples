@@ -42,7 +42,13 @@ The browser preloads the compact map and hazard indexes, then draws and animates
 
 ## Resource isolation
 
-Use a dedicated systemd service, restricted user, `NoNewPrivileges`, `ProtectSystem`, bounded memory/tasks and CPU quota. NODE01 CT101 also serves other public sites, so changes must be scoped to the atlas service and hostname. Check Proxmox memory/load/storage and container headroom before increasing allocation. Do not change other nodes, tunnels, app processes or storage partitions unless a measured need exists.
+Use a dedicated systemd service, restricted user, `NoNewPrivileges`, `ProtectSystem`, bounded memory/tasks and CPU quota. The current host is `webserver`, container 703 (`web-edge`); older notes naming NODE01 CT101 are historical. It also serves other public sites, so changes must be scoped to the atlas service and hostname. Check Proxmox memory/load/storage and container headroom before increasing allocation. Do not change other nodes, tunnels, app processes or storage partitions unless a measured need exists.
+
+## Rolling release retention
+
+Keep the current atlas release and exactly one previous app/database pair, plus one matching previous-database backup. After the new release passes origin and public checks, run its `server/release_retention.py --receipt /path/to/deployed.json` to inspect the plan, then repeat with `--apply`. The activation receipt must identify `id`, `api`, `static`, `rollbackApi`, `rollbackStatic`, `previousVersion` and the verified `health` object. Store that receipt outside temporary upload directories.
+
+The utility locks against concurrent deployment, verifies active pointers and the previous database backup, and rejects redirected paths. Older atlas API releases, database backups, hosted download versions and atlas components within old shared-site snapshots are removed. Both retained web snapshots keep the current/previous downloadable versions where present. Other applications in those shared snapshots are retained. Published GitHub release archives are separate from server rollback storage. Run this step after every successful deployment, never before verification.
 
 
 Current module boundaries and cache/publication invariants: docs/developer-guide.md. Currentverification is in docs/verification.md; olderrelease observations are in docs/release-verification-history.md and do not override this runtime contract.

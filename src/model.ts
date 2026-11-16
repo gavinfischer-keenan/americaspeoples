@@ -105,7 +105,7 @@ export interface Linguistics {
   };
 }
 export interface HistoryMetadata {
-  kind: "settlement" | "habitation" | "migration" | "exchange" | "wreck" | "visit";
+  kind: "settlement" | "habitation" | "migration" | "exchange" | "wreck" | "visit" | "attestation";
   claimId: string;
   foundingPower?: string;
   eventDate?: string;

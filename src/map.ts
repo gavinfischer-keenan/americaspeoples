@@ -20,6 +20,7 @@ import {MapTooltip,tooltipForRecords,tooltipForHazard,type MapTooltipContent,typ
 import { AtlasContext } from './atlas-context';
 export interface MapInteraction {mode:MapMode;playing:boolean;onPause:()=>void}
 export interface PhysicalOptions {ice:boolean; iceScenario:string; currents:boolean; winds:boolean; hidden:ReadonlySet<string>; uncertain:boolean}
+export interface MapCamera {scope:MapScope;center:MapPoint;pixelScale:number;rotation:[number,number,number]}
 const compactPlaceName=(name:string)=>name.length<=40?name:name.slice(0,39).trimEnd()+'…';
 export class MapView {
   readonly context=new AtlasContext();
@@ -33,6 +34,7 @@ export class MapView {
   private geometry = new MapGeometry(this.projection);
   private viewportFrame: number | null = null;
   private viewportDrawPending=false;
+  private resizeObserver:ResizeObserver;
   private scale = 1;
   private tx = 0;
   private ty = 0;
@@ -135,11 +137,12 @@ export class MapView {
     const endPointer=(e:PointerEvent)=>{pointers.delete(e.pointerId);drag=null;pinch=null;};
     svg.addEventListener("pointerup",endPointer);
     svg.addEventListener("pointercancel",endPointer);
-    new ResizeObserver(() => {
+    this.resizeObserver=new ResizeObserver(() => {
       if (this.element.isConnected) {
         this.resize();
       }
-    }).observe(this.element);
+    });
+    this.resizeObserver.observe(this.element);
     svg.addEventListener(
       "wheel",
       (e) => {
@@ -190,6 +193,19 @@ export class MapView {
   private hideTooltip(){this.hovered=null;this.tooltip.hide();}
   /** Route owners can clear body-mounted hover content when reusing this map. */
   clearHover():void{this.hideTooltip();}
+  camera():MapCamera{
+    const [x,y]=this.projection.translate(), k=this.projection.scale();
+    // Normalized projected center also works when a user pans outside the globe.
+    return {scope:this.scope,center:[((this.width/2-this.tx)/this.scale-x)/k,((this.height/2-this.ty)/this.scale-y)/k],pixelScale:k*this.scale,rotation:this.projection.rotate()};
+  }
+  restoreCamera(camera:MapCamera):void{
+    this.resize(false);this.scope=camera.scope;this.rebuildProjection(camera.rotation);
+    this.scale=clampZoom(camera.pixelScale/this.projection.scale());
+    const [x,y]=this.projection.translate(),k=this.projection.scale();
+    this.tx=this.width/2-(x+camera.center[0]*k)*this.scale;this.ty=this.height/2-(y+camera.center[1]*k)*this.scale;
+    this.transform();this.draw();
+  }
+  dispose():void{this.clearHover();this.resizeObserver.disconnect();if(this.viewportFrame!==null)cancelAnimationFrame(this.viewportFrame);this.element.remove();}
   setDetailedLand(land:any):void{this.land=land;$('.land',this.element).setAttribute('d',geoPath(this.projection)(land)??'');$('.terrain-land-mask',this.element).setAttribute('d',geoPath(this.projection)(land)??'');}
   refreshContext():void{
     let group=this.element.querySelector<SVGGElement>('.historical-context');
