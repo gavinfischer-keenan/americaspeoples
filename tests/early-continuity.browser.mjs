@@ -23,9 +23,15 @@ try{
    await page.getByRole('heading',{name:scene.title,exact:true}).waitFor();
    const active=scene.recordIds.filter(id=>{const r=records.find(r=>r.id===id);return r.time.start<=scene.year&&r.time.end>=scene.year;});
    assert.ok(active.length,scene.id);
-   await point(active[0]).waitFor();
-   const box=await point(active[0]).boundingBox(),map=await page.locator('#map-host').boundingBox();
-   assert.ok(box&&box.x+box.width>map.x&&box.x<map.x+map.width&&box.y+box.height>map.y&&box.y<map.y+map.height,scene.id+' current evidence in camera');
+   const current=records.find(r=>r.id===active[0]);
+   // A place can keep the same coordinates while its scene records are repainted.
+   // Check current content and screen geometry in one browser frame.
+   await page.waitForFunction(({key,title})=>{
+    const marker=document.querySelector(`[data-point="${key}"]`),map=document.querySelector('#map-host');
+    if(!marker?.textContent.includes(title)||!map)return false;
+    const b=marker.getBoundingClientRect(),m=map.getBoundingClientRect();
+    return b.width>0&&b.right>m.left&&b.left<m.right&&b.bottom>m.top&&b.top<m.bottom;
+   },{key:`${current.location.lon},${current.location.lat}`,title:current.title});
   }
   await page.screenshot({path:`test-results/early-${story.id}.png`});
   await page.getByRole('button',{name:'Reset map view',exact:true}).click();
