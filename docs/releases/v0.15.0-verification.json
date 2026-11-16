@@ -1,0 +1,95 @@
+{
+  "version": "0.15.0",
+  "status": "reviewed candidate; not deployed",
+  "pullRequest": "https://github.com/gavinfischer-keenan/americaspeoples/pull/11",
+  "verifiedAt": "2026-11-16",
+  "implementationCommit": "d1b24ae32db6e649a9eaab47063ed4a98a178ca3",
+  "baseCommit": "c63efae",
+  "records": 2003,
+  "sharedRecords": 1945,
+  "focusedRecords": 58,
+  "addedRecords": 43,
+  "addedLocalityIds": 33,
+  "regionalObservations": {
+    "Central America": 11,
+    "South America": 17,
+    "Australia": 15
+  },
+  "consensus": {
+    "mode": "Deep",
+    "campaignCalls": 5,
+    "cumulativeCalls": 58,
+    "cap": 100,
+    "statusPollsIncluded": true
+  },
+  "validation": {
+    "command": "npm run verify:release",
+    "unitTests": 281,
+    "releasePhases": [
+      "Unit tests",
+      "TypeScript contracts",
+      "Published evidence validation",
+      "Production build and self-host package",
+      "Packaged history documentation",
+      "Python API integration and release retention",
+      "Hosted privacy, CSP and full snapshot",
+      "Extracted self-host package",
+      "Spreadsheet import, editing and sharing",
+      "Layout, chronology and draft regressions",
+      "Complete researched workbook and reviews",
+      "Overlay selection, filters and persistence",
+      "Map panels, viewport and mobile layout",
+      "Smart timeline and keyboard control",
+      "Physical layers and source reviews",
+      "Site and culture guides, road maps and natural events",
+      "Dated geography, journeys, local selection and mobile",
+      "Guided stories, discovery and responsive UI",
+      "Shared world movie, scoped expeditions and local terrain",
+      "Independent topic movies, geography and state restoration",
+      "Community topics, queue promotion and tablet navigation",
+      "Land and sovereignty topics, later-date isolation and tablet navigation",
+      "Complete topic queue, current chapter evidence and packaged gap guides",
+      "Regional evidence in the shared movie and packaged source guide",
+      "Map picking, camera, touch and label usability",
+      "Movie and Explore separation",
+      "Map playback interaction and hover",
+      "Map rendering and interaction contracts",
+      "Map contrast and direction cues",
+      "Keyed panel focus and DOM identity",
+      "Network failure, queue and search resilience"
+    ],
+    "allPassed": true,
+    "logSha256": "41c2f6f710852190873f6fe05947f1159bc1e356e71e76a6999c4fe169345661",
+    "visualExamples": [
+      "San Bernabé, 1712",
+      "Nauta, 1830",
+      "Kurtonitj, c.1840–1870"
+    ]
+  },
+  "review": {
+    "method": "Fresh independent whole-branch review",
+    "critical": 0,
+    "important": 0,
+    "actionableMinor": 0,
+    "declinedToJudge": [],
+    "sourceVerification": "Risk-weighted primary/custodial source checking, not exhaustive."
+  },
+  "rulings": [
+    {
+      "decision": "Reuse the existing clean checkout on a separate feature branch.",
+      "reason": "Established workspace preference and developer direction.",
+      "costIfWrong": "Less worktree isolation; changes remain isolated on the feature branch."
+    },
+    {
+      "decision": "Implement the established shared-map design without a fresh design approval.",
+      "reason": "The user previously authorized judgment and implementation; this is an additive evidence campaign.",
+      "costIfWrong": "Different presentation preferences could require a later revision."
+    },
+    {
+      "decision": "Use native Windows progress tracking instead of previously hung Bash helpers.",
+      "reason": "Preserve the same briefs, ledger and review evidence with functioning local tooling.",
+      "costIfWrong": "More reliance on manually maintained workflow records."
+    }
+  ],
+  "deferredMinors": []
+}

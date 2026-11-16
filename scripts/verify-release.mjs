@@ -78,6 +78,7 @@ const phases = [
   ["Community topics, queue promotion and tablet navigation", node, ["--import", "tsx", "tests/community-topics.browser.mjs"]],
   ["Land and sovereignty topics, later-date isolation and tablet navigation", node, ["--import", "tsx", "tests/sovereignty-topics.browser.mjs"]],
   ["Complete topic queue, current chapter evidence and packaged gap guides", node, ["--import", "tsx", "tests/remaining-topics.browser.mjs"]],
+  ["Regional evidence in the shared movie and packaged source guide", node, ["tests/regional-gaps.browser.mjs"]],
   ["Map picking, camera, touch and label usability", node, ["tests/map-ux.browser.mjs"]],
   ["Movie and Explore separation", node, ["tests/movie-explore.browser.mjs"]],
   ["Map playback interaction and hover", node, ["tests/map-interaction.browser.mjs"]],

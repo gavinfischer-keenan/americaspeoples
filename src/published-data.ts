@@ -1,3 +1,4 @@
+import regionalGap from '../data/regional-gap-expansion-records.json';
 import worldGap from '../data/world-gap-expansion-records.json';
 import remainingContext from '../data/remaining-topic-context-records.json';
 import remainingEvidence from '../data/remaining-topic-evidence-records.json';
@@ -50,6 +51,7 @@ export const dataset = publishedDataset(
   starter as Dataset,
   [
     ...research.proposals.map((p) => p.record),
+    ...regionalGap.records,
     ...history.records,
     ...settlements.records,
     ...missions.records,
