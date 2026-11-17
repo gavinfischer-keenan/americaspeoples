@@ -1,3 +1,4 @@
+import {earlyContinuityStories} from './early-continuity-stories';
 import type { MapScope } from "./map-projection";
 import { expansionStories } from './expansion-stories';
 import { northernStory } from './northern-story';
@@ -306,5 +307,6 @@ export const stories: Story[] = [
     ],
   },
   ...expansionStories,
+  ...earlyContinuityStories,
   northernStory,
 ];

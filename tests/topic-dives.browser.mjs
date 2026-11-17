@@ -13,8 +13,8 @@ try{
  const year=await page.locator('#year-number').inputValue(),voyage=await page.locator('#voyage-position').innerText();
  await page.getByRole('button',{name:'Zoom in',exact:true}).click();await page.waitForTimeout(120);
  const camera=await world();
- await page.getByRole('link',{name:'Topic dives',exact:true}).click();
- await page.locator('.library-card[href="#topic/languages"]').click();await page.locator('#topic-map .world').waitFor();
+ await page.getByRole('link',{name:'Deep dives',exact:true}).click();await page.locator('.dive-tabs a[href="#dives/languages"]').click();
+ await page.locator('a[href="#topic/languages"]').click();await page.locator('#topic-map .world').waitFor();
  assert.equal(await page.locator('.timeline').isVisible(),false);
  assert.equal(await page.locator('#topic-map [data-voyage]').count(),0);
  assert.equal(await page.locator('#topic-map [data-boundary]').count(),0);
@@ -34,7 +34,7 @@ try{
  assert.match(await page.locator('#topic-year').innerText(),/1,571/);
  assert.match(await page.locator('#topic-detail').innerText(),/Molina|Nahuatl/);
  await page.locator('#topic-close-detail').click();
- await page.locator('.topic-toolbar a').click();await page.locator('#map-host .world').waitFor();
+ await page.locator('.topic-toolbar a').filter({hasText:'Shared atlas'}).click();await page.locator('#map-host .world').waitFor();
  assert.equal(await page.locator('#year-number').inputValue(),year,'topic time does not change global year');
  assert.equal(await page.locator('#voyage-select').inputValue(),'beagle-1831-1836');
  assert.equal(await page.locator('#voyage-position').innerText(),voyage,'fractional expedition date retained');
@@ -42,10 +42,10 @@ try{
  await page.getByRole('link',{name:'Explore',exact:true}).click();
  await page.locator('#place-search').fill('Taos');
  const exploreCamera=await world();
- await page.getByRole('link',{name:'Topic dives',exact:true}).click();await page.locator('.library-card[href="#topic/horses"]').click();
+ await page.getByRole('link',{name:'Deep dives',exact:true}).click();await page.locator('.dive-tabs a[href="#dives/subjects"]').click();await page.locator('a[href="#topic/horses"]').click();
  await page.locator('#topic-play').click();await page.waitForTimeout(500);await page.locator('#topic-play').click();
  await page.locator('#topic-next').click();assert.match(await page.locator('#topic-year').innerText(),/1,519/);
- await page.locator('.topic-toolbar a').click();
+ await page.locator('.topic-toolbar a').filter({hasText:'Shared atlas'}).click();
  assert.equal(page.url().split('#')[1],'explore');assert.equal(await page.locator('#place-search').inputValue(),'Taos');
  assert.equal(await world(),exploreCamera);
  for(const id of ['sweet-potatoes','boats','dogs','horses','maize','trade','languages']){

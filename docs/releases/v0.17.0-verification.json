@@ -1,0 +1,131 @@
+{
+  "version": "0.17.0",
+  "status": "verified candidate; not merged or deployed",
+  "verifiedAt": "2026-11-16",
+  "baseCommit": "9437c9f",
+  "implementationCommit": "ff8192a9fb199403e8feba36429f5052320476d1",
+  "records": 2075,
+  "sharedRecords": 2017,
+  "focusedRecords": 58,
+  "addedRecords": 37,
+  "newObservationLocationAnchors": 13,
+  "refinedExistingRecords": [
+    "px-kuk-mounds",
+    "px-kuk-ditches"
+  ],
+  "newGuides": [
+    "caral-supe",
+    "kuk",
+    "upano"
+  ],
+  "newContextualScenes": 19,
+  "directory": {
+    "categories": [
+      "Subjects",
+      "Places",
+      "Languages",
+      "Cultures"
+    ],
+    "independentMovies": 20,
+    "contextualStories": 14,
+    "guides": 15,
+    "combinedPlaceCards": 4,
+    "comingSoonEntries": 25
+  },
+  "consensus": {
+    "mode": "Deep",
+    "campaignCalls": 4,
+    "cumulativeCalls": 70,
+    "cap": 100,
+    "remaining": 30,
+    "statusPollsIncluded": true,
+    "thread": "rXHxjPj4SXyP6yI7Jo4MeQ",
+    "interaction": "TcAqFAExQTyF-oiN4Qap3w",
+    "rawReportPublished": false
+  },
+  "validation": {
+    "command": "npm run verify:release",
+    "unitTests": 295,
+    "releasePhases": [
+      "Unit tests",
+      "TypeScript contracts",
+      "Published evidence validation",
+      "Production build and self-host package",
+      "Packaged history documentation",
+      "Python API integration and release retention",
+      "Hosted privacy, CSP and full snapshot",
+      "Extracted self-host package",
+      "Spreadsheet import, editing and sharing",
+      "Layout, chronology and draft regressions",
+      "Complete researched workbook and reviews",
+      "Overlay selection, filters and persistence",
+      "Map panels, viewport and mobile layout",
+      "Smart timeline and keyboard control",
+      "Physical layers and source reviews",
+      "Site and culture guides, road maps and natural events",
+      "Dated geography, journeys, local selection and mobile",
+      "Guided stories, discovery and responsive UI",
+      "Shared world movie, scoped expeditions and local terrain",
+      "Independent topic movies, geography and state restoration",
+      "Community topics, queue promotion and tablet navigation",
+      "Land and sovereignty topics, later-date isolation and tablet navigation",
+      "Complete topic queue, current chapter evidence and packaged gap guides",
+      "Categorized deep dives, existing content and legacy navigation",
+      "Early continuity, contextual place movies and guide navigation",
+      "Regional evidence in the shared movie and packaged source guide",
+      "Interior communities, dated connections and conflict windows",
+      "Map picking, camera, touch and label usability",
+      "Movie and Explore separation",
+      "Map playback interaction and hover",
+      "Map rendering and interaction contracts",
+      "Map contrast and direction cues",
+      "Keyed panel focus and DOM identity",
+      "Network failure, queue and search resilience"
+    ],
+    "allPassed": true,
+    "logSha256": "5bfbacd28c591cfde688e97fcdf0f9beda8a0ccb90c005164060bb57708815d9",
+    "all37NewRecordsMatchSelfhostAndSQLite": true,
+    "datasetSha256": "0f08f3c5ce1793d5b02b8bd2e35d72edb662960e862b3680744be19d37ee8c4b",
+    "immutableBaselineSha256": "64fefd1c759e46eb036389947c1ca0ec7caa36e20631be478b3c0e00b16a5f1c",
+    "pythonPlatformLimit": "10 Python cases passed; 5 Linux symlink-retention cases skipped on Windows. Retention code unchanged.",
+    "browser": "Installed Edge on Windows; desktop/tablet viewport tests, basic phone overflow. Not physical-device testing.",
+    "execution": "Stages 1–24 passed at 2139595. Stage 25 caught a browser-test synchronization race at a reused Kuk marker. Test-only ff8192a waits atomically for current evidence and screen geometry; all 19 scenes passed. Ordered stages 25–34 then passed. No application or data changes intervened.",
+    "packagedImplementationCommit": "2139595",
+    "firstAttemptLogSha256": "3baf4537d34e999143b7ca5b4bafdeb43b416a6074660d1221817546da2b62d0",
+    "resumedLogSha256": "5fd7e8b78cd2a45e609a55dcbad22f525cbaa19941bd66bb527d63180081175f",
+    "finalDocumentationBuild": {
+      "commit": "022de1c",
+      "build": "passed",
+      "packageTests": 5,
+      "newGuidesAndVerificationTextMatchPackage": true,
+      "unchangedDatasetHash": true,
+      "all37RecordsMatchPackagedJsonAndSQLite": true
+    }
+  },
+  "review": {
+    "status": "complete; no material findings",
+    "reviewedRange": "9437c9f..2139595",
+    "method": "One fresh gpt-6-astra reviewer; no re-review",
+    "testOnlyFollowupCommit": "ff8192a",
+    "deferredMinors": [
+      "Two existing Kuk review discussion sentences retain older rounded institutional dates alongside the refined calibrated onset fields; map dates are correct."
+    ],
+    "limits": "Primary-source spot checks on new/refined claims; no exhaustive revalidation of the existing atlas. Nimowa full excavation tables not checked; published access limit is explicit."
+  },
+  "rulings": [
+    "Ruling: Native Bash task-start helper stalled on Windows and was interrupted; use equivalent Python extraction and ledger updates — avoids repeating a stalled helper while preserving task briefs and verified completion records — risk is bookkeeping drift, checked against this plan and Git history.",
+    "Final: Ruling: Do not re-research the entire pre-existing atlas in this intake — source checks target the new and refined claims and regression checks preserve earlier content — inherited source errors may remain.",
+    "Final: Ruling: Admit only abstract-supported Nimowa observations with an island reference — exact dates and access limits are explicit, while excavation tables are inaccessible — full text could refine chronology or location.",
+    "Final: Ruling: Keep public place anchors instead of inventing surveyed footprints or roads — the sources do not supply verified building geometry for this intake — fine building detail remains incomplete.",
+    "Final: Ruling: Deliver a candidate PR without live activation — this evidence/UI request is scoped to the next reviewable update — production integration remains to be checked during deployment."
+  ],
+  "remainingLimits": [
+    "Nimowa original author abstract checked; full excavation tables not verified. Island reference is not the excavation coordinate.",
+    "Upano regional phases do not date individual structures; lake catchment signals do not identify towns or people.",
+    "No new route inferred from isotopes or imported material alone.",
+    "Central America and post-Lapita island histories remain incomplete; held leads are listed in the evidence guide.",
+    "Australian pastoral/wool and mining topics remain Coming soon.",
+    "No live activation or retention change in this candidate."
+  ],
+  "pullRequest": "https://github.com/gavinfischer-keenan/americaspeoples/pull/13"
+}

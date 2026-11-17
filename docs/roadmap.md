@@ -49,3 +49,9 @@ Priorities are dated local occupation and construction phases, early food produc
 Australian colonial coverage presently includes Sydney (1788), Hobart (1804) and Perth (1829) establishment observations, but lacks a dedicated convict-voyage/wool-shipping sequence and detailed pastoral growth. These are additions to research, not a claim that the country or its neighbours are already comprehensively mapped.
 
 Every intake must feed independently supported settlements, voyages, peoples, conflicts and relocations into the canonical shared map, with reciprocal topic references. Subject-only interpretation stays in the separate topic mode. Source uncertainty, geographic precision and unknown cessation remain explicit. Consensus research must use Deep and remain within the cumulative **100-call cap**; the v0.16 deployment closes at **66 calls**, including polls, leaving **34**. No further Consensus calls were used for this initial queue and coverage assessment.
+
+## Categorized directory — v0.17 candidate
+
+The live navigation in this candidate reorganizes existing independent movies, contextual stories and guides into Subjects, Places, Languages and Cultures. Coming soon entries are visible but not playable. Caral/Supe, Kuk and Upano now have dedicated place guides and contextual movies. The fifteen other complexes in the 16 November shortlist remain queued; the six established place guides retain an expansion label. Four proposed language studies (Austronesian, Quechuan/Aymaran, Iroquoian and Maya) and four culture studies (Wari, Moche, Lapita and Gunditjmara) seed the new lists. These are research priorities, with no promised completeness or publication date.
+
+The Australian convict/pastoral/wool and mining subjects remain queued with the land-dispossession and forced-relocation requirements above. Consensus cumulative usage is now 70/100 after this intake, leaving 30 calls. See [the candidate evidence and source decisions](early-continuity.md).

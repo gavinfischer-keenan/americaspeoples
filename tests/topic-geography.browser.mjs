@@ -18,7 +18,7 @@ try{
  await page.waitForFunction(length=>(document.querySelector('#topic-map .land')?.getAttribute('d')?.length??0)>length*5,coarseLength,{timeout:5000});
  assert.equal(await land.getAttribute('d'),await page.locator('#topic-map .terrain-land-mask').getAttribute('d'),'relief uses the same detailed coastline');
  const detailedLength=(await land.getAttribute('d')).length;
- await page.goto(base+'/#topics');await page.locator('.library-card[href="#topic/sweet-potatoes"]').click();
+ await page.goto(base+'/#topics');await page.locator('a[href="#topic/sweet-potatoes"]').click();
  assert.equal((await land.getAttribute('d')).length,detailedLength,'a later topic mount receives already-loaded coastlines');
  await page.locator('#topic-next').click();
  await page.screenshot({path:'test-results/topic-island-tablet.png'});

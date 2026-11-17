@@ -48,5 +48,5 @@ try {
  await page.locator('#hazard-results a').first().click();await page.getByRole('heading',{name:'Original data fields'}).waitFor();
  assert.match(await page.locator('main').innerText(),/NOAA|NCEI/);
  assert.deepEqual(errors,[]);
- console.log('PASS: 12 populated guides and reports; both culture road maps; sources; mobile width; natural-event master preserves ENSO and individual choices; earthquake catalog/source review.');
+ console.log('PASS: 15 populated guides and reports; both culture road maps; sources; mobile width; natural-event master preserves ENSO and individual choices; earthquake catalog/source review.');
 } finally {await browser.close();server.close();}

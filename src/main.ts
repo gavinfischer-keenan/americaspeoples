@@ -1,13 +1,14 @@
 import {sharedContextHTML} from './topic-context';
 import { recordsForView, retainCurrentSelection, canSelect, type AtlasMode } from "./atlas-view";
 import { effectiveClimateHidden } from "./physical-rules";
-import { siteGuideIndex } from "./site-guides";
+import {deepDiveIndexHTML} from './deep-dives';
+import './deep-dives.css';
 import "./styles.css";
 import "./atlas-ui.css";
 import './atlas-context.css';
 import './topic-dives.css';
 import {topics,topicOnlyIds} from './topic-dives';
-import {mountTopicPage,topicIndexHTML} from './topic-page';
+import {mountTopicPage} from './topic-page';
 import {storyDetailsHTML} from './story-details';
 import type {MapCamera} from './map';
 import { atlasAssets, loadAtlasAssets } from './atlas-assets';
@@ -769,7 +770,7 @@ function renderHistorySummary(){
   const count=(kind:string)=>visible.filter(r=>r.history?.kind===kind).length;
   const possibleFoundations=visible.filter(r=>r.history?.kind==='settlement'&&year<r.time.end!).length;
   summary.hidden=atlasMode==='explore'||(isGuidedStory()&&!count('settlement')&&!count('wreck')&&!visible.some(r=>r.history?.windows));
-  summary.innerHTML=`<span><b>${count('settlement')-possibleFoundations}</b> established places${possibleFoundations?` + ${possibleFoundations} possible`:''}</span><span><b>${visible.filter(r=>r.history?.windows&&currentActive.includes(r)).length}</b> active connections</span><span><b>${count('wreck')}</b> recorded losses</span><small>In this view · not population totals</small>`;
+  summary.innerHTML=`<span><b>${count('settlement')-possibleFoundations}</b> foundation records${possibleFoundations?` + ${possibleFoundations} possible`:''}</span><span><b>${visible.filter(r=>r.history?.windows&&currentActive.includes(r)).length}</b> active connections</span><span><b>${count('wreck')}</b> recorded losses</span><small>In this view · not population totals</small>`;
 }
 function openDetails(){
   if(!mountedMap)return;
@@ -1008,7 +1009,8 @@ async function route() {
   // Reading pages may sit between the shared atlas and a topic. Keep the
   // last shared view before unmounting it, rather than capturing only direct entry.
   if(mountedMap){lastAtlasCamera=map.camera();lastAtlasRoute=atlasMode==='explore'?'#explore':'#movie';}
-  if((hash==='#topics'||hash.startsWith('#topics/')||hash.startsWith('#topic/'))&&!topicOriginCamera){topicOriginCamera=lastAtlasCamera;topicOriginRoute=lastAtlasRoute;}
+  const diveRoute=hash==='#dives'||hash.startsWith('#dives/')||hash==='#sites'||hash==='#topics'||hash.startsWith('#topics/')||hash.startsWith('#topic/');
+  if(diveRoute&&!topicOriginCamera){topicOriginCamera=lastAtlasCamera;topicOriginRoute=lastAtlasRoute;}
   disposeTopic?.();disposeTopic=undefined;
   previousHash = hash;
   tableController?.dispose();
@@ -1017,7 +1019,7 @@ async function route() {
   mountedMap = false;
   map.clearHover();
   stop();
-  const activeNav=hash==='#topics'||hash.startsWith('#topics/')||hash.startsWith('#topic/')?'#topics':hash==='#explore'?'#explore':['#map','#movie'].includes(hash)?'#movie':'#library';
+  const activeNav=diveRoute?'#dives':hash==='#explore'?'#explore':['#map','#movie'].includes(hash)||hash.startsWith('#story/')?'#movie':'#library';
   document
     .querySelectorAll("nav a")
     .forEach((a) =>
@@ -1041,10 +1043,20 @@ async function route() {
       if(topicOriginCamera){map.restoreCamera(topicOriginCamera);topicOriginCamera=undefined;}
       if(pendingLocation){const record=pendingLocation;pendingLocation=null;map.focus(record);}
     }
+    else if(hash==='#dives'||hash.startsWith('#dives/')){
+      main.innerHTML=deepDiveIndexHTML(hash.slice(7),topicOriginRoute);
+    }
+    else if(hash.startsWith('#story/')){
+      const requested=decodeURIComponent(hash.slice(7));
+      if(!stories.some(s=>s.id===requested))throw new Error('Story not found.');
+      openingPlayback=false;voyageId='';storyId=requested;storyElapsed=0;storySceneIndex=-1;
+      placeQuery='';placeCategory='all';topicOriginCamera=undefined;
+      location.replace('#movie');return;
+    }
     else if(hash==='#topics'||hash.startsWith('#topics/')){
       const requested=decodeURIComponent(hash.slice(8));
       if(topics.some(t=>t.id===requested)){location.replace('#topic/'+encodeURIComponent(requested));return;}
-      main.innerHTML=topicIndexHTML(topicOriginRoute);
+      main.innerHTML=deepDiveIndexHTML('subjects',topicOriginRoute);
       const item=[...main.querySelectorAll<HTMLElement>('[data-future-topic]')].find(el=>el.dataset.futureTopic===requested);
       if(item){item.classList.add('future-selected');requestAnimationFrame(()=>{item.focus();item.scrollIntoView({block:'start'});});}
     }
@@ -1057,7 +1069,7 @@ async function route() {
     else if (hash === "#context") main.innerHTML = contextHTML(rows());
     else if (hash === "#proposals") proposalsPage();
     else if (hash === "#about") aboutPage();
-    else if (hash === "#sites") main.innerHTML = siteGuideIndex();
+    else if (hash === "#sites") main.innerHTML = deepDiveIndexHTML('places',topicOriginRoute);
     else if (hash === "#physical" || hash.startsWith("#physical/")) {
       const id = hash.slice(10);
       if (id) {

@@ -20,7 +20,7 @@ try{
   }
   console.log('PASS '+t.id+': '+t.scenes.length+' chapters and visible current evidence');
  }
- await page.goto(base+'/#topics');assert.equal(await page.locator('.topic-index .library-card').count(),20);
+ await page.goto(base+'/#topics');assert.equal(await page.locator('.dive-card a[href^="#topic/"]').count(),17);
  assert.equal(await page.locator('[data-future-topic]').count(),0);
  for(const file of ['remaining-topic-dives','world-coverage-audit','australasia-archaeology']){
   const response=await page.goto(base+'/docs/'+file+'.html');assert.equal(response.status(),200);assert.ok((await page.locator('h1').innerText()).length>8);

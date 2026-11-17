@@ -430,7 +430,7 @@
     },
     {
       "id": "px-kuk-mounds",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "Kuk - early mounded cultivation",
       "culture": {
@@ -451,12 +451,12 @@
       "routeKind": "schematic",
       "time": {
         "kind": "occurrence",
-        "start": -5050,
-        "end": -4450,
+        "start": -5000,
+        "end": -4490,
         "approximate": true,
-        "original": "Early mounds: 7000-6400 BP.",
+        "original": "Phase onset reported as 6950–6440 calibrated years BP (Denham et al. 2003).",
         "method": "Published calendar estimate; cal BP converted as 1950 minus BP; BCE as astronomical year 1 minus BCE. No new calibration.",
-        "interpretation": "Dated evidence or modeled bracket, not an annual census or proof of uninterrupted occupation."
+        "interpretation": "Published calibrated onset window; not continuous operation of every mound or ditch."
       },
       "claims": [
         {
@@ -470,6 +470,12 @@
               "locator": "Brief synthesis, mounds",
               "stance": "supports",
               "note": "Supports stated evidence and chronology; endpoint geography is an approximate editorial anchor."
+            },
+            {
+              "sourceId": "early-kuk2003",
+              "locator": "Abstract: calibrated Phase 2 / Phase 3 onset ranges",
+              "stance": "supports",
+              "note": "Refines the former rounded institutional dates."
             }
           ]
         }
@@ -483,6 +489,16 @@
           "venue": "World Heritage List",
           "url": "https://whc.unesco.org/en/list/887/",
           "access": "Institutional description and coordinates inspected 2026-11-15."
+        },
+        {
+          "id": "early-kuk2003",
+          "authors": "Tim P. Denham et al.",
+          "title": "Origins of agriculture at Kuk Swamp in the highlands of New Guinea",
+          "year": 2003,
+          "venue": "Science 301:189–193",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/12817084/",
+          "doi": "10.1126/science.1085255",
+          "access": "Original abstract checked 2026-11-16; calibrated phase-onset ranges retained. Later interpretations are discussed in the 2017 scholarly chapters."
         }
       ],
       "review": {
@@ -490,16 +506,25 @@
         "limitations": "Cultivation does not date first highland settlement; the institutional chronology is rounded.",
         "discussion": "Local evidence is not automatically the first settlement of the entire island group. Early mounds: 7000-6400 BP.",
         "provenance": "Independent source check 2026-11-15 using completed research reports as leads; original reports preserved.",
-        "reviewedAt": "2026-11-15",
+        "reviewedAt": "2026-11-16",
         "history": [
-          "Added with date, geographic and interpretive limitations."
+          "Added with date, geographic and interpretive limitations.",
+          "2026-11-16: refined onset with Denham et al. 2003 and consolidated the Kuk location for local chronology."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "early-kuk-phase1",
+          "early-kuk-phase4",
+          "early-kuk-phase5",
+          "early-kuk-phase6",
+          "early-kuk-kawelka-departure",
+          "early-kuk-1933",
+          "px-kuk-ditches"
+        ]
       }
     },
     {
       "id": "px-kuk-ditches",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "Kuk - ditch systems",
       "culture": {
@@ -509,7 +534,7 @@
         "color": "#6cc9c4"
       },
       "location": {
-        "id": "px-kuk-ditches-place",
+        "id": "px-kuk-mounds-place",
         "name": "Kuk Early Agricultural Site",
         "lon": 144.3317,
         "lat": -5.7837,
@@ -520,12 +545,12 @@
       "routeKind": "schematic",
       "time": {
         "kind": "occurrence",
-        "start": -2050,
-        "end": -2050,
+        "start": -2400,
+        "end": -2030,
         "approximate": true,
-        "original": "Ditches from about 4000 BP.",
+        "original": "Phase onset reported as 4350–3980 calibrated years BP (Denham et al. 2003).",
         "method": "Published calendar estimate; cal BP converted as 1950 minus BP; BCE as astronomical year 1 minus BCE. No new calibration.",
-        "interpretation": "Dated evidence or modeled bracket, not an annual census or proof of uninterrupted occupation."
+        "interpretation": "Published calibrated onset window; not continuous operation of every mound or ditch."
       },
       "claims": [
         {
@@ -539,6 +564,12 @@
               "locator": "Brief synthesis, ditches",
               "stance": "supports",
               "note": "Supports stated evidence and chronology; endpoint geography is an approximate editorial anchor."
+            },
+            {
+              "sourceId": "early-kuk2003",
+              "locator": "Abstract: calibrated Phase 2 / Phase 3 onset ranges",
+              "stance": "supports",
+              "note": "Refines the former rounded institutional dates."
             }
           ]
         }
@@ -552,6 +583,16 @@
           "venue": "World Heritage List",
           "url": "https://whc.unesco.org/en/list/887/",
           "access": "Institutional description and coordinates inspected 2026-11-15."
+        },
+        {
+          "id": "early-kuk2003",
+          "authors": "Tim P. Denham et al.",
+          "title": "Origins of agriculture at Kuk Swamp in the highlands of New Guinea",
+          "year": 2003,
+          "venue": "Science 301:189–193",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/12817084/",
+          "doi": "10.1126/science.1085255",
+          "access": "Original abstract checked 2026-11-16; calibrated phase-onset ranges retained. Later interpretations are discussed in the 2017 scholarly chapters."
         }
       ],
       "review": {
@@ -559,11 +600,20 @@
         "limitations": "Construction onset neither dates first occupation nor proves every ditch operated continuously.",
         "discussion": "Local evidence is not automatically the first settlement of the entire island group. Ditches from about 4000 BP.",
         "provenance": "Independent source check 2026-11-15 using completed research reports as leads; original reports preserved.",
-        "reviewedAt": "2026-11-15",
+        "reviewedAt": "2026-11-16",
         "history": [
-          "Added with date, geographic and interpretive limitations."
+          "Added with date, geographic and interpretive limitations.",
+          "2026-11-16: refined onset with Denham et al. 2003 and consolidated the Kuk location for local chronology."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "early-kuk-phase1",
+          "early-kuk-phase4",
+          "early-kuk-phase5",
+          "early-kuk-phase6",
+          "early-kuk-kawelka-departure",
+          "early-kuk-1933",
+          "px-kuk-mounds"
+        ]
       }
     },
     {
