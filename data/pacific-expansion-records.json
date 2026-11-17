@@ -356,7 +356,9 @@
         "history": [
           "Added with date, geographic and interpretive limitations."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "d19-au-mungo-quarters-1934"
+        ]
       }
     },
     {
@@ -1188,7 +1190,7 @@
     },
     {
       "id": "px-bourewa-model",
-      "revision": 1,
+      "revision": 2,
       "type": "occupation",
       "title": "Bourewa - revised Lapita occupation model",
       "culture": {
@@ -1198,12 +1200,12 @@
         "color": "#6cc9c4"
       },
       "location": {
-        "id": "px-bourewa-model-place",
+        "id": "d19-place-bourewa",
         "name": "Bourewa, Viti Levu",
-        "lon": 177.3,
-        "lat": -18.1,
-        "precision": "Approximate geographic anchor, uncertainty about 25 km; not a surveyed archaeological footprint.",
-        "provenance": "Editorial approximation of the named island, valley or district in the cited source. Decimal digits express orientation, not measurement accuracy."
+        "lon": 177.304114,
+        "lat": -18.08981,
+        "precision": "Published archaeological-site reference, approximately 1 km context; not an individual burial or the Lapita excavation unit.",
+        "provenance": "Stantis et al. 2021 specifications-table WGS84 coordinates. Geography only; its later burial chronology is not used for the Lapita model. https://pmc.ncbi.nlm.nih.gov/articles/PMC8511799/"
       },
       "destination": null,
       "routeKind": "schematic",
@@ -1228,6 +1230,12 @@
               "locator": "Publisher abstract, 95.4% ranges",
               "stance": "supports",
               "note": "Supports stated evidence and chronology; endpoint geography is an approximate editorial anchor."
+            },
+            {
+              "sourceId": "d19-source-geo-bourewa",
+              "stance": "context",
+              "locator": "Stantis et al. 2021 specifications-table WGS84 coordinates. Geography only; its later burial chronology is not used for the Lapita model. https://pmc.ncbi.nlm.nih.gov/articles/PMC8511799/",
+              "note": "Geographic context only: supports the public map reference, not the historical date or extent of the finding."
             }
           ]
         }
@@ -1242,16 +1250,27 @@
           "url": "https://pacificarchaeology.org/index.php/journal/article/view/NunnPetchey",
           "access": "Publisher abstract and PDF compared 2026-11-15; abstract bounds used consistently.",
           "doi": "10.70460/jpa.v4i2.118"
+        },
+        {
+          "id": "d19-source-geo-bourewa",
+          "title": "Isotopic data for bioarchaeological samples from Polynesia (pre-Contact and modern periods)",
+          "authors": "Chris Stantis and colleagues",
+          "year": 2021,
+          "venue": "Original scholarship / institutional or community documentation",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8511799/",
+          "access": "Original data article downloaded; specifications-table site coordinates checked. Used only for the public Bourewa geographic anchor, not for Lapita-period dates. Independently written factual summaries; no source media reproduced.",
+          "doi": "10.1016/j.dib.2021.107419"
         }
       ],
       "review": {
         "summary": "The revised Bourewa model gives a later occupation chronology than some older Fiji-foundation estimates.",
-        "limitations": "The envelope follows the publisher abstract; PDF bounds differ by one year. It dates this site, not every Fijian arrival.",
+        "limitations": "The envelope follows the publisher abstract; PDF bounds differ by one year. It dates this site, not every Fijian arrival. Public location refined to the explicitly documented broad place reference; chronology is unchanged.",
         "discussion": "Local evidence is not automatically the first settlement of the entire island group. Onset 2865-2770; end 2690-2614 cal BP, abstract 95.4% ranges.",
         "provenance": "Independent source check 2026-11-15 using completed research reports as leads; original reports preserved.",
-        "reviewedAt": "2026-11-15",
+        "reviewedAt": "2026-11-16",
         "history": [
-          "Added with date, geographic and interpretive limitations."
+          "Added with date, geographic and interpretive limitations.",
+          "Batch B checked public geographic anchor; retained published chronology."
         ],
         "relatedIds": []
       },

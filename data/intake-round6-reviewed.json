@@ -384,7 +384,7 @@
     },
     {
       "id": "r6-nukuleka-onset",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "Nukuleka — coral-file founder horizon",
       "culture": {
@@ -394,12 +394,12 @@
         "color": "#9babb5"
       },
       "location": {
-        "id": "r6-nukuleka-onset-place",
+        "id": "d19-place-nukuleka",
         "name": "Nukuleka, Tongatapu",
-        "lon": -175.12,
-        "lat": -21.14,
-        "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
-        "provenance": "Named geographic setting in the cited study; editorial approximate placement."
+        "lon": -175.12674,
+        "lat": -21.15191,
+        "precision": "Public village reference, approximately 1 km context; not the sampled coral file or excavation grid.",
+        "provenance": "GeoNames 4032395 structured coordinates, verified from downloaded public page. https://www.geonames.org/4032395/nukuleka.html"
       },
       "destination": null,
       "routeKind": "schematic",
@@ -424,6 +424,12 @@
               "stance": "supports",
               "locator": "Abstract/results as specified in source access",
               "note": "Source supports this scoped finding; access and interpretation limits retained."
+            },
+            {
+              "sourceId": "d19-source-geo-nukuleka",
+              "stance": "context",
+              "locator": "GeoNames 4032395 structured coordinates, verified from downloaded public page. https://www.geonames.org/4032395/nukuleka.html",
+              "note": "Geographic context only: supports the public map reference, not the historical date or extent of the finding."
             }
           ]
         },
@@ -464,16 +470,26 @@
           "access": "Open PLOS full text inspected: overlap/contiguous models, Fig.5 and probability intervals; no independent modeling.",
           "referenceType": "journal-article",
           "doi": "10.1371/journal.pone.0120795"
+        },
+        {
+          "id": "d19-source-geo-nukuleka",
+          "title": "Nukuleka, GeoNames 4032395",
+          "authors": "GeoNames",
+          "year": null,
+          "venue": "Original scholarship / institutional or community documentation",
+          "url": "https://www.geonames.org/4032395/nukuleka.html",
+          "access": "Public village gazetteer HTML and structured coordinates downloaded and checked; not an excavation position. Independently written factual summaries; no source media reproduced."
         }
       ],
       "review": {
         "summary": "A worked coral file associated with basal Lapita material dates to 2838±8 BP; the 2015 study reports 2846–2830 calBP at 2σ for the founder horizon.",
-        "limitations": "Dates a proposed initial-landfall horizon. It is not the late 29th centuryBCE. Exact lab intervals and model probabilities are not interchangeable.",
+        "limitations": "Dates a proposed initial-landfall horizon. It is not the late 29th centuryBCE. Exact lab intervals and model probabilities are not interchangeable. Public location refined to the explicitly documented broad place reference; chronology is unchanged.",
         "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
         "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
-        "reviewedAt": "2026-10-29",
+        "reviewedAt": "2026-11-16",
         "history": [
-          "2026-10-29: reconciled for v0.3.6."
+          "2026-10-29: reconciled for v0.3.6.",
+          "Batch B checked public geographic anchor; retained published chronology."
         ],
         "relatedIds": [
           "tonga-talasiu-sampled-individual"
@@ -1162,7 +1178,7 @@
     },
     {
       "id": "r6-nan-madol-sealevel",
-      "revision": 1,
+      "revision": 2,
       "type": "event",
       "title": "Nan Madol — construction and relative sea level",
       "culture": {
@@ -1171,7 +1187,14 @@
         "kind": "unknown",
         "color": "#9babb5"
       },
-      "location": null,
+      "location": {
+        "id": "d19-place-nan-madol",
+        "name": "Nan Madol, public property reference",
+        "lon": 158.330833,
+        "lat": 6.839722,
+        "precision": "Public World Heritage property reference, approximately 1 km site context; not an individual islet, wall or coral sample.",
+        "provenance": "UNESCO property 1503: N6 50 23 E158 19 51, converted from DMS. https://whc.unesco.org/en/list/1503/"
+      },
       "destination": null,
       "routeKind": "schematic",
       "time": {
@@ -1195,6 +1218,12 @@
               "stance": "supports",
               "locator": "Abstract/results as specified in source access",
               "note": "Source supports this scoped finding; access and interpretation limits retained."
+            },
+            {
+              "sourceId": "d19-source-nan-unesco",
+              "stance": "context",
+              "locator": "UNESCO property 1503: N6 50 23 E158 19 51, converted from DMS. https://whc.unesco.org/en/list/1503/",
+              "note": "Geographic context only: supports the public map reference, not the historical date or extent of the finding."
             }
           ]
         }
@@ -1210,16 +1239,26 @@
           "access": "Open primary full text inspected: abstract, sea-level results and monument implications.",
           "referenceType": "journal-article",
           "doi": "10.1073/pnas.2210863119"
+        },
+        {
+          "id": "d19-source-nan-unesco",
+          "title": "Nan Madol: Ceremonial Centre of Eastern Micronesia",
+          "authors": "UNESCO World Heritage Centre",
+          "year": 2016,
+          "venue": "Original scholarship / institutional or community documentation",
+          "url": "https://whc.unesco.org/en/list/1503/",
+          "access": "Official page and public coordinate metadata checked through web rendering; direct archive download was blocked. Independently written factual summaries; no source media reproduced."
         }
       ],
       "review": {
         "summary": "The reconstruction places monument construction around 770–750 BP when relative sea level was about 0.94 m lower.",
-        "limitations": "A monument-phase context, not initial island settlement. Lower sea level informs the interpretation of later inundation.",
+        "limitations": "A monument-phase context, not initial island settlement. Lower sea level informs the interpretation of later inundation. Public location refined to the explicitly documented broad place reference; chronology is unchanged.",
         "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
         "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
-        "reviewedAt": "2026-10-29",
+        "reviewedAt": "2026-11-16",
         "history": [
-          "2026-10-29: reconciled for v0.3.6."
+          "2026-10-29: reconciled for v0.3.6.",
+          "Batch B checked public geographic anchor; retained published chronology."
         ],
         "relatedIds": []
       },
@@ -1229,12 +1268,12 @@
         "geometry": {
           "type": "Point",
           "coordinates": [
-            158.33,
-            6.84
+            158.330833,
+            6.839722
           ]
         },
-        "precision": "Approximate named locality/island reference, rounded for public display; not an excavation coordinate or surveyed boundary.",
-        "provenance": "Illustrative geographic context only; no precise route or boundary inferred."
+        "precision": "Public World Heritage property reference, approximately 1 km site context; not an individual islet, wall or coral sample.",
+        "provenance": "UNESCO property 1503: N6 50 23 E158 19 51, converted from DMS. https://whc.unesco.org/en/list/1503/ Overlay synchronized to the public location reference; no surveyed feature geometry implied."
       }
     },
     {

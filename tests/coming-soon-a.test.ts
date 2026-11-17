@@ -23,7 +23,7 @@ test('first thirteen planned studies become usable in their correct lists',()=>{
    assert.equal(deepDives.some(d=>d.id===id&&!d.links.length),false,id+' still planned');
   }
  }
- assert.equal(deepDives.filter(d=>!d.links.length).length,12);
+ assert.equal(deepDives.filter(d=>!d.links.length).length,0);
 });
 test('ten new place and culture studies have substantive chapters with current shared evidence',()=>{
  for(const id of [...places,...cultures]){

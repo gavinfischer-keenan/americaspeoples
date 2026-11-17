@@ -3,6 +3,7 @@ import {topics,topicOnlyIds} from './topic-dives';
 import {futureDives,topicConnections} from './deep-dive-backlog';
 import {esc} from './dom';
 import {timeLabel} from './time';
+import {siteGuides} from './site-guides';
 
 export function sharedContextRecords(ids:readonly string[],all:readonly DisplayRecord[]):DisplayRecord[]{
  const byId=new Map(all.map(r=>[r.id,r])),found=new Map<string,DisplayRecord>();
@@ -18,7 +19,13 @@ export function sharedContextHTML(ids:readonly string[],all:readonly DisplayReco
 }
 export function relatedDivesHTML(id:string,links=topicConnections[id]??[]):string{
  if(!links.length)return '';
- return `<section class="related-dives"><h3>See also</h3>${links.map(([target,reason])=>{const t=topics.find(t=>t.id===target),f=futureDives.find(f=>f.id===target);if(!t&&!f)return '';return `<p><a href="${t?'#topic/':'#topics/'}${encodeURIComponent(target)}">${esc((t??f)!.title)}${t?' ↗':' · planned'}</a><small>${esc(reason)}</small></p>`;}).join('')}</section>`;
+ const rows=links.map(([target,reason])=>{
+  const t=topics.find(t=>t.id===target),g=siteGuides.find(g=>g.id===target),f=futureDives.find(f=>f.id===target);
+  if(!t&&!g&&!f)return '';
+  const href=t?'#topic/'+encodeURIComponent(target):g?g.href:'#topics/'+encodeURIComponent(target);
+  return `<p><a href="${esc(href)}">${esc((t??g??f)!.title)}${t||g?' ↗':' · planned'}</a><small>${esc(reason)}</small></p>`;
+ }).join('');
+ return rows?`<section class="related-dives"><h3>See also</h3>${rows}</section>`:'';
 }
 export function futureDivesHTML():string{
  if(!futureDives.length)return '';

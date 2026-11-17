@@ -19,7 +19,7 @@ try{
  }
  console.log('PASS promoted planned bookmarks open all three playable movies');
  await page.goto(base+'/#topics');
- assert.equal(await page.locator('.dive-card a[href^="#topic/"]').count(),17);
+ assert.equal(await page.locator('.dive-card a[href^="#topic/"]').count(),19);
  assert.equal(await page.locator('[data-future-topic]').count(),0);
  assert.equal(await page.locator('a[href="#topic/languages"]').count(),0);
  assert.equal(await page.locator('[data-future-topic="haudenosaunee"]').count(),0);

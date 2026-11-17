@@ -1,0 +1,3783 @@
+{
+  "version": "0.18.0",
+  "recordCount": 2143,
+  "sharedRecordCount": 2078,
+  "method": "Shared dated locality/point observations in overlapping rectangular regions; connections with named origin points count at that origin, while route-only and focused topic records are excluded. Intersecting source windows count, not historical-memory display. Counts are evidence records, not towns, populations, continuous occupancy or research effort. Empty cells are not classified as human absence. Undated records remain separate.",
+  "matrix": [
+    {
+      "region": "Alaska / western Arctic",
+      "bounds": [
+        -170,
+        52,
+        -130,
+        72
+      ],
+      "undatedIds": [
+        "northwest-cui-maternal-continuity",
+        "alaska-natael-pleistocene-context",
+        "northwest-lesnek-deglaciation",
+        "r10v-amaknak-bridge-architecture",
+        "r10v-margaret-bay-stone-houses",
+        "r10v-nak3-dil161-marine-resources"
+      ],
+      "periods": [
+        {
+          "start": -50000,
+          "end": -10001,
+          "recordIds": [
+            "early-bluefish-mandible",
+            "genomic-ana-admixture2022",
+            "beringia-wooller-warmwet",
+            "alaska-doering-climate-counterpoint",
+            "northwest-royer-current-hypothesis",
+            "r10v-niidhaayh-component1",
+            "r12v-dry-creek-c1",
+            "r12v-swan-point-cz4b",
+            "r12v-swan-point-cz4a",
+            "r12v-swan-point-cz3b",
+            "r12v-bachner-f22-9",
+            "r12v-owl-ridge-c1",
+            "r12v-owl-ridge-c2"
+          ]
+        },
+        {
+          "start": -10000,
+          "end": -3001,
+          "recordIds": [
+            "usr1-genomic-sample",
+            "northwest-lindo-regional-lineage",
+            "alaska-doering-climate-counterpoint",
+            "alaska-krusenstern-environment",
+            "r10v-amaknak-quarry-unl469",
+            "r10v-niidhaayh-component1",
+            "r10v-niidhaayh-component2",
+            "r12v-dry-creek-c2",
+            "r12v-swan-point-cz3a",
+            "r12v-swan-point-cz2b",
+            "r12v-owl-ridge-c2",
+            "r12v-owl-ridge-c3"
+          ]
+        },
+        {
+          "start": -3000,
+          "end": -1,
+          "recordIds": [
+            "alaska-tyys-ancestry",
+            "alaska-tremayne-demography",
+            "alaska-doering-climate-counterpoint",
+            "alaska-krusenstern-environment",
+            "r10v-chaluka-paleo-burial",
+            "r12v-amaknak-s2-floor",
+            "r12v-amaknak-s5-floor",
+            "r12v-amaknak-s7-main-room",
+            "r12v-amaknak-s3-hearth"
+          ]
+        },
+        {
+          "start": 0,
+          "end": 999,
+          "recordIds": [
+            "alaska-doering-climate-counterpoint",
+            "alaska-krusenstern-environment"
+          ]
+        },
+        {
+          "start": 1000,
+          "end": 1491,
+          "recordIds": [
+            "thule-eastward-chronology-model",
+            "alaska-espenberg-transition",
+            "alaska-doering-climate-counterpoint",
+            "alaska-krusenstern-environment",
+            "arctic-thule-mason-drivers",
+            "r10v-kagamil-late-paleo-burial",
+            "r10v-ship-rock-neo-burial"
+          ]
+        },
+        {
+          "start": 1492,
+          "end": 1699,
+          "recordIds": [
+            "alaska-doering-climate-counterpoint",
+            "alaska-krusenstern-environment"
+          ]
+        },
+        {
+          "start": 1700,
+          "end": 1799,
+          "recordIds": [
+            "alaska-doering-climate-counterpoint",
+            "alaska-krusenstern-environment",
+            "ai-colony-49",
+            "visit-bering-outbound-1741-2",
+            "context-fur-kodiak-1784",
+            "context-fur-kodiak-1784-coercion"
+          ]
+        },
+        {
+          "start": 1800,
+          "end": 1934,
+          "recordIds": [
+            "alaska-doering-climate-counterpoint",
+            "alaska-krusenstern-environment",
+            "ai-colony-49",
+            "rail-alaska-seward-fairbanks-1923",
+            "rail-copper-river-1911-1934",
+            "context-fur-sitka-1804",
+            "context-whaling-arctic-1871",
+            "sovereignty-alaska-transfer",
+            "context-unalaska-mission"
+          ]
+        }
+      ]
+    },
+    {
+      "region": "Canadian Arctic / Greenland",
+      "bounds": [
+        -130,
+        60,
+        -20,
+        84
+      ],
+      "undatedIds": [],
+      "periods": [
+        {
+          "start": -50000,
+          "end": -10001,
+          "recordIds": []
+        },
+        {
+          "start": -10000,
+          "end": -3001,
+          "recordIds": []
+        },
+        {
+          "start": -3000,
+          "end": -1,
+          "recordIds": [
+            "gap-sermermiut-dorset",
+            "north-kitsissut"
+          ]
+        },
+        {
+          "start": 0,
+          "end": 999,
+          "recordIds": [
+            "gap-quaqtaq-dorset",
+            "gap-sermermiut-dorset"
+          ]
+        },
+        {
+          "start": 1000,
+          "end": 1491,
+          "recordIds": [
+            "iqaluktuuq-late-dorset",
+            "r8v-pingiqqalik-adaptation",
+            "gap-quaqtaq-dorset",
+            "gap-quaqtaq-thule",
+            "north-somerset",
+            "north-tuktut"
+          ]
+        },
+        {
+          "start": 1492,
+          "end": 1699,
+          "recordIds": [
+            "r8v-pingiqqalik-adaptation",
+            "north-somerset",
+            "north-tuktut"
+          ]
+        },
+        {
+          "start": 1700,
+          "end": 1799,
+          "recordIds": [
+            "r8v-pingiqqalik-adaptation",
+            "ai-colony-46"
+          ]
+        },
+        {
+          "start": 1800,
+          "end": 1934,
+          "recordIds": [
+            "r8v-pingiqqalik-adaptation",
+            "ai-colony-46"
+          ]
+        }
+      ]
+    },
+    {
+      "region": "Pacific Northwest",
+      "bounds": [
+        -130,
+        42,
+        -116,
+        60
+      ],
+      "undatedIds": [
+        "northwest-cui-maternal-continuity",
+        "r9v-nw-tsishaa-early-terrace",
+        "r9v-nw-huu7ii-early-terrace",
+        "r9v-nw-chuumata-early-terrace",
+        "r9v-nw-tsishaa-hunted-whale",
+        "r9v-nw-huu7ii-house-valves",
+        "r9v-nw-xweetay-obsidian",
+        "r9v-nw-stsailes-camas",
+        "r9v-nw-fishtraps-cooperation",
+        "r9v-nw-katzie-wapato",
+        "r9v-nw-gitxsan-wetsuweten-trails",
+        "r10v-idaho-wewukiyepuh",
+        "r10v-idaho-salmon-winter"
+      ],
+      "periods": [
+        {
+          "start": -50000,
+          "end": -10001,
+          "recordIds": [
+            "early-coopers-ferry-area-b",
+            "early-paisley-coprolites",
+            "pacific-calvert-island-footprints"
+          ]
+        },
+        {
+          "start": -10000,
+          "end": -3001,
+          "recordIds": []
+        },
+        {
+          "start": -3000,
+          "end": -1,
+          "recordIds": [
+            "gap-palmrose-early",
+            "gap-quadra-clam-gardens"
+          ]
+        },
+        {
+          "start": 0,
+          "end": 999,
+          "recordIds": [
+            "r9v-nw-harrison-growth",
+            "gap-palmrose-early",
+            "gap-palmrose-rebuilding",
+            "gap-palmrose-late"
+          ]
+        },
+        {
+          "start": 1000,
+          "end": 1491,
+          "recordIds": [
+            "r9v-nw-harrison-population-model"
+          ]
+        },
+        {
+          "start": 1492,
+          "end": 1699,
+          "recordIds": []
+        },
+        {
+          "start": 1700,
+          "end": 1799,
+          "recordIds": [
+            "visit-vancouver-coast-1792-1",
+            "visit-vancouver-coast-1792-2",
+            "visit-vancouver-coast-1792-3",
+            "context-fur-yuquot-trade"
+          ]
+        },
+        {
+          "start": 1800,
+          "end": 1934,
+          "recordIds": [
+            "visit-lewis-clark-pacific-1804-1806-5",
+            "visit-lewis-clark-pacific-1804-1806-6"
+          ]
+        }
+      ]
+    },
+    {
+      "region": "California / Southwest",
+      "bounds": [
+        -125,
+        29,
+        -103,
+        42
+      ],
+      "undatedIds": [
+        "sw-westernstemmed-synthesis",
+        "sw-rockart-minimum-ages",
+        "sw-laplaya-burning-alternatives",
+        "sw-sandiego-typology-and-climate",
+        "sw-california-regional-trajectories",
+        "sw-bonneville-climate-occupation",
+        "sw-centralcalifornia-asynchronous",
+        "sw-channel-shoreline-loss",
+        "sw-channel-chirp-method",
+        "fc-chaco-woodland-causation",
+        "fc-petrifiedforest-dispersal",
+        "fc-bonito-isotope-origins",
+        "fc-chaco-early-inequality",
+        "fc-chaco-community-residential-mobility",
+        "r8v-picuris-continuity",
+        "r9v-sw-sanmarcos-mobility",
+        "r9v-sw-drought-statistics",
+        "r10v-nevada-leonard-revised",
+        "r11v-california-polynesian-contact-debate",
+        "r12v-nv-gatecliff-renewed"
+      ],
+      "periods": [
+        {
+          "start": -50000,
+          "end": -10001,
+          "recordIds": [
+            "white-sands-footprints",
+            "genomic-northern-southern-split",
+            "channel-islands-maritime-sites2011",
+            "sw-youngerdryas-california-debate",
+            "r10v-nevada-crypt-cache",
+            "r10v-nevada-lsc-white-hearth"
+          ]
+        },
+        {
+          "start": -10000,
+          "end": -3001,
+          "recordIds": [
+            "channel-islands-maritime-sites2011",
+            "sw-california-ancestry-northward",
+            "sw-chumash-sampled-continuity",
+            "sw-grassvalley-paleosol",
+            "sw-sri26-maritime-seasonal",
+            "sw-twainharte-flutedpoint",
+            "r10v-nevada-lsc-white-hearth",
+            "r10v-nevada-lsc-lower-shell-hearth",
+            "r10v-nevada-silverzone",
+            "r11v-torqua-cave",
+            "r12v-nv-gatecliff-logistic",
+            "r12v-ut-hogup-strata-1-7",
+            "r12v-ut-hogup-strata-8",
+            "r12v-ca-marsh-creek-earlier"
+          ]
+        },
+        {
+          "start": -3000,
+          "end": -1,
+          "recordIds": [
+            "sw-california-ancestry-northward",
+            "sw-chumash-sampled-continuity",
+            "sw-laplaya-eap",
+            "sw-laplaya-pithouse1-burning",
+            "sw-rockcanyon-diet-transition",
+            "fc-chaco-early-maize-pollen",
+            "r12v-nv-gatecliff-logistic",
+            "r12v-nv-gatecliff-hiatus",
+            "r12v-ut-hogup-strata-8",
+            "r12v-ut-hogup-strata-9-10",
+            "r12v-ut-hogup-strata-11-16",
+            "r12v-nv-leonard-sandal",
+            "r12v-nv-leonard-possible-cradleboard",
+            "r12v-nv-leonard-cradleboard",
+            "r12v-nv-leonard-matting",
+            "r12v-nv-alta-toquima-initial",
+            "r12v-ca-marsh-creek-earlier",
+            "r12v-ca-marsh-creek-early-period",
+            "r12v-ca-prisoners-harbor-onset",
+            "r12v-ca-ven863-seasonal"
+          ]
+        },
+        {
+          "start": 0,
+          "end": 999,
+          "recordIds": [
+            "mesa-verde-settlement",
+            "chaco-regional-center",
+            "sw-chumash-sampled-continuity",
+            "sw-laplaya-eap",
+            "sw-rockcanyon-diet-transition",
+            "sw-sancarlos-earlyformative",
+            "fc-chaco-early-network",
+            "fc-middle-san-juan-continuity",
+            "fc-petrifiedforest-early-aggregation",
+            "fc-bonito-long-construction",
+            "fc-chaco-community-scale",
+            "fc-elkridge-pueblo1-context",
+            "hovenweep-holly",
+            "hovenweep-cutthroat-castle",
+            "hovenweep-cajon",
+            "reach-chaco-communities",
+            "r9v-sw-taos-cultivation",
+            "r9v-sw-cave29-ice-harvest",
+            "r9v-sw-hidden-cave-aridity",
+            "r11v-catalina-drought-settlements",
+            "r12v-ut-hogup-strata-11-16",
+            "r12v-nv-leonard-matting",
+            "d18-meso-paq-early-pithouses",
+            "d18-meso-paq-courtyard-change",
+            "settlement-walpi-habitation",
+            "vx-sacred-ridge",
+            "site-chaco-pueblo-bonito",
+            "site-chaco-una-vida",
+            "site-chaco-hungo-pavi",
+            "site-chaco-penasco-blanco",
+            "site-chaco-kin-bineola",
+            "site-mesa-far-view-house",
+            "site-mesa-badger-house-early",
+            "site-mesa-step-house-pithouses"
+          ]
+        },
+        {
+          "start": 1000,
+          "end": 1491,
+          "recordIds": [
+            "mesa-verde-settlement",
+            "chaco-regional-center",
+            "sw-chumash-sampled-continuity",
+            "sw-altar-coalescence",
+            "sw-bylas-social-reorganization",
+            "fc-chaco-late-network",
+            "fc-middle-san-juan-continuity",
+            "fc-middle-san-juan-outliers",
+            "fc-bonito-room28-closure",
+            "fc-bonito-long-construction",
+            "fc-chaco-centrality-reorganization",
+            "fc-chaco-community-scale",
+            "fc-wiyo-cultural-transformation",
+            "fc-turkey-migration-proxy",
+            "fc-mesaverde-depopulation-model",
+            "fc-international-borderlands-agency",
+            "hovenweep-square-tower",
+            "hovenweep-holly",
+            "hovenweep-horseshoe",
+            "hovenweep-hackberry",
+            "hovenweep-cutthroat-castle",
+            "hovenweep-cajon",
+            "hovenweep-lowry-pueblo",
+            "hovenweep-sand-canyon-pueblo",
+            "hovenweep-goodman-point-pueblo",
+            "reach-chaco-communities",
+            "reach-borderlands-interaction",
+            "r9v-nevada-pueblo-grande",
+            "r9v-sw-taos-adobe",
+            "r9v-sw-taos-ancestral-ruin",
+            "r9v-sw-pot-earlier",
+            "r9v-sw-pot-construction",
+            "r9v-sw-pot-decommission",
+            "r9v-sw-pot-obsidian",
+            "r9v-sw-tijeras-early",
+            "r9v-sw-tijeras-layout",
+            "r9v-sw-tijeras-consolidation",
+            "r9v-sw-tijeras-rebuild",
+            "r9v-sw-sanmarcos-aggregation",
+            "r9v-sw-sand-canyon-violence",
+            "r9v-sw-castle-rock-violence",
+            "r9v-sw-cave29-late",
+            "r9v-sw-hidden-cave-aridity",
+            "r11v-catalina-drought-settlements",
+            "r12v-ut-hogup-strata-11-16",
+            "d18-meso-paq-casa-amurallada",
+            "d18-meso-paq-macaw-raising",
+            "d18-meso-paq-housewell-interment",
+            "settlement-taos-habitation",
+            "settlement-acoma-habitation",
+            "settlement-oraibi-habitation",
+            "settlement-walpi-habitation",
+            "settlement-ohkay-owingeh-habitation",
+            "settlement-picuris-habitation",
+            "settlement-pecos-habitation",
+            "settlement-hawikuh-habitation",
+            "vx-pot-creek",
+            "site-chaco-hungo-pavi",
+            "site-chaco-chetro-ketl",
+            "site-chaco-pueblo-del-arroyo",
+            "site-chaco-pueblo-alto",
+            "site-chaco-new-alto",
+            "site-chaco-kin-kletso",
+            "site-chaco-casa-chiquita",
+            "site-chaco-tsin-kletsin",
+            "site-chaco-casa-rinconada",
+            "site-chaco-wijiji",
+            "site-chaco-kin-klizhin",
+            "site-mesa-cliff-palace",
+            "site-mesa-balcony-house",
+            "site-mesa-spruce-tree-house",
+            "site-mesa-long-house",
+            "site-mesa-far-view-house",
+            "site-mesa-cedar-tree-tower",
+            "site-mesa-sun-temple",
+            "site-mesa-step-house-masonry",
+            "site-wupatki",
+            "site-wukoki",
+            "site-box-canyon",
+            "site-nalakihu-citadel",
+            "city-paquime-multistory-town"
+          ]
+        },
+        {
+          "start": 1492,
+          "end": 1699,
+          "recordIds": [
+            "sw-chumash-sampled-continuity",
+            "ai-colony-13",
+            "r9v-sw-sanmarcos-aggregation",
+            "r9v-sw-sanmarcos-terminal",
+            "r9v-sw-hidden-cave-aridity",
+            "r12v-ut-hogup-strata-11-16",
+            "history-santa-fe-colonial",
+            "history-san-agustin-1595",
+            "settlement-taos-habitation",
+            "settlement-acoma-habitation",
+            "settlement-oraibi-habitation",
+            "settlement-walpi-habitation",
+            "settlement-ohkay-owingeh-habitation",
+            "settlement-picuris-habitation",
+            "settlement-pecos-habitation",
+            "settlement-hawikuh-habitation",
+            "visit-cabrillo-ferrelo-1542-1543-2",
+            "visit-cabrillo-ferrelo-1542-1543-3",
+            "visit-cabrillo-ferrelo-1542-1543-4",
+            "visit-drake-1577-1579-4"
+          ]
+        },
+        {
+          "start": 1700,
+          "end": 1799,
+          "recordIds": [
+            "sw-chumash-sampled-continuity",
+            "ai-colony-13",
+            "ai-colony-48",
+            "settlement-taos-habitation",
+            "settlement-acoma-habitation",
+            "settlement-oraibi-habitation",
+            "settlement-walpi-habitation",
+            "settlement-ohkay-owingeh-habitation",
+            "settlement-picuris-habitation",
+            "settlement-pecos-habitation",
+            "mission-san-diego",
+            "mission-san-carlos",
+            "mission-san-antonio",
+            "mission-san-gabriel",
+            "mission-san-luis-obispo",
+            "mission-san-francisco-asis",
+            "mission-san-juan-capistrano",
+            "mission-santa-clara",
+            "mission-san-buenaventura",
+            "mission-santa-barbara",
+            "mission-la-purisima",
+            "mission-santa-cruz",
+            "mission-soledad",
+            "mission-san-jose",
+            "mission-san-juan-bautista",
+            "mission-san-miguel",
+            "mission-san-fernando",
+            "mission-san-luis-rey",
+            "mission-san-diego-relocation",
+            "mission-san-carlos-relocation",
+            "mission-san-antonio-relocation",
+            "mission-san-gabriel-relocation",
+            "mission-santa-clara-second-site",
+            "mission-santa-clara-third-site",
+            "mission-santa-cruz-hilltop",
+            "mission-san-fernando-velicata"
+          ]
+        },
+        {
+          "start": 1800,
+          "end": 1934,
+          "recordIds": [
+            "removal-bosque-confinement-1864-1868",
+            "removal-dine-return-1868",
+            "violence-bloody-island-1850",
+            "removal-dine-long-walk-1864",
+            "ai-colony-13",
+            "ai-colony-48",
+            "settlement-taos-habitation",
+            "settlement-acoma-habitation",
+            "settlement-oraibi-habitation",
+            "settlement-walpi-habitation",
+            "settlement-ohkay-owingeh-habitation",
+            "settlement-picuris-habitation",
+            "settlement-pecos-habitation",
+            "mission-santa-ines",
+            "mission-san-rafael",
+            "mission-san-francisco-solano",
+            "mission-santa-clara-fourth-site",
+            "mission-santa-clara-final-site",
+            "mission-la-purisima-relocation",
+            "vx-camp-grant",
+            "rail-central-pacific-completion-1869",
+            "ax-pacific-mail-china",
+            "context-fur-ross-1812",
+            "context-fur-ross-sale-1841",
+            "battle-cwsac-nm001",
+            "battle-cwsac-nm002"
+          ]
+        }
+      ]
+    },
+    {
+      "region": "Great Plains",
+      "bounds": [
+        -110,
+        29,
+        -94,
+        52
+      ],
+      "undatedIds": [
+        "fc-chaco-woodland-causation",
+        "fc-petrifiedforest-dispersal",
+        "fc-bonito-isotope-origins",
+        "fc-chaco-early-inequality",
+        "fc-chaco-community-residential-mobility",
+        "la-belcher-chronology",
+        "plains-jim-pitts-goshen",
+        "r8v-picuris-continuity",
+        "r9v-sw-sanmarcos-mobility",
+        "r9v-sw-drought-statistics",
+        "r10v-wyoming-hellgap"
+      ],
+      "periods": [
+        {
+          "start": -50000,
+          "end": -10001,
+          "recordIds": [
+            "white-sands-footprints",
+            "early-gault-modelled-onset",
+            "early-friedkin-stemmed-points",
+            "genomic-northern-southern-split",
+            "r10v-wyoming-laprele",
+            "r10v-wyoming-colby"
+          ]
+        },
+        {
+          "start": -10000,
+          "end": -3001,
+          "recordIds": []
+        },
+        {
+          "start": -3000,
+          "end": -1,
+          "recordIds": [
+            "fc-chaco-early-maize-pollen"
+          ]
+        },
+        {
+          "start": 0,
+          "end": 999,
+          "recordIds": [
+            "mesa-verde-settlement",
+            "chaco-regional-center",
+            "sw-sancarlos-earlyformative",
+            "fc-chaco-early-network",
+            "fc-middle-san-juan-continuity",
+            "fc-petrifiedforest-early-aggregation",
+            "fc-bonito-long-construction",
+            "fc-chaco-community-scale",
+            "fc-elkridge-pueblo1-context",
+            "hovenweep-holly",
+            "hovenweep-cutthroat-castle",
+            "hovenweep-cajon",
+            "reach-chaco-communities",
+            "r9v-sw-taos-cultivation",
+            "r9v-sw-cave29-ice-harvest",
+            "r9v-sw-hidden-cave-aridity",
+            "d18-meso-paq-early-pithouses",
+            "d18-meso-paq-courtyard-change",
+            "vx-sacred-ridge",
+            "site-chaco-pueblo-bonito",
+            "site-chaco-una-vida",
+            "site-chaco-hungo-pavi",
+            "site-chaco-penasco-blanco",
+            "site-chaco-kin-bineola",
+            "site-mesa-far-view-house",
+            "site-mesa-badger-house-early",
+            "site-mesa-step-house-pithouses"
+          ]
+        },
+        {
+          "start": 1000,
+          "end": 1491,
+          "recordIds": [
+            "mesa-verde-settlement",
+            "chaco-regional-center",
+            "sw-bylas-social-reorganization",
+            "fc-chaco-late-network",
+            "fc-middle-san-juan-continuity",
+            "fc-middle-san-juan-outliers",
+            "fc-bonito-room28-closure",
+            "fc-bonito-long-construction",
+            "fc-chaco-centrality-reorganization",
+            "fc-chaco-community-scale",
+            "fc-wiyo-cultural-transformation",
+            "fc-turkey-migration-proxy",
+            "fc-mesaverde-depopulation-model",
+            "fc-international-borderlands-agency",
+            "hovenweep-square-tower",
+            "hovenweep-holly",
+            "hovenweep-horseshoe",
+            "hovenweep-hackberry",
+            "hovenweep-cutthroat-castle",
+            "hovenweep-cajon",
+            "hovenweep-lowry-pueblo",
+            "hovenweep-sand-canyon-pueblo",
+            "hovenweep-goodman-point-pueblo",
+            "reach-chaco-communities",
+            "reach-borderlands-interaction",
+            "r9v-sw-taos-adobe",
+            "r9v-sw-taos-ancestral-ruin",
+            "r9v-sw-pot-earlier",
+            "r9v-sw-pot-construction",
+            "r9v-sw-pot-decommission",
+            "r9v-sw-pot-obsidian",
+            "r9v-sw-tijeras-early",
+            "r9v-sw-tijeras-layout",
+            "r9v-sw-tijeras-consolidation",
+            "r9v-sw-tijeras-rebuild",
+            "r9v-sw-sanmarcos-aggregation",
+            "r9v-sw-sand-canyon-violence",
+            "r9v-sw-castle-rock-violence",
+            "r9v-sw-cave29-late",
+            "r9v-sw-hidden-cave-aridity",
+            "r9v-sw-crow-creek-massacre",
+            "d18-meso-paq-casa-amurallada",
+            "d18-meso-paq-macaw-raising",
+            "d18-meso-paq-housewell-interment",
+            "settlement-taos-habitation",
+            "settlement-acoma-habitation",
+            "settlement-ohkay-owingeh-habitation",
+            "settlement-picuris-habitation",
+            "settlement-pecos-habitation",
+            "settlement-hawikuh-habitation",
+            "vx-pot-creek",
+            "site-chaco-hungo-pavi",
+            "site-chaco-chetro-ketl",
+            "site-chaco-pueblo-del-arroyo",
+            "site-chaco-pueblo-alto",
+            "site-chaco-new-alto",
+            "site-chaco-kin-kletso",
+            "site-chaco-casa-chiquita",
+            "site-chaco-tsin-kletsin",
+            "site-chaco-casa-rinconada",
+            "site-chaco-wijiji",
+            "site-chaco-kin-klizhin",
+            "site-mesa-cliff-palace",
+            "site-mesa-balcony-house",
+            "site-mesa-spruce-tree-house",
+            "site-mesa-long-house",
+            "site-mesa-far-view-house",
+            "site-mesa-cedar-tree-tower",
+            "site-mesa-sun-temple",
+            "site-mesa-step-house-masonry",
+            "city-paquime-multistory-town"
+          ]
+        },
+        {
+          "start": 1492,
+          "end": 1699,
+          "recordIds": [
+            "ai-colony-13",
+            "ai-colony-43",
+            "r9v-sw-sanmarcos-aggregation",
+            "r9v-sw-sanmarcos-terminal",
+            "r9v-sw-hidden-cave-aridity",
+            "history-santa-fe-colonial",
+            "settlement-taos-habitation",
+            "settlement-acoma-habitation",
+            "settlement-ohkay-owingeh-habitation",
+            "settlement-picuris-habitation",
+            "settlement-pecos-habitation",
+            "settlement-hawikuh-habitation"
+          ]
+        },
+        {
+          "start": 1700,
+          "end": 1799,
+          "recordIds": [
+            "ai-colony-13",
+            "ai-colony-43",
+            "settlement-taos-habitation",
+            "settlement-acoma-habitation",
+            "settlement-ohkay-owingeh-habitation",
+            "settlement-picuris-habitation",
+            "settlement-pecos-habitation"
+          ]
+        },
+        {
+          "start": 1800,
+          "end": 1934,
+          "recordIds": [
+            "removal-bosque-confinement-1864-1868",
+            "removal-dine-return-1868",
+            "epidemic-mandan1837",
+            "violence-dakota-execution-expulsion-1862-1863",
+            "violence-sand-creek-1864",
+            "removal-dine-long-walk-1864",
+            "removal-nez-perce-exile-1877",
+            "removal-ponca-1877",
+            "violence-wounded-knee-1890",
+            "ai-colony-13",
+            "ai-colony-43",
+            "settlement-taos-habitation",
+            "settlement-acoma-habitation",
+            "settlement-ohkay-owingeh-habitation",
+            "settlement-picuris-habitation",
+            "settlement-pecos-habitation",
+            "vx-washita",
+            "visit-lewis-clark-pacific-1804-1806-2",
+            "post-pony-express-1860-1861",
+            "rail-union-pacific-completion-1869",
+            "battle-cwsac-ar001",
+            "battle-cwsac-ar004",
+            "battle-cwsac-ar005",
+            "battle-cwsac-ar009",
+            "battle-cwsac-ks001",
+            "battle-cwsac-ks002",
+            "battle-cwsac-ks003",
+            "battle-cwsac-ks004",
+            "battle-cwsac-mn001",
+            "battle-cwsac-mn002",
+            "battle-cwsac-mo002",
+            "battle-cwsac-mo003",
+            "battle-cwsac-mo005",
+            "battle-cwsac-mo014",
+            "battle-cwsac-mo015",
+            "battle-cwsac-mo016",
+            "battle-cwsac-mo024",
+            "battle-cwsac-mo025",
+            "battle-cwsac-mo026",
+            "battle-cwsac-mo027",
+            "battle-cwsac-mo028",
+            "battle-cwsac-mo029",
+            "battle-cwsac-nd001",
+            "battle-cwsac-nd002",
+            "battle-cwsac-nd003",
+            "battle-cwsac-nd004",
+            "battle-cwsac-nd005",
+            "battle-cwsac-nm001",
+            "battle-cwsac-nm002",
+            "battle-cwsac-ok002",
+            "battle-cwsac-ok003",
+            "battle-cwsac-ok004",
+            "battle-cwsac-ok006",
+            "battle-cwsac-ok007",
+            "battle-cwsac-tx002",
+            "battle-cwsac-tx003",
+            "battle-alamo",
+            "battle-san-jacinto-texas"
+          ]
+        }
+      ]
+    },
+    {
+      "region": "Northeast / Great Lakes",
+      "bounds": [
+        -94,
+        38,
+        -55,
+        53
+      ],
+      "undatedIds": [
+        "atlantic-lanse-amour-burial-context",
+        "atlantic-cowpath-context",
+        "atlantic-cowpath-east-context",
+        "atlantic-cowpath-west-context",
+        "atlantic-iceberg-context",
+        "atlantic-black-rock-brook-context",
+        "atlantic-factory-cove-context",
+        "atlantic-belle-isle-1975-model",
+        "atlantic-newfoundland-shoreline-preservation",
+        "northeast-brigham",
+        "northeast-derby",
+        "plains-northeast-minnesota-visibility",
+        "r4-west-runway",
+        "r11v-iroquoian-appearance-debate"
+      ],
+      "periods": [
+        {
+          "start": -50000,
+          "end": -10001,
+          "recordIds": [
+            "greatlakes-eastern-initial-settlement",
+            "greatlakes-ricelake-eh1",
+            "atlantic-debert-calibrated-context",
+            "northeast-brian-jones-hearth",
+            "northeast-vail-feature1",
+            "northeast-colebrook-component",
+            "northeast-neponset-component",
+            "northeast-bull-brook-context",
+            "northeast-mount-desert-offshore-finds",
+            "northeast-intervale",
+            "northeast-randolph",
+            "northeast-mount-jasper",
+            "northeast-jefferson-i",
+            "northeast-jefferson-ii",
+            "northeast-jefferson-iii",
+            "northeast-adkins",
+            "northeast-michaud",
+            "northeast-lamoreau",
+            "northeast-champlain-shoreline-model",
+            "northeast-rimouski-context",
+            "northeast-kruger2-context"
+          ]
+        },
+        {
+          "start": -10000,
+          "end": -3001,
+          "recordIds": [
+            "greatlakes-fulton-growth",
+            "greatlakes-ricelake-eh1",
+            "greatlakes-ricelake-eh2",
+            "atlantic-kitchel-forest-hiatus",
+            "northeast-colebrook-component",
+            "northeast-neponset-component",
+            "northeast-mount-desert-offshore-finds",
+            "northeast-intervale",
+            "northeast-randolph",
+            "northeast-mount-jasper",
+            "northeast-jefferson-i",
+            "northeast-jefferson-ii",
+            "northeast-jefferson-iii",
+            "northeast-adkins",
+            "northeast-michaud",
+            "northeast-lamoreau",
+            "northeast-new-brunswick-lanceolates",
+            "northeast-champlain-shoreline-model",
+            "northeast-rimouski-context",
+            "northeast-kruger2-context",
+            "r5-huron-obsidian",
+            "context-stilwell-burial"
+          ]
+        },
+        {
+          "start": -3000,
+          "end": -1,
+          "recordIds": [
+            "phillips-garden-dorset",
+            "greatlakes-fulton-growth",
+            "greatlakes-fulton-maize-introduction",
+            "greatlakes-ricelake-eh2"
+          ]
+        },
+        {
+          "start": 0,
+          "end": 999,
+          "recordIds": [
+            "phillips-garden-dorset",
+            "mound-city-hopewell",
+            "greatlakes-fulton-maize-introduction",
+            "greatlakes-fulton-maize-agriculture",
+            "northeast-sipp-ia",
+            "northeast-sipp-ib"
+          ]
+        },
+        {
+          "start": 1000,
+          "end": 1491,
+          "recordIds": [
+            "lanse-1021",
+            "cahokia-urban",
+            "greatlakes-fulton-maize-agriculture",
+            "northeast-sipp-ii",
+            "r9v-sw-orendorf-trauma",
+            "visit-norse-lanse-aux-meadows-1021",
+            "community-smith-pagerie"
+          ]
+        },
+        {
+          "start": 1492,
+          "end": 1699,
+          "recordIds": [
+            "greatlakes-fulton-maize-agriculture",
+            "northeast-sipp-ii",
+            "ai-colony-15",
+            "ai-colony-17",
+            "ai-colony-19",
+            "ai-colony-21",
+            "ai-colony-22",
+            "ai-colony-25",
+            "ai-colony-27",
+            "ai-colony-30",
+            "ai-colony-31",
+            "ai-colony-32",
+            "ai-colony-39",
+            "ai-colony-42",
+            "r9v-census-new-france1666",
+            "d18-language-hochelaga-1535",
+            "d18-language-stadacona-1535",
+            "history-plymouth-colonial",
+            "history-boston-colonial",
+            "history-quebec-colonial",
+            "history-montreal-colonial",
+            "history-new-amsterdam-colonial",
+            "vx-mystic",
+            "context-mission-sainte-marie",
+            "community-smith-pagerie",
+            "community-klock",
+            "community-garoga",
+            "community-briggs-run",
+            "community-ganondagan",
+            "community-ganondagan-1687"
+          ]
+        },
+        {
+          "start": 1700,
+          "end": 1799,
+          "recordIds": [
+            "river-labbe-mission",
+            "acadian-deportation-boston1755",
+            "ai-colony-15",
+            "ai-colony-17",
+            "ai-colony-22",
+            "ai-colony-25",
+            "ai-colony-27",
+            "ai-colony-30",
+            "ai-colony-31",
+            "ai-colony-39",
+            "ai-colony-42",
+            "r9v-census-new-hampshire",
+            "r9v-census-massachusetts",
+            "r9v-census-rhode-island",
+            "r9v-census-connecticut",
+            "r9v-census-new-york",
+            "r9v-census-new-jersey",
+            "r9v-census-pennsylvania",
+            "r9v-census-delaware",
+            "r9v-census-maryland",
+            "vx-gnadenhutten",
+            "ax-acadian-halifax-louisiana",
+            "context-whaling-dartmouth-1767",
+            "community-newtown-1779",
+            "community-chenussio-1779",
+            "community-grand-river",
+            "community-canandaigua-1794",
+            "battle-abraham",
+            "battle-sainte-foy",
+            "battle-louisbourg"
+          ]
+        },
+        {
+          "start": 1800,
+          "end": 1934,
+          "recordIds": [
+            "removal-ira-1934",
+            "ai-colony-15",
+            "ai-colony-17",
+            "visit-lewis-clark-pacific-1804-1806-1",
+            "visit-lewis-clark-return-1806",
+            "ax-alexandria-new-orleans",
+            "ax-alexandria-natchez",
+            "ax-black-ball-packets",
+            "context-fur-convention-1911",
+            "context-whaling-morgan-1841",
+            "context-whaling-morgan-1921",
+            "sovereignty-carlisle-1879",
+            "sovereignty-florida-signing",
+            "sovereignty-alaska-signing",
+            "sovereignty-alaska-payment",
+            "battle-cwsac-dc001",
+            "battle-cwsac-in001",
+            "battle-cwsac-ky011",
+            "battle-cwsac-md001",
+            "battle-cwsac-md002",
+            "battle-cwsac-md003",
+            "battle-cwsac-md004",
+            "battle-cwsac-md006",
+            "battle-cwsac-md007",
+            "battle-cwsac-md008",
+            "battle-cwsac-mo001",
+            "battle-cwsac-mo006",
+            "battle-cwsac-mo010",
+            "battle-cwsac-mo011",
+            "battle-cwsac-mo013",
+            "battle-cwsac-mo022",
+            "battle-cwsac-mo023",
+            "battle-cwsac-oh001",
+            "battle-cwsac-oh002",
+            "battle-cwsac-pa001",
+            "battle-cwsac-pa002",
+            "battle-cwsac-va002",
+            "battle-cwsac-va004",
+            "battle-cwsac-va005",
+            "battle-cwsac-va006",
+            "battle-cwsac-va007",
+            "battle-cwsac-va022",
+            "battle-cwsac-va023",
+            "battle-cwsac-va024",
+            "battle-cwsac-va025",
+            "battle-cwsac-va026",
+            "battle-cwsac-va027",
+            "battle-cwsac-va028",
+            "battle-cwsac-va029",
+            "battle-cwsac-va032",
+            "battle-cwsac-va033",
+            "battle-cwsac-va034",
+            "battle-cwsac-va035",
+            "battle-cwsac-va036",
+            "battle-cwsac-va037",
+            "battle-cwsac-va038",
+            "battle-cwsac-va039",
+            "battle-cwsac-va040",
+            "battle-cwsac-va041",
+            "battle-cwsac-va042",
+            "battle-cwsac-va043",
+            "battle-cwsac-va044",
+            "battle-cwsac-va045",
+            "battle-cwsac-va046",
+            "battle-cwsac-va048",
+            "battle-cwsac-va099",
+            "battle-cwsac-va100",
+            "battle-cwsac-va101",
+            "battle-cwsac-va102",
+            "battle-cwsac-va103",
+            "battle-cwsac-va104",
+            "battle-cwsac-va105",
+            "battle-cwsac-va106",
+            "battle-cwsac-va107",
+            "battle-cwsac-va108",
+            "battle-cwsac-va110",
+            "battle-cwsac-va111",
+            "battle-cwsac-va114",
+            "battle-cwsac-va115",
+            "battle-cwsac-va116",
+            "battle-cwsac-va117",
+            "battle-cwsac-va118",
+            "battle-cwsac-va119",
+            "battle-cwsac-va120",
+            "battle-cwsac-va121",
+            "battle-cwsac-va122",
+            "battle-cwsac-va123",
+            "battle-cwsac-wv001",
+            "battle-cwsac-wv002",
+            "battle-cwsac-wv003",
+            "battle-cwsac-wv004",
+            "battle-cwsac-wv005",
+            "battle-cwsac-wv006",
+            "battle-cwsac-wv007",
+            "battle-cwsac-wv010",
+            "battle-cwsac-wv012",
+            "battle-cwsac-wv013",
+            "battle-cwsac-wv014",
+            "battle-cwsac-wv015",
+            "battle-cwsac-wv016",
+            "battle-queenston",
+            "battle-chateauguay"
+          ]
+        }
+      ]
+    },
+    {
+      "region": "Southeastern US",
+      "bounds": [
+        -94,
+        24,
+        -75,
+        38
+      ],
+      "undatedIds": [
+        "se-georgia-instability4300bp",
+        "se-georgia-ring-dispersal",
+        "se-bolen-water-aggregation",
+        "se-holocene-settlement-synthesis",
+        "se-gulf-persistent-coastal-use",
+        "se-king-open-depopulation",
+        "se-dyar-enduring-traditions",
+        "la-hillman-components",
+        "la-belcher-chronology",
+        "la-bayou-survey-bias",
+        "la-delta-cultural-landscapes",
+        "la-delta-research-history",
+        "mississippi-hester-formation",
+        "r4-cactus-hill-stratigraphy",
+        "r4-woodland-household-model",
+        "r4-woodland-knowledge-complexity",
+        "r4-bayshore-landscape",
+        "r4-crystal-roberts-resources",
+        "r8v-ocmulgee-earthlodge",
+        "r8v-garden-patch-dating",
+        "r9v-florida-aucilla-inventory",
+        "r9v-florida-apalachee-detection",
+        "r12v-la-toncrey-midden"
+      ],
+      "periods": [
+        {
+          "start": -50000,
+          "end": -10001,
+          "recordIds": [
+            "early-page-ladson-unit3c",
+            "se-bolen-lithic-networks"
+          ]
+        },
+        {
+          "start": -10000,
+          "end": -3001,
+          "recordIds": [
+            "se-bolen-lithic-networks",
+            "la-watson-brake"
+          ]
+        },
+        {
+          "start": -3000,
+          "end": -1,
+          "recordIds": [
+            "poverty-point-earthworks",
+            "poverty-point-copper-exchange",
+            "se-stcatherines-ring-model",
+            "se-musgrove-ring-model",
+            "se-mcqueen-ring-model",
+            "se-shellring-relative-sequence",
+            "la-lafourche-landscape",
+            "la-flooding-context",
+            "r10v-tensas-hiatus",
+            "r10v-tensas-reoccupation",
+            "r10v-tensas-mound",
+            "r10v-bayou-jasmine-early",
+            "r10v-tchefuncte-site",
+            "r10v-mcguffee-charcoal",
+            "r10v-boothe-association"
+          ]
+        },
+        {
+          "start": 0,
+          "end": 999,
+          "recordIds": [
+            "la-morgan-coles-creek",
+            "la-lafourche-landscape",
+            "arkansas-wapanocca-landuse",
+            "gulf-woodland-fishery-context",
+            "r4-kiskiak-mockley",
+            "r4-walker-noe-knotweed",
+            "r4-bayshore-early",
+            "r4-bayshore-late",
+            "r10v-plash-fishing",
+            "r10v-bayou-stjohn-fishing",
+            "r10v-garden-patch-construction",
+            "r10v-garden-patch-seasonality",
+            "r10v-shell-mound-solstice",
+            "r10v-bayou-jasmine-early",
+            "r10v-marksville-earthworks",
+            "r10v-mcguffee-charcoal",
+            "r12v-la-raffman-plaza",
+            "r12v-la-st-agnes-basal",
+            "site-ocmulgee-great-temple"
+          ]
+        },
+        {
+          "start": 1000,
+          "end": 1491,
+          "recordIds": [
+            "se-floridakeys-revised-chronology",
+            "se-king-modeled-onset",
+            "la-grand-caillou",
+            "la-morgan-coles-creek",
+            "la-adams-bay",
+            "la-lafourche-landscape",
+            "arkansas-wapanocca-landuse",
+            "gulf-woodland-fishery-context",
+            "r4-werowocomoco-town",
+            "r4-bayshore-late",
+            "r8v-ocmulgee-middle-plateau",
+            "r10v-bayou-stjohn-fishing",
+            "r12v-la-raffman-plaza",
+            "r12v-la-raffman-reconfiguration",
+            "r12v-la-st-agnes-apex",
+            "r12v-la-byram-ferry-occupation",
+            "site-ocmulgee-earth-lodge",
+            "site-ocmulgee-great-temple",
+            "site-etowah"
+          ]
+        },
+        {
+          "start": 1492,
+          "end": 1699,
+          "recordIds": [
+            "jamestown-founding1607",
+            "la-adams-bay",
+            "la-lafourche-landscape",
+            "arkansas-wapanocca-landuse",
+            "r4-kiskiak-spaces",
+            "r4-werowocomoco-town",
+            "r8v-ocmulgee-middle-plateau",
+            "ai-colony-12",
+            "ai-colony-16",
+            "ai-colony-37",
+            "ai-colony-38",
+            "ai-colony-45",
+            "r8v-roanoke-1585",
+            "r8v-roanoke-1587",
+            "r12v-la-byram-ferry-occupation",
+            "history-st-augustine-colonial",
+            "history-jamestown-colonial",
+            "history-atocha-1622",
+            "history-santa-margarita-1622",
+            "site-etowah",
+            "context-treasure-atocha-1622"
+          ]
+        },
+        {
+          "start": 1700,
+          "end": 1799,
+          "recordIds": [
+            "la-lafourche-landscape",
+            "r4-kiskiak-spaces",
+            "r8v-ocmulgee-middle-plateau",
+            "ai-colony-12",
+            "ai-colony-16",
+            "ai-colony-37",
+            "ai-colony-38",
+            "ai-colony-45",
+            "ai-colony-47",
+            "r9v-census-virginia",
+            "r9v-census-north-carolina",
+            "r9v-census-south-carolina",
+            "r9v-census-georgia",
+            "history-new-orleans-colonial",
+            "history-spanish-fleet-1715",
+            "history-spanish-fleet-1733",
+            "ax-acadian-attakapas",
+            "ax-acadian-st-gabriel",
+            "ax-acadian-vidalia",
+            "ax-acadian-lafourche"
+          ]
+        },
+        {
+          "start": 1800,
+          "end": 1934,
+          "recordIds": [
+            "removal-choctaw-1831-1833",
+            "removal-muscogee-1836-1837",
+            "removal-cherokee-1838-1839",
+            "la-lafourche-landscape",
+            "ai-colony-12",
+            "ai-colony-45",
+            "d18-language-new-echota-phoenix-1828",
+            "sovereignty-louisiana-transfer",
+            "sovereignty-florida-transfer",
+            "battle-cwsac-al001",
+            "battle-cwsac-al002",
+            "battle-cwsac-al003",
+            "battle-cwsac-al004",
+            "battle-cwsac-al005",
+            "battle-cwsac-al006",
+            "battle-cwsac-al007",
+            "battle-cwsac-ar002",
+            "battle-cwsac-ar003",
+            "battle-cwsac-ar006",
+            "battle-cwsac-ar007",
+            "battle-cwsac-ar008",
+            "battle-cwsac-ar010",
+            "battle-cwsac-ar011",
+            "battle-cwsac-ar012",
+            "battle-cwsac-ar013",
+            "battle-cwsac-ar014",
+            "battle-cwsac-ar015",
+            "battle-cwsac-ar016",
+            "battle-cwsac-ar017",
+            "battle-cwsac-fl001",
+            "battle-cwsac-fl002",
+            "battle-cwsac-fl003",
+            "battle-cwsac-fl004",
+            "battle-cwsac-fl005",
+            "battle-cwsac-fl006",
+            "battle-cwsac-ga001",
+            "battle-cwsac-ga003",
+            "battle-cwsac-ga004",
+            "battle-cwsac-ga005",
+            "battle-cwsac-ga006",
+            "battle-cwsac-ga007",
+            "battle-cwsac-ga008",
+            "battle-cwsac-ga009",
+            "battle-cwsac-ga010",
+            "battle-cwsac-ga011",
+            "battle-cwsac-ga012",
+            "battle-cwsac-ga013",
+            "battle-cwsac-ga014",
+            "battle-cwsac-ga015",
+            "battle-cwsac-ga016",
+            "battle-cwsac-ga017",
+            "battle-cwsac-ga018",
+            "battle-cwsac-ga019",
+            "battle-cwsac-ga020",
+            "battle-cwsac-ga021",
+            "battle-cwsac-ga022",
+            "battle-cwsac-ga023",
+            "battle-cwsac-ga025",
+            "battle-cwsac-ga026",
+            "battle-cwsac-ga027",
+            "battle-cwsac-ga028",
+            "battle-cwsac-ky001",
+            "battle-cwsac-ky002",
+            "battle-cwsac-ky003",
+            "battle-cwsac-ky004",
+            "battle-cwsac-ky005",
+            "battle-cwsac-ky006",
+            "battle-cwsac-ky007",
+            "battle-cwsac-ky008",
+            "battle-cwsac-ky009",
+            "battle-cwsac-ky010",
+            "battle-cwsac-la001",
+            "battle-cwsac-la002",
+            "battle-cwsac-la003",
+            "battle-cwsac-la004",
+            "battle-cwsac-la005",
+            "battle-cwsac-la006",
+            "battle-cwsac-la007",
+            "battle-cwsac-la008",
+            "battle-cwsac-la009",
+            "battle-cwsac-la010",
+            "battle-cwsac-la011",
+            "battle-cwsac-la012",
+            "battle-cwsac-la013",
+            "battle-cwsac-la014",
+            "battle-cwsac-la015",
+            "battle-cwsac-la016",
+            "battle-cwsac-la017",
+            "battle-cwsac-la018",
+            "battle-cwsac-la019",
+            "battle-cwsac-la020",
+            "battle-cwsac-la021",
+            "battle-cwsac-la022",
+            "battle-cwsac-la023",
+            "battle-cwsac-mo004",
+            "battle-cwsac-mo007",
+            "battle-cwsac-mo008",
+            "battle-cwsac-mo009",
+            "battle-cwsac-mo012",
+            "battle-cwsac-mo017",
+            "battle-cwsac-mo018",
+            "battle-cwsac-mo019",
+            "battle-cwsac-mo020",
+            "battle-cwsac-mo021",
+            "battle-cwsac-ms001",
+            "battle-cwsac-ms002",
+            "battle-cwsac-ms003",
+            "battle-cwsac-ms004",
+            "battle-cwsac-ms005",
+            "battle-cwsac-ms006",
+            "battle-cwsac-ms007",
+            "battle-cwsac-ms008",
+            "battle-cwsac-ms009",
+            "battle-cwsac-ms010",
+            "battle-cwsac-ms011",
+            "battle-cwsac-ms012",
+            "battle-cwsac-ms013",
+            "battle-cwsac-ms014",
+            "battle-cwsac-ms015",
+            "battle-cwsac-ms016",
+            "battle-cwsac-nc001",
+            "battle-cwsac-nc002",
+            "battle-cwsac-nc003",
+            "battle-cwsac-nc004",
+            "battle-cwsac-nc005",
+            "battle-cwsac-nc006",
+            "battle-cwsac-nc007",
+            "battle-cwsac-nc008",
+            "battle-cwsac-nc009",
+            "battle-cwsac-nc010",
+            "battle-cwsac-nc011",
+            "battle-cwsac-nc012",
+            "battle-cwsac-nc013",
+            "battle-cwsac-nc014",
+            "battle-cwsac-nc015",
+            "battle-cwsac-nc016",
+            "battle-cwsac-nc017",
+            "battle-cwsac-nc018",
+            "battle-cwsac-nc019",
+            "battle-cwsac-nc020",
+            "battle-cwsac-sc001",
+            "battle-cwsac-sc002",
+            "battle-cwsac-sc003",
+            "battle-cwsac-sc004",
+            "battle-cwsac-sc005",
+            "battle-cwsac-sc006",
+            "battle-cwsac-sc007",
+            "battle-cwsac-sc008",
+            "battle-cwsac-sc009",
+            "battle-cwsac-sc010",
+            "battle-cwsac-sc011",
+            "battle-cwsac-tn001",
+            "battle-cwsac-tn002",
+            "battle-cwsac-tn003",
+            "battle-cwsac-tn004",
+            "battle-cwsac-tn005",
+            "battle-cwsac-tn006",
+            "battle-cwsac-tn007",
+            "battle-cwsac-tn008",
+            "battle-cwsac-tn009",
+            "battle-cwsac-tn010",
+            "battle-cwsac-tn011",
+            "battle-cwsac-tn012",
+            "battle-cwsac-tn013",
+            "battle-cwsac-tn014",
+            "battle-cwsac-tn015",
+            "battle-cwsac-tn016",
+            "battle-cwsac-tn017",
+            "battle-cwsac-tn018",
+            "battle-cwsac-tn019",
+            "battle-cwsac-tn020",
+            "battle-cwsac-tn021",
+            "battle-cwsac-tn022",
+            "battle-cwsac-tn023",
+            "battle-cwsac-tn024",
+            "battle-cwsac-tn025",
+            "battle-cwsac-tn026",
+            "battle-cwsac-tn027",
+            "battle-cwsac-tn028",
+            "battle-cwsac-tn029",
+            "battle-cwsac-tn030",
+            "battle-cwsac-tn031",
+            "battle-cwsac-tn032",
+            "battle-cwsac-tn033",
+            "battle-cwsac-tn034",
+            "battle-cwsac-tn035",
+            "battle-cwsac-tn036",
+            "battle-cwsac-tn037",
+            "battle-cwsac-tn038",
+            "battle-cwsac-tx001",
+            "battle-cwsac-tx006",
+            "battle-cwsac-va003",
+            "battle-cwsac-va008",
+            "battle-cwsac-va009",
+            "battle-cwsac-va010",
+            "battle-cwsac-va011",
+            "battle-cwsac-va012",
+            "battle-cwsac-va013",
+            "battle-cwsac-va014",
+            "battle-cwsac-va015",
+            "battle-cwsac-va016",
+            "battle-cwsac-va017",
+            "battle-cwsac-va018",
+            "battle-cwsac-va019",
+            "battle-cwsac-va020",
+            "battle-cwsac-va021",
+            "battle-cwsac-va030",
+            "battle-cwsac-va031",
+            "battle-cwsac-va047",
+            "battle-cwsac-va049",
+            "battle-cwsac-va050",
+            "battle-cwsac-va051",
+            "battle-cwsac-va052",
+            "battle-cwsac-va053",
+            "battle-cwsac-va054",
+            "battle-cwsac-va055",
+            "battle-cwsac-va056",
+            "battle-cwsac-va057",
+            "battle-cwsac-va058",
+            "battle-cwsac-va059",
+            "battle-cwsac-va062",
+            "battle-cwsac-va063",
+            "battle-cwsac-va064",
+            "battle-cwsac-va065",
+            "battle-cwsac-va066",
+            "battle-cwsac-va067",
+            "battle-cwsac-va068",
+            "battle-cwsac-va069",
+            "battle-cwsac-va070",
+            "battle-cwsac-va071",
+            "battle-cwsac-va072",
+            "battle-cwsac-va073",
+            "battle-cwsac-va074",
+            "battle-cwsac-va075",
+            "battle-cwsac-va076",
+            "battle-cwsac-va077",
+            "battle-cwsac-va078",
+            "battle-cwsac-va079",
+            "battle-cwsac-va080",
+            "battle-cwsac-va081",
+            "battle-cwsac-va082",
+            "battle-cwsac-va083",
+            "battle-cwsac-va084",
+            "battle-cwsac-va085",
+            "battle-cwsac-va086",
+            "battle-cwsac-va087",
+            "battle-cwsac-va088",
+            "battle-cwsac-va089",
+            "battle-cwsac-va090",
+            "battle-cwsac-va091",
+            "battle-cwsac-va092",
+            "battle-cwsac-va093",
+            "battle-cwsac-va094",
+            "battle-cwsac-va095",
+            "battle-cwsac-va096",
+            "battle-cwsac-va097",
+            "battle-cwsac-va098",
+            "battle-cwsac-va109",
+            "battle-cwsac-va113",
+            "battle-cwsac-va124",
+            "battle-cwsac-va125",
+            "battle-cwsac-wv008",
+            "battle-cwsac-wv009"
+          ]
+        }
+      ]
+    },
+    {
+      "region": "Mexico",
+      "bounds": [
+        -117,
+        14,
+        -86,
+        30
+      ],
+      "undatedIds": [
+        "central-honduras-village-onset",
+        "se-gulf-persistent-coastal-use",
+        "sw-laplaya-burning-alternatives",
+        "empire-basinmexico-scaling",
+        "empire-yautepec-survey",
+        "la-hillman-components",
+        "la-bayou-survey-bias",
+        "la-delta-cultural-landscapes",
+        "la-delta-research-history",
+        "mexico-cedros-spring-context",
+        "mexico-faro-punta-marquez",
+        "r7-wrobel-hoyo-negro-naia",
+        "r7-wrobel-chan-hol-ii",
+        "r7-wrobel-chan-hol-iii",
+        "r7-wrobel-el-templo",
+        "r7-wrobel-el-pit-ii",
+        "r7-wrobel-saki-tzul-and-mayahak-cab-pek",
+        "r11v-kaminaljuyu-chronology-revision",
+        "r12v-la-toncrey-midden"
+      ],
+      "periods": [
+        {
+          "start": -50000,
+          "end": -10001,
+          "recordIds": [
+            "chiquihuite-sc-c-onset",
+            "mexico-cerro-pedregoso-context",
+            "mexico-el-peregrino",
+            "mexico-colina-castor",
+            "r5-hoyo-negro-individual",
+            "r5-cerro-pedregoso",
+            "r7-wrobel-naharon-i",
+            "r7-wrobel-el-pit-i-cenote-pat-jacinto",
+            "r12v-monkey-dust-s5a"
+          ]
+        },
+        {
+          "start": -10000,
+          "end": -3001,
+          "recordIds": [
+            "central-belize-early-lineage",
+            "central-belize-southern-ancestry",
+            "mexico-cerro-pedregoso-context",
+            "r5-cerro-pedregoso",
+            "r7-wrobel-chan-hol-i",
+            "r7-wrobel-muknal",
+            "r7-wrobel-las-palmas-i",
+            "r7-wrobel-mayahak-cab-pek",
+            "r7-wrobel-saki-tzul",
+            "r12v-xihuatoxtla-layer-d",
+            "r12v-chan-hol-illumination-earlier",
+            "r12v-chan-hol-illumination-later",
+            "r12v-lamina-p11",
+            "r12v-sagitario-p06",
+            "r12v-sagitario-p07",
+            "r12v-camilo-s11",
+            "r12v-monkey-dust-s5a",
+            "r12v-coxcatlan-el-riego",
+            "early-gigante-esperanza",
+            "early-gigante-late-esperanza",
+            "early-gigante-early-marcala1",
+            "early-gigante-early-marcala2",
+            "early-gigante-middle-marcala1",
+            "early-gigante-middle-marcala2",
+            "early-gigante-middle-marcala3"
+          ]
+        },
+        {
+          "start": -3000,
+          "end": -1,
+          "recordIds": [
+            "south-tikal-corriental-sediments",
+            "central-honduras-exchange1100",
+            "central-sanisidro-monuments",
+            "central-aguadafenix-construction",
+            "central-belize-village-transition",
+            "sw-laplaya-eap",
+            "sw-laplaya-pithouse1-burning",
+            "la-lafourche-landscape",
+            "r8v-los-naranjos-jaral",
+            "r8v-los-naranjos-eden",
+            "r8v-ceibal-ceremonial",
+            "r11v-santa-rita-preclassic-mobility",
+            "d18-meso-monte-foundation-terraces",
+            "d18-meso-monte-structurej-carvings",
+            "d18-meso-monte-ballcourt-construction",
+            "early-gigante-late-marcala",
+            "early-gigante-early-estanzuela",
+            "early-gigante-middle-estanzuela",
+            "early-gigante-late-estanzuela",
+            "settlement-cholula-habitation",
+            "site-tikal",
+            "site-monte-alban",
+            "city-monte-alban-urban-occupation",
+            "city-dainzu-long-occupation-sequence",
+            "city-zaachila-early-village",
+            "city-calakmul-major-urban-phase",
+            "city-la-venta-monumental-center",
+            "city-chalcatzingo-middle-formative-center"
+          ]
+        },
+        {
+          "start": 0,
+          "end": 999,
+          "recordIds": [
+            "south-tikal-corriental-sediments",
+            "south-teotihuacan-urban-development",
+            "south-copan-classic-urban-phase",
+            "south-montealban-tomb105-residence",
+            "south-overlay-tikal-entrada-378",
+            "central-elcoyote-late-phase",
+            "sw-laplaya-eap",
+            "empire-comparative-maya-aggregation",
+            "la-morgan-coles-creek",
+            "la-lafourche-landscape",
+            "gulf-woodland-fishery-context",
+            "r8v-los-naranjos-eden",
+            "r11v-ceibal-preclassic-decline",
+            "r11v-ceibal-classic-decline",
+            "r11v-piedras-negras-war-study",
+            "d18-meso-teo-superimposed-heating",
+            "d18-meso-teo-lv2-reoccupation",
+            "d18-meso-teo-lv3-reoccupation",
+            "d18-meso-teo-tunnels-coyotlatelco",
+            "d18-meso-teo-tunnels-mazapa",
+            "d18-meso-monte-tomb7-reuse",
+            "d18-meso-cal-chiiknahb-initial",
+            "d18-meso-cal-structurev-stelae623",
+            "d18-meso-cal-stela33-dedication",
+            "d18-meso-cal-chiiknahb-murals",
+            "d18-meso-cal-chiiknahb-final",
+            "d18-meso-cop-preacropolis",
+            "d18-meso-cop-hunal-phase",
+            "d18-meso-cop-oropendola",
+            "d18-meso-cop-stairway-first",
+            "d18-meso-cop-stairway-later",
+            "d18-meso-cop-postroyal-activity",
+            "settlement-cholula-habitation",
+            "vx-witzna",
+            "vx-cancuen",
+            "site-tikal",
+            "site-copan",
+            "site-chichen-itza",
+            "site-monte-alban",
+            "site-palenque",
+            "site-tula",
+            "site-el-tajin",
+            "gap-alabama-early",
+            "gap-alabama-platform",
+            "city-tula-monumental-expansion",
+            "city-yautepec-early-postclassic-town",
+            "city-teotenango-civic-center",
+            "city-xochicalco-planned-hilltop-city",
+            "city-monte-alban-urban-occupation",
+            "city-mitla-settlement-and-growth",
+            "city-dainzu-long-occupation-sequence",
+            "city-lambityeco-salt-producing-town",
+            "city-calakmul-major-urban-phase",
+            "city-palenque-dynastic-city",
+            "city-edzna-regional-capital",
+            "city-bonampak-late-classic-center",
+            "city-yaxchilan-late-classic-city",
+            "city-dzibilchaltun-visible-monumental-phase",
+            "city-ek-balam-urban-florescence",
+            "city-kabah-puuc-urban-peak",
+            "city-sayil-urban-construction",
+            "city-labna-urban-peak",
+            "city-cantona-major-urban-expansion"
+          ]
+        },
+        {
+          "start": 1000,
+          "end": 1491,
+          "recordIds": [
+            "south-overlay-templomayor-obsidian",
+            "central-elcoyote-late-phase",
+            "empire-tenochtitlan-population",
+            "empire-comparative-maya-aggregation",
+            "empire-tlaxcallan-landscape",
+            "site-templomayor-stageii",
+            "site-tizatlan-fourteenth-century",
+            "la-grand-caillou",
+            "la-morgan-coles-creek",
+            "la-adams-bay",
+            "la-lafourche-landscape",
+            "gulf-woodland-fishery-context",
+            "d18-meso-teo-tunnels-mazapa",
+            "d18-meso-teo-tunnels-aztec",
+            "d18-meso-monte-tomb7-reuse",
+            "d18-meso-cal-chiiknahb-final",
+            "d18-meso-cop-postroyal-activity",
+            "settlement-cholula-habitation",
+            "settlement-tenochtitlan-habitation",
+            "settlement-tzintzuntzan-habitation",
+            "settlement-iximche-habitation",
+            "site-chichen-itza",
+            "site-tula",
+            "site-el-tajin",
+            "site-tlatelolco",
+            "gap-alabama-late",
+            "gap-alabama-platform",
+            "city-tenayuca-temple-and-town",
+            "city-calixtlahuaca-urban-florescence",
+            "city-calixtlahuaca-tributary-city",
+            "city-tula-monumental-expansion",
+            "city-malinalco-mexica-stronghold",
+            "city-huexotla-documented-political-center",
+            "city-teopanzolco-temple-center",
+            "city-yautepec-early-postclassic-town",
+            "city-teotenango-civic-center",
+            "city-teotenango-fortified-town",
+            "city-mitla-settlement-and-growth",
+            "city-dainzu-long-occupation-sequence",
+            "city-edzna-regional-capital",
+            "city-mayapan-walled-capital",
+            "city-dzibilchaltun-visible-monumental-phase",
+            "city-labna-urban-peak",
+            "city-tzintzuntzan",
+            "city-tulum"
+          ]
+        },
+        {
+          "start": 1492,
+          "end": 1699,
+          "recordIds": [
+            "south-overlay-templomayor-obsidian",
+            "epidemic-central-mexico1520",
+            "epidemic-teposcolula1545",
+            "empire-tenochtitlan-population",
+            "la-adams-bay",
+            "la-lafourche-landscape",
+            "ai-colony-05",
+            "ai-colony-43",
+            "ai-colony-45",
+            "d18-meso-monte-tomb7-reuse",
+            "d18-meso-cal-earlycolonial-visits",
+            "d18-language-mani-1562",
+            "history-veracruz-lineage",
+            "history-mexico-city-colonial-transition",
+            "settlement-cholula-habitation",
+            "settlement-tenochtitlan-habitation",
+            "settlement-tzintzuntzan-habitation",
+            "settlement-iximche-habitation",
+            "settlement-antigua-guatemala",
+            "mission-loreto-concho",
+            "visit-cabrillo-ferrelo-1542-1543-5",
+            "context-treasure-zacatecas-1546",
+            "context-treasure-san-diego-1615",
+            "context-treasure-san-diego-1615-coercion",
+            "city-tenayuca-temple-and-town",
+            "city-calixtlahuaca-tributary-city",
+            "city-malinalco-mexica-stronghold",
+            "city-yautepec-documented-provincial-center",
+            "city-teotenango-fortified-town",
+            "city-cempoala-town-at-the-spanish-encounter",
+            "city-tzintzuntzan",
+            "city-tulum"
+          ]
+        },
+        {
+          "start": 1700,
+          "end": 1799,
+          "recordIds": [
+            "la-lafourche-landscape",
+            "ai-colony-05",
+            "ai-colony-43",
+            "ai-colony-45",
+            "regional-omoa-construction",
+            "regional-san-bernabe-1712",
+            "regional-san-bernabe-1766",
+            "regional-omoa-1777",
+            "regional-omoa-1779",
+            "history-new-orleans-colonial",
+            "settlement-cholula-habitation",
+            "settlement-tenochtitlan-habitation",
+            "settlement-tzintzuntzan-habitation",
+            "settlement-guatemala-city",
+            "mission-santa-rosalia-mulege",
+            "mission-san-ignacio-baja",
+            "mission-san-borja",
+            "mission-san-fernando-velicata",
+            "ax-acadian-attakapas",
+            "ax-acadian-st-gabriel",
+            "ax-acadian-vidalia",
+            "ax-acadian-lafourche"
+          ]
+        },
+        {
+          "start": 1800,
+          "end": 1934,
+          "recordIds": [
+            "la-lafourche-landscape",
+            "ai-colony-05",
+            "ai-colony-43",
+            "ai-colony-45",
+            "regional-totonicapan-1820",
+            "regional-san-pedro-1848",
+            "settlement-cholula-habitation",
+            "settlement-tenochtitlan-habitation",
+            "settlement-tzintzuntzan-habitation",
+            "rail-mexico-veracruz-capital-1873",
+            "gap-kaxil-village",
+            "gap-kaxil-cabildo",
+            "sovereignty-yaqui-1905",
+            "sovereignty-louisiana-transfer",
+            "sovereignty-gadsden-signing",
+            "sovereignty-gadsden-revised",
+            "battle-cwsac-la001",
+            "battle-cwsac-la002",
+            "battle-cwsac-la005",
+            "battle-cwsac-la006",
+            "battle-cwsac-la007",
+            "battle-cwsac-la012",
+            "battle-cwsac-tx001",
+            "battle-cwsac-tx002",
+            "battle-cwsac-tx003",
+            "battle-cwsac-tx005",
+            "battle-cwsac-tx006",
+            "battle-alamo",
+            "battle-san-jacinto-texas",
+            "battle-palo-alto",
+            "battle-resaca",
+            "battle-chapultepec",
+            "battle-puebla"
+          ]
+        }
+      ]
+    },
+    {
+      "region": "Central America",
+      "bounds": [
+        -93,
+        7,
+        -77,
+        18
+      ],
+      "undatedIds": [
+        "central-honduras-village-onset",
+        "central-landbridge-cultigens",
+        "central-landbridge-chiefdoms",
+        "jm-archaic-evidence-limits",
+        "jm-white-marl-pottery-provenance",
+        "jm-white-marl-living-heritage",
+        "r7-wrobel-saki-tzul-and-mayahak-cab-pek",
+        "r8v-fonseca-routes",
+        "r8v-nicoya-greenstones",
+        "r8v-caribbean-greenstones",
+        "r9v-cc-isthmian-ancestry-model",
+        "r9v-cc-panama-paternal-directionality",
+        "r11v-kaminaljuyu-chronology-revision"
+      ],
+      "periods": [
+        {
+          "start": -50000,
+          "end": -10001,
+          "recordIds": []
+        },
+        {
+          "start": -10000,
+          "end": -3001,
+          "recordIds": [
+            "central-belize-early-lineage",
+            "central-belize-southern-ancestry",
+            "r5-angi-burial",
+            "r7-wrobel-mayahak-cab-pek",
+            "r7-wrobel-saki-tzul",
+            "early-gigante-esperanza",
+            "early-gigante-late-esperanza",
+            "early-gigante-early-marcala1",
+            "early-gigante-early-marcala2",
+            "early-gigante-middle-marcala1",
+            "early-gigante-middle-marcala2",
+            "early-gigante-middle-marcala3"
+          ]
+        },
+        {
+          "start": -3000,
+          "end": -1,
+          "recordIds": [
+            "south-tikal-corriental-sediments",
+            "central-honduras-exchange1100",
+            "central-sanisidro-monuments",
+            "central-aguadafenix-construction",
+            "central-belize-village-transition",
+            "r8v-los-naranjos-jaral",
+            "r8v-los-naranjos-eden",
+            "r8v-la-regla-grave2",
+            "r8v-huiscoyol-grave11",
+            "r8v-ceibal-ceremonial",
+            "early-gigante-late-marcala",
+            "early-gigante-early-estanzuela",
+            "early-gigante-middle-estanzuela",
+            "early-gigante-late-estanzuela",
+            "site-tikal",
+            "context-pottery-monagrillo"
+          ]
+        },
+        {
+          "start": 0,
+          "end": 999,
+          "recordIds": [
+            "south-tikal-corriental-sediments",
+            "south-copan-classic-urban-phase",
+            "south-overlay-tikal-entrada-378",
+            "central-elcoyote-late-phase",
+            "empire-comparative-maya-aggregation",
+            "jm-blue-marlin-survey-context",
+            "jm-paradise-wes15a",
+            "jm-bluefields-mollusk-change",
+            "jm-white-marl-settlement",
+            "r5-mayales-early-date",
+            "r5-jicaro-maternal-lineages",
+            "r8v-los-naranjos-eden",
+            "r8v-tiguilotada-early",
+            "r8v-el-cano-emeralds",
+            "r8v-sitio-conte-emeralds",
+            "r9v-cc-panama-ancient-genomes",
+            "r9v-cc-aguas-buenas-residue",
+            "r9v-cc-guacimo-early-metals",
+            "r11v-ceibal-preclassic-decline",
+            "r11v-ceibal-classic-decline",
+            "r11v-ayala-early-polychromes",
+            "r11v-cerro-juan-diaz-diversification",
+            "r11v-piedras-negras-war-study",
+            "d18-meso-cop-preacropolis",
+            "d18-meso-cop-hunal-phase",
+            "d18-meso-cop-oropendola",
+            "d18-meso-cop-stairway-first",
+            "d18-meso-cop-stairway-later",
+            "d18-meso-cop-postroyal-activity",
+            "vx-witzna",
+            "vx-cancuen",
+            "site-tikal",
+            "site-copan",
+            "site-palenque",
+            "gap-alabama-early",
+            "gap-alabama-platform",
+            "city-palenque-dynastic-city",
+            "city-bonampak-late-classic-center",
+            "city-yaxchilan-late-classic-city"
+          ]
+        },
+        {
+          "start": 1000,
+          "end": 1491,
+          "recordIds": [
+            "central-elcoyote-late-phase",
+            "empire-comparative-maya-aggregation",
+            "jm-paradise-wes15a",
+            "jm-sweetwater-wes15b",
+            "jm-bluefields-mollusk-change",
+            "jm-white-marl-settlement",
+            "jm-white-marl-plant-diet",
+            "jm-white-marl-landscape-proxies",
+            "r5-jicaro-maternal-lineages",
+            "r8v-tiguilotada-early",
+            "r8v-tiguilotada-late",
+            "r8v-gualorita",
+            "r8v-el-cano-emeralds",
+            "r8v-sitio-conte-emeralds",
+            "r9v-cc-panama-ancient-genomes",
+            "r9v-cc-las-mercedes-chacmool",
+            "r9v-cc-barillas-mound61",
+            "r9v-cc-barillas-mound27",
+            "d18-meso-cop-postroyal-activity",
+            "settlement-iximche-habitation",
+            "gap-alabama-late",
+            "gap-alabama-platform"
+          ]
+        },
+        {
+          "start": 1492,
+          "end": 1699,
+          "recordIds": [
+            "jm-bluefields-mollusk-change",
+            "jm-white-marl-settlement",
+            "jm-white-marl-plant-diet",
+            "r8v-tiguilotada-late",
+            "r8v-gualorita",
+            "ai-colony-03",
+            "ai-colony-35",
+            "ai-colony-44",
+            "history-panama-viejo",
+            "history-panama-casco-antiguo",
+            "settlement-iximche-habitation",
+            "settlement-leon-viejo",
+            "settlement-leon-current-site",
+            "settlement-antigua-guatemala",
+            "visit-balboa-pacific-1513"
+          ]
+        },
+        {
+          "start": 1700,
+          "end": 1799,
+          "recordIds": [
+            "ai-colony-35",
+            "ai-colony-44",
+            "regional-talamanca-1709",
+            "regional-cartago-1710",
+            "regional-omoa-construction",
+            "regional-san-bernabe-1712",
+            "regional-san-bernabe-1766",
+            "regional-omoa-1777",
+            "regional-omoa-1779",
+            "settlement-guatemala-city",
+            "settlement-san-jose-costa-rica"
+          ]
+        },
+        {
+          "start": 1800,
+          "end": 1934,
+          "recordIds": [
+            "ai-colony-35",
+            "regional-totonicapan-1820",
+            "regional-matagalpa-1881",
+            "regional-izalco-1932",
+            "regional-san-pedro-1848",
+            "rail-panama-colon-panama-1855",
+            "rail-costarica-limon-sanjose-1890",
+            "gap-kaxil-village",
+            "gap-kaxil-cabildo",
+            "battle-santa-rosa",
+            "battle-rivas",
+            "battle-san-jacinto-nicaragua"
+          ]
+        }
+      ]
+    },
+    {
+      "region": "Caribbean",
+      "bounds": [
+        -85,
+        9,
+        -59,
+        27
+      ],
+      "undatedIds": [
+        "central-landbridge-cultigens",
+        "central-landbridge-chiefdoms",
+        "caribbean-hispaniola-indigenous-legacies",
+        "cuba-canimar-cultigen-evidence",
+        "cuba-playa-mango-diet",
+        "cuba-los-buchillones-waterfront",
+        "cuba-el-morrillo-postholes",
+        "cuba-jigue-1-precolonial",
+        "abc-faunal-record-synthesis",
+        "curacao-bonaire-turtle-species",
+        "curacao-jan-thiel-shell-middens",
+        "las-aves-resource-access-networks",
+        "jm-archaic-evidence-limits",
+        "jm-white-marl-pottery-provenance",
+        "jm-white-marl-living-heritage",
+        "r8v-caribbean-greenstones",
+        "r9v-cc-trants-carnelian-production",
+        "r9v-cc-trants-exotic-ornaments",
+        "r9v-cc-isthmian-ancestry-model",
+        "r9v-cc-panama-paternal-directionality",
+        "r12v-curacao-c1426-marine-subsistence"
+      ],
+      "periods": [
+        {
+          "start": -50000,
+          "end": -10001,
+          "recordIds": []
+        },
+        {
+          "start": -10000,
+          "end": -3001,
+          "recordIds": [
+            "caribbean-trinidad-colonizationmodel",
+            "caribbean-puertorico-coroso-onset",
+            "cuba-canimar-old-charcoal-problem",
+            "curacao-c1426-basal",
+            "curacao-c1426-f001",
+            "barbados-heywoods-early-shell",
+            "r5-angi-burial"
+          ]
+        },
+        {
+          "start": -3000,
+          "end": -1,
+          "recordIds": [
+            "cuba-canimar-older-cemetery",
+            "cuba-playa-mango-m2-cemetery",
+            "cuba-playa-mango-m2-domestic",
+            "cuba-cayo-caiman-resource-use",
+            "cuba-archaic-faunal-variability",
+            "aruba-canashito-burial",
+            "barbuda-boiling-rock-burial",
+            "barbados-heywoods-early-shell",
+            "barbados-heywoods-shell-adze",
+            "saba-plum-piece-archaic"
+          ]
+        },
+        {
+          "start": 0,
+          "end": 999,
+          "recordIds": [
+            "south-tibes-monserrate-deposit",
+            "caribbean-grenada-ceramicsettlement",
+            "cuba-canimar-younger-cemetery",
+            "cuba-playa-mango-m2-cemetery",
+            "cuba-playa-mango-m2-domestic",
+            "cuba-playa-mango-m1-tooth",
+            "cuba-archaic-faunal-variability",
+            "aruba-malmok-complex",
+            "aruba-spaans-lagoen-6-burial",
+            "martinique-anse-trabaud-deposits",
+            "jm-blue-marlin-survey-context",
+            "jm-paradise-wes15a",
+            "jm-bluefields-mollusk-change",
+            "jm-white-marl-settlement",
+            "r9v-cc-morel-necklace",
+            "r9v-cc-vive-minerals",
+            "r9v-cc-gare-maritime-production",
+            "r9v-cc-panama-ancient-genomes",
+            "r9v-cc-guacimo-early-metals",
+            "settlement-salt-river-bay"
+          ]
+        },
+        {
+          "start": 1000,
+          "end": 1491,
+          "recordIds": [
+            "se-floridakeys-revised-chronology",
+            "caribbean-windward-identityformation",
+            "cuba-canimar-younger-cemetery",
+            "bonaire-amboina-settlement",
+            "bonaire-amboina-isotope-lifeways",
+            "aruba-malmok-complex",
+            "martinique-anse-trabaud-deposits",
+            "jm-paradise-wes15a",
+            "jm-sweetwater-wes15b",
+            "jm-bluefields-mollusk-change",
+            "jm-white-marl-settlement",
+            "jm-white-marl-plant-diet",
+            "jm-white-marl-landscape-proxies",
+            "r9v-cc-anse-gourde-materialchange",
+            "r9v-cc-panama-ancient-genomes",
+            "r9v-cc-las-mercedes-chacmool",
+            "settlement-en-bas-saline",
+            "settlement-maima",
+            "settlement-caguana",
+            "settlement-salt-river-bay"
+          ]
+        },
+        {
+          "start": 1492,
+          "end": 1699,
+          "recordIds": [
+            "caribbean-windward-identityformation",
+            "caribbean-colonial-resistance-networks",
+            "curacao-rif-sint-marie-plantation",
+            "jm-bluefields-mollusk-change",
+            "jm-white-marl-settlement",
+            "jm-white-marl-plant-diet",
+            "ai-colony-01",
+            "ai-colony-02",
+            "ai-colony-03",
+            "ai-colony-04",
+            "ai-colony-07",
+            "ai-colony-23",
+            "ai-colony-24",
+            "ai-colony-28",
+            "ai-colony-29",
+            "ai-colony-35",
+            "ai-colony-36",
+            "ai-colony-41",
+            "history-santo-domingo-colonial",
+            "history-caparra",
+            "history-san-juan-colonial",
+            "history-havana-current-site",
+            "history-panama-viejo",
+            "history-cartagena-colonial",
+            "history-atocha-1622",
+            "history-santa-margarita-1622",
+            "settlement-en-bas-saline",
+            "settlement-maima",
+            "settlement-caguana",
+            "settlement-salt-river-bay",
+            "settlement-la-isabela",
+            "settlement-la-vega-vieja",
+            "settlement-puerto-real",
+            "settlement-baracoa",
+            "settlement-bayamo",
+            "settlement-trinidad",
+            "settlement-sancti-spiritus-current-site",
+            "settlement-camaguey-current-site",
+            "settlement-santiago-cuba",
+            "settlement-sevilla-la-nueva",
+            "settlement-spanish-town",
+            "settlement-port-royal",
+            "settlement-kingston",
+            "settlement-willemstad",
+            "settlement-bridgetown",
+            "settlement-basseterre",
+            "settlement-saint-pierre-martinique",
+            "visit-columbus-first-1492-1493-3",
+            "visit-columbus-first-1492-1493-4",
+            "visit-columbus-first-1492-1493-5",
+            "context-treasure-atocha-1622",
+            "context-mission-montesinos-1511",
+            "context-treasure-ana-arrival"
+          ]
+        },
+        {
+          "start": 1700,
+          "end": 1799,
+          "recordIds": [
+            "klein-bonaire-pos-kangreu",
+            "ai-colony-01",
+            "ai-colony-02",
+            "ai-colony-04",
+            "ai-colony-07",
+            "ai-colony-23",
+            "ai-colony-24",
+            "ai-colony-28",
+            "ai-colony-29",
+            "ai-colony-35",
+            "ai-colony-36",
+            "ai-colony-41",
+            "regional-talamanca-1709",
+            "regional-cartago-1710",
+            "history-spanish-fleet-1733",
+            "settlement-christiansted",
+            "settlement-san-jose-costa-rica",
+            "community-maroon-treaty-1739",
+            "community-balliceaux",
+            "community-garifuna-deportation",
+            "community-haiti-uprising"
+          ]
+        },
+        {
+          "start": 1800,
+          "end": 1934,
+          "recordIds": [
+            "bonaire-orange-saltpan-landscape",
+            "ai-colony-01",
+            "ai-colony-02",
+            "ai-colony-04",
+            "ai-colony-07",
+            "ai-colony-23",
+            "ai-colony-24",
+            "ai-colony-28",
+            "ai-colony-29",
+            "ai-colony-35",
+            "ai-colony-36",
+            "ai-colony-41",
+            "settlement-cienfuegos",
+            "vx-morant-bay",
+            "vx-fireburn",
+            "vx-sam-sharpe",
+            "vx-les-cayes",
+            "rail-jamaica-kingston-angels-1845",
+            "rail-cuba-havana-bejucal-1837",
+            "rail-panama-colon-panama-1855",
+            "rail-costarica-limon-sanjose-1890",
+            "sovereignty-virgin-islands-transfer",
+            "community-haiti-independence",
+            "community-jamaica-1834",
+            "community-jamaica-1838",
+            "community-martinique-1848",
+            "community-curacao-1863",
+            "community-puerto-rico-1873",
+            "community-cuba-1886",
+            "battle-carabobo",
+            "battle-vertieres"
+          ]
+        }
+      ]
+    },
+    {
+      "region": "Northern South America",
+      "bounds": [
+        -81,
+        -1,
+        -49,
+        13
+      ],
+      "undatedIds": [
+        "empire-caranqui-control",
+        "abc-faunal-record-synthesis",
+        "curacao-bonaire-turtle-species",
+        "curacao-jan-thiel-shell-middens",
+        "las-aves-resource-access-networks",
+        "amazon-northwest-sex-specific-history",
+        "amazon-northwest-linguistic-exogamy",
+        "amazon-northwest-maternal-connections",
+        "amazon-ecuador-paternal-c3",
+        "amazon-paternal-phylogeography-model",
+        "r8v-nare-technology",
+        "r8v-cauca-volcanic-context",
+        "r9v-cc-isthmian-ancestry-model",
+        "r9v-cc-altiplano-ancestry-shift",
+        "r9v-cc-altiplano-herrera-muisca",
+        "r9v-cc-panama-paternal-directionality",
+        "r11v-pashimbi-climate-model",
+        "r12v-curacao-c1426-marine-subsistence"
+      ],
+      "periods": [
+        {
+          "start": -50000,
+          "end": -10001,
+          "recordIds": [
+            "r11v-cerro-montoya-basal",
+            "r11v-limoncillos-basal"
+          ]
+        },
+        {
+          "start": -10000,
+          "end": -3001,
+          "recordIds": [
+            "caribbean-trinidad-colonizationmodel",
+            "curacao-c1426-basal",
+            "curacao-c1426-f001",
+            "r8v-checua-burial-early",
+            "r8v-checua-burial-late",
+            "r11v-limoncillos-basal"
+          ]
+        },
+        {
+          "start": -3000,
+          "end": -1,
+          "recordIds": [
+            "aruba-canashito-burial",
+            "r11v-cotocollao-early",
+            "r11v-cotocollao-late",
+            "context-pottery-monagrillo"
+          ]
+        },
+        {
+          "start": 0,
+          "end": 999,
+          "recordIds": [
+            "caribbean-grenada-ceramicsettlement",
+            "aruba-malmok-complex",
+            "aruba-spaans-lagoen-6-burial",
+            "r8v-el-cano-emeralds",
+            "r8v-sitio-conte-emeralds",
+            "r9v-cc-panama-ancient-genomes",
+            "r11v-japoto-manteno-onset",
+            "r11v-cerro-juan-diaz-diversification"
+          ]
+        },
+        {
+          "start": 1000,
+          "end": 1491,
+          "recordIds": [
+            "caribbean-windward-identityformation",
+            "empire-chamical-onset",
+            "bonaire-amboina-settlement",
+            "bonaire-amboina-isotope-lifeways",
+            "aruba-malmok-complex",
+            "r8v-el-cano-emeralds",
+            "r8v-sitio-conte-emeralds",
+            "r9v-cc-panama-ancient-genomes"
+          ]
+        },
+        {
+          "start": 1492,
+          "end": 1699,
+          "recordIds": [
+            "caribbean-windward-identityformation",
+            "curacao-rif-sint-marie-plantation",
+            "ai-colony-07",
+            "ai-colony-09",
+            "ai-colony-20",
+            "ai-colony-28",
+            "ai-colony-33",
+            "ai-colony-34",
+            "ai-colony-44",
+            "history-panama-viejo",
+            "history-panama-casco-antiguo",
+            "history-cartagena-colonial",
+            "settlement-willemstad",
+            "settlement-paramaribo",
+            "settlement-bogota",
+            "visit-balboa-pacific-1513",
+            "context-treasure-ana-arrival",
+            "context-treasure-zaragoza-labor",
+            "context-ruiz-merchants"
+          ]
+        },
+        {
+          "start": 1700,
+          "end": 1799,
+          "recordIds": [
+            "klein-bonaire-pos-kangreu",
+            "ai-colony-07",
+            "ai-colony-09",
+            "ai-colony-20",
+            "ai-colony-28",
+            "ai-colony-33",
+            "ai-colony-34",
+            "ai-colony-44",
+            "r12v-rionegro-directory-portuguese-policy",
+            "regional-kumako-1717",
+            "regional-kumako-1730",
+            "interior-barcelos-labor",
+            "interior-barcelos-borba-1758",
+            "interior-saogabriel-1761",
+            "interior-marabitanas-1763",
+            "interior-cuyuni-1755",
+            "interior-cuyuni-1758",
+            "interior-zeelandia-1744",
+            "interior-marouini-1793",
+            "settlement-georgetown",
+            "community-balliceaux"
+          ]
+        },
+        {
+          "start": 1800,
+          "end": 1934,
+          "recordIds": [
+            "bonaire-orange-saltpan-landscape",
+            "ai-colony-07",
+            "ai-colony-09",
+            "ai-colony-20",
+            "ai-colony-28",
+            "ai-colony-33",
+            "ai-colony-34",
+            "r12v-saogabriel-salesian-arrival1915",
+            "r12v-iauarete-salesian-mission1929",
+            "r12v-barcelos-fma-community1934",
+            "regional-puerto-asis-1912",
+            "interior-maripaston-1905",
+            "interior-maripaston-paramaribo-1905",
+            "interior-kumaka-1846",
+            "interior-galibi-1925",
+            "interior-cottica-early",
+            "settlement-saint-laurent-maroni",
+            "rail-panama-colon-panama-1855",
+            "community-curacao-1863",
+            "battle-boyaca",
+            "battle-carabobo",
+            "battle-pichincha"
+          ]
+        }
+      ]
+    },
+    {
+      "region": "Andes",
+      "bounds": [
+        -82,
+        -27,
+        -66,
+        1
+      ],
+      "undatedIds": [
+        "empire-akawillay-discontinuity",
+        "empire-yanawilka-resettlement",
+        "empire-caranqui-control",
+        "empire-copiapo-stages",
+        "empire-calchaqui-ritualmodel",
+        "amazon-waorani-maternal-founder",
+        "amazon-tikuna-village-variation",
+        "amazon-pano-maternal-variation",
+        "amazon-peru-marker-exchange",
+        "amazon-ashaninka-genomic-structure",
+        "amazon-northwest-sex-specific-history",
+        "amazon-northwest-linguistic-exogamy",
+        "amazon-northwest-maternal-connections",
+        "amazon-takanan-relationships",
+        "amazon-ecuador-paternal-c3",
+        "amazon-western-genomic-connections",
+        "amazon-andes-divide-models",
+        "amazon-paternal-phylogeography-model",
+        "r4-peru-regional-history",
+        "r4-sama-ecological-mobility",
+        "r4-uros-altiplano",
+        "r5-pucuncho-workshop",
+        "r5-andean-parrot-trade",
+        "r9v-inca-huanuco-provisioning",
+        "r9v-inca-huanuco-road-scale",
+        "r9v-inca-atacama-road-exchange",
+        "r9v-inca-quechua-diffusion",
+        "r9v-inca-court-language-hypothesis",
+        "r9v-inca-inkawasi-accounting",
+        "r11v-acre-local-roads",
+        "r11v-south-coast-overlap",
+        "r11v-wari-language-alternatives",
+        "r11v-northern-peru-language-divisions",
+        "r11v-pashimbi-climate-model",
+        "r11v-chillia-migration-model",
+        "r11v-santa-ana-cacao"
+      ],
+      "periods": [
+        {
+          "start": -50000,
+          "end": -10001,
+          "recordIds": [
+            "early-huaca-prieta-unit9",
+            "south-america-regional-technologies",
+            "r5-cuncaicha-early",
+            "r12v-cueva-bautista-camp"
+          ]
+        },
+        {
+          "start": -10000,
+          "end": -3001,
+          "recordIds": [
+            "central-andes-sutter-dispersal",
+            "r5-cuncaicha-early",
+            "r8v-pedernales38",
+            "early-pernil-foragers",
+            "early-pernil-village"
+          ]
+        },
+        {
+          "start": -3000,
+          "end": -1,
+          "recordIds": [
+            "south-caral-dated-contexts",
+            "south-chavin-janabarroid-contexts",
+            "r4-norte-chico-centers",
+            "r11v-upano-network",
+            "r11v-sangay-platforms",
+            "r11v-pacopampa-healed-trauma",
+            "r11v-huayurco-stone-vessels",
+            "r11v-palpa-settlement-model",
+            "r11v-cotocollao-early",
+            "r11v-cotocollao-late",
+            "r11v-real-alto-middle-valdivia",
+            "d18-andes-chavin-monumental-growth",
+            "d18-andes-chavin-urabarriu-model",
+            "d18-andes-chavin-chakinani-model",
+            "d18-andes-chavin-gallery3-inhalers",
+            "d18-andes-chavin-janabarriu-burger-alternative",
+            "d18-andes-moche-salinar-cerro-blanco",
+            "early-pernil-village",
+            "early-aspero-dated",
+            "early-lurihuasi-construction",
+            "early-chupacigarro-plaza",
+            "early-caral-plaza-2470",
+            "early-caral-plaza-2290",
+            "early-caral-late-change",
+            "early-vichama-early",
+            "early-upano-sangay",
+            "early-upano-kilamope",
+            "early-upano-cormoran-early",
+            "context-copper-bordo-burial"
+          ]
+        },
+        {
+          "start": 0,
+          "end": 999,
+          "recordIds": [
+            "south-tiwanaku-planned-city",
+            "r9v-inca-akawillay-early-sector",
+            "r11v-upano-network",
+            "r11v-sangay-platforms",
+            "r11v-moche-model-chronology",
+            "r11v-nasca-loro-mixing",
+            "r11v-cusco-obsidian-continuity",
+            "r11v-amazon-feathers-model",
+            "r11v-palpa-settlement-model",
+            "r11v-recuay-coast-interaction",
+            "r11v-liguiqui-manteno-onset",
+            "r11v-japoto-manteno-onset",
+            "r11v-playa-miller-trauma",
+            "d18-andes-tiwanaku-foundation-model",
+            "d18-andes-tiwanaku-pumapunku-building",
+            "d18-andes-tiwanaku-late-communal-projects",
+            "d18-andes-tiwanaku-residential-end",
+            "d18-andes-chanchan-early-compounds",
+            "d18-andes-wari-moquegua-canal",
+            "d18-andes-wari-baul-rebuilding",
+            "d18-andes-wari-baul-brewery",
+            "d18-andes-moche-salinar-cerro-blanco",
+            "d18-andes-moche-ca9-marine-food",
+            "d18-andes-moche-new-temple-phase",
+            "d18-andes-moche-late-textiles",
+            "early-upano-sangay",
+            "early-upano-kilamope",
+            "early-upano-huapula-reuse",
+            "early-upano-cormoran-early",
+            "site-chan-chan",
+            "site-tiwanaku",
+            "context-copper-sican-workshops",
+            "city-pikillacta"
+          ]
+        },
+        {
+          "start": 1000,
+          "end": 1491,
+          "recordIds": [
+            "south-chanchan-chimu-apogee",
+            "south-machupicchu-ams-occupation",
+            "empire-chamical-onset",
+            "empire-cuzco-survey-counts",
+            "empire-andes-scaling",
+            "empire-ica-inventory",
+            "empire-huarochiri-ritual",
+            "reach-ica-inca-context",
+            "r4-chincha-resettlement",
+            "r9v-inca-cusco-formation",
+            "r9v-inca-machupicchu-bayesian-alternative",
+            "r9v-inca-machupicchu-retainers",
+            "r9v-inca-tambo-viejo-model",
+            "r11v-acre-mound-network",
+            "r11v-nasca-repopulation",
+            "r11v-cusco-obsidian-continuity",
+            "r11v-amazon-feathers-model",
+            "r11v-chachapoya-built-environments",
+            "r12v-topain-residential-end",
+            "r12v-paniri-phase-start",
+            "d18-andes-tiwanaku-residential-end",
+            "d18-andes-tiwanaku-redware-end",
+            "d18-andes-chanchan-early-compounds",
+            "d18-andes-chanchan-tello-laberinto",
+            "d18-andes-chanchan-middle-compounds",
+            "d18-andes-chanchan-velarde-bandelier",
+            "d18-andes-chanchan-nik-chol",
+            "d18-andes-chanchan-inca-transition",
+            "d18-andes-wari-baul-brewery",
+            "d18-andes-wari-baul-brewery-closure",
+            "d18-andes-moche-late-textiles",
+            "d18-andes-moche-early-chimu-cemetery",
+            "d18-andes-moche-ca43-hearth",
+            "early-vichama-later",
+            "early-upano-huapula-reuse",
+            "settlement-cusco-habitation",
+            "vx-huanchaquito",
+            "site-chan-chan",
+            "context-copper-sican-workshops",
+            "city-ollantaytambo",
+            "city-huanuco",
+            "city-ingapirca",
+            "city-tambo-viejo"
+          ]
+        },
+        {
+          "start": 1492,
+          "end": 1699,
+          "recordIds": [
+            "south-chanchan-chimu-apogee",
+            "south-machupicchu-ams-occupation",
+            "empire-cuzco-survey-counts",
+            "empire-ica-inventory",
+            "empire-huarochiri-ritual",
+            "reach-ica-inca-context",
+            "r4-chincha-resettlement",
+            "ai-colony-08",
+            "r9v-inca-machupicchu-bayesian-alternative",
+            "r9v-inca-machupicchu-retainers",
+            "r9v-inca-sanco-1572-count",
+            "r9v-inca-tambo-viejo-model",
+            "r9v-inca-cajamarca-1532",
+            "r9v-inca-cusco-revolt-1536",
+            "r9v-inca-vilcabamba-1572",
+            "r9v-inca-huanuco-colonial-plaza",
+            "r11v-acre-mound-network",
+            "r11v-amazon-feathers-model",
+            "r12v-topain-residential-end",
+            "d18-andes-tiwanaku-1549-description",
+            "d18-language-huarochiri-1608",
+            "early-upano-cormoran-later",
+            "history-lima-colonial",
+            "settlement-cusco-habitation",
+            "settlement-arequipa",
+            "settlement-cuenca",
+            "site-chan-chan",
+            "context-ruiz-merchants",
+            "city-huanuco",
+            "city-huanuco-colonial",
+            "city-tambo-viejo"
+          ]
+        },
+        {
+          "start": 1700,
+          "end": 1799,
+          "recordIds": [
+            "r4-chincha-resettlement",
+            "ai-colony-08",
+            "regional-ocopa-1725",
+            "regional-sangarara-1780",
+            "regional-cusco-1781",
+            "early-upano-cormoran-later",
+            "interior-saogabriel-1761",
+            "settlement-cusco-habitation"
+          ]
+        },
+        {
+          "start": 1800,
+          "end": 1934,
+          "recordIds": [
+            "r4-chincha-resettlement",
+            "ai-colony-08",
+            "r12v-saogabriel-salesian-arrival1915",
+            "r12v-iauarete-salesian-mission1929",
+            "regional-machaca-1921",
+            "regional-puerto-asis-1912",
+            "regional-nauta-1830",
+            "early-upano-cormoran-later",
+            "interior-iquitos-1864",
+            "settlement-cusco-habitation",
+            "visit-beagle-1831-1836-8",
+            "rail-peru-callao-lima-1851",
+            "rail-ecuador-duran-quito-1908",
+            "context-confederation-war",
+            "gap-iquique-1907",
+            "community-putumayo-violence",
+            "battle-junin",
+            "battle-ayacucho",
+            "battle-pichincha"
+          ]
+        }
+      ]
+    },
+    {
+      "region": "Amazon interior",
+      "bounds": [
+        -73,
+        -16,
+        -45,
+        1
+      ],
+      "undatedIds": [
+        "empire-akawillay-discontinuity",
+        "amazon-arara-founder-comparison",
+        "amazon-tikuna-village-variation",
+        "amazon-pano-maternal-variation",
+        "amazon-northwest-sex-specific-history",
+        "amazon-northwest-linguistic-exogamy",
+        "amazon-northwest-maternal-connections",
+        "amazon-takanan-relationships",
+        "amazon-mitogenome-reference-bias",
+        "amazon-castro2022-regional-structure",
+        "amazon-andes-divide-models",
+        "amazon-population-y-affinity",
+        "amazon-isolation-remote-proxies",
+        "amazon-founder-marker-resolution",
+        "amazon-paternal-phylogeography-model",
+        "amazon-castro2026-diversity-models",
+        "r5-pucuncho-workshop",
+        "r8v-arawakan-calibrations",
+        "r9v-inca-court-language-hypothesis",
+        "r11v-acre-local-roads",
+        "r11v-teotonio-residues",
+        "r11v-mojos-farming-patterns",
+        "r11v-pedra-pintada-technology",
+        "r11v-abrigo-sol-reassessment",
+        "r11v-santarem-carapanari"
+      ],
+      "periods": [
+        {
+          "start": -50000,
+          "end": -10001,
+          "recordIds": [
+            "early-santa-elina-unitiii",
+            "r5-cuncaicha-early"
+          ]
+        },
+        {
+          "start": -10000,
+          "end": -3001,
+          "recordIds": [
+            "south-america-ancestry-change9ka",
+            "south-america-cultivation8000",
+            "central-andes-sutter-dispersal",
+            "r5-cuncaicha-early",
+            "r5-bolivian-forest-islands",
+            "r11v-teotonio-sequence",
+            "context-pottery-taperinha",
+            "community-isla-tesoro-early"
+          ]
+        },
+        {
+          "start": -3000,
+          "end": -1,
+          "recordIds": [
+            "tupi-guarani-onset",
+            "r5-bolivian-forest-islands",
+            "r11v-teotonio-sequence"
+          ]
+        },
+        {
+          "start": 0,
+          "end": 999,
+          "recordIds": [
+            "r9v-inca-akawillay-early-sector",
+            "r11v-casarabe-network",
+            "r11v-cotoca-centre",
+            "r11v-landivar-centre",
+            "r11v-teotonio-sequence",
+            "r11v-cusco-obsidian-continuity",
+            "r11v-amazon-feathers-model",
+            "r11v-paredao-guarita-overlap",
+            "city-pikillacta"
+          ]
+        },
+        {
+          "start": 1000,
+          "end": 1491,
+          "recordIds": [
+            "south-machupicchu-ams-occupation",
+            "empire-cuzco-survey-counts",
+            "r9v-inca-cusco-formation",
+            "r9v-inca-machupicchu-bayesian-alternative",
+            "r9v-inca-machupicchu-retainers",
+            "r11v-casarabe-network",
+            "r11v-cotoca-centre",
+            "r11v-landivar-centre",
+            "r11v-acre-mound-network",
+            "r11v-teotonio-sequence",
+            "r11v-cusco-obsidian-continuity",
+            "r11v-amazon-feathers-model",
+            "r11v-paredao-guarita-overlap",
+            "settlement-cusco-habitation",
+            "settlement-upper-xingu",
+            "city-ollantaytambo"
+          ]
+        },
+        {
+          "start": 1492,
+          "end": 1699,
+          "recordIds": [
+            "south-machupicchu-ams-occupation",
+            "empire-cuzco-survey-counts",
+            "r9v-inca-machupicchu-bayesian-alternative",
+            "r9v-inca-machupicchu-retainers",
+            "r9v-inca-sanco-1572-count",
+            "r9v-inca-cusco-revolt-1536",
+            "r9v-inca-vilcabamba-1572",
+            "r11v-acre-mound-network",
+            "r11v-teotonio-sequence",
+            "r11v-amazon-feathers-model",
+            "settlement-cusco-habitation",
+            "settlement-upper-xingu",
+            "settlement-belem",
+            "community-isla-tesoro-late"
+          ]
+        },
+        {
+          "start": 1700,
+          "end": 1799,
+          "recordIds": [
+            "r12v-rionegro-directory-portuguese-policy",
+            "regional-sangarara-1780",
+            "regional-cusco-1781",
+            "regional-vila-bela-1752",
+            "regional-murutucu-1780",
+            "interior-barcelos-labor",
+            "interior-borba-1756",
+            "interior-barcelos-borba-1758",
+            "interior-pauxis-1725",
+            "interior-pauxis-1740s",
+            "interior-obidos-1758",
+            "interior-magdalena-1786",
+            "interior-baures-1787",
+            "interior-principe-1776",
+            "interior-baures-principe-1787",
+            "interior-saogabriel-1761",
+            "settlement-cusco-habitation",
+            "settlement-goias"
+          ]
+        },
+        {
+          "start": 1800,
+          "end": 1934,
+          "recordIds": [
+            "r12v-saogabriel-salesian-arrival1915",
+            "r12v-iauarete-salesian-mission1929",
+            "r12v-barcelos-fma-community1934",
+            "regional-belem-1835",
+            "regional-belem-1836",
+            "interior-manaus-1853",
+            "interior-belem-manaus-1853",
+            "interior-cachuela-1882",
+            "settlement-cusco-habitation",
+            "context-cabanagem",
+            "community-putumayo-violence"
+          ]
+        }
+      ]
+    },
+    {
+      "region": "Brazil Atlantic",
+      "bounds": [
+        -51,
+        -30,
+        -34,
+        -1
+      ],
+      "undatedIds": [
+        "r5-brazil-sambaqui-diversity",
+        "r8v-paulistaware-origin",
+        "r11v-jabuticabeira-ancestry",
+        "r11v-galheta-continuity"
+      ],
+      "periods": [
+        {
+          "start": -50000,
+          "end": -10001,
+          "recordIds": []
+        },
+        {
+          "start": -10000,
+          "end": -3001,
+          "recordIds": []
+        },
+        {
+          "start": -3000,
+          "end": -1,
+          "recordIds": [
+            "tupi-guarani-onset",
+            "r11v-tarioba-chronology"
+          ]
+        },
+        {
+          "start": 0,
+          "end": 999,
+          "recordIds": [
+            "gap-galheta-site"
+          ]
+        },
+        {
+          "start": 1000,
+          "end": 1491,
+          "recordIds": [
+            "gap-galheta-site"
+          ]
+        },
+        {
+          "start": 1492,
+          "end": 1699,
+          "recordIds": [
+            "r8v-paulistaware-african-diaspora",
+            "ai-colony-06",
+            "ai-colony-26",
+            "history-sao-vicente-colonial",
+            "history-salvador-colonial",
+            "history-rio-colonial",
+            "settlement-sao-luis",
+            "settlement-belem",
+            "settlement-olinda",
+            "visit-magellan-elcano-1519-1522-3",
+            "context-mission-piratininga-1554",
+            "battle-guararapes"
+          ]
+        },
+        {
+          "start": 1700,
+          "end": 1799,
+          "recordIds": [
+            "r8v-paulistaware-african-diaspora",
+            "ai-colony-06",
+            "regional-murutucu-1780",
+            "settlement-goias",
+            "settlement-diamantina",
+            "visit-cook-endeavour-1768-1770-2"
+          ]
+        },
+        {
+          "start": 1800,
+          "end": 1934,
+          "recordIds": [
+            "ai-colony-06",
+            "regional-canudos-community",
+            "regional-canudos-1897",
+            "regional-valongo-1811",
+            "regional-belem-1835",
+            "regional-belem-1836",
+            "interior-belem-manaus-1853",
+            "settlement-belo-horizonte",
+            "visit-beagle-1831-1836-3",
+            "visit-beagle-1831-1836-4",
+            "rail-brazil-maua-fragoso-1854",
+            "rail-brazil-recife-cabo-1858",
+            "rail-brazil-santos-jundiai-1867",
+            "context-cabanagem",
+            "context-males-revolt"
+          ]
+        }
+      ]
+    },
+    {
+      "region": "Southern Cone",
+      "bounds": [
+        -76,
+        -56,
+        -53,
+        -27
+      ],
+      "undatedIds": [
+        "empire-copiapo-stages",
+        "argentina-early-radiocarbon-pattern",
+        "fell-cave-early-context-reinterpreted",
+        "ultima-esperanza-deglaciation-exploration",
+        "lago-sofia-1-faunal-use",
+        "tres-arroyos-1-faunal-use",
+        "patagonia-2003-coastal-entry-model",
+        "cerro-casa-piedra-hunting-change",
+        "chorrillo-malo-2-early",
+        "r5-argentina-central-lineage",
+        "r5-falklands-visits",
+        "r8v-central-argentina-ancestry",
+        "r8v-patagonia-continuity",
+        "r11v-aconquija-feature-survey",
+        "r11v-uruguai1-levels",
+        "r11v-los-ajos-plant-foods",
+        "r11v-ongamira-radiocarbon"
+      ],
+      "periods": [
+        {
+          "start": -50000,
+          "end": -10001,
+          "recordIds": [
+            "monte-verde-ii",
+            "patagonia-pilauco-lithic-sequence",
+            "patagonia-pilauco-footprint",
+            "patagonia-cueva-vieja-earliest-hearth",
+            "patagonia-huenul1-older-assay",
+            "la-gruta-1-earliest",
+            "southern-patagonia-pioneer-nodes",
+            "cerro-casa-piedra-7-earliest",
+            "abrigo-1-sombrero-early",
+            "r11v-tigre-pleistocene"
+          ]
+        },
+        {
+          "start": -10000,
+          "end": -3001,
+          "recordIds": [
+            "chinchihuapi-later-context",
+            "patagonia-cueva-vieja-earliest-hearth",
+            "patagonia-huenul1-early-component",
+            "patagonia-huenul1-older-assay",
+            "patagonia-huenul1-midholocene-pit",
+            "patagonia-huenul1-rockart-model",
+            "patagonia-north-midholocene-retraction",
+            "patagonia-north-rockart-resilience",
+            "la-gruta-1-early-holocene",
+            "southern-deseado-water-hiatus",
+            "southern-patagonia-pioneer-nodes",
+            "bano-nuevo-1-early-holocene",
+            "bano-nuevo-1-shell-transport",
+            "casa-piedra-rosello-early",
+            "r11v-tigre-early-holocene"
+          ]
+        },
+        {
+          "start": -3000,
+          "end": -1,
+          "recordIds": [
+            "bano-nuevo-1-shell-transport",
+            "r11v-los-ajos-mound-beginnings"
+          ]
+        },
+        {
+          "start": 0,
+          "end": 999,
+          "recordIds": [
+            "bano-nuevo-1-shell-transport",
+            "r11v-tigre-late-reoccupation"
+          ]
+        },
+        {
+          "start": 1000,
+          "end": 1491,
+          "recordIds": [
+            "empire-mendoza-onset",
+            "bano-nuevo-1-shell-transport",
+            "r12v-ranchillos-start",
+            "r12v-tambillos-start",
+            "r12v-tambillitos-start",
+            "r12v-quillota-later-cemetery"
+          ]
+        },
+        {
+          "start": 1492,
+          "end": 1699,
+          "recordIds": [
+            "ultima-esperanza-historic-skeleton",
+            "bano-nuevo-1-shell-transport",
+            "ai-colony-10",
+            "ai-colony-11",
+            "r12v-ranchillos-start",
+            "r12v-tambillos-start",
+            "r12v-tambillitos-start",
+            "settlement-colonia-sacramento",
+            "settlement-buenos-aires-second-foundation",
+            "settlement-santiago-chile",
+            "settlement-cordoba-original",
+            "settlement-cordoba-current-site",
+            "visit-magellan-elcano-1519-1522-4",
+            "visit-magellan-elcano-1519-1522-5",
+            "visit-magellan-elcano-1519-1522-6",
+            "visit-drake-1577-1579-2",
+            "visit-drake-1577-1579-3"
+          ]
+        },
+        {
+          "start": 1700,
+          "end": 1799,
+          "recordIds": [
+            "ultima-esperanza-historic-skeleton",
+            "bano-nuevo-1-shell-transport",
+            "ai-colony-10",
+            "ai-colony-11",
+            "regional-negrete-1793",
+            "interior-san-fernando-1750",
+            "interior-san-fernando-asuncion-1763",
+            "settlement-montevideo",
+            "visit-cook-endeavour-1768-1770-3",
+            "context-mission-trinidad-1706"
+          ]
+        },
+        {
+          "start": 1800,
+          "end": 1934,
+          "recordIds": [
+            "bano-nuevo-1-shell-transport",
+            "ultima-esperanza-historic-skeleton-later",
+            "ai-colony-10",
+            "ai-colony-11",
+            "regional-sewell-1905",
+            "visit-beagle-1831-1836-5",
+            "visit-beagle-1831-1836-6",
+            "visit-beagle-1831-1836-7",
+            "rail-chile-caldera-copiapo-1851",
+            "rail-argentina-buenos-aires-floresta-1857",
+            "sovereignty-martin-garcia",
+            "battle-chacabuco",
+            "battle-maipu",
+            "battle-riachuelo",
+            "battle-obligado"
+          ]
+        }
+      ]
+    },
+    {
+      "region": "Australia",
+      "bounds": [
+        112,
+        -44,
+        154,
+        -10
+      ],
+      "undatedIds": [],
+      "periods": [
+        {
+          "start": -50000,
+          "end": -10001,
+          "recordIds": [
+            "px-warratyi-early",
+            "px-boodie-onset",
+            "px-mungo-mortuary",
+            "au-riwi-onset",
+            "au-karnatukul-onset",
+            "au-karnatukul-lgm",
+            "au-gabarnmang-onset",
+            "au-cloggs-installation-early",
+            "au-cloggs-installation-later"
+          ]
+        },
+        {
+          "start": -10000,
+          "end": -3001,
+          "recordIds": [
+            "px-boodie-late",
+            "px-jiigurru-early",
+            "px-budj-bim-living-landscape",
+            "au-cloggs-installation-early",
+            "au-cloggs-installation-later"
+          ]
+        },
+        {
+          "start": -3000,
+          "end": -1,
+          "recordIds": [
+            "px-jiigurru-pottery",
+            "px-budj-bim-living-landscape",
+            "vx-narrabeen"
+          ]
+        },
+        {
+          "start": 0,
+          "end": 999,
+          "recordIds": [
+            "early-nimowa-first",
+            "px-jiigurru-pottery",
+            "px-budj-bim-living-landscape"
+          ]
+        },
+        {
+          "start": 1000,
+          "end": 1491,
+          "recordIds": [
+            "early-nimowa-later",
+            "px-budj-bim-living-landscape",
+            "vx-kaakutja"
+          ]
+        },
+        {
+          "start": 1492,
+          "end": 1699,
+          "recordIds": [
+            "early-nimowa-later",
+            "px-budj-bim-living-landscape"
+          ]
+        },
+        {
+          "start": 1700,
+          "end": 1799,
+          "recordIds": [
+            "regional-sydney-1788",
+            "history-pandora-1791",
+            "px-budj-bim-living-landscape",
+            "visit-cook-endeavour-1768-1770-6",
+            "visit-cook-endeavour-1768-1770-7"
+          ]
+        },
+        {
+          "start": 1800,
+          "end": 1934,
+          "recordIds": [
+            "regional-coranderrk-1863",
+            "regional-coranderrk-1886",
+            "regional-coranderrk-1924",
+            "regional-brewarrina-1848",
+            "regional-mount-william-1830s",
+            "regional-ntaria-1877",
+            "regional-cummeragunja-1880s",
+            "regional-hobart-1804",
+            "regional-perth-1829",
+            "regional-milingimbi-1923",
+            "regional-cummeragunja-1930",
+            "regional-kurtonitj-1840s",
+            "regional-cossack-1870",
+            "regional-cossack-1881",
+            "px-budj-bim-living-landscape",
+            "vx-myall-creek",
+            "vx-waterloo-creek",
+            "vx-pinjarra",
+            "vx-coniston",
+            "visit-beagle-1831-1836-14",
+            "visit-beagle-1831-1836-15",
+            "visit-beagle-1831-1836-16",
+            "context-whaling-connecticut-1842",
+            "context-whaling-delta-1849",
+            "sovereignty-wybalenna",
+            "sovereignty-oyster-cove",
+            "sovereignty-cootamundra",
+            "sovereignty-kinchela",
+            "sovereignty-palm-island"
+          ]
+        }
+      ]
+    },
+    {
+      "region": "Aotearoa New Zealand",
+      "bounds": [
+        166,
+        -48,
+        179,
+        -34
+      ],
+      "undatedIds": [],
+      "periods": [
+        {
+          "start": -50000,
+          "end": -10001,
+          "recordIds": []
+        },
+        {
+          "start": -10000,
+          "end": -3001,
+          "recordIds": []
+        },
+        {
+          "start": -3000,
+          "end": -1,
+          "recordIds": []
+        },
+        {
+          "start": 0,
+          "end": 999,
+          "recordIds": []
+        },
+        {
+          "start": 1000,
+          "end": 1491,
+          "recordIds": [
+            "history-aotearoa-regional-occupation",
+            "nz-purakaunui-stores",
+            "context-wairau-bar",
+            "context-triangle-flat"
+          ]
+        },
+        {
+          "start": 1492,
+          "end": 1699,
+          "recordIds": [
+            "history-aotearoa-regional-occupation",
+            "visit-tasman-nz-1642-1643-1",
+            "visit-tasman-nz-1642-1643-2",
+            "visit-tasman-nz-1642-1643-3"
+          ]
+        },
+        {
+          "start": 1700,
+          "end": 1799,
+          "recordIds": [
+            "history-aotearoa-regional-occupation",
+            "visit-cook-endeavour-1768-1770-5",
+            "nz-otahau-palisade"
+          ]
+        },
+        {
+          "start": 1800,
+          "end": 1934,
+          "recordIds": [
+            "history-aotearoa-regional-occupation",
+            "vx-wairau",
+            "vx-rangiaowhia",
+            "visit-beagle-1831-1836-13",
+            "context-mission-rangihoua-1814",
+            "sovereignty-parihaka-community",
+            "sovereignty-parihaka-prisoners",
+            "sovereignty-parihaka-invasion"
+          ]
+        }
+      ]
+    },
+    {
+      "region": "New Guinea / Island Melanesia",
+      "bounds": [
+        130,
+        -23,
+        175,
+        0
+      ],
+      "undatedIds": [
+        "r6-png-ancestry-interactions",
+        "r6-mololo-early"
+      ],
+      "periods": [
+        {
+          "start": -50000,
+          "end": -10001,
+          "recordIds": [
+            "px-new-guinea-highlands",
+            "context-mololo-early",
+            "au-gabarnmang-onset"
+          ]
+        },
+        {
+          "start": -10000,
+          "end": -3001,
+          "recordIds": [
+            "early-kuk-phase1",
+            "px-kuk-mounds",
+            "px-jiigurru-early"
+          ]
+        },
+        {
+          "start": -3000,
+          "end": -1,
+          "recordIds": [
+            "mololo-cave-tentative-early-association",
+            "vanuatu-teouma-dated-individuals",
+            "early-kuk-phase4",
+            "early-uripiv-lapita",
+            "early-uripiv-postlapita",
+            "px-kuk-ditches",
+            "px-jiigurru-pottery",
+            "px-mussau-lapita-onset",
+            "px-bismarcks-lapita-onset",
+            "px-teouma-midden",
+            "px-caution-bay-lapita",
+            "px-fergusson-caution-bay",
+            "px-vatcha-lapita"
+          ]
+        },
+        {
+          "start": 0,
+          "end": 999,
+          "recordIds": [
+            "early-kuk-phase4",
+            "early-nimowa-first",
+            "px-jiigurru-pottery",
+            "px-fergusson-caution-bay"
+          ]
+        },
+        {
+          "start": 1000,
+          "end": 1491,
+          "recordIds": [
+            "tikopia-mccoy2020-tongan-glass",
+            "early-kuk-phase5",
+            "early-nimowa-later",
+            "vx-nebira",
+            "gap-popo-village"
+          ]
+        },
+        {
+          "start": 1492,
+          "end": 1699,
+          "recordIds": [
+            "early-kuk-phase5",
+            "early-uripiv-later",
+            "early-nimowa-later",
+            "vx-nebira",
+            "vx-taumako",
+            "gap-popo-village"
+          ]
+        },
+        {
+          "start": 1700,
+          "end": 1799,
+          "recordIds": [
+            "early-kuk-phase6",
+            "early-uripiv-later",
+            "history-pandora-1791",
+            "visit-cook-endeavour-1768-1770-7",
+            "gap-popo-village",
+            "gap-mirimua-relocation"
+          ]
+        },
+        {
+          "start": 1800,
+          "end": 1934,
+          "recordIds": [
+            "regional-milingimbi-1923",
+            "early-kuk-phase6",
+            "early-kuk-kawelka-departure",
+            "early-kuk-1933",
+            "early-uripiv-later",
+            "vx-coniston",
+            "gap-popo-village",
+            "gap-mirimua-relocation",
+            "sovereignty-palm-island"
+          ]
+        }
+      ]
+    },
+    {
+      "region": "Central/Eastern Polynesia",
+      "bounds": [
+        -175,
+        -30,
+        -105,
+        0
+      ],
+      "undatedIds": [
+        "pacific-ioannidis2021-network",
+        "r6-cook-adze-exchange"
+      ],
+      "periods": [
+        {
+          "start": -50000,
+          "end": -10001,
+          "recordIds": []
+        },
+        {
+          "start": -10000,
+          "end": -3001,
+          "recordIds": []
+        },
+        {
+          "start": -3000,
+          "end": -1,
+          "recordIds": [
+            "r6-haapai-onset",
+            "r6-vavau-onset",
+            "history-samoa-continuity",
+            "history-american-samoa-regional-occupation",
+            "px-toaga-onset"
+          ]
+        },
+        {
+          "start": 0,
+          "end": 999,
+          "recordIds": [
+            "pacific-sear2020-atiu",
+            "pacific-sear2020-drought",
+            "r6-cook-drought-early",
+            "history-american-samoa-regional-occupation"
+          ]
+        },
+        {
+          "start": 1000,
+          "end": 1491,
+          "recordIds": [
+            "pacific-wilmshurst2011-chronology",
+            "pacific-sear2020-atiu",
+            "pacific-sear2020-drought",
+            "pacific-allen2014-marquesas",
+            "pacific-faahia2019-basal-dates",
+            "pacific-ioannidis2020-nativeamerican-contact",
+            "rapanui-moreno2024-admixture",
+            "moorea-gs1-colonisation",
+            "moorea-scmf5-colonisation",
+            "r6-ureia",
+            "r6-tangatatau-coral",
+            "r6-anakena-onset",
+            "r6-rapanui-admixture",
+            "r6-cook-drought-early",
+            "r6-cook-drought-later",
+            "r6-tangatatau-coral-later",
+            "r8v-rapanui-admixture",
+            "r10v-hooumi-layeriv",
+            "r10v-hakaea-layer-vii-hearth",
+            "r10v-hanamiai-start",
+            "history-american-samoa-regional-occupation",
+            "history-rapa-nui-regional-occupation",
+            "px-henderson-late-occupation",
+            "px-pitcairn-tautama",
+            "context-anaho-tools"
+          ]
+        },
+        {
+          "start": 1492,
+          "end": 1699,
+          "recordIds": [
+            "r6-rapanui-bottleneck",
+            "r6-rapanui-drought",
+            "history-american-samoa-regional-occupation",
+            "history-rapa-nui-regional-occupation",
+            "px-henderson-late-occupation",
+            "px-hooumi-later-houses"
+          ]
+        },
+        {
+          "start": 1700,
+          "end": 1799,
+          "recordIds": [
+            "r6-rapanui-drought",
+            "history-bounty-1790",
+            "history-american-samoa-regional-occupation",
+            "history-rapa-nui-regional-occupation",
+            "px-hooumi-later-houses",
+            "visit-cook-endeavour-1768-1770-4"
+          ]
+        },
+        {
+          "start": 1800,
+          "end": 1934,
+          "recordIds": [
+            "history-american-samoa-regional-occupation",
+            "history-rapa-nui-regional-occupation",
+            "history-rapa-nui-historical-continuity",
+            "vx-apia-black-saturday",
+            "visit-beagle-1831-1836-12",
+            "context-mission-mangareva-1834",
+            "sovereignty-rapanui-1914"
+          ]
+        }
+      ]
+    },
+    {
+      "region": "Hawaii",
+      "bounds": [
+        -161,
+        18,
+        -154,
+        23
+      ],
+      "undatedIds": [
+        "hawaii-graves1995-settlement-process",
+        "r5-hawaii-conflict-conventions",
+        "r10v-hawaii-statehood-debate",
+        "r10v-hawaii-warfare-coalitions"
+      ],
+      "periods": [
+        {
+          "start": -50000,
+          "end": -10001,
+          "recordIds": []
+        },
+        {
+          "start": -10000,
+          "end": -3001,
+          "recordIds": []
+        },
+        {
+          "start": -3000,
+          "end": -1,
+          "recordIds": []
+        },
+        {
+          "start": 0,
+          "end": 999,
+          "recordIds": [
+            "hawaii-athens2014-model",
+            "hawaii-dye2011-model"
+          ]
+        },
+        {
+          "start": 1000,
+          "end": 1491,
+          "recordIds": [
+            "hawaii-athens2014-model",
+            "hawaii-dye2011-model",
+            "hawaii-bellows-o18-establishment",
+            "r5-kawela-onset",
+            "r10v-kohala-household-expansion",
+            "history-hawaii-continuity",
+            "history-hawaii-island-regional-occupation",
+            "hawaii-local-lapakahi",
+            "context-kahikinui-community",
+            "context-kohala-land-use"
+          ]
+        },
+        {
+          "start": 1492,
+          "end": 1699,
+          "recordIds": [
+            "r10v-kohala-household-expansion",
+            "history-hawaii-island-regional-occupation",
+            "context-kahikinui-community"
+          ]
+        },
+        {
+          "start": 1700,
+          "end": 1799,
+          "recordIds": [
+            "r10v-kohala-household-expansion",
+            "r10v-oahu-conquest-1795",
+            "history-hawaii-island-regional-occupation",
+            "hawaii-local-puukohola",
+            "hawaii-local-puna-rebellion",
+            "hawaii-local-mokuohai",
+            "hawaii-local-kauiki",
+            "hawaii-local-oahu-conquest",
+            "hawaii-local-kepaniwai",
+            "hawaii-local-waipio-sea-battle",
+            "hawaii-local-keoua-killed",
+            "hawaii-local-nuuanu",
+            "context-kahikinui-community",
+            "context-hawaii-provisioning-1779"
+          ]
+        },
+        {
+          "start": 1800,
+          "end": 1934,
+          "recordIds": [
+            "r10v-kohala-household-expansion",
+            "r10v-kauai-acknowledgment-1810",
+            "history-hawaii-island-regional-occupation",
+            "rail-oahu-honolulu-aiea-1889",
+            "rail-oahu-aiea-pearl-city-1890",
+            "rail-oahu-pearl-city-ewa-1890",
+            "rail-oahu-ewa-kahuku-1899",
+            "context-kahikinui-community",
+            "context-lahaina-capital",
+            "context-lahaina-fort",
+            "context-whaling-fortune-1853",
+            "context-mission-honolulu-1820",
+            "sovereignty-iolani-palace",
+            "sovereignty-hawaii-1887",
+            "sovereignty-hawaii-accession",
+            "sovereignty-hawaii-overthrow",
+            "sovereignty-hawaii-imprisonment",
+            "sovereignty-hawaii-petitions",
+            "sovereignty-hawaii-annexation",
+            "sovereignty-hawaii-territory",
+            "sovereignty-kalamaula-1923"
+          ]
+        }
+      ]
+    }
+  ]
+}

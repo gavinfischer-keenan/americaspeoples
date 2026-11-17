@@ -7,6 +7,11 @@ export const languageFamilies:LanguageFamily[]=[
   ['stan1288','Spanish','Romance · descended from spoken Latin'],['port1283','Portuguese','Romance · descended from spoken Latin'],['stan1290','French','Romance · descended from spoken Latin'],['stan1293','English','Germanic'],['dutc1256','Dutch','Germanic'],['russ1263','Russian','Slavic'],
  ]),
  family('aust1307','Austronesian',[
+  ["amis1246", "Amis", "East Formosan → Central East Formosan"],
+  ["taga1270", "Tagalog", "Malayo-Polynesian → Greater Central Philippine → Central Philippine"],
+  ["stan1306", "Standard Malay (modern example)", "Malayo-Polynesian → Malayic; modern catalog example"],
+  ["pohn1238", "Pohnpeian", "Malayo-Polynesian → Oceanic → Micronesian"],
+  ["maor1246", "Māori", "Oceanic → Polynesian → East Polynesian"],
   ['hawa1245','Hawaiian','Oceanic → Polynesian'],['tahi1242','Tahitian','Oceanic → Polynesian'],['rapa1244','Rapanui','Oceanic → Polynesian'],
  ]),
  family('eski1264','Inuit–Yupik–Unangan',[

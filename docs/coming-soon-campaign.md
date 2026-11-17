@@ -1,31 +1,48 @@
-# Dedicated studies: the Coming soon campaign
+# Dedicated studies: the completed Coming soon campaign
 
-The 25 entries in the v0.17 directory are being completed in two releases. A dedicated study means a source-linked chronological movie and, for a place or culture, a longer guide. It does not mean every building or every historical claim is now mapped.
+All **25 entries** from the v0.17 Coming soon lists now have dedicated treatment, delivered in two releases. A study has a chronological movie and, for a place or culture, a source-linked guide. Available does not mean every building, community or historical claim is mapped.
 
-## First release: 13 studies
+The four lists now contain **70 available entries**: 26 independent movies, 33 contextual stories and 34 guides, with formats combined on one card where they belong to the same study. The original 25-entry queue is complete. Six older guide expansions remain a separate future list.
 
-Eight places: Chavín de Huántar, Tiwanaku, Chan Chan, Teotihuacan, Monte Albán, Calakmul, Copán and Paquimé. Two cultures: Wari histories and Moche communities. Three language studies: Quechuan/Aymaran, Iroquoian and Maya languages.
+## First release: 13 studies, v0.18
 
-Place and culture movies run on the shared atlas clock. Other contemporary places, conflicts, voyages and connections remain present when you zoom out. Language studies use an independent topic clock and a selected family diagram. A language document is evidence of speech being recorded, not a first-arrival date or a map of everybody who spoke it.
+- Places: [Chavín](../sites/chavin.html), [Tiwanaku](../sites/tiwanaku.html), [Chan Chan](../sites/chan-chan.html), [Teotihuacan](../sites/teotihuacan.html), [Monte Albán](../sites/monte-alban.html), [Calakmul](../sites/calakmul.html), [Copán](../sites/copan.html) and [Paquimé](../sites/paquime.html).
+- Cultures: [Wari](../sites/wari.html) and [Moche](../sites/moche.html).
+- Languages: [Quechuan/Aymaran](../index.html#topic/andean-languages), [Iroquoian](../index.html#topic/iroquoian-languages) and [Maya](../index.html#topic/maya-languages).
 
-## Second release: 12 studies
+This release added 87 chapters, 61 shared observations and seven focused language records. It was merged and deployed before work on the second release was published.
 
-Poverty Point, Hopewell earthworks, San Agustín, Tierradentro, Casarabe (Cotoca/Landívar), Nan Madol and Budj Bim; Lapita and Gunditjmara histories; Austronesian languages; and Australia's pastoral/wool and mining histories. These Australian studies connect extraction, towns, shipping and labour with dispossession, resistance and forced relocation where evidence supports the connection before 1934.
+## Second release: 12 studies, v0.19
 
-## How the evidence reaches the map
+- Places: [Poverty Point](../sites/poverty-point.html), [Hopewell earthworks](../sites/hopewell.html), [San Agustín](../sites/san-agustin.html), [Tierradentro](../sites/tierradentro.html), [Casarabe](../sites/casarabe.html), [Nan Madol](../sites/nan-madol.html) and [Budj Bim](../sites/budj-bim.html).
+- Cultures: [Lapita communities and successors](../sites/lapita.html) and [Gunditjmara histories](../sites/gunditjmara.html).
+- Languages: [Austronesian](../index.html#topic/austronesian-languages).
+- Subjects: [Australia: convicts, stations and wool ships](../index.html#topic/australian-wool) and [Australia: mines, towns and export ports](../index.html#topic/australian-mining).
 
-Independently supported settlement phases, construction, encounters, conflict and movement enter the master collection. Subject-only material remains in the independent topic view. Related records link the two, preserving each observation's own date. An old building does not prove that all surrounding houses were occupied throughout the same period; a dated burial is not the construction date of its entire compound.
+This release adds **86 chapters, 70 shared observations and five focused records**. The atlas contains **2,218 records: 2,148 shared and 70 focused**. Tupaia’s documented voyage participation, Waitangi, individual settlements, construction, conflict and shipping connections join the master map. Focused document, animal-introduction and industrial-process evidence stays in its subject or language study.
 
-Named buildings can share a public archaeological-site anchor when their surveyed coordinates have not been verified. The location field states that limit. These points support orientation and selection; they are not invented building footprints. Calibrated ranges, ceramic phases, historical dates and competing models remain distinguishable.
+Place and culture movies use the shared atlas date. Zoom out to see contemporary places, conflicts, voyages and connections elsewhere. Language and subject movies have an independent clock and restore the shared view on return. See also links explain connections between studies and can lead from a subject movie to a place or culture guide.
 
-Language relationships are not political boundaries, genetic ancestry or fixed dates of migration. Written registers can differ from the language spoken by every resident. Borrowing and multilingual contact do not require one language to descend from the other.
+## How to read these records
+
+A construction window is not a whole settlement lifespan. A publication dates documentation, not a language’s birth. A public site reference is not a surveyed house, tomb or wall. Family relationships do not map political territories or biological ancestry, and modern catalog coordinates are not used to locate ancient speakers.
+
+Supported public references refine Nan Madol, Nukuleka, Bourewa and Tahiti. Casarabe now includes separate Cerrito, Salvatierra and Santa María points alongside Cotoca and Landívar. Pond 690 stays unplaced because the checked source does not establish a dependable public sample coordinate. Its farming sequence is not extended into a claim that every Casarabe center remained occupied.
+
+Tierradentro’s conventional tomb attribution is provisional; the Spanish institutional guide says 600–900 CE, while an English version prints BCE. Local settlement phases are kept separate from that tomb range. Hopewell’s modeled boundaries retain their probability levels rather than turning a median into a certain founding year.
+
+Nan Madol’s nomination contains different statements about residential cessation: its summary ends residence by the 1820s, while its detailed history retains chiefly occupation on a few islets later. The movie and record disclose that tension. A broad early-contact window is not an exact assembly date or proof of equal activity on every islet. Continuing ceremonial significance is not identical to household residence.
+
+Mungo woolshed’s visitor interpretation gives 1869, while its conservation plan favors 1877–1880. The mapped envelope presents those alternatives; it is not eleven years of continuous construction. Later mapped buildings and the 1934 quarters have their own observations. Source summaries do not turn a mission, company charter or mineral discovery into an already-built town.
+
+The First Fleet connection shows the 1788 Australian arrival; its 1787 British departure remains explanatory context. Cutty Sark’s documented December 1883–March 1884 voyage is represented by two schematic connections through the named Cape Horn region. Both use the whole voyage window because the individual passage date is unresolved. These lines are connections, not navigated tracks, recorded stops or interpolated ship positions. The broader 1883–1895 wool career is separate. The existing Wybalenna–Oyster Cove relocation already had the correct origin and destination and was preserved.
 
 ## Research access and call budget
 
-The whole-campaign [Consensus Deep dossier](https://consensus.app/search/produce-one-comprehensive-source-grounded-research/BYbj0vRsRricX6NOXl4gaA/) supplied research leads. The cumulative budget is **74/100 calls**, including creation and status polls, with **26 remaining**. Its full output is retained privately; public guides contain independently written explanations and original-source links.
+The whole-campaign [Consensus Deep dossier](https://consensus.app/search/produce-one-comprehensive-source-grounded-research/BYbj0vRsRricX6NOXl4gaA/) supplied leads for both releases. Cumulative usage remains **74/100 calls**, including creation and status polls, with 26 remaining. No additional Consensus calls were used for the second half. Full generated reports and source extracts stay private; public text is independently written and links original scholarship, institutional collections and community sources.
 
-The dossier required checking: a Chan Chan reference did not match its attributed claim, some chronological summaries collapsed distinct local events, and some references needed correction. Its final Australian section was incomplete. Original scholarship and institutional/community sources are therefore checked directly. A source is not marked fully read when only its abstract or catalogue entry could be inspected.
+Source checking corrected misleading discovery summaries, an incorrect Chan Chan reference, Chavín’s construction-phase interval and bibliographic details. A precise Cutty Sark cargo count was rejected because the inspected museum source did not support it. The Australian end of the generated dossier was incomplete and required direct source work. Abstract, catalog and full-text access are labeled honestly; no new radiocarbon calibration or language reconstruction is claimed.
 
 ## Continuing expansions
 
-Chaco Canyon, Machu Picchu, Cahokia, Mesa Verde, Hovenweep and Canyons of the Ancients already have guides and remain a separate expansion list for finer building detail and local chronology. Their expansion labels are not counted among these 25 entries. Broader geographic and chronological gaps remain visible in the [coverage audit](world-coverage-audit.html).
+Chaco Canyon, Machu Picchu, Cahokia, Mesa Verde, Hovenweep and Canyons of the Ancients retain their separate expansion labels for finer buildings and local phases. [The roadmap](roadmap.md) and [coverage audit](world-coverage-audit.html) describe broader remaining gaps. Completing the movie queue does not declare the historical atlas complete.
