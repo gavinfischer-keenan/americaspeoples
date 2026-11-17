@@ -1,3 +1,5 @@
+import comingSoonA from '../data/coming-soon-a-expansion-records.json';
+import comingSoonALanguages from '../data/coming-soon-a-topic-evidence-records.json';
 import earlyContinuity from '../data/early-continuity-expansion-records.json';
 import interiorFrontier from '../data/interior-frontier-expansion-records.json';
 import regionalGap from '../data/regional-gap-expansion-records.json';
@@ -53,7 +55,7 @@ export const dataset = publishedDataset(
   starter as Dataset,
   [
     ...research.proposals.map((p) => p.record),
-    ...regionalGap.records,
+    ...regionalGap.records, ...comingSoonA.records, ...comingSoonALanguages.records,
     ...earlyContinuity.records, ...interiorFrontier.records,
     ...history.records,
     ...settlements.records,

@@ -3,6 +3,9 @@ export interface FutureDive {id:string;title:string;description:string;links:str
 export const futureDives:FutureDive[]=[];
 
 export const topicConnections:Record<string,string[][]>={
+ 'andean-languages':[['languages','Compare separate roots, language contact and colonial documentation.'],['missionaries','Quechua and Aymara documentation was also part of evangelization and imposed institutions.']],
+ 'iroquoian-languages':[['haudenosaunee','Related languages belong to distinct communities with their own political histories.'],['forced-relocations','Removal changed where people lived; it did not end their languages or identity.'],['languages','Compare descent with borrowing and multilingual contact.']],
+ 'maya-languages':[['languages','Written registers and spoken varieties need different evidence.'],['missionaries','Colonial manuscripts preserve knowledge within unequal encounters.']],
  "pacific-fur-trades":[["whaling", "Compare related ports and ocean labor, but different animals and extraction systems."], ["territorial-purchases", "Alaska’s purchase belongs within an older colonial and commercial history."], ["hawaii-statehood", "Hawaiian ports connected commerce to changing political power."]],
  "whaling":[["pacific-fur-trades", "Compare marine extraction and its effects on communities and animals."], ["boats", "Vessels and provisioning supported long voyages."], ["hawaii-statehood", "Ships visited an existing Hawaiian kingdom."]],
  "spanish-treasure":[["trade", "Atlantic fleets and the Manila–Acapulco system connect wider commerce."], ["caribbean-enslavement", "Colonial wealth relied on multiple systems of coerced labor."], ["copper", "Compare different histories of extraction and metalworking."]],

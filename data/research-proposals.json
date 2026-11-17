@@ -1512,7 +1512,13 @@
           "history": [
             "Suggested via bulk workbook; not reviewed."
           ],
-          "relatedIds": []
+          "relatedIds": [
+            "d18-andes-chavin-monumental-growth",
+            "d18-andes-chavin-urabarriu-model",
+            "d18-andes-chavin-chakinani-model",
+            "d18-andes-chavin-gallery3-inhalers",
+            "d18-andes-chavin-janabarriu-burger-alternative"
+          ]
         }
       },
       "rationale": "Represents a documented chronological debate while retaining the source’s local ceramic-phase estimate.",
@@ -1987,7 +1993,14 @@
           "history": [
             "Suggested via bulk workbook; not reviewed."
           ],
-          "relatedIds": []
+          "relatedIds": [
+            "d18-meso-teo-superimposed-heating",
+            "d18-meso-teo-lv2-reoccupation",
+            "d18-meso-teo-lv3-reoccupation",
+            "d18-meso-teo-tunnels-coyotlatelco",
+            "d18-meso-teo-tunnels-mazapa",
+            "d18-meso-teo-tunnels-aztec"
+          ]
         }
       },
       "rationale": "Adds a named urban phase while separating it from the full settlement history.",
@@ -2083,7 +2096,14 @@
           "history": [
             "Suggested via bulk workbook; not reviewed."
           ],
-          "relatedIds": []
+          "relatedIds": [
+            "d18-meso-cop-preacropolis",
+            "d18-meso-cop-hunal-phase",
+            "d18-meso-cop-oropendola",
+            "d18-meso-cop-stairway-first",
+            "d18-meso-cop-stairway-later",
+            "d18-meso-cop-postroyal-activity"
+          ]
         }
       },
       "rationale": "Adds a bounded local Maya urban phase with transparent source resolution.",
@@ -2179,7 +2199,14 @@
           "history": [
             "Suggested via bulk workbook; not reviewed."
           ],
-          "relatedIds": []
+          "relatedIds": [
+            "d18-andes-tiwanaku-foundation-model",
+            "d18-andes-tiwanaku-pumapunku-building",
+            "d18-andes-tiwanaku-late-communal-projects",
+            "d18-andes-tiwanaku-residential-end",
+            "d18-andes-tiwanaku-redware-end",
+            "d18-andes-tiwanaku-1549-description"
+          ]
         }
       },
       "rationale": "Adds an explicitly bounded local urban phase in the southern Andes.",
@@ -2285,7 +2312,12 @@
           "history": [
             "Suggested via bulk workbook; not reviewed."
           ],
-          "relatedIds": []
+          "relatedIds": [
+            "d18-meso-monte-foundation-terraces",
+            "d18-meso-monte-structurej-carvings",
+            "d18-meso-monte-ballcourt-construction",
+            "d18-meso-monte-tomb7-reuse"
+          ]
         }
       },
       "rationale": "Adds a named architectural context rather than a generalized civilization range.",
@@ -3239,7 +3271,14 @@
           "history": [
             "Suggested via bulk workbook; not reviewed."
           ],
-          "relatedIds": []
+          "relatedIds": [
+            "d18-andes-chanchan-early-compounds",
+            "d18-andes-chanchan-tello-laberinto",
+            "d18-andes-chanchan-middle-compounds",
+            "d18-andes-chanchan-velarde-bandelier",
+            "d18-andes-chanchan-nik-chol",
+            "d18-andes-chanchan-inca-transition"
+          ]
         }
       },
       "rationale": "Adds a local capital-phase occurrence with century-level precision.",
@@ -5719,7 +5758,7 @@
       "baseRecord": null,
       "record": {
         "id": "removal-cherokee-1838-1839",
-        "revision": 1,
+        "revision": 2,
         "type": "event",
         "title": "Forced removal: Cherokee Trail of Tears, 1838–1839",
         "culture": {
@@ -5766,6 +5805,24 @@
                 "stance": "supports",
                 "locator": "Printed p. 1, Introduction",
                 "note": "Supports dates, coercion, depots, and Indian Territory destination."
+              },
+              {
+                "sourceId": "d18-source-cherokee-removal",
+                "locator": "NPS removal account; Tennessee brochure; exhibit on surviving communities.",
+                "stance": "context",
+                "note": "Related reading for Iroquoian languages; contextual language interpretation, not direct dating of this place or every speaker."
+              },
+              {
+                "sourceId": "d18-source-fort-cass",
+                "locator": "NPS removal account; Tennessee brochure; exhibit on surviving communities.",
+                "stance": "context",
+                "note": "Related reading for Iroquoian languages; contextual language interpretation, not direct dating of this place or every speaker."
+              },
+              {
+                "sourceId": "d18-source-cherokee-syllabary",
+                "locator": "NPS removal account; Tennessee brochure; exhibit on surviving communities.",
+                "stance": "context",
+                "note": "Related reading for Iroquoian languages; contextual language interpretation, not direct dating of this place or every speaker."
               }
             ]
           },
@@ -5850,6 +5907,33 @@
             "venue": "Remember the Removal: Sites on the Trail",
             "url": "https://www.cherokee.gov/about-the-nation/remember-the-removal/sites-on-the-trail/fort-cass-cherokee-agency-emigration-depot/",
             "access": "Tribal institutional web account consulted. Supports the Fort Cass–Charleston/Cleveland geographical relationship, not a surveyed camp coordinate."
+          },
+          {
+            "id": "d18-source-cherokee-removal",
+            "authors": "National Park Service",
+            "title": "Trail of Tears National Historic Trail: History & Culture",
+            "year": 2025,
+            "venue": "Original scholarship / institutional source",
+            "url": "https://www.nps.gov/trte/learn/historyculture/index.htm",
+            "access": "Full institutional account read and saved: forced removal starts May 1838; final movement completed March 1839; coercion and opposition described. Original factual summary; source prose and media are not republished."
+          },
+          {
+            "id": "d18-source-fort-cass",
+            "authors": "National Park Service and partners",
+            "title": "Trail of Tears: Tennessee",
+            "year": null,
+            "venue": "Original scholarship / institutional source",
+            "url": "https://www.nps.gov/trte/planyourvisit/upload/Tennessee-Trail-of-Tears-brochure-508.pdf",
+            "access": "Two-page institutional brochure read: Fort Cass at modern Charleston; camps spread over 12 by 4 miles; departure and suffering described. Original factual summary; source prose and media are not republished."
+          },
+          {
+            "id": "d18-source-cherokee-syllabary",
+            "authors": "National Park Service, University of West Georgia Center for Public History, Chattooga County Historical Society",
+            "title": "All the People were Amazed: Chattooga Town",
+            "year": null,
+            "venue": "Original scholarship / institutional source",
+            "url": "https://www.nps.gov/trte/learn/historyculture/upload/All-the-People-were-Amazed-508.pdf",
+            "access": "One-page institutional exhibit read. It dates syllabary completion to 1821; cites Payne–Butrick Papers I:139–140 for the Chattooga court demonstration. Original factual summary; source prose and media are not republished."
           }
         ],
         "review": {
@@ -5859,9 +5943,14 @@
           "provenance": "AI-assisted source compilation checked 2026-10-28. Ready means structurally complete for human review; no independent scholarly or community review has occurred. Full-text, excerpt, and institutional access scopes are recorded separately.",
           "reviewedAt": "2026-10-28",
           "history": [
-            "Suggested via bulk workbook; not reviewed."
+            "Suggested via bulk workbook; not reviewed.",
+            "Added source access and contextual reading for the dedicated language study; original place/date claim remains separate."
           ],
-          "relatedIds": []
+          "relatedIds": [
+            "d18-language-hochelaga-1535",
+            "d18-language-stadacona-1535",
+            "d18-language-new-echota-phoenix-1828"
+          ]
         },
         "overlay": {
           "kind": "forced-removal",
@@ -22433,7 +22522,9 @@
           "history": [
             "2026-10-28: Reviewed intake; shared published corpus unchanged."
           ],
-          "relatedIds": []
+          "relatedIds": [
+            "d18-language-huarochiri-1608"
+          ]
         }
       },
       "rationale": "Author-supplied literature intake with primary source/access checks.",
@@ -82893,7 +82984,13 @@
             "2026-10-29: Checked against accessed original or author-institution text with stated limits."
           ],
           "relatedIds": [
-            "r11v-wari-language-alternatives"
+            "r11v-wari-language-alternatives",
+            "d18-andes-wari-moquegua-canal",
+            "d18-andes-wari-baul-rebuilding",
+            "d18-andes-wari-baul-brewery",
+            "d18-andes-wari-baul-brewery-closure",
+            "d18-andes-wari-mejia-late-household",
+            "d18-andes-wari-petroglifo-offering"
           ]
         }
       },
@@ -82971,7 +83068,13 @@
             "2026-10-29: Checked against accessed original or author-institution text with stated limits."
           ],
           "relatedIds": [
-            "r11v-wari-language-alternatives"
+            "r11v-wari-language-alternatives",
+            "d18-andes-wari-moquegua-canal",
+            "d18-andes-wari-baul-rebuilding",
+            "d18-andes-wari-baul-brewery",
+            "d18-andes-wari-baul-brewery-closure",
+            "d18-andes-wari-mejia-late-household",
+            "d18-andes-wari-petroglifo-offering"
           ]
         }
       },
@@ -83049,7 +83152,13 @@
             "2026-10-29: Checked against accessed original or author-institution text with stated limits."
           ],
           "relatedIds": [
-            "r11v-wari-language-alternatives"
+            "r11v-wari-language-alternatives",
+            "d18-andes-wari-moquegua-canal",
+            "d18-andes-wari-baul-rebuilding",
+            "d18-andes-wari-baul-brewery",
+            "d18-andes-wari-baul-brewery-closure",
+            "d18-andes-wari-mejia-late-household",
+            "d18-andes-wari-petroglifo-offering"
           ]
         }
       },
@@ -83215,7 +83324,14 @@
           "history": [
             "2026-10-29: Checked against accessed original or author-institution text with stated limits."
           ],
-          "relatedIds": []
+          "relatedIds": [
+            "d18-andes-moche-salinar-cerro-blanco",
+            "d18-andes-moche-ca9-marine-food",
+            "d18-andes-moche-new-temple-phase",
+            "d18-andes-moche-late-textiles",
+            "d18-andes-moche-early-chimu-cemetery",
+            "d18-andes-moche-ca43-hearth"
+          ]
         },
         "overlay": {
           "kind": "regional-evidence",
@@ -83484,7 +83600,14 @@
           "history": [
             "2026-10-29: Checked against accessed original or author-institution text with stated limits."
           ],
-          "relatedIds": []
+          "relatedIds": [
+            "d18-andes-wari-moquegua-canal",
+            "d18-andes-wari-baul-rebuilding",
+            "d18-andes-wari-baul-brewery",
+            "d18-andes-wari-baul-brewery-closure",
+            "d18-andes-wari-mejia-late-household",
+            "d18-andes-wari-petroglifo-offering"
+          ]
         },
         "overlay": {
           "kind": "population-history",
@@ -83754,7 +83877,14 @@
           "history": [
             "2026-10-29: Checked against accessed original or author-institution text with stated limits."
           ],
-          "relatedIds": []
+          "relatedIds": [
+            "d18-andes-wari-moquegua-canal",
+            "d18-andes-wari-baul-rebuilding",
+            "d18-andes-wari-baul-brewery",
+            "d18-andes-wari-baul-brewery-closure",
+            "d18-andes-wari-mejia-late-household",
+            "d18-andes-wari-petroglifo-offering"
+          ]
         },
         "overlay": {
           "kind": "language",
@@ -85088,7 +85218,14 @@
           "history": [
             "2026-10-29: Original-source comparison admitted with access and scope limits."
           ],
-          "relatedIds": []
+          "relatedIds": [
+            "d18-andes-moche-salinar-cerro-blanco",
+            "d18-andes-moche-ca9-marine-food",
+            "d18-andes-moche-new-temple-phase",
+            "d18-andes-moche-late-textiles",
+            "d18-andes-moche-early-chimu-cemetery",
+            "d18-andes-moche-ca43-hearth"
+          ]
         },
         "overlay": {
           "kind": "trade",
