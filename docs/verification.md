@@ -1,6 +1,6 @@
 # Current source verification
 
-Version **0.17.0 is merged and prepared for publication**. Public activation is recorded separately in the deployment receipt. The [candidate receipt](https://github.com/gavinfischer-keenan/americaspeoples/blob/main/docs/releases/v0.17.0-verification.json) records this update; [the v0.16 receipt](https://github.com/gavinfischer-keenan/americaspeoples/blob/main/docs/releases/v0.16.0-verification.json) retains the last deployment checks.
+Version **0.17.0 is merged and deployed** at [the live atlas](https://americaspeoples.11mosswood.us/). PR #13 was merged as `6229cff4b940e79eb2476fc616475ee7deda4dd9`; the published artifact commit is `947a08e44bfef2f5b2fc660d31d390c21ca913be`. The [candidate receipt](https://github.com/gavinfischer-keenan/americaspeoples/blob/main/docs/releases/v0.17.0-verification.json) records this update; [the v0.16 receipt](https://github.com/gavinfischer-keenan/americaspeoples/blob/main/docs/releases/v0.16.0-verification.json) retains the last deployment checks.
 
 This release contains **2,075 records: 2,017 shared and 58 focused**. It adds 37 shared observations at 13 public location anchors, refines two existing Kuk onset windows, and adds Caral/Supe, Kuk and Upano guides with 19 contextual movie chapters. These are dated observations, not 37 newly discovered settlements. Consensus Deep usage is **70/100 calls**, including submission and polls; 30 remain. Complete generated reports stay private.
 
@@ -15,3 +15,11 @@ One fresh independent whole-branch review found no Critical or Important issues.
 The ordered release gate ran in two parts: stages 1–24 passed, then a new browser test caught a redraw-timing race while checking Kuk chapters at the same location. A test-only change waits for current evidence and screen geometry together. All 19 scenes and stages 25–34 then passed; no application or data changes intervened. The receipt records both logs and the test-only commit.
 
 The [evidence guide](early-continuity.html) distinguishes full-text, supplement, synopsis and abstract access. Nimowa remains limited to the original author abstract; its point is a generalized island reference. Regional Upano phases do not directly date every structure. Unknown continuation is not abandonment. No new route was invented from an imported object or non-local isotope alone. The [world comparison](world-coverage-audit.html) and [65-region matrix](coverage-audit.html) retain gaps and separate observations from localities. Australian pastoral/wool and mining movies remain queued.
+
+## Public deployment verification
+
+The public API reports v0.17.0 and 2,075 records. Public app assets, guides and downloads match the built release, and all five GitHub release assets match local checksums. Live desktop and tablet checks passed for the shared Americas movie, the four directory categories, all 45 available cards, the 25 planned entries, the three new contextual place movies, source-date locating and independent topic playback.
+
+The merged release passed 295 unit tests and five package checks. Five Linux retention safety tests passed on the host. Server, GitHub and local versioned archives retain **v0.17.0 and v0.16.0 only**. Public verification passed again after cleanup. All 388 unrelated origin files and three neighbouring public pages were verified unchanged.
+
+The next authorized campaign completes the 25 Coming soon entries in two separately merged and deployed batches (13 then 12). New research is not part of this release.

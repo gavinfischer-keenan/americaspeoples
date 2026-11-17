@@ -63,3 +63,7 @@
 - [x] Run the full ordered release gate. Expected: every required phase passes; inspect representative screenshots.
 - [x] Obtain one fresh independent whole-branch review; resolve material findings in one tested fix pass, preserve source-access limitations and held leads.
 - [x] Record source counts, site/observation distinctions, cumulative Consensus calls and review results; commit, push and create the candidate PR.
+
+### Authorized publication
+
+The user authorized PR #13 merge and live deployment. Completed: merged verification (295 unit tests, five package checks), v0.17.0 publication, live desktop/tablet and public asset checks, five Linux retention tests, current-plus-one rollback retention and temporary payload cleanup. The deployment receipt records exact commits and artifact hashes.

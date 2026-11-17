@@ -1,6 +1,6 @@
 {
   "version": "0.17.0",
-  "status": "verified candidate; not merged or deployed",
+  "status": "merged and deployed; public verification and retention complete",
   "verifiedAt": "2026-11-16",
   "baseCommit": "9437c9f",
   "implementationCommit": "ff8192a9fb199403e8feba36429f5052320476d1",
@@ -124,8 +124,136 @@
     "Upano regional phases do not date individual structures; lake catchment signals do not identify towns or people.",
     "No new route inferred from isotopes or imported material alone.",
     "Central America and post-Lapita island histories remain incomplete; held leads are listed in the evidence guide.",
-    "Australian pastoral/wool and mining topics remain Coming soon.",
-    "No live activation or retention change in this candidate."
+    "Australian pastoral/wool and mining topics remain Coming soon."
   ],
-  "pullRequest": "https://github.com/gavinfischer-keenan/americaspeoples/pull/13"
+  "pullRequest": "https://github.com/gavinfischer-keenan/americaspeoples/pull/13",
+  "deployment": {
+    "checkedAt": "2026-11-17T01:44:05.3351922Z",
+    "url": "https://americaspeoples.11mosswood.us/",
+    "release": "https://github.com/gavinfischer-keenan/americaspeoples/releases/tag/v0.17.0",
+    "mergeCommit": "6229cff4b940e79eb2476fc616475ee7deda4dd9",
+    "artifactCommit": "947a08e44bfef2f5b2fc660d31d390c21ca913be",
+    "id": "20261117T013453Z-americas-v0.17.0",
+    "health": {
+      "status": "ok",
+      "version": "0.17.0",
+      "records": 2075
+    },
+    "publicAssets": {
+      "app.js": "Exact SHA-256 match",
+      "app.css": "Exact SHA-256 match",
+      "index.html": "Matches release after excluding host analytics injection",
+      "LICENSE.md": "Exact SHA-256 match",
+      "CONTRIBUTING.md": "Exact SHA-256 match",
+      "THIRD_PARTY.md": "Exact SHA-256 match",
+      "licenses/PolyForm-Noncommercial-1.0.0.md": "Exact SHA-256 match",
+      "licenses/CC-BY-NC-SA-4.0.txt": "Exact SHA-256 match",
+      "docs/reuse-and-contributing.html": "Matches release after excluding host analytics injection",
+      "docs/atlas-expansion.html": "Matches release after excluding host analytics injection",
+      "sites/chaco.html": "Matches release after excluding host analytics injection",
+      "docs/intake/2026-10-28-01-reviews.txt": "Exact SHA-256 match",
+      "historical-boundaries.json": "Exact SHA-256 match",
+      "colonial-boundaries.json": "Exact SHA-256 match",
+      "national-boundaries.json": "Exact SHA-256 match",
+      "early-national-boundaries.json": "Exact SHA-256 match",
+      "reservation-boundaries.json": "Exact SHA-256 match",
+      "boundary-sources.json": "Exact SHA-256 match",
+      "expanded-boundary-sources.json": "Exact SHA-256 match",
+      "early-national-boundary-sources.json": "Exact SHA-256 match",
+      "reservation-boundary-sources.json": "Exact SHA-256 match",
+      "voyages.json": "Exact SHA-256 match",
+      "rail-network.json": "Exact SHA-256 match",
+      "land-detailed.geojson": "Exact SHA-256 match",
+      "templates/americas-peoples-researched-import.xlsx": "Exact SHA-256 match",
+      "sites/caral-supe.html": "Matches release after excluding host analytics injection",
+      "sites/kuk.html": "Matches release after excluding host analytics injection",
+      "sites/upano.html": "Matches release after excluding host analytics injection",
+      "docs/early-continuity.html": "Matches release after excluding host analytics injection",
+      "docs/interior-frontiers.html": "Matches release after excluding host analytics injection",
+      "docs/regional-gap-evidence.html": "Matches release after excluding host analytics injection",
+      "docs/remaining-topic-dives.html": "Matches release after excluding host analytics injection",
+      "docs/world-coverage-audit.html": "Matches release after excluding host analytics injection",
+      "docs/australasia-archaeology.html": "Matches release after excluding host analytics injection",
+      "docs/land-sovereignty-dives.html": "Matches release after excluding host analytics injection",
+      "world-coverage-audit.json": "Exact SHA-256 match",
+      "coverage-audit.json": "Exact SHA-256 match",
+      "docs/community-topic-dives.html": "Matches release after excluding host analytics injection",
+      "docs/pacific-topic-dives.html": "Matches release after excluding host analytics injection",
+      "docs/cities-conflicts-topic-dives.html": "Matches release after excluding host analytics injection",
+      "docs/cities-conflicts-coverage.html": "Matches release after excluding host analytics injection",
+      "licenses/acw-battle-data-BSD-3-Clause.txt": "Exact SHA-256 match",
+      "docs/shared-history-update.md": "Exact SHA-256 match",
+      "terrain/natural-earth-relief.webp": "Exact SHA-256 match",
+      "terrain/chaco.webp": "Exact SHA-256 match",
+      "terrain/four-corners.webp": "Exact SHA-256 match",
+      "terrain/mesa-verde.webp": "Exact SHA-256 match",
+      "terrain/hovenweep.webp": "Exact SHA-256 match",
+      "terrain/hawaiian-islands.webp": "Exact SHA-256 match",
+      "terrain/oahu.webp": "Exact SHA-256 match",
+      "terrain/maui.webp": "Exact SHA-256 match",
+      "terrain/north-hawaii.webp": "Exact SHA-256 match",
+      "americas-peoples-v0.17.0-selfhost.zip": "Public download SHA-256 verified",
+      "americas-peoples-import.xlsx": "Public download SHA-256 verified",
+      "americas-peoples-researched-import.xlsx": "Public download SHA-256 verified"
+    },
+    "landing": "Expanded coverage, current download links, appendix and noncommercial policy verified",
+    "sourceReviews": 6,
+    "unrelatedOriginFilesUnchanged": 388,
+    "neighborPagesVerified": 3,
+    "neighborNote": "Home and utility responses exact after excluding client-dependent analytics injection; privacy content exact after decoding Cloudflare email protection and excluding analytics injection. Previous/current origin privacy files are byte-identical.",
+    "githubAssets": [
+      {
+        "name": "americas-peoples-import.xlsx",
+        "size": 302388,
+        "digest": "sha256:ed0abc070fc522e4ad2e3a7c97d3f7f109ed6265c4735ed186559a4e6079c794"
+      },
+      {
+        "name": "americas-peoples-researched-import.xlsx",
+        "size": 4241902,
+        "digest": "sha256:848c207a64b672688957cfe4e01a31e70460321e844d67ac61b04ecfd6bef1ca"
+      },
+      {
+        "name": "americas-peoples-v0.17.0-selfhost.zip",
+        "size": 29440750,
+        "digest": "sha256:397b1cc3a74539c18882c697136e6dcdce4ba07ceb37d25419b2753a6c66f8ad"
+      },
+      {
+        "name": "artifacts.json",
+        "size": 1219,
+        "digest": "sha256:663c5a4c7346a64d69196574f51a194b41555a4b004c140dadbdce98b989d46d"
+      },
+      {
+        "name": "SHA256SUMS.txt",
+        "size": 305,
+        "digest": "sha256:907c57808b6370f056cf16bddde487b52f1570c41d3587f2755847d8f4777c42"
+      }
+    ],
+    "retention": {
+      "current": "0.17.0",
+      "previous": "0.16.0",
+      "serverCleanupComplete": true,
+      "githubReleases": [
+        {
+          "isLatest": true,
+          "tagName": "v0.17.0"
+        },
+        {
+          "isLatest": false,
+          "tagName": "v0.16.0"
+        }
+      ],
+      "localVersionedArchives": [
+        "0.17.0",
+        "0.16.0"
+      ],
+      "temporaryPayloadsRemoved": true
+    },
+    "mergedValidation": {
+      "unitTests": 295,
+      "packageTests": 5,
+      "liveDesktopAndTabletChecks": "passed",
+      "linuxRetentionTests": 5,
+      "publicVerificationAfterCleanup": "passed"
+    }
+  }
 }
