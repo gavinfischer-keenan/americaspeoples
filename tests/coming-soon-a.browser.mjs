@@ -4,6 +4,7 @@ import {readFile,mkdir} from 'node:fs/promises';
 import {createStaticServer} from '../scripts/static-server.mjs';
 import {stories} from '../src/stories.ts';
 import {topics} from '../src/topic-dives.ts';
+import {historyState} from '../src/history.ts';
 const studyIds=['chavin','tiwanaku','chan-chan','teotihuacan','monte-alban','calakmul','copan','paquime','wari','moche'];
 const languageIds=['andean-languages','iroquoian-languages','maya-languages'];
 const server=createStaticServer('dist');await new Promise(r=>server.listen(0,'127.0.0.1',r));
@@ -43,7 +44,17 @@ try{
   for(const [i,scene] of topic.scenes.entries()){
    if(i)await page.locator('#topic-next').click();
    await page.getByRole('heading',{name:scene.title,exact:true}).waitFor();
-   assert.ok((await page.locator('#topic-scene').innerText()).includes(scene.body));chapters++;
+   assert.ok((await page.locator('#topic-scene').innerText()).includes(scene.body));
+   const current=scene.recordIds.map(id=>records.find(r=>r.id===id)).find(r=>r?.location&&historyState(r,scene.year)==='active');
+   assert.ok(current,scene.title+' current mapped evidence');
+   await page.waitForFunction(({title})=>{
+    // A dated connection is rendered as an overlay, not as a settlement dot.
+    const marker=[...document.querySelectorAll('#topic-map [data-point],#topic-map [data-overlay]')].find(el=>el.querySelector('title')?.textContent.includes(title)),map=document.querySelector('#topic-map');
+    if(!marker?.textContent.includes(title)||!map)return false;
+    const b=marker.getBoundingClientRect(),m=map.getBoundingClientRect();
+    return b.width>0&&b.right>m.left&&b.left<m.right&&b.bottom>m.top&&b.top<m.bottom;
+   },{title:current.title});
+   chapters++;
   }
   await page.locator('.topic-toolbar a').filter({hasText:'Shared atlas'}).click();
   await page.locator('#story-select').waitFor();

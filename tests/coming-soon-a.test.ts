@@ -44,8 +44,22 @@ test('three language studies retain independent evidence and filtered family dia
   const topic=topics.find(t=>t.id===id);assert.ok(topic,id);
   assert.ok(topic.scenes.length>=5,id+' chapters');
   assert.ok(topic.recordIds.some(id=>topicOnlyIds.has(id)),id+' focused evidence');
-  for(const scene of topic.scenes){assert.ok(scene.body.length>180);assert.ok(scene.recordIds.every(id=>byId.has(id)),scene.title);}
+  for(const scene of topic.scenes){
+   assert.ok(scene.body.length>180);assert.ok(scene.recordIds.every(id=>byId.has(id)),scene.title);
+   assert.ok(scene.recordIds.some(id=>{const r=byId.get(id);return r?.location&&historyState(r,scene.year)==='active';}),scene.title+' current mapped evidence');
+  }
  }
+});
+test('Chavín phase count spans the complete 1200–800 BCE construction interval',()=>{
+ // Kembel and Haas distinguish all thirteen phases over 400 years from the
+ // intensive construction in the final 200 years; those are different claims.
+ const record=byId.get('d18-andes-chavin-monumental-growth');assert.ok(record);
+ assert.deepEqual([record.time.start,record.time.end],[-1199,-799]);
+ const material=[record,stories.find(s=>s.id===siteGuides.find(g=>g.id==='chavin')?.storyId),content.pages.find(p=>p.id==='chavin')];
+ const strings:string[]=[];
+ const visit=(x:unknown):void=>{if(typeof x==='string'){if(x.includes('thirteen of fifteen'))strings.push(x);}else if(x&&typeof x==='object')Object.values(x).forEach(visit);};
+ material.forEach(visit);assert.ok(strings.length>=5,'record, review, movie and guide explain the phases');
+ for(const text of strings)assert.match(text,/thirteen of fifteen[^.;]*1200–800/,text);
 });
 test('family-specific diagrams omit unrelated roots while the overview retains them',()=>{
  // A family-specific view must not imply that unrelated roots belong to this dive.
