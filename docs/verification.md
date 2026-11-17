@@ -1,8 +1,8 @@
 # Current source verification
 
-Version **0.17.0 is a verified candidate, not yet merged or deployed**. The live atlas remains v0.16.0. The [candidate receipt](https://github.com/gavinfischer-keenan/americaspeoples/blob/feat/early-americas-pacific-continuity/docs/releases/v0.17.0-verification.json) records this update; [the v0.16 receipt](https://github.com/gavinfischer-keenan/americaspeoples/blob/main/docs/releases/v0.16.0-verification.json) retains the last deployment checks.
+Version **0.17.0 is merged and prepared for publication**. Public activation is recorded separately in the deployment receipt. The [candidate receipt](https://github.com/gavinfischer-keenan/americaspeoples/blob/main/docs/releases/v0.17.0-verification.json) records this update; [the v0.16 receipt](https://github.com/gavinfischer-keenan/americaspeoples/blob/main/docs/releases/v0.16.0-verification.json) retains the last deployment checks.
 
-This candidate contains **2,075 records: 2,017 shared and 58 focused**. It adds 37 shared observations at 13 public location anchors, refines two existing Kuk onset windows, and adds Caral/Supe, Kuk and Upano guides with 19 contextual movie chapters. These are dated observations, not 37 newly discovered settlements. Consensus Deep usage is **70/100 calls**, including submission and polls; 30 remain. Complete generated reports stay private.
+This release contains **2,075 records: 2,017 shared and 58 focused**. It adds 37 shared observations at 13 public location anchors, refines two existing Kuk onset windows, and adds Caral/Supe, Kuk and Upano guides with 19 contextual movie chapters. These are dated observations, not 37 newly discovered settlements. Consensus Deep usage is **70/100 calls**, including submission and polls; 30 remain. Complete generated reports stay private.
 
 The Deep dives directory now classifies all **20 independent movies, 14 contextual stories and 15 guides** into Subjects, Places, Languages and Cultures. Four place cards combine a movie and guide. All existing links remain reachable. The 25 Coming soon entries have no play controls; six existing guides are separately marked for expansion.
 
