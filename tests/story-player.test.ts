@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import type { Story } from "../src/stories";
-import { sampleStory, sceneHoldMs, sceneStartMs, storyDurationMs } from "../src/story-player";
+import { sampleStory, sceneHoldMs, sceneStartMs, storyDurationMs, storyElapsedAtYear } from "../src/story-player";
 
 const story: Story = {
   id: "timing", title: "Timing", subtitle: "", description: "",
@@ -10,6 +10,14 @@ const story: Story = {
     recordIds: [], scope: "americas", center: [-100, 30], zoom: 2,
   })),
 };
+
+test('hierarchy entry seeks the same year through holds and travel, including reversed chapters',()=>{
+  for(const year of [100,125,150,175,200])assert.equal(sampleStory(story,storyElapsedAtYear(story,year)).year,year);
+  const reversed={...story,scenes:[...story.scenes].reverse()};
+  assert.equal(sampleStory(reversed,storyElapsedAtYear(reversed,150)).year,150);
+  assert.equal(storyElapsedAtYear(story,50),0);
+  assert.equal(storyElapsedAtYear(story,250),storyDurationMs(story));
+});
 
 test("each scene holds for reading before the year travels to the next scene", () => {
   assert.equal(sampleStory(story, 9999).phase, "hold");

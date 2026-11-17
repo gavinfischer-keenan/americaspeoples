@@ -13,7 +13,7 @@ try{
  });
  for(const [topic,record,year] of [['boats','px-madjedbebe-onset','68,751 BCE'],['dogs','topic-dog-alaska','8,461 BCE']]){
   await check(`${topic} review opens the source date without clamping`,async p=>{
-   await p.goto(base+'/#topic/'+topic);await p.locator('#topic-scene .scene-sources summary').click();
+   await p.goto(base+'/#topic/'+topic);await p.locator('#topic-scene .scene-sources:not(.scene-notes) summary').click();
    await p.locator(`#topic-scene .scene-sources a[href="#review/${record}"]`).click();await p.locator('[data-action="locate"]').click();
    assert.equal(await p.locator('#topic-year').innerText(),year);
   });

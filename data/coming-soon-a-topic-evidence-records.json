@@ -4,9 +4,9 @@
   "records": [
     {
       "id": "d18-language-lima-doctrina-1584",
-      "revision": 1,
+      "revision": 3,
       "type": "occurrence",
-      "title": "Lima — a catechism in Quechua, Aymara and Spanish",
+      "title": "Lima — Christian instruction printed in three languages",
       "culture": {
         "id": "d18-communities-andean-languages",
         "name": "Quechuan and Aymaran histories — see the dated community and context",
@@ -30,26 +30,34 @@
         "approximate": false,
         "original": "1584 CE imprint",
         "method": "Historical document, manuscript, monument or encounter date as reported by the cited source. This is not a first date of speech or a census of speakers.",
-        "interpretation": "Publication date, not first use of any language. Selected missionary written forms cannot stand for every local variety. Reused rounded city reference, not a printing-house coordinate."
+        "interpretation": "1584 is the Lima edition’s publication date. The languages were already in use before this printing."
       },
       "claims": [
         {
           "id": "evidence",
-          "text": "Antonio Ricardo printed the Doctrina christiana in Lima in 1584. The edition presents Christian instruction in Spanish, Quechua and Aymara. It records multilingual colonial religious work rather than a replacement of Indigenous languages by Spanish.",
+          "text": "In 1584, Antonio Ricardo printed the Doctrina christiana in Lima. This surviving book presents Catholic instruction in Spanish, Quechua and Aymara, with a catechism and a guide to confession. Its multilingual form shows how colonial religious teaching was directed to readers and listeners who used Indigenous languages.",
           "status": "well-supported",
-          "explanation": "Publication date, not first use of any language. Selected missionary written forms cannot stand for every local variety. Publication date, not first use of any language. Selected missionary written forms cannot stand for every local variety. Public place reference only; the named structure or excavated sample is not separately geolocated.",
+          "explanation": "The catalog and published bibliographic study establish the edition and its contents. The pages have not been independently collated here, and the book does not map all Quechua or Aymara speakers.",
           "support": [
             {
               "sourceId": "d18-source-doctrina1584",
-              "locator": "Catalog Created/Published; Notes: Content in Aymara and Quechua and Spanish.",
+              "locator": "Holding-institution item description, full title, imprint and language fields",
               "stance": "supports",
-              "note": "Supports this observation within the stated chronology, access and geographic limits."
-            },
+              "note": "Supports the stated historical account or material observation; source access is specified in the citation."
+            }
+          ]
+        },
+        {
+          "id": "historical-context",
+          "text": "The edition also includes a short Aymara-to-Spanish vocabulary of words used in the doctrine. That practical glossary connects translation with the daily work of instruction and confession. Together, the language versions and glossary preserve specific written choices made for a missionary publication, an early printed record of the language work on which evangelization depended.",
+          "status": "well-supported",
+          "explanation": "Interpretations and historical perspectives are attributed in the text.",
+          "support": [
             {
-              "sourceId": "d18-source-adelaar2020",
-              "locator": "Adelaar abstract and section 2; Doctrina catalog imprint/languages.",
-              "stance": "context",
-              "note": "Related reading for Quechuan and Aymaran histories; contextual language interpretation, not direct dating of this place or every speaker."
+              "sourceId": "d18-source-bertonio2012",
+              "locator": "Section 1: brief Aymara–Spanish vocabulary included in the 1584 Doctrina",
+              "stance": "supports",
+              "note": "Supports the stated historical account or material observation; source access is specified in the citation."
             }
           ]
         }
@@ -62,26 +70,28 @@
           "year": 1584,
           "venue": "Original scholarship / institutional source",
           "url": "https://www.loc.gov/item/2021666903/",
-          "access": "Library of Congress / National Library of Peru item metadata read through web results; catalog gives Lima, Antonio Ricardo, 1584 and Aymara/Quechua/Spanish. Original full pages not collated. Original factual summary; source prose and media are not republished."
+          "access": "Library of Congress/National Library of Peru item description independently checked through indexed full metadata on 2026-11-16: Lima, Antonio Ricardo, 1584; Spanish, Quechua and Aymara; catechism/confession contents. Direct item fetch returned 403. Original pages were not collated."
         },
         {
-          "id": "d18-source-adelaar2020",
-          "authors": "Willem Adelaar",
-          "title": "Reconstruction beyond proto-languages in the middle Andes",
-          "year": 2020,
+          "id": "d18-source-bertonio2012",
+          "authors": "Hans van den Berg",
+          "title": "Las ediciones del Vocabulario de la lengua aymara",
+          "year": 2012,
           "venue": "Original scholarship / institutional source",
-          "url": "https://cadernos.abralin.org/index.php/cadernos/article/view/274",
-          "access": "Full publisher HTML read; local HTML/text saved. Abstract and sections 1–3. Original factual summary; source prose and media are not republished."
+          "url": "https://www.scielo.org.bo/scielo.php?pid=s2077-33232012000100002&script=sci_arttext",
+          "access": "Original scholarly article independently read on 2026-11-16 in publisher rendering and previously preserved full text. Section 2 reproduces and analyzes the 1612 preface and imprint. The same article discusses competing Juli/Lima printing hypotheses; the correction therefore says “bears a Juli imprint,” not that the physical press location is certain."
         }
       ],
       "review": {
-        "summary": "Antonio Ricardo printed the Doctrina christiana in Lima in 1584. The edition presents Christian instruction in Spanish, Quechua and Aymara. It records multilingual colonial religious work rather than a replacement of Indigenous languages by Spanish.",
-        "limitations": "Publication date, not first use of any language. Selected missionary written forms cannot stand for every local variety. Reused rounded city reference, not a printing-house coordinate.",
-        "discussion": "The date belongs to this document, encounter or observed pattern. Language relationships, speaker distributions, political identity and ancestry are separate questions.",
+        "summary": "In 1584, Antonio Ricardo printed the Doctrina christiana in Lima. This surviving book presents Catholic instruction in Spanish, Quechua and Aymara, with a catechism and a guide to confession. Its multilingual form shows how colonial religious teaching was directed to readers and listeners who used Indigenous languages.",
+        "limitations": "The catalog and published bibliographic study establish the edition and its contents. The pages have not been independently collated here, and the book does not map all Quechua or Aymara speakers.",
+        "discussion": "The edition also includes a short Aymara-to-Spanish vocabulary of words used in the doctrine. That practical glossary connects translation with the daily work of instruction and confession. Together, the language versions and glossary preserve specific written choices made for a missionary publication, an early printed record of the language work on which evangelization depended.",
         "provenance": "Dedicated-study campaign: Consensus Deep discovery followed by original-source checking. Full research dossier retained privately.",
         "reviewedAt": "2026-11-16",
         "history": [
-          "Added independently written source-linked observation with explicit chronology and place precision."
+          "Added independently written source-linked observation with explicit chronology and place precision.",
+          "2026-11-16: Reader-facing description updated: Lead with the historical event, people and surviving evidence; replace generic process commentary with distinct factual context.",
+          "2026-11-16: Reader-facing description updated: Lead with the historical event, people and surviving evidence; replace generic process commentary with distinct factual context."
         ],
         "relatedIds": [
           "topic-language-lima",
@@ -179,9 +189,9 @@
     },
     {
       "id": "d18-language-bertonio-juli-1612",
-      "revision": 1,
+      "revision": 3,
       "type": "occurrence",
-      "title": "Juli — Aymara writers behind Bertonio’s vocabulary",
+      "title": "Juli — Aymara writers help create Bertonio’s dictionary",
       "culture": {
         "id": "d18-communities-andean-languages",
         "name": "Quechuan and Aymaran histories — see the dated community and context",
@@ -205,32 +215,46 @@
         "approximate": false,
         "original": "1612 CE imprint; preparatory letter dated 11 July 1611",
         "method": "Historical document, manuscript, monument or encounter date as reported by the cited source. This is not a first date of speech or a census of speakers.",
-        "interpretation": "Juli is the imprint and community context; actual press locality has been debated. A printed dictionary does not date Aymara origins or delimit Aymaran territory. Published modern town reference associated with the dictionary’s documented subject community and imprint; no printing shop asserted."
+        "interpretation": "1612 is the edition’s imprint date; the preface describes work accumulated over many years."
       },
       "claims": [
         {
           "id": "evidence",
-          "text": "Bertonio’s Aymara–Spanish vocabulary bears a Juli 1612 imprint. His introduction describes drawing words from texts composed by Indigenous Aymara collaborators. The work is associated especially with the Lupaca usage of Chucuito, not every Aymaran variety.",
+          "text": "Ludovico Bertonio’s Aymara–Spanish dictionary bears a Juli, Chucuito, 1612 imprint. Behind the named Jesuit author stood Indigenous Aymara writers: his introduction describes their compositions about Christian teachings, saints and sermons. Bertonio extracted words and expressions from those writings to build the dictionary.",
           "status": "well-supported",
-          "explanation": "Juli is the imprint and community context; actual press locality has been debated. A printed dictionary does not date Aymara origins or delimit Aymaran territory. Juli is the imprint and community context; actual press locality has been debated. A printed dictionary does not date Aymara origins or delimit Aymaran territory. Public place reference only; the named structure or excavated sample is not separately geolocated.",
+          "explanation": "The title page names Juli, but the physical location of printing has been debated. The vocabulary’s regional emphasis does not make it a complete record of every Aymara variety.",
           "support": [
             {
               "sourceId": "d18-source-bertonio2012",
-              "locator": "Van den Berg section 2; Bertonio fols.A 1r–A 1v; imprint and Chucuito scope paragraph.",
+              "locator": "Section 2: 1612 imprint and quoted preface, fols. A1r–A1v; collection of words from Aymara collaborators’ texts",
               "stance": "supports",
-              "note": "Supports this observation within the stated chronology, access and geographic limits."
+              "note": "Supports the stated historical account or material observation; source access is specified in the citation."
             },
             {
               "sourceId": "d18-source-bertonio-catalog",
-              "locator": "Van den Berg section 2; Bertonio fols.A 1r–A 1v; imprint and Chucuito scope paragraph.",
-              "stance": "supports",
-              "note": "Supports this observation within the stated chronology, access and geographic limits."
+              "locator": "Institutional bibliographic record: Vocabulario, Juli Pueblo/Chucuito, Francisco del Canto, 1612",
+              "stance": "context",
+              "note": "Corroborates the edition’s title-page imprint. It does not resolve the debated physical printing location or establish the identity of every collaborator."
             },
             {
               "sourceId": "d18-source-geo-juli",
-              "locator": "Van den Berg section 2; Bertonio fols.A 1r–A 1v; imprint and Chucuito scope paragraph.",
+              "locator": "Table 1.14: Juli capital-locality coordinates",
+              "stance": "context",
+              "note": "Context for the public town reference used on the map. It does not locate a particular press or Jesuit writing room."
+            }
+          ]
+        },
+        {
+          "id": "historical-context",
+          "text": "The book was intended to help priests teach, preach and hear confessions in Aymara. Bertonio praised the collaborators’ command of the language and urged learners to consult skilled speakers, practice writing and study Aymara texts. The vocabulary especially reflects Lupaca usage in Chucuito. Its pages therefore preserve Indigenous literary and linguistic work within a colonial mission project, as well as the church’s practical dependence on local language expertise.",
+          "status": "well-supported",
+          "explanation": "Interpretations and historical perspectives are attributed in the text.",
+          "support": [
+            {
+              "sourceId": "d18-source-bertonio2012",
+              "locator": "Section 2: intended clergy readership, Chucuito/Lupaca scope, and learning advice on fols. B1r–B1v",
               "stance": "supports",
-              "note": "Supports this observation within the stated chronology, access and geographic limits."
+              "note": "Supports the stated historical account or material observation; source access is specified in the citation."
             }
           ]
         }
@@ -243,7 +267,7 @@
           "year": 2012,
           "venue": "Original scholarship / institutional source",
           "url": "https://www.scielo.org.bo/scielo.php?pid=s2077-33232012000100002&script=sci_arttext",
-          "access": "Full scholarly HTML read and saved. Section 2 quotes 1612 imprint, A1r–A1v on Indigenous written contributions and A1v on lexicon; discusses Chucuito/Lupaca scope and dated approvals. Original factual summary; source prose and media are not republished."
+          "access": "Original scholarly article independently read on 2026-11-16 in publisher rendering and previously preserved full text. Section 2 reproduces and analyzes the 1612 preface and imprint. The same article discusses competing Juli/Lima printing hypotheses; the correction therefore says “bears a Juli imprint,” not that the physical press location is certain."
         },
         {
           "id": "d18-source-bertonio-catalog",
@@ -265,13 +289,15 @@
         }
       ],
       "review": {
-        "summary": "Bertonio’s Aymara–Spanish vocabulary bears a Juli 1612 imprint. His introduction describes drawing words from texts composed by Indigenous Aymara collaborators. The work is associated especially with the Lupaca usage of Chucuito, not every Aymaran variety.",
-        "limitations": "Juli is the imprint and community context; actual press locality has been debated. A printed dictionary does not date Aymara origins or delimit Aymaran territory. Published modern town reference associated with the dictionary’s documented subject community and imprint; no printing shop asserted.",
-        "discussion": "The date belongs to this document, encounter or observed pattern. Language relationships, speaker distributions, political identity and ancestry are separate questions.",
+        "summary": "Ludovico Bertonio’s Aymara–Spanish dictionary bears a Juli, Chucuito, 1612 imprint. Behind the named Jesuit author stood Indigenous Aymara writers: his introduction describes their compositions about Christian teachings, saints and sermons. Bertonio extracted words and expressions from those writings to build the dictionary.",
+        "limitations": "The title page names Juli, but the physical location of printing has been debated. The vocabulary’s regional emphasis does not make it a complete record of every Aymara variety.",
+        "discussion": "The book was intended to help priests teach, preach and hear confessions in Aymara. Bertonio praised the collaborators’ command of the language and urged learners to consult skilled speakers, practice writing and study Aymara texts. The vocabulary especially reflects Lupaca usage in Chucuito. Its pages therefore preserve Indigenous literary and linguistic work within a colonial mission project, as well as the church’s practical dependence on local language expertise.",
         "provenance": "Dedicated-study campaign: Consensus Deep discovery followed by original-source checking. Full research dossier retained privately.",
         "reviewedAt": "2026-11-16",
         "history": [
-          "Added independently written source-linked observation with explicit chronology and place precision."
+          "Added independently written source-linked observation with explicit chronology and place precision.",
+          "2026-11-16: Reader-facing description updated: Lead with the historical event, people and surviving evidence; replace generic process commentary with distinct factual context.",
+          "2026-11-16: Reader-facing description updated: Lead with the historical event, people and surviving evidence; replace generic process commentary with distinct factual context."
         ],
         "relatedIds": [
           "topic-language-aymara",
@@ -481,9 +507,9 @@
     },
     {
       "id": "d18-language-popol-vuh-copy-1700-1715",
-      "revision": 1,
+      "revision": 3,
       "type": "occurrence",
-      "title": "Chichicastenango — K’iche’ in the surviving Popol Vuh manuscript",
+      "title": "Chichicastenango — preserving the Popol Vuh in K’iche’ and Spanish",
       "culture": {
         "id": "d18-communities-maya-languages",
         "name": "Maya languages — see the dated community and context",
@@ -507,32 +533,46 @@
         "approximate": true,
         "original": "1700–1715 CE transcription range; catalog narrower probable 1700–1703",
         "method": "Historical document, manuscript, monument or encounter date as reported by the cited source. This is not a first date of speech or a census of speakers.",
-        "interpretation": "Broad date follows holding institution’s guide; narrower catalog date is probable. Copy date is not the origin of the narratives or the K’iche’ language. Published municipal town coordinate; source swaps axis names but gives N/W directions. Not exact manuscript writing-place."
+        "interpretation": "The range dates Ximénez’s surviving transcription and translation, not the origin of the K’iche’ language or the creation of every story in the Popol Vuh."
       },
       "claims": [
         {
           "id": "evidence",
-          "text": "The surviving Newberry manuscript preserves a K’iche’ text with Francisco Ximénez’s Spanish translation, copied in Chichicastenango in the early eighteenth century. It records a highland Maya literary and historical tradition distinct from the Classic lowland inscriptions.",
+          "text": "Between about 1700 and 1715, Dominican priest Francisco Ximénez copied the Popol Vuh in Chichicastenango, Guatemala. The surviving manuscript places K’iche’ written in Latin letters alongside his Spanish translation. It preserves K’iche’ Maya accounts of creation, origins, traditions and spiritual history, making the text itself a record of how a sacred narrative was transmitted across languages.",
           "status": "well-supported",
-          "explanation": "Broad date follows holding institution’s guide; narrower catalog date is probable. Copy date is not the origin of the narratives or the K’iche’ language. Broad date follows holding institution’s guide; narrower catalog date is probable. Copy date is not the origin of the narratives or the K’iche’ language. Public place reference only; the named structure or excavated sample is not separately geolocated.",
+          "explanation": "The exact relationship between this copy, earlier written versions and oral recitation remains under study. The Newberry guide gives 1700–1715; the linked catalog suggests a narrower probable date for its larger manuscript volume.",
           "support": [
             {
               "sourceId": "d18-source-popol-newberry",
-              "locator": "Newberry guide What is the Popol Vuh?; catalog summary Ayer MS 1515.",
+              "locator": "What is the Popol Vuh? — manuscript date, place, content and parallel K’iche’/Spanish text",
               "stance": "supports",
-              "note": "Supports this observation within the stated chronology, access and geographic limits."
+              "note": "Supports the stated historical account or material observation; source access is specified in the citation."
             },
             {
               "sourceId": "d18-source-popol-catalog",
-              "locator": "Newberry guide What is the Popol Vuh?; catalog summary Ayer MS 1515.",
-              "stance": "supports",
-              "note": "Supports this observation within the stated chronology, access and geographic limits."
+              "locator": "Ayer MS 1515, volume 2: manuscript contents and probable 1700–1703 catalog dating",
+              "stance": "context",
+              "note": "Holding-institution identification of the manuscript containing the Popol Vuh transcription. The catalog proposes a narrower date for the volume than the 1700–1715 range in the research guide."
             },
             {
               "sourceId": "d18-source-geo-chichicastenango",
-              "locator": "Newberry guide What is the Popol Vuh?; catalog summary Ayer MS 1515.",
+              "locator": "Section III: public municipal location statement",
+              "stance": "context",
+              "note": "Context for the named town and its public municipal reference. It does not identify the exact room or building where Ximénez copied the manuscript."
+            }
+          ]
+        },
+        {
+          "id": "historical-context",
+          "text": "The handwritten pages contain corrections to the K’iche’ text, and their form reflects a tradition intended for oral presentation. The Newberry Library’s guide describes a possible earlier, sixteenth-century version written by an Indigenous author using Latin letters. The surviving copy later traveled from Guatemala to Europe and then Chicago, where it entered the Newberry collection in 1912. Its eighteenth-century date belongs to this manuscript, while the stories and traditions it carries are older.",
+          "status": "well-supported",
+          "explanation": "Interpretations and historical perspectives are attributed in the text.",
+          "support": [
+            {
+              "sourceId": "d18-source-popol-newberry",
+              "locator": "What is the Popol Vuh? — corrections, possible earlier text, transmission and Newberry acquisition",
               "stance": "supports",
-              "note": "Supports this observation within the stated chronology, access and geographic limits."
+              "note": "Supports the stated historical account or material observation; source access is specified in the citation."
             }
           ]
         }
@@ -545,7 +585,7 @@
           "year": null,
           "venue": "Original scholarship / institutional source",
           "url": "https://www.newberry.org/collection/research-guide/popol-vuh",
-          "access": "Full holding-institution guide read and saved: surviving copy transcribed in Chichicastenango 1700–1715; possible sixteenth-century antecedent explicitly qualified. Original factual summary; source prose and media are not republished."
+          "access": "Holding-institution research guide independently read on 2026-11-16, including manuscript content, copying date, parallel-language format, corrections and provenance. Earlier-text and oral-recitation explanations remain qualified as in the guide."
         },
         {
           "id": "d18-source-popol-catalog",
@@ -567,13 +607,15 @@
         }
       ],
       "review": {
-        "summary": "The surviving Newberry manuscript preserves a K’iche’ text with Francisco Ximénez’s Spanish translation, copied in Chichicastenango in the early eighteenth century. It records a highland Maya literary and historical tradition distinct from the Classic lowland inscriptions.",
-        "limitations": "Broad date follows holding institution’s guide; narrower catalog date is probable. Copy date is not the origin of the narratives or the K’iche’ language. Published municipal town coordinate; source swaps axis names but gives N/W directions. Not exact manuscript writing-place.",
-        "discussion": "The date belongs to this document, encounter or observed pattern. Language relationships, speaker distributions, political identity and ancestry are separate questions.",
+        "summary": "Between about 1700 and 1715, Dominican priest Francisco Ximénez copied the Popol Vuh in Chichicastenango, Guatemala. The surviving manuscript places K’iche’ written in Latin letters alongside his Spanish translation. It preserves K’iche’ Maya accounts of creation, origins, traditions and spiritual history, making the text itself a record of how a sacred narrative was transmitted across languages.",
+        "limitations": "The exact relationship between this copy, earlier written versions and oral recitation remains under study. The Newberry guide gives 1700–1715; the linked catalog suggests a narrower probable date for its larger manuscript volume.",
+        "discussion": "The handwritten pages contain corrections to the K’iche’ text, and their form reflects a tradition intended for oral presentation. The Newberry Library’s guide describes a possible earlier, sixteenth-century version written by an Indigenous author using Latin letters. The surviving copy later traveled from Guatemala to Europe and then Chicago, where it entered the Newberry collection in 1912. Its eighteenth-century date belongs to this manuscript, while the stories and traditions it carries are older.",
         "provenance": "Dedicated-study campaign: Consensus Deep discovery followed by original-source checking. Full research dossier retained privately.",
         "reviewedAt": "2026-11-16",
         "history": [
-          "Added independently written source-linked observation with explicit chronology and place precision."
+          "Added independently written source-linked observation with explicit chronology and place precision.",
+          "2026-11-16: Reader-facing description updated: Lead with the historical event, people and surviving evidence; replace generic process commentary with distinct factual context.",
+          "2026-11-16: Reader-facing description updated: Lead with the historical event, people and surviving evidence; replace generic process commentary with distinct factual context."
         ],
         "relatedIds": [
           "d18-language-tikal-stela4-379",

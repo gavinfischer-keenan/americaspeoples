@@ -136,6 +136,7 @@ try {
     .locator("#selected-records")
     .getByRole("link", { name: /Full review/ })
     .click();
+  await page.locator('.review-technical > summary').click();
   await page
     .getByRole("heading", { name: "Overlay geometry", exact: true })
     .waitFor();

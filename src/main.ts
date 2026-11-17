@@ -10,6 +10,7 @@ import './topic-dives.css';
 import {topics,topicOnlyIds} from './topic-dives';
 import {mountTopicPage} from './topic-page';
 import {storyDetailsHTML} from './story-details';
+import {guideMovieNavigationHTML} from './guide-navigation';
 import type {MapCamera} from './map';
 import { atlasAssets, loadAtlasAssets } from './atlas-assets';
 import { sampleVoyage, voyageDate, dateValue } from './voyages';
@@ -18,7 +19,7 @@ import { movieContextHTML } from './movie-context';
 import {localChronologyHTML} from './local-chronology';
 import { appShell, mapShell, libraryHTML } from "./atlas-shell";
 import { stories } from "./stories";
-import { sampleStory, sceneStartMs, storyDurationMs } from "./story-player";
+import { sampleStory, sceneStartMs, storyDurationMs, storyElapsedAtYear } from "./story-player";
 import { exploreRecords, exploreCategory, exploreCategories, regions, type ExploreCategory } from "./explore";
 import { version as appVersion } from "../package.json";
 import { dataset, fullRecord, completeDataset } from "./client-data";
@@ -99,6 +100,7 @@ let panels: MapPanels | null = null;
 let currentActive: DisplayRecord[] = [];
 let currentVisible: DisplayRecord[] = [];
 let storyId='free', storyElapsed=0, storySceneIndex=-1, storyRate=1;
+let pendingStoryYear:number|null=null;
 let movieClock=minYear;
 let openingPlayback=!location.hash||['#map','#movie'].includes(location.hash);
 let placeQuery='', placeCategory:ExploreCategory='all', explorePeriod:'all'|'current'='all';
@@ -296,7 +298,7 @@ function renderStory(){
   const story=currentStory(),scene=story.scenes[Math.max(0,storySceneIndex)];
   description.textContent=story.subtitle;
   $('#cinema-caption').innerHTML=`<span class="eyebrow">${esc(formatYear(scene.year))} · ${esc(story.title)}</span><h3>${esc(scene.title)}</h3><p>${esc(scene.body)}</p><small>${esc(scene.note)}</small>`;
-  host.innerHTML=`<div class="scene-copy"><div class="scene-kicker"><span class="eyebrow">SCENE ${String(Math.max(0,storySceneIndex)+1).padStart(2,'0')} / ${String(story.scenes.length).padStart(2,'0')}</span><span>${esc(formatYear(scene.year))}</span></div><h2>${esc(scene.title)}</h2><p class="scene-body">${esc(scene.body)}</p><p class="scene-note">${esc(scene.note)}</p>${storyDetailsHTML(scene,dataset.records)}<details class="scene-sources"><summary>Read the evidence · ${scene.recordIds.length}</summary>${scene.recordIds.map(id=>{const r=dataset.records.find(r=>r.id===id);return r?`<a href="${recordHref(r)}">${esc(r.title)} ↗</a>`:'';}).join('')}</details></div>`;
+  host.innerHTML=`<div class="scene-copy"><div class="scene-kicker"><span class="eyebrow">SCENE ${String(Math.max(0,storySceneIndex)+1).padStart(2,'0')} / ${String(story.scenes.length).padStart(2,'0')}</span><span>${esc(formatYear(scene.year))}</span></div><h2>${esc(scene.title)}</h2><p class="scene-body">${esc(scene.body)}</p><details class="scene-sources scene-notes"><summary>Dates and evidence notes</summary><p class="scene-note">${esc(scene.note)}</p></details>${guideMovieNavigationHTML(story.id,scene.recordIds)}${storyDetailsHTML(scene,dataset.records)}<details class="scene-sources"><summary>Read the evidence · ${scene.recordIds.length}</summary>${scene.recordIds.map(id=>{const r=dataset.records.find(r=>r.id===id);return r?`<a href="${recordHref(r)}">${esc(r.title)} ↗</a>`:'';}).join('')}</details></div>`;
   chapters.innerHTML=story.scenes.map((s,i)=>`<button data-scene="${i}" aria-label="Scene ${i+1}: ${esc(s.title)}" aria-current="${i===storySceneIndex?'step':'false'}" title="${esc(s.title)}">${i+1}</button>`).join('');
 }
 function updateStoryProgress(){
@@ -353,7 +355,7 @@ function mountAtlasControls(){
   $('#selection-choices').addEventListener('click',e=>{const button=(e.target as Element).closest<HTMLButtonElement>('[data-pick-record]');if(!button)return;const r=selectionCandidates[Number(button.dataset.pickRecord)];if(r){selected=[r];map.setHighlighted([r.id]);renderSelectionChoices();renderVisible();}});
   $('#story-select').addEventListener('change',e=>{openingPlayback=false;stop();voyageId='';storyId=(e.target as HTMLSelectElement).value;storyElapsed=0;storySceneIndex=-1;placeQuery='';placeCategory='all';if(storyId==='free')showWholeMovie();else showStoryScene(0);syncTransport();});
   $('#whole-movie').addEventListener('click',()=>showWholeMovie());
-  $('#story-scene').addEventListener('click',e=>{const b=(e.target as Element).closest<HTMLButtonElement>('[data-movie-year]');if(b){setYear(Number(b.dataset.movieYear));renderStory();}});
+  $('#story-scene').addEventListener('click',e=>{const link=(e.target as Element).closest<HTMLAnchorElement>('[data-shared-study]');if(link&&!e.ctrlKey&&!e.metaKey&&!e.shiftKey&&!e.altKey){pendingStoryYear=year;}const b=(e.target as Element).closest<HTMLButtonElement>('[data-movie-year]');if(b){setYear(Number(b.dataset.movieYear));renderStory();}});
   $('#story-chapters').addEventListener('click',e=>{const b=(e.target as Element).closest<HTMLButtonElement>('[data-scene]');if(b)seekScene(Number(b.dataset.scene));});
   renderStory();
 }
@@ -650,7 +652,7 @@ function mapPage() {
   });
   mountAtlasControls();
   renderLegend();
-  if(isGuidedStory()){const frame=sampleStory(currentStory(),storyElapsed);showStoryScene(frame.sceneIndex);setYear(frame.year,false);}
+  if(isGuidedStory()){const frame=sampleStory(currentStory(),storyElapsed);showStoryScene(frame.sceneIndex);setYear(pendingStoryYear??frame.year,false);pendingStoryYear=null;}
   else renderMapData();
   syncTransport();
 }
@@ -851,13 +853,15 @@ function reviewPage(r: FullDisplayRecord, p?: Proposal, index?: number, shared=f
     .forEach((a) =>
       a.addEventListener("click", (e) => {
         e.preventDefault();
-        document
-          .getElementById(
+        const target=document.getElementById(
             a.dataset.source !== undefined
               ? "source-" + a.dataset.source
               : "claim-" + a.dataset.claim,
-          )
-          ?.scrollIntoView({ behavior: "instant", block: "center" });
+          );
+        if(target){
+          for(let node:HTMLElement|null=target;node;node=node.parentElement)if(node instanceof HTMLDetailsElement)node.open=true;
+          target.scrollIntoView({ behavior: "instant", block: "center" });
+        }
       }),
     );
   $('[data-action="correct"]', main).addEventListener("click", () => {
@@ -1061,7 +1065,7 @@ async function route() {
     else if(hash.startsWith('#story/')){
       const requested=decodeURIComponent(hash.slice(7));
       if(!stories.some(s=>s.id===requested))throw new Error('Story not found.');
-      openingPlayback=false;voyageId='';storyId=requested;storyElapsed=0;storySceneIndex=-1;
+      openingPlayback=false;voyageId='';storyId=requested;storyElapsed=pendingStoryYear===null?0:storyElapsedAtYear(currentStory(),pendingStoryYear);storySceneIndex=-1;
       placeQuery='';placeCategory='all';topicOriginCamera=undefined;
       location.replace('#movie');return;
     }

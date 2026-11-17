@@ -1,6 +1,7 @@
+import {readerDetailHTML} from './reader-evidence';
 import type { DisplayRecord } from "./model";
 import { $, esc } from "./dom";
-import { isDisputed, temporalState, timeLabel } from "./time";
+import { isDisputed, timeLabel } from "./time";
 import { disputeLabel, disputeLevel } from "./disputes";
 import { isModeledRecord } from "./map-filters";
 import { populationAt } from "./population";
@@ -101,6 +102,9 @@ export class MapPanels {
         r.culture.name,
         r.time,
         r.review.summary,
+        r.claims,
+        r.location,
+        r.destination,
         r.review.limitations,
         r.population,
         r.history,
@@ -118,7 +122,7 @@ export class MapPanels {
           .map((r) => {
             const included = exploring || activeKeys.has(recordKey(r));
             const inView = visibleKeys.has(recordKey(r));
-            return `<article class="selected-detail"><h4>${esc(r.title)}</h4><p class="fine">${esc(r.culture.name)} · ${esc(timeLabel(r.time))}</p>${!exploring && historyLabel(r,year) ? `<p class="selection-status">${esc(historyLabel(r,year))}</p>` : !included ? '<p class="selection-status">Not active evidence at the current year / filters.</p>' : !inView ? '<p class="selection-status">Outside the current map view.</p>' : ""}<dl class="record-precision"><dt>When</dt><dd>${esc(timeLabel(r.time))}${r.time.kind==='occurrence'&&r.time.start!==r.time.end?' · event falls within this window':''}</dd><dt>Where</dt><dd>${esc(r.location?.precision??r.overlay?.precision??'Location unresolved')}</dd></dl><p>${esc(r.review.summary)}</p>${!r.overlay && r.type !== "movement" && !r.history && (exploring || historyState(r,year)==='active') ? `<p class="fine">${exploring ? r.population?.length ? r.population.map(p=>`${p.min.toLocaleString()}–${p.max.toLocaleString()} residents · ${formatYear(p.start)}–${formatYear(p.end)}`).map(esc).join("<br>") : "Population unknown in this record; Explore marker size is a reference." : esc(populationAt([r], year).label)}</p>` : ""}<p class="fine">${!exploring && historyState(r,year)!=='active' ? "Historical context · not current occupation evidence" : r.time.kind === "unplaced" ? "Chronology unresolved · independent of selected year" : exploring ? "All-period Explore view · inspect the published date range" : temporalState(r.time, year) === "possible" ? "Possible time / context window" : "Documented time"}${isModeledRecord(r) ? " · Modeled / schematic evidence" : ""}</p><p class="fine">${esc(r.review.limitations)}</p>${r.time.kind === "unplaced" ? `<p class="fine"><strong>Source date guidance:</strong> ${esc(r.time.original)}<br>${esc(r.time.interpretation)}</p>` : ""}<a class="button" href="${recordHref(r)}">Full review &amp; sources ↗</a>${guideLink(r.id)}</article>`;
+            return `<article class="selected-detail"><h4>${esc(r.title)}</h4><p class="fine">${esc(r.culture.kind==='unknown'?'Community not identified':r.culture.name)} · ${esc(timeLabel(r.time))}</p>${!exploring && historyLabel(r,year) ? `<p class="selection-status">${esc(historyLabel(r,year))}</p>` : !included ? '<p class="selection-status">Not active evidence at the current year / filters.</p>' : !inView ? '<p class="selection-status">Outside the current map view.</p>' : ""}${readerDetailHTML(r)}${r.population?.length && (exploring || historyState(r,year)==='active') ? `<p class="fine">${exploring ? r.population.map(p=>`${p.min.toLocaleString()}–${p.max.toLocaleString()} residents · ${formatYear(p.start)}–${formatYear(p.end)}`).map(esc).join("<br>") : esc(populationAt([r], year).label)}</p>` : ""}${isDisputed(r)?'<p class="fine">Some interpretations are debated. Open Evidence and uncertainty for the qualifications.</p>':''}<a class="button" href="${recordHref(r)}">Full review &amp; sources ↗</a>${guideLink(r.id)}</article>`;
           })
           .join("")
       : interactionLocked ? '<p class="empty">Movie playing. Hover for a summary; click the map to pause, then select a record.</p>' : '<p class="empty">Select a site from the list or a marker on the map to see its evidence, dates, and sources here.</p>';

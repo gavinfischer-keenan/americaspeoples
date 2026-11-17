@@ -34,7 +34,12 @@ test('round11 preserves preceding release evidence and accounts for all archived
   const current=dataset.records.find(r=>r.id===old.id)!;
   const update=read('data/round12-reviewed.json').proposedUpdates.find((u:any)=>u.targetId===old.id);
   if(update){assert.deepEqual(update.beforeRecord,old);assert.ok(current.revision>=update.record.revision);}
-  else assert.deepEqual(current,old);
+  else if(current.review.history.some(h=>h.startsWith('2026-11-16: Reader-facing description updated:'))){
+   assert.ok(current.revision>old.revision,'reader edits retain their revision history');
+   // This later editorial pass changes wording, never the archived chronology,
+   // geometry, claims, citations, cultural attribution or other scientific fields.
+   assert.deepEqual({...current,revision:old.revision,review:{...current.review,summary:old.review.summary,reviewedAt:old.review.reviewedAt,history:old.review.history}},old);
+  }else assert.deepEqual(current,old);
  }
  const page=readFileSync('docs/round11-synthesis.html','utf8');
  assert.match(page,/coverage-audit.html/);assert.doesNotMatch(page,/C:\\|C:\/Users|\.codex\/attachments/);

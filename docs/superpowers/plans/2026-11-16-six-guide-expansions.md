@@ -8,7 +8,7 @@
 **Spec:** docs/superpowers/specs/2026-11-16-six-guide-expansions-design.md
 
 ## Global Constraints
-Consensus74baseline/100cap; allresearch requests Deep. Shared observations, main1934limit, existingHawaii1959exception, noncommercialreuse terms, sourceaccess/uncertainty, publiccoordinatesonly, currentplusonepreviousretention. AllsixguideURLs and Chaco's existingstoryID retained. Root integrates; researchsubtasks write private proposals only.
+Consensus began at 74 lifetime calls; two Deep reports completed at 80. The user then replaced the old cap with 75 additional calls. None of that new allowance is used. Shared observations, main1934limit, existingHawaii1959exception, noncommercialreuse terms, sourceaccess/uncertainty, publiccoordinatesonly, currentplusonepreviousretention. AllsixguideURLs and Chaco's existingstoryID retained. Root integrates; researchsubtasks write private proposals only.
 
 ## Review Focus
 1. Reused timber/sample dates masquerading as complete building/use lifespans: test scoped temporal interpretation and source-linked phase records.
@@ -33,6 +33,13 @@ Consensus74baseline/100cap; allresearch requests Deep. Shared observations, main
 - [ ] Registercollections/buildconversion/browserphase; updatev0.20.0/audits/documentation/researchbudget. Buildandrununits/types/validation/package/newbrowserchecks; expectedallpass.
 - [ ] Runcomplete releasegate; onefreshreview againstwholebranchbase/spec/ledger and primarysource spotchecks. FixCritical/Important once with RED→GREEN and requiredchecks; recordlimits andminorfindings. Commitverifiedresult.
 
+### Accepted regional scope addition (before publication)
+- [ ] Add failing hierarchy contracts: Four Corners regional parent, four existing child studies, unique links, parent/child navigation, preserved shared clock and current evidence.
+- [ ] Extend guide catalog with optional parentGuideId and study level; render nested place groups, static-guide breadcrumbs/children and story navigation. Preserve existing guide URLs and unique record ownership.
+- [ ] Check regional Deep dossier against originals; author Four Corners movie/guide with community continuity and qualified movement evidence. Add public Aztec, Salmon, Canyon de Chelly and Cortez-area closer studies where sourced; clarify Peñasco Blanco/Pueblo Bonito and integrate their local treatment.
+- [ ] Add Chaco road map, authority/inequality debate and post-Chaco architectural/social discussion, with distinct source confidence. Propose other regional groupings in a source-linked roadmap.
+- [ ] Expand the same new browser release phase to verify regional → local → regional navigation and retained contemporaneous evidence; update counts and budget from final data rather than assumed numbers.
+
 ## Task3 — Publish and verify
 **Files:** docs/releases/v0.20.0-verification.json and private deploymenthelpers/logs.
 **Interfaces:** verifiedbranch → mergedreleasepackage → static/APIdeployment and publicchecks.
@@ -41,3 +48,23 @@ Consensus74baseline/100cap; allresearch requests Deep. Shared observations, main
 - [ ] RunLinuxretentionchecks, retain0.20.0+immediatelyprevious0.19.1 only, removeobsoletearchives/payloads afterpathverification; recheckpublicsite, commit/pushfinalreceipt.
 
 Self-review: allspecitems map toTask1 evidence/movies,Task2 localUI/package/tests,Task3 release. No schema/dependencychange planned. Source count targets are aspirations, notpermissiontofabricateevidence; anyunresolvedplacement remains explicit.
+
+Accepted budget revision: both Deep reports completed at lifetime80 calls. The user now authorizes75 additionalcalls fromthatpoint, replacing the old100totalcap. Track the fresh allowance separately from reportedmonthlyaccountcredits65/200; no newresearchcalls currentlyneeded. PuebloBlanco clarified as PuebloBonito; selectedadditionalpublicFourCornerscomplexes are authorized.
+
+## Additional accepted scope — readable evidence panels
+
+The user supplied a Kruger 2 screenshot showing a location-precision note under Where and an editorial audit placeholder instead of an explanation of the discovery. This is part of the current release.
+
+- Replace the main panel with a factual description, recognizable named place, date and plain-language date meaning.
+- Keep original dating, geographic precision and limitations in expandable Evidence and uncertainty; preserve source links and disputed interpretations.
+- Use the same factual description and named location in hover/full-review introductions.
+- Replace process-only summaries across the older record families with source-supported descriptions, including a primary-source pass on the 24 Northeast records. Preserve numeric dates and geometry unless a separately verified correction is explicitly recorded.
+- Check catalog/full-record refresh, keyboard identity, uncertainty access, exact-date selection, tablet layout and the user-supplied Kruger case.
+
+
+## Further accepted display and writing scope
+
+The user added: plain-history inspectors and full reviews; readable place names; a source-backed Maní account; broad fact-first prose cleanup; a labeled topographic map at the top of every place guide; clickable tile surfaces; hover text that leaves Hawaiʻi visible; and independent collapse arrows for the upper two Watch sections. The 11,966 BCE white overlay was investigated and traced to four reversed ice rings. These are implemented in the same authorized release. No additional Consensus calls were used. Full release checks and fresh final review remain required before publication.
+
+
+Source implementation and the 40-stage gate are complete. The final review and bounded remediation are documented in docs/six-guide-expansions.md. Authorized merge/publication/deployment and final retention verification are the remaining release steps.

@@ -37,3 +37,11 @@ test("tooltip clamps to small viewports even beside the bottom-right corner", ()
   );
   assert.ok(pos.left >= 8 && pos.top >= 8);
 });
+
+test('hover preview leaves the inspected island or feature clear',()=>{
+ const feature={left:700,top:320,right:830,bottom:440};
+ const size={width:340,height:190};
+ const p=tooltipPosition({x:790,y:380},size,{width:1440,height:960},feature);
+ const overlaps=p.left<feature.right&&p.left+size.width>feature.left&&p.top<feature.bottom&&p.top+size.height>feature.top;
+ assert.equal(overlaps,false,'the popup cannot cover its target');
+});

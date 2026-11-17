@@ -1,7 +1,7 @@
 import type { DisplayRecord } from "./model";
 import type { HazardEvent } from "./physical-data";
 import { formatYear, timeLabel } from "./time";
-import { historyLabel } from './history';
+import {readerSummary,readerLocation,readerDateMeaning} from './reader-evidence';
 
 export interface MapTooltipContent {
   title: string;
@@ -26,18 +26,19 @@ export function tooltipForRecords(
   return {
     title: rows.map((r) => r.title).join(" · "),
     summary: rows
-      .map((r) => r.review.summary)
+      .map(readerSummary)
       .filter(Boolean)
       .join(" "),
     dates:
       rows.map((r) => timeLabel(r.time)).join("; ") +
-      ". " + (mode==='movie'?rows.map(r=>historyLabel(r,year)).filter(Boolean).join(' ')+ ' ':'') +
+      ". " +
       (unresolved
-        ? "Dates unresolved: context only; no occupation at a selected year is established."
+        ? "Dates unresolved: we do not yet know when this happened."
         : mode === "explore"
-          ? "All-time Explore context: compare these source dates; visibility does not establish occupation at the movie year."
-          : `Movie year ${formatYear(year)}. Source ranges can describe possible dates rather than continuous occupation.`) +
-      '\nLocation: '+[...new Set(rows.map(r=>r.location?.precision??r.overlay?.precision).filter(Boolean))].join(' '),
+          ? "All-time Explore view."
+          : `Movie year ${formatYear(year)}.`) +
+      '\nWhere: '+[...new Set(rows.map(readerLocation))].join('; ')+
+      '\n'+[...new Set(rows.map(readerDateMeaning))].join(' '),
   };
 }
 export function tooltipForHazard(event: HazardEvent): MapTooltipContent {
@@ -52,8 +53,19 @@ export function tooltipPosition(
   anchor: { x: number; y: number },
   size: { width: number; height: number },
   viewport: { width: number; height: number },
+  avoid?:{left:number;top:number;right:number;bottom:number},
 ) {
   const gap = 8;
+  if(avoid){
+    const candidates=[
+      {left:avoid.right+16,top:anchor.y-size.height/2},
+      {left:avoid.left-size.width-16,top:anchor.y-size.height/2},
+      {left:anchor.x-size.width/2,top:avoid.top-size.height-16},
+      {left:anchor.x-size.width/2,top:avoid.bottom+16},
+    ].map(p=>({left:Math.max(gap,Math.min(p.left,viewport.width-size.width-gap)),top:Math.max(gap,Math.min(p.top,viewport.height-size.height-gap))}));
+    const clear=candidates.find(p=>p.left+size.width<=avoid.left-gap||p.left>=avoid.right+gap||p.top+size.height<=avoid.top-gap||p.top>=avoid.bottom+gap);
+    if(clear)return clear;
+  }
   let left = anchor.x + gap,
     top = anchor.y + gap;
   if (left + size.width > viewport.width - gap)
@@ -97,15 +109,18 @@ export class MapTooltip {
       this.owner = owner;
     }
     owner.setAttribute("aria-describedby", this.element.id);
-    this.title.textContent = content.title;
-    this.summary.textContent = content.summary;
-    this.dates.textContent = content.dates;
+    const shorten=(text:string,limit:number)=>text.length<=limit?text:text.slice(0,limit).replace(/\s+\S*$/,'')+'…';
+    this.title.textContent = shorten(content.title,150);
+    this.summary.textContent = shorten(content.summary,260);
+    this.dates.textContent = shorten(content.dates,260);
     if (!this.element.isConnected) document.body.append(this.element);
     const box = this.element.getBoundingClientRect();
+    const target=owner.getBoundingClientRect();
+    const avoid=target.width<=220&&target.height<=220?{left:Math.min(target.left,anchor.x-35),right:Math.max(target.right,anchor.x+35),top:Math.min(target.top,anchor.y-35),bottom:Math.max(target.bottom,anchor.y+35)}:{left:anchor.x-70,right:anchor.x+70,top:anchor.y-70,bottom:anchor.y+70};
     const position = tooltipPosition(anchor, box, {
       width: window.innerWidth,
       height: window.innerHeight,
-    });
+    },avoid);
     this.element.style.left = position.left + "px";
     this.element.style.top = position.top + "px";
   }

@@ -35,6 +35,8 @@ try {
   const review=await page.goto(origin+'/#review/regional-coranderrk-1924');
   assert.equal(review.status(),200);
   await page.locator('[data-action="locate"]').waitFor();
+  assert.match(await page.locator('.review-history').innerText(),/closed Coranderrk.*1924; elderly residents remained/i);
+  await page.locator('.review-technical > summary').click();
   assert.match(await page.locator('body').innerText(),/Administrative closure is not abandonment/);
   assert.deepEqual(errors,[]);
   console.log('PASS regional evidence: Central/South American and Australian places visible in shared movie; dated closure caveat and packaged guide.');

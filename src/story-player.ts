@@ -37,6 +37,21 @@ export function storyDurationMs(story: Story): number {
     + TRANSITION_MS * (story.scenes.length - 1);
 }
 
+/** Seek the existing movie clock to a shared year; callers retain out-of-range
+ * years on arrival and offer the ordinary explicit replay control. */
+export function storyElapsedAtYear(story:Story,year:number):number{
+  requireScenes(story);
+  const exact=story.scenes.findIndex(scene=>scene.year===year);
+  if(exact>=0)return sceneStartMs(story,exact);
+  for(let i=0;i<story.scenes.length-1;i++){
+    const a=story.scenes[i],b=story.scenes[i+1];
+    if(year>Math.min(a.year,b.year)&&year<Math.max(a.year,b.year))
+      return sceneStartMs(story,i)+sceneHoldMs(a)+(year-a.year)/(b.year-a.year)*TRANSITION_MS;
+  }
+  if(year>Math.max(...story.scenes.map(scene=>scene.year)))return storyDurationMs(story);
+  return 0;
+}
+
 /**
  * Sample virtual elapsed time. The caller owns pause/resume and accumulates
  * elapsed time at its chosen speed; this function never reads a clock or mutates state.

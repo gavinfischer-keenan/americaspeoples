@@ -10,11 +10,15 @@ try{
  const jump=async(y,era='CE')=>{await page.getByLabel('Year number',{exact:true}).fill(String(y));await page.getByLabel('Era',{exact:true}).selectOption(era);await page.getByRole('button',{name:'Go to year',exact:true}).click();};
  await page.locator('#toggle-layers').click();
  await jump(18050,'BCE');await page.locator('.ice-context path').first().waitFor();assert.ok(await page.locator('.ice-context path').count());assert.match(await page.locator('#ice-status').innerText(),/20,000/);
+ await jump(11966,'BCE');await page.waitForFunction(()=>document.querySelector('#ice-status').textContent.includes('14,000'));
+ const iceBox=await page.locator('.ice-context path').boundingBox(),mapBox=await page.locator('#map-host').boundingBox();
+ assert.ok(iceBox.height<mapBox.height*.5,'14,000 BP ice must not paint the whole globe');
+ await page.screenshot({path:'test-results/ice-11966-bce.png'});
  await page.getByLabel('Ice boundary scenario').selectOption('max');await page.waitForFunction(()=>document.querySelector('#ice-status').textContent.includes('MAX'));assert.match(await page.locator('#ice-status').innerText(),/MAX/);
  await page.goto(origin+'/#explore');await page.locator('#toggle-layers').click();
  await page.locator('#show-currents').check();await page.locator('#show-winds').check();assert.ok(await page.locator('.flow-warm').count()>5);assert.equal(await page.locator('.flow-wind').count(),10);
  assert.ok(Number(await page.locator('#context-count').innerText())>20);
- const before=await page.locator('#context-count').innerText();await page.locator('[data-context-index]').first().click();assert.match(await page.locator('#selected-records').innerText(),/Chronology unresolved/);assert.doesNotMatch(await page.locator('#selected-records').innerText(),/Documented time/);
+ const before=await page.locator('#context-count').innerText();await page.locator('[data-context-index]').first().click();assert.match(await page.locator('#selected-records').innerText(),/date has not been established/);assert.doesNotMatch(await page.locator('#selected-records').innerText(),/Documented time/);
  await page.locator('#show-undated').uncheck();assert.equal(await page.locator('.undated-context').count(),0);assert.equal(await page.locator('#context-count').innerText(),'0');await page.locator('#show-undated').check();assert.equal(await page.locator('#context-count').innerText(),before);
  await page.screenshot({path:'test-results/physical-ice-ocean.png',fullPage:true});
  await page.goto(origin+'/#movie');await page.locator('#story-select').selectOption('free');if(!(await page.locator('#time-settings').isVisible()))await page.locator('#time-settings-toggle').click();await page.locator('#toggle-layers').click();

@@ -5,7 +5,12 @@ import { esc } from './dom';
  * No title matching: a regional article must not claim every similarly named site.
  * Detailed articles remain static documents, loaded only when opened.
  */
-export const siteGuides = catalog.guides;
+export interface SiteGuide {
+ id:string; title:string; href:string; region:string; description:string;
+ recordIds:string[]; kind:'site'|'culture'; report:string; relatedGuideIds?:string[];
+ storyId?:string; parentGuideId?:string; level?:'region'|'complex'|'building'; referenceRecordIds?:string[];
+}
+export const siteGuides = catalog.guides as SiteGuide[];
 const byRecord = new Map(siteGuides.flatMap(g => g.recordIds.map(id => [id, g] as const)));
 export const guideForRecord = (id: string) => byRecord.get(id);
 export function guideLink(id: string): string {

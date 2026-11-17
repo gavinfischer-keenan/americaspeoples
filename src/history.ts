@@ -1,5 +1,6 @@
 import type { EvidenceRecord, MapRecord } from "./model";
 import { END_YEAR, formatYear, temporalState } from "./time";
+import {contextDateMeaning} from './date-context';
 
 export type HistoryState =
   | "active"
@@ -14,7 +15,7 @@ export const HISTORY_LABELS = {
   exchange: "Trade & exchange",
   wreck: "Shipwrecks",
   visit: "Historical visits",
-  attestation: "Dated finds & language attestations",
+  attestation: "Dated finds & observations",
 } as const;
 
 /** Display memory is deliberately separate from the underlying evidence interval. */
@@ -43,6 +44,8 @@ export function historyState(record: MapRecord, year: number): HistoryState {
 export function historyLabel(record: MapRecord, year: number): string {
   const state = historyState(record, year),
     h = record.history;
+  const context=contextDateMeaning(record);
+  if(context&&state!=='outside')return `${state==='active'?'Period context':'Earlier period context'} · ${context}`;
   if(h?.kind==='attestation'&&state!=='outside')return `${state==='active'?'Evidence at its source date':'Earlier evidence'} · ${record.time.original}. This marker does not establish continuous presence or a first arrival.`;
   if(h?.kind==='visit'&&state!=='outside')return `${state==='active'?'Dated':'Historical'} visit · ${h.eventDate||record.time.original}. This visit marker does not establish settlement or continued presence afterward.`;
   if (h?.endEvidence && state !== 'outside' && year >= h.endEvidence.start) {
