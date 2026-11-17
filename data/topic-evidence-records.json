@@ -1332,7 +1332,7 @@
     },
     {
       "id": "topic-language-quechua",
-      "revision": 2,
+      "revision": 3,
       "type": "occurrence",
       "title": "Peru — Quechua vocabulary in 1788",
       "culture": {
@@ -1372,6 +1372,12 @@
               "stance": "supports",
               "locator": "Named site, phase, event or evidence discussion",
               "note": "Supports the stated claim and its dated scope; approximate map locator is not a footprint."
+            },
+            {
+              "sourceId": "d18-source-adelaar2020",
+              "locator": "AGI item 6, MP-ESCRITURA_CIFRA,40; Adelaar section 2.",
+              "stance": "context",
+              "note": "Related reading for Quechuan and Aymaran histories; contextual language interpretation, not direct dating of this place or every speaker."
             }
           ]
         }
@@ -1386,6 +1392,15 @@
           "url": "https://www.cultura.gob.es/cultura/archivos/difusion/registro-memoria-unesco/2015/vocabulario-lenguas-nuevo-mundo.html",
           "access": "Public source consulted 2026-11-15; factual description independently written for this atlas.",
           "referenceType": "web-resource"
+        },
+        {
+          "id": "d18-source-adelaar2020",
+          "authors": "Willem Adelaar",
+          "title": "Reconstruction beyond proto-languages in the middle Andes",
+          "year": 2020,
+          "venue": "Original scholarship / institutional source",
+          "url": "https://cadernos.abralin.org/index.php/cadernos/article/view/274",
+          "access": "Full publisher HTML read; local HTML/text saved. Abstract and sections 1–3. Original factual summary; source prose and media are not republished."
         }
       ],
       "review": {
@@ -1395,10 +1410,15 @@
         "provenance": "Source-specific factual synthesis; geographic precision and chronology are recorded separately.",
         "reviewedAt": "2026-11-15",
         "history": [
-          "Added in the cities, conflicts and topic-dives expansion."
+          "Added in the cities, conflicts and topic-dives expansion.",
+          "Added source access and contextual reading for the dedicated language study; original place/date claim remains separate."
         ],
         "relatedIds": [
-          "r9v-inca-quechua-diffusion"
+          "r9v-inca-quechua-diffusion",
+          "d18-language-huarochiri-1608",
+          "d18-language-lima-doctrina-1584",
+          "d18-language-holguin-lima-1608",
+          "d18-language-bertonio-juli-1612"
         ]
       },
       "history": {
@@ -1420,7 +1440,7 @@
     },
     {
       "id": "topic-language-aymara",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "Cuzco document — Aymara vocabulary",
       "culture": {
@@ -1460,6 +1480,18 @@
               "stance": "supports",
               "locator": "Named site, phase, event or evidence discussion",
               "note": "Supports the stated claim and its dated scope; approximate map locator is not a footprint."
+            },
+            {
+              "sourceId": "d18-source-agi-vocabularies",
+              "locator": "AGI item 7, MP-ESCRITURA_CIFRA,41; existing inventory-backed Cuzco record.",
+              "stance": "context",
+              "note": "Related reading for Quechuan and Aymaran histories; contextual language interpretation, not direct dating of this place or every speaker."
+            },
+            {
+              "sourceId": "d18-source-adelaar2020",
+              "locator": "AGI item 7, MP-ESCRITURA_CIFRA,41; existing inventory-backed Cuzco record.",
+              "stance": "context",
+              "note": "Related reading for Quechuan and Aymaran histories; contextual language interpretation, not direct dating of this place or every speaker."
             }
           ]
         }
@@ -1474,6 +1506,24 @@
           "url": "https://www.cultura.gob.es/gl/dam/jcr%3A54ebdaff-ed6a-4fd5-a63b-f549cb7ea23f/agi-us-doc-digital-ok-final.pdf",
           "access": "Public source consulted 2026-11-15; factual description independently written for this atlas.",
           "referenceType": "web-resource"
+        },
+        {
+          "id": "d18-source-agi-vocabularies",
+          "authors": "Archivo General de Indias / Ministerio de Cultura",
+          "title": "Vocabulario de diferentes lenguas del Nuevo Mundo",
+          "year": null,
+          "venue": "Original scholarship / institutional source",
+          "url": "https://www.cultura.gob.es/cultura/archivos/difusion/registro-memoria-unesco/2015/vocabulario-lenguas-nuevo-mundo.html",
+          "access": "Institutional list read and saved: MP-ESCRITURA_CIFRA 40 Quechua 1788; 41 Aymara 1789; 45 Quiché and other languages 1790. Original factual summary; source prose and media are not republished."
+        },
+        {
+          "id": "d18-source-adelaar2020",
+          "authors": "Willem Adelaar",
+          "title": "Reconstruction beyond proto-languages in the middle Andes",
+          "year": 2020,
+          "venue": "Original scholarship / institutional source",
+          "url": "https://cadernos.abralin.org/index.php/cadernos/article/view/274",
+          "access": "Full publisher HTML read; local HTML/text saved. Abstract and sections 1–3. Original factual summary; source prose and media are not republished."
         }
       ],
       "review": {
@@ -1483,9 +1533,15 @@
         "provenance": "Source-specific factual synthesis; geographic precision and chronology are recorded separately.",
         "reviewedAt": "2026-11-15",
         "history": [
-          "Added in the cities, conflicts and topic-dives expansion."
+          "Added in the cities, conflicts and topic-dives expansion.",
+          "Added source access and contextual reading for the dedicated language study; original place/date claim remains separate."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "d18-language-huarochiri-1608",
+          "d18-language-lima-doctrina-1584",
+          "d18-language-holguin-lima-1608",
+          "d18-language-bertonio-juli-1612"
+        ]
       },
       "history": {
         "kind": "attestation",
@@ -1592,7 +1648,7 @@
     },
     {
       "id": "topic-language-guatemala",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "Guatemala region — many languages documented",
       "culture": {
@@ -1655,9 +1711,16 @@
         "provenance": "Source-specific factual synthesis; geographic precision and chronology are recorded separately.",
         "reviewedAt": "2026-11-15",
         "history": [
-          "Added in the cities, conflicts and topic-dives expansion."
+          "Added in the cities, conflicts and topic-dives expansion.",
+          "Added source access and contextual reading for the dedicated language study; original place/date claim remains separate."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "d18-language-mani-1562",
+          "d18-language-tikal-stela4-379",
+          "d18-language-tikal-marker-416",
+          "d18-language-popol-vuh-copy-1700-1715",
+          "d18-language-northern-maya-variation-800-950"
+        ]
       },
       "history": {
         "kind": "attestation",
@@ -1693,7 +1756,7 @@
     },
     {
       "id": "topic-language-lima",
-      "revision": 2,
+      "revision": 3,
       "type": "occurrence",
       "title": "Lima — Quechua and Spanish in print",
       "culture": {
@@ -1733,6 +1796,12 @@
               "stance": "supports",
               "locator": "Named site, phase, event or evidence discussion",
               "note": "Supports the stated claim and its dated scope; approximate map locator is not a footprint."
+            },
+            {
+              "sourceId": "d18-source-adelaar2020",
+              "locator": "Existing BNE-backed record; Adelaar section 2.",
+              "stance": "context",
+              "note": "Related reading for Quechuan and Aymaran histories; contextual language interpretation, not direct dating of this place or every speaker."
             }
           ]
         }
@@ -1747,6 +1816,15 @@
           "url": "https://www.bne.es/es/Micrositios/Guias/Lengua/Espanol_ultramar/Galeria/Obra2.html",
           "access": "Public source consulted 2026-11-15; factual description independently written for this atlas.",
           "referenceType": "web-resource"
+        },
+        {
+          "id": "d18-source-adelaar2020",
+          "authors": "Willem Adelaar",
+          "title": "Reconstruction beyond proto-languages in the middle Andes",
+          "year": 2020,
+          "venue": "Original scholarship / institutional source",
+          "url": "https://cadernos.abralin.org/index.php/cadernos/article/view/274",
+          "access": "Full publisher HTML read; local HTML/text saved. Abstract and sections 1–3. Original factual summary; source prose and media are not republished."
         }
       ],
       "review": {
@@ -1756,10 +1834,15 @@
         "provenance": "Source-specific factual synthesis; geographic precision and chronology are recorded separately.",
         "reviewedAt": "2026-11-15",
         "history": [
-          "Added in the cities, conflicts and topic-dives expansion."
+          "Added in the cities, conflicts and topic-dives expansion.",
+          "Added source access and contextual reading for the dedicated language study; original place/date claim remains separate."
         ],
         "relatedIds": [
-          "history-lima-colonial"
+          "history-lima-colonial",
+          "d18-language-huarochiri-1608",
+          "d18-language-lima-doctrina-1584",
+          "d18-language-holguin-lima-1608",
+          "d18-language-bertonio-juli-1612"
         ]
       },
       "history": {
@@ -2049,7 +2132,7 @@
     },
     {
       "id": "topic-language-wendat",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "Huronia — Wendat and French language encounter",
       "culture": {
@@ -2112,9 +2195,14 @@
         "provenance": "Source-specific factual synthesis; geographic precision and chronology are recorded separately.",
         "reviewedAt": "2026-11-15",
         "history": [
-          "Added in the cities, conflicts and topic-dives expansion."
+          "Added in the cities, conflicts and topic-dives expansion.",
+          "Added source access and contextual reading for the dedicated language study; original place/date claim remains separate."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "d18-language-hochelaga-1535",
+          "d18-language-stadacona-1535",
+          "d18-language-new-echota-phoenix-1828"
+        ]
       },
       "history": {
         "kind": "attestation",
@@ -2145,7 +2233,7 @@
     },
     {
       "id": "topic-language-mohawk",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "Upper Hudson — Mohawk and Dutch contact",
       "culture": {
@@ -2185,6 +2273,12 @@
               "stance": "supports",
               "locator": "Named site, phase, event or evidence discussion",
               "note": "Supports the stated claim and its dated scope; approximate map locator is not a footprint."
+            },
+            {
+              "sourceId": "d18-source-schillaci2017",
+              "locator": "Existing Megapolensis record; Schillaci family discussion pp.450–451.",
+              "stance": "context",
+              "note": "Related reading for Iroquoian languages; contextual language interpretation, not direct dating of this place or every speaker."
             }
           ]
         }
@@ -2199,6 +2293,15 @@
           "url": "https://tile.loc.gov/storage-services/service/gdc/gdclccn/11/02/17/58/11021758/11021758.pdf",
           "access": "Public source consulted 2026-11-15; factual description independently written for this atlas.",
           "referenceType": "web-resource"
+        },
+        {
+          "id": "d18-source-schillaci2017",
+          "authors": "Michael A. Schillaci, Craig Kopris, Søren Wichmann and Genevieve Dewar",
+          "title": "Linguistic Clues to Iroquoian Prehistory",
+          "year": 2017,
+          "venue": "Original scholarship / institutional source",
+          "url": "https://wiredspace.wits.ac.za/server/api/core/bitstreams/5e7b194d-5ec7-4494-8755-714a6256a796/content",
+          "access": "Original article PDF downloaded; abstract and opening discussion pp.448–451 read via web PDF. Journal of Anthropological Research 73(3). Original factual summary; source prose and media are not republished."
         }
       ],
       "review": {
@@ -2208,9 +2311,14 @@
         "provenance": "Source-specific factual synthesis; geographic precision and chronology are recorded separately.",
         "reviewedAt": "2026-11-15",
         "history": [
-          "Added in the cities, conflicts and topic-dives expansion."
+          "Added in the cities, conflicts and topic-dives expansion.",
+          "Added source access and contextual reading for the dedicated language study; original place/date claim remains separate."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "d18-language-hochelaga-1535",
+          "d18-language-stadacona-1535",
+          "d18-language-new-echota-phoenix-1828"
+        ]
       },
       "history": {
         "kind": "attestation",

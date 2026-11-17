@@ -1,0 +1,62 @@
+import {chromium} from 'playwright';
+import assert from 'node:assert/strict';
+import {readFile,mkdir} from 'node:fs/promises';
+import {createStaticServer} from '../scripts/static-server.mjs';
+import {stories} from '../src/stories.ts';
+import {topics} from '../src/topic-dives.ts';
+const studyIds=['chavin','tiwanaku','chan-chan','teotihuacan','monte-alban','calakmul','copan','paquime','wari','moche'];
+const languageIds=['andean-languages','iroquoian-languages','maya-languages'];
+const server=createStaticServer('dist');await new Promise(r=>server.listen(0,'127.0.0.1',r));
+const browser=await chromium.launch({executablePath:process.env.BROWSER_PATH||'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',headless:true});
+const page=await browser.newPage({viewport:{width:1440,height:960}}),errors=[];
+page.setDefaultTimeout(15000);page.on('pageerror',e=>errors.push(e.message));
+const base=`http://127.0.0.1:${server.address().port}`;
+const records=JSON.parse(await readFile('dist/dataset.json','utf8')).records;
+let chapters=0;
+try{
+ await mkdir('test-results',{recursive:true});
+ for(const id of studyIds){
+  const story=stories.find(s=>s.id===id);assert.ok(story,id);
+  assert.equal((await page.goto(base+'/sites/'+id+'.html')).status(),200);
+  await page.locator(`a[href="../#story/${id}"]`).click();
+  for(const [i,scene] of story.scenes.entries()){
+   if(i)await page.getByRole('button',{name:'Next scene',exact:true}).click();
+   await page.getByRole('heading',{name:scene.title,exact:true}).waitFor();
+   const current=scene.recordIds.map(id=>records.find(r=>r.id===id)).find(r=>r.location&&r.time.start<=scene.year&&r.time.end>=scene.year);
+   assert.ok(current,scene.title);
+   await page.waitForFunction(({key,title})=>{
+    const marker=document.querySelector(`[data-point="${key}"]`),map=document.querySelector('#map-host');
+    if(!marker?.textContent.includes(title)||!map)return false;
+    const b=marker.getBoundingClientRect(),m=map.getBoundingClientRect();
+    return b.width>0&&b.right>m.left&&b.left<m.right&&b.bottom>m.top&&b.top<m.bottom;
+   },{key:`${current.location.lon},${current.location.lat}`,title:current.title});
+   chapters++;
+  }
+  assert.ok(await page.locator('#concurrent-context').isVisible());
+  await page.getByRole('button',{name:'Reset map view',exact:true}).click();
+  assert.equal(await page.locator('#story-select').inputValue(),id);
+ }
+ for(const id of languageIds){
+  const topic=topics.find(t=>t.id===id);assert.ok(topic,id);
+  await page.goto(base+'/#topic/'+id);await page.locator('#topic-next').waitFor();
+  assert.equal(await page.locator('.language-family').count(),id==='andean-languages'?2:1);
+  for(const [i,scene] of topic.scenes.entries()){
+   if(i)await page.locator('#topic-next').click();
+   await page.getByRole('heading',{name:scene.title,exact:true}).waitFor();
+   assert.ok((await page.locator('#topic-scene').innerText()).includes(scene.body));chapters++;
+  }
+  await page.locator('.topic-toolbar a').filter({hasText:'Shared atlas'}).click();
+  await page.locator('#story-select').waitFor();
+ }
+ await page.setViewportSize({width:1024,height:768});
+ for(const route of ['#dives/places','#story/teotihuacan','#topic/andean-languages']){
+  await page.goto(base+'/'+route);await page.locator(route.includes('story')?'#story-select':route.includes('topic')?'#topic-next':'.dive-card').first().waitFor();
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),route+' tablet');
+ }
+ await page.screenshot({path:'test-results/coming-soon-a-tablet.png'});
+ for(const r of JSON.parse(await readFile('data/coming-soon-a-expansion-records.json','utf8')).records)assert.deepEqual(records.find(x=>x.id===r.id),r,r.id+' package');
+ assert.equal((await page.goto(base+'/docs/coming-soon-campaign.html')).status(),200);
+ assert.match(await page.locator('body').innerText(),/74\/100/);
+ assert.deepEqual(errors,[]);console.log(`PASS 13 dedicated studies, ${chapters} chapters, original guides, shared-context controls, filtered language families, exports and tablet layouts.`);
+}catch(error){await page.screenshot({path:'test-results/coming-soon-a-failure.png',timeout:5000}).catch(()=>{});throw error;}
+finally{await browser.close();await new Promise(r=>server.close(r));}

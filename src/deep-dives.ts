@@ -12,7 +12,7 @@ export const diveCategories=[
 export type DiveCategory=typeof diveCategories[number]['id'];
 interface DiveLink {href:string;label:'Independent movie'|'Contextual movie'|'Read guide'}
 export interface DeepDive {id:string;title:string;description:string;category:DiveCategory;links:DiveLink[];expansion?:string}
-const topicCategory:Record<string,DiveCategory>={languages:'languages',haudenosaunee:'cultures','amazonian-peoples':'cultures'};
+const topicCategory:Record<string,DiveCategory>={languages:'languages','andean-languages':'languages','iroquoian-languages':'languages','maya-languages':'languages','austronesian-languages':'languages',haudenosaunee:'cultures','amazonian-peoples':'cultures'};
 const storyCategory:Record<string,DiveCategory>={
  'pacific-arrivals':'subjects','hawaii-connections':'places','built-places':'subjects','chaco-connections':'places',
  'pacific-exchange':'subjects','connected-oceans':'subjects','early-american-evidence':'subjects',
@@ -22,7 +22,7 @@ const storyCategory:Record<string,DiveCategory>={
 const expansionPlaces=new Set(['chaco','hovenweep','mesa-verde','canyons-of-the-ancients','machu-picchu','cahokia']);
 const combinedStories=new Set(siteGuides.map(g=>g.storyId).filter(Boolean));
 const planned=(id:string,title:string,description:string,category:DiveCategory):DeepDive=>({id,title,description,category,links:[]});
-export const deepDives:DeepDive[]=[
+const availableDives:DeepDive[]=[
  ...topics.map(t=>({id:'topic-'+t.id,title:t.title,description:t.description,category:topicCategory[t.id]??'subjects',links:[{href:'#topic/'+t.id,label:'Independent movie' as const}]})),
  ...siteGuides.map(g=>({id:'place-'+g.id,title:g.title,description:g.description,category:(g.kind==='culture'?'cultures':'places') as DiveCategory,
   links:[{href:g.href,label:'Read guide' as const},...stories.filter(s=>s.id===g.storyId).map(s=>({href:'#story/'+s.id,label:'Contextual movie' as const}))],
@@ -31,6 +31,8 @@ export const deepDives:DeepDive[]=[
   if(!storyCategory[s.id])throw new Error('Assign a deep-dive category to story '+s.id);
   return {id:'story-'+s.id,title:s.title,description:s.description,category:storyCategory[s.id],links:[{href:'#story/'+s.id,label:'Contextual movie' as const}]};
  }),
+];
+const plannedDives:DeepDive[]=[
  planned('australian-wool','Australia: convicts, stations and wool ships','Transportation, town and station growth, Aboriginal dispossession and resistance, and the ships connecting wool ports to Britain.','subjects'),
  planned('australian-mining','Australia: mines, towns and export ports','Extraction, labour, growing towns and infrastructure, linked to Indigenous land and water dispossession. Through 1934.','subjects'),
  ...[
@@ -59,6 +61,9 @@ export const deepDives:DeepDive[]=[
  planned('lapita','Lapita communities and successors','Pottery, voyaging and later island histories, without equating an archaeological label with one people.','cultures'),
  planned('gunditjmara','Gunditjmara histories','A community history connected to the proposed Budj Bim place study.','cultures'),
 ];
+
+const availableStudyIds=new Set([...topics.map(t=>t.id),...siteGuides.map(g=>g.id)]);
+export const deepDives:DeepDive[]=[...availableDives,...plannedDives.filter(d=>!availableStudyIds.has(d.id))];
 
 function card(d:DeepDive):string{
  return `<article class="dive-card${d.links.length?'':' dive-planned'}" data-dive="${esc(d.id)}"><span class="dive-status">${d.links.length?'Available now':'Coming soon'}</span><h3>${esc(d.title)}</h3><p>${esc(d.description)}</p>${d.expansion?`<p class="dive-expansion">Guide available · ${esc(d.expansion)}</p>`:''}${d.links.length?`<div class="dive-actions">${d.links.map(l=>`<a href="${esc(l.href)}">${l.label} <span aria-hidden="true">↗</span></a>`).join('')}</div>`:''}</article>`;

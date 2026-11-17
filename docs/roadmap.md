@@ -55,3 +55,9 @@ Every intake must feed independently supported settlements, voyages, peoples, co
 The live navigation in this candidate reorganizes existing independent movies, contextual stories and guides into Subjects, Places, Languages and Cultures. Coming soon entries are visible but not playable. Caral/Supe, Kuk and Upano now have dedicated place guides and contextual movies. The fifteen other complexes in the 16 November shortlist remain queued; the six established place guides retain an expansion label. Four proposed language studies (Austronesian, Quechuan/Aymaran, Iroquoian and Maya) and four culture studies (Wari, Moche, Lapita and Gunditjmara) seed the new lists. These are research priorities, with no promised completeness or publication date.
 
 The Australian convict/pastoral/wool and mining subjects remain queued with the land-dispossession and forced-relocation requirements above. Consensus cumulative usage is now 70/100 after this intake, leaving 30 calls. See [the candidate evidence and source decisions](early-continuity.md).
+
+## Coming soon campaign — first half implemented, v0.18 candidate
+
+Completed dedicated treatments: Chavín, Tiwanaku, Chan Chan, Teotihuacan, Monte Albán, Calakmul, Copán, Paquimé; Wari and Moche; Quechuan/Aymaran, Iroquoian and Maya languages. The ten place/culture movies retain the shared clock. The three language movies are independent. This intake adds 61 shared and seven focused observations, with 87 chronological chapters. Publication awaits the release checks below, then the authorized merge/deploy.
+
+Second half: Poverty Point, Hopewell earthworks, San Agustín, Tierradentro, Casarabe, Nan Madol, Budj Bim; Lapita, Gunditjmara; Austronesian languages; Australian wool/pastoralism and mining. Six established guide expansions remain a separate list. Consensus usage is 74/100 including status calls, with the full two-batch dossier already complete.

@@ -19,7 +19,7 @@ export const languageFamilies:LanguageFamily[]=[
   ['wamp1249','Massachusett / Wampanoag','Algonquian'],
  ]),
  family('iroq1247','Iroquoian',[
-  ['wend1234','Wendat'],['moha1258','Kanien’kéha / Mohawk'],
+  ['wend1234','Wendat'],['moha1258','Kanien’kéha / Mohawk'],['cher1273','Cherokee','Southern Iroquoian; distinct from the northern languages'],
  ]),
  family('miwo1274','Miwok–Costanoan',[
   ['muts1243','Mutsun'],
@@ -28,13 +28,13 @@ export const languageFamilies:LanguageFamily[]=[
   ['clas1250','Classical Nahuatl'],
  ]),
  family('maya1287','Mayan',[
-  ['kaqc1270','Kaqchikel'],['chol1282','Ch’ol'],['tzot1259','Tzotzil'],['yuca1254','Yucatec Maya'],
+  ['kaqc1270','Kaqchikel'],['chol1282','Ch’ol'],['tzot1259','Tzotzil'],['yuca1254','Yucatec Maya'],['kich1262','K’iche’','Greater Quichean → Core Quichean → Quiche–Achi'],
  ]),
  family('quec1387','Quechuan',[
   ['cusc1236','Cusco Quechua'],['clas1251','Classical Quechua (catalog category)'],
  ]),
  family('ayma1253','Aymaran',[
-  ['cent2142','Central Aymara'],['sout2996','Southern Aymara'],
+  ['cent2142','Central Aymara'],['sout2996','Southern Aymara'],['jaqa1244','Jaqaru','Tupe branch'],
  ]),
  family('tupi1275','Tupian',[
   ['tupi1273','Tupinambá'],['para1311','Paraguayan Guaraní'],
@@ -46,6 +46,7 @@ export const languageFamilies:LanguageFamily[]=[
   ['mapu1245','Mapudungun'],
  ]),
 ];
-export function languageLineagesHTML():string{
- return `<section class="language-lineages"><h3>Roots &amp; relatives</h3><p>A selected family forest, independent of the movie date. These are linguistic relationships, not a map of ancestry or political identity. Intermediate branches omitted unless named.</p>${languageFamilies.map(f=>`<details class="language-family"><summary>${esc(f.name)}</summary><a href="${f.url}" target="_blank" rel="noopener">Classification &amp; references ↗</a><ul>${f.members.map(m=>`<li>${m.path?`<small>${esc(m.path)} →</small>`:''}<a href="https://glottolog.org/resource/languoid/id/${m.id}" target="_blank" rel="noopener">${esc(m.name)}</a></li>`).join('')}</ul></details>`).join('')}<details><summary>Unresolved roots and isolated languages</summary><p>Zuni is classified as an isolate: no established genealogical relationship to another language is demonstrated by that classification. An isolate still has a history.</p><a href="https://glottolog.org/resource/languoid/id/zuni1245" target="_blank" rel="noopener">Zuni classification ↗</a><p>Dene–Yeniseian is a debated long-range proposal. The map does not join all American languages into “Amerind,” or treat genetic similarity as proof of speech.</p><a href="#review/language-dene-yeniseian-beringia-model">Read the proposal and limits ↗</a></details><details><summary>Contact is not descent</summary><p>Languages can borrow words and structures while retaining different family histories. Bilingual communities, trade languages and creoles need contact histories as well as family trees. Hawaiian did not turn into English: Hawaiʻi Creole developed in a multilingual society, with English as its principal vocabulary source and contributions from several languages.</p><a href="https://www.hawaii.edu/satocenter/langnet/definitions/hce.html" target="_blank" rel="noopener">University of Hawaiʻi: Hawaiʻi Creole ↗</a></details><p class="fine">Selected names and classification facts: Glottolog, Hammarström, Forkel, Haspelmath and Bank · CC BY 4.0. Catalog consulted November 2026. Some catalog headings use older terminology; the Inuit–Yupik–Unangan label is used here for the family cataloged as “Eskimo–Aleut.” Modern catalog coordinates were not used to draw historical distributions.</p></section>`;
+export function languageLineagesHTML(familyIds?:readonly string[]):string{
+ const selected=familyIds?languageFamilies.filter(f=>familyIds.includes(f.id)):languageFamilies;
+ return `<section class="language-lineages"><h3>Roots &amp; relatives</h3><p>A selected family forest, independent of the movie date. These are linguistic relationships, not a map of ancestry or political identity. Intermediate branches omitted unless named.</p>${selected.map(f=>`<details class="language-family"><summary>${esc(f.name)}</summary><a href="${f.url}" target="_blank" rel="noopener">Classification &amp; references ↗</a><ul>${f.members.map(m=>`<li>${m.path?`<small>${esc(m.path)} →</small>`:''}<a href="https://glottolog.org/resource/languoid/id/${m.id}" target="_blank" rel="noopener">${esc(m.name)}</a></li>`).join('')}</ul></details>`).join('')}<details><summary>Unresolved roots and isolated languages</summary><p>Zuni is classified as an isolate: no established genealogical relationship to another language is demonstrated by that classification. An isolate still has a history.</p><a href="https://glottolog.org/resource/languoid/id/zuni1245" target="_blank" rel="noopener">Zuni classification ↗</a><p>Dene–Yeniseian is a debated long-range proposal. The map does not join all American languages into “Amerind,” or treat genetic similarity as proof of speech.</p><a href="#review/language-dene-yeniseian-beringia-model">Read the proposal and limits ↗</a></details><details><summary>Contact is not descent</summary><p>Languages can borrow words and structures while retaining different family histories. Bilingual communities, trade languages and creoles need contact histories as well as family trees. Hawaiian did not turn into English: Hawaiʻi Creole developed in a multilingual society, with English as its principal vocabulary source and contributions from several languages.</p><a href="https://www.hawaii.edu/satocenter/langnet/definitions/hce.html" target="_blank" rel="noopener">University of Hawaiʻi: Hawaiʻi Creole ↗</a></details><p class="fine">Selected names and classification facts: Glottolog, Hammarström, Forkel, Haspelmath and Bank · CC BY 4.0. Catalog consulted November 2026. Some catalog headings use older terminology; the Inuit–Yupik–Unangan label is used here for the family cataloged as “Eskimo–Aleut.” Modern catalog coordinates were not used to draw historical distributions.</p></section>`;
 }

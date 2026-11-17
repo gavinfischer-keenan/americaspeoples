@@ -3060,7 +3060,7 @@
     },
     {
       "id": "site-tikal",
-      "revision": 1,
+      "revision": 2,
       "type": "occupation",
       "title": "Tikal — local community evidence",
       "culture": {
@@ -3100,6 +3100,24 @@
               "locator": "Site description / chronological discussion",
               "stance": "supports",
               "note": "Supports this named local phase, not a regional population extrapolation."
+            },
+            {
+              "sourceId": "d18-source-houston2000",
+              "locator": "Houston et al. abstract; author draft pp.1–4; Mora-Marín 2025 section 1.2.",
+              "stance": "context",
+              "note": "Related reading for Maya languages; contextual language interpretation, not direct dating of this place or every speaker."
+            },
+            {
+              "sourceId": "d18-source-mora-protocholan",
+              "locator": "Houston et al. abstract; author draft pp.1–4; Mora-Marín 2025 section 1.2.",
+              "stance": "context",
+              "note": "Related reading for Maya languages; contextual language interpretation, not direct dating of this place or every speaker."
+            },
+            {
+              "sourceId": "d18-source-mora2025",
+              "locator": "Houston et al. abstract; author draft pp.1–4; Mora-Marín 2025 section 1.2.",
+              "stance": "context",
+              "note": "Related reading for Maya languages; contextual language interpretation, not direct dating of this place or every speaker."
             }
           ]
         }
@@ -3114,6 +3132,33 @@
           "url": "https://whc.unesco.org/en/list/64/",
           "access": "Public source reviewed 2026-11-15; factual dates and place references summarized in original wording.",
           "referenceType": "web-resource"
+        },
+        {
+          "id": "d18-source-houston2000",
+          "authors": "Stephen Houston, John Robertson and David Stuart",
+          "title": "The Language of Classic Maya Inscriptions",
+          "year": 2000,
+          "venue": "Original scholarship / institutional source",
+          "url": "https://doi.org/10.1086/300142",
+          "access": "Publisher-indexed abstract read; introduction and Classic Ch’olti’an proposal checked in indexed article PDF excerpt. Original publisher page blocked. Original factual summary; source prose and media are not republished."
+        },
+        {
+          "id": "d18-source-mora-protocholan",
+          "authors": "David F. Mora-Marín",
+          "title": "Proto-Ch’olan as the Standard Language of Classic Lowland Mayan Texts",
+          "year": null,
+          "venue": "Original scholarship / institutional source",
+          "url": "https://davidmm.web.unc.edu/wp-content/uploads/sites/400/2025/02/ProtoCholanHypothesis.pdf",
+          "access": "Author-hosted 113-page draft opened; abstract/introduction pp.1–4 and methodology read. Header says paper to be submitted to Current Anthropology. Original factual summary; source prose and media are not republished."
+        },
+        {
+          "id": "d18-source-mora2025",
+          "authors": "David Mora-Marín",
+          "title": "Historical Sociolinguistics of the Classic Maya Lowlands: The Generic Preposition Variable",
+          "year": 2025,
+          "venue": "Original scholarship / institutional source",
+          "url": "https://cadernos.abralin.org/index.php/cadernos/article/view/794",
+          "access": "Full scholarly HTML read and saved. Sections 1.1–1.2, 2.2.2, 3.1–3.4, and 4 read; Tikal Stela 4/379 and Ballcourt Marker/416 explicitly identified. DOI 10.25189/2675-4916.2025.v6.n1.id794. Original factual summary; source prose and media are not republished."
         }
       ],
       "review": {
@@ -3123,9 +3168,16 @@
         "provenance": "Individually curated public heritage/archaeological sources; no confidential coordinates and no inferred building footprints.",
         "reviewedAt": "2026-11-15",
         "history": [
-          "Added an individual place to complement regional evidence."
+          "Added an individual place to complement regional evidence.",
+          "Added source access and contextual reading for the dedicated language study; original place/date claim remains separate."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "d18-language-mani-1562",
+          "d18-language-tikal-stela4-379",
+          "d18-language-tikal-marker-416",
+          "d18-language-popol-vuh-copy-1700-1715",
+          "d18-language-northern-maya-variation-800-950"
+        ]
       },
       "history": {
         "kind": "habitation",
@@ -3134,7 +3186,7 @@
     },
     {
       "id": "site-copan",
-      "revision": 1,
+      "revision": 2,
       "type": "occupation",
       "title": "Copán — local community evidence",
       "culture": {
@@ -3174,6 +3226,12 @@
               "locator": "Site description / chronological discussion",
               "stance": "supports",
               "note": "Supports this named local phase, not a regional population extrapolation."
+            },
+            {
+              "sourceId": "d18-source-mora2025",
+              "locator": "Sections 3.1 and 3.4; Figure 15 and spatial-transmission discussion.",
+              "stance": "context",
+              "note": "Related reading for Maya languages; contextual language interpretation, not direct dating of this place or every speaker."
             }
           ]
         }
@@ -3188,6 +3246,15 @@
           "url": "https://whc.unesco.org/en/list/129/",
           "access": "Public source reviewed 2026-11-15; factual dates and place references summarized in original wording.",
           "referenceType": "web-resource"
+        },
+        {
+          "id": "d18-source-mora2025",
+          "authors": "David Mora-Marín",
+          "title": "Historical Sociolinguistics of the Classic Maya Lowlands: The Generic Preposition Variable",
+          "year": 2025,
+          "venue": "Original scholarship / institutional source",
+          "url": "https://cadernos.abralin.org/index.php/cadernos/article/view/794",
+          "access": "Full scholarly HTML read and saved. Sections 1.1–1.2, 2.2.2, 3.1–3.4, and 4 read; Tikal Stela 4/379 and Ballcourt Marker/416 explicitly identified. DOI 10.25189/2675-4916.2025.v6.n1.id794. Original factual summary; source prose and media are not republished."
         }
       ],
       "review": {
@@ -3197,9 +3264,22 @@
         "provenance": "Individually curated public heritage/archaeological sources; no confidential coordinates and no inferred building footprints.",
         "reviewedAt": "2026-11-15",
         "history": [
-          "Added an individual place to complement regional evidence."
+          "Added an individual place to complement regional evidence.",
+          "Added source access and contextual reading for the dedicated language study; original place/date claim remains separate."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "d18-meso-cop-preacropolis",
+          "d18-meso-cop-hunal-phase",
+          "d18-meso-cop-oropendola",
+          "d18-meso-cop-stairway-first",
+          "d18-meso-cop-stairway-later",
+          "d18-meso-cop-postroyal-activity",
+          "d18-language-mani-1562",
+          "d18-language-tikal-stela4-379",
+          "d18-language-tikal-marker-416",
+          "d18-language-popol-vuh-copy-1700-1715",
+          "d18-language-northern-maya-variation-800-950"
+        ]
       },
       "history": {
         "kind": "habitation",
@@ -3273,7 +3353,14 @@
         "history": [
           "Added an individual place to complement regional evidence."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "d18-andes-chanchan-early-compounds",
+          "d18-andes-chanchan-tello-laberinto",
+          "d18-andes-chanchan-middle-compounds",
+          "d18-andes-chanchan-velarde-bandelier",
+          "d18-andes-chanchan-nik-chol",
+          "d18-andes-chanchan-inca-transition"
+        ]
       },
       "history": {
         "kind": "habitation",
@@ -3347,7 +3434,14 @@
         "history": [
           "Added an individual place to complement regional evidence."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "d18-andes-tiwanaku-foundation-model",
+          "d18-andes-tiwanaku-pumapunku-building",
+          "d18-andes-tiwanaku-late-communal-projects",
+          "d18-andes-tiwanaku-residential-end",
+          "d18-andes-tiwanaku-redware-end",
+          "d18-andes-tiwanaku-1549-description"
+        ]
       },
       "history": {
         "kind": "habitation",
@@ -3495,7 +3589,12 @@
         "history": [
           "Added an individual place to complement regional evidence."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "d18-meso-monte-foundation-terraces",
+          "d18-meso-monte-structurej-carvings",
+          "d18-meso-monte-ballcourt-construction",
+          "d18-meso-monte-tomb7-reuse"
+        ]
       },
       "history": {
         "kind": "habitation",
