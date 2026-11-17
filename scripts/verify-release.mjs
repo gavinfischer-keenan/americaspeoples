@@ -69,6 +69,7 @@ const phases = [
     ["tests/map-panels.browser.mjs"],
   ],
   ["Smart timeline and keyboard control", node, ["tests/timeline.browser.mjs"]],
+  ["Exact event navigation", node, ["tests/evidence-date.browser.mjs"]],
   ["Physical layers and source reviews", node, ["tests/physical.browser.mjs"]],
   ["Site and culture guides, road maps and natural events", node, ["tests/site-guides.browser.mjs"]],
   ["Dated geography, journeys, local selection and mobile", node, ["tests/expansion.browser.mjs"]],

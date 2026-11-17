@@ -1,0 +1,30 @@
+import assert from 'node:assert/strict';
+import {chromium} from 'playwright';
+import {createStaticServer} from '../scripts/static-server.mjs';
+const server=createStaticServer('dist');await new Promise(r=>server.listen(0,'127.0.0.1',r));
+const browser=await chromium.launch({executablePath:process.env.BROWSER_PATH||'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',headless:true});
+const page=await browser.newPage({viewport:{width:1440,height:960}});page.setDefaultTimeout(12000);
+const base=`http://127.0.0.1:${server.address().port}`;
+try{
+ await page.goto(base+'/#review/d19-au-eureka-1854');
+ await page.locator('[data-action="locate"]').click();
+ await page.locator('#selected-records h4').waitFor();
+ assert.match(await page.locator('#selected-records').innerText(),/Eureka/);
+ assert.match(await page.locator('body').innerText(),/Shared date: 1854-12-03/);
+ assert.equal(await page.locator('#year-number').inputValue(),'1854');
+ await page.locator('#time-settings-toggle').click();
+ await page.getByLabel('Year number',{exact:true}).fill('1854');
+ await page.getByRole('button',{name:'Go to year',exact:true}).click();
+ await page.locator('[data-local-record="d19-au-eureka-1854"]').click();
+ await page.locator('#selected-records h4').waitFor();
+ assert.match(await page.locator('body').innerText(),/Shared date: 1854-12-03/);
+ await page.goto(base+'/#explore');
+ await page.locator('#explore-period').selectOption('all');
+ await page.locator('#place-search').fill('Eureka');
+ await page.locator('#visible-records [data-map-record-key]').filter({hasText:'Eureka'}).first().click();
+ await page.locator('#show-selection-year').click();
+ await page.locator('#selected-records h4').waitFor();
+ assert.equal(await page.locator('#explore-period').inputValue(),'current');
+ assert.match(await page.locator('#selected-records').innerText(),/Eureka/);
+ console.log('PASS exact event navigation from review, local chronology and Explore selection; calendar year remains1854.');
+}finally{await browser.close();await new Promise(r=>server.close(r));}

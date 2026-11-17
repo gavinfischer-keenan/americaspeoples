@@ -1,0 +1,41 @@
+{
+  "version": "0.19.1",
+  "status": "verified navigation patch; deployment pending",
+  "verifiedAt": "2026-11-17T03:58:57.540653+00:00",
+  "baseCommit": "9c0e5642e6898e83673b632e55a7b62fd6826db2",
+  "records": 2218,
+  "sharedRecords": 2148,
+  "focusedRecords": 70,
+  "completedStudies": 25,
+  "directory": {
+    "availableCards": 70,
+    "comingSoonEntries": 0
+  },
+  "consensus": {
+    "cumulativeCalls": 74,
+    "cap": 100,
+    "newCalls": 0
+  },
+  "fix": "Review, local chronology and Explore View its time navigation preserve a documented event day instead of selecting January1 and hiding later-year events. Year-only records keep their existing behavior.",
+  "validation": {
+    "inheritedFullGate": "All36stages passed for v0.19.0; this patch adds a37th stage for future full gates.",
+    "patchUnitTests": 309,
+    "typecheck": "passed",
+    "recordValidation": 2218,
+    "build": "passed",
+    "packageTests": 5,
+    "browserChecks": [
+      "Exact-date review/local chronology/Explore navigation: failed beforefix, passedafter",
+      "Sharedworldmovie, simultaneousColumbus/Taos, contextualjourneys",
+      "Datedgeography, expeditionarrivals, borders, rails, localhabitation",
+      "Movie/Explore isolation, selection, hover, viewport andsimplephonelayout"
+    ],
+    "exactDateRegressionLogSha256": "62b11f87c8503eddaf1652ee0c75fbd8aaaf33e48ca627b97de9f1a0447f20f6",
+    "full37StageGateRepeated": false
+  },
+  "review": "The campaign hadonefreshwholebranchreview. This smallfollowup was triggeredbyobservedlivefailure; roottracedtheclock/filterinteraction, reproducedinbrowser, correctedthreeentrypoints andverifiedrelevantcontracts. No secondwholebranchreview.",
+  "limits": [
+    "Publiclocalityprecisionandsourceuncertaintyunchanged",
+    "Sixexistingguideexpansionsremainfuturework"
+  ]
+}
