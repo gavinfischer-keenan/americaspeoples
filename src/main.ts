@@ -12,7 +12,7 @@ import {mountTopicPage} from './topic-page';
 import {storyDetailsHTML} from './story-details';
 import type {MapCamera} from './map';
 import { atlasAssets, loadAtlasAssets } from './atlas-assets';
-import { sampleVoyage, voyageDate } from './voyages';
+import { sampleVoyage, voyageDate, dateValue } from './voyages';
 import { availableVoyageRecords, scopedVoyageDate, scopedVoyageProgress, advanceMovieClock, datedContextKey } from './shared-movie';
 import { movieContextHTML } from './movie-context';
 import {localChronologyHTML} from './local-chronology';
@@ -334,7 +334,9 @@ function closeDetails(){
 function mountAtlasControls(){
   $('#concurrent-context').addEventListener('click',e=>{
     const button=(e.target as Element).closest<HTMLElement>('[data-local-year]');if(!button)return;
-    const id=button.dataset.localRecord;setYear(Number(button.dataset.localYear));
+    const id=button.dataset.localRecord;
+    const target=dataset.records.find(r=>r.id===id);
+    if(target)setRecordYear(target);else setYear(Number(button.dataset.localYear));
     const record=currentVisible.find(r=>r.id===id);if(record){map.setHighlighted([record.id]);selectEvidence([record]);}
   });
   $<HTMLInputElement>('#place-search').value=placeQuery;
@@ -347,7 +349,7 @@ function mountAtlasControls(){
   $('#focus-mode').addEventListener('click',()=>{const focus=document.body.classList.toggle('focus-view');$('#focus-mode').setAttribute('aria-pressed',String(focus));$('#focus-mode').textContent=focus?'Exit focus':'Focus view';});
   $('#close-layers').addEventListener('click',()=>$('#toggle-layers').click());
   $('#focus-selection').addEventListener('click',()=>{if(selected.length)map.focusRecords(selected);});
-  $('#show-selection-year').addEventListener('click',()=>{const r=selected[0];if(!r||r.time.start===null)return;setYear(r.time.start);if(atlasMode==='explore'){explorePeriod='current';$<HTMLSelectElement>('#explore-period').value='current';$('.timeline').hidden=false;syncTransport();renderMapData();}map.focusRecords([r]);selectEvidence([r]);});
+  $('#show-selection-year').addEventListener('click',()=>{const r=selected[0];if(!r||r.time.start===null)return;setRecordYear(r);if(atlasMode==='explore'){explorePeriod='current';$<HTMLSelectElement>('#explore-period').value='current';$('.timeline').hidden=false;syncTransport();renderMapData();}map.focusRecords([r]);selectEvidence([r]);});
   $('#selection-choices').addEventListener('click',e=>{const button=(e.target as Element).closest<HTMLButtonElement>('[data-pick-record]');if(!button)return;const r=selectionCandidates[Number(button.dataset.pickRecord)];if(r){selected=[r];map.setHighlighted([r.id]);renderSelectionChoices();renderVisible();}});
   $('#story-select').addEventListener('change',e=>{openingPlayback=false;stop();voyageId='';storyId=(e.target as HTMLSelectElement).value;storyElapsed=0;storySceneIndex=-1;placeQuery='';placeCategory='all';if(storyId==='free')showWholeMovie();else showStoryScene(0);syncTransport();});
   $('#whole-movie').addEventListener('click',()=>showWholeMovie());
@@ -383,6 +385,16 @@ function bounds(recenter = false) {
       return `<span style="left:${p * 100}%">${formatYear(y)}</span>`;
     })
     .join("");
+}
+function setRecordYear(record: DisplayRecord) {
+  if(record.time.start===null)return;
+  const iso=record.time.eventDate??record.history?.eventDate;
+  const exact=iso?dateValue(iso):NaN;
+  setYear(Number.isFinite(exact)?Math.floor(exact):record.time.start);
+  if(Number.isFinite(exact)){
+    movieClock=exact;
+    if(mountedMap)renderMapData();
+  }
 }
 function setYear(next: number, manual = true) {
   if (manual) { openingPlayback=false;stop(); voyageId=''; if (mountedMap && atlasMode === "movie") useFreeTimeline(); }
@@ -866,7 +878,7 @@ function reviewPage(r: FullDisplayRecord, p?: Proposal, index?: number, shared=f
     if(sourceTopic){pendingTopicLocation=r;location.hash='#topic/'+sourceTopic.id;return;}
     storyId='free';storySceneIndex=-1;placeQuery='';placeCategory='all';explorePeriod='all';
     if (r.time.kind === "unplaced") showUndated = true;
-    if (r.time.start !== null) setYear(r.time.start);
+    if (r.time.start !== null) setRecordYear(r);
     if (p) preview = true;
     hiddenCultures.delete(r.culture.id);
     if (r.overlay) hiddenLayers.delete(r.overlay.kind);
