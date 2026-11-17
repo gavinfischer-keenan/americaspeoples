@@ -8,7 +8,9 @@ test('site guides resolve explicit record IDs without title guessing', () => {
   assert.ok(rows.length > 0);
   for (const row of rows) {
     assert.match(row.href, /^sites\/[a-z0-9-]+\.html$/);
-    if(row.kind !== 'culture') assert.ok(row.recordIds.length > 0);
+    if(row.kind !== 'culture') assert.ok(row.recordIds.length > 0 ||
+      row.relatedGuideIds?.some(id => rows.find(g => g.id === id)?.recordIds.length),
+      row.id + ' must expose direct evidence or a dedicated linked guide');
     for (const id of row.recordIds) assert.equal(guides.guideForRecord(id)?.id, row.id);
   }
   assert.equal(new Set(rows.flatMap(r => r.recordIds)).size, rows.flatMap(r => r.recordIds).length);

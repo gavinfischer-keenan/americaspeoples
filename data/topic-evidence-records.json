@@ -1244,7 +1244,7 @@
     },
     {
       "id": "topic-language-tahiti",
-      "revision": 2,
+      "revision": 3,
       "type": "occurrence",
       "title": "Tahiti — vocabulary recorded in 1775",
       "culture": {
@@ -1254,12 +1254,12 @@
         "color": "#ac7656"
       },
       "location": {
-        "id": "topic-language-tahiti-place",
-        "name": "Tahiti",
-        "lon": -149.45,
-        "lat": -17.65,
-        "precision": "Approximate public locality anchor; not an excavated building footprint or a reconstructed battle line.",
-        "provenance": "https://www.cultura.gob.es/cultura/archivos/difusion/registro-memoria-unesco/2015/vocabulario-lenguas-nuevo-mundo.html"
+        "id": "d19-place-tahiti",
+        "name": "Tahiti, island context",
+        "lon": -149.41916,
+        "lat": -17.65601,
+        "precision": "Public island reference, approximately 35 km contextual radius; not Tupaia’s drawing place or a vocabulary collection site.",
+        "provenance": "GeoNames 4033649 structured island coordinates. https://www.geonames.org/4033649/tahiti.html"
       },
       "destination": null,
       "routeKind": "schematic",
@@ -1284,6 +1284,12 @@
               "stance": "supports",
               "locator": "Named site, phase, event or evidence discussion",
               "note": "Supports the stated claim and its dated scope; approximate map locator is not a footprint."
+            },
+            {
+              "sourceId": "d19-source-geo-tahiti",
+              "stance": "context",
+              "locator": "GeoNames 4033649 structured island coordinates. https://www.geonames.org/4033649/tahiti.html",
+              "note": "Geographic context only: supports the public map reference, not the historical date or extent of the finding."
             }
           ]
         }
@@ -1298,16 +1304,26 @@
           "url": "https://www.cultura.gob.es/cultura/archivos/difusion/registro-memoria-unesco/2015/vocabulario-lenguas-nuevo-mundo.html",
           "access": "Public source consulted 2026-11-15; factual description independently written for this atlas.",
           "referenceType": "web-resource"
+        },
+        {
+          "id": "d19-source-geo-tahiti",
+          "title": "Tahiti, GeoNames 4033649",
+          "authors": "GeoNames",
+          "year": null,
+          "venue": "Original scholarship / institutional or community documentation",
+          "url": "https://www.geonames.org/4033649/tahiti.html",
+          "access": "Public island gazetteer HTML and structured coordinates downloaded and checked. Island-level contextual point, not a manuscript collection place. Independently written factual summaries; no source media reproduced."
         }
       ],
       "review": {
         "summary": "The archive preserves a Tahitian vocabulary dated 1775. Comparing such records with linguistic reconstruction helps distinguish related Polynesian languages from the separate dates when outsiders recorded them.",
-        "limitations": "Island-level reference. Date of documentation is not the language’s birth, the first contact, or a census.",
+        "limitations": "Island-level reference. Date of documentation is not the language’s birth, the first contact, or a census. Public location refined to the explicitly documented broad place reference; chronology is unchanged.",
         "discussion": "This is dated evidence. It neither establishes continuous presence after its date nor determines a first arrival. Earlier evidence remains explicitly labeled on later topic frames.",
         "provenance": "Source-specific factual synthesis; geographic precision and chronology are recorded separately.",
-        "reviewedAt": "2026-11-15",
+        "reviewedAt": "2026-11-16",
         "history": [
-          "Added in the cities, conflicts and topic-dives expansion."
+          "Added in the cities, conflicts and topic-dives expansion.",
+          "Batch B checked public geographic anchor; retained published chronology."
         ],
         "relatedIds": [
           "visit-cook-endeavour-1768-1770-4"

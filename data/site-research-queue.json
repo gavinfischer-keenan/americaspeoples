@@ -8,43 +8,23 @@
     "Pacific monumental complexes and island networks",
     "Caral and the Supe Valley",
     "Kuk Early Agricultural Site",
-    "Upano: Sangay / Huapula, Kilamope and Lake Cormoran"
+    "Upano: Sangay / Huapula, Kilamope and Lake Cormoran",
+    "Chavín, Tiwanaku, Chan Chan, Wari and Moche",
+    "Teotihuacan, Monte Albán, Calakmul, Copán and Paquimé",
+    "Poverty Point and Hopewell earthworks",
+    "San Agustín, Tierradentro and Casarabe centers",
+    "Nan Madol, Budj Bim, Lapita and Gunditjmara histories"
   ],
   "nextComplexes": [
-    {
-      "topic": "Tiwanaku and Wari",
-      "region": "Central / southern Andes",
-      "focus": "Separate state histories, provincial compounds, roads and inherited infrastructure; languages and cultural affiliation remain qualified."
-    },
-    {
-      "topic": "Moche, Chimor / Chan Chan, and north-coast Peru",
-      "region": "Peru",
-      "focus": "Individual urban compounds, irrigation, settlement networks, ritual, languages, transitions and dated hazards."
-    },
-    {
-      "topic": "Chavin and further Norte Chico detail",
-      "region": "Peru",
-      "focus": "Caral now has a dedicated guide and contextual movie. Add distinct Chavin history and deeper building phases for Supe settlements; no automatic cultural succession."
-    },
-    {
-      "topic": "Teotihuacan, Monte Alban and central Mexican / Oaxacan networks",
-      "region": "Mesoamerica",
-      "focus": "Neighborhoods, apartment compounds, roads, urban scale, multilingual populations and political transformations."
-    },
     {
       "topic": "Tenochtitlan and Basin of Mexico",
       "region": "Mesoamerica",
       "focus": "Causeways, canals, chinampas, water management, altepetl, language and imperial versus local histories."
     },
     {
-      "topic": "Paquime, Hohokam canal communities and Mogollon complexes",
+      "topic": "Hohokam canal communities and Mogollon complexes",
       "region": "US Southwest / northern Mexico",
-      "focus": "Separate traditions, site-specific water systems, architecture and interregional connections."
-    },
-    {
-      "topic": "Poverty Point, Hopewell and southeastern mound centers",
-      "region": "North America",
-      "focus": "Individual earthworks and habitation sites, river connections, chronology and limits of linguistic assignment."
+      "focus": "Paquimé now has a dedicated study. Research distinct Hohokam and Mogollon places, water systems, architecture and connections."
     },
     {
       "topic": "Marajo, Santarem and Upper Xingu settlement networks",
@@ -54,13 +34,30 @@
     {
       "topic": "Northern Colombia and Ecuador complexes",
       "region": "Northern South America",
-      "focus": "Terraces, paths, drainage, settlements, material networks and carefully qualified affiliations."
+      "focus": "San Agustín and Tierradentro now have dedicated studies. Add other distinct northern Andean settlements, paths, drainage and material networks."
     },
     {
       "topic": "Additional Micronesian, Polynesian and Island Southeast Asian centers",
       "region": "Pacific",
-      "focus": "Deepen individual island communities, monumental structures and changing voyaging networks."
+      "focus": "Nan Madol and Lapita now have dedicated studies. Deepen other island communities, structures and changing voyaging connections."
     }
   ],
-  "limits": "This is an editorial work queue, not a claim of exhaustive coverage or completed research. Source acquisition does not automatically add mapped sites."
+  "limits": "This is an editorial work queue, not a claim of exhaustive coverage or completed research. Source acquisition does not automatically add mapped sites.",
+  "completedCampaign": {
+    "fromVersion": "0.17.0",
+    "releases": [
+      "0.18.0",
+      "0.19.0"
+    ],
+    "entries": 25,
+    "status": "dedicated treatments implemented; coverage remains expandable"
+  },
+  "guideExpansions": [
+    "chaco",
+    "machu-picchu",
+    "cahokia",
+    "mesa-verde",
+    "hovenweep",
+    "canyons-of-the-ancients"
+  ]
 }

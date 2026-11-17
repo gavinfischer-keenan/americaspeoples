@@ -20,7 +20,7 @@ try{
   }
   console.log('PASS '+t.id+': '+t.scenes.length+' chapters and visible current evidence');
  }
- await page.goto(base+'/#topics');assert.equal(await page.locator('.dive-card a[href^="#topic/"]').count(),17);
+ await page.goto(base+'/#topics');assert.equal(await page.locator('.dive-card a[href^="#topic/"]').count(),19);
  assert.equal(await page.locator('[data-future-topic]').count(),0);
  for(const file of ['remaining-topic-dives','world-coverage-audit','australasia-archaeology']){
   const response=await page.goto(base+'/docs/'+file+'.html');assert.equal(response.status(),200);assert.ok((await page.locator('h1').innerText()).length>8);
@@ -30,6 +30,6 @@ try{
   assert.ok(await page.locator('#topic-play').isVisible());assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2));
   await page.screenshot({path:'test-results/remaining-'+label+'.png',fullPage:true});
  }
- assert.deepEqual(errors,[]);console.log('PASS twenty playable cards, packaged guides, desktop/tablet layouts and no browser errors');
+ assert.deepEqual(errors,[]);console.log('PASS available subject cards, packaged guides, desktop/tablet layouts and no browser errors');
 }finally{await browser.close();await new Promise(r=>server.close(r));}
 

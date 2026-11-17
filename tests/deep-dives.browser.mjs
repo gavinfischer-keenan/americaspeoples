@@ -16,7 +16,7 @@ try{
  for(const c of ['subjects','places','languages','cultures']){
   await page.locator(`.dive-tabs a[href="#dives/${c}"]`).click();
   await page.locator(`.dive-tabs a[href="#dives/${c}"][aria-current="page"]`).waitFor();assert.ok(await page.locator('.dive-card:not(.dive-planned) a').count());
-  assert.ok(await page.locator('.dive-planned').count());
+  assert.equal(await page.locator('.dive-planned,.dive-queue').count(),0);
   assert.equal(await page.locator('.dive-planned a,.dive-planned button').count(),0);
   assert.equal(await page.locator(`.dive-tabs a[href="#dives/${c}"]`).getAttribute('aria-current'),'page');
  }

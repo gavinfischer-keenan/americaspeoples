@@ -22,11 +22,12 @@ test('language and culture movies leave the subject list; places combine existin
  assert.equal(home('sites/machu-picchu.html').category,'places');
  assert.equal(home('sites/inca-civilization.html').category,'cultures');
 });
-test('each list has truthful coming-soon entries and no invented playback links',()=>{
+test('each list has truthful availability and no invented playback links',()=>{
  for(const c of diveCategories){
   const planned=deepDives.filter(d=>d.category===c.id&&!d.links.length);
-  assert.ok(planned.length,c.id);
+
   const html=deepDiveIndexHTML(c.id);
+  if(!planned.length)assert.doesNotMatch(html,/class="dive-queue"|0 coming soon/);
   for(const d of planned){
    assert.ok(html.includes(`data-dive="${d.id}"`));
    const card=html.split(`data-dive="${d.id}"`)[1].split('</article>')[0];

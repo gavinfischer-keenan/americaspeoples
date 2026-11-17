@@ -24,7 +24,8 @@ test("Pacific and violence additions are complete, source-linked and internally 
   assert.deepEqual(validateDataset(dataset), []);
   for (const r of records) {
     assert.match(r.location!.precision, /\d+ km/);
-    assert.match(r.location!.provenance, /approximation|Rounded public UNESCO/);
+    // A checked site reference can replace the earlier editorial approximation.
+    assert.match(r.location!.provenance, /approximation|Rounded public UNESCO|specifications-table WGS84 coordinates/);
     assert.ok(r.sources.every(s => /^https:\/\//.test(s.url)));
     assert.ok(r.time.end === null || r.time.end <= 1934);
   }

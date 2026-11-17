@@ -81,6 +81,7 @@ const phases = [
   ["Categorized deep dives, existing content and legacy navigation", node, ["tests/deep-dives.browser.mjs"]],
   ["Early continuity, contextual place movies and guide navigation", node, ["--import", "tsx", "tests/early-continuity.browser.mjs"]],
   ["First thirteen dedicated studies, language families and tablet playback", node, ["--import", "tsx", "tests/coming-soon-a.browser.mjs"]],
+  ["Final twelve dedicated studies, shared evidence and completed lists", node, ["--import", "tsx", "tests/coming-soon-b.browser.mjs"]],
   ["Regional evidence in the shared movie and packaged source guide", node, ["tests/regional-gaps.browser.mjs"]],
   ["Interior communities, dated connections and conflict windows", node, ["tests/interior-frontiers.browser.mjs"]],
   ["Map picking, camera, touch and label usability", node, ["tests/map-ux.browser.mjs"]],
