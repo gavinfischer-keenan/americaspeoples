@@ -54385,9 +54385,9 @@
       "baseRecord": null,
       "record": {
         "id": "r5-falklands-visits",
-        "revision": 2,
+        "revision": 3,
         "type": "event",
-        "title": "Falklands — disputed pre-European visits",
+        "title": "New Island — sea-lion bones and possible early visitors",
         "culture": {
           "id": "unknown",
           "name": "Unknown attribution",
@@ -54405,12 +54405,13 @@
         "destination": null,
         "routeKind": "schematic",
         "time": {
-          "kind": "unplaced",
-          "start": null,
-          "end": null,
-          "original": "Pre-European activity hypothesis; proxy dates are not an occupation duration",
-          "method": "Original chronology retained without unsupported calendar conversion",
-          "interpretation": "This is an interpretation, non-discovery or reassessment rather than an independently dated human presence. Keep its source scope and date guidance accessible as context. Source guidance: Pre-European activity hypothesis; proxy dates are not an occupation duration"
+          "kind": "occurrence",
+          "start": 1275,
+          "end": 1420,
+          "approximate": true,
+          "original": "Hamley et al. 2021: bone deposits reported at 675–530 cal BP, expressed by the authors as 1275–1420 CE.",
+          "method": "AMS radiocarbon of marine mammal bone with marine-reservoir correction; published depositional interpretation.",
+          "interpretation": "This is the reported bone-deposition window. Human involvement is disputed; it is not a continuous settlement or a dated arrival."
         },
         "claims": [
           {
@@ -54440,10 +54441,10 @@
             "authors": "Hamley, K. M.; et al.",
             "title": "Evidence of prehistoric human activity in the Falkland Islands",
             "year": 2021,
-            "venue": "See linked primary publication",
+            "venue": "Science Advances",
             "doi": "10.1126/sciadv.abh3803",
             "url": "https://doi.org/10.1126/sciadv.abh3803",
-            "access": "Primary publisher abstract inspected; full text not claimed.",
+            "access": "Full primary article Results and Discussion read at https://pmc.ncbi.nlm.nih.gov/articles/PMC8550247/ on 2026-11-17.",
             "referenceType": "journal-article"
           },
           {
@@ -54454,19 +54455,20 @@
             "venue": "See linked primary publication",
             "doi": "10.1080/15564894.2022.2077484",
             "url": "https://doi.org/10.1080/15564894.2022.2077484",
-            "access": "Primary critique abstract inspected.",
+            "access": "Abstract and source-grounded excerpts in the 2026-11-17 Consensus Deep review; direct DOI access unavailable.",
             "referenceType": "journal-article"
           }
         ],
         "review": {
-          "summary": "Charcoal, faunal remains and a lithic find have been interpreted as evidence of pre-European human activity in the Falkland Islands.",
-          "limitations": "Natural and human explanations for fire and bone accumulations remain contested. Possible visitation is not established permanent settlement.",
-          "discussion": "Population size is unknown. Archaeological culture, ancestry, language and present-day identity are not interchangeable.",
+          "summary": "Sea-lion and penguin bones were found in concentrations on New Island. Hamley and colleagues dated the sea-lion remains and proposed visits around 1275–1420 CE. A stone point and increased charcoal add to the case, but neither proves who visited.",
+          "limitations": "No cut marks were identified on the bones. Natural accumulation and fire remain alternatives; the surface stone point has no secure prehistoric date.",
+          "discussion": "The 2022 review by Zangrando and Borrero challenges the human interpretation and cultural attribution. The warrah’s presence and marine diet do not establish transport by people. The map therefore shows a disputed regional finding, with no invented village or route.",
           "provenance": "Round5 author-supplied research leads reconciled against the cited sources on 2026-10-28.",
-          "reviewedAt": "2026-10-29",
+          "reviewedAt": "2026-11-17",
           "history": [
             "2026-10-28: reviewed for v0.3.4.",
-            "2026-10-29:280-record chronology review: interpretation-or-record-gap. This is an interpretation, non-discovery or reassessment rather than an independently dated human presence. Keep its source scope and date guidance accessible as context."
+            "2026-10-29:280-record chronology review: interpretation-or-record-gap. This is an interpretation, non-discovery or reassessment rather than an independently dated human presence. Keep its source scope and date guidance accessible as context.",
+            "2026-11-17: Published bone-deposition window distinguished from disputed human visits; no habitation interval inferred."
           ],
           "relatedIds": []
         },
@@ -57073,7 +57075,7 @@
       "baseRecord": null,
       "record": {
         "id": "r6-galapagos-reevaluation",
-        "revision": 2,
+        "revision": 3,
         "type": "event",
         "title": "Galápagos — pre-Columbian claims reassessed",
         "culture": {
@@ -57115,22 +57117,23 @@
             "authors": "Atholl Anderson; Karen Stothert; Helene Martinsson-Wallin; Paul Wallin; Iona Flett; Simon Haberle; Henk Heijnis; Edward Rhodes",
             "title": "Reconsidering Precolumbian Human Colonization in the Galápagos Islands, Republic of Ecuador",
             "year": 2016,
-            "venue": "See linked primary publication",
+            "venue": "Latin American Antiquity",
             "url": "https://eprints.whiterose.ac.uk/id/eprint/159894/",
-            "access": "Author-university abstract and primary re-excavation summary inspected.",
+            "access": "Accepted article PDF read at the White Rose repository on 2026-11-17, including excavation descriptions and radiocarbon/OSL discussion. PDF is linked, not redistributed.",
             "referenceType": "journal-article",
             "doi": "10.7183/1045-6635.27.2.169"
           }
         ],
         "review": {
-          "summary": "Re-excavation and OSL/radiocarbon analysis favor historical-age deposits at the investigated sites, challenging earlier pre-Columbian interpretations.",
-          "limitations": "This does not rule out every unrecorded visit; no prehistoric settlement dot is invented from an absence assessment.",
-          "discussion": "Population unknown. Site extent, ancestry, archaeological culture, language and present-day identity are distinct. Approximate placement is not exact site mapping.",
+          "summary": "Pottery, glass, metal and hearth charcoal were recovered together at Galápagos landing places including James Bay and Whale Bay. Later excavations and dating place the investigated camps in the historical era, challenging the earlier proposal of pre-Columbian fishing visits.",
+          "limitations": "A few pottery ages are anomalous or older; the associated deposits do not establish a prehistoric settlement. An unrecorded brief visit cannot be ruled out.",
+          "discussion": "The 1950s collections emphasized plain earthenware while discarding later-looking material. The 2005 re-excavations retained all artifact types. Their shared distribution and charcoal ages favour historical camps, so the atlas does not draw an unsupported Inca or Polynesian voyage to these islands.",
           "provenance": "2026-10-29 round6 author-supplied syntheses reconciled against linked research; complete intake: docs/intake/index.html.",
-          "reviewedAt": "2026-10-29",
+          "reviewedAt": "2026-11-17",
           "history": [
             "2026-10-29: reconciled for v0.3.6.",
-            "2026-10-29:280-record chronology review: interpretation-or-record-gap. This is an interpretation, non-discovery or reassessment rather than an independently dated human presence. Keep its source scope and date guidance accessible as context."
+            "2026-10-29:280-record chronology review: interpretation-or-record-gap. This is an interpretation, non-discovery or reassessment rather than an independently dated human presence. Keep its source scope and date guidance accessible as context.",
+            "2026-11-17: Explain the physical finds and re-excavation; preserve an undated assessment rather than invent a prehistoric settlement."
           ],
           "relatedIds": []
         },
@@ -92716,9 +92719,9 @@
       "baseRecord": null,
       "record": {
         "id": "r12v-sagitario-p06",
-        "revision": 1,
+        "revision": 2,
         "type": "event",
-        "title": "Sagitario side tunnel — dated charcoal in ochre-mining context",
+        "title": "Sagitario side tunnel — charcoal sample P06 from ochre mining",
         "culture": {
           "id": "unknown",
           "name": "Unknown attribution",
@@ -92783,14 +92786,15 @@
           }
         ],
         "review": {
-          "summary": "Sagitario side tunnel — dated charcoal in ochre-mining context supplies a sample-specific date rather than a regional age assigned uniformly to every cave.",
+          "summary": "Charcoal sample P06 was recovered in the Sagitario cave mining area. Its radiocarbon measurement helps date people’s use of this underground ochre source; another sample in the tunnel records a different time.",
           "limitations": "Sample association and cave charcoal redeposition constrain interpretation. Activity is not settlement, population or speech. Geography is a regional overlay only; exact locality remains unlocated; no excavation, burial or cave-entrance point inferred.",
           "discussion": "Separate cave samples preserve repeated activities without assuming continuity or uniform use across the cave systems. Later calcite flooding dates do not date mining directly.",
           "provenance": "Round12 report009 source check; original source access levels stated per reference. Private report retained unchanged. Geographic disposition: regional-overlay; INAH2022 official account locates Sagitario/LaMina8km inland nearAkumal; MacDonald2020 Figure1 establishes cave-system context. Public Akumal OSM854200484 at20.3988,-87.3173 rounded to0.1degree supplies regional context only, not a cave entrance or mining station.",
-          "reviewedAt": "2026-10-29",
+          "reviewedAt": "2026-11-17",
           "history": [
             "2026-10-29: Extracted source-specific dated activity; no new calibration or geographic invention.",
-            "2026-10-29: Geographic pass: regional-overlay; original archaeological chronology unchanged."
+            "2026-10-29: Geographic pass: regional-overlay; original archaeological chronology unchanged.",
+            "2026-11-17: Distinguish the two dated charcoal samples in map choices; source dates unchanged."
           ],
           "relatedIds": []
         },
@@ -92822,9 +92826,9 @@
       "baseRecord": null,
       "record": {
         "id": "r12v-sagitario-p07",
-        "revision": 1,
+        "revision": 2,
         "type": "event",
-        "title": "Sagitario side tunnel — dated charcoal in ochre-mining context",
+        "title": "Sagitario side tunnel — charcoal sample P07 from ochre mining",
         "culture": {
           "id": "unknown",
           "name": "Unknown attribution",
@@ -92889,14 +92893,15 @@
           }
         ],
         "review": {
-          "summary": "Sagitario side tunnel — dated charcoal in ochre-mining context supplies a sample-specific date rather than a regional age assigned uniformly to every cave.",
+          "summary": "Charcoal sample P07 was recovered in the Sagitario cave mining area. Its radiocarbon measurement helps date people’s use of this underground ochre source; another sample in the tunnel records a different time.",
           "limitations": "Sample association and cave charcoal redeposition constrain interpretation. Activity is not settlement, population or speech. Geography is a regional overlay only; exact locality remains unlocated; no excavation, burial or cave-entrance point inferred.",
           "discussion": "Separate cave samples preserve repeated activities without assuming continuity or uniform use across the cave systems. Later calcite flooding dates do not date mining directly.",
           "provenance": "Round12 report009 source check; original source access levels stated per reference. Private report retained unchanged. Geographic disposition: regional-overlay; INAH2022 official account locates Sagitario/LaMina8km inland nearAkumal; MacDonald2020 Figure1 establishes cave-system context. Public Akumal OSM854200484 at20.3988,-87.3173 rounded to0.1degree supplies regional context only, not a cave entrance or mining station.",
-          "reviewedAt": "2026-10-29",
+          "reviewedAt": "2026-11-17",
           "history": [
             "2026-10-29: Extracted source-specific dated activity; no new calibration or geographic invention.",
-            "2026-10-29: Geographic pass: regional-overlay; original archaeological chronology unchanged."
+            "2026-10-29: Geographic pass: regional-overlay; original archaeological chronology unchanged.",
+            "2026-11-17: Distinguish the two dated charcoal samples in map choices; source dates unchanged."
           ],
           "relatedIds": []
         },

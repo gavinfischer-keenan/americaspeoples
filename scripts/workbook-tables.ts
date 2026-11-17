@@ -1,4 +1,5 @@
 import { writeFile } from "node:fs/promises";
+import {unzipSync,zipSync} from 'fflate';
 import { dataset } from "../src/published-data";
 import { version as appVersion } from '../package.json';
 import { BULK_HEADERS, OVERLAY_HEADERS } from "../src/bulk-schema";
@@ -144,7 +145,10 @@ await writeFile("data/workbook-tables.json", JSON.stringify(tables));
 const XLSX = await import("xlsx");
 const workbook = XLSX.utils.book_new();
 for(const [name,rows] of Object.entries(tables)) XLSX.utils.book_append_sheet(workbook,XLSX.utils.aoa_to_sheet(rows),name);
-await writeFile("templates/americas-peoples-researched-import.xlsx", XLSX.write(workbook,{type:"buffer",bookType:"xlsx",compression:true}));
+// Recompress the same XML parts efficiently so the full evidence workbook stays
+// within the existing import byte limits as the atlas grows.
+const workbookBytes=XLSX.write(workbook,{type:"buffer",bookType:"xlsx",compression:true});
+await writeFile("templates/americas-peoples-researched-import.xlsx", zipSync(unzipSync(workbookBytes),{level:9}));
 console.log(
   Object.fromEntries(Object.entries(tables).map(([k, v]) => [k, v.length - 1])),
 );

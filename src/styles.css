@@ -1370,6 +1370,15 @@ dd:last-child {
   font-weight: 500;
   stroke: none;
 }
+
+/* A qualification belongs to its feature; it is never another map location. */
+.map-canvas [data-evidence-status="disputed"] { --evidence-rim:#ff6e7d; }
+.map-canvas [data-evidence-status="discussion"] { --evidence-rim:#e8bf73; }
+.map-canvas .evidence-status-ring { fill:none;stroke:var(--evidence-rim);stroke-width:2;pointer-events:none; }
+.map-canvas [data-evidence-status="disputed"] .evidence-status-ring { stroke-dasharray:2 1; }
+.map-canvas [data-evidence-status]:not([data-evidence-status="none"]) .reach-contour,
+.map-canvas [data-evidence-status]:not([data-evidence-status="none"]) .cloud-core,
+.map-canvas [data-evidence-status]:not([data-evidence-status="none"]) circle.cloud-glow { stroke:var(--evidence-rim);stroke-opacity:.8; }
 .asterisk.dispute-disputed {
   color: #ff6e7d;
   fill: #ff6e7d;
