@@ -338,3 +338,5 @@ Tablet/computer are primary targets; phone remains best effort. Selected geograp
 ## v0.20.0 — archaeological places and readable history
 
 All 40 source release stages passed, including 339 unit tests, all published workbook records and 110 expanded/new chapters. One fresh review produced three important findings; all were corrected and checked. Source and publication details: [v0.20.0 receipt](releases/v0.20.0-verification.json).
+
+Merged as [PR #17](https://github.com/gavinfischer-keenan/americaspeoples/pull/17), deployed as `20261117T071811Z-americas-v0.20.0`, and verified publicly. Only v0.19.1 remains as the previous rollback release.
