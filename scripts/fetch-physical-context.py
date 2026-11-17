@@ -2,6 +2,7 @@
 Run explicitly to refresh; the hosted app never silently changes its evidence.
 """
 from pathlib import Path
+import subprocess
 import requests,json,hashlib,zipfile,io,re,shapefile
 from shapely.geometry import shape,mapping
 from shapely.geometry.polygon import orient
@@ -66,3 +67,4 @@ for n in z.namelist():
  snaps.append({'ageCalBP':float(m[1])*1000,'scenario':m[2].lower(),'geometry':{'type':'GeometryCollection','geometries':geometries}})
 (root/'data/ice-snapshots.json').write_text(json.dumps({'sourceId':'nadi1','method':'WGS84 author polygons; topology-preserving simplification tolerance0.12degrees; MIN/MAX/OPTIMAL kept separately. Select nearest dated snapshot without inventing interpolated boundaries. Calendar BP epoch1950.','snapshots':snaps},separators=(',',':')))
 print('ice snapshots',len(snaps),flush=True)
+subprocess.run(['node','--import','tsx','scripts/normalize-ice-geometry.ts'],cwd=root,check=True)

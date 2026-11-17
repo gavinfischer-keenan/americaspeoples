@@ -1,3 +1,4 @@
+import sixGuides from '../data/six-guide-expansion-records.json';
 import comingSoonB from '../data/coming-soon-b-expansion-records.json';
 import comingSoonBTopics from '../data/coming-soon-b-topic-evidence-records.json';
 import comingSoonA from '../data/coming-soon-a-expansion-records.json';
@@ -57,7 +58,7 @@ export const dataset = publishedDataset(
   starter as Dataset,
   [
     ...research.proposals.map((p) => p.record),
-    ...regionalGap.records, ...comingSoonB.records, ...comingSoonBTopics.records, ...comingSoonA.records, ...comingSoonALanguages.records,
+    ...sixGuides.records, ...regionalGap.records, ...comingSoonB.records, ...comingSoonBTopics.records, ...comingSoonA.records, ...comingSoonALanguages.records,
     ...earlyContinuity.records, ...interiorFrontier.records,
     ...history.records,
     ...settlements.records,

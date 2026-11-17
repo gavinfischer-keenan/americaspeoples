@@ -105,7 +105,7 @@ export const queueLanguageTopics:TopicDive[]=[
         "id": "andean-languages-6",
         "year": 1788,
         "title": "An imperial collection records Quechua again",
-        "body": "A 1788 vocabulary preserved in the Archivo General de Indias records Quechua under the label general language of Peru. This later document belongs to a different collecting project from the early missionary books. Placing their dates side by side shows successive acts of documentation. It does not fill the intervening centuries with an unchanging speaker map, and the broad label must not erase the family’s internal diversity.",
+        "body": "A 1788 vocabulary in the Archivo General de Indias records Quechua under the label general language of Peru. It belongs to a later collecting project than the early missionary books. These successive documents preserve different acts of recording a diverse language family, shaped by their authors’ purposes and the communities from whom they collected words.",
         "note": "Peru is the document’s broad subject-area anchor; the collection locality and individual varieties are not reconstructed.",
         "recordIds": [
           "topic-language-quechua"
@@ -121,7 +121,7 @@ export const queueLanguageTopics:TopicDive[]=[
         "id": "andean-languages-7",
         "year": 1789,
         "title": "Aymara is separately documented",
-        "body": "The related archival collection also preserves an Aymara vocabulary dated 1789; the existing inventory record identifies Cuzco and 5 May. Keeping this entry separate from Quechua matters: contact did not make one language family a branch of the other. Together the manuscripts show what particular collectors wrote down. Their survival supplies evidence for continuing Indigenous language use without pretending to count every community or every speaker.",
+        "body": "A related archival collection preserves an Aymara vocabulary dated 5 May 1789 and associated with Cuzco in the inventory. Aymara and Quechua belong to distinct language families despite their long history of contact. The manuscripts preserve particular collectors’ selections of words and document continuing Indigenous language use.",
         "note": "Cuzco is the document locality in the existing checked record, not the Aymaran homeland. Archival dates do not mark the end of these histories.",
         "recordIds": [
           "topic-language-aymara"

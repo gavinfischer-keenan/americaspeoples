@@ -26,9 +26,10 @@ try{
  await page.locator('.language-family').first().locator('summary').click();
  assert.match(await page.locator('.language-lineages').innerText(),/descended from spoken Latin/);
  await page.screenshot({path:'test-results/topic-languages-desktop.png'});
- await page.locator('#topic-scene .scene-sources summary').click();
+ await page.locator('#topic-scene .scene-sources:not(.scene-notes) summary').click();
  await page.locator('#topic-scene .scene-sources a[href="#review/topic-language-molina"]').click();
  await page.locator('.topic-return').waitFor();
+ await page.locator('.review-technical > summary').click();
  assert.match(await page.locator('.history-review').innerText(),/does not establish continuous/);
  await page.locator('[data-action="locate"]').click();
  assert.match(await page.locator('#topic-year').innerText(),/1,571/);

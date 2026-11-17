@@ -18,8 +18,11 @@ export function localChronologyHTML(
         past = year > r.time.end!,
         construction = r.history?.kind === "settlement";
       const event = !!r.overlay;
+      const datedFind = r.history?.kind === 'attestation';
       const state = future
         ? "Later evidence"
+        : datedFind
+          ? past ? 'Earlier dated find' : 'Dated find / observation'
         : event
           ? "Dated local event"
           : construction
@@ -29,7 +32,7 @@ export function localChronologyHTML(
             : past
               ? "Earlier occupation evidence"
               : "Occupation evidence";
-      return `<article class="local-phase ${future ? "future-phase" : ""}"><small>${esc(state)}</small><strong>${esc(r.location!.name)}</strong><button data-local-year="${r.time.start}" data-local-record="${esc(r.id)}">${esc(timeLabel(r.time))}</button><a href="${recordHref(r)}">Evidence &amp; location ↗</a></article>`;
+      return `<article class="local-phase ${future ? "future-phase" : ""}"><small>${esc(state)}</small><strong>${esc(r.title)}</strong><span class="local-phase-place">${esc(r.location!.name)}</span><button data-local-year="${r.time.start}" data-local-record="${esc(r.id)}">${esc(timeLabel(r.time))}</button><a href="${recordHref(r)}">Evidence &amp; location ↗</a></article>`;
     })
     .join(
       "",

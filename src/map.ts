@@ -341,7 +341,7 @@ export class MapView {
   localChronology(records:DisplayRecord[]):DisplayRecord[]{
     if(this.scale<80)return [];
     return records.filter(r=>{
-      if(!r.location||r.time.start===null||!(r.type==='occupation'||r.history?.kind==='habitation'||r.history?.kind==='settlement'||['conflict','violence','forced-removal'].includes(r.overlay?.kind??'')))return false;
+      if(!r.location||r.time.start===null||!(r.type==='occupation'||r.history?.kind==='habitation'||r.history?.kind==='settlement'||r.history?.kind==='attestation'||['conflict','violence','forced-removal'].includes(r.overlay?.kind??'')))return false;
       const p=this.projection([r.location.lon,r.location.lat]);return p&&boundsInViewport([p,p],this.scale,this.tx,this.ty,this.width,this.height);
     });
   }

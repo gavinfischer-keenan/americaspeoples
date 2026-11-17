@@ -333,3 +333,8 @@ The final stress checks also exposed animation overwriting typed dates. A reprod
 The review did not certify exhaustive history, every citation's full text or future deployment. Those are not claimed here. The author rechecked the locally retained Admission Act and accessible GPO transcription after the reviewer's PDF request timed out. Actual public deployment, download hashes, neighboring pages and rolling retention are verified separately during activation.
 
 Tablet/computer are primary targets; phone remains best effort. Selected geographic and chronological gaps are listed in [the coverage report](world-coverage-audit.md), with source decisions for [land and sovereignty](land-sovereignty-dives.md), [trade, missions and materials](remaining-topic-dives.md), and [Australia/Aotearoa](australasia-archaeology.md).
+
+
+## v0.20.0 — archaeological places and readable history
+
+All 40 source release stages passed, including 339 unit tests, all published workbook records and 110 expanded/new chapters. One fresh review produced three important findings; all were corrected and checked. Source and publication details: [v0.20.0 receipt](releases/v0.20.0-verification.json).

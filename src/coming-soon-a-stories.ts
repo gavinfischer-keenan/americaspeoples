@@ -42,7 +42,7 @@ export const comingSoonAStories:Story[]=[
         "id": "chavin-3",
         "year": -949,
         "title": "Urabarriu and a competing starting point",
-        "body": "A second chronology approaches Chavín through ceramic associations and radiocarbon sequencing. Burger places the Urabarriu phase at 950–800 calibrated BCE and proposes a later establishment than the architectural study. The difference illustrates how people’s activities leave different clocks: mortar, charred material and pottery assemblages do not automatically date the same event. Urabarriu contexts belong to the history of an inhabited ceremonial place, but the available abstract does not support detailed reconstructions of individual households or their diets. These alternative starting points remain an active chronological argument. Averaging them would manufacture a foundation date that neither study actually proposes.",
+        "body": "Urabarriu pottery belongs to the early history of Chavín as an inhabited ceremonial place. Burger dates the phase to 950–800 calibrated BCE, later than the beginning proposed by the architectural study. The disagreement concerns how pottery, charred remains, and building materials fit into the site's sequence. These materials can date different activities, so the competing chronologies remain distinct rather than yielding a single agreed foundation year.",
         "note": "950 BCE anchors Burger’s Urabarriu model; competing construction model begins earlier.",
         "recordIds": [
           "d18-andes-chavin-urabarriu-model",
@@ -118,7 +118,7 @@ export const comingSoonAStories:Story[]=[
         "id": "tiwanaku-1",
         "year": 180,
         "title": "A settlement before the monumental capital",
-        "body": "Tiwanaku began before the familiar image of a fully formed stone city. The current chronological model places foundation around AD 180, while the broad 400–900 urban phase describes a later planned center. These are different claims. People established a settlement in the Titicaca basin before the development of its best-known monuments, and later construction and immigration transformed the place. The model does not identify a first house, a founding ethnic group or a precisely dated ceremony. Its foundation estimate comes from a Bayesian synthesis of radiocarbon evidence. Settlement, monument building and the growth of a political center therefore belong to connected but distinct histories.",
+        "body": "People established a settlement at Tiwanaku before its best-known stone monuments were built. Later construction and immigration transformed it into a planned center in the Titicaca basin. A statistical model combining radiocarbon dates estimates foundation around AD 180; the broad 400–900 urban phase describes the later city. The earlier estimate does not identify a first house or a founding ethnic group. Settlement, monument building, and the growth of a political center unfolded through related stages of the place’s history.",
         "note": "Approximate modeled boundary; no exact founding event or invented confidence range.",
         "recordIds": [
           "d18-andes-tiwanaku-foundation-model"
@@ -134,7 +134,7 @@ export const comingSoonAStories:Story[]=[
         "id": "tiwanaku-2",
         "year": 580,
         "title": "Making Pumapunku",
-        "body": "Pumapunku has its own construction history within Tiwanaku. Marsh and colleagues place its beginning near a modeled median of AD 580. Stoneworkers and builders assembled a monument whose surviving blocks display carefully worked forms, but later damage and displacement obscure their original arrangement. Vranich’s reconstruction is explicitly exploratory: it draws on surviving pieces rather than intact walls. The distinction matters when imagining the building. Individual blocks are observed archaeological evidence, while some proposed relationships between them remain hypotheses. Pumapunku’s construction belongs to the city’s development, but neither a median date nor a reconstructed elevation provides an exact record of a single completed ancient building.",
+        "body": "Stoneworkers at Pumapunku shaped blocks into carefully worked forms and assembled a major monument within Tiwanaku. Marsh and colleagues estimate the start of construction near AD 580. Later damage and displacement separated many blocks from their original positions. Vranich uses the surviving pieces to explore how the building may once have fitted together. The blocks themselves preserve the builders’ work; the reconstructed arrangement remains a hypothesis where the original masonry no longer survives in place.",
         "note": "580 is a boundary median, not a precise construction ceremony.",
         "recordIds": [
           "d18-andes-tiwanaku-pumapunku-building",
@@ -348,7 +348,7 @@ export const comingSoonAStories:Story[]=[
         "id": "wari-1",
         "year": 650,
         "title": "Making an irrigated colonial landscape",
-        "body": "Wari-associated expansion in Moquegua involved building and maintaining an agricultural landscape alongside its hilltop complexes. Nash describes a canal longer than 20 kilometers that brought at least 700 hectares into cultivation, with part operating by around AD 650. Cerro Baúl and nearby Cerro Mejía were settled before 700. Water management, farming and households were therefore central to the enclave. These statements do not date the entire canal to one year or prove that all inhabitants arrived together. The exact canal route was not independently checked. The summit and neighboring settlement have related but distinct archaeological sequences, and their buildings cannot all inherit one common foundation date.",
+        "body": "People in the Wari-associated Moquegua enclave built and maintained an agricultural landscape around their hilltop complexes. Nash describes a canal longer than 20 kilometers that brought at least 700 hectares into cultivation, with part operating by around AD 650. Cerro Baúl and nearby Cerro Mejía were settled before 700. Water management, farming, and household work sustained these neighboring settlements. The canal and buildings developed through their own sequences, and their broad dates do not establish a single founding campaign.",
         "note": "650 is an approximate by-then operating statement for part of the irrigation system.",
         "recordIds": [
           "d18-andes-wari-moquegua-canal"
@@ -364,7 +364,7 @@ export const comingSoonAStories:Story[]=[
         "id": "wari-2",
         "year": 650,
         "title": "Households with different ways of living",
-        "body": "Households in the Moquegua enclave differed in their architecture, diets and ways of preparing food. Nash interprets this diversity as evidence for a polyethnic colonial community, while the birthplace, language and reasons for moving of individual residents remain unresolved. Water access, cooking, storage and work were integral to the enclave’s operation alongside monumental architecture. The approximately 650 orientation shared with irrigation evidence is not a census date: the household comparison concerns the wider archaeological phase. Cerro Baúl and Cerro Mejía also remain distinct places. A broad reference for the colony area does not place a specific Mejía house on the summit or imply a uniform planned neighborhood.",
+        "body": "Households in the Moquegua enclave differed in their architecture, diets, and ways of preparing food. Cooking, storage, work, and access to water were central to everyday life at Cerro Baúl and Cerro Mejía. Nash interprets this variety as evidence of a polyethnic colonial community: people with different backgrounds living within the enclave. The household comparison concerns a broad archaeological phase around the period of irrigation development. It does not identify the birthplace, language, or reasons for moving of each resident.",
         "note": "Shares the approximately 650 irrigation orientation. Household diversity summarizes the wider enclave phase; it is not a census or a claim that each household existed in 650.",
         "recordIds": [
           "d18-andes-wari-moquegua-canal"
@@ -558,7 +558,7 @@ export const comingSoonAStories:Story[]=[
         "id": "teo-02",
         "year": 400,
         "title": "Neighbourhood households and work",
-        "body": "La Ventilla brings the view away from the pyramids and into a neighborhood of compounds. Archaeologists distinguish an elite and administrative compound, LV 2, from LV 3, associated with lapidary workers. These settings make households, specialized production and unequal access to space part of the city's history. The later dating study also shows why a ceramic label is not a direct label for a political regime. At this viewing year the existing city record supplies context, while the compound evidence gives the guide its smaller scale.",
+        "body": "La Ventilla was a neighborhood of compounds within Teotihuacan. Archaeologists identify LV 2 with elite and administrative activity and LV 3 with lapidary workers, craftspeople who shaped stone. These neighboring spaces reveal households, specialized production, and unequal access to space within the city. Their later archaeological histories also preserve changes in how the compounds were used.",
         "note": "Contextual Classic-period view anchored by existing urban record.",
         "recordIds": [
           "south-teotihuacan-urban-development"
@@ -679,7 +679,7 @@ export const comingSoonAStories:Story[]=[
         "id": "monte-02",
         "year": -299,
         "title": "Images made and remade",
-        "body": "The Danzantes carvings were not fixed forever in their first architectural setting. Winter argues that the original wall was dismantled after a relatively short period and that its stones entered later buildings. This reuse made earlier images available for new acts of remembrance. The figures themselves remain contested: a reading as remembered founding participants differs sharply from interpretations emphasizing captives and violence. The city-phase record anchors the viewing frame, while the wall's relative sequence provides a discussion of memory without inventing an exact demolition year.",
+        "body": "Monte Albán’s Danzantes carvings were moved and reused in later buildings. Winter argues that their original wall was dismantled after a relatively short period, giving the earlier images new settings for remembrance. The figures’ meanings remain disputed: Winter’s interpretation as remembered founding participants differs from readings that emphasize captives and violence. The sequence of dismantling and reuse is better established than an exact demolition year.",
         "note": "Early urban era; relative sequence, not a dated demolition. The viewing year anchors the existing city phase, not the relative wall-reuse event.",
         "recordIds": [
           "site-monte-alban"
@@ -711,7 +711,7 @@ export const comingSoonAStories:Story[]=[
         "id": "monte-04",
         "year": -99,
         "title": "A ballcourt and public space",
-        "body": "The ballcourt associated with the North Platform adds a named public structure to Monte Albán's monumental and residential landscape. INAH places its construction around 100 BCE. Its presence helps shift the narrative from the founding of a settlement to the repeated addition of spaces for public activity. The broad city record and the more specific ballcourt occurrence perform different jobs: one keeps the settlement in view, while the other marks a particular architectural intervention. Neither establishes a complete schedule for all surrounding plaza buildings.",
+        "body": "Builders added a ballcourt beside Monte Albán’s North Platform around 100 BCE, according to INAH. The court joined the city’s expanding landscape of public structures, residential terraces, and plaza buildings. Its construction records one particular addition to a city that had already been inhabited for centuries.",
         "note": "Approximate construction 100 BCE.",
         "recordIds": [
           "d18-meso-monte-ballcourt-construction"
@@ -727,7 +727,7 @@ export const comingSoonAStories:Story[]=[
         "id": "monte-05",
         "year": 650,
         "title": "Homes, ancestors and intercity contacts",
-        "body": "The residence associated with Tomb 105 gives the Classic city a household and ancestral scale. Its existing construction record, approximately 500–800 CE, can be reused without creating a second version of the same claim. Mortuary space, residence and the wider terrace landscape belong in the same account of urban life. Connections with Teotihuacan are part of an earlier intercity history described by INAH, not evidence that all local political changes were imposed from outside. The scene places elite architecture beside the labor and food production sustaining the city.",
+        "body": "The residence associated with Tomb 105 connected elite domestic life with the commemoration of ancestors at Monte Albán. Its construction is broadly dated to 500–800 CE. Residence, burial space, and the surrounding terrace landscape formed parts of the same urban community, sustained by household work and food production. INAH also describes earlier connections with Teotihuacan, although those relationships do not establish that outside powers directed every local political change.",
         "note": "Residence construction window 500–800; earlier contacts 200–500 are retrospective context.",
         "recordIds": [
           "south-montealban-tomb105-residence"
@@ -743,7 +743,7 @@ export const comingSoonAStories:Story[]=[
         "id": "monte-06",
         "year": 850,
         "title": "Political decentralization",
-        "body": "Between roughly 800 and 900 CE, Monte Albán lost population and much of its earlier monumental prominence as the Oaxaca Valley's political geography changed. Feinman and Nicholas challenge the older picture of a simple Mixtec invasion replacing Zapotec society. A declining urban center and a reorganizing regional population are different historical processes. The existing city-phase record remains current here, while the guide explains decentralization as a transition in where people and institutions concentrated, without treating the end of major construction as the disappearance of all communities.",
+        "body": "Between roughly 800 and 900 CE, Monte Albán lost population and much of its monumental prominence as people and institutions became concentrated elsewhere in the Oaxaca Valley. Feinman and Nicholas challenge the older explanation of a simple Mixtec invasion replacing Zapotec society. They instead emphasize changes in regional settlement and political organization. The city’s decline formed part of this wider reorganization of inhabited communities.",
         "note": "Approximate demographic/monumental change 800–900.",
         "recordIds": [
           "site-monte-alban"
@@ -863,7 +863,7 @@ export const comingSoonAStories:Story[]=[
         "id": "cal-06",
         "year": 695,
         "title": "A defeat within continuing city life",
-        "body": "INAH's historical account places Calakmul's defeat by Tikal in 695 CE. At that moment the existing broad urban-phase record remains current, and the mural phase also reaches into this period. A military setback therefore enters an already complex city history rather than replacing it with a simple abandonment event. The later construction sequence at Chiik Nahb supplies an important comparison in the next scene. Changes in royal power, the ability to commission monuments and the everyday continuation of local activity need separate evidence and separate dates.",
+        "body": "Calakmul suffered defeat by Tikal in 695 CE, according to INAH’s historical account. The setback occurred while the city remained a place of urban activity and mural painting. Later rebuilding at Chiik Nahb shows that this defeat did not immediately end construction. The history of the royal court therefore unfolded alongside longer histories of people using and changing the city’s buildings.",
         "note": "Military event in institutional synthesis; not a destruction date. Existing urban-phase record provides current city context; no independently added military-event record.",
         "recordIds": [
           "city-calakmul-major-urban-phase"
@@ -895,7 +895,7 @@ export const comingSoonAStories:Story[]=[
         "id": "cal-08",
         "year": 1530,
         "title": "Visits to an older sacred city",
-        "body": "INAH recounts that Alonso de Ávila encountered the old city in the early sixteenth century and observed occasional Indigenous ritual visits. The underlying colonial text was not verified in this pass, so the record remains an attributed documentary account with a coarse first-half-century window. Its historical subject is visitation to an older sacred place, not the continuation of the Classic court. This later layer allows the guide to end with remembered and reused spaces, while keeping the observed activity distinct from both dense urban occupation and twentieth-century archaeological work.",
+        "body": "INAH recounts that Alonso de Ávila encountered Calakmul’s old city in the early sixteenth century and observed occasional Indigenous ritual visits. The account describes people returning to a sacred place long after its Classic court had ended. Its date is broadly assigned to the first half of the century. This remains an account attributed through INAH; the underlying colonial text has not been independently checked here.",
         "note": "Early 16th-century report;1530 is an orientation year only.",
         "recordIds": [
           "d18-meso-cal-earlycolonial-visits"
@@ -951,7 +951,7 @@ export const comingSoonAStories:Story[]=[
         "id": "cop-03",
         "year": 575,
         "title": "Oropéndola inside the later pyramid",
-        "body": "Oropéndola survives inside Structure 10 L-16, making the later pyramid a container for earlier architectural histories. Its carved stone mosaic façade differs from the modeled stucco associated with other early buildings, and its arrangement can be compared with nearby Rosalila. Stratigraphy suggests construction around 550–600 CE; lintel samples and ceramics provide additional checks. The Spanish dating section and full context resolve an erroneous BCE label in the English abstract. This scene follows a particular temple's construction rather than assigning the same age to every buried building in the Acropolis.",
+        "body": "Builders enclosed Oropéndola within the later Structure 10 L-16 at Copán. Its carved stone mosaic façade differs from the modeled stucco of other early buildings, and its arrangement can be compared with nearby Rosalila. The sequence of buried structures suggests construction around 550–600 CE, supported by lintel samples and pottery. The earlier temple survived because later building projects incorporated it within the growing Acropolis.",
         "note": "Viewing year within suggested construction window 550–600 CE.",
         "recordIds": [
           "d18-meso-cop-oropendola"
@@ -1137,7 +1137,7 @@ export const comingSoonAStories:Story[]=[
         "id": "paq-07",
         "year": 1440,
         "title": "Decline without an invented disappearance",
-        "body": "By the fifteenth century, Paquimé's large-scale occupation declined, closing the main phase represented in the existing town record. The conventional 1450 boundary organizes a body of archaeological evidence; it does not identify one last resident or prove that every building ended simultaneously. The earlier scenes show why such a distinction matters: households, water systems, bird keeping and ritual activities each have their own records. The result was a transformed regional landscape. Specific causes, later connections and the histories of living communities require their own evidence; the end of this building phase does not establish their disappearance.",
+        "body": "Paquimé’s large-scale occupation declined during the fifteenth century, bringing its main town phase to an end around the conventional date of 1450. Its households, water systems, bird keeping, and ritual spaces had developed through different histories. The changing use of this built landscape transformed the regional center, although the available evidence does not establish one final departure date or a single cause of decline.",
         "note": "Late-phase viewing frame; approximately fifteenth-century decline, not a last-person date.",
         "recordIds": [
           "city-paquime-multistory-town"

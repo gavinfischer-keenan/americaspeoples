@@ -409,3 +409,15 @@ Additional GeoNames references for Nukuleka and Tahiti are credited in their loc
 Cerrito, Salvatierra and Santa María use further coordinate facts from Prümers et al. (2022), Supplementary Table 1, [CC BY 4.0](https://doi.org/10.1038/s41586-022-04780-4). These are transformed from WGS84 UTM 20S into longitude/latitude and rounded to 0.001°, approximately 100 m; they locate public site references, not buildings or excavation units. Other sources and their geographic transformations are recorded per observation.
 
 Carrington geographic context is cross-checked against Penny Edmonds’ *Humanitarians in the Antipodes: Travelling Under Concern*, contributed by Heidi Ing to [TLCMap layer 2012](https://tlcmap.org/index.php/layers/2012), entry td3dd2. Only an independently described public locality reference is used; the layer, narrative, map and media are not redistributed. Its 1836 travel date does not replace the company-settlement chronology.
+### Archaeological local studies in v0.20
+
+New factual summaries cite the original archaeological reports, National Park Service and Crow Canyon publications, SPARC Salmon/Aztec material, and community-authored histories listed in each record and guide. Public feature anchors drawn from OpenStreetMap retain attribution to OpenStreetMap contributors and the existing ODbL terms. Source plans are used to check named positions; their images, map tiles, photographs and full reports are not redistributed. No claim of community or institutional endorsement is made.
+
+The two new Consensus Deep reports remain private. Published chapter text and claims are independently authored; the underlying evidence sources are linked. Project noncommercial terms do not remove upstream permissions or create copyright in historical or geographic facts.
+
+
+### Labeled place-guide terrain in v0.20
+
+The 35 guide relief images are derived from Mapzen/Tilezen Terrain Tiles, https://registry.opendata.aws/terrain-tiles/, retrieved 2026-11-17. Source attribution and terms: https://github.com/tilezen/joerd/blob/master/docs/attribution.md. Providers relevant to this geographic coverage include USGS 3DEP, SRTM and GMTED2010, NOAA ETOPO1, INEGI's 2016 continental relief data, and © Commonwealth of Australia (Geoscience Australia) 2017 under CC BY 4.0. These are mixed upstream terms, not a blanket public-domain claim. Full source-provider credit remains at the linked attribution page; the source manifest records each tile URL, hash, map bounds and transformation.
+
+Processing decodes Terrarium elevations, resamples into registered Web Mercator rectangles, and draws shaded relief and elevation contours. The project does not claim ownership of source elevation facts or restrict rights already granted by their providers. Modern terrain is not an archaeological excavation plan. Building labels use the independently credited public feature anchors in atlas records; no third-party archaeological plan images are reproduced.

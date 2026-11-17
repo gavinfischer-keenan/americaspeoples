@@ -31,14 +31,32 @@
         "site-chaco-casa-rinconada",
         "site-chaco-wijiji",
         "site-chaco-kin-bineola",
-        "site-chaco-kin-klizhin"
+        "site-chaco-kin-klizhin",
+        "g20-chaco-shabikeshchee-village",
+        "g20-chaco-bc57-episodic",
+        "g20-chaco-bc50-residence",
+        "g20-chaco-bc51-timber-967",
+        "g20-chaco-bc51-timber-1043",
+        "g20-chaco-una-vida-western",
+        "g20-chaco-una-vida-later",
+        "g20-chaco-chetro-additions",
+        "g20-chaco-alto-plaza-arc",
+        "g20-chaco-pintado-construction",
+        "g20-chaco-kin-bineola-later",
+        "g20-chaco-arroyo-triwall",
+        "g20-chaco-bonito-residence",
+        "g20-chaco-bonito-late-reuse",
+        "g20-chaco-bonito-thirteenth-use"
       ],
-      "report": "four-corners",
+      "report": "six-guide-expansions",
       "kind": "site",
       "relatedGuideIds": [
-        "chaco-culture"
+        "chaco-culture",
+        "mesa-verde"
       ],
-      "storyId": "chaco-connections"
+      "storyId": "chaco-connections",
+      "parentGuideId": "four-corners",
+      "level": "complex"
     },
     {
       "id": "hovenweep",
@@ -53,13 +71,27 @@
         "hovenweep-hackberry",
         "hovenweep-cutthroat-castle",
         "hovenweep-cajon",
-        "hovenweep-goodman-point-pueblo"
+        "hovenweep-goodman-point-pueblo",
+        "g20-hove-castle-architecture",
+        "g20-hove-house-architecture",
+        "g20-hove-square-tower-architecture",
+        "g20-hove-twin-towers-architecture",
+        "g20-hove-unit-type-house-architecture",
+        "g20-hove-rim-rock-house-architecture",
+        "g20-hove-tower-point-architecture",
+        "g20-hove-castle-1277-beam"
       ],
-      "report": "four-corners",
+      "report": "six-guide-expansions",
       "kind": "site",
       "relatedGuideIds": [
-        "chaco-culture"
-      ]
+        "chaco-culture",
+        "canyons-of-the-ancients",
+        "mesa-verde",
+        "chaco"
+      ],
+      "storyId": "hovenweep",
+      "parentGuideId": "four-corners",
+      "level": "complex"
     },
     {
       "id": "mesa-verde",
@@ -79,13 +111,30 @@
         "site-mesa-sun-temple",
         "site-mesa-badger-house-early",
         "site-mesa-step-house-pithouses",
-        "site-mesa-step-house-masonry"
+        "site-mesa-step-house-masonry",
+        "g20-mesa-pithouse-600",
+        "g20-mesa-far-view-buried-timbers",
+        "g20-mesa-pipe-shrine-early",
+        "g20-mesa-pipe-shrine-late",
+        "g20-mesa-coyote-sequence",
+        "g20-mesa-reservoir-early",
+        "g20-mesa-reservoir-final",
+        "g20-mesa-badger-earlier",
+        "g20-mesa-badger-1258",
+        "g20-mesa-two-raven-episodes",
+        "g20-mesa-sun-point-pueblo",
+        "g20-mesa-long-house-kiva-i",
+        "g20-mesa-balcony-rebuilding"
       ],
-      "report": "four-corners",
+      "report": "six-guide-expansions",
       "kind": "site",
       "relatedGuideIds": [
-        "chaco-culture"
-      ]
+        "chaco-culture",
+        "chaco"
+      ],
+      "storyId": "mesa-verde",
+      "parentGuideId": "four-corners",
+      "level": "complex"
     },
     {
       "id": "canyons-of-the-ancients",
@@ -96,13 +145,32 @@
       "recordIds": [
         "hovenweep-lowry-pueblo",
         "hovenweep-sand-canyon-pueblo",
-        "r9v-sw-sand-canyon-violence"
+        "r9v-sw-sand-canyon-violence",
+        "g20-canm-lowry-first-build",
+        "g20-canm-lowry-additions",
+        "g20-canm-lowry-great-kiva-first",
+        "g20-canm-lowry-great-kiva-late",
+        "g20-canm-dominguez-build",
+        "g20-canm-escalante-first",
+        "g20-canm-escalante-return",
+        "g20-canm-escalante-few-rooms",
+        "g20-canm-painted-hand-build",
+        "g20-canm-castle-rock-village",
+        "g20-canm-castle-rock-ending",
+        "g20-canm-sand-canyon-building",
+        "g20-canm-saddlehorn-households"
       ],
-      "report": "four-corners",
+      "report": "six-guide-expansions",
       "kind": "site",
       "relatedGuideIds": [
-        "chaco-culture"
-      ]
+        "chaco-culture",
+        "hovenweep",
+        "mesa-verde",
+        "chaco"
+      ],
+      "storyId": "canyons-of-the-ancients",
+      "parentGuideId": "four-corners",
+      "level": "complex"
     },
     {
       "id": "machu-picchu",
@@ -117,13 +185,23 @@
         "r9v-inca-cusco-formation",
         "r9v-inca-court-language-hypothesis",
         "r9v-inca-cusco-revolt-1536",
-        "r11v-cusco-obsidian-continuity"
+        "r11v-cusco-obsidian-continuity",
+        "g20-mp-sun",
+        "g20-mp-royal-residence",
+        "g20-mp-main-temple",
+        "g20-mp-three-windows",
+        "g20-mp-intiwatana",
+        "g20-mp-condor",
+        "g20-mp-water-mirrors",
+        "g20-mp-main-gate",
+        "g20-mp-sacred-plaza"
       ],
-      "report": "inca",
+      "report": "six-guide-expansions",
       "kind": "site",
       "relatedGuideIds": [
         "inca-civilization"
-      ]
+      ],
+      "storyId": "machu-picchu"
     },
     {
       "id": "maya-centers",
@@ -152,13 +230,27 @@
       "region": "North America · Mississippi Valley",
       "description": "Mounds, plazas, neighborhoods, satellite communities and changing urban scale.",
       "recordIds": [
-        "cahokia-urban"
+        "cahokia-urban",
+        "g20-cah-plaza-village",
+        "g20-cah-plaza-construction",
+        "g20-cah-monks-start",
+        "g20-cah-monks-completion",
+        "g20-cah-monks-terrace",
+        "g20-cah-mound48",
+        "g20-cah-woodhenge",
+        "g20-cah-stockades",
+        "g20-cah-mound34-premound",
+        "g20-cah-mound34-platform",
+        "g20-cah-mound51",
+        "g20-cah-mound60",
+        "g20-cah-plaza-late-houses"
       ],
-      "report": "cahokia",
+      "report": "six-guide-expansions",
       "kind": "site",
       "relatedGuideIds": [
         "mississippian-cultures"
-      ]
+      ],
+      "storyId": "cahokia"
     },
     {
       "id": "pacific-complexes",
@@ -718,6 +810,298 @@
         "pacific-complexes"
       ],
       "storyId": "lapita"
+    },
+    {
+      "id": "aztec",
+      "title": "Aztec: building and remaking an Animas community",
+      "href": "sites/aztec.html",
+      "region": "Four Corners · New Mexico",
+      "description": "A local chronology of construction, alteration, communal use, and living Pueblo connections at Aztec Ruins.",
+      "recordIds": [
+        "g20-aztec-kiva-l-first",
+        "g20-aztec-north-east-build",
+        "g20-aztec-west-wing-build",
+        "g20-aztec-east-growth",
+        "g20-aztec-hubbard-triwall",
+        "g20-aztec-west-first-remodel",
+        "g20-aztec-west-mid1200-remodel",
+        "g20-aztec-great-kiva-late-use"
+      ],
+      "kind": "site",
+      "report": "six-guide-expansions",
+      "relatedGuideIds": [
+        "chaco",
+        "mesa-verde",
+        "salmon",
+        "four-corners"
+      ],
+      "storyId": "aztec",
+      "parentGuideId": "four-corners",
+      "level": "complex"
+    },
+    {
+      "id": "salmon",
+      "title": "Salmon: a great house through changing generations",
+      "href": "sites/salmon.html",
+      "region": "Four Corners · New Mexico",
+      "description": "A local chronology distinguishing Salmon Pueblo’s first construction, continued occupation, later rebuilding, and final-use evidence.",
+      "recordIds": [
+        "g20-salmon-great-house-build",
+        "g20-salmon-chacoan-occupation",
+        "g20-salmon-tower-kiva-build",
+        "g20-salmon-great-kiva-initial",
+        "g20-salmon-room96-conversion",
+        "g20-salmon-san-juan-occupation",
+        "g20-salmon-later-room-remodeling",
+        "g20-salmon-great-kiva-roof1263",
+        "g20-salmon-tower-final-use"
+      ],
+      "kind": "site",
+      "report": "six-guide-expansions",
+      "relatedGuideIds": [
+        "chaco",
+        "mesa-verde",
+        "aztec",
+        "four-corners"
+      ],
+      "storyId": "salmon",
+      "parentGuideId": "four-corners",
+      "level": "complex"
+    },
+    {
+      "id": "canyon-de-chelly",
+      "title": "Canyon de Chelly / Tséyi’: a living homeland",
+      "href": "sites/canyon-de-chelly.html",
+      "region": "Four Corners · Arizona",
+      "description": "Follow distinct Pueblo building phases, a named Diné artistic attribution, military violence, forced removal and the 1931 monument within Navajo land. Feature points and broad historical anchors retain different geographic precision.",
+      "recordIds": [
+        "g20-chelly-antelope-structure67",
+        "g20-chelly-antelope-masonry-village",
+        "g20-chelly-antelope-central-plaza",
+        "g20-chelly-white-house-construction",
+        "g20-chelly-mummy-tower-1284",
+        "g20-chelly-antelope-dibe-yazhi",
+        "g20-chelly-massacre-cave-1805",
+        "g20-chelly-canyon-destruction-1864",
+        "g20-chelly-monument-1931"
+      ],
+      "kind": "site",
+      "report": "six-guide-expansions",
+      "relatedGuideIds": [
+        "chaco",
+        "mesa-verde",
+        "chaco-culture",
+        "four-corners"
+      ],
+      "storyId": "canyon-de-chelly",
+      "parentGuideId": "four-corners",
+      "level": "complex"
+    },
+    {
+      "id": "four-corners",
+      "title": "Four Corners: connected histories and continuing homelands",
+      "href": "sites/four-corners.html",
+      "region": "Southwestern United States · Four Corners and neighboring homelands",
+      "description": "Follow changing settlement, regional connections, migration, colonial coercion and continuing Pueblo, Diné and Ute histories from early farming communities to 1934.",
+      "recordIds": [
+        "g20-fc-mesa-verde-rio-grande-migration",
+        "g20-fc-weeminuche-westward-1895"
+      ],
+      "kind": "site",
+      "report": "four-corners-regional",
+      "relatedGuideIds": [
+        "chaco",
+        "mesa-verde",
+        "hovenweep",
+        "canyons-of-the-ancients",
+        "aztec",
+        "salmon",
+        "canyon-de-chelly",
+        "cortez-area"
+      ],
+      "referenceRecordIds": [
+        "g20-chaco-shabikeshchee-village",
+        "site-mesa-step-house-pithouses",
+        "site-mesa-badger-house-early",
+        "site-chaco-pueblo-bonito",
+        "g20-chaco-bonito-residence",
+        "g20-mesa-pipe-shrine-early",
+        "g20-mesa-coyote-sequence",
+        "fc-chaco-early-network",
+        "g20-chaco-chetro-additions",
+        "g20-chaco-una-vida-later",
+        "g20-chaco-pintado-construction",
+        "hovenweep-lowry-pueblo",
+        "history-mesoamerica-chaco-macaws",
+        "g20-salmon-chacoan-occupation",
+        "g20-aztec-north-east-build",
+        "g20-chaco-kin-bineola-later",
+        "fc-middle-san-juan-outliers",
+        "g20-salmon-san-juan-occupation",
+        "g20-aztec-west-first-remodel",
+        "g20-canm-escalante-few-rooms",
+        "g20-mesa-reservoir-final",
+        "g20-canm-sand-canyon-building",
+        "g20-canm-castle-rock-village",
+        "g20-canm-saddlehorn-households",
+        "g20-hove-castle-architecture",
+        "site-mesa-cliff-palace",
+        "g20-fc-mesa-verde-rio-grande-migration",
+        "fc-turkey-migration-proxy",
+        "settlement-taos-habitation",
+        "settlement-acoma-habitation",
+        "settlement-oraibi-habitation",
+        "settlement-walpi-habitation",
+        "settlement-hawikuh-habitation",
+        "fc-wiyo-cultural-transformation",
+        "history-santa-fe-colonial",
+        "pueblo-revolt1680",
+        "g20-chelly-antelope-dibe-yazhi",
+        "g20-chelly-canyon-destruction-1864",
+        "removal-dine-long-walk-1864",
+        "removal-bosque-confinement-1864-1868",
+        "removal-dine-return-1868",
+        "g20-fc-weeminuche-westward-1895",
+        "g20-chelly-monument-1931"
+      ],
+      "level": "region",
+      "storyId": "four-corners"
+    },
+    {
+      "id": "pueblo-bonito",
+      "title": "Pueblo Bonito: one house, several histories",
+      "href": "sites/pueblo-bonito.html",
+      "region": "Chaco Canyon · New Mexico",
+      "description": "A close study of changing construction, unequal status and continued use within the larger Chaco history.",
+      "recordIds": [],
+      "kind": "site",
+      "report": "four-corners-regional",
+      "relatedGuideIds": [
+        "chaco",
+        "mesa-verde",
+        "four-corners",
+        "aztec",
+        "salmon"
+      ],
+      "referenceRecordIds": [
+        "site-chaco-pueblo-bonito",
+        "g20-chaco-bonito-residence",
+        "g20-chaco-bonito-late-reuse",
+        "g20-chaco-bonito-thirteenth-use"
+      ],
+      "parentGuideId": "chaco",
+      "storyId": "pueblo-bonito"
+    },
+    {
+      "id": "lowry",
+      "title": "Lowry Pueblo",
+      "href": "sites/lowry.html",
+      "region": "Canyons of the Ancients · Colorado",
+      "description": "Four local views follow the pueblo and great kiva through construction and later maintenance.",
+      "recordIds": [],
+      "kind": "site",
+      "report": "four-corners-regional",
+      "relatedGuideIds": [
+        "chaco",
+        "mesa-verde",
+        "canyons-of-the-ancients",
+        "cortez-area",
+        "four-corners"
+      ],
+      "referenceRecordIds": [
+        "hovenweep-lowry-pueblo",
+        "g20-canm-lowry-first-build",
+        "g20-canm-lowry-additions",
+        "g20-canm-lowry-great-kiva-first",
+        "g20-canm-lowry-great-kiva-late"
+      ],
+      "parentGuideId": "canyons-of-the-ancients",
+      "storyId": "lowry"
+    },
+    {
+      "id": "sand-canyon",
+      "title": "Sand Canyon Pueblo",
+      "href": "sites/sand-canyon.html",
+      "region": "Canyons of the Ancients · Colorado",
+      "description": "Three views separate village construction, occupation and terminal violence.",
+      "recordIds": [],
+      "kind": "site",
+      "report": "four-corners-regional",
+      "relatedGuideIds": [
+        "chaco",
+        "mesa-verde",
+        "canyons-of-the-ancients",
+        "castle-rock",
+        "cortez-area",
+        "four-corners"
+      ],
+      "referenceRecordIds": [
+        "hovenweep-sand-canyon-pueblo",
+        "g20-canm-sand-canyon-building",
+        "r9v-sw-sand-canyon-violence"
+      ],
+      "parentGuideId": "canyons-of-the-ancients",
+      "storyId": "sand-canyon"
+    },
+    {
+      "id": "castle-rock",
+      "title": "Castle Rock Pueblo",
+      "href": "sites/castle-rock.html",
+      "region": "Canyons of the Ancients · Colorado",
+      "description": "Three local views keep occupation, setting and evidence of violence distinct.",
+      "recordIds": [],
+      "kind": "site",
+      "report": "four-corners-regional",
+      "relatedGuideIds": [
+        "chaco",
+        "mesa-verde",
+        "canyons-of-the-ancients",
+        "sand-canyon",
+        "cortez-area",
+        "four-corners"
+      ],
+      "referenceRecordIds": [
+        "g20-canm-castle-rock-village",
+        "g20-canm-saddlehorn-households",
+        "hovenweep-sand-canyon-pueblo",
+        "g20-canm-castle-rock-ending"
+      ],
+      "parentGuideId": "canyons-of-the-ancients",
+      "storyId": "castle-rock"
+    },
+    {
+      "id": "cortez-area",
+      "title": "Communities around Cortez",
+      "href": "sites/cortez-area.html",
+      "region": "Montezuma Valley and Dolores · Colorado",
+      "description": "Follow Lowry, Escalante, Dominguez, Sand Canyon, Castle Rock and Saddlehorn without inventing an ancient Cortez center.",
+      "recordIds": [],
+      "kind": "site",
+      "report": "four-corners-regional",
+      "relatedGuideIds": [
+        "chaco",
+        "mesa-verde",
+        "four-corners",
+        "canyons-of-the-ancients",
+        "lowry",
+        "sand-canyon",
+        "castle-rock",
+        "hovenweep"
+      ],
+      "referenceRecordIds": [
+        "hovenweep-lowry-pueblo",
+        "g20-canm-lowry-first-build",
+        "g20-canm-dominguez-build",
+        "g20-canm-escalante-first",
+        "g20-canm-escalante-few-rooms",
+        "hovenweep-sand-canyon-pueblo",
+        "g20-canm-sand-canyon-building",
+        "g20-canm-castle-rock-village",
+        "g20-canm-saddlehorn-households",
+        "g20-canm-castle-rock-ending"
+      ],
+      "parentGuideId": "four-corners",
+      "storyId": "cortez-area"
     }
   ]
 }

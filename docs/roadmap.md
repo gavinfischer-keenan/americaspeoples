@@ -2,16 +2,13 @@
 
 The 25 Coming soon entries from v0.17 are implemented in v0.18 and v0.19. See [the completed list, links and source decisions](coming-soon-campaign.md). They add dedicated treatments to the existing Subjects, Places, Languages and Cultures lists; they do not exhaust those histories.
 
-## Expand existing place guides
+## Expand regional histories and their local studies
 
-- Chaco Canyon: finer building groups, construction phases, roads and nearby communities.
-- Machu Picchu: named structures, local sequence and connections within the wider Inka landscape.
-- Cahokia: separate mound, neighborhood and surrounding-community histories.
-- Mesa Verde: local villages and building phases beyond broad regional periods.
-- Hovenweep: distinct settlements, structures and changing uses.
-- Canyons of the Ancients: more public localities and place-specific chronology.
+The six requested place-guide expansions are included in v0.20, together with Four Corners and its linked local studies. See [what was added and what remains uncertain](six-guide-expansions.md). These are substantial selected expansions, not exhaustive inventories of every structure.
 
-These six expansions are separate from the now-completed25-study queue. Public coordinates and source-supported dates are required; absence of a precise house date does not justify treating the whole landscape as empty.
+Candidates for further regional parent movies include the Cusco/Sacred Valley landscape, north-coastal Peru, the Basin of Mexico, the Maya lowlands, and Mississippi/Illinois river communities. Keep distinct local histories and living communities visible; a parent grouping is an editorial navigation aid, not an assertion of one ancient state or people.
+
+Continue adding public building anchors, occupation phases and mapped road segments where the sources support them. The Chaco road overview remains schematic. More precise footprints and paths need source-specific coordinates and reuse permission.
 
 ## Continue filling geographic and temporal gaps
 
@@ -27,4 +24,4 @@ Keep company charters separate from built settlements, discoveries separate from
 
 ## Research process
 
-Use the completed Deep dossier and checked original sources before making another research request. Cumulative Consensus usage is 74/100, including status calls;26 remain under the agreed cap. New common historical evidence feeds the master map, focused subject material remains separate, and reciprocal evidence links preserve source-specific dates. The raw reports remain private.
+Use the completed Deep dossier and checked original sources before making another research request. Two further Deep dossiers completed at 80 lifetime tool calls, including status calls. The user then authorized 75 additional calls; none of that new allowance has been used. The provider resets monthly, but a reset is not an automatic new spending authorization. New common historical evidence feeds the master map, focused subject material remains separate, and reciprocal evidence links preserve source-specific dates. The raw reports remain private.

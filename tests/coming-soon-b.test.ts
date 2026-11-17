@@ -44,7 +44,7 @@ test('remaining twelve dedicated studies finish the accepted queue in their corr
   }
  }
  assert.equal(deepDives.filter(d=>!d.links.length).length,0);
- assert.equal(deepDives.filter(d=>d.links.length).length,70);
+ assert.ok(deepDives.filter(d=>d.links.length).length>=70,'completed campaign remains available as further studies are added');
 });
 test('completed lists do not display empty coming-soon sections',()=>{
  for(const c of diveCategories){

@@ -39,7 +39,7 @@ export const comingSoonBTopics:TopicDive[]=[
         "id": "austronesian-languages-2",
         "year": 1769,
         "title": "Tupaia carries language and navigation into an encounter",
-        "body": "Tupaia’s participation in the expedition leaving Tahiti in 1769 brought navigational knowledge and Polynesian communication into a European voyage’s surviving record. The chart tradition associated with him is evidence of Indigenous knowledge being translated through another documentary system. The State Library’s surviving printed example dates to 1788 and should not be mistaken for his lost original drawing. Nor should a network of known islands be read as one rigid route or a region where every speaker understood every other without difficulty. Tahiti anchors the encounter here; it does not stand for Tupaia’s whole life, all his knowledge, or every place represented on the chart.",
+        "body": "Tupaia joined the expedition leaving Tahiti in 1769, contributing navigational knowledge and Polynesian communication. The chart tradition associated with him records Indigenous knowledge translated through a European documentary system. A surviving printed example in the State Library dates to 1788; his original drawing is lost. The chart’s network of known islands preserves a different kind of geographical knowledge from a single voyage itinerary.",
         "note": "1769 dates the encounter and participation; 1788 dates the surviving printed chart discussed retrospectively.",
         "recordIds": [
           "d19-language-tupaia-1769"
@@ -55,7 +55,7 @@ export const comingSoonBTopics:TopicDive[]=[
         "id": "austronesian-languages-3",
         "year": 1775,
         "title": "A Tahitian vocabulary enters a colonial archive",
-        "body": "The Archivo General de Indias catalog preserves a Tahitian vocabulary dated 1775, a separately documented episode from Tupaia’s 1769 encounter. A vocabulary makes selected words portable for readers elsewhere, but its selection and translation reflect the circumstances in which the document was made. The catalog establishes the item, date and language heading; it does not provide a census, a distribution map or the birth date of Tahitian. The island-level point respects that limit. Comparison with related Polynesian languages belongs to linguistic analysis, while a colonial collection’s categories and spellings require their own historical reading rather than automatic acceptance as transparent descriptions.",
+        "body": "A Tahitian vocabulary dated 1775 survives in the Archivo General de Indias catalog. It records a separate episode of language documentation from Tupaia’s participation in the 1769 expedition. The vocabulary made selected Tahitian words available to readers elsewhere through transcription and translation. Its choices and spellings reflect the circumstances of collection, while Tahitian’s relationships with other Polynesian languages have a much older history.",
         "note": "Catalog item MP-ESCRITURA_CIFRA,53; manuscript contents were not comprehensively examined.",
         "recordIds": [
           "topic-language-tahiti"
@@ -87,7 +87,7 @@ export const comingSoonBTopics:TopicDive[]=[
         "id": "austronesian-languages-5",
         "year": 1834,
         "title": "A newspaper builds a new setting for Hawaiian writing",
-        "body": "Ka Lama Hawaii first appeared at Lahainaluna on 14 February 1834. Its school setting connected Hawaiian-language instruction with the work of producing a serial publication, adding another use for an established language. The first issues belong to temporary printing quarters, while the permanent stone Hale Paʻi was a later construction. Keeping those dates separate avoids making a surviving building older than its documented history. Newspapers would become a substantial setting for Hawaiian knowledge and debate, but this chapter stays with the first issue’s dated context. The mapped campus reference is deliberately broad enough to avoid claiming an exact position for the early press room.",
+        "body": "Ka Lama Hawaii first appeared at Lahainaluna on 14 February 1834. Students and teachers worked within a school setting that brought Hawaiian-language instruction together with newspaper production. The first issues came from temporary printing quarters; the permanent stone Hale Paʻi was built later. The newspaper added print publication to the uses of an established language and formed part of a much larger history of Hawaiian knowledge and debate in newspapers.",
         "note": "First issue 1834; construction of the later stone printing building began in 1837.",
         "recordIds": [
           "d19-language-ka-lama-1834"
@@ -185,7 +185,7 @@ export const comingSoonBTopics:TopicDive[]=[
         "id": "australian-wool-3",
         "year": 1815,
         "title": "At Belgenny, map the buildings that actually existed",
-        "body": "A land grant and an occupied farm are not the same event. The Camden estate originated in an 1805 colonial grant, but this chapter selects a surviving documentary building phase: Elizabeth Macarthur’s west-facing cottage at Belgenny in 1815. It places the working farm on the map without pretending every later structure existed from the grant date. Houses and work buildings supported the management of animals and labour; their construction also made colonial occupation more durable. The compact compound can later be expanded into individual building footprints when surveyed evidence is available. For now, its public locality is explicit and its construction date remains separate from the legal grant.",
+        "body": "Elizabeth Macarthur’s west-facing cottage at Belgenny was built in 1815, ten years after the colonial grant that established the Camden estate. Houses and work buildings supported the management of animals and labor on the farm. Construction made occupation of the estate more durable, while the grant and the growth of the working compound remained separate stages in its colonial history.",
         "note": "Farm compound reference, approximately 2 km uncertainty. Exact individual footprints have not been claimed.",
         "recordIds": [
           "d19-au-belgenny-cottage-1815"
@@ -201,7 +201,7 @@ export const comingSoonBTopics:TopicDive[]=[
         "id": "australian-wool-4",
         "year": 1821,
         "title": "The farm compound grows",
-        "body": "Belgenny’s second cottage, designed by Henry Kitchen, was built facing east in 1821. This is a small but concrete example of how a pastoral place changed: an existing compound gained another building rather than suddenly appearing as a complete historic estate. Its fabric was altered again in later decades, so a present-day photograph cannot be projected unchanged into every earlier year. The dated phase also keeps household and managerial spaces visible within an industry often represented only by sheep numbers and owners’ names. Growth on the map should mean documented construction or occupation, with inherited land claims kept distinct from Indigenous agreement.",
+        "body": "Belgenny gained a second cottage in 1821, designed by Henry Kitchen and facing east. It added household and management space to the existing pastoral compound. Further alterations changed the building in later decades. These successive projects reveal the work of maintaining an estate alongside the better-known history of sheep breeding and wool exports.",
         "note": "1821 is a separate building phase; later joined wings and replacement fabric do not belong to this scene.",
         "recordIds": [
           "d19-au-belgenny-cottage-1821",
@@ -299,7 +299,7 @@ export const comingSoonBTopics:TopicDive[]=[
         "id": "australian-wool-10",
         "year": 1880,
         "title": "Mungo: show the disagreement instead of hiding the building",
-        "body": "The woolshed at Mungo is a real, locatable building, but its construction story is less settled than a confident single year suggests. Current visitor interpretation gives 1869. The detailed conservation study instead favours 1877–1880 and identifies an 1885 plan as firm evidence for the woolshed and neighbouring structures. The map therefore uses the bounded span of the proposed construction dates, with the disagreement available to inspect. Attribution to Chinese builders also requires qualification because the study traces it to oral testimony rather than secure construction records. This uncertainty concerns the building’s date and builders, not whether the building or the surrounding Indigenous history existed.",
+        "body": "The Mungo woolshed served the pastoral industry, but its construction date remains disputed. Visitor interpretation gives 1869; the detailed conservation study favors 1877–1880 and identifies an 1885 plan as firm evidence for the building and neighboring structures. The attribution to Chinese builders derives from oral testimony rather than secure construction records. Both the dating dispute and that attribution remain qualified in the building’s history.",
         "note": "1869–1880 encloses competing estimates; it is not continuous construction. Public visitor coordinates are used, not the inconsistent older inventory grid reference.",
         "recordIds": [
           "d19-au-mungo-woolshed-dating"
@@ -366,7 +366,7 @@ export const comingSoonBTopics:TopicDive[]=[
         "id": "australian-wool-14",
         "year": 1934,
         "title": "A working place changes again",
-        "body": "New shearers’ quarters were built at Mungo around 1934, adding another dated structure to the pastoral compound. The intervening story is not represented by inventing a fresh foundation every decade: surviving plans and conservation records identify particular changes that can be added as evidence becomes available. Here the same public compound reference connects the disputed early woolshed date, the firm 1885 building plan and a later accommodation phase. It also keeps a working pastoral landscape distinct from the much older archaeological landscape. Ending this study at the atlas’s 1934 limit is a viewing boundary, not the end of the station, Indigenous community life or consequences of dispossession.",
+        "body": "New shearers’ quarters were built at Mungo around 1934, adding accommodation to the pastoral compound. Together with the woolshed and the buildings recorded on the 1885 plan, they show successive investment in a working station. This pastoral history occupies one part of a landscape with a much older Indigenous history and continuing consequences of dispossession.",
         "note": "Approximately 1934 dates the quarters; the public compound point is not their surveyed footprint. The endpoint is the atlas limit.",
         "recordIds": [
           "d19-au-mungo-quarters-1934",
@@ -464,7 +464,7 @@ export const comingSoonBTopics:TopicDive[]=[
         "id": "australian-mining-4",
         "year": 1854,
         "title": "Eureka: a dispute becomes a deadly attack",
-        "body": "At the Ballarat diggings, licence fees and their enforcement intensified conflict between miners and colonial authorities. Miners gathered under the Eureka flag and built a stockade; on 3 December 1854 troops and police attacked it. People were killed on both sides. The marker supplies the locality and opposing groups without inventing a reconstruction of every unit or barricade. Later reforms made Eureka important in political memory, but the struggle should not be presented as instant equal rights for everyone. Indigenous dispossession and exclusion of Chinese miners continued alongside the demands made by the miners assembled at Eureka.",
+        "body": "Conflict over licence fees and their enforcement brought miners at Ballarat into confrontation with colonial authorities. Miners gathered under the Eureka flag and built a stockade. On 3 December 1854, troops and police attacked it, killing people on both sides. The struggle became important in political memory and later reform, while Indigenous dispossession and exclusion of Chinese miners continued.",
         "note": "Exact attack date; approximate locality. Casualty totals vary and are not converted into one artificial certainty.",
         "recordIds": [
           "d19-au-eureka-1854"
@@ -497,7 +497,7 @@ export const comingSoonBTopics:TopicDive[]=[
         "id": "australian-mining-6",
         "year": 1861,
         "title": "Lambing Flat: miners are driven out",
-        "body": "On 30 June 1861 European miners attacked Chinese communities at Lambing Flat. People were injured, camps were looted or destroyed and miners were driven away from their workings. This episode needs its own marker because a generic gold-rush symbol cannot show who held power or who suffered violence. It also complicates any simple narrative in which mining automatically created democratic solidarity. Chinese workers participated in the same expanding economy while facing attacks and restrictive immigration policies. The record identifies the aggressors and targeted community where the evidence does so, while keeping the camp location approximate and avoiding an unsupported death total.",
+        "body": "European miners attacked Chinese communities at Lambing Flat on 30 June 1861. They injured people, looted or destroyed camps, and drove miners from their workings. Chinese workers participated in the growing mining economy while facing violence and restrictive immigration policies. The episode reveals sharp exclusions within the goldfields’ working communities; the evidence used here does not establish a reliable death total.",
         "note": "Violent expulsion and injury are documented. This record does not assign fatalities that the checked account does not establish.",
         "recordIds": [
           "d19-au-lambing-flat-1861"
@@ -513,7 +513,7 @@ export const comingSoonBTopics:TopicDive[]=[
         "id": "australian-mining-7",
         "year": 1862,
         "title": "Indigenous people also worked the goldfields",
-        "body": "A report published at Castlemaine on 21 March 1862 described Aboriginal men and women fossicking around older workings. Fred Cahir places it within Dja Dja Wurrung participation in the Victorian goldfields. Such observations challenge a map that shows Indigenous people only before mining or only as passive victims afterwards. People worked, traded and made decisions within conditions profoundly changed by invasion. The newspaper’s prejudices require critical reading; they are evidence of the observer’s outlook, not neutral descriptions to repeat. This marker dates a documented observation rather than the first or last Indigenous gold work, and it does not pretend to locate the report’s unnamed gully.",
+        "body": "A report published at Castlemaine on 21 March 1862 described Aboriginal men and women fossicking around older workings. Fred Cahir places the account within Dja Dja Wurrung participation in the Victorian goldfields. People worked, traded, and made decisions under conditions transformed by invasion. The report preserves one observation of that participation, filtered through the newspaper writer’s prejudices; the particular gully is unnamed.",
         "note": "Dated documentation, not a continuous occupation window. The historical source’s stereotypes are not adopted in the atlas.",
         "recordIds": [
           "d19-au-castlemaine-fossickers-1862"
@@ -529,7 +529,7 @@ export const comingSoonBTopics:TopicDive[]=[
         "id": "australian-mining-8",
         "year": 1886,
         "title": "Broken Hill: extraction becomes an industrial landscape",
-        "body": "Broken Hill’s northern smelting furnaces were erected in 1886, with another smelter and larger concentrating facilities following. This is built industrial activity rather than simply the legal formation of a mining company. Furnaces, heaps of slag and tailings, housing and transport made extraction part of daily urban life. Metal production generated wealth while also producing fumes and waste around the expanding town. A city-scale reference is appropriate for this chapter because the individual furnaces have not all been independently mapped. The dated construction phases offer a foundation for later detail without pretending the entire industrial complex existed in its final form from the beginning.",
+        "body": "Workers erected Broken Hill’s northern smelting furnaces in 1886, followed by another smelter and larger concentrating facilities. Furnaces, slag heaps, tailings, housing, and transport brought mineral extraction into daily urban life. Metal production generated wealth while exposing the expanding town to fumes and industrial waste. Successive construction projects enlarged the working complex.",
         "note": "1886 dates the first BHP smelters in Broken Hill; it is not the date of every mine or the company’s formation.",
         "recordIds": [
           "d19-au-broken-hill-smelters-1886"
@@ -561,7 +561,7 @@ export const comingSoonBTopics:TopicDive[]=[
         "id": "australian-mining-10",
         "year": 1903,
         "title": "Water infrastructure changes what the goldfields can support",
-        "body": "Water reached Mount Charlotte at Kalgoorlie on 24 January 1903 through the Goldfields Water Supply Scheme. Construction had begun in 1898, creating a long-distance system of pipes and pumping stations rather than a plan that existed only on paper. Its operation changed the practical conditions for mining and urban life. The scheme did not discover water for a previously unknowable landscape: it imposed a new industrial scale of supply within Country whose water places Aboriginal people already knew. The map locates the operating endpoint and explains the connection without drawing an unverified detailed pipeline alignment or implying that all towns received water on the same day.",
+        "body": "Water reached Mount Charlotte at Kalgoorlie on 24 January 1903 through the Goldfields Water Supply Scheme. Construction had begun in 1898, creating a long-distance network of pipes and pumping stations. Its operation changed the conditions for mining and urban life by supplying water at an industrial scale. Aboriginal people already knew and used water sources within this Country before the scheme was built.",
         "note": "Specific operating endpoint, 24 January 1903. No exact pipe alignment or invented intermediate stations are drawn.",
         "recordIds": [
           "d19-au-kalgoorlie-water-1903"
@@ -577,7 +577,7 @@ export const comingSoonBTopics:TopicDive[]=[
         "id": "australian-mining-11",
         "year": 1906,
         "title": "A processing change keeps difficult ore in play",
-        "body": "At Broken Hill, separating valuable metals from complex ores was as consequential as finding the deposit. Auguste de Bavay patented a film-flotation process in July 1906 and opened a plant, with expansion following in 1909. The chapter therefore maps a documented working development rather than a broad claim that Australia invented flotation in one moment. Different processes, experiments and plants had different histories. Keeping this technical evidence within the subject dive avoids covering the main historical map with every laboratory or processing detail, while the actual mining town and industrial construction remain shared records that can appear in other stories.",
+        "body": "Auguste de Bavay patented a film-flotation process in July 1906 and opened a plant at Broken Hill, with expansion following in 1909. Flotation separated valuable minerals from complex ore, making processing technology as consequential as extraction. This working development belonged to a broader history of competing processes, experiments, and plants rather than a single moment of invention.",
         "note": "Topic-specific process record. The 1906 development is not the first flotation experiment worldwide; individual plant footprint remains unresolved.",
         "recordIds": [
           "d19-au-broken-hill-flotation-1906",

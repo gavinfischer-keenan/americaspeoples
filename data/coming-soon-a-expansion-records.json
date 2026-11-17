@@ -4859,9 +4859,9 @@
     },
     {
       "id": "d18-language-huarochiri-1608",
-      "revision": 1,
+      "revision": 3,
       "type": "occurrence",
-      "title": "San Damián — testimony collected under colonial religious coercion",
+      "title": "San Damián — Andean traditions recorded during religious persecution",
       "culture": {
         "id": "d18-communities-andean-languages",
         "name": "Quechuan and Aymaran histories — see the dated community and context",
@@ -4885,32 +4885,46 @@
         "approximate": true,
         "original": "Approximately 1608 CE; manuscript collection, not town foundation",
         "method": "Historical document, manuscript, monument or encounter date as reported by the cited source. This is not a first date of speech or a census of speakers.",
-        "interpretation": "Late-sixteenth-century resettlement is background, not dated here as a single event. The surviving text is mediated evidence; narrated precolonial events are not assigned 1608. Published modern town reference; not the reducción perimeter, a shrine, or manuscript-writing room."
+        "interpretation": "The date concerns the manuscript’s compilation around 1608. Its accounts of ancestors and deities refer to traditions with their own histories."
       },
       "claims": [
         {
           "id": "evidence",
-          "text": "The Huarochirí manuscript records Quechua testimony collected in the world of San Damián, a colonial resettlement town. Its production under Francisco de Ávila’s investigation of Indigenous religious practice involved multiple Indigenous voices and scribal hands.",
+          "text": "Around 1608, the Huarochirí manuscript recorded local Andean traditions in Quechua in the setting of San Damián, a town created through colonial resettlement. Its stories describe deities, ancestors, migrations and the founding of communities. The work took shape during priest Francisco de Ávila’s campaign against Indigenous religious practices, including devotion to Pariacaca and Chaupiñamca.",
           "status": "well-supported",
-          "explanation": "Late-sixteenth-century resettlement is background, not dated here as a single event. The surviving text is mediated evidence; narrated precolonial events are not assigned 1608. Late-sixteenth-century resettlement is background, not dated here as a single event. The surviving text is mediated evidence; narrated precolonial events are not assigned 1608. Public place reference only; the named structure or excavated sample is not separately geolocated.",
+          "explanation": "The roles of individual narrators, scribes and Ávila remain debated. The text should not be treated as an unedited transcript or the work of a single clearly identified author.",
           "support": [
             {
               "sourceId": "d18-source-herring2025",
-              "locator": "Herring opening historical-context passage; Martínez introduction and discussion of fols.72v–73r and multiple scribes.",
+              "locator": "Abstract and previously checked full-article passage: San Damián reducción and later-1608 manuscript context",
               "stance": "supports",
-              "note": "Supports this observation within the stated chronology, access and geographic limits."
+              "note": "Supports the stated historical account or material observation; source access is specified in the citation."
             },
             {
               "sourceId": "d18-source-martinez2016",
-              "locator": "Herring opening historical-context passage; Martínez introduction and discussion of fols.72v–73r and multiple scribes.",
+              "locator": "Introduction and discussion of thematic organization: cosmology, migrations and community founders",
               "stance": "supports",
-              "note": "Supports this observation within the stated chronology, access and geographic limits."
+              "note": "Supports the stated historical account or material observation; source access is specified in the citation."
             },
             {
               "sourceId": "d18-source-geo-san-damian",
-              "locator": "Herring opening historical-context passage; Martínez introduction and discussion of fols.72v–73r and multiple scribes.",
+              "locator": "Published locality table, p. 41: San Damián district capital",
+              "stance": "context",
+              "note": "Context for the public town reference used for San Damián. Historical resettlement and manuscript production are supported separately by the scholarly sources."
+            }
+          ]
+        },
+        {
+          "id": "historical-context",
+          "text": "The manuscript preserves the labor of Indigenous narrators and writers as well as the demands of a colonial religious investigation. Marginal notes ask for missing names and explanations; later passages incorporate some of that information. Differences in handwriting and ink help scholars reconstruct a process of questioning, drafting and revision. These traces show people actively organizing and commenting on traditions while authorities sought information that could be used to suppress their worship.",
+          "status": "well-supported",
+          "explanation": "Interpretations and historical perspectives are attributed in the text.",
+          "support": [
+            {
+              "sourceId": "d18-source-martinez2016",
+              "locator": "Figures 1–3 and discussion of folios 72v–73r; marginal questions, ink/handwriting, and later incorporation of information",
               "stance": "supports",
-              "note": "Supports this observation within the stated chronology, access and geographic limits."
+              "note": "Supports the stated historical account or material observation; source access is specified in the citation."
             }
           ]
         }
@@ -4923,7 +4937,7 @@
           "year": 2025,
           "venue": "Original scholarship / institutional source",
           "url": "https://doi.org/10.1080/02666286.2024.2449221",
-          "access": "Publisher-indexed abstract and explicit full-article passage read: San Damián was a reducción in 1608; manuscript worked up in latter 1608 under Ávila. Full direct fetch returned 403. Word & Image 41(1):89–103. Original factual summary; source prose and media are not republished."
+          "access": "Earlier original-source check retained for the specific San Damián/1608 context: publisher-indexed abstract and explicit article passage. This pass independently checks the manuscript’s contents and working process against Martínez Sagredo 2016; it does not claim a new full-text read of Herring."
         },
         {
           "id": "d18-source-martinez2016",
@@ -4932,7 +4946,7 @@
           "year": 2016,
           "venue": "Original scholarship / institutional source",
           "url": "https://www.scielo.cl/scielo.php?pid=S0718-68942016000100009&script=sci_arttext",
-          "access": "Full scholarly article accessed via web; introduction, discussion of marginalia and multiple hands, and volume 3169 context checked. DOI 10.4067/S0718-68942016000100009. Original factual summary; source prose and media are not republished."
+          "access": "Original scholarly article independently read through publisher web rendering on 2026-11-16: introduction, folios 72v–73r/Figures 1–3, marginalia and authorship discussion. Direct local HTML download returned 403; web-rendered full article was accessible."
         },
         {
           "id": "d18-source-geo-san-damian",
@@ -4945,13 +4959,15 @@
         }
       ],
       "review": {
-        "summary": "The Huarochirí manuscript records Quechua testimony collected in the world of San Damián, a colonial resettlement town. Its production under Francisco de Ávila’s investigation of Indigenous religious practice involved multiple Indigenous voices and scribal hands.",
-        "limitations": "Late-sixteenth-century resettlement is background, not dated here as a single event. The surviving text is mediated evidence; narrated precolonial events are not assigned 1608. Published modern town reference; not the reducción perimeter, a shrine, or manuscript-writing room.",
-        "discussion": "The date belongs to this document, encounter or observed pattern. Language relationships, speaker distributions, political identity and ancestry are separate questions.",
+        "summary": "Around 1608, the Huarochirí manuscript recorded local Andean traditions in Quechua in the setting of San Damián, a town created through colonial resettlement. Its stories describe deities, ancestors, migrations and the founding of communities. The work took shape during priest Francisco de Ávila’s campaign against Indigenous religious practices, including devotion to Pariacaca and Chaupiñamca.",
+        "limitations": "The roles of individual narrators, scribes and Ávila remain debated. The text should not be treated as an unedited transcript or the work of a single clearly identified author.",
+        "discussion": "The manuscript preserves the labor of Indigenous narrators and writers as well as the demands of a colonial religious investigation. Marginal notes ask for missing names and explanations; later passages incorporate some of that information. Differences in handwriting and ink help scholars reconstruct a process of questioning, drafting and revision. These traces show people actively organizing and commenting on traditions while authorities sought information that could be used to suppress their worship.",
         "provenance": "Dedicated-study campaign: Consensus Deep discovery followed by original-source checking. Full research dossier retained privately.",
         "reviewedAt": "2026-11-16",
         "history": [
-          "Added independently written source-linked observation with explicit chronology and place precision."
+          "Added independently written source-linked observation with explicit chronology and place precision.",
+          "2026-11-16: Reader-facing description updated: Lead with the historical event, people and surviving evidence; replace generic process commentary with distinct factual context.",
+          "2026-11-16: Reader-facing description updated: Lead with the historical event, people and surviving evidence; replace generic process commentary with distinct factual context."
         ],
         "relatedIds": [
           "empire-huarochiri-ritual",
@@ -4970,9 +4986,9 @@
     },
     {
       "id": "d18-language-hochelaga-1535",
-      "revision": 1,
+      "revision": 3,
       "type": "occurrence",
-      "title": "Hochelaga — encounter with an Iroquoian town",
+      "title": "Hochelaga — food, gifts and communication during Cartier’s visit",
       "culture": {
         "id": "d18-communities-iroquoian-languages",
         "name": "Iroquoian languages — see the dated community and context",
@@ -4996,38 +5012,46 @@
         "approximate": false,
         "original": "October 1535 CE encounter",
         "method": "Historical document, manuscript, monument or encounter date as reported by the cited source. This is not a first date of speech or a census of speakers.",
-        "interpretation": "Hochelaga’s exact location is unknown. The McGill plaque commemorates the town and is not its established footprint. European interpretations of local intentions are not treated as fact. Published public marker reference, not the unknown former village footprint."
+        "interpretation": "1535 dates the encounter described by the expedition, not the beginning of the town or its language."
       },
       "claims": [
         {
           "id": "evidence",
-          "text": "Cartier’s second-voyage account describes a visit to Hochelaga, a town in the Montréal area. The voyage materials preserve a vocabulary associated with Hochelaga and Canada. These are dated encounters with existing Indigenous communities, not first occupation or language-origin dates.",
+          "text": "In 1535, Cartier’s party visited Hochelaga in the Montréal area. The voyage account describes being welcomed in an open square, receiving woven mats, exchanging gifts and being offered fish, beans and bread. It also preserves words and phrases attributed to Hochelaga and Canada.",
           "status": "well-supported",
-          "explanation": "Hochelaga’s exact location is unknown. The McGill plaque commemorates the town and is not its established footprint. European interpretations of local intentions are not treated as fact. Hochelaga’s exact location is unknown. The McGill plaque commemorates the town and is not its established footprint. European interpretations of local intentions are not treated as fact. Public place reference only; the named structure or excavated sample is not separately geolocated.",
+          "explanation": "The description comes from the visiting Europeans’ account and reflects their interpretations. The modern commemorative marker does not identify an excavated village footprint.",
           "support": [
             {
               "sourceId": "d18-source-cartier1535",
-              "locator": "Voyage excerpt pp.2–3 and p.7 vocabulary; Parks Canada Heritage Value.",
+              "locator": "Selected primary account, pp. 2–3: reception, mats, gifts and food; p. 7: vocabulary",
               "stance": "supports",
-              "note": "Supports this observation within the stated chronology, access and geographic limits."
+              "note": "Supports the stated historical account or material observation; source access is specified in the citation."
+            }
+          ]
+        },
+        {
+          "id": "historical-context",
+          "text": "The vocabulary includes numbers, body parts, foods, greetings and requests—traces of practical communication. Parks Canada identifies Hochelaga as an Iroquoian village, while noting that its exact site remains unknown.",
+          "status": "well-supported",
+          "explanation": "Interpretations and historical perspectives are attributed in the text.",
+          "support": [
+            {
+              "sourceId": "d18-source-cartier1535",
+              "locator": "p. 7: selected vocabulary",
+              "stance": "supports",
+              "note": "Supports the stated historical account or material observation; source access is specified in the citation."
             },
             {
               "sourceId": "d18-source-hochelaga-parks",
-              "locator": "Voyage excerpt pp.2–3 and p.7 vocabulary; Parks Canada Heritage Value.",
+              "locator": "Heritage Value: Iroquoian village and unknown exact location",
               "stance": "supports",
-              "note": "Supports this observation within the stated chronology, access and geographic limits."
+              "note": "Supports the stated historical account or material observation; source access is specified in the citation."
             },
             {
               "sourceId": "d18-source-geo-hochelaga",
-              "locator": "Voyage excerpt pp.2–3 and p.7 vocabulary; Parks Canada Heritage Value.",
-              "stance": "supports",
-              "note": "Supports this observation within the stated chronology, access and geographic limits."
-            },
-            {
-              "sourceId": "d18-source-schillaci2017",
-              "locator": "Schillaci pp.448–451; voyage pp.2–3 and 7; Parks Heritage Value.",
+              "locator": "Hochelaga Historical Marker entry: coordinates and McGill address",
               "stance": "context",
-              "note": "Related reading for Iroquoian languages; contextual language interpretation, not direct dating of this place or every speaker."
+              "note": "Locates the modern commemorative marker referred to in the record’s location limitation. It does not establish the unknown archaeological village location."
             }
           ]
         }
@@ -5040,7 +5064,7 @@
           "year": 1535,
           "venue": "Original scholarship / institutional source",
           "url": "https://nationalhumanitiescenter.org/pds/amerbegin/exploration/text2/cartier.pdf",
-          "access": "Seven-page selected primary text read and downloaded. Pages 2–3 Hochelaga and Stadacona; p.3 note on captured interpreters; p.7 selected vocabulary. Original factual summary; source prose and media are not republished."
+          "access": "Original selected primary-source text independently downloaded and read on 2026-11-16: Hochelaga reception pp. 2–3, Stadacona/translation pp. 3–4, winter illness and assistance pp. 5–6, vocabulary p. 7. The NHC edition translates excerpts from Ramsay Cook’s 1993 edition; European interpretations are attributed to the account."
         },
         {
           "id": "d18-source-hochelaga-parks",
@@ -5059,25 +5083,18 @@
           "venue": "Original scholarship / institutional source",
           "url": "https://www.hmdb.org/m.asp?m=72726",
           "access": "Full marker entry read: 45 degrees 30.216 minutes N, 73 degrees 34.508 minutes W; same McGill address as Parks Canada. Original factual summary; source prose and media are not republished."
-        },
-        {
-          "id": "d18-source-schillaci2017",
-          "authors": "Michael A. Schillaci, Craig Kopris, Søren Wichmann and Genevieve Dewar",
-          "title": "Linguistic Clues to Iroquoian Prehistory",
-          "year": 2017,
-          "venue": "Original scholarship / institutional source",
-          "url": "https://wiredspace.wits.ac.za/server/api/core/bitstreams/5e7b194d-5ec7-4494-8755-714a6256a796/content",
-          "access": "Original article PDF downloaded; abstract and opening discussion pp.448–451 read via web PDF. Journal of Anthropological Research 73(3). Original factual summary; source prose and media are not republished."
         }
       ],
       "review": {
-        "summary": "Cartier’s second-voyage account describes a visit to Hochelaga, a town in the Montréal area. The voyage materials preserve a vocabulary associated with Hochelaga and Canada. These are dated encounters with existing Indigenous communities, not first occupation or language-origin dates.",
-        "limitations": "Hochelaga’s exact location is unknown. The McGill plaque commemorates the town and is not its established footprint. European interpretations of local intentions are not treated as fact. Published public marker reference, not the unknown former village footprint.",
-        "discussion": "The date belongs to this document, encounter or observed pattern. Language relationships, speaker distributions, political identity and ancestry are separate questions.",
+        "summary": "In 1535, Cartier’s party visited Hochelaga in the Montréal area. The voyage account describes being welcomed in an open square, receiving woven mats, exchanging gifts and being offered fish, beans and bread. It also preserves words and phrases attributed to Hochelaga and Canada.",
+        "limitations": "The description comes from the visiting Europeans’ account and reflects their interpretations. The modern commemorative marker does not identify an excavated village footprint.",
+        "discussion": "The vocabulary includes numbers, body parts, foods, greetings and requests—traces of practical communication. Parks Canada identifies Hochelaga as an Iroquoian village, while noting that its exact site remains unknown.",
         "provenance": "Dedicated-study campaign: Consensus Deep discovery followed by original-source checking. Full research dossier retained privately.",
         "reviewedAt": "2026-11-16",
         "history": [
-          "Added independently written source-linked observation with explicit chronology and place precision."
+          "Added independently written source-linked observation with explicit chronology and place precision.",
+          "2026-11-16: Reader-facing description updated: Lead with the historical event, people and surviving evidence; replace generic process commentary with distinct factual context.",
+          "2026-11-16: Reader-facing description updated: Lead with the historical event, people and surviving evidence; replace generic process commentary with distinct factual context."
         ],
         "relatedIds": [
           "d18-language-stadacona-1535",
@@ -5094,9 +5111,9 @@
     },
     {
       "id": "d18-language-stadacona-1535",
-      "revision": 1,
+      "revision": 3,
       "type": "occurrence",
-      "title": "Stadacona — interpretation, exchange and wintering",
+      "title": "Stadacona — interpreters and aid during Cartier’s winter",
       "culture": {
         "id": "d18-communities-iroquoian-languages",
         "name": "Iroquoian languages — see the dated community and context",
@@ -5120,26 +5137,40 @@
         "approximate": true,
         "original": "1535–1536 CE second voyage; October 1535 visit documented",
         "method": "Historical document, manuscript, monument or encounter date as reported by the cited source. This is not a first date of speech or a census of speakers.",
-        "interpretation": "The point is the public Cartier-Brébeuf wintering memorial locality, not Stadacona’s archaeological footprint. The general voyage wordlist does not allocate every entry to one town. Official modern park reference for 1535–1536 wintering near Stadacona; no village footprint inferred."
+        "interpretation": "The record marks the 1535 encounter; the described winter and illness extend into the expedition’s 1535–1536 stay."
       },
       "claims": [
         {
           "id": "evidence",
-          "text": "The account describes Cartier’s visit to Donnacona at Stadacona and the expedition’s nearby wintering. Taignoagny and Dom Agaya mediated communication after Cartier had taken them to France in 1534. The encounter shows language work entangled with unequal power.",
+          "text": "At Stadacona near present-day Québec City, Donnacona received Cartier’s party and showed houses stocked for winter. Taignoagny and Dom Agaya helped communication after Cartier had taken them captive to France in 1534. The expedition returned with them in 1535 and wintered nearby.",
           "status": "well-supported",
-          "explanation": "The point is the public Cartier-Brébeuf wintering memorial locality, not Stadacona’s archaeological footprint. The general voyage wordlist does not allocate every entry to one town. The point is the public Cartier-Brébeuf wintering memorial locality, not Stadacona’s archaeological footprint. The general voyage wordlist does not allocate every entry to one town. Public place reference only; the named structure or excavated sample is not separately geolocated.",
+          "explanation": "These events survive in the expedition’s account. Its sweeping claims about the remedy reflect the narrator’s interpretation; this record does not identify the tree species.",
           "support": [
             {
               "sourceId": "d18-source-cartier1535",
-              "locator": "Voyage excerpt p.3 Stadacona visit and note 3; official park history/coordinates.",
+              "locator": "p. 3: Stadacona, Donnacona and winter provisions; note 3: captive interpreters",
               "stance": "supports",
-              "note": "Supports this observation within the stated chronology, access and geographic limits."
+              "note": "Supports the stated historical account or material observation; source access is specified in the citation."
             },
             {
               "sourceId": "d18-source-geo-cartier",
-              "locator": "Voyage excerpt p.3 Stadacona visit and note 3; official park history/coordinates.",
+              "locator": "Official Parc Cartier-Brébeuf entry: coordinates and 1535–1536 wintering history",
+              "stance": "context",
+              "note": "Context for the mapped wintering-area reference near Québec City. It is not a measured footprint for Donnacona’s houses or all of Stadacona."
+            }
+          ]
+        },
+        {
+          "id": "historical-context",
+          "text": "During the expedition’s severe winter illness, Dom Agaya sent two women who showed the visitors how to prepare bark and leaves from a tree called annedda. The account credits their help with the sailors’ recovery. This episode records Indigenous knowledge and assistance within a relationship already shaped by captivity.",
+          "status": "well-supported",
+          "explanation": "Interpretations and historical perspectives are attributed in the text.",
+          "support": [
+            {
+              "sourceId": "d18-source-cartier1535",
+              "locator": "pp. 5–6: winter illness, Dom Agaya and two women preparing annedda",
               "stance": "supports",
-              "note": "Supports this observation within the stated chronology, access and geographic limits."
+              "note": "Supports the stated historical account or material observation; source access is specified in the citation."
             }
           ]
         }
@@ -5152,7 +5183,7 @@
           "year": 1535,
           "venue": "Original scholarship / institutional source",
           "url": "https://nationalhumanitiescenter.org/pds/amerbegin/exploration/text2/cartier.pdf",
-          "access": "Seven-page selected primary text read and downloaded. Pages 2–3 Hochelaga and Stadacona; p.3 note on captured interpreters; p.7 selected vocabulary. Original factual summary; source prose and media are not republished."
+          "access": "Original selected primary-source text independently downloaded and read on 2026-11-16: Hochelaga reception pp. 2–3, Stadacona/translation pp. 3–4, winter illness and assistance pp. 5–6, vocabulary p. 7. The NHC edition translates excerpts from Ramsay Cook’s 1993 edition; European interpretations are attributed to the account."
         },
         {
           "id": "d18-source-geo-cartier",
@@ -5165,13 +5196,15 @@
         }
       ],
       "review": {
-        "summary": "The account describes Cartier’s visit to Donnacona at Stadacona and the expedition’s nearby wintering. Taignoagny and Dom Agaya mediated communication after Cartier had taken them to France in 1534. The encounter shows language work entangled with unequal power.",
-        "limitations": "The point is the public Cartier-Brébeuf wintering memorial locality, not Stadacona’s archaeological footprint. The general voyage wordlist does not allocate every entry to one town. Official modern park reference for 1535–1536 wintering near Stadacona; no village footprint inferred.",
-        "discussion": "The date belongs to this document, encounter or observed pattern. Language relationships, speaker distributions, political identity and ancestry are separate questions.",
+        "summary": "At Stadacona near present-day Québec City, Donnacona received Cartier’s party and showed houses stocked for winter. Taignoagny and Dom Agaya helped communication after Cartier had taken them captive to France in 1534. The expedition returned with them in 1535 and wintered nearby.",
+        "limitations": "These events survive in the expedition’s account. Its sweeping claims about the remedy reflect the narrator’s interpretation; this record does not identify the tree species.",
+        "discussion": "During the expedition’s severe winter illness, Dom Agaya sent two women who showed the visitors how to prepare bark and leaves from a tree called annedda. The account credits their help with the sailors’ recovery. This episode records Indigenous knowledge and assistance within a relationship already shaped by captivity.",
         "provenance": "Dedicated-study campaign: Consensus Deep discovery followed by original-source checking. Full research dossier retained privately.",
         "reviewedAt": "2026-11-16",
         "history": [
-          "Added independently written source-linked observation with explicit chronology and place precision."
+          "Added independently written source-linked observation with explicit chronology and place precision.",
+          "2026-11-16: Reader-facing description updated: Lead with the historical event, people and surviving evidence; replace generic process commentary with distinct factual context.",
+          "2026-11-16: Reader-facing description updated: Lead with the historical event, people and surviving evidence; replace generic process commentary with distinct factual context."
         ],
         "relatedIds": [
           "d18-language-hochelaga-1535",
@@ -5188,9 +5221,9 @@
     },
     {
       "id": "d18-language-new-echota-phoenix-1828",
-      "revision": 1,
+      "revision": 3,
       "type": "occurrence",
-      "title": "New Echota — Cherokee and English in a national newspaper",
+      "title": "New Echota — a Cherokee national newspaper speaks against removal",
       "culture": {
         "id": "d18-communities-iroquoian-languages",
         "name": "Iroquoian languages — see the dated community and context",
@@ -5214,44 +5247,58 @@
         "approximate": false,
         "original": "21 February 1828 CE first issue",
         "method": "Historical document, manuscript, monument or encounter date as reported by the cited source. This is not a first date of speech or a census of speakers.",
-        "interpretation": "The public reference point is a modern site approach; do not identify it as the press footprint. No literacy or population figure inferred from publication. Public NPS site-approach photograph coordinate, suitable only as a town/site reference; not exact printing-office footprint."
+        "interpretation": "21 February 1828 is the first issue’s publication date. It dates this newspaper’s launch, not the beginning of Cherokee literacy or government."
       },
       "claims": [
         {
           "id": "evidence",
-          "text": "The Cherokee Phoenix began publication at New Echota on 21 February 1828. Printed in Cherokee and English, its early contents included the Cherokee constitution and public affairs. A working press was part of the Cherokee capital’s political institutions.",
+          "text": "The first Cherokee Phoenix appeared at New Echota on 21 February 1828, edited by Elias Boudinot and printed in Cherokee and English. Its opening issue carried the Cherokee constitution. In an address to readers, the editor explained that the printing establishment belonged to the Cherokee Nation and that the newspaper operated under the direction of its legislature.",
           "status": "well-supported",
-          "explanation": "The public reference point is a modern site approach; do not identify it as the press footprint. No literacy or population figure inferred from publication. The public reference point is a modern site approach; do not identify it as the press footprint. No literacy or population figure inferred from publication. Public place reference only; the named structure or excavated sample is not separately geolocated.",
+          "explanation": "The editorial states the newspaper’s aims and political position at its launch. It does not represent every Cherokee opinion or settle later disagreements over removal.",
           "support": [
             {
               "sourceId": "d18-source-phoenix1828",
-              "locator": "First issue index and constitution; LoC serial history; Georgia managing-authority history.",
+              "locator": "Volume 1, issue 1 index: constitution and publication date",
               "stance": "supports",
-              "note": "Supports this observation within the stated chronology, access and geographic limits."
+              "note": "Supports the stated historical account or material observation; source access is specified in the citation."
             },
             {
               "sourceId": "d18-source-phoenix-loc",
-              "locator": "First issue index and constitution; LoC serial history; Georgia managing-authority history.",
+              "locator": "Serial description: first issue, editor and languages",
               "stance": "supports",
-              "note": "Supports this observation within the stated chronology, access and geographic limits."
+              "note": "Supports the stated historical account or material observation; source access is specified in the citation."
+            },
+            {
+              "sourceId": "history-first-phoenix-editorial1828",
+              "locator": "Opening address: national ownership and legislature",
+              "stance": "supports",
+              "note": "Supports the stated historical account or material observation; source access is specified in the citation."
             },
             {
               "sourceId": "d18-source-new-echota",
-              "locator": "First issue index and constitution; LoC serial history; Georgia managing-authority history.",
-              "stance": "supports",
-              "note": "Supports this observation within the stated chronology, access and geographic limits."
+              "locator": "Managing-authority historic-site history: Cherokee capital and print shop",
+              "stance": "context",
+              "note": "Context for New Echota as the national-capital and printing setting. The first-issue date and political aims come from the newspaper and serial catalog."
             },
             {
               "sourceId": "d18-source-geo-new-echota",
-              "locator": "First issue index and constitution; LoC serial history; Georgia managing-authority history.",
-              "stance": "supports",
-              "note": "Supports this observation within the stated chronology, access and geographic limits."
-            },
-            {
-              "sourceId": "d18-source-cherokee-syllabary",
-              "locator": "Issue 1 index and constitution; institutional serial and site histories.",
+              "locator": "NPS public image record: Trail of Tears sign leading to New Echota Historic Site, published coordinates",
               "stance": "context",
-              "note": "Related reading for Iroquoian languages; contextual language interpretation, not direct dating of this place or every speaker."
+              "note": "Locates a public sign leading to the historic site. It is a visitor-area map reference, not the exact position of the 1828 press."
+            }
+          ]
+        },
+        {
+          "id": "historical-context",
+          "text": "The opening editorial promised to publish national laws and public documents in both languages and provide space for debate. It also confronted the dispute with Georgia and the federal policy of removing Indigenous nations beyond state borders, describing removal as harmful and promising to represent the majority’s views. The press was therefore a working political institution: it circulated Cherokee law, addressed outside readers and argued for the nation’s future in its existing homeland.",
+          "status": "well-supported",
+          "explanation": "Interpretations and historical perspectives are attributed in the text.",
+          "support": [
+            {
+              "sourceId": "history-first-phoenix-editorial1828",
+              "locator": "To the Public: national purposes; bilingual documents; free discussion; Georgia and removal-policy paragraphs",
+              "stance": "supports",
+              "note": "Supports the stated historical account or material observation; source access is specified in the citation."
             }
           ]
         }
@@ -5264,7 +5311,7 @@
           "year": 1828,
           "venue": "Original scholarship / institutional source",
           "url": "https://www.wcu.edu/library/DigitalCollections/CherokeePhoenix/Vol1/no01/index.html",
-          "access": "Original-issue digital index read and saved; linked primary-text pages include the Cherokee constitution and the editor’s address. Original factual summary; source prose and media are not republished."
+          "access": "First-issue digital index independently downloaded on 2026-11-16; the linked opening editorial was also downloaded and read in full. Constitution presence is supported by the index; its entire text was not collated in this pass."
         },
         {
           "id": "d18-source-phoenix-loc",
@@ -5273,7 +5320,7 @@
           "year": null,
           "venue": "Original scholarship / institutional source",
           "url": "https://www.loc.gov/item/sn83020866",
-          "access": "Indexed institutional serial description read: first issue 21 February 1828, Cherokee and English, laws and notices; direct item fetch blocked. Original factual summary; source prose and media are not republished."
+          "access": "Institutional serial catalog checked through current indexed rendering on 2026-11-16 for 21 February 1828, Cherokee/English and Elias Boudinot; direct item page access remained restricted."
         },
         {
           "id": "d18-source-new-echota",
@@ -5294,23 +5341,25 @@
           "access": "Public NPS image record explicitly publishes latitude 34.540433, longitude -84.910033. Original factual summary; source prose and media are not republished."
         },
         {
-          "id": "d18-source-cherokee-syllabary",
-          "authors": "National Park Service, University of West Georgia Center for Public History, Chattooga County Historical Society",
-          "title": "All the People were Amazed: Chattooga Town",
-          "year": null,
-          "venue": "Original scholarship / institutional source",
-          "url": "https://www.nps.gov/trte/learn/historyculture/upload/All-the-People-were-Amazed-508.pdf",
-          "access": "One-page institutional exhibit read. It dates syllabary completion to 1821; cites Payne–Butrick Papers I:139–140 for the Chattooga court demonstration. Original factual summary; source prose and media are not republished."
+          "id": "history-first-phoenix-editorial1828",
+          "authors": "Cherokee Phoenix, edited by Elias Boudinot",
+          "title": "New Echota: To the Public, 21 February 1828",
+          "year": 1828,
+          "venue": "Cherokee Phoenix 1(1), p. 3, columns 2b–4; Western Carolina University transcription",
+          "url": "https://www.wcu.edu/library/DigitalCollections/CherokeePhoenix/Vol1/no01/new-echota-page-3-column-2b-4.html",
+          "access": "Original-issue editorial transcription independently downloaded and read on 2026-11-16. It states national ownership, direction by the Cherokee Legislature, bilingual publication aims, discussion of removal policy and the controversy with Georgia. No verbatim quotation is republished."
         }
       ],
       "review": {
-        "summary": "The Cherokee Phoenix began publication at New Echota on 21 February 1828. Printed in Cherokee and English, its early contents included the Cherokee constitution and public affairs. A working press was part of the Cherokee capital’s political institutions.",
-        "limitations": "The public reference point is a modern site approach; do not identify it as the press footprint. No literacy or population figure inferred from publication. Public NPS site-approach photograph coordinate, suitable only as a town/site reference; not exact printing-office footprint.",
-        "discussion": "The date belongs to this document, encounter or observed pattern. Language relationships, speaker distributions, political identity and ancestry are separate questions.",
+        "summary": "The first Cherokee Phoenix appeared at New Echota on 21 February 1828, edited by Elias Boudinot and printed in Cherokee and English. Its opening issue carried the Cherokee constitution. In an address to readers, the editor explained that the printing establishment belonged to the Cherokee Nation and that the newspaper operated under the direction of its legislature.",
+        "limitations": "The editorial states the newspaper’s aims and political position at its launch. It does not represent every Cherokee opinion or settle later disagreements over removal.",
+        "discussion": "The opening editorial promised to publish national laws and public documents in both languages and provide space for debate. It also confronted the dispute with Georgia and the federal policy of removing Indigenous nations beyond state borders, describing removal as harmful and promising to represent the majority’s views. The press was therefore a working political institution: it circulated Cherokee law, addressed outside readers and argued for the nation’s future in its existing homeland.",
         "provenance": "Dedicated-study campaign: Consensus Deep discovery followed by original-source checking. Full research dossier retained privately.",
         "reviewedAt": "2026-11-16",
         "history": [
-          "Added independently written source-linked observation with explicit chronology and place precision."
+          "Added independently written source-linked observation with explicit chronology and place precision.",
+          "2026-11-16: Reader-facing description updated: Lead with the historical event, people and surviving evidence; replace generic process commentary with distinct factual context.",
+          "2026-11-16: Reader-facing description updated: Lead with the historical event, people and surviving evidence; replace generic process commentary with distinct factual context."
         ],
         "relatedIds": [
           "d18-language-hochelaga-1535",
@@ -5327,9 +5376,9 @@
     },
     {
       "id": "d18-language-mani-1562",
-      "revision": 1,
+      "revision": 3,
       "type": "occurrence",
-      "title": "Maní — suppression of Maya religious books and practice",
+      "title": "Maní — public punishment and the burning of Maya books",
       "culture": {
         "id": "d18-communities-maya-languages",
         "name": "Maya languages — see the dated community and context",
@@ -5353,26 +5402,40 @@
         "approximate": false,
         "original": "12 July 1562 CE auto de fe",
         "method": "Historical document, manuscript, monument or encounter date as reported by the cited source. This is not a first date of speech or a census of speakers.",
-        "interpretation": "This was a specific destructive event, not the disappearance of Maya languages or all Indigenous writing. Association of particular burnt fragments with the event remains interpretive. Published modern municipal-seat reference; not the exact 1562 plaza apparatus or archaeological fire footprint."
+        "interpretation": "12 July 1562 is the documented date of the public punishment and burning. The archaeological recovery took place in 2015."
       },
       "claims": [
         {
           "id": "evidence",
-          "text": "At Maní’s public plaza, Diego de Landa’s campaign punished Maya religious practice and destroyed sacred objects and books in an auto de fe. The event belongs to the history of colonial coercion and the uneven survival of Maya written records.",
+          "text": "On 12 July 1562, Franciscan friar Diego de Landa and other friars staged an auto de fe in Maní’s plaza: a public ceremony of religious condemnation and punishment. Maya prisoners were punished for continuing to honor their gods, practices the friars condemned as idolatry. Landa ordered sacred objects and Maya books burned. A report that sacred images and skulls had been found in a nearby cave had helped trigger the investigation.",
           "status": "well-supported",
-          "explanation": "This was a specific destructive event, not the disappearance of Maya languages or all Indigenous writing. Association of particular burnt fragments with the event remains interpretive. This was a specific destructive event, not the disappearance of Maya languages or all Indigenous writing. Association of particular burnt fragments with the event remains interpretive. Public place reference only; the named structure or excavated sample is not separately geolocated.",
+          "explanation": "The ceramics’ association with the 1562 burning is an archaeological interpretation. The reported finds are pottery fragments, not recovered pages from the destroyed books.",
           "support": [
             {
               "sourceId": "d18-source-mani-inah",
-              "locator": "INAH report opening paragraph; historical account and archaeological-association qualifications.",
+              "locator": "Opening historical account; paragraphs on Landa, religious persecution and the public burning",
               "stance": "supports",
-              "note": "Supports this observation within the stated chronology, access and geographic limits."
+              "note": "Supports the stated historical account or material observation; source access is specified in the citation."
             },
             {
               "sourceId": "d18-source-geo-mani",
-              "locator": "INAH report opening paragraph; historical account and archaeological-association qualifications.",
+              "locator": "Table 1.1, PDF p. 18: Maní municipal-seat coordinates",
+              "stance": "context",
+              "note": "Context for the public town reference used on the map. This geographic table does not date the event or locate the 1562 fire within the plaza."
+            }
+          ]
+        },
+        {
+          "id": "historical-context",
+          "text": "In 2015, excavators recovered 548 ceramic fragments from five trenches in front of Maní’s municipal palace. Almost 97 percent came from vessels and incense burners, many bearing human figures; numerous pieces showed exposure to fire. Archaeologist Tomás Gallareta Negrón interpreted this concentration as remains of the destruction. Historian John Chuchiak connects the event to disputes between secular officials and Franciscans over the persecution of Maya religion. The burning targeted both religious practice and the objects and books through which knowledge was passed on.",
+          "status": "well-supported",
+          "explanation": "Interpretations and historical perspectives are attributed in the text.",
+          "support": [
+            {
+              "sourceId": "d18-source-mani-inah",
+              "locator": "2015 rescue excavation and ceramic analysis paragraphs; Gallareta interpretation; Chuchiak explanation of secular–Franciscan conflict",
               "stance": "supports",
-              "note": "Supports this observation within the stated chronology, access and geographic limits."
+              "note": "Supports the stated historical account or material observation; source access is specified in the citation."
             }
           ]
         }
@@ -5385,7 +5448,7 @@
           "year": 2024,
           "venue": "Original scholarship / institutional source",
           "url": "https://www.inah.gob.mx/boletines/reconstruyen-el-auto-de-fe-de-mani-yucatan-a-partir-de-nuevos-hallazgos-fuentes-historicas-y-animacion-virtual",
-          "access": "Full institutional research report fetched/read locally and saved; exact public-event date 12 July 1562, town plaza, destruction of sacred objects and codices. Original factual summary; source prose and media are not republished."
+          "access": "INAH Bulletin 367, 26 June 2024, independently read in the preserved original HTML/text and current indexed full report on 2026-11-16. Main article consistently dates the event to 1562; one gallery caption has an apparent 1652 typo. The report explicitly interprets the pottery concentration as associated with the event. Direct live page returned 403 and PDF request timed out; indexed report and previously saved original agree."
         },
         {
           "id": "d18-source-geo-mani",
@@ -5398,13 +5461,15 @@
         }
       ],
       "review": {
-        "summary": "At Maní’s public plaza, Diego de Landa’s campaign punished Maya religious practice and destroyed sacred objects and books in an auto de fe. The event belongs to the history of colonial coercion and the uneven survival of Maya written records.",
-        "limitations": "This was a specific destructive event, not the disappearance of Maya languages or all Indigenous writing. Association of particular burnt fragments with the event remains interpretive. Published modern municipal-seat reference; not the exact 1562 plaza apparatus or archaeological fire footprint.",
-        "discussion": "The date belongs to this document, encounter or observed pattern. Language relationships, speaker distributions, political identity and ancestry are separate questions.",
+        "summary": "On 12 July 1562, Franciscan friar Diego de Landa and other friars staged an auto de fe in Maní’s plaza: a public ceremony of religious condemnation and punishment. Maya prisoners were punished for continuing to honor their gods, practices the friars condemned as idolatry. Landa ordered sacred objects and Maya books burned. A report that sacred images and skulls had been found in a nearby cave had helped trigger the investigation.",
+        "limitations": "The ceramics’ association with the 1562 burning is an archaeological interpretation. The reported finds are pottery fragments, not recovered pages from the destroyed books.",
+        "discussion": "In 2015, excavators recovered 548 ceramic fragments from five trenches in front of Maní’s municipal palace. Almost 97 percent came from vessels and incense burners, many bearing human figures; numerous pieces showed exposure to fire. Archaeologist Tomás Gallareta Negrón interpreted this concentration as remains of the destruction. Historian John Chuchiak connects the event to disputes between secular officials and Franciscans over the persecution of Maya religion. The burning targeted both religious practice and the objects and books through which knowledge was passed on.",
         "provenance": "Dedicated-study campaign: Consensus Deep discovery followed by original-source checking. Full research dossier retained privately.",
         "reviewedAt": "2026-11-16",
         "history": [
-          "Added independently written source-linked observation with explicit chronology and place precision."
+          "Added independently written source-linked observation with explicit chronology and place precision.",
+          "2026-11-16: Reader-facing description updated: Lead with the historical event, people and surviving evidence; replace generic process commentary with distinct factual context.",
+          "2026-11-16: Reader-facing description updated: Lead with the historical event, people and surviving evidence; replace generic process commentary with distinct factual context."
         ],
         "relatedIds": [
           "d18-language-tikal-stela4-379",

@@ -692,7 +692,7 @@
     },
     {
       "id": "cahokia-urban",
-      "revision": 4,
+      "revision": 5,
       "type": "occupation",
       "title": "Cahokia — urban archaeological complex",
       "culture": {
@@ -840,19 +840,32 @@
         }
       ],
       "review": {
-        "summary": "This row represents the urban phase, not the first or last human presence in the region. Mississippian is an archaeological classification, not a race.",
+        "summary": "Cahokia’s urban complex flourished in approximately 1050–1400 CE. ‘Mississippian’ names an archaeological tradition associated with this phase, rather than a race or a single verified ethnic identity.",
         "limitations": "The regional population persisted and later increased. Ending this marker must not imply an empty watershed or extinction.",
         "discussion": "The regional population persisted and later increased. Ending this marker must not imply an empty watershed or extinction. Museum-reproduced Lohmann/Stirling estimates are model-based and approximate; the original 1997 chapter remains access-restricted. No interpolation between phases.",
         "provenance": "Starter corpus compiled from the named publications and archival sources. Editorial source check only; access limitations are recorded per citation. No independent peer review.",
-        "reviewedAt": "2026-10-28",
+        "reviewedAt": "2026-11-16",
         "history": [
           "2026-10-28: Initial source-traceable starter entry.",
           "2026-10-28: linked existing official geographic references explicitly as location context, without changing archaeological dating.",
           "2026-10-28: UNESCO coordinate and qualified sourced population phases added.",
-          "2026-10-28: supplementary source and interpretation context added."
+          "2026-10-28: supplementary source and interpretation context added.",
+          "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes."
         ],
         "relatedIds": [
-          "river-labbe-mission"
+          "river-labbe-mission",
+          "g20-cah-plaza-village",
+          "g20-cah-plaza-construction",
+          "g20-cah-monks-start",
+          "g20-cah-monks-completion",
+          "g20-cah-monks-terrace",
+          "g20-cah-mound48",
+          "g20-cah-woodhenge",
+          "g20-cah-stockades",
+          "g20-cah-mound34-premound",
+          "g20-cah-mound34-platform",
+          "g20-cah-mound51",
+          "g20-cah-mound60"
         ]
       },
       "population": [
@@ -876,7 +889,7 @@
     },
     {
       "id": "river-labbe-mission",
-      "revision": 3,
+      "revision": 5,
       "type": "occupation",
       "title": "Monks Mound — River L’Abbe mission",
       "culture": {
@@ -886,12 +899,12 @@
         "color": "#d48d77"
       },
       "location": {
-        "id": "cahokia",
-        "name": "Cahokia Mounds State Historic Site, Illinois",
-        "lon": -90.06138888888889,
-        "lat": 38.65861111111111,
-        "precision": "DMS-derived public UNESCO property reference point, not an individual mound, house or settlement centroid. Published accuracy is one arcsecond; extra decimal places are conversion precision only.",
-        "provenance": "UNESCO property 198bis maps table: N38 39 31 W90 3 41; https://whc.unesco.org/en/list/198/maps/"
+        "id": "g20-cah-monks-mound",
+        "name": "Monks Mound (Mound 38), Cahokia",
+        "lon": -90.06245,
+        "lat": 38.66034,
+        "precision": "Approximate public named-feature anchor, about 100 m tolerance. Crosschecked against an official archaeological plan; not a surveyed footprint or excavation location.",
+        "provenance": "https://www.openstreetmap.org/way/360096331; https://cahokiamounds.org/map/; https://www.npshistory.com/brochures/nhl/cahokia-mounds-trail-maps.pdf"
       },
       "destination": null,
       "routeKind": "schematic",
@@ -931,6 +944,32 @@
               "note": "Identifies the named regional setting. Not evidence for the associated archaeological age or historical event."
             }
           ]
+        },
+        {
+          "id": "named-mound-location",
+          "text": "The River L’Abbe mission was on the first terrace of Monks Mound.",
+          "status": "well-supported",
+          "explanation": "The marker identifies the mound at 100 m tolerance rather than the precise chapel footprint.",
+          "support": [
+            {
+              "sourceId": "white2020",
+              "locator": "Discussion, paragraph beginning “In AD 1735”: first terrace of Monks Mound",
+              "stance": "supports",
+              "note": "Names the terrace; not a surveyed chapel coordinate."
+            },
+            {
+              "sourceId": "g20-osm-360096331",
+              "locator": "Named mound polygon independently matched to public trail map",
+              "stance": "context",
+              "note": "Public mound-scale geography only."
+            },
+            {
+              "sourceId": "g20-cah-trail",
+              "locator": "Monks Mound on the public site plan",
+              "stance": "context",
+              "note": "Crosscheck of named mound location."
+            }
+          ]
         }
       ],
       "sources": [
@@ -948,9 +987,29 @@
           "authors": "UNESCO World Heritage Centre",
           "title": "Cahokia Mounds State Historic Site",
           "year": null,
-          "venue": "World Heritage List, property 198bis",
+          "venue": "World Heritage List, property 198 bis",
           "url": "https://whc.unesco.org/en/list/198/",
           "access": "Official property page read, including description and public coordinates."
+        },
+        {
+          "id": "g20-osm-360096331",
+          "title": "Monks Mound (Mound 38) — public map geometry",
+          "url": "https://www.openstreetmap.org/way/360096331",
+          "authors": "OpenStreetMap contributors",
+          "year": null,
+          "access": "Original OSM API geometry downloaded 2026-11-16 and independently crosschecked against official public archaeological plans. Crowdsourced mapping is not a surveyed archaeological footprint.",
+          "venue": "OpenStreetMap public geographic database",
+          "referenceType": "web-resource"
+        },
+        {
+          "id": "g20-cah-trail",
+          "title": "Cahokia Mounds Historic Site: Trail Maps, revised October 2010",
+          "url": "https://www.npshistory.com/brochures/nhl/cahokia-mounds-trail-maps.pdf",
+          "authors": "Cahokia Mounds State Historic Site",
+          "year": 2010,
+          "access": "Original site-issued map downloaded from NPSHistory archive and visually inspected. Archive is a mirror, not the National Park Service. Geographic context only.",
+          "venue": "Institutional publication",
+          "referenceType": "web-resource"
         }
       ],
       "review": {
@@ -958,20 +1017,25 @@
         "limitations": "The dates delimit the mission's operation. The later destination of every resident is not established here. Original cited historical studies were not independently reviewed. Also present: French missionaries. This category does not describe every participant.",
         "discussion": "The dates delimit the mission's operation. The later destination of every resident is not established here. Original cited historical studies were not independently reviewed.",
         "provenance": "Starter corpus compiled from the named publications and archival sources. Editorial source check only; access limitations are recorded per citation. No independent peer review.",
-        "reviewedAt": "2026-10-28",
+        "reviewedAt": "2026-11-16",
         "history": [
           "2026-10-28: Initial source-traceable starter entry.",
           "2026-10-28: linked existing official geographic references explicitly as location context, without changing archaeological dating.",
-          "2026-10-28: shared public Cahokia complex locator refined; no individual structure location asserted."
+          "2026-10-28: shared public Cahokia complex locator refined; no individual structure location asserted.",
+          "2026-11-16: Current UNESCO property reference lies south of Monks Mound. Source explicitly places the mission on the first terrace; refine to the named mound while retaining mission dates and existing claims.",
+          "2026-11-16: Current UNESCO property reference lies south of Monks Mound. Source explicitly places the mission on the first terrace; refine to the named mound while retaining mission dates and existing claims."
         ],
         "relatedIds": [
-          "cahokia-urban"
+          "cahokia-urban",
+          "g20-cah-monks-start",
+          "g20-cah-monks-completion",
+          "g20-cah-monks-terrace"
         ]
       }
     },
     {
       "id": "louisiana-purchase",
-      "revision": 1,
+      "revision": 2,
       "type": "event",
       "title": "Louisiana Purchase Treaty",
       "culture": {
@@ -1019,13 +1083,14 @@
         }
       ],
       "review": {
-        "summary": "The National Archives preserves the treaty and identifies its provenance in Record Group 11. This primary document supports a dated diplomatic transaction and the application's chronological endpoint.",
+        "summary": "The United States and France concluded the Louisiana Purchase Treaty on 30 April 1803. The treaty states the two governments’ territorial claims; it does not establish Indigenous consent, an empty territory or a population movement on that date.",
         "limitations": "The treaty expresses the claims of its signatory governments. It is not evidence that the territory was unoccupied, that Indigenous peoples consented, or that populations moved in the year of signature. Keep it in the event table and timeline without a fabricated settlement dot.",
         "discussion": "The treaty expresses the claims of its signatory governments. It is not evidence that the territory was unoccupied, that Indigenous peoples consented, or that populations moved in the year of signature. Keep it in the event table and timeline without a fabricated settlement dot.",
         "provenance": "Starter corpus compiled from the named publications and archival sources. Editorial source check only; access limitations are recorded per citation. No independent peer review.",
-        "reviewedAt": "2026-10-28",
+        "reviewedAt": "2026-11-16",
         "history": [
-          "2026-10-28: Initial source-traceable starter entry."
+          "2026-10-28: Initial source-traceable starter entry.",
+          "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes."
         ],
         "relatedIds": [
           "sovereignty-louisiana-transfer"

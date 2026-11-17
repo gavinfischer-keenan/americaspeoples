@@ -311,7 +311,7 @@ export const comingSoonBStories:Story[]=[
         "id": "tierradentro-1",
         "year": -99,
         "title": "Settlement on the Plano de Segovia",
-        "body": "Tierradentro’s story begins here with settlement evidence rather than the excavation of its famous painted tombs. During the locally defined Early 3 period, from 300 BCE to 100 CE, the regional survey found a concentration of habitation at Plano de Segovia and smaller concentrations around San Andrés. Pottery distributions reveal people organizing households and daily activities across this mountain landscape. They do not yet establish when particular hypogea were cut into the rock. Keeping those histories separate matters because settlements could precede, overlap or outlast the funerary monuments. The map uses a public Segovia-area reference, while the actual survey distributions extend beyond a single point.",
+        "body": "During Tierradentro’s locally defined Early 3 period, from 300 BCE to 100 CE, people concentrated their households at Plano de Segovia and in smaller groups around San Andrés. Pottery distributions reveal this settlement pattern across the mountain landscape. These traces of everyday activity precede the conventional dating of the famous painted tombs, whose individual construction dates remain unresolved.",
         "note": "100 BCE orients the local Early 3 phase. The public Segovia locator is not an individual house or early tomb.",
         "recordIds": [
           "d19-tierradentro-segovia-early3"
@@ -464,7 +464,7 @@ export const comingSoonBStories:Story[]=[
         "id": "casarabe-4",
         "year": 1100,
         "title": "Later activity in Salvatierra’s sequence",
-        "body": "A Phase 5 charcoal context at Salvatierra has a modeled date of 1081–1158 CE at 95.4% probability, much later than the Phase 1 sample. Together, the contexts show why a site history needs a sequence of excavated deposits rather than one cultural label. They do not prove continuous occupation between the two sample windows. Across Salvatierra’s excavated phases, burial practices varied, with many graves lacking goods and some individuals receiving exceptional treatment. The dated Phase 5 charcoal does not date all of those burials. Architecture, mortuary practice and water storage must each be related to stratigraphy before their changes can be placed within a precise historical narrative.",
+        "body": "Later activity at Salvatierra is represented by Phase 5 charcoal dated to 1081–1158 CE at 95.4% probability, following the much earlier Phase 1 context. Across the excavated sequence, burial treatment varied: many graves lacked goods, while some individuals received exceptional treatment. The settlement also included architecture and water-storage features. Each deposit has to be placed in its own layer sequence, so the Phase 5 charcoal cannot supply a date for every burial or prove occupation throughout the interval since Phase 1.",
         "note": "1100 CE is within a Phase 5 charcoal likelihood; site-wide burial patterns are not assigned wholesale to this date.",
         "recordIds": [
           "d19-casarabe-salvatierra-phase5-charcoal"
@@ -553,7 +553,7 @@ export const comingSoonBStories:Story[]=[
         "id": "nan-madol-2",
         "year": 1065,
         "title": "Courtly settings receive concentrated investment",
-        "body": "Within the early phase, ten coral dates cluster between about 1055 and 1075 CE. Samples from Pahnkedira and the royal-tomb complex suggest a concentrated episode of investment in places associated with chiefly power. The pattern is meaningful because it sits inside a wider sample sequence rather than resting on one spectacular structure. Still, coral dates do not identify the workers, their recruitment, or the precise political event that prompted building. The public map point represents Nan Madol as a whole; the palace and named tomb islets remain distinct architectural contexts in the source, not separately surveyed pins here.",
+        "body": "People invested in construction at Pahnkedira and the royal-tomb complex during an early phase of Nan Madol’s development. Ten coral dates cluster around 1055–1075 CE, suggesting a concentrated episode of work at places associated with chiefly power. These samples belong to a wider sequence of construction-related coral. They help establish when building occurred, while the workers’ identities and the political circumstances behind their labor remain unknown.",
         "note": "A dated sample cluster, not ten independently dated monuments.",
         "recordIds": [
           "d19-nan-court-peak",
@@ -620,7 +620,7 @@ export const comingSoonBStories:Story[]=[
         "id": "nan-madol-6",
         "year": 1830,
         "title": "Chiefly life continues after monumental expansion",
-        "body": "The heritage nomination describes a broad early-contact period from 1826 to 1885, with foreign objects entering Nan Madol’s archaeological record. Its accounts of residence need care: the summary ends residential use by the 1820s, while the detailed history retains chiefly occupation on a few islets into the early 1900s. That tension is kept visible here. Ceremonial visits, chiefly residence and a growing monumental center are different kinds of activity. Pohnpeian institutions and relationships continued even as the place’s uses changed. This chapter uses 1830 as a viewing position within the documentary period; it does not claim a specifically dated assembly or equal activity on every islet.",
+        "body": "Foreign objects entered Nan Madol’s archaeological record during the heritage nomination’s early-contact period, 1826–1885. The nomination gives differing accounts of residence: its summary ends residential use by the 1820s, while its detailed history retains chiefly occupation on a few islets into the early 1900s. Pohnpeian institutions and relationships continued as the place’s uses changed. Chiefly residence and ceremonial visits belonged to this later history, distinct from the earlier growth of the monumental center.",
         "note": "Sources differ on residential cessation. The 1826–1885 context window does not date continuous occupation, an exact assembly or the end of Pohnpeian institutions.",
         "recordIds": [
           "d19-nan-early-contact-use"
@@ -660,7 +660,7 @@ export const comingSoonBStories:Story[]=[
         "id": "budj-bim-2",
         "year": 1250,
         "title": "Stone walls reshape an existing channel",
-        "body": "The F10 channel’s stone sidewalls belong to a later episode dated approximately 600–800 cal BP, represented here as 1150–1350 CE. Their relationship to the earlier excavated channel shows development rather than a complete system built all at once. A channel can be recut, contained and maintained as sediment and water conditions change. That sequence is more informative than treating the visible walls as timeless scenery. The dates concern a specific part of the Muldoons complex, and the broad map reference does not identify an excavation trench. Other channels and houses require their own contextual evidence and chronological checks.",
+        "body": "People added stone sidewalls to the F10 channel at Muldoons around 1150–1350 CE, substantially later than the excavated channel itself. The walls contained water within an older feature that could be recut and maintained as sediments and conditions changed. This sequence records successive work on the Gunditjmara aquaculture landscape. The date concerns this particular channel feature; other surviving channels, walls, and houses have their own histories.",
         "note": "Published approximate construction range; no single year of completion is implied.",
         "recordIds": [
           "d19-budj-f10-walls"
@@ -692,7 +692,7 @@ export const comingSoonBStories:Story[]=[
         "id": "budj-bim-4",
         "year": 1850,
         "title": "A stone house belongs to a lived frontier landscape",
-        "body": "At Kurtonitj, excavated materials support occupation of a stone house during approximately 1840–1870. Metal objects help place this use within the colonial period, while older stone artifacts may belong to earlier activity. The house matters here because the engineered landscape was also a setting of residence and everyday decisions, including life under growing colonial pressure. Its occupation range cannot be substituted for the date when the walls were first built. The public Kurtonitj point identifies the central landscape component rather than the house itself. The companion Gunditjmara study follows the community history behind this particular material record.",
+        "body": "People occupied a stone house at Kurtonitj around 1840–1870, during growing colonial pressure on Gunditjmara Country. Metal objects help date this occupation, while some stone artifacts may derive from earlier activity. The house places residence and everyday work within the wider engineered landscape. The assemblage dates use of the house, rather than the first construction of its walls.",
         "note": "Occupation evidence, not a construction date; house KSH-1 is not separately mapped.",
         "recordIds": [
           "regional-kurtonitj-1840s"
@@ -708,7 +708,7 @@ export const comingSoonBStories:Story[]=[
         "id": "budj-bim-5",
         "year": 1867,
         "title": "The mission reorganizes access to Country",
-        "body": "Lake Condah Mission opened in 1867 within a landscape already shaped by generations of Gunditjmara activity. Its location followed resistance to relocation away from Country, yet the institution also introduced supervision and restrictions that changed how people could live and move. This chapter places the mission beside the water-engineering sequence because access to a cultural landscape is part of its history. It does not date a new aquaculture feature or suggest that earlier knowledge ended when the mission opened. The community study takes up the families, exclusionary policies and continued connections that outlasted the mission’s formal administration.",
+        "body": "Lake Condah Mission opened in 1867 after Gunditjmara resistance to relocation away from Country helped determine its location. The institution imposed supervision and restrictions on how people could live and move. Families maintained connections with a landscape already shaped by generations of water engineering, residence, and harvesting. The mission became one setting within that continuing history, alongside exclusionary policies and struggles over access to Country.",
         "note": "The mission is a separate nearby locality, mapped with a coarse public reference.",
         "recordIds": [
           "d19-gunditjmara-mission-1867"
@@ -764,7 +764,7 @@ export const comingSoonBStories:Story[]=[
         "id": "gunditjmara-3",
         "year": 1867,
         "title": "Insisting on Country within a mission system",
-        "body": "The opening of Lake Condah Mission followed Gunditjmara refusal to settle away from their own Country. That insistence helped determine where the institution stood, even though a mission also imposed colonial authority over everyday life. The two facts belong together: the site records both coercion and decisions made by people trying to maintain local connections. It later became important to family histories, gathering and political organization. Its opening is therefore an event within Gunditjmara history, not a replacement for that history. The map uses a coarse mission-locality reference and does not expose particular graves or identify individual residents’ houses.",
+        "body": "Gunditjmara refusal to settle away from Country helped determine where Lake Condah Mission was established. The mission imposed colonial authority over everyday life, while residents worked to maintain local connections. It became important to family histories, gatherings, and political organization. Its history includes both coercion by colonial institutions and decisions made by people seeking to remain connected to their homeland.",
         "note": "Community account checked against the National Museum history; the date is the mission opening.",
         "recordIds": [
           "d19-gunditjmara-mission-1867"
@@ -796,7 +796,7 @@ export const comingSoonBStories:Story[]=[
         "id": "gunditjmara-5",
         "year": 1918,
         "title": "Administrative closure does not end community ties",
-        "body": "Lake Condah Mission formally closed in 1918, and the community account describes people being forced off the mission, including movement toward Lake Tyers. Yet the same history preserves continued visits and relationships, while the National Museum records residents remaining after closure. These accounts warn against converting an administrative endpoint into the disappearance of a community from Country. The site’s later importance to gathering, family memory and political struggle rests on those continuing connections. The timeline stops before 1935, but that display limit is not a historical endpoint for Gunditjmara people or for their responsibilities to the landscape.",
+        "body": "Lake Condah Mission formally closed in 1918. The community account describes people being forced off the mission, including movement toward Lake Tyers, while preserving a history of continued visits and relationships. The National Museum also records residents remaining after closure. These accounts show differing experiences around the administrative ending. Connections with Country continued through family memory, gatherings, and political struggle.",
         "note": "Formal closure is dated precisely; different later experiences are not flattened into one universal departure.",
         "recordIds": [
           "d19-gunditjmara-mission-1918"
@@ -852,7 +852,7 @@ export const comingSoonBStories:Story[]=[
         "id": "lapita-3",
         "year": -888,
         "title": "Nukuleka supplies a narrow chronological anchor",
-        "body": "At Nukuleka on Tongatapu, uranium-series dating of a coral file gives a reported range of 2846–2830 cal BP, unusually narrow beside many radiocarbon windows. The object contributes to the chronology of early settlement in Tonga, but a precise measurement still requires an archaeological interpretation of when the coral was collected and used. It cannot by itself specify the language of its maker or the route of the last voyage to the village. The public marker locates Nukuleka as a modern named place, keeping the dated artifact’s context separate from an exact excavation pin or a reconstructed landing beach.",
+        "body": "An early settlement at Nukuleka on Tongatapu produced a coral file, a tool made from coral. Uranium-series dating gives a reported range of 2846–2830 calibrated years before 1950. The object helps establish the chronology of early settlement in Tonga. Interpreting its age still depends on when the coral was collected and used; it cannot identify the maker’s language or the course of a voyage to the village.",
         "note": "A reused reviewed observation with a newly checked public village coordinate.",
         "recordIds": [
           "r6-nukuleka-onset"
@@ -868,7 +868,7 @@ export const comingSoonBStories:Story[]=[
         "id": "lapita-4",
         "year": -800,
         "title": "Bourewa has its own settlement model",
-        "body": "At Bourewa on Viti Levu, a Bayesian analysis combines dated evidence into modeled settlement bounds. The published onset range is 2865–2770 cal BP and the terminal range 2690–2614 cal BP, both reported at 95.4 percent probability. The display selects a year within their overall envelope so that this Fiji sequence can be compared with Tonga without forcing the two onto one exact timetable. Model boundaries depend on the samples and assumptions included. They are not annual population estimates, and the terminal modeled boundary should not become an unsupported claim that people left the entire district or stopped moving between islands.",
+        "body": "Bourewa on Viti Levu preserves a dated early settlement sequence in Fiji. A statistical analysis combining the samples estimates its beginning at 2865–2770 calibrated years before 1950 and its ending at 2690–2614, both at 95.4% probability. These modeled boundaries describe the sampled occupation sequence. They provide a basis for comparison with Tonga’s early settlements without requiring identical settlement dates across the islands or a departure of all people from the wider district.",
         "note": "Existing model retained; geography refined using a separately published Bourewa site reference.",
         "recordIds": [
           "px-bourewa-model"

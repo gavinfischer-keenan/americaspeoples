@@ -98,6 +98,7 @@ try {
           await page.locator(".bibliography li").count(),
           record.sources.length,
         );
+        await page.locator('.review-technical > summary').click();
         assert.ok(
           (await page.locator("main").innerText()).includes(
             record.time.original,

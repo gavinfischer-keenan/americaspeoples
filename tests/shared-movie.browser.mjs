@@ -8,7 +8,7 @@ const page=await browser.newPage({viewport:{width:1440,height:960}}),errors=[];
 page.on('pageerror',e=>{errors.push(e.message);console.error('PAGE ERROR',e.message);});
 const origin=`http://127.0.0.1:${server.address().port}`;
 const records=JSON.parse(await readFile('dist/dataset.json','utf8')).records;
-const point=id=>{const r=records.find(r=>r.id===id);return r.history?.kind==='settlement'?page.locator(`[data-record-id="${id}"]`):page.locator(`[data-point="${r.location.lon},${r.location.lat}"]`);};
+const point=id=>{const r=records.find(r=>r.id===id);return r.history?.kind==='settlement'?page.locator(records.filter(x=>x.history?.kind==='settlement'&&x.location?.lon===r.location.lon&&x.location?.lat===r.location.lat).map(x=>`[data-record-id="${x.id}"]`).join(',')).first():page.locator(`[data-point="${r.location.lon},${r.location.lat}"]`);};
 try{
  await page.goto(origin);await page.getByRole('button',{name:'Pause',exact:true}).waitFor();
  assert.equal(await page.locator('#story-select').inputValue(),'free');
@@ -42,8 +42,8 @@ try{
  await page.getByLabel('Follow an expedition',{exact:true}).selectOption('beagle-1831-1836');
  await page.locator('#voyage-progress').press('End');assert.match(await page.locator('#voyage-position').innerText(),/1836-04/,'ends before Mauritius and Africa');
  await page.getByLabel('Choose a story',{exact:true}).selectOption('chaco-connections');
- await page.locator('[data-terrain="chaco"]').waitFor();
  await page.locator('#story-progress').press('End');
+ await page.locator('[data-terrain="chaco"]').waitFor();
  assert.ok(await page.locator('[data-local-record="site-chaco-pueblo-bonito"]').count(),'local chronology exposes dated building phases');
  assert.equal(await page.locator('[data-terrain="mesa-verde"]').count(),0,'offscreen local terrain is not rendered');
  const bonito=point('site-chaco-pueblo-bonito'),chetro=point('site-chaco-chetro-ketl');
@@ -69,8 +69,7 @@ try{
  await page.getByRole('button',{name:'Close details',exact:true}).click();
  await page.getByLabel('Choose a story',{exact:true}).selectOption('chaco-connections');
  await page.getByRole('button',{name:'Restart story',exact:true}).click();
- await page.getByRole('button',{name:'Next scene',exact:true}).click();
- await page.getByRole('button',{name:'Next scene',exact:true}).click();
+ await page.locator('#story-progress').press('End'); // The expanded early chapters now precede the Taos occupation record.
  await page.getByRole('button',{name:'Reset map view',exact:true}).click();
  assert.ok(await point('settlement-taos-habitation').count(),'story timeline retains other places on zoom-out');
  await page.getByLabel('Choose a story',{exact:true}).selectOption('hawaii-connections');
