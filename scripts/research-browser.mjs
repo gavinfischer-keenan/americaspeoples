@@ -117,7 +117,20 @@ try {
     const count =
       dataset.records.filter((r) => r.overlay?.kind === kind).length * 2;
     await page.getByLabel("Record type filter").selectOption(kind);
-    assert.equal(await page.locator("tbody tr[data-href]").count(), count);
+    let displayed = 0;
+    const seen = new Set();
+    while (true) {
+      const links = await page.locator("tbody tr[data-href]").evaluateAll(rows => rows.map(row => row.dataset.href));
+      for (const link of links) {
+        assert.ok(!seen.has(link), kind + " repeats a record between pages");
+        seen.add(link);
+      }
+      displayed += links.length;
+      const next = page.getByRole("button", {name: "Next page", exact: true});
+      if (await next.isDisabled()) break;
+      await next.click();
+    }
+    assert.equal(displayed, count);
   }
   await page.getByRole("link", { name: "Library", exact: true }).click();
   await page.locator('.library-card[href="#proposals"]').click();

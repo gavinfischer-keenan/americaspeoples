@@ -14,6 +14,21 @@ const places=['poverty-point','hopewell','san-agustin','tierradentro','casarabe'
 const cultures=['lapita','gunditjmara'];
 const independent=['austronesian-languages','australian-wool','australian-mining'];
 const byId=new Map(dataset.records.map(r=>[r.id,r]));
+test('Carrington observations and chapter use the historical Port Stephens locality',()=>{
+ const anchor=[152.0145581,-32.6663159]; // TLCMap historical gazetteer 2012, entry td3dd2.
+ const closeToCarrington=(point:readonly number[])=>
+  Math.hypot((point[0]-anchor[0])*93.7,(point[1]-anchor[1])*111.2)<2;
+ for(const [id,year] of [['d19-au-carrington-1826',1826],['d19-au-carrington-network-1828',1828]] as const){
+  const r=byId.get(id);assert.ok(r?.location,id);
+  assert.ok(closeToCarrington([r.location.lon,r.location.lat]),id+' exceeds declared 2 km locality tolerance');
+  assert.equal(r.time.start,year,id+' original date');
+  const source=r.sources.find(s=>s.url.includes('tlcmap.org'));
+  assert.ok(source,id+' checked geographic source');
+  assert.ok(r.claims.some(c=>c.support.some(s=>s.sourceId===source.id&&s.stance==='context')),id+' geographic context exported');
+ }
+ const scene=topics.find(t=>t.id==='australian-wool')?.scenes.find(s=>s.id==='australian-wool-6');
+ assert.ok(scene?.center&&closeToCarrington(scene.center),'chapter camera must center on Carrington');
+});
 test('related studies can link subjects to a place guide with an explanatory reason',()=>{
  const html=relatedDivesHTML('test',[['machu-picchu','Compare a local built landscape with its wider connections.']]);
  assert.match(html,/href="sites\/machu-picchu.html"/);

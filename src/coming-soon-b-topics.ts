@@ -240,8 +240,8 @@ export const comingSoonBTopics:TopicDive[]=[
           "d19-au-carrington-1826"
         ],
         "center": [
-          151.675,
-          -32.668
+          152.01456,
+          -32.66632
         ],
         "zoom": 15,
         "scope": "pacific"
