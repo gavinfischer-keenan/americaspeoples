@@ -14,7 +14,8 @@ import {guideMovieNavigationHTML} from './guide-navigation';
 import type {MapCamera} from './map';
 import { atlasAssets, loadAtlasAssets } from './atlas-assets';
 import { sampleVoyage, voyageDate, dateValue } from './voyages';
-import { availableVoyageRecords, scopedVoyageDate, scopedVoyageProgress, advanceMovieClock, datedContextKey, storySceneDate } from './shared-movie';
+import {activeExpeditions,expeditionsHTML,expeditionPhase,activityDuring,activityWindows,expeditionActivityHTML} from './expedition-context';
+import { availableVoyageRecords, scopedVoyageDate, scopedVoyageProgress, advanceMovieClock, datedContextKey, storySceneDate, MOVIE_END_DATE } from './shared-movie';
 import { movieContextHTML } from './movie-context';
 import {localChronologyHTML} from './local-chronology';
 import { appShell, mapShell, libraryHTML } from "./atlas-shell";
@@ -262,12 +263,26 @@ function showWholeMovie(){
   map.overview('americas');map.setHighlighted([]);mapPage();
 }
 function renderConcurrentContext(){
+  renderExpeditionsNow();
   const host=document.querySelector('#concurrent-context');if(!host||atlasMode!=='movie')return;
   const v=selectedVoyage(),frame=v&&sampleVoyage(v.stops,voyageClock);
   const local=map.localChronology(mapRows());
   const html=local.length?localChronologyHTML(local,year):movieContextHTML(currentVisible,year,frame?.coordinates);
   if(host.innerHTML!==html)host.innerHTML=html;
   if(storyId==='free')$('#cinema-caption').innerHTML=`<span class="eyebrow">${esc(formatYear(year))} · ALL HISTORIES</span><h3>${v?esc(v.name):'The world, together.'}</h3><p>Communities, journeys and events share this date. Zoom out to see other regions.</p>`;
+}
+function renderExpeditionsNow(){
+  const panel=document.querySelector<HTMLDetailsElement>('#expeditions-now');if(!panel||!mountedMap)return;
+  const date=voyageId?voyageClock:movieClock;
+  const entries=showVoyages?activeExpeditions(atlasAssets.voyages,date,p=>map.containsCoordinate(p)):[];
+  const periods=showVoyages?activityDuring(atlasAssets.expeditionActivities,date,entries):[];
+  panel.hidden=!entries.length&&!periods.length;if(panel.hidden)return;
+  const offscreen=entries.filter(e=>!e.inView).length;
+  const summary=panel.querySelector('summary')!;
+  const title=`Expeditions · ${voyageDate(date)}${offscreen?` · ${offscreen} beyond this view`:''}`;
+  if(summary.textContent!==title)summary.textContent=title;
+  const host=panel.querySelector('.expeditions-list')!,html=expeditionsHTML(entries)+(periods.length?'<h4>Also recorded in this period</h4>'+expeditionActivityHTML(periods,atlasAssets.activitySources):'');
+  if(host.innerHTML!==html)host.innerHTML=html;
 }
 function seekScene(index:number){
   stop();
@@ -438,13 +453,13 @@ function tick(now: number) {
     if(frame.completed)stop();
   } else if (playing && now >= holdUntil) {
     const dt = Math.min((now - lastTick) / 1000, 0.25),pacing=playbackIndex(),previous=movieClock;
-    const next=advanceMovieClock(movieClock,dt,speed==='smart'?pacing.yearsPerSecond(year):speed,pacing,showVoyages?atlasAssets.voyages:[],speed==='smart');
+    const next=advanceMovieClock(movieClock,dt,speed==='smart'?pacing.yearsPerSecond(year):speed,pacing,showVoyages?atlasAssets.voyages:[],speed==='smart',showVoyages?activityWindows(atlasAssets.expeditionActivities):[]);
     movieClock=next.date;
     if(Math.floor(movieClock)!==year)setYear(Math.floor(movieClock),false);
     else if(datedContextKey(dataset.records,atlasAssets.voyages,movieClock)!==datedContextKey(dataset.records,atlasAssets.voyages,previous))renderMapData();
-    map.context.options.voyageDate=movieClock;map.refreshVoyage();
+    map.context.options.voyageDate=movieClock;map.refreshVoyage();renderExpeditionsNow();
     if(next.boundary)holdUntil=now+700;
-    if (year >= END_YEAR) stop();
+    if (movieClock >= MOVIE_END_DATE) stop();
   }
   if(mountedMap&&atlasMode==='movie')syncMapDate();
   lastTick = now;
@@ -459,7 +474,7 @@ $("#play").addEventListener("click", () => {
   const voyage=selectedVoyage();
   if(voyage&&scopedVoyageProgress(voyage,voyageClock)>=1-1e-9){voyageClock=scopedVoyageDate(voyage,0);setYear(Math.floor(voyageClock),false);syncVoyage();}
   if (isGuidedStory() && sampleStory(currentStory(),storyElapsed).completed) seekScene(0);
-  else if (!voyage && !isGuidedStory() && year === END_YEAR) setYear(minYear);
+  else if (!voyage && !isGuidedStory() && movieClock >= MOVIE_END_DATE) setYear(minYear);
   playing = true;
   selected = [];
   renderMapData();
@@ -677,6 +692,16 @@ function renderLegend() {
     );
 }
 function mountHistoricalContext(){
+  $('#map-host').insertAdjacentHTML('afterend','<details id="expeditions-now" class="expeditions-now" hidden open><summary>Happening now</summary><div class="expeditions-list"></div><p>Journeys share the map date. Lines link documented anchors; positions between them are illustrative.</p></details>');
+  $('#expeditions-now').addEventListener('click',e=>{
+    const button=(e.target as Element).closest<HTMLButtonElement>('[data-follow-expedition]');if(!button)return;
+    const date=voyageId?voyageClock:movieClock;
+    const v=atlasAssets.voyages.find(v=>v.id===button.dataset.followExpedition),frame=v&&sampleVoyage(v.stops,date);if(!v)return;
+    stop();closeDetails();useFreeTimeline();voyageId=v.id;voyageClock=date;showVoyages=true;
+    setYear(Math.floor(date),false);if(frame)map.focusRegion(frame.coordinates,2,'world');
+    renderHistoricalContext();renderStory();syncTransport();syncVoyage();
+    if(!frame)$<HTMLDetailsElement>('#voyage-controls details').open=true;
+  });
   $('#layer-options > .visible-heading').insertAdjacentHTML('afterend',`<section class="historical-options"><h3>Borders, journeys &amp; railways</h3><label class="check"><input id="show-boundaries" type="checkbox" ${showBoundaries?'checked':''}> Dotted historical boundaries</label><label class="check"><input id="show-rails" type="checkbox" ${showRails?'checked':''}> Accumulated railway construction</label><label class="check"><input id="show-voyages" type="checkbox" ${showVoyages?'checked':''}> Expeditions active this year</label><form id="context-year-form" class="context-year"><label for="context-year">Map year · CE</label><input id="context-year" type="number" min="1" max="1934" value="${Math.max(1,year)}"><button>Go</button></form><p class="fine">Borders are the dated administrative record at year end, not exclusive occupation or proof of control. Railway lines accumulate built or attested infrastructure; continued service is not implied.</p><label>Follow a dated journey<select id="voyage-select"><option value="">Choose an expedition…</option></select></label><p id="context-load-status" role="status"></p><details><summary>Boundaries in this view &amp; sources</summary><div id="context-catalog" class="context-catalog"></div></details><a href="docs/atlas-expansion.html" target="_blank">Dates, sources &amp; remaining gaps ↗</a></section>`);
   $('#story-scene').insertAdjacentHTML('beforebegin','<section id="voyage-controls" class="voyage-controls" aria-label="Dated expedition" hidden><strong id="voyage-title"></strong><p id="voyage-position"></p><input id="voyage-progress" type="range" min="0" max="10000" value="0" aria-label="Expedition date"><details><summary>Itinerary &amp; evidence</summary><p id="voyage-precision"></p><div id="voyage-evidence" class="context-catalog"></div></details><button id="close-voyage">Return to timeline</button></section>');
   for(const [id,change] of [['show-boundaries',(v:boolean)=>showBoundaries=v],['show-rails',(v:boolean)=>showRails=v],['show-voyages',(v:boolean)=>showVoyages=v]] as const)$('#'+id).addEventListener('change',e=>{change((e.target as HTMLInputElement).checked);renderMapData();});
@@ -705,7 +730,7 @@ function renderHistoricalContext(){
   const v=selectedVoyage();$('#voyage-controls').hidden=!v;$('#story-scene').hidden=!!v;$('#story-chapters').hidden=!!v;
   if(v){
     $('#voyage-title').textContent=v.name;
-    $('#voyage-precision').textContent=v.precision+' The moving symbol interpolates between dated stops; it is not a daily position log. Playback skips segments beyond the Americas–Pacific atlas. Scope crossings are interpolated, not documented daily positions. Hollow stops are later in the itinerary. Canoe and walking symbols distinguish river and land legs.';
+    $('#voyage-precision').textContent=v.precision+' The moving symbol interpolates between dated stops; it is not a daily position log. '+(v.scope==='global'?'The full expedition remains on the shared clock, including polar and offscreen stages.':'Playback skips segments beyond the Americas–Pacific atlas; scope crossings are interpolated.')+' Hollow stops are later in the itinerary. Symbols distinguish sea, river, land, ice drift and wintering where recorded.';
     $('#voyage-evidence').innerHTML=`<p>${esc(v.summary)}</p>`+v.stops.map(s=>`<p><b>${esc(s.name)}</b> · ${esc(s.arrival)}–${esc(s.departure)}<br>${esc(s.note)}</p>`).join('')+v.sourceIds.map(id=>{const source=atlasAssets.voyageSources.find(s=>s.id===id);return source?`<p><a href="${esc(source.url)}" target="_blank" rel="noopener">${esc(source.title)} ↗</a></p>`:'';}).join('');
     syncVoyage();
   }
@@ -717,10 +742,10 @@ function renderBoundaryCatalog(){
 function syncVoyage(){
   const v=selectedVoyage();if(!v||!mountedMap)return;
   const frame=sampleVoyage(v.stops,voyageClock);
-  $('#voyage-position').textContent=`${voyageDate(voyageClock)} · ${frame?.status==='stopped'?'At':'Traveling: '} ${frame?.stopName??''} · ${playing?'Following journey':'Press Play to follow the journey'}.`;
+  $('#voyage-position').textContent=`${voyageDate(voyageClock)} · ${frame?expeditionPhase(v,frame)+': '+frame.stopName:'Expedition in progress; position not reconstructed between documented anchors'} · ${playing?'Following journey':'Press Play to follow the journey'}.`;
   $<HTMLInputElement>('#voyage-progress').value=String(Math.round(scopedVoyageProgress(v,voyageClock)*10000));
   $('#voyage-progress').setAttribute('aria-valuetext',voyageDate(voyageClock));
-  map.context.options.voyageDate=voyageClock;map.context.options.voyageId=voyageId;map.refreshVoyage();
+  map.context.options.voyageDate=voyageClock;map.context.options.voyageId=voyageId;map.refreshVoyage();renderExpeditionsNow();
 }
 function renderMapData() {
   map.context.options={boundaries:showBoundaries,rails:showRails,voyages:showVoyages,voyageId,voyageDate:voyageId?voyageClock:movieClock};

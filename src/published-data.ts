@@ -1,4 +1,5 @@
 import sparseTen from '../data/sparse-ten-expansion-records.json';
+import regionalCoverage from '../data/coverage-15-expansion-records.json';
 import easternBrazil from '../data/eastern-brazil-expansion-records.json';
 import tradeExpansion from '../data/trade-0-1200-expansion-records.json';
 import regionalContinuity from '../data/three-regional-gaps-expansion-records.json';
@@ -68,6 +69,7 @@ export const dataset = publishedDataset(
   starter as Dataset,
   [
     ...sparseTen.records,
+    ...regionalCoverage.records,
     ...easternBrazil.records,
     ...tradeExpansion.records,
     ...regionalContinuity.records,

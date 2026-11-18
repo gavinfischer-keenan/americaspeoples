@@ -45,7 +45,7 @@ test("every itinerary omits off-scope time but retains Pacific and American trav
     for (let i = 0; i <= 100; i++) {
       const date = scopedVoyageDate(v, i / 100),
         frame = sampleVoyage(v.stops, date)!;
-      assert.ok(inAtlas(frame.coordinates), v.id + " stays within the atlas");
+      if(v.scope!=='global')assert.ok(inAtlas(frame.coordinates), v.id + " stays within the atlas");
       assert.ok(Math.abs(scopedVoyageProgress(v, date) - i / 100) < 1e-6);
     }
   }
@@ -123,7 +123,8 @@ test("all contemporaneous ships move even when a different ship is selected", ()
         .draw(geoEquirectangular(), 1831, 1)
         .match(/class="voyage-traveler/g) || []
     ).length,
-    0,
+    2,
+    "documented departure markers remain locatable outside legacy playback scope",
   );
 });
 test("smart clock stops at evidence boundaries and slows for in-scope journeys", () => {

@@ -94,7 +94,13 @@ export class MapTooltip {
   private readonly summary = document.createElement("p");
   private readonly dates = document.createElement("p");
   private owner: Element | null = null;
-  constructor() {
+  private readonly dismissOutside = (event: Event) => {
+    if (!(event.target instanceof Node) || !this.owner?.contains(event.target)) this.hide();
+  };
+  private readonly dismissEscape = (event: KeyboardEvent) => {
+    if (event.key === 'Escape') this.hide();
+  };
+  constructor(private readonly onHide: () => void = () => {}) {
     this.element.className = "map-hover-tooltip";
     this.element.id = "map-hover-tooltip-" + ++nextTooltip;
     this.element.setAttribute("role", "tooltip");
@@ -115,7 +121,12 @@ export class MapTooltip {
     this.title.textContent = shorten(content.title,150);
     this.summary.textContent = shorten(content.summary,260);
     this.dates.textContent = shorten(content.dates,260);
-    if (!this.element.isConnected) document.body.append(this.element);
+    if (!this.element.isConnected) {
+      document.body.append(this.element);
+      document.addEventListener('pointerover',this.dismissOutside,true);
+      document.addEventListener('focusin',this.dismissOutside,true);
+      document.addEventListener('keydown',this.dismissEscape,true);
+    }
     const box = this.element.getBoundingClientRect();
     const target=owner.getBoundingClientRect();
     const avoid=target.width<=220&&target.height<=220?{left:Math.min(target.left,anchor.x-35),right:Math.max(target.right,anchor.x+35),top:Math.min(target.top,anchor.y-35),bottom:Math.max(target.bottom,anchor.y+35)}:{left:anchor.x-70,right:anchor.x+70,top:anchor.y-70,bottom:anchor.y+70};
@@ -127,8 +138,12 @@ export class MapTooltip {
     this.element.style.top = position.top + "px";
   }
   hide() {
+    document.removeEventListener('pointerover',this.dismissOutside,true);
+    document.removeEventListener('focusin',this.dismissOutside,true);
+    document.removeEventListener('keydown',this.dismissEscape,true);
     this.owner?.removeAttribute("aria-describedby");
     this.owner = null;
     this.element.remove();
+    this.onHide();
   }
 }

@@ -53,7 +53,7 @@ export class MapView {
   private highlighted=new Set<string>();
   private focusTargets:{feature:SVGElement;rows:DisplayRecord[]}[]=[];
   private interaction:MapInteraction|null=null;
-  private readonly tooltip=new MapTooltip();
+  private readonly tooltip=new MapTooltip(()=>{this.hovered=null;});
   private tips=new Map<string,MapTooltipContent>();
   private hovered:{key:string;x:number;y:number}|null=null;
   constructor(
@@ -348,6 +348,9 @@ export class MapView {
   /** Same projected geometry and transform as the map; unmapped records stay out. */
   visibleRecords(): DisplayRecord[] {
     return this.recordsInView(this.records);
+  }
+  containsCoordinate(point:MapPoint):boolean{
+    const p=this.projection(point);return !!p&&boundsInViewport([p,p],this.scale,this.tx,this.ty,this.width,this.height);
   }
   visibleBoundaries(){
     if(!this.context.options.boundaries)return [];
@@ -745,6 +748,12 @@ export class MapView {
       }
       feature.dataset.mapTip=key;
       feature.setAttribute('aria-label',content.title+'. '+content.summary+' '+content.dates);
+      // SVG titles also summon a browser tooltip over our catalog popup.
+      // Preserve the symbol/provenance explanation without that second popup.
+      for(const title of feature.querySelectorAll('title')){
+        const description=document.createElementNS('http://www.w3.org/2000/svg','desc');
+        description.textContent=title.textContent;title.replaceWith(description);
+      }
       if(!feature.dataset.hazard){
         const highlighted=rows.some(r=>this.highlighted.has(r.id));
         feature.classList.toggle('is-highlighted',highlighted);

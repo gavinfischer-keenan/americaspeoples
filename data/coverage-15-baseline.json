@@ -1,0 +1,2127 @@
+{
+  "baselineVersion": "0.26.0",
+  "baselineCommit": "bb1e8d4",
+  "reviewedAt": "2026-11-18",
+  "baselineRecordCount": 2710,
+  "baselineSharedRecordCount": 2637,
+  "method": "Distinct dated locality IDs are taken from data/coverage-audit.json regionalRanking. Periods union locality IDs in data/coverage-audit.json matrix. Geography follows that audit, including state clipping and editorial rectangles. Fiji, Tonga and Samoa are one region; its two antimeridian components are unioned before counting. The gaps were selected by coverage counts and post-arrival chronology, editorially prioritized among eligible candidates, with bounded subregion exceptions disclosed. Counts measure available local evidence, which can include broad historical reference points, and do not measure population or continuity.",
+  "exclusions": [
+    {
+      "regions": [
+        "Idaho — southern / central",
+        "Kiribati — Gilbert Islands",
+        "Kiribati — Line Islands",
+        "Kiribati — Phoenix Islands",
+        "Louisiana — western coastal plain",
+        "Montana — central / eastern plains",
+        "Nevada — central / eastern basins",
+        "Nevada — southern desert",
+        "Wyoming — eastern plains",
+        "Wyoming — western mountains"
+      ],
+      "reason": "Ten targeted v0.26 regional reviews."
+    },
+    {
+      "regions": [
+        "Falkland / southern islands",
+        "Galapagos"
+      ],
+      "reason": "Focused v0.21 island histories, fbcf38e and 35d5288."
+    },
+    {
+      "regions": [
+        "Amazonia / inland Brazil",
+        "Guianas",
+        "Gran Chaco"
+      ],
+      "reason": "Focused v0.16 interior-frontiers review, PR #12."
+    },
+    {
+      "regions": [
+        "ABC islands",
+        "Louisiana — lower Mississippi valley"
+      ],
+      "reason": "Prior focused regional intake material and overlap with covered areas; retain for future refinement."
+    },
+    {
+      "regions": [
+        "Canada",
+        "Aleutians",
+        "Eastern Brazil",
+        "Costa Rica / Panama",
+        "Solomons / Vanuatu",
+        "Southwest / Four Corners",
+        "Micronesian island chains",
+        "Hawaii"
+      ],
+      "reason": "Prior focused guides, campaigns or regional history reviews."
+    }
+  ],
+  "regions": [
+    {
+      "rank": 1,
+      "id": "northern-idaho",
+      "region": "Idaho — northern river corridors",
+      "bounds": [
+        -117.3,
+        -114,
+        45,
+        49
+      ],
+      "auditBounds": [
+        [
+          -117.3,
+          -114,
+          45,
+          49
+        ]
+      ],
+      "auditRows": [
+        "Idaho — northern river corridors"
+      ],
+      "localityCount": 2,
+      "localityIds": [
+        "early-coopers-ferry",
+        "visit-lewis-clark-pacific-1804-1806-5-place"
+      ],
+      "undatedLocalityCount": 1,
+      "periods": [
+        {
+          "period": "Before25,000BCE",
+          "start": -1000000,
+          "end": -25000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "25,000–15,000BCE",
+          "start": -24999,
+          "end": -15000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "15,000–10,000BCE",
+          "start": -14999,
+          "end": -9999,
+          "localityCount": 1,
+          "localityIds": [
+            "early-coopers-ferry"
+          ]
+        },
+        {
+          "period": "10,000–6,000BCE",
+          "start": -9998,
+          "end": -5999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "6,000–3,000BCE",
+          "start": -5998,
+          "end": -2999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "3,000–1,000BCE",
+          "start": -2998,
+          "end": -999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1,000–1BCE",
+          "start": -998,
+          "end": 0,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1–500CE",
+          "start": 1,
+          "end": 500,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "501–1000CE",
+          "start": 501,
+          "end": 1000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1001–1500CE",
+          "start": 1001,
+          "end": 1500,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1501–1700CE",
+          "start": 1501,
+          "end": 1700,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1701–1934CE",
+          "start": 1701,
+          "end": 1934,
+          "localityCount": 1,
+          "localityIds": [
+            "visit-lewis-clark-pacific-1804-1806-5-place"
+          ]
+        }
+      ],
+      "rationale": "Two represented places, separated by most of the chronology; Clearwater and Coeur d’Alene evidence can diversify the local history.",
+      "priorReview": "Round 10 Idaho leads were received but had not been verified as a regional history. v0.26 reviewed the separate southern/central bin."
+    },
+    {
+      "rank": 2,
+      "id": "rapa-nui",
+      "region": "Rapa Nui",
+      "bounds": [
+        -112,
+        -108,
+        -29,
+        -25
+      ],
+      "auditBounds": [
+        [
+          -112,
+          -108,
+          -29,
+          -25
+        ]
+      ],
+      "auditRows": [
+        "Rapa Nui"
+      ],
+      "localityCount": 2,
+      "localityIds": [
+        "history-rapa-nui-historical-continuity-place",
+        "history-rapa-nui-regional-occupation-place"
+      ],
+      "undatedLocalityCount": 0,
+      "periods": [
+        {
+          "period": "Before25,000BCE",
+          "start": -1000000,
+          "end": -25000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "25,000–15,000BCE",
+          "start": -24999,
+          "end": -15000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "15,000–10,000BCE",
+          "start": -14999,
+          "end": -9999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "10,000–6,000BCE",
+          "start": -9998,
+          "end": -5999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "6,000–3,000BCE",
+          "start": -5998,
+          "end": -2999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "3,000–1,000BCE",
+          "start": -2998,
+          "end": -999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1,000–1BCE",
+          "start": -998,
+          "end": 0,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1–500CE",
+          "start": 1,
+          "end": 500,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "501–1000CE",
+          "start": 501,
+          "end": 1000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1001–1500CE",
+          "start": 1001,
+          "end": 1500,
+          "localityCount": 1,
+          "localityIds": [
+            "history-rapa-nui-regional-occupation-place"
+          ]
+        },
+        {
+          "period": "1501–1700CE",
+          "start": 1501,
+          "end": 1700,
+          "localityCount": 1,
+          "localityIds": [
+            "history-rapa-nui-regional-occupation-place"
+          ]
+        },
+        {
+          "period": "1701–1934CE",
+          "start": 1701,
+          "end": 1934,
+          "localityCount": 2,
+          "localityIds": [
+            "history-rapa-nui-historical-continuity-place",
+            "history-rapa-nui-regional-occupation-place"
+          ]
+        }
+      ],
+      "rationale": "Two broad place references; add named settlements, cultivation and monument contexts, plus islander agency.",
+      "priorReview": "Pacific topic material and one late relocation case are narrower than an island-wide place review."
+    },
+    {
+      "rank": 3,
+      "id": "western-montana",
+      "region": "Montana — western mountains",
+      "bounds": [
+        -116,
+        -111,
+        44.3,
+        49
+      ],
+      "auditBounds": [
+        [
+          -116,
+          -111,
+          44.3,
+          49
+        ]
+      ],
+      "auditRows": [
+        "Montana — western mountains"
+      ],
+      "localityCount": 3,
+      "localityIds": [
+        "billy-big-spring",
+        "visit-lewis-clark-pacific-1804-1806-3-place",
+        "visit-lewis-clark-pacific-1804-1806-4-place"
+      ],
+      "undatedLocalityCount": 0,
+      "periods": [
+        {
+          "period": "Before25,000BCE",
+          "start": -1000000,
+          "end": -25000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "25,000–15,000BCE",
+          "start": -24999,
+          "end": -15000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "15,000–10,000BCE",
+          "start": -14999,
+          "end": -9999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "10,000–6,000BCE",
+          "start": -9998,
+          "end": -5999,
+          "localityCount": 1,
+          "localityIds": [
+            "billy-big-spring"
+          ]
+        },
+        {
+          "period": "6,000–3,000BCE",
+          "start": -5998,
+          "end": -2999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "3,000–1,000BCE",
+          "start": -2998,
+          "end": -999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1,000–1BCE",
+          "start": -998,
+          "end": 0,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1–500CE",
+          "start": 1,
+          "end": 500,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "501–1000CE",
+          "start": 501,
+          "end": 1000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1001–1500CE",
+          "start": 1001,
+          "end": 1500,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1501–1700CE",
+          "start": 1501,
+          "end": 1700,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1701–1934CE",
+          "start": 1701,
+          "end": 1934,
+          "localityCount": 2,
+          "localityIds": [
+            "visit-lewis-clark-pacific-1804-1806-3-place",
+            "visit-lewis-clark-pacific-1804-1806-4-place"
+          ]
+        }
+      ],
+      "rationale": "Three dated localities over the full timeline; temporal gaps extend from early site evidence to nineteenth-century encounters.",
+      "priorReview": "Listed as outstanding in Round 10. v0.26 focused on central/eastern Montana."
+    },
+    {
+      "rank": 4,
+      "id": "southern-lesser-antilles",
+      "region": "Southern Lesser Antilles",
+      "bounds": [
+        -63,
+        -59,
+        10,
+        15
+      ],
+      "auditBounds": [
+        [
+          -63,
+          -59,
+          10,
+          15
+        ]
+      ],
+      "auditRows": [
+        "Southern Lesser Antilles"
+      ],
+      "localityCount": 3,
+      "localityIds": [
+        "community-martinique-1848-place",
+        "settlement-place-bridgetown",
+        "settlement-place-saint-pierre-martinique"
+      ],
+      "undatedLocalityCount": 0,
+      "periods": [
+        {
+          "period": "Before25,000BCE",
+          "start": -1000000,
+          "end": -25000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "25,000–15,000BCE",
+          "start": -24999,
+          "end": -15000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "15,000–10,000BCE",
+          "start": -14999,
+          "end": -9999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "10,000–6,000BCE",
+          "start": -9998,
+          "end": -5999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "6,000–3,000BCE",
+          "start": -5998,
+          "end": -2999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "3,000–1,000BCE",
+          "start": -2998,
+          "end": -999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1,000–1BCE",
+          "start": -998,
+          "end": 0,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1–500CE",
+          "start": 1,
+          "end": 500,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "501–1000CE",
+          "start": 501,
+          "end": 1000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1001–1500CE",
+          "start": 1001,
+          "end": 1500,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1501–1700CE",
+          "start": 1501,
+          "end": 1700,
+          "localityCount": 2,
+          "localityIds": [
+            "settlement-place-bridgetown",
+            "settlement-place-saint-pierre-martinique"
+          ]
+        },
+        {
+          "period": "1701–1934CE",
+          "start": 1701,
+          "end": 1934,
+          "localityCount": 1,
+          "localityIds": [
+            "community-martinique-1848-place"
+          ]
+        }
+      ],
+      "rationale": "Three localities, concentrated in the contact era; ceramics and village evidence can build an earlier sequence.",
+      "priorReview": "The Caribbean synthesis and Garifuna movement topic contain relevant material but no coast-to-coast regional campaign."
+    },
+    {
+      "rank": 5,
+      "id": "northern-inland-louisiana",
+      "region": "Louisiana — northern / inland",
+      "bounds": [
+        -94,
+        -91,
+        31,
+        33.2
+      ],
+      "auditBounds": [
+        [
+          -94,
+          -91,
+          31,
+          33.2
+        ]
+      ],
+      "auditRows": [
+        "Louisiana — northern / inland"
+      ],
+      "localityCount": 4,
+      "localityIds": [
+        "poverty-point",
+        "r10-place-boothe",
+        "r10-place-marksville",
+        "r10-place-mcguffee"
+      ],
+      "undatedLocalityCount": 0,
+      "periods": [
+        {
+          "period": "Before25,000BCE",
+          "start": -1000000,
+          "end": -25000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "25,000–15,000BCE",
+          "start": -24999,
+          "end": -15000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "15,000–10,000BCE",
+          "start": -14999,
+          "end": -9999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "10,000–6,000BCE",
+          "start": -9998,
+          "end": -5999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "6,000–3,000BCE",
+          "start": -5998,
+          "end": -2999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "3,000–1,000BCE",
+          "start": -2998,
+          "end": -999,
+          "localityCount": 1,
+          "localityIds": [
+            "poverty-point"
+          ]
+        },
+        {
+          "period": "1,000–1BCE",
+          "start": -998,
+          "end": 0,
+          "localityCount": 2,
+          "localityIds": [
+            "r10-place-boothe",
+            "r10-place-mcguffee"
+          ]
+        },
+        {
+          "period": "1–500CE",
+          "start": 1,
+          "end": 500,
+          "localityCount": 2,
+          "localityIds": [
+            "r10-place-marksville",
+            "r10-place-mcguffee"
+          ]
+        },
+        {
+          "period": "501–1000CE",
+          "start": 501,
+          "end": 1000,
+          "localityCount": 1,
+          "localityIds": [
+            "r10-place-mcguffee"
+          ]
+        },
+        {
+          "period": "1001–1500CE",
+          "start": 1001,
+          "end": 1500,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1501–1700CE",
+          "start": 1501,
+          "end": 1700,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1701–1934CE",
+          "start": 1701,
+          "end": 1934,
+          "localityCount": 0,
+          "localityIds": []
+        }
+      ],
+      "rationale": "Four localities; no local entries from 501 CE onward, despite Caddo archaeology and locally documented colonial settlements.",
+      "priorReview": "Earlier Louisiana/Gulf intake was broad. The recent expansion concentrated on the western coast. The Poverty Point guide covers that one complex within this bin, and its material is excluded from the new evidence focus."
+    },
+    {
+      "rank": 6,
+      "id": "northwestern-nevada",
+      "region": "Nevada — northwestern basins",
+      "bounds": [
+        -120,
+        -116,
+        38,
+        42
+      ],
+      "auditBounds": [
+        [
+          -120,
+          -116,
+          38,
+          42
+        ]
+      ],
+      "auditRows": [
+        "Nevada — northwestern basins"
+      ],
+      "localityCount": 4,
+      "localityIds": [
+        "crypt-cave",
+        "last-supper-cave",
+        "leonard-rockshelter",
+        "r12-alta-toquima-landscape"
+      ],
+      "undatedLocalityCount": 1,
+      "periods": [
+        {
+          "period": "Before25,000BCE",
+          "start": -1000000,
+          "end": -25000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "25,000–15,000BCE",
+          "start": -24999,
+          "end": -15000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "15,000–10,000BCE",
+          "start": -14999,
+          "end": -9999,
+          "localityCount": 2,
+          "localityIds": [
+            "crypt-cave",
+            "last-supper-cave"
+          ]
+        },
+        {
+          "period": "10,000–6,000BCE",
+          "start": -9998,
+          "end": -5999,
+          "localityCount": 1,
+          "localityIds": [
+            "last-supper-cave"
+          ]
+        },
+        {
+          "period": "6,000–3,000BCE",
+          "start": -5998,
+          "end": -2999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "3,000–1,000BCE",
+          "start": -2998,
+          "end": -999,
+          "localityCount": 2,
+          "localityIds": [
+            "leonard-rockshelter",
+            "r12-alta-toquima-landscape"
+          ]
+        },
+        {
+          "period": "1,000–1BCE",
+          "start": -998,
+          "end": 0,
+          "localityCount": 2,
+          "localityIds": [
+            "leonard-rockshelter",
+            "r12-alta-toquima-landscape"
+          ]
+        },
+        {
+          "period": "1–500CE",
+          "start": 1,
+          "end": 500,
+          "localityCount": 1,
+          "localityIds": [
+            "leonard-rockshelter"
+          ]
+        },
+        {
+          "period": "501–1000CE",
+          "start": 501,
+          "end": 1000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1001–1500CE",
+          "start": 1001,
+          "end": 1500,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1501–1700CE",
+          "start": 1501,
+          "end": 1700,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1701–1934CE",
+          "start": 1701,
+          "end": 1934,
+          "localityCount": 0,
+          "localityIds": []
+        }
+      ],
+      "rationale": "Four localities; none dated to 501 CE or later. Improve lake, shelter and homelands coverage.",
+      "priorReview": "Round 10 received Northern Nevada leads pending verification. v0.26 focused on the central/eastern basins and southern desert."
+    },
+    {
+      "rank": 7,
+      "id": "northern-lesser-antilles",
+      "region": "Northern Lesser Antilles",
+      "bounds": [
+        -65,
+        -59,
+        15,
+        19
+      ],
+      "auditBounds": [
+        [
+          -65,
+          -59,
+          15,
+          19
+        ]
+      ],
+      "auditRows": [
+        "Northern Lesser Antilles"
+      ],
+      "localityCount": 4,
+      "localityIds": [
+        "settlement-place-basseterre",
+        "settlement-place-christiansted",
+        "settlement-place-salt-river-bay",
+        "sovereignty-virgin-islands-transfer-place"
+      ],
+      "undatedLocalityCount": 0,
+      "periods": [
+        {
+          "period": "Before25,000BCE",
+          "start": -1000000,
+          "end": -25000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "25,000–15,000BCE",
+          "start": -24999,
+          "end": -15000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "15,000–10,000BCE",
+          "start": -14999,
+          "end": -9999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "10,000–6,000BCE",
+          "start": -9998,
+          "end": -5999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "6,000–3,000BCE",
+          "start": -5998,
+          "end": -2999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "3,000–1,000BCE",
+          "start": -2998,
+          "end": -999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1,000–1BCE",
+          "start": -998,
+          "end": 0,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1–500CE",
+          "start": 1,
+          "end": 500,
+          "localityCount": 1,
+          "localityIds": [
+            "settlement-place-salt-river-bay"
+          ]
+        },
+        {
+          "period": "501–1000CE",
+          "start": 501,
+          "end": 1000,
+          "localityCount": 1,
+          "localityIds": [
+            "settlement-place-salt-river-bay"
+          ]
+        },
+        {
+          "period": "1001–1500CE",
+          "start": 1001,
+          "end": 1500,
+          "localityCount": 1,
+          "localityIds": [
+            "settlement-place-salt-river-bay"
+          ]
+        },
+        {
+          "period": "1501–1700CE",
+          "start": 1501,
+          "end": 1700,
+          "localityCount": 1,
+          "localityIds": [
+            "settlement-place-basseterre"
+          ]
+        },
+        {
+          "period": "1701–1934CE",
+          "start": 1701,
+          "end": 1934,
+          "localityCount": 2,
+          "localityIds": [
+            "settlement-place-christiansted",
+            "sovereignty-virgin-islands-transfer-place"
+          ]
+        }
+      ],
+      "rationale": "Four dated places across several island chains. Improve settlements and cross-island pottery/food evidence.",
+      "priorReview": "Earlier general Caribbean intake supplies leads; there is no comparable completed regional guide or production campaign."
+    },
+    {
+      "rank": 8,
+      "id": "venezuela",
+      "region": "Venezuela",
+      "bounds": [
+        -73,
+        -60,
+        0,
+        12
+      ],
+      "auditBounds": [
+        [
+          -73,
+          -60,
+          0,
+          12
+        ]
+      ],
+      "auditRows": [
+        "Venezuela"
+      ],
+      "localityCount": 4,
+      "localityIds": [
+        "cerro-montoya-1",
+        "interior-place-marabitanas",
+        "limoncillos",
+        "r12-iauarete-locality"
+      ],
+      "undatedLocalityCount": 0,
+      "periods": [
+        {
+          "period": "Before25,000BCE",
+          "start": -1000000,
+          "end": -25000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "25,000–15,000BCE",
+          "start": -24999,
+          "end": -15000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "15,000–10,000BCE",
+          "start": -14999,
+          "end": -9999,
+          "localityCount": 2,
+          "localityIds": [
+            "cerro-montoya-1",
+            "limoncillos"
+          ]
+        },
+        {
+          "period": "10,000–6,000BCE",
+          "start": -9998,
+          "end": -5999,
+          "localityCount": 1,
+          "localityIds": [
+            "limoncillos"
+          ]
+        },
+        {
+          "period": "6,000–3,000BCE",
+          "start": -5998,
+          "end": -2999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "3,000–1,000BCE",
+          "start": -2998,
+          "end": -999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1,000–1BCE",
+          "start": -998,
+          "end": 0,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1–500CE",
+          "start": 1,
+          "end": 500,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "501–1000CE",
+          "start": 501,
+          "end": 1000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1001–1500CE",
+          "start": 1001,
+          "end": 1500,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1501–1700CE",
+          "start": 1501,
+          "end": 1700,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1701–1934CE",
+          "start": 1701,
+          "end": 1934,
+          "localityCount": 2,
+          "localityIds": [
+            "interior-place-marabitanas",
+            "r12-iauarete-locality"
+          ]
+        }
+      ],
+      "rationale": "Four places with a major gap between early finds and late colonial history. Several radiocarbon-grounded ceramic and farming sites are independently documented.",
+      "priorReview": "Two Round 7 Venezuela dossiers are intake leads. The focused interior-frontiers campaign targeted Amazonia, Guianas and Gran Chaco and did not provide a Venezuela review."
+    },
+    {
+      "rank": 9,
+      "id": "fiji-tonga-samoa",
+      "region": "Fiji / Tonga / Samoa",
+      "bounds": [
+        175,
+        -165,
+        -25,
+        -10
+      ],
+      "auditBounds": [
+        [
+          175,
+          180,
+          -25,
+          -10
+        ],
+        [
+          -180,
+          -165,
+          -25,
+          -10
+        ]
+      ],
+      "auditRows": [
+        "Fiji / Tonga",
+        "Fiji / Tonga / Samoa east of dateline"
+      ],
+      "localityCount": 10,
+      "localityIds": [
+        "d19-place-bourewa",
+        "d19-place-nukuleka",
+        "history-american-samoa-regional-occupation-place",
+        "history-samoa-continuity-place",
+        "history-tonga-regional-occupation-place",
+        "history-tongatapu-continuity-place",
+        "px-toaga-onset-place",
+        "r6-haapai-onset-place",
+        "r6-nukuleka-pit-place",
+        "r6-vavau-onset-place"
+      ],
+      "undatedLocalityCount": 0,
+      "periods": [
+        {
+          "period": "Before25,000BCE",
+          "start": -1000000,
+          "end": -25000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "25,000–15,000BCE",
+          "start": -24999,
+          "end": -15000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "15,000–10,000BCE",
+          "start": -14999,
+          "end": -9999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "10,000–6,000BCE",
+          "start": -9998,
+          "end": -5999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "6,000–3,000BCE",
+          "start": -5998,
+          "end": -2999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "3,000–1,000BCE",
+          "start": -2998,
+          "end": -999,
+          "localityCount": 2,
+          "localityIds": [
+            "history-american-samoa-regional-occupation-place",
+            "history-samoa-continuity-place"
+          ]
+        },
+        {
+          "period": "1,000–1BCE",
+          "start": -998,
+          "end": 0,
+          "localityCount": 9,
+          "localityIds": [
+            "d19-place-bourewa",
+            "d19-place-nukuleka",
+            "history-american-samoa-regional-occupation-place",
+            "history-tonga-regional-occupation-place",
+            "history-tongatapu-continuity-place",
+            "px-toaga-onset-place",
+            "r6-haapai-onset-place",
+            "r6-nukuleka-pit-place",
+            "r6-vavau-onset-place"
+          ]
+        },
+        {
+          "period": "1–500CE",
+          "start": 1,
+          "end": 500,
+          "localityCount": 2,
+          "localityIds": [
+            "history-american-samoa-regional-occupation-place",
+            "history-tonga-regional-occupation-place"
+          ]
+        },
+        {
+          "period": "501–1000CE",
+          "start": 501,
+          "end": 1000,
+          "localityCount": 2,
+          "localityIds": [
+            "history-american-samoa-regional-occupation-place",
+            "history-tonga-regional-occupation-place"
+          ]
+        },
+        {
+          "period": "1001–1500CE",
+          "start": 1001,
+          "end": 1500,
+          "localityCount": 2,
+          "localityIds": [
+            "history-american-samoa-regional-occupation-place",
+            "history-tonga-regional-occupation-place"
+          ]
+        },
+        {
+          "period": "1501–1700CE",
+          "start": 1501,
+          "end": 1700,
+          "localityCount": 2,
+          "localityIds": [
+            "history-american-samoa-regional-occupation-place",
+            "history-tonga-regional-occupation-place"
+          ]
+        },
+        {
+          "period": "1701–1934CE",
+          "start": 1701,
+          "end": 1934,
+          "localityCount": 2,
+          "localityIds": [
+            "history-american-samoa-regional-occupation-place",
+            "history-tonga-regional-occupation-place"
+          ]
+        }
+      ],
+      "rationale": "Ten distinct localities across both sides of the dateline, six early-to-late CE bins dominated by broad regional references. Later island-centred phases are the focus.",
+      "priorReview": "Fiji and Lapita studies and Round 6 Tongan precedence intake cover settlement and selected places; the later local cross-archipelago sequence lacks a dedicated regional review."
+    },
+    {
+      "rank": 10,
+      "id": "northern-mexico-baja",
+      "region": "Northern Mexico / Baja",
+      "bounds": [
+        -117,
+        -97,
+        23,
+        33
+      ],
+      "auditBounds": [
+        [
+          -117,
+          -97,
+          23,
+          33
+        ]
+      ],
+      "auditRows": [
+        "Northern Mexico / Baja"
+      ],
+      "localityCount": 11,
+      "localityIds": [
+        "chiquihuite",
+        "city-paquime-multistory-town-place",
+        "early-friedkin",
+        "early-gault",
+        "mission-place-loreto-concho",
+        "mission-place-san-borja",
+        "mission-place-san-fernando-velicata",
+        "mission-place-san-ignacio-baja",
+        "mission-place-santa-rosalia-mulege",
+        "visit-cabrillo-ferrelo-1542-1543-5-place",
+        "white-sands"
+      ],
+      "undatedLocalityCount": 0,
+      "periods": [
+        {
+          "period": "Before25,000BCE",
+          "start": -1000000,
+          "end": -25000,
+          "localityCount": 1,
+          "localityIds": [
+            "chiquihuite"
+          ]
+        },
+        {
+          "period": "25,000–15,000BCE",
+          "start": -24999,
+          "end": -15000,
+          "localityCount": 2,
+          "localityIds": [
+            "early-gault",
+            "white-sands"
+          ]
+        },
+        {
+          "period": "15,000–10,000BCE",
+          "start": -14999,
+          "end": -9999,
+          "localityCount": 1,
+          "localityIds": [
+            "early-friedkin"
+          ]
+        },
+        {
+          "period": "10,000–6,000BCE",
+          "start": -9998,
+          "end": -5999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "6,000–3,000BCE",
+          "start": -5998,
+          "end": -2999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "3,000–1,000BCE",
+          "start": -2998,
+          "end": -999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1,000–1BCE",
+          "start": -998,
+          "end": 0,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1–500CE",
+          "start": 1,
+          "end": 500,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "501–1000CE",
+          "start": 501,
+          "end": 1000,
+          "localityCount": 1,
+          "localityIds": [
+            "city-paquime-multistory-town-place"
+          ]
+        },
+        {
+          "period": "1001–1500CE",
+          "start": 1001,
+          "end": 1500,
+          "localityCount": 1,
+          "localityIds": [
+            "city-paquime-multistory-town-place"
+          ]
+        },
+        {
+          "period": "1501–1700CE",
+          "start": 1501,
+          "end": 1700,
+          "localityCount": 2,
+          "localityIds": [
+            "mission-place-loreto-concho",
+            "visit-cabrillo-ferrelo-1542-1543-5-place"
+          ]
+        },
+        {
+          "period": "1701–1934CE",
+          "start": 1701,
+          "end": 1934,
+          "localityCount": 4,
+          "localityIds": [
+            "mission-place-san-borja",
+            "mission-place-san-fernando-velicata",
+            "mission-place-san-ignacio-baja",
+            "mission-place-santa-rosalia-mulege"
+          ]
+        }
+      ],
+      "rationale": "Eleven dated localities, with several Holocene gaps and a sharp shift to mission-era coverage. Add Indigenous place-specific evidence where possible.",
+      "priorReview": "Baja intake, mission histories and the Paquimé guide address narrower questions. Existing Paquimé study is outside the new guide’s evidence focus."
+    },
+    {
+      "rank": 11,
+      "id": "central-east-polynesia",
+      "region": "Societies / Cooks / Marquesas",
+      "bounds": [
+        -165,
+        -130,
+        -24,
+        0
+      ],
+      "auditBounds": [
+        [
+          -165,
+          -130,
+          -24,
+          0
+        ]
+      ],
+      "auditRows": [
+        "Societies / Cooks / Marquesas"
+      ],
+      "localityCount": 12,
+      "localityIds": [
+        "context-anaho-tools-place",
+        "context-mission-mangareva-1834-place",
+        "d19-place-tahiti",
+        "px-hooumi-later-houses-place",
+        "r10-hakaea-place",
+        "r10-hanamiai-place",
+        "r10-hooumi-place",
+        "r6-tangatatau-coral-later-place",
+        "r6-tangatatau-coral-place",
+        "r6-ureia-place",
+        "visit-beagle-1831-1836-12-place",
+        "visit-cook-endeavour-1768-1770-4-place"
+      ],
+      "undatedLocalityCount": 0,
+      "periods": [
+        {
+          "period": "Before25,000BCE",
+          "start": -1000000,
+          "end": -25000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "25,000–15,000BCE",
+          "start": -24999,
+          "end": -15000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "15,000–10,000BCE",
+          "start": -14999,
+          "end": -9999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "10,000–6,000BCE",
+          "start": -9998,
+          "end": -5999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "6,000–3,000BCE",
+          "start": -5998,
+          "end": -2999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "3,000–1,000BCE",
+          "start": -2998,
+          "end": -999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1,000–1BCE",
+          "start": -998,
+          "end": 0,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1–500CE",
+          "start": 1,
+          "end": 500,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "501–1000CE",
+          "start": 501,
+          "end": 1000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1001–1500CE",
+          "start": 1001,
+          "end": 1500,
+          "localityCount": 7,
+          "localityIds": [
+            "context-anaho-tools-place",
+            "r10-hakaea-place",
+            "r10-hanamiai-place",
+            "r10-hooumi-place",
+            "r6-tangatatau-coral-later-place",
+            "r6-tangatatau-coral-place",
+            "r6-ureia-place"
+          ]
+        },
+        {
+          "period": "1501–1700CE",
+          "start": 1501,
+          "end": 1700,
+          "localityCount": 1,
+          "localityIds": [
+            "px-hooumi-later-houses-place"
+          ]
+        },
+        {
+          "period": "1701–1934CE",
+          "start": 1701,
+          "end": 1934,
+          "localityCount": 5,
+          "localityIds": [
+            "context-mission-mangareva-1834-place",
+            "d19-place-tahiti",
+            "px-hooumi-later-houses-place",
+            "visit-beagle-1831-1836-12-place",
+            "visit-cook-endeavour-1768-1770-4-place"
+          ]
+        }
+      ],
+      "rationale": "Twelve locality IDs across three distant groups; only one in 1501–1700. New dated observations should distribute across island groups.",
+      "priorReview": "Society Islands intake and Pacific topic movies cover selected origins and evidence. The Pacific group guide does not provide this three-archipelago local sequence."
+    },
+    {
+      "rank": 12,
+      "id": "aotearoa",
+      "region": "Aotearoa New Zealand",
+      "bounds": [
+        166,
+        179,
+        -48,
+        -34
+      ],
+      "auditBounds": [
+        [
+          166,
+          179,
+          -48,
+          -34
+        ]
+      ],
+      "auditRows": [
+        "Aotearoa New Zealand"
+      ],
+      "localityCount": 13,
+      "localityIds": [
+        "context-mission-rangihoua-1814-place",
+        "context-triangle-flat-place",
+        "context-wairau-bar-place",
+        "d19-place-waitangi",
+        "history-aotearoa-regional-occupation-place",
+        "nz-otahau-palisade-place",
+        "nz-purakaunui-stores-place",
+        "sovereignty-parihaka-community-place",
+        "visit-beagle-1831-1836-13-place",
+        "visit-cook-endeavour-1768-1770-5-place",
+        "visit-tasman-nz-1642-1643-1-place",
+        "visit-tasman-nz-1642-1643-2-place",
+        "visit-tasman-nz-1642-1643-3-place"
+      ],
+      "undatedLocalityCount": 0,
+      "periods": [
+        {
+          "period": "Before25,000BCE",
+          "start": -1000000,
+          "end": -25000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "25,000–15,000BCE",
+          "start": -24999,
+          "end": -15000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "15,000–10,000BCE",
+          "start": -14999,
+          "end": -9999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "10,000–6,000BCE",
+          "start": -9998,
+          "end": -5999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "6,000–3,000BCE",
+          "start": -5998,
+          "end": -2999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "3,000–1,000BCE",
+          "start": -2998,
+          "end": -999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1,000–1BCE",
+          "start": -998,
+          "end": 0,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1–500CE",
+          "start": 1,
+          "end": 500,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "501–1000CE",
+          "start": 501,
+          "end": 1000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1001–1500CE",
+          "start": 1001,
+          "end": 1500,
+          "localityCount": 4,
+          "localityIds": [
+            "context-triangle-flat-place",
+            "context-wairau-bar-place",
+            "history-aotearoa-regional-occupation-place",
+            "nz-purakaunui-stores-place"
+          ]
+        },
+        {
+          "period": "1501–1700CE",
+          "start": 1501,
+          "end": 1700,
+          "localityCount": 4,
+          "localityIds": [
+            "history-aotearoa-regional-occupation-place",
+            "visit-tasman-nz-1642-1643-1-place",
+            "visit-tasman-nz-1642-1643-2-place",
+            "visit-tasman-nz-1642-1643-3-place"
+          ]
+        },
+        {
+          "period": "1701–1934CE",
+          "start": 1701,
+          "end": 1934,
+          "localityCount": 7,
+          "localityIds": [
+            "context-mission-rangihoua-1814-place",
+            "d19-place-waitangi",
+            "history-aotearoa-regional-occupation-place",
+            "nz-otahau-palisade-place",
+            "sovereignty-parihaka-community-place",
+            "visit-beagle-1831-1836-13-place",
+            "visit-cook-endeavour-1768-1770-5-place"
+          ]
+        }
+      ],
+      "rationale": "Thirteen localities over the years represented; add settlement, landscape and Māori political/community chronology from named places.",
+      "priorReview": "The land/sovereignty and food/voyaging campaigns are targeted subject reviews with named Māori cases; avoid duplicating those cases and supply a regional place history."
+    },
+    {
+      "rank": 13,
+      "id": "southeast-tidewater",
+      "region": "Southeast / Tidewater",
+      "bounds": [
+        -88,
+        -74,
+        29,
+        38
+      ],
+      "auditBounds": [
+        [
+          -88,
+          -74,
+          29,
+          38
+        ]
+      ],
+      "auditRows": [
+        "Southeast / Tidewater"
+      ],
+      "localityCount": 13,
+      "localityIds": [
+        "d18-place-new-echota-phoenix-1828",
+        "early-page-ladson",
+        "history-jamestown-colonial-place",
+        "history-st-augustine-colonial-place",
+        "jamestown-historic",
+        "place-etowah",
+        "place-ocmulgee-earth-lodge",
+        "place-ocmulgee-great-temple",
+        "r10-place-bayou-stjohn",
+        "r10-place-garden-patch",
+        "r10-place-plash",
+        "r10-place-shell-mound",
+        "sovereignty-florida-transfer-place"
+      ],
+      "undatedLocalityCount": 0,
+      "periods": [
+        {
+          "period": "Before25,000BCE",
+          "start": -1000000,
+          "end": -25000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "25,000–15,000BCE",
+          "start": -24999,
+          "end": -15000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "15,000–10,000BCE",
+          "start": -14999,
+          "end": -9999,
+          "localityCount": 1,
+          "localityIds": [
+            "early-page-ladson"
+          ]
+        },
+        {
+          "period": "10,000–6,000BCE",
+          "start": -9998,
+          "end": -5999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "6,000–3,000BCE",
+          "start": -5998,
+          "end": -2999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "3,000–1,000BCE",
+          "start": -2998,
+          "end": -999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1,000–1BCE",
+          "start": -998,
+          "end": 0,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1–500CE",
+          "start": 1,
+          "end": 500,
+          "localityCount": 3,
+          "localityIds": [
+            "r10-place-garden-patch",
+            "r10-place-plash",
+            "r10-place-shell-mound"
+          ]
+        },
+        {
+          "period": "501–1000CE",
+          "start": 501,
+          "end": 1000,
+          "localityCount": 6,
+          "localityIds": [
+            "place-etowah",
+            "place-ocmulgee-great-temple",
+            "r10-place-bayou-stjohn",
+            "r10-place-garden-patch",
+            "r10-place-plash",
+            "r10-place-shell-mound"
+          ]
+        },
+        {
+          "period": "1001–1500CE",
+          "start": 1001,
+          "end": 1500,
+          "localityCount": 4,
+          "localityIds": [
+            "place-etowah",
+            "place-ocmulgee-earth-lodge",
+            "place-ocmulgee-great-temple",
+            "r10-place-bayou-stjohn"
+          ]
+        },
+        {
+          "period": "1501–1700CE",
+          "start": 1501,
+          "end": 1700,
+          "localityCount": 4,
+          "localityIds": [
+            "history-jamestown-colonial-place",
+            "history-st-augustine-colonial-place",
+            "jamestown-historic",
+            "place-etowah"
+          ]
+        },
+        {
+          "period": "1701–1934CE",
+          "start": 1701,
+          "end": 1934,
+          "localityCount": 2,
+          "localityIds": [
+            "d18-place-new-echota-phoenix-1828",
+            "sovereignty-florida-transfer-place"
+          ]
+        }
+      ],
+      "rationale": "Thirteen dated places; representation clusters after the first millennium CE and weakens in the latest audit bin. Focus on Tidewater tributaries and local Indigenous communities.",
+      "priorReview": "Prior Southeastern and Virginia/Tidewater intake and broad culture guides are adjacent material. Existing Mississippian and eastern site guides are outside the new guide’s evidence focus."
+    },
+    {
+      "rank": 14,
+      "id": "northern-central-america",
+      "region": "Honduras / El Salvador / Nicaragua",
+      "bounds": [
+        -91,
+        -82,
+        10,
+        17
+      ],
+      "auditBounds": [
+        [
+          -91,
+          -82,
+          10,
+          17
+        ]
+      ],
+      "auditRows": [
+        "Honduras / El Salvador / Nicaragua"
+      ],
+      "localityCount": 15,
+      "localityIds": [
+        "ayala-nicaragua",
+        "ceibal",
+        "city-yaxchilan-late-classic-city-place",
+        "early-place-gigante",
+        "gap-alabama-place",
+        "lca-place-las-mercedes-1",
+        "place-copan",
+        "regional-place-omoa",
+        "regional-place-san-bernabe",
+        "settlement-place-antigua-guatemala",
+        "settlement-place-guatemala-city",
+        "settlement-place-iximche-habitation",
+        "settlement-place-leon-current-site",
+        "settlement-place-leon-viejo",
+        "south-copan"
+      ],
+      "undatedLocalityCount": 1,
+      "periods": [
+        {
+          "period": "Before25,000BCE",
+          "start": -1000000,
+          "end": -25000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "25,000–15,000BCE",
+          "start": -24999,
+          "end": -15000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "15,000–10,000BCE",
+          "start": -14999,
+          "end": -9999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "10,000–6,000BCE",
+          "start": -9998,
+          "end": -5999,
+          "localityCount": 1,
+          "localityIds": [
+            "early-place-gigante"
+          ]
+        },
+        {
+          "period": "6,000–3,000BCE",
+          "start": -5998,
+          "end": -2999,
+          "localityCount": 1,
+          "localityIds": [
+            "early-place-gigante"
+          ]
+        },
+        {
+          "period": "3,000–1,000BCE",
+          "start": -2998,
+          "end": -999,
+          "localityCount": 2,
+          "localityIds": [
+            "early-place-gigante",
+            "lca-place-las-mercedes-1"
+          ]
+        },
+        {
+          "period": "1,000–1BCE",
+          "start": -998,
+          "end": 0,
+          "localityCount": 2,
+          "localityIds": [
+            "early-place-gigante",
+            "lca-place-las-mercedes-1"
+          ]
+        },
+        {
+          "period": "1–500CE",
+          "start": 1,
+          "end": 500,
+          "localityCount": 5,
+          "localityIds": [
+            "ayala-nicaragua",
+            "ceibal",
+            "gap-alabama-place",
+            "place-copan",
+            "south-copan"
+          ]
+        },
+        {
+          "period": "501–1000CE",
+          "start": 501,
+          "end": 1000,
+          "localityCount": 7,
+          "localityIds": [
+            "ayala-nicaragua",
+            "ceibal",
+            "city-yaxchilan-late-classic-city-place",
+            "gap-alabama-place",
+            "lca-place-las-mercedes-1",
+            "place-copan",
+            "south-copan"
+          ]
+        },
+        {
+          "period": "1001–1500CE",
+          "start": 1001,
+          "end": 1500,
+          "localityCount": 3,
+          "localityIds": [
+            "gap-alabama-place",
+            "lca-place-las-mercedes-1",
+            "settlement-place-iximche-habitation"
+          ]
+        },
+        {
+          "period": "1501–1700CE",
+          "start": 1501,
+          "end": 1700,
+          "localityCount": 4,
+          "localityIds": [
+            "settlement-place-antigua-guatemala",
+            "settlement-place-iximche-habitation",
+            "settlement-place-leon-current-site",
+            "settlement-place-leon-viejo"
+          ]
+        },
+        {
+          "period": "1701–1934CE",
+          "start": 1701,
+          "end": 1934,
+          "localityCount": 3,
+          "localityIds": [
+            "regional-place-omoa",
+            "regional-place-san-bernabe",
+            "settlement-place-guatemala-city"
+          ]
+        }
+      ],
+      "rationale": "Fifteen localities with only a small early-Holocene set. Prior Honduran work leaves El Salvador and Nicaragua unevenly represented.",
+      "priorReview": "v0.17 reviewed El Gigante, and Copán has a dedicated site guide. General Central American research includes selected later entries. Emphasize unfinished El Salvador/Nicaragua place sequences."
+    },
+    {
+      "rank": 15,
+      "id": "patagonia-tierra-del-fuego",
+      "region": "Patagonia / Tierra del Fuego",
+      "bounds": [
+        -77,
+        -53,
+        -57,
+        -40
+      ],
+      "auditBounds": [
+        [
+          -77,
+          -53,
+          -57,
+          -40
+        ]
+      ],
+      "auditRows": [
+        "Patagonia / Tierra del Fuego"
+      ],
+      "localityCount": 17,
+      "localityIds": [
+        "bano-nuevo-1",
+        "cerro-casa-piedra-7",
+        "chinchihuapi",
+        "islands-port-egmont",
+        "islands-port-louis",
+        "islands-stanley",
+        "monte-verde",
+        "patagonia-cueva-vieja",
+        "patagonia-pilauco",
+        "visit-beagle-1831-1836-5-place",
+        "visit-beagle-1831-1836-6-place",
+        "visit-cook-endeavour-1768-1770-3-place",
+        "visit-drake-1577-1579-2-place",
+        "visit-drake-1577-1579-3-place",
+        "visit-magellan-elcano-1519-1522-4-place",
+        "visit-magellan-elcano-1519-1522-5-place",
+        "visit-magellan-elcano-1519-1522-6-place"
+      ],
+      "undatedLocalityCount": 2,
+      "periods": [
+        {
+          "period": "Before25,000BCE",
+          "start": -1000000,
+          "end": -25000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "25,000–15,000BCE",
+          "start": -24999,
+          "end": -15000,
+          "localityCount": 1,
+          "localityIds": [
+            "patagonia-pilauco"
+          ]
+        },
+        {
+          "period": "15,000–10,000BCE",
+          "start": -14999,
+          "end": -9999,
+          "localityCount": 4,
+          "localityIds": [
+            "cerro-casa-piedra-7",
+            "monte-verde",
+            "patagonia-cueva-vieja",
+            "patagonia-pilauco"
+          ]
+        },
+        {
+          "period": "10,000–6,000BCE",
+          "start": -9998,
+          "end": -5999,
+          "localityCount": 3,
+          "localityIds": [
+            "bano-nuevo-1",
+            "chinchihuapi",
+            "patagonia-cueva-vieja"
+          ]
+        },
+        {
+          "period": "6,000–3,000BCE",
+          "start": -5998,
+          "end": -2999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "3,000–1,000BCE",
+          "start": -2998,
+          "end": -999,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1,000–1BCE",
+          "start": -998,
+          "end": 0,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1–500CE",
+          "start": 1,
+          "end": 500,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "501–1000CE",
+          "start": 501,
+          "end": 1000,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1001–1500CE",
+          "start": 1001,
+          "end": 1500,
+          "localityCount": 0,
+          "localityIds": []
+        },
+        {
+          "period": "1501–1700CE",
+          "start": 1501,
+          "end": 1700,
+          "localityCount": 5,
+          "localityIds": [
+            "visit-drake-1577-1579-2-place",
+            "visit-drake-1577-1579-3-place",
+            "visit-magellan-elcano-1519-1522-4-place",
+            "visit-magellan-elcano-1519-1522-5-place",
+            "visit-magellan-elcano-1519-1522-6-place"
+          ]
+        },
+        {
+          "period": "1701–1934CE",
+          "start": 1701,
+          "end": 1934,
+          "localityCount": 6,
+          "localityIds": [
+            "islands-port-egmont",
+            "islands-port-louis",
+            "islands-stanley",
+            "visit-beagle-1831-1836-5-place",
+            "visit-beagle-1831-1836-6-place",
+            "visit-cook-endeavour-1768-1770-3-place"
+          ]
+        }
+      ],
+      "rationale": "Seventeen places overall, zero in five consecutive bins between the early Holocene and contact-era activity, despite available local evidence.",
+      "priorReview": "Patagonia intake, early continental peopling, voyages and southern-island work contain relevant material. No dedicated production review of the Patagonia/Tierra del Fuego local sequence was found."
+    }
+  ]
+}

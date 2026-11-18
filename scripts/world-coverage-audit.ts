@@ -23,7 +23,9 @@ The preceding v0.24.0 campaign added **${additions.length} shared map records** 
 
 The preceding eastern Brazil pass added **${easternAdded.length} shared map records**, extending the Atlantic Brazil history with villages, burials and exchange evidence from 501–1500 CE. [Read its source decisions and v0.24.0 before/after comparison](eastern-brazil.html).
 
-The v0.26.0 campaign adds **68 shared records** across the ten sparsest target areas: western U.S. local histories, coastal Louisiana and the Gilbert, Phoenix and Line islands. [Read the named places, continuity decisions and before/after counts](sparse-ten-histories.html). The full matrix below still exposes periods that need more research.
+The v0.26.0 campaign added **68 shared records** across the ten sparsest target areas: western U.S. local histories, coastal Louisiana and the Gilbert, Phoenix and Line islands. [Read the named places, continuity decisions and before/after counts](sparse-ten-histories.html). The full matrix below still exposes periods that need more research.
+
+The v0.27.0 review selects **15 further regional gaps**, adds **70 shared evidence records** and connects each region to a guide and contextual story. [Read the ranked selection and locality comparison](coverage-15-review.html). Expanded voyages and polar expeditions remain on the same clock; [their coverage review](voyage-coverage-review.html) distinguishes reconstructed tracks from less precise date windows.
 
 ## The preceding three-region campaign
 

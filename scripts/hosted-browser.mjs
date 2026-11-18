@@ -162,7 +162,7 @@ try {
     requests.every((r) => r.url.startsWith(origin + "/") && r.method === "GET"),
   );
   assert.ok(requests.some(r=>r.url.includes('/api/records/ai-colony-16')));
-  const geographicAssets=new Set(['historical-boundaries.json','colonial-boundaries.json','national-boundaries.json','early-national-boundaries.json','reservation-boundaries.json','boundary-sources.json','expanded-boundary-sources.json','early-national-boundary-sources.json','reservation-boundary-sources.json','rail-network.json','voyages.json','land-detailed.geojson'].map(name=>'/'+name));
+  const geographicAssets=new Set(['historical-boundaries.json','colonial-boundaries.json','national-boundaries.json','early-national-boundaries.json','reservation-boundaries.json','boundary-sources.json','expanded-boundary-sources.json','early-national-boundary-sources.json','reservation-boundary-sources.json','rail-network.json','voyages.json','expedition-activity.json','land-detailed.geojson'].map(name=>'/'+name));
   assert.ok(requests.filter(r=>r.type==='fetch').every(r=>new URL(r.url).pathname.startsWith('/api/')||geographicAssets.has(new URL(r.url).pathname)));
   assert.deepEqual(errors, []);
   assert.deepEqual(violations, []);

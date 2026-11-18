@@ -49,7 +49,7 @@ try{
   await page.getByRole('button',{name:'Reset map view',exact:true}).click();
   assert.equal(await page.locator('#year-number').inputValue(),chosenYear,id+' shared date on zoom-out');
   const outsideTitles=records.filter(r=>r.location&&historyState(r,Number(chosenYear))==='active'&&!guide.recordIds.includes(r.id)&&Math.hypot(r.location.lon-story.scenes.at(-1).center[0],r.location.lat-story.scenes.at(-1).center[1])>5).map(r=>r.title);
-  await page.waitForFunction(titles=>[...document.querySelectorAll('#map-host title')].some(el=>titles.some(t=>el.textContent.includes(t))),outsideTitles);
+  await page.waitForFunction(titles=>[...document.querySelectorAll('#map-host [data-map-tip]')].some(el=>titles.some(t=>el.getAttribute('aria-label')?.includes(t))),outsideTitles);
   console.log(`PASS ${id}: ${story.scenes.length} current chapters, local phase selection and shared world`);
  }
  // New regional and nested local movies must show current evidence in every chapter too.

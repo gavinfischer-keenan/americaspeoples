@@ -10,11 +10,12 @@ const page=await browser.newPage({viewport:{width:1440,height:960}}),errors=[];
 page.on('pageerror',e=>errors.push(e.message));
 const origin=`http://127.0.0.1:${server.address().port}`;
 const records=JSON.parse(await readFile('dist/dataset.json','utf8')).records;
+const voyageCatalog=JSON.parse(await readFile('data/voyages.json','utf8'));
 const boundaryNames=()=>page.locator('#context-catalog strong').allTextContents();
 const year=async value=>{await page.locator('#context-year').fill(String(value));await page.locator('#context-year-form button').click();};
 try{
  await page.goto(origin+'/#movie');
- await page.waitForFunction(()=>document.querySelectorAll('#watch-voyage option').length===11);
+ await page.waitForFunction(count=>document.querySelectorAll('#watch-voyage option').length===count,voyageCatalog.voyages.length+1);
  await page.getByLabel('Follow an expedition',{exact:true}).selectOption('beagle-1831-1836');
  const controls=await page.locator('#voyage-controls').boundingBox(),map=await page.locator('#map-host').boundingBox();
  assert.ok(controls.x+controls.width<=map.x,'journey controls do not cover the map');
@@ -25,7 +26,7 @@ try{
  assert.notEqual(await page.locator('[data-voyage="beagle-1831-1836"]').getAttribute('transform'),before);
  assert.ok(await page.locator('.future-stop').count()>0);
  await page.screenshot({path:'test-results/expedition-desktop.png'});
- const beagle=JSON.parse(await readFile('data/voyages.json','utf8')).voyages.find(v=>v.id==='beagle-1831-1836');
+ const beagle=voyageCatalog.voyages.find(v=>v.id==='beagle-1831-1836');
  const fraction=iso=>{const d=new Date(iso),y=d.getUTCFullYear();return y+(+d-Date.UTC(y,0,1))/(Date.UTC(y+1,0,1)-Date.UTC(y,0,1));};
  const seek=async iso=>{await page.locator('#voyage-progress').evaluate((input,value)=>{input.value=String(value);input.dispatchEvent(new Event('input',{bubbles:true}));},scopedVoyageProgress(beagle,fraction(iso))*10000);};
  const salvador=records.find(r=>r.id==='visit-beagle-1831-1836-3'),point=`[data-point="${salvador.location.lon},${salvador.location.lat}"]`;

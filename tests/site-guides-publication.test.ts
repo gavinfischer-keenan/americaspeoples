@@ -13,10 +13,17 @@ test("research source pages contain status and source links without raw report r
   assert.throws(() => researchStatusHTML({id:"bad",title:"Bad",url:"https://consensus.app/",publication:"public-raw"} as any), /private source status/);
 });
 
+test('direct original-source reviews identify their method without inventing a provider report',()=>{
+ const html=researchStatusHTML({id:'direct',title:'Regional review',url:'https://americaspeoples.11mosswood.us/docs/coverage-15-review.html',publication:'original-source-review'} as any);
+ assert.match(html,/original publications and institutional records/);
+ assert.match(html,/retained privately/);
+ assert.doesNotMatch(html,/Consensus|third-party research response/);
+});
+
 test("research catalog and historical intake paths expose notices instead of raw exports", async () => {
   const catalog = JSON.parse(await readFile("data/site-research-reviews.json","utf8"));
   for (const review of catalog.reviews) {
-    assert.equal(review.publication, "private-source-links-only");
+    assert.ok(['private-source-links-only','original-source-review'].includes(review.publication));
     assert.equal(review.file, undefined);
     const md = await readFile("sites/reports/" + review.id + ".md","utf8");
     assert.ok(md.length < 1500);

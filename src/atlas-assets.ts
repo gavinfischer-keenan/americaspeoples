@@ -1,10 +1,11 @@
 import type { PoliticalBoundary, BoundarySource } from './boundaries';
 import type { RailSegment } from './atlas-context';
 import type { Voyage } from './voyages';
+import type {ExpeditionActivity} from './expedition-context';
 import transport from '../data/transport-expansion-records.json';
 import type { EvidenceRecord } from './model';
 import { regionalRailSegments } from './atlas-context';
-export const atlasAssets={boundaries:[] as PoliticalBoundary[],boundarySources:[] as BoundarySource[],rails:[] as RailSegment[],voyages:[] as Voyage[],voyageSources:[] as {id:string;title:string;url:string}[],errors:[] as string[],ready:false};
+export const atlasAssets={boundaries:[] as PoliticalBoundary[],boundarySources:[] as BoundarySource[],rails:[] as RailSegment[],voyages:[] as Voyage[],voyageSources:[] as {id:string;title:string;url:string}[],expeditionActivities:[] as ExpeditionActivity[],activitySources:[] as {id:string;title:string;url:string}[],errors:[] as string[],ready:false};
 let detailedLand:any;
 const landListeners=new Set<(land:any)=>void>();
 /** New and already-mounted topic maps share the asynchronously loaded geography. */
@@ -22,6 +23,7 @@ export async function loadAtlasAssets(changed:()=>void,land:(value:any)=>void):P
   ...sources.map(name=>[name,async()=>{atlasAssets.boundarySources.push(...await read(`${name}.json`));}] as [string,()=>Promise<void>]),
   ['Historical railway network',async()=>{atlasAssets.rails.push(...(await read('rail-network.json')).segments);}],
   ['Voyage itineraries',async()=>{const value=await read('voyages.json');atlasAssets.voyages=value.voyages;atlasAssets.voyageSources=value.sources;}],
+  ['Expedition date windows',async()=>{const value=await read('expedition-activity.json');atlasAssets.expeditionActivities=value.activities;atlasAssets.activitySources=value.sources;}],
   ['Detailed coastlines',async()=>{detailedLand=await read('land-detailed.geojson');land(detailedLand);for(const listener of landListeners)listener(detailedLand);}],
  ];
  // A missing regional file must not erase every other successfully loaded layer.

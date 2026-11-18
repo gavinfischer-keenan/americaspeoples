@@ -1,4 +1,5 @@
 import {threeRegionalGapStories} from './three-regional-gaps-stories';
+import regionalCoverage from '../data/coverage-15-stories.json';
 import {shieldAleutianLocalStories} from './shield-aleutian-local-stories';
 import {canadaAleutianStories} from './canada-aleutian-stories';
 import {islandChainStories} from './island-chain-stories';
@@ -36,6 +37,7 @@ export interface Story {
 // Scene years are viewing positions inside the cited evidence windows, not new
 // historical estimates. Notes distinguish representative years from dated events.
 export const stories: Story[] = [
+ ...regionalCoverage.stories as Story[],
  ...threeRegionalGapStories,
  ...shieldAleutianLocalStories,
  ...canadaAleutianStories,

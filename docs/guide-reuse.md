@@ -31,3 +31,10 @@ Non-English official sources are linked in their original languages, including S
 The source register combines canonical evidence-record citations, guide sources and paragraph citations, curated reading links, public data metadata and manifests, and the complete project notices. It groups exact URLs and DOI aliases while preserving the supplied addresses and the records or files that use them. Reference-only entries explicitly say that their reuse license has not been verified. Reused data and photographs retain their separate notices; the full third-party notices preserve copyright statements for incorporated software and datasets.
 
 The build verifies each photograph against its recorded byte count and SHA-256 before publishing it. Photographs are bounded to two million bytes per stored file. Tests require sourced narrative for every enriched guide, verify image provenance, exercise safe rendering and new-guide reading fallbacks, and check that every canonical record and guide citation appears in the register. Links can change after verification; access failures do not create permission to redistribute the source.
+
+
+## Whole-area maps
+
+The v0.27.0 guides add 16 original survey and study figures with their own public-domain or CC BY 4.0 notices. Credits, historical scope, transformations, original links, pixel dimensions and hashes are recorded in [the published map manifest](https://americaspeoples.11mosswood.us/sites/maps/manifest.json) and beneath each sheet. These maps retain their individual licenses; the surrounding noncommercial text does not impose new restrictions on them. The 29 additional map references remain links when reuse rights are unverified.
+
+All map viewers run locally from the atlas origin. The map-sheet build verifies the recorded SHA-256 before copying each asset. The larger terrain images retain Tilezen/provider credits and expose actual sampling and contour metadata separately from export size. Zooming a modern relief map does not turn it into an archaeological survey.
