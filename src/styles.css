@@ -1376,6 +1376,7 @@ dd:last-child {
 .map-canvas [data-evidence-status="discussion"] { --evidence-rim:#e8bf73; }
 .map-canvas .evidence-status-ring { fill:none;stroke:var(--evidence-rim);stroke-width:2;pointer-events:none; }
 .map-canvas [data-evidence-status="disputed"] .evidence-status-ring { stroke-dasharray:2 1; }
+.map-canvas [data-context][data-evidence-status]:not([data-evidence-status="none"]) > circle { stroke:var(--evidence-rim); }
 .map-canvas [data-evidence-status]:not([data-evidence-status="none"]) .reach-contour,
 .map-canvas [data-evidence-status]:not([data-evidence-status="none"]) .cloud-core,
 .map-canvas [data-evidence-status]:not([data-evidence-status="none"]) circle.cloud-glow { stroke:var(--evidence-rim);stroke-opacity:.8; }

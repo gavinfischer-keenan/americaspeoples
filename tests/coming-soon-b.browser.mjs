@@ -25,12 +25,12 @@ try{
    await page.getByRole('heading',{name:scene.title,exact:true}).waitFor();
    const current=scene.recordIds.map(id=>records.find(r=>r.id===id)).find(r=>r?.location&&historyState(r,scene.year)==='active');
    assert.ok(current,scene.title);
-   await page.waitForFunction(({title})=>{
-    const marker=[...document.querySelectorAll('#map-host [data-point],#map-host [data-overlay]')].find(el=>el.querySelector('title')?.textContent.includes(title)),map=document.querySelector('#map-host');
-    if(!marker?.textContent.includes(title)||!map)return false;
+   await page.waitForFunction(({id})=>{
+    const marker=[...document.querySelectorAll('#map-host [data-map-tip]')].find(el=>{const key=el.getAttribute('data-map-tip');return key?.startsWith('records:')&&JSON.parse(key.slice(8)).some(value=>JSON.parse(value)[0]===id)}),map=document.querySelector('#map-host');
+    if(!marker||!map)return false;
     const b=marker.getBoundingClientRect(),m=map.getBoundingClientRect();
     return b.width>0&&b.right>m.left&&b.left<m.right&&b.bottom>m.top&&b.top<m.bottom;
-   },{title:current.title});
+   },{id:current.id});
    chapters++;
   }
   console.log(`PASS contextual ${id}: ${story.scenes.length} current chapters`);
@@ -48,13 +48,13 @@ try{
    assert.ok((await page.locator('#topic-scene').innerText()).includes(scene.body));
    const current=scene.recordIds.map(id=>records.find(r=>r.id===id)).find(r=>r?.location&&historyState(r,scene.year)==='active');
    assert.ok(current,scene.title+' current mapped evidence');
-   await page.waitForFunction(({title})=>{
+   await page.waitForFunction(({id})=>{
     // A dated connection is rendered as an overlay, not as a settlement dot.
-    const marker=[...document.querySelectorAll('#topic-map [data-point],#topic-map [data-overlay]')].find(el=>el.querySelector('title')?.textContent.includes(title)),map=document.querySelector('#topic-map');
-    if(!marker?.textContent.includes(title)||!map)return false;
+    const marker=[...document.querySelectorAll('#topic-map [data-map-tip]')].find(el=>{const key=el.getAttribute('data-map-tip');return key?.startsWith('records:')&&JSON.parse(key.slice(8)).some(value=>JSON.parse(value)[0]===id)}),map=document.querySelector('#topic-map');
+    if(!marker||!map)return false;
     const b=marker.getBoundingClientRect(),m=map.getBoundingClientRect();
     return b.width>0&&b.right>m.left&&b.left<m.right&&b.bottom>m.top&&b.top<m.bottom;
-   },{title:current.title});
+   },{id:current.id});
    chapters++;
   }
   console.log(`PASS independent ${id}: ${topic.scenes.length} current chapters`);

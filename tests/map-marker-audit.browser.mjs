@@ -11,5 +11,17 @@ try{const page=await browser.newPage({viewport:{width:1100,height:900}});await p
  await page.evaluate(()=>show(all.filter(r=>['g20-hove-castle-architecture','g20-hove-castle-1277-beam'].includes(r.id))));
  assert.equal(await page.locator('.features [data-map-tip]').count(),1,'one marker for co-located construction and beam');assert.equal(await page.locator('.site-count').textContent(),'2');await page.locator('.features [data-map-tip]').press('Enter');assert.equal((await page.evaluate(()=>selected)).length,2);
  await page.evaluate(()=>show(all.filter(r=>['g20-canm-castle-rock-village','g20-canm-castle-rock-ending'].includes(r.id))));assert.equal(await page.locator('.features [data-map-tip]').count(),1);const hit=await page.locator('.features [data-map-tip]').evaluate(el=>{const p=new DOMPoint(0,0).matrixTransform(el.getScreenCTM());return{x:p.x,y:p.y}});await page.mouse.click(hit.x,hit.y);assert.equal((await page.evaluate(()=>selected)).length,2);
- console.log('PASS Bluefish single marker, attached status, zoom, co-located phases, battle/settlement, pointer and keyboard');
+ await page.evaluate(()=>{window.bosque=all.filter(r=>['removal-bosque-confinement-1864-1868','removal-dine-return-1868'].includes(r.id));show(bosque);});
+ for(let i=0;i<4;i++){
+  await page.evaluate(()=>map.focusRecords(bosque));
+  assert.equal(await page.locator('[data-point] .site-count').textContent(),'2','camera redraw must not add records');
+  await page.locator('[data-point]').press('Enter');assert.deepEqual((await page.evaluate(()=>selected)).sort(),['removal-bosque-confinement-1864-1868','removal-dine-return-1868']);
+ }
+ await page.evaluate(()=>{window.corrected={...bosque[1],proposalKey:'local-return-correction'};show([bosque[1],corrected,bosque[0]]);});
+ await page.locator('[data-point]').press('Enter');assert.equal((await page.evaluate(()=>selected)).length,3,'a correction remains distinct while input order changes');
+ assert.equal(await page.locator('[data-point] .site-count').textContent(),'3');
+ await page.evaluate(()=>{const r=all.find(r=>r.id==='central-landbridge-cultigens');map.update([],1868,[r]);map.focusRecords([r]);});
+ const context=page.locator('[data-context]').first();await context.waitFor();assert.match(await context.getAttribute('aria-label'),/gold rim/);
+ assert.equal(await context.locator('circle').evaluate(el=>getComputedStyle(el).stroke),'rgb(232, 191, 115)','unresolved evidence must show its promised status rim');
+ console.log('PASS Bluefish status, co-located phases, stable redraw identities, corrections, unresolved status, pointer and keyboard');
 }finally{await browser.close();await new Promise(r=>server.close(r));}

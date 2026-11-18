@@ -19,6 +19,19 @@ const overlayCount = (kind, year) =>
       (!(r.time.eventDate ?? r.history?.eventDate) ||
         (r.time.eventDate ?? r.history?.eventDate) <= `${year}-01-01`),
   ).length * 2;
+// Co-located original/correction records now share a marker. Count selectable
+// identities rather than requiring a duplicate SVG symbol for each source row.
+const renderedOverlayCount = async kind => {
+  const ids=dataset.records.filter(r=>r.overlay?.kind===kind).map(r=>r.id);
+  return page.locator('[data-map-tip]').evaluateAll((features,ids)=>{
+    const identities=new Set();
+    for(const feature of features){
+      const key=feature.dataset.mapTip;if(!key.startsWith('records:'))continue;
+      for(const value of JSON.parse(key.slice(8)))if(ids.includes(JSON.parse(value)[0]))identities.add(value);
+    }
+    return identities.size;
+  },ids);
+};
 try {
   await mkdir("test-results", { recursive: true });
   await page.goto(url + "#map");
@@ -86,11 +99,11 @@ try {
   };
   await go(1864);
   assert.equal(
-    await page.locator(".overlay-forced-removal").count(),
+    await renderedOverlayCount("forced-removal"),
     overlayCount("forced-removal", 1864),
   );
   assert.equal(
-    await page.locator(".overlay-violence").count(),
+    await renderedOverlayCount("violence"),
     overlayCount("violence", 1864),
   );
   await page.screenshot({
@@ -99,11 +112,11 @@ try {
   });
   await go(1837);
   assert.equal(
-    await page.locator(".overlay-epidemic").count(),
+    await renderedOverlayCount("epidemic"),
     overlayCount("epidemic", 1837),
   );
   assert.equal(
-    await page.locator(".overlay-forced-removal").count(),
+    await renderedOverlayCount("forced-removal"),
     overlayCount("forced-removal", 1837),
   );
   await go(1934);

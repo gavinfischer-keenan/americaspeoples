@@ -18,8 +18,7 @@ try{
  await page.goto(base+'/#story/machu-picchu');await page.locator('#story-select').waitFor();
  const sun=page.locator('[data-record-id="g20-mp-sun"]'),residence=page.locator('[data-record-id="g20-mp-royal-residence"]');
  await sun.waitFor();await residence.waitFor();
- const sunBox=await sun.boundingBox(),residenceBox=await residence.boundingBox();
- assert.ok(Math.hypot(sunBox.x+sunBox.width/2-residenceBox.x-residenceBox.width/2,sunBox.y+sunBox.height/2-residenceBox.y-residenceBox.height/2)>=12,'Machu Picchu opening separates neighboring buildings, not one crowded site dot');
+ await page.waitForFunction(()=>{const sun=document.querySelector('[data-record-id="g20-mp-sun"]'),residence=document.querySelector('[data-record-id="g20-mp-royal-residence"]');if(!sun||!residence)return false;const a=sun.getBoundingClientRect(),b=residence.getBoundingClientRect();return a.width>0&&b.width>0&&Math.hypot(a.x+a.width/2-b.x-b.width/2,a.y+a.height/2-b.y-b.height/2)>=12;});
  for(const id of ids){
   const guide=siteGuides.find(g=>g.id===id),story=stories.find(s=>s.id===guide.storyId);assert.ok(story,id);
   assert.equal((await page.goto(base+'/'+guide.href)).status(),200);
@@ -27,13 +26,13 @@ try{
   for(const [i,scene] of story.scenes.entries()){
    if(i)await page.getByRole('button',{name:'Next scene',exact:true}).click();
    await page.getByRole('heading',{name:scene.title,exact:true}).waitFor();
-   const titles=scene.recordIds.map(id=>records.find(r=>r.id===id)).filter(r=>r?.location&&historyState(r,scene.year)==='active').map(r=>r.title);
+   const titles=scene.recordIds.map(id=>records.find(r=>r.id===id)).filter(r=>r?.location&&historyState(r,scene.year)==='active').map(r=>r.id);
    assert.ok(titles.length,scene.id+' current evidence');
    await page.waitForFunction(titles=>{
     const map=document.querySelector('#map-host'),m=map?.getBoundingClientRect();if(!m)return false;
     return [...map.querySelectorAll('[data-point],[data-overlay],[data-record-id]')].some(el=>{
-     const title=el.querySelector('title')?.textContent??'',b=el.getBoundingClientRect();
-     return titles.some(t=>title.includes(t))&&b.width>0&&b.right>m.left&&b.left<m.right&&b.bottom>m.top&&b.top<m.bottom;
+     const key=el.getAttribute('data-map-tip'),b=el.getBoundingClientRect();
+     return key?.startsWith('records:')&&JSON.parse(key.slice(8)).some(value=>titles.includes(JSON.parse(value)[0]))&&b.width>0&&b.right>m.left&&b.left<m.right&&b.bottom>m.top&&b.top<m.bottom;
     });
    },titles);
    chapters++;
@@ -54,18 +53,18 @@ try{
   console.log(`PASS ${id}: ${story.scenes.length} current chapters, local phase selection and shared world`);
  }
  // New regional and nested local movies must show current evidence in every chapter too.
- const added=siteGuides.filter(g=>!ids.includes(g.id)&&(g.id==='four-corners'||g.parentGuideId));
+ const added=siteGuides.filter(g=>g.storyId&&!ids.includes(g.id)&&(g.id==='four-corners'||g.parentGuideId));
  for(const guide of added){
   const story=stories.find(s=>s.id===guide.storyId);assert.ok(story,guide.id);
   await page.goto(base+'/#story/'+story.id);
   for(const [i,scene] of story.scenes.entries()){
    if(i)await page.getByRole('button',{name:'Next scene',exact:true}).click();
    await page.getByRole('heading',{name:scene.title,exact:true}).waitFor();
-   const titles=scene.recordIds.map(id=>records.find(r=>r.id===id)).filter(r=>r?.location&&historyState(r,scene.year)==='active').map(r=>r.title);
+   const titles=scene.recordIds.map(id=>records.find(r=>r.id===id)).filter(r=>r?.location&&historyState(r,scene.year)==='active').map(r=>r.id);
    assert.ok(titles.length,scene.id+' current evidence');
    await page.waitForFunction(titles=>{
     const map=document.querySelector('#map-host'),m=map.getBoundingClientRect();
-    return [...map.querySelectorAll('[data-point],[data-overlay],[data-record-id]')].some(el=>{const b=el.getBoundingClientRect();return titles.some(t=>el.querySelector('title')?.textContent.includes(t))&&b.width>0&&b.left<m.right&&b.right>m.left&&b.top<m.bottom&&b.bottom>m.top});
+    return [...map.querySelectorAll('[data-point],[data-overlay],[data-record-id]')].some(el=>{const b=el.getBoundingClientRect(),key=el.getAttribute('data-map-tip');return key?.startsWith('records:')&&JSON.parse(key.slice(8)).some(value=>titles.includes(JSON.parse(value)[0]))&&b.width>0&&b.left<m.right&&b.right>m.left&&b.top<m.bottom&&b.bottom>m.top});
    },titles);
    chapters++;
   }

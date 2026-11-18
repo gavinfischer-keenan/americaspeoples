@@ -43,6 +43,7 @@ export class MapView {
   private contextRecords: DisplayRecord[] = [];
   private contextAnchors=new Map<string,DisplayRecord[]>();
   private places=new Map<string,DisplayRecord[]>();
+  private drawnPoints=new Map<string,DisplayRecord[]>();
   private physical:PhysicalOptions={ice:false,iceScenario:'optimal',currents:false,winds:false,hidden:new Set(),uncertain:true};
   private icePaths=new Map<string,string>();
   private flowPaths=new Map<string,string>();
@@ -402,7 +403,7 @@ export class MapView {
       const record=this.records[Number(element.dataset.overlay)];if(!record)return [];
       return this.places.get(placeKey(record)??"none")??[record];
     }
-    if(element.dataset.point!==undefined)return this.places.get(element.dataset.point)??this.records.filter(r=>!r.overlay&&r.location&&`${r.location.lon},${r.location.lat}`===element.dataset.point);
+    if(element.dataset.point!==undefined)return this.drawnPoints.get(element.dataset.point)??[];
     return [];
   }
   private selectRows(rows:DisplayRecord[]){
@@ -492,6 +493,7 @@ export class MapView {
     $('.physical-features',this.element).innerHTML=background;
     this.refreshContext();
     const groups = new Map<string, DisplayRecord[]>();
+    this.drawnPoints=groups;
     let endpointLabels='';
     const labeledEndpoints=new Set<string>();
     let arrows = "",
@@ -585,8 +587,11 @@ export class MapView {
       }
       if (!r.location) continue;
       const key = `${r.location.lon},${r.location.lat}`;
-      const group = groups.get(key);
-      if(colocated)groups.set(key,colocated);else if (group) group.push(r); else groups.set(key, [r]);
+      const group = groups.get(key)??[];
+      // Keep render groups independent of the cached place groups. A route's
+      // origin can share this marker, while its path remains separately selectable.
+      for(const item of colocated??[r])if(!group.includes(item))group.push(item);
+      groups.set(key,group);
       if (r.type === "movement" && r.destination) {
         const a = this.projection([r.location.lon, r.location.lat]),
           b = this.projection([r.destination.lon, r.destination.lat]);
