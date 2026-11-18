@@ -200,6 +200,12 @@
       "work/deployment/v0231/payload.tar"
     ]
   },
+  "workingCopyCleanup": {
+    "status": "Not performed: automatic approval review rejected the combined branch and internal work-folder cleanup as blocked by policy, without a more specific reason.",
+    "featureBranchRetained": "atlas/density-display-plan",
+    "internalWorkFolderRetained": ".superpowers/sdd/2026-11-18-density-and-sparse-coverage",
+    "deployedReleaseRetentionComplete": true
+  },
   "implementationDecisions": [
     {
       "decision": "Include the ten-region research in this release, following the user’s later request.",
