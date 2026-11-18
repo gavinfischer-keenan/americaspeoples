@@ -9,6 +9,7 @@ export interface SiteGuide {
  id:string; title:string; href:string; region:string; description:string;
  recordIds:string[]; kind:'site'|'culture'; report:string; relatedGuideIds?:string[];
  storyId?:string; topicId?:string; parentGuideId?:string; level?:'region'|'complex'|'building'; referenceRecordIds?:string[];
+ mapAspectRatio?:number;
 }
 export const siteGuides = catalog.guides as SiteGuide[];
 const byRecord = new Map(siteGuides.flatMap(g => g.recordIds.map(id => [id, g] as const)));

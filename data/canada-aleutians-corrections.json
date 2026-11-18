@@ -1,0 +1,1327 @@
+{
+  "baseCommit": "283fef2",
+  "reviewedAt": "2026-11-17",
+  "updates": [
+    {
+      "targetId": "pacific-calvert-island-footprints",
+      "beforeRecord": {
+        "id": "pacific-calvert-island-footprints",
+        "revision": 1,
+        "type": "event",
+        "title": "Calvert Island — human footprints in coastal sediment",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": null,
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -11367,
+          "end": -10683,
+          "approximate": true,
+          "original": "13,317–12,633 cal BP, conservative associated-wood chronology",
+          "method": "Associated pine wood; Calib 7.0.2 / IntCal13 reported by McLaren et al.",
+          "interpretation": "Reported dated evidence envelope; neither an exact founding date nor proof of continuous occupation throughout the range."
+        },
+        "claims": [
+          {
+            "id": "tracks",
+            "text": "McLaren and colleagues report 29 human footprints representing at least three people, including a juvenile, on Calvert Island.",
+            "status": "well-supported",
+            "explanation": "Minimum track-makers are not a resident population estimate. Associated wood and stratigraphy constrain the conservative chronology; the footprints themselves were not directly radiocarbon dated.",
+            "support": [
+              {
+                "sourceId": "atlantic-a3",
+                "locator": "Results; discussion; conclusion",
+                "stance": "supports",
+                "note": "Primary source inspected to the access level recorded in its citation."
+              }
+            ]
+          },
+          {
+            "id": "dating",
+            "text": "The conservative published envelope is 13,317–12,633 cal BP; narrower rounded wording elsewhere in the paper should not replace that full envelope.",
+            "status": "well-supported",
+            "explanation": "Bioturbated overlying sediment produced discordant dates. The accepted lower footprint surface and associated wood require stratigraphic interpretation.",
+            "support": [
+              {
+                "sourceId": "atlantic-a3",
+                "locator": "Radiocarbon results and conclusion",
+                "stance": "supports",
+                "note": "Primary source inspected to the access level recorded in its citation."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "atlantic-a3",
+            "authors": "McLaren, D.; Fedje, D.; Dyck, Angela; Mackie, Q.; Gauvreau, Alisha; Cohen, J.",
+            "title": "Terminal Pleistocene epoch human footprints from the Pacific coast of Canada",
+            "year": 2018,
+            "venue": "PLoS ONE",
+            "url": "https://doi.org/10.1371/journal.pone.0193522",
+            "access": "Primary PLOS full text inspected: abstract, stratigraphy, dating Table 2, discussion and conclusion; coordinates not extracted from a figure.",
+            "doi": "10.1371/journal.pone.0193522"
+          }
+        ],
+        "review": {
+          "summary": "McLaren and colleagues report 29 human footprints representing at least three people, including a juvenile, on Calvert Island. The conservative published envelope is 13,317–12,633 cal BP; narrower rounded wording elsewhere in the paper should not replace that full envelope.",
+          "limitations": "This is Pacific coastal presence. It is not evidence for the route into Atlantic Canada, uninterrupted coastal movement, or a village population.",
+          "discussion": "Dating, archaeological classification, and migration inference are distinguished.",
+          "provenance": "Atlantic Canada intake: both supplied PDF syntheses and all 29 RIS occurrences reconciled against primary publications or explicitly limited access. Supplied syntheses are research leads, not primary evidence. Author-supplied PDF/RIS originals preserved in the local round3 intake archive. Reviewed citations and limitations are public; original synthesis PDFs are not republished.",
+          "reviewedAt": "2026-10-28",
+          "history": [
+            "2026-10-28: Source intake reviewed; shared corpus unchanged."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "regional-evidence",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -128,
+              52
+            ]
+          },
+          "precision": "Rounded regional anchor for the named source geography; not an archaeological coordinate, route, territory, or confidence boundary.",
+          "provenance": "Calvert Island, British Columbia, named in the primary paper. Rounded island-region anchor, not coordinates for site EjTa-4."
+        }
+      },
+      "record": {
+        "id": "pacific-calvert-island-footprints",
+        "revision": 2,
+        "type": "event",
+        "title": "Calvert Island — human footprints in coastal sediment",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "cw-place-5913649",
+          "name": "Calvert Island",
+          "lon": -128.0,
+          "lat": 51.6,
+          "precision": "Public named locality reference rounded to 1 decimal places; approximately 20 km orientation tolerance. Not an excavation, house, burial, exact event footprint or territory boundary.",
+          "provenance": "GeoNames 5913649, Calvert Island, Canadian country gazetteer: 51.56512, -128.0175; https://www.geonames.org/5913649/ ; https://download.geonames.org/export/dump/CA.zip downloaded 2026-11-17. Historical source establishes association with this locality; gazetteer supplies reference geography."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -11367,
+          "end": -10683,
+          "approximate": true,
+          "original": "13,317–12,633 cal BP, conservative associated-wood chronology",
+          "method": "Associated pine wood; Calib 7.0.2 / IntCal13 reported by McLaren et al.",
+          "interpretation": "Reported dated evidence envelope; neither an exact founding date nor proof of continuous occupation throughout the range."
+        },
+        "claims": [
+          {
+            "id": "tracks",
+            "text": "McLaren and colleagues report 29 human footprints representing at least three people, including a juvenile, on Calvert Island.",
+            "status": "well-supported",
+            "explanation": "Minimum track-makers are not a resident population estimate. Associated wood and stratigraphy constrain the conservative chronology; the footprints themselves were not directly radiocarbon dated.",
+            "support": [
+              {
+                "sourceId": "atlantic-a3",
+                "locator": "Results; discussion; conclusion",
+                "stance": "supports",
+                "note": "Primary source inspected to the access level recorded in its citation."
+              }
+            ]
+          },
+          {
+            "id": "dating",
+            "text": "The conservative published envelope is 13,317–12,633 cal BP; narrower rounded wording elsewhere in the paper should not replace that full envelope.",
+            "status": "well-supported",
+            "explanation": "Bioturbated overlying sediment produced discordant dates. The accepted lower footprint surface and associated wood require stratigraphic interpretation.",
+            "support": [
+              {
+                "sourceId": "atlantic-a3",
+                "locator": "Radiocarbon results and conclusion",
+                "stance": "supports",
+                "note": "Primary source inspected to the access level recorded in its citation."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "atlantic-a3",
+            "authors": "McLaren, D.; Fedje, D.; Dyck, Angela; Mackie, Q.; Gauvreau, Alisha; Cohen, J.",
+            "title": "Terminal Pleistocene epoch human footprints from the Pacific coast of Canada",
+            "year": 2018,
+            "venue": "PLoS ONE",
+            "url": "https://doi.org/10.1371/journal.pone.0193522",
+            "access": "Primary PLOS full text inspected: abstract, stratigraphy, dating Table 2, discussion and conclusion; coordinates not extracted from a figure.",
+            "doi": "10.1371/journal.pone.0193522"
+          }
+        ],
+        "review": {
+          "summary": "McLaren and colleagues report 29 human footprints representing at least three people, including a juvenile, on Calvert Island. The conservative published envelope is 13,317–12,633 cal BP; narrower rounded wording elsewhere in the paper should not replace that full envelope.",
+          "limitations": "This is Pacific coastal presence. It is not evidence for the route into Atlantic Canada, uninterrupted coastal movement, or a village population.",
+          "discussion": "Dating, archaeological classification, and migration inference are distinguished.",
+          "provenance": "Atlantic Canada intake: both supplied PDF syntheses and all 29 RIS occurrences reconciled against primary publications or explicitly limited access. Supplied syntheses are research leads, not primary evidence. Author-supplied PDF/RIS originals preserved in the local round3 intake archive. Reviewed citations and limitations are public; original synthesis PDFs are not republished.",
+          "reviewedAt": "2026-10-28",
+          "history": [
+            "2026-10-28: Source intake reviewed; shared corpus unchanged.",
+            "2026-11-17: Added a public Calvert Island reference; chronology unchanged and no separate footprint record added."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "regional-evidence",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -128.0,
+              51.6
+            ]
+          },
+          "precision": "Public named locality reference rounded to 1 decimal places; approximately 20 km orientation tolerance. Not an excavation, house, burial, exact event footprint or territory boundary.",
+          "provenance": "GeoNames 5913649, Calvert Island, Canadian country gazetteer: 51.56512, -128.0175; https://www.geonames.org/5913649/ ; https://download.geonames.org/export/dump/CA.zip downloaded 2026-11-17. Historical source establishes association with this locality; gazetteer supplies reference geography."
+        }
+      },
+      "reason": "2026-11-17: Added a public Calvert Island reference; chronology unchanged and no separate footprint record added."
+    },
+    {
+      "targetId": "r10v-amaknak-quarry-unl469",
+      "beforeRecord": {
+        "id": "r10v-amaknak-quarry-unl469",
+        "revision": 1,
+        "type": "occurrence",
+        "title": "Amaknak Quarry (UNL-469) — Late Anangula core-and-blade evidence",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "r10-amaknak-quarry-unl469",
+          "name": "Amaknak Quarry (UNL-469)",
+          "lon": -166.5,
+          "lat": 53.9,
+          "provenance": "Rogers et al. 2009 pp.153–154, Figure 1 and site description: eastern side of Amaknak Island’s southern peninsula, within Unalaska. Rounded public locality setting; figure not digitized.",
+          "precision": "Coarse named-site setting rounded to about 0.1 degree (several kilometres); unsuitable for navigation or finding excavation features."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -6090,
+          "end": -4790,
+          "approximate": true,
+          "original": "8040–6740 cal BP; Table 1 uses OxCal 3.1 and IntCal04",
+          "method": "Published calibrated BP translated to astronomical years by 1950 minus cal BP; no recalibration.",
+          "interpretation": "Source-specific dated evidence or uncertainty envelope; not uninterrupted residence, a census or a founding date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Tests recovered blades, microblades, flake tools and a biface at UNL-469 on Amaknak Island. Charcoal dates span 8040–6740 cal BP and fill a previously poorly sampled Late Anangula interval.",
+            "status": "under discussion",
+            "explanation": "Multiple charcoal dates do not demonstrate continuous settlement or archipelago-wide demographic continuity.",
+            "support": [
+              {
+                "sourceId": "r10-rogers2009",
+                "locator": "Abstract; pp.153–155, Table 1",
+                "stance": "supports",
+                "note": "Checked 2026-10-29: Original society-hosted article PDF; abstract, site description and radiocarbon Table 1 inspected."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r10-rogers2009",
+            "authors": "Jason S. Rogers; Michael R. Yarborough; Catherine L. Pendleton",
+            "title": "An Anangula Period Core-and-Blade Site on Amaknak Island, Eastern Aleutians",
+            "year": 2009,
+            "venue": "Alaska Journal of Anthropology 7(1):153–166",
+            "url": "https://www.alaskaanthropology.org/wp-content/uploads/2017/08/akanth-articles_282_v7_n1_Rogers-Yarborough-Pendleton-Report.pdf",
+            "access": "Checked 2026-10-29: Original society-hosted article PDF; abstract, site description and radiocarbon Table 1 inspected.",
+            "referenceType": "journal-article"
+          }
+        ],
+        "review": {
+          "summary": "Tests recovered blades, microblades, flake tools and a biface at UNL-469 on Amaknak Island. Charcoal dates span 8040–6740 cal BP and fill a previously poorly sampled Late Anangula interval.",
+          "limitations": "Multiple charcoal dates do not demonstrate continuous settlement or archipelago-wide demographic continuity.",
+          "discussion": "Archaeological labels, ancestry and language are separate evidence. The named-site point is deliberately coarse, with several kilometres of geographic uncertainty.",
+          "provenance": "Round10 Arctic/Aleutian intake checked against the original publication or institutional record actually accessed. Private generated reports are not redistributed.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: Original-source check; chronology and map precision limits retained.",
+            "2026-10-29: Added coarse named-site occurrence point from published geographic setting; no exact excavation coordinates inferred."
+          ],
+          "relatedIds": []
+        }
+      },
+      "record": {
+        "id": "r10v-amaknak-quarry-unl469",
+        "revision": 2,
+        "type": "occurrence",
+        "title": "Amaknak — charcoal and stone tools at a possible hearth",
+        "culture": {
+          "id": "unangan-aleutian-histories",
+          "name": "Unangan communities and colonial encounters",
+          "kind": "people",
+          "color": "#547e8c"
+        },
+        "location": {
+          "id": "al-place-amaknak-quarry",
+          "name": "Near Unalaska — southern Amaknak Island, UNL-469",
+          "lat": 53.89,
+          "lon": -166.54,
+          "precision": "Southern-island reference within approximately 3 km; exact test squares are not plotted.",
+          "provenance": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Rounded southern-island position interpreted from Rogers et al.2009, Figure1; not a surveyed excavation coordinate."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -5780,
+          "end": -5630,
+          "approximate": true,
+          "original": "7730–7580 cal BP; Beta-237109,6820±40 radiocarbon BP",
+          "method": "Published OxCal 3.1/IntCal 04 calibration, Table 1; calendar BP 1950 converted to 5781–5631 BCE with no year zero.",
+          "interpretation": "The possible hearth is dated by one charcoal sample. The older 8040–7920 cal BP determination used possible soil organic material and is not used as this record’s date."
+        },
+        "claims": [
+          {
+            "id": "evidence",
+            "text": "Excavators found charred stones, charcoal, blades and microblades at Amaknak’s Quarry Site. A charcoal sample from the possible hearth dates this activity to 7730–7580 cal BP, placing people in a period once thought poorly represented in the eastern islands.",
+            "status": "well-supported",
+            "explanation": "The possible hearth is dated by one charcoal sample. The older 8040–7920 cal BP determination used possible soil organic material and is not used as this record’s date.",
+            "support": [
+              {
+                "sourceId": "al-source-quarry",
+                "locator": "Full report inspected, pp.153–156 and Table 1. Dated charcoal is separated from the questionable oldest soil-organic sample.",
+                "stance": "supports",
+                "note": "Historical evidence; geographic reference is separately identified."
+              },
+              {
+                "sourceId": "al-geo-5879282",
+                "locator": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Rounded southern-island position interpreted from Rogers et al.2009, Figure1; not a surveyed excavation coordinate.",
+                "stance": "context",
+                "note": "Supports the public geographic reference. Archaeological and historical dates are supported by the other cited sources."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "al-source-quarry",
+            "title": "An Anangula Period Core-and-Blade Site on Amaknak Island, Eastern Aleutians",
+            "url": "https://www.alaskaanthropology.org/wp-content/uploads/2015/11/AJA-v71-optimized.pdf",
+            "authors": "Jason S. Rogers, Michael R. Yarborough and Catherine L. Pendleton",
+            "year": 2009,
+            "venue": "Alaska Journal of Anthropology 7(1):153–156",
+            "access": "Full report inspected, pp.153–156 and Table 1. Dated charcoal is separated from the questionable oldest soil-organic sample."
+          },
+          {
+            "id": "al-geo-5879282",
+            "title": "GeoNames geographic reference: Near Unalaska — southern Amaknak Island, UNL-469",
+            "authors": "GeoNames contributors",
+            "year": null,
+            "venue": "GeoNames, CC BY4.0",
+            "url": "https://www.geonames.org/5879282/",
+            "access": "Public US gazetteer checked 2026-11-17. Coordinates describe the stated locality; historical evidence is cited separately."
+          }
+        ],
+        "review": {
+          "summary": "Excavators found charred stones, charcoal, blades and microblades at Amaknak’s Quarry Site. A charcoal sample from the possible hearth dates this activity to 7730–7580 cal BP, placing people in a period once thought poorly represented in the eastern islands.",
+          "limitations": "The possible hearth is dated by one charcoal sample. The older 8040–7920 cal BP determination used possible soil organic material and is not used as this record’s date.",
+          "discussion": "Excavators found charred stones, charcoal, blades and microblades at Amaknak’s Quarry Site. A charcoal sample from the possible hearth dates this activity to 7730–7580 cal BP, placing people in a period once thought poorly represented in the eastern islands.",
+          "provenance": "Original source-linked summary; archaeological and historical evidence checked2026-11-17.",
+          "reviewedAt": "2026-11-17",
+          "history": [
+            "2026-10-29: Original-source check; chronology and map precision limits retained.",
+            "2026-10-29: Added coarse named-site occurrence point from published geographic setting; no exact excavation coordinates inferred.",
+            "2026-11-17: Expanded the existing Amaknak record with checked calibrated chronology and public locality; retained its ID to avoid duplicate map evidence.",
+            "The earlier 8040–6740 cal BP envelope included a questionable soil-organic determination. This record now follows dated hearth charcoal; a separate record retains a later charcoal sample."
+          ],
+          "relatedIds": [
+            "al-amaknak-quarry-later"
+          ]
+        }
+      },
+      "reason": "The earlier 8040–6740 cal BP envelope included a questionable soil-organic determination. This record now follows dated hearth charcoal; a separate record retains a later charcoal sample."
+    },
+    {
+      "targetId": "r10v-amaknak-bridge-architecture",
+      "beforeRecord": {
+        "id": "r10v-amaknak-bridge-architecture",
+        "revision": 1,
+        "type": "occurrence",
+        "title": "Amaknak Bridge (UNL-050) — houses and Neoglacial adaptation",
+        "culture": {
+          "id": "r10-unangan-archaeological",
+          "name": "Ancestral Unangan archaeological contexts",
+          "kind": "culture",
+          "color": "#b18a60"
+        },
+        "location": {
+          "id": "r10-amaknak-bridge",
+          "name": "Amaknak Bridge (UNL-050)",
+          "lon": -166.5,
+          "lat": 53.9,
+          "provenance": "Knecht and Davis 2008 Figure 1 and site description: Amaknak Bridge locality in Unalaska Bay. Rounded public locality setting; no excavation coordinate claimed.",
+          "precision": "Coarse named-site setting rounded to about 0.1 degree (several kilometres); unsuitable for navigation or finding excavation features."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "unplaced",
+          "start": null,
+          "end": null,
+          "approximate": true,
+          "original": "3300–2700 rcybp; calendar calibration not recovered",
+          "method": "Source chronology retained as stated; no new calibration or date inferred.",
+          "interpretation": "Source-specific dated evidence or uncertainty envelope; not uninterrupted residence, a census or a founding date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Amaknak Bridge preserves multiple-room houses, labrets and burials. Knecht and Davis place occupation at 3300–2700 radiocarbon years BP and interpret changes alongside colder Neoglacial conditions.",
+            "status": "under discussion",
+            "explanation": "The source explicitly uses rcybp, which cannot be converted directly to calendar years. Climate response remains interpretation; houses are not a census.",
+            "support": [
+              {
+                "sourceId": "r10-knecht2008",
+                "locator": "Abstract; pp.61,65–69",
+                "stance": "supports",
+                "note": "Checked 2026-10-29: Author-university abstract inspected; author-uploaded original article text on ResearchGate also read. No recalibration."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r10-knecht2008",
+            "authors": "Richard A. Knecht; Richard S. Davis",
+            "title": "The Amaknak Bridge Site: Cultural Change and the Neoglacial in the Eastern Aleutians",
+            "year": 2008,
+            "venue": "Arctic Anthropology 45(1):61–78",
+            "url": "https://abdn.elsevierpure.com/en/publications/the-amaknak-bridge-site-cultural-change-and-the-neoglacial-in-the/",
+            "access": "Checked 2026-10-29: Author-university abstract inspected; author-uploaded original article text on ResearchGate also read. No recalibration.",
+            "referenceType": "journal-article",
+            "doi": "10.1353/arc.0.0003"
+          }
+        ],
+        "review": {
+          "summary": "Amaknak Bridge preserves multiple-room houses, labrets and burials. Knecht and Davis place occupation at 3300–2700 radiocarbon years BP and interpret changes alongside colder Neoglacial conditions.",
+          "limitations": "The source explicitly uses rcybp, which cannot be converted directly to calendar years. Climate response remains interpretation; houses are not a census.",
+          "discussion": "Archaeological labels, ancestry and language are separate evidence. The named-site point is deliberately coarse, with several kilometres of geographic uncertainty.",
+          "provenance": "Round10 Arctic/Aleutian intake checked against the original publication or institutional record actually accessed. Private generated reports are not redistributed.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: Original-source check; chronology and map precision limits retained.",
+            "2026-10-29: Added coarse named-site occurrence point from published geographic setting; no exact excavation coordinates inferred."
+          ],
+          "relatedIds": []
+        }
+      },
+      "record": {
+        "id": "r10v-amaknak-bridge-architecture",
+        "revision": 2,
+        "type": "occurrence",
+        "title": "Amaknak Bridge — stone houses and elaborate hearths",
+        "culture": {
+          "id": "unangan-aleutian-histories",
+          "name": "Unangan communities and colonial encounters",
+          "kind": "people",
+          "color": "#547e8c"
+        },
+        "location": {
+          "id": "al-place-amaknak-bridge",
+          "name": "Near Unalaska — Amaknak Bridge settlement",
+          "lat": 53.88,
+          "lon": -166.55,
+          "precision": "Rounded bridge-area reference within approximately 1 km; individual house walls are described in the guide, not surveyed on the map.",
+          "provenance": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Bridge-area reference from published site-location figures in Rogers2011 and Knecht/Davis2008."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -1972,
+          "end": -408,
+          "approximate": true,
+          "original": "Published charcoal-date envelope 3922–2358 cal BP; approximately 1973–409 BCE",
+          "method": "Outer envelope of calibrated charcoal ranges reported by Rogers; not a new pooled radiocarbon model.",
+          "interpretation": "The envelope spans samples from different contexts. It does not date every structure or establish continuous occupation throughout the whole range."
+        },
+        "claims": [
+          {
+            "id": "evidence",
+            "text": "Excavations exposed portions of 30–40 partly sunken, stone-lined structures. Fireplaces, vents and channels beneath floors helped organize warmth and work inside houses that were repeatedly repaired and rebuilt.",
+            "status": "well-supported",
+            "explanation": "The envelope spans samples from different contexts. It does not date every structure or establish continuous occupation throughout the whole range.",
+            "support": [
+              {
+                "sourceId": "al-source-hearths",
+                "locator": "Author-posted article text inspected: calibrated charcoal bounds 3922–3565 to 2618–2358 cal BP, stone houses and complex hearths. The full site date envelope is not the lifespan of every house.",
+                "stance": "supports",
+                "note": "Historical evidence; geographic reference is separately identified."
+              },
+              {
+                "sourceId": "al-source-amaknak",
+                "locator": "Author/institutional abstract inspected; radiocarbon-year chronology retained as originally reported. Calendar range comes separately from Rogers.",
+                "stance": "supports",
+                "note": "Historical evidence; geographic reference is separately identified."
+              },
+              {
+                "sourceId": "al-geo-5879282",
+                "locator": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Bridge-area reference from published site-location figures in Rogers2011 and Knecht/Davis2008.",
+                "stance": "context",
+                "note": "Supports the public geographic reference. Archaeological and historical dates are supported by the other cited sources."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "al-source-hearths",
+            "title": "Architecture and Complex Hearth Features at the Amaknak Bridge Site, Eastern Aleutian Islands, Alaska",
+            "url": "https://doi.org/10.1353/arc.2012.0004",
+            "authors": "Jason S. Rogers",
+            "year": 2011,
+            "venue": "Arctic Anthropology48(2):92–112",
+            "access": "Author-posted article text inspected: calibrated charcoal bounds 3922–3565 to 2618–2358 cal BP, stone houses and complex hearths. The full site date envelope is not the lifespan of every house."
+          },
+          {
+            "id": "al-source-amaknak",
+            "title": "The Amaknak Bridge Site: Cultural Change and the Neoglacial in the Eastern Aleutians",
+            "url": "https://doi.org/10.1353/arc.0.0003",
+            "authors": "Richard A. Knecht and Richard S. Davis",
+            "year": 2008,
+            "venue": "Arctic Anthropology45(1):61–78",
+            "access": "Author/institutional abstract inspected; radiocarbon-year chronology retained as originally reported. Calendar range comes separately from Rogers."
+          },
+          {
+            "id": "al-geo-5879282",
+            "title": "GeoNames geographic reference: Near Unalaska — Amaknak Bridge settlement",
+            "authors": "GeoNames contributors",
+            "year": null,
+            "venue": "GeoNames, CC BY4.0",
+            "url": "https://www.geonames.org/5879282/",
+            "access": "Public US gazetteer checked 2026-11-17. Coordinates describe the stated locality; historical evidence is cited separately."
+          }
+        ],
+        "review": {
+          "summary": "Excavations exposed portions of 30–40 partly sunken, stone-lined structures. Fireplaces, vents and channels beneath floors helped organize warmth and work inside houses that were repeatedly repaired and rebuilt.",
+          "limitations": "The envelope spans samples from different contexts. It does not date every structure or establish continuous occupation throughout the whole range.",
+          "discussion": "Some houses had multiple rooms. The surviving arrangements make household labour and building technology visible, while faunal remains trace the food brought into the settlement.",
+          "provenance": "Original source-linked summary; archaeological and historical evidence checked2026-11-17.",
+          "reviewedAt": "2026-11-17",
+          "history": [
+            "2026-10-29: Original-source check; chronology and map precision limits retained.",
+            "2026-10-29: Added coarse named-site occurrence point from published geographic setting; no exact excavation coordinates inferred.",
+            "2026-11-17: Expanded the existing Amaknak record with checked calibrated chronology and public locality; retained its ID to avoid duplicate map evidence."
+          ],
+          "relatedIds": []
+        }
+      },
+      "reason": "2026-11-17: Expanded the existing Amaknak record with checked calibrated chronology and public locality; retained its ID to avoid duplicate map evidence."
+    },
+    {
+      "targetId": "r12v-amaknak-s2-floor",
+      "beforeRecord": {
+        "id": "r12v-amaknak-s2-floor",
+        "revision": 2,
+        "type": "occurrence",
+        "title": "Amaknak Bridge — Structure 2 floor charcoal",
+        "culture": {
+          "id": "r10-unangan-archaeological",
+          "name": "Ancestral Unangan archaeological contexts",
+          "kind": "culture",
+          "color": "#b18a60"
+        },
+        "location": {
+          "id": "r10-amaknak-bridge",
+          "name": "Amaknak Bridge (UNL-050)",
+          "lon": -166.5,
+          "lat": 53.9,
+          "provenance": "Knecht and Davis 2008 Figure 1 and site description: Amaknak Bridge locality in Unalaska Bay. Rounded public locality setting; no excavation coordinate claimed.",
+          "precision": "Coarse named-site setting rounded to about 0.1 degree (several kilometres); unsuitable for navigation or finding excavation features."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -1769,
+          "end": -1519,
+          "approximate": true,
+          "original": "3370 ± 60 radiocarbon BP (Beta-181340); published 2σ calibrated 1770–1520 BCE (95% probability)",
+          "method": "Published calibrated BCE limits translated to astronomical years (1 BCE = 0); no recalibration. Calibration curve/software not identified in accessed dating passage.",
+          "interpretation": "Probability envelope for associated charcoal; not a duration of continuous residence or a founding date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Structure 2 floor has a published charcoal age of 3370 ± 60 BP, calibrated to 1770–1520 BCE.",
+            "status": "under discussion",
+            "explanation": "Wood age can predate use or deposition; sample association does not date every episode of house use.",
+            "support": [
+              {
+                "sourceId": "r10-knecht2008",
+                "locator": "Table 2 p.65; Dating and Stratigraphy pp.65–66; house descriptions pp.66–67",
+                "stance": "supports",
+                "note": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r10-knecht2008",
+            "authors": "Richard A. Knecht; Richard S. Davis",
+            "title": "The Amaknak Bridge Site: Cultural Change and the Neoglacial in the Eastern Aleutians",
+            "year": 2008,
+            "venue": "Arctic Anthropology 45(1):61–78",
+            "url": "https://www.researchgate.net/publication/254927024_The_Amaknak_Bridge_Site_Cultural_Change_and_the_Neoglacial_in_the_Eastern_Aleutians",
+            "access": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration.",
+            "referenceType": "journal-article",
+            "doi": "10.1353/arc.0.0003"
+          }
+        ],
+        "review": {
+          "summary": "Charcoal from the floor of Amaknak Bridge’s Structure 2 has a published calibrated date of approximately 1770–1520 BCE. The result dates that floor sample, not the construction and entire use of every building at the site.",
+          "limitations": "Single wood-charcoal determination; old-wood and depositional associations require caution. No language or resident population assigned.",
+          "discussion": "Calibrated uncertainty is retained in full. The excavators consider an occupation hiatus possible; chronological overlap is not proof that all houses were contemporaneous.",
+          "provenance": "Round12 original-source check of the preserved Aleutian Consensus report; original documents remain private and unchanged. Independently accessed author-uploaded text confirms the dates.",
+          "reviewedAt": "2026-11-16",
+          "history": [
+            "2026-10-29: Extracted published sample-specific calendar range; no new calibration.",
+            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes."
+          ],
+          "relatedIds": [
+            "r10v-amaknak-bridge-architecture"
+          ]
+        }
+      },
+      "record": {
+        "id": "r12v-amaknak-s2-floor",
+        "revision": 3,
+        "type": "occurrence",
+        "title": "Amaknak Bridge — Structure 2 floor charcoal",
+        "culture": {
+          "id": "r10-unangan-archaeological",
+          "name": "Ancestral Unangan archaeological contexts",
+          "kind": "culture",
+          "color": "#b18a60"
+        },
+        "location": {
+          "id": "al-place-amaknak-bridge",
+          "name": "Near Unalaska — Amaknak Bridge settlement",
+          "lat": 53.88,
+          "lon": -166.55,
+          "precision": "Rounded bridge-area reference within approximately 1 km; individual house walls are described in the guide, not surveyed on the map.",
+          "provenance": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Bridge-area reference from published site-location figures in Rogers2011 and Knecht/Davis2008."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -1769,
+          "end": -1519,
+          "approximate": true,
+          "original": "3370 ± 60 radiocarbon BP (Beta-181340); published 2σ calibrated 1770–1520 BCE (95% probability)",
+          "method": "Published calibrated BCE limits translated to astronomical years (1 BCE = 0); no recalibration. Calibration curve/software not identified in accessed dating passage.",
+          "interpretation": "Probability envelope for associated charcoal; not a duration of continuous residence or a founding date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Structure 2 floor has a published charcoal age of 3370 ± 60 BP, calibrated to 1770–1520 BCE.",
+            "status": "under discussion",
+            "explanation": "Wood age can predate use or deposition; sample association does not date every episode of house use.",
+            "support": [
+              {
+                "sourceId": "r10-knecht2008",
+                "locator": "Table 2 p.65; Dating and Stratigraphy pp.65–66; house descriptions pp.66–67",
+                "stance": "supports",
+                "note": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r10-knecht2008",
+            "authors": "Richard A. Knecht; Richard S. Davis",
+            "title": "The Amaknak Bridge Site: Cultural Change and the Neoglacial in the Eastern Aleutians",
+            "year": 2008,
+            "venue": "Arctic Anthropology 45(1):61–78",
+            "url": "https://www.researchgate.net/publication/254927024_The_Amaknak_Bridge_Site_Cultural_Change_and_the_Neoglacial_in_the_Eastern_Aleutians",
+            "access": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration.",
+            "referenceType": "journal-article",
+            "doi": "10.1353/arc.0.0003"
+          }
+        ],
+        "review": {
+          "summary": "Charcoal from the floor of Amaknak Bridge’s Structure 2 has a published calibrated date of approximately 1770–1520 BCE. The result dates that floor sample, not the construction and entire use of every building at the site.",
+          "limitations": "Single wood-charcoal determination; old-wood and depositional associations require caution. No language or resident population assigned.",
+          "discussion": "Calibrated uncertainty is retained in full. The excavators consider an occupation hiatus possible; chronological overlap is not proof that all houses were contemporaneous.",
+          "provenance": "Round12 original-source check of the preserved Aleutian Consensus report; original documents remain private and unchanged. Independently accessed author-uploaded text confirms the dates.",
+          "reviewedAt": "2026-11-16",
+          "history": [
+            "2026-10-29: Extracted published sample-specific calendar range; no new calibration.",
+            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes.",
+            "2026-11-17: Aligned the public Amaknak Bridge locality with the expanded architecture record. Sample dates and claims are unchanged."
+          ],
+          "relatedIds": [
+            "r10v-amaknak-bridge-architecture"
+          ]
+        }
+      },
+      "reason": "2026-11-17: Aligned the public Amaknak Bridge locality with the expanded architecture record. Sample dates and claims are unchanged."
+    },
+    {
+      "targetId": "r12v-amaknak-s5-floor",
+      "beforeRecord": {
+        "id": "r12v-amaknak-s5-floor",
+        "revision": 2,
+        "type": "occurrence",
+        "title": "Amaknak Bridge — Structure 5 floor charcoal",
+        "culture": {
+          "id": "r10-unangan-archaeological",
+          "name": "Ancestral Unangan archaeological contexts",
+          "kind": "culture",
+          "color": "#b18a60"
+        },
+        "location": {
+          "id": "r10-amaknak-bridge",
+          "name": "Amaknak Bridge (UNL-050)",
+          "lon": -166.5,
+          "lat": 53.9,
+          "provenance": "Knecht and Davis 2008 Figure 1 and site description: Amaknak Bridge locality in Unalaska Bay. Rounded public locality setting; no excavation coordinate claimed.",
+          "precision": "Coarse named-site setting rounded to about 0.1 degree (several kilometres); unsuitable for navigation or finding excavation features."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -1409,
+          "end": -1009,
+          "approximate": true,
+          "original": "3000 ± 70 radiocarbon BP (Beta-184634); published 2σ calibrated 1410–1010 BCE (95% probability)",
+          "method": "Published calibrated BCE limits translated to astronomical years (1 BCE = 0); no recalibration. Calibration curve/software not identified in accessed dating passage.",
+          "interpretation": "Probability envelope for associated charcoal; not a duration of continuous residence or a founding date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Structure 5 floor has a published charcoal age of 3000 ± 70 BP, calibrated to 1410–1010 BCE.",
+            "status": "under discussion",
+            "explanation": "Wood age can predate use or deposition; sample association does not date every episode of house use.",
+            "support": [
+              {
+                "sourceId": "r10-knecht2008",
+                "locator": "Table 2 p.65; Dating and Stratigraphy pp.65–66; house descriptions pp.66–67",
+                "stance": "supports",
+                "note": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r10-knecht2008",
+            "authors": "Richard A. Knecht; Richard S. Davis",
+            "title": "The Amaknak Bridge Site: Cultural Change and the Neoglacial in the Eastern Aleutians",
+            "year": 2008,
+            "venue": "Arctic Anthropology 45(1):61–78",
+            "url": "https://www.researchgate.net/publication/254927024_The_Amaknak_Bridge_Site_Cultural_Change_and_the_Neoglacial_in_the_Eastern_Aleutians",
+            "access": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration.",
+            "referenceType": "journal-article",
+            "doi": "10.1353/arc.0.0003"
+          }
+        ],
+        "review": {
+          "summary": "Charcoal from the floor of Amaknak Bridge’s Structure 5 dates to approximately 1410–1010 BCE. It provides evidence for this individual domestic context rather than one site-wide occupation span.",
+          "limitations": "Single wood-charcoal determination; old-wood and depositional associations require caution. No language or resident population assigned.",
+          "discussion": "Calibrated uncertainty is retained in full. The excavators consider an occupation hiatus possible; chronological overlap is not proof that all houses were contemporaneous.",
+          "provenance": "Round12 original-source check of the preserved Aleutian Consensus report; original documents remain private and unchanged. Independently accessed author-uploaded text confirms the dates.",
+          "reviewedAt": "2026-11-16",
+          "history": [
+            "2026-10-29: Extracted published sample-specific calendar range; no new calibration.",
+            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes."
+          ],
+          "relatedIds": [
+            "r10v-amaknak-bridge-architecture"
+          ]
+        }
+      },
+      "record": {
+        "id": "r12v-amaknak-s5-floor",
+        "revision": 3,
+        "type": "occurrence",
+        "title": "Amaknak Bridge — Structure 5 floor charcoal",
+        "culture": {
+          "id": "r10-unangan-archaeological",
+          "name": "Ancestral Unangan archaeological contexts",
+          "kind": "culture",
+          "color": "#b18a60"
+        },
+        "location": {
+          "id": "al-place-amaknak-bridge",
+          "name": "Near Unalaska — Amaknak Bridge settlement",
+          "lat": 53.88,
+          "lon": -166.55,
+          "precision": "Rounded bridge-area reference within approximately 1 km; individual house walls are described in the guide, not surveyed on the map.",
+          "provenance": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Bridge-area reference from published site-location figures in Rogers2011 and Knecht/Davis2008."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -1409,
+          "end": -1009,
+          "approximate": true,
+          "original": "3000 ± 70 radiocarbon BP (Beta-184634); published 2σ calibrated 1410–1010 BCE (95% probability)",
+          "method": "Published calibrated BCE limits translated to astronomical years (1 BCE = 0); no recalibration. Calibration curve/software not identified in accessed dating passage.",
+          "interpretation": "Probability envelope for associated charcoal; not a duration of continuous residence or a founding date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Structure 5 floor has a published charcoal age of 3000 ± 70 BP, calibrated to 1410–1010 BCE.",
+            "status": "under discussion",
+            "explanation": "Wood age can predate use or deposition; sample association does not date every episode of house use.",
+            "support": [
+              {
+                "sourceId": "r10-knecht2008",
+                "locator": "Table 2 p.65; Dating and Stratigraphy pp.65–66; house descriptions pp.66–67",
+                "stance": "supports",
+                "note": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r10-knecht2008",
+            "authors": "Richard A. Knecht; Richard S. Davis",
+            "title": "The Amaknak Bridge Site: Cultural Change and the Neoglacial in the Eastern Aleutians",
+            "year": 2008,
+            "venue": "Arctic Anthropology 45(1):61–78",
+            "url": "https://www.researchgate.net/publication/254927024_The_Amaknak_Bridge_Site_Cultural_Change_and_the_Neoglacial_in_the_Eastern_Aleutians",
+            "access": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration.",
+            "referenceType": "journal-article",
+            "doi": "10.1353/arc.0.0003"
+          }
+        ],
+        "review": {
+          "summary": "Charcoal from the floor of Amaknak Bridge’s Structure 5 dates to approximately 1410–1010 BCE. It provides evidence for this individual domestic context rather than one site-wide occupation span.",
+          "limitations": "Single wood-charcoal determination; old-wood and depositional associations require caution. No language or resident population assigned.",
+          "discussion": "Calibrated uncertainty is retained in full. The excavators consider an occupation hiatus possible; chronological overlap is not proof that all houses were contemporaneous.",
+          "provenance": "Round12 original-source check of the preserved Aleutian Consensus report; original documents remain private and unchanged. Independently accessed author-uploaded text confirms the dates.",
+          "reviewedAt": "2026-11-16",
+          "history": [
+            "2026-10-29: Extracted published sample-specific calendar range; no new calibration.",
+            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes.",
+            "2026-11-17: Aligned the public Amaknak Bridge locality with the expanded architecture record. Sample dates and claims are unchanged."
+          ],
+          "relatedIds": [
+            "r10v-amaknak-bridge-architecture"
+          ]
+        }
+      },
+      "reason": "2026-11-17: Aligned the public Amaknak Bridge locality with the expanded architecture record. Sample dates and claims are unchanged."
+    },
+    {
+      "targetId": "r12v-amaknak-s7-main-room",
+      "beforeRecord": {
+        "id": "r12v-amaknak-s7-main-room",
+        "revision": 2,
+        "type": "occurrence",
+        "title": "Amaknak Bridge — Structure 7 main room charcoal",
+        "culture": {
+          "id": "r10-unangan-archaeological",
+          "name": "Ancestral Unangan archaeological contexts",
+          "kind": "culture",
+          "color": "#b18a60"
+        },
+        "location": {
+          "id": "r10-amaknak-bridge",
+          "name": "Amaknak Bridge (UNL-050)",
+          "lon": -166.5,
+          "lat": 53.9,
+          "provenance": "Knecht and Davis 2008 Figure 1 and site description: Amaknak Bridge locality in Unalaska Bay. Rounded public locality setting; no excavation coordinate claimed.",
+          "precision": "Coarse named-site setting rounded to about 0.1 degree (several kilometres); unsuitable for navigation or finding excavation features."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -1279,
+          "end": -819,
+          "approximate": true,
+          "original": "2840 ± 90 radiocarbon BP (Beta-184636); published 2σ calibrated 1280–820 BCE (95% probability)",
+          "method": "Published calibrated BCE limits translated to astronomical years (1 BCE = 0); no recalibration. Calibration curve/software not identified in accessed dating passage.",
+          "interpretation": "Probability envelope for associated charcoal; not a duration of continuous residence or a founding date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Structure 7 main room has a published charcoal age of 2840 ± 90 BP, calibrated to 1280–820 BCE.",
+            "status": "under discussion",
+            "explanation": "Wood age can predate use or deposition; sample association does not date every episode of house use.",
+            "support": [
+              {
+                "sourceId": "r10-knecht2008",
+                "locator": "Table 2 p.65; Dating and Stratigraphy pp.65–66; house descriptions pp.66–67",
+                "stance": "supports",
+                "note": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r10-knecht2008",
+            "authors": "Richard A. Knecht; Richard S. Davis",
+            "title": "The Amaknak Bridge Site: Cultural Change and the Neoglacial in the Eastern Aleutians",
+            "year": 2008,
+            "venue": "Arctic Anthropology 45(1):61–78",
+            "url": "https://www.researchgate.net/publication/254927024_The_Amaknak_Bridge_Site_Cultural_Change_and_the_Neoglacial_in_the_Eastern_Aleutians",
+            "access": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration.",
+            "referenceType": "journal-article",
+            "doi": "10.1353/arc.0.0003"
+          }
+        ],
+        "review": {
+          "summary": "Charcoal from the main room of Amaknak Bridge’s Structure 7 dates to approximately 1280–820 BCE. The interval is the sample’s dating range, not evidence that the room was used continuously for all those years.",
+          "limitations": "Single wood-charcoal determination; old-wood and depositional associations require caution. No language or resident population assigned.",
+          "discussion": "Calibrated uncertainty is retained in full. The excavators consider an occupation hiatus possible; chronological overlap is not proof that all houses were contemporaneous.",
+          "provenance": "Round12 original-source check of the preserved Aleutian Consensus report; original documents remain private and unchanged. Independently accessed author-uploaded text confirms the dates.",
+          "reviewedAt": "2026-11-16",
+          "history": [
+            "2026-10-29: Extracted published sample-specific calendar range; no new calibration.",
+            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes."
+          ],
+          "relatedIds": [
+            "r10v-amaknak-bridge-architecture"
+          ]
+        }
+      },
+      "record": {
+        "id": "r12v-amaknak-s7-main-room",
+        "revision": 3,
+        "type": "occurrence",
+        "title": "Amaknak Bridge — Structure 7 main room charcoal",
+        "culture": {
+          "id": "r10-unangan-archaeological",
+          "name": "Ancestral Unangan archaeological contexts",
+          "kind": "culture",
+          "color": "#b18a60"
+        },
+        "location": {
+          "id": "al-place-amaknak-bridge",
+          "name": "Near Unalaska — Amaknak Bridge settlement",
+          "lat": 53.88,
+          "lon": -166.55,
+          "precision": "Rounded bridge-area reference within approximately 1 km; individual house walls are described in the guide, not surveyed on the map.",
+          "provenance": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Bridge-area reference from published site-location figures in Rogers2011 and Knecht/Davis2008."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -1279,
+          "end": -819,
+          "approximate": true,
+          "original": "2840 ± 90 radiocarbon BP (Beta-184636); published 2σ calibrated 1280–820 BCE (95% probability)",
+          "method": "Published calibrated BCE limits translated to astronomical years (1 BCE = 0); no recalibration. Calibration curve/software not identified in accessed dating passage.",
+          "interpretation": "Probability envelope for associated charcoal; not a duration of continuous residence or a founding date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Structure 7 main room has a published charcoal age of 2840 ± 90 BP, calibrated to 1280–820 BCE.",
+            "status": "under discussion",
+            "explanation": "Wood age can predate use or deposition; sample association does not date every episode of house use.",
+            "support": [
+              {
+                "sourceId": "r10-knecht2008",
+                "locator": "Table 2 p.65; Dating and Stratigraphy pp.65–66; house descriptions pp.66–67",
+                "stance": "supports",
+                "note": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r10-knecht2008",
+            "authors": "Richard A. Knecht; Richard S. Davis",
+            "title": "The Amaknak Bridge Site: Cultural Change and the Neoglacial in the Eastern Aleutians",
+            "year": 2008,
+            "venue": "Arctic Anthropology 45(1):61–78",
+            "url": "https://www.researchgate.net/publication/254927024_The_Amaknak_Bridge_Site_Cultural_Change_and_the_Neoglacial_in_the_Eastern_Aleutians",
+            "access": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration.",
+            "referenceType": "journal-article",
+            "doi": "10.1353/arc.0.0003"
+          }
+        ],
+        "review": {
+          "summary": "Charcoal from the main room of Amaknak Bridge’s Structure 7 dates to approximately 1280–820 BCE. The interval is the sample’s dating range, not evidence that the room was used continuously for all those years.",
+          "limitations": "Single wood-charcoal determination; old-wood and depositional associations require caution. No language or resident population assigned.",
+          "discussion": "Calibrated uncertainty is retained in full. The excavators consider an occupation hiatus possible; chronological overlap is not proof that all houses were contemporaneous.",
+          "provenance": "Round12 original-source check of the preserved Aleutian Consensus report; original documents remain private and unchanged. Independently accessed author-uploaded text confirms the dates.",
+          "reviewedAt": "2026-11-16",
+          "history": [
+            "2026-10-29: Extracted published sample-specific calendar range; no new calibration.",
+            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes.",
+            "2026-11-17: Aligned the public Amaknak Bridge locality with the expanded architecture record. Sample dates and claims are unchanged."
+          ],
+          "relatedIds": [
+            "r10v-amaknak-bridge-architecture"
+          ]
+        }
+      },
+      "reason": "2026-11-17: Aligned the public Amaknak Bridge locality with the expanded architecture record. Sample dates and claims are unchanged."
+    },
+    {
+      "targetId": "r12v-amaknak-s3-hearth",
+      "beforeRecord": {
+        "id": "r12v-amaknak-s3-hearth",
+        "revision": 2,
+        "type": "occurrence",
+        "title": "Amaknak Bridge — Structure 3 hearth charcoal",
+        "culture": {
+          "id": "r10-unangan-archaeological",
+          "name": "Ancestral Unangan archaeological contexts",
+          "kind": "culture",
+          "color": "#b18a60"
+        },
+        "location": {
+          "id": "r10-amaknak-bridge",
+          "name": "Amaknak Bridge (UNL-050)",
+          "lon": -166.5,
+          "lat": 53.9,
+          "provenance": "Knecht and Davis 2008 Figure 1 and site description: Amaknak Bridge locality in Unalaska Bay. Rounded public locality setting; no excavation coordinate claimed.",
+          "precision": "Coarse named-site setting rounded to about 0.1 degree (several kilometres); unsuitable for navigation or finding excavation features."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -909,
+          "end": -419,
+          "approximate": true,
+          "original": "2590 ± 90 radiocarbon BP (Beta-181341); published 2σ calibrated 910–420 BCE (95% probability)",
+          "method": "Published calibrated BCE limits translated to astronomical years (1 BCE = 0); no recalibration. Calibration curve/software not identified in accessed dating passage.",
+          "interpretation": "Probability envelope for associated charcoal; not a duration of continuous residence or a founding date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Structure 3 hearth has a published charcoal age of 2590 ± 90 BP, calibrated to 910–420 BCE.",
+            "status": "under discussion",
+            "explanation": "Wood age can predate use or deposition; sample association does not date every episode of house use.",
+            "support": [
+              {
+                "sourceId": "r10-knecht2008",
+                "locator": "Table 2 p.65; Dating and Stratigraphy pp.65–66; house descriptions pp.66–67",
+                "stance": "supports",
+                "note": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r10-knecht2008",
+            "authors": "Richard A. Knecht; Richard S. Davis",
+            "title": "The Amaknak Bridge Site: Cultural Change and the Neoglacial in the Eastern Aleutians",
+            "year": 2008,
+            "venue": "Arctic Anthropology 45(1):61–78",
+            "url": "https://www.researchgate.net/publication/254927024_The_Amaknak_Bridge_Site_Cultural_Change_and_the_Neoglacial_in_the_Eastern_Aleutians",
+            "access": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration.",
+            "referenceType": "journal-article",
+            "doi": "10.1353/arc.0.0003"
+          }
+        ],
+        "review": {
+          "summary": "Charcoal from a hearth in Amaknak Bridge’s Structure 3 dates to approximately 910–420 BCE. This dates a specific household burning context, with uncertainty that should not be converted into a precise construction year.",
+          "limitations": "Single wood-charcoal determination; old-wood and depositional associations require caution. No language or resident population assigned.",
+          "discussion": "Calibrated uncertainty is retained in full. The excavators consider an occupation hiatus possible; chronological overlap is not proof that all houses were contemporaneous.",
+          "provenance": "Round12 original-source check of the preserved Aleutian Consensus report; original documents remain private and unchanged. Independently accessed author-uploaded text confirms the dates.",
+          "reviewedAt": "2026-11-16",
+          "history": [
+            "2026-10-29: Extracted published sample-specific calendar range; no new calibration.",
+            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes."
+          ],
+          "relatedIds": [
+            "r10v-amaknak-bridge-architecture"
+          ]
+        }
+      },
+      "record": {
+        "id": "r12v-amaknak-s3-hearth",
+        "revision": 3,
+        "type": "occurrence",
+        "title": "Amaknak Bridge — Structure 3 hearth charcoal",
+        "culture": {
+          "id": "r10-unangan-archaeological",
+          "name": "Ancestral Unangan archaeological contexts",
+          "kind": "culture",
+          "color": "#b18a60"
+        },
+        "location": {
+          "id": "al-place-amaknak-bridge",
+          "name": "Near Unalaska — Amaknak Bridge settlement",
+          "lat": 53.88,
+          "lon": -166.55,
+          "precision": "Rounded bridge-area reference within approximately 1 km; individual house walls are described in the guide, not surveyed on the map.",
+          "provenance": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Bridge-area reference from published site-location figures in Rogers2011 and Knecht/Davis2008."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -909,
+          "end": -419,
+          "approximate": true,
+          "original": "2590 ± 90 radiocarbon BP (Beta-181341); published 2σ calibrated 910–420 BCE (95% probability)",
+          "method": "Published calibrated BCE limits translated to astronomical years (1 BCE = 0); no recalibration. Calibration curve/software not identified in accessed dating passage.",
+          "interpretation": "Probability envelope for associated charcoal; not a duration of continuous residence or a founding date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Structure 3 hearth has a published charcoal age of 2590 ± 90 BP, calibrated to 910–420 BCE.",
+            "status": "under discussion",
+            "explanation": "Wood age can predate use or deposition; sample association does not date every episode of house use.",
+            "support": [
+              {
+                "sourceId": "r10-knecht2008",
+                "locator": "Table 2 p.65; Dating and Stratigraphy pp.65–66; house descriptions pp.66–67",
+                "stance": "supports",
+                "note": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r10-knecht2008",
+            "authors": "Richard A. Knecht; Richard S. Davis",
+            "title": "The Amaknak Bridge Site: Cultural Change and the Neoglacial in the Eastern Aleutians",
+            "year": 2008,
+            "venue": "Arctic Anthropology 45(1):61–78",
+            "url": "https://www.researchgate.net/publication/254927024_The_Amaknak_Bridge_Site_Cultural_Change_and_the_Neoglacial_in_the_Eastern_Aleutians",
+            "access": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration.",
+            "referenceType": "journal-article",
+            "doi": "10.1353/arc.0.0003"
+          }
+        ],
+        "review": {
+          "summary": "Charcoal from a hearth in Amaknak Bridge’s Structure 3 dates to approximately 910–420 BCE. This dates a specific household burning context, with uncertainty that should not be converted into a precise construction year.",
+          "limitations": "Single wood-charcoal determination; old-wood and depositional associations require caution. No language or resident population assigned.",
+          "discussion": "Calibrated uncertainty is retained in full. The excavators consider an occupation hiatus possible; chronological overlap is not proof that all houses were contemporaneous.",
+          "provenance": "Round12 original-source check of the preserved Aleutian Consensus report; original documents remain private and unchanged. Independently accessed author-uploaded text confirms the dates.",
+          "reviewedAt": "2026-11-16",
+          "history": [
+            "2026-10-29: Extracted published sample-specific calendar range; no new calibration.",
+            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes.",
+            "2026-11-17: Aligned the public Amaknak Bridge locality with the expanded architecture record. Sample dates and claims are unchanged."
+          ],
+          "relatedIds": [
+            "r10v-amaknak-bridge-architecture"
+          ]
+        }
+      },
+      "reason": "2026-11-17: Aligned the public Amaknak Bridge locality with the expanded architecture record. Sample dates and claims are unchanged."
+    },
+    {
+      "targetId": "gap-quadra-clam-gardens",
+      "beforeRecord": {
+        "id": "gap-quadra-clam-gardens",
+        "revision": 1,
+        "type": "occurrence",
+        "title": "Northern Quadra Island — early clam-garden construction",
+        "culture": {
+          "id": "coastal-first-nations-of-northern-quadra-island",
+          "name": "Coastal First Nations of northern Quadra Island",
+          "kind": "people",
+          "color": "#80623d"
+        },
+        "location": {
+          "id": "gap-quadra-clam-gardens-place",
+          "name": "Kanish / Waiatt Bays, northern Quadra Island",
+          "lon": -125.25,
+          "lat": 50.23,
+          "precision": "Approximate public locality, about 15 km uncertainty; not a surveyed feature or route.",
+          "provenance": "Named locality in the cited source; rounded geographic reference. Regional anchors are identified in the place name and limitations."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -1550,
+          "end": -1550,
+          "approximate": true,
+          "original": "At least approximately 3500 years ago",
+          "method": "Approximate 3500-year age from calibrated radiocarbon and sea-level interpretation; 1950 BP base used for map placement.",
+          "interpretation": "This approximate earliest reference is not the date of every wall. The much longer history of human–clam relations must not be substituted for construction age."
+        },
+        "claims": [
+          {
+            "id": "evidence",
+            "text": "Rock walls and terraces engineered productive clam habitat. Radiocarbon and sea-level evidence places some garden construction at least about 3500 years ago.",
+            "status": "well-supported",
+            "explanation": "This approximate earliest reference is not the date of every wall. The much longer history of human–clam relations must not be substituted for construction age.",
+            "support": [
+              {
+                "sourceId": "source",
+                "locator": "Abstract; sections 4.2–4.3; Fig. 8",
+                "stance": "supports",
+                "note": "Supports this observation; uncertainty and limits remain explicit."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "source",
+            "authors": "Nicole F. Smith; Dana Lepofsky; Ginevra Toniello; Keith Holmes; Louie Wilson; Christina M. Neudorf; Christine Roberts",
+            "title": "3500 years of shellfish mariculture on the Northwest Coast of North America",
+            "url": "https://doi.org/10.1371/journal.pone.0211194",
+            "year": 2019,
+            "venue": "Linked publication or custodial institution",
+            "referenceType": "journal-article",
+            "access": "Primary publication or custodial institutional account checked 2026-11-15. Original factual summary; no images or source text redistributed."
+          }
+        ],
+        "review": {
+          "summary": "Rock walls and terraces engineered productive clam habitat. Radiocarbon and sea-level evidence places some garden construction at least about 3500 years ago.",
+          "limitations": "This approximate earliest reference is not the date of every wall. The much longer history of human–clam relations must not be substituted for construction age.",
+          "discussion": "A source window is not proof of uninterrupted residence, a regional population total, or abandonment. Related records keep their own dates.",
+          "provenance": "Consensus Deep discovery followed by independent primary-source checking.",
+          "reviewedAt": "2026-11-15",
+          "history": [
+            "Added dated evidence with explicit location precision and canonical cross-references."
+          ],
+          "relatedIds": []
+        },
+        "history": {
+          "kind": "attestation",
+          "claimId": "evidence"
+        }
+      },
+      "record": {
+        "id": "gap-quadra-clam-gardens",
+        "revision": 2,
+        "type": "occurrence",
+        "title": "Northern Quadra Island — early clam-garden construction",
+        "culture": {
+          "id": "coastal-first-nations-of-northern-quadra-island",
+          "name": "Coastal First Nations of northern Quadra Island",
+          "kind": "people",
+          "color": "#80623d"
+        },
+        "location": {
+          "id": "gap-quadra-clam-gardens-place",
+          "name": "Kanish / Waiatt Bays, northern Quadra Island",
+          "lon": -125.25,
+          "lat": 50.23,
+          "precision": "Approximate public locality, about 15 km uncertainty; not a surveyed feature or route.",
+          "provenance": "Named locality in the cited source; rounded geographic reference. Regional anchors are identified in the place name and limitations."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -1550,
+          "end": -1550,
+          "approximate": true,
+          "original": "At least approximately 3500 years ago",
+          "method": "Approximate 3500-year age from calibrated radiocarbon and sea-level interpretation; 1950 BP base used for map placement.",
+          "interpretation": "This approximate earliest reference is not the date of every wall. The much longer history of human–clam relations must not be substituted for construction age."
+        },
+        "claims": [
+          {
+            "id": "evidence",
+            "text": "Rock walls and terraces engineered productive clam habitat. Radiocarbon and sea-level evidence places some garden construction at least about 3500 years ago.",
+            "status": "well-supported",
+            "explanation": "This approximate earliest reference is not the date of every wall. The much longer history of human–clam relations must not be substituted for construction age.",
+            "support": [
+              {
+                "sourceId": "source",
+                "locator": "Abstract; sections 4.2–4.3; Fig. 8",
+                "stance": "supports",
+                "note": "Supports this observation; uncertainty and limits remain explicit."
+              }
+            ]
+          },
+          {
+            "id": "later-proxy-study",
+            "text": "A 2022 study extends the evidence for ancestral sea gardens to at least about 3,800 years ago, using former sea levels, wall elevations and archaeological evidence.",
+            "status": "well-supported",
+            "explanation": "This is a refinement using several kinds of evidence, rather than a new direct radiocarbon age for every wall. The map retains the earlier conservative construction reference.",
+            "support": [
+              {
+                "sourceId": "cw-clam2022",
+                "stance": "supports",
+                "locator": "Publisher article and associated Hakai dataset abstract inspected. Proxy wall ages combine sea level, elevation and archaeological evidence; not independent radiocarbon dates for every wall.",
+                "note": "Supports the later proxy-age refinement."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "source",
+            "authors": "Nicole F. Smith; Dana Lepofsky; Ginevra Toniello; Keith Holmes; Louie Wilson; Christina M. Neudorf; Christine Roberts",
+            "title": "3500 years of shellfish mariculture on the Northwest Coast of North America",
+            "url": "https://doi.org/10.1371/journal.pone.0211194",
+            "year": 2019,
+            "venue": "Linked publication or custodial institution",
+            "referenceType": "journal-article",
+            "access": "Primary publication or custodial institutional account checked 2026-11-15. Original factual summary; no images or source text redistributed."
+          },
+          {
+            "id": "cw-clam2022",
+            "title": "Ancestral sea gardens supported human settlements for at least 3,800 years on the Northwest Coast of North America",
+            "authors": "Keith Holmes, Dana Lepofsky, Nicole F. Smith, Travis D. Crowell and Anne K. Salomon",
+            "year": 2022,
+            "url": "https://doi.org/10.3389/feart.2022.988111",
+            "venue": "Frontiers in Earth Science",
+            "access": "Publisher article and associated Hakai dataset abstract inspected. Proxy wall ages combine sea level, elevation and archaeological evidence; not independent radiocarbon dates for every wall."
+          }
+        ],
+        "review": {
+          "summary": "Rock walls and terraces engineered productive clam habitat. Radiocarbon and sea-level evidence places some garden construction at least about 3500 years ago.",
+          "limitations": "This approximate earliest reference is not the date of every wall. The much longer history of human–clam relations must not be substituted for construction age.",
+          "discussion": "People built stone walls and terraces that expanded clam habitat in Kanish and Waiatt bays. A later 2022 study combines wall elevations, former sea levels and archaeological evidence to extend garden history to at least about 3,800 years ago. The mapped date retains the conservative 2019 reference.",
+          "provenance": "Consensus Deep discovery followed by independent primary-source checking.",
+          "reviewedAt": "2026-11-17",
+          "history": [
+            "Added dated evidence with explicit location precision and canonical cross-references.",
+            "2026-11-17: Added the 2022 follow-up study while retaining the existing bay locator and record ID; no duplicate garden-construction marker added."
+          ],
+          "relatedIds": []
+        },
+        "history": {
+          "kind": "attestation",
+          "claimId": "evidence"
+        }
+      },
+      "reason": "2026-11-17: Added the 2022 follow-up study while retaining the existing bay locator and record ID; no duplicate garden-construction marker added."
+    }
+  ]
+}

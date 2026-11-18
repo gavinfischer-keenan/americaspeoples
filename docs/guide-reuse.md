@@ -12,13 +12,13 @@ The guide narratives are original Americas Peoples writing. Their factual claims
 | Scholarly and institutional references | Linked for evidence or further reading. Unless a specific reuse statement is recorded, the source’s reuse license has not been verified. A citation does not grant permission to reproduce the work. |
 | Public-domain material | Remains public domain. The atlas’s noncommercial license does not restrict independent reuse. |
 
-The new photograph selection uses CC BY 2.0, CC0 1.0 and public-domain material. The files are self-hosted; readers do not contact an external image service. Wikimedia-generated previews are identified as such. No local cropping, retouching, generated reconstruction or color alteration was applied. Modern photographs and the historical Palau quarry photograph are clearly distinguished in their captions.
+The new photograph selection uses CC BY 2.0, 2.5, 3.0 and 4.0, CC0 1.0 and public-domain material. The files are self-hosted; readers do not contact an external image service. Wikimedia-generated previews are identified as such. No local cropping, retouching, generated reconstruction or color alteration was applied. Captions distinguish modern views, historical photographs, museum objects, reconstructions and protective modern structures. A photograph’s date does not create a new event on the shared timeline.
 
 ## Wikipedia and Commons
 
 [Wikimedia’s Terms of Use](https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use) describe text attribution and licensing obligations. Wikipedia’s CC BY-SA material cannot simply be relabeled CC BY-NC-SA. The [CC BY-SA 4.0 terms](https://creativecommons.org/licenses/by-sa/4.0/) require compatible terms for adaptations and prohibit additional restrictions. This project therefore links to verified Wikipedia articles without copying their prose into its noncommercial text.
 
-Commons is a hosting service, not a single license. The [Commons reuse guidance](https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia) requires checking the individual file. For these six photographs, the source page, named creator and license declaration were checked on 17 November 2026. The item-level notices remain applicable independently of the surrounding page. See the [CC BY 2.0 terms](https://creativecommons.org/licenses/by/2.0/) and [CC0 dedication](https://creativecommons.org/publicdomain/zero/1.0/).
+Commons is a hosting service, not a single license. The [Commons reuse guidance](https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia) requires checking the individual file. For the 31 photographs and museum-object images, the source page, named creator and license declaration were checked on 17 November 2026. The item-level notices remain applicable independently of the surrounding page. See the [CC BY 2.0 terms](https://creativecommons.org/licenses/by/2.0/) and [CC0 dedication](https://creativecommons.org/publicdomain/zero/1.0/).
 
 ## Government and institutional websites
 

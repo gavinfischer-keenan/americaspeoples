@@ -1,3 +1,5 @@
+import canadaExpansion from '../data/canada-expansion-records.json';
+import aleutianExpansion from '../data/aleutian-expansion-records.json';
 import islandChain from '../data/island-chain-expansion-records.json';
 import yapMicronesia from '../data/yap-micronesia-expansion-records.json';
 import islandHistory from '../data/island-history-expansion-records.json';
@@ -60,7 +62,7 @@ export function publishedDataset(
 export const dataset = publishedDataset(
   starter as Dataset,
   [
-    ...research.proposals.map((p) => p.record), ...islandHistory.records,...islandChain.records,...yapMicronesia.records,
+    ...canadaExpansion.records, ...aleutianExpansion.records, ...research.proposals.map((p) => p.record), ...islandHistory.records,...islandChain.records,...yapMicronesia.records,
     ...sixGuides.records, ...regionalGap.records, ...comingSoonB.records, ...comingSoonBTopics.records, ...comingSoonA.records, ...comingSoonALanguages.records,
     ...earlyContinuity.records, ...interiorFrontier.records,
     ...history.records,

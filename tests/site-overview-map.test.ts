@@ -22,6 +22,13 @@ test('site overview module provides the pure manifest and accessible renderer',(
   assert.equal(typeof overview?.createSiteOverview,'function');
   assert.equal(typeof overview?.siteOverviewHTML,'function');
 });
+
+test('a tall northern region can use a square terrain map without widening across most of the world',()=>{
+  assert.ok(overview);
+  const map=overview.createSiteOverview(guide(['south','north','west'],{level:'region',mapAspectRatio:1} as Partial<SiteGuide>),[record('south',-75,44),record('north',-70,82),record('west',-140,67)],[])!;
+  assert.ok(map.bounds[2]-map.bounds[0]<150);
+  assert.match(overview.siteOverviewHTML(map),/viewBox="0 0 1200 1200"/);
+});
 test('phases and coordinate aliases share a feature while all review links remain available',()=>{
   assert.ok(overview);
   const records=[record('early',-108,37,'House'),record('late',-108,37,'House'),record('alias',-108.00000001,37,'House alias')];
@@ -101,7 +108,7 @@ test('all published mapped guides have finite bounds enclosing every canonical p
     const [w,s,e,n]=map.bounds;
     assert.ok(map.bounds.every(Number.isFinite),g.id);
     assert.ok(w<e&&s<n&&s>-90&&n<90,g.id);
-    assert.ok(Math.abs((e-w)/(merc(n)-merc(s))-2)<1e-7,g.id);
+    assert.ok(Math.abs((e-w)/(merc(n)-merc(s))-(map.pixels?.[0]??1200)/(map.pixels?.[1]??600))<1e-7,g.id);
     for(const p of map.points){let lon=p.lon;while(lon<w)lon+=360;while(lon>e&&lon-360>=w)lon-=360;assert.ok(lon>=w&&lon<=e&&p.lat>=s&&p.lat<=n,`${g.id}: ${p.name}`);}
   }
 });

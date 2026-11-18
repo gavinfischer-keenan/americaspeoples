@@ -89,6 +89,7 @@ const phases = [
   ["One marker per exact place and attached evidence status", node, ["tests/map-marker-audit.browser.mjs"]],
   ["Island histories, rai topic and licensed source navigation", node, ["--import", "tsx", "tests/island-chain.browser.mjs"]],
   ["Guide narratives, licensed photographs and source register", node, ["--import", "tsx", "tests/guide-enrichment.browser.mjs", "--generated"]],
+  ["Canadian and Aleutian contextual histories, illustrated guides and reciprocal links", node, ["--import", "tsx", "tests/canada-aleutians.browser.mjs"]],
   ["Regional evidence in the shared movie and packaged source guide", node, ["tests/regional-gaps.browser.mjs"]],
   ["Interior communities, dated connections and conflict windows", node, ["tests/interior-frontiers.browser.mjs"]],
   ["Map picking, camera, touch and label usability", node, ["tests/map-ux.browser.mjs"]],

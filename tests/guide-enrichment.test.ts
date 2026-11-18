@@ -34,7 +34,7 @@ test('each stored photograph matches its provenance and retains a separate reusa
     assert.equal(createHash('sha256').update(bytes).digest('hex'), image.sha256);
     assert.ok(image.bytes < 2_000_000);
     assert.ok(image.creator && image.sourcePage && image.licenseUrl && image.licenseEvidence && image.checkedAt);
-    assert.ok(['CC BY 2.0', 'Public domain', 'CC0 1.0'].includes(image.license));
+    assert.ok(['CC BY 2.0', 'CC BY 2.5', 'CC BY 3.0', 'CC BY 4.0', 'Public domain', 'CC0 1.0'].includes(image.license));
     assert.ok(image.width > 0 && image.height > 0);
   }
 });

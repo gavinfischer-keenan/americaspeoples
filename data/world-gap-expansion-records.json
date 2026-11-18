@@ -1097,7 +1097,7 @@
     },
     {
       "id": "gap-quadra-clam-gardens",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "Northern Quadra Island — early clam-garden construction",
       "culture": {
@@ -1139,6 +1139,20 @@
               "note": "Supports this observation; uncertainty and limits remain explicit."
             }
           ]
+        },
+        {
+          "id": "later-proxy-study",
+          "text": "A 2022 study extends the evidence for ancestral sea gardens to at least about 3,800 years ago, using former sea levels, wall elevations and archaeological evidence.",
+          "status": "well-supported",
+          "explanation": "This is a refinement using several kinds of evidence, rather than a new direct radiocarbon age for every wall. The map retains the earlier conservative construction reference.",
+          "support": [
+            {
+              "sourceId": "cw-clam2022",
+              "stance": "supports",
+              "locator": "Publisher article and associated Hakai dataset abstract inspected. Proxy wall ages combine sea level, elevation and archaeological evidence; not independent radiocarbon dates for every wall.",
+              "note": "Supports the later proxy-age refinement."
+            }
+          ]
         }
       ],
       "sources": [
@@ -1151,16 +1165,26 @@
           "venue": "Linked publication or custodial institution",
           "referenceType": "journal-article",
           "access": "Primary publication or custodial institutional account checked 2026-11-15. Original factual summary; no images or source text redistributed."
+        },
+        {
+          "id": "cw-clam2022",
+          "title": "Ancestral sea gardens supported human settlements for at least 3,800 years on the Northwest Coast of North America",
+          "authors": "Keith Holmes, Dana Lepofsky, Nicole F. Smith, Travis D. Crowell and Anne K. Salomon",
+          "year": 2022,
+          "url": "https://doi.org/10.3389/feart.2022.988111",
+          "venue": "Frontiers in Earth Science",
+          "access": "Publisher article and associated Hakai dataset abstract inspected. Proxy wall ages combine sea level, elevation and archaeological evidence; not independent radiocarbon dates for every wall."
         }
       ],
       "review": {
         "summary": "Rock walls and terraces engineered productive clam habitat. Radiocarbon and sea-level evidence places some garden construction at least about 3500 years ago.",
         "limitations": "This approximate earliest reference is not the date of every wall. The much longer history of human–clam relations must not be substituted for construction age.",
-        "discussion": "A source window is not proof of uninterrupted residence, a regional population total, or abandonment. Related records keep their own dates.",
+        "discussion": "People built stone walls and terraces that expanded clam habitat in Kanish and Waiatt bays. A later 2022 study combines wall elevations, former sea levels and archaeological evidence to extend garden history to at least about 3,800 years ago. The mapped date retains the conservative 2019 reference.",
         "provenance": "Consensus Deep discovery followed by independent primary-source checking.",
-        "reviewedAt": "2026-11-15",
+        "reviewedAt": "2026-11-17",
         "history": [
-          "Added dated evidence with explicit location precision and canonical cross-references."
+          "Added dated evidence with explicit location precision and canonical cross-references.",
+          "2026-11-17: Added the 2022 follow-up study while retaining the existing bay locator and record ID; no duplicate garden-construction marker added."
         ],
         "relatedIds": []
       },
