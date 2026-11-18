@@ -10,7 +10,7 @@ page.setDefaultTimeout(10000);page.on('pageerror',e=>errors.push(e.message));
 const origin=`http://127.0.0.1:${server.address().port}`;
 const records=JSON.parse(await readFile('dist/dataset.json','utf8')).records;
 const incoming=JSON.parse(await readFile('data/early-continuity-expansion-records.json','utf8')).records;
-const point=id=>{const r=records.find(r=>r.id===id);return page.locator(`[data-point="${r.location.lon},${r.location.lat}"]`);};
+const point=id=>page.locator(`#map-host [data-member-ids*='${JSON.stringify(id)}']`);
 try{
  await mkdir('test-results',{recursive:true});
  for(const story of earlyContinuityStories){

@@ -1,3 +1,4 @@
+import {densityGroups,placeChange,type DensityAnchor} from './map-density';
 import {terrainHTML,intersectsView,type ViewBounds} from './terrain';
 import { mapProjection, type MapScope } from "./map-projection";
 import { geoPath, geoGraticule10 } from "d3-geo";
@@ -9,7 +10,7 @@ import {routeEndpointLabels,routeDirectionLabels} from './map-route-labels';
 import { guideForRecord } from "./site-guides";
 import { populationAt } from "./population";
 import type { DisplayRecord } from "./model";
-import { temporalState, temporalOpacity, timeLabel, isDisputed, END_YEAR } from "./time";
+import { temporalState, temporalOpacity, formatYear, timeLabel, isDisputed, END_YEAR } from "./time";
 import { OVERLAY_LABELS } from "./overlays";
 import { esc, $ } from "./dom";
 import { disputeLevel } from "./disputes";
@@ -26,6 +27,7 @@ const compactPlaceName=(name:string)=>name.length<=40?name:name.slice(0,39).trim
 export class MapView {
   readonly context=new AtlasContext();
   readonly element = document.createElement("div");
+  private densityPreference:'compact'|'standard'|'detailed'='standard';
   private terrainKey="";
   private scope: MapScope = "americas";
   private width=1000;
@@ -61,8 +63,9 @@ export class MapView {
   ) {
     this.element.className = "map-canvas";
     const path = geoPath(this.projection);
-    this.element.innerHTML = `<svg viewBox="0 0 1000 800" role="img" aria-label="Map of the Americas and Pacific. Use the visible records list for keyboard access to evidence." tabindex="0"><defs><pattern id="population-unknown" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V5" stroke="#fff" stroke-width="1.8" opacity=".8"/></pattern><radialGradient id="reach-fade"><stop offset="0%" stop-color="white" stop-opacity=".35"/><stop offset="40%" stop-color="white" stop-opacity=".22"/><stop offset="100%" stop-color="white" stop-opacity="0"/></radialGradient><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#e5c78c"/></marker></defs><g class="world"><path class="graticule" d="${path(geoGraticule10())}"/><path class="land" d="${path(land)}"/><clipPath id="terrain-land-clip"><path class="terrain-land-mask" d="${path(land)}"/></clipPath><g class="terrain" clip-path="url(#terrain-land-clip)" aria-hidden="true"></g><g class="map-labels">${this.labels()}</g><g class="features"></g></g></svg><div class="map-controls"><label class="map-scope">Map region<select aria-label="Map region"><option value="pacific">Asia-Pacific / Americas</option><option value="americas">Americas focus</option><option value="atlantic">Atlantic connections</option><option value="world">Whole world</option></select></label><button data-zoom="in" aria-label="Zoom in">+</button><button data-zoom="out" aria-label="Zoom out">−</button><button data-zoom="reset" aria-label="Reset map view">⌖</button></div><div class="map-caption">Modern relief & coastlines · Not a reconstruction for this date<br>Natural Earth + USGS 3DEP · Public domain<br>Place references: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors · ODbL</a></div>`;
+    this.element.innerHTML = `<svg viewBox="0 0 1000 800" role="img" aria-label="Map of the Americas and Pacific. Use the visible records list for keyboard access to evidence." tabindex="0"><defs><pattern id="population-unknown" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V5" stroke="#fff" stroke-width="1.8" opacity=".8"/></pattern><radialGradient id="reach-fade"><stop offset="0%" stop-color="white" stop-opacity=".35"/><stop offset="40%" stop-color="white" stop-opacity=".22"/><stop offset="100%" stop-color="white" stop-opacity="0"/></radialGradient><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#e5c78c"/></marker></defs><g class="world"><path class="graticule" d="${path(geoGraticule10())}"/><path class="land" d="${path(land)}"/><clipPath id="terrain-land-clip"><path class="terrain-land-mask" d="${path(land)}"/></clipPath><g class="terrain" clip-path="url(#terrain-land-clip)" aria-hidden="true"></g><g class="map-labels">${this.labels()}</g><g class="features"></g></g></svg><div class="map-controls"><label class="map-scope">Map region<select aria-label="Map region"><option value="pacific">Asia-Pacific / Americas</option><option value="americas">Americas focus</option><option value="atlantic">Atlantic connections</option><option value="world">Whole world</option></select></label><details class="map-density-options"><summary>Map detail</summary><label>Place grouping<select aria-label="Place grouping"><option value="compact">Compact</option><option value="standard" selected>Standard</option><option value="detailed">Detailed</option></select></label></details><button data-zoom="in" aria-label="Zoom in">+</button><button data-zoom="out" aria-label="Zoom out">−</button><button data-zoom="reset" aria-label="Reset map view">⌖</button></div><div class="map-caption">Modern relief & coastlines · Not a reconstruction for this date<br>Natural Earth + USGS 3DEP · Public domain<br>Place references: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors · ODbL</a></div>`;
     const svg = $<SVGSVGElement>("svg", this.element);
+    $('defs',this.element).insertAdjacentHTML('beforeend',[['migration','#ffba64'],['exchange','#62e4e9'],['forced','#ff85c5']].map(([kind,color])=>`<marker id="corridor-${kind}" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="3.4" markerHeight="3.4" orient="auto-start-reverse"><path d="M1,1L11,6L1,11L3,6Z" fill="${color}" stroke="#132934" stroke-width="1.1" stroke-linejoin="round"/></marker>`).join(''));
     svg.setAttribute('role','group');
     svg.setAttribute('aria-roledescription','interactive map');
     // Capture before feature listeners or native anchor navigation. A pause click
@@ -75,7 +78,7 @@ export class MapView {
       if(!feature&&(e.button!==0||e.altKey||e.ctrlKey||e.metaKey||e.shiftKey))return;
       e.preventDefault();e.stopPropagation();
       const onPause=this.interaction.onPause;
-      this.interaction={...this.interaction,playing:false};
+      this.setInteraction({...this.interaction,playing:false});
       onPause();
     };
     this.element.addEventListener('click',pauseClick,true);
@@ -99,6 +102,10 @@ export class MapView {
     life.observe(document.body,{childList:true,subtree:true});
     $(".map-scope select", this.element).addEventListener("change", (e) => {
       this.setScope((e.target as HTMLSelectElement).value as MapScope);
+    });
+    this.element.querySelector('.map-density-options select')!.addEventListener('change',event=>{
+      this.densityPreference=(event.target as HTMLSelectElement).value as typeof this.densityPreference;
+      this.draw();
     });
     let drag: { x: number; y: number; tx: number; ty: number } | null = null;
     const pointers=new Map<number,MapPoint>();
@@ -157,7 +164,7 @@ export class MapView {
     svg.addEventListener("keydown", (e) => {
       if((e.key==='Enter'||e.key===' ')&&e.target!==svg){
         const feature=(e.target as Element).closest<SVGElement>('[data-point],[data-overlay],[data-context]');
-        if(feature){e.preventDefault();if(this.interaction?.mode==='movie'&&this.interaction.playing){this.interaction.onPause();return;}this.selectRows(this.featureRows(feature));return;}
+        if(feature){e.preventDefault();if(this.interaction?.mode==='movie'&&this.interaction.playing){this.interaction.onPause();return;}this.activateFeature(feature);return;}
       }
       const d = 35;
       if (e.key === "ArrowLeft") this.tx += d;
@@ -183,13 +190,14 @@ export class MapView {
           this.resetView();
         } else this.zoom(target.dataset.zoom === "in" ? 1.35 : 1 / 1.35);
       } else if (!moved&&svg.contains(e.target as Node)) {
+        if(target?.hasAttribute('data-density-group')){this.activateFeature(target);return;}
         const rows=e.detail===0&&target?this.featureRows(target):this.pick(this.clientPoint(e.clientX,e.clientY),(e as PointerEvent).pointerType==='touch');
         if(rows.length){e.preventDefault();this.selectRows(rows);}
       }
     });
   }
   setInteraction(interaction:MapInteraction):void{
-    const changed=this.interaction?.mode!==interaction.mode;
+    const changed=this.interaction?.mode!==interaction.mode||this.interaction?.playing!==interaction.playing;
     this.interaction=interaction;
     if(changed)this.draw();
   }
@@ -322,14 +330,16 @@ export class MapView {
   private declutterLabels(){
     const viewport=$('svg',this.element).getBoundingClientRect();
     if(!viewport.width||!viewport.height)return;
-    const labels=[...this.element.querySelectorAll<SVGTextElement>('.settlement-label,.history-place-label,.route-endpoint-label text,.boundary-label')].map(label=>({label,selected:!!label.closest('.is-highlighted,.route-endpoint-label'),bounds:label.getBoundingClientRect()}));
+    const labels=[...this.element.querySelectorAll<SVGTextElement>('.settlement-label,.history-place-label,.route-endpoint-label text,.route-direction-label text,.community-name,.boundary-label')].map(label=>({label,selected:!!label.closest('.is-highlighted,.route-endpoint-label'),bounds:label.getBoundingClientRect()}));
     labels.sort((a,b)=>Number(b.selected)-Number(a.selected));
-    const placed:DOMRect[]=[];
+    const placed:DOMRect[]=[...this.element.querySelectorAll('.map-controls,.map-caption,.community-glyph,.site-dot,.settlement-symbol,.wreck-symbol')].map(node=>node.getBoundingClientRect());
+    let communityNames=0;
     for(const {label,selected,bounds} of labels){
       const visible=bounds.right>=viewport.left&&bounds.left<=viewport.right&&bounds.bottom>=viewport.top&&bounds.top<=viewport.bottom;
-      const collides=placed.some(other=>bounds.left<other.right+6&&bounds.right>other.left-6&&bounds.top<other.bottom+4&&bounds.bottom>other.top-4);
+      const limited=label.classList.contains('community-name')&&communityNames>=((this.scale<6?6:14)*({compact:.65,standard:1,detailed:1.45}[this.densityPreference]));
+      const collides=limited||placed.some(other=>bounds.left<other.right+6&&bounds.right>other.left-6&&bounds.top<other.bottom+4&&bounds.bottom>other.top-4);
       label.style.visibility=selected||(visible&&!collides)?'visible':'hidden';
-      if(visible&&(selected||!collides))placed.push(bounds);
+      if(visible&&(selected||!collides)){placed.push(bounds);if(label.classList.contains('community-name'))communityNames++;}
     }
   }
   /** Same projected geometry and transform as the map; unmapped records stay out. */
@@ -406,6 +416,13 @@ export class MapView {
     if(element.dataset.point!==undefined)return this.drawnPoints.get(element.dataset.point)??[];
     return [];
   }
+  private activateFeature(feature:Element){
+    const rows=this.featureRows(feature);
+    if(feature.hasAttribute('data-density-group')&&this.scale<2048){
+      this.focusRecords(rows);
+      this.onSelect(rows);
+    }else this.selectRows(rows);
+  }
   private selectRows(rows:DisplayRecord[]){
     if(!rows.length)return;
     this.highlighted=new Set(rows.map(r=>r.id));this.draw();this.onSelect(rows);
@@ -458,8 +475,14 @@ export class MapView {
     this.element.classList.toggle('local-detail',this.scale>=80);
     const viewport=this.viewBounds(),terrain=terrainHTML(this.projection,this.scale,viewport);
     if(this.terrainKey!==terrain){$(".terrain",this.element).innerHTML=terrain;this.terrainKey=terrain;}
-    const focused=document.activeElement instanceof SVGElement&&this.element.contains(document.activeElement)?document.activeElement.dataset.mapTip:undefined;
+    const focusedElement=document.activeElement instanceof SVGElement&&this.element.contains(document.activeElement)?document.activeElement:null;
+    const focused=focusedElement?.dataset.mapTip;
+    const focusedRows=focusedElement?this.featureRows(focusedElement):[];
+    const focusedId=focusedRows.length===1?focusedRows[0].id:null;
     const symbolScale = 1 / (this.scale * this.viewportFit());
+    const playing=this.interaction?.mode==='movie'&&this.interaction.playing;
+    this.element.classList.toggle('density-playing',!!playing);
+    this.element.classList.toggle('density-overview',this.scale<6);
     const lanes=this.routeLanes(symbolScale);
     $('.map-labels',this.element).innerHTML=this.labels();
     const path=geoPath(this.projection);
@@ -498,17 +521,50 @@ export class MapView {
     const labeledEndpoints=new Set<string>();
     let arrows = "",
       overlays = "";
+    const groupedKeys=new Set<string>();
+    const anchors:DensityAnchor[]=[];
+    const screenBounds=this.viewBounds(0);
+    const journey=this.context.voyages.find(voyage=>voyage.id===this.context.options.voyageId);
+    const journeyStops=new Set(journey?.stops.map(stop=>stop.recordId));
+    const band=2**(Math.round(2*Math.log2(this.scale))/2)*this.viewportFit();
+    for(const [key,rows] of this.places){
+      const p=this.projection(key.split(',').map(Number) as MapPoint);
+      if(!p||!intersectsView([p,p],viewport))continue;
+      const states=rows.map(row=>historyState(row,this.year));
+      anchors.push({key,x:p[0]*band,y:p[1]*band,inView:intersectsView([p,p],screenBounds),active:states.filter(state=>state==='active').length,
+        prior:states.filter(state=>['past-place','founded','loss'].includes(state)).length,
+        protectedPoint:rows.some(row=>(this.highlighted.has(row.id)||journeyStops.has(row.id)||row.id===focusedId))});
+    }
+    let communities='';
+    const spacing=(this.scale<6?52:this.scale<80?36:25)*({compact:1.3,standard:1,detailed:.76}[this.densityPreference]);
+    for(const group of densityGroups(anchors,spacing)){
+      if(group.members.length===1)continue;
+      const rows=group.members.flatMap(member=>this.places.get(member.key)!);
+      for(const member of group.members)groupedKeys.add(member.key);
+      groups.set(group.key,rows);
+      const anchorRow=this.places.get(group.anchor.key)![0];
+      const name=compactPlaceName((anchorRow.location?.name??anchorRow.title).split(/ [—–] /)[0]);
+      const p=this.projection(group.anchor.key.split(',').map(Number) as MapPoint)!;
+      const hasHabitation=rows.some(row=>historyState(row,this.year)==='active'&&(row.type==='occupation'||row.history?.kind==='habitation')&&!placeChange(row.history,this.year));
+      const glyph=(hasHabitation&&this.interaction?.mode!=='explore')?'M-9,5V-2l4-4 4,4V5ZM0,5V-4l4-4 5,5V5Z':'M-8,1l4-4 4,4-4,4ZM0,-2l4-4 4,4-4,4Z';
+      const changed=rows.some(row=>row.time.kind==='occurrence'&&row.time.start===this.year&&row.time.end===this.year);
+      communities+=`<g data-point="${group.key}" data-density-group="${group.members.length}" data-active="${group.active}" data-prior="${group.prior}" data-anchor-name="${esc(name)}" class="community-group ${group.active||this.interaction?.mode==='explore'?'':'community-context'} ${changed?'community-change':''}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><circle class="community-hit" r="15"/><path class="community-glyph" d="${glyph}"/><text class="community-count" x="10" y="-6">${group.members.length}</text><text class="community-name" x="18" y="11">Near ${esc(name)}</text></g>`;
+    }
     for (const [index, r] of this.records.entries()) {
-      const colocated=this.places.get(placeKey(r)??"none");
+      const locationKey=placeKey(r);
+      if(locationKey&&groupedKeys.has(locationKey))continue;
+      const colocated=this.places.get(locationKey??"none");
       if(colocated&&colocated[0]!==r)continue;
       const bounds=this.geometry.get(r).bounds;if(!bounds||!intersectsView(bounds,viewport))continue;
       if(r.history?.kind==='migration'||r.history?.kind==='exchange'){
         const d=this.geometry.get(r).path;
         if(d){
           const active=this.interaction?.mode==='movie'&&historyState(r,this.year)==='active';
-          const both=r.overlay?.direction==='both';
+          const direction=r.overlay?.direction;
+          const start=direction==='reverse'||direction==='both',end=direction==='forward'||direction==='both';
+          const marker='url(#corridor-'+r.history.kind+')';
           const lane=lanes.get(r);
-          arrows+=`<g data-overlay="${index}" data-history-route="${esc(r.id)}" class="history-route route-${r.history.kind} ${active?'route-active':''}" ${lane?`transform="translate(${lane[0]},${lane[1]})"`:''} style="opacity:${this.opacity(r)}"><title>${esc(r.title)} — ${esc(historyLabel(r,this.year))}${lane?' — Separate display lane; source endpoints unchanged':''}</title><path class="route-halo" d="${d}"/><path class="route-line" d="${d}" marker-end="url(#arrow)" ${both?'marker-start="url(#arrow)"':''}/><path class="route-flow" d="${d}"/><path class="overlay-line-hit" d="${d}" style="stroke-width:${16/this.scale}px"/></g>`;
+          arrows+=`<g data-overlay="${index}" data-history-route="${esc(r.id)}" class="history-route route-${r.history.kind} ${active?'route-active':''}" ${lane?`transform="translate(${lane[0]},${lane[1]})"`:''} style="opacity:${this.opacity(r)}"><title>${esc(r.title)} — ${esc(historyLabel(r,this.year))}${lane?' — Separate display lane; source endpoints unchanged':''}</title><path class="route-halo" d="${d}"/><path class="route-line" d="${d}" ${end?`marker-end="${marker}"`:''} ${start?`marker-start="${marker}"`:''}/><path class="route-flow" d="${d}"/><path class="overlay-line-hit" d="${d}" style="stroke-width:${16/this.scale}px"/></g>`;
           const directionLabel=routeDirectionLabels[r.id];
           if(lane&&directionLabel&&this.highlighted.has(r.id)){
             const line=this.geometry.get(r).lines.reduce((longest,line)=>line.length>longest.length?line:longest,[] as MapPoint[]),mid=line[Math.floor(line.length/2)];
@@ -580,8 +636,13 @@ export class MapView {
             overlays += `<g data-overlay="${index}" class="${cls}" style="opacity:${opacity}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><title>${title}</title><circle class="overlay-hit" r="14"/><path d="${o.kind === "conflict" ? "M-7,-7 L7,7 M7,-7 L-7,7" : o.kind === "violence" ? "M-8,-8 H8 V8 H-8 Z M-6,-6 L6,6 M6,-6 L-6,6" : o.kind === "epidemic" ? "M0,-8 A8,8 0 1,1 0,8 A8,8 0 1,1 0,-8 M0,-12 V-9 M0,9 V12 M-12,0 H-9 M9,0 H12" : o.kind === "forced-removal" ? "M-8,-8 H8 V8 H-8 Z" : "M0,-9 L9,0 L0,9 L-9,0 Z"}"/>${colocated&&colocated.length>1?`<text class="site-count" x="11" y="-10">${colocated.length}</text>`:""}</g>`;
         } else {
           const d = this.geometry.get(r).path;
-          if (d)
-            overlays += `<g data-overlay="${index}" class="${cls}" style="opacity:${opacity}"><title>${title}</title><path d="${d}" ${o.kind === "forced-removal" ? 'marker-end="url(#arrow)"' : ""} style="stroke-width:${3 / this.scale}"/><path class="overlay-line-hit" d="${d}" style="stroke-width:${15 / this.scale}"/>${directionSymbol}</g>`;
+          if(d&&g.type==='LineString'&&['trade','forced-removal'].includes(o.kind)){
+            const kind=o.kind==='trade'?'exchange':'forced';
+            const marker='url(#corridor-'+kind+')';
+            const start=o.direction==='both'||o.direction==='reverse',end=o.direction==='both'||o.direction==='forward';
+            overlays+=`<g data-overlay="${index}" class="${cls} history-route route-${kind}" style="opacity:${opacity>0?1:0}" data-direction="${o.direction??'unknown'}"><title>${title}</title><path class="route-halo" d="${d}"/><path class="route-line" d="${d}" ${start?`marker-start="${marker}"`:''} ${end?`marker-end="${marker}"`:''}/><path class="overlay-line-hit" d="${d}" style="stroke-width:${16/this.scale}px"/>${directionSymbol}</g>`;
+          }else if (d)
+            overlays += `<g data-overlay="${index}" class="${cls}" style="opacity:${opacity}"><title>${title}</title><path d="${d}" style="stroke-width:${3 / this.scale}"/><path class="overlay-line-hit" d="${d}" style="stroke-width:${15 / this.scale}"/>${directionSymbol}</g>`;
         }
         continue;
       }
@@ -596,11 +657,12 @@ export class MapView {
         const a = this.projection([r.location.lon, r.location.lat]),
           b = this.projection([r.destination.lon, r.destination.lat]);
         if (a && b)
-          arrows += `<path data-overlay="${index}" style="opacity:${this.opacity(r)}" class="movement ${r.proposalKey ? "proposal-path" : ""}" d="${this.geometry.get(r).path}" marker-end="url(#arrow)"><title>${esc(r.title)} — ${esc(r.routeKind)} connection</title></path>`;
+          arrows += `<g data-overlay="${index}" class="history-route route-migration legacy-route"><title>${esc(r.title)} — ${esc(r.routeKind)} connection</title><path class="route-halo" d="${this.geometry.get(r).path}"/><path class="route-line movement ${r.proposalKey ? "proposal-path" : ""}" d="${this.geometry.get(r).path}" marker-end="url(#corridor-migration)"/></g>`;
       }
     }
     let markers = "", pastMarkers = "";
     for (const [key, rows] of groups) {
+      if(key.startsWith("cell:"))continue;
       const r = rows[0],
         p = this.projection([r.location!.lon, r.location!.lat]);
       if (!p) continue;
@@ -614,7 +676,7 @@ export class MapView {
       const marker = `<g data-point="${key}" style="opacity:${Math.max(...rows.map((x) => this.opacity(x)))}" class="site ${past ? "past-place" : ""} ${possible ? "possible" : ""} ${rows.some((x) => x.proposalKey) ? "proposal-point" : ""}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><title>${esc(rows.map((x) => x.title + " — " + x.culture.name + " — " + timeLabel(x.time)).join("; "))} — ${esc(population.label)}${possible ? " — uncertain time" : ""}${rows.some(x => guideForRecord(x.id)) ? " — Site guide available" : ""}</title>${rows.some(x => guideForRecord(x.id)) ? `<text class="site-guide-marker" x="-17" y="17" aria-hidden="true">◈</text>` : ""}<circle class="site-halo" r="${Math.max(13, population.outerRadius + 4)}"/>${population.outerRadius > population.radius ? `<circle class="population-range" r="${population.outerRadius}" style="fill:${r.culture.color}"/>` : ""}<circle class="site-dot" r="${population.radius}" style="--site-color:${r.culture.color}"/>${population.unknown ? `<circle class="population-unknown" r="${population.radius}" fill="url(#population-unknown)"/>` : ""}${this.scale >= 16 || rows.some(x=>this.highlighted.has(x.id)) ? `<text class="settlement-label" x="${population.outerRadius + 5}" y="4">${esc(compactPlaceName(r.location!.name))}</text>` : ""}${rows.length > 1 ? `<text class="site-count" x="11" y="-8">${rows.length}</text>` : ""}</g>`;
       if(past)pastMarkers+=marker;else markers+=marker;
     }
-    $(".features", this.element).innerHTML = overlays + arrows + pastMarkers + markers + physicalMarkers + endpointLabels;
+    $(".features", this.element).innerHTML = overlays + arrows + pastMarkers + communities + markers + physicalMarkers + endpointLabels;
     // Rebuild catalog-only tooltip lookup with the rendered feature identities.
     // Retain hover across a redraw only when the same records remain visible.
     this.tips.clear();
@@ -631,13 +693,40 @@ export class MapView {
         if(feature.dataset.context!==undefined)rows=this.contextAnchors.get(feature.dataset.context)??[];
         else if(feature.dataset.overlay!==undefined){const row=this.records[Number(feature.dataset.overlay)];if(row)rows=this.places.get(placeKey(row)??"none")??[row];}
         else rows=groups.get(feature.dataset.point!)??[];
-        content=tooltipForRecords(rows,this.interaction?.mode??'movie',this.year);
+        feature.dataset.memberIds=JSON.stringify(rows.map(r=>r.id));
+        const endings=this.interaction?.mode==='movie'?rows.flatMap(row=>{
+          const ending=placeChange(row.history,this.year);
+          return ending?[{row,ending}]:[];
+        }):[];
+        if(endings.length){
+          const change=endings.find(entry=>entry.ending.inWindow)??endings[0];
+          feature.dataset.localEnding=change.ending.kind;
+          feature.dataset.endingInWindow=String(change.ending.inWindow);
+          feature.dataset.endingNote=historyLabel(change.row,this.year);
+          // An ending concerns its source place. Never strike through a whole region.
+          if(change.ending.inWindow||!feature.dataset.densityGroup){
+            const d=change.ending.kind==='relocated'?'M4,-9H13m-4,-4 4,4-4,4':'M4,-12l8,7m0,-7-8,7';
+            feature.insertAdjacentHTML('beforeend',`<path class="local-ending-symbol ${change.ending.possible?'ending-possible':''}" d="${d}"/>`);
+          }
+        }
+        const change=rows.find(r=>r.time.kind==='occurrence'&&r.time.start===this.year&&r.time.end===this.year);
+        if(change&&this.interaction?.mode==='movie'){
+          feature.classList.add('dated-change');
+          feature.dataset.change=change.title+' · '+formatYear(this.year);
+        }
+        content=feature.dataset.densityGroup?{
+          title:`Near ${feature.dataset.anchorName} · ${feature.dataset.densityGroup} mapped locations`,
+          summary:this.interaction?.mode==='explore'?`${rows.length} records from all periods. Open to inspect the members.`:
+            `${rows.length} records. ${feature.dataset.active} in their evidence window, ${feature.dataset.prior} earlier. Open to inspect the members.`,
+          dates:feature.dataset.change??(this.interaction?.mode==='explore'?'All-time Explore view':formatYear(this.year))
+        }:tooltipForRecords(rows,this.interaction?.mode??'movie',this.year);
         key=(feature.dataset.context!==undefined?'context:':'records:')+JSON.stringify(rows.map(row=>JSON.stringify([row.id,row.proposalKey??null])).sort());
       }
       if(!content)continue;
+      if(feature.dataset.endingNote)content.summary+=' '+feature.dataset.endingNote;
       const status=rows.some(r=>disputeLevel(r)==='disputed')?'disputed':rows.some(isDisputed)?'discussion':'none';
       feature.dataset.evidenceStatus=status;
-      if(status!=='none'&&(feature.dataset.point!==undefined||feature.classList.contains('history-marker')||feature.classList.contains('overlay-feature')&&rows[0]?.overlay?.geometry?.type==='Point')){
+      if(!feature.dataset.densityGroup&&status!=='none'&&(feature.dataset.point!==undefined||feature.classList.contains('history-marker')||feature.classList.contains('overlay-feature')&&rows[0]?.overlay?.geometry?.type==='Point')){
         const dot=feature.querySelector('.site-dot');
         const radius=dot?Number(dot.getAttribute('r'))+2:10;
         feature.insertAdjacentHTML('beforeend',`<circle class="evidence-status-ring" r="${radius}" aria-hidden="true"/>`);
@@ -656,7 +745,7 @@ export class MapView {
       }
       this.tips.set(key,content);
       if(this.hovered?.key===key)hoveredFeature=feature;
-      if(focused===key)focusedFeature=feature;
+      if(focused===key||(focusedId&&rows.some(r=>r.id===focusedId)))focusedFeature=feature;
     }
     this.updateTabStops();
     this.declutterLabels();

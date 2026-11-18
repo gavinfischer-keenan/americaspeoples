@@ -64,3 +64,35 @@ button:disabled{opacity:.42;cursor:default}
 #cinema-caption{display:none}.focus-view.guided-story #cinema-caption{display:block;position:absolute;z-index:6;bottom:45px;left:24px;width:min(440px,calc(100% - 48px));padding:21px 24px;background:#f2eee4f5;color:#264647;border:1px solid #bdd0c2;border-radius:12px;box-shadow:0 8px 35px #001b2655}.focus-view #cinema-caption .eyebrow{color:#47786f;font-size:9px}.focus-view #cinema-caption h3{font:27px/1.2 Georgia,serif;margin:11px 0}.focus-view #cinema-caption p{font-size:13px;line-height:1.6;margin:0 0 10px}.focus-view #cinema-caption small{font-size:10px;line-height:1.5;color:#58736a;display:block}.focus-view.guided-story .history-summary{display:none}
 @media(max-width:700px){.atlas-layout>.story-panel{flex-basis:46%;max-height:320px}.story-intro{padding:9px 16px}.scene-copy{padding:12px 16px}.scene-copy h2{font-size:22px;margin:9px 0}.scene-copy .scene-body{font-size:12px;line-height:1.55;margin-bottom:10px}.scene-note{font-size:10px;line-height:1.5;margin-bottom:10px}.story-footnote{display:none}.focus-view.guided-story #cinema-caption{bottom:42px;left:12px;width:calc(100% - 24px);padding:14px 16px}.focus-view #cinema-caption h3{font-size:22px}.focus-view #cinema-caption p{font-size:12px}.focus-view #cinema-caption small{font-size:10px}}
 @media(min-width:701px) and (max-height:800px){.story-intro{padding:15px 20px 10px}.story-intro p{display:none}.scene-copy{padding:17px 22px 12px}.scene-copy h2{font-size:27px;margin:10px 0 13px}.scene-copy .scene-body{line-height:1.6}.story-footnote{padding-top:10px}#story-chapters{gap:5px}}
+
+.community-group{cursor:pointer}
+.community-hit{fill:transparent}
+.community-glyph{fill:#fbdfab;stroke:#173943;stroke-width:2.2;stroke-linejoin:round}
+.community-context .community-glyph{fill:#aab8b3;stroke:#334c54}
+.community-change .community-glyph{stroke:#ffe875;stroke-width:3}
+.community-count,.community-name{font:600 11px system-ui;fill:#fff3d6;stroke:#203640;stroke-width:3.5;paint-order:stroke;stroke-linejoin:round;pointer-events:none}
+.community-name{font-size:10px}
+.density-overview .terrain{opacity:.55}
+.density-overview .regional-cloud{opacity:.32!important}
+.density-overview .population-unknown,.density-overview .site-guide-marker,.density-overview .population-range{display:none}
+.density-playing .community-count,.density-playing.density-overview .site-count{display:none}
+.density-playing.density-overview .site-dot{r:4px}
+.density-playing.density-overview .site-halo{fill:transparent;stroke:none}
+.map-canvas .history-route .route-halo{stroke:#142a34;stroke-width:6;opacity:1}
+.map-canvas .history-route .route-line{stroke:#62e4e9;stroke-width:3;opacity:1}
+.map-canvas .route-migration .route-line{stroke:#ffba64;stroke-dasharray:8 4}
+.map-canvas.density-playing .history-route .route-halo{stroke-width:10}
+.map-canvas.density-playing .history-route .route-line{stroke-width:6}
+.map-canvas .history-route:not([data-direction="forward"]) .route-flow{display:none}
+.map-canvas .route-forced .route-line{stroke:#ff85c5;stroke-dasharray:10 3 2 3}
+.map-canvas .route-forced .direction-ink{stroke:#ff85c5}
+@media(prefers-reduced-motion:reduce){.map-canvas .history-route .route-flow{animation:none;display:none}}
+.map-density-options{font:10px system-ui;color:#c7d9da;background:#16313a;border-radius:4px;padding:3px 5px;cursor:pointer}
+.map-density-options label{display:grid;gap:3px;margin-top:5px}
+.map-canvas.density-playing .dated-change .site-dot,.map-canvas.density-playing .dated-change .settlement-symbol{stroke:#fff2a2;stroke-width:2.5}
+.map-canvas .voyage-tracks>path.voyage-casing{stroke:#162b35;stroke-width:5;stroke-dasharray:none;pointer-events:none}
+.map-canvas .voyage-tracks>path[data-voyage-track]{stroke:#ffbd6f;stroke-width:2.8}
+.map-canvas.density-playing .voyage-tracks>path.voyage-casing{stroke-width:9}
+.map-canvas.density-playing .voyage-tracks>path[data-voyage-track]{stroke-width:5;stroke-dasharray:9 4}
+.local-ending-symbol{fill:none;stroke:#f5b383;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0px 1px 1px #112833);pointer-events:none}
+.ending-possible{stroke-dasharray:3 1.5}
