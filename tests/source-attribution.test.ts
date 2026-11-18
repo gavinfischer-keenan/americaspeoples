@@ -29,7 +29,7 @@ test('source register covers the full published dataset and all guide citation U
   }
   for (const image of input.media.images) {
     const source = entries.find((e:any) => e.urls.includes(image.sourcePage));
-    assert.equal(source?.kind, 'Reused photograph');
+    assert.equal(source?.kind, image.role === 'site-plan' ? 'Reused historical map / chart' : 'Reused photograph');
     assert.equal(source?.license, image.license);
   }
   const geonames = entries.find((e:any) => e.urls.includes('https://www.geonames.org/export/'));
