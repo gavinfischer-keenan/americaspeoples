@@ -2,7 +2,7 @@
 
 A free, noncommercial educational atlas. Redistribution, teaching, corrections, and contributions are encouraged. Original software: **PolyForm Noncommercial 1.0.0**. Original educational content and copyrightable curated data: **CC BY-NC-SA 4.0**, with third-party terms preserved. See [LICENSE.md](LICENSE.md), [reuse details](docs/reuse-and-contributing.md), and [CONTRIBUTING.md](CONTRIBUTING.md). This is source-available software with noncommercial permissions.
 
-Version 0.23.0. The production atlas is hosted at https://americaspeoples.11mosswood.us/ and launched from https://tripofisch.com/free-utilities/americaspeoples/.
+Version 0.23.1. The production atlas is hosted at https://americaspeoples.11mosswood.us/ and launched from https://tripofisch.com/free-utilities/americaspeoples/.
 
 Canada now has eight regional guides, including the inland Shield. Three new Aleutian village studies explain Amaknak's house sequence, Iliuliuk's harbor and buildings, and household life at Chaluka and Nikolski. This release adds 51 master-map observations, ten revisions to existing evidence, four contextual movies with 33 chapters, and five chapters in the regional overviews. A licensed historical chart and an original explanatory house diagram link to their evidence. The atlas contains 2,531 records (2,458 shared, 73 focused), 27 independent movies, 65 contextual stories and 63 guides. The four lists contain 99 available entries. Fifteen of the 75 newly authorized Consensus tool calls have been used; 60 remain. See [the Shield and village update](docs/shield-aleutian-local-histories.md) and the [sources, attributions and licenses register](sites/sources-attributions.html).
 
