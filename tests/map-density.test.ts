@@ -38,10 +38,21 @@ import {fixture} from './fixtures';
 test('movie captions retain conflict, loss and foundation source windows',()=>{
   const record=fixture();
   record.time={...record.time,start:1640,end:1643,kind:'occurrence'};
-  const conflict={...record,overlay:{kind:'conflict' as const,basis:'documented' as const,geometry:null,precision:'named town',provenance:'fixture'}};
-  assert.match(changeCaption(conflict,1641)??'',/Conflict.*1,?640.*1,?643/);
+  const conflict={...record,title:'Battle of Cedar Crossing',overlay:{kind:'conflict' as const,basis:'documented' as const,geometry:null,precision:'named town',provenance:'fixture'}};
+  assert.match(changeCaption(conflict,1641)??'',/Battle of Cedar Crossing.*1,?640.*1,?643/);
   assert.equal(changeCaption(conflict,1644),null);
-  assert.match(changeCaption({...record,history:{kind:'wreck',claimId:'wreck'}},1641)??'',/Shipwreck/);
-  assert.match(changeCaption({...record,type:'event',history:{kind:'settlement',claimId:'foundation'}},1641)??'',/Foundation/);
+  assert.match(changeCaption({...record,title:'Seabird wreck',history:{kind:'wreck',claimId:'wreck'}},1641)??'',/Seabird wreck.*1,?640.*1,?643/);
+  assert.match(changeCaption({...record,title:'Foundation of Riverport',type:'event',history:{kind:'settlement',claimId:'foundation'}},1641)??'',/Foundation of Riverport.*1,?640.*1,?643/);
   assert.equal(changeCaption({...record,type:'occupation',time:{...record.time,kind:'interval'}},1641),null);
+});
+
+test('movie captions name dated evidence and documented endings within a bounded label',()=>{
+  const record=fixture();
+  const dated={...record,title:'Riverport pottery from the west bank and upper terrace',time:{...record.time,start:1640,end:1643,kind:'occurrence' as const}};
+  const caption=changeCaption(dated,1641)??'';
+  assert.match(caption,/^Riverport pottery.*… · 1,?640 CE–1,?643 CE$/);
+  assert.ok(caption.split(' · ')[0].length<=36);
+  const ending={...record,title:'McKean — guano camp and workings',history:{kind:'habitation' as const,claimId:'camp',endEvidence:{start:1870,end:1870,meaning:'abandoned' as const,certainty:'documented' as const,claimId:'camp',note:'The last workers left.'}}};
+  assert.match(changeCaption(ending,1870)??'',/McKean.*departure.*1,?870 CE/);
+  assert.equal(changeCaption(ending,1871),null);
 });

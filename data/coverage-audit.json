@@ -41730,16 +41730,6 @@
       "undatedLocalityCount": 0
     },
     {
-      "region": "Aleutians — west of dateline",
-      "localityCount": 3,
-      "localityIds": [
-        "al-place-4045759",
-        "al-place-4046181",
-        "al-place-4046198"
-      ],
-      "undatedLocalityCount": 0
-    },
-    {
       "region": "Falkland / southern islands",
       "localityCount": 3,
       "localityIds": [
@@ -42209,30 +42199,6 @@
       "undatedLocalityCount": 2
     },
     {
-      "region": "Aleutians — east of dateline",
-      "localityCount": 17,
-      "localityIds": [
-        "al-av-nikolski-place",
-        "al-av-pauloff-place",
-        "al-av-reese-bay-place",
-        "al-av-sandy-dunes-island-reference",
-        "al-iliuliuk-village-chart-reference",
-        "al-place-5866709",
-        "al-place-5873333",
-        "al-place-5879047",
-        "al-place-5879048",
-        "al-place-5879729",
-        "al-place-7304673",
-        "al-place-7304680",
-        "al-place-7304681",
-        "al-place-amaknak-bridge",
-        "al-place-amaknak-quarry",
-        "context-unalaska-mission-place",
-        "r10-adak-adk127"
-      ],
-      "undatedLocalityCount": 3
-    },
-    {
       "region": "Lower Ohio / Midwest",
       "localityCount": 17,
       "localityIds": [
@@ -42404,6 +42370,33 @@
         "settlement-place-san-jose-costa-rica"
       ],
       "undatedLocalityCount": 0
+    },
+    {
+      "region": "Aleutians",
+      "localityCount": 20,
+      "localityIds": [
+        "al-av-nikolski-place",
+        "al-av-pauloff-place",
+        "al-av-reese-bay-place",
+        "al-av-sandy-dunes-island-reference",
+        "al-iliuliuk-village-chart-reference",
+        "al-place-4045759",
+        "al-place-4046181",
+        "al-place-4046198",
+        "al-place-5866709",
+        "al-place-5873333",
+        "al-place-5879047",
+        "al-place-5879048",
+        "al-place-5879729",
+        "al-place-7304673",
+        "al-place-7304680",
+        "al-place-7304681",
+        "al-place-amaknak-bridge",
+        "al-place-amaknak-quarry",
+        "context-unalaska-mission-place",
+        "r10-adak-adk127"
+      ],
+      "undatedLocalityCount": 3
     },
     {
       "region": "Bolivia / Central Andes",
@@ -43407,7 +43400,7 @@
       "undatedLocalityCount": 7
     }
   ],
-  "geographicAudit": "Named U.S. state subregions are clipped to bundled 1934 state polygons when available, solely to identify modern geographic bins. No historical map boundaries are changed. The sparse ranking combines Fiji/Tonga/Samoa across the dateline and excludes Japan/Ryukyus from the requested detailed scope. The matrix retains its component rectangles for comparison.",
+  "geographicAudit": "Named U.S. state subregions are clipped to bundled 1934 state polygons when available, solely to identify modern geographic bins. No historical map boundaries are changed. The sparse ranking combines the dateline components of the Aleutians and of Fiji/Tonga/Samoa. Japan/Ryukyus falls outside the requested detailed ranking scope. The matrix retains the component rectangles for comparison.",
   "recordIds": [
     "chiquihuite-sc-c-onset",
     "white-sands-footprints",

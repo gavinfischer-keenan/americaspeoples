@@ -111,19 +111,19 @@ try{
   assert.equal((await flow(undefined,true)).shown,false);
   await page.emulateMedia({reducedMotion:'reduce'});
   assert.equal((await flow('forward',true)).shown,false);
-  for(const [kind,caption] of [['conflict','Conflict'],['wreck','Shipwreck'],['settlement','Foundation']]){
-    await page.evaluate(kind=>{
+  for(const [kind,title] of [['conflict','Battle of Cedar Crossing'],['wreck','Seabird wreck'],['settlement','Foundation of Riverport']]){
+    await page.evaluate(({kind,title})=>{
       const reference=records.find(r=>r.location&&r.type==='occupation');
-      const point={...reference,id:'change',type:'event',history:undefined,
+      const point={...reference,id:'change',title,type:'event',history:undefined,
         time:{...reference.time,kind:'occurrence',start:1640,end:1643}};
       if(kind==='conflict')point.overlay={kind,basis:'documented',geometry:{type:'Point',coordinates:[point.location.lon,point.location.lat]}};
       else point.history={kind,claimId:'event'};
       map.focusRecords([point]);map.setHighlighted([]);map.update([point],1641);mode(true);
-    },kind);
+    },{kind,title});
     const glyph=page.locator(kind==='conflict'?'.overlay-conflict.dated-change > path':kind==='wreck'?'.dated-change .wreck-symbol':'.dated-change .settlement-symbol').first();
     assert.equal(await glyph.evaluate(el=>getComputedStyle(el).stroke),'rgb(255, 242, 162)');
     const label=page.locator('.dated-change .change-caption:visible');
-    assert.match(await label.textContent(),new RegExp(caption+'.*1,?640.*1,?643'));
+    assert.match(await label.textContent(),new RegExp(title+'.*1,?640.*1,?643'));
   }
   const collision=await page.evaluate(()=>{
     const base=records.find(r=>r.type==='occupation'&&r.location);

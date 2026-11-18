@@ -15,14 +15,16 @@ const unique=(ids:string[])=>[...new Set(ids)].sort();
 const regions=before.regions.map((old:any)=>{
  const now=coverage.matrix.find((r:any)=>r.region===old.region);
  if(!now)throw new Error('Missing geographic audit row: '+old.region);
- const beforeLocalityIds=unique(old.evidence.map((e:any)=>dataset.records.find(r=>r.id===e.id)?.location?.id).filter(Boolean));
+ const beforeLocalityIds=Array.isArray(old.localityIds)&&old.localityIds.every((id:unknown)=>typeof id==='string'&&id.trim())?unique(old.localityIds):null;
+ if(!beforeLocalityIds||beforeLocalityIds.length!==old.places||beforeLocalityIds.length!==old.localityIds.length)
+  throw new Error('Baseline place count does not match frozen locality IDs: '+old.region);
  const afterLocalityIds=unique(now.periods.flatMap((p:any)=>p.localityIds));
  const recordIds=unique(now.periods.flatMap((p:any)=>[...p.localRecordIds,...p.contextRecordIds]));
  return {region:old.region,bounds:old.bounds,beforeLocalityIds,afterLocalityIds,recordIds,
   addedRecordIds:expansion.regionAssignments[old.region],
   periods:now.periods.map((p:any)=>({...p,beforeLocalityCount:old.periods.find((b:any)=>b.start===p.start&&b.end===p.end)?.count??0}))};
 });
-const method='The same ten geographic bins are compared with v0.25.0. Modern state outlines clip the named US bins; they are audit boundaries, not ancient territories. Distinct locality IDs count once across multiple phases. Public island-scale references remain island-scale. Dates measure available evidence, not the number of people or continuously occupied towns. Blank periods are collection gaps unless a source establishes a departure.';
+const method='The same ten geographic bins are compared with locality IDs frozen at v0.25.0. Modern state outlines clip the named US bins; they are audit boundaries, not ancient territories. Distinct locality IDs count once across multiple phases. Public island-scale references remain island-scale. Dates measure available evidence, not the number of people or continuously occupied towns. Blank periods are collection gaps unless a source establishes a departure.';
 const report={version:dataset.version,baselineVersion:before.version,recordCount:dataset.records.length,sharedRecordCount:coverage.recordCount,newRecordCount:additions.length,method,regions};
 writeFileSync('data/sparse-ten-coverage.json',JSON.stringify(report,null,2)+'\n');
 let text=`# Ten sparse areas: communities, connections and changing places

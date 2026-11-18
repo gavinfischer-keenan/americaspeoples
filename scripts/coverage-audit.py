@@ -128,16 +128,24 @@ summary={'reviewedAt':max((r.get('review',{}).get('reviewedAt','') for r in reco
 incoming=read('data/intake-queue-round12.json',read('data/intake-queue-round11.json',read('data/intake-queue-round10.json',{'batch':None,'items':[]})))
 summary['incomingResearch']=incoming
 summary['version']=version
-ranking=[]
+ranking_regions={
+ 'Fiji / Tonga':'Fiji / Tonga / Samoa',
+ 'Fiji / Tonga / Samoa east of dateline':'Fiji / Tonga / Samoa',
+ 'Aleutians — west of dateline':'Aleutians',
+ 'Aleutians — east of dateline':'Aleutians',
+}
+ranking_rows={}
 for row in matrix:
- if row['region'] in ['Japan / Ryukyus','Fiji / Tonga','Fiji / Tonga / Samoa east of dateline']:continue
- ids=sorted({id for p in row['periods'] for id in p['localityIds']})
- ranking.append({'region':row['region'],'localityCount':len(ids),'localityIds':ids,'undatedLocalityCount':len(row['unresolvedLocalityIds'])})
-fiji=[row for row in matrix if row['region'].startswith('Fiji / Tonga')]
-fiji_ids=sorted({id for row in fiji for p in row['periods'] for id in p['localityIds']})
-ranking.append({'region':'Fiji / Tonga / Samoa','localityCount':len(fiji_ids),'localityIds':fiji_ids,'undatedLocalityCount':len({id for row in fiji for id in row['unresolvedLocalityIds']})})
+ if row['region']=='Japan / Ryukyus':continue
+ region=ranking_regions.get(row['region'],row['region'])
+ ranking_rows.setdefault(region,[]).append(row)
+ranking=[]
+for region,components in ranking_rows.items():
+ ids=sorted({id for row in components for period in row['periods'] for id in period['localityIds']})
+ undated={id for row in components for id in row['unresolvedLocalityIds']}
+ ranking.append({'region':region,'localityCount':len(ids),'localityIds':ids,'undatedLocalityCount':len(undated)})
 summary['regionalRanking']=sorted(ranking,key=lambda row:(row['localityCount'],row['region']))
-summary['geographicAudit']='Named U.S. state subregions are clipped to bundled 1934 state polygons when available, solely to identify modern geographic bins. No historical map boundaries are changed. The sparse ranking combines Fiji/Tonga/Samoa across the dateline and excludes Japan/Ryukyus from the requested detailed scope. The matrix retains its component rectangles for comparison.'
+summary['geographicAudit']='Named U.S. state subregions are clipped to bundled 1934 state polygons when available, solely to identify modern geographic bins. No historical map boundaries are changed. The sparse ranking combines the dateline components of the Aleutians and of Fiji/Tonga/Samoa. Japan/Ryukyus falls outside the requested detailed ranking scope. The matrix retains the component rectangles for comparison.'
 summary['recordIds']=[r['id'] for r in records]
 summary['method']=summary['method'].replace('Current base, research, history and shared expansion/context records deduplicated by record ID; focused topic collections excluded.','Canonical published master-map records; focused topic IDs excluded using the same registry as the map. Standalone data fixtures use shared collection files.')
 (root/'data/coverage-audit.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n',encoding='utf8')

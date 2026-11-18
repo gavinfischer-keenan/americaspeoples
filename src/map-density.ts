@@ -60,22 +60,27 @@ export function changeCaption(record:MapRecord,year:number):string|null {
   if(ending?.inWindow){
     const evidence=record.history?.endEvidence;
     const from=evidence?.start??year,to=evidence?.end??year;
-    const kind=ending.kind==='relocated'?'Local relocation':'Local abandonment';
-    return datedCaption((ending.possible?'Possible ':'')+kind,from,to);
+    const kind=ending.kind==='relocated'?'relocation':'departure';
+    const suffix=': '+(ending.possible?'possible ':'')+kind;
+    return datedCaption(shortCaption(record.title,36-suffix.length)+suffix,from,to);
   }
   if(start===null||end===null||year<start||year>end)return null;
-  const kind=record.overlay?.kind==='conflict'?'Conflict':
-    record.overlay?.kind==='violence'?'Violence':
-    record.overlay?.kind==='forced-removal'?'Forced relocation':
-    record.history?.kind==='wreck'?'Shipwreck':
-    record.history?.kind==='visit'?'Visit':
-    record.history?.kind==='settlement'&&record.type!=='occupation'?'Foundation':
-    record.time.kind==='occurrence'?'Dated evidence':null;
-  if(!kind)return null;
+  const datedChange=record.overlay?.kind==='conflict'||record.overlay?.kind==='violence'||
+    record.overlay?.kind==='forced-removal'||record.history?.kind==='wreck'||
+    record.history?.kind==='visit'||(record.history?.kind==='settlement'&&record.type!=='occupation')||
+    record.time.kind==='occurrence';
+  if(!datedChange)return null;
   const supported=record.history?.windows?.find(window=>year>=window.start&&year<=window.end);
   if(record.history?.windows&&!supported)return null;
-  return datedCaption(kind,supported?.start??start,supported?.end??end);
+  return datedCaption(shortCaption(record.title,36),supported?.start??start,supported?.end??end);
 }
-function datedCaption(kind:string,start:number,end:number){
-  return kind+' · '+formatYear(start)+(start===end?'':'–'+formatYear(end));
+function shortCaption(title:string,limit:number){
+  const chars=[...title.trim()];
+  if(chars.length<=limit)return chars.join('');
+  const slice=chars.slice(0,limit-1).join('');
+  const wordEnd=slice.lastIndexOf(' ');
+  return (wordEnd>=limit/2?slice.slice(0,wordEnd):slice).trimEnd()+'…';
+}
+function datedCaption(label:string,start:number,end:number){
+  return label+' · '+formatYear(start)+(start===end?'':'–'+formatYear(end));
 }
