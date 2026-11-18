@@ -34,9 +34,9 @@
 
 **Interfaces:** Contributors return canonical `EvidenceRecord` proposals, existing-record changes separately, guide/page/story proposals and source audits. Root owns integration and the Consensus ledger.
 
-- [ ] Complete one whole-task Consensus Deep dossier and retain the report privately with citations intact.
-- [ ] Verify primary sources, public location support, sample/date methods, site identity and plan permissions. Audit existing 2,480 records before adding observations.
-- [ ] Establish the final supported inventory, including inland precontact continuity and Aleutian building/local settlement sequences.
+- [x] Complete one whole-task Consensus Deep dossier and retain the report privately with citations intact.
+- [x] Verify primary sources, public location support, sample/date methods, site identity and plan permissions. Audit existing 2,480 records before adding observations.
+- [x] Establish the final supported inventory, including inland precontact continuity and Aleutian building/local settlement sequences.
 
 ### Task 2: Master-map records and connected place guides
 
@@ -44,9 +44,9 @@
 
 **Interfaces:** New records remain shared (`topicOnlyIds` excludes them); new contextual stories reference canonical IDs. Canada Shield belongs under Canada; local Aleutian village guides belong under Aleutian Islands.
 
-- [ ] Add failing tests for valid shared records, parent/child guide links, active evidence in every new scene, accurate age conventions and preserved identities.
-- [ ] Integrate verified records, original narrative guides, local/contextual sequences and explained reciprocal links. Publish explicit correction history when revising existing records.
-- [ ] Generate matching terrain assets and workbook; pass focused unit/data checks.
+- [x] Add failing tests for valid shared records, parent/child guide links, active evidence in every new scene, accurate age conventions and preserved identities.
+- [x] Integrate verified records, original narrative guides, local/contextual sequences and explained reciprocal links. Publish explicit correction history when revising existing records.
+- [x] Generate matching terrain assets and workbook; pass focused unit/data checks.
 
 ### Task 3: Village plans and readable local chronology
 
@@ -54,10 +54,10 @@
 
 **Interfaces:** Plans reference canonical record IDs and source URLs. Relative layouts have no inferred geographic coordinates; a scale or north arrow appears only when the source supports it. Plan sources enter the existing source register through the associated guide's source list.
 
-- [ ] Select verified reusable plans or original factual diagrams from the source audit; record why the chosen representation matches the evidence.
-- [ ] Before adding behavior, write failing tests for record links, bounds/label validity, safe URLs, spatial qualification and chronological labels.
-- [ ] Add readable, labeled village detail near the top of each local guide; connect structures and phases to their master-map evidence.
-- [ ] Check desktop/tablet rendering and navigation, including preserved shared-world context.
+- [x] Select verified reusable plans or original factual diagrams from the source audit; record why the chosen representation matches the evidence.
+- [x] Before adding behavior, write failing tests for record links, bounds/label validity, safe URLs, spatial qualification and chronological labels.
+- [x] Add readable, labeled village detail near the top of each local guide; connect structures and phases to their master-map evidence.
+- [x] Check desktop/tablet rendering and navigation, including preserved shared-world context.
 
 ### Task 4: Review, release and deployment
 

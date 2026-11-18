@@ -24,4 +24,6 @@ Keep company charters separate from built settlements, discoveries separate from
 
 ## Research process
 
-Use the completed Deep dossier and checked original sources before making another research request. Two further Deep dossiers completed at 80 lifetime tool calls, including status calls. The user then authorized 75 additional calls; none of that new allowance has been used. The provider resets monthly, but a reset is not an automatic new spending authorization. New common historical evidence feeds the master map, focused subject material remains separate, and reciprocal evidence links preserve source-specific dates. The raw reports remain private.
+Use the completed Deep dossiers and checked original sources before making another research request. At v0.23.0, 15 of the 75 newly authorized calls have been used, including dispatch and retrieval; 60 remain. This follows the earlier conservative ledger of 80 calls. The provider resets monthly, but a reset is not an automatic new spending authorization. New common historical evidence feeds the master map, focused subject material remains separate, and reciprocal evidence links preserve source-specific dates. The raw reports remain private.
+
+The inland Shield and local Aleutian expansion is included in v0.23.0. See [the new local histories and remaining plan constraints](shield-aleutian-local-histories.md). Further work can deepen individual Shield households and community sequences, and obtain reusable Aleutian excavation plans with verified geographic control.
