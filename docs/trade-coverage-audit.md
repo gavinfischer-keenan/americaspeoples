@@ -1,6 +1,6 @@
 # Trade and exchange, 0–1200 CE
 
-The shared map now contains **36 mapped exchange observations** intersecting this period, compared with **7** in v0.23.1. These counts exclude founding migrations. They count evidence records; multiple records can describe phases or goods on one connection.
+The shared map now contains **38 mapped exchange observations** intersecting this period, compared with **7** in v0.23.1. These counts exclude founding migrations. They count evidence records; multiple records can describe phases or goods on one connection.
 
 Shared, explicitly classified exchange observations with line geometry and at least one supported activity window intersecting map years 0–1200. Founding migrations are excluded even where they use the same rendering layer. Multiple materials or dates may describe the same connection; counts are observations, not independent routes, traffic volume or evidence of continuous voyages. Samples use the same activity-window logic as the map. The point inventory also indexes explicitly reviewed exchange claims within settlement records; associated-context dates are identified separately from direct dates of traded objects.
 
@@ -11,8 +11,8 @@ Shared, explicitly classified exchange observations with line geometry and at le
 | 500 CE | 1 | 8 |
 | 750 CE | 0 | 9 |
 | 1000 CE | 2 | 15 |
-| 1150 CE | 2 | 9 |
-| 1200 CE | 3 | 10 |
+| 1150 CE | 2 | 10 |
+| 1200 CE | 3 | 12 |
 
 Source-to-find connections show where materials traveled. A schematic line does not establish a direct journey, a surveyed road or an annual trading schedule. Activity windows follow the dated assemblages or historical phases cited in each record. An endpoint means the last included evidence unless a source independently supports cessation. Later Inca imperial roads are not assigned to earlier centuries.
 
@@ -20,6 +20,8 @@ Source-to-find connections show where materials traveled. A schematic line does 
 
 ## Mapped exchange evidence
 
+- [Manra — Tutuila basalt provenance](../index.html#review/st-ki-tataga-matau-manra) — 1175–1405 CE, 2σ date of the Manra context. Material source and recovery island. This is the find-context date, which cannot date a documented sailing or a period of regular service.
+- [Tabuaeran — Eiao basalt provenance](../index.html#review/st-ki-eiao-tabuaeran) — 1050–1284 CE at 2σ, date of coconut shell associated with the adze. Material source and recovery island. This is the find-context date, which cannot date a documented sailing or a period of regular service.
 - [San Martín Jilotepeque obsidian at Terminal Preclassic Ceibal](../index.html#review/trade-meso-san-martin-ceibal) — Ceibal Terminal Preclassic, 75 BCE–200 CE. San Martín Jilotepeque accounts for 227 of 318 assigned artifacts in that period.. The latest boundary is the end of the sampled context range. Later material movement may have continued.
 - [El Chayal obsidian and blade making at Classic Ceibal](../index.html#review/trade-meso-el-chayal-ceibal) — Ceibal Classic phase evidence, 200–950 CE. This includes 51 of 64 obsidian artifacts in unmixed Early Classic deposits.. The latest boundary is the end of the sampled context range. Later material movement may have continued.
 - [Sierra de las Navajas obsidian at Teotihuacan’s Tlajinga workshop](../index.html#review/trade-meso-pachuca-teotihuacan) — Compound 17:S3E1 contexts. North patio Feature 1 twig: 238–349 cal CE. Western work surface J16 charred material: 428–599 cal CE.. The latest boundary is the end of the sampled context range. Later material movement may have continued.

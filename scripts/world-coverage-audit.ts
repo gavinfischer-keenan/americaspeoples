@@ -21,7 +21,9 @@ The current map contains **${shared.length.toLocaleString('en-US')} shared obser
 
 The preceding v0.24.0 campaign added **${additions.length} shared map records** about lower Central America, Brazil's Atlantic coast and the Solomon Islands–Vanuatu region, including three linked route views of local finds. See [the histories and source decisions](three-regional-gaps.html).
 
-The latest eastern Brazil pass adds **${easternAdded.length} shared map records**, extending the Atlantic Brazil history with villages, burials and exchange evidence from 501–1500 CE. [Read its source decisions and v0.24.0 before/after comparison](eastern-brazil.html).
+The preceding eastern Brazil pass added **${easternAdded.length} shared map records**, extending the Atlantic Brazil history with villages, burials and exchange evidence from 501–1500 CE. [Read its source decisions and v0.24.0 before/after comparison](eastern-brazil.html).
+
+The v0.26.0 campaign adds **68 shared records** across the ten sparsest target areas: western U.S. local histories, coastal Louisiana and the Gilbert, Phoenix and Line islands. [Read the named places, continuity decisions and before/after counts](sparse-ten-histories.html). The full matrix below still exposes periods that need more research.
 
 ## The preceding three-region campaign
 

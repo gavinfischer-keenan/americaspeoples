@@ -1,6 +1,6 @@
 # A readable atlas at every scale — proposed design
 
-Status: proposal for discussion, not an approved implementation or a deployed change. Audited v0.25.0, source commit d4e56c7, on 18 November 2026. No Consensus calls used; 49 remain.
+Status: approved design, implemented for v0.26.0; publication is verified separately in the release receipt. Baseline audited v0.25.0, source commit d4e56c7, on 18 November 2026. The initial design audit used no Consensus calls. The subsequent evidence campaign used four; 45 remain.
 
 The atlas has two different density problems: many places lack local history, while the places with evidence produce too many competing symbols. The shared date and interconnected world remain the foundation. Zoom changes how evidence is drawn, not which historical world the user enters.
 
@@ -21,7 +21,7 @@ Ranked by distinct dated locality IDs across all twelve existing coverage period
 | Eastern Wyoming | 1 | La Prele: mammoth-associated activity. |
 | Western Wyoming | 1 | Colby: bone-pile activity. |
 
-The 65 editorial audit rectangles have unequal sizes and overlap. Named US subregions were additionally checked against the bundled state polygons as of 1934, solely to avoid attributing neighboring places to the wrong modern named area. These polygons do not assert ancient state boundaries. Camp Fortunate's Montana location is also corroborated by the [Bureau of Reclamation](https://www.usbr.gov/gp/mtao/clarkcanyon/). Japan/Ryukyus is excluded from the detailed ranking because the user's mainland-origin policy does not call for a local-town campaign there. The two Fiji–Tonga–Samoa date-line sectors together have ten dated locality IDs; treating the western half's one locality as the whole group would create a false priority. These are analysis corrections; the production audit has not yet been changed.
+The 65 editorial audit rectangles have unequal sizes and overlap. Named US subregions were additionally checked against the bundled state polygons as of 1934, solely to avoid attributing neighboring places to the wrong modern named area. These polygons do not assert ancient state boundaries. Camp Fortunate's Montana location is also corroborated by the [Bureau of Reclamation](https://www.usbr.gov/gp/mtao/clarkcanyon/). Japan/Ryukyus is excluded from the detailed ranking because the user's mainland-origin policy does not call for a local-town campaign there. The two Fiji–Tonga–Samoa date-line sectors together have ten dated locality IDs; treating the western half's one locality as the whole group would create a false priority. These corrections are included in the v0.26.0 geographic audit.
 
 This strict low-count list is not automatically the best order for research. Three Kiribati rows should become one island-history campaign, starting with original settlement evidence and then continuity. The inland western US rows could become a coordinated Great Basin/northern Rockies campaign. Western Louisiana needs named communities rather than additional regional circles.
 
