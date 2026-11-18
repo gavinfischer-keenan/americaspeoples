@@ -118,13 +118,29 @@ try{
         time:{...reference.time,kind:'occurrence',start:1640,end:1643}};
       if(kind==='conflict')point.overlay={kind,basis:'documented',geometry:{type:'Point',coordinates:[point.location.lon,point.location.lat]}};
       else point.history={kind,claimId:'event'};
-      map.focusRecords([point]);map.update([point],1641);mode(true);
+      map.focusRecords([point]);map.setHighlighted([]);map.update([point],1641);mode(true);
     },kind);
     const glyph=page.locator(kind==='conflict'?'.overlay-conflict.dated-change > path':kind==='wreck'?'.dated-change .wreck-symbol':'.dated-change .settlement-symbol').first();
     assert.equal(await glyph.evaluate(el=>getComputedStyle(el).stroke),'rgb(255, 242, 162)');
     const label=page.locator('.dated-change .change-caption:visible');
     assert.match(await label.textContent(),new RegExp(caption+'.*1,?640.*1,?643'));
   }
+  const collision=await page.evaluate(()=>{
+    const base=records.find(r=>r.type==='occupation'&&r.location);
+    const selected={...base,id:'protected-town',history:undefined,overlay:undefined,
+      location:{...base.location,lon:-90,lat:35,name:'Selected town with a protected map label'}};
+    const event={...base,id:'adjacent-conflict',history:undefined,type:'event',location:null,
+      time:{...base.time,kind:'occurrence',start:1641,end:1641},
+      overlay:{kind:'conflict',basis:'documented',geometry:{type:'Point',coordinates:[-89,34.45]}}};
+    map.focusRegion([-90,35],7);map.update([selected,event],1641);
+    map.setHighlighted(['protected-town']);mode(true);
+    const name=map.element.querySelector('.is-highlighted .settlement-label');
+    const caption=map.element.querySelector('.change-caption');
+    const a=name.getBoundingClientRect(),b=caption.getBoundingClientRect();
+    return {overlap:a.left<b.right&&a.right>b.left&&a.top<b.bottom&&a.bottom>b.top,
+      name:getComputedStyle(name).visibility,caption:getComputedStyle(caption).visibility};
+  });
+  assert.deepEqual(collision,{overlap:true,name:'visible',caption:'hidden'});
   await page.setViewportSize({width:850,height:650});
   await page.evaluate(()=>{map.focusRegion([-95,32],1);setDate(1832);mode(true);});
   assert.equal(await page.locator('.route-flow').evaluateAll(lines=>lines.some(el=>getComputedStyle(el).animationName!=='none'&&getComputedStyle(el).display!=='none')),false);

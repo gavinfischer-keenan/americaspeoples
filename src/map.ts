@@ -331,7 +331,7 @@ export class MapView {
     const viewport=$('svg',this.element).getBoundingClientRect();
     if(!viewport.width||!viewport.height)return;
     const labels=[...this.element.querySelectorAll<SVGTextElement>('.settlement-label,.history-place-label,.route-endpoint-label text,.route-direction-label text,.community-name,.change-caption,.boundary-label')].map(label=>({label,selected:!!label.closest('.is-highlighted,.route-endpoint-label'),bounds:label.getBoundingClientRect()}));
-    const priority=(entry:typeof labels[number])=>entry.label.classList.contains('change-caption')?2:Number(entry.selected);
+    const priority=(entry:typeof labels[number])=>entry.label.classList.contains('change-caption')?1:entry.selected?2:0;
     labels.sort((a,b)=>priority(b)-priority(a));
     const placed:DOMRect[]=[...this.element.querySelectorAll('.map-controls,.map-caption,.community-glyph,.site-dot,.settlement-symbol,.wreck-symbol')].map(node=>node.getBoundingClientRect());
     let communityNames=0,changeCaptions=0;
