@@ -6,7 +6,7 @@ import {topicOnlyIds} from '../src/topic-dives';
 import {siteGuides,guideForRecord} from '../src/site-guides';
 import {stories} from '../src/stories';
 import type {EvidenceRecord} from '../src/model';
-import {historyState,historyLabel,historyDates} from '../src/history';
+import {historyState,historyLabel,historyDates,historyOpacity} from '../src/history';
 import {historyHTML} from '../src/history-review';
 import {validateRecord} from '../src/validation';
 import {activeRecords} from '../src/time';
@@ -19,7 +19,12 @@ test('separate calibrated windows do not activate intervening years on the share
  ] as const){
   const r=dataset.records.find(r=>r.id===id)!;assert.deepEqual(validateRecord(r),[]);
   for(const year of active)assert.equal(historyState(r,year),'active');
-  for(const year of gap){assert.equal(historyState(r,year),'outside');assert.deepEqual(activeRecords([r],year),[]);}
+  for(const year of gap){
+   assert.deepEqual(activeRecords([r],year),[]);
+   assert.equal(historyState(r,year),'past-place');
+   assert.ok(historyOpacity(r,year)!<historyOpacity(r,active[0])!);
+   assert.match(historyLabel(r,year),/earlier evidence.*outside its supported dating windows/i);
+  }
   assert.doesNotMatch(historyLabel(r,active[0]),/voyage|contact/);
   assert.match(historyHTML(r),/Separate supported dates/);
   for(const w of r.history!.windows!)assert.ok(historyDates([r]).includes(w.end+1));
