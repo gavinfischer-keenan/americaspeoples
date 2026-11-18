@@ -1,3 +1,5 @@
+import tradeExpansion from '../data/trade-0-1200-expansion-records.json';
+import regionalContinuity from '../data/three-regional-gaps-expansion-records.json';
 import shieldAleutianLocal from '../data/shield-aleutian-local-records.json';
 import canadaExpansion from '../data/canada-expansion-records.json';
 import aleutianExpansion from '../data/aleutian-expansion-records.json';
@@ -63,6 +65,8 @@ export function publishedDataset(
 export const dataset = publishedDataset(
   starter as Dataset,
   [
+    ...tradeExpansion.records,
+    ...regionalContinuity.records,
     ...shieldAleutianLocal.records,
     ...canadaExpansion.records, ...aleutianExpansion.records, ...research.proposals.map((p) => p.record), ...islandHistory.records,...islandChain.records,...yapMicronesia.records,
     ...sixGuides.records, ...regionalGap.records, ...comingSoonB.records, ...comingSoonBTopics.records, ...comingSoonA.records, ...comingSoonALanguages.records,

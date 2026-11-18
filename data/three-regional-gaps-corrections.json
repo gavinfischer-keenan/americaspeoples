@@ -1,0 +1,356 @@
+{
+  "updates": [
+    {
+      "targetId": "r11v-cerro-juan-diaz-diversification",
+      "beforeRecord": {
+        "id": "r11v-cerro-juan-diaz-diversification",
+        "revision": 1,
+        "type": "event",
+        "title": "Cerro Juan Díaz — increasing isotope diversity",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "cerro-juan-diaz",
+          "name": "Cerro Juan Díaz, Los Santos, Panama",
+          "lon": -80.42,
+          "lat": 7.94,
+          "precision": "Rounded named-site setting; uncertainty approximately 3–5 km, not an excavation coordinate.",
+          "provenance": "Named locality in the cited publication; generalized geographic anchor, unsuitable for navigation."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": 700,
+          "end": 700,
+          "approximate": true,
+          "original": "Increase in dietary and mobility variation by about AD 700.",
+          "method": "Published date convention retained; no new radiocarbon calibration. BCE uses astronomical year numbering (1 BCE = 0); calendar BP is referenced to 1950.",
+          "interpretation": "Evidence or activity envelope; not uninterrupted residence, a population count, or an ethnic boundary."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Cerro Juan Díaz's sampled individuals show wider diet and mobility variation after about 700 CE.",
+            "status": "under discussion",
+            "explanation": "The authors cannot determine individual social ranks. Isotope variation is not a census, exact migration route or city founding date.",
+            "support": [
+              {
+                "sourceId": "r11ns-cjd2025",
+                "locator": "Results; Conclusions",
+                "stance": "supports",
+                "note": "Checked 2026-10-29: Full original article read, Results and Conclusions; 49 sampled individuals, local isotope baseline and social-rank limitations checked."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r11ns-cjd2025",
+            "authors": "Ashley E. Sharpe; Nicole E. Smith-Guzmán; Claudia Patricia Díaz Pérez; Luis Alberto Sánchez Herrera; Diana Carvajal-Contreras; Jason Curtis; Jonathan D. Cybulski; Benoit Desjardins; Ilean Isaza-Aizpurúa; George Kamenov; Yajaira Núñez-Cortés",
+            "title": "Isotopic evidence of increased societal diversification in Pre-Columbian Panama",
+            "year": 2025,
+            "venue": "PLOS One 20(11):e0335678",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12591407/",
+            "access": "Checked 2026-10-29: Full original article read, Results and Conclusions; 49 sampled individuals, local isotope baseline and social-rank limitations checked.",
+            "referenceType": "journal-article",
+            "doi": "10.1371/journal.pone.0335678"
+          }
+        ],
+        "review": {
+          "summary": "Cerro Juan Díaz's sampled individuals show wider diet and mobility variation after about 700 CE.",
+          "limitations": "The authors cannot determine individual social ranks. Isotope variation is not a census, exact migration route or city founding date.",
+          "discussion": "Material traditions, genetic ancestry, languages and political identities require separate evidence. No resident estimate or territorial boundary is inferred.",
+          "provenance": "Round11 private literature intake checked against accessed original publications or official investigator accounts. Raw reports remain private.",
+          "reviewedAt": "2026-10-29",
+          "history": [
+            "2026-10-29: Original-source review with access and inference limits."
+          ],
+          "relatedIds": []
+        }
+      },
+      "reason": "Corrects the generalized site-area reference with a published field reference and primary location map. Replaces generic review wording with the documented river setting, isotope limits and later Operation 5 context.",
+      "record": {
+        "id": "r11v-cerro-juan-diaz-diversification",
+        "revision": 2,
+        "type": "event",
+        "title": "Cerro Juan Díaz — increasing isotope diversity",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": {
+          "id": "cerro-juan-diaz",
+          "name": "Cerro Juan Díaz, Los Santos, Panama",
+          "lon": -80.4,
+          "lat": 7.96,
+          "precision": "Rounded site-area reference for the hill on the La Villa River, approximately 1–2 km.",
+          "provenance": "Mayo Torné 2004 dissertation, Operation 8, 7°57′42″ N, 80°24′14″ W. General setting independently checked against Sharpe et al. 2025 Fig. 1. https://es.scribd.com/document/455613855/2004-TESIS-Mayo-Torne-Julia-Del-Carmen-Industria-Preshispanica-de-Conchas-Marinas-en-Gran-Cocle-Panama-pdf https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0335678"
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": 700,
+          "end": 700,
+          "approximate": true,
+          "original": "Increase in dietary and mobility variation by about AD 700.",
+          "method": "Published date convention retained; no new radiocarbon calibration. BCE uses astronomical year numbering (1 BCE = 0); calendar BP is referenced to 1950.",
+          "interpretation": "The authors identify a shift around 700 CE in the variation among sampled individuals, within a much longer history of activity at the site."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Cerro Juan Díaz's sampled individuals show wider diet and mobility variation after about 700 CE.",
+            "status": "under discussion",
+            "explanation": "The authors cannot determine individual social ranks. Isotope variation is not a census, exact migration route or city founding date.",
+            "support": [
+              {
+                "sourceId": "r11ns-cjd2025",
+                "locator": "Results; Discussion; Conclusions",
+                "stance": "supports",
+                "note": "The authors compare 49 sampled individuals and their context across ceramic phases."
+              },
+              {
+                "sourceId": "lca-src-cjd-late",
+                "locator": "§3.1–3.2, tables 1–2",
+                "stance": "context",
+                "note": "Later burials in an activity area add separate evidence for how people reused one part of the settlement."
+              },
+              {
+                "sourceId": "lca-src-cjd-mayo-thesis",
+                "locator": "Operation 8, geographic setting",
+                "stance": "context",
+                "note": "Provides a published coordinate for the hillside, generalized here for the site area."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r11ns-cjd2025",
+            "authors": "Ashley E. Sharpe; Nicole E. Smith-Guzmán; Claudia Patricia Díaz Pérez; Luis Alberto Sánchez Herrera; Diana Carvajal-Contreras; Jason Curtis; Jonathan D. Cybulski; Benoit Desjardins; Ilean Isaza-Aizpurúa; George Kamenov; Yajaira Núñez-Cortés",
+            "title": "Isotopic evidence of increased societal diversification in Pre-Columbian Panama",
+            "year": 2025,
+            "venue": "PLOS One 20(11):e0335678",
+            "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0335678",
+            "access": "Open publisher article, Figure 1, Results, Discussion and S2 Fig checked.",
+            "referenceType": "journal-article",
+            "doi": "10.1371/journal.pone.0335678"
+          },
+          {
+            "id": "lca-src-cjd-late",
+            "authors": "Nicole E. Smith-Guzmán, Benoit Desjardins, and Veronica Pace",
+            "year": 2026,
+            "title": "Insights into Late Ceramic Period lived experiences in Greater Coclé via human burials at Operation 5, Cerro Juan Díaz, Panamá",
+            "venue": "World Archaeology",
+            "url": "https://www.academia.edu/146188998/Insights_into_Late_Ceramic_Period_lived_experiences_in_Greater_Cocl%C3%A9_via_human_burials_at_Operation_5_Cerro_Juan_D%C3%ADaz_Panam%C3%A1",
+            "access": "Full article copy, field context, Fig. 1, and AMS Table 1 checked.",
+            "referenceType": "journal-article",
+            "doi": "10.1080/00438243.2025.2599278"
+          },
+          {
+            "id": "lca-src-cjd-mayo-thesis",
+            "authors": "Julia del Carmen Mayo Torné",
+            "year": 2004,
+            "title": "La industria prehispánica de conchas marinas en Gran Coclé, Panamá",
+            "venue": "Universidad Complutense de Madrid doctoral dissertation",
+            "url": "https://es.scribd.com/document/455613855/2004-TESIS-Mayo-Torne-Julia-Del-Carmen-Industria-Preshispanica-de-Conchas-Marinas-en-Gran-Cocle-Panama-pdf",
+            "access": "Dissertation text includes a valid coordinate for the Operation 8 area. Published regional and site maps independently confirm the La Villa River setting.",
+            "referenceType": "thesis",
+            "publisher": "Universidad Complutense de Madrid"
+          }
+        ],
+        "review": {
+          "summary": "Over the long history of Cerro Juan Díaz, chemical signatures in bones and teeth record changing foods and movement. Around 700 CE, the diets and mobility histories of the people sampled began to vary more widely.",
+          "limitations": "The results are from 49 sampled individuals. Isotopes reflect combinations of foods and local geology, which limit assignments of individual origins and ranks.",
+          "discussion": "The village occupied land on both banks of the La Villa River near Parita Bay. Food waste includes freshwater and marine resources, while excavated areas preserve buildings, workshops and burials. The study found additional age- and sex-associated differences by 1150 CE. Operation 5 offers a separate record of burials over a former building floor during that later period.",
+          "provenance": "The existing isotope observation is retained and updated using the open publisher article and separate excavations at the same place.",
+          "reviewedAt": "2026-11-17",
+          "history": [
+            "2026-10-29: Original-source review with access and inference limits.",
+            "2026-11-17: Updated the site-area coordinate from published field documentation and linked later mortuary evidence."
+          ],
+          "relatedIds": [
+            "lca-cerro-juan-diaz-later-house-floor"
+          ]
+        }
+      }
+    },
+    {
+      "targetId": "vx-taumako",
+      "beforeRecord": {
+        "id": "vx-taumako",
+        "revision": 1,
+        "type": "event",
+        "title": "Taumako - mixed injuries and weapon trauma",
+        "culture": {
+          "id": "violence-evidence-contexts",
+          "name": "Historical and archaeological violence contexts - see evidence",
+          "kind": "unknown",
+          "color": "#dc7b81"
+        },
+        "location": {
+          "id": "vx-taumako-place",
+          "name": "Taumako, Duff Islands",
+          "lon": 167.3,
+          "lat": -9.9,
+          "precision": "Approximate geographic anchor, uncertainty about 15 km; not an exact grave, battlefield boundary or surveyed incident site.",
+          "provenance": "Editorial geographic approximation of the named place or region in the supporting source. The marker does not assign every person or injury to one exact coordinate."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "interval",
+          "start": 1530,
+          "end": 1698,
+          "approximate": true,
+          "original": "Cemetery sample CE 1530-1698.",
+          "method": "Source chronology preserved; BCE uses astronomical year 1 minus BCE and calibrated BP uses 1950 minus BP. Unplaced dates are left null.",
+          "interpretation": "A historical event, archaeological context or sample envelope as identified in the claim; a broad range does not imply continuous violence."
+        },
+        "overlay": {
+          "kind": "violence",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              167.3,
+              -9.9
+            ]
+          },
+          "precision": "Point is an approximate regional anchor with about 15 km geographic uncertainty; no victim distribution inferred.",
+          "provenance": "Named context from the cited source; geometry is an editorial orientation marker, not surveyed forensic mapping."
+        },
+        "claims": [
+          {
+            "id": "violence-evidence",
+            "text": "Taumako skeletal evidence includes healed trauma and a small number of piercing or sharp-force injuries relevant to interpersonal violence.",
+            "status": "well-supported",
+            "explanation": "The sample spans many burials, not one massacre or continuous warfare. Injury type does not identify an attacker, and healed injuries cannot be equated with homicide.",
+            "support": [
+              {
+                "sourceId": "source-1",
+                "locator": "Abstract: Taumako chronology and trauma comparison",
+                "stance": "supports",
+                "note": "Supports the stated context and evidence; interpretations, uncertainty and approximate geography are kept explicit."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "source-1",
+            "authors": "Rachel M. Scott and Hallie R. Buckley",
+            "title": "Biocultural interpretations of trauma in two prehistoric Pacific Island populations from Papua New Guinea and the Solomon Islands",
+            "year": 2010,
+            "venue": "American Journal of Physical Anthropology",
+            "url": "https://doi.org/10.1002/ajpa.21250",
+            "access": "Institutional or primary publication text and relevant dated passages inspected 2026-11-15."
+          }
+        ],
+        "review": {
+          "summary": "Taumako skeletal evidence includes healed trauma and a small number of piercing or sharp-force injuries relevant to interpersonal violence.",
+          "limitations": "The sample spans many burials, not one massacre or continuous warfare. Injury type does not identify an attacker, and healed injuries cannot be equated with homicide.",
+          "discussion": "Cause, perpetrators and severity are not generalized beyond this evidence. Cemetery sample CE 1530-1698.",
+          "provenance": "Independently checked from primary or institutional sources on 2026-11-15; research reports used as leads and preserved unchanged.",
+          "reviewedAt": "2026-11-15",
+          "history": [
+            "Added with explicit distinctions among trauma, killing, conflict and contextual uncertainty."
+          ],
+          "relatedIds": []
+        }
+      },
+      "record": {
+        "id": "vx-taumako",
+        "revision": 2,
+        "type": "event",
+        "title": "Taumako - mixed injuries and weapon trauma",
+        "culture": {
+          "id": "violence-evidence-contexts",
+          "name": "Historical and archaeological violence contexts - see evidence",
+          "kind": "unknown",
+          "color": "#dc7b81"
+        },
+        "location": {
+          "id": "vx-taumako-place",
+          "name": "Taumako, Duff Islands",
+          "lon": 167.18,
+          "lat": -9.87,
+          "precision": "Island-scale reference for the named archaeological localities. Cemetery coordinates are generalized.",
+          "provenance": "GeoNames feature 2102724 (CC BY 4.0), rounded. https://www.geonames.org/2102724/ — Hermann et al. 2023, Figure 1D shows the field locations."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "interval",
+          "start": 1530,
+          "end": 1698,
+          "approximate": true,
+          "original": "Cemetery sample CE 1530-1698.",
+          "method": "Source chronology preserved; BCE uses astronomical year 1 minus BCE and calibrated BP uses 1950 minus BP. Unplaced dates are left null.",
+          "interpretation": "A historical event, archaeological context or sample envelope as identified in the claim; a broad range does not imply continuous violence."
+        },
+        "overlay": {
+          "kind": "violence",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              167.18,
+              -9.87
+            ]
+          },
+          "precision": "Rounded island-scale point for Taumako. The cemetery and individual finds are generalized.",
+          "provenance": "GeoNames feature 2102724 (CC BY 4.0), rounded. https://www.geonames.org/2102724/ — Hermann et al. 2023, Figure 1D shows the field locations."
+        },
+        "claims": [
+          {
+            "id": "violence-evidence",
+            "text": "Taumako skeletal evidence includes healed trauma and a small number of piercing or sharp-force injuries relevant to interpersonal violence.",
+            "status": "well-supported",
+            "explanation": "The sample spans many burials, not one massacre or continuous warfare. Injury type does not identify an attacker, and healed injuries cannot be equated with homicide.",
+            "support": [
+              {
+                "sourceId": "source-1",
+                "locator": "Abstract: Taumako chronology and trauma comparison",
+                "stance": "supports",
+                "note": "Supports the stated context and evidence; interpretations, uncertainty and approximate geography are kept explicit."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "source-1",
+            "authors": "Rachel M. Scott and Hallie R. Buckley",
+            "title": "Biocultural interpretations of trauma in two prehistoric Pacific Island populations from Papua New Guinea and the Solomon Islands",
+            "year": 2010,
+            "venue": "American Journal of Physical Anthropology",
+            "url": "https://doi.org/10.1002/ajpa.21250",
+            "access": "Institutional or primary publication text and relevant dated passages inspected 2026-11-15."
+          }
+        ],
+        "review": {
+          "summary": "Taumako skeletal evidence includes healed trauma and a small number of piercing or sharp-force injuries relevant to interpersonal violence.",
+          "limitations": "The sample spans many burials, not one massacre or continuous warfare. Injury type does not identify an attacker, and healed injuries cannot be equated with homicide.",
+          "discussion": "Cause, perpetrators and severity are not generalized beyond this evidence. Cemetery sample CE 1530-1698.",
+          "provenance": "Independently checked from primary or institutional sources on 2026-11-15; research reports used as leads and preserved unchanged.",
+          "reviewedAt": "2026-11-17",
+          "history": [
+            "Added with explicit distinctions among trauma, killing, conflict and contextual uncertainty.",
+            "2026-11-17: Updated the island reference to the public GeoNames locality, using the established place ID."
+          ],
+          "relatedIds": []
+        }
+      },
+      "reason": "The original 167.3° E anchor falls offshore. Use the public Taumako Island reference at GeoNames 2102724, rounded to 167.18° E, 9.87° S. The marker represents the island and keeps the cemetery generalized."
+    }
+  ]
+}

@@ -46,7 +46,7 @@ export function historyLabel(record: MapRecord, year: number): string {
     h = record.history;
   const context=contextDateMeaning(record);
   if(context&&state!=='outside')return `${state==='active'?'Period context':'Earlier period context'} · ${context}`;
-  if(h?.kind==='attestation'&&state!=='outside')return `${state==='active'?'Evidence at its source date':'Earlier evidence'} · ${record.time.original}. This marker does not establish continuous presence or a first arrival.`;
+  if(h?.kind==='attestation'&&!h.windows&&state!=='outside')return `${state==='active'?'Evidence at its source date':'Earlier evidence'} · ${record.time.original}. This marker does not establish continuous presence or a first arrival.`;
   if(h?.kind==='visit'&&state!=='outside')return `${state==='active'?'Dated':'Historical'} visit · ${h.eventDate||record.time.original}. This visit marker does not establish settlement or continued presence afterward.`;
   if (h?.endEvidence && state !== 'outside' && year >= h.endEvidence.start) {
     const e=h.endEvidence, range=e.start===e.end?formatYear(e.start):`${formatYear(e.start)}–${formatYear(e.end)}`;
@@ -75,6 +75,9 @@ export function historyLabel(record: MapRecord, year: number): string {
     return `Earlier occupation evidence ends ${formatYear(record.time.end!)}. Later occupation is unknown in this record; this does not establish abandonment.`;
   if (h?.windows) {
     const w = h.windows.find((w) => year >= w.start && year <= w.end);
+    if(h.kind==='attestation')return w
+      ? `Possible date for this evidence · ${formatYear(w.start)}–${formatYear(w.end)}. ${w.note}`
+      : 'This year is outside the supported date ranges for this evidence.';
     return w
       ? `${w.certainty === "approximate" ? "Approximate activity window" : "Documented activity period"} · ${formatYear(w.start)}–${formatYear(w.end)}. ${w.note} Animation does not measure voyage frequency.`
       : "No supported activity window at this year; this does not prove that all contact stopped.";
@@ -213,8 +216,8 @@ export function validateHistory(r: EvidenceRecord): string[] {
     errors.push(
       "Route history requires a mapped trade LineString event with forward or both directions.",
     );
-  if (h.windows !== undefined && !["migration", "exchange"].includes(h.kind))
-    errors.push("Activity windows apply only to route history.");
+  if (h.windows !== undefined && !["migration", "exchange", "attestation"].includes(h.kind))
+    errors.push("Supported windows apply only to routes or dated evidence.");
   if (h.windows !== undefined) {
     if (
       !Array.isArray(h.windows) ||

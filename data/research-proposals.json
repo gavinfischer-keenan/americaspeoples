@@ -41101,67 +41101,79 @@
       "baseRecord": null,
       "record": {
         "id": "tikopia-mccoy2020-tongan-glass",
-        "revision": 3,
+        "revision": 4,
         "type": "event",
-        "title": "Tikopia: later Tongan volcanic-glass imports",
+        "title": "Northern Tongan volcanic glass at Tikopia",
         "culture": {
-          "id": "unknown",
-          "name": "Unknown attribution",
+          "id": "sv-tikopia",
+          "name": "Tikopian communities",
           "kind": "unknown",
-          "color": "#9babb5"
+          "color": "#527f97"
         },
-        "location": null,
-        "destination": null,
+        "location": {
+          "id": "tp-place-north-tonga-glass",
+          "name": "Northern Tonga volcanic-glass source region",
+          "lon": -173.77,
+          "lat": -15.96,
+          "precision": "Regional reference at Niuatoputapu. The data do not name a specific source island or outcrop.",
+          "provenance": "GeoNames public Niuatoputapu island reference, https://www.geonames.org/search.html?country=TO&q=&startRow=0. McCoy et al. discuss the broader northern Tongan source region."
+        },
+        "destination": {
+          "id": "sv-place-tikopia",
+          "name": "Tikopia, Solomon Islands",
+          "lon": 168.83,
+          "lat": -12.29,
+          "precision": "Island-scale reference. Individual excavation units are named in the evidence.",
+          "provenance": "GeoNames feature 2178465 (CC BY 4.0), rounded. https://www.geonames.org/2178465/ — Swift et al. 2021, Figure 1 identifies the Sinapupu area and excavation zones."
+        },
         "routeKind": "schematic",
         "time": {
-          "kind": "occurrence",
-          "start": 1185,
-          "end": 1185,
+          "kind": "interval",
+          "start": 1158,
+          "end": 1212,
           "approximate": true,
-          "original": "Tongan imports begin 765 cal yr BP (±54 years).",
-          "method": "Published calibrated/calendar chronology; 1950 minus cal BP or 1 minus BCE, with approximate occurrence semantics.",
-          "interpretation": "Approximate reported onset; ±54 is preserved without reinterpreting its uncertainty level."
+          "original": "Published approximate import onset 765 cal BP (±54); independent modeled Tuakamali phase onset 1158–1212 cal CE (95% HPD).",
+          "method": "The authors associate the three pieces with Tuakamali contexts at TK-1 and TK-35. The line uses the radiocarbon-based onset of that phase as an approximate anchor for the earliest possible exchange evidence.",
+          "interpretation": "The window marks uncertainty around the emergence of Tongan-source imports. The precise arrival of each piece and the end of contact are unknown."
+        },
+        "overlay": {
+          "kind": "trade",
+          "basis": "schematic",
+          "direction": "forward",
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -173.77,
+                -15.96
+              ],
+              [
+                168.83,
+                -12.29
+              ]
+            ]
+          },
+          "precision": "The line connects generalized source and find references. It represents the direction of material movement.",
+          "provenance": "Endpoints follow the locations above. The material connection is documented by Mark D. McCoy, Caroline Cervera, Mara A. Mulrooney, Andrew McAlister and Patrick V. Kirch."
         },
         "claims": [
           {
-            "id": "tikopia-import",
-            "text": "Geochemical work identifies later Tongan volcanic-glass imports to Tikopia beginning around 765 cal BP.",
+            "id": "material-connection",
+            "text": "Three volcanic-glass pieces from the Tuakamali phase on Tikopia match Tongan reference material. The source study places them in excavated deposits and identifies northern Tonga as the likely source region.",
             "status": "well-supported",
-            "explanation": "The claim follows the scope of the cited analysis; archaeological, genetic and linguistic associations are not treated as equivalent identities.",
+            "explanation": "Available analyses cannot select a Tongan island or outcrop. The glass does not independently establish when particular people arrived or the kind of political relationship they had.",
             "support": [
               {
                 "sourceId": "mccoy2020-tikopia",
-                "locator": "Abstract",
-                "stance": "supports",
-                "note": "Later Polynesian imports are reported as rare."
-              }
-            ]
-          },
-          {
-            "id": "tikopia-politics",
-            "text": "The authors propose that this limited later contact could relate to Tongan political expansion.",
-            "status": "under discussion",
-            "explanation": "Strong Polynesian linguistic influence does not require frequent material imports or a unique political mechanism.",
-            "support": [
+                "locator": "Results, Tables 1–3 and Figs. 4–5; Discussion and Conclusions",
+                "note": "Distinguishes three Tongan pieces from Banks glass and Admiralty obsidian and gives the approximate phase chronology.",
+                "stance": "supports"
+              },
               {
-                "sourceId": "mccoy2020-tikopia",
-                "locator": "Abstract",
-                "stance": "supports",
-                "note": "Political targeting is an interpretation, not directly measured by glass chemistry."
-              }
-            ]
-          },
-          {
-            "id": "round6-object-movement",
-            "text": "Tongan-source glass at Tikopia establishes material movement; political expansion remains an interpretation.",
-            "status": "under discussion",
-            "explanation": "Rare imports do not determine frequency, direction or social purpose of all journeys.",
-            "support": [
-              {
-                "sourceId": "mccoy2020-tikopia",
-                "stance": "context",
-                "locator": "Round6 source reconciliation",
-                "note": "Rare imports do not determine frequency, direction or social purpose of all journeys."
+                "sourceId": "sv-ref-tikopia-kirch-swift",
+                "locator": "pp. 332–333 and Table 4 α5",
+                "note": "Dating model places the onset of the Early Tuakamali Phase at 1158–1212 CE.",
+                "stance": "supports"
               }
             ]
           }
@@ -41174,35 +41186,56 @@
             "year": 2020,
             "venue": "Quaternary Research 98:49–57",
             "url": "https://www.cambridge.org/core/journals/quaternary-research/article/abs/obsidian-and-volcanic-glass-artifact-evidence-for-longdistance-voyaging-to-the-polynesian-outlier-island-of-tikopia/AC03C1980EA60297CF18E84CAC32FA9D",
-            "access": "Publisher abstract read; detailed artifact table not accessed.",
+            "access": "Author-posted full paper checked, especially Results by time period, Tables 1–3 and Figure 5. Original symposium hypotheses are treated separately from geochemical matches.",
             "referenceType": "journal-article",
             "doi": "10.1017/qua.2020.38"
+          },
+          {
+            "id": "sv-ref-tikopia-kirch-swift",
+            "authors": "Patrick V. Kirch and Jillian A. Swift",
+            "year": 2017,
+            "title": "New AMS radiocarbon dates and a re-evaluation of the cultural sequence of Tikopia Island, southeast Solomon Islands",
+            "venue": "Journal of the Polynesian Society 126(3):313–336",
+            "url": "https://doi.org/10.15286/jps.126.3.313-336",
+            "access": "Author-posted full paper checked, including modeled boundary discussion and sample-context descriptions.",
+            "referenceType": "journal-article",
+            "doi": "10.15286/jps.126.3.313-336"
           }
         ],
+        "history": {
+          "kind": "exchange",
+          "claimId": "material-connection",
+          "windows": [
+            {
+              "start": 1158,
+              "end": 1212,
+              "certainty": "approximate",
+              "note": "The modeled transition to the find-bearing Tuakamali phase provides an approximate earliest evidence context. The individual glass pieces are not dated to this whole window."
+            }
+          ],
+          "connection": {
+            "evidence": "Three pXRF matches in stratified TK-1 and TK-35 deposits, linked to a modeled period boundary.",
+            "lastEvidence": 1212,
+            "cessation": "unknown",
+            "note": "The window marks uncertainty around the emergence of Tongan-source imports. The precise arrival of each piece and the end of contact are unknown.",
+            "claimId": "material-connection"
+          }
+        },
         "review": {
-          "summary": "Chemical analysis identifies Tongan volcanic glass reaching Tikopia from around 765 calibrated years before 1950, with stated dating uncertainty. A connection with Tongan political expansion is proposed, but transported material alone does not establish political control.",
-          "limitations": "Map placement is a schematic anchor for Tikopia, southeastern Solomon Islands, not a verified site coordinate. No resident population estimate, fixed ethnic identity or exact voyage route is inferred. Access limits are recorded for each source.",
-          "discussion": "Different evidence types address different questions; model results do not become direct observations of an arrival or language boundary.",
-          "provenance": "Reviewed against primary material from three overlapping Pacific-origins exports and one Fiji export; canonical Hawaiʻi chronology/network records belong to the coordinated reviewer. Full author-supplied synthesis archive: docs/intake/index.html. Original synthesis is secondary provenance, not a substitute for the cited primary study.",
-          "reviewedAt": "2026-11-16",
+          "summary": "Three volcanic-glass pieces from the Tuakamali phase on Tikopia match Tongan reference material. The source study places them in excavated deposits and identifies northern Tonga as the likely source region.",
+          "limitations": "Available analyses cannot select a Tongan island or outcrop. The glass does not independently establish when particular people arrived or the kind of political relationship they had.",
+          "discussion": "Most analyzed volcanic glass on Tikopia came from the Banks Islands. The rarer Tongan glass adds evidence of a different connection in deposits associated with changes in tools and ornament. McCoy and colleagues proposed a link to Tongan political expansion, which remains an interpretation.",
+          "provenance": "Original account following the cited archaeological evidence and documented geographic references.",
+          "reviewedAt": "2026-11-17",
           "history": [
             "2026-10-29: round6 source and interpretation context added.",
-            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes."
+            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes.",
+            "2026-11-17: Added dated source-to-find mapping after reviewing the cited evidence."
           ],
-          "relatedIds": []
-        },
-        "overlay": {
-          "kind": "trade",
-          "basis": "schematic",
-          "geometry": {
-            "type": "Point",
-            "coordinates": [
-              168.8,
-              -12.3
-            ]
-          },
-          "precision": "Rounded anchor for Tikopia, southeastern Solomon Islands; not an exact site, territorial limit or statistical confidence area.",
-          "provenance": "The cited source establishes Tikopia, southeastern Solomon Islands as the relevant geography. Coordinates are editorial schematic placement under the user's authorization for fuzzy named regions; no exact archaeological position is claimed."
+          "relatedIds": [
+            "sv-tikopia-tuakamali",
+            "trade-pacific-banks-tikopia-obsidian"
+          ]
         }
       },
       "rationale": "Author-supplied literature intake with primary source/access checks.",
@@ -88421,7 +88454,7 @@
       "baseRecord": null,
       "record": {
         "id": "r11v-cerro-juan-diaz-diversification",
-        "revision": 1,
+        "revision": 2,
         "type": "event",
         "title": "Cerro Juan Díaz — increasing isotope diversity",
         "culture": {
@@ -88433,10 +88466,10 @@
         "location": {
           "id": "cerro-juan-diaz",
           "name": "Cerro Juan Díaz, Los Santos, Panama",
-          "lon": -80.42,
-          "lat": 7.94,
-          "precision": "Rounded named-site setting; uncertainty approximately 3–5 km, not an excavation coordinate.",
-          "provenance": "Named locality in the cited publication; generalized geographic anchor, unsuitable for navigation."
+          "lon": -80.4,
+          "lat": 7.96,
+          "precision": "Rounded site-area reference for the hill on the La Villa River, approximately 1–2 km.",
+          "provenance": "Mayo Torné 2004 dissertation, Operation 8, 7°57′42″ N, 80°24′14″ W. General setting independently checked against Sharpe et al. 2025 Fig. 1. https://es.scribd.com/document/455613855/2004-TESIS-Mayo-Torne-Julia-Del-Carmen-Industria-Preshispanica-de-Conchas-Marinas-en-Gran-Cocle-Panama-pdf https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0335678"
         },
         "destination": null,
         "routeKind": "schematic",
@@ -88447,7 +88480,7 @@
           "approximate": true,
           "original": "Increase in dietary and mobility variation by about AD 700.",
           "method": "Published date convention retained; no new radiocarbon calibration. BCE uses astronomical year numbering (1 BCE = 0); calendar BP is referenced to 1950.",
-          "interpretation": "Evidence or activity envelope; not uninterrupted residence, a population count, or an ethnic boundary."
+          "interpretation": "The authors identify a shift around 700 CE in the variation among sampled individuals, within a much longer history of activity at the site."
         },
         "claims": [
           {
@@ -88458,9 +88491,21 @@
             "support": [
               {
                 "sourceId": "r11ns-cjd2025",
-                "locator": "Results; Conclusions",
+                "locator": "Results; Discussion; Conclusions",
                 "stance": "supports",
-                "note": "Checked 2026-10-29: Full original article read, Results and Conclusions; 49 sampled individuals, local isotope baseline and social-rank limitations checked."
+                "note": "The authors compare 49 sampled individuals and their context across ceramic phases."
+              },
+              {
+                "sourceId": "lca-src-cjd-late",
+                "locator": "§3.1–3.2, tables 1–2",
+                "stance": "context",
+                "note": "Later burials in an activity area add separate evidence for how people reused one part of the settlement."
+              },
+              {
+                "sourceId": "lca-src-cjd-mayo-thesis",
+                "locator": "Operation 8, geographic setting",
+                "stance": "context",
+                "note": "Provides a published coordinate for the hillside, generalized here for the site area."
               }
             ]
           }
@@ -88472,22 +88517,47 @@
             "title": "Isotopic evidence of increased societal diversification in Pre-Columbian Panama",
             "year": 2025,
             "venue": "PLOS One 20(11):e0335678",
-            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12591407/",
-            "access": "Checked 2026-10-29: Full original article read, Results and Conclusions; 49 sampled individuals, local isotope baseline and social-rank limitations checked.",
+            "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0335678",
+            "access": "Open publisher article, Figure 1, Results, Discussion and S2 Fig checked.",
             "referenceType": "journal-article",
             "doi": "10.1371/journal.pone.0335678"
+          },
+          {
+            "id": "lca-src-cjd-late",
+            "authors": "Nicole E. Smith-Guzmán, Benoit Desjardins, and Veronica Pace",
+            "year": 2026,
+            "title": "Insights into Late Ceramic Period lived experiences in Greater Coclé via human burials at Operation 5, Cerro Juan Díaz, Panamá",
+            "venue": "World Archaeology",
+            "url": "https://www.academia.edu/146188998/Insights_into_Late_Ceramic_Period_lived_experiences_in_Greater_Cocl%C3%A9_via_human_burials_at_Operation_5_Cerro_Juan_D%C3%ADaz_Panam%C3%A1",
+            "access": "Full article copy, field context, Fig. 1, and AMS Table 1 checked.",
+            "referenceType": "journal-article",
+            "doi": "10.1080/00438243.2025.2599278"
+          },
+          {
+            "id": "lca-src-cjd-mayo-thesis",
+            "authors": "Julia del Carmen Mayo Torné",
+            "year": 2004,
+            "title": "La industria prehispánica de conchas marinas en Gran Coclé, Panamá",
+            "venue": "Universidad Complutense de Madrid doctoral dissertation",
+            "url": "https://es.scribd.com/document/455613855/2004-TESIS-Mayo-Torne-Julia-Del-Carmen-Industria-Preshispanica-de-Conchas-Marinas-en-Gran-Cocle-Panama-pdf",
+            "access": "Dissertation text includes a valid coordinate for the Operation 8 area. Published regional and site maps independently confirm the La Villa River setting.",
+            "referenceType": "thesis",
+            "publisher": "Universidad Complutense de Madrid"
           }
         ],
         "review": {
-          "summary": "Cerro Juan Díaz's sampled individuals show wider diet and mobility variation after about 700 CE.",
-          "limitations": "The authors cannot determine individual social ranks. Isotope variation is not a census, exact migration route or city founding date.",
-          "discussion": "Material traditions, genetic ancestry, languages and political identities require separate evidence. No resident estimate or territorial boundary is inferred.",
-          "provenance": "Round11 private literature intake checked against accessed original publications or official investigator accounts. Raw reports remain private.",
-          "reviewedAt": "2026-10-29",
+          "summary": "Over the long history of Cerro Juan Díaz, chemical signatures in bones and teeth record changing foods and movement. Around 700 CE, the diets and mobility histories of the people sampled began to vary more widely.",
+          "limitations": "The results are from 49 sampled individuals. Isotopes reflect combinations of foods and local geology, which limit assignments of individual origins and ranks.",
+          "discussion": "The village occupied land on both banks of the La Villa River near Parita Bay. Food waste includes freshwater and marine resources, while excavated areas preserve buildings, workshops and burials. The study found additional age- and sex-associated differences by 1150 CE. Operation 5 offers a separate record of burials over a former building floor during that later period.",
+          "provenance": "The existing isotope observation is retained and updated using the open publisher article and separate excavations at the same place.",
+          "reviewedAt": "2026-11-17",
           "history": [
-            "2026-10-29: Original-source review with access and inference limits."
+            "2026-10-29: Original-source review with access and inference limits.",
+            "2026-11-17: Updated the site-area coordinate from published field documentation and linked later mortuary evidence."
           ],
-          "relatedIds": []
+          "relatedIds": [
+            "lca-cerro-juan-diaz-later-house-floor"
+          ]
         }
       },
       "rationale": "Round11 original-source finding with explicit chronology, geography and access limits.",

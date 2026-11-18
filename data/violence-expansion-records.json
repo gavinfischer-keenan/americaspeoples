@@ -581,7 +581,7 @@
     },
     {
       "id": "vx-taumako",
-      "revision": 1,
+      "revision": 2,
       "type": "event",
       "title": "Taumako - mixed injuries and weapon trauma",
       "culture": {
@@ -593,10 +593,10 @@
       "location": {
         "id": "vx-taumako-place",
         "name": "Taumako, Duff Islands",
-        "lon": 167.3,
-        "lat": -9.9,
-        "precision": "Approximate geographic anchor, uncertainty about 15 km; not an exact grave, battlefield boundary or surveyed incident site.",
-        "provenance": "Editorial geographic approximation of the named place or region in the supporting source. The marker does not assign every person or injury to one exact coordinate."
+        "lon": 167.18,
+        "lat": -9.87,
+        "precision": "Island-scale reference for the named archaeological localities. Cemetery coordinates are generalized.",
+        "provenance": "GeoNames feature 2102724 (CC BY 4.0), rounded. https://www.geonames.org/2102724/ — Hermann et al. 2023, Figure 1D shows the field locations."
       },
       "destination": null,
       "routeKind": "schematic",
@@ -615,12 +615,12 @@
         "geometry": {
           "type": "Point",
           "coordinates": [
-            167.3,
-            -9.9
+            167.18,
+            -9.87
           ]
         },
-        "precision": "Point is an approximate regional anchor with about 15 km geographic uncertainty; no victim distribution inferred.",
-        "provenance": "Named context from the cited source; geometry is an editorial orientation marker, not surveyed forensic mapping."
+        "precision": "Rounded island-scale point for Taumako. The cemetery and individual finds are generalized.",
+        "provenance": "GeoNames feature 2102724 (CC BY 4.0), rounded. https://www.geonames.org/2102724/ — Hermann et al. 2023, Figure 1D shows the field locations."
       },
       "claims": [
         {
@@ -654,9 +654,10 @@
         "limitations": "The sample spans many burials, not one massacre or continuous warfare. Injury type does not identify an attacker, and healed injuries cannot be equated with homicide.",
         "discussion": "Cause, perpetrators and severity are not generalized beyond this evidence. Cemetery sample CE 1530-1698.",
         "provenance": "Independently checked from primary or institutional sources on 2026-11-15; research reports used as leads and preserved unchanged.",
-        "reviewedAt": "2026-11-15",
+        "reviewedAt": "2026-11-17",
         "history": [
-          "Added with explicit distinctions among trauma, killing, conflict and contextual uncertainty."
+          "Added with explicit distinctions among trauma, killing, conflict and contextual uncertainty.",
+          "2026-11-17: Updated the island reference to the public GeoNames locality, using the established place ID."
         ],
         "relatedIds": []
       }

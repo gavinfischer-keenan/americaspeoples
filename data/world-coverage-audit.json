@@ -1,7 +1,7 @@
 {
-  "version": "0.20.0",
-  "recordCount": 2317,
-  "sharedRecordCount": 2247,
+  "version": "0.24.0",
+  "recordCount": 2612,
+  "sharedRecordCount": 2539,
   "method": "Shared dated locality/point observations in overlapping rectangular regions; connections with named origin points count at that origin, while route-only and focused topic records are excluded. Intersecting source windows count, not historical-memory display. Counts are evidence records, not towns, populations, continuous occupancy or research effort. Empty cells are not classified as human absence. Undated records remain separate.",
   "matrix": [
     {
@@ -13,10 +13,11 @@
         72
       ],
       "undatedIds": [
+        "al-anangula-village-bluff",
+        "al-chaluka-stone-house",
         "northwest-cui-maternal-continuity",
         "alaska-natael-pleistocene-context",
         "northwest-lesnek-deglaciation",
-        "r10v-amaknak-bridge-architecture",
         "r10v-margaret-bay-stone-houses",
         "r10v-nak3-dil161-marine-resources"
       ],
@@ -44,6 +45,9 @@
           "start": -10000,
           "end": -3001,
           "recordIds": [
+            "canada-yukon-composite-dart",
+            "al-anangula-blades",
+            "al-amaknak-quarry-later",
             "usr1-genomic-sample",
             "northwest-lindo-regional-lineage",
             "alaska-doering-climate-counterpoint",
@@ -62,10 +66,16 @@
           "start": -3000,
           "end": -1,
           "recordIds": [
+            "al-amaknak-s7-west-charcoal",
+            "al-amaknak-pack-ice-fauna",
+            "al-sandy-dunes-early",
+            "al-sandy-dunes-village",
+            "al-chaluka-community",
             "alaska-tyys-ancestry",
             "alaska-tremayne-demography",
             "alaska-doering-climate-counterpoint",
             "alaska-krusenstern-environment",
+            "r10v-amaknak-bridge-architecture",
             "r10v-chaluka-paleo-burial",
             "r12v-amaknak-s2-floor",
             "r12v-amaknak-s5-floor",
@@ -77,6 +87,8 @@
           "start": 0,
           "end": 999,
           "recordIds": [
+            "al-pauloff-ancestral-houses",
+            "al-chaluka-community",
             "alaska-doering-climate-counterpoint",
             "alaska-krusenstern-environment"
           ]
@@ -85,6 +97,7 @@
           "start": 1000,
           "end": 1491,
           "recordIds": [
+            "al-chaluka-community",
             "thule-eastward-chronology-model",
             "alaska-espenberg-transition",
             "alaska-doering-climate-counterpoint",
@@ -98,6 +111,7 @@
           "start": 1492,
           "end": 1699,
           "recordIds": [
+            "al-chaluka-community",
             "alaska-doering-climate-counterpoint",
             "alaska-krusenstern-environment"
           ]
@@ -106,6 +120,11 @@
           "start": 1700,
           "end": 1799,
           "recordIds": [
+            "al-reese-bay-longhouse-2",
+            "al-chaluka-community",
+            "al-sanak-conflict-1771",
+            "al-garden-cove-1786",
+            "al-pribilof-forced-labour",
             "alaska-doering-climate-counterpoint",
             "alaska-krusenstern-environment",
             "ai-colony-49",
@@ -118,6 +137,28 @@
           "start": 1800,
           "end": 1934,
           "recordIds": [
+            "al-reese-bay-longhouse-2",
+            "al-iliuliuk-harbor-survey",
+            "al-nikolski-chapel-1806",
+            "al-nikolski-chapel-1828",
+            "al-nikolski-church-1930",
+            "al-nikolski-sheep-ranch-1926",
+            "al-pauloff-cod-station",
+            "canada-sgang-gwaay-houses",
+            "canada-mcpherson-post-1840",
+            "canada-selkirk-1852",
+            "canada-reliance-post-1874",
+            "canada-moosehide-move-1897",
+            "canada-chooutla-1911",
+            "canada-aklavik-1912",
+            "al-chaluka-community",
+            "al-sanak-relocation-1823",
+            "al-unalaska-church-1826",
+            "al-unalaska-church-1858",
+            "al-sanak-post-1873",
+            "al-akutan-trading-1878",
+            "al-unalaska-church-1894",
+            "al-akutan-whaling-1912",
             "alaska-doering-climate-counterpoint",
             "alaska-krusenstern-environment",
             "ai-colony-49",
@@ -155,6 +196,7 @@
           "start": -3000,
           "end": -1,
           "recordIds": [
+            "canada-rivendell-hazen",
             "gap-sermermiut-dorset",
             "north-kitsissut"
           ]
@@ -171,6 +213,7 @@
           "start": 1000,
           "end": 1491,
           "recordIds": [
+            "canada-qaummaarviit-houses",
             "iqaluktuuq-late-dorset",
             "r8v-pingiqqalik-adaptation",
             "gap-quaqtaq-dorset",
@@ -183,6 +226,7 @@
           "start": 1492,
           "end": 1699,
           "recordIds": [
+            "canada-qaummaarviit-houses",
             "r8v-pingiqqalik-adaptation",
             "north-somerset",
             "north-tuktut"
@@ -192,6 +236,8 @@
           "start": 1700,
           "end": 1799,
           "recordIds": [
+            "canada-qaummaarviit-houses",
+            "canada-kugluk-1771",
             "r8v-pingiqqalik-adaptation",
             "ai-colony-46"
           ]
@@ -200,6 +246,16 @@
           "start": 1800,
           "end": 1934,
           "recordIds": [
+            "canada-shield-fort-resolution",
+            "canada-shield-old-fort-reliance",
+            "canada-shield-fort-resolution-treaty",
+            "canada-fort-providence-treaty11",
+            "canada-qaummaarviit-houses",
+            "canada-kekerten-buildings-1857",
+            "canada-blacklead-mission-1894",
+            "canada-arviat-post-1921",
+            "canada-pond-inlet-trial-1923",
+            "canada-dundas-post-1924",
             "r8v-pingiqqalik-adaptation",
             "ai-colony-46"
           ]
@@ -256,6 +312,7 @@
           "start": 0,
           "end": 999,
           "recordIds": [
+            "canada-keatley-village",
             "r9v-nw-harrison-growth",
             "gap-palmrose-early",
             "gap-palmrose-rebuilding",
@@ -266,6 +323,7 @@
           "start": 1000,
           "end": 1491,
           "recordIds": [
+            "canada-keatley-village",
             "r9v-nw-harrison-population-model"
           ]
         },
@@ -288,6 +346,10 @@
           "start": 1800,
           "end": 1934,
           "recordIds": [
+            "canada-langley-1827",
+            "canada-quesnel-chiefs-1864",
+            "canada-alert-bay-school-1894",
+            "canada-mimkwamlis-potlatch-1921",
             "visit-lewis-clark-pacific-1804-1806-5",
             "visit-lewis-clark-pacific-1804-1806-6"
           ]
@@ -387,6 +449,7 @@
           "start": 0,
           "end": 999,
           "recordIds": [
+            "trade-am-zuni-chaco-beams",
             "mesa-verde-settlement",
             "chaco-regional-center",
             "sw-chumash-sampled-continuity",
@@ -441,6 +504,8 @@
           "start": 1000,
           "end": 1491,
           "recordIds": [
+            "trade-am-zuni-chaco-beams",
+            "trade-am-chuska-plaza-tree",
             "mesa-verde-settlement",
             "chaco-regional-center",
             "sw-chumash-sampled-continuity",
@@ -706,6 +771,8 @@
         52
       ],
       "undatedIds": [
+        "canada-shield-wanipigow-early",
+        "canada-shield-bloodvein",
         "fc-chaco-woodland-causation",
         "fc-petrifiedforest-dispersal",
         "fc-bonito-isotope-origins",
@@ -734,12 +801,15 @@
         {
           "start": -10000,
           "end": -3001,
-          "recordIds": []
+          "recordIds": [
+            "canada-atkinson-processing"
+          ]
         },
         {
           "start": -3000,
           "end": -1,
           "recordIds": [
+            "canada-shield-long-rapids-laurel",
             "fc-chaco-early-maize-pollen"
           ]
         },
@@ -747,6 +817,9 @@
           "start": 0,
           "end": 999,
           "recordIds": [
+            "trade-am-zuni-chaco-beams",
+            "canada-shield-long-rapids-laurel",
+            "canada-shield-wanipigow-pottery",
             "mesa-verde-settlement",
             "chaco-regional-center",
             "sw-sancarlos-earlyformative",
@@ -794,6 +867,12 @@
           "start": 1000,
           "end": 1491,
           "recordIds": [
+            "trade-am-zuni-chaco-beams",
+            "trade-am-chuska-plaza-tree",
+            "canada-shield-long-rapids-laurel",
+            "canada-shield-wanipigow-pottery",
+            "canada-lockport-horticulture",
+            "canada-olson-horticulture",
             "mesa-verde-settlement",
             "chaco-regional-center",
             "sw-bylas-social-reorganization",
@@ -936,6 +1015,8 @@
           "start": 1492,
           "end": 1699,
           "recordIds": [
+            "canada-shield-wanipigow-pottery",
+            "canada-olson-horticulture",
             "pueblo-revolt1680",
             "ai-colony-13",
             "ai-colony-43",
@@ -968,6 +1049,11 @@
           "start": 1800,
           "end": 1934,
           "recordIds": [
+            "canada-shield-northwest-angle-treaty",
+            "canada-shield-long-rapids-homesteads",
+            "canada-seven-oaks-1816",
+            "canada-treaty1-1871",
+            "canada-lebret-school-1884",
             "removal-bosque-confinement-1864-1868",
             "removal-dine-return-1868",
             "epidemic-mandan1837",
@@ -1044,6 +1130,12 @@
         53
       ],
       "undatedIds": [
+        "canada-shield-mashteuiatsh-hearth",
+        "canada-shield-whitefish-lake",
+        "canada-shield-waapushukamikw",
+        "canada-shield-ashuanipi",
+        "canada-east-augustine-threshold",
+        "greatlakes-cummins-context",
         "atlantic-lanse-amour-burial-context",
         "atlantic-cowpath-context",
         "atlantic-cowpath-east-context",
@@ -1091,6 +1183,8 @@
           "start": -10000,
           "end": -3001,
           "recordIds": [
+            "canada-shield-renshaw-copper",
+            "canada-east-mnjikaning-early",
             "greatlakes-fulton-growth",
             "greatlakes-ricelake-eh1",
             "greatlakes-ricelake-eh2",
@@ -1119,6 +1213,7 @@
           "start": -3000,
           "end": -1,
           "recordIds": [
+            "canada-east-serpent-mounds",
             "phillips-garden-dorset",
             "greatlakes-fulton-growth",
             "greatlakes-fulton-maize-introduction",
@@ -1129,6 +1224,8 @@
           "start": 0,
           "end": 999,
           "recordIds": [
+            "trade-am-superior-mound-city",
+            "canada-east-serpent-mounds",
             "phillips-garden-dorset",
             "mound-city-hopewell",
             "greatlakes-fulton-maize-introduction",
@@ -1149,6 +1246,8 @@
           "recordIds": [
             "lanse-1021",
             "cahokia-urban",
+            "canada-east-mcdonald-village",
+            "canada-east-droulers-village",
             "greatlakes-fulton-maize-agriculture",
             "northeast-sipp-ii",
             "r9v-sw-orendorf-trauma",
@@ -1173,6 +1272,16 @@
           "start": 1492,
           "end": 1699,
           "recordIds": [
+            "canada-shield-metabetchouane",
+            "canada-east-mantle-dated",
+            "canada-east-saint-louis-1649",
+            "canada-east-droulers-village",
+            "canada-east-mailhot-curran",
+            "canada-east-caprouge-1541",
+            "canada-east-tadoussac-1603",
+            "canada-east-wendake-1697",
+            "canada-east-red-bay-whaling",
+            "canada-east-port-royal-1605",
             "greatlakes-fulton-maize-agriculture",
             "northeast-sipp-ii",
             "ai-colony-15",
@@ -1210,6 +1319,14 @@
           "end": 1799,
           "recordIds": [
             "river-labbe-mission",
+            "canada-shield-obadjiwan",
+            "canada-east-great-peace-1701",
+            "canada-east-odanak-1759",
+            "canada-east-halifax-1749",
+            "canada-east-halifax-treaty-1752",
+            "canada-east-beausejour-1755",
+            "canada-east-grand-pre-1755",
+            "canada-east-skmaqn-1758",
             "acadian-deportation-boston1755",
             "ai-colony-15",
             "ai-colony-17",
@@ -1245,6 +1362,17 @@
           "start": 1800,
           "end": 1934,
           "recordIds": [
+            "canada-shield-obadjiwan",
+            "canada-shield-osnaburgh-treaty",
+            "canada-shield-pelican-lake-school",
+            "canada-shield-lac-seul-flood",
+            "canada-east-fort-william",
+            "canada-east-robinson-huron",
+            "canada-east-shingwauk-1875",
+            "canada-east-williams-rama",
+            "canada-east-kitigan-zibi-1853",
+            "canada-east-mashteuiatsh-1856",
+            "canada-east-shubenacadie-1930",
             "removal-ira-1934",
             "ai-colony-15",
             "ai-colony-17",
@@ -1429,6 +1557,7 @@
           "start": 0,
           "end": 999,
           "recordIds": [
+            "trade-am-appalachian-mound-city",
             "la-morgan-coles-creek",
             "la-lafourche-landscape",
             "arkansas-wapanocca-landuse",
@@ -1454,6 +1583,7 @@
           "start": 1000,
           "end": 1491,
           "recordIds": [
+            "trade-am-mitchell-cypress",
             "se-floridakeys-revised-chronology",
             "se-king-modeled-onset",
             "la-grand-caillou",
@@ -1879,6 +2009,7 @@
           "start": -3000,
           "end": -1,
           "recordIds": [
+            "trade-meso-san-martin-ceibal",
             "south-tikal-corriental-sediments",
             "central-honduras-exchange1100",
             "central-sanisidro-monuments",
@@ -1913,6 +2044,13 @@
           "start": 0,
           "end": 999,
           "recordIds": [
+            "trade-meso-san-martin-ceibal",
+            "trade-meso-el-chayal-ceibal",
+            "trade-meso-pachuca-teotihuacan",
+            "trade-meso-pachuca-tikal",
+            "trade-meso-pachuca-el-coyote",
+            "trade-meso-ixtepeque-tiguilotada",
+            "trade-meso-motagua-playa-grande",
             "south-tikal-corriental-sediments",
             "south-teotihuacan-urban-development",
             "south-copan-classic-urban-phase",
@@ -1945,6 +2083,7 @@
             "d18-meso-cop-stairway-first",
             "d18-meso-cop-stairway-later",
             "d18-meso-cop-postroyal-activity",
+            "history-mesoamerica-chaco-macaws",
             "settlement-cholula-habitation",
             "vx-witzna",
             "vx-cancuen",
@@ -1982,6 +2121,10 @@
           "start": 1000,
           "end": 1491,
           "recordIds": [
+            "trade-meso-pachuca-el-coyote",
+            "trade-meso-ixtepeque-tiguilotada",
+            "trade-meso-motagua-playa-grande",
+            "trade-am-cacao-pueblo-bonito",
             "south-overlay-templomayor-obsidian",
             "central-elcoyote-late-phase",
             "empire-tenochtitlan-population",
@@ -1999,6 +2142,7 @@
             "d18-meso-monte-tomb7-reuse",
             "d18-meso-cal-chiiknahb-final",
             "d18-meso-cop-postroyal-activity",
+            "history-mesoamerica-chaco-macaws",
             "settlement-cholula-habitation",
             "settlement-tenochtitlan-habitation",
             "settlement-tzintzuntzan-habitation",
@@ -2187,6 +2331,9 @@
           "start": -3000,
           "end": -1,
           "recordIds": [
+            "trade-meso-san-martin-ceibal",
+            "lca-cerro-mangote-burial",
+            "lca-las-mercedes-early-pottery",
             "south-tikal-corriental-sediments",
             "central-honduras-exchange1100",
             "central-sanisidro-monuments",
@@ -2209,6 +2356,23 @@
           "start": 0,
           "end": 999,
           "recordIds": [
+            "trade-meso-san-martin-ceibal",
+            "trade-meso-el-chayal-ceibal",
+            "trade-meso-ixtepeque-tiguilotada",
+            "trade-meso-guinope-tiguilotada",
+            "trade-meso-diquis-drago",
+            "trade-meso-motagua-playa-grande",
+            "lca-sitio-sierra-river-food",
+            "lca-barriles-bajo-postholes",
+            "lca-el-silencio-early-deposit",
+            "lca-lomas-entierros-households",
+            "lca-sitio-conte-burial-11",
+            "lca-el-cano-tomb-7",
+            "lca-batambal-hilltop",
+            "lca-grijalba-mounds",
+            "lca-guayabo-monumental-works",
+            "lca-sitio-drago-coastal-village",
+            "lca-sitio-sierra-later-burials",
             "south-tikal-corriental-sediments",
             "south-copan-classic-urban-phase",
             "south-overlay-tikal-entrada-378",
@@ -2254,6 +2418,20 @@
           "start": 1000,
           "end": 1491,
           "recordIds": [
+            "trade-meso-ixtepeque-tiguilotada",
+            "trade-meso-guinope-tiguilotada",
+            "trade-meso-diquis-drago",
+            "trade-meso-motagua-playa-grande",
+            "trade-am-cacao-pueblo-bonito",
+            "lca-lomas-entierros-households",
+            "lca-batambal-hilltop",
+            "lca-grijalba-mounds",
+            "lca-guayabo-monumental-works",
+            "lca-sitio-drago-coastal-village",
+            "lca-sitio-sierra-later-burials",
+            "lca-las-mercedes-building",
+            "lca-finca-6-ramp",
+            "lca-cerro-juan-diaz-later-house-floor",
             "central-elcoyote-late-phase",
             "empire-comparative-maya-aggregation",
             "jm-paradise-wes15a",
@@ -2282,6 +2460,8 @@
           "start": 1492,
           "end": 1699,
           "recordIds": [
+            "lca-batambal-hilltop",
+            "lca-grijalba-mounds",
             "jm-bluefields-mollusk-change",
             "jm-white-marl-settlement",
             "jm-white-marl-plant-diet",
@@ -2390,6 +2570,7 @@
           "start": -3000,
           "end": -1,
           "recordIds": [
+            "lca-las-mercedes-early-pottery",
             "cuba-canimar-older-cemetery",
             "cuba-playa-mango-m2-cemetery",
             "cuba-playa-mango-m2-domestic",
@@ -2406,6 +2587,9 @@
           "start": 0,
           "end": 999,
           "recordIds": [
+            "lca-lomas-entierros-households",
+            "lca-guayabo-monumental-works",
+            "lca-sitio-drago-coastal-village",
             "south-tibes-monserrate-deposit",
             "caribbean-grenada-ceramicsettlement",
             "cuba-canimar-younger-cemetery",
@@ -2432,6 +2616,10 @@
           "start": 1000,
           "end": 1491,
           "recordIds": [
+            "lca-lomas-entierros-households",
+            "lca-guayabo-monumental-works",
+            "lca-sitio-drago-coastal-village",
+            "lca-las-mercedes-building",
             "se-floridakeys-revised-chronology",
             "caribbean-windward-identityformation",
             "cuba-canimar-younger-cemetery",
@@ -2632,6 +2820,7 @@
           "start": -3000,
           "end": -1,
           "recordIds": [
+            "lca-cerro-mangote-burial",
             "aruba-canashito-burial",
             "r11v-cotocollao-early",
             "r11v-cotocollao-late",
@@ -2645,6 +2834,10 @@
           "start": 0,
           "end": 999,
           "recordIds": [
+            "lca-sitio-sierra-river-food",
+            "lca-sitio-conte-burial-11",
+            "lca-el-cano-tomb-7",
+            "lca-sitio-sierra-later-burials",
             "caribbean-grenada-ceramicsettlement",
             "aruba-malmok-complex",
             "aruba-spaans-lagoen-6-burial",
@@ -2668,6 +2861,8 @@
           "start": 1000,
           "end": 1491,
           "recordIds": [
+            "lca-sitio-sierra-later-burials",
+            "lca-cerro-juan-diaz-later-house-floor",
             "caribbean-windward-identityformation",
             "empire-chamical-onset",
             "bonaire-amboina-settlement",
@@ -2871,6 +3066,11 @@
           "start": 0,
           "end": 999,
           "recordIds": [
+            "trade-am-quispisisa-corralones",
+            "trade-am-alca-quilcapampa",
+            "trade-am-quispisisa-quilcapampa",
+            "trade-am-spondylus-khoa",
+            "trade-am-charana-omo",
             "south-tiwanaku-planned-city",
             "r9v-inca-akawillay-early-sector",
             "r11v-upano-network",
@@ -2910,6 +3110,7 @@
           "start": 1000,
           "end": 1491,
           "recordIds": [
+            "trade-am-charana-omo",
             "south-chanchan-chimu-apogee",
             "south-machupicchu-ams-occupation",
             "empire-chamical-onset",
@@ -3122,6 +3323,7 @@
           "start": 0,
           "end": 999,
           "recordIds": [
+            "trade-am-alca-quilcapampa",
             "r9v-inca-akawillay-early-sector",
             "r11v-casarabe-network",
             "r11v-cotoca-centre",
@@ -3265,12 +3467,25 @@
         {
           "start": -10000,
           "end": -3001,
-          "recordIds": []
+          "recordIds": [
+            "atl-br-caipora-basal",
+            "atl-br-piacaguera-burials",
+            "atl-br-beirada-lagoon",
+            "atl-br-encantada-built-mound"
+          ]
         },
         {
           "start": -3000,
           "end": -1,
           "recordIds": [
+            "atl-br-beirada-lagoon",
+            "atl-br-encantada-built-mound",
+            "atl-br-morro-whale-bone",
+            "atl-br-morro-diet",
+            "atl-br-cabecuda-early-deposits",
+            "atl-br-amourins-platform",
+            "atl-br-jabuticabeira-shell",
+            "atl-br-sernambetiba-deposits",
             "tupi-guarani-onset",
             "r11v-tarioba-chronology"
           ]
@@ -3279,6 +3494,12 @@
           "start": 0,
           "end": 999,
           "recordIds": [
+            "atl-br-cabecuda-late-burial",
+            "atl-br-jabuticabeira-shell",
+            "atl-br-jabuticabeira-fish",
+            "atl-br-icara-funerary",
+            "atl-br-lagoa-freitas-early",
+            "atl-br-sernambetiba-deposits",
             "gap-galheta-site"
           ]
         },
@@ -3286,6 +3507,8 @@
           "start": 1000,
           "end": 1491,
           "recordIds": [
+            "atl-br-lagoa-freitas-late",
+            "atl-br-riacho-ceramics",
             "gap-galheta-site"
           ]
         },
@@ -3293,6 +3516,7 @@
           "start": 1492,
           "end": 1699,
           "recordIds": [
+            "atl-br-lagoa-freitas-late",
             "r8v-paulistaware-african-diaspora",
             "ai-colony-06",
             "ai-colony-26",
@@ -3361,7 +3585,6 @@
         "cerro-casa-piedra-hunting-change",
         "chorrillo-malo-2-early",
         "r5-argentina-central-lineage",
-        "r5-falklands-visits",
         "r8v-central-argentina-ancestry",
         "r8v-patagonia-continuity",
         "r11v-aconquija-feature-survey",
@@ -3429,6 +3652,7 @@
           "recordIds": [
             "empire-mendoza-onset",
             "bano-nuevo-1-shell-transport",
+            "r5-falklands-visits",
             "r12v-ranchillos-start",
             "r12v-tambillos-start",
             "r12v-tambillitos-start",
@@ -3466,6 +3690,11 @@
             "bano-nuevo-1-shell-transport",
             "ai-colony-10",
             "ai-colony-11",
+            "islands-port-louis-1764",
+            "islands-port-egmont-1766",
+            "islands-puerto-soledad-1767",
+            "islands-egmont-1770",
+            "islands-egmont-1774",
             "regional-negrete-1793",
             "interior-san-fernando-1750",
             "interior-san-fernando-asuncion-1763",
@@ -3482,6 +3711,10 @@
             "ultima-esperanza-historic-skeleton-later",
             "ai-colony-10",
             "ai-colony-11",
+            "islands-soledad-1811",
+            "islands-vernet-1826",
+            "islands-lexington-1831",
+            "islands-stanley-1843",
             "regional-sewell-1905",
             "visit-beagle-1831-1836-5",
             "visit-beagle-1831-1836-6",
@@ -3538,6 +3771,7 @@
           "start": -3000,
           "end": -1,
           "recordIds": [
+            "trade-pacific-peats-macdonald",
             "px-jiigurru-pottery",
             "px-budj-bim-living-landscape",
             "vx-narrabeen"
@@ -3547,6 +3781,7 @@
           "start": 0,
           "end": 999,
           "recordIds": [
+            "trade-pacific-peats-macdonald",
             "early-nimowa-first",
             "px-jiigurru-pottery",
             "px-budj-bim-living-landscape"
@@ -3556,6 +3791,9 @@
           "start": 1000,
           "end": 1491,
           "recordIds": [
+            "trade-pacific-peats-macdonald",
+            "island-agila-settlement",
+            "island-agila-later",
             "d19-budj-f10-walls",
             "d19-budj-f30-dam",
             "early-nimowa-later",
@@ -3567,6 +3805,9 @@
           "start": 1492,
           "end": 1699,
           "recordIds": [
+            "trade-pacific-peats-macdonald",
+            "island-kupang-1653",
+            "island-agila-later",
             "d19-budj-f30-dam",
             "early-nimowa-later",
             "px-budj-bim-living-landscape"
@@ -3576,6 +3817,7 @@
           "start": 1700,
           "end": 1799,
           "recordIds": [
+            "trade-pacific-peats-macdonald",
             "regional-sydney-1788",
             "history-pandora-1791",
             "px-budj-bim-living-landscape",
@@ -3743,6 +3985,7 @@
           "start": -50000,
           "end": -10001,
           "recordIds": [
+            "island-buang-merabak-early",
             "px-new-guinea-highlands",
             "context-mololo-early",
             "au-gabarnmang-onset"
@@ -3752,6 +3995,7 @@
           "start": -10000,
           "end": -3001,
           "recordIds": [
+            "island-waim-crafts",
             "early-kuk-phase1",
             "px-kuk-mounds",
             "px-jiigurru-early"
@@ -3761,8 +4005,15 @@
           "start": -3000,
           "end": -1,
           "recordIds": [
+            "sv-nenumbo-horticulture",
+            "sv-matantas-late-lapita",
+            "sv-mafilau-erueti",
+            "sv-lakao-village",
+            "sv-tikopia-sinapupu",
+            "sv-malua-bay-fill",
             "mololo-cave-tentative-early-association",
             "vanuatu-teouma-dated-individuals",
+            "island-waim-crafts",
             "d19-lapita-kamgot-early",
             "d19-lapita-kamgot-later",
             "early-kuk-phase4",
@@ -3782,6 +4033,13 @@
           "start": 0,
           "end": 999,
           "recordIds": [
+            "trade-pacific-banks-tikopia-obsidian",
+            "sv-lakao-village",
+            "sv-tikopia-sinapupu",
+            "sv-malua-bay-fill",
+            "sv-pangpang-melarip",
+            "sv-lamen-ceramics",
+            "sv-ivanaud-gardens",
             "early-kuk-phase4",
             "early-nimowa-first",
             "px-jiigurru-pottery",
@@ -3792,7 +4050,20 @@
           "start": 1000,
           "end": 1491,
           "recordIds": [
-            "tikopia-mccoy2020-tongan-glass",
+            "trade-pacific-banks-tikopia-obsidian",
+            "sv-lakao-village",
+            "sv-tikopia-sinapupu",
+            "sv-ivanaud-gardens",
+            "sv-tikopia-tuakamali",
+            "sv-bao-faced-shrine",
+            "sv-chachara-nasara",
+            "sv-kahula-adzes",
+            "sv-sikopo-obsidian",
+            "sv-mangaas-residence",
+            "trade-pacific-kutau-sikopo-1319",
+            "island-motupore-pottery",
+            "island-agila-settlement",
+            "island-agila-later",
             "early-kuk-phase5",
             "early-nimowa-later",
             "vx-nebira",
@@ -3803,6 +4074,13 @@
           "start": 1492,
           "end": 1699,
           "recordIds": [
+            "sv-mangaas-residence",
+            "sv-namu-mobility",
+            "sv-nusa-roviana-fort",
+            "sv-emae-vanua-lava-glass",
+            "trade-pacific-vanua-lava-emae-1565",
+            "island-motupore-pottery",
+            "island-agila-later",
             "early-kuk-phase5",
             "early-uripiv-later",
             "early-nimowa-later",
@@ -3815,6 +4093,7 @@
           "start": 1700,
           "end": 1799,
           "recordIds": [
+            "sv-namu-mobility",
             "early-kuk-phase6",
             "early-uripiv-later",
             "history-pandora-1791",
@@ -3827,6 +4106,10 @@
           "start": 1800,
           "end": 1934,
           "recordIds": [
+            "sv-namu-mobility",
+            "island-moresby-1873",
+            "island-rabaul-wharf-1910",
+            "island-kabakaul-1914",
             "regional-milingimbi-1923",
             "early-kuk-phase6",
             "early-kuk-kawelka-departure",
@@ -3878,6 +4161,7 @@
           "start": 0,
           "end": 999,
           "recordIds": [
+            "trade-pacific-tataga-aganoa",
             "pacific-sear2020-atiu",
             "pacific-sear2020-drought",
             "r6-cook-drought-early",
@@ -3888,6 +4172,8 @@
           "start": 1000,
           "end": 1491,
           "recordIds": [
+            "trade-pacific-tataga-aganoa",
+            "trade-pacific-tutuila-kahula-1296",
             "pacific-wilmshurst2011-chronology",
             "pacific-sear2020-atiu",
             "pacific-sear2020-drought",
@@ -3895,6 +4181,7 @@
             "pacific-faahia2019-basal-dates",
             "pacific-ioannidis2020-nativeamerican-contact",
             "rapanui-moreno2024-admixture",
+            "tikopia-mccoy2020-tongan-glass",
             "moorea-gs1-colonisation",
             "moorea-scmf5-colonisation",
             "r6-ureia",

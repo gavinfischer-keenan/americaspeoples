@@ -19,13 +19,13 @@ import { marked } from "marked";
 import { createAppendix, renderAppendix } from "./appendix";
 import { buildSiteGuides } from "./site-guide-build";
 const { version } = JSON.parse(await readFile("package.json", "utf8"));
-const d = JSON.parse(await readFile("data/evidence.json", "utf8"));
 const research = JSON.parse(
   await readFile("data/research-proposals.json", "utf8"),
 );
-const history = JSON.parse(await readFile("data/history-records.json", "utf8"));
-const expansion=(await Promise.all([...['canada','aleutian','island-chain','yap-micronesia','island-history','six-guide','coming-soon-b','coming-soon-a','early-continuity','interior-frontier','regional-gap','world-gap','australasia-archaeology','settlement','mission','pacific','violence','voyage','transport','atlantic','local-places','shared-context','hawaii-local','city','conflict','northern'].map(name=>`data/${name}-expansion-records.json`),'data/shield-aleutian-local-records.json','data/coming-soon-b-topic-evidence-records.json','data/coming-soon-a-topic-evidence-records.json','data/topic-evidence-records.json','data/pacific-topic-evidence-records.json','data/pacific-topic-context-records.json','data/community-topic-evidence-records.json','data/community-topic-context-records.json','data/sovereignty-topic-evidence-records.json','data/sovereignty-topic-context-records.json','data/remaining-topic-context-records.json','data/remaining-topic-evidence-records.json'].map(async name=>JSON.parse(await readFile(name,'utf8')).records))).flat();
-const appendix = createAppendix({...d,license:published.license,records:[...d.records,...history.records,...expansion]}, research, version);
+// Keep the appendix in sync with the map as collections are added. The research
+// proposals retain their own attribution category without being included twice.
+const proposalIds=new Set(research.proposals.map((p:{record:{id:string}})=>p.record.id));
+const appendix = createAppendix({...published,records:published.records.filter(r=>!proposalIds.has(r.id))}, research, version);
 const errors = validateDataset(published);
 if (errors.length) throw new Error(errors.join("\n"));
 await import("./workbook-tables");
@@ -104,6 +104,7 @@ for(const [from,to] of [
  ["docs/hosted-architecture.md","docs/hosted-architecture.md"],
  ["data/coverage-audit.json","coverage-audit.json"],
  ["data/world-coverage-audit.json","world-coverage-audit.json"],
+ ["data/trade-coverage-audit.json","trade-coverage-audit.json"],
  ["data/topic-context-audit.json","topic-context-audit.json"],
  ["data/temporal-review-2026-10-29.json","temporal-review.json"],
  ["data/round8-synthesis.json","round8-synthesis.json"],
@@ -144,6 +145,8 @@ for (const name of [
   "docs/remaining-topic-dives.md",
   "docs/australasia-archaeology.md",
   "docs/world-coverage-audit.md",
+  "docs/three-regional-gaps.md",
+  "docs/trade-coverage-audit.md",
   "docs/regional-gap-evidence.md",
   "docs/interior-frontiers.md",
   "docs/early-continuity.md",
@@ -182,13 +185,13 @@ for (const name of [
   await copyFile(name, `dist/${name}`);
   names.push(name);
 }
-for (const document of ["shield-aleutian-local-histories", "canada-aleutians", "island-networks", "island-history-evidence", "map-marker-audit", "guide-reuse", "bulk-import-guide", "history-update", "ui-redesign", "reuse-and-contributing", "atlas-expansion", "cities-conflicts-topic-dives", "cities-conflicts-coverage", "pacific-topic-dives", "community-topic-dives", "land-sovereignty-dives", "remaining-topic-dives", "australasia-archaeology", "world-coverage-audit", "regional-gap-evidence", "interior-frontiers", "early-continuity", "coming-soon-campaign", "six-guide-expansions"]) {
+for (const document of ["trade-coverage-audit", "three-regional-gaps", "shield-aleutian-local-histories", "canada-aleutians", "island-networks", "island-history-evidence", "map-marker-audit", "guide-reuse", "bulk-import-guide", "history-update", "ui-redesign", "reuse-and-contributing", "atlas-expansion", "cities-conflicts-topic-dives", "cities-conflicts-coverage", "pacific-topic-dives", "community-topic-dives", "land-sovereignty-dives", "remaining-topic-dives", "australasia-archaeology", "world-coverage-audit", "regional-gap-evidence", "interior-frontiers", "early-continuity", "coming-soon-campaign", "six-guide-expansions"]) {
 const guide = await marked.parse(
   await readFile(`docs/${document}.md`, "utf8"),
 );
 await writeFile(
   `dist/docs/${document}.html`,
-  `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'"><title>Americas Peoples — ${document === "shield-aleutian-local-histories" ? "Inland Shield and Aleutian village histories" : document === "canada-aleutians" ? "Canada, Aleutians and illustrated histories" : document === "island-networks" ? "Island networks and illustrated guides" : document === "island-history-evidence" ? "Falklands and Galápagos evidence" : document === "map-marker-audit" ? "Map marker audit" : document === "guide-reuse" ? "Guide writing and reuse" : document === "six-guide-expansions" ? "Archaeological places and connected regional histories" : document === "coming-soon-campaign" ? "Dedicated deep-dive studies" : document === "early-continuity" ? "Early Americas and Pacific continuity" : document === "interior-frontiers" ? "Amazon, Chaco and Guianas evidence" : document === "regional-gap-evidence" ? "Regional evidence and source decisions" : document === "remaining-topic-dives" ? "Trade, missions and material histories" : document === "australasia-archaeology" ? "Australia and Aotearoa archaeology" : document === "world-coverage-audit" ? "Where the map has gaps" : document === "land-sovereignty-dives" ? "Land and sovereignty topic movies" : document === "community-topic-dives" ? "Community history topic movies" : document === "pacific-topic-dives" ? "Pacific topic movies and connected history" : document === "cities-conflicts-topic-dives" ? "Cities, encounters and topic dives" : document === "cities-conflicts-coverage" ? "Coverage and source decisions" : document === "history-update" ? "History layers" : document === "ui-redesign" ? "Watch and Explore" : document === "reuse-and-contributing" ? "Free education and reuse" : document === "atlas-expansion" ? "An expanding atlas" : "Bulk import guide"}</title><style>body{font:16px/1.65 system-ui,sans-serif;color:#20313a;max-width:1100px;margin:40px auto;padding:0 24px 60px}h1,h2,h3{line-height:1.25;margin-top:1.6em}h1{font-size:36px}a{color:#086b7b}table{border-collapse:collapse;width:100%;font-size:14px;display:block;overflow:auto}td,th{border:1px solid #cbd6d9;padding:10px;text-align:left;min-width:140px}th{background:#e6f0f1}code{background:#edf1f2;padding:2px 4px;border-radius:3px}pre{padding:16px;background:#edf1f2;overflow:auto}pre code{padding:0}blockquote{border-left:3px solid #25818e;margin-left:0;padding-left:20px}li{margin:6px 0}</style></head><body><a href="../index.html#proposals">← Back to Americas Peoples</a>${guide}</body></html>`,
+  `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'"><title>Americas Peoples — ${document === "three-regional-gaps" ? "Three regional histories and coverage" : document === "trade-coverage-audit" ? "Trade and exchange, 0–1200 CE" : document === "shield-aleutian-local-histories" ? "Inland Shield and Aleutian village histories" : document === "canada-aleutians" ? "Canada, Aleutians and illustrated histories" : document === "island-networks" ? "Island networks and illustrated guides" : document === "island-history-evidence" ? "Falklands and Galápagos evidence" : document === "map-marker-audit" ? "Map marker audit" : document === "guide-reuse" ? "Guide writing and reuse" : document === "six-guide-expansions" ? "Archaeological places and connected regional histories" : document === "coming-soon-campaign" ? "Dedicated deep-dive studies" : document === "early-continuity" ? "Early Americas and Pacific continuity" : document === "interior-frontiers" ? "Amazon, Chaco and Guianas evidence" : document === "regional-gap-evidence" ? "Regional evidence and source decisions" : document === "remaining-topic-dives" ? "Trade, missions and material histories" : document === "australasia-archaeology" ? "Australia and Aotearoa archaeology" : document === "world-coverage-audit" ? "Where the map has gaps" : document === "land-sovereignty-dives" ? "Land and sovereignty topic movies" : document === "community-topic-dives" ? "Community history topic movies" : document === "pacific-topic-dives" ? "Pacific topic movies and connected history" : document === "cities-conflicts-topic-dives" ? "Cities, encounters and topic dives" : document === "cities-conflicts-coverage" ? "Coverage and source decisions" : document === "history-update" ? "History layers" : document === "ui-redesign" ? "Watch and Explore" : document === "reuse-and-contributing" ? "Free education and reuse" : document === "atlas-expansion" ? "An expanding atlas" : "Bulk import guide"}</title><style>body{font:16px/1.65 system-ui,sans-serif;color:#20313a;max-width:1100px;margin:40px auto;padding:0 24px 60px}h1,h2,h3{line-height:1.25;margin-top:1.6em}h1{font-size:36px}a{color:#086b7b}table{border-collapse:collapse;width:100%;font-size:14px;display:block;overflow:auto}td,th{border:1px solid #cbd6d9;padding:10px;text-align:left;min-width:140px}th{background:#e6f0f1}code{background:#edf1f2;padding:2px 4px;border-radius:3px}pre{padding:16px;background:#edf1f2;overflow:auto}pre code{padding:0}blockquote{border-left:3px solid #25818e;margin-left:0;padding-left:20px}li{margin:6px 0}</style></head><body><a href="../index.html#proposals">← Back to Americas Peoples</a>${guide}</body></html>`,
 );
 names.push(`docs/${document}.html`);
 }

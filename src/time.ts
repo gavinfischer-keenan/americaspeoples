@@ -37,11 +37,12 @@ export function temporalState(
     return "possible";
   return "certain";
 }
-export function activeRecords<T extends Pick<EvidenceRecord, "time">>(
+export function activeRecords<T extends Pick<EvidenceRecord, "time"> & Partial<Pick<EvidenceRecord,"history">>>(
   records: readonly T[],
   year: number,
 ): T[] {
-  return records.filter((r) => temporalState(r.time, year) !== "absent");
+  return records.filter((r) => temporalState(r.time, year) !== "absent" &&
+    (!r.history?.windows || r.history.windows.some(w=>year>=w.start&&year<=w.end)));
 }
 /** Illustrative temporal support, not a probability density or population size.
  * No padding outside source bounds; uncertain single-year references stay visible.

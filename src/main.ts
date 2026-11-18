@@ -783,8 +783,9 @@ function renderHistorySummary(){
   const summary=$('#history-summary');
   const count=(kind:string)=>visible.filter(r=>r.history?.kind===kind).length;
   const possibleFoundations=visible.filter(r=>r.history?.kind==='settlement'&&year<r.time.end!).length;
-  summary.hidden=atlasMode==='explore'||(isGuidedStory()&&!count('settlement')&&!count('wreck')&&!visible.some(r=>r.history?.windows));
-  summary.innerHTML=`<span><b>${count('settlement')-possibleFoundations}</b> foundation records${possibleFoundations?` + ${possibleFoundations} possible`:''}</span><span><b>${visible.filter(r=>r.history?.windows&&currentActive.includes(r)).length}</b> active connections</span><span><b>${count('wreck')}</b> recorded losses</span><small>In this view · not population totals</small>`;
+  const connections=visible.filter(r=>['migration','exchange'].includes(r.history?.kind??'')&&currentActive.includes(r));
+  summary.hidden=atlasMode==='explore'||(isGuidedStory()&&!count('settlement')&&!count('wreck')&&!connections.length);
+  summary.innerHTML=`<span><b>${count('settlement')-possibleFoundations}</b> foundation records${possibleFoundations?` + ${possibleFoundations} possible`:''}</span><span><b>${connections.length}</b> active connections</span><span><b>${count('wreck')}</b> recorded losses</span><small>In this view · not population totals</small>`;
 }
 function openDetails(){
   if(!mountedMap)return;

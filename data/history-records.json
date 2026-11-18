@@ -4125,90 +4125,100 @@
     },
     {
       "id": "history-mesoamerica-chaco-macaws",
-      "revision": 1,
+      "revision": 2,
       "type": "event",
-      "title": "Macaw exchange into the Pueblo Southwest",
+      "title": "Scarlet macaws reached Pueblo Bonito",
       "culture": {
         "id": "historical-exchange",
         "name": "Exchange networks",
         "kind": "unknown",
         "color": "#71d1c9"
       },
-      "location": null,
-      "destination": null,
+      "location": {
+        "id": "trade-am-place-scarlet-macaw-range",
+        "name": "Gulf lowlands of Mexico, macaw range",
+        "lon": -94.5,
+        "lat": 17,
+        "provenance": "George et al. (2018), Figure 4B and Discussion, Gulf coast/Isthmus of Tehuantepec and northern Guatemala comparisons. The point represents part of the native range of the original breeding stock.",
+        "precision": "Macroregional natural-range reference. The proposed breeding colony itself is unlocated."
+      },
+      "destination": {
+        "id": "place-chaco-pueblo-bonito",
+        "name": "Pueblo Bonito",
+        "lon": -107.961636,
+        "lat": 36.060579,
+        "precision": "Public mapped archaeological place, rounded to six decimals. Site point, not a surveyed footprint or room plan.",
+        "provenance": "National Park Service NPMap public point layer, unit_code=chcu, name=Pueblo Bonito; https://carto.nps.gov/user/parktiles/api/v2/sql. The archaeological feature was selected, not a visitor center, parking lot or trailhead."
+      },
       "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 900,
+        "end": 1150,
+        "approximate": true,
+        "original": "Approximately 900–1150 CE; AMS dates on Pueblo Bonito macaw remains, with an early group around 900–975 CE.",
+        "method": "Direct dates on bone anchor scarlet macaws in the archaeological record. The inferred original stock region draws on a separate mitochondrial DNA comparison.",
+        "interpretation": "The range places the evidence in time. It does not date each stage of transport."
+      },
       "claims": [
         {
           "id": "historical-basis",
-          "text": "Scarlet macaws reached Chaco through a long-distance Indigenous exchange network.",
+          "text": "Scarlet macaws reached Pueblo Bonito far from their tropical range. Direct dates on bones place birds at Chaco across more than two centuries.",
           "status": "under discussion",
-          "explanation": "The line is a macroregional connection, not a known road or identified supply settlement. Ancient DNA later suggested an undiscovered breeding community outside the species' natural range; individual birds need not have travelled directly from tropical Mesoamerica. 1150 is the sampled acquisition span, not a universal end to Indigenous trade.",
+          "explanation": "DNA points toward an ancestral stock region in the northern range of the scarlet macaw. An intermediate breeding colony is plausible, and the route taken by particular birds is unknown.",
           "support": [
             {
-              "sourceId": "source-1",
-              "locator": "Abstract; PNAS (2015), DOI 10.1073/pnas.1509825112",
+              "sourceId": "trade-am-source-macaws",
+              "locator": "Dating the Procurement of Macaws, Figure 3 and Table 1",
               "stance": "supports",
-              "note": "Supports the stated chronology and geographic relationship; coordinates and connecting paths are editorial approximations."
+              "note": "Documents directly dated specimens from Pueblo Bonito, including the early group."
             },
             {
-              "sourceId": "source-2",
-              "locator": "Abstract; PNAS 115, 8740–8745 (2018), DOI 10.1073/pnas.1805856115",
+              "sourceId": "trade-am-source-macaw-dna",
+              "locator": "Results, Figure 4B; Discussion",
               "stance": "supports",
-              "note": "Supports the stated chronology and geographic relationship; coordinates and connecting paths are editorial approximations."
+              "note": "Compares ancient birds with wild southern Mexican and Central American macaws and proposes a breeding colony."
             }
           ]
         }
       ],
       "sources": [
         {
-          "id": "source-1",
+          "id": "trade-am-source-macaws",
           "authors": "Adam S. Watson et al.",
           "title": "Early procurement of scarlet macaws and the emergence of social complexity in Chaco Canyon, NM",
-          "year": null,
-          "venue": "pubmed.ncbi.nlm.nih.gov",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/26100874/",
-          "access": "PubMed indexed abstract read; publisher full-text access was inconsistent."
+          "year": 2015,
+          "venue": "PNAS 112(27):8238–8243",
+          "url": "https://doi.org/10.1073/pnas.1509825112",
+          "doi": "10.1073/pnas.1509825112",
+          "access": "Open full text with directly dated bones and individual probability distributions checked.",
+          "referenceType": "journal-article"
         },
         {
-          "id": "source-2",
+          "id": "trade-am-source-macaw-dna",
           "authors": "Richard J. George et al.",
           "title": "Archaeogenomic evidence from the southwestern US points to a pre-Hispanic scarlet macaw breeding colony",
-          "year": null,
-          "venue": "pubmed.ncbi.nlm.nih.gov",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30104352/",
-          "access": "PubMed indexed abstract read."
+          "year": 2018,
+          "venue": "PNAS 115(35):8740–8745",
+          "url": "https://doi.org/10.1073/pnas.1805856115",
+          "doi": "10.1073/pnas.1805856115",
+          "access": "Open full text, distribution and source-colony interpretation checked.",
+          "referenceType": "journal-article"
         }
       ],
       "review": {
-        "summary": "Scarlet macaws reached Chaco through a long-distance Indigenous exchange network.",
-        "limitations": "The line is a macroregional connection, not a known road or identified supply settlement. Ancient DNA later suggested an undiscovered breeding community outside the species' natural range; individual birds need not have travelled directly from tropical Mesoamerica. 1150 is the sampled acquisition span, not a universal end to Indigenous trade.",
-        "discussion": "Selected evidence; coverage is not a complete inventory.",
-        "provenance": "Source-linked editorial synthesis checked 2026-11-14. Access notes distinguish full text, abstracts, and indexed excerpts. No population estimates inferred.",
-        "reviewedAt": "2026-11-14",
+        "summary": "Scarlet macaws reached Pueblo Bonito far from their tropical range. Direct dates on bones place birds at Chaco across more than two centuries.",
+        "limitations": "DNA points toward an ancestral stock region in the northern range of the scarlet macaw. An intermediate breeding colony is plausible, and the route taken by particular birds is unknown.",
+        "discussion": "People had to obtain and care for live birds. Several Pueblo Bonito macaws predate its most intensive great-house expansion. Their bones and the genetic evidence together show a long connection between distant regions without locating a specific shipment or breeding settlement.",
+        "provenance": "Original synthesis from the cited evidence and public geographic references.",
+        "reviewedAt": "2026-11-17",
         "history": [
-          "Added dated history layer with source locators and explicit uncertainty."
+          "Added dated history layer with source locators and explicit uncertainty.",
+          "2026-11-17: Refined the published exchange record against original field and laboratory studies."
         ],
-        "relatedIds": []
-      },
-      "time": {
-        "kind": "interval",
-        "start": 900,
-        "end": 1150,
-        "approximate": true,
-        "original": "900 CE to 1150 CE",
-        "method": "Explicit activity episodes derived from cited historical chronology or dated archaeological contexts.",
-        "interpretation": "Only the listed activity windows display. Gaps mean no supported window in this record, not proof all contact stopped. Flow animation indicates connection, not voyage frequency."
-      },
-      "history": {
-        "kind": "exchange",
-        "claimId": "historical-basis",
-        "windows": [
-          {
-            "start": 900,
-            "end": 1150,
-            "certainty": "approximate",
-            "note": "Radiocarbon-dated birds underpin the 2015 authors' interpretation of persistent acquisition at Pueblo Bonito during this period."
-          }
+        "relatedIds": [
+          "trade-am-cacao-pueblo-bonito",
+          "g20-chaco-bonito-residence"
         ]
       },
       "overlay": {
@@ -4219,17 +4229,36 @@
           "type": "LineString",
           "coordinates": [
             [
-              -100,
-              20
+              -94.5,
+              17
             ],
             [
-              -107.96,
-              36.06
+              -107.961636,
+              36.060579
             ]
           ]
         },
-        "precision": "Schematic regional connection, not a reconstructed sailing track.",
-        "provenance": "Editorial anchors join source-supported origins/destinations. No implication that travel followed a straight or constant path."
+        "precision": "Schematic connection from the inferred original breeding-stock region to the excavated receiving site. Intermediate breeding and transfer points are unresolved.",
+        "provenance": "George et al. (2018), Figure 4B and Discussion, Gulf coast/Isthmus of Tehuantepec and northern Guatemala comparisons. The point represents part of the native range of the original breeding stock. National Park Service NPMap public point layer, unit_code=chcu, name=Pueblo Bonito; https://carto.nps.gov/user/parktiles/api/v2/sql. The archaeological feature was selected, not a visitor center, parking lot or trailhead."
+      },
+      "history": {
+        "kind": "exchange",
+        "claimId": "historical-basis",
+        "windows": [
+          {
+            "start": 900,
+            "end": 1150,
+            "certainty": "approximate",
+            "note": "Approximate interval associated with the dated evidence."
+          }
+        ],
+        "connection": {
+          "evidence": "Scarlet macaws reached Pueblo Bonito far from their tropical range. Direct dates on bones place birds at Chaco across more than two centuries.",
+          "lastEvidence": 1150,
+          "cessation": "unknown",
+          "note": "The upper date bounds this evidence record. Later continuation or cessation is unresolved.",
+          "claimId": "historical-basis"
+        }
       }
     },
     {
