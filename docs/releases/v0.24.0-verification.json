@@ -1,0 +1,146 @@
+{
+  "version": "0.24.0",
+  "status": "merged, deployed and publicly verified; current plus one previous release retained",
+  "verifiedAt": "2026-11-18T08:27:51.999648+00:00",
+  "pullRequest": "https://github.com/gavinfischer-keenan/americaspeoples/pull/22",
+  "release": "https://github.com/gavinfischer-keenan/americaspeoples/releases/tag/v0.24.0",
+  "site": "https://americaspeoples.11mosswood.us/",
+  "baseCommit": "2e0ba8ee21e8eab3645fb62b7e6bb7a93ac91459",
+  "deployedCommit": "4290ca670e4c6227bbe0f3fa2cff0341542c0c9b",
+  "records": 2612,
+  "sharedRecords": 2539,
+  "focusedRecords": 73,
+  "guides": 66,
+  "contextualStories": 68,
+  "independentTopics": 27,
+  "availableDirectoryEntries": 102,
+  "newSharedMapRecords": 81,
+  "newEvidenceEntries": 78,
+  "linkedRouteRepresentationsOfLocalFinds": 3,
+  "representationNote": "Kahula, Sikopo and Emae local finds and their exchange lines are reciprocal linked views of the same evidence; record counts are not independent discoveries.",
+  "updatedRecords": [
+    "r11v-cerro-juan-diaz-diversification",
+    "vx-taumako",
+    "history-mesoamerica-chaco-macaws",
+    "tikopia-mccoy2020-tongan-glass"
+  ],
+  "newRegionalChapters": 28,
+  "newTradeTopicChapters": 13,
+  "newExchangeConnections": 31,
+  "tradeAudit": {
+    "mapYearBounds": [
+      0,
+      1200
+    ],
+    "beforeMappedExchangeObservations": 7,
+    "afterMappedExchangeObservations": 36,
+    "foundingMigrationsExcluded": true,
+    "unknownCessationNotTreatedAsKnownEnd": true
+  },
+  "remainingPriority": "Eastern Brazil, 501–1500 CE: no dated localities in these two detailed audit cells. Sernambetiba now supplies one in each of 1000–1 BCE and 1–500 CE.",
+  "terrainMaps": 57,
+  "guideMediaItems": 33,
+  "newMedia": {
+    "id": "morro-do-ouro-sections",
+    "license": "CC BY 4.0",
+    "unchanged": true
+  },
+  "consensus": {
+    "mode": "Deep",
+    "thisBatchCalls": 6,
+    "usedSinceAdditionalAllowance": 21,
+    "additionalAllowance": 75,
+    "remaining": 54,
+    "cumulativeCalls": 101,
+    "rawReportsRemainPrivate": true
+  },
+  "validation": {
+    "fullReleaseStages": 50,
+    "unitTests": 387,
+    "finalPackagedDocumentationTests": 7,
+    "documentationRefreshAfterGate": true,
+    "runtimeUnchangedAfterGate": true,
+    "independentReview": "No outstanding substantive findings after the final source addition",
+    "publicAssetsChecked": 223,
+    "publicSourceReviews": 13,
+    "neighborPagesVerified": 3,
+    "liveBrowser": {
+      "verifiedAt": "2026-11-18T08:23:47.893Z",
+      "health": {
+        "status": "ok",
+        "version": "0.24.0",
+        "records": 2612
+      },
+      "regionalChapters": 28,
+      "newTradeChapters": 13,
+      "sharedContext": "Taos remains visible in1492",
+      "viewports": [
+        "1440x960",
+        "1024x768"
+      ],
+      "pageErrors": []
+    },
+    "linuxRetentionTests": 5
+  },
+  "deployment": {
+    "status": "deployed",
+    "id": "20261118T082111Z-americas-v0.24.0",
+    "commit": "4290ca670e4c6227bbe0f3fa2cff0341542c0c9b",
+    "health": {
+      "status": "ok",
+      "version": "0.24.0",
+      "records": 2612
+    },
+    "static": "/srv/tripofisch/releases/20261118T082111Z-americas-v0.24.0",
+    "api": "/srv/americaspeoples/releases/20261118T082111Z-americas-v0.24.0",
+    "previousVersion": "0.23.1",
+    "rollbackStatic": "/srv/tripofisch/releases/20261118T041829Z-americas-v0.23.1",
+    "rollbackApi": "/srv/americaspeoples/releases/20261118T041829Z-americas-v0.23.1",
+    "unchangedFiles": 388
+  },
+  "packageSha256": "80570a3e6b69994d1650db3788dce8a20af9e796b0a73f8d3e8bb99b9da808cb",
+  "githubReleaseAssetsVerified": 5,
+  "retention": {
+    "current": "0.24.0",
+    "previous": "0.23.1",
+    "remainingCleanupTargets": [],
+    "githubReleaseTags": [
+      "v0.24.0",
+      "v0.23.1"
+    ],
+    "localVersionedArchives": [
+      "americas-peoples-v0.23.1-selfhost.zip",
+      "americas-peoples-v0.24.0-selfhost.zip"
+    ],
+    "retiredVersion": "0.23.0",
+    "sourceTagsRetained": true,
+    "unrelatedHostedContentPreserved": true
+  },
+  "temporaryCleanup": {
+    "currentLocalUploadRemoved": true,
+    "edge": {
+      "removed": [
+        "/var/tmp/americas-v0.24.0-staging",
+        "/var/tmp/americas-v0240-payload.tar",
+        "/var/tmp/americas-v0240-deploy.py",
+        "/var/tmp/americas-v0240-test-retention.py"
+      ],
+      "freeBytes": 4079779840
+    },
+    "host": {
+      "removed": [
+        "/var/tmp/americas-v0240-payload.tar",
+        "/var/tmp/americas-v0240-deploy.py",
+        "/var/tmp/americas-v0240-test-retention.py"
+      ],
+      "freeBytes": 78056988672
+    },
+    "cleanupHelpersRemoved": true,
+    "previouslyBlockedLocalUploadsLeftUntouched": [
+      "work/deployment/v0230/payload.tar",
+      "work/deployment/v0231/payload.tar"
+    ],
+    "note": "Deletion of these two prior temporary uploads was rejected by automatic approval in earlier release work and was not retried."
+  },
+  "releaseGateLogSha256": "7b2a64c42b60f71257e4d672acd6ecde0be7d584605ef488939422406233fb13"
+}
