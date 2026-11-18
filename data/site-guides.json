@@ -1577,11 +1577,8 @@
       "region": "North Pacific — Aleutian and Pribilof islands",
       "description": "The Aleutian and Pribilof islands hold histories of skilled maritime life, enduring villages and profound colonial disruption. Tools, houses, gardens, churches and working harbours reveal how Unangan communities lived and changed across the centuries before 1934.",
       "recordIds": [
-        "al-anangula-blades",
         "r10v-amaknak-quarry-unl469",
         "al-amaknak-quarry-later",
-        "al-chaluka-community",
-        "r10v-amaknak-bridge-architecture",
         "al-agattu-early-villages",
         "al-shemya-early-settlement",
         "al-korovinski-ancestral",
@@ -1594,15 +1591,16 @@
         "al-korovinski-colonial",
         "al-sanak-relocation-1823",
         "al-st-paul-relocation-1825",
-        "al-unalaska-church-1826",
         "al-attu-winter-village",
-        "al-unalaska-church-1858",
         "al-atka-village-1870",
         "al-sanak-post-1873",
         "al-akutan-trading-1878",
-        "al-unalaska-church-1894",
         "al-attu-seasonal-move-1909",
-        "al-akutan-whaling-1912"
+        "al-akutan-whaling-1912",
+        "al-sandy-dunes-early",
+        "al-sandy-dunes-village",
+        "al-pauloff-ancestral-houses",
+        "al-pauloff-cod-station"
       ],
       "kind": "site",
       "level": "region",
@@ -1611,21 +1609,30 @@
       "relatedGuideIds": [
         "canada-pacific",
         "canada-northwest",
-        "canada-arctic"
+        "canada-arctic",
+        "amaknak-bridge",
+        "unalaska-village",
+        "chaluka-nikolski"
       ],
       "referenceRecordIds": [
         "r12v-amaknak-s2-floor",
         "r12v-amaknak-s5-floor",
         "r12v-amaknak-s7-main-room",
-        "r12v-amaknak-s3-hearth"
+        "r12v-amaknak-s3-hearth",
+        "al-anangula-blades",
+        "al-chaluka-community",
+        "r10v-amaknak-bridge-architecture",
+        "al-unalaska-church-1826",
+        "al-unalaska-church-1858",
+        "al-unalaska-church-1894"
       ]
     },
     {
       "id": "canada",
       "title": "Canada: many histories, one shared map",
       "href": "sites/canada.html",
-      "region": "Northern North America — seven regional histories",
-      "description": "Move between seven regional histories of homes, food, trade, diplomacy, conflict and colonial change, from the earliest evidence to 1934.",
+      "region": "Northern North America — eight regional histories",
+      "description": "Explore eight regional histories of homes, food, travel, diplomacy and colonial change, from the earliest evidence to 1934.",
       "kind": "site",
       "level": "region",
       "recordIds": [],
@@ -1650,7 +1657,11 @@
         "canada-selkirk-1852",
         "canada-batoche-battle-1885",
         "canada-dundas-post-1924",
-        "canada-east-shubenacadie-1930"
+        "canada-east-shubenacadie-1930",
+        "canada-shield-shak-selma",
+        "canada-shield-long-rapids-laurel",
+        "canada-shield-wanipigow-pottery",
+        "canada-shield-lac-seul-flood"
       ],
       "relatedGuideIds": [
         "canada-pacific",
@@ -1659,11 +1670,187 @@
         "canada-arctic",
         "canada-great-lakes",
         "canada-st-lawrence",
-        "canada-atlantic"
+        "canada-atlantic",
+        "canada-shield"
       ],
       "report": "canada-aleutians",
       "storyId": "canada",
       "mapAspectRatio": 1
+    },
+    {
+      "id": "amaknak-bridge",
+      "title": "Amaknak Bridge",
+      "href": "sites/amaknak-bridge.html",
+      "region": "Eastern Aleutians · Unalaska Bay",
+      "description": "Stone houses, floor channels, repairs and archaeological evidence of daily work.",
+      "recordIds": [
+        "r10v-amaknak-bridge-architecture",
+        "r12v-amaknak-s2-floor",
+        "r12v-amaknak-s3-hearth",
+        "r12v-amaknak-s5-floor",
+        "r12v-amaknak-s7-main-room",
+        "al-amaknak-s7-west-charcoal",
+        "al-amaknak-pack-ice-fauna"
+      ],
+      "referenceRecordIds": [
+        "r10v-margaret-bay-stone-houses",
+        "al-chaluka-stone-house"
+      ],
+      "relatedGuideIds": [
+        "aleutian-islands",
+        "unalaska-village",
+        "chaluka-nikolski"
+      ],
+      "kind": "site",
+      "level": "complex",
+      "report": "shield-aleutian-local",
+      "parentGuideId": "aleutian-islands",
+      "storyId": "amaknak-bridge",
+      "mapRecordIds": [
+        "r10v-amaknak-bridge-architecture",
+        "r12v-amaknak-s2-floor",
+        "r12v-amaknak-s3-hearth",
+        "r12v-amaknak-s5-floor",
+        "r12v-amaknak-s7-main-room",
+        "al-amaknak-s7-west-charcoal",
+        "al-amaknak-pack-ice-fauna"
+      ]
+    },
+    {
+      "id": "unalaska-village",
+      "title": "Iliuliuk and Unalaska",
+      "href": "sites/unalaska-village.html",
+      "region": "Eastern Aleutians · Unalaska Island",
+      "description": "A survey chart of the nineteenth-century village, successive churches and the earlier Reese Bay longhouse.",
+      "recordIds": [
+        "al-iliuliuk-harbor-survey",
+        "al-reese-bay-longhouse-2",
+        "al-unalaska-church-1826",
+        "al-unalaska-church-1858",
+        "al-unalaska-church-1894"
+      ],
+      "referenceRecordIds": [
+        "r10v-amaknak-bridge-architecture"
+      ],
+      "relatedGuideIds": [
+        "aleutian-islands",
+        "amaknak-bridge",
+        "chaluka-nikolski"
+      ],
+      "kind": "site",
+      "level": "complex",
+      "report": "shield-aleutian-local",
+      "parentGuideId": "aleutian-islands",
+      "storyId": "unalaska-village",
+      "mapRecordIds": [
+        "al-iliuliuk-harbor-survey",
+        "al-unalaska-church-1826",
+        "al-unalaska-church-1858",
+        "al-unalaska-church-1894"
+      ]
+    },
+    {
+      "id": "chaluka-nikolski",
+      "title": "Chaluka and Nikolski",
+      "href": "sites/chaluka-nikolski.html",
+      "region": "Eastern Aleutians · Umnak Island",
+      "description": "A layered settlement, stone-walled house, earlier island sites and the building phases of St. Nicholas Church.",
+      "recordIds": [
+        "al-chaluka-community",
+        "al-chaluka-stone-house",
+        "al-anangula-blades",
+        "al-anangula-village-bluff",
+        "al-nikolski-chapel-1806",
+        "al-nikolski-chapel-1828",
+        "al-nikolski-sheep-ranch-1926",
+        "al-nikolski-church-1930"
+      ],
+      "referenceRecordIds": [
+        "r10v-amaknak-bridge-architecture"
+      ],
+      "relatedGuideIds": [
+        "aleutian-islands",
+        "amaknak-bridge",
+        "unalaska-village"
+      ],
+      "kind": "site",
+      "level": "complex",
+      "report": "shield-aleutian-local",
+      "parentGuideId": "aleutian-islands",
+      "storyId": "chaluka-nikolski",
+      "mapRecordIds": [
+        "al-chaluka-community",
+        "al-chaluka-stone-house",
+        "al-nikolski-chapel-1806",
+        "al-nikolski-chapel-1828",
+        "al-nikolski-sheep-ranch-1926",
+        "al-nikolski-church-1930"
+      ]
+    },
+    {
+      "id": "canada-shield",
+      "title": "Canadian Shield — camps, waterways and inland communities",
+      "href": "sites/canada-shield.html",
+      "region": "Canada — Ontario, Québec, Manitoba, Saskatchewan, Labrador and Great Slave Lake",
+      "description": "Follow ancient hearths, sturgeon fisheries and portage routes from inland Labrador to Great Slave Lake, then see how fur trading, treaty-making and hydroelectric development changed life through 1934.",
+      "recordIds": [
+        "greatlakes-cummins-context",
+        "canada-shield-black-lake-early",
+        "canada-shield-shak-selma",
+        "canada-shield-napeu-atik",
+        "canada-shield-mistanuk",
+        "canada-shield-renshaw-copper",
+        "canada-shield-wanipigow-early",
+        "canada-shield-mashteuiatsh-hearth",
+        "canada-shield-caniapiscau-hearth",
+        "canada-shield-black-lake-small-tools",
+        "canada-shield-long-rapids-laurel",
+        "canada-shield-wanipigow-pottery",
+        "canada-shield-caniapiscau-longhouses",
+        "canada-shield-ashuanipi",
+        "canada-shield-black-lake-late",
+        "canada-shield-metabetchouane",
+        "canada-shield-obadjiwan",
+        "canada-shield-fort-resolution",
+        "canada-shield-norway-house",
+        "canada-shield-old-fort-reliance",
+        "canada-shield-fort-nascopie",
+        "canada-shield-stanley-mission",
+        "canada-shield-northwest-angle-treaty",
+        "canada-shield-long-rapids-homesteads",
+        "canada-shield-norway-house-treaty",
+        "canada-shield-fond-du-lac-treaty",
+        "canada-shield-fort-resolution-treaty",
+        "canada-shield-osnaburgh-treaty",
+        "canada-shield-sakitawak-treaty",
+        "canada-shield-split-lake-treaty",
+        "canada-shield-fort-mckenzie-move",
+        "canada-shield-fort-mckenzie-camps",
+        "canada-shield-pelican-lake-school",
+        "canada-shield-lac-seul-flood",
+        "canada-shield-whitefish-lake",
+        "canada-shield-waapushukamikw",
+        "canada-shield-bloodvein",
+        "canada-shield-sipiwesk-pottery"
+      ],
+      "referenceRecordIds": [
+        "canada-east-fort-william",
+        "canada-east-mashteuiatsh-1856",
+        "canada-fort-providence-treaty11"
+      ],
+      "kind": "site",
+      "report": "shield-aleutian-local",
+      "storyId": "canada-shield",
+      "level": "region",
+      "parentGuideId": "canada",
+      "relatedGuideIds": [
+        "canada-great-lakes",
+        "canada-st-lawrence",
+        "canada-prairies",
+        "canada-northwest",
+        "canada-atlantic"
+      ],
+      "mapAspectRatio": 1.65
     }
   ]
 }

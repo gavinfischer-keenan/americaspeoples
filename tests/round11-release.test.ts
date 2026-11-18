@@ -34,8 +34,9 @@ test('round11 preserves preceding release evidence and accounts for all archived
   const current=dataset.records.find(r=>r.id===old.id)!;
   const update=read('data/round12-reviewed.json').proposedUpdates.find((u:any)=>u.targetId===old.id);
   const later=read('data/canada-aleutians-corrections.json').updates.find((u:any)=>u.targetId===old.id);
+  const local=read('data/shield-aleutian-local-corrections.json').updates.find((u:any)=>u.targetId===old.id);
   if(update){assert.deepEqual(update.beforeRecord,old);assert.ok(current.revision>=update.record.revision);}
-  else if(later){assert.deepEqual(later.beforeRecord,old);assert.deepEqual(current,later.record);assert.ok(current.revision>old.revision);assert.ok(later.reason);}
+  else if(later){assert.deepEqual(later.beforeRecord,old);if(local)assert.deepEqual(local.beforeRecord,later.record);assert.deepEqual(current,local?.record??later.record);assert.ok(current.revision>old.revision);assert.ok(later.reason);}
   else if(current.review.history.some(h=>h.startsWith('2026-11-16: Reader-facing description updated:'))){
    assert.ok(current.revision>old.revision,'reader edits retain their revision history');
    // This later editorial pass changes wording, never the archived chronology,

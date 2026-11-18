@@ -120,15 +120,21 @@ export function createSiteOverview(guide: SiteGuide, records: readonly EvidenceR
   const lookup = new Map(records.map(r => [r.id, r]));
   const get = (ids: string[]) => [...new Set(ids)].flatMap(id => lookup.has(id) ? [lookup.get(id)!] : []);
   const regional = isRegional(guide);
-  let candidates = collect(get([...guide.recordIds, ...guide.referenceRecordIds ?? []]), regional);
+  const guideIds=[...guide.recordIds,...guide.referenceRecordIds??[]];
+  if(guide.mapRecordIds!==undefined && (!Array.isArray(guide.mapRecordIds) || !guide.mapRecordIds.length ||
+    new Set(guide.mapRecordIds).size!==guide.mapRecordIds.length ||
+    guide.mapRecordIds.some(id=>!guideIds.includes(id)||!lookup.has(id))))throw Error('Invalid guide map record selection: '+guide.id);
+  let candidates = collect(get(guideIds), regional);
   // A related article must never enlarge a mapped local study just because it
   // is linked for context. Only articles without any own/reference place fall back.
-  if (!candidates.length) {
+  if (!candidates.length && guide.mapRecordIds===undefined) {
     const related = new Set(guide.relatedGuideIds ?? []);
     candidates = collect(get(guides.filter(g => related.has(g.id)).flatMap(g => [...g.recordIds, ...g.referenceRecordIds ?? []])), regional);
   }
+  const mapCandidates=guide.mapRecordIds===undefined?candidates:collect(get(guide.mapRecordIds),regional);
+  if(guide.mapRecordIds!==undefined&&!mapCandidates.length)throw Error('Guide map record selection has no mapped place: '+guide.id);
   if (!candidates.length) return null;
-  const selected = regional ? candidates : localCluster(candidates);
+  const selected = regional ? mapCandidates : localCluster(mapCandidates);
   const points = selected.map(({local: _local, ...point}) => point);
   if (!points.length) return null;
   const aspect=guide.mapAspectRatio??2;

@@ -1,0 +1,179 @@
+{
+  "plans": [
+    {
+      "id": "iliuliuk-harbor-village-plan",
+      "guideId": "unalaska-village",
+      "mediaId": "iliuliuk-harbor-1875",
+      "title": "Iliuliuk on the 1875 Coast Survey chart",
+      "surveyDate": "Surveyed 1871–1872 · Issued July 1875",
+      "description": "The numbered depths and shore details show how the harbor worked. Along the lower-right shore, the church and a line of building marks show the narrow strip of land occupied by Iliuliuk.",
+      "landmarks": [
+        {
+          "label": "Church",
+          "description": "The church label sits amid the village marks. Its survey date places it in the 1858 building phase, decades before construction of the church that stands today.",
+          "recordIds": [
+            "al-unalaska-church-1858",
+            "al-unalaska-church-1894"
+          ]
+        },
+        {
+          "label": "Shoreline buildings",
+          "description": "Small building symbols run along the strip of ground at the base of the hill. The symbols leave individual addresses and households unidentified.",
+          "recordIds": [
+            "al-iliuliuk-harbor-survey"
+          ]
+        },
+        {
+          "label": "Iliuliuk Harbor",
+          "description": "The numbers in the water give soundings in fathoms. The notes beside the scale describe tidal observations.",
+          "recordIds": [
+            "al-iliuliuk-harbor-survey"
+          ]
+        },
+        {
+          "label": "Amaknak Island",
+          "description": "Opposite the village, surveyors plotted the astronomical station on the Amaknak shore. The earlier Amaknak Bridge settlement belongs to a separate archaeological record in the same harbor area.",
+          "recordIds": [
+            "al-iliuliuk-harbor-survey",
+            "r10v-amaknak-bridge-architecture"
+          ]
+        },
+        {
+          "label": "Expedition Island",
+          "description": "The chart names a small island within the harbor, one of several shore and water features depicted to help mariners orient themselves.",
+          "recordIds": [
+            "al-iliuliuk-harbor-survey"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "amaknak-house-sequence",
+      "guideId": "amaknak-bridge",
+      "title": "Amaknak: houses built beside and over older houses",
+      "surveyDate": "Excavation accounts published in 2008 and 2011",
+      "description": "The excavated walls preserve a history of rebuilding. A round house, Structure A, stood before walls associated with Structure 7 were built against and partly over it. Three smaller structures lay west of the main room. The blocks below explain those relationships; they do not reproduce the excavation drawing or imply that every room was occupied together.",
+      "diagram": {
+        "width": 1000,
+        "height": 730,
+        "features": [
+          {
+            "id": "structure-a",
+            "label": "Earlier Structure A",
+            "shape": "ellipse",
+            "x": 600,
+            "y": 45,
+            "width": 280,
+            "height": 140,
+            "recordIds": [
+              "r10v-amaknak-bridge-architecture"
+            ]
+          },
+          {
+            "id": "s7-nw",
+            "label": "7 Northwest",
+            "shape": "rect",
+            "x": 85,
+            "y": 230,
+            "width": 235,
+            "height": 105,
+            "recordIds": [
+              "r10v-amaknak-bridge-architecture"
+            ]
+          },
+          {
+            "id": "s7-w",
+            "label": "7 West",
+            "shape": "rect",
+            "x": 85,
+            "y": 400,
+            "width": 235,
+            "height": 105,
+            "recordIds": [
+              "al-amaknak-s7-west-charcoal"
+            ]
+          },
+          {
+            "id": "s7-sw",
+            "label": "7 Southwest",
+            "shape": "rect",
+            "x": 85,
+            "y": 570,
+            "width": 235,
+            "height": 105,
+            "recordIds": [
+              "r10v-amaknak-bridge-architecture"
+            ]
+          },
+          {
+            "id": "s7-main",
+            "label": "Structure 7 main room",
+            "shape": "rect",
+            "x": 570,
+            "y": 345,
+            "width": 340,
+            "height": 235,
+            "recordIds": [
+              "r12v-amaknak-s7-main-room"
+            ]
+          }
+        ],
+        "connections": [
+          {
+            "from": "structure-a",
+            "to": "s7-main",
+            "label": "Later walls built against A"
+          },
+          {
+            "from": "s7-w",
+            "to": "s7-main",
+            "label": "West of the main room"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "title": "Rogers — architecture, rebuilding and complex hearths (2011), pp. 98–100",
+          "url": "https://doi.org/10.1353/arc.2012.0004"
+        },
+        {
+          "title": "Knecht and Davis — Amaknak Bridge houses and charcoal dates (2008), pp. 65–71",
+          "url": "https://doi.org/10.1353/arc.0.0003"
+        }
+      ],
+      "landmarks": [
+        {
+          "label": "A round house beneath later walls",
+          "description": "Structure A was nearly circular, about four metres across. Later walls associated with the main room and the northwest structure were built against and over it, deforming its southern wall. The wall relationships establish a building sequence without supplying a separate construction year for A.",
+          "recordIds": [
+            "r10v-amaknak-bridge-architecture"
+          ]
+        },
+        {
+          "label": "The main room and its hearth",
+          "description": "Structure 7's main room measured roughly six by four metres. A smaller hearth lay underneath the later hearth, and a southern wall had been rebuilt after collapse. A hearth by the eastern wall connected with a flue and branching channels below the floor.",
+          "recordIds": [
+            "r12v-amaknak-s7-main-room",
+            "r10v-amaknak-bridge-architecture"
+          ]
+        },
+        {
+          "label": "The western structures have their own histories",
+          "description": "The smaller western rooms prompted different interpretations. The first account described a multichamber house; later excavation separated some structures and identified earlier building work to the southwest. Charcoal from 7 West has a much earlier published date range than the main-room charcoal, so the diagram is a sequence of discoveries rather than one occupied household frozen in time.",
+          "recordIds": [
+            "al-amaknak-s7-west-charcoal",
+            "r12v-amaknak-s7-main-room"
+          ]
+        },
+        {
+          "label": "Other houses in the same settlement",
+          "description": "Structure 2 had upright wall stones, roof supports, long channels and a slab-covered storage pit. Structure 3 contained floor caches, including bird bones interpreted as material for making needles. These finds reveal food storage, heating and skilled work inside the houses.",
+          "recordIds": [
+            "r12v-amaknak-s2-floor",
+            "r12v-amaknak-s3-hearth"
+          ]
+        }
+      ]
+    }
+  ]
+}

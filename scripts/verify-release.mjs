@@ -90,6 +90,7 @@ const phases = [
   ["Island histories, rai topic and licensed source navigation", node, ["--import", "tsx", "tests/island-chain.browser.mjs"]],
   ["Guide narratives, licensed photographs and source register", node, ["--import", "tsx", "tests/guide-enrichment.browser.mjs", "--generated"]],
   ["Canadian and Aleutian contextual histories, illustrated guides and reciprocal links", node, ["--import", "tsx", "tests/canada-aleutians.browser.mjs"]],
+  ["Shield continuity, local Aleutian histories and licensed village plans", node, ["--import", "tsx", "tests/shield-aleutian-local.browser.mjs"]],
   ["Regional evidence in the shared movie and packaged source guide", node, ["tests/regional-gaps.browser.mjs"]],
   ["Interior communities, dated connections and conflict windows", node, ["tests/interior-frontiers.browser.mjs"]],
   ["Map picking, camera, touch and label usability", node, ["tests/map-ux.browser.mjs"]],

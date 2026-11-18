@@ -2,7 +2,7 @@
   "records": [
     {
       "id": "al-anangula-blades",
-      "revision": 1,
+      "revision": 2,
       "type": "occurrence",
       "title": "Anangula — a coastal stone-tool workshop",
       "culture": {
@@ -22,13 +22,13 @@
       "destination": null,
       "routeKind": "schematic",
       "time": {
-        "kind": "occurrence",
-        "start": -7000,
-        "end": -7000,
+        "start": -7650,
+        "end": -6050,
+        "original": "Approx. 9600–8000 calibrated years BP",
+        "method": "Published approximate calibrated sample envelope, expressed as astronomical years by subtracting from 1950.",
+        "interpretation": "The broadly spaced assemblage dates and much tighter estimates for house-floor or hearth evidence address different questions.",
         "approximate": true,
-        "original": "Around 9,000 years ago; rounded c.7000 BCE",
-        "method": "Rounded institutional archaeological synthesis, not a newly calibrated sample.",
-        "interpretation": "This dates the early core-and-blade site. The separate village on the island is younger."
+        "kind": "occurrence"
       },
       "claims": [
         {
@@ -50,6 +50,26 @@
               "note": "Supports the public geographic reference. Archaeological and historical dates are supported by the other cited sources."
             }
           ]
+        },
+        {
+          "id": "houses-and-age",
+          "text": "The early site includes shallow house depressions and a wide scatter of lithic debris. A modern reassessment identified pressure microblade production in the stone assemblage.",
+          "explanation": "The concentration of structures and tools can reflect multiple episodes of use. Settlement size, seasonality and duration remain questions.",
+          "support": [
+            {
+              "sourceId": "al-av-gomez",
+              "locator": "pp. 23–26, chronology and assemblage reassessment",
+              "stance": "supports",
+              "note": "Reports approximate calibrated bounds from 41 determinations and reinterprets the stone technology."
+            },
+            {
+              "sourceId": "al-av-davis-knecht-continuity",
+              "locator": "discussion of Anangula Blade site and Hog Island",
+              "stance": "supports",
+              "note": "Records the basis of Aigner’s residential interpretation and cautions about equating clusters with year-round populations."
+            }
+          ],
+          "status": "well-supported"
         }
       ],
       "sources": [
@@ -70,18 +90,44 @@
           "venue": "GeoNames, CC BY4.0",
           "url": "https://www.geonames.org/7304673/",
           "access": "Public US gazetteer checked 2026-11-17. Coordinates describe the stated locality; historical evidence is cited separately."
+        },
+        {
+          "id": "al-av-gomez",
+          "authors": "Yan Axel Gómez Coutouly",
+          "year": 2015,
+          "title": "Anangula—A Major Pressure-Microblade Site in the Aleutian Islands, Alaska: Reevaluating Its Lithic Component",
+          "venue": "Arctic Anthropology 52(1):23–59",
+          "url": "https://www.academia.edu/16520132/Anangula_A_Major_Pressure_Microblade_Site_in_the_Aleutian_Islands_Alaska_Reevaluating_Its_Lithic_Component",
+          "access": "Author text checked. Original lithic reanalysis and review of site chronology.",
+          "doi": "10.3368/aa.52.1.23",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "al-av-davis-knecht-continuity",
+          "authors": "Richard S. Davis and Richard A. Knecht",
+          "year": 2010,
+          "title": "Continuity and Change in the Eastern Aleutian Archaeological Sequence",
+          "venue": "Human Biology 82(5–6):507–524",
+          "url": "https://www.academia.edu/85716046/Continuity_and_change_in_the_eastern_Aleutian_archaeological_sequence",
+          "access": "Author text checked for the distinction between sites and interpretation of early shelter remains.",
+          "doi": "10.3378/027.082.0503",
+          "referenceType": "journal-article"
         }
       ],
       "review": {
         "summary": "Craftworkers at Anangula struck long blades from prepared stone cores and retouched them into cutting and scraping tools. Imported raw materials and the coastal setting show the work behind early maritime life.",
-        "limitations": "This dates the early core-and-blade site. The separate village on the island is younger.",
-        "discussion": "Thousands of flakes record repeated tool-making. The raw stone was brought from elsewhere; surviving tools tell more of this early workshop than the poorly preserved wood and bone do.",
+        "limitations": "The broadly spaced assemblage dates and much tighter estimates for house-floor or hearth evidence address different questions.",
+        "discussion": "Anangula’s early blade site includes house depressions as well as stone-working evidence. The younger village reported elsewhere on the island is a separate archaeological locality.",
         "provenance": "Original source-linked summary; archaeological and historical evidence checked2026-11-17.",
         "reviewedAt": "2026-11-17",
         "history": [
-          "2026-11-17: Added Aleutian place history to the shared map."
+          "2026-11-17: Added Aleutian place history to the shared map.",
+          "2026-11-17: Added source-checked evidence from the village research."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "al-anangula-village-bluff",
+          "al-chaluka-community"
+        ]
       }
     },
     {
@@ -172,7 +218,7 @@
     },
     {
       "id": "al-chaluka-community",
-      "revision": 1,
+      "revision": 2,
       "type": "occupation",
       "title": "Chaluka and Nikolski — a village landscape across millennia",
       "culture": {
@@ -226,6 +272,20 @@
               "note": "Supports the public geographic reference. Archaeological and historical dates are supported by the other cited sources."
             }
           ]
+        },
+        {
+          "id": "stratigraphy",
+          "text": "The Chaluka mound preserves repeated construction, activity and deposition. A stratigraphic study correlated excavations from 1938 through 1972 and distinguished eleven natural and human events, with reef and marine resource use through the sampled sequence.",
+          "explanation": "The sequences come from excavation areas within a village landscape. The number and arrangement of houses changed over time.",
+          "support": [
+            {
+              "sourceId": "al-av-aigner-chaluka",
+              "locator": "published abstract",
+              "stance": "supports",
+              "note": "Describes the study’s stratigraphic correlations and continuity of marine use."
+            }
+          ],
+          "status": "well-supported"
         }
       ],
       "sources": [
@@ -255,18 +315,34 @@
           "venue": "GeoNames, CC BY4.0",
           "url": "https://www.geonames.org/7304680/",
           "access": "Public US gazetteer checked 2026-11-17. Coordinates describe the stated locality; historical evidence is cited separately."
+        },
+        {
+          "id": "al-av-aigner-chaluka",
+          "authors": "Christy G. Turner II, Jean S. Aigner and Linda R. Richards",
+          "year": 1974,
+          "title": "Chaluka Stratigraphy, Umnak Island, Alaska",
+          "venue": "Arctic Anthropology 11 Supplement:125–142",
+          "url": "https://www.jstor.org/stable/40315807",
+          "access": "Journal abstract read. It summarizes eleven events and marine and reef use throughout the excavated stratigraphy."
         }
       ],
       "review": {
         "summary": "At Chaluka, layers of houses, tools and food remains built a large village mound beside present-day Nikolski. Archaeology and community history describe roughly four millennia of residence and changing use at this enduring settlement.",
         "limitations": "The beginning is approximate. Houses and seasonal activities changed over time; this is the village landscape’s history, not one building occupied for four millennia.",
-        "discussion": "At Chaluka, layers of houses, tools and food remains built a large village mound beside present-day Nikolski. Archaeology and community history describe roughly four millennia of residence and changing use at this enduring settlement.",
+        "discussion": "Eleven natural and human events were distinguished in the published stratigraphic study. A well-preserved stone-walled floor records the organization of space and tasks within one of the village buildings. Construction of successive chapels and the standing church documents later building phases in nearby Nikolski.",
         "provenance": "Original source-linked summary; archaeological and historical evidence checked2026-11-17.",
         "reviewedAt": "2026-11-17",
         "history": [
-          "2026-11-17: Added Aleutian place history to the shared map."
+          "2026-11-17: Added Aleutian place history to the shared map.",
+          "2026-11-17: Added source-checked evidence from the village research."
         ],
-        "relatedIds": []
+        "relatedIds": [
+          "al-chaluka-stone-house",
+          "al-nikolski-chapel-1806",
+          "al-nikolski-chapel-1828",
+          "al-nikolski-church-1930",
+          "al-anangula-village-bluff"
+        ]
       },
       "history": {
         "claimId": "evidence",
@@ -444,7 +520,7 @@
     },
     {
       "id": "al-korovinski-ancestral",
-      "revision": 1,
+      "revision": 2,
       "type": "occupation",
       "title": "Korovinski — an ancestral village on Atka",
       "culture": {
@@ -492,6 +568,20 @@
               "note": "Supports the public geographic reference. Archaeological and historical dates are supported by the other cited sources."
             }
           ]
+        },
+        {
+          "id": "house-depressions",
+          "text": "Veltre mapped partly sunken house depressions attributed to the ancestral occupation. He distinguished them from the later garden enclosures, transport features and sod walls of the Russian-American Company era.",
+          "explanation": "The dissertation abstract summarizes the survey. Individual building footprints and dates require the field maps and excavation documentation.",
+          "support": [
+            {
+              "sourceId": "al-av-korovinski-diss",
+              "locator": "dissertation abstract, field survey and archaeological results",
+              "stance": "supports",
+              "note": "Original excavator distinguishes two principal occupations and their surface features."
+            }
+          ],
+          "status": "well-supported"
         }
       ],
       "sources": [
@@ -512,6 +602,15 @@
           "venue": "GeoNames, CC BY4.0",
           "url": "https://www.geonames.org/5866709/",
           "access": "Public US gazetteer checked 2026-11-17. Coordinates describe the stated locality; historical evidence is cited separately."
+        },
+        {
+          "id": "al-av-korovinski-diss",
+          "authors": "Douglas William Veltre",
+          "year": 1979,
+          "title": "Korovinski: The Ethnohistorical Archaeology of an Aleut and Russian Settlement on Atka Island, Alaska",
+          "venue": "University of Connecticut doctoral dissertation, AAI8017067",
+          "url": "https://digitalcommons.lib.uconn.edu/dissertations/AAI8017067/",
+          "access": "University dissertation abstract checked. Original mapped feature inventory and settlement chronology are summarized there."
         }
       ],
       "review": {
@@ -521,9 +620,11 @@
         "provenance": "Original source-linked summary; archaeological and historical evidence checked2026-11-17.",
         "reviewedAt": "2026-11-17",
         "history": [
-          "2026-11-17: Added Aleutian place history to the shared map."
+          "2026-11-17: Added Aleutian place history to the shared map.",
+          "2026-11-17: Added source-checked evidence from the village research."
         ],
         "relatedIds": [
+          "al-atka-village-1870",
           "al-korovinski-colonial"
         ]
       }
@@ -1145,7 +1246,7 @@
     },
     {
       "id": "al-korovinski-colonial",
-      "revision": 1,
+      "revision": 2,
       "type": "event",
       "title": "Korovinski — a company settlement with potato gardens",
       "culture": {
@@ -1193,6 +1294,20 @@
               "note": "Supports the public geographic reference. Archaeological and historical dates are supported by the other cited sources."
             }
           ]
+        },
+        {
+          "id": "mapped-features",
+          "text": "The Korovinski survey mapped 122 surface features in all, mostly from the company era. Garden plots, drainage ditches, boat slips and sod walls show how work was organized along the shore and on land.",
+          "explanation": "The feature total spans multiple periods and functions. Buildings in that total include incomplete and unidentified remains.",
+          "support": [
+            {
+              "sourceId": "al-av-korovinski-diss",
+              "locator": "dissertation abstract, mapped surface inventory",
+              "stance": "supports",
+              "note": "Original investigator summarizes the landscape features and his period assignments."
+            }
+          ],
+          "status": "well-supported"
         }
       ],
       "sources": [
@@ -1213,6 +1328,15 @@
           "venue": "GeoNames, CC BY4.0",
           "url": "https://www.geonames.org/5866709/",
           "access": "Public US gazetteer checked 2026-11-17. Coordinates describe the stated locality; historical evidence is cited separately."
+        },
+        {
+          "id": "al-av-korovinski-diss",
+          "authors": "Douglas William Veltre",
+          "year": 1979,
+          "title": "Korovinski: The Ethnohistorical Archaeology of an Aleut and Russian Settlement on Atka Island, Alaska",
+          "venue": "University of Connecticut doctoral dissertation, AAI8017067",
+          "url": "https://digitalcommons.lib.uconn.edu/dissertations/AAI8017067/",
+          "access": "University dissertation abstract checked. Original mapped feature inventory and settlement chronology are summarized there."
         }
       ],
       "review": {
@@ -1222,9 +1346,11 @@
         "provenance": "Original source-linked summary; archaeological and historical evidence checked2026-11-17.",
         "reviewedAt": "2026-11-17",
         "history": [
-          "2026-11-17: Added Aleutian place history to the shared map."
+          "2026-11-17: Added Aleutian place history to the shared map.",
+          "2026-11-17: Added source-checked evidence from the village research."
         ],
         "relatedIds": [
+          "al-atka-village-1870",
           "al-korovinski-ancestral"
         ]
       },

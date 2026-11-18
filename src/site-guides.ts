@@ -10,6 +10,8 @@ export interface SiteGuide {
  recordIds:string[]; kind:'site'|'culture'; report:string; relatedGuideIds?:string[];
  storyId?:string; topicId?:string; parentGuideId?:string; level?:'region'|'complex'|'building'; referenceRecordIds?:string[];
  mapAspectRatio?:number;
+ /** Optional local terrain selection; the guide and shared movie retain all evidence. */
+ mapRecordIds?:string[];
 }
 export const siteGuides = catalog.guides as SiteGuide[];
 const byRecord = new Map(siteGuides.flatMap(g => g.recordIds.map(id => [id, g] as const)));

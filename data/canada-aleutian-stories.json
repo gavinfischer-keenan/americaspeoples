@@ -999,6 +999,23 @@
           "holdMs": 20000
         },
         {
+          "id": "sandy-dunes-houses",
+          "year": -1900,
+          "title": "Houses beside a lake on Sanak",
+          "body": "At Sandy Dunes, people built small round or oval houses beside a former pond, with hearths along one side. Shell middens preserved remains of fish, birds and mammals. Excavation distinguishes successive areas of habitation, while obsidian attributed to Umnak points to connections beyond this island.",
+          "note": "The scene uses the published phase window; the houses represent several episodes of settlement.",
+          "recordIds": [
+            "al-sandy-dunes-village"
+          ],
+          "scope": "americas",
+          "center": [
+            -162.7089,
+            54.4297
+          ],
+          "zoom": 9,
+          "holdMs": 18000
+        },
+        {
           "id": "eastern-houses",
           "year": -1000,
           "title": "Making a home warm and durable",
@@ -1170,14 +1187,31 @@
           "scope": "pacific",
           "note": "The supplied activity record extends through 1934; the historical station continued to 1939.",
           "holdMs": 20000
+        },
+        {
+          "id": "pauloff-cod-fishery",
+          "year": 1912,
+          "title": "Salt cod leaves Pauloff Harbor",
+          "body": "At Pauloff Harbor, shore buildings supported a commercial cod fishery. Workers lived in bunkhouses, sorted and salted the catch, and stored it for shipment. In May 1912 John Cobb photographed men loading the schooner Sequoia. The working village was part of a network of fishing shores around Sanak.",
+          "note": "A dated photograph anchors this scene; it is not a construction date for every building.",
+          "recordIds": [
+            "al-pauloff-cod-station"
+          ],
+          "scope": "americas",
+          "center": [
+            -162.7,
+            54.46
+          ],
+          "zoom": 10,
+          "holdMs": 18000
         }
       ]
     },
     {
       "id": "canada",
       "title": "Canada: many histories, one shared map",
-      "subtitle": "Seven regions, connected histories",
-      "description": "Move between seven regional histories of homes, food, trade, diplomacy, conflict and colonial change, from the earliest evidence to 1934.",
+      "subtitle": "Eight regions, connected histories",
+      "description": "Move between eight regional histories of homes, food, trade, diplomacy, conflict and colonial change, from the earliest evidence to 1934.",
       "scenes": [
         {
           "id": "canada-northwest-bluefish",
@@ -1248,6 +1282,23 @@
           "holdMs": 20000
         },
         {
+          "id": "canada-shield-kamestastin",
+          "year": -5350,
+          "title": "A fire at the edge of a caribou crossing",
+          "body": "At Kamestastin Lake in the Labrador interior, Tshikapisk excavations found worked quartz in a pit beside a small fire. Charcoal from two contexts dates this work to the sixth millennium BCE. The lake outlet was one of the places where caribou crossed. This evidence opens a view into the lives of people who worked and hunted far from the coast.",
+          "note": "The display year lies in the larger published probability component for the dated samples.",
+          "recordIds": [
+            "canada-shield-shak-selma"
+          ],
+          "scope": "americas",
+          "center": [
+            -63.27,
+            55.9
+          ],
+          "zoom": 7,
+          "holdMs": 18000
+        },
+        {
           "id": "canada-great-lakes-fishweirs",
           "year": -3299,
           "title": "Building with water and fish",
@@ -1297,6 +1348,24 @@
           "scope": "americas",
           "holdMs": 18000,
           "note": "Regional lake reference, not the archaeological site location. Other regions remain on the same map date; zoom out to follow their evidence."
+        },
+        {
+          "id": "canada-shield-rainy-river",
+          "year": 950,
+          "title": "Sturgeon, wild rice and riverside gathering",
+          "body": "At the Rainy River’s Long Rapids, people gathered for sturgeon. Dwellings and Laurel mounds at Kay-Nah-Chi-Wah-Nung preserve part of the history of that place. At Wanipigow Lake, pottery and food remains show the use of wild rice and other plant foods in the forest interior. These are two ways rivers and lakes sustained households and brought them together.",
+          "note": "950 falls in broad pottery phase windows for the two localities.",
+          "recordIds": [
+            "canada-shield-long-rapids-laurel",
+            "canada-shield-wanipigow-pottery"
+          ],
+          "scope": "americas",
+          "center": [
+            -94.8,
+            49.8
+          ],
+          "zoom": 6,
+          "holdMs": 18000
         },
         {
           "id": "canada-atlantic-norse1021",
@@ -1471,6 +1540,23 @@
           ],
           "zoom": 9,
           "holdMs": 20000
+        },
+        {
+          "id": "canada-shield-lac-seul",
+          "year": 1934,
+          "title": "Families move as Lac Seul rises",
+          "body": "Water impounded by the Ear Falls dam flooded reserve land at Lac Seul without the First Nation’s consent. Families lost homes, gardens, wild rice beds and graves. At Kejick Bay the water turned a connected shore into an island. By the atlas endpoint the Nation was living through the consequences of decisions made elsewhere.",
+          "note": "1934 is the atlas endpoint during the documented rise in water levels.",
+          "recordIds": [
+            "canada-shield-lac-seul-flood"
+          ],
+          "scope": "americas",
+          "center": [
+            -92.3,
+            50.29
+          ],
+          "zoom": 8,
+          "holdMs": 18000
         }
       ]
     }

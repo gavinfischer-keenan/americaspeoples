@@ -29,6 +29,18 @@ test('a tall northern region can use a square terrain map without widening acros
   assert.ok(map.bounds[2]-map.bounds[0]<150);
   assert.match(overview.siteOverviewHTML(map),/viewBox="0 0 1200 1200"/);
 });
+test('an explicit village overview stays local while its wider reading keeps nearby context',()=>{
+ assert.ok(overview);
+ const rows=[record('village',-166.5363,53.8756),record('other-bay',-166.72,54)];
+ const local=guide(['village','other-bay'],{mapRecordIds:['village']} as Partial<SiteGuide>);
+ const map=overview.createSiteOverview(local,rows,[])!;
+ assert.deepEqual(map.points.map(p=>p.id),['village']);
+ assert.equal(map.omittedPoints,1);
+ assert.ok(map.bounds[2]-map.bounds[0]<.1);
+ assert.deepEqual(local.recordIds,['village','other-bay']);
+ assert.throws(()=>overview.createSiteOverview(guide(['village'],{mapRecordIds:['other-bay']} as Partial<SiteGuide>),rows,[]),/map record/i);
+ assert.throws(()=>overview.createSiteOverview(guide(['village'],{mapRecordIds:[]} as Partial<SiteGuide>),rows,[]),/map record/i);
+});
 test('phases and coordinate aliases share a feature while all review links remain available',()=>{
   assert.ok(overview);
   const records=[record('early',-108,37,'House'),record('late',-108,37,'House'),record('alias',-108.00000001,37,'House alias')];

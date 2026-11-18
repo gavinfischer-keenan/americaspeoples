@@ -8,7 +8,7 @@ test('guide enrichment gives every original guide sourced historical narrative a
   assert.ok(raw, 'The independently authored guide enrichment must exist');
   const enrichment = JSON.parse(raw);
   const { pages } = JSON.parse(await readFile('data/site-guide-content.json', 'utf8'));
-  assert.equal(enrichment.pages.length, 43);
+  assert.ok(enrichment.pages.length >= 43, 'Retain the original guide narratives as the collection grows');
   for (const page of enrichment.pages) {
     const original = pages.find((p:any) => p.id === page.id);
     assert.ok(original, page.id);
@@ -34,7 +34,7 @@ test('each stored photograph matches its provenance and retains a separate reusa
     assert.equal(createHash('sha256').update(bytes).digest('hex'), image.sha256);
     assert.ok(image.bytes < 2_000_000);
     assert.ok(image.creator && image.sourcePage && image.licenseUrl && image.licenseEvidence && image.checkedAt);
-    assert.ok(['CC BY 2.0', 'CC BY 2.5', 'CC BY 3.0', 'CC BY 4.0', 'Public domain', 'CC0 1.0'].includes(image.license));
+    assert.ok(['CC BY 2.0', 'CC BY 2.5', 'CC BY 3.0', 'CC BY 4.0', 'Public domain', 'Public domain (United States)', 'CC0 1.0'].includes(image.license));
     assert.ok(image.width > 0 && image.height > 0);
   }
 });

@@ -1,0 +1,2051 @@
+{
+  "baseCommit": "5ae8ff4415cece15e2828d8760091a6d8239abbe",
+  "updates": [
+    {
+      "targetId": "r10v-amaknak-bridge-architecture",
+      "beforeRecord": {
+        "id": "r10v-amaknak-bridge-architecture",
+        "revision": 2,
+        "type": "occurrence",
+        "title": "Amaknak Bridge — stone houses and elaborate hearths",
+        "culture": {
+          "id": "unangan-aleutian-histories",
+          "name": "Unangan communities and colonial encounters",
+          "kind": "people",
+          "color": "#547e8c"
+        },
+        "location": {
+          "id": "al-place-amaknak-bridge",
+          "name": "Near Unalaska — Amaknak Bridge settlement",
+          "lat": 53.88,
+          "lon": -166.55,
+          "precision": "Rounded bridge-area reference within approximately 1 km; individual house walls are described in the guide, not surveyed on the map.",
+          "provenance": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Bridge-area reference from published site-location figures in Rogers2011 and Knecht/Davis2008."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -1972,
+          "end": -408,
+          "approximate": true,
+          "original": "Published charcoal-date envelope 3922–2358 cal BP; approximately 1973–409 BCE",
+          "method": "Outer envelope of calibrated charcoal ranges reported by Rogers; not a new pooled radiocarbon model.",
+          "interpretation": "The envelope spans samples from different contexts. It does not date every structure or establish continuous occupation throughout the whole range."
+        },
+        "claims": [
+          {
+            "id": "evidence",
+            "text": "Excavations exposed portions of 30–40 partly sunken, stone-lined structures. Fireplaces, vents and channels beneath floors helped organize warmth and work inside houses that were repeatedly repaired and rebuilt.",
+            "status": "well-supported",
+            "explanation": "The envelope spans samples from different contexts. It does not date every structure or establish continuous occupation throughout the whole range.",
+            "support": [
+              {
+                "sourceId": "al-source-hearths",
+                "locator": "Author-posted article text inspected: calibrated charcoal bounds 3922–3565 to 2618–2358 cal BP, stone houses and complex hearths. The full site date envelope is not the lifespan of every house.",
+                "stance": "supports",
+                "note": "Historical evidence; geographic reference is separately identified."
+              },
+              {
+                "sourceId": "al-source-amaknak",
+                "locator": "Author/institutional abstract inspected; radiocarbon-year chronology retained as originally reported. Calendar range comes separately from Rogers.",
+                "stance": "supports",
+                "note": "Historical evidence; geographic reference is separately identified."
+              },
+              {
+                "sourceId": "al-geo-5879282",
+                "locator": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Bridge-area reference from published site-location figures in Rogers2011 and Knecht/Davis2008.",
+                "stance": "context",
+                "note": "Supports the public geographic reference. Archaeological and historical dates are supported by the other cited sources."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "al-source-hearths",
+            "title": "Architecture and Complex Hearth Features at the Amaknak Bridge Site, Eastern Aleutian Islands, Alaska",
+            "url": "https://doi.org/10.1353/arc.2012.0004",
+            "authors": "Jason S. Rogers",
+            "year": 2011,
+            "venue": "Arctic Anthropology48(2):92–112",
+            "access": "Author-posted article text inspected: calibrated charcoal bounds 3922–3565 to 2618–2358 cal BP, stone houses and complex hearths. The full site date envelope is not the lifespan of every house."
+          },
+          {
+            "id": "al-source-amaknak",
+            "title": "The Amaknak Bridge Site: Cultural Change and the Neoglacial in the Eastern Aleutians",
+            "url": "https://doi.org/10.1353/arc.0.0003",
+            "authors": "Richard A. Knecht and Richard S. Davis",
+            "year": 2008,
+            "venue": "Arctic Anthropology45(1):61–78",
+            "access": "Author/institutional abstract inspected; radiocarbon-year chronology retained as originally reported. Calendar range comes separately from Rogers."
+          },
+          {
+            "id": "al-geo-5879282",
+            "title": "GeoNames geographic reference: Near Unalaska — Amaknak Bridge settlement",
+            "authors": "GeoNames contributors",
+            "year": null,
+            "venue": "GeoNames, CC BY4.0",
+            "url": "https://www.geonames.org/5879282/",
+            "access": "Public US gazetteer checked 2026-11-17. Coordinates describe the stated locality; historical evidence is cited separately."
+          }
+        ],
+        "review": {
+          "summary": "Excavations exposed portions of 30–40 partly sunken, stone-lined structures. Fireplaces, vents and channels beneath floors helped organize warmth and work inside houses that were repeatedly repaired and rebuilt.",
+          "limitations": "The envelope spans samples from different contexts. It does not date every structure or establish continuous occupation throughout the whole range.",
+          "discussion": "Some houses had multiple rooms. The surviving arrangements make household labour and building technology visible, while faunal remains trace the food brought into the settlement.",
+          "provenance": "Original source-linked summary; archaeological and historical evidence checked2026-11-17.",
+          "reviewedAt": "2026-11-17",
+          "history": [
+            "2026-10-29: Original-source check; chronology and map precision limits retained.",
+            "2026-10-29: Added coarse named-site occurrence point from published geographic setting; no exact excavation coordinates inferred.",
+            "2026-11-17: Expanded the existing Amaknak record with checked calibrated chronology and public locality; retained its ID to avoid duplicate map evidence."
+          ],
+          "relatedIds": []
+        }
+      },
+      "record": {
+        "id": "r10v-amaknak-bridge-architecture",
+        "revision": 3,
+        "type": "occurrence",
+        "title": "Amaknak Bridge — stone houses and elaborate hearths",
+        "culture": {
+          "id": "unangan-aleutian-histories",
+          "name": "Unangan communities and colonial encounters",
+          "kind": "people",
+          "color": "#547e8c"
+        },
+        "location": {
+          "id": "al-place-amaknak-bridge",
+          "name": "Amaknak Bridge",
+          "lat": 53.88,
+          "lon": -166.55,
+          "precision": "Public bridge-area reference, approximate within 1 km. All structures are described in the same site context.",
+          "provenance": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Bridge-area reference from published site-location figures in Rogers2011 and Knecht/Davis2008."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -1972,
+          "end": -408,
+          "approximate": true,
+          "original": "Published charcoal-date envelope 3922–2358 cal BP; approximately 1973–409 BCE",
+          "method": "Outer envelope of calibrated charcoal ranges reported by Rogers; not a new pooled radiocarbon model.",
+          "interpretation": "The envelope spans samples from different contexts. It does not date every structure or establish continuous occupation throughout the whole range."
+        },
+        "claims": [
+          {
+            "id": "evidence",
+            "text": "On a knoll above the channel, builders terraced stone houses, repaired walls and laid new floors and hearths across older ones. Most houses were round or oval, about 3–4 metres across. A few were larger and rectangular.",
+            "status": "well-supported",
+            "explanation": "The envelope spans samples from different contexts. It does not date every structure or establish continuous occupation throughout the whole range.",
+            "support": [
+              {
+                "sourceId": "al-source-hearths",
+                "locator": "pp. 92, 95–100, especially figs. 3–4 and 11–12",
+                "stance": "supports",
+                "note": "Calibrated outer sample ranges and the field evidence for terracing, superimposition and rebuilding."
+              },
+              {
+                "sourceId": "al-source-amaknak",
+                "locator": "Author/institutional abstract inspected; radiocarbon-year chronology retained as originally reported. Calendar range comes separately from Rogers.",
+                "stance": "supports",
+                "note": "Historical evidence; geographic reference is separately identified."
+              },
+              {
+                "sourceId": "al-geo-5879282",
+                "locator": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Bridge-area reference from published site-location figures in Rogers2011 and Knecht/Davis2008.",
+                "stance": "context",
+                "note": "Supports the public geographic reference. Archaeological and historical dates are supported by the other cited sources."
+              }
+            ]
+          },
+          {
+            "id": "excavation-inventory",
+            "text": "The 2006–2007 fieldwork found portions of at least 36 structures, including at least 14 that were complete or nearly complete, and identified 17 hearths or subfloor channels.",
+            "explanation": "These counts describe excavated features from several episodes. They offer no count of the houses standing in a particular year.",
+            "support": [
+              {
+                "sourceId": "al-source-hearths",
+                "locator": "pp. 95–96, figs. 3–4",
+                "stance": "supports",
+                "note": "The total-station plan accumulates walls and features across building episodes."
+              }
+            ],
+            "status": "well-supported"
+          },
+          {
+            "id": "hearth-layouts",
+            "text": "Excavated hearths had passages cut under the floors. At least twelve installations had branched channels. In the rectangular Structure 63, two channels ran from the hearth along the house’s long axis. Structure V included a wall shaft and branches that split repeatedly.",
+            "explanation": "The site date envelope covers sampled archaeological contexts. The architecture paper gives no separate calendar range for Structure 63. Airflow and heating performance are inferred.",
+            "support": [
+              {
+                "sourceId": "al-source-hearths",
+                "locator": "pp. 102–106, figs. 15–19",
+                "stance": "supports",
+                "note": "Compares hearth layouts and discusses the inferred functions of shafts and subfloor channels."
+              }
+            ],
+            "status": "well-supported"
+          }
+        ],
+        "sources": [
+          {
+            "id": "al-source-hearths",
+            "title": "Architecture and Complex Hearth Features at the Amaknak Bridge Site, Eastern Aleutian Islands, Alaska",
+            "url": "https://doi.org/10.1353/arc.2012.0004",
+            "authors": "Jason S. Rogers",
+            "year": 2011,
+            "venue": "Arctic Anthropology48(2):92–112",
+            "access": "Author-posted article text inspected: calibrated charcoal bounds 3922–3565 to 2618–2358 cal BP, stone houses and complex hearths. The full site date envelope is not the lifespan of every house."
+          },
+          {
+            "id": "al-source-amaknak",
+            "title": "The Amaknak Bridge Site: Cultural Change and the Neoglacial in the Eastern Aleutians",
+            "url": "https://doi.org/10.1353/arc.0.0003",
+            "authors": "Richard A. Knecht and Richard S. Davis",
+            "year": 2008,
+            "venue": "Arctic Anthropology45(1):61–78",
+            "access": "Author/institutional abstract inspected; radiocarbon-year chronology retained as originally reported. Calendar range comes separately from Rogers."
+          },
+          {
+            "id": "al-geo-5879282",
+            "title": "GeoNames geographic reference: Near Unalaska — Amaknak Bridge settlement",
+            "authors": "GeoNames contributors",
+            "year": null,
+            "venue": "GeoNames, CC BY4.0",
+            "url": "https://www.geonames.org/5879282/",
+            "access": "Public US gazetteer checked 2026-11-17. Coordinates describe the stated locality; historical evidence is cited separately."
+          }
+        ],
+        "review": {
+          "summary": "On a knoll above the channel, builders terraced stone houses, repaired walls and laid new floors and hearths across older ones. Most houses were round or oval, about 3–4 metres across. A few were larger and rectangular.",
+          "limitations": "The envelope spans samples from different contexts. It does not date every structure or establish continuous occupation throughout the whole range.",
+          "discussion": "Later excavation showed that some adjacent walls and floors at Structure 7 belonged to earlier or separately built structures. Fireplaces, wall shafts and channels below floors are visible in the remains. Their functions are inferred from their construction and deposits.",
+          "provenance": "Original source-linked summary; archaeological and historical evidence checked2026-11-17.",
+          "reviewedAt": "2026-11-17",
+          "history": [
+            "2026-10-29: Original-source check; chronology and map precision limits retained.",
+            "2026-10-29: Added coarse named-site occurrence point from published geographic setting; no exact excavation coordinates inferred.",
+            "2026-11-17: Expanded the existing Amaknak record with checked calibrated chronology and public locality; retained its ID to avoid duplicate map evidence.",
+            "2026-11-17: Added source-checked evidence from the village research."
+          ],
+          "relatedIds": [
+            "r12v-amaknak-s2-floor",
+            "r12v-amaknak-s5-floor",
+            "r12v-amaknak-s7-main-room",
+            "al-amaknak-s7-west-charcoal",
+            "r12v-amaknak-s3-hearth",
+            "al-amaknak-pack-ice-fauna"
+          ]
+        }
+      },
+      "reason": "Adds Rogers’s 2006–2007 structure inventory, detailed hearth layouts, and chronological interpretation of building intersections. Keeps the previously reconciled time envelope and coordinates."
+    },
+    {
+      "targetId": "r12v-amaknak-s7-main-room",
+      "beforeRecord": {
+        "id": "r12v-amaknak-s7-main-room",
+        "revision": 3,
+        "type": "occurrence",
+        "title": "Amaknak Bridge — Structure 7 main room charcoal",
+        "culture": {
+          "id": "r10-unangan-archaeological",
+          "name": "Ancestral Unangan archaeological contexts",
+          "kind": "culture",
+          "color": "#b18a60"
+        },
+        "location": {
+          "id": "al-place-amaknak-bridge",
+          "name": "Near Unalaska — Amaknak Bridge settlement",
+          "lat": 53.88,
+          "lon": -166.55,
+          "precision": "Rounded bridge-area reference within approximately 1 km; individual house walls are described in the guide, not surveyed on the map.",
+          "provenance": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Bridge-area reference from published site-location figures in Rogers2011 and Knecht/Davis2008."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -1279,
+          "end": -819,
+          "approximate": true,
+          "original": "2840 ± 90 radiocarbon BP (Beta-184636); published 2σ calibrated 1280–820 BCE (95% probability)",
+          "method": "Published calibrated BCE limits translated to astronomical years (1 BCE = 0); no recalibration. Calibration curve/software not identified in accessed dating passage.",
+          "interpretation": "Probability envelope for associated charcoal; not a duration of continuous residence or a founding date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Structure 7 main room has a published charcoal age of 2840 ± 90 BP, calibrated to 1280–820 BCE.",
+            "status": "under discussion",
+            "explanation": "Wood age can predate use or deposition; sample association does not date every episode of house use.",
+            "support": [
+              {
+                "sourceId": "r10-knecht2008",
+                "locator": "Table 2 p.65; Dating and Stratigraphy pp.65–66; house descriptions pp.66–67",
+                "stance": "supports",
+                "note": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r10-knecht2008",
+            "authors": "Richard A. Knecht; Richard S. Davis",
+            "title": "The Amaknak Bridge Site: Cultural Change and the Neoglacial in the Eastern Aleutians",
+            "year": 2008,
+            "venue": "Arctic Anthropology 45(1):61–78",
+            "url": "https://www.researchgate.net/publication/254927024_The_Amaknak_Bridge_Site_Cultural_Change_and_the_Neoglacial_in_the_Eastern_Aleutians",
+            "access": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration.",
+            "referenceType": "journal-article",
+            "doi": "10.1353/arc.0.0003"
+          }
+        ],
+        "review": {
+          "summary": "Charcoal from the main room of Amaknak Bridge’s Structure 7 dates to approximately 1280–820 BCE. The interval is the sample’s dating range, not evidence that the room was used continuously for all those years.",
+          "limitations": "Single wood-charcoal determination; old-wood and depositional associations require caution. No language or resident population assigned.",
+          "discussion": "Calibrated uncertainty is retained in full. The excavators consider an occupation hiatus possible; chronological overlap is not proof that all houses were contemporaneous.",
+          "provenance": "Round12 original-source check of the preserved Aleutian Consensus report; original documents remain private and unchanged. Independently accessed author-uploaded text confirms the dates.",
+          "reviewedAt": "2026-11-16",
+          "history": [
+            "2026-10-29: Extracted published sample-specific calendar range; no new calibration.",
+            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes.",
+            "2026-11-17: Aligned the public Amaknak Bridge locality with the expanded architecture record. Sample dates and claims are unchanged."
+          ],
+          "relatedIds": [
+            "r10v-amaknak-bridge-architecture"
+          ]
+        }
+      },
+      "record": {
+        "id": "r12v-amaknak-s7-main-room",
+        "revision": 4,
+        "type": "occurrence",
+        "title": "Amaknak Bridge — Structure 7 main room charcoal",
+        "culture": {
+          "id": "r10-unangan-archaeological",
+          "name": "Ancestral Unangan archaeological contexts",
+          "kind": "culture",
+          "color": "#b18a60"
+        },
+        "location": {
+          "id": "al-place-amaknak-bridge",
+          "name": "Amaknak Bridge",
+          "lat": 53.88,
+          "lon": -166.55,
+          "precision": "Public bridge-area reference, approximate within 1 km. All structures are described in the same site context.",
+          "provenance": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Bridge-area reference from published site-location figures in Rogers2011 and Knecht/Davis2008."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -1279,
+          "end": -819,
+          "approximate": true,
+          "original": "2840 ± 90 radiocarbon BP (Beta-184636); published 2σ calibrated 1280–820 BCE (95% probability)",
+          "method": "Published calibrated BCE limits translated to astronomical years (1 BCE = 0); no recalibration. Calibration curve/software not identified in accessed dating passage.",
+          "interpretation": "Probability envelope for associated charcoal; not a duration of continuous residence or a founding date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Structure 7 main room has a published charcoal age of 2840 ± 90 BP, calibrated to 1280–820 BCE.",
+            "status": "under discussion",
+            "explanation": "Wood age can predate use or deposition; sample association does not date every episode of house use.",
+            "support": [
+              {
+                "sourceId": "r10-knecht2008",
+                "locator": "Table 2 p.65; Dating and Stratigraphy pp.65–66; house descriptions pp.66–67",
+                "stance": "supports",
+                "note": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration."
+              }
+            ]
+          },
+          {
+            "id": "building-order",
+            "text": "The roughly 6 × 4 metre main building had an east-wall hearth and a branched subfloor channel. It overlapped the earlier Structure A and was laid over a smaller hearth.",
+            "explanation": "The excavators in 2003 interpreted steps and adjoining remains as links to side rooms. Rogers interpreted superposition and wall intersections exposed by the later fieldwork as evidence of earlier or distinct buildings.",
+            "support": [
+              {
+                "sourceId": "al-source-amaknak",
+                "locator": "pp. 68–71, figs. 6–8",
+                "stance": "supports",
+                "note": "Original interpretation and description of hearth and adjacent spaces."
+              },
+              {
+                "sourceId": "al-source-hearths",
+                "locator": "pp. 98–100, fig. 12; pp. 103–104, figs. 16–17",
+                "stance": "supports",
+                "note": "Later fieldwork shows wall overlap and a smaller underlying hearth."
+              }
+            ],
+            "status": "well-supported"
+          }
+        ],
+        "sources": [
+          {
+            "id": "r10-knecht2008",
+            "authors": "Richard A. Knecht; Richard S. Davis",
+            "title": "The Amaknak Bridge Site: Cultural Change and the Neoglacial in the Eastern Aleutians",
+            "year": 2008,
+            "venue": "Arctic Anthropology 45(1):61–78",
+            "url": "https://www.researchgate.net/publication/254927024_The_Amaknak_Bridge_Site_Cultural_Change_and_the_Neoglacial_in_the_Eastern_Aleutians",
+            "access": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration.",
+            "referenceType": "journal-article",
+            "doi": "10.1353/arc.0.0003"
+          },
+          {
+            "id": "al-source-amaknak",
+            "authors": "Richard A. Knecht and Richard S. Davis",
+            "year": 2008,
+            "title": "The Amaknak Bridge Site: Cultural Change and the Neoglacial in the Eastern Aleutians",
+            "venue": "Arctic Anthropology 45(1):61–78",
+            "url": "https://doi.org/10.1353/arc.0.0003",
+            "access": "Author-posted full text and published radiocarbon table checked.",
+            "doi": "10.1353/arc.0.0003",
+            "referenceType": "journal-article"
+          },
+          {
+            "id": "al-source-hearths",
+            "authors": "Jason S. Rogers",
+            "year": 2011,
+            "title": "Architecture and Complex Hearth Features at the Amaknak Bridge Site, Eastern Aleutian Islands, Alaska",
+            "venue": "Arctic Anthropology 48(2):92–112",
+            "url": "https://doi.org/10.1353/arc.2012.0004",
+            "access": "Author-posted full text checked, especially the description of 2006–2007 excavation and the structure and hearth sections.",
+            "doi": "10.1353/arc.2012.0004",
+            "referenceType": "journal-article"
+          }
+        ],
+        "review": {
+          "summary": "Charcoal from the main room of Amaknak Bridge’s Structure 7 dates to approximately 1280–820 BCE. The interval is the sample’s dating range, not evidence that the room was used continuously for all those years.",
+          "limitations": "Single wood-charcoal determination; old-wood and depositional associations require caution. No language or resident population assigned.",
+          "discussion": "The two excavations produced different readings of the adjacent spaces. The earlier team read the step-ups as internal links. The later team found that construction of the main building cut earlier structures and argued that the northwest and west structures were independently built.",
+          "provenance": "Round12 original-source check of the preserved Aleutian Consensus report; original documents remain private and unchanged. Independently accessed author-uploaded text confirms the dates.",
+          "reviewedAt": "2026-11-17",
+          "history": [
+            "2026-10-29: Extracted published sample-specific calendar range; no new calibration.",
+            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes.",
+            "2026-11-17: Aligned the public Amaknak Bridge locality with the expanded architecture record. Sample dates and claims are unchanged.",
+            "2026-11-17: Added source-checked evidence from the village research."
+          ],
+          "relatedIds": [
+            "r10v-amaknak-bridge-architecture",
+            "al-amaknak-s7-west-charcoal"
+          ]
+        }
+      },
+      "reason": "Adds wall and hearth superposition and the differing readings of the west structures. Keeps the canonical published Beta-184636 date and coordinates."
+    },
+    {
+      "targetId": "r12v-amaknak-s2-floor",
+      "beforeRecord": {
+        "id": "r12v-amaknak-s2-floor",
+        "revision": 3,
+        "type": "occurrence",
+        "title": "Amaknak Bridge — Structure 2 floor charcoal",
+        "culture": {
+          "id": "r10-unangan-archaeological",
+          "name": "Ancestral Unangan archaeological contexts",
+          "kind": "culture",
+          "color": "#b18a60"
+        },
+        "location": {
+          "id": "al-place-amaknak-bridge",
+          "name": "Near Unalaska — Amaknak Bridge settlement",
+          "lat": 53.88,
+          "lon": -166.55,
+          "precision": "Rounded bridge-area reference within approximately 1 km; individual house walls are described in the guide, not surveyed on the map.",
+          "provenance": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Bridge-area reference from published site-location figures in Rogers2011 and Knecht/Davis2008."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -1769,
+          "end": -1519,
+          "approximate": true,
+          "original": "3370 ± 60 radiocarbon BP (Beta-181340); published 2σ calibrated 1770–1520 BCE (95% probability)",
+          "method": "Published calibrated BCE limits translated to astronomical years (1 BCE = 0); no recalibration. Calibration curve/software not identified in accessed dating passage.",
+          "interpretation": "Probability envelope for associated charcoal; not a duration of continuous residence or a founding date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Structure 2 floor has a published charcoal age of 3370 ± 60 BP, calibrated to 1770–1520 BCE.",
+            "status": "under discussion",
+            "explanation": "Wood age can predate use or deposition; sample association does not date every episode of house use.",
+            "support": [
+              {
+                "sourceId": "r10-knecht2008",
+                "locator": "Table 2 p.65; Dating and Stratigraphy pp.65–66; house descriptions pp.66–67",
+                "stance": "supports",
+                "note": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r10-knecht2008",
+            "authors": "Richard A. Knecht; Richard S. Davis",
+            "title": "The Amaknak Bridge Site: Cultural Change and the Neoglacial in the Eastern Aleutians",
+            "year": 2008,
+            "venue": "Arctic Anthropology 45(1):61–78",
+            "url": "https://www.researchgate.net/publication/254927024_The_Amaknak_Bridge_Site_Cultural_Change_and_the_Neoglacial_in_the_Eastern_Aleutians",
+            "access": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration.",
+            "referenceType": "journal-article",
+            "doi": "10.1353/arc.0.0003"
+          }
+        ],
+        "review": {
+          "summary": "Charcoal from the floor of Amaknak Bridge’s Structure 2 has a published calibrated date of approximately 1770–1520 BCE. The result dates that floor sample, not the construction and entire use of every building at the site.",
+          "limitations": "Single wood-charcoal determination; old-wood and depositional associations require caution. No language or resident population assigned.",
+          "discussion": "Calibrated uncertainty is retained in full. The excavators consider an occupation hiatus possible; chronological overlap is not proof that all houses were contemporaneous.",
+          "provenance": "Round12 original-source check of the preserved Aleutian Consensus report; original documents remain private and unchanged. Independently accessed author-uploaded text confirms the dates.",
+          "reviewedAt": "2026-11-16",
+          "history": [
+            "2026-10-29: Extracted published sample-specific calendar range; no new calibration.",
+            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes.",
+            "2026-11-17: Aligned the public Amaknak Bridge locality with the expanded architecture record. Sample dates and claims are unchanged."
+          ],
+          "relatedIds": [
+            "r10v-amaknak-bridge-architecture"
+          ]
+        }
+      },
+      "record": {
+        "id": "r12v-amaknak-s2-floor",
+        "revision": 4,
+        "type": "occurrence",
+        "title": "Amaknak Bridge — Structure 2 floor charcoal",
+        "culture": {
+          "id": "r10-unangan-archaeological",
+          "name": "Ancestral Unangan archaeological contexts",
+          "kind": "culture",
+          "color": "#b18a60"
+        },
+        "location": {
+          "id": "al-place-amaknak-bridge",
+          "name": "Amaknak Bridge",
+          "lat": 53.88,
+          "lon": -166.55,
+          "precision": "Public bridge-area reference, approximate within 1 km. All structures are described in the same site context.",
+          "provenance": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Bridge-area reference from published site-location figures in Rogers2011 and Knecht/Davis2008."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -1769,
+          "end": -1519,
+          "approximate": true,
+          "original": "3370 ± 60 radiocarbon BP (Beta-181340); published 2σ calibrated 1770–1520 BCE (95% probability)",
+          "method": "Published calibrated BCE limits translated to astronomical years (1 BCE = 0); no recalibration. Calibration curve/software not identified in accessed dating passage.",
+          "interpretation": "Probability envelope for associated charcoal; not a duration of continuous residence or a founding date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Structure 2 floor has a published charcoal age of 3370 ± 60 BP, calibrated to 1770–1520 BCE.",
+            "status": "under discussion",
+            "explanation": "Wood age can predate use or deposition; sample association does not date every episode of house use.",
+            "support": [
+              {
+                "sourceId": "r10-knecht2008",
+                "locator": "Table 2 p.65; Dating and Stratigraphy pp.65–66; house descriptions pp.66–67",
+                "stance": "supports",
+                "note": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration."
+              }
+            ]
+          },
+          {
+            "id": "structure-context",
+            "text": "A single ring of upright stones lined Structure 2. The excavation documented whale-bone supports, channels extending nearly four metres and a slab-covered storage pit. The excavators read ash in the house fill as a possible interruption in local occupation.",
+            "explanation": "These details concern the excavated structure and associated deposits. They do not establish the number of residents or a full construction and use span.",
+            "support": [
+              {
+                "sourceId": "al-source-amaknak",
+                "locator": "pp. 66–67 fig. 4",
+                "stance": "supports",
+                "note": "Original excavation report and published drawing or date table."
+              }
+            ],
+            "status": "well-supported"
+          }
+        ],
+        "sources": [
+          {
+            "id": "r10-knecht2008",
+            "authors": "Richard A. Knecht; Richard S. Davis",
+            "title": "The Amaknak Bridge Site: Cultural Change and the Neoglacial in the Eastern Aleutians",
+            "year": 2008,
+            "venue": "Arctic Anthropology 45(1):61–78",
+            "url": "https://www.researchgate.net/publication/254927024_The_Amaknak_Bridge_Site_Cultural_Change_and_the_Neoglacial_in_the_Eastern_Aleutians",
+            "access": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration.",
+            "referenceType": "journal-article",
+            "doi": "10.1353/arc.0.0003"
+          },
+          {
+            "id": "al-source-amaknak",
+            "authors": "Richard A. Knecht and Richard S. Davis",
+            "year": 2008,
+            "title": "The Amaknak Bridge Site: Cultural Change and the Neoglacial in the Eastern Aleutians",
+            "venue": "Arctic Anthropology 45(1):61–78",
+            "url": "https://doi.org/10.1353/arc.0.0003",
+            "access": "Author-posted full text and published radiocarbon table checked.",
+            "doi": "10.1353/arc.0.0003",
+            "referenceType": "journal-article"
+          }
+        ],
+        "review": {
+          "summary": "Charcoal from the floor of Amaknak Bridge’s Structure 2 has a published calibrated date of approximately 1770–1520 BCE. The result dates that floor sample, not the construction and entire use of every building at the site.",
+          "limitations": "Single wood-charcoal determination; old-wood and depositional associations require caution. No language or resident population assigned.",
+          "discussion": "Calibrated uncertainty is retained in full. The excavators consider an occupation hiatus possible; chronological overlap is not proof that all houses were contemporaneous.",
+          "provenance": "Round12 original-source check of the preserved Aleutian Consensus report; original documents remain private and unchanged. Independently accessed author-uploaded text confirms the dates.",
+          "reviewedAt": "2026-11-17",
+          "history": [
+            "2026-10-29: Extracted published sample-specific calendar range; no new calibration.",
+            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes.",
+            "2026-11-17: Aligned the public Amaknak Bridge locality with the expanded architecture record. Sample dates and claims are unchanged.",
+            "2026-11-17: Added source-checked evidence from the village research."
+          ],
+          "relatedIds": [
+            "r10v-amaknak-bridge-architecture"
+          ]
+        }
+      },
+      "reason": "Adds documented layout, storage pit and tephra context. Keeps the existing sample chronology and coordinates."
+    },
+    {
+      "targetId": "r12v-amaknak-s5-floor",
+      "beforeRecord": {
+        "id": "r12v-amaknak-s5-floor",
+        "revision": 3,
+        "type": "occurrence",
+        "title": "Amaknak Bridge — Structure 5 floor charcoal",
+        "culture": {
+          "id": "r10-unangan-archaeological",
+          "name": "Ancestral Unangan archaeological contexts",
+          "kind": "culture",
+          "color": "#b18a60"
+        },
+        "location": {
+          "id": "al-place-amaknak-bridge",
+          "name": "Near Unalaska — Amaknak Bridge settlement",
+          "lat": 53.88,
+          "lon": -166.55,
+          "precision": "Rounded bridge-area reference within approximately 1 km; individual house walls are described in the guide, not surveyed on the map.",
+          "provenance": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Bridge-area reference from published site-location figures in Rogers2011 and Knecht/Davis2008."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -1409,
+          "end": -1009,
+          "approximate": true,
+          "original": "3000 ± 70 radiocarbon BP (Beta-184634); published 2σ calibrated 1410–1010 BCE (95% probability)",
+          "method": "Published calibrated BCE limits translated to astronomical years (1 BCE = 0); no recalibration. Calibration curve/software not identified in accessed dating passage.",
+          "interpretation": "Probability envelope for associated charcoal; not a duration of continuous residence or a founding date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Structure 5 floor has a published charcoal age of 3000 ± 70 BP, calibrated to 1410–1010 BCE.",
+            "status": "under discussion",
+            "explanation": "Wood age can predate use or deposition; sample association does not date every episode of house use.",
+            "support": [
+              {
+                "sourceId": "r10-knecht2008",
+                "locator": "Table 2 p.65; Dating and Stratigraphy pp.65–66; house descriptions pp.66–67",
+                "stance": "supports",
+                "note": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r10-knecht2008",
+            "authors": "Richard A. Knecht; Richard S. Davis",
+            "title": "The Amaknak Bridge Site: Cultural Change and the Neoglacial in the Eastern Aleutians",
+            "year": 2008,
+            "venue": "Arctic Anthropology 45(1):61–78",
+            "url": "https://www.researchgate.net/publication/254927024_The_Amaknak_Bridge_Site_Cultural_Change_and_the_Neoglacial_in_the_Eastern_Aleutians",
+            "access": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration.",
+            "referenceType": "journal-article",
+            "doi": "10.1353/arc.0.0003"
+          }
+        ],
+        "review": {
+          "summary": "Charcoal from the floor of Amaknak Bridge’s Structure 5 dates to approximately 1410–1010 BCE. It provides evidence for this individual domestic context rather than one site-wide occupation span.",
+          "limitations": "Single wood-charcoal determination; old-wood and depositional associations require caution. No language or resident population assigned.",
+          "discussion": "Calibrated uncertainty is retained in full. The excavators consider an occupation hiatus possible; chronological overlap is not proof that all houses were contemporaneous.",
+          "provenance": "Round12 original-source check of the preserved Aleutian Consensus report; original documents remain private and unchanged. Independently accessed author-uploaded text confirms the dates.",
+          "reviewedAt": "2026-11-16",
+          "history": [
+            "2026-10-29: Extracted published sample-specific calendar range; no new calibration.",
+            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes.",
+            "2026-11-17: Aligned the public Amaknak Bridge locality with the expanded architecture record. Sample dates and claims are unchanged."
+          ],
+          "relatedIds": [
+            "r10v-amaknak-bridge-architecture"
+          ]
+        }
+      },
+      "record": {
+        "id": "r12v-amaknak-s5-floor",
+        "revision": 4,
+        "type": "occurrence",
+        "title": "Amaknak Bridge — Structure 5 floor charcoal",
+        "culture": {
+          "id": "r10-unangan-archaeological",
+          "name": "Ancestral Unangan archaeological contexts",
+          "kind": "culture",
+          "color": "#b18a60"
+        },
+        "location": {
+          "id": "al-place-amaknak-bridge",
+          "name": "Amaknak Bridge",
+          "lat": 53.88,
+          "lon": -166.55,
+          "precision": "Public bridge-area reference, approximate within 1 km. All structures are described in the same site context.",
+          "provenance": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Bridge-area reference from published site-location figures in Rogers2011 and Knecht/Davis2008."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -1409,
+          "end": -1009,
+          "approximate": true,
+          "original": "3000 ± 70 radiocarbon BP (Beta-184634); published 2σ calibrated 1410–1010 BCE (95% probability)",
+          "method": "Published calibrated BCE limits translated to astronomical years (1 BCE = 0); no recalibration. Calibration curve/software not identified in accessed dating passage.",
+          "interpretation": "Probability envelope for associated charcoal; not a duration of continuous residence or a founding date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Structure 5 floor has a published charcoal age of 3000 ± 70 BP, calibrated to 1410–1010 BCE.",
+            "status": "under discussion",
+            "explanation": "Wood age can predate use or deposition; sample association does not date every episode of house use.",
+            "support": [
+              {
+                "sourceId": "r10-knecht2008",
+                "locator": "Table 2 p.65; Dating and Stratigraphy pp.65–66; house descriptions pp.66–67",
+                "stance": "supports",
+                "note": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration."
+              }
+            ]
+          },
+          {
+            "id": "structure-context",
+            "text": "The structure’s packed floor yielded the associated charcoal. A second determination came from fill above the floor and gave 2970 ± 60 radiocarbon BP (Beta-181339), published as 1390–1000 BCE. The two contexts record separate deposits, with overlapping calibrated ranges.",
+            "explanation": "These details concern the excavated structure and associated deposits. They do not establish the number of residents or a full construction and use span.",
+            "support": [
+              {
+                "sourceId": "al-source-amaknak",
+                "locator": "p. 65 Table 2",
+                "stance": "supports",
+                "note": "Original excavation report and published drawing or date table."
+              }
+            ],
+            "status": "well-supported"
+          }
+        ],
+        "sources": [
+          {
+            "id": "r10-knecht2008",
+            "authors": "Richard A. Knecht; Richard S. Davis",
+            "title": "The Amaknak Bridge Site: Cultural Change and the Neoglacial in the Eastern Aleutians",
+            "year": 2008,
+            "venue": "Arctic Anthropology 45(1):61–78",
+            "url": "https://www.researchgate.net/publication/254927024_The_Amaknak_Bridge_Site_Cultural_Change_and_the_Neoglacial_in_the_Eastern_Aleutians",
+            "access": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration.",
+            "referenceType": "journal-article",
+            "doi": "10.1353/arc.0.0003"
+          },
+          {
+            "id": "al-source-amaknak",
+            "authors": "Richard A. Knecht and Richard S. Davis",
+            "year": 2008,
+            "title": "The Amaknak Bridge Site: Cultural Change and the Neoglacial in the Eastern Aleutians",
+            "venue": "Arctic Anthropology 45(1):61–78",
+            "url": "https://doi.org/10.1353/arc.0.0003",
+            "access": "Author-posted full text and published radiocarbon table checked.",
+            "doi": "10.1353/arc.0.0003",
+            "referenceType": "journal-article"
+          }
+        ],
+        "review": {
+          "summary": "Charcoal from the floor of Amaknak Bridge’s Structure 5 dates to approximately 1410–1010 BCE. It provides evidence for this individual domestic context rather than one site-wide occupation span.",
+          "limitations": "Single wood-charcoal determination; old-wood and depositional associations require caution. No language or resident population assigned.",
+          "discussion": "Calibrated uncertainty is retained in full. The excavators consider an occupation hiatus possible; chronological overlap is not proof that all houses were contemporaneous.",
+          "provenance": "Round12 original-source check of the preserved Aleutian Consensus report; original documents remain private and unchanged. Independently accessed author-uploaded text confirms the dates.",
+          "reviewedAt": "2026-11-17",
+          "history": [
+            "2026-10-29: Extracted published sample-specific calendar range; no new calibration.",
+            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes.",
+            "2026-11-17: Aligned the public Amaknak Bridge locality with the expanded architecture record. Sample dates and claims are unchanged.",
+            "2026-11-17: Added source-checked evidence from the village research."
+          ],
+          "relatedIds": [
+            "r10v-amaknak-bridge-architecture"
+          ]
+        }
+      },
+      "reason": "Adds the independently reported fill determination in a second claim. Keeps the existing floor sample chronology and coordinates."
+    },
+    {
+      "targetId": "r12v-amaknak-s3-hearth",
+      "beforeRecord": {
+        "id": "r12v-amaknak-s3-hearth",
+        "revision": 3,
+        "type": "occurrence",
+        "title": "Amaknak Bridge — Structure 3 hearth charcoal",
+        "culture": {
+          "id": "r10-unangan-archaeological",
+          "name": "Ancestral Unangan archaeological contexts",
+          "kind": "culture",
+          "color": "#b18a60"
+        },
+        "location": {
+          "id": "al-place-amaknak-bridge",
+          "name": "Near Unalaska — Amaknak Bridge settlement",
+          "lat": 53.88,
+          "lon": -166.55,
+          "precision": "Rounded bridge-area reference within approximately 1 km; individual house walls are described in the guide, not surveyed on the map.",
+          "provenance": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Bridge-area reference from published site-location figures in Rogers2011 and Knecht/Davis2008."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -909,
+          "end": -419,
+          "approximate": true,
+          "original": "2590 ± 90 radiocarbon BP (Beta-181341); published 2σ calibrated 910–420 BCE (95% probability)",
+          "method": "Published calibrated BCE limits translated to astronomical years (1 BCE = 0); no recalibration. Calibration curve/software not identified in accessed dating passage.",
+          "interpretation": "Probability envelope for associated charcoal; not a duration of continuous residence or a founding date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Structure 3 hearth has a published charcoal age of 2590 ± 90 BP, calibrated to 910–420 BCE.",
+            "status": "under discussion",
+            "explanation": "Wood age can predate use or deposition; sample association does not date every episode of house use.",
+            "support": [
+              {
+                "sourceId": "r10-knecht2008",
+                "locator": "Table 2 p.65; Dating and Stratigraphy pp.65–66; house descriptions pp.66–67",
+                "stance": "supports",
+                "note": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "r10-knecht2008",
+            "authors": "Richard A. Knecht; Richard S. Davis",
+            "title": "The Amaknak Bridge Site: Cultural Change and the Neoglacial in the Eastern Aleutians",
+            "year": 2008,
+            "venue": "Arctic Anthropology 45(1):61–78",
+            "url": "https://www.researchgate.net/publication/254927024_The_Amaknak_Bridge_Site_Cultural_Change_and_the_Neoglacial_in_the_Eastern_Aleutians",
+            "access": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration.",
+            "referenceType": "journal-article",
+            "doi": "10.1353/arc.0.0003"
+          }
+        ],
+        "review": {
+          "summary": "Charcoal from a hearth in Amaknak Bridge’s Structure 3 dates to approximately 910–420 BCE. This dates a specific household burning context, with uncertainty that should not be converted into a precise construction year.",
+          "limitations": "Single wood-charcoal determination; old-wood and depositional associations require caution. No language or resident population assigned.",
+          "discussion": "Calibrated uncertainty is retained in full. The excavators consider an occupation hiatus possible; chronological overlap is not proof that all houses were contemporaneous.",
+          "provenance": "Round12 original-source check of the preserved Aleutian Consensus report; original documents remain private and unchanged. Independently accessed author-uploaded text confirms the dates.",
+          "reviewedAt": "2026-11-16",
+          "history": [
+            "2026-10-29: Extracted published sample-specific calendar range; no new calibration.",
+            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes.",
+            "2026-11-17: Aligned the public Amaknak Bridge locality with the expanded architecture record. Sample dates and claims are unchanged."
+          ],
+          "relatedIds": [
+            "r10v-amaknak-bridge-architecture"
+          ]
+        }
+      },
+      "record": {
+        "id": "r12v-amaknak-s3-hearth",
+        "revision": 4,
+        "type": "occurrence",
+        "title": "Amaknak Bridge — Structure 3 hearth charcoal",
+        "culture": {
+          "id": "r10-unangan-archaeological",
+          "name": "Ancestral Unangan archaeological contexts",
+          "kind": "culture",
+          "color": "#b18a60"
+        },
+        "location": {
+          "id": "al-place-amaknak-bridge",
+          "name": "Amaknak Bridge",
+          "lat": 53.88,
+          "lon": -166.55,
+          "precision": "Public bridge-area reference, approximate within 1 km. All structures are described in the same site context.",
+          "provenance": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Bridge-area reference from published site-location figures in Rogers2011 and Knecht/Davis2008."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -909,
+          "end": -419,
+          "approximate": true,
+          "original": "2590 ± 90 radiocarbon BP (Beta-181341); published 2σ calibrated 910–420 BCE (95% probability)",
+          "method": "Published calibrated BCE limits translated to astronomical years (1 BCE = 0); no recalibration. Calibration curve/software not identified in accessed dating passage.",
+          "interpretation": "Probability envelope for associated charcoal; not a duration of continuous residence or a founding date."
+        },
+        "claims": [
+          {
+            "id": "finding",
+            "text": "Structure 3 hearth has a published charcoal age of 2590 ± 90 BP, calibrated to 910–420 BCE.",
+            "status": "under discussion",
+            "explanation": "Wood age can predate use or deposition; sample association does not date every episode of house use.",
+            "support": [
+              {
+                "sourceId": "r10-knecht2008",
+                "locator": "Table 2 p.65; Dating and Stratigraphy pp.65–66; house descriptions pp.66–67",
+                "stance": "supports",
+                "note": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration."
+              }
+            ]
+          },
+          {
+            "id": "structure-context",
+            "text": "Structure 3 was a round house under four metres across. It had a group of central post supports and floor caches. A cache of albatross long bones was interpreted as stock for making needles.",
+            "explanation": "These details concern the excavated structure and associated deposits. They do not establish the number of residents or a full construction and use span.",
+            "support": [
+              {
+                "sourceId": "al-source-amaknak",
+                "locator": "pp. 67–68 fig. 5",
+                "stance": "supports",
+                "note": "Original excavation report and published drawing or date table."
+              }
+            ],
+            "status": "well-supported"
+          }
+        ],
+        "sources": [
+          {
+            "id": "r10-knecht2008",
+            "authors": "Richard A. Knecht; Richard S. Davis",
+            "title": "The Amaknak Bridge Site: Cultural Change and the Neoglacial in the Eastern Aleutians",
+            "year": 2008,
+            "venue": "Arctic Anthropology 45(1):61–78",
+            "url": "https://www.researchgate.net/publication/254927024_The_Amaknak_Bridge_Site_Cultural_Change_and_the_Neoglacial_in_the_Eastern_Aleutians",
+            "access": "Checked 2026-10-29: Original author-uploaded article text independently inspected on ResearchGate, Table 2 p.65 and house descriptions pp.66–67. University of Aberdeen abstract and metadata independently checked. Consensus original-source excerpts were discovery leads; no new calibration.",
+            "referenceType": "journal-article",
+            "doi": "10.1353/arc.0.0003"
+          },
+          {
+            "id": "al-source-amaknak",
+            "authors": "Richard A. Knecht and Richard S. Davis",
+            "year": 2008,
+            "title": "The Amaknak Bridge Site: Cultural Change and the Neoglacial in the Eastern Aleutians",
+            "venue": "Arctic Anthropology 45(1):61–78",
+            "url": "https://doi.org/10.1353/arc.0.0003",
+            "access": "Author-posted full text and published radiocarbon table checked.",
+            "doi": "10.1353/arc.0.0003",
+            "referenceType": "journal-article"
+          }
+        ],
+        "review": {
+          "summary": "Charcoal from a hearth in Amaknak Bridge’s Structure 3 dates to approximately 910–420 BCE. This dates a specific household burning context, with uncertainty that should not be converted into a precise construction year.",
+          "limitations": "Single wood-charcoal determination; old-wood and depositional associations require caution. No language or resident population assigned.",
+          "discussion": "Calibrated uncertainty is retained in full. The excavators consider an occupation hiatus possible; chronological overlap is not proof that all houses were contemporaneous.",
+          "provenance": "Round12 original-source check of the preserved Aleutian Consensus report; original documents remain private and unchanged. Independently accessed author-uploaded text confirms the dates.",
+          "reviewedAt": "2026-11-17",
+          "history": [
+            "2026-10-29: Extracted published sample-specific calendar range; no new calibration.",
+            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes.",
+            "2026-11-17: Aligned the public Amaknak Bridge locality with the expanded architecture record. Sample dates and claims are unchanged.",
+            "2026-11-17: Added source-checked evidence from the village research."
+          ],
+          "relatedIds": [
+            "r10v-amaknak-bridge-architecture"
+          ]
+        }
+      },
+      "reason": "Adds documented floor layout, roof supports and material caches. Keeps the existing hearth sample chronology and coordinates."
+    },
+    {
+      "targetId": "al-anangula-blades",
+      "beforeRecord": {
+        "id": "al-anangula-blades",
+        "revision": 1,
+        "type": "occurrence",
+        "title": "Anangula — a coastal stone-tool workshop",
+        "culture": {
+          "id": "unangan-aleutian-histories",
+          "name": "Unangan communities and colonial encounters",
+          "kind": "people",
+          "color": "#547e8c"
+        },
+        "location": {
+          "id": "al-place-7304673",
+          "name": "Anangula Site",
+          "lat": 52.9965,
+          "lon": -168.913,
+          "precision": "Public archaeological-district reference; approximate within 500 metres. It does not locate a burial or a particular workshop floor.",
+          "provenance": "GeoNames US gazetteer, feature 7304673, downloaded 2026-11-17. https://www.geonames.org/7304673/ — CC BY 4.0; geographic reference only."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": -7000,
+          "end": -7000,
+          "approximate": true,
+          "original": "Around 9,000 years ago; rounded c.7000 BCE",
+          "method": "Rounded institutional archaeological synthesis, not a newly calibrated sample.",
+          "interpretation": "This dates the early core-and-blade site. The separate village on the island is younger."
+        },
+        "claims": [
+          {
+            "id": "evidence",
+            "text": "Craftworkers at Anangula struck long blades from prepared stone cores and retouched them into cutting and scraping tools. Imported raw materials and the coastal setting show the work behind early maritime life.",
+            "status": "well-supported",
+            "explanation": "This dates the early core-and-blade site. The separate village on the island is younger.",
+            "support": [
+              {
+                "sourceId": "al-source-anangula",
+                "locator": "Full institutional page read; core-and-blade site and later village distinguished.",
+                "stance": "supports",
+                "note": "Historical evidence; geographic reference is separately identified."
+              },
+              {
+                "sourceId": "al-geo-7304673",
+                "locator": "GeoNames US gazetteer, feature 7304673, downloaded 2026-11-17. https://www.geonames.org/7304673/ — CC BY 4.0; geographic reference only.",
+                "stance": "context",
+                "note": "Supports the public geographic reference. Archaeological and historical dates are supported by the other cited sources."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "al-source-anangula",
+            "title": "Anangula National Historic Landmark",
+            "url": "https://www.nps.gov/places/anangula-site.htm",
+            "authors": "National Park Service",
+            "year": 2024,
+            "venue": "Archaeological research / institutional history",
+            "access": "Full institutional page read; core-and-blade site and later village distinguished."
+          },
+          {
+            "id": "al-geo-7304673",
+            "title": "GeoNames geographic reference: Anangula Site",
+            "authors": "GeoNames contributors",
+            "year": null,
+            "venue": "GeoNames, CC BY4.0",
+            "url": "https://www.geonames.org/7304673/",
+            "access": "Public US gazetteer checked 2026-11-17. Coordinates describe the stated locality; historical evidence is cited separately."
+          }
+        ],
+        "review": {
+          "summary": "Craftworkers at Anangula struck long blades from prepared stone cores and retouched them into cutting and scraping tools. Imported raw materials and the coastal setting show the work behind early maritime life.",
+          "limitations": "This dates the early core-and-blade site. The separate village on the island is younger.",
+          "discussion": "Thousands of flakes record repeated tool-making. The raw stone was brought from elsewhere; surviving tools tell more of this early workshop than the poorly preserved wood and bone do.",
+          "provenance": "Original source-linked summary; archaeological and historical evidence checked2026-11-17.",
+          "reviewedAt": "2026-11-17",
+          "history": [
+            "2026-11-17: Added Aleutian place history to the shared map."
+          ],
+          "relatedIds": []
+        }
+      },
+      "record": {
+        "id": "al-anangula-blades",
+        "revision": 2,
+        "type": "occurrence",
+        "title": "Anangula — a coastal stone-tool workshop",
+        "culture": {
+          "id": "unangan-aleutian-histories",
+          "name": "Unangan communities and colonial encounters",
+          "kind": "people",
+          "color": "#547e8c"
+        },
+        "location": {
+          "id": "al-place-7304673",
+          "name": "Anangula Site",
+          "lat": 52.9965,
+          "lon": -168.913,
+          "precision": "Public archaeological-district reference; approximate within 500 metres. It does not locate a burial or a particular workshop floor.",
+          "provenance": "GeoNames US gazetteer, feature 7304673, downloaded 2026-11-17. https://www.geonames.org/7304673/ — CC BY 4.0; geographic reference only."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "start": -7650,
+          "end": -6050,
+          "original": "Approx. 9600–8000 calibrated years BP",
+          "method": "Published approximate calibrated sample envelope, expressed as astronomical years by subtracting from 1950.",
+          "interpretation": "The broadly spaced assemblage dates and much tighter estimates for house-floor or hearth evidence address different questions.",
+          "approximate": true,
+          "kind": "occurrence"
+        },
+        "claims": [
+          {
+            "id": "evidence",
+            "text": "Craftworkers at Anangula struck long blades from prepared stone cores and retouched them into cutting and scraping tools. Imported raw materials and the coastal setting show the work behind early maritime life.",
+            "status": "well-supported",
+            "explanation": "This dates the early core-and-blade site. The separate village on the island is younger.",
+            "support": [
+              {
+                "sourceId": "al-source-anangula",
+                "locator": "Full institutional page read; core-and-blade site and later village distinguished.",
+                "stance": "supports",
+                "note": "Historical evidence; geographic reference is separately identified."
+              },
+              {
+                "sourceId": "al-geo-7304673",
+                "locator": "GeoNames US gazetteer, feature 7304673, downloaded 2026-11-17. https://www.geonames.org/7304673/ — CC BY 4.0; geographic reference only.",
+                "stance": "context",
+                "note": "Supports the public geographic reference. Archaeological and historical dates are supported by the other cited sources."
+              }
+            ]
+          },
+          {
+            "id": "houses-and-age",
+            "text": "The early site includes shallow house depressions and a wide scatter of lithic debris. A modern reassessment identified pressure microblade production in the stone assemblage.",
+            "explanation": "The concentration of structures and tools can reflect multiple episodes of use. Settlement size, seasonality and duration remain questions.",
+            "support": [
+              {
+                "sourceId": "al-av-gomez",
+                "locator": "pp. 23–26, chronology and assemblage reassessment",
+                "stance": "supports",
+                "note": "Reports approximate calibrated bounds from 41 determinations and reinterprets the stone technology."
+              },
+              {
+                "sourceId": "al-av-davis-knecht-continuity",
+                "locator": "discussion of Anangula Blade site and Hog Island",
+                "stance": "supports",
+                "note": "Records the basis of Aigner’s residential interpretation and cautions about equating clusters with year-round populations."
+              }
+            ],
+            "status": "well-supported"
+          }
+        ],
+        "sources": [
+          {
+            "id": "al-source-anangula",
+            "title": "Anangula National Historic Landmark",
+            "url": "https://www.nps.gov/places/anangula-site.htm",
+            "authors": "National Park Service",
+            "year": 2024,
+            "venue": "Archaeological research / institutional history",
+            "access": "Full institutional page read; core-and-blade site and later village distinguished."
+          },
+          {
+            "id": "al-geo-7304673",
+            "title": "GeoNames geographic reference: Anangula Site",
+            "authors": "GeoNames contributors",
+            "year": null,
+            "venue": "GeoNames, CC BY4.0",
+            "url": "https://www.geonames.org/7304673/",
+            "access": "Public US gazetteer checked 2026-11-17. Coordinates describe the stated locality; historical evidence is cited separately."
+          },
+          {
+            "id": "al-av-gomez",
+            "authors": "Yan Axel Gómez Coutouly",
+            "year": 2015,
+            "title": "Anangula—A Major Pressure-Microblade Site in the Aleutian Islands, Alaska: Reevaluating Its Lithic Component",
+            "venue": "Arctic Anthropology 52(1):23–59",
+            "url": "https://www.academia.edu/16520132/Anangula_A_Major_Pressure_Microblade_Site_in_the_Aleutian_Islands_Alaska_Reevaluating_Its_Lithic_Component",
+            "access": "Author text checked. Original lithic reanalysis and review of site chronology.",
+            "doi": "10.3368/aa.52.1.23",
+            "referenceType": "journal-article"
+          },
+          {
+            "id": "al-av-davis-knecht-continuity",
+            "authors": "Richard S. Davis and Richard A. Knecht",
+            "year": 2010,
+            "title": "Continuity and Change in the Eastern Aleutian Archaeological Sequence",
+            "venue": "Human Biology 82(5–6):507–524",
+            "url": "https://www.academia.edu/85716046/Continuity_and_change_in_the_eastern_Aleutian_archaeological_sequence",
+            "access": "Author text checked for the distinction between sites and interpretation of early shelter remains.",
+            "doi": "10.3378/027.082.0503",
+            "referenceType": "journal-article"
+          }
+        ],
+        "review": {
+          "summary": "Craftworkers at Anangula struck long blades from prepared stone cores and retouched them into cutting and scraping tools. Imported raw materials and the coastal setting show the work behind early maritime life.",
+          "limitations": "The broadly spaced assemblage dates and much tighter estimates for house-floor or hearth evidence address different questions.",
+          "discussion": "Anangula’s early blade site includes house depressions as well as stone-working evidence. The younger village reported elsewhere on the island is a separate archaeological locality.",
+          "provenance": "Original source-linked summary; archaeological and historical evidence checked2026-11-17.",
+          "reviewedAt": "2026-11-17",
+          "history": [
+            "2026-11-17: Added Aleutian place history to the shared map.",
+            "2026-11-17: Added source-checked evidence from the village research."
+          ],
+          "relatedIds": [
+            "al-anangula-village-bluff",
+            "al-chaluka-community"
+          ]
+        }
+      },
+      "reason": "Uses published approximate calibrated limits from the lithic reanalysis and adds early house depressions. The public archaeological district place and its coordinate provenance are preserved. Separates the distinct younger Anangula Village."
+    },
+    {
+      "targetId": "al-chaluka-community",
+      "beforeRecord": {
+        "id": "al-chaluka-community",
+        "revision": 1,
+        "type": "occupation",
+        "title": "Chaluka and Nikolski — a village landscape across millennia",
+        "culture": {
+          "id": "unangan-aleutian-histories",
+          "name": "Unangan communities and colonial encounters",
+          "kind": "people",
+          "color": "#547e8c"
+        },
+        "location": {
+          "id": "al-place-7304680",
+          "name": "Chaluka Site",
+          "lat": 52.9379,
+          "lon": -168.8635,
+          "precision": "Public Chaluka locality at Nikolski, approximate within 300 metres; village landscape rather than individual buildings.",
+          "provenance": "GeoNames US gazetteer, feature 7304680, downloaded 2026-11-17. https://www.geonames.org/7304680/ — CC BY 4.0; geographic reference only."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "interval",
+          "start": -2000,
+          "end": 1934,
+          "approximate": true,
+          "original": "Approximately 4,000 years of village history; shown from c.2000 BCE through the atlas endpoint 1934",
+          "method": "Rounded archaeological and community-history synthesis.",
+          "interpretation": "The beginning is approximate. Houses and seasonal activities changed over time; this is the village landscape’s history, not one building occupied for four millennia."
+        },
+        "claims": [
+          {
+            "id": "evidence",
+            "text": "At Chaluka, layers of houses, tools and food remains built a large village mound beside present-day Nikolski. Archaeology and community history describe roughly four millennia of residence and changing use at this enduring settlement.",
+            "status": "well-supported",
+            "explanation": "The beginning is approximate. Houses and seasonal activities changed over time; this is the village landscape’s history, not one building occupied for four millennia.",
+            "support": [
+              {
+                "sourceId": "al-source-chaluka",
+                "locator": "Full institutional page read; four-millennia village mound chronology.",
+                "stance": "supports",
+                "note": "Historical evidence; geographic reference is separately identified."
+              },
+              {
+                "sourceId": "al-source-apia",
+                "locator": "Community-hosted history read, including houses, seasonal use, marine travel and Russian-period coercion.",
+                "stance": "supports",
+                "note": "Historical evidence; geographic reference is separately identified."
+              },
+              {
+                "sourceId": "al-geo-7304680",
+                "locator": "GeoNames US gazetteer, feature 7304680, downloaded 2026-11-17. https://www.geonames.org/7304680/ — CC BY 4.0; geographic reference only.",
+                "stance": "context",
+                "note": "Supports the public geographic reference. Archaeological and historical dates are supported by the other cited sources."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "al-source-chaluka",
+            "title": "Chaluka Site National Historic Landmark",
+            "url": "https://www.nps.gov/places/chaluka-site.htm",
+            "authors": "National Park Service",
+            "year": 2020,
+            "venue": "Archaeological research / institutional history",
+            "access": "Full institutional page read; four-millennia village mound chronology."
+          },
+          {
+            "id": "al-source-apia",
+            "title": "Unangax̂ history",
+            "url": "https://www.apiai.org/departments/cultural-heritage-department/culture-history/history/",
+            "authors": "Douglas W. Veltre; Aleutian Pribilof Islands Association",
+            "year": null,
+            "venue": "Archaeological research / institutional history",
+            "access": "Community-hosted history read, including houses, seasonal use, marine travel and Russian-period coercion."
+          },
+          {
+            "id": "al-geo-7304680",
+            "title": "GeoNames geographic reference: Chaluka Site",
+            "authors": "GeoNames contributors",
+            "year": null,
+            "venue": "GeoNames, CC BY4.0",
+            "url": "https://www.geonames.org/7304680/",
+            "access": "Public US gazetteer checked 2026-11-17. Coordinates describe the stated locality; historical evidence is cited separately."
+          }
+        ],
+        "review": {
+          "summary": "At Chaluka, layers of houses, tools and food remains built a large village mound beside present-day Nikolski. Archaeology and community history describe roughly four millennia of residence and changing use at this enduring settlement.",
+          "limitations": "The beginning is approximate. Houses and seasonal activities changed over time; this is the village landscape’s history, not one building occupied for four millennia.",
+          "discussion": "At Chaluka, layers of houses, tools and food remains built a large village mound beside present-day Nikolski. Archaeology and community history describe roughly four millennia of residence and changing use at this enduring settlement.",
+          "provenance": "Original source-linked summary; archaeological and historical evidence checked2026-11-17.",
+          "reviewedAt": "2026-11-17",
+          "history": [
+            "2026-11-17: Added Aleutian place history to the shared map."
+          ],
+          "relatedIds": []
+        },
+        "history": {
+          "claimId": "evidence",
+          "kind": "habitation",
+          "continuity": "ongoing"
+        }
+      },
+      "record": {
+        "id": "al-chaluka-community",
+        "revision": 2,
+        "type": "occupation",
+        "title": "Chaluka and Nikolski — a village landscape across millennia",
+        "culture": {
+          "id": "unangan-aleutian-histories",
+          "name": "Unangan communities and colonial encounters",
+          "kind": "people",
+          "color": "#547e8c"
+        },
+        "location": {
+          "id": "al-place-7304680",
+          "name": "Chaluka Site",
+          "lat": 52.9379,
+          "lon": -168.8635,
+          "precision": "Public Chaluka locality at Nikolski, approximate within 300 metres; village landscape rather than individual buildings.",
+          "provenance": "GeoNames US gazetteer, feature 7304680, downloaded 2026-11-17. https://www.geonames.org/7304680/ — CC BY 4.0; geographic reference only."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "interval",
+          "start": -2000,
+          "end": 1934,
+          "approximate": true,
+          "original": "Approximately 4,000 years of village history; shown from c.2000 BCE through the atlas endpoint 1934",
+          "method": "Rounded archaeological and community-history synthesis.",
+          "interpretation": "The beginning is approximate. Houses and seasonal activities changed over time; this is the village landscape’s history, not one building occupied for four millennia."
+        },
+        "claims": [
+          {
+            "id": "evidence",
+            "text": "At Chaluka, layers of houses, tools and food remains built a large village mound beside present-day Nikolski. Archaeology and community history describe roughly four millennia of residence and changing use at this enduring settlement.",
+            "status": "well-supported",
+            "explanation": "The beginning is approximate. Houses and seasonal activities changed over time; this is the village landscape’s history, not one building occupied for four millennia.",
+            "support": [
+              {
+                "sourceId": "al-source-chaluka",
+                "locator": "Full institutional page read; four-millennia village mound chronology.",
+                "stance": "supports",
+                "note": "Historical evidence; geographic reference is separately identified."
+              },
+              {
+                "sourceId": "al-source-apia",
+                "locator": "Community-hosted history read, including houses, seasonal use, marine travel and Russian-period coercion.",
+                "stance": "supports",
+                "note": "Historical evidence; geographic reference is separately identified."
+              },
+              {
+                "sourceId": "al-geo-7304680",
+                "locator": "GeoNames US gazetteer, feature 7304680, downloaded 2026-11-17. https://www.geonames.org/7304680/ — CC BY 4.0; geographic reference only.",
+                "stance": "context",
+                "note": "Supports the public geographic reference. Archaeological and historical dates are supported by the other cited sources."
+              }
+            ]
+          },
+          {
+            "id": "stratigraphy",
+            "text": "The Chaluka mound preserves repeated construction, activity and deposition. A stratigraphic study correlated excavations from 1938 through 1972 and distinguished eleven natural and human events, with reef and marine resource use through the sampled sequence.",
+            "explanation": "The sequences come from excavation areas within a village landscape. The number and arrangement of houses changed over time.",
+            "support": [
+              {
+                "sourceId": "al-av-aigner-chaluka",
+                "locator": "published abstract",
+                "stance": "supports",
+                "note": "Describes the study’s stratigraphic correlations and continuity of marine use."
+              }
+            ],
+            "status": "well-supported"
+          }
+        ],
+        "sources": [
+          {
+            "id": "al-source-chaluka",
+            "title": "Chaluka Site National Historic Landmark",
+            "url": "https://www.nps.gov/places/chaluka-site.htm",
+            "authors": "National Park Service",
+            "year": 2020,
+            "venue": "Archaeological research / institutional history",
+            "access": "Full institutional page read; four-millennia village mound chronology."
+          },
+          {
+            "id": "al-source-apia",
+            "title": "Unangax̂ history",
+            "url": "https://www.apiai.org/departments/cultural-heritage-department/culture-history/history/",
+            "authors": "Douglas W. Veltre; Aleutian Pribilof Islands Association",
+            "year": null,
+            "venue": "Archaeological research / institutional history",
+            "access": "Community-hosted history read, including houses, seasonal use, marine travel and Russian-period coercion."
+          },
+          {
+            "id": "al-geo-7304680",
+            "title": "GeoNames geographic reference: Chaluka Site",
+            "authors": "GeoNames contributors",
+            "year": null,
+            "venue": "GeoNames, CC BY4.0",
+            "url": "https://www.geonames.org/7304680/",
+            "access": "Public US gazetteer checked 2026-11-17. Coordinates describe the stated locality; historical evidence is cited separately."
+          },
+          {
+            "id": "al-av-aigner-chaluka",
+            "authors": "Christy G. Turner II, Jean S. Aigner and Linda R. Richards",
+            "year": 1974,
+            "title": "Chaluka Stratigraphy, Umnak Island, Alaska",
+            "venue": "Arctic Anthropology 11 Supplement:125–142",
+            "url": "https://www.jstor.org/stable/40315807",
+            "access": "Journal abstract read. It summarizes eleven events and marine and reef use throughout the excavated stratigraphy."
+          }
+        ],
+        "review": {
+          "summary": "At Chaluka, layers of houses, tools and food remains built a large village mound beside present-day Nikolski. Archaeology and community history describe roughly four millennia of residence and changing use at this enduring settlement.",
+          "limitations": "The beginning is approximate. Houses and seasonal activities changed over time; this is the village landscape’s history, not one building occupied for four millennia.",
+          "discussion": "Eleven natural and human events were distinguished in the published stratigraphic study. A well-preserved stone-walled floor records the organization of space and tasks within one of the village buildings. Construction of successive chapels and the standing church documents later building phases in nearby Nikolski.",
+          "provenance": "Original source-linked summary; archaeological and historical evidence checked2026-11-17.",
+          "reviewedAt": "2026-11-17",
+          "history": [
+            "2026-11-17: Added Aleutian place history to the shared map.",
+            "2026-11-17: Added source-checked evidence from the village research."
+          ],
+          "relatedIds": [
+            "al-chaluka-stone-house",
+            "al-nikolski-chapel-1806",
+            "al-nikolski-chapel-1828",
+            "al-nikolski-church-1930",
+            "al-anangula-village-bluff"
+          ]
+        },
+        "history": {
+          "claimId": "evidence",
+          "kind": "habitation",
+          "continuity": "ongoing"
+        }
+      },
+      "reason": "Adds primary stratigraphy and links to the house and later Nikolski building phases. Keeps the existing village interpretation and dates."
+    },
+    {
+      "targetId": "al-korovinski-ancestral",
+      "beforeRecord": {
+        "id": "al-korovinski-ancestral",
+        "revision": 1,
+        "type": "occupation",
+        "title": "Korovinski — an ancestral village on Atka",
+        "culture": {
+          "id": "unangan-aleutian-histories",
+          "name": "Unangan communities and colonial encounters",
+          "kind": "people",
+          "color": "#547e8c"
+        },
+        "location": {
+          "id": "al-place-5866709",
+          "name": "Korovinski (historical)",
+          "lat": 52.2867,
+          "lon": -174.3383,
+          "precision": "Public historic Korovinski locality, approximately 2 km precision; the shore spits and gardens are not separately georeferenced. Public historic Korovinski locality, approximately 2 km precision; not a measured garden or building footprint.",
+          "provenance": "GeoNames US gazetteer, feature 5866709, downloaded 2026-11-17. https://www.geonames.org/5866709/ — CC BY 4.0; geographic reference only."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "interval",
+          "start": 1,
+          "end": 1500,
+          "approximate": true,
+          "original": "Approximately 2,000–500 years ago; rounded c. 1–1500 CE",
+          "method": "Broad rounded chronology in the excavator’s retrospective account; not a calibrated start/end estimate.",
+          "interpretation": "The long date span is approximate; it must not be joined across the gap to the nineteenth-century settlement."
+        },
+        "claims": [
+          {
+            "id": "evidence",
+            "text": "At Korovinski, house depressions and other remains record an ancestral Unangan village. The excavator’s synthesis places this earlier occupation roughly between 2,000 and 500 years ago, ending with a major volcanic disruption before a later colonial settlement reused the area.",
+            "status": "well-supported",
+            "explanation": "The long date span is approximate; it must not be joined across the gap to the nineteenth-century settlement.",
+            "support": [
+              {
+                "sourceId": "al-source-gardens",
+                "locator": "Excavator’s account and site maps inspected. Two separate occupation periods, garden walls and move to Atka are reported; the older abandonment estimate is approximate.",
+                "stance": "supports",
+                "note": "Historical evidence; geographic reference is separately identified."
+              },
+              {
+                "sourceId": "al-geo-5866709",
+                "locator": "GeoNames US gazetteer, feature 5866709, downloaded 2026-11-17. https://www.geonames.org/5866709/ — CC BY 4.0; geographic reference only.",
+                "stance": "context",
+                "note": "Supports the public geographic reference. Archaeological and historical dates are supported by the other cited sources."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "al-source-gardens",
+            "title": "Gardening in the Aleutian Islands during the Russian Period",
+            "url": "https://aleutianislandsworkinggroup.wordpress.com/2016/02/15/gardening-in-the-aleutian-islands-during-the-russian-period/",
+            "authors": "Douglas W. Veltre",
+            "year": 2016,
+            "venue": "Archaeological research / institutional history",
+            "access": "Excavator’s account and site maps inspected. Two separate occupation periods, garden walls and move to Atka are reported; the older abandonment estimate is approximate."
+          },
+          {
+            "id": "al-geo-5866709",
+            "title": "GeoNames geographic reference: Korovinski (historical)",
+            "authors": "GeoNames contributors",
+            "year": null,
+            "venue": "GeoNames, CC BY4.0",
+            "url": "https://www.geonames.org/5866709/",
+            "access": "Public US gazetteer checked 2026-11-17. Coordinates describe the stated locality; historical evidence is cited separately."
+          }
+        ],
+        "review": {
+          "summary": "At Korovinski, house depressions and other remains record an ancestral Unangan village. The excavator’s synthesis places this earlier occupation roughly between 2,000 and 500 years ago, ending with a major volcanic disruption before a later colonial settlement reused the area.",
+          "limitations": "The long date span is approximate; it must not be joined across the gap to the nineteenth-century settlement.",
+          "discussion": "At Korovinski, house depressions and other remains record an ancestral Unangan village. The excavator’s synthesis places this earlier occupation roughly between 2,000 and 500 years ago, ending with a major volcanic disruption before a later colonial settlement reused the area.",
+          "provenance": "Original source-linked summary; archaeological and historical evidence checked2026-11-17.",
+          "reviewedAt": "2026-11-17",
+          "history": [
+            "2026-11-17: Added Aleutian place history to the shared map."
+          ],
+          "relatedIds": [
+            "al-korovinski-colonial"
+          ]
+        }
+      },
+      "record": {
+        "id": "al-korovinski-ancestral",
+        "revision": 2,
+        "type": "occupation",
+        "title": "Korovinski — an ancestral village on Atka",
+        "culture": {
+          "id": "unangan-aleutian-histories",
+          "name": "Unangan communities and colonial encounters",
+          "kind": "people",
+          "color": "#547e8c"
+        },
+        "location": {
+          "id": "al-place-5866709",
+          "name": "Korovinski (historical)",
+          "lat": 52.2867,
+          "lon": -174.3383,
+          "precision": "Public historic Korovinski locality, approximately 2 km precision; the shore spits and gardens are not separately georeferenced. Public historic Korovinski locality, approximately 2 km precision; not a measured garden or building footprint.",
+          "provenance": "GeoNames US gazetteer, feature 5866709, downloaded 2026-11-17. https://www.geonames.org/5866709/ — CC BY 4.0; geographic reference only."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "interval",
+          "start": 1,
+          "end": 1500,
+          "approximate": true,
+          "original": "Approximately 2,000–500 years ago; rounded c. 1–1500 CE",
+          "method": "Broad rounded chronology in the excavator’s retrospective account; not a calibrated start/end estimate.",
+          "interpretation": "The long date span is approximate; it must not be joined across the gap to the nineteenth-century settlement."
+        },
+        "claims": [
+          {
+            "id": "evidence",
+            "text": "At Korovinski, house depressions and other remains record an ancestral Unangan village. The excavator’s synthesis places this earlier occupation roughly between 2,000 and 500 years ago, ending with a major volcanic disruption before a later colonial settlement reused the area.",
+            "status": "well-supported",
+            "explanation": "The long date span is approximate; it must not be joined across the gap to the nineteenth-century settlement.",
+            "support": [
+              {
+                "sourceId": "al-source-gardens",
+                "locator": "Excavator’s account and site maps inspected. Two separate occupation periods, garden walls and move to Atka are reported; the older abandonment estimate is approximate.",
+                "stance": "supports",
+                "note": "Historical evidence; geographic reference is separately identified."
+              },
+              {
+                "sourceId": "al-geo-5866709",
+                "locator": "GeoNames US gazetteer, feature 5866709, downloaded 2026-11-17. https://www.geonames.org/5866709/ — CC BY 4.0; geographic reference only.",
+                "stance": "context",
+                "note": "Supports the public geographic reference. Archaeological and historical dates are supported by the other cited sources."
+              }
+            ]
+          },
+          {
+            "id": "house-depressions",
+            "text": "Veltre mapped partly sunken house depressions attributed to the ancestral occupation. He distinguished them from the later garden enclosures, transport features and sod walls of the Russian-American Company era.",
+            "explanation": "The dissertation abstract summarizes the survey. Individual building footprints and dates require the field maps and excavation documentation.",
+            "support": [
+              {
+                "sourceId": "al-av-korovinski-diss",
+                "locator": "dissertation abstract, field survey and archaeological results",
+                "stance": "supports",
+                "note": "Original excavator distinguishes two principal occupations and their surface features."
+              }
+            ],
+            "status": "well-supported"
+          }
+        ],
+        "sources": [
+          {
+            "id": "al-source-gardens",
+            "title": "Gardening in the Aleutian Islands during the Russian Period",
+            "url": "https://aleutianislandsworkinggroup.wordpress.com/2016/02/15/gardening-in-the-aleutian-islands-during-the-russian-period/",
+            "authors": "Douglas W. Veltre",
+            "year": 2016,
+            "venue": "Archaeological research / institutional history",
+            "access": "Excavator’s account and site maps inspected. Two separate occupation periods, garden walls and move to Atka are reported; the older abandonment estimate is approximate."
+          },
+          {
+            "id": "al-geo-5866709",
+            "title": "GeoNames geographic reference: Korovinski (historical)",
+            "authors": "GeoNames contributors",
+            "year": null,
+            "venue": "GeoNames, CC BY4.0",
+            "url": "https://www.geonames.org/5866709/",
+            "access": "Public US gazetteer checked 2026-11-17. Coordinates describe the stated locality; historical evidence is cited separately."
+          },
+          {
+            "id": "al-av-korovinski-diss",
+            "authors": "Douglas William Veltre",
+            "year": 1979,
+            "title": "Korovinski: The Ethnohistorical Archaeology of an Aleut and Russian Settlement on Atka Island, Alaska",
+            "venue": "University of Connecticut doctoral dissertation, AAI8017067",
+            "url": "https://digitalcommons.lib.uconn.edu/dissertations/AAI8017067/",
+            "access": "University dissertation abstract checked. Original mapped feature inventory and settlement chronology are summarized there."
+          }
+        ],
+        "review": {
+          "summary": "At Korovinski, house depressions and other remains record an ancestral Unangan village. The excavator’s synthesis places this earlier occupation roughly between 2,000 and 500 years ago, ending with a major volcanic disruption before a later colonial settlement reused the area.",
+          "limitations": "The long date span is approximate; it must not be joined across the gap to the nineteenth-century settlement.",
+          "discussion": "At Korovinski, house depressions and other remains record an ancestral Unangan village. The excavator’s synthesis places this earlier occupation roughly between 2,000 and 500 years ago, ending with a major volcanic disruption before a later colonial settlement reused the area.",
+          "provenance": "Original source-linked summary; archaeological and historical evidence checked2026-11-17.",
+          "reviewedAt": "2026-11-17",
+          "history": [
+            "2026-11-17: Added Aleutian place history to the shared map.",
+            "2026-11-17: Added source-checked evidence from the village research."
+          ],
+          "relatedIds": [
+            "al-atka-village-1870",
+            "al-korovinski-colonial"
+          ]
+        }
+      },
+      "reason": "Adds the original investigator’s attribution of partly sunken house depressions to the ancestral occupation. Keeps the existing date envelope."
+    },
+    {
+      "targetId": "al-korovinski-colonial",
+      "beforeRecord": {
+        "id": "al-korovinski-colonial",
+        "revision": 1,
+        "type": "event",
+        "title": "Korovinski — a company settlement with potato gardens",
+        "culture": {
+          "id": "unangan-aleutian-histories",
+          "name": "Unangan communities and colonial encounters",
+          "kind": "people",
+          "color": "#547e8c"
+        },
+        "location": {
+          "id": "al-place-5866709",
+          "name": "Korovinski (historical)",
+          "lat": 52.2867,
+          "lon": -174.3383,
+          "precision": "Public historic Korovinski locality, approximately 2 km precision; the shore spits and gardens are not separately georeferenced. Public historic Korovinski locality, approximately 2 km precision; not a measured garden or building footprint.",
+          "provenance": "GeoNames US gazetteer, feature 5866709, downloaded 2026-11-17. https://www.geonames.org/5866709/ — CC BY 4.0; geographic reference only."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": 1820,
+          "end": 1820,
+          "approximate": true,
+          "original": "Around 1820 CE; settlement left for present-day Atka in the years after 1867",
+          "method": "Excavator’s archaeological and historical synthesis.",
+          "interpretation": "This is a new settlement phase after a long gap. The last residents moved in the late 1860 s–1870 s, rather than on a known single day."
+        },
+        "claims": [
+          {
+            "id": "evidence",
+            "text": "Russians and Unangan reoccupied Korovinski around 1820. Houses, warehouses, a church and extensive garden plots served the Russian-American Company’s western administration and the people living and working there.",
+            "status": "well-supported",
+            "explanation": "This is a new settlement phase after a long gap. The last residents moved in the late 1860 s–1870 s, rather than on a known single day.",
+            "support": [
+              {
+                "sourceId": "al-source-gardens",
+                "locator": "Excavator’s account and site maps inspected. Two separate occupation periods, garden walls and move to Atka are reported; the older abandonment estimate is approximate.",
+                "stance": "supports",
+                "note": "Historical evidence; geographic reference is separately identified."
+              },
+              {
+                "sourceId": "al-geo-5866709",
+                "locator": "GeoNames US gazetteer, feature 5866709, downloaded 2026-11-17. https://www.geonames.org/5866709/ — CC BY 4.0; geographic reference only.",
+                "stance": "context",
+                "note": "Supports the public geographic reference. Archaeological and historical dates are supported by the other cited sources."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "al-source-gardens",
+            "title": "Gardening in the Aleutian Islands during the Russian Period",
+            "url": "https://aleutianislandsworkinggroup.wordpress.com/2016/02/15/gardening-in-the-aleutian-islands-during-the-russian-period/",
+            "authors": "Douglas W. Veltre",
+            "year": 2016,
+            "venue": "Archaeological research / institutional history",
+            "access": "Excavator’s account and site maps inspected. Two separate occupation periods, garden walls and move to Atka are reported; the older abandonment estimate is approximate."
+          },
+          {
+            "id": "al-geo-5866709",
+            "title": "GeoNames geographic reference: Korovinski (historical)",
+            "authors": "GeoNames contributors",
+            "year": null,
+            "venue": "GeoNames, CC BY4.0",
+            "url": "https://www.geonames.org/5866709/",
+            "access": "Public US gazetteer checked 2026-11-17. Coordinates describe the stated locality; historical evidence is cited separately."
+          }
+        ],
+        "review": {
+          "summary": "Russians and Unangan reoccupied Korovinski around 1820. Houses, warehouses, a church and extensive garden plots served the Russian-American Company’s western administration and the people living and working there.",
+          "limitations": "This is a new settlement phase after a long gap. The last residents moved in the late 1860 s–1870 s, rather than on a known single day.",
+          "discussion": "Russians and Unangan reoccupied Korovinski around 1820. Houses, warehouses, a church and extensive garden plots served the Russian-American Company’s western administration and the people living and working there.",
+          "provenance": "Original source-linked summary; archaeological and historical evidence checked2026-11-17.",
+          "reviewedAt": "2026-11-17",
+          "history": [
+            "2026-11-17: Added Aleutian place history to the shared map."
+          ],
+          "relatedIds": [
+            "al-korovinski-ancestral"
+          ]
+        },
+        "history": {
+          "claimId": "evidence",
+          "kind": "settlement",
+          "endMeaning": "relocated",
+          "endEvidence": {
+            "start": 1867,
+            "end": 1875,
+            "meaning": "relocated",
+            "certainty": "inferred",
+            "claimId": "evidence",
+            "note": "Approximate editorial window for the move after 1867 to present-day Atka, established around 1870. The source does not give a separately dated final departure in 1875."
+          }
+        }
+      },
+      "record": {
+        "id": "al-korovinski-colonial",
+        "revision": 2,
+        "type": "event",
+        "title": "Korovinski — a company settlement with potato gardens",
+        "culture": {
+          "id": "unangan-aleutian-histories",
+          "name": "Unangan communities and colonial encounters",
+          "kind": "people",
+          "color": "#547e8c"
+        },
+        "location": {
+          "id": "al-place-5866709",
+          "name": "Korovinski (historical)",
+          "lat": 52.2867,
+          "lon": -174.3383,
+          "precision": "Public historic Korovinski locality, approximately 2 km precision; the shore spits and gardens are not separately georeferenced. Public historic Korovinski locality, approximately 2 km precision; not a measured garden or building footprint.",
+          "provenance": "GeoNames US gazetteer, feature 5866709, downloaded 2026-11-17. https://www.geonames.org/5866709/ — CC BY 4.0; geographic reference only."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": 1820,
+          "end": 1820,
+          "approximate": true,
+          "original": "Around 1820 CE; settlement left for present-day Atka in the years after 1867",
+          "method": "Excavator’s archaeological and historical synthesis.",
+          "interpretation": "This is a new settlement phase after a long gap. The last residents moved in the late 1860 s–1870 s, rather than on a known single day."
+        },
+        "claims": [
+          {
+            "id": "evidence",
+            "text": "Russians and Unangan reoccupied Korovinski around 1820. Houses, warehouses, a church and extensive garden plots served the Russian-American Company’s western administration and the people living and working there.",
+            "status": "well-supported",
+            "explanation": "This is a new settlement phase after a long gap. The last residents moved in the late 1860 s–1870 s, rather than on a known single day.",
+            "support": [
+              {
+                "sourceId": "al-source-gardens",
+                "locator": "Excavator’s account and site maps inspected. Two separate occupation periods, garden walls and move to Atka are reported; the older abandonment estimate is approximate.",
+                "stance": "supports",
+                "note": "Historical evidence; geographic reference is separately identified."
+              },
+              {
+                "sourceId": "al-geo-5866709",
+                "locator": "GeoNames US gazetteer, feature 5866709, downloaded 2026-11-17. https://www.geonames.org/5866709/ — CC BY 4.0; geographic reference only.",
+                "stance": "context",
+                "note": "Supports the public geographic reference. Archaeological and historical dates are supported by the other cited sources."
+              }
+            ]
+          },
+          {
+            "id": "mapped-features",
+            "text": "The Korovinski survey mapped 122 surface features in all, mostly from the company era. Garden plots, drainage ditches, boat slips and sod walls show how work was organized along the shore and on land.",
+            "explanation": "The feature total spans multiple periods and functions. Buildings in that total include incomplete and unidentified remains.",
+            "support": [
+              {
+                "sourceId": "al-av-korovinski-diss",
+                "locator": "dissertation abstract, mapped surface inventory",
+                "stance": "supports",
+                "note": "Original investigator summarizes the landscape features and his period assignments."
+              }
+            ],
+            "status": "well-supported"
+          }
+        ],
+        "sources": [
+          {
+            "id": "al-source-gardens",
+            "title": "Gardening in the Aleutian Islands during the Russian Period",
+            "url": "https://aleutianislandsworkinggroup.wordpress.com/2016/02/15/gardening-in-the-aleutian-islands-during-the-russian-period/",
+            "authors": "Douglas W. Veltre",
+            "year": 2016,
+            "venue": "Archaeological research / institutional history",
+            "access": "Excavator’s account and site maps inspected. Two separate occupation periods, garden walls and move to Atka are reported; the older abandonment estimate is approximate."
+          },
+          {
+            "id": "al-geo-5866709",
+            "title": "GeoNames geographic reference: Korovinski (historical)",
+            "authors": "GeoNames contributors",
+            "year": null,
+            "venue": "GeoNames, CC BY4.0",
+            "url": "https://www.geonames.org/5866709/",
+            "access": "Public US gazetteer checked 2026-11-17. Coordinates describe the stated locality; historical evidence is cited separately."
+          },
+          {
+            "id": "al-av-korovinski-diss",
+            "authors": "Douglas William Veltre",
+            "year": 1979,
+            "title": "Korovinski: The Ethnohistorical Archaeology of an Aleut and Russian Settlement on Atka Island, Alaska",
+            "venue": "University of Connecticut doctoral dissertation, AAI8017067",
+            "url": "https://digitalcommons.lib.uconn.edu/dissertations/AAI8017067/",
+            "access": "University dissertation abstract checked. Original mapped feature inventory and settlement chronology are summarized there."
+          }
+        ],
+        "review": {
+          "summary": "Russians and Unangan reoccupied Korovinski around 1820. Houses, warehouses, a church and extensive garden plots served the Russian-American Company’s western administration and the people living and working there.",
+          "limitations": "This is a new settlement phase after a long gap. The last residents moved in the late 1860 s–1870 s, rather than on a known single day.",
+          "discussion": "Russians and Unangan reoccupied Korovinski around 1820. Houses, warehouses, a church and extensive garden plots served the Russian-American Company’s western administration and the people living and working there.",
+          "provenance": "Original source-linked summary; archaeological and historical evidence checked2026-11-17.",
+          "reviewedAt": "2026-11-17",
+          "history": [
+            "2026-11-17: Added Aleutian place history to the shared map.",
+            "2026-11-17: Added source-checked evidence from the village research."
+          ],
+          "relatedIds": [
+            "al-atka-village-1870",
+            "al-korovinski-ancestral"
+          ]
+        },
+        "history": {
+          "claimId": "evidence",
+          "kind": "settlement",
+          "endMeaning": "relocated",
+          "endEvidence": {
+            "start": 1867,
+            "end": 1875,
+            "meaning": "relocated",
+            "certainty": "inferred",
+            "claimId": "evidence",
+            "note": "Approximate editorial window for the move after 1867 to present-day Atka, established around 1870. The source does not give a separately dated final departure in 1875."
+          }
+        }
+      },
+      "reason": "Adds the original investigator’s surface-feature count and records the layout evidence for gardens, transport and sod buildings. Keeps the existing date anchor."
+    },
+    {
+      "targetId": "greatlakes-cummins-context",
+      "beforeRecord": {
+        "id": "greatlakes-cummins-context",
+        "revision": 3,
+        "type": "occupation",
+        "title": "Cummins — stratified Lake Minong shoreline context",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": null,
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "unplaced",
+          "start": null,
+          "end": null,
+          "approximate": true,
+          "original": "Paleoindian assemblages and Lake Minong shorelines",
+          "method": "Original publication scope and units retained",
+          "interpretation": "This comparative, methodological or multi-event finding has no one event date. Display its original chronological guidance and geographic context, without interpreting it as a contemporaneous settlement. Source guidance: Paleoindian assemblages and Lake Minong shorelines"
+        },
+        "claims": [
+          {
+            "id": "context",
+            "text": "The Cummins study examines stratified Paleoindian assemblages at Thunder Bay in relation to proglacial shoreline development.",
+            "status": "under discussion",
+            "explanation": "Its geoarchaeological framing emphasizes formation processes and post-occupation disturbance; shoreline age alone is not a directly dated settlement.",
+            "support": [
+              {
+                "sourceId": "julig1990-cummins",
+                "locator": "Chapter2 introduction",
+                "stance": "supports",
+                "note": "Supports the stated inference at the described evidence resolution."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "julig1990-cummins",
+            "authors": "P. J. Julig, J. H. McAndrews, and William C. Mahaney",
+            "title": "Geoarchaeology of the Cummins site on the beach of proglacial Lake Minong, Lake Superior Basin, Canada",
+            "year": 1990,
+            "venue": "Archaeological Geology of North America, GSA Centennial Special Volume4, chapter2",
+            "url": "https://www.lakeheadu.ca/sites/default/files/uploads/53/outlines/2014-15/NECU5311/Juligetal_1990_GSA_Cummins.pdf",
+            "access": "Institution-hosted primary PDF introductory text inspected via indexed text. No complete occupation dating table extracted.",
+            "referenceType": "book-chapter",
+            "publisher": "Geological Society of America",
+            "editors": "N. P. Lasca and J. Donahue",
+            "pages": "21–49"
+          }
+        ],
+        "review": {
+          "summary": "At Cummins near Thunder Bay, layers containing early stone-tool assemblages are studied alongside shorelines formed near retreating glaciers. Their relationship helps researchers reconstruct the landscape in which people used the site.",
+          "limitations": "No exact defensible public site coordinate extracted; no generic county or tourist-point coordinate substituted. Time bounds preserve the publication's resolution.",
+          "discussion": "Interpretation follows the evidence type. Proxy frequencies, modeled movements and environmental associations are not equivalent to counts of people or mapped migration routes.",
+          "provenance": "Both Great Lakes input batches reconciled2026-10-28; actual access scope stated in citations. Full author-supplied synthesis archive: docs/intake/index.html. Original synthesis is secondary provenance, not a substitute for the cited primary study.",
+          "reviewedAt": "2026-11-16",
+          "history": [
+            "2026-10-29:280-record chronology review: general-or-multiple-contexts. This comparative, methodological or multi-event finding has no one event date. Display its original chronological guidance and geographic context, without interpreting it as a contemporaneous settlement.",
+            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes."
+          ],
+          "relatedIds": []
+        }
+      },
+      "record": {
+        "id": "greatlakes-cummins-context",
+        "revision": 4,
+        "type": "occupation",
+        "title": "Cummins — stone working and a camp on Lake Minong",
+        "culture": {
+          "id": "sh-northern-plano",
+          "name": "Northern Plano archaeological tradition",
+          "kind": "culture",
+          "color": "#5e83a2"
+        },
+        "location": {
+          "id": "sh-place-cummins",
+          "name": "Near Thunder Bay",
+          "lon": -89.25,
+          "lat": 48.38,
+          "precision": "Present-day public community reference, for the historical locality. The marker does not identify an individual structure, legal boundary or route.",
+          "provenance": "GeoNames 6166142, Thunder Bay (ON), 48.38202, -89.25018, rounded to 0.01° for display. https://www.geonames.org/6166142/ ; https://download.geonames.org/export/dump/CA.zip (CC BY 4.0). Historical association is established by the claims' sources."
+        },
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "unplaced",
+          "start": null,
+          "end": null,
+          "original": "Dawson places the early camp and quarry around 7000 BC; Parks Canada describes the site as at least 9,000 years old.",
+          "method": "Artifact chronology, relict shoreline context and preliminary field estimates. The reported cremation age in the 1983 article is expressed as a conventional radiocarbon estimate in BC notation.",
+          "interpretation": "The early camp has a relative archaeological chronology. The approximation and minimum age cannot supply a calibrated calendar window or a date of first arrival.",
+          "approximate": true
+        },
+        "claims": [
+          {
+            "id": "context",
+            "text": "At the edge of former Lake Minong, people worked jasper-rich taconite to make stone tools. Test excavations identified stone-working debris, hearths and pits at the Cummins quarry and camp.",
+            "status": "well-supported",
+            "explanation": "The early camp has a relative archaeological chronology. The approximation and minimum age cannot supply a calibrated calendar window or a date of first arrival.",
+            "support": [
+              {
+                "sourceId": "sh-src-dawson",
+                "locator": "Abstract; pp. 3–4 and 23–24, conclusions and fig. 6",
+                "stance": "supports",
+                "note": "Field evidence for workshop and camp, plus the article's approximate chronology."
+              },
+              {
+                "sourceId": "sh-src-cummins-parks",
+                "locator": "Backgrounder, paragraphs 1–3",
+                "stance": "supports",
+                "note": "Identifies the national historic site, former shoreline and camp."
+              },
+              {
+                "sourceId": "julig1990-cummins",
+                "locator": "Introduction, pp. 21–23",
+                "stance": "context",
+                "note": "Interprets the sediments and reconstructed shoreline context separately from the activity that left tools."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "sh-src-dawson",
+            "authors": "K. C. A. Dawson",
+            "title": "Cummins Site: A Late Palaeo-Indian (Plano) Site at Thunder Bay, Ontario",
+            "year": 1983,
+            "venue": "Ontario Archaeology 39, 3–31",
+            "url": "https://ontarioarchaeology.org/wp-content/uploads/oa039-01_dawson.pdf",
+            "access": "Open primary excavation article. Abstract, site description and conclusions inspected."
+          },
+          {
+            "id": "sh-src-cummins-parks",
+            "authors": "Parks Canada",
+            "title": "Cummins Pre-Contact Site, Thunder Bay, Ontario",
+            "year": 2016,
+            "venue": "National Historic Site backgrounder",
+            "url": "https://www.canada.ca/en/parks-canada/news/2016/02/cummins-pre-contact-site-thunder-bay-ontario.html",
+            "access": "Public designation backgrounder inspected."
+          },
+          {
+            "id": "julig1990-cummins",
+            "authors": "P. J. Julig, J. H. McAndrews, and William C. Mahaney",
+            "title": "Geoarchaeology of the Cummins site on the beach of proglacial Lake Minong, Lake Superior Basin, Canada",
+            "year": 1990,
+            "venue": "Archaeological Geology of North America, GSA Centennial Special Volume4, chapter2",
+            "url": "https://www.lakeheadu.ca/sites/default/files/uploads/53/outlines/2014-15/NECU5311/Juligetal_1990_GSA_Cummins.pdf",
+            "access": "Institution-hosted primary PDF introductory text inspected via indexed text. No complete occupation dating table extracted.",
+            "referenceType": "book-chapter",
+            "publisher": "Geological Society of America",
+            "editors": "N. P. Lasca and J. Donahue",
+            "pages": "21–49"
+          }
+        ],
+        "review": {
+          "summary": "At the edge of former Lake Minong, people worked jasper-rich taconite to make stone tools. Test excavations identified stone-working debris, hearths and pits at the Cummins quarry and camp.",
+          "limitations": "The early camp has a relative archaeological chronology. The approximation and minimum age cannot supply a calibrated calendar window or a date of first arrival.",
+          "discussion": "The workshop lay near a stone outcrop and a former lake beach. The beach’s position helps explain the choice of place. The surrounding camps and activity sites provide a wider context for what happened there.",
+          "provenance": "Inland Shield source review. Geographic precision and documentary or archaeological support are stated separately.",
+          "reviewedAt": "2026-11-17",
+          "history": [
+            "2026-10-29:280-record chronology review: general-or-multiple-contexts. This comparative, methodological or multi-event finding has no one event date. Display its original chronological guidance and geographic context, without interpreting it as a contemporaneous settlement.",
+            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes.",
+            "2026-11-17: source and duplicate review for the Canadian Shield guide."
+          ],
+          "relatedIds": [
+            "canada-shield-black-lake-early"
+          ]
+        }
+      },
+      "reason": "Retain the existing Cummins observation and its unplaced chronology; explain the quarry and camp and add a public Thunder Bay locator, checked against Dawson and Parks Canada."
+    }
+  ]
+}

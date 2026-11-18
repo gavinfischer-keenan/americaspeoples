@@ -56,12 +56,15 @@ test('the Canadian guide reuses the earlier Quadra garden construction record',(
 
 test('existing evidence refinements retain complete before/after records and increment revisions',async()=>{
  const corrections=JSON.parse(await readFile('data/canada-aleutians-corrections.json','utf8'));
+ const local=JSON.parse(await readFile('data/shield-aleutian-local-corrections.json','utf8'));
  assert.equal(corrections.updates.length,8);
  for(const change of corrections.updates){
   assert.equal(change.beforeRecord.id,change.targetId);
   assert.equal(change.record.id,change.targetId);
   assert.ok(change.record.revision>change.beforeRecord.revision);
   assert.ok(change.reason);
-  assert.deepEqual(dataset.records.find(r=>r.id===change.targetId),change.record);
+  const next=local.updates.find((u:any)=>u.targetId===change.targetId);
+  if(next)assert.deepEqual(next.beforeRecord,change.record,'later refinements retain the full prior revision');
+  assert.deepEqual(dataset.records.find(r=>r.id===change.targetId),next?.record??change.record);
  }
 });

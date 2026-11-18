@@ -4,7 +4,7 @@ import { createHash } from 'node:crypto';
 export type GuideSource = { url: string; title: string };
 export type Reading = GuideSource & { kind: string; language?: string; note?: string; checkedAt?: string };
 export type Enrichment = { pages: { id: string; heading: string; narrative: { text: string; sources: string[] }[]; reading: Reading[]; citationTitles?: Record<string,string> }[] };
-export type GuideMedia = { images: { id: string; file: string; title: string; creator: string; creatorUrl?: string; sourcePage: string; sourceUrl: string; license: string; licenseUrl: string; licenseEvidence: string; checkedAt: string; changes: string; guideIds: string[]; alt: string; caption: string; width: number; height: number; bytes: number; sha256: string; projectLicenseApplies: boolean }[] };
+export type GuideMedia = { images: { id: string; role?: 'site-plan'; file: string; title: string; creator: string; creatorUrl?: string; sourcePage: string; sourceUrl: string; license: string; licenseUrl: string; licenseEvidence: string; checkedAt: string; changes: string; guideIds: string[]; alt: string; caption: string; width: number; height: number; bytes: number; sha256: string; projectLicenseApplies: boolean }[] };
 export const htmlEscape = (value: unknown): string => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]!));
 export function safeSourceURL(value: string): string {
   const url = new URL(value);
@@ -13,15 +13,30 @@ export function safeSourceURL(value: string): string {
 }
 const sourceName = (url: string) => new URL(url).hostname.replace(/^(www\.|home\.)/, '');
 
+type GuideImage = GuideMedia['images'][number];
+
+export function guideImagePath(image: GuideImage): string {
+  if (!/^[a-z0-9-]+\.(jpg|png|webp)$/.test(image.file) || image.projectLicenseApplies !== false) throw new Error('Unsafe or unlicensed guide image: ' + image.id);
+  return 'guide-media/' + image.file;
+}
+
+export function guideImageHTML(image: GuideImage, className?: string): string {
+  if (![image.width, image.height].every(n => Number.isSafeInteger(n) && n > 0)) throw new Error('Invalid guide image dimensions: ' + image.id);
+  const classAttribute = className ? ` class="${htmlEscape(className)}"` : '';
+  return `<img${classAttribute} src="${guideImagePath(image)}" width="${image.width}" height="${image.height}" loading="lazy" decoding="async" alt="${htmlEscape(image.alt)}">`;
+}
+
+export function guideImageCaptionHTML(image: GuideImage): string {
+  const creator = image.creatorUrl ? `<a href="${safeSourceURL(image.creatorUrl)}">${htmlEscape(image.creator)}</a>` : htmlEscape(image.creator);
+  return `<figcaption><p>${htmlEscape(image.caption)}</p><p class="photo-credit">${htmlEscape(image.title)} — ${creator}. <a href="${safeSourceURL(image.sourcePage)}">Image source</a> · <a href="${safeSourceURL(image.licenseUrl)}">${htmlEscape(image.license)}</a>. ${htmlEscape(image.changes)} This image is not subject to the atlas’s noncommercial license.</p></figcaption>`;
+}
+
 export function guideNarrativeHTML(id: string, enrichment: Enrichment, media: GuideMedia): string {
   const page = enrichment.pages.find(page => page.id === id);
-  const images = media.images.filter(image => image.guideIds.includes(id));
+  const images = media.images.filter(image => image.role !== 'site-plan' && image.guideIds.includes(id));
   if (!page && !images.length) return '';
   const prose = page ? `<div class="reading-prose">${page.narrative.map(p => `<p>${htmlEscape(p.text)}</p><p class="narrative-citations">Evidence: ${p.sources.map((url,index) => `<a href="${safeSourceURL(url)}" title="${htmlEscape(page.citationTitles?.[url] ?? url)}" aria-label="${htmlEscape(page.citationTitles?.[url] ?? url)}">${htmlEscape(sourceName(url))} [${index+1}] ↗</a>`).join(' · ')}</p>`).join('')}</div>` : '';
-  const figures = images.map(image => {
-    if (!/^[a-z0-9-]+\.(jpg|png|webp)$/.test(image.file) || image.projectLicenseApplies !== false) throw new Error('Unsafe or unlicensed guide image');
-    return `<figure class="guide-photo"><a href="${safeSourceURL(image.sourcePage)}"><img src="guide-media/${htmlEscape(image.file)}" width="${image.width}" height="${image.height}" loading="lazy" decoding="async" alt="${htmlEscape(image.alt)}"></a><figcaption><p>${htmlEscape(image.caption)}</p><p class="photo-credit">${htmlEscape(image.title)} — ${image.creatorUrl ? `<a href="${safeSourceURL(image.creatorUrl)}">${htmlEscape(image.creator)}</a>` : htmlEscape(image.creator)}. <a href="${safeSourceURL(image.sourcePage)}">Image source</a> · <a href="${safeSourceURL(image.licenseUrl)}">${htmlEscape(image.license)}</a>. ${htmlEscape(image.changes)} This image is not subject to the atlas’s noncommercial license.</p></figcaption></figure>`;
-  }).join('');
+  const figures = images.map(image => `<figure class="guide-photo"><a href="${safeSourceURL(image.sourcePage)}">${guideImageHTML(image)}</a>${guideImageCaptionHTML(image)}</figure>`).join('');
   return `<section id="historical-narrative" class="historical-narrative"><div class="eyebrow">A closer reading</div><h2>${htmlEscape(page?.heading ?? 'History in photographs')}</h2>${prose}${figures ? `<div class="guide-photo-grid">${figures}</div>` : ''}</section>`;
 }
 
@@ -38,11 +53,11 @@ export function guideReadingHTML(id: string, sources: GuideSource[], enrichment:
 export async function copyGuideMedia(media: GuideMedia): Promise<void> {
   await mkdir('sites/guide-media', { recursive: true });
   for (const image of media.images) {
-    if (!/^[a-z0-9-]+\.(jpg|png|webp)$/.test(image.file) || image.projectLicenseApplies !== false) throw new Error('Unsafe or unlicensed guide image');
-    const bytes = await readFile('data/guide-media/' + image.file);
+    const path = guideImagePath(image);
+    const bytes = await readFile('data/' + path);
     if (bytes.length !== image.bytes || bytes.length > 2_000_000 || createHash('sha256').update(bytes).digest('hex') !== image.sha256) throw new Error('Guide image provenance mismatch: ' + image.id);
     if (!image.creator || !image.license || !image.licenseUrl || !image.licenseEvidence || !image.sourcePage) throw new Error('Missing guide image attribution: ' + image.id);
-    await copyFile('data/guide-media/' + image.file, 'sites/guide-media/' + image.file);
+    await copyFile('data/' + path, 'sites/' + path);
   }
   await copyFile('data/guide-media/manifest.json', 'sites/guide-media/manifest.json');
 }

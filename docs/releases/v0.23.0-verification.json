@@ -1,0 +1,113 @@
+{
+  "records": 2531,
+  "sharedRecords": 2458,
+  "focusedRecords": 73,
+  "guides": 63,
+  "contextualStories": 65,
+  "independentTopics": 27,
+  "directory": {
+    "availableCards": 99,
+    "comingSoonEntries": 0
+  },
+  "version": "0.23.0",
+  "status": "verified release candidate; publication pending",
+  "verifiedAt": "2026-11-18T04:10:20.313136+00:00",
+  "baseCommit": "5ae8ff4415cece15e2828d8760091a6d8239abbe",
+  "newRecords": 51,
+  "newSharedRecords": 51,
+  "updatedRecords": 10,
+  "calendarPlacedNew": 40,
+  "unplacedNew": 11,
+  "terrainMaps": 54,
+  "newChapters": 38,
+  "newGuideChapters": 33,
+  "villagePlans": 2,
+  "consensus": {
+    "cumulativeCalls": 95,
+    "additionalAllowance": 75,
+    "usedSinceAllowanceUpdate": 15,
+    "thisBatch": 3,
+    "remaining": 60,
+    "reportsRemainPrivate": true
+  },
+  "validation": {
+    "releaseStages": 45,
+    "unitTests": 376,
+    "stageNames": {
+      "1": "Unit tests",
+      "2": "TypeScript contracts",
+      "3": "Published evidence validation",
+      "4": "Production build and self-host package",
+      "5": "Packaged history documentation",
+      "6": "Python API integration and release retention",
+      "7": "Hosted privacy, CSP and full snapshot",
+      "8": "Extracted self-host package",
+      "9": "Spreadsheet import, editing and sharing",
+      "10": "Layout, chronology and draft regressions",
+      "11": "Complete researched workbook and reviews",
+      "12": "Overlay selection, filters and persistence",
+      "13": "Map panels, viewport and mobile layout",
+      "14": "Smart timeline and keyboard control",
+      "15": "Exact event navigation",
+      "16": "Physical layers and source reviews",
+      "17": "Site and culture guides, road maps and natural events",
+      "18": "Dated geography, journeys, local selection and mobile",
+      "19": "Guided stories, discovery and responsive UI",
+      "20": "Shared world movie, scoped expeditions and local terrain",
+      "21": "Independent topic movies, geography and state restoration",
+      "22": "Community topics, queue promotion and tablet navigation",
+      "23": "Land and sovereignty topics, later-date isolation and tablet navigation",
+      "24": "Complete topic queue, current chapter evidence and packaged gap guides",
+      "25": "Categorized deep dives, existing content and legacy navigation",
+      "26": "Early continuity, contextual place movies and guide navigation",
+      "27": "First thirteen dedicated studies, language families and tablet playback",
+      "28": "Final twelve dedicated studies, shared evidence and completed lists",
+      "29": "Expanded archaeological guides, regional hierarchy and shared local timelines",
+      "30": "Collapsible story panels and labeled site terrain maps",
+      "31": "Readable map evidence, named places and expandable uncertainty",
+      "32": "One marker per exact place and attached evidence status",
+      "33": "Island histories, rai topic and licensed source navigation",
+      "34": "Guide narratives, licensed photographs and source register",
+      "35": "Canadian and Aleutian contextual histories, illustrated guides and reciprocal links",
+      "36": "Shield continuity, local Aleutian histories and licensed village plans",
+      "37": "Regional evidence in the shared movie and packaged source guide",
+      "38": "Interior communities, dated connections and conflict windows",
+      "39": "Map picking, camera, touch and label usability",
+      "40": "Movie and Explore separation",
+      "41": "Map playback interaction and hover",
+      "42": "Map rendering and interaction contracts",
+      "43": "Map contrast and direction cues",
+      "44": "Keyed panel focus and DOM identity",
+      "45": "Network failure, queue and search resilience"
+    },
+    "releaseLogSha256": "c57a611825a3ede848c3400ca17fa9ab87f6623ca9e2045df8ae99c678b0a3c9",
+    "review": "Independent whole-branch review; missing owning-guide links and stale Canada count fixed with regression coverage. No unresolved material findings.",
+    "finalTargetedChecks": "✔ the complete topic release includes the new guides and current coverage (521.1665ms)\n✔ the land and sovereignty guide ships with explicit timeline limits (481.9445ms)\n✔ the community topic coverage link opens a packaged source guide (447.8134ms)\n✔ the self-host release contains the linked history explanation as readable HTML (447.3148ms)\n✔ the interface guide ships with its public About link (445.1043ms)\n✔ Four Corners is a regional entry with its four existing local studies beneath it (2.298ms)\n✔ guide hierarchy is resolvable and has no cycles or false historical ownership (2.1575ms)\n✔ regional and local movie links expose the same shared world, with referenced studies first (0.279ms)\n✔ inland Shield and local Aleutian guides keep regional parents and active shared-world scenes (1.1377ms)\n✔ existing Amaknak house finds open the new local study rather than losing their guide link (0.134ms)\n✔ new inland and village observations publish on the master map with human-readable places (10.3809ms)\n✔ local refinements preserve prior observations through versioned before-and-after corrections (1.9134ms)\n✔ site guides resolve explicit record IDs without title guessing (1.0843ms)\nℹ tests 13\nℹ suites 0\nℹ pass 13\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 2662.2101\nPASS: 4 connected local guides, 33 shared-world scenes, 2 village plans, evidence links and tablet layouts.\nPASS: 9 regional guides and 86 contextual scenes, master-map evidence, tablet images/credits and reciprocal links.\nPASS: extracted self-host bundle starts independently; frontend, full record and dated ice requests work."
+  },
+  "artifacts": {
+    "version": "0.23.0",
+    "artifacts": [
+      {
+        "filename": "americas-peoples-v0.23.0-selfhost.zip",
+        "repositoryPath": "downloads/americas-peoples-v0.23.0-selfhost.zip",
+        "bytes": 46830827,
+        "sha256": "3bd31d688e803f13e19482597c6c2709f443bca7015cf4232f0926a949f7f02f",
+        "url": "https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/tags/v0.23.0/downloads/americas-peoples-v0.23.0-selfhost.zip"
+      },
+      {
+        "filename": "americas-peoples-import.xlsx",
+        "repositoryPath": "templates/americas-peoples-import.xlsx",
+        "bytes": 302388,
+        "sha256": "ed0abc070fc522e4ad2e3a7c97d3f7f109ed6265c4735ed186559a4e6079c794",
+        "url": "https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/tags/v0.23.0/templates/americas-peoples-import.xlsx"
+      },
+      {
+        "filename": "americas-peoples-researched-import.xlsx",
+        "repositoryPath": "templates/americas-peoples-researched-import.xlsx",
+        "bytes": 2424033,
+        "sha256": "54d0291c9cc3e1090829ea7fd7e04c199f6f6afcc6f12b680e59c97c5af55acc",
+        "url": "https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/tags/v0.23.0/templates/americas-peoples-researched-import.xlsx"
+      }
+    ]
+  }
+}
