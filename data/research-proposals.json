@@ -44172,7 +44172,7 @@
       "baseRecord": null,
       "record": {
         "id": "pacific-calvert-island-footprints",
-        "revision": 1,
+        "revision": 2,
         "type": "event",
         "title": "Calvert Island — human footprints in coastal sediment",
         "culture": {
@@ -44181,7 +44181,14 @@
           "kind": "unknown",
           "color": "#9babb5"
         },
-        "location": null,
+        "location": {
+          "id": "cw-place-5913649",
+          "name": "Calvert Island",
+          "lon": -128.0,
+          "lat": 51.6,
+          "precision": "Public named locality reference rounded to 1 decimal places; approximately 20 km orientation tolerance. Not an excavation, house, burial, exact event footprint or territory boundary.",
+          "provenance": "GeoNames 5913649, Calvert Island, Canadian country gazetteer: 51.56512, -128.0175; https://www.geonames.org/5913649/ ; https://download.geonames.org/export/dump/CA.zip downloaded 2026-11-17. Historical source establishes association with this locality; gazetteer supplies reference geography."
+        },
         "destination": null,
         "routeKind": "schematic",
         "time": {
@@ -44242,7 +44249,8 @@
           "provenance": "Atlantic Canada intake: both supplied PDF syntheses and all 29 RIS occurrences reconciled against primary publications or explicitly limited access. Supplied syntheses are research leads, not primary evidence. Author-supplied PDF/RIS originals preserved in the local round3 intake archive. Reviewed citations and limitations are public; original synthesis PDFs are not republished.",
           "reviewedAt": "2026-10-28",
           "history": [
-            "2026-10-28: Source intake reviewed; shared corpus unchanged."
+            "2026-10-28: Source intake reviewed; shared corpus unchanged.",
+            "2026-11-17: Added a public Calvert Island reference; chronology unchanged and no separate footprint record added."
           ],
           "relatedIds": []
         },
@@ -44252,12 +44260,12 @@
           "geometry": {
             "type": "Point",
             "coordinates": [
-              -128,
-              52
+              -128.0,
+              51.6
             ]
           },
-          "precision": "Rounded regional anchor for the named source geography; not an archaeological coordinate, route, territory, or confidence boundary.",
-          "provenance": "Calvert Island, British Columbia, named in the primary paper. Rounded island-region anchor, not coordinates for site EjTa-4."
+          "precision": "Public named locality reference rounded to 1 decimal places; approximately 20 km orientation tolerance. Not an excavation, house, burial, exact event footprint or territory boundary.",
+          "provenance": "GeoNames 5913649, Calvert Island, Canadian country gazetteer: 51.56512, -128.0175; https://www.geonames.org/5913649/ ; https://download.geonames.org/export/dump/CA.zip downloaded 2026-11-17. Historical source establishes association with this locality; gazetteer supplies reference geography."
         }
       },
       "rationale": "Author-supplied literature intake with primary source/access checks.",
@@ -78668,73 +78676,91 @@
       "baseRecord": null,
       "record": {
         "id": "r10v-amaknak-quarry-unl469",
-        "revision": 1,
+        "revision": 2,
         "type": "occurrence",
-        "title": "Amaknak Quarry (UNL-469) — Late Anangula core-and-blade evidence",
+        "title": "Amaknak — charcoal and stone tools at a possible hearth",
         "culture": {
-          "id": "unknown",
-          "name": "Unknown attribution",
-          "kind": "unknown",
-          "color": "#9babb5"
+          "id": "unangan-aleutian-histories",
+          "name": "Unangan communities and colonial encounters",
+          "kind": "people",
+          "color": "#547e8c"
         },
         "location": {
-          "id": "r10-amaknak-quarry-unl469",
-          "name": "Amaknak Quarry (UNL-469)",
-          "lon": -166.5,
-          "lat": 53.9,
-          "provenance": "Rogers et al. 2009 pp.153–154, Figure 1 and site description: eastern side of Amaknak Island’s southern peninsula, within Unalaska. Rounded public locality setting; figure not digitized.",
-          "precision": "Coarse named-site setting rounded to about 0.1 degree (several kilometres); unsuitable for navigation or finding excavation features."
+          "id": "al-place-amaknak-quarry",
+          "name": "Near Unalaska — southern Amaknak Island, UNL-469",
+          "lat": 53.89,
+          "lon": -166.54,
+          "precision": "Southern-island reference within approximately 3 km; exact test squares are not plotted.",
+          "provenance": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Rounded southern-island position interpreted from Rogers et al.2009, Figure1; not a surveyed excavation coordinate."
         },
         "destination": null,
         "routeKind": "schematic",
         "time": {
           "kind": "occurrence",
-          "start": -6090,
-          "end": -4790,
+          "start": -5780,
+          "end": -5630,
           "approximate": true,
-          "original": "8040–6740 cal BP; Table 1 uses OxCal 3.1 and IntCal04",
-          "method": "Published calibrated BP translated to astronomical years by 1950 minus cal BP; no recalibration.",
-          "interpretation": "Source-specific dated evidence or uncertainty envelope; not uninterrupted residence, a census or a founding date."
+          "original": "7730–7580 cal BP; Beta-237109,6820±40 radiocarbon BP",
+          "method": "Published OxCal 3.1/IntCal 04 calibration, Table 1; calendar BP 1950 converted to 5781–5631 BCE with no year zero.",
+          "interpretation": "The possible hearth is dated by one charcoal sample. The older 8040–7920 cal BP determination used possible soil organic material and is not used as this record’s date."
         },
         "claims": [
           {
-            "id": "finding",
-            "text": "Tests recovered blades, microblades, flake tools and a biface at UNL-469 on Amaknak Island. Charcoal dates span 8040–6740 cal BP and fill a previously poorly sampled Late Anangula interval.",
-            "status": "under discussion",
-            "explanation": "Multiple charcoal dates do not demonstrate continuous settlement or archipelago-wide demographic continuity.",
+            "id": "evidence",
+            "text": "Excavators found charred stones, charcoal, blades and microblades at Amaknak’s Quarry Site. A charcoal sample from the possible hearth dates this activity to 7730–7580 cal BP, placing people in a period once thought poorly represented in the eastern islands.",
+            "status": "well-supported",
+            "explanation": "The possible hearth is dated by one charcoal sample. The older 8040–7920 cal BP determination used possible soil organic material and is not used as this record’s date.",
             "support": [
               {
-                "sourceId": "r10-rogers2009",
-                "locator": "Abstract; pp.153–155, Table 1",
+                "sourceId": "al-source-quarry",
+                "locator": "Full report inspected, pp.153–156 and Table 1. Dated charcoal is separated from the questionable oldest soil-organic sample.",
                 "stance": "supports",
-                "note": "Checked 2026-10-29: Original society-hosted article PDF; abstract, site description and radiocarbon Table 1 inspected."
+                "note": "Historical evidence; geographic reference is separately identified."
+              },
+              {
+                "sourceId": "al-geo-5879282",
+                "locator": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Rounded southern-island position interpreted from Rogers et al.2009, Figure1; not a surveyed excavation coordinate.",
+                "stance": "context",
+                "note": "Supports the public geographic reference. Archaeological and historical dates are supported by the other cited sources."
               }
             ]
           }
         ],
         "sources": [
           {
-            "id": "r10-rogers2009",
-            "authors": "Jason S. Rogers; Michael R. Yarborough; Catherine L. Pendleton",
+            "id": "al-source-quarry",
             "title": "An Anangula Period Core-and-Blade Site on Amaknak Island, Eastern Aleutians",
+            "url": "https://www.alaskaanthropology.org/wp-content/uploads/2015/11/AJA-v71-optimized.pdf",
+            "authors": "Jason S. Rogers, Michael R. Yarborough and Catherine L. Pendleton",
             "year": 2009,
-            "venue": "Alaska Journal of Anthropology 7(1):153–166",
-            "url": "https://www.alaskaanthropology.org/wp-content/uploads/2017/08/akanth-articles_282_v7_n1_Rogers-Yarborough-Pendleton-Report.pdf",
-            "access": "Checked 2026-10-29: Original society-hosted article PDF; abstract, site description and radiocarbon Table 1 inspected.",
-            "referenceType": "journal-article"
+            "venue": "Alaska Journal of Anthropology 7(1):153–156",
+            "access": "Full report inspected, pp.153–156 and Table 1. Dated charcoal is separated from the questionable oldest soil-organic sample."
+          },
+          {
+            "id": "al-geo-5879282",
+            "title": "GeoNames geographic reference: Near Unalaska — southern Amaknak Island, UNL-469",
+            "authors": "GeoNames contributors",
+            "year": null,
+            "venue": "GeoNames, CC BY4.0",
+            "url": "https://www.geonames.org/5879282/",
+            "access": "Public US gazetteer checked 2026-11-17. Coordinates describe the stated locality; historical evidence is cited separately."
           }
         ],
         "review": {
-          "summary": "Tests recovered blades, microblades, flake tools and a biface at UNL-469 on Amaknak Island. Charcoal dates span 8040–6740 cal BP and fill a previously poorly sampled Late Anangula interval.",
-          "limitations": "Multiple charcoal dates do not demonstrate continuous settlement or archipelago-wide demographic continuity.",
-          "discussion": "Archaeological labels, ancestry and language are separate evidence. The named-site point is deliberately coarse, with several kilometres of geographic uncertainty.",
-          "provenance": "Round10 Arctic/Aleutian intake checked against the original publication or institutional record actually accessed. Private generated reports are not redistributed.",
-          "reviewedAt": "2026-10-29",
+          "summary": "Excavators found charred stones, charcoal, blades and microblades at Amaknak’s Quarry Site. A charcoal sample from the possible hearth dates this activity to 7730–7580 cal BP, placing people in a period once thought poorly represented in the eastern islands.",
+          "limitations": "The possible hearth is dated by one charcoal sample. The older 8040–7920 cal BP determination used possible soil organic material and is not used as this record’s date.",
+          "discussion": "Excavators found charred stones, charcoal, blades and microblades at Amaknak’s Quarry Site. A charcoal sample from the possible hearth dates this activity to 7730–7580 cal BP, placing people in a period once thought poorly represented in the eastern islands.",
+          "provenance": "Original source-linked summary; archaeological and historical evidence checked2026-11-17.",
+          "reviewedAt": "2026-11-17",
           "history": [
             "2026-10-29: Original-source check; chronology and map precision limits retained.",
-            "2026-10-29: Added coarse named-site occurrence point from published geographic setting; no exact excavation coordinates inferred."
+            "2026-10-29: Added coarse named-site occurrence point from published geographic setting; no exact excavation coordinates inferred.",
+            "2026-11-17: Expanded the existing Amaknak record with checked calibrated chronology and public locality; retained its ID to avoid duplicate map evidence.",
+            "The earlier 8040–6740 cal BP envelope included a questionable soil-organic determination. This record now follows dated hearth charcoal; a separate record retains a later charcoal sample."
           ],
-          "relatedIds": []
+          "relatedIds": [
+            "al-amaknak-quarry-later"
+          ]
         }
       },
       "rationale": "Round10 original-source or institutional finding with explicit access, geography and chronology limits.",
@@ -78751,72 +78777,101 @@
       "baseRecord": null,
       "record": {
         "id": "r10v-amaknak-bridge-architecture",
-        "revision": 1,
+        "revision": 2,
         "type": "occurrence",
-        "title": "Amaknak Bridge (UNL-050) — houses and Neoglacial adaptation",
+        "title": "Amaknak Bridge — stone houses and elaborate hearths",
         "culture": {
-          "id": "r10-unangan-archaeological",
-          "name": "Ancestral Unangan archaeological contexts",
-          "kind": "culture",
-          "color": "#b18a60"
+          "id": "unangan-aleutian-histories",
+          "name": "Unangan communities and colonial encounters",
+          "kind": "people",
+          "color": "#547e8c"
         },
         "location": {
-          "id": "r10-amaknak-bridge",
-          "name": "Amaknak Bridge (UNL-050)",
-          "lon": -166.5,
-          "lat": 53.9,
-          "provenance": "Knecht and Davis 2008 Figure 1 and site description: Amaknak Bridge locality in Unalaska Bay. Rounded public locality setting; no excavation coordinate claimed.",
-          "precision": "Coarse named-site setting rounded to about 0.1 degree (several kilometres); unsuitable for navigation or finding excavation features."
+          "id": "al-place-amaknak-bridge",
+          "name": "Near Unalaska — Amaknak Bridge settlement",
+          "lat": 53.88,
+          "lon": -166.55,
+          "precision": "Rounded bridge-area reference within approximately 1 km; individual house walls are described in the guide, not surveyed on the map.",
+          "provenance": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Bridge-area reference from published site-location figures in Rogers2011 and Knecht/Davis2008."
         },
         "destination": null,
         "routeKind": "schematic",
         "time": {
-          "kind": "unplaced",
-          "start": null,
-          "end": null,
+          "kind": "occurrence",
+          "start": -1972,
+          "end": -408,
           "approximate": true,
-          "original": "3300–2700 rcybp; calendar calibration not recovered",
-          "method": "Source chronology retained as stated; no new calibration or date inferred.",
-          "interpretation": "Source-specific dated evidence or uncertainty envelope; not uninterrupted residence, a census or a founding date."
+          "original": "Published charcoal-date envelope 3922–2358 cal BP; approximately 1973–409 BCE",
+          "method": "Outer envelope of calibrated charcoal ranges reported by Rogers; not a new pooled radiocarbon model.",
+          "interpretation": "The envelope spans samples from different contexts. It does not date every structure or establish continuous occupation throughout the whole range."
         },
         "claims": [
           {
-            "id": "finding",
-            "text": "Amaknak Bridge preserves multiple-room houses, labrets and burials. Knecht and Davis place occupation at 3300–2700 radiocarbon years BP and interpret changes alongside colder Neoglacial conditions.",
-            "status": "under discussion",
-            "explanation": "The source explicitly uses rcybp, which cannot be converted directly to calendar years. Climate response remains interpretation; houses are not a census.",
+            "id": "evidence",
+            "text": "Excavations exposed portions of 30–40 partly sunken, stone-lined structures. Fireplaces, vents and channels beneath floors helped organize warmth and work inside houses that were repeatedly repaired and rebuilt.",
+            "status": "well-supported",
+            "explanation": "The envelope spans samples from different contexts. It does not date every structure or establish continuous occupation throughout the whole range.",
             "support": [
               {
-                "sourceId": "r10-knecht2008",
-                "locator": "Abstract; pp.61,65–69",
+                "sourceId": "al-source-hearths",
+                "locator": "Author-posted article text inspected: calibrated charcoal bounds 3922–3565 to 2618–2358 cal BP, stone houses and complex hearths. The full site date envelope is not the lifespan of every house.",
                 "stance": "supports",
-                "note": "Checked 2026-10-29: Author-university abstract inspected; author-uploaded original article text on ResearchGate also read. No recalibration."
+                "note": "Historical evidence; geographic reference is separately identified."
+              },
+              {
+                "sourceId": "al-source-amaknak",
+                "locator": "Author/institutional abstract inspected; radiocarbon-year chronology retained as originally reported. Calendar range comes separately from Rogers.",
+                "stance": "supports",
+                "note": "Historical evidence; geographic reference is separately identified."
+              },
+              {
+                "sourceId": "al-geo-5879282",
+                "locator": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Bridge-area reference from published site-location figures in Rogers2011 and Knecht/Davis2008.",
+                "stance": "context",
+                "note": "Supports the public geographic reference. Archaeological and historical dates are supported by the other cited sources."
               }
             ]
           }
         ],
         "sources": [
           {
-            "id": "r10-knecht2008",
-            "authors": "Richard A. Knecht; Richard S. Davis",
+            "id": "al-source-hearths",
+            "title": "Architecture and Complex Hearth Features at the Amaknak Bridge Site, Eastern Aleutian Islands, Alaska",
+            "url": "https://doi.org/10.1353/arc.2012.0004",
+            "authors": "Jason S. Rogers",
+            "year": 2011,
+            "venue": "Arctic Anthropology48(2):92–112",
+            "access": "Author-posted article text inspected: calibrated charcoal bounds 3922–3565 to 2618–2358 cal BP, stone houses and complex hearths. The full site date envelope is not the lifespan of every house."
+          },
+          {
+            "id": "al-source-amaknak",
             "title": "The Amaknak Bridge Site: Cultural Change and the Neoglacial in the Eastern Aleutians",
+            "url": "https://doi.org/10.1353/arc.0.0003",
+            "authors": "Richard A. Knecht and Richard S. Davis",
             "year": 2008,
-            "venue": "Arctic Anthropology 45(1):61–78",
-            "url": "https://abdn.elsevierpure.com/en/publications/the-amaknak-bridge-site-cultural-change-and-the-neoglacial-in-the/",
-            "access": "Checked 2026-10-29: Author-university abstract inspected; author-uploaded original article text on ResearchGate also read. No recalibration.",
-            "referenceType": "journal-article",
-            "doi": "10.1353/arc.0.0003"
+            "venue": "Arctic Anthropology45(1):61–78",
+            "access": "Author/institutional abstract inspected; radiocarbon-year chronology retained as originally reported. Calendar range comes separately from Rogers."
+          },
+          {
+            "id": "al-geo-5879282",
+            "title": "GeoNames geographic reference: Near Unalaska — Amaknak Bridge settlement",
+            "authors": "GeoNames contributors",
+            "year": null,
+            "venue": "GeoNames, CC BY4.0",
+            "url": "https://www.geonames.org/5879282/",
+            "access": "Public US gazetteer checked 2026-11-17. Coordinates describe the stated locality; historical evidence is cited separately."
           }
         ],
         "review": {
-          "summary": "Amaknak Bridge preserves multiple-room houses, labrets and burials. Knecht and Davis place occupation at 3300–2700 radiocarbon years BP and interpret changes alongside colder Neoglacial conditions.",
-          "limitations": "The source explicitly uses rcybp, which cannot be converted directly to calendar years. Climate response remains interpretation; houses are not a census.",
-          "discussion": "Archaeological labels, ancestry and language are separate evidence. The named-site point is deliberately coarse, with several kilometres of geographic uncertainty.",
-          "provenance": "Round10 Arctic/Aleutian intake checked against the original publication or institutional record actually accessed. Private generated reports are not redistributed.",
-          "reviewedAt": "2026-10-29",
+          "summary": "Excavations exposed portions of 30–40 partly sunken, stone-lined structures. Fireplaces, vents and channels beneath floors helped organize warmth and work inside houses that were repeatedly repaired and rebuilt.",
+          "limitations": "The envelope spans samples from different contexts. It does not date every structure or establish continuous occupation throughout the whole range.",
+          "discussion": "Some houses had multiple rooms. The surviving arrangements make household labour and building technology visible, while faunal remains trace the food brought into the settlement.",
+          "provenance": "Original source-linked summary; archaeological and historical evidence checked2026-11-17.",
+          "reviewedAt": "2026-11-17",
           "history": [
             "2026-10-29: Original-source check; chronology and map precision limits retained.",
-            "2026-10-29: Added coarse named-site occurrence point from published geographic setting; no exact excavation coordinates inferred."
+            "2026-10-29: Added coarse named-site occurrence point from published geographic setting; no exact excavation coordinates inferred.",
+            "2026-11-17: Expanded the existing Amaknak record with checked calibrated chronology and public locality; retained its ID to avoid duplicate map evidence."
           ],
           "relatedIds": []
         }
@@ -90811,7 +90866,7 @@
       "baseRecord": null,
       "record": {
         "id": "r12v-amaknak-s2-floor",
-        "revision": 2,
+        "revision": 3,
         "type": "occurrence",
         "title": "Amaknak Bridge — Structure 2 floor charcoal",
         "culture": {
@@ -90821,12 +90876,12 @@
           "color": "#b18a60"
         },
         "location": {
-          "id": "r10-amaknak-bridge",
-          "name": "Amaknak Bridge (UNL-050)",
-          "lon": -166.5,
-          "lat": 53.9,
-          "provenance": "Knecht and Davis 2008 Figure 1 and site description: Amaknak Bridge locality in Unalaska Bay. Rounded public locality setting; no excavation coordinate claimed.",
-          "precision": "Coarse named-site setting rounded to about 0.1 degree (several kilometres); unsuitable for navigation or finding excavation features."
+          "id": "al-place-amaknak-bridge",
+          "name": "Near Unalaska — Amaknak Bridge settlement",
+          "lat": 53.88,
+          "lon": -166.55,
+          "precision": "Rounded bridge-area reference within approximately 1 km; individual house walls are described in the guide, not surveyed on the map.",
+          "provenance": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Bridge-area reference from published site-location figures in Rogers2011 and Knecht/Davis2008."
         },
         "destination": null,
         "routeKind": "schematic",
@@ -90876,7 +90931,8 @@
           "reviewedAt": "2026-11-16",
           "history": [
             "2026-10-29: Extracted published sample-specific calendar range; no new calibration.",
-            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes."
+            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes.",
+            "2026-11-17: Aligned the public Amaknak Bridge locality with the expanded architecture record. Sample dates and claims are unchanged."
           ],
           "relatedIds": [
             "r10v-amaknak-bridge-architecture"
@@ -90897,7 +90953,7 @@
       "baseRecord": null,
       "record": {
         "id": "r12v-amaknak-s5-floor",
-        "revision": 2,
+        "revision": 3,
         "type": "occurrence",
         "title": "Amaknak Bridge — Structure 5 floor charcoal",
         "culture": {
@@ -90907,12 +90963,12 @@
           "color": "#b18a60"
         },
         "location": {
-          "id": "r10-amaknak-bridge",
-          "name": "Amaknak Bridge (UNL-050)",
-          "lon": -166.5,
-          "lat": 53.9,
-          "provenance": "Knecht and Davis 2008 Figure 1 and site description: Amaknak Bridge locality in Unalaska Bay. Rounded public locality setting; no excavation coordinate claimed.",
-          "precision": "Coarse named-site setting rounded to about 0.1 degree (several kilometres); unsuitable for navigation or finding excavation features."
+          "id": "al-place-amaknak-bridge",
+          "name": "Near Unalaska — Amaknak Bridge settlement",
+          "lat": 53.88,
+          "lon": -166.55,
+          "precision": "Rounded bridge-area reference within approximately 1 km; individual house walls are described in the guide, not surveyed on the map.",
+          "provenance": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Bridge-area reference from published site-location figures in Rogers2011 and Knecht/Davis2008."
         },
         "destination": null,
         "routeKind": "schematic",
@@ -90962,7 +91018,8 @@
           "reviewedAt": "2026-11-16",
           "history": [
             "2026-10-29: Extracted published sample-specific calendar range; no new calibration.",
-            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes."
+            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes.",
+            "2026-11-17: Aligned the public Amaknak Bridge locality with the expanded architecture record. Sample dates and claims are unchanged."
           ],
           "relatedIds": [
             "r10v-amaknak-bridge-architecture"
@@ -90983,7 +91040,7 @@
       "baseRecord": null,
       "record": {
         "id": "r12v-amaknak-s7-main-room",
-        "revision": 2,
+        "revision": 3,
         "type": "occurrence",
         "title": "Amaknak Bridge — Structure 7 main room charcoal",
         "culture": {
@@ -90993,12 +91050,12 @@
           "color": "#b18a60"
         },
         "location": {
-          "id": "r10-amaknak-bridge",
-          "name": "Amaknak Bridge (UNL-050)",
-          "lon": -166.5,
-          "lat": 53.9,
-          "provenance": "Knecht and Davis 2008 Figure 1 and site description: Amaknak Bridge locality in Unalaska Bay. Rounded public locality setting; no excavation coordinate claimed.",
-          "precision": "Coarse named-site setting rounded to about 0.1 degree (several kilometres); unsuitable for navigation or finding excavation features."
+          "id": "al-place-amaknak-bridge",
+          "name": "Near Unalaska — Amaknak Bridge settlement",
+          "lat": 53.88,
+          "lon": -166.55,
+          "precision": "Rounded bridge-area reference within approximately 1 km; individual house walls are described in the guide, not surveyed on the map.",
+          "provenance": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Bridge-area reference from published site-location figures in Rogers2011 and Knecht/Davis2008."
         },
         "destination": null,
         "routeKind": "schematic",
@@ -91048,7 +91105,8 @@
           "reviewedAt": "2026-11-16",
           "history": [
             "2026-10-29: Extracted published sample-specific calendar range; no new calibration.",
-            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes."
+            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes.",
+            "2026-11-17: Aligned the public Amaknak Bridge locality with the expanded architecture record. Sample dates and claims are unchanged."
           ],
           "relatedIds": [
             "r10v-amaknak-bridge-architecture"
@@ -91069,7 +91127,7 @@
       "baseRecord": null,
       "record": {
         "id": "r12v-amaknak-s3-hearth",
-        "revision": 2,
+        "revision": 3,
         "type": "occurrence",
         "title": "Amaknak Bridge — Structure 3 hearth charcoal",
         "culture": {
@@ -91079,12 +91137,12 @@
           "color": "#b18a60"
         },
         "location": {
-          "id": "r10-amaknak-bridge",
-          "name": "Amaknak Bridge (UNL-050)",
-          "lon": -166.5,
-          "lat": 53.9,
-          "provenance": "Knecht and Davis 2008 Figure 1 and site description: Amaknak Bridge locality in Unalaska Bay. Rounded public locality setting; no excavation coordinate claimed.",
-          "precision": "Coarse named-site setting rounded to about 0.1 degree (several kilometres); unsuitable for navigation or finding excavation features."
+          "id": "al-place-amaknak-bridge",
+          "name": "Near Unalaska — Amaknak Bridge settlement",
+          "lat": 53.88,
+          "lon": -166.55,
+          "precision": "Rounded bridge-area reference within approximately 1 km; individual house walls are described in the guide, not surveyed on the map.",
+          "provenance": "GeoNames US gazetteer, feature 5879282, downloaded 2026-11-17. https://www.geonames.org/5879282/ — CC BY 4.0; geographic reference only. Bridge-area reference from published site-location figures in Rogers2011 and Knecht/Davis2008."
         },
         "destination": null,
         "routeKind": "schematic",
@@ -91134,7 +91192,8 @@
           "reviewedAt": "2026-11-16",
           "history": [
             "2026-10-29: Extracted published sample-specific calendar range; no new calibration.",
-            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes."
+            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes.",
+            "2026-11-17: Aligned the public Amaknak Bridge locality with the expanded architecture record. Sample dates and claims are unchanged."
           ],
           "relatedIds": [
             "r10v-amaknak-bridge-architecture"

@@ -4,6 +4,7 @@ import {futureDives,topicConnections} from './deep-dive-backlog';
 import {esc} from './dom';
 import {timeLabel} from './time';
 import {siteGuides} from './site-guides';
+import {guidesLinkedToTopic} from './guide-connections';
 
 export function sharedContextRecords(ids:readonly string[],all:readonly DisplayRecord[]):DisplayRecord[]{
  const byId=new Map(all.map(r=>[r.id,r])),found=new Map<string,DisplayRecord>();
@@ -17,9 +18,10 @@ export function sharedContextHTML(ids:readonly string[],all:readonly DisplayReco
  if(!records.length)return '';
  return `<section class="topic-context"><h3>In the shared history</h3><p>These places and encounters also belong to the whole atlas. Their dates can differ from this chapter’s.</p>${records.map(r=>`<a data-shared-context href="#context/${encodeURIComponent(r.id)}"><strong>${esc(r.title)}</strong><small>${esc(timeLabel(r.time))}</small><span>Evidence &amp; shared map ↗</span></a>`).join('')}</section>`;
 }
-export function relatedDivesHTML(id:string,links=topicConnections[id]??[]):string{
+export function relatedDivesHTML(id:string,links=[...(topicConnections[id]??[]),...guidesLinkedToTopic(id)]):string{
  if(!links.length)return '';
- const rows=links.map(([target,reason])=>{
+ const seen=new Set<string>();
+ const rows=links.filter(([target])=>!seen.has(target)&&!!seen.add(target)).map(([target,reason])=>{
   const t=topics.find(t=>t.id===target),g=siteGuides.find(g=>g.id===target),f=futureDives.find(f=>f.id===target);
   if(!t&&!g&&!f)return '';
   const href=t?'#topic/'+encodeURIComponent(target):g?g.href:'#topics/'+encodeURIComponent(target);

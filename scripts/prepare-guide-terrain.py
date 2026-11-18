@@ -33,6 +33,7 @@ def fetch(tile):
  return arr[:,:,0]*256+arr[:,:,1]+arr[:,:,2]/256-32768,{'url':url,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
 
 for req in requests:
+ size=tuple(req.get('pixels',[1200,600]));assert size[0]==1200 and 600<=size[1]<=1200
  ident=req['id'];assert ident and all(c.isalnum() or c=='-' for c in ident)
  w,s,e,n=req['bounds'];assert e>w and n>s and -85<s<n<85
  # Roughly one elevation sample per output pixel, bounded by published tile zoom.

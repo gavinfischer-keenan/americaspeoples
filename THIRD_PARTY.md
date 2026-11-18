@@ -442,3 +442,8 @@ Original guide narratives are independently authored from their cited evidence a
 The Palau quarry photograph is attributed to Elisabeth Krämer-Bannow, photographed during the 1908–1910 Hamburg expedition and published in Wilhelm Müller, *Yap*, in *Ergebnisse der Südsee-Expedition 1908–1910* (Hamburg, 1914). Commons identifies it as public domain under life-plus-70 terms and pre-1931 publication in the United States. The source-page link provides the Hamburg library scan. The photograph is historical evidence of one working setting, not an illustration of every period of quarrying.
 
 The factual provenance, item-level rights evidence, original and downloaded URLs, dimensions, byte counts, checksums, guide placements and verification dates are recorded in `data/guide-media/manifest.json`, published as `sites/guide-media/manifest.json`. The current six-image selection totals 1455575 bytes. No full scholarly reports or raw research-provider responses are redistributed by this feature. See [the guide reuse policy](docs/guide-reuse.md).
+
+
+## Canada, Aleutian and expanded-guide images
+
+The guide-media manifest now includes 31 individually credited photographs and museum-object images. New items retain public-domain, CC0 1.0, or CC BY 2.0/2.5/3.0/4.0 terms as recorded for each file; none is relicensed under the atlas’s noncommercial terms. Creator, source-page, license link, modification statement and verification date appear in `data/guide-media/manifest.json` and beneath each image. Self-hosted copies have recorded dimensions, byte counts and SHA-256 hashes. Referenced Canadian community histories and archaeological research are cited as evidence; no permission to redistribute their original text or illustrations is implied.

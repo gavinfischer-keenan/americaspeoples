@@ -1,0 +1,601 @@
+{
+  "connections": {
+    "canada-great-lakes": [
+      {
+        "id": "canada-st-lawrence",
+        "kind": "guide",
+        "reason": "Follow Wendat community history to Wendake and the river diplomacy that linked Ontario with Québec."
+      },
+      {
+        "id": "canada-prairies",
+        "kind": "guide",
+        "reason": "Continue Fort William’s fur-trade connections into Métis and Prairie histories."
+      },
+      {
+        "id": "hopewell",
+        "kind": "guide",
+        "reason": "Compare distant exchange and earthwork traditions without equating Point Peninsula communities with Ohio societies."
+      },
+      {
+        "id": "iroquoian-languages",
+        "kind": "topic",
+        "reason": "Read the topic on Wendat, Hochelaga and Stadacona language encounters alongside their village and diplomatic histories."
+      }
+    ],
+    "canada-st-lawrence": [
+      {
+        "id": "canada-great-lakes",
+        "kind": "guide",
+        "reason": "Connect Wendake and Montréal diplomacy with Wendat villages, displacement and trade in Ontario."
+      },
+      {
+        "id": "canada-atlantic",
+        "kind": "guide",
+        "reason": "Continue downriver to fisheries, Mi’kmaq alliances and the wars affecting Acadian communities."
+      },
+      {
+        "id": "iroquoian-languages",
+        "kind": "topic",
+        "reason": "Read the topic on Wendat, Hochelaga and Stadacona language encounters alongside their village and diplomatic histories."
+      }
+    ],
+    "canada-atlantic": [
+      {
+        "id": "canada-st-lawrence",
+        "kind": "guide",
+        "reason": "Connect downstream fisheries and Acadian wars with St. Lawrence trade, diplomacy and imperial conflict."
+      },
+      {
+        "id": "canada-arctic",
+        "kind": "guide",
+        "reason": "Follow Inuit histories north from Labrador while keeping Dorset and Inuit evidence distinct; verify final guide slug."
+      },
+      {
+        "id": "forced-relocations",
+        "kind": "topic",
+        "reason": "Compare the documented coercion at Shubenacadie with other institutions and removals, while keeping Acadian deportation and Indigenous schooling distinct."
+      }
+    ],
+    "aleutian-islands": [
+      {
+        "kind": "guide",
+        "id": "canada-pacific",
+        "reason": "Compare long maritime settlement histories, marine resource work and the colonial fur trade along the northeast Pacific coast."
+      },
+      {
+        "kind": "guide",
+        "id": "canada-northwest",
+        "reason": "Connect the Alaska Peninsula approach and northern travel networks with inland Yukon and northwest histories, without treating the Aleutians as a land bridge."
+      },
+      {
+        "kind": "guide",
+        "id": "canada-arctic",
+        "reason": "Compare boats, seasonal movement and sea-mammal economies while distinguishing Unangan histories from Inuit and earlier Arctic archaeological traditions."
+      },
+      {
+        "kind": "topic",
+        "id": "boats",
+        "reason": "Explore the watercraft and maritime skills behind fishing, cargo movement and inter-island connections described in this guide."
+      },
+      {
+        "kind": "topic",
+        "id": "pacific-fur-trades",
+        "reason": "Follow the merchants, coerced hunting and commercial demand that connected Aleutian communities to the wider Pacific fur economy."
+      },
+      {
+        "kind": "topic",
+        "id": "forced-relocations",
+        "reason": "Place Sanak–Belkofski and Pribilof labour movements beside other documented coercive relocations, with each episode’s causes kept distinct."
+      },
+      {
+        "kind": "topic",
+        "id": "whaling",
+        "reason": "Compare Akutan’s twentieth-century industrial station with other whaling economies and their different labour and processing systems."
+      },
+      {
+        "kind": "topic",
+        "id": "missionaries",
+        "reason": "Connect Unalaska’s dated church-building phases and translation setting with other mission encounters, while keeping local craftsmanship and community agency visible."
+      }
+    ],
+    "canada-pacific": [
+      {
+        "kind": "guide",
+        "id": "canada-northwest",
+        "reason": "Coastal–interior trade and colonial encounters continue through Tlingit, Tutchone and Yukon histories."
+      },
+      {
+        "kind": "guide",
+        "id": "canada-prairies",
+        "reason": "Compare different food-producing landscapes, settlement forms and colonial institutions without implying one cultural sequence."
+      },
+      {
+        "kind": "guide",
+        "id": "budj-bim",
+        "reason": "Compare Indigenous engineering of food landscapes; no shared ancestry or direct diffusion is proposed."
+      }
+    ],
+    "canada-prairies": [
+      {
+        "kind": "guide",
+        "id": "canada-pacific",
+        "reason": "Compare coastal mariculture with prairie cultivation and distinct regional forms of colonial expansion."
+      },
+      {
+        "kind": "guide",
+        "id": "canada-northwest",
+        "reason": "Follow fur-trade and treaty institutions north while preserving different nations and local events."
+      },
+      {
+        "kind": "guide",
+        "id": "mississippian-cultures",
+        "reason": "Context for eastern woodland/plains agricultural connections; tool resemblance alone does not establish migration from Cahokia."
+      }
+    ],
+    "canada-northwest": [
+      {
+        "kind": "guide",
+        "id": "canada-pacific",
+        "reason": "Chilkat Tlingit trade connects the coast and Yukon interior; compare specific encounters rather than generalized frontier expansion."
+      },
+      {
+        "kind": "guide",
+        "id": "canada-arctic",
+        "reason": "Gwich’in–Inuvialuit exchange and coastal settlement connect Mackenzie and Arctic histories."
+      },
+      {
+        "kind": "guide",
+        "id": "canada-prairies",
+        "reason": "Compare distinct numbered-treaty meetings, fur-trade institutions and schools."
+      }
+    ],
+    "canada-arctic": [
+      {
+        "kind": "guide",
+        "id": "canada-northwest",
+        "reason": "Inuvialuit and Gwich’in networks connect the western Arctic with inland rivers."
+      },
+      {
+        "kind": "guide",
+        "id": "canada-pacific",
+        "reason": "Compare maritime food production and colonial encounters while keeping distinct peoples and histories clear."
+      },
+      {
+        "kind": "guide",
+        "id": "canada-atlantic",
+        "reason": "Labrador and Newfoundland provide other Dorset/Inuit histories; chronological similarity does not establish identical populations."
+      }
+    ],
+    "canada": [
+      {
+        "kind": "guide",
+        "id": "canada-pacific",
+        "reason": "Footprints, clam gardens, houses, trade and Indigenous communities across the coast and Fraser interior."
+      },
+      {
+        "kind": "guide",
+        "id": "canada-prairies",
+        "reason": "Hunting, cultivation, river-lot communities, treaties and colonial institutions across the northern plains."
+      },
+      {
+        "kind": "guide",
+        "id": "canada-northwest",
+        "reason": "Ancient hunting technology, northern exchange, Klondike displacement and treaty encounters."
+      },
+      {
+        "kind": "guide",
+        "id": "canada-arctic",
+        "reason": "Local archaeological sequences, Inuit dwellings, whaling labour, trade and colonial institutions through 1934."
+      },
+      {
+        "kind": "guide",
+        "id": "canada-great-lakes",
+        "reason": "Fish fences, longhouse villages, canoe commerce and colonial institutions reveal a Great Lakes world built through work, diplomacy, conflict and continuing Indigenous community life."
+      },
+      {
+        "kind": "guide",
+        "id": "canada-st-lawrence",
+        "reason": "Follow stone-working places, farming villages, river diplomacy and colonial land changes while keeping the histories of Indigenous communities visible beyond every change of regime."
+      },
+      {
+        "kind": "guide",
+        "id": "canada-atlantic",
+        "reason": "Deep coastal evidence, sea-going work and living Indigenous communities connect with colonial fisheries, Acadian displacement, treaty diplomacy and imposed schooling through 1934."
+      },
+      {
+        "kind": "guide",
+        "id": "aleutian-islands",
+        "reason": "Follow a neighbouring North Pacific maritime world through archaeology, forced fur-hunting labour and changing settlements."
+      },
+      {
+        "kind": "topic",
+        "id": "forced-relocations",
+        "reason": "Compare the local moves and school histories with forced relocations elsewhere in the atlas."
+      },
+      {
+        "kind": "topic",
+        "id": "trade",
+        "reason": "Trace the commodities and transport networks that connected distant communities."
+      },
+      {
+        "kind": "topic",
+        "id": "languages",
+        "reason": "Explore language histories alongside places, without treating an archaeological culture as a language boundary."
+      }
+    ],
+    "maya-centers": [
+      {
+        "kind": "guide",
+        "id": "maya-culture",
+        "reason": "Follow the writing, calendar, agriculture and sacred kingship shared across these distinct cities."
+      },
+      {
+        "kind": "guide",
+        "id": "copan",
+        "reason": "Explore the dynasty and carved history introduced in the four-city comparison."
+      },
+      {
+        "kind": "guide",
+        "id": "calakmul",
+        "reason": "Meet another major Maya capital connected to Tikal through political rivalry and regional networks."
+      }
+    ],
+    "castle-rock": [
+      {
+        "kind": "guide",
+        "id": "sand-canyon",
+        "reason": "Compare a nearby, much larger village with its own household evidence and late-thirteenth-century ending."
+      },
+      {
+        "kind": "guide",
+        "id": "cortez-area",
+        "reason": "Place Castle Rock among the farms, great houses and later villages around Cortez."
+      },
+      {
+        "kind": "guide",
+        "id": "mesa-verde",
+        "reason": "Compare contemporaneous ancestral Pueblo settlement and migration in the wider Mesa Verde region."
+      }
+    ],
+    "sand-canyon": [
+      {
+        "kind": "guide",
+        "id": "castle-rock",
+        "reason": "Compare household life and local terminal histories at a smaller neighboring settlement."
+      },
+      {
+        "kind": "guide",
+        "id": "canyons-of-the-ancients",
+        "reason": "See the wider landscape of farms, water works and villages around Sand Canyon."
+      },
+      {
+        "kind": "guide",
+        "id": "hovenweep",
+        "reason": "Compare large aggregated villages with canyon-head communities built around springs."
+      }
+    ],
+    "lowry": [
+      {
+        "kind": "guide",
+        "id": "chaco",
+        "reason": "Compare great-house construction and gathering spaces with an important southern centre."
+      },
+      {
+        "kind": "guide",
+        "id": "cortez-area",
+        "reason": "Place Lowry beside Escalante, Dominguez and later villages on the Great Sage Plain."
+      },
+      {
+        "kind": "guide",
+        "id": "canyons-of-the-ancients",
+        "reason": "Follow the broader agricultural and settlement landscape that surrounds the pueblo."
+      }
+    ],
+    "gunditjmara": [
+      {
+        "kind": "guide",
+        "id": "budj-bim",
+        "reason": "Follow the channels, weirs and wetlands maintained through the community history told here."
+      },
+      {
+        "kind": "guide",
+        "id": "kuk",
+        "reason": "Compare two independently developed histories of managing wet ground for food, without implying a shared origin."
+      },
+      {
+        "kind": "guide",
+        "id": "new-guinea-islands",
+        "reason": "Explore another regional history where cultivation, environmental knowledge and continuing communities are central."
+      }
+    ],
+    "budj-bim": [
+      {
+        "kind": "guide",
+        "id": "gunditjmara",
+        "reason": "Follow the community history, resistance and land return connected to this engineered Country."
+      },
+      {
+        "kind": "guide",
+        "id": "kuk",
+        "reason": "Compare long-lived wetland food production through drainage and cultivation in the New Guinea highlands."
+      },
+      {
+        "kind": "guide",
+        "id": "casarabe",
+        "reason": "Compare another independently engineered landscape where channels and stored water supported food production."
+      }
+    ],
+    "lapita": [
+      {
+        "kind": "guide",
+        "id": "new-guinea-islands",
+        "reason": "Place early Lapita sites within the longer inhabited history of New Guinea and its neighboring islands."
+      },
+      {
+        "kind": "guide",
+        "id": "pacific-complexes",
+        "reason": "Continue from early settlement networks to later monumental places across the Pacific."
+      },
+      {
+        "kind": "guide",
+        "id": "micronesian-island-networks",
+        "reason": "Compare a different set of island connections, exchanges and local histories rather than treating every Pacific network as Lapita."
+      }
+    ],
+    "cortez-area": [
+      {
+        "kind": "guide",
+        "id": "lowry",
+        "reason": "Compare a long-lived pueblo and great kiva with the smaller household and great-house examples here."
+      },
+      {
+        "kind": "guide",
+        "id": "sand-canyon",
+        "reason": "Follow the aggregation of households into one of the region’s large thirteenth-century villages."
+      },
+      {
+        "kind": "guide",
+        "id": "castle-rock",
+        "reason": "Read a smaller neighboring community through its food, buildings and local ending."
+      }
+    ],
+    "mississippian-cultures": [
+      {
+        "kind": "guide",
+        "id": "cahokia",
+        "reason": "Explore one exceptionally large Mississippian centre and the communities supporting its monumental core."
+      },
+      {
+        "kind": "guide",
+        "id": "hopewell",
+        "reason": "Compare much earlier earthwork gatherings and exchange in the Ohio Valley."
+      },
+      {
+        "kind": "guide",
+        "id": "poverty-point",
+        "reason": "See an earlier Lower Mississippi earthwork tradition built within a different food economy."
+      }
+    ],
+    "maya-culture": [
+      {
+        "kind": "guide",
+        "id": "maya-centers",
+        "reason": "Compare the distinct cities in which courts, architecture and written histories developed."
+      },
+      {
+        "kind": "guide",
+        "id": "copan",
+        "reason": "Follow a dynasty through its sculpted monuments and long Hieroglyphic Stairway."
+      },
+      {
+        "kind": "guide",
+        "id": "calakmul",
+        "reason": "Explore a major court whose political relationships extended across the Maya lowlands."
+      }
+    ],
+    "caral-supe": [
+      {
+        "kind": "guide",
+        "id": "chavin",
+        "reason": "Compare a later Andean ceremonial centre with its own architecture and regional connections."
+      },
+      {
+        "kind": "guide",
+        "id": "moche",
+        "reason": "Follow a much later coastal history of public building, agriculture and political authority."
+      },
+      {
+        "kind": "guide",
+        "id": "poverty-point",
+        "reason": "Compare early monumental earthworks in a different American region and subsistence setting."
+      }
+    ],
+    "upano": [
+      {
+        "kind": "guide",
+        "id": "casarabe",
+        "reason": "Compare a later Amazonian settlement network with different earthworks and water-management systems."
+      },
+      {
+        "kind": "guide",
+        "id": "caral-supe",
+        "reason": "Compare early urban organization in a sharply different environment on the Pacific side of the Andes."
+      },
+      {
+        "kind": "guide",
+        "id": "kuk",
+        "reason": "Explore another long history in which cultivating wet ground transformed an inhabited landscape."
+      }
+    ],
+    "kuk": [
+      {
+        "kind": "guide",
+        "id": "new-guinea-islands",
+        "reason": "Put highland cultivation beside the distinct coastal and island histories of New Guinea."
+      },
+      {
+        "kind": "guide",
+        "id": "budj-bim",
+        "reason": "Compare enduring wetland engineering for eel production in Gunditjmara Country."
+      },
+      {
+        "kind": "guide",
+        "id": "casarabe",
+        "reason": "Compare drainage and stored water supporting farming in the Bolivian Amazon."
+      }
+    ],
+    "tierradentro": [
+      {
+        "kind": "guide",
+        "id": "san-agustin",
+        "reason": "Compare neighboring northern Andean traditions of funerary monuments and carved stone figures."
+      },
+      {
+        "kind": "guide",
+        "id": "chavin",
+        "reason": "Compare another Andean setting where architecture and powerful imagery organized sacred space."
+      },
+      {
+        "kind": "guide",
+        "id": "caral-supe",
+        "reason": "Contrast underground ceremonial chambers with much earlier open courts and platforms on the Peruvian coast."
+      }
+    ],
+    "hopewell": [
+      {
+        "kind": "guide",
+        "id": "poverty-point",
+        "reason": "Compare an earlier earthwork centre connected to far-reaching movement of materials."
+      },
+      {
+        "kind": "guide",
+        "id": "cahokia",
+        "reason": "Compare ceremonial gathering with the later urban scale and household landscape of Cahokia."
+      },
+      {
+        "kind": "guide",
+        "id": "mississippian-cultures",
+        "reason": "Follow later and regionally diverse mound-building societies across eastern North America."
+      }
+    ],
+    "san-agustin": [
+      {
+        "kind": "guide",
+        "id": "tierradentro",
+        "reason": "Compare nearby underground funerary architecture with San Agustín’s mounds and carved guardians."
+      },
+      {
+        "kind": "guide",
+        "id": "chavin",
+        "reason": "Compare the integration of water, architecture and sacred imagery in another Andean setting."
+      },
+      {
+        "kind": "guide",
+        "id": "moche",
+        "reason": "Explore another tradition in which political authority and ritual were expressed through monumental art."
+      }
+    ],
+    "casarabe": [
+      {
+        "kind": "guide",
+        "id": "upano",
+        "reason": "Compare an earlier Amazonian urban landscape of platforms, roads and cultivated spaces."
+      },
+      {
+        "kind": "guide",
+        "id": "kuk",
+        "reason": "Compare recurrent wetland drainage and cultivation in the New Guinea highlands."
+      },
+      {
+        "kind": "guide",
+        "id": "budj-bim",
+        "reason": "Compare a different food economy supported by channels, barriers and managed water storage."
+      }
+    ],
+    "cahokia": [
+      {
+        "kind": "guide",
+        "id": "mississippian-cultures",
+        "reason": "Place Cahokia within a wider and diverse history of farming towns and mound centres."
+      },
+      {
+        "kind": "guide",
+        "id": "hopewell",
+        "reason": "Compare earlier regional gathering places and long-distance material connections."
+      },
+      {
+        "kind": "guide",
+        "id": "poverty-point",
+        "reason": "Compare another major earthwork landscape whose builders used a different subsistence economy."
+      }
+    ],
+    "poverty-point": [
+      {
+        "kind": "guide",
+        "id": "hopewell",
+        "reason": "Compare later earthwork gathering and exchange networks in the Ohio Valley."
+      },
+      {
+        "kind": "guide",
+        "id": "mississippian-cultures",
+        "reason": "Follow a later agricultural and mound-building world in the Mississippi drainage."
+      },
+      {
+        "kind": "guide",
+        "id": "caral-supe",
+        "reason": "Compare early monumental construction in the Americas under different environmental and economic conditions."
+      }
+    ],
+    "canyons-of-the-ancients": [
+      {
+        "kind": "guide",
+        "id": "lowry",
+        "reason": "Explore the household work and communal architecture of an earlier pueblo on the Great Sage Plain."
+      },
+      {
+        "kind": "guide",
+        "id": "sand-canyon",
+        "reason": "Follow the development of a large thirteenth-century village."
+      },
+      {
+        "kind": "guide",
+        "id": "castle-rock",
+        "reason": "Compare a smaller community built around a sandstone butte in the same regional landscape."
+      }
+    ],
+    "aztec": [
+      {
+        "kind": "guide",
+        "id": "chaco",
+        "reason": "Compare the earlier great-house centre with Aztec’s rapid building and subsequent alterations."
+      },
+      {
+        "kind": "guide",
+        "id": "salmon",
+        "reason": "Explore another major ancestral Pueblo community in the neighboring San Juan drainage."
+      },
+      {
+        "kind": "guide",
+        "id": "four-corners",
+        "reason": "Place Aztec within regional settlement, migration and continuing Pueblo histories."
+      }
+    ],
+    "hovenweep": [
+      {
+        "kind": "guide",
+        "id": "sand-canyon",
+        "reason": "Compare canyon-head communities with a large aggregated village in the same wider region."
+      },
+      {
+        "kind": "guide",
+        "id": "mesa-verde",
+        "reason": "Explore related ancestral Pueblo farming, architecture and migration histories."
+      },
+      {
+        "kind": "guide",
+        "id": "canyons-of-the-ancients",
+        "reason": "Follow the broader landscape of fields, households and public pueblos surrounding Hovenweep."
+      }
+    ]
+  }
+}

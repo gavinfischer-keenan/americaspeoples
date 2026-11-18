@@ -21,7 +21,10 @@ test('source-specific phase windows and unresolved one-sided dating remain disti
  const get=(id:string)=>dataset.records.find(r=>r.id===id)!;
  assert.deepEqual([get('r10v-nevada-lsc-white-hearth').time.start,get('r10v-nevada-lsc-white-hearth').time.end],[-10424,-9877]);
  assert.deepEqual([get('r10v-nevada-lsc-lower-shell-hearth').time.start,get('r10v-nevada-lsc-lower-shell-hearth').time.end],[-8254,-7845]);
- for(const id of ['r10v-idaho-wewukiyepuh','r10v-gulf-canoe-canal','r10v-amaknak-bridge-architecture'])assert.equal(get(id).time.kind,'unplaced',id);
+ for(const id of ['r10v-idaho-wewukiyepuh','r10v-gulf-canoe-canal'])assert.equal(get(id).time.kind,'unplaced',id);
+ const bridge=get('r10v-amaknak-bridge-architecture');
+ assert.equal(bridge.time.kind,'occurrence');
+ assert.ok(bridge.sources.some(s=>s.url==='https://doi.org/10.1353/arc.2012.0004'),'later published calibration supplies the previously unresolved calendar dates');
  assert.equal(get('r10v-hooumi-layeriv').time.start,1129);
  assert.equal(get('r10v-hooumi-layeriv').time.end,1212);
  assert.match(get('r10v-hooumi-layeriv').review.limitations,/deposit|arrival/i);
