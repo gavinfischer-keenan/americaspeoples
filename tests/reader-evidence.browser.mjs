@@ -37,7 +37,7 @@ try{
  await page.setViewportSize({width:1440,height:960});
  await page.locator('#whole-movie').click();
  await page.locator('[data-movie-year="1000"]').click();
- const hawaii=page.locator('#map-host [data-overlay]').filter({has:page.locator('title').filter({hasText:'Hawaiʻi: alternative Bayesian colonization estimates'})});
+ const hawaii=page.locator('#map-host [data-overlay][aria-label*="Hawaiʻi: alternative Bayesian colonization estimates"]');
  const feature=await hawaii.boundingBox();assert.ok(feature);
  await page.mouse.move(feature.x+feature.width/2,feature.y+feature.height/2);
  const tooltip=page.getByRole('tooltip');await tooltip.waitFor();

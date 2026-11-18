@@ -49,7 +49,7 @@ try{
    assert.ok(current,scene.title+' current mapped evidence');
    await page.waitForFunction(({title})=>{
     // A dated connection is rendered as an overlay, not as a settlement dot.
-    const marker=[...document.querySelectorAll('#topic-map [data-point],#topic-map [data-overlay]')].find(el=>el.querySelector('title')?.textContent.includes(title)),map=document.querySelector('#topic-map');
+    const marker=[...document.querySelectorAll('#topic-map [data-point],#topic-map [data-overlay]')].find(el=>el.getAttribute('aria-label')?.includes(title)),map=document.querySelector('#topic-map');
     if(!marker?.textContent.includes(title)||!map)return false;
     const b=marker.getBoundingClientRect(),m=map.getBoundingClientRect();
     return b.width>0&&b.right>m.left&&b.left<m.right&&b.bottom>m.top&&b.top<m.bottom;

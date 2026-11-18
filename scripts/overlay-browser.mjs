@@ -215,6 +215,8 @@ try {
   await page.waitForFunction(
     () => document.querySelector("#current-year")?.textContent === "1,934 CE",
   );
+  await page.getByRole("button", { name: "Play", exact: true }).waitFor();
+  assert.match(await page.locator('#map-instruction').innerText(),/1934-12-31/);
   assert.equal(
     await page.getByRole("button", { name: "Play", exact: true }).count(),
     1,

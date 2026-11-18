@@ -1,0 +1,15 @@
+# Regional gaps, complete-area maps and contemporary voyages
+
+The user authorized selecting 15 undercovered regions without a prior focused review, using editorial judgment and carrying the work through. The atlas already ends in 1934 and preserves a shared date. Preserve that experience and the existing playback density rules.
+
+Count distinct dated localities, inspect post-settlement time gaps, reconcile dateline regions, and exclude recently completed campaigns. Prior broad intake is different from a dedicated regional review: report that distinction rather than claiming untouched literature. The selected 15 must receive independently sourced local evidence, a substantial place guide, and a contextual chronology on the shared map. Geographic emptiness is never population absence.
+
+Every place guide needs a clear full-area reference map with zoomable detail and source attribution. Use modern terrain as a reference, with honest native resolution; upsampling is not new evidence. Provide full extent and local details when one scale cannot serve both. Machu Picchu needs a useful topographic view of the sanctuary/Urubamba setting and the broader guide's Inca heartland. Chaco needs topography and sourced ancient-road geography, distinguishing surveyed segments from schematic connections. Preserve licenses and public archaeological location precision.
+
+Audit major voyages touching the Americas and Arctic/Antarctic exploration through 1934. Maintain a documented inclusion inventory rather than claiming a finite list is literally every voyage. Add missing significant expeditions, including Shackleton, with source-supported dated stages. Simultaneous voyages must appear without selecting one first; show a compact dated list for journeys offscreen and let the viewer follow them without losing the shared world. Do not imply straight interpolated lines are surveyed sailing tracks or use exact-looking invented dates. Separate ship travel, sledging/land travel and drift when needed.
+
+Approach: extend the current TypeScript/data pipeline and static guide renderer; use locally hosted map assets and progressively disclosed voyage context. Replacing the map engine or moving hosting adds risk without serving this request. Research and source discovery may run in parallel; production integration remains coordinated. Existing self-hosted publication and release checks remain authoritative.
+
+Acceptance: 15 documented regional reviews with added shared-map evidence and linked guides; useful full-area maps across place guides with especially strong Chaco/Machu Picchu references; a verified expanded voyage inventory and simultaneous/offscreen visibility; tests, build, guide/asset verification, browser checks and release verification pass before publication.
+
+Added user requirement: eliminate overlapping tooltips. Custom map popups must not also trigger native SVG hover tooltips; keep accessible labels and symbol explanations, clear on outside pointer/focus and Escape, and prevent dismissed popups returning after redraw.

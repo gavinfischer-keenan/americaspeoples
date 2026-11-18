@@ -24,7 +24,7 @@ try {
   await page.getByRole("button", { name: "Go to year", exact: true }).click();
   const audit = await page.evaluate(() =>
     [...document.querySelectorAll(".cloud-core")].map((e) => ({
-      title: e.parentElement.querySelector("title").textContent,
+      title: e.parentElement.getAttribute("aria-label"),
       stroke: getComputedStyle(e).stroke,
       width: getComputedStyle(e).strokeWidth,
     })),

@@ -31,7 +31,7 @@ reset();window.ready=true;
   format: "iife",
   platform: "browser",
 });
-const css = await readFile("src/styles.css", "utf8");
+const css = await readFile("src/styles.css", "utf8") + await readFile('src/atlas-context.css','utf8');
 const server = http.createServer((req, res) => {
   res.setHeader(
     "content-type",
@@ -153,7 +153,7 @@ try {
       1,
     );
   assert.match(
-    await page.locator("[data-point] title").first().textContent(),
+    await page.locator("[data-point] desc").first().textContent(),
     /Explore size is a reference/,
   );
   assert.equal(await page.locator(".population-unknown").count(), 0);
@@ -224,6 +224,44 @@ try {
   }
   assert.equal(requests.length, requestCount);
   assert.equal(await page.evaluate(() => location.hash), "");
+  // Native browser tooltips are outside the DOM/screenshot. Their SVG <title>
+  // trigger must be absent whenever a feature already has the custom tooltip.
+  await page.evaluate(() => {
+    const cloud={...overlay,id:'cloud',title:'Regional cloud',overlay:{...overlay.overlay,kind:'regional-evidence',direction:'both'}};
+    const history={...record,id:'history',title:'Historic foundation',location:{...record.location,lon:-110},history:{kind:'settlement'},overlay:{kind:'settlement',basis:'schematic',geometry:{type:'Point',coordinates:[-110,40]}}};
+    map.context.voyages=[{id:'test-voyage',name:'Test voyage',summary:'Fixture',scope:'global',sourceIds:[],recordIds:[],precision:'Fixture',stops:[{name:'First stop',coordinates:[-100,40],arrival:'0150-01-01',departure:'0150-01-02',mode:'sea',note:'Fixture'},{name:'Second stop',coordinates:[-80,30],arrival:'0151-01-01',departure:'0151-01-02',mode:'sea',note:'Fixture'}]}];
+    map.context.options.voyageId='test-voyage';
+    map.update([record,overlay,cloud,history],150,[context]);
+  });
+  for (const selector of ['[data-point]','.overlay-feature','.regional-cloud','.direction-symbol','.history-marker','[data-context]','.hazard-marker']) {
+    const target=page.locator(selector).first();
+    await target.dispatchEvent('pointerover',{clientX:600,clientY:400});
+    assert.equal(await page.getByRole('tooltip').count(),1,selector+' has one custom tooltip');
+    const feature=await target.evaluate(el=>{
+      const owner=el.closest('[data-map-tip]');
+      return {native:owner.querySelectorAll('title,[title]').length+(owner.hasAttribute('title')?1:0),label:owner.getAttribute('aria-label'),description:owner.querySelector('desc')?.textContent};
+    });
+    assert.equal(feature.native,0,selector+' must not also trigger a native tooltip');
+    assert.ok(feature.label&&feature.description,selector+' retains accessible text and symbol explanation');
+  }
+  const voyage=await page.locator('.voyage-traveler').evaluate(el=>({pointerEvents:getComputedStyle(el).pointerEvents,custom:el.hasAttribute('data-map-tip'),hit:document.elementFromPoint(el.getBoundingClientRect().x+13,el.getBoundingClientRect().y+13)?.closest('.journey-context')!==null}));
+  assert.equal(voyage.pointerEvents,'none','voyage references do not intercept evidence hover');
+  assert.equal(voyage.custom,false,'voyage references do not register a competing custom tooltip');
+  assert.equal(voyage.hit,false,'voyage SVG titles are not pointer targets');
+  // Keyboard entry into a drawer/control must dismiss a pointer-origin popup.
+  // Redraws must not resurrect that dismissed popup from a stale hover key.
+  await page.locator('[data-point]').first().dispatchEvent('pointerover',{clientX:600,clientY:400});
+  await page.locator('.map-density-options summary').focus();
+  assert.equal(await page.getByRole('tooltip').count(),0,'focus entering a map drawer dismisses hover');
+  await page.keyboard.press('Enter');
+  await page.evaluate(()=>map.update([record,overlay],150,[context]));
+  assert.equal(await page.getByRole('tooltip').count(),0,'drawer redraw does not restore dismissed hover');
+  await page.locator('[data-point]').first().dispatchEvent('pointerover',{clientX:600,clientY:400});
+  await page.keyboard.press('Escape');
+  assert.equal(await page.getByRole('tooltip').count(),0,'Escape dismisses hover when focus is outside SVG');
+  await page.locator('[data-point]').first().dispatchEvent('pointerover',{clientX:600,clientY:400});
+  await page.locator('.map-density-options summary').dispatchEvent('pointerover');
+  assert.equal(await page.getByRole('tooltip').count(),0,'pointer entering a control dismisses hover');
   // A correction preview shares its published record ID but has its own identity.
   await page.evaluate(() => {
     const preview = {
@@ -282,9 +320,15 @@ try {
       bounds.x + bounds.width <= 320 &&
       bounds.y + bounds.height <= 560,
   );
+  await page.evaluate(()=>map.setScope('world'));
+  assert.equal(await page.getByRole('tooltip').count(),0,'changing map view clears hover');
+  await page.locator('[data-point]').first().dispatchEvent('pointerover',{clientX:150,clientY:300});
+  await page.getByRole('tooltip').waitFor();
+  await page.evaluate(()=>map.element.remove());
+  await page.waitForFunction(()=>!document.querySelector('[role="tooltip"]'));
   assert.deepEqual(errors, []);
   console.log(
-    "Map interaction browser fixture passed: pause consumption, keyboard hazard guard, all-time Explore, catalog hover, stale clearing and mobile bounds.",
+    "Map interaction browser fixture passed: pause consumption, keyboard hazard guard, all-time Explore, single accessible tooltip, drawer/view dismissal, stale clearing and mobile bounds.",
   );
 } finally {
   await browser.close();

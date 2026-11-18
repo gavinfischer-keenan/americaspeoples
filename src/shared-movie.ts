@@ -4,6 +4,7 @@ import type { PlaybackIndex } from "./playback-index";
 import { END_YEAR } from "./time";
 
 export type MovieWindow = { start: number; end: number };
+export const MOVIE_END_DATE=dateValue(`${END_YEAR}-12-31`);
 /** Fixed atlas scope, independent of the viewer's zoom or camera. */
 export function inAtlas(point: readonly number[]): boolean {
   const lon = (point[0] + 360) % 360;
@@ -15,10 +16,15 @@ export function inAtlas(point: readonly number[]): boolean {
   );
 }
 const windowsCache = new WeakMap<Voyage, MovieWindow[]>();
+export const inVoyageScope=(v:Voyage,point:readonly number[])=>v.scope==='global'||inAtlas(point);
 /** Crossings are derived from schematic great-circle legs, not historical position logs. */
 export function scopedVoyageWindows(v: Voyage): MovieWindow[] {
   const cached = windowsCache.get(v);
   if (cached) return cached;
+  if(v.scope==='global'){
+    const windows=[{start:dateValue(v.stops[0].arrival),end:dateValue(v.stops.at(-1)!.departure)}];
+    windowsCache.set(v,windows);return windows;
+  }
   const pieces: MovieWindow[] = [];
   for (let i = 0; i < v.stops.length; i++) {
     const stop = v.stops[i],
@@ -28,6 +34,7 @@ export function scopedVoyageWindows(v: Voyage): MovieWindow[] {
       pieces.push({ start: arrival, end: departure });
     const next = v.stops[i + 1];
     if (!next) continue;
+    if(stop.gapAfter)continue;
     const end = dateValue(next.arrival);
     if (end <= departure) continue;
     const interpolate = geoInterpolate(stop.coordinates, next.coordinates);
@@ -139,8 +146,9 @@ export function advanceMovieClock(
   index: PlaybackIndex,
   voyages: readonly Voyage[],
   smart: boolean,
+  contextWindows:readonly {start:number;end:number}[]=[],
 ): { date: number; boundary: boolean } {
-  const windows = voyages.flatMap((v) => scopedVoyageWindows(v));
+  const windows = [...voyages.flatMap((v) => scopedVoyageWindows(v)),...contextWindows];
   const traveling = windows.some((w) => date >= w.start && date < w.end);
   const effective = smart
     ? Math.min(
@@ -148,7 +156,7 @@ export function advanceMovieClock(
         traveling ? 0.12 : date >= 1400 ? 1 : date >= 0 ? 20 : rate,
       )
     : rate;
-  let target = Math.min(END_YEAR, date + Math.max(0, seconds) * effective);
+  let target = Math.min(MOVIE_END_DATE, date + Math.max(0, seconds) * effective);
   const stop = index.advance(
     Math.floor(date),
     Math.max(0, Math.floor(target) - Math.floor(date)),
@@ -167,7 +175,7 @@ export function advanceMovieClock(
   for (const v of voyages)
     for (const s of v.stops)
       for (const edge of [dateValue(s.arrival), dateValue(s.departure)])
-        if (inAtlas(s.coordinates) && edge > date + 1e-8 && edge <= target) {
+        if (inVoyageScope(v,s.coordinates) && edge > date + 1e-8 && edge <= target) {
           target = edge;
           boundary = true;
         }
@@ -195,7 +203,7 @@ export function scopedVoyageGeometry(
         .filter((d) => d > w.start && d < end),
       end,
     ];
-    const line: number[][] = [];
+    let line: number[][] = [];
     for (let i = 0; i < dates.length; i++) {
       const d = dates[i],
         previous = dates[i - 1] ?? d;
@@ -204,7 +212,8 @@ export function scopedVoyageGeometry(
           v.stops,
           previous + ((d - previous) * j) / 16,
         );
-        if (frame && inAtlas(frame.coordinates)) line.push(frame.coordinates);
+        if (frame && inVoyageScope(v,frame.coordinates)) line.push(frame.coordinates);
+        else {if(line.length>1)coordinates.push(line);line=[];}
       }
     }
     if (line.length > 1) coordinates.push(line);

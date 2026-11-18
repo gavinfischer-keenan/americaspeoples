@@ -1,7 +1,8 @@
 import { geoPath, type GeoProjection } from 'd3-geo';
 import { boundariesAt, type PoliticalBoundary } from './boundaries';
 import { dateValue, sampleVoyage, type Voyage } from './voyages';
-import { inAtlas, scopedVoyageGeometry } from './shared-movie';
+import { scopedVoyageGeometry } from './shared-movie';
+import {expeditionPhase} from './expedition-context';
 import {intersectsView,type ViewBounds} from './terrain';
 import { esc } from './dom';
 import type { EvidenceRecord } from './model';
@@ -47,7 +48,7 @@ export class AtlasContext {
    const selected=this.voyages.find(v=>v.id===this.options.voyageId);
    for(const v of this.voyages){
     const date=this.options.voyageDate??year;
-    if(dateValue(v.stops[0].arrival)>=year+1||dateValue(v.stops.at(-1)!.departure)<year)continue;
+    if(date<dateValue(v.stops[0].arrival)||date>dateValue(v.stops.at(-1)!.departure))continue;
     const emphasized=selected?.id===v.id;
     const frame=sampleVoyage(v.stops,date);
     const geometry=scopedVoyageGeometry(v,emphasized?Infinity:date);
@@ -55,9 +56,9 @@ export class AtlasContext {
     const d=(emphasized?cached('voyage-'+v.id,geometry):path(geometry))??'';
     html+=`<path class="voyage-casing" aria-hidden="true" d="${d}"/><path class="${emphasized?'selected-voyage':''}" data-voyage-track="${esc(v.id)}" d="${d}"><title>${esc(v.name)} · schematic links between documented stops, not a surveyed track.</title></path>`;
     }
-    if(emphasized)for(const s of v.stops){if(!inAtlas(s.coordinates))continue;const p=projection(s.coordinates),future=dateValue(s.arrival)>date;if(p&&intersectsView([p,p],view))html+=`<circle class="voyage-stop ${future?'future-stop':''}" cx="${p[0]}" cy="${p[1]}" r="${3/scale}"><title>${esc(s.name)} · ${esc(s.arrival)}${future?' · later in this itinerary':''}</title></circle>`;}
-    const p=frame&&inAtlas(frame.coordinates)&&projection(frame.coordinates);
-    if(frame&&p&&intersectsView([p,p],view))html+=`<g class="voyage-traveler ${emphasized?'selected-traveler':''}" data-voyage="${esc(v.id)}" transform="translate(${p[0]},${p[1]}) scale(${1/scale})"><title>${esc(v.name)} · ${esc(frame.stopName)}</title><circle r="13"/><text text-anchor="middle" dy=".35em">${frame.mode==='land'?'🚶':frame.mode==='river'?'🛶':'⛵'}</text></g>`;
+    if(emphasized)for(const s of v.stops){const p=projection(s.coordinates),future=dateValue(s.arrival)>date;if(p&&intersectsView([p,p],view))html+=`<circle class="voyage-stop ${future?'future-stop':''}" cx="${p[0]}" cy="${p[1]}" r="${3/scale}"><title>${esc(s.name)} · ${esc(s.arrival)}${future?' · later in this itinerary':''}</title></circle>`;}
+    const p=frame&&projection(frame.coordinates);
+    if(frame&&p&&intersectsView([p,p],view))html+=`<g class="voyage-traveler ${emphasized?'selected-traveler':''}" data-voyage="${esc(v.id)}" transform="translate(${p[0]},${p[1]}) scale(${1/scale})"><title>${esc(v.name)} · ${esc(expeditionPhase(v,frame))} · ${esc(frame.stopName)}</title><circle r="13"/><text text-anchor="middle" dy=".35em">${v.stops[frame.leg].phase==='ice-drift'?'❄':v.stops[frame.leg].phase==='wintering'&&frame.status==='stopped'?'⌂':frame.mode==='air'?'✈':frame.mode==='land'?'🚶':frame.mode==='river'?'🛶':'⛵'}</text></g>`;
    }
    html+='</g>';
   }

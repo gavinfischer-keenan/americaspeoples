@@ -48,7 +48,7 @@ export function collectSourceAttributions(input: AttributionInputs): Attribution
       const license = typeof object.license === 'string' ? object.license : inheritedLicense;
       for (const [field, item] of Object.entries(object)) {
         if (typeof item === 'string' && /^https?:\/\//.test(item) && !/\s/.test(item)) {
-          const material = manifest.reused && /^(url|download|request|dataset|data|source|sourceUrl)$/.test(field) && !(field === 'url' && object.referenceOnly === true);
+          const material = manifest.reused && /^(url|download|request|dataset|data|source|sourceUrl)$/.test(field) && object.referenceOnly !== true;
           add({url:item,title:typeof object.title === 'string' ? object.title : typeof object.source === 'string' && !object.source.startsWith('http') ? object.source : undefined}, manifest.file, material ? {kind:'Reused data / map source',license:license || 'Item-specific terms: consult the full third-party notices and linked provider; no blanket license is asserted.',notes:['Public provenance manifest: '+manifest.file]} : {});
         } else walk(item, license);
       }
@@ -105,7 +105,7 @@ export async function loadAttributionInputs(): Promise<AttributionInputs> {
       if (item.isDirectory()) { await walk(file); continue; }
       // Raw event pages are represented by their fetch manifest and cited records.
       if (!item.name.endsWith('.json') || (directory === 'data/physical-sources' && !/manifest|import/.test(item.name)) || ['site-guide-content.json','guide-enrichment.json'].includes(item.name) || directory === 'data/guide-media') continue;
-      const reused = /(?:boundary-sources|terrain\/sources|physical-sources\/fetch-manifest|rail-network\.json)/.test(file);
+      const reused = /(?:boundary-sources|terrain\/sources|guide-maps\/manifest|physical-sources\/fetch-manifest|rail-network\.json)/.test(file);
       const data = JSON.parse(await readFile(file,'utf8'));
       const license = file === 'data/guide-terrain/sources.json' ? 'Mixed elevation-source terms; preserve Mapzen/Tilezen and upstream credits in the linked attribution document.' : file === 'data/rail-network.json' ? data.provenance.license : undefined;
       manifests.push({file,data,reused,license});

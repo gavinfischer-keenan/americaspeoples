@@ -17,7 +17,7 @@ try{
  await mkdir('test-results',{recursive:true});
  for(const story of shieldAleutianLocalStories){
   assert.equal((await page.goto(base+'/sites/'+story.id+'.html')).status(),200);
-  await page.locator('.site-overview').waitFor();
+  await page.locator('.site-overview').first().waitFor();
   assert.ok((await page.locator('#architecture').innerText()).split(/\s+/).length>500,story.id+' needs substantive history');
   await page.locator(`a[href="../#story/${story.id}"]`).first().click();
   for(const [i,scene] of story.scenes.entries()){

@@ -13,8 +13,8 @@ try{
  await mkdir('test-results',{recursive:true});
  for(const story of canadaAleutianStories){
   assert.equal((await page.goto(base+'/sites/'+story.id+'.html')).status(),200);
-  await page.locator('.site-overview').waitFor();
-  if(['canada','canada-arctic','aleutian-islands'].includes(story.id))await page.locator('.site-overview').screenshot({path:`test-results/${story.id}-terrain-guide.png`});
+  await page.locator('.site-overview').first().waitFor();
+  if(['canada','canada-arctic','aleutian-islands'].includes(story.id))await page.locator('.site-overview').first().screenshot({path:`test-results/${story.id}-terrain-guide.png`});
   assert.ok((await page.locator('#architecture').innerText()).split(/\s+/).length>500,story.id);
   assert.ok(await page.locator('#related-dives a').count()>=3,story.id+' related cards');
   await page.locator(`a[href="../#story/${story.id}"]`).click();

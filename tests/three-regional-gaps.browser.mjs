@@ -14,7 +14,7 @@ try{
  await mkdir('test-results',{recursive:true});
  for(const story of stories){
   assert.equal((await page.goto(base+'/sites/'+story.id+'.html')).status(),200);
-  await page.locator('.site-overview').waitFor();
+  await page.locator('.site-overview').first().waitFor();
   assert.ok((await page.locator('#architecture').innerText()).split(/\s+/).length>500);
   assert.ok(await page.locator('#related-dives a').count()>0);
   await page.getByRole('link',{name:'Watch the contextual movie',exact:true}).click();
@@ -46,7 +46,7 @@ try{
   await page.setViewportSize({width,height:960});
   for(const story of stories){
    await page.goto(base+'/sites/'+story.id+'.html');
-   const panel=page.locator('.site-overview');await panel.scrollIntoViewIfNeeded();
+   const panel=page.locator('.site-overview').first();await panel.scrollIntoViewIfNeeded();
    await panel.locator('image').evaluateAll(async images=>{await Promise.all(images.map(i=>new Promise((resolve,reject)=>{const img=new Image();img.onload=resolve;img.onerror=reject;img.src=i.getAttribute('href');})));});
    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
    assert.ok(await panel.locator('svg a').count()>0);

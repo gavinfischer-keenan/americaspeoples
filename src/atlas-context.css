@@ -1,4 +1,8 @@
 .historical-context,.historical-context *,.journey-context,.journey-context *{pointer-events:none}
+.expeditions-now{position:absolute;left:14px;top:66px;z-index:4;width:min(300px,calc(100% - 205px));max-height:45%;overflow:auto;background:#102e3bf2;color:#f4f8f6;border:1px solid #719599;border-radius:9px;padding:10px;box-shadow:0 4px 18px #0003}
+.expeditions-now[hidden]{display:none}.expeditions-now>summary{cursor:pointer;font-size:14px;font-weight:650}.expeditions-now>p{font-size:12px;line-height:1.4;margin:8px 0 0;color:#c9dbdb}
+.expeditions-list{display:grid;gap:7px;margin-top:9px}.expedition-row{display:grid;text-align:left;gap:3px;width:100%;white-space:normal;background:#244952;color:#f5faf5;border:1px solid #5c8589;border-radius:5px;padding:8px;cursor:pointer}.expedition-row:hover{background:#315f65}.expedition-row:focus-visible{outline:3px solid #f9d48d;outline-offset:2px}.expedition-row strong{font-size:14px;line-height:1.35}.expedition-row span,.expedition-row small{font-size:12px;line-height:1.4}.expedition-follow{color:#ffe0a0}
+.movie-playing .expedition-row small,.movie-playing .expeditions-now>p{display:none}@media(max-width:700px){.expeditions-now{left:10px;top:70px;width:min(230px,calc(100% - 150px));max-height:32%;padding:7px}.expedition-row strong{font-size:13px}}
 .whole-movie-button{width:100%;margin-top:12px;font-size:11px;background:#dce7df;color:#21595b;border-color:#a6beb5}
 .whole-intro h2{font-size:28px}.whole-intro>p{font-size:13px;line-height:1.65}.movie-starts{display:flex;flex-wrap:wrap;gap:6px}.movie-starts button{font-size:11px;min-height:32px;color:#24595b;background:#e1e9df;border-color:#b4c7bb}
 .concurrent-context{padding:16px 24px;border-top:1px solid #c8d4c8;color:#284d4e}.context-kicker{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:11px}.context-explainer{font-size:12px;line-height:1.5}.concurrent-records{display:grid;gap:8px}.concurrent-records a{display:block;border:1px solid #c0d0c3;background:#e5ebdf;padding:10px 12px;border-radius:8px;text-decoration:none}.concurrent-records small{display:block;font-size:9px;line-height:1.5;color:#54736b}.concurrent-records strong{font-size:12px;line-height:1.5;display:block;margin-top:3px}.concurrent-context>.fine{font-size:10px;line-height:1.5}
@@ -53,3 +57,5 @@
 .story-section .scene-copy{padding-top:6px}
 .story-section #story-chapters{padding-bottom:14px}
 @media(max-width:700px){.story-section>summary{padding:10px 16px}.story-section .story-intro{position:static}}
+
+.expedition-period{border:1px solid #5c8589;border-radius:5px;padding:8px;font-size:12px;line-height:1.5}.expedition-period summary{cursor:pointer;font-weight:600}.expedition-period summary span{display:block;font-weight:400;color:#d1e2df}.expedition-period a{color:#ffe0a0}.expeditions-list h4{font-size:12px;margin:8px 0 0;color:#d1e2df}

@@ -457,3 +457,10 @@ The complete Figure 3 from Colonese and coauthors (2025), *New insights into the
 ## Morro Grande funerary vessels
 
 Figure 4 from Buarque, Baumann, Barbosa-Guimarães and Cordeiro (2020), *Entre dois mundos*, credits Angela Buarque (2009b). The complete embedded photograph is extracted unchanged from PDF page 12 (printed page 32). The [article's copyright notice](https://www.revista.sabnet.org/ojs/index.php/sab/article/view/726#license) grants [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/); the figure has no separate rights exception. The photograph is not cropped, retouched or recompressed. The guide caption and media manifest preserve its creator, source, license, extraction statement and checksum. These third-party terms remain attached to the image independently of the atlas's original writing.
+
+
+## Whole-area guide map sheets (v0.27.0)
+
+The 16 source-map assets in `data/guide-maps/` retain the item-level source, creator, rights statement, processing description, dimensions and SHA-256 in `data/guide-maps/manifest.json`, published as `sites/maps/manifest.json`. They include U.S. BLM and NPS public-domain cartography, the public-domain 1912 Machu Picchu/Urubamba survey published in 1913, and credited CC BY 4.0 Casarabe study figures. Public-domain works remain unrestricted; CC BY works retain that license independently of the atlas's noncommercial original text. Historical interpretation and map dates are preserved in captions. Linked reference maps are not redistributed where reuse rights have not been established.
+
+The larger guide relief images use the existing Mapzen/Tilezen terrain source and its provider attribution elsewhere in this notice. Source tile URLs and hashes, Mercator bounds, output pixels, approximate grid sampling and contour intervals are recorded in `data/guide-terrain/sources.json`. These are modern terrain references. A larger output image does not increase the accuracy of the underlying elevation survey.

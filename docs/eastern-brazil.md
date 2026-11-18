@@ -2,7 +2,7 @@
 
 Eastern Brazil’s missing centuries now contain named villages, camps and burial places. Wooden house piles, pottery, hearths and human remains establish local episodes; graphite and a carved green-stone pendant reveal connections beyond the places where they were found. The 30 map records comprise 29 evidence entries and one linked route view of the Canaã pottery evidence. No new battle marker is assigned: the reviewed bone modifications and suspected injuries do not establish a securely dated conflict in this campaign.
 
-This release adds **30 shared map records** at **28 distinct named localities** within the study rectangle. The master map now has 2,637 shared observations and 73 focused topic records.
+This release adds **30 shared map records** at **28 distinct named localities** within the study rectangle. The master map now has 2,911 shared observations and 73 focused topic records.
 
 [Read the illustrated regional history](../sites/atlantic-brazil.html) · [Watch its contextual movie](../index.html#story/atlantic-brazil) · [Open the master map](../index.html#movie) · [Browse sources and licenses](../sites/sources-attributions.html)
 
@@ -15,7 +15,7 @@ The immutable baseline is v0.24.0, with 2,539 shared records. Earlier and later 
 | Period | Named localities before | Named localities now | Local evidence records now |
 |---|---:|---:|---:|
 | 501–1000CE | 0 | 12 | 12 |
-| 1001–1500CE | 0 | 25 | 25 |
+| 1001–1500CE | 0 | 27 | 27 |
 
 ## Settlements and activity
 

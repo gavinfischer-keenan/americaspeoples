@@ -14,6 +14,8 @@ ROOT=Path.cwd();CACHE=ROOT/'work/guide-terrain';OUT=ROOT/'data/guide-terrain'
 CACHE.mkdir(parents=True,exist_ok=True);OUT.mkdir(parents=True,exist_ok=True)
 requests=json.loads((ROOT/'work/guide-terrain-requests.json').read_text(encoding='utf-8'))
 size=(1200,600);manifest=[]
+existing=json.loads((OUT/'sources.json').read_text(encoding='utf8')) if (OUT/'sources.json').exists() else {'maps':[]}
+by_id={m['id']:m for m in existing['maps']}
 def merc_y(lat):return (1-math.asinh(math.tan(math.radians(lat)))/math.pi)/2
 def fetch(tile):
  z,x,y=tile;n=2**z;x=x%n
@@ -33,16 +35,20 @@ def fetch(tile):
  return arr[:,:,0]*256+arr[:,:,1]+arr[:,:,2]/256-32768,{'url':url,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
 
 for req in requests:
- size=tuple(req.get('pixels',[1200,600]));assert size[0]==1200 and 600<=size[1]<=1200
+ size=tuple(req.get('outputPixels',req.get('pixels',[1200,600])));assert 1200<=size[0]<=4800 and 600<=size[1]<=4800
  ident=req['id'];assert ident and all(c.isalnum() or c=='-' for c in ident)
+ prior=by_id.get(ident)
+ if prior and prior['bounds']==req['bounds'] and prior['pixels']==list(size) and (OUT/prior['file']).exists():
+  manifest.append(prior);print(ident,'cached',flush=True);continue
  w,s,e,n=req['bounds'];assert e>w and n>s and -85<s<n<85
- # Roughly one elevation sample per output pixel, bounded by published tile zoom.
- z=max(2,min(15,math.ceil(math.log2(360/(e-w)*size[0]/256))))
+ # Choose the closest coarser source grid: ceiling can request four times
+ # as many tiles without adding native survey detail to the output.
+ z=max(2,min(15,math.floor(math.log2(360/(e-w)*size[0]/256))))
  scale=2**z
  x0=(w+180)/360*scale;x1=(e+180)/360*scale;y0=merc_y(n)*scale;y1=merc_y(s)*scale
  tx0,tx1=math.floor(x0),math.ceil(x1)-1;ty0,ty1=math.floor(y0),math.ceil(y1)-1
  tiles=[(z,x,y) for y in range(ty0,ty1+1) for x in range(tx0,tx1+1)]
- assert len(tiles)<=100,(ident,len(tiles))
+ assert len(tiles)<=625,(ident,len(tiles))
  mosaic=np.empty(((ty1-ty0+1)*256,(tx1-tx0+1)*256));sources=[]
  with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
   for (zz,x,y),(arr,source) in zip(tiles,pool.map(fetch,tiles)):
@@ -68,7 +74,7 @@ for req in requests:
  rgb[contour]=rgb[contour]*.68+np.array([96,103,84])*.32
  image=Image.fromarray(np.uint8(np.clip(rgb,0,255)))
  file=OUT/(ident+'.webp');image.save(file,quality=91,method=6)
- manifest.append({'id':ident,'bounds':req['bounds'],'projection':'Web Mercator','pixels':list(size),'file':ident+'.webp','tileZoom':z,'contourIntervalMeters':interval,'elevationRangeMeters':[round(float(height.min()),1),round(float(height.max()),1)],'sha256':hashlib.sha256(file.read_bytes()).hexdigest(),'tiles':sources})
+ manifest.append({'id':ident,'bounds':req['bounds'],'projection':'Web Mercator','pixels':list(size),'file':ident+'.webp','tileZoom':z,'sampleSpacingMeters':round(40075016.686*math.cos(math.radians((s+n)/2))/(256*scale),1),'contourIntervalMeters':interval,'elevationRangeMeters':[round(float(height.min()),1),round(float(height.max()),1)],'sha256':hashlib.sha256(file.read_bytes()).hexdigest(),'tiles':sources})
  print(ident,len(tiles),'tiles',interval,'m contours',file.stat().st_size,'bytes',flush=True)
 data={'retrieved':datetime.datetime.now(datetime.timezone.utc).date().isoformat(),'source':'Mapzen/Tilezen Terrain Tiles on AWS Open Data','dataset':'https://registry.opendata.aws/terrain-tiles/','attribution':'https://github.com/tilezen/joerd/blob/master/docs/attribution.md','format':'https://github.com/tilezen/joerd/blob/master/docs/formats.md','processing':'Terrarium RGB decoded to elevations in metres; bilinear sampling into each registered Web Mercator rectangle; lightly smoothed shaded relief and contours. No vertical exaggeration. Modern terrain, not an ancient landform or surveyed archaeological plan. Output pixels do not imply elevation-source accuracy.','maps':manifest}
 (OUT/'sources.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

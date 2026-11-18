@@ -24,7 +24,7 @@ test('the packaged evidence appendix contains every canonical published record e
 
 test('the complete topic release includes the new guides and current coverage',async()=>{
  const files=unzipSync(await readFile(`release/americas-peoples-v${version}-selfhost.zip`));
- for(const name of ['remaining-topic-dives','world-coverage-audit','australasia-archaeology','interior-frontiers','shield-aleutian-local-histories','three-regional-gaps','trade-coverage-audit','eastern-brazil']){
+ for(const name of ['coverage-15-review','voyage-coverage-review','remaining-topic-dives','world-coverage-audit','australasia-archaeology','interior-frontiers','shield-aleutian-local-histories','three-regional-gaps','trade-coverage-audit','eastern-brazil']){
   assert.ok(files[`americas-peoples/web/docs/${name}.md`],name);
   assert.ok(files[`americas-peoples/web/docs/${name}.html`],name);
  }

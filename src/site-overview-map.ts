@@ -1,5 +1,7 @@
 import type { EvidenceRecord, Place } from './model';
 import type { SiteGuide } from './site-guides';
+import {mapViewerStart} from './guide-map-viewer';
+import areaExtents from '../data/guide-map-extents.json';
 
 export interface GuideMapPoint {
   id: string;
@@ -19,6 +21,7 @@ export interface GuideMap {
   points: GuideMapPoint[];
   /** Unique context places excluded from this local view; phases are not counted. */
   omittedPoints: number;
+  scopeNote?:string;
 }
 
 const R = 6371008.8;
@@ -143,6 +146,38 @@ export function createSiteOverview(guide: SiteGuide, records: readonly EvidenceR
   return {id: guide.id, title: guide.title, bounds: boundsFor(points,1200/height), pixels:[1200,height], points, omittedPoints: candidates.length-points.length};
 }
 
+/** Companion to a close view: retain every local place named by the guide.
+ * Trade destinations are connections, not extensions of the studied landscape. */
+export function createSiteAreaOverview(guide:SiteGuide,records:readonly EvidenceRecord[],guides:readonly SiteGuide[]):GuideMap|null{
+ const local=records.filter(r=>!isContext(r)).map(r=>({...r,destination:null}));
+ const area=createSiteOverview({...guide,level:'region',mapRecordIds:undefined},local,guides);
+ if(!area)return null;
+ return {...area,id:guide.id+'-area',title:guide.title+' · whole study area',omittedPoints:0};
+}
+
+/** Whole-area references come first, with the building-scale view retained. */
+export function createGuideMaps(guide:SiteGuide,records:readonly EvidenceRecord[],guides:readonly SiteGuide[]):GuideMap[]{
+ const close=createSiteOverview(guide,records,guides);if(!close)return [];
+ const area=createSiteAreaOverview(guide,records,guides);
+ const configured=areaExtents.maps.filter(m=>m.guideId===guide.id).map(config=>{
+  const [w,s,e,n]=config.bounds;
+  const height=Math.round(1200/config.aspect),aspect=1200/height;
+  const cx=(w+e)/2,cy=(mercator(s)+mercator(n))/2;
+  const halfWidth=Math.max((e-w)/2,(mercator(n)-mercator(s))/2*aspect);
+  const bounds:[number,number,number,number]=[cx-halfWidth,latitude(cy-halfWidth/aspect),cx+halfWidth,latitude(cy+halfWidth/aspect)];
+  const nearby=records.filter(r=>{
+   if(isContext(r)||!r.location)return false;
+   if('mapRecordIds' in config&&config.mapRecordIds&&!config.mapRecordIds.includes(r.id))return false;
+   let lon=r.location.lon;while(lon<w)lon+=360;while(lon>e&&lon-360>=w)lon-=360;
+   return lon>=w&&lon<=e&&r.location.lat>=s&&r.location.lat<=n;
+  });
+  const points=collect(nearby,false).map(({local:_local,...point})=>point);
+  return {id:config.id,title:config.title,bounds,pixels:[1200,height] as [number,number],points,omittedPoints:0,scopeNote:config.scope};
+ });
+ if(configured.length)return [...configured,close];
+ return area&&area.points.length>close.points.length?[area,close]:[close];
+}
+
 interface Box { x:number; y:number; w:number; h:number; }
 interface Label extends Box { lines:string[]; point:GuideMapPoint; index:number; px:number; py:number; }
 const overlap = (a:Box,b:Box) => a.x < b.x+b.w+4 && a.x+a.w+4 > b.x && a.y < b.y+b.h+4 && a.y+a.h+4 > b.y;
@@ -219,5 +254,5 @@ export function siteOverviewHTML(map: GuideMap): string {
   const scaleText=scale>=1000?`${Number((scale/1000).toPrecision(2))} km`:`${Math.round(scale)} m`;
   const key=map.points.map((p,i)=>`<li style="break-inside:avoid"><a href="${escape(review(p.recordIds[0]))}">${i+1}. ${escape(p.name)}</a><details><summary>Location notes and evidence</summary><p>${escape(p.precision)}</p><ul>${p.recordIds.map((rid,j)=>`<li><a href="${escape(review(rid))}">Evidence ${j+1}</a></li>`).join('')}</ul></details></li>`).join('');
   const omitted=map.omittedPoints?` ${map.omittedPoints} distant or exchange-context ${map.omittedPoints===1?'place is':'places are'} outside this local view; use the linked studies and master map for wider connections.`:'';
-  return `<figure class="site-overview" aria-labelledby="${id}-heading"><h2 id="${id}-heading">${escape(map.title)}: places and terrain</h2><div style="overflow-x:auto"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 ${height}" width="1200" height="${height}" style="display:block;width:100%;height:auto;min-width:600px" role="group" aria-labelledby="${id}-title ${id}-description"><title id="${id}-title">${escape(map.title)} — labeled site map</title><desc id="${id}-description">Modern terrain with numbered public feature anchors. Features from different periods; use the movie for changes through time. Links open evidence reviews; the numbered key repeats every feature below the map.</desc><rect width="1200" height="${height}" fill="#e9e4d4"/><image href="../guide-terrain/${escape(encodeURIComponent(map.id))}.webp" x="0" y="0" width="1200" height="${height}" preserveAspectRatio="none"/>${leaders}${markers}${text}<g aria-label="North"><rect x="1110" y="12" width="76" height="75" rx="5" fill="#fffdf4" fill-opacity=".93"/><path d="M1148 63 L1148 34 M1139 45 L1148 29 L1157 45" fill="none" stroke="#203b32" stroke-width="2"/><text x="1148" y="79" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#203b32">North</text></g><g aria-label="Approximate scale ${scaleText}"><rect x="12" y="${height-62}" width="260" height="50" rx="5" fill="#fffdf4" fill-opacity=".93"/><path d="M28 ${height-42} H${(28+scalePixels).toFixed(2)} M28 ${height-48} V${height-36} M${(28+scalePixels).toFixed(2)} ${height-48} V${height-36}" fill="none" stroke="#203b32" stroke-width="2"/><text x="28" y="${height-20}" font-family="system-ui,sans-serif" font-size="13" fill="#203b32">Approximate scale: ${scaleText}</text></g></svg></div><figcaption>Modern relief. Features span different periods; select a label for history and dates. Markers locate places, not building outlines.</figcaption>${omitted?`<details><summary>Wider connections</summary><p>${escape(omitted.trim())}</p></details>`:''}<details class="site-overview-key-panel"><summary>Places on this map · ${map.points.length}</summary><ol class="site-overview-key" style="list-style:none;padding:0;columns:2 20rem">${key}</ol></details></figure>`;
+  return `<figure class="site-overview" aria-labelledby="${id}-heading"><h2 id="${id}-heading">${escape(map.title)}: places and terrain</h2><div style="overflow-x:auto"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 ${height}" width="1200" height="${height}" style="display:block;width:100%;height:auto;min-width:600px" role="group" aria-labelledby="${id}-title ${id}-description"><title id="${id}-title">${escape(map.title)} — labeled site map</title><desc id="${id}-description">Modern terrain with numbered public feature anchors. Features from different periods; use the movie for changes through time. Links open evidence reviews; the numbered key repeats every feature below the map.</desc><rect width="1200" height="${height}" fill="#e9e4d4"/><image href="../guide-terrain/${escape(encodeURIComponent(map.id))}.webp" x="0" y="0" width="1200" height="${height}" preserveAspectRatio="none"/>${leaders}${markers}${text}<g aria-label="North"><rect x="1110" y="12" width="76" height="75" rx="5" fill="#fffdf4" fill-opacity=".93"/><path d="M1148 63 L1148 34 M1139 45 L1148 29 L1157 45" fill="none" stroke="#203b32" stroke-width="2"/><text x="1148" y="79" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#203b32">North</text></g><g aria-label="Approximate scale ${scaleText}"><rect x="12" y="${height-62}" width="260" height="50" rx="5" fill="#fffdf4" fill-opacity=".93"/><path d="M28 ${height-42} H${(28+scalePixels).toFixed(2)} M28 ${height-48} V${height-36} M${(28+scalePixels).toFixed(2)} ${height-48} V${height-36}" fill="none" stroke="#203b32" stroke-width="2"/><text x="28" y="${height-20}" font-family="system-ui,sans-serif" font-size="13" fill="#203b32">Approximate scale: ${scaleText}</text></g></svg></div><figcaption>Modern relief. Features span different periods; select a label for history and dates. Markers locate places, not building outlines.</figcaption>${omitted?`<details><summary>Wider connections</summary><p>${escape(omitted.trim())}</p></details>`:''}<details class="site-overview-key-panel"><summary>Places on this map · ${map.points.length}</summary><ol class="site-overview-key" style="list-style:none;padding:0;columns:2 20rem">${key}</ol></details></figure>`.replace('<div style="overflow-x:auto">',mapViewerStart(map.title)).replace('</svg></div>','</svg></div></div>');
 }
