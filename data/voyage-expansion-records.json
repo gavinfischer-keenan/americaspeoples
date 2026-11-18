@@ -1525,9 +1525,9 @@
     },
     {
       "id": "visit-magellan-elcano-1519-1522-8",
-      "revision": 2,
+      "revision": 3,
       "type": "event",
-      "title": "Magellan–Elcano expedition — Mactan: Magellan’s death",
+      "title": "Mactan — resistance to Magellan’s intervention",
       "culture": {
         "id": "historical-expeditions",
         "name": "Historical expeditions",
@@ -1551,7 +1551,8 @@
         "approximate": false,
         "original": "1521-04-27",
         "method": "Dated historical source; mapped at the atlas’s whole-year resolution.",
-        "interpretation": "A documented observation or event, not an inferred occupation or later continuity."
+        "interpretation": "A documented observation or event, not an inferred occupation or later continuity.",
+        "eventDate": "1521-04-27"
       },
       "claims": [
         {
@@ -1565,6 +1566,20 @@
               "locator": "Pigafetta account of Mactan, 27 April",
               "stance": "supports",
               "note": "Source supports the dated event or interval; schematic coordinates and intervening travel are not claimed as measured evidence."
+            }
+          ]
+        },
+        {
+          "id": "evidence",
+          "text": "Mactan’s defenders defeated Magellan’s attacking force on 27 April 1521. Lapulapu rejected the expedition’s demand to recognize Spanish authority and Humabon’s asserted supremacy.",
+          "status": "well-supported",
+          "explanation": "Mactan island reference, not a reconstructed combat position. Differing local rulers and alliances must not be flattened into one pre-existing island-wide state or a modern national border.",
+          "support": [
+            {
+              "sourceId": "island-source-mactan",
+              "locator": "Relevant dated description; see access note",
+              "stance": "supports",
+              "note": "Supports the stated local finding or dated event, within the access limits recorded below."
             }
           ]
         }
@@ -1581,16 +1596,26 @@
           "referenceType": "book",
           "publisher": "Hakluyt Society",
           "identifier": "Project Gutenberg 74723"
+        },
+        {
+          "id": "island-source-mactan",
+          "title": "Mactan: Ruta ng Ekspedisyon Magallanes–Elcano sa Pilipinas",
+          "authors": "National Historical Commission of the Philippines",
+          "year": 2021,
+          "url": "https://philhistoricsites.nhcp.gov.ph/registry_database/mactan-ruta-ng-ekspedisyon-magallanes-elcano-sa-pilipinas/",
+          "venue": "Original research / institutional heritage documentation",
+          "access": "Relevant source text inspected 2026-11-17. Independently written factual summary; no photographs, plans or source prose reproduced."
         }
       ],
       "review": {
-        "summary": "Magellan died at Mactan on 27 April 1521. The mapped point identifies the locality rather than an exact position within it.",
-        "limitations": "Location is approximate. The cited event does not establish settlement, sovereignty, uninterrupted occupation, or service after the documented period.",
+        "summary": "Mactan’s defenders defeated Magellan’s attacking force on 27 April 1521. Lapulapu rejected the expedition’s demand to recognize Spanish authority and Humabon’s asserted supremacy. Magellan was killed in the fighting.",
+        "limitations": "Mactan island reference, not a reconstructed combat position. Differing local rulers and alliances must not be flattened into one pre-existing island-wide state or a modern national border.",
         "discussion": "The record keeps a narrow dated claim. Other stops, communities and changes require their own evidence; absence from this selection does not mean historical absence.",
         "provenance": "Curated from the identified primary or institutional source; research reports were used as leads, not as claim evidence.",
-        "reviewedAt": "2026-11-16",
+        "reviewedAt": "2026-11-17",
         "history": [
-          "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes."
+          "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes.",
+          "2026-11-17: Added the Philippine historical commission account of Lapulapu, Humabon and the battle to the existing voyage event, instead of adding a second marker."
         ],
         "relatedIds": []
       },

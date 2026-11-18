@@ -14,7 +14,7 @@ import {guideMovieNavigationHTML} from './guide-navigation';
 import type {MapCamera} from './map';
 import { atlasAssets, loadAtlasAssets } from './atlas-assets';
 import { sampleVoyage, voyageDate, dateValue } from './voyages';
-import { availableVoyageRecords, scopedVoyageDate, scopedVoyageProgress, advanceMovieClock, datedContextKey } from './shared-movie';
+import { availableVoyageRecords, scopedVoyageDate, scopedVoyageProgress, advanceMovieClock, datedContextKey, storySceneDate } from './shared-movie';
 import { movieContextHTML } from './movie-context';
 import {localChronologyHTML} from './local-chronology';
 import { appShell, mapShell, libraryHTML } from "./atlas-shell";
@@ -401,7 +401,7 @@ function setRecordYear(record: DisplayRecord) {
 function setYear(next: number, manual = true) {
   if (manual) { openingPlayback=false;stop(); voyageId=''; if (mountedMap && atlasMode === "movie") useFreeTimeline(); }
   year = Math.round(Math.max(minYear, Math.min(END_YEAR, next)));
-  if(manual||isGuidedStory())movieClock=year;
+  if(manual||isGuidedStory())movieClock=isGuidedStory()?storySceneDate({year,recordIds:currentStory().scenes[storySceneIndex]?.recordIds??[]},dataset.records,atlasAssets.voyages):year;
   const slider = $<HTMLInputElement>("#time-slider");
   if (year < rangeStart || year > rangeEnd) bounds(true);
   slider.value = String(

@@ -46,7 +46,7 @@ try{
  await page.getByLabel('Search places and evidence',{exact:true}).fill('no-such-place-in-this-atlas');assert.match(await page.locator('#visible-records').innerText(),/No matching records/);
  await page.getByLabel('Search places and evidence',{exact:true}).fill('');
  await page.getByLabel('Explore period',{exact:true}).selectOption('current');assert.ok(await page.locator('.timeline').isVisible());
- await page.getByRole('link',{name:'Library',exact:true}).click();await page.locator('.library-card').first().waitFor();assert.equal(await page.locator('.library-card').count(),7);assert.equal(await page.locator('.library-card[href="#dives"]').count(),1);assert.ok(await page.locator('.timeline').isHidden());
+ await page.getByRole('link',{name:'Library',exact:true}).click();await page.locator('.library-card').first().waitFor();assert.equal(await page.locator('.library-card').count(),8);assert.equal(await page.locator('.library-card[href="#dives"]').count(),1);assert.ok(await page.locator('.timeline').isHidden());
  await page.getByRole('link',{name:/Evidence index/}).click();await page.getByLabel('Search evidence',{exact:true}).waitFor();assert.ok(await page.locator('.timeline').isHidden());
  await page.goto(origin+'/#review/cahokia-urban');await page.locator('[data-action="locate"]').click();await page.locator('#selected-records h4').waitFor();
  assert.match(await page.locator('#selected-records').innerText(),/Cahokia/);assert.equal(await page.locator('#story-select').inputValue(),'free');assert.equal(await page.locator('#year-number').inputValue(),'1050');

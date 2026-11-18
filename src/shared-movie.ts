@@ -96,6 +96,18 @@ export function scopedVoyageProgress(v: Voyage, date: number): number {
   );
 }
 const arrivalCache = new WeakMap<readonly Voyage[], Map<string, number>>();
+/** A chapter about an August arrival must reach August, not January 1.
+ * Keep the shared day-level clock, so later events in that year remain future. */
+export function storySceneDate(
+ scene:{year:number;recordIds:readonly string[]},
+ records:readonly {id:string;time?:{eventDate?:string};history?:{eventDate?:string}}[],
+ voyages:readonly Voyage[],
+):number {
+ const ids=new Set(scene.recordIds);
+ const dates=records.filter(r=>ids.has(r.id)).map(r=>r.time?.eventDate??r.history?.eventDate);
+ for(const voyage of voyages)for(const stop of voyage.stops)if(stop.recordId&&ids.has(stop.recordId))dates.push(stop.arrival);
+ return Math.max(scene.year,...dates.filter((d):d is string=>!!d).map(dateValue).filter(d=>Number.isFinite(d)&&Math.floor(d)===scene.year));
+}
 export function availableVoyageRecords<
   T extends {
     id: string;

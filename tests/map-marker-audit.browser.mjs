@@ -1,0 +1,27 @@
+import {build} from 'esbuild';import {chromium} from 'playwright';import http from 'node:http';import assert from 'node:assert/strict';import {readFile,mkdir} from 'node:fs/promises';
+const bundle=await build({stdin:{resolveDir:process.cwd(),contents:`import {MapView} from './src/map';import {dataset} from './src/published-data';window.selected=[];window.all=dataset.records;window.blue=all.find(r=>r.id==='early-bluefish-mandible');window.map=new MapView({type:'FeatureCollection',features:[]},rs=>window.selected=rs.map(r=>r.id));document.body.append(map.element);map.setInteraction({mode:'explore',playing:false,onPause:()=>{}});window.show=(rs)=>{map.update(rs,-22000);map.focusRecords(rs);};show([blue]);window.ready=true;`},bundle:true,write:false,format:'iife',platform:'browser'});
+const css=(await Promise.all(['styles','atlas-ui','atlas-context'].map(x=>readFile('src/'+x+'.css','utf8')))).join('\n');
+const server=http.createServer((req,res)=>{res.setHeader('content-type',req.url==='/app.js'?'text/javascript':'text/html');res.end(req.url==='/app.js'?bundle.outputFiles[0].text:`<style>${css}body{margin:0}.map-canvas{height:800px;width:1000px}</style><script src='/app.js' defer></script>`)});await new Promise(r=>server.listen(0,'127.0.0.1',r));
+const browser=await chromium.launch({executablePath:process.env.BROWSER_PATH||'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',headless:true});
+try{const page=await browser.newPage({viewport:{width:1100,height:900}});await page.goto('http://127.0.0.1:'+server.address().port);await page.waitForFunction(()=>window.ready);await mkdir('work/marker-islands',{recursive:true});await page.screenshot({path:'work/marker-islands/bluefish-marker.png'});
+ assert.equal(await page.locator('.features .asterisk').count(),0,'dispute must not look like another place');
+ const blue=page.locator('[data-point]');assert.equal(await blue.count(),1);assert.match(await blue.getAttribute('aria-label'),/disputed/i);assert.equal(await blue.locator('.evidence-status-ring').count(),1);
+ await blue.press('Enter');assert.deepEqual(await page.evaluate(()=>selected),['early-bluefish-mandible']);
+ await page.evaluate(()=>map.overview());assert.equal(await page.locator('.features .asterisk').count(),0);
+ await page.evaluate(()=>show(all.filter(r=>['g20-hove-castle-architecture','g20-hove-castle-1277-beam'].includes(r.id))));
+ assert.equal(await page.locator('.features [data-map-tip]').count(),1,'one marker for co-located construction and beam');assert.equal(await page.locator('.site-count').textContent(),'2');await page.locator('.features [data-map-tip]').press('Enter');assert.equal((await page.evaluate(()=>selected)).length,2);
+ await page.evaluate(()=>show(all.filter(r=>['g20-canm-castle-rock-village','g20-canm-castle-rock-ending'].includes(r.id))));assert.equal(await page.locator('.features [data-map-tip]').count(),1);const hit=await page.locator('.features [data-map-tip]').evaluate(el=>{const p=new DOMPoint(0,0).matrixTransform(el.getScreenCTM());return{x:p.x,y:p.y}});await page.mouse.click(hit.x,hit.y);assert.equal((await page.evaluate(()=>selected)).length,2);
+ await page.evaluate(()=>{window.bosque=all.filter(r=>['removal-bosque-confinement-1864-1868','removal-dine-return-1868'].includes(r.id));show(bosque);});
+ for(let i=0;i<4;i++){
+  await page.evaluate(()=>map.focusRecords(bosque));
+  assert.equal(await page.locator('[data-point] .site-count').textContent(),'2','camera redraw must not add records');
+  await page.locator('[data-point]').press('Enter');assert.deepEqual((await page.evaluate(()=>selected)).sort(),['removal-bosque-confinement-1864-1868','removal-dine-return-1868']);
+ }
+ await page.evaluate(()=>{window.corrected={...bosque[1],proposalKey:'local-return-correction'};show([bosque[1],corrected,bosque[0]]);});
+ await page.locator('[data-point]').press('Enter');assert.equal((await page.evaluate(()=>selected)).length,3,'a correction remains distinct while input order changes');
+ assert.equal(await page.locator('[data-point] .site-count').textContent(),'3');
+ await page.evaluate(()=>{const r=all.find(r=>r.id==='central-landbridge-cultigens');map.update([],1868,[r]);map.focusRecords([r]);});
+ const context=page.locator('[data-context]').first();await context.waitFor();assert.match(await context.getAttribute('aria-label'),/gold rim/);
+ assert.equal(await context.locator('circle').evaluate(el=>getComputedStyle(el).stroke),'rgb(232, 191, 115)','unresolved evidence must show its promised status rim');
+ console.log('PASS Bluefish status, co-located phases, stable redraw identities, corrections, unresolved status, pointer and keyboard');
+}finally{await browser.close();await new Promise(r=>server.close(r));}

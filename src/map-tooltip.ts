@@ -1,3 +1,4 @@
+import {disputeLevel} from './disputes';
 import type { DisplayRecord } from "./model";
 import type { HazardEvent } from "./physical-data";
 import { formatYear, timeLabel } from "./time";
@@ -24,7 +25,7 @@ export function tooltipForRecords(
       r.time.end === null,
   );
   return {
-    title: rows.map((r) => r.title).join(" · "),
+    title: (rows.length>1?`${rows.length} records at this map point · `:"")+rows.map((r) => r.title).join(" · "),
     summary: rows
       .map(readerSummary)
       .filter(Boolean)
@@ -32,6 +33,7 @@ export function tooltipForRecords(
     dates:
       rows.map((r) => timeLabel(r.time)).join("; ") +
       ". " +
+      (rows.some(r=>disputeLevel(r)==='disputed')?"Disputed interpretation (red rim). ":rows.some(r=>disputeLevel(r)==='discussion')?"Interpretation under discussion (gold rim). ":"")+
       (unresolved
         ? "Dates unresolved: we do not yet know when this happened."
         : mode === "explore"

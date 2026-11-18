@@ -12,7 +12,8 @@ import type { DisplayRecord } from "./model";
 import { temporalState, temporalOpacity, timeLabel, isDisputed, END_YEAR } from "./time";
 import { OVERLAY_LABELS } from "./overlays";
 import { esc, $ } from "./dom";
-import { disputeLevel, disputeLabel } from "./disputes";
+import { disputeLevel } from "./disputes";
+import {placeGroups,placeKey} from "./map-place-groups";
 import { boundsInViewport } from "./map-filters";
 import { historyState, historyOpacity, historyLabel } from './history';
 import {iceSnapshot,eventsAt,oceanPaths,isUncertainHazard} from './physical';
@@ -41,6 +42,8 @@ export class MapView {
   private records: DisplayRecord[] = [];
   private contextRecords: DisplayRecord[] = [];
   private contextAnchors=new Map<string,DisplayRecord[]>();
+  private places=new Map<string,DisplayRecord[]>();
+  private drawnPoints=new Map<string,DisplayRecord[]>();
   private physical:PhysicalOptions={ice:false,iceScenario:'optimal',currents:false,winds:false,hidden:new Set(),uncertain:true};
   private icePaths=new Map<string,string>();
   private flowPaths=new Map<string,string>();
@@ -355,6 +358,7 @@ export class MapView {
   }
   update(records: DisplayRecord[], year: number, context:DisplayRecord[]=[],physical?:PhysicalOptions) {
     this.records = records;
+    this.places=placeGroups(records);
     this.contextRecords=context;
     this.geometry.update([...records, ...context]);
     if(physical)this.physical=physical;
@@ -397,9 +401,9 @@ export class MapView {
     if(element.dataset.context!==undefined)return this.contextAnchors.get(element.dataset.context)??[];
     if(element.dataset.overlay!==undefined){
       const record=this.records[Number(element.dataset.overlay)];if(!record)return [];
-      return record.history&&record.location?this.records.filter(r=>r.history?.kind===record.history!.kind&&r.location?.lon===record.location!.lon&&r.location?.lat===record.location!.lat):[record];
+      return this.places.get(placeKey(record)??"none")??[record];
     }
-    if(element.dataset.point!==undefined)return this.records.filter(r=>!r.overlay&&r.location&&`${r.location.lon},${r.location.lat}`===element.dataset.point);
+    if(element.dataset.point!==undefined)return this.drawnPoints.get(element.dataset.point)??[];
     return [];
   }
   private selectRows(rows:DisplayRecord[]){
@@ -489,11 +493,14 @@ export class MapView {
     $('.physical-features',this.element).innerHTML=background;
     this.refreshContext();
     const groups = new Map<string, DisplayRecord[]>();
+    this.drawnPoints=groups;
     let endpointLabels='';
     const labeledEndpoints=new Set<string>();
     let arrows = "",
       overlays = "";
     for (const [index, r] of this.records.entries()) {
+      const colocated=this.places.get(placeKey(r)??"none");
+      if(colocated&&colocated[0]!==r)continue;
       const bounds=this.geometry.get(r).bounds;if(!bounds||!intersectsView(bounds,viewport))continue;
       if(r.history?.kind==='migration'||r.history?.kind==='exchange'){
         const d=this.geometry.get(r).path;
@@ -524,7 +531,7 @@ export class MapView {
       if(r.history?.kind==='wreck'||r.history?.kind==='settlement'){
         if(!r.location)continue;
         const p=this.projection([r.location.lon,r.location.lat]);if(!p)continue;
-        const shared=this.records.filter(row=>row.history?.kind===r.history!.kind&&row.location?.lon===r.location!.lon&&row.location?.lat===r.location!.lat);
+        const shared=colocated??[r];
         if(shared[0]!==r)continue;
         const wreck=r.history.kind==='wreck';
         arrows+=`<g data-overlay="${index}" data-record-id="${esc(r.id)}" data-history-kind="${r.history.kind}" class="history-marker history-${r.history.kind} ${this.interaction?.mode!=='explore'&&this.uncertainty(r)?'history-possible':''}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})" style="--history-color:${r.culture.color};opacity:${this.opacity(r)}"><title>${esc(r.title)} — ${esc(historyLabel(r,this.year))}</title><circle class="history-hit" r="13"/>${wreck?'<path class="wreck-symbol" d="M0,-7V7 M-7,2Q0,13 7,2 M-3,-4H3 M-7,2V6 M7,2V6"/><circle class="wreck-eye" cy="-9" r="2"/>':'<path class="settlement-symbol" d="M0,-7L7,0L0,7L-7,0Z"/>'}${shared.length>1?`<text class="site-count" x="10" y="-10">${shared.length}</text>`:''}${this.scale>=4||shared.some(x=>this.highlighted.has(x.id))?`<text class="history-place-label" x="12" y="4">${esc(compactPlaceName(r.location.name))}</text>`:''}</g>`;
@@ -553,18 +560,9 @@ export class MapView {
         }
         if (["cultural-reach", "language"].includes(o.kind) && g.type === "Point" && o.radiusKm) {
           const d = this.geometry.get(r).areaPath;
-          overlays += `<g data-overlay="${index}" class="cultural-reach ${o.kind === "language" ? "language-area" : ""}" style="opacity:${opacity};--reach-color:${o.kind === "language" ? "#caa5f1" : r.culture.color}"><title>${title} — feathered illustrative area, not a surveyed border or exclusive territory</title><path d="${d}"/><path class="reach-contour" d="${d}"/>${isDisputed(r) ? `<text class="asterisk dispute-${disputeLevel(r)}" x="${this.projection(g.coordinates)![0]}" y="${this.projection(g.coordinates)![1]}" style="font-size:${20 * symbolScale}px">*</text>` : ""}</g>`;
+          overlays += `<g data-overlay="${index}" class="cultural-reach ${o.kind === "language" ? "language-area" : ""}" style="opacity:${opacity};--reach-color:${o.kind === "language" ? "#caa5f1" : r.culture.color}"><title>${title} — feathered illustrative area, not a surveyed border or exclusive territory</title><path d="${d}"/><path class="reach-contour" d="${d}"/></g>`;
           continue;
         }
-        const anchor = this.projection(
-          g.type === "Point"
-            ? g.coordinates
-            : g.coordinates[g.coordinates.length - 1],
-        );
-        const star =
-          isDisputed(r) && anchor
-            ? `<text class="cloud-star asterisk dispute-${disputeLevel(r)}" x="${anchor[0] + 10}" y="${anchor[1] - 12}" style="font-size:${20 / this.scale}px"><title>${esc(disputeLabel(r))}</title>*</text>`
-            : "";
         if (
           ["population-history", "regional-evidence", "environment", "language"].includes(
             o.kind,
@@ -573,13 +571,13 @@ export class MapView {
           const d =
             g.type === "LineString" ? this.geometry.get(r).path : null;
           const p = g.type === "Point" ? this.projection(g.coordinates) : null;
-          overlays += `<g data-overlay="${index}" class="regional-cloud cloud-${o.kind}" style="opacity:${opacity}"><title>${title} — illustrative extent; not a site, precise route or probability boundary</title>${d ? `<path class="cloud-glow" d="${d}"/><path class="cloud-core" d="${d}"/><path class="cloud-hit" d="${d}"/>` : p ? `<circle class="cloud-glow" cx="${p[0]}" cy="${p[1]}" r="35"/><circle class="cloud-hit" cx="${p[0]}" cy="${p[1]}" r="35"/>` : ""}${star}${directionSymbol}</g>`;
+          overlays += `<g data-overlay="${index}" class="regional-cloud cloud-${o.kind}" style="opacity:${opacity}"><title>${title} — illustrative extent; not a site, precise route or probability boundary</title>${d ? `<path class="cloud-glow" d="${d}"/><path class="cloud-core" d="${d}"/><path class="cloud-hit" d="${d}"/>` : p ? `<circle class="cloud-glow" cx="${p[0]}" cy="${p[1]}" r="35"/><circle class="cloud-hit" cx="${p[0]}" cy="${p[1]}" r="35"/>` : ""}${directionSymbol}</g>`;
           continue;
         }
         if (g.type === "Point") {
           const p = this.projection(g.coordinates);
           if (p)
-            overlays += `<g data-overlay="${index}" class="${cls}" style="opacity:${opacity}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><title>${title}</title><circle class="overlay-hit" r="14"/><path d="${o.kind === "conflict" ? "M-7,-7 L7,7 M7,-7 L-7,7" : o.kind === "violence" ? "M-8,-8 H8 V8 H-8 Z M-6,-6 L6,6 M6,-6 L-6,6" : o.kind === "epidemic" ? "M0,-8 A8,8 0 1,1 0,8 A8,8 0 1,1 0,-8 M0,-12 V-9 M0,9 V12 M-12,0 H-9 M9,0 H12" : o.kind === "forced-removal" ? "M-8,-8 H8 V8 H-8 Z" : "M0,-9 L9,0 L0,9 L-9,0 Z"}"/>${isDisputed(r) ? `<text class="asterisk dispute-${disputeLevel(r)}" x="10" y="-9"><title>${esc(disputeLabel(r))}</title>*</text>` : ""}</g>`;
+            overlays += `<g data-overlay="${index}" class="${cls}" style="opacity:${opacity}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><title>${title}</title><circle class="overlay-hit" r="14"/><path d="${o.kind === "conflict" ? "M-7,-7 L7,7 M7,-7 L-7,7" : o.kind === "violence" ? "M-8,-8 H8 V8 H-8 Z M-6,-6 L6,6 M6,-6 L-6,6" : o.kind === "epidemic" ? "M0,-8 A8,8 0 1,1 0,8 A8,8 0 1,1 0,-8 M0,-12 V-9 M0,9 V12 M-12,0 H-9 M9,0 H12" : o.kind === "forced-removal" ? "M-8,-8 H8 V8 H-8 Z" : "M0,-9 L9,0 L0,9 L-9,0 Z"}"/>${colocated&&colocated.length>1?`<text class="site-count" x="11" y="-10">${colocated.length}</text>`:""}</g>`;
         } else {
           const d = this.geometry.get(r).path;
           if (d)
@@ -589,8 +587,11 @@ export class MapView {
       }
       if (!r.location) continue;
       const key = `${r.location.lon},${r.location.lat}`;
-      const group = groups.get(key);
-      if (group) group.push(r); else groups.set(key, [r]);
+      const group = groups.get(key)??[];
+      // Keep render groups independent of the cached place groups. A route's
+      // origin can share this marker, while its path remains separately selectable.
+      for(const item of colocated??[r])if(!group.includes(item))group.push(item);
+      groups.set(key,group);
       if (r.type === "movement" && r.destination) {
         const a = this.projection([r.location.lon, r.location.lat]),
           b = this.projection([r.destination.lon, r.destination.lat]);
@@ -610,7 +611,7 @@ export class MapView {
       const population = this.interaction?.mode==='explore'
         ? {radius:6,outerRadius:6,unknown:false,label:'Explore size is a reference; inspect dated estimates'}
         : populationAt(rows.filter(x=>historyState(x,this.year)==='active'), this.year);
-      const marker = `<g data-point="${key}" style="opacity:${Math.max(...rows.map((x) => this.opacity(x)))}" class="site ${past ? "past-place" : ""} ${possible ? "possible" : ""} ${rows.some((x) => x.proposalKey) ? "proposal-point" : ""}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><title>${esc(rows.map((x) => x.title + " — " + x.culture.name + " — " + timeLabel(x.time)).join("; "))} — ${esc(population.label)}${possible ? " — uncertain time" : ""}${rows.some(x => guideForRecord(x.id)) ? " — Site guide available" : ""}</title>${rows.some(x => guideForRecord(x.id)) ? `<text class="site-guide-marker" x="-17" y="17" aria-hidden="true">◈</text>` : ""}<circle class="site-halo" r="${Math.max(13, population.outerRadius + 4)}"/>${population.outerRadius > population.radius ? `<circle class="population-range" r="${population.outerRadius}" style="fill:${r.culture.color}"/>` : ""}<circle class="site-dot" r="${population.radius}" style="--site-color:${r.culture.color}"/>${population.unknown ? `<circle class="population-unknown" r="${population.radius}" fill="url(#population-unknown)"/>` : ""}${this.scale >= 16 || rows.some(x=>this.highlighted.has(x.id)) ? `<text class="settlement-label" x="${population.outerRadius + 5}" y="4">${esc(compactPlaceName(r.location!.name))}</text>` : ""}${rows.length > 1 ? `<text class="site-count" x="11" y="-8">${rows.length}</text>` : ""}${rows.some(isDisputed) ? `<text class="site-star asterisk dispute-${rows.some((x) => disputeLevel(x) === "disputed") ? "disputed" : "discussion"}" x="-13" y="-8">*</text>` : ""}</g>`;
+      const marker = `<g data-point="${key}" style="opacity:${Math.max(...rows.map((x) => this.opacity(x)))}" class="site ${past ? "past-place" : ""} ${possible ? "possible" : ""} ${rows.some((x) => x.proposalKey) ? "proposal-point" : ""}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><title>${esc(rows.map((x) => x.title + " — " + x.culture.name + " — " + timeLabel(x.time)).join("; "))} — ${esc(population.label)}${possible ? " — uncertain time" : ""}${rows.some(x => guideForRecord(x.id)) ? " — Site guide available" : ""}</title>${rows.some(x => guideForRecord(x.id)) ? `<text class="site-guide-marker" x="-17" y="17" aria-hidden="true">◈</text>` : ""}<circle class="site-halo" r="${Math.max(13, population.outerRadius + 4)}"/>${population.outerRadius > population.radius ? `<circle class="population-range" r="${population.outerRadius}" style="fill:${r.culture.color}"/>` : ""}<circle class="site-dot" r="${population.radius}" style="--site-color:${r.culture.color}"/>${population.unknown ? `<circle class="population-unknown" r="${population.radius}" fill="url(#population-unknown)"/>` : ""}${this.scale >= 16 || rows.some(x=>this.highlighted.has(x.id)) ? `<text class="settlement-label" x="${population.outerRadius + 5}" y="4">${esc(compactPlaceName(r.location!.name))}</text>` : ""}${rows.length > 1 ? `<text class="site-count" x="11" y="-8">${rows.length}</text>` : ""}</g>`;
       if(past)pastMarkers+=marker;else markers+=marker;
     }
     $(".features", this.element).innerHTML = overlays + arrows + pastMarkers + markers + physicalMarkers + endpointLabels;
@@ -628,12 +629,19 @@ export class MapView {
         if(event){content=tooltipForHazard(event);key='hazard:'+event.id;}
       }else{
         if(feature.dataset.context!==undefined)rows=this.contextAnchors.get(feature.dataset.context)??[];
-        else if(feature.dataset.overlay!==undefined){const row=this.records[Number(feature.dataset.overlay)];if(row)rows=row.history&&row.location?this.records.filter(r=>r.history?.kind===row.history!.kind&&r.location?.lon===row.location!.lon&&r.location?.lat===row.location!.lat):[row];}
+        else if(feature.dataset.overlay!==undefined){const row=this.records[Number(feature.dataset.overlay)];if(row)rows=this.places.get(placeKey(row)??"none")??[row];}
         else rows=groups.get(feature.dataset.point!)??[];
         content=tooltipForRecords(rows,this.interaction?.mode??'movie',this.year);
         key=(feature.dataset.context!==undefined?'context:':'records:')+JSON.stringify(rows.map(row=>JSON.stringify([row.id,row.proposalKey??null])).sort());
       }
       if(!content)continue;
+      const status=rows.some(r=>disputeLevel(r)==='disputed')?'disputed':rows.some(isDisputed)?'discussion':'none';
+      feature.dataset.evidenceStatus=status;
+      if(status!=='none'&&(feature.dataset.point!==undefined||feature.classList.contains('history-marker')||feature.classList.contains('overlay-feature')&&rows[0]?.overlay?.geometry?.type==='Point')){
+        const dot=feature.querySelector('.site-dot');
+        const radius=dot?Number(dot.getAttribute('r'))+2:10;
+        feature.insertAdjacentHTML('beforeend',`<circle class="evidence-status-ring" r="${radius}" aria-hidden="true"/>`);
+      }
       feature.dataset.mapTip=key;
       feature.setAttribute('aria-label',content.title+'. '+content.summary+' '+content.dates);
       if(!feature.dataset.hazard){
