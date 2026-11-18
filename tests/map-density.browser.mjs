@@ -79,7 +79,7 @@ try{
   const ending=await page.evaluate(()=>{
     const reference=records.find(row=>row.id==='settlement-taos-habitation');
     const companion={...reference,id:'nearby',location:{...reference.location,lon:reference.location.lon+.002}};
-    const ended={...reference,id:'ended',history:{...reference.history,continuity:undefined,endYear:1500,endMeaning:'relocated'}};
+    const ended={...reference,id:'ended',history:{...reference.history,continuity:undefined,endEvidence:{start:1500,end:1500,meaning:'relocated',certainty:'documented',label:'Capital relocation',claimId:reference.history.claimId,note:'The capital moved.'}}};
     map.focusRegion([reference.location.lon,reference.location.lat],2);
     map.setHighlighted([]);map.update([ended,companion],1499);
     const before=map.element.querySelector('[data-density-group]').dataset.localEnding;
@@ -88,6 +88,21 @@ try{
     return {before:before??null,after:group.dataset.localEnding,members:JSON.parse(group.dataset.memberIds).sort(),symbol:!!group.querySelector('.local-ending-symbol')};
   });
   assert.deepEqual(ending,{before:null,after:'relocated',members:['ended','nearby'],symbol:true});
+  // Keep the other member as earlier context in each pair.
+  for(const id of ['st-ki-orona-hull2','st-ki-kiritimati-shell-workshop','settlement-taos-habitation']){
+    const result=await page.evaluate(id=>{
+      const active=records.find(r=>r.id===id),year=active.time.start;
+      const prior={...active,id:'earlier',time:{...active.time,start:year-2,end:year-1},
+        history:{kind:'attestation',claimId:active.history.claimId},
+        location:{...active.location,lon:active.location.lon+.00001}};
+      map.focusRegion([active.location.lon,active.location.lat],2);
+      map.update([active,prior],year);
+      const group=map.element.querySelector('[data-density-group]');
+      return {ids:JSON.parse(group.dataset.memberIds).sort(),active:JSON.parse(group.dataset.activeMemberIds),
+        houses:group.querySelector('.community-glyph').getAttribute('d').includes('V-2')};
+    },id);
+    assert.deepEqual(result,{ids:[id,'earlier'].sort(),active:[id],houses:id==='settlement-taos-habitation'});
+  }
   const corridor=await page.evaluate(()=>{
     const reference=records.find(row=>row.history?.kind==='exchange');
     const route={...reference,id:'crossing',overlay:{...reference.overlay,direction:undefined,geometry:{type:'LineString',coordinates:[[-108,35],[-93,35]]}}};
@@ -124,6 +139,23 @@ try{
     assert.equal(await glyph.evaluate(el=>getComputedStyle(el).stroke),'rgb(255, 242, 162)');
     const label=page.locator('.dated-change .change-caption:visible');
     assert.match(await label.textContent(),new RegExp(title+'.*1,?640.*1,?643'));
+  }
+  for(const [id,year,caption,detail] of [
+    ['islands-port-egmont-1766',1774,/British garrison withdrawal/,/British garrison withdrew/],
+    ['history-caparra',1521,/Spanish settlement at Caparra/,/capital moved to San Juan in 1521/],
+  ]){
+    for(const date of [year,year+1]){
+      await page.evaluate(({id,date})=>{
+        const row=records.find(r=>r.id===id);
+        map.focusRecords([row]);map.setHighlighted([]);map.update([row],date);mode(true);
+      },{id,date});
+      const mark=page.locator('[data-local-ending]');
+      assert.ok(await mark.locator('.local-ending-symbol').isVisible());
+      if(date===year)assert.match(await mark.locator('.change-caption:visible').textContent(),caption);
+      else assert.equal(await mark.locator('.change-caption').count(),0);
+      await mark.focus();
+      assert.match(await page.getByRole('tooltip').innerText(),detail);
+    }
   }
   const collision=await page.evaluate(()=>{
     const base=records.find(r=>r.type==='occupation'&&r.location);

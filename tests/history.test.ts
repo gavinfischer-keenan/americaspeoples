@@ -112,7 +112,7 @@ test("a later abandonment is not shown at the foundation date", () => {
     },
   };
   assert.doesNotMatch(historyLabel(r, 1600), /Documented relocation/);
-  assert.match(historyLabel(r, 1700), /Documented relocation/);
+  assert.doesNotMatch(historyLabel(r, 1700), /Documented relocation/);
   assert.ok(historyDates([r]).includes(1671));
 });
 test("published historical layers preserve date gaps, losses and documented regional continuity", () => {

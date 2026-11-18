@@ -47,9 +47,6 @@ export function placeChange(history:HistoryMetadata|undefined,year:number){
   if(evidence&&year>=evidence.start)return {
     kind:evidence.meaning,inWindow:year<=evidence.end,possible:year<evidence.end||evidence.certainty==='inferred'
   };
-  if(history?.endYear!==undefined&&year>=history.endYear&&(history.endMeaning==='abandoned'||history.endMeaning==='relocated')){
-    return {kind:history.endMeaning,inWindow:year===history.endYear,possible:false};
-  }
   return null;
 }
 
@@ -59,6 +56,7 @@ export function changeCaption(record:MapRecord,year:number):string|null {
   const ending=placeChange(record.history,year);
   if(ending?.inWindow){
     const evidence=record.history?.endEvidence;
+    if(evidence?.label)return datedCaption((ending.possible?'Possible ':'')+evidence.label,evidence.start,evidence.end);
     const from=evidence?.start??year,to=evidence?.end??year;
     const kind=ending.kind==='relocated'?'relocation':'departure';
     const suffix=': '+(ending.possible?'possible ':'')+kind;

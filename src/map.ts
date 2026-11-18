@@ -548,7 +548,7 @@ export class MapView {
       const anchorRow=this.places.get(group.anchor.key)![0];
       const name=compactPlaceName((anchorRow.location?.name??anchorRow.title).split(/ [—–] /)[0]);
       const p=this.projection(group.anchor.key.split(',').map(Number) as MapPoint)!;
-      const hasHabitation=rows.some(row=>historyState(row,this.year)==='active'&&(row.type==='occupation'||row.history?.kind==='habitation')&&!placeChange(row.history,this.year));
+      const hasHabitation=rows.some(row=>historyState(row,this.year)==='active'&&row.history?.kind==='habitation'&&!placeChange(row.history,this.year));
       const glyph=(hasHabitation&&this.interaction?.mode!=='explore')?'M-9,5V-2l4-4 4,4V5ZM0,5V-4l4-4 5,5V5Z':'M-8,1l4-4 4,4-4,4ZM0,-2l4-4 4,4-4,4Z';
       communities+=`<g data-point="${group.key}" data-density-group="${group.members.length}" data-active="${group.active}" data-prior="${group.prior}" data-anchor-name="${esc(name)}" class="community-group ${group.active||this.interaction?.mode==='explore'?'':'community-context'}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><circle class="community-hit" r="15"/><path class="community-glyph" d="${glyph}"/><text class="community-count" x="10" y="-6">${group.members.length}</text><text class="community-name" x="18" y="11">Near ${esc(name)}</text></g>`;
     }
@@ -731,7 +731,7 @@ export class MapView {
         key=(feature.dataset.context!==undefined?'context:':'records:')+JSON.stringify(rows.map(row=>JSON.stringify([row.id,row.proposalKey??null])).sort());
       }
       if(!content)continue;
-      if(feature.dataset.endingNote)content.summary+=' '+feature.dataset.endingNote;
+      if(feature.dataset.endingNote)content.summary=feature.dataset.endingNote+' '+content.summary;
       if(this.interaction?.mode==='movie'&&!feature.dataset.densityGroup){
         const prior=rows.find(row=>row.history?.kind==='attestation'&&row.history.windows&&historyState(row,this.year)==='past-place');
         if(prior)content.dates+=' '+historyLabel(prior,this.year);

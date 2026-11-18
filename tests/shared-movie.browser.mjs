@@ -1,14 +1,12 @@
 import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
 import { createStaticServer } from '../scripts/static-server.mjs';
 const server=createStaticServer('dist');await new Promise(r=>server.listen(0,'127.0.0.1',r));
 const browser=await chromium.launch({executablePath:process.env.BROWSER_PATH||'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',headless:true});
 const page=await browser.newPage({viewport:{width:1440,height:960}}),errors=[];
 page.on('pageerror',e=>{errors.push(e.message);console.error('PAGE ERROR',e.message);});
 const origin=`http://127.0.0.1:${server.address().port}`;
-const records=JSON.parse(await readFile('dist/dataset.json','utf8')).records;
-const point=id=>{const r=records.find(r=>r.id===id);return r.history?.kind==='settlement'?page.locator(records.filter(x=>x.history?.kind==='settlement'&&x.location?.lon===r.location.lon&&x.location?.lat===r.location.lat).map(x=>`[data-record-id="${x.id}"]`).join(',')).first():page.locator(`[data-point="${r.location.lon},${r.location.lat}"]`);};
+const point=id=>page.locator(`#map-host [data-member-ids*='"${id}"']`).first();
 try{
  await page.goto(origin);await page.getByRole('button',{name:'Pause',exact:true}).waitFor();
  assert.equal(await page.locator('#story-select').inputValue(),'free');

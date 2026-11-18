@@ -26,8 +26,8 @@ test('local ending symbols require explicit evidence and retain its entire date 
   assert.equal(placeChange({...h,continuity:'ongoing'},1500),null);
   const moved:HistoryMetadata={...h,endYear:1280,endMeaning:'relocated'};
   assert.equal(placeChange(moved,1279),null);
-  assert.deepEqual(placeChange(moved,1280),{kind:'relocated',inWindow:true,possible:false});
-  assert.deepEqual(placeChange(moved,1400),{kind:'relocated',inWindow:false,possible:false});
+  assert.equal(placeChange(moved,1280),null);
+  assert.equal(placeChange(moved,1400),null);
   const ended:HistoryMetadata={...h,endEvidence:{start:1280,end:1300,meaning:'abandoned',certainty:'inferred',claimId:'end',note:'Local site evidence.'}};
   assert.deepEqual(placeChange(ended,1290),{kind:'abandoned',inWindow:true,possible:true});
   assert.deepEqual(placeChange(ended,1400),{kind:'abandoned',inWindow:false,possible:true});
@@ -55,4 +55,25 @@ test('movie captions name dated evidence and documented endings within a bounded
   const ending={...record,title:'McKean — guano camp and workings',history:{kind:'habitation' as const,claimId:'camp',endEvidence:{start:1870,end:1870,meaning:'abandoned' as const,certainty:'documented' as const,claimId:'camp',note:'The last workers left.'}}};
   assert.match(changeCaption(ending,1870)??'',/McKean.*departure.*1,?870 CE/);
   assert.equal(changeCaption(ending,1871),null);
+});
+
+import {dataset} from '../src/published-data';
+import {historyLabel} from '../src/history';
+test('colonial endings name the actor or site and retain both dates where relevant',()=>{
+  for(const [id,start,end,action,detail] of [
+    ['history-caparra',1519,1521,/Spanish settlement at Caparra/,/capital moved to San Juan in 1521/],
+    ['history-panama-viejo',1671,1671,/old colonial city/,/officially relocated in 1673/],
+    ['islands-port-egmont-1766',1774,1774,/British garrison withdrawal/,/Later visits/],
+    ['islands-port-louis-1764',1811,1811,/Spanish settlers/,/Puerto Soledad/],
+  ] as const){
+    const record=dataset.records.find(r=>r.id===id)!;
+    const evidence=record.history!.endEvidence!;
+    assert.deepEqual([evidence.start,evidence.end],[start,end]);
+    assert.ok(record.claims.find(c=>c.id===evidence.claimId)?.support.some(s=>s.stance==='supports'));
+    assert.match(changeCaption(record,start)??'',action);
+    assert.equal(changeCaption(record,end+1),null);
+    for(const year of [start,end+1]){
+      assert.match(historyLabel(record,year),action);assert.match(historyLabel(record,year),detail);
+    }
+  }
 });

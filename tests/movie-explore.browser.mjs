@@ -16,7 +16,14 @@ try {
  const current=await page.locator('#visible-records button[data-temporal-status="current"]').evaluateAll(nodes=>nodes.map(n=>JSON.parse(n.dataset.mapRecordKey)[0]));
  for(const id of current){const r=byId.get(id),t=r.time;assert.ok(t.start!==null&&t.start<=1200&&t.end>=1200,id);if(r.history?.windows)assert.ok(r.history.windows.some(w=>w.start<=1200&&w.end>=1200));}
  const historical=movie.filter(id=>!current.includes(id));assert.ok(historical.length>0);
- for(const id of historical){const r=byId.get(id);assert.ok(r.time.end<1200&&(r.type==='occupation'||['settlement','wreck','visit','attestation'].includes(r.history?.kind)),id);}
+ for(const id of historical){
+   const r=byId.get(id),windows=r.history?.kind==='attestation'&&r.history.windows;
+   if(windows){
+     assert.ok(windows.some(w=>w.end<1200),id);
+     assert.ok(windows.every(w=>w.end<1200||w.start>1200),id);
+   }else assert.ok(r.time.end<1200,id);
+   assert.ok(r.type==='occupation'||['settlement','wreck','visit','attestation'].includes(r.history?.kind),id);
+ }
  const stale=movie.find(id=>{const r=byId.get(id);return r.time.end<1500&&r.type!=='occupation'&&!r.history;});assert.ok(stale);
  await page.locator('#visible-records button').nth(movie.indexOf(stale)).click();assert.equal(await page.locator('#selected-records article').count(),1);
  await jump(1877);assert.equal(await page.locator('#selected-records article').count(),0);

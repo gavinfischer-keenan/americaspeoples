@@ -52,15 +52,13 @@ export function historyLabel(record: MapRecord, year: number): string {
   if(h?.kind==='visit'&&state!=='outside')return `${state==='active'?'Dated':'Historical'} visit · ${h.eventDate||record.time.original}. This visit marker does not establish settlement or continued presence afterward.`;
   if (h?.endEvidence && state !== 'outside' && year >= h.endEvidence.start) {
     const e=h.endEvidence, range=e.start===e.end?formatYear(e.start):`${formatYear(e.start)}–${formatYear(e.end)}`;
-    const action=e.meaning==='relocated'?'relocation':'local abandonment';
+    const action=e.label??(e.meaning==='relocated'?'relocation':'local abandonment');
     return `${year<e.end?'Possible':e.certainty==='inferred'?'Inferred':'Documented'} ${action} · ${range}. ${e.note} The earlier place remains historical context.`;
   }
   if(h?.kind==='habitation'&&state!=='outside'&&h.continuity==='ongoing')
     return 'Evidence of continuing habitation; the display ends in 1934, while community history continues. This is not a year-by-year population count.';
   if (h?.kind === "wreck" && state !== "outside")
     return `Historical loss · ${h.eventDate || formatYear(record.time.start!)}${h.group ? " · " + h.group : ""}. Remains and salvage are separate from the sinking date.`;
-  if (h?.endYear !== undefined && year >= h.endYear && state !== "outside")
-    return `${h.endMeaning === "relocated" ? "Documented relocation" : "Documented local abandonment"} · ${formatYear(h.endYear)}. The earlier place remains historical context; community histories may continue elsewhere.`;
   if (
     h?.kind === "settlement" &&
     state !== "outside" &&
@@ -198,6 +196,7 @@ export function validateHistory(r: EvidenceRecord): string[] {
     errors.push('Ongoing habitation must reach the display horizon without an abandonment ending.');
   if(h.endEvidence!==undefined){
     const e=h.endEvidence;
+    if(e?.label!==undefined&&(typeof e.label!=='string'||!e.label.trim()||e.label.length>60))errors.push('Invalid ending label.');
     if(!e||typeof e!=='object'||!Number.isSafeInteger(e.start)||!Number.isSafeInteger(e.end)||e.start>e.end||e.start<(r.time?.start??Infinity)||e.end>END_YEAR||!['abandoned','relocated'].includes(e.meaning)||!['documented','inferred'].includes(e.certainty)||!supported(e.claimId)||typeof e.note!=='string'||!e.note.trim()||!['habitation','settlement'].includes(h.kind)||h.endYear!==undefined)
       errors.push('Invalid or unsupported history ending evidence.');
   }

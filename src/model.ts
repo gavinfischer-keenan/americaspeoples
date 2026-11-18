@@ -117,6 +117,7 @@ export interface HistoryMetadata {
     start: number;
     end: number;
     meaning: "abandoned" | "relocated";
+    label?: string;
     certainty: "documented" | "inferred";
     claimId: string;
     note: string;
