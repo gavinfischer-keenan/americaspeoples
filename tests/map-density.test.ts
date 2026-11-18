@@ -32,3 +32,16 @@ test('local ending symbols require explicit evidence and retain its entire date 
   assert.deepEqual(placeChange(ended,1290),{kind:'abandoned',inWindow:true,possible:true});
   assert.deepEqual(placeChange(ended,1400),{kind:'abandoned',inWindow:false,possible:true});
 });
+
+import {changeCaption} from '../src/map-density';
+import {fixture} from './fixtures';
+test('movie captions retain conflict, loss and foundation source windows',()=>{
+  const record=fixture();
+  record.time={...record.time,start:1640,end:1643,kind:'occurrence'};
+  const conflict={...record,overlay:{kind:'conflict' as const,basis:'documented' as const,geometry:null,precision:'named town',provenance:'fixture'}};
+  assert.match(changeCaption(conflict,1641)??'',/Conflict.*1,?640.*1,?643/);
+  assert.equal(changeCaption(conflict,1644),null);
+  assert.match(changeCaption({...record,history:{kind:'wreck',claimId:'wreck'}},1641)??'',/Shipwreck/);
+  assert.match(changeCaption({...record,type:'event',history:{kind:'settlement',claimId:'foundation'}},1641)??'',/Foundation/);
+  assert.equal(changeCaption({...record,type:'occupation',time:{...record.time,kind:'interval'}},1641),null);
+});

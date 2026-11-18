@@ -25,7 +25,9 @@ const bundle=await build({stdin:{resolveDir:process.cwd(),contents:`
     const missing=map.visibleRecords().filter(r=>placeKey(r)&&!ids.includes(r.id)).map(r=>r.id);
     const marks=[...root.querySelectorAll('.site,.history-marker,.community-group,.overlay-feature[transform]')].map(el=>el.getScreenCTM()).filter(m=>m.e>=box.left&&m.e<=box.right&&m.f>=box.top&&m.f<=box.bottom);
     const crowded=marks.filter(a=>marks.some(b=>a!==b&&Math.hypot(a.e-b.e,a.f-b.f)<24)).length;
-    return {marks:marks.length,crowded,missing,ids:[...new Set(ids)].sort(),year,camera:map.camera(),selection:window.selection??[]};
+    const groups=[...root.querySelectorAll('[data-density-group]')].map(el=>[el.dataset.point,el.getAttribute('transform'),JSON.parse(el.dataset.memberIds).sort()]);
+    const selectedMarks=[...root.querySelectorAll('[aria-pressed="true"]')].map(el=>[el.getAttribute('transform'),JSON.parse(el.dataset.memberIds).sort()]);
+    return {groups,selectedMarks,marks:marks.length,crowded,missing,ids:[...new Set(ids)].sort(),year,camera:map.camera(),selection:window.selection??[]};
   };
   mode(false);setDate(1492);
 `},bundle:true,write:false,loader:{'.geojson':'json'},format:'iife'});
@@ -51,19 +53,28 @@ try{
     const playing=await page.evaluate(()=>inspect());
     assert.deepEqual(playing,paused,name+' must preserve membership, selection, camera and date');
     assert.equal(await page.locator('.community-count:visible').count(),0);
+    assert.ok(await page.locator('.change-caption:visible').count()<=2);
     await page.screenshot({path:out+'/'+name+'-'+year+'.png'});
     await page.evaluate(()=>mode(false));
     if(name==='overview'&&year===1492){assert.ok(paused.ids.includes('settlement-taos-habitation'));assert.ok(paused.ids.includes('visit-columbus-first-1492-1493-3'));await page.screenshot({path:out+'/overview-1492-paused.png'});}
     metrics.push({name,year,marks:paused.marks,crowded:paused.crowded,represented:paused.ids.length});
   }
   await page.evaluate(()=>{map.focusRegion([-91,34],1);setDate(1492);});
+  const single=page.locator('.site:not([data-density-group])[tabindex="0"]').first();
+  await single.press('Enter');
+  const inspected=await page.evaluate(()=>inspect());
+  assert.ok(inspected.selection.length&&inspected.selectedMarks.length&&inspected.groups.length);
+  await page.evaluate(()=>mode(true));assert.deepEqual(await page.evaluate(()=>inspect()),inspected);
+  await page.evaluate(()=>mode(false));assert.deepEqual(await page.evaluate(()=>inspect()),inspected);
   const group=page.locator('[data-density-group][tabindex="0"]').first();
   const members=JSON.parse(await group.getAttribute('data-member-ids'));
   await group.press('Enter');
   assert.deepEqual(await page.evaluate(()=>window.selection),members);
   for(const [id,gap] of [['eb-ne-formoso',650],['eb-se-primavera',1350]]){
     await page.evaluate(year=>setDate(year),gap);
-    assert.ok(!(await page.evaluate(()=>inspect().ids)).includes(id));
+    await page.evaluate(()=>map.focusRegion([-48,-15],1));
+    assert.ok((await page.evaluate(()=>inspect().ids)).includes(id));
+    assert.ok(!await page.evaluate(id=>[...document.querySelectorAll('[data-active-member-ids]')].some(el=>JSON.parse(el.dataset.activeMemberIds).includes(id)),id));
   }
   const ending=await page.evaluate(()=>{
     const reference=records.find(row=>row.id==='settlement-taos-habitation');
@@ -85,6 +96,35 @@ try{
     return {crosses:!!path?.getAttribute('d'),start:path?.hasAttribute('marker-start'),end:path?.hasAttribute('marker-end')};
   });
   assert.deepEqual(corridor,{crosses:true,start:false,end:false});
+  await page.emulateMedia({reducedMotion:'no-preference'});
+  async function flow(direction,playing){
+    return page.evaluate(({direction,playing})=>{
+      const reference=records.find(row=>row.history?.kind==='exchange');
+      const route={...reference,id:'flow',overlay:{...reference.overlay,direction}};
+      map.focusRecords([route]);map.update([route],route.history.windows[0].start);mode(playing);
+      const style=getComputedStyle(document.querySelector('[data-history-route="flow"] .route-flow'));
+      return {shown:style.display!=='none'&&Number(style.opacity)>0,running:style.animationName!=='none'&&style.animationPlayState==='running'};
+    },{direction,playing});
+  }
+  assert.deepEqual(await flow('forward',true),{shown:true,running:true});
+  assert.equal((await flow('forward',false)).running,false);
+  assert.equal((await flow(undefined,true)).shown,false);
+  await page.emulateMedia({reducedMotion:'reduce'});
+  assert.equal((await flow('forward',true)).shown,false);
+  for(const [kind,caption] of [['conflict','Conflict'],['wreck','Shipwreck'],['settlement','Foundation']]){
+    await page.evaluate(kind=>{
+      const reference=records.find(r=>r.location&&r.type==='occupation');
+      const point={...reference,id:'change',type:'event',history:undefined,
+        time:{...reference.time,kind:'occurrence',start:1640,end:1643}};
+      if(kind==='conflict')point.overlay={kind,basis:'documented',geometry:{type:'Point',coordinates:[point.location.lon,point.location.lat]}};
+      else point.history={kind,claimId:'event'};
+      map.focusRecords([point]);map.update([point],1641);mode(true);
+    },kind);
+    const glyph=page.locator(kind==='conflict'?'.overlay-conflict.dated-change > path':kind==='wreck'?'.dated-change .wreck-symbol':'.dated-change .settlement-symbol').first();
+    assert.equal(await glyph.evaluate(el=>getComputedStyle(el).stroke),'rgb(255, 242, 162)');
+    const label=page.locator('.dated-change .change-caption:visible');
+    assert.match(await label.textContent(),new RegExp(caption+'.*1,?640.*1,?643'));
+  }
   await page.setViewportSize({width:850,height:650});
   await page.evaluate(()=>{map.focusRegion([-95,32],1);setDate(1832);mode(true);});
   assert.equal(await page.locator('.route-flow').evaluateAll(lines=>lines.some(el=>getComputedStyle(el).animationName!=='none'&&getComputedStyle(el).display!=='none')),false);

@@ -1,4 +1,5 @@
-import type {HistoryMetadata} from './model';
+import {formatYear} from './time';
+import type {MapRecord,HistoryMetadata} from './model';
 
 /** Coordinates are projected pixels before camera translation, quantized to a zoom band
  * by the caller. Panning or changing the date never moves the grouping lattice. */
@@ -50,4 +51,31 @@ export function placeChange(history:HistoryMetadata|undefined,year:number){
     return {kind:history.endMeaning,inWindow:year===history.endYear,possible:false};
   }
   return null;
+}
+
+/** This cue describes the documented change window, never the lifespan of a community. */
+export function changeCaption(record:MapRecord,year:number):string|null {
+  const {start,end}=record.time;
+  const ending=placeChange(record.history,year);
+  if(ending?.inWindow){
+    const evidence=record.history?.endEvidence;
+    const from=evidence?.start??year,to=evidence?.end??year;
+    const kind=ending.kind==='relocated'?'Local relocation':'Local abandonment';
+    return datedCaption((ending.possible?'Possible ':'')+kind,from,to);
+  }
+  if(start===null||end===null||year<start||year>end)return null;
+  const kind=record.overlay?.kind==='conflict'?'Conflict':
+    record.overlay?.kind==='violence'?'Violence':
+    record.overlay?.kind==='forced-removal'?'Forced relocation':
+    record.history?.kind==='wreck'?'Shipwreck':
+    record.history?.kind==='visit'?'Visit':
+    record.history?.kind==='settlement'&&record.type!=='occupation'?'Foundation':
+    record.time.kind==='occurrence'?'Dated evidence':null;
+  if(!kind)return null;
+  const supported=record.history?.windows?.find(window=>year>=window.start&&year<=window.end);
+  if(record.history?.windows&&!supported)return null;
+  return datedCaption(kind,supported?.start??start,supported?.end??end);
+}
+function datedCaption(kind:string,start:number,end:number){
+  return kind+' · '+formatYear(start)+(start===end?'':'–'+formatYear(end));
 }

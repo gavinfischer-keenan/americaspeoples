@@ -96,3 +96,6 @@ button:disabled{opacity:.42;cursor:default}
 .map-canvas.density-playing .voyage-tracks>path[data-voyage-track]{stroke-width:5;stroke-dasharray:9 4}
 .local-ending-symbol{fill:none;stroke:#f5b383;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0px 1px 1px #112833);pointer-events:none}
 .ending-possible{stroke-dasharray:3 1.5}
+.map-canvas.density-playing .history-route.route-active[data-direction="forward"] .route-flow{animation-play-state:running}
+.change-caption{font:600 11px system-ui;fill:#fff7c2;stroke:#18323a;stroke-width:3.5;paint-order:stroke;pointer-events:none}
+.map-canvas.density-playing .dated-change :is(.community-glyph,.wreck-symbol,.wreck-eye),.map-canvas.density-playing .overlay-feature.dated-change>path{stroke:#fff2a2;stroke-width:2.8}

@@ -31,7 +31,7 @@ export function historyState(record: MapRecord, year: number): HistoryState {
   if (history?.windows)
     return history.windows.some((w) => year >= w.start && year <= w.end)
       ? "active"
-      : "outside";
+      : history.kind==="attestation"&&history.windows.some(w=>w.end<year)?"past-place":"outside";
   if (temporalState(time, year) !== "absent") return "active";
   if (history?.kind === "wreck") return "loss";
   if (history?.kind === "settlement") return "founded";
@@ -46,6 +46,8 @@ export function historyLabel(record: MapRecord, year: number): string {
     h = record.history;
   const context=contextDateMeaning(record);
   if(context&&state!=='outside')return `${state==='active'?'Period context':'Earlier period context'} · ${context}`;
+  if(h?.kind==='attestation'&&h.windows&&state==='past-place')
+    return 'Earlier evidence at this place. This year falls outside its supported dating windows. Continuous habitation is unknown.';
   if(h?.kind==='attestation'&&!h.windows&&state!=='outside')return `${state==='active'?'Evidence at its source date':'Earlier evidence'} · ${record.time.original}. This marker does not establish continuous presence or a first arrival.`;
   if(h?.kind==='visit'&&state!=='outside')return `${state==='active'?'Dated':'Historical'} visit · ${h.eventDate||record.time.original}. This visit marker does not establish settlement or continued presence afterward.`;
   if (h?.endEvidence && state !== 'outside' && year >= h.endEvidence.start) {

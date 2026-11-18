@@ -1,4 +1,4 @@
-import {densityGroups,placeChange,type DensityAnchor} from './map-density';
+import {changeCaption,densityGroups,placeChange,type DensityAnchor} from './map-density';
 import {terrainHTML,intersectsView,type ViewBounds} from './terrain';
 import { mapProjection, type MapScope } from "./map-projection";
 import { geoPath, geoGraticule10 } from "d3-geo";
@@ -330,16 +330,19 @@ export class MapView {
   private declutterLabels(){
     const viewport=$('svg',this.element).getBoundingClientRect();
     if(!viewport.width||!viewport.height)return;
-    const labels=[...this.element.querySelectorAll<SVGTextElement>('.settlement-label,.history-place-label,.route-endpoint-label text,.route-direction-label text,.community-name,.boundary-label')].map(label=>({label,selected:!!label.closest('.is-highlighted,.route-endpoint-label'),bounds:label.getBoundingClientRect()}));
-    labels.sort((a,b)=>Number(b.selected)-Number(a.selected));
+    const labels=[...this.element.querySelectorAll<SVGTextElement>('.settlement-label,.history-place-label,.route-endpoint-label text,.route-direction-label text,.community-name,.change-caption,.boundary-label')].map(label=>({label,selected:!!label.closest('.is-highlighted,.route-endpoint-label'),bounds:label.getBoundingClientRect()}));
+    const priority=(entry:typeof labels[number])=>entry.label.classList.contains('change-caption')?2:Number(entry.selected);
+    labels.sort((a,b)=>priority(b)-priority(a));
     const placed:DOMRect[]=[...this.element.querySelectorAll('.map-controls,.map-caption,.community-glyph,.site-dot,.settlement-symbol,.wreck-symbol')].map(node=>node.getBoundingClientRect());
-    let communityNames=0;
+    let communityNames=0,changeCaptions=0;
     for(const {label,selected,bounds} of labels){
       const visible=bounds.right>=viewport.left&&bounds.left<=viewport.right&&bounds.bottom>=viewport.top&&bounds.top<=viewport.bottom;
-      const limited=label.classList.contains('community-name')&&communityNames>=((this.scale<6?6:14)*({compact:.65,standard:1,detailed:1.45}[this.densityPreference]));
+      const caption=label.classList.contains('change-caption');
+      const limited=caption&&changeCaptions>=2||label.classList.contains('community-name')&&communityNames>=((this.scale<6?6:14)*({compact:.65,standard:1,detailed:1.45}[this.densityPreference]));
       const collides=limited||placed.some(other=>bounds.left<other.right+6&&bounds.right>other.left-6&&bounds.top<other.bottom+4&&bounds.bottom>other.top-4);
-      label.style.visibility=selected||(visible&&!collides)?'visible':'hidden';
-      if(visible&&(selected||!collides)){placed.push(bounds);if(label.classList.contains('community-name'))communityNames++;}
+      const show=(!caption&&selected)||(visible&&!collides);
+      label.style.visibility=show?'visible':'hidden';
+      if(visible&&show){placed.push(bounds);if(caption)changeCaptions++;if(label.classList.contains('community-name'))communityNames++;}
     }
   }
   /** Same projected geometry and transform as the map; unmapped records stay out. */
@@ -547,8 +550,7 @@ export class MapView {
       const p=this.projection(group.anchor.key.split(',').map(Number) as MapPoint)!;
       const hasHabitation=rows.some(row=>historyState(row,this.year)==='active'&&(row.type==='occupation'||row.history?.kind==='habitation')&&!placeChange(row.history,this.year));
       const glyph=(hasHabitation&&this.interaction?.mode!=='explore')?'M-9,5V-2l4-4 4,4V5ZM0,5V-4l4-4 5,5V5Z':'M-8,1l4-4 4,4-4,4ZM0,-2l4-4 4,4-4,4Z';
-      const changed=rows.some(row=>row.time.kind==='occurrence'&&row.time.start===this.year&&row.time.end===this.year);
-      communities+=`<g data-point="${group.key}" data-density-group="${group.members.length}" data-active="${group.active}" data-prior="${group.prior}" data-anchor-name="${esc(name)}" class="community-group ${group.active||this.interaction?.mode==='explore'?'':'community-context'} ${changed?'community-change':''}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><circle class="community-hit" r="15"/><path class="community-glyph" d="${glyph}"/><text class="community-count" x="10" y="-6">${group.members.length}</text><text class="community-name" x="18" y="11">Near ${esc(name)}</text></g>`;
+      communities+=`<g data-point="${group.key}" data-density-group="${group.members.length}" data-active="${group.active}" data-prior="${group.prior}" data-anchor-name="${esc(name)}" class="community-group ${group.active||this.interaction?.mode==='explore'?'':'community-context'}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><circle class="community-hit" r="15"/><path class="community-glyph" d="${glyph}"/><text class="community-count" x="10" y="-6">${group.members.length}</text><text class="community-name" x="18" y="11">Near ${esc(name)}</text></g>`;
     }
     for (const [index, r] of this.records.entries()) {
       const locationKey=placeKey(r);
@@ -564,7 +566,7 @@ export class MapView {
           const start=direction==='reverse'||direction==='both',end=direction==='forward'||direction==='both';
           const marker='url(#corridor-'+r.history.kind+')';
           const lane=lanes.get(r);
-          arrows+=`<g data-overlay="${index}" data-history-route="${esc(r.id)}" class="history-route route-${r.history.kind} ${active?'route-active':''}" ${lane?`transform="translate(${lane[0]},${lane[1]})"`:''} style="opacity:${this.opacity(r)}"><title>${esc(r.title)} — ${esc(historyLabel(r,this.year))}${lane?' — Separate display lane; source endpoints unchanged':''}</title><path class="route-halo" d="${d}"/><path class="route-line" d="${d}" ${end?`marker-end="${marker}"`:''} ${start?`marker-start="${marker}"`:''}/><path class="route-flow" d="${d}"/><path class="overlay-line-hit" d="${d}" style="stroke-width:${16/this.scale}px"/></g>`;
+          arrows+=`<g data-overlay="${index}" data-history-route="${esc(r.id)}" data-direction="${direction??'unknown'}" class="history-route route-${r.history.kind} ${active?'route-active':''}" ${lane?`transform="translate(${lane[0]},${lane[1]})"`:''} style="opacity:${this.opacity(r)}"><title>${esc(r.title)} — ${esc(historyLabel(r,this.year))}${lane?' — Separate display lane; source endpoints unchanged':''}</title><path class="route-halo" d="${d}"/><path class="route-line" d="${d}" ${end?`marker-end="${marker}"`:''} ${start?`marker-start="${marker}"`:''}/><path class="route-flow" d="${d}"/><path class="overlay-line-hit" d="${d}" style="stroke-width:${16/this.scale}px"/></g>`;
           const directionLabel=routeDirectionLabels[r.id];
           if(lane&&directionLabel&&this.highlighted.has(r.id)){
             const line=this.geometry.get(r).lines.reduce((longest,line)=>line.length>longest.length?line:longest,[] as MapPoint[]),mid=line[Math.floor(line.length/2)];
@@ -694,6 +696,7 @@ export class MapView {
         else if(feature.dataset.overlay!==undefined){const row=this.records[Number(feature.dataset.overlay)];if(row)rows=this.places.get(placeKey(row)??"none")??[row];}
         else rows=groups.get(feature.dataset.point!)??[];
         feature.dataset.memberIds=JSON.stringify(rows.map(r=>r.id));
+        if(this.interaction?.mode==='movie')feature.dataset.activeMemberIds=JSON.stringify(rows.filter(r=>historyState(r,this.year)==='active').map(r=>r.id));
         const endings=this.interaction?.mode==='movie'?rows.flatMap(row=>{
           const ending=placeChange(row.history,this.year);
           return ending?[{row,ending}]:[];
@@ -709,10 +712,15 @@ export class MapView {
             feature.insertAdjacentHTML('beforeend',`<path class="local-ending-symbol ${change.ending.possible?'ending-possible':''}" d="${d}"/>`);
           }
         }
-        const change=rows.find(r=>r.time.kind==='occurrence'&&r.time.start===this.year&&r.time.end===this.year);
-        if(change&&this.interaction?.mode==='movie'){
-          feature.classList.add('dated-change');
-          feature.dataset.change=change.title+' · '+formatYear(this.year);
+        const isPoint=feature.dataset.point!==undefined||feature.classList.contains('history-marker')||
+          feature.classList.contains('overlay-feature')&&rows[0]?.overlay?.geometry?.type==='Point';
+        if(isPoint&&this.interaction?.mode==='movie'){
+          const caption=rows.map(row=>changeCaption(row,this.year)).find(Boolean);
+          if(caption){
+            feature.classList.add('dated-change');
+            feature.dataset.change=caption;
+            if(playing)feature.insertAdjacentHTML('beforeend',`<text class="change-caption" x="19" y="-12">${esc(caption)}</text>`);
+          }
         }
         content=feature.dataset.densityGroup?{
           title:`Near ${feature.dataset.anchorName} · ${feature.dataset.densityGroup} mapped locations`,
@@ -724,6 +732,10 @@ export class MapView {
       }
       if(!content)continue;
       if(feature.dataset.endingNote)content.summary+=' '+feature.dataset.endingNote;
+      if(this.interaction?.mode==='movie'&&!feature.dataset.densityGroup){
+        const prior=rows.find(row=>row.history?.kind==='attestation'&&row.history.windows&&historyState(row,this.year)==='past-place');
+        if(prior)content.dates+=' '+historyLabel(prior,this.year);
+      }
       const status=rows.some(r=>disputeLevel(r)==='disputed')?'disputed':rows.some(isDisputed)?'discussion':'none';
       feature.dataset.evidenceStatus=status;
       if(!feature.dataset.densityGroup&&status!=='none'&&(feature.dataset.point!==undefined||feature.classList.contains('history-marker')||feature.classList.contains('overlay-feature')&&rows[0]?.overlay?.geometry?.type==='Point')){
