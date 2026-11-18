@@ -1,0 +1,154 @@
+{
+  "version": "0.25.0",
+  "status": "merged, deployed and publicly verified; current plus one previous release retained",
+  "verifiedAt": "2026-11-18T16:53:45.137639+00:00",
+  "pullRequest": "https://github.com/gavinfischer-keenan/americaspeoples/pull/23",
+  "release": "https://github.com/gavinfischer-keenan/americaspeoples/releases/tag/v0.25.0",
+  "site": "https://americaspeoples.11mosswood.us/",
+  "baseCommit": "a75b5a9",
+  "deployedCommit": "71de4c46c530c54a851bafd3ab0fd52f0e7cb5a8",
+  "records": 2642,
+  "sharedRecords": 2569,
+  "focusedRecords": 73,
+  "guides": 66,
+  "contextualStories": 68,
+  "independentTopics": 27,
+  "availableDirectoryEntries": 102,
+  "newSharedMapRecords": 30,
+  "newEvidenceEntries": 29,
+  "newArchaeologicalLocalities": 28,
+  "linkedRouteRepresentationsOfLocalFinds": 1,
+  "representationNote": "Canaã pottery and the provisional Jequié graphite source connection are reciprocal linked views of the same archaeological evidence. Boca do Rio remains one village record with a separate greenstone exchange claim and no invented quarry route.",
+  "newRegionalChapters": 12,
+  "newTradeTopicChapters": 2,
+  "easternBrazilCoverage": {
+    "501–1000 CE": {
+      "beforeLocalities": 0,
+      "afterLocalities": 12
+    },
+    "1001–1500 CE": {
+      "beforeLocalities": 0,
+      "afterLocalities": 25
+    },
+    "explicitDateGapsPreserved": true
+  },
+  "conflictFinding": "No new battle markers: reviewed injuries and mortuary bone modifications do not establish a securely dated conflict in the campaign.",
+  "tradeAudit": {
+    "mapYearBounds": [
+      0,
+      1200
+    ],
+    "mappedExchangeObservations": 36,
+    "pointOrUnmappedRecords": 6,
+    "bocaDoRioAssociatedContextNotDirectObjectDate": true
+  },
+  "terrainMaps": 57,
+  "guideMediaItems": 34,
+  "newMedia": {
+    "id": "morro-grande-urn",
+    "license": "CC BY-NC-SA 4.0",
+    "unchanged": true
+  },
+  "consensus": {
+    "mode": "Deep",
+    "thisBatchCalls": 5,
+    "usedSinceAdditionalAllowance": 26,
+    "additionalAllowance": 75,
+    "remaining": 49,
+    "cumulativeCalls": 106,
+    "rawReportsRemainPrivate": true
+  },
+  "validation": {
+    "fullReleaseStages": 52,
+    "unitTests": 391,
+    "finalPackagedDocumentationTests": 7,
+    "postReviewChanges": "Corrected two identical burial-scene sentences and included an existing point exchange claim in the trade audit; rebuilt and checked affected units, browser histories and package documentation.",
+    "runtimeImplementationUnchangedAfterGate": true,
+    "independentReview": "Two P2 findings corrected and verified; no outstanding substantive findings",
+    "publicAssetsChecked": 227,
+    "publicSourceReviews": 18,
+    "neighborPagesVerified": 3,
+    "liveBrowser": {
+      "verifiedAt": "2026-11-18T16:52:27.703Z",
+      "health": {
+        "status": "ok",
+        "version": "0.25.0",
+        "records": 2642
+      },
+      "regionalChapters": 40,
+      "tradeChaptersChecked": 15,
+      "dateGaps": [
+        "Formoso 650 CE",
+        "Primavera 1350 CE"
+      ],
+      "sharedContext": "Taos remains visible in1492",
+      "viewports": [
+        "1440x960",
+        "1024x768"
+      ],
+      "pageErrors": []
+    },
+    "linuxRetentionTests": 5
+  },
+  "deployment": {
+    "status": "deployed",
+    "id": "20261118T164737Z-americas-v0.25.0",
+    "commit": "71de4c46c530c54a851bafd3ab0fd52f0e7cb5a8",
+    "health": {
+      "status": "ok",
+      "version": "0.25.0",
+      "records": 2642
+    },
+    "static": "/srv/tripofisch/releases/20261118T164737Z-americas-v0.25.0",
+    "api": "/srv/americaspeoples/releases/20261118T164737Z-americas-v0.25.0",
+    "previousVersion": "0.24.0",
+    "rollbackStatic": "/srv/tripofisch/releases/20261118T082111Z-americas-v0.24.0",
+    "rollbackApi": "/srv/americaspeoples/releases/20261118T082111Z-americas-v0.24.0",
+    "unchangedFiles": 388
+  },
+  "packageSha256": "6ef178109dfe89f09561d1f378dbb9b7c07f9b9c4a3265ff559956a1a55950f9",
+  "githubReleaseAssetsVerified": 5,
+  "retention": {
+    "current": "0.25.0",
+    "previous": "0.24.0",
+    "remainingCleanupTargets": [],
+    "githubReleaseTags": [
+      "v0.25.0",
+      "v0.24.0"
+    ],
+    "localVersionedArchives": [
+      "americas-peoples-v0.24.0-selfhost.zip",
+      "americas-peoples-v0.25.0-selfhost.zip"
+    ],
+    "retiredVersion": "0.23.1",
+    "sourceTagsRetained": true,
+    "unrelatedHostedContentPreserved": true
+  },
+  "temporaryCleanup": {
+    "currentLocalUploadRemoved": true,
+    "edge": {
+      "removed": [
+        "/var/tmp/americas-v0.25.0-staging",
+        "/var/tmp/americas-v0250-payload.tar",
+        "/var/tmp/americas-v0250-deploy.py",
+        "/var/tmp/americas-v0250-test-retention.py"
+      ],
+      "freeBytes": 4062138368
+    },
+    "host": {
+      "removed": [
+        "/var/tmp/americas-v0250-payload.tar",
+        "/var/tmp/americas-v0250-deploy.py",
+        "/var/tmp/americas-v0250-test-retention.py"
+      ],
+      "freeBytes": 78048223232
+    },
+    "cleanupHelpersRemoved": true,
+    "previouslyBlockedLocalUploadsLeftUntouched": [
+      "work/deployment/v0230/payload.tar",
+      "work/deployment/v0231/payload.tar"
+    ],
+    "note": "Deletion of these two prior temporary uploads was rejected by automatic approval in earlier release work and was not retried."
+  },
+  "releaseGateLogSha256": "073c349c8f57562e12fae5f0902fe7294feb8f1e29214924dc0482713d2049a0"
+}

@@ -25,7 +25,7 @@
 - [x] Audit existing records, preserve a v0.24.0 baseline, obtain the Deep report and independently verify southeastern and northeastern/interior sources.
 - [x] Integrate accepted records and linked exchange views; extend the regional guide/movie and trade topic when evidence supports it. Add tests of coordinates, periods, calibrated gaps, shared visibility and deduplication.
 - [x] Generate coverage and source documentation; build and run the complete release gate and meaningful browser checks. Obtain one independent review and resolve substantive findings.
-- [ ] Publish the completed release, verify public pages/API/assets, retain current plus one previous release and record the receipt.
+- [x] Publish the completed release, verify public pages/API/assets, retain current plus one previous release and record the receipt.
 
 ## Review focus
 
