@@ -7,6 +7,9 @@ import { chromium } from "playwright";
 const require = createRequire(import.meta.url);
 const node = process.execPath;
 const phases = [
+  ["Canonical regional coverage audit", null, ["scripts/coverage-audit.py"]],
+  ["Current broad coverage report", node, ["--import", "tsx", "scripts/world-coverage-audit.ts"]],
+  ["Trade activity-window audit", node, ["--import", "tsx", "scripts/trade-coverage-audit.ts"]],
   [
     "Unit tests",
     node,
@@ -91,6 +94,8 @@ const phases = [
   ["Guide narratives, licensed photographs and source register", node, ["--import", "tsx", "tests/guide-enrichment.browser.mjs", "--generated"]],
   ["Canadian and Aleutian contextual histories, illustrated guides and reciprocal links", node, ["--import", "tsx", "tests/canada-aleutians.browser.mjs"]],
   ["Shield continuity, local Aleutian histories and licensed village plans", node, ["--import", "tsx", "tests/shield-aleutian-local.browser.mjs"]],
+  ["Three regional histories, master-map chapters and tablet guides", node, ["tests/three-regional-gaps.browser.mjs"]],
+  ["Expanded exchange chapters and shared-map trade connections", node, ["tests/trade-coverage.browser.mjs"]],
   ["Regional evidence in the shared movie and packaged source guide", node, ["tests/regional-gaps.browser.mjs"]],
   ["Interior communities, dated connections and conflict windows", node, ["tests/interior-frontiers.browser.mjs"]],
   ["Map picking, camera, touch and label usability", node, ["tests/map-ux.browser.mjs"]],

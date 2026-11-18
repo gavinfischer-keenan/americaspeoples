@@ -38,7 +38,7 @@ export function movieContextHTML(
       (state === "active" ? 1000 : 0) +
       (event ? 400 : 0) +
       (r.history?.kind === "habitation" ? 150 : 0) +
-      (r.history?.windows ? 100 : 0) -
+      (['migration','exchange'].includes(r.history?.kind??'') ? 100 : 0) -
       Math.min(500, Math.abs(year - (r.time.start ?? year))) / 10
     );
   };

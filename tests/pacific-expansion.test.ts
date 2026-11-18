@@ -23,9 +23,15 @@ test("Pacific and violence additions are complete, source-linked and internally 
   // Related evidence can now cross collection boundaries into the shared atlas.
   assert.deepEqual(validateDataset(dataset), []);
   for (const r of records) {
-    assert.match(r.location!.precision, /\d+ km/);
-    // A checked site reference can replace the earlier editorial approximation.
-    assert.match(r.location!.provenance, /approximation|Rounded public UNESCO|specifications-table WGS84 coordinates/);
+    if(r.id==='vx-taumako'){
+      assert.deepEqual([r.location!.lon,r.location!.lat],[167.18,-9.87]);
+      assert.match(r.location!.precision,/Island-scale/);
+      assert.match(r.location!.provenance,/GeoNames feature 2102724/);
+    }else{
+      assert.match(r.location!.precision, /\d+ km/);
+      // A checked site reference can replace the earlier editorial approximation.
+      assert.match(r.location!.provenance, /approximation|Rounded public UNESCO|specifications-table WGS84 coordinates/);
+    }
     assert.ok(r.sources.every(s => /^https:\/\//.test(s.url)));
     assert.ok(r.time.end === null || r.time.end <= 1934);
   }

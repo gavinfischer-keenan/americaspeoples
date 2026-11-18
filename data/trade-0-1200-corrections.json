@@ -1,0 +1,504 @@
+{
+  "updates": [
+    {
+      "targetId": "history-mesoamerica-chaco-macaws",
+      "beforeRecord": {
+        "id": "history-mesoamerica-chaco-macaws",
+        "revision": 1,
+        "type": "event",
+        "title": "Macaw exchange into the Pueblo Southwest",
+        "culture": {
+          "id": "historical-exchange",
+          "name": "Exchange networks",
+          "kind": "unknown",
+          "color": "#71d1c9"
+        },
+        "location": null,
+        "destination": null,
+        "routeKind": "schematic",
+        "claims": [
+          {
+            "id": "historical-basis",
+            "text": "Scarlet macaws reached Chaco through a long-distance Indigenous exchange network.",
+            "status": "under discussion",
+            "explanation": "The line is a macroregional connection, not a known road or identified supply settlement. Ancient DNA later suggested an undiscovered breeding community outside the species' natural range; individual birds need not have travelled directly from tropical Mesoamerica. 1150 is the sampled acquisition span, not a universal end to Indigenous trade.",
+            "support": [
+              {
+                "sourceId": "source-1",
+                "locator": "Abstract; PNAS (2015), DOI 10.1073/pnas.1509825112",
+                "stance": "supports",
+                "note": "Supports the stated chronology and geographic relationship; coordinates and connecting paths are editorial approximations."
+              },
+              {
+                "sourceId": "source-2",
+                "locator": "Abstract; PNAS 115, 8740–8745 (2018), DOI 10.1073/pnas.1805856115",
+                "stance": "supports",
+                "note": "Supports the stated chronology and geographic relationship; coordinates and connecting paths are editorial approximations."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "source-1",
+            "authors": "Adam S. Watson et al.",
+            "title": "Early procurement of scarlet macaws and the emergence of social complexity in Chaco Canyon, NM",
+            "year": null,
+            "venue": "pubmed.ncbi.nlm.nih.gov",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/26100874/",
+            "access": "PubMed indexed abstract read; publisher full-text access was inconsistent."
+          },
+          {
+            "id": "source-2",
+            "authors": "Richard J. George et al.",
+            "title": "Archaeogenomic evidence from the southwestern US points to a pre-Hispanic scarlet macaw breeding colony",
+            "year": null,
+            "venue": "pubmed.ncbi.nlm.nih.gov",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/30104352/",
+            "access": "PubMed indexed abstract read."
+          }
+        ],
+        "review": {
+          "summary": "Scarlet macaws reached Chaco through a long-distance Indigenous exchange network.",
+          "limitations": "The line is a macroregional connection, not a known road or identified supply settlement. Ancient DNA later suggested an undiscovered breeding community outside the species' natural range; individual birds need not have travelled directly from tropical Mesoamerica. 1150 is the sampled acquisition span, not a universal end to Indigenous trade.",
+          "discussion": "Selected evidence; coverage is not a complete inventory.",
+          "provenance": "Source-linked editorial synthesis checked 2026-11-14. Access notes distinguish full text, abstracts, and indexed excerpts. No population estimates inferred.",
+          "reviewedAt": "2026-11-14",
+          "history": [
+            "Added dated history layer with source locators and explicit uncertainty."
+          ],
+          "relatedIds": []
+        },
+        "time": {
+          "kind": "interval",
+          "start": 900,
+          "end": 1150,
+          "approximate": true,
+          "original": "900 CE to 1150 CE",
+          "method": "Explicit activity episodes derived from cited historical chronology or dated archaeological contexts.",
+          "interpretation": "Only the listed activity windows display. Gaps mean no supported window in this record, not proof all contact stopped. Flow animation indicates connection, not voyage frequency."
+        },
+        "history": {
+          "kind": "exchange",
+          "claimId": "historical-basis",
+          "windows": [
+            {
+              "start": 900,
+              "end": 1150,
+              "certainty": "approximate",
+              "note": "Radiocarbon-dated birds underpin the 2015 authors' interpretation of persistent acquisition at Pueblo Bonito during this period."
+            }
+          ]
+        },
+        "overlay": {
+          "kind": "trade",
+          "basis": "schematic",
+          "direction": "forward",
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -100,
+                20
+              ],
+              [
+                -107.96,
+                36.06
+              ]
+            ]
+          },
+          "precision": "Schematic regional connection, not a reconstructed sailing track.",
+          "provenance": "Editorial anchors join source-supported origins/destinations. No implication that travel followed a straight or constant path."
+        }
+      },
+      "record": {
+        "id": "history-mesoamerica-chaco-macaws",
+        "revision": 2,
+        "type": "event",
+        "title": "Scarlet macaws reached Pueblo Bonito",
+        "culture": {
+          "id": "historical-exchange",
+          "name": "Exchange networks",
+          "kind": "unknown",
+          "color": "#71d1c9"
+        },
+        "location": {
+          "id": "trade-am-place-scarlet-macaw-range",
+          "name": "Gulf lowlands of Mexico, macaw range",
+          "lon": -94.5,
+          "lat": 17,
+          "provenance": "George et al. (2018), Figure 4B and Discussion, Gulf coast/Isthmus of Tehuantepec and northern Guatemala comparisons. The point represents part of the native range of the original breeding stock.",
+          "precision": "Macroregional natural-range reference. The proposed breeding colony itself is unlocated."
+        },
+        "destination": {
+          "id": "place-chaco-pueblo-bonito",
+          "name": "Pueblo Bonito",
+          "lon": -107.961636,
+          "lat": 36.060579,
+          "precision": "Public mapped archaeological place, rounded to six decimals. Site point, not a surveyed footprint or room plan.",
+          "provenance": "National Park Service NPMap public point layer, unit_code=chcu, name=Pueblo Bonito; https://carto.nps.gov/user/parktiles/api/v2/sql. The archaeological feature was selected, not a visitor center, parking lot or trailhead."
+        },
+        "routeKind": "schematic",
+        "time": {
+          "kind": "interval",
+          "start": 900,
+          "end": 1150,
+          "approximate": true,
+          "original": "Approximately 900–1150 CE; AMS dates on Pueblo Bonito macaw remains, with an early group around 900–975 CE.",
+          "method": "Direct dates on bone anchor scarlet macaws in the archaeological record. The inferred original stock region draws on a separate mitochondrial DNA comparison.",
+          "interpretation": "The range places the evidence in time. It does not date each stage of transport."
+        },
+        "claims": [
+          {
+            "id": "historical-basis",
+            "text": "Scarlet macaws reached Pueblo Bonito far from their tropical range. Direct dates on bones place birds at Chaco across more than two centuries.",
+            "status": "under discussion",
+            "explanation": "DNA points toward an ancestral stock region in the northern range of the scarlet macaw. An intermediate breeding colony is plausible, and the route taken by particular birds is unknown.",
+            "support": [
+              {
+                "sourceId": "trade-am-source-macaws",
+                "locator": "Dating the Procurement of Macaws, Figure 3 and Table 1",
+                "stance": "supports",
+                "note": "Documents directly dated specimens from Pueblo Bonito, including the early group."
+              },
+              {
+                "sourceId": "trade-am-source-macaw-dna",
+                "locator": "Results, Figure 4B; Discussion",
+                "stance": "supports",
+                "note": "Compares ancient birds with wild southern Mexican and Central American macaws and proposes a breeding colony."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "trade-am-source-macaws",
+            "authors": "Adam S. Watson et al.",
+            "title": "Early procurement of scarlet macaws and the emergence of social complexity in Chaco Canyon, NM",
+            "year": 2015,
+            "venue": "PNAS 112(27):8238–8243",
+            "url": "https://doi.org/10.1073/pnas.1509825112",
+            "doi": "10.1073/pnas.1509825112",
+            "access": "Open full text with directly dated bones and individual probability distributions checked.",
+            "referenceType": "journal-article"
+          },
+          {
+            "id": "trade-am-source-macaw-dna",
+            "authors": "Richard J. George et al.",
+            "title": "Archaeogenomic evidence from the southwestern US points to a pre-Hispanic scarlet macaw breeding colony",
+            "year": 2018,
+            "venue": "PNAS 115(35):8740–8745",
+            "url": "https://doi.org/10.1073/pnas.1805856115",
+            "doi": "10.1073/pnas.1805856115",
+            "access": "Open full text, distribution and source-colony interpretation checked.",
+            "referenceType": "journal-article"
+          }
+        ],
+        "review": {
+          "summary": "Scarlet macaws reached Pueblo Bonito far from their tropical range. Direct dates on bones place birds at Chaco across more than two centuries.",
+          "limitations": "DNA points toward an ancestral stock region in the northern range of the scarlet macaw. An intermediate breeding colony is plausible, and the route taken by particular birds is unknown.",
+          "discussion": "People had to obtain and care for live birds. Several Pueblo Bonito macaws predate its most intensive great-house expansion. Their bones and the genetic evidence together show a long connection between distant regions without locating a specific shipment or breeding settlement.",
+          "provenance": "Original synthesis from the cited evidence and public geographic references.",
+          "reviewedAt": "2026-11-17",
+          "history": [
+            "Added dated history layer with source locators and explicit uncertainty.",
+            "2026-11-17: Refined the published exchange record against original field and laboratory studies."
+          ],
+          "relatedIds": [
+            "trade-am-cacao-pueblo-bonito",
+            "g20-chaco-bonito-residence"
+          ]
+        },
+        "overlay": {
+          "kind": "trade",
+          "basis": "schematic",
+          "direction": "forward",
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -94.5,
+                17
+              ],
+              [
+                -107.961636,
+                36.060579
+              ]
+            ]
+          },
+          "precision": "Schematic connection from the inferred original breeding-stock region to the excavated receiving site. Intermediate breeding and transfer points are unresolved.",
+          "provenance": "George et al. (2018), Figure 4B and Discussion, Gulf coast/Isthmus of Tehuantepec and northern Guatemala comparisons. The point represents part of the native range of the original breeding stock. National Park Service NPMap public point layer, unit_code=chcu, name=Pueblo Bonito; https://carto.nps.gov/user/parktiles/api/v2/sql. The archaeological feature was selected, not a visitor center, parking lot or trailhead."
+        },
+        "history": {
+          "kind": "exchange",
+          "claimId": "historical-basis",
+          "windows": [
+            {
+              "start": 900,
+              "end": 1150,
+              "certainty": "approximate",
+              "note": "Approximate interval associated with the dated evidence."
+            }
+          ],
+          "connection": {
+            "evidence": "Scarlet macaws reached Pueblo Bonito far from their tropical range. Direct dates on bones place birds at Chaco across more than two centuries.",
+            "lastEvidence": 1150,
+            "cessation": "unknown",
+            "note": "The upper date bounds this evidence record. Later continuation or cessation is unresolved.",
+            "claimId": "historical-basis"
+          }
+        }
+      },
+      "reason": "Retains the original 900–1150 CE chronology, specifies the Pueblo Bonito receiver and labels the probable ancestral stock area while retaining uncertainty about an intervening colony."
+    },
+    {
+      "targetId": "tikopia-mccoy2020-tongan-glass",
+      "beforeRecord": {
+        "id": "tikopia-mccoy2020-tongan-glass",
+        "revision": 3,
+        "type": "event",
+        "title": "Tikopia: later Tongan volcanic-glass imports",
+        "culture": {
+          "id": "unknown",
+          "name": "Unknown attribution",
+          "kind": "unknown",
+          "color": "#9babb5"
+        },
+        "location": null,
+        "destination": null,
+        "routeKind": "schematic",
+        "time": {
+          "kind": "occurrence",
+          "start": 1185,
+          "end": 1185,
+          "approximate": true,
+          "original": "Tongan imports begin 765 cal yr BP (±54 years).",
+          "method": "Published calibrated/calendar chronology; 1950 minus cal BP or 1 minus BCE, with approximate occurrence semantics.",
+          "interpretation": "Approximate reported onset; ±54 is preserved without reinterpreting its uncertainty level."
+        },
+        "claims": [
+          {
+            "id": "tikopia-import",
+            "text": "Geochemical work identifies later Tongan volcanic-glass imports to Tikopia beginning around 765 cal BP.",
+            "status": "well-supported",
+            "explanation": "The claim follows the scope of the cited analysis; archaeological, genetic and linguistic associations are not treated as equivalent identities.",
+            "support": [
+              {
+                "sourceId": "mccoy2020-tikopia",
+                "locator": "Abstract",
+                "stance": "supports",
+                "note": "Later Polynesian imports are reported as rare."
+              }
+            ]
+          },
+          {
+            "id": "tikopia-politics",
+            "text": "The authors propose that this limited later contact could relate to Tongan political expansion.",
+            "status": "under discussion",
+            "explanation": "Strong Polynesian linguistic influence does not require frequent material imports or a unique political mechanism.",
+            "support": [
+              {
+                "sourceId": "mccoy2020-tikopia",
+                "locator": "Abstract",
+                "stance": "supports",
+                "note": "Political targeting is an interpretation, not directly measured by glass chemistry."
+              }
+            ]
+          },
+          {
+            "id": "round6-object-movement",
+            "text": "Tongan-source glass at Tikopia establishes material movement; political expansion remains an interpretation.",
+            "status": "under discussion",
+            "explanation": "Rare imports do not determine frequency, direction or social purpose of all journeys.",
+            "support": [
+              {
+                "sourceId": "mccoy2020-tikopia",
+                "stance": "context",
+                "locator": "Round6 source reconciliation",
+                "note": "Rare imports do not determine frequency, direction or social purpose of all journeys."
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "mccoy2020-tikopia",
+            "title": "Obsidian and volcanic glass artifact evidence for long-distance voyaging to the Polynesian Outlier island of Tikopia",
+            "authors": "Mark D. McCoy, Caroline Cervera, Mara A. Mulrooney, Andrew McAlister and Patrick V. Kirch",
+            "year": 2020,
+            "venue": "Quaternary Research 98:49–57",
+            "url": "https://www.cambridge.org/core/journals/quaternary-research/article/abs/obsidian-and-volcanic-glass-artifact-evidence-for-longdistance-voyaging-to-the-polynesian-outlier-island-of-tikopia/AC03C1980EA60297CF18E84CAC32FA9D",
+            "access": "Publisher abstract read; detailed artifact table not accessed.",
+            "referenceType": "journal-article",
+            "doi": "10.1017/qua.2020.38"
+          }
+        ],
+        "review": {
+          "summary": "Chemical analysis identifies Tongan volcanic glass reaching Tikopia from around 765 calibrated years before 1950, with stated dating uncertainty. A connection with Tongan political expansion is proposed, but transported material alone does not establish political control.",
+          "limitations": "Map placement is a schematic anchor for Tikopia, southeastern Solomon Islands, not a verified site coordinate. No resident population estimate, fixed ethnic identity or exact voyage route is inferred. Access limits are recorded for each source.",
+          "discussion": "Different evidence types address different questions; model results do not become direct observations of an arrival or language boundary.",
+          "provenance": "Reviewed against primary material from three overlapping Pacific-origins exports and one Fiji export; canonical Hawaiʻi chronology/network records belong to the coordinated reviewer. Full author-supplied synthesis archive: docs/intake/index.html. Original synthesis is secondary provenance, not a substitute for the cited primary study.",
+          "reviewedAt": "2026-11-16",
+          "history": [
+            "2026-10-29: round6 source and interpretation context added.",
+            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes."
+          ],
+          "relatedIds": []
+        },
+        "overlay": {
+          "kind": "trade",
+          "basis": "schematic",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              168.8,
+              -12.3
+            ]
+          },
+          "precision": "Rounded anchor for Tikopia, southeastern Solomon Islands; not an exact site, territorial limit or statistical confidence area.",
+          "provenance": "The cited source establishes Tikopia, southeastern Solomon Islands as the relevant geography. Coordinates are editorial schematic placement under the user's authorization for fuzzy named regions; no exact archaeological position is claimed."
+        }
+      },
+      "record": {
+        "id": "tikopia-mccoy2020-tongan-glass",
+        "revision": 4,
+        "type": "event",
+        "title": "Northern Tongan volcanic glass at Tikopia",
+        "culture": {
+          "id": "sv-tikopia",
+          "name": "Tikopian communities",
+          "kind": "unknown",
+          "color": "#527f97"
+        },
+        "location": {
+          "id": "tp-place-north-tonga-glass",
+          "name": "Northern Tonga volcanic-glass source region",
+          "lon": -173.77,
+          "lat": -15.96,
+          "precision": "Regional reference at Niuatoputapu. The data do not name a specific source island or outcrop.",
+          "provenance": "GeoNames public Niuatoputapu island reference, https://www.geonames.org/search.html?country=TO&q=&startRow=0. McCoy et al. discuss the broader northern Tongan source region."
+        },
+        "destination": {
+          "id": "sv-place-tikopia",
+          "name": "Tikopia, Solomon Islands",
+          "lon": 168.83,
+          "lat": -12.29,
+          "precision": "Island-scale reference. Individual excavation units are named in the evidence.",
+          "provenance": "GeoNames feature 2178465 (CC BY 4.0), rounded. https://www.geonames.org/2178465/ — Swift et al. 2021, Figure 1 identifies the Sinapupu area and excavation zones."
+        },
+        "routeKind": "schematic",
+        "time": {
+          "kind": "interval",
+          "start": 1158,
+          "end": 1212,
+          "approximate": true,
+          "original": "Published approximate import onset 765 cal BP (±54); independent modeled Tuakamali phase onset 1158–1212 cal CE (95% HPD).",
+          "method": "The authors associate the three pieces with Tuakamali contexts at TK-1 and TK-35. The line uses the radiocarbon-based onset of that phase as an approximate anchor for the earliest possible exchange evidence.",
+          "interpretation": "The window marks uncertainty around the emergence of Tongan-source imports. The precise arrival of each piece and the end of contact are unknown."
+        },
+        "overlay": {
+          "kind": "trade",
+          "basis": "schematic",
+          "direction": "forward",
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -173.77,
+                -15.96
+              ],
+              [
+                168.83,
+                -12.29
+              ]
+            ]
+          },
+          "precision": "The line connects generalized source and find references. It represents the direction of material movement.",
+          "provenance": "Endpoints follow the locations above. The material connection is documented by Mark D. McCoy, Caroline Cervera, Mara A. Mulrooney, Andrew McAlister and Patrick V. Kirch."
+        },
+        "claims": [
+          {
+            "id": "material-connection",
+            "text": "Three volcanic-glass pieces from the Tuakamali phase on Tikopia match Tongan reference material. The source study places them in excavated deposits and identifies northern Tonga as the likely source region.",
+            "status": "well-supported",
+            "explanation": "Available analyses cannot select a Tongan island or outcrop. The glass does not independently establish when particular people arrived or the kind of political relationship they had.",
+            "support": [
+              {
+                "sourceId": "mccoy2020-tikopia",
+                "locator": "Results, Tables 1–3 and Figs. 4–5; Discussion and Conclusions",
+                "note": "Distinguishes three Tongan pieces from Banks glass and Admiralty obsidian and gives the approximate phase chronology.",
+                "stance": "supports"
+              },
+              {
+                "sourceId": "sv-ref-tikopia-kirch-swift",
+                "locator": "pp. 332–333 and Table 4 α5",
+                "note": "Dating model places the onset of the Early Tuakamali Phase at 1158–1212 CE.",
+                "stance": "supports"
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "mccoy2020-tikopia",
+            "title": "Obsidian and volcanic glass artifact evidence for long-distance voyaging to the Polynesian Outlier island of Tikopia",
+            "authors": "Mark D. McCoy, Caroline Cervera, Mara A. Mulrooney, Andrew McAlister and Patrick V. Kirch",
+            "year": 2020,
+            "venue": "Quaternary Research 98:49–57",
+            "url": "https://www.cambridge.org/core/journals/quaternary-research/article/abs/obsidian-and-volcanic-glass-artifact-evidence-for-longdistance-voyaging-to-the-polynesian-outlier-island-of-tikopia/AC03C1980EA60297CF18E84CAC32FA9D",
+            "access": "Author-posted full paper checked, especially Results by time period, Tables 1–3 and Figure 5. Original symposium hypotheses are treated separately from geochemical matches.",
+            "referenceType": "journal-article",
+            "doi": "10.1017/qua.2020.38"
+          },
+          {
+            "id": "sv-ref-tikopia-kirch-swift",
+            "authors": "Patrick V. Kirch and Jillian A. Swift",
+            "year": 2017,
+            "title": "New AMS radiocarbon dates and a re-evaluation of the cultural sequence of Tikopia Island, southeast Solomon Islands",
+            "venue": "Journal of the Polynesian Society 126(3):313–336",
+            "url": "https://doi.org/10.15286/jps.126.3.313-336",
+            "access": "Author-posted full paper checked, including modeled boundary discussion and sample-context descriptions.",
+            "referenceType": "journal-article",
+            "doi": "10.15286/jps.126.3.313-336"
+          }
+        ],
+        "history": {
+          "kind": "exchange",
+          "claimId": "material-connection",
+          "windows": [
+            {
+              "start": 1158,
+              "end": 1212,
+              "certainty": "approximate",
+              "note": "The modeled transition to the find-bearing Tuakamali phase provides an approximate earliest evidence context. The individual glass pieces are not dated to this whole window."
+            }
+          ],
+          "connection": {
+            "evidence": "Three pXRF matches in stratified TK-1 and TK-35 deposits, linked to a modeled period boundary.",
+            "lastEvidence": 1212,
+            "cessation": "unknown",
+            "note": "The window marks uncertainty around the emergence of Tongan-source imports. The precise arrival of each piece and the end of contact are unknown.",
+            "claimId": "material-connection"
+          }
+        },
+        "review": {
+          "summary": "Three volcanic-glass pieces from the Tuakamali phase on Tikopia match Tongan reference material. The source study places them in excavated deposits and identifies northern Tonga as the likely source region.",
+          "limitations": "Available analyses cannot select a Tongan island or outcrop. The glass does not independently establish when particular people arrived or the kind of political relationship they had.",
+          "discussion": "Most analyzed volcanic glass on Tikopia came from the Banks Islands. The rarer Tongan glass adds evidence of a different connection in deposits associated with changes in tools and ornament. McCoy and colleagues proposed a link to Tongan political expansion, which remains an interpretation.",
+          "provenance": "Original account following the cited archaeological evidence and documented geographic references.",
+          "reviewedAt": "2026-11-17",
+          "history": [
+            "2026-10-29: round6 source and interpretation context added.",
+            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes.",
+            "2026-11-17: Added dated source-to-find mapping after reviewing the cited evidence."
+          ],
+          "relatedIds": [
+            "sv-tikopia-tuakamali",
+            "trade-pacific-banks-tikopia-obsidian"
+          ]
+        }
+      },
+      "reason": "Replace the single display year of 1185 with a schematic northern-Tonga-to-Tikopia source connection anchored to the original modeled transition range. Full McCoy et al. confirms three distinct Tongan matches in Tuakamali layers, and the 2017 dated sequence supplies 1158–1212 cal CE as an approximate phase-onset window. The transport date and exact source remain unresolved."
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "version": "0.24.0",
+  "period": [
+    0,
+    1200
+  ],
+  "baselineVersion": "0.23.1",
+  "method": "Shared, explicitly classified exchange observations with line geometry and at least one supported activity window intersecting map years 0–1200. Founding migrations are excluded even where they use the same rendering layer. Multiple materials or dates may describe the same connection; counts are observations, not independent routes, traffic volume or evidence of continuous voyages. Samples use the same activity-window logic as the map.",
+  "mappedExchangeIds": [
+    "trade-meso-san-martin-ceibal",
+    "trade-meso-el-chayal-ceibal",
+    "trade-meso-pachuca-teotihuacan",
+    "trade-meso-pachuca-tikal",
+    "trade-meso-pachuca-el-coyote",
+    "trade-meso-ixtepeque-tiguilotada",
+    "trade-meso-guinope-tiguilotada",
+    "trade-meso-diquis-drago",
+    "trade-meso-motagua-playa-grande",
+    "trade-am-superior-mound-city",
+    "trade-am-appalachian-mound-city",
+    "trade-am-mitchell-cypress",
+    "trade-am-zuni-chaco-beams",
+    "trade-am-chuska-plaza-tree",
+    "trade-am-cacao-pueblo-bonito",
+    "trade-am-quispisisa-corralones",
+    "trade-am-alca-quilcapampa",
+    "trade-am-quispisisa-quilcapampa",
+    "trade-am-spondylus-khoa",
+    "trade-am-charana-omo",
+    "trade-pacific-india-bali-early",
+    "trade-pacific-yap-fais",
+    "trade-pacific-palau-fais",
+    "trade-pacific-peats-macdonald",
+    "trade-pacific-tataga-aganoa",
+    "trade-pacific-china-bali-shore",
+    "trade-pacific-changsha-belitung",
+    "trade-pacific-banks-tikopia-obsidian",
+    "tikopia-mccoy2020-tongan-glass",
+    "r8v-ixtepeque-naranjos",
+    "r8v-colombia-panama-emeralds",
+    "history-samoa-tonga-exchange",
+    "history-mangareva-pitcairn-henderson",
+    "history-mesoamerica-chaco-macaws",
+    "px-fergusson-caution-bay",
+    "px-raoul-norfolk-obsidian"
+  ],
+  "pointOrUnmappedIds": [
+    "polynesian-outliers-samoan-adze-transfer",
+    "kapingamarangi-stone-provenance",
+    "r11v-cusco-obsidian-continuity",
+    "r11v-amazon-feathers-model",
+    "r11v-recuay-coast-interaction"
+  ],
+  "samples": [
+    {
+      "year": 0,
+      "beforeIds": [
+        "r8v-ixtepeque-naranjos",
+        "px-fergusson-caution-bay"
+      ],
+      "ids": [
+        "trade-meso-san-martin-ceibal",
+        "trade-pacific-india-bali-early",
+        "trade-pacific-peats-macdonald",
+        "r8v-ixtepeque-naranjos",
+        "px-fergusson-caution-bay"
+      ]
+    },
+    {
+      "year": 250,
+      "beforeIds": [
+        "r8v-ixtepeque-naranjos"
+      ],
+      "ids": [
+        "trade-meso-el-chayal-ceibal",
+        "trade-meso-pachuca-teotihuacan",
+        "trade-meso-pachuca-tikal",
+        "trade-pacific-yap-fais",
+        "trade-pacific-palau-fais",
+        "trade-pacific-peats-macdonald",
+        "trade-pacific-banks-tikopia-obsidian",
+        "r8v-ixtepeque-naranjos"
+      ]
+    },
+    {
+      "year": 500,
+      "beforeIds": [
+        "r8v-ixtepeque-naranjos"
+      ],
+      "ids": [
+        "trade-meso-el-chayal-ceibal",
+        "trade-meso-pachuca-teotihuacan",
+        "trade-meso-pachuca-tikal",
+        "trade-pacific-yap-fais",
+        "trade-pacific-peats-macdonald",
+        "trade-pacific-tataga-aganoa",
+        "trade-pacific-banks-tikopia-obsidian",
+        "r8v-ixtepeque-naranjos"
+      ]
+    },
+    {
+      "year": 750,
+      "beforeIds": [],
+      "ids": [
+        "trade-meso-el-chayal-ceibal",
+        "trade-meso-pachuca-el-coyote",
+        "trade-am-quispisisa-corralones",
+        "trade-am-charana-omo",
+        "trade-pacific-yap-fais",
+        "trade-pacific-peats-macdonald",
+        "trade-pacific-tataga-aganoa",
+        "trade-pacific-china-bali-shore",
+        "trade-pacific-banks-tikopia-obsidian"
+      ]
+    },
+    {
+      "year": 1000,
+      "beforeIds": [
+        "r8v-colombia-panama-emeralds",
+        "history-mesoamerica-chaco-macaws"
+      ],
+      "ids": [
+        "trade-meso-pachuca-el-coyote",
+        "trade-meso-ixtepeque-tiguilotada",
+        "trade-meso-guinope-tiguilotada",
+        "trade-meso-diquis-drago",
+        "trade-meso-motagua-playa-grande",
+        "trade-am-zuni-chaco-beams",
+        "trade-am-cacao-pueblo-bonito",
+        "trade-am-charana-omo",
+        "trade-pacific-yap-fais",
+        "trade-pacific-peats-macdonald",
+        "trade-pacific-tataga-aganoa",
+        "trade-pacific-china-bali-shore",
+        "trade-pacific-banks-tikopia-obsidian",
+        "r8v-colombia-panama-emeralds",
+        "history-mesoamerica-chaco-macaws"
+      ]
+    },
+    {
+      "year": 1150,
+      "beforeIds": [
+        "history-mangareva-pitcairn-henderson",
+        "history-mesoamerica-chaco-macaws"
+      ],
+      "ids": [
+        "trade-meso-ixtepeque-tiguilotada",
+        "trade-meso-guinope-tiguilotada",
+        "trade-meso-diquis-drago",
+        "trade-pacific-yap-fais",
+        "trade-pacific-peats-macdonald",
+        "trade-pacific-china-bali-shore",
+        "trade-pacific-banks-tikopia-obsidian",
+        "history-mangareva-pitcairn-henderson",
+        "history-mesoamerica-chaco-macaws"
+      ]
+    },
+    {
+      "year": 1200,
+      "beforeIds": [
+        "history-samoa-tonga-exchange",
+        "history-mangareva-pitcairn-henderson",
+        "px-raoul-norfolk-obsidian"
+      ],
+      "ids": [
+        "trade-meso-ixtepeque-tiguilotada",
+        "trade-meso-guinope-tiguilotada",
+        "trade-pacific-yap-fais",
+        "trade-pacific-peats-macdonald",
+        "trade-pacific-china-bali-shore",
+        "trade-pacific-banks-tikopia-obsidian",
+        "tikopia-mccoy2020-tongan-glass",
+        "history-samoa-tonga-exchange",
+        "history-mangareva-pitcairn-henderson",
+        "px-raoul-norfolk-obsidian"
+      ]
+    }
+  ]
+}

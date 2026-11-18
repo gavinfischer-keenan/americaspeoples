@@ -1,26 +1,64 @@
 import {dataset} from '../src/published-data';
 import {topicOnlyIds} from '../src/topic-dives';
-import {readFileSync,writeFileSync} from 'node:fs';
-const regions:[string,number,number,number,number][]=[
-['Alaska / western Arctic',-170,52,-130,72],['Canadian Arctic / Greenland',-130,60,-20,84],['Pacific Northwest',-130,42,-116,60],['California / Southwest',-125,29,-103,42],['Great Plains',-110,29,-94,52],['Northeast / Great Lakes',-94,38,-55,53],['Southeastern US',-94,24,-75,38],['Mexico',-117,14,-86,30],['Central America',-93,7,-77,18],['Caribbean',-85,9,-59,27],['Northern South America',-81,-1,-49,13],['Andes',-82,-27,-66,1],['Amazon interior',-73,-16,-45,1],['Brazil Atlantic',-51,-30,-34,-1],['Southern Cone',-76,-56,-53,-27],['Australia',112,-44,154,-10],['Aotearoa New Zealand',166,-48,179,-34],['New Guinea / Island Melanesia',130,-23,175,0],['Central/Eastern Polynesia',-175,-30,-105,0],['Hawaii',-161,18,-154,23]];
-const periods=[[-50000,-10001],[-10000,-3001],[-3000,-1],[0,999],[1000,1491],[1492,1699],[1700,1799],[1800,1934]];
-const baseline=JSON.parse(readFileSync('data/six-guide-baseline.json','utf8'));
-const before=baseline.matrix;
-const additions=JSON.parse(readFileSync('data/six-guide-expansion-records.json','utf8')).records;
-const matrix=regions.map(([region,w,s,e,n])=>{
- const rows=dataset.records.filter(r=>{const p=r.location?[r.location.lon,r.location.lat]:r.overlay?.geometry?.type==='Point'?r.overlay.geometry.coordinates:null;return !topicOnlyIds.has(r.id)&&p&&p[0]>=w&&p[0]<=e&&p[1]>=s&&p[1]<=n});
- return {region,bounds:[w,s,e,n],undatedIds:rows.filter(r=>r.time.start===null).map(r=>r.id),periods:periods.map(([start,end])=>({start,end,recordIds:rows.filter(r=>r.time.start!==null&&r.time.end!==null&&r.time.start<=end&&r.time.end>=start).map(r=>r.id)}))};
+import {readFileSync,writeFileSync,existsSync} from 'node:fs';
+const baseline=JSON.parse(readFileSync('data/three-regional-gaps-baseline.json','utf8'));
+const shared=dataset.records.filter(r=>!topicOnlyIds.has(r.id));
+const matrix=baseline.matrix.map((row:any)=>{
+ const [w,s,e,n]=row.bounds;
+ const rows=shared.filter(r=>{const p=r.location?[r.location.lon,r.location.lat]:r.overlay?.geometry?.type==='Point'?r.overlay.geometry.coordinates:null;return p&&p[0]>=w&&p[0]<=e&&p[1]>=s&&p[1]<=n});
+ return {region:row.region,bounds:row.bounds,undatedIds:rows.filter(r=>r.time.start===null).map(r=>r.id),periods:row.periods.map((period:any)=>({start:period.start,end:period.end,recordIds:rows.filter(r=>r.time.start!==null&&r.time.end!==null&&r.time.start<=period.end&&r.time.end>=period.start).map(r=>r.id)}))};
 });
 const method='Shared dated locality/point observations in overlapping rectangular regions; connections with named origin points count at that origin, while route-only and focused topic records are excluded. Intersecting source windows count, not historical-memory display. Counts are evidence records, not towns, populations, continuous occupancy or research effort. Empty cells are not classified as human absence. Undated records remain separate.';
-writeFileSync('data/world-coverage-audit.json',JSON.stringify({version:dataset.version,recordCount:dataset.records.length,sharedRecordCount:dataset.records.filter(r=>!topicOnlyIds.has(r.id)).length,method,matrix},null,2)+'\n');
-let guide='# Where the map has gaps\n\nThe audit found both missing research and evidence that still needs better dates or locations. It does **not** find that blank regions were empty of people. The current campaign adds **'+additions.length+' shared observations** supporting expanded archaeological guides and connected Four Corners histories. See [the current campaign and source decisions](six-guide-expansions.html). The prior two dedicated-study releases added 131 shared observations in total. The prior v0.17 campaign added 37 early-continuity observations. The prior v0.16 campaign added 35 interior observations. The prior v0.15 campaign added 43 regional observations; those remain part of the baseline. The prior v0.14 release added 16 other gap observations and 8 Australia/Aotearoa archaeological observations; those are retained, not counted as new here.\n\n## What the numbers measure\n\n'+method+'\n\nThe immutable baseline is the completed v0.19.1 atlas: 2,218 total records and 2,148 shared records, before these local and regional expansions. The completed v0.14 and earlier working baselines are retained separately. Cells show **before → now** when changed; unchanged counts appear once. The period labels below are astronomical map-year bounds: year 0 is 1 BCE, and −1 is 2 BCE. These broad diagnostic bins are not cultural periods. The [detailed coverage matrix](coverage-audit.html) supplies 65 smaller/overlapping regions, including a dedicated Gran Chaco row, distinct locality counts, unresolved evidence and source links.\n\n| Region | −50000…−10001 | −10000…−3001 | −3000…−1 | 0…999 | 1000…1491 | 1492…1699 | 1700…1799 | 1800…1934 | Undated now |\n|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|\n';
-for(const row of matrix){
- const b=before.find((x:any)=>x.region===row.region);
- guide+='| '+row.region+' | '+row.periods.map((p,i)=>{const old=b.periods[i].recordIds.length,now=p.recordIds.length;return old===now?String(now):old+' → '+now}).join(' | ')+' | '+row.undatedIds.length+' |\n';
-}
-guide+='\n## Earlier v0.14 additions, retained\n\n| Gap or weakness | Response | Limits that remain |\n|---|---|---|\n| Earlier Northwest Coast places and engineering | Three Palmrose occupation/building phases; early northern Quadra clam gardens | Three phases are one locality. The 11,500-year history of human–clam relationships is not a date for garden walls. |\n| Arctic evidence before and during Thule Inuit histories | Sermermiut Early Dorset evidence; distinct Dorset and Thule observations at Illutalialuk | Environmental phase associations are approximate. Cultural succession is not evidence of extermination. |\n| Atlantic Brazil before European arrival | Dated Galheta IV funerary mound and processing activity | The separate genomic specimen remains undated in the atlas until its own date is recovered; the whole site range cannot substitute. |\n| Later village development in New Guinea | Popo and the inferred move to Mirimua Mapoe | Modeled onset/transition ranges and oral traditions are retained. Regional pins need finer public coordinate verification. |\n| Maya communities beyond a single Classic-period peak | Early Classic and Late Postclassic Alabama phases; nineteenth-century Kaxil Uinic and its documented cabildo | These are sampled periods and specific places, not an assertion that all Maya towns grew or ended together. |\n| Later Andean labor history and violence | Iquique massacre, 1907 | Named authority and victims are supported; disputed casualty totals are not flattened into an exact number. |\n| Australian and Aotearoa local chronology | Riwi, Karnatukul, Nawarla Gabarnmang, Cloggs, Pūrākaunui and Otāhau | Activity, ritual installations, crop storage and palisade construction date different things. Two sensitive Australian localities remain generalized. |\n\n## When a gap could be real\n\nEvidence of a local departure can be shown when a source supports it: Popo’s shift and the interpreted later departure from Illutalialuk are labeled with uncertain windows. That is different from the absence of a record in a selected year. Aotearoa’s very early empty bins precede the currently supported settlement chronology; they should not trigger invented towns merely to fill a matrix. See the existing [early Māori settlement evidence](../index.html#review/context-triangle-flat) and the [Australia/Aotearoa source guide](australasia-archaeology.html).\n\nNo broad region is classified as unoccupied solely from this audit. Counts are especially biased toward documented U.S. Civil War encounters, colonial foundations and sites with readily accessible dates. Routes and long-lived historical markers also make the visible map different from this count of dated observations.\n\n## Remaining priorities\n\n- Northwest Coast villages in the earlier Holocene; date and locate existing Ts’ishaa, Huu7ii and Xwe’etay evidence before requesting duplicate research.\n- Arctic local phases and mobility beyond a single Dorset-to-Thule narrative; community-reviewed accounts and evidence of any violence require case-specific support.\n- Atlantic Brazilian built landscapes, sambaquis and Jê communities across the first and second millennia CE.\n- Central America, the Andes and Amazonia in 1700–1934: Indigenous towns, labor, local conflicts, displacement and continuing institutions, beyond capital cities and independence battles.\n- New Guinea, Solomons and other Melanesian islands after Lapita: local villages, gardens, ritual centers and changing exchange windows.\n- Australia’s later Holocene local sequences and Aotearoa’s many pā, seasonal places and community histories.\n- Geographic refinement where public site coordinates are available. A town name with a broad regional pin is useful orientation, but does not support building-scale precision.\n\nAll 25 formerly planned dedicated studies are now available, alongside the earlier content. The atlas has 26 independent topic movies. The six older place guides now have expanded local evidence; the Four Corners regional movie links its local studies. Further finer-grained coverage remains continuing work. These priorities are **continuing research gaps**, not a queue of missing movies. Full Consensus reports remain private; original factual records cite the underlying sources.\n\n## Current dedicated-study additions and source access\n\n| Evidence | Primary source |\n|---|---|\n';
-const gaps=additions;
-for(const r of gaps){const so=r.sources[0];guide+='| ['+r.title+'](../index.html#review/'+r.id+') | ['+so.authors+' — '+so.title+']('+so.url+') |\n';}
-writeFileSync('docs/world-coverage-audit.md',guide);
-console.log(dataset.records.length+' total; '+dataset.records.filter(r=>!topicOnlyIds.has(r.id)).length+' shared; '+matrix.length+' region rows');
+writeFileSync('data/world-coverage-audit.json',JSON.stringify({version:dataset.version,recordCount:dataset.records.length,sharedRecordCount:shared.length,method,matrix},null,2)+'\n');
+const collection='data/three-regional-gaps-expansion-records.json';
+const additions=existsSync(collection)?JSON.parse(readFileSync(collection,'utf8')).records:[];
+let guide=`# Where the map has gaps
 
+The current map contains **${shared.length.toLocaleString('en-US')} shared observations** and ${dataset.records.length-shared.length} focused topic observations. The audit does **not** find that blank regions were empty of people. It shows where this collection needs more dated local history.
+
+This campaign adds **${additions.length} shared map records** about lower Central America, Brazil's Atlantic coast and the Solomon Islands–Vanuatu region, including three linked route views of local finds. See [the histories and source decisions](three-regional-gaps.html).
+
+## Why these three gaps
+
+- **Costa Rica and Panama, especially 1000 BCE–1500 CE:** the baseline had Monagrillo and a single dated Cerro Juan Díaz observation, followed by colonial foundations. Settlements, monumental centers and exchange were largely missing.
+- **Atlantic coastal Brazil before 1500:** the eastern-coast row had one locality in 3000–1000 BCE, then none in the next four bins. Galheta IV adds a southern example but cannot represent the whole coast.
+- **Solomon Islands and Vanuatu after Lapita:** the broad regional row had no dated localities in 1–500 CE and only one in each of the next two bins. Founding sites and migration models needed local histories alongside them.
+
+These are editorial priorities among many serious gaps. Rectangles overlap and sometimes include neighboring islands; individual places still need geographic checks. Counts measure collected evidence, not population or survey completeness.
+
+**Brazil after this pass:** the finer Eastern Brazil row improves from one to three distinct localities in 3000–1000 BCE. Sernambetiba adds one locality to each of the 1000–1 BCE and 1–500 CE bins (**0 → 1** in both). The 501–1000 and 1001–1500 CE bins remain **0 → 0**. Farther south, the Paraguay / Southern Brazil row changes from 0 → 1, 0 → 3, 2 → 5 and 1 → 3 localities across the four bins from 1000 BCE through 1500 CE. The coastal history is broader, but later Eastern Brazil still needs research.
+
+## What the numbers measure
+
+${method}
+
+The immutable baseline is **v${baseline.version}: ${baseline.recordCount.toLocaleString('en-US')} total and ${baseline.sharedRecordCount.toLocaleString('en-US')} shared records**, before this campaign. Changed cells show before → now. Period labels are astronomical map-year bounds: year 0 is 1 BCE, and −1 is 2 BCE. The [detailed coverage matrix](coverage-audit.html) uses the same canonical master-map collection, with 65 finer/overlapping regions, distinct locality counts and source links. It now includes collections regardless of filename.
+
+| Region | −50000…−10001 | −10000…−3001 | −3000…−1 | 0…999 | 1000…1491 | 1492…1699 | 1700…1799 | 1800…1934 | Undated now |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+`;
+for(const row of matrix){const b=baseline.matrix.find((x:any)=>x.region===row.region);guide+='| '+row.region+' | '+row.periods.map((p:any,i:number)=>{const old=b.periods[i].recordIds.length,now=p.recordIds.length;return old===now?String(now):old+' → '+now}).join(' | ')+' | '+row.undatedIds.length+' |\n';}
+guide+=`
+## Gaps that remain
+
+- **Patagonia and Tierra del Fuego, roughly 6000 BCE–1500 CE:** early arrivals and recent encounters still overshadow the intervening local histories.
+- **Pacific Northwest, especially 10000–1000 BCE:** verify and date existing leads for villages, camps and engineered landscapes before ordering duplicate research.
+- **Northern Mexico and Baja before 1500:** large stretches have few local communities between early finds and colonial settlements.
+- **Lesser Antilles and Venezuela before 1500:** settlements, repeated journeys and local changes remain thin.
+- **Australia's later Holocene and New Guinea after early settlement:** more local sequences are needed alongside regional evidence.
+- **Alaska and Arctic Canada after early arrivals:** local communities need histories beyond a single cultural-replacement story.
+
+Early empty bins in remote islands are screened separately from post-settlement gaps. A later date at a site does not fill all the years since an earlier one. No region is classified as unoccupied solely from this audit.
+
+## Existing histories in the comparison
+
+The baseline includes the inland Shield and Aleutian village expansions, Four Corners regional and local guides, Early Classic and Late Postclassic Alabama phases, and earlier Pacific and South American campaigns. Independent topic movies retain their own evidence; ordinary place movies share the master clock. Full Consensus reports remain private; the atlas cites original sources and uses independently written historical prose.
+
+## New observations and sources
+
+| Evidence | Primary source |
+|---|---|
+`;
+for(const r of additions){const so=r.sources[0];guide+='| ['+r.title+'](../index.html#review/'+r.id+') | ['+so.authors+' — '+so.title+']('+so.url+') |\n';}
+writeFileSync('docs/world-coverage-audit.md',guide);
+console.log(dataset.records.length+' total; '+shared.length+' shared; '+matrix.length+' region rows');

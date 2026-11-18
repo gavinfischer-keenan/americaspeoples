@@ -4,6 +4,29 @@ import { existsSync, mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync
 import { tmpdir, homedir } from "node:os";
 import { join, resolve } from "node:path";
 import { spawnSync } from "node:child_process";
+import {dataset} from '../src/published-data';
+import {topicOnlyIds} from '../src/topic-dives';
+
+test('coverage export follows the canonical master map, including nonstandard collection filenames',()=>{
+ const result=spawnSync(process.execPath,['--import','tsx','scripts/export-coverage-records.ts'],{encoding:'utf8',maxBuffer:50*1024*1024});
+ assert.equal(result.status,0,result.stderr);
+ const exported=JSON.parse(result.stdout);
+ assert.deepEqual(exported.records.map((r:any)=>r.id),dataset.records.filter(r=>!topicOnlyIds.has(r.id)).map(r=>r.id));
+ assert.ok(exported.records.some((r:any)=>r.id==='al-amaknak-s7-west-charcoal'));
+ assert.ok(!exported.records.some((r:any)=>topicOnlyIds.has(r.id)));
+ assert.equal(exported.version,dataset.version);
+});
+
+test('published detailed audit includes every shared map record',()=>{
+ const audit=JSON.parse(readFileSync('data/coverage-audit.json','utf8'));
+ const shared=dataset.records.filter(r=>!topicOnlyIds.has(r.id));
+ assert.equal(audit.version,dataset.version);
+ assert.equal(audit.recordCount,shared.length);
+ assert.deepEqual(audit.recordIds,shared.map(r=>r.id));
+ const represented=new Set([...audit.unallocatedRecordIds,...audit.matrix.flatMap((r:any)=>[...r.unresolvedIds,...r.periods.flatMap((p:any)=>[...p.localRecordIds,...p.contextRecordIds])])]);
+ assert.ok(represented.has('al-amaknak-s7-west-charcoal'));
+ assert.ok([...represented].every(id=>shared.some(r=>r.id===id)));
+});
 
 test("coverage audit counts distinct dated places, separates context and uses current intake", () => {
   const root = mkdtempSync(join(tmpdir(), "atlas-coverage-"));

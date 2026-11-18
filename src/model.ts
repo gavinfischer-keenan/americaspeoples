@@ -128,6 +128,7 @@ export interface HistoryMetadata {
     note: string;
     claimId: string;
   };
+  /** Route activity periods or disjoint supported dates for an attestation. */
   windows?: {
     start: number;
     end: number;

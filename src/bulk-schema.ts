@@ -1,6 +1,6 @@
 /** Public spreadsheet contract. Headers are case-sensitive; column order is flexible. */
 export const BULK_SCHEMA_VERSION = 2;
-export const MAX_SUPPORT_ROWS = 5000;
+export const MAX_SUPPORT_ROWS = 10000;
 export const BULK_HEADERS = {
   Evidence: [
     "start_year",
