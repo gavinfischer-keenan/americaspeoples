@@ -11,12 +11,23 @@ import {
   scopedVoyageProgress,
   availableVoyageRecords,
   advanceMovieClock,
+  storySceneDate,
 } from "../src/shared-movie";
 import { PlaybackIndex } from "../src/playback-index";
 import { dataset } from "../src/published-data";
 import { validateRecord } from "../src/validation";
 const voyages = raw.voyages as Voyage[];
 const beagle = voyages.find((v) => v.id === "beagle-1831-1836")!;
+
+test('contextual chapters reach their dated event without revealing later same-year events',()=>{
+ const records=[{id:'arrival',time:{eventDate:'1839-08-15'}},{id:'later',time:{eventDate:'1839-12-01'}}];
+ const date=storySceneDate({year:1839,recordIds:['arrival']},records,[]);
+ assert.equal(date,dateValue('1839-08-15'));
+ assert.deepEqual(availableVoyageRecords(records,[],date).map(r=>r.id),['arrival']);
+ assert.equal(storySceneDate({year:1838,recordIds:['arrival']},records,[]),1838);
+ const stop=beagle.stops.find(s=>s.recordId)!;
+ assert.equal(storySceneDate({year:Math.floor(dateValue(stop.arrival)),recordIds:[stop.recordId!]},[],voyages),dateValue(stop.arrival));
+});
 test("every itinerary omits off-scope time but retains Pacific and American travel", () => {
   assert.equal(inAtlas([-4, 50]), false);
   assert.equal(inAtlas([57, -20]), false);

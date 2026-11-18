@@ -52,5 +52,6 @@ export function libraryHTML(count:number):string{return `<article class="library
  ['#context','03','Movement & context','Examine connections, language, and what the evidence can establish.'],
  ['#physical','04','The changing environment','Ice, ocean reference patterns, and natural-event sources.'],
  ['#proposals','05','Contribute evidence','Draft a suggestion, import research, or share a source-linked collection.'],
- ['#about','06','About this atlas','How to read the map, evidence limits, and noncommercial source downloads.'],
+ ['sites/sources-attributions.html','06','Sources, attributions & licenses','Where our evidence, text, pictures and maps come from, and the rights that apply to each.'],
+ ['#about','07','About this atlas','How to read the map, evidence limits, and noncommercial source downloads.'],
  ].map(([href,n,title,body])=>`<a class="library-card" href="${href}"><span>${n} ↗</span><h3>${title}</h3><p>${body}</p></a>`).join('')}</div><p class="fine">This is a growing research collection. Empty space and missing dates do not mean that people, exchange, or conflict were absent.</p>${location.protocol==='file:'?'':`<a href="https://tripofisch.com/privacy/">Privacy &amp; analytics ↗</a>`}</article>`;}

@@ -15,7 +15,7 @@ test('all requested movies are playable with sourced chronological chapters and 
   for(const s of t.scenes){assert.ok(s.year>=before&&s.year<=1934,s.id);before=s.year;assert.ok(s.body.length>=180&&s.note.length>=55,s.id);assert.ok(s.recordIds.every(x=>t.recordIds.includes(x)));assert.ok(rows.some(r=>s.recordIds.includes(r.id)&&historyState(r,s.year)==='active'&&(r.location||r.overlay?.geometry)),s.id+' mapped current evidence');}
   assert.ok(topicConnections[id]?.length);
  }
- assert.equal(topics.length,26);assert.equal(futureDives.length,0);assert.doesNotMatch(futureDivesHTML(),/NOT YET PLAYABLE|data-future-topic/);
+ assert.equal(topics.length,27);assert.equal(futureDives.length,0);assert.doesNotMatch(futureDivesHTML(),/NOT YET PLAYABLE|data-future-topic/);
 });
 test('new objects stay focused while built places, encounters and wrecks join shared history',()=>{
  for(const id of ['context-fur-kodiak-1784','context-fur-sitka-1804','context-fur-ross-1812','context-whaling-fortune-1853','context-whaling-arctic-1871','context-treasure-potosi-1545','context-treasure-zacatecas-1546','context-treasure-atocha-1622','context-mission-piratininga-1554','context-mission-trinidad-1706','context-mission-rangihoua-1814','context-pottery-taperinha']){assert.ok(dataset.records.some(r=>r.id===id),'Missing '+id);assert.ok(!topicOnlyIds.has(id));}

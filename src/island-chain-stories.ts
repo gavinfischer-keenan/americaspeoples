@@ -1,0 +1,583 @@
+import type {Story} from './stories';
+export const islandChainStories:Story[]=[
+  {
+    "id": "borneo-brunei",
+    "title": "Borneo and Brunei",
+    "subtitle": "From forest occupation to river capitals and industrial coasts",
+    "description": "Eight chapters connect selected northern Bornean places across deep time, without treating them as a single people or polity.",
+    "scenes": [
+      {
+        "id": "niah",
+        "year": -48000,
+        "title": "A forest world, long before the ports",
+        "body": "Niah’s early evidence places human use of tropical forest environments around 50,000 years ago. Food gathering and repeated use of the caves belong to a far older history than the coastal courts. Later changes in subsistence and burial practice show that a place can remain important while the activities carried out there change profoundly.",
+        "note": "Rounded archaeological anchor; the cave sequence is not continuous residence and the marker does not locate burials.",
+        "recordIds": [
+          "island-niah-early"
+        ],
+        "scope": "pacific",
+        "center": [
+          113.78,
+          3.8
+        ],
+        "zoom": 7,
+        "holdMs": 18000
+      },
+      {
+        "id": "santubong",
+        "year": 1100,
+        "title": "A shrine in a trading landscape",
+        "body": "At Bongkissam, gold figures and other valuables were placed in a local shrine. Imported ceramics situate Santubong within wider exchange, while the ritual deposit shows how people gave those materials particular meanings at home. Foreign objects and imagery do not tell us that every resident shared one origin, language or faith.",
+        "note": "1100 is a viewing year within a broad tenth- to thirteenth-century attribution.",
+        "recordIds": [
+          "island-bongkissam-shrine"
+        ],
+        "scope": "pacific",
+        "center": [
+          110.32,
+          1.72
+        ],
+        "zoom": 12,
+        "holdMs": 18000
+      },
+      {
+        "id": "kotabatu",
+        "year": 1400,
+        "title": "Government and commerce along the river",
+        "body": "Kota Batu was a centre of settlement, government and trade on the Brunei River. Its broad archaeological history reaches before the best-known European descriptions. River access joined political life to the movement of goods and people; the later maritime wreck displayed in Brunei provides a different, cargo-scale glimpse of this connected world.",
+        "note": "The museum’s fourteenth- to seventeenth-century span does not date each building.",
+        "recordIds": [
+          "island-kota-batu-centre"
+        ],
+        "scope": "pacific",
+        "center": [
+          114.95,
+          4.88
+        ],
+        "zoom": 14,
+        "holdMs": 18000
+      },
+      {
+        "id": "brunei1521",
+        "year": 1521,
+        "title": "Visitors encounter an established court",
+        "body": "The expedition reaching Brunei in 1521 encountered established authority and skilled production. Pigafetta described brass objects and cannon. Such details illuminate the material setting of ceremony and power, but the visit did not begin Brunei’s history or its crafts. Archaeology supplies the earlier centuries behind the written encounter.",
+        "note": "A dated visit, not a founding event or verified population census.",
+        "recordIds": [
+          "island-brunei-1521"
+        ],
+        "scope": "pacific",
+        "center": [
+          114.94,
+          4.89
+        ],
+        "zoom": 12,
+        "holdMs": 18000
+      },
+      {
+        "id": "kuching",
+        "year": 1839,
+        "title": "A new actor on the Sarawak River",
+        "body": "Brooke’s arrival at Kuching in August 1839 opened a sequence of negotiations and interventions that produced a new regime. A grant in 1841 and installation in 1842 were different steps. This was a local and regional transformation along a populated river, not a single transfer of the whole island of Borneo.",
+        "note": "The selected marker dates arrival; later authority is narrative context.",
+        "recordIds": [
+          "island-kuching-1839"
+        ],
+        "scope": "pacific",
+        "center": [
+          110.33,
+          1.55
+        ],
+        "zoom": 12,
+        "holdMs": 18000
+      },
+      {
+        "id": "labuan",
+        "year": 1846,
+        "title": "An island becomes a colonial port",
+        "body": "Labuan’s cession followed another path of colonial expansion. The treaty was concluded at Brunei, while Labuan was the island named in it and developed as a British port and coaling station. Separating the agreement, possession and construction helps explain how colonial authority acquired material footholds over time.",
+        "note": "Labuan is the subject of the treaty, not its signing location.",
+        "recordIds": [
+          "island-labuan-1846"
+        ],
+        "scope": "pacific",
+        "center": [
+          115.25,
+          5.28
+        ],
+        "zoom": 12,
+        "holdMs": 18000
+      },
+      {
+        "id": "tuaran",
+        "year": 1927,
+        "title": "Workers demand to be heard",
+        "body": "At Tuaran Rubber Estate, the arrest of Lam Sang and Sun Noi prompted fellow Chinese labourers to demand their release and refuse work. Their complaints challenged the gap between promised and imposed conditions. Plantation history includes these named workers’ actions as well as the companies and colonial officials who regulated their lives.",
+        "note": "3 August 1927 is documented in the district report cited by the historian; the map uses Tuaran town, not the estate.",
+        "recordIds": [
+          "island-tuaran-1927"
+        ],
+        "scope": "pacific",
+        "center": [
+          116.23,
+          6.18
+        ],
+        "zoom": 12,
+        "holdMs": 18000
+      },
+      {
+        "id": "seria",
+        "year": 1932,
+        "title": "Oil joins the coastal export economy",
+        "body": "Commercial discovery at Seria in 1929 was followed by Brunei’s first oil exports in 1932. A new industrial centre joined a coast already shaped by river settlements, courts, colonial ports and plantations. These histories overlapped without becoming one uniform story: different kinds of work, authority and maritime connection remained visible by 1934.",
+        "note": "The marker dates export commencement at a producing-region reference, not a precise tanker movement.",
+        "recordIds": [
+          "island-seria-1932"
+        ],
+        "scope": "pacific",
+        "center": [
+          114.32,
+          4.61
+        ],
+        "zoom": 12,
+        "holdMs": 18000
+      }
+    ]
+  },
+  {
+    "id": "cebu-philippines",
+    "title": "Cebu and its maritime neighbours",
+    "subtitle": "Older skills, local choices and a changing port",
+    "description": "Eight chapters follow material evidence and political encounters from precolonial communities to American occupation.",
+    "scenes": [
+      {
+        "id": "sanremigio",
+        "year": 1,
+        "title": "Cebu before the chronicles",
+        "body": "A jar from San Remigio belongs to the museum’s broad Metal Age range. It places material life on Cebu long before Magellan’s expedition. Its significance is local and concrete: an object survives from earlier human activity, even though it cannot provide the founding year or complete lifespan of a settlement.",
+        "note": "Year 1 is only a viewing position within 500 BCE–500 CE; the municipality reference protects a burial locality.",
+        "recordIds": [
+          "island-san-remigio-metal-age"
+        ],
+        "scope": "pacific",
+        "center": [
+          123.94,
+          11.08
+        ],
+        "zoom": 12,
+        "holdMs": 18000
+      },
+      {
+        "id": "butuan",
+        "year": 900,
+        "title": "The work inside a seagoing boat",
+        "body": "Butuan’s excavated boats preserve skilled plank construction and internal lugs associated with lashings. Boat 1’s wing-end timber has an AMS range of 777–988 CE. Such remains make the technologies behind regional seafaring tangible. They belong beside Cebu’s exchange history, while providing no proof of a specific voyage between Butuan and Cebu.",
+        "note": "The date concerns wood growth, not an exact launch or sinking.",
+        "recordIds": [
+          "island-butuan-boat1"
+        ],
+        "scope": "pacific",
+        "center": [
+          125.54,
+          8.95
+        ],
+        "zoom": 10,
+        "holdMs": 18000
+      },
+      {
+        "id": "tradeware",
+        "year": 1450,
+        "title": "Imported ceramics in an established port",
+        "body": "Chinese ceramics became more numerous in Cebu’s fifteenth- and sixteenth-century archaeological assemblages. Their uneven distribution points toward differences in access within the port. The objects show overseas connections before colonial settlement, with local people choosing, using and redistributing goods rather than simply receiving them at the water’s edge.",
+        "note": "Ceramic-period ranges are broad; an individual direct sailing route is not known.",
+        "recordIds": [
+          "island-cebu-tradeware"
+        ],
+        "scope": "pacific",
+        "center": [
+          123.89,
+          10.32
+        ],
+        "zoom": 13,
+        "holdMs": 18000
+      },
+      {
+        "id": "1521",
+        "year": 1521,
+        "title": "Cebu and Mactan make different choices",
+        "body": "Magellan’s expedition entered Humabon’s active port in April. Alliance and baptism at Cebu did not produce agreement everywhere. At Mactan, Lapulapu resisted the demand to accept Spanish authority and Humabon’s supremacy; the defenders defeated Magellan’s attacking force. Local political relationships are essential to understanding the encounter.",
+        "note": "The two records date separate April events and use locality references, not a reconstructed battlefield.",
+        "recordIds": [
+          "island-cebu-1521",
+          "visit-magellan-elcano-1519-1522-8"
+        ],
+        "scope": "pacific",
+        "center": [
+          123.97,
+          10.3
+        ],
+        "zoom": 18,
+        "holdMs": 18000
+      },
+      {
+        "id": "1565",
+        "year": 1565,
+        "title": "Colonial settlement and a Pacific passage",
+        "body": "Legazpi established Villa de San Miguel within the older port, and an agreement with Tupas followed armed intervention. That year Urdaneta departed Cebu and reached Acapulco, establishing a return passage across the Pacific. Colonial institutions and trans-Pacific voyages now intersected with much older Asian and interisland connections.",
+        "note": "A colonial foundation does not date first human settlement or universal local consent.",
+        "recordIds": [
+          "island-cebu-1565"
+        ],
+        "scope": "pacific",
+        "center": [
+          123.89,
+          10.32
+        ],
+        "zoom": 13,
+        "holdMs": 18000
+      },
+      {
+        "id": "urban",
+        "year": 1735,
+        "title": "Building a city meant changing its ground",
+        "body": "The Jesuit House had been built on reclaimed Tinago Marsh in 1730. Soon afterward, construction began on the present Santo Niño church, following earlier structures and fires. These different projects show how urban history combined altered waterways, new land and repeated rebuilding. The surviving city is an accumulation of episodes, not a single sixteenth-century plan frozen in place.",
+        "note": "The selected record spans the church’s 1735–1737 construction; the 1730 house supplies preceding context.",
+        "recordIds": [
+          "island-cebu-santonino-1735"
+        ],
+        "scope": "pacific",
+        "center": [
+          123.89,
+          10.32
+        ],
+        "zoom": 15,
+        "holdMs": 18000
+      },
+      {
+        "id": "port",
+        "year": 1863,
+        "title": "A port made by many islands’ work",
+        "body": "The international port opening was implemented in 1863 after an 1860 decree. Cebu collected products from Bohol, Panay, Leyte and Mindanao for wider markets. Sugar, tobacco, rice and abaca make the relationships concrete: the port’s importance depended on producers and crews across an interisland region, as well as on merchants in the city.",
+        "note": "Opening under new regulations was not the beginning of Cebu’s overseas trade.",
+        "recordIds": [
+          "island-cebu-port-1863"
+        ],
+        "scope": "pacific",
+        "center": [
+          123.89,
+          10.32
+        ],
+        "zoom": 7,
+        "holdMs": 18000
+      },
+      {
+        "id": "occupation",
+        "year": 1899,
+        "title": "Another contested colonial power",
+        "body": "American occupation displaced Cebu’s revolutionary government in February 1899. Later reversals between civil and military administration, including port closure and reopening, show how uneven the transition remained. The city’s connected economy endured under new political conditions, while residents’ experience cannot be reduced to a single transfer date.",
+        "note": "Month-level historical attestation; the guide carries the administrative sequence through 1902 and keeps later developments within 1934.",
+        "recordIds": [
+          "island-cebu-1899"
+        ],
+        "scope": "pacific",
+        "center": [
+          123.89,
+          10.32
+        ],
+        "zoom": 12,
+        "holdMs": 18000
+      }
+    ]
+  },
+  {
+    "id": "timor",
+    "title": "Timor: communities across a divided island",
+    "subtitle": "Fishing, settlement, alliance and colonial frontiers",
+    "description": "Eight chapters keep Timor’s deep maritime history beside the later struggles over forts, governors and boundaries.",
+    "scenes": [
+      {
+        "id": "laili",
+        "year": -44000,
+        "title": "An early shelter sequence",
+        "body": "Laili records an abrupt beginning of intensive occupation around 44,000 years ago. The modeled range expresses uncertainty around that onset. It gives a local view of people using Timor’s environment near Sahul, while leaving the first arrival elsewhere on the island unresolved.",
+        "note": "This scene reuses the existing onset record; it does not turn its uncertainty window into continuous residence.",
+        "recordIds": [
+          "context-laili-early"
+        ],
+        "scope": "pacific",
+        "center": [
+          126.15,
+          -8.55
+        ],
+        "zoom": 10,
+        "holdMs": 18000
+      },
+      {
+        "id": "hook",
+        "year": -18000,
+        "title": "A tool from a later fishing world",
+        "body": "Long before this shell hook, Jerimalai’s early deposits already contained marine fish. The hook belongs to a later context, between 23,000 and 16,000 calibrated years BP. Separating fish remains from a surviving tool preserves a changing technological history instead of imagining that the same fishing equipment was used across tens of millennia.",
+        "note": "The hook is indirectly dated by context and cannot be assigned to the earliest fish-bearing deposits.",
+        "recordIds": [
+          "island-jerimalai-hook"
+        ],
+        "scope": "pacific",
+        "center": [
+          127.26,
+          -8.39
+        ],
+        "zoom": 12,
+        "holdMs": 18000
+      },
+      {
+        "id": "dog",
+        "year": -1050,
+        "title": "A relationship recorded in burial",
+        "body": "A deliberately buried dog at Matja Kuru 2 documents human activity in the early first millennium BCE. It belongs to a very different time from the oldest cave deposits. The burial gives a specific glimpse of relationships with animals, without identifying the full meaning of the practice or the ancestry of the people involved.",
+        "note": "A dated animal burial, not the foundation or whole duration of a village; the existing protected locator is retained.",
+        "recordIds": [
+          "context-timor-burial"
+        ],
+        "scope": "pacific",
+        "center": [
+          127.05,
+          -8.43
+        ],
+        "zoom": 11,
+        "holdMs": 18000
+      },
+      {
+        "id": "hilltop",
+        "year": 1450,
+        "title": "An inhabited hilltop connected to exchange",
+        "body": "At Leki Wakik, imported ceramics and domestic food remains reveal a community connected beyond its hilltop. Excavators tentatively place occupation onset around 1450. Surviving walls require interpretation: their incomplete extent and accessible slopes make a purely defensive reconstruction uncertain. People lived, ate and maintained relationships here as well as shaping stone structures.",
+        "note": "Tentative onset, not the construction date of every wall; sacred features are not located.",
+        "recordIds": [
+          "island-leki-wakik-onset"
+        ],
+        "scope": "pacific",
+        "center": [
+          126.17,
+          -8.53
+        ],
+        "zoom": 12,
+        "holdMs": 18000
+      },
+      {
+        "id": "kupang",
+        "year": 1653,
+        "title": "A fort depended on a local ally",
+        "body": "VOC personnel built Fort Concordia at Kupang in February 1653 with Ama Pono’s consent and assistance. Sandalwood commerce and regional rivalry gave the foothold wider significance. The episode makes local authority visible: Dutch personnel could construct a fort without commanding all western Timor or replacing its rulers.",
+        "note": "Town and bay reference; the exact construction day and fort footprint are not reconstructed.",
+        "recordIds": [
+          "island-kupang-1653"
+        ],
+        "scope": "pacific",
+        "center": [
+          123.61,
+          -10.17
+        ],
+        "zoom": 11,
+        "holdMs": 18000
+      },
+      {
+        "id": "lifau",
+        "year": 1702,
+        "title": "A governor arrives at Lifau",
+        "body": "The arrival of a governor sent from Lisbon gave Lifau a formal administrative role in 1702. The office entered an older trading and political world in which Timorese rulers and Topass leaders retained substantial power. A title recognized by a distant monarchy did not translate automatically into uniform government over the island.",
+        "note": "Administrative arrival, not first settlement or island-wide effective sovereignty.",
+        "recordIds": [
+          "island-lifau-1702"
+        ],
+        "scope": "pacific",
+        "center": [
+          124.31,
+          -9.2
+        ],
+        "zoom": 13,
+        "holdMs": 18000
+      },
+      {
+        "id": "dili",
+        "year": 1769,
+        "title": "Government moves to an inhabited bay",
+        "body": "After leaving Lifau, the Portuguese governor established the new seat at Dili in October 1769. The account describes nearby Mambae-speaking residents and the beginning of administrative construction. Lifau did not cease to have a community, and Dili did not begin as empty ground: a moving colonial centre intersected with existing places.",
+        "note": "10 October dates the arrival and beginning of the new administrative settlement in the detailed historical account.",
+        "recordIds": [
+          "island-dili-1769"
+        ],
+        "scope": "pacific",
+        "center": [
+          125.57,
+          -8.56
+        ],
+        "zoom": 13,
+        "holdMs": 18000
+      },
+      {
+        "id": "manufahi",
+        "year": 1912,
+        "title": "The violence behind territorial rule",
+        "body": "The Manufahi rebellion of 1911–1912 and its suppression expose the force behind expanding Portuguese authority. Taxation, local power and displacement shaped people’s experience. The boundary award of 1914 later settled a colonial dispute with the Dutch, but such decisions did not make customary territories, languages and family connections align neatly with the line.",
+        "note": "Regional conflict locator; the guide distinguishes the 1859 settlement and 1914 award rather than inventing an ancient cultural border.",
+        "recordIds": [
+          "island-manufahi-1912"
+        ],
+        "scope": "pacific",
+        "center": [
+          125.65,
+          -9.0
+        ],
+        "zoom": 9,
+        "holdMs": 18000
+      }
+    ]
+  },
+  {
+    "id": "new-guinea-islands",
+    "title": "New Guinea and neighbouring islands",
+    "subtitle": "Highland gardens and connected coasts",
+    "description": "Eight chapters join ancient island occupation, highland innovation, Lapita settlement, exchange partnerships and uneven colonial reach.",
+    "scenes": [
+      {
+        "id": "newireland",
+        "year": -40050,
+        "title": "Sea crossings long before Lapita",
+        "body": "Buang Merabak records early use of New Ireland around 42,000 calibrated years BP. This offshore occupation belongs alongside older highland evidence on New Guinea, not to the much later spread of Lapita pottery. People could use caves, forest resources and the coast in an island environment reached by sea.",
+        "note": "Rounded onset and broad island locator; no vessel form or first crossing track is known.",
+        "recordIds": [
+          "island-buang-merabak-early"
+        ],
+        "scope": "pacific",
+        "center": [
+          151.69,
+          -3.17
+        ],
+        "zoom": 5,
+        "holdMs": 18000
+      },
+      {
+        "id": "kuk",
+        "year": -4700,
+        "title": "Cultivators reshape wet ground",
+        "body": "At Kuk, mounded cultivation survives beneath later deposits. The sequence documents local knowledge of plants, soils and water, part of the evidence for independent agricultural development in New Guinea. Later drainage systems represent further changes. These landscapes were made through repeated work and decisions, many centuries before Lapita settlements appeared offshore.",
+        "note": "A viewing year within the mounded-cultivation range; different agricultural phases remain separate records.",
+        "recordIds": [
+          "px-kuk-mounds"
+        ],
+        "scope": "pacific",
+        "center": [
+          144.33,
+          -5.78
+        ],
+        "zoom": 12,
+        "holdMs": 18000
+      },
+      {
+        "id": "waim",
+        "year": -2700,
+        "title": "Craft and expression in the highlands",
+        "body": "Waim’s upper cultural horizon contains a carved face, carefully made pestles, axe-adze manufacture and evidence interpreted as fibercraft. The dated combination broadens the highland story beyond gardens. Technological and social developments were already underway locally before the later movement of Lapita-associated communities through the Bismarcks.",
+        "note": "5050–4200 cal BP dates the archaeological horizon; the locator is a broad Jimi River reference.",
+        "recordIds": [
+          "island-waim-crafts"
+        ],
+        "scope": "pacific",
+        "center": [
+          144.25,
+          -5.21
+        ],
+        "zoom": 9,
+        "holdMs": 18000
+      },
+      {
+        "id": "lapita",
+        "year": -1350,
+        "title": "Lagoon settlements and a widening island world",
+        "body": "Mussau and Kamgot help date early Lapita settlement in the Bismarcks. At Kamgot, people occupied a landscape beside a lagoon whose edge changed. Later settlement extended east toward Vanuatu, Fiji, Tonga and Samoa. These linked histories are better understood as many local landfalls and communities than as one known ship’s itinerary.",
+        "note": "Selected year lies within both cited evidence windows; later eastward stages are linked in the guide, not redated here.",
+        "recordIds": [
+          "px-mussau-lapita-onset",
+          "d19-lapita-kamgot-early"
+        ],
+        "scope": "pacific",
+        "center": [
+          151.5,
+          -3.5
+        ],
+        "zoom": 4,
+        "holdMs": 18000
+      },
+      {
+        "id": "caution",
+        "year": -800,
+        "title": "Connections lead toward the mainland too",
+        "body": "Lapita pottery at Caution Bay reveals a south-coast history within an already inhabited region. Fergusson Island obsidian also reached this area, tracing material movement across maritime connections. The direction matters: the Pacific story includes exchanges toward New Guinea’s mainland as well as expansion farther east.",
+        "note": "A source-to-find connection does not establish a direct voyage or the number of intermediaries.",
+        "recordIds": [
+          "px-caution-bay-lapita",
+          "px-fergusson-caution-bay"
+        ],
+        "scope": "pacific",
+        "center": [
+          147.0,
+          -9.25
+        ],
+        "zoom": 6,
+        "holdMs": 18000
+      },
+      {
+        "id": "agila",
+        "year": 1300,
+        "title": "Partners around Hood Bay",
+        "body": "Agila’s early pottery connects its settlement with ancestral Motu assemblages, including comparison with Motupore. Later material points more strongly toward Mailu. Historical sea exchange depended on cargoes, seasonal sailing and durable relationships ashore. Hood Bay communities helped negotiate those connections; they were participants with choices of their own.",
+        "note": "1300 is within the initial-settlement estimate and Motupore comparison range; the later ceramic shift is discussed separately in the guide.",
+        "recordIds": [
+          "island-agila-settlement",
+          "island-motupore-pottery"
+        ],
+        "scope": "pacific",
+        "center": [
+          147.6,
+          -9.8
+        ],
+        "zoom": 8,
+        "holdMs": 18000
+      },
+      {
+        "id": "colonial",
+        "year": 1914,
+        "title": "An island campaign changes colonial control",
+        "body": "Australian forces landed at Kabakaul and advanced toward the wireless station at Bita Paka. German reservists and Melanesian police defended it. The campaign followed decades of colonial claims and built ports such as Rabaul. It changed the governing power while involving local people whose histories were much older than either administration.",
+        "note": "Landing-area reference for 11 September 1914, not a reconstructed battlefield; the later mandate is distinct from Papua.",
+        "recordIds": [
+          "island-kabakaul-1914"
+        ],
+        "scope": "pacific",
+        "center": [
+          152.32,
+          -4.35
+        ],
+        "zoom": 12,
+        "holdMs": 18000
+      },
+      {
+        "id": "kuk1933",
+        "year": 1933,
+        "title": "A colonial observation is only one local moment",
+        "body": "When Europeans reached the upper Wahgi, Kuk’s wetland was described as uninhabited grassland after Kawelka departure. The wider valley remained a human landscape. Earlier sweet-potato cultivation, pig husbandry and exchange had already transformed highland life. One observer’s view of one wetland cannot erase customary relationships or stand for the whole interior.",
+        "note": "Reuses the existing 1933 observation; absence from this wetland does not mean regional absence or loss of customary ownership.",
+        "recordIds": [
+          "early-kuk-1933"
+        ],
+        "scope": "pacific",
+        "center": [
+          144.33,
+          -5.78
+        ],
+        "zoom": 11,
+        "holdMs": 18000
+      }
+    ]
+  }
+];

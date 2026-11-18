@@ -1,3 +1,5 @@
+import {islandChainStories} from './island-chain-stories';
+import {yapMicronesiaStories} from './yap-micronesia-dives';
 import {sixGuideStories} from './six-guide-stories';
 import {comingSoonBStories} from './coming-soon-b-stories';
 import {comingSoonAStories} from './coming-soon-a-stories';
@@ -31,6 +33,8 @@ export interface Story {
 // Scene years are viewing positions inside the cited evidence windows, not new
 // historical estimates. Notes distinguish representative years from dated events.
 export const stories: Story[] = [
+ ...islandChainStories,
+ ...yapMicronesiaStories,
   {
     id: "pacific-arrivals",
     title: "Across the Pacific",

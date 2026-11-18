@@ -37,3 +37,11 @@ test('each list has truthful availability and no invented playback links',()=>{
  const html=deepDiveIndexHTML('unknown');
  assert.match(html,/Choose your way in/);assert.doesNotMatch(html,/undefined/);
 });
+
+test('the rai movie and its illustrated guide share one subject card',()=>{
+ const card=deepDives.find(d=>d.links.some(l=>l.href==='#topic/rai-stone-money'));
+ assert.ok(card);
+ assert.equal(card.category,'subjects');
+ assert.ok(card.links.some(l=>l.href==='sites/yap-rai.html'&&l.label==='Read guide'));
+ assert.equal(deepDives.filter(d=>d.links.some(l=>l.href==='sites/yap-rai.html')).length,1);
+});
