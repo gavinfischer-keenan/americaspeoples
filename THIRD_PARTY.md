@@ -453,3 +453,7 @@ The guide-media manifest now includes 31 individually credited photographs and m
 ## Atlantic Brazil excavation figure
 
 The complete Figure 3 from Colonese and coauthors (2025), *New insights into the formation process and chronology of the Sambaqui Morro do Ouro*, is reused unchanged under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The published caption credits the photographs to the author(s), 2019. [Article, figure and rights notice](https://www.scielo.br/j/bgoeldi/a/FBBPdxrrKkzM9kSczgKBHWh/?lang=en). The separate third-party map in Figure 1 is not included. Creator, source, license, modification statement and checksum are recorded in the guide-media manifest and public caption. This image retains its own license, independently of the atlas’s noncommercial terms.
+
+## Morro Grande funerary vessels
+
+Figure 4 from Buarque, Baumann, Barbosa-Guimarães and Cordeiro (2020), *Entre dois mundos*, credits Angela Buarque (2009b). The complete embedded photograph is extracted unchanged from PDF page 12 (printed page 32). The [article's copyright notice](https://www.revista.sabnet.org/ojs/index.php/sab/article/view/726#license) grants [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/); the figure has no separate rights exception. The photograph is not cropped, retouched or recompressed. The guide caption and media manifest preserve its creator, source, license, extraction statement and checksum. These third-party terms remain attached to the image independently of the atlas's original writing.

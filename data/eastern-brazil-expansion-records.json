@@ -1,0 +1,3227 @@
+{
+  "records": [
+    {
+      "id": "eb-se-morro-grande-urn",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Morro Grande — charcoal in a burial urn",
+      "culture": {
+        "id": "eb-se-culture-arar",
+        "name": "Araruama Tupiguarani communities",
+        "kind": "culture",
+        "color": "#856447"
+      },
+      "location": {
+        "id": "eb-se-place-morro-grande",
+        "name": "Morro Grande, Araruama",
+        "lon": -42.364,
+        "lat": -22.785,
+        "precision": "Site area, approximately 0.5 km.",
+        "provenance": "Mageste 2017, Table 13, prints 770627 E, 7477853 N, UTM 23K. Converted as zone 23 south and rounded given the unstated datum. The Rio state inventory AR-CS-001 and the Scheel-Ybert et al. Figure 1 map identify the archaeological site at the school in Morro Grande district. https://www.academia.edu/94551602/Cronologia_e_Variabilidade_Os_Ceramistas_Tupiguarani_da_Zona_da_Mata_mineira"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 130,
+        "end": 560,
+        "original": "Beta-84333: 1820–1390 cal BP at 2σ in Macario et al. 2009; 1817–1394 cal BP in Buarque et al. 2020.",
+        "method": "Converted published calibrated limits from the 1950 CE reference.",
+        "interpretation": "Charcoal within an urn dates one archaeological context.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "At Morro Grande, people used large pots and painted bowls in a burial ceremony. Charcoal recovered from inside an urn has a calibrated age range of 130–560 CE.",
+          "explanation": "The excavators associated the charcoal with the rite. The sample dates the charcoal, and its age range reaches the sixth century.",
+          "status": "well-supported",
+          "support": [
+            {
+              "sourceId": "eb-se-src-morro-2008",
+              "locator": "pp. 765–767, Figure 3 and Results",
+              "note": "Identifies charcoal from within an urn and associated artifacts.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-morro-2009",
+              "locator": "p. 941, Results and Discussion, Figure 2",
+              "note": "Publishes the 2σ interval.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-entre-dois-mundos",
+              "locator": "p. 30, Table 1, Beta-84333",
+              "note": "Later account gives the closely matching calendar range 133–556 CE.",
+              "stance": "context"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-se-src-morro-2009",
+          "authors": "K. D. Macario, A. Buarque, R. Scheel-Ybert, R. M. Anjos, P. R. S. Gomes, M. Beauclair, and C. Hatté",
+          "year": 2009,
+          "title": "The long-term Tupiguarani occupation in southeastern Brazil",
+          "venue": "Radiocarbon 51(3):937–946",
+          "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/E7070879AF0B41F935BDA932FAD3E10E/S0033822200034019a.pdf/div-class-title-the-long-term-tupiguarani-occupation-in-southeastern-brazil-div.pdf",
+          "access": "Full paper, methods, calibrated distribution and archaeological interpretation checked.",
+          "referenceType": "journal-article",
+          "doi": "10.1017/S0033822200034019"
+        },
+        {
+          "id": "eb-se-src-morro-2008",
+          "authors": "Rita Scheel-Ybert, Kita Macario, Angela Buarque, Roberto M. Anjos, and Mariana Beauclair",
+          "year": 2008,
+          "title": "A new age to an old site: the earliest Tupiguarani settlement in Rio de Janeiro State?",
+          "venue": "Anais da Academia Brasileira de Ciências 80(4):763–770",
+          "url": "https://pdfs.semanticscholar.org/3b16/722875d00fbfc24d5d9f9216a95516a1e922.pdf",
+          "access": "Full text, Figure 1 map, Figure 3 sector plan and urn charcoal description checked.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "eb-se-src-entre-dois-mundos",
+          "authors": "Angela Buarque, Thereza Baumann, Jeanne Cordeiro, and Márcia Barbosa-Guimarães",
+          "year": 2020,
+          "title": "Entre dois mundos: Franceses de Paratitou e Tupinambá de Rouen",
+          "venue": "Revista de Arqueologia 33(2):21–42",
+          "url": "https://revista.sabnet.org/ojs/index.php/sab/article/download/726/46/46",
+          "access": "Full text, table, contextual discussion, disjoint dates and footnote coordinates checked.",
+          "referenceType": "journal-article",
+          "doi": "10.24885/sab.v33i2.726"
+        }
+      ],
+      "review": {
+        "summary": "At Morro Grande, people used large pots and painted bowls in a burial ceremony. Charcoal recovered from inside an urn has a calibrated age range of 130–560 CE.",
+        "limitations": "The excavators associated the charcoal with the rite. The sample dates the charcoal, and its age range reaches the sixth century.",
+        "discussion": "The urn lay in the part of the site where excavators also found much older hearths. Later funerary material came from another area of the settlement, where people returned to use the land.",
+        "provenance": "Compared the archaeological context and published calendar evidence with the cited locality reference.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Source-checked archaeological context and geographic reference."
+        ],
+        "relatedIds": [
+          "eb-se-morro-grande-late-hearth"
+        ]
+      }
+    },
+    {
+      "id": "eb-se-morro-grande-late-hearth",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Morro Grande — a hearth beside a later burial",
+      "culture": {
+        "id": "eb-se-culture-arar",
+        "name": "Araruama Tupiguarani communities",
+        "kind": "culture",
+        "color": "#856447"
+      },
+      "location": {
+        "id": "eb-se-place-morro-grande",
+        "name": "Morro Grande, Araruama",
+        "lon": -42.364,
+        "lat": -22.785,
+        "precision": "Site area, approximately 0.5 km.",
+        "provenance": "Mageste 2017, Table 13, prints 770627 E, 7477853 N, UTM 23K. Converted as zone 23 south and rounded given the unstated datum. The Rio state inventory AR-CS-001 and the Scheel-Ybert et al. Figure 1 map identify the archaeological site at the school in Morro Grande district. https://www.academia.edu/94551602/Cronologia_e_Variabilidade_Os_Ceramistas_Tupiguarani_da_Zona_da_Mata_mineira"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1219,
+        "end": 1699,
+        "original": "PLID-000686 / Plid-0686B: 731–251 cal BP at 2σ in Buarque et al. 2020, Table 1. Macario et al. 2009 report 750–0 cal BP at 2σ.",
+        "method": "Converted later published calibrated limits from the 1950 CE reference. The original analytical publication reports a broader range of about 1200–1950 CE.",
+        "interpretation": "A hearth associated with a funerary assemblage offers evidence of later use in another sector.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "People returned to a different part of Morro Grande and lit a fire near a burial. The charcoal dates the fire within a broad range that includes the centuries before and after Portuguese arrival.",
+          "explanation": "The calibration and a thermoluminescence result leave room for both a precolonial and a colonial-era date. The earlier urn sample comes from a different sector.",
+          "status": "under discussion",
+          "support": [
+            {
+              "sourceId": "eb-se-src-entre-dois-mundos",
+              "locator": "p. 30, Table 1, PLID-000686",
+              "note": "Reports calibrated limits of 731–251 cal BP.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-morro-2009",
+              "locator": "pp. 941 and 944, Fig. 2",
+              "note": "Describes the dated charcoal, alternate broad calibration and timing possibilities.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-mageste-2017",
+              "locator": "pp. 224, 246, Table 12 and Fig. 76",
+              "note": "Locates the later hearth and funerary arrangement in sector 11.",
+              "stance": "supports"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-se-src-morro-2009",
+          "authors": "K. D. Macario, A. Buarque, R. Scheel-Ybert, R. M. Anjos, P. R. S. Gomes, M. Beauclair, and C. Hatté",
+          "year": 2009,
+          "title": "The long-term Tupiguarani occupation in southeastern Brazil",
+          "venue": "Radiocarbon 51(3):937–946",
+          "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/E7070879AF0B41F935BDA932FAD3E10E/S0033822200034019a.pdf/div-class-title-the-long-term-tupiguarani-occupation-in-southeastern-brazil-div.pdf",
+          "access": "Full paper, methods, calibrated distribution and archaeological interpretation checked.",
+          "referenceType": "journal-article",
+          "doi": "10.1017/S0033822200034019"
+        },
+        {
+          "id": "eb-se-src-entre-dois-mundos",
+          "authors": "Angela Buarque, Thereza Baumann, Jeanne Cordeiro, and Márcia Barbosa-Guimarães",
+          "year": 2020,
+          "title": "Entre dois mundos: Franceses de Paratitou e Tupinambá de Rouen",
+          "venue": "Revista de Arqueologia 33(2):21–42",
+          "url": "https://revista.sabnet.org/ojs/index.php/sab/article/download/726/46/46",
+          "access": "Full text, table, contextual discussion, disjoint dates and footnote coordinates checked.",
+          "referenceType": "journal-article",
+          "doi": "10.24885/sab.v33i2.726"
+        },
+        {
+          "id": "eb-se-src-mageste-2017",
+          "authors": "Leandro Elias Canaan Mageste",
+          "year": 2017,
+          "title": "Cronologia e Variabilidade: Os Ceramistas Tupiguarani da Zona da Mata Mineira e do Complexo Lagunar de Araruama",
+          "venue": "Universidade de São Paulo, Museu de Arqueologia e Etnologia",
+          "url": "https://www.academia.edu/94551602/Cronologia_e_Variabilidade_Os_Ceramistas_Tupiguarani_da_Zona_da_Mata_mineira",
+          "access": "Author's full thesis checked for sample inventories, context and coordinates.",
+          "referenceType": "thesis",
+          "publisher": "Universidade de São Paulo, Museu de Arqueologia e Etnologia"
+        }
+      ],
+      "review": {
+        "summary": "People returned to a different part of Morro Grande and lit a fire near a burial. The charcoal dates the fire within a broad range that includes the centuries before and after Portuguese arrival.",
+        "limitations": "The calibration and a thermoluminescence result leave room for both a precolonial and a colonial-era date. The earlier urn sample comes from a different sector.",
+        "discussion": "The dated charcoal came from the same funerary arrangement as pottery dated independently by thermoluminescence. Differences in the vessels from this sector led the team to consider whether people returned to the site after a long interval.",
+        "provenance": "Compared the archaeological context and published calendar evidence with the cited locality reference.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Source-checked archaeological context and geographic reference."
+        ],
+        "relatedIds": [
+          "eb-se-morro-grande-urn"
+        ]
+      }
+    },
+    {
+      "id": "eb-se-bananeiras-urn",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Bananeiras — a woman buried beside the Araruama lagoon",
+      "culture": {
+        "id": "eb-se-culture-arar",
+        "name": "Araruama Tupiguarani communities",
+        "kind": "culture",
+        "color": "#856447"
+      },
+      "location": {
+        "id": "eb-se-place-bananeiras",
+        "name": "Bananeiras",
+        "lon": -42.285,
+        "lat": -22.865,
+        "precision": "Archaeological locality rounded to 0.001°.",
+        "provenance": "Buarque et al. 2020, p. 33 n. 9, gives 22°51′54.1″ S, 42°17′06.9″ W, Córrego Alegre. https://revista.sabnet.org/ojs/index.php/sab/article/download/726/46/46"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1500,
+        "end": 1681,
+        "original": "Beta-171160: 450–269 cal BP at 2σ in Emenes et al. 2026. The earlier Buarque et al. 2020 calibration reports 1420–1510 CE and 1600–1620 CE as separate possibilities.",
+        "method": "Emenes et al. use CALIB 8.20, SHCal20 and Marine20 with a local marine reservoir correction where applicable. The study does not specify a sample-level curve or marine fraction for Bananeiras.",
+        "interpretation": "The map uses the newer reported limits of 1500–1681 CE for the directly dated burial. The earlier publication preserves two alternative possible ranges and allows for a date before 1500.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "At Bananeiras, mourners placed a young woman in a large clay urn. Painted bowls and two pendants made from marine shells accompanied her.",
+          "explanation": "The newer dating places the burial between 1500 and 1681 CE. The excavation team's earlier calibration gave two separate possibilities, 1420–1510 CE and 1600–1620 CE.",
+          "status": "well-supported",
+          "support": [
+            {
+              "sourceId": "eb-se-src-bananeiras-excavation",
+              "locator": "pp. 40–49 and 50, Table I",
+              "note": "Reports the excavated burial, bowls, pendants, and direct AMS measurement of human remains.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-entre-dois-mundos",
+              "locator": "p. 33 and nn. 9–10; p. 30, Table 1",
+              "note": "Identifies the two calendar ranges and the location.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-emenes",
+              "locator": "p. 24, Table 1, Bananeiras",
+              "note": "Published modern recalibration moves the range to 1500–1681 CE.",
+              "stance": "context"
+            },
+            {
+              "sourceId": "eb-se-src-oliveira-ceramic",
+              "locator": "Abstract, materials and conclusions",
+              "note": "Reports sixteenth-century results for pottery, a different sample from the human bone Beta-171160.",
+              "stance": "context"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-se-src-bananeiras-excavation",
+          "authors": "Ângela Buarque, Claudia Rodrigues-Carvalho, and E. C. Silva",
+          "year": 2003,
+          "title": "Programa funerário dos Tupinambá em Araruama, RJ — Sítio Bananeiras",
+          "venue": "Revista do Museu de Arqueologia e Etnologia 13:39–55",
+          "url": "https://www.revistas.usp.br/revmae/article/download/109464/107938/196395",
+          "access": "Full text, figures, context and sample table checked.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "eb-se-src-entre-dois-mundos",
+          "authors": "Angela Buarque, Thereza Baumann, Jeanne Cordeiro, and Márcia Barbosa-Guimarães",
+          "year": 2020,
+          "title": "Entre dois mundos: Franceses de Paratitou e Tupinambá de Rouen",
+          "venue": "Revista de Arqueologia 33(2):21–42",
+          "url": "https://revista.sabnet.org/ojs/index.php/sab/article/download/726/46/46",
+          "access": "Full text, table, contextual discussion, disjoint dates and footnote coordinates checked.",
+          "referenceType": "journal-article",
+          "doi": "10.24885/sab.v33i2.726"
+        },
+        {
+          "id": "eb-se-src-emenes",
+          "authors": "Juliana Emenes, Murilo Bastos, Victor Guida, Vivian Rebelo, Carla Neto, Claudia Rodrigues-Carvalho, and Claudio Valeriano",
+          "year": 2026,
+          "title": "Estudo preliminar sobre o uso de isótopos de estrôncio em pesquisas de migração e mobilidade residencial humana no litoral fluminense",
+          "venue": "Revista do Museu de Arqueologia e Etnologia 47:21–32",
+          "url": "https://revistas.usp.br/revmae/pt_BR/article/download/220928/229086/867331",
+          "access": "Full text and new calibrations in Table 1 checked.",
+          "referenceType": "journal-article",
+          "doi": "10.11606/issn.2448-1750.revmae.2026.220928"
+        },
+        {
+          "id": "eb-se-src-oliveira-ceramic",
+          "authors": "Fabiana M. Oliveira, Kita D. Macario, Bruna B. Pereira, Angela Buarque, David Chivall, Eduardo Q. Alves, and Christopher Bronk Ramsey",
+          "year": 2017,
+          "title": "Evaluation of Sample Preparation Protocols for the 14C Dating of Tupiguarani Pottery in Southeastern Brazil",
+          "venue": "Radiocarbon 59(3):765–773",
+          "url": "https://www.cambridge.org/core/journals/radiocarbon/article/abs/evaluation-of-sample-preparation-protocols-for-the-14c-dating-of-tupiguarani-pottery-in-southeastern-brazil/8A53F86E08E7F99DDE51D63DDDFA9E3E",
+          "access": "Publisher abstract and materials/date interpretation checked. This study measured pottery residues.",
+          "referenceType": "journal-article",
+          "doi": "10.1017/RDC.2016.58"
+        }
+      ],
+      "review": {
+        "summary": "At Bananeiras, mourners placed a young woman in a large clay urn. Painted bowls and two pendants made from marine shells accompanied her.",
+        "limitations": "The newer dating places the burial between 1500 and 1681 CE. The excavation team's earlier calibration gave two separate possibilities, 1420–1510 CE and 1600–1620 CE.",
+        "discussion": "The burial lay near the Araruama lagoon. The natural shell layers helped preserve her bones. The dug area was small because buildings already surrounded it, so this burial provides a much more precise picture than the settlement layout. A separate radiocarbon study of pottery residues at Bananeiras found evidence of sixteenth-century activity.",
+        "provenance": "Compared the archaeological context and published calendar evidence with the cited locality reference.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Source-checked archaeological context and geographic reference."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "eb-se-cabo-frio-cremation",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Ilha do Cabo Frio — a cremation near Una pottery",
+      "culture": {
+        "id": "eb-se-culture-rj-coast",
+        "name": "Rio de Janeiro coastal fisher-gatherers",
+        "kind": "culture",
+        "color": "#497380"
+      },
+      "location": {
+        "id": "eb-se-place-cabo-frio-island",
+        "name": "Ilha do Cabo Frio, Arraial do Cabo",
+        "lon": -42.006,
+        "lat": -23.005,
+        "precision": "Island reference point, within a few kilometers of the site shown on the field map.",
+        "provenance": "The heritage survey publishes 23°00′17″ S, 42°00′20″ W for the island. Tenório et al. Figure 1 distinguishes the site called Ilha do Cabo Frio from Usiminas on the same island. https://periodicos.uff.br/uso_publico/article/download/28771/16699/99152"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 340,
+        "end": 530,
+        "original": "Beta-222741: 1610–1420 cal BP.",
+        "method": "Converted the published calibrated range from the 1950 CE reference.",
+        "interpretation": "The range dates a cremation context and reaches the early sixth century.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "On Ilha do Cabo Frio, excavators found a cremation close to pottery of the Una tradition. Elsewhere at the site, they recorded pierced shark teeth and cut marine shells.",
+          "explanation": "The burial date reaches the sixth century. The relationship between the cremation and nearby pottery remains an interpretation based on proximity.",
+          "status": "well-supported",
+          "support": [
+            {
+              "sourceId": "eb-se-src-cabo-frio",
+              "locator": "pp. 137–138, Table 1 and Fig. 8; pp. 140–141, Table 2",
+              "note": "Reports the calibrated cremation, associated material and the contact hypothesis.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-cabo-frio-island",
+              "locator": "Section 3, Sambaquis da Ilha de Cabo Frio",
+              "note": "Names the sites and gives a geographic reference for the island.",
+              "stance": "supports"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-se-src-cabo-frio",
+          "authors": "Maria Cristina Tenório, Marisa Coutinho Afonso, and Diogo de Cerqueira Pinto",
+          "year": 2010,
+          "title": "Arqueologia do Arraial do Cabo - com foco nos sítios da Ilha do Cabo Frio",
+          "venue": "Revista do Museu de Arqueologia e Etnologia 20:127–145",
+          "url": "https://revistas.usp.br/revmae/pt_BR/article/download/89918/92715/128895",
+          "access": "Original excavation report, calibrated date table, site map, cremation plan and interpretation checked.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "eb-se-src-cabo-frio-island",
+          "authors": "Alícia Bertoloto, Anderson Passos, Gabriela Marques, Iuri Pacheco, Luciano Rapagnã, Melanie Lopes, and Thayse Bertucci",
+          "year": 2015,
+          "title": "Sambaquis do estado do Rio de Janeiro: musealização como forma de preservação",
+          "venue": "Revista Eletrônica Uso Público em Unidades de Conservação 3(6)",
+          "url": "https://periodicos.uff.br/uso_publico/article/download/28771/16699/99152",
+          "access": "Public island coordinate and names of its two sites checked.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "On Ilha do Cabo Frio, excavators found a cremation close to pottery of the Una tradition. Elsewhere at the site, they recorded pierced shark teeth and cut marine shells.",
+        "limitations": "The burial date reaches the sixth century. The relationship between the cremation and nearby pottery remains an interpretation based on proximity.",
+        "discussion": "The island's archaeological deposits document fishing and distinct ways of preparing the dead. The investigators considered contact with people making Una pottery as one possible explanation for the new burial practice.",
+        "provenance": "Compared the archaeological context and published calendar evidence with the cited locality reference.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Source-checked archaeological context and geographic reference."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "eb-se-ze-espinho-burial",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Zé Espinho — a later burial in the Guaratiba shell mounds",
+      "culture": {
+        "id": "eb-se-culture-rj-coast",
+        "name": "Rio de Janeiro coastal fisher-gatherers",
+        "kind": "culture",
+        "color": "#497380"
+      },
+      "location": {
+        "id": "eb-se-place-ze-espinho",
+        "name": "Zé Espinho",
+        "lon": -43.581,
+        "lat": -23.021,
+        "precision": "Rounded published shell-mound complex location.",
+        "provenance": "Pezo-Lanfranco et al., Table 1, 23°01′14″ S, 43°34′53″ W. https://www.academia.edu/122303254/Evidence_of_variability_in_carbohydrate_consumption_in_prehistoric_fisher_hunter_gatherers_of_Southeastern_Brazil_Spatiotemporal_trends_of_oral_health_markers"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 600,
+        "end": 1222,
+        "original": "Burial 3B / individual 2061: 600–1222 cal CE at 2σ from context.",
+        "method": "Published contextual radiocarbon range. Emenes et al. give 629–1224 CE for the same conventional measurement after recalibration.",
+        "interpretation": "The date is associated with the burial context and represents later use of the shell-mound complex.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "On the tidal plain at Guaratiba, people buried their dead among shell deposits. A dated context in the Zé Espinho complex places one burial between 600 and 1222 CE.",
+          "explanation": "The range comes from dated archaeological material associated with burial 3B. It applies to one context in a complex with several mounds and earlier deposits.",
+          "status": "well-supported",
+          "support": [
+            {
+              "sourceId": "eb-se-src-filippini",
+              "locator": "Table 2, individual 2061; dating discussion and supplementary photograph 3",
+              "note": "Provides the 2σ context range and associates the person with burial 3B.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-pezo",
+              "locator": "Table 1, Zé Espinho",
+              "note": "Describes environment, the published location and pottery in upper deposits.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-emenes",
+              "locator": "p. 24, Table 1, Zé Espinho",
+              "note": "Updated calibration is closely comparable.",
+              "stance": "context"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-se-src-filippini",
+          "authors": "José Filippini, Luis Pezo-Lanfranco, and Sabine Eggers",
+          "year": 2019,
+          "title": "Estudio regional sistemático de treponematosis en conchales (sambaquis) precolombinos de Brasil",
+          "venue": "Chungara 51(3):403–425",
+          "url": "https://www.chungara.cl/Vols/2019/51-3/51-3-07-FILIPPINI_ET_AL.pdf",
+          "access": "Full text, calibrated context table and individual inventory checked.",
+          "referenceType": "journal-article",
+          "doi": "10.4067/S0717-73562019005000301"
+        },
+        {
+          "id": "eb-se-src-pezo",
+          "authors": "Luis Pezo-Lanfranco",
+          "year": 2018,
+          "title": "Evidence of variability in carbohydrate consumption in prehistoric fisher-hunter-gatherers of Southeastern Brazil: Spatiotemporal trends of oral health markers",
+          "venue": "American Journal of Physical Anthropology 167(3):507–523",
+          "url": "https://www.academia.edu/122303254/Evidence_of_variability_in_carbohydrate_consumption_in_prehistoric_fisher_hunter_gatherers_of_Southeastern_Brazil_Spatiotemporal_trends_of_oral_health_markers",
+          "access": "Full table checked for coordinates, setting and use.",
+          "referenceType": "journal-article",
+          "doi": "10.1002/ajpa.23681"
+        },
+        {
+          "id": "eb-se-src-emenes",
+          "authors": "Juliana Emenes, Murilo Bastos, Victor Guida, Vivian Rebelo, Carla Neto, Claudia Rodrigues-Carvalho, and Claudio Valeriano",
+          "year": 2026,
+          "title": "Estudo preliminar sobre o uso de isótopos de estrôncio em pesquisas de migração e mobilidade residencial humana no litoral fluminense",
+          "venue": "Revista do Museu de Arqueologia e Etnologia 47:21–32",
+          "url": "https://revistas.usp.br/revmae/pt_BR/article/download/220928/229086/867331",
+          "access": "Full text and new calibrations in Table 1 checked.",
+          "referenceType": "journal-article",
+          "doi": "10.11606/issn.2448-1750.revmae.2026.220928"
+        }
+      ],
+      "review": {
+        "summary": "On the tidal plain at Guaratiba, people buried their dead among shell deposits. A dated context in the Zé Espinho complex places one burial between 600 and 1222 CE.",
+        "limitations": "The range comes from dated archaeological material associated with burial 3B. It applies to one context in a complex with several mounds and earlier deposits.",
+        "discussion": "The nearby mangroves, channels and coastal forests offered fishing and gathering grounds. The deposits preserve the traces of repeated activity in that setting, including a layer with ceramic sherds and several burial contexts.",
+        "provenance": "Compared the archaeological context and published calendar evidence with the cited locality reference.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Source-checked archaeological context and geographic reference."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "eb-se-mata-dos-bentes",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Mata dos Bentes — fired pottery on a Rio Novo hill",
+      "culture": {
+        "id": "eb-se-culture-zona",
+        "name": "Zona da Mata Tupiguarani communities",
+        "kind": "culture",
+        "color": "#8a654b"
+      },
+      "location": {
+        "id": "eb-se-place-mata-dos-bentes",
+        "name": "Mata dos Bentes",
+        "lon": -43.164,
+        "lat": -21.513,
+        "precision": "Rounded published archaeological-site reference, approximately 0.5 km.",
+        "provenance": "Loures de Oliveira 2012, Table 1, gives 690224 E, 7620010 N. UTM zone 23 south is confirmed in Mageste 2017 Table 1. Converted and rounded given the unspecified datum. https://ojs.ufgd.edu.br/nanduty/article/download/2292/1361/6881"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 604,
+        "end": 804,
+        "original": "604–804 CE (TL, Corrêa Table 14).",
+        "method": "Published calendar dates from thermoluminescence of fired pottery in Corrêa 2009, Table 14.",
+        "interpretation": "Sample age estimates date activity in the excavated site. Overlap among the sample estimates does not determine the duration of settlement.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Residents of a hill near present-day Rio Novo shaped and fired clay vessels. Excavators recovered corrugated and painted pottery alongside worked stone.",
+          "explanation": "The date applies to fired pottery from the site. Publications give different uncertainty estimates for the early sample, and the timeline uses Corrêa's printed calendar range.",
+          "status": "well-supported",
+          "support": [
+            {
+              "sourceId": "eb-se-src-correa",
+              "locator": "ch. VI, p. 274, Table 14; ch. V, p. 228",
+              "note": "Lists pottery luminescence ranges in calendar years and recovered stone assemblage.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-loures-oliveira",
+              "locator": "Table 1 and site descriptions",
+              "note": "Locates the site within the Zona da Mata survey and provides coordinates.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-mageste-loures",
+              "locator": "pp. 129–130, Table 2",
+              "note": "Documents pottery surface treatments in the studied assemblage.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-mageste-2017",
+              "stance": "context",
+              "locator": "Table 1, site inventory and coordinates",
+              "note": "Corroborates the surveyed locality and regional ceramic context; the displayed calendar range comes from Corrêa Table 14."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-se-src-correa",
+          "authors": "Ângelo Alves Corrêa",
+          "year": 2009,
+          "title": "Tetama nas matas mineiras: sítios Tupi na microrregião de Juiz de Fora - MG",
+          "venue": "Universidade de São Paulo, Museu de Arqueologia e Etnologia",
+          "url": "https://www.teses.usp.br/teses/disponiveis/71/71131/tde-30042009-135816/publico/08_CAPITULO_VI.pdf",
+          "access": "Chapters V and VI of the USP thesis checked, including the calendar-age table.",
+          "referenceType": "thesis",
+          "doi": "10.11606/D.71.2009.tde-30042009-135816",
+          "publisher": "Universidade de São Paulo, Museu de Arqueologia e Etnologia"
+        },
+        {
+          "id": "eb-se-src-loures-oliveira",
+          "authors": "Ana Paula de Paula Loures de Oliveira",
+          "year": 2012,
+          "title": "Tradição, identidade e região: alguns apontamentos sobre os aspectos teóricos do Projeto de Mapeamento Arqueológico e Cultural da Zona da Mata Mineira",
+          "venue": "Revista Ñanduty 1(1)",
+          "url": "https://ojs.ufgd.edu.br/nanduty/article/download/2292/1361/6881",
+          "access": "Project report site descriptions, locality table and coordinates checked.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "eb-se-src-mageste-loures",
+          "authors": "Leandro Elias Canaan Mageste and Ana Paula de Paula Loures Oliveira",
+          "year": 2011,
+          "title": "Dicotomia ou complementaridade? O eterno debate acerca dos conceitos de estilo e função",
+          "venue": "Revista do Museu de Arqueologia e Etnologia, Suplemento 11:125–131",
+          "url": "https://revistas.usp.br/revmaesupl/article/download/113546/111501/205406",
+          "access": "Primary ceramic analysis and decoration inventory checked.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "eb-se-src-mageste-2017",
+          "authors": "Leandro Elias Canaan Mageste",
+          "year": 2017,
+          "title": "Cronologia e Variabilidade: Os Ceramistas Tupiguarani da Zona da Mata Mineira e do Complexo Lagunar de Araruama",
+          "venue": "Universidade de São Paulo, Museu de Arqueologia e Etnologia",
+          "url": "https://www.academia.edu/94551602/Cronologia_e_Variabilidade_Os_Ceramistas_Tupiguarani_da_Zona_da_Mata_mineira",
+          "access": "Author's full thesis checked for sample inventories, context and coordinates.",
+          "referenceType": "thesis",
+          "publisher": "Universidade de São Paulo, Museu de Arqueologia e Etnologia"
+        }
+      ],
+      "review": {
+        "summary": "Residents of a hill near present-day Rio Novo shaped and fired clay vessels. Excavators recovered corrugated and painted pottery alongside worked stone.",
+        "limitations": "The date applies to fired pottery from the site. Publications give different uncertainty estimates for the early sample, and the timeline uses Corrêa's printed calendar range.",
+        "discussion": "The collection preserves differently finished vessels, including pieces with white and red slips and surfaces marked by fingertips. Later finds are evidence of another period of use.",
+        "provenance": "Compared the archaeological context and published calendar evidence with the cited locality reference.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Source-checked archaeological context and geographic reference."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "eb-se-primavera",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Primavera — pottery and stone on a hill above the Rio Novo drainage",
+      "culture": {
+        "id": "eb-se-culture-zona",
+        "name": "Zona da Mata Tupiguarani communities",
+        "kind": "culture",
+        "color": "#8a654b"
+      },
+      "location": {
+        "id": "eb-se-place-primavera",
+        "name": "Primavera",
+        "lon": -43.044,
+        "lat": -21.53,
+        "precision": "Rounded published archaeological-site reference, approximately 0.5 km.",
+        "provenance": "Loures de Oliveira 2012, Table 1, gives 702618 E, 7617899 N. UTM zone 23 south is confirmed in Mageste 2017 Table 1. Converted and rounded given the unspecified datum. https://ojs.ufgd.edu.br/nanduty/article/download/2292/1361/6881"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1114,
+        "end": 1524,
+        "original": "1114–1314 and 1384–1524 CE (two pottery TL estimates in Corrêa Table 14).",
+        "method": "Published calendar dates from thermoluminescence of fired pottery in Corrêa 2009, Table 14.",
+        "interpretation": "Sample age estimates date activity in the excavated site. Overlap among the sample estimates does not determine the duration of settlement.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 1114,
+            "end": 1314,
+            "certainty": "approximate",
+            "note": "Calendar estimate for the earlier dated pottery."
+          },
+          {
+            "start": 1384,
+            "end": 1524,
+            "certainty": "approximate",
+            "note": "Calendar estimate for another sample."
+          }
+        ]
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "At Primavera, residents used worked stone and clay vessels with smooth, painted and corrugated finishes. Two pottery samples date activity on the hill during separate time ranges.",
+          "explanation": "The timeline follows Corrêa's printed estimates. The technical literature reports differing ages or uncertainties for some samples, and the gap between these intervals is left open.",
+          "status": "well-supported",
+          "support": [
+            {
+              "sourceId": "eb-se-src-correa",
+              "locator": "ch. VI, p. 274, Table 14; ch. V, p. 228",
+              "note": "Lists pottery luminescence ranges in calendar years and recovered stone assemblage.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-loures-oliveira",
+              "locator": "Table 1 and site descriptions",
+              "note": "Locates the site within the Zona da Mata survey and provides coordinates.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-mageste-loures",
+              "locator": "pp. 129–130, Table 2",
+              "note": "Documents pottery surface treatments in the studied assemblage.",
+              "stance": "supports"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-se-src-correa",
+          "authors": "Ângelo Alves Corrêa",
+          "year": 2009,
+          "title": "Tetama nas matas mineiras: sítios Tupi na microrregião de Juiz de Fora - MG",
+          "venue": "Universidade de São Paulo, Museu de Arqueologia e Etnologia",
+          "url": "https://www.teses.usp.br/teses/disponiveis/71/71131/tde-30042009-135816/publico/08_CAPITULO_VI.pdf",
+          "access": "Chapters V and VI of the USP thesis checked, including the calendar-age table.",
+          "referenceType": "thesis",
+          "doi": "10.11606/D.71.2009.tde-30042009-135816",
+          "publisher": "Universidade de São Paulo, Museu de Arqueologia e Etnologia"
+        },
+        {
+          "id": "eb-se-src-loures-oliveira",
+          "authors": "Ana Paula de Paula Loures de Oliveira",
+          "year": 2012,
+          "title": "Tradição, identidade e região: alguns apontamentos sobre os aspectos teóricos do Projeto de Mapeamento Arqueológico e Cultural da Zona da Mata Mineira",
+          "venue": "Revista Ñanduty 1(1)",
+          "url": "https://ojs.ufgd.edu.br/nanduty/article/download/2292/1361/6881",
+          "access": "Project report site descriptions, locality table and coordinates checked.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "eb-se-src-mageste-loures",
+          "authors": "Leandro Elias Canaan Mageste and Ana Paula de Paula Loures Oliveira",
+          "year": 2011,
+          "title": "Dicotomia ou complementaridade? O eterno debate acerca dos conceitos de estilo e função",
+          "venue": "Revista do Museu de Arqueologia e Etnologia, Suplemento 11:125–131",
+          "url": "https://revistas.usp.br/revmaesupl/article/download/113546/111501/205406",
+          "access": "Primary ceramic analysis and decoration inventory checked.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "At Primavera, residents used worked stone and clay vessels with smooth, painted and corrugated finishes. Two pottery samples date activity on the hill during separate time ranges.",
+        "limitations": "The timeline follows Corrêa's printed estimates. The technical literature reports differing ages or uncertainties for some samples, and the gap between these intervals is left open.",
+        "discussion": "Primavera supplied one of the larger worked-stone collections in the survey. The pottery and stone assemblages document different skills practiced in the same hilltop locality.",
+        "provenance": "Compared the archaeological context and published calendar evidence with the cited locality reference.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Source-checked archaeological context and geographic reference."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "eb-se-poca",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Poça — painted and textured pottery in the hills",
+      "culture": {
+        "id": "eb-se-culture-zona",
+        "name": "Zona da Mata Tupiguarani communities",
+        "kind": "culture",
+        "color": "#8a654b"
+      },
+      "location": {
+        "id": "eb-se-place-poca",
+        "name": "Poça (Poca)",
+        "lon": -42.939,
+        "lat": -21.547,
+        "precision": "Rounded published archaeological-site reference, approximately 0.5 km.",
+        "provenance": "Loures de Oliveira 2012, Table 1, gives 713452 E, 7615863 N. UTM zone 23 south is confirmed in Mageste 2017 Table 1. Converted and rounded given the unspecified datum. https://ojs.ufgd.edu.br/nanduty/article/download/2292/1361/6881"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1164,
+        "end": 1479,
+        "original": "1164–1344, 1294–1454 and 1339–1479 CE (three TL estimates).",
+        "method": "Published calendar dates from thermoluminescence of fired pottery in Corrêa 2009, Table 14.",
+        "interpretation": "Three pottery ranges overlap. The display envelope shows their full span, and the dates do not resolve how long people stayed.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "At Poça, people used pots with corrugated ridges, incised marks, and red or white surface coatings. Three pieces of fired pottery provide dates between the twelfth and fifteenth centuries.",
+          "explanation": "The ranges overlap and date individual pieces. The duration of settlement remains uncertain.",
+          "status": "well-supported",
+          "support": [
+            {
+              "sourceId": "eb-se-src-correa",
+              "locator": "ch. VI, p. 274, Table 14; ch. V, p. 228",
+              "note": "Lists pottery luminescence ranges in calendar years and recovered stone assemblage.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-loures-oliveira",
+              "locator": "Table 1 and site descriptions",
+              "note": "Locates the site within the Zona da Mata survey and provides coordinates.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-mageste-loures",
+              "locator": "pp. 129–130, Table 2",
+              "note": "Documents pottery surface treatments in the studied assemblage.",
+              "stance": "supports"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-se-src-correa",
+          "authors": "Ângelo Alves Corrêa",
+          "year": 2009,
+          "title": "Tetama nas matas mineiras: sítios Tupi na microrregião de Juiz de Fora - MG",
+          "venue": "Universidade de São Paulo, Museu de Arqueologia e Etnologia",
+          "url": "https://www.teses.usp.br/teses/disponiveis/71/71131/tde-30042009-135816/publico/08_CAPITULO_VI.pdf",
+          "access": "Chapters V and VI of the USP thesis checked, including the calendar-age table.",
+          "referenceType": "thesis",
+          "doi": "10.11606/D.71.2009.tde-30042009-135816",
+          "publisher": "Universidade de São Paulo, Museu de Arqueologia e Etnologia"
+        },
+        {
+          "id": "eb-se-src-loures-oliveira",
+          "authors": "Ana Paula de Paula Loures de Oliveira",
+          "year": 2012,
+          "title": "Tradição, identidade e região: alguns apontamentos sobre os aspectos teóricos do Projeto de Mapeamento Arqueológico e Cultural da Zona da Mata Mineira",
+          "venue": "Revista Ñanduty 1(1)",
+          "url": "https://ojs.ufgd.edu.br/nanduty/article/download/2292/1361/6881",
+          "access": "Project report site descriptions, locality table and coordinates checked.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "eb-se-src-mageste-loures",
+          "authors": "Leandro Elias Canaan Mageste and Ana Paula de Paula Loures Oliveira",
+          "year": 2011,
+          "title": "Dicotomia ou complementaridade? O eterno debate acerca dos conceitos de estilo e função",
+          "venue": "Revista do Museu de Arqueologia e Etnologia, Suplemento 11:125–131",
+          "url": "https://revistas.usp.br/revmaesupl/article/download/113546/111501/205406",
+          "access": "Primary ceramic analysis and decoration inventory checked.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "At Poça, people used pots with corrugated ridges, incised marks, and red or white surface coatings. Three pieces of fired pottery provide dates between the twelfth and fifteenth centuries.",
+        "limitations": "The ranges overlap and date individual pieces. The duration of settlement remains uncertain.",
+        "discussion": "Only a small area was excavated. Its finds help show how people used several nearby hills in the Zona da Mata.",
+        "provenance": "Compared the archaeological context and published calendar evidence with the cited locality reference.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Source-checked archaeological context and geographic reference."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "eb-se-teixeira-lopes",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Teixeira Lopes — finished vessels at a Juiz de Fora locality",
+      "culture": {
+        "id": "eb-se-culture-zona",
+        "name": "Zona da Mata Tupiguarani communities",
+        "kind": "culture",
+        "color": "#8a654b"
+      },
+      "location": {
+        "id": "eb-se-place-teixeira-lopes",
+        "name": "Teixeira Lopes",
+        "lon": -43.614,
+        "lat": -21.773,
+        "precision": "Rounded published archaeological-site reference, approximately 0.5 km.",
+        "provenance": "Loures de Oliveira 2012, Table 1, gives 643259 E, 7591633 N. UTM zone 23 south is confirmed in Mageste 2017 Table 1. Converted and rounded given the unspecified datum. https://ojs.ufgd.edu.br/nanduty/article/download/2292/1361/6881"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1359,
+        "end": 1479,
+        "original": "1359–1479 CE (earlier TL estimate, Corrêa Table 14).",
+        "method": "Published calendar dates from thermoluminescence of fired pottery in Corrêa 2009, Table 14.",
+        "interpretation": "Sample age estimates date activity in the excavated site. Overlap among the sample estimates does not determine the duration of settlement.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "At Teixeira Lopes, near present-day Juiz de Fora, people made and used painted and corrugated pots. A dated fragment places one episode before 1500 CE.",
+          "explanation": "A second thermoluminescence result points to 1754–1804 CE, centuries after the earlier sample.",
+          "status": "well-supported",
+          "support": [
+            {
+              "sourceId": "eb-se-src-correa",
+              "locator": "ch. VI, p. 274, Table 14; ch. V, p. 228",
+              "note": "Lists pottery luminescence ranges in calendar years and recovered stone assemblage.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-loures-oliveira",
+              "locator": "Table 1 and site descriptions",
+              "note": "Locates the site within the Zona da Mata survey and provides coordinates.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-mageste-loures",
+              "locator": "pp. 129–130, Table 2",
+              "note": "Documents pottery surface treatments in the studied assemblage.",
+              "stance": "supports"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-se-src-correa",
+          "authors": "Ângelo Alves Corrêa",
+          "year": 2009,
+          "title": "Tetama nas matas mineiras: sítios Tupi na microrregião de Juiz de Fora - MG",
+          "venue": "Universidade de São Paulo, Museu de Arqueologia e Etnologia",
+          "url": "https://www.teses.usp.br/teses/disponiveis/71/71131/tde-30042009-135816/publico/08_CAPITULO_VI.pdf",
+          "access": "Chapters V and VI of the USP thesis checked, including the calendar-age table.",
+          "referenceType": "thesis",
+          "doi": "10.11606/D.71.2009.tde-30042009-135816",
+          "publisher": "Universidade de São Paulo, Museu de Arqueologia e Etnologia"
+        },
+        {
+          "id": "eb-se-src-loures-oliveira",
+          "authors": "Ana Paula de Paula Loures de Oliveira",
+          "year": 2012,
+          "title": "Tradição, identidade e região: alguns apontamentos sobre os aspectos teóricos do Projeto de Mapeamento Arqueológico e Cultural da Zona da Mata Mineira",
+          "venue": "Revista Ñanduty 1(1)",
+          "url": "https://ojs.ufgd.edu.br/nanduty/article/download/2292/1361/6881",
+          "access": "Project report site descriptions, locality table and coordinates checked.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "eb-se-src-mageste-loures",
+          "authors": "Leandro Elias Canaan Mageste and Ana Paula de Paula Loures Oliveira",
+          "year": 2011,
+          "title": "Dicotomia ou complementaridade? O eterno debate acerca dos conceitos de estilo e função",
+          "venue": "Revista do Museu de Arqueologia e Etnologia, Suplemento 11:125–131",
+          "url": "https://revistas.usp.br/revmaesupl/article/download/113546/111501/205406",
+          "access": "Primary ceramic analysis and decoration inventory checked.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "At Teixeira Lopes, near present-day Juiz de Fora, people made and used painted and corrugated pots. A dated fragment places one episode before 1500 CE.",
+        "limitations": "A second thermoluminescence result points to 1754–1804 CE, centuries after the earlier sample.",
+        "discussion": "The contrasting ages show how material from different episodes can collect at one place. The early date places Indigenous activity here well before that later deposition.",
+        "provenance": "Compared the archaeological context and published calendar evidence with the cited locality reference.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Source-checked archaeological context and geographic reference."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "eb-se-emilio-barao",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Emílio Barão — household pottery and worked stone",
+      "culture": {
+        "id": "eb-se-culture-zona",
+        "name": "Zona da Mata Tupiguarani communities",
+        "kind": "culture",
+        "color": "#8a654b"
+      },
+      "location": {
+        "id": "eb-se-place-emilio-barao",
+        "name": "Emílio Barão",
+        "lon": -43.613,
+        "lat": -21.778,
+        "precision": "Rounded published archaeological-site reference, approximately 0.5 km.",
+        "provenance": "Loures de Oliveira 2012, Table 1, gives 643391 E, 7591053 N. UTM zone 23 south is confirmed in Mageste 2017 Table 1. Converted and rounded given the unspecified datum. https://ojs.ufgd.edu.br/nanduty/article/download/2292/1361/6881"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1354,
+        "end": 1574,
+        "original": "1354–1474 and 1474–1574 CE (two TL estimates); another TL sample dates to 1564–1664 CE.",
+        "method": "Published calendar dates from thermoluminescence of fired pottery in Corrêa 2009, Table 14.",
+        "interpretation": "Sample age estimates date activity in the excavated site. Overlap among the sample estimates does not determine the duration of settlement.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "At Emílio Barão, residents handled a variety of clay vessels and worked stone. Two dated pieces of pottery place activity on the hill before and around the onset of European colonization on the coast.",
+          "explanation": "The date estimates touch at 1474 CE. Additional dated material belongs to later activity and cannot be used to date all the objects recovered from the locality.",
+          "status": "well-supported",
+          "support": [
+            {
+              "sourceId": "eb-se-src-correa",
+              "locator": "ch. VI, p. 274, Table 14; ch. V, p. 228",
+              "note": "Lists pottery luminescence ranges in calendar years and recovered stone assemblage.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-loures-oliveira",
+              "locator": "Table 1 and site descriptions",
+              "note": "Locates the site within the Zona da Mata survey and provides coordinates.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-mageste-loures",
+              "locator": "pp. 129–130, Table 2",
+              "note": "Documents pottery surface treatments in the studied assemblage.",
+              "stance": "supports"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-se-src-correa",
+          "authors": "Ângelo Alves Corrêa",
+          "year": 2009,
+          "title": "Tetama nas matas mineiras: sítios Tupi na microrregião de Juiz de Fora - MG",
+          "venue": "Universidade de São Paulo, Museu de Arqueologia e Etnologia",
+          "url": "https://www.teses.usp.br/teses/disponiveis/71/71131/tde-30042009-135816/publico/08_CAPITULO_VI.pdf",
+          "access": "Chapters V and VI of the USP thesis checked, including the calendar-age table.",
+          "referenceType": "thesis",
+          "doi": "10.11606/D.71.2009.tde-30042009-135816",
+          "publisher": "Universidade de São Paulo, Museu de Arqueologia e Etnologia"
+        },
+        {
+          "id": "eb-se-src-loures-oliveira",
+          "authors": "Ana Paula de Paula Loures de Oliveira",
+          "year": 2012,
+          "title": "Tradição, identidade e região: alguns apontamentos sobre os aspectos teóricos do Projeto de Mapeamento Arqueológico e Cultural da Zona da Mata Mineira",
+          "venue": "Revista Ñanduty 1(1)",
+          "url": "https://ojs.ufgd.edu.br/nanduty/article/download/2292/1361/6881",
+          "access": "Project report site descriptions, locality table and coordinates checked.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "eb-se-src-mageste-loures",
+          "authors": "Leandro Elias Canaan Mageste and Ana Paula de Paula Loures Oliveira",
+          "year": 2011,
+          "title": "Dicotomia ou complementaridade? O eterno debate acerca dos conceitos de estilo e função",
+          "venue": "Revista do Museu de Arqueologia e Etnologia, Suplemento 11:125–131",
+          "url": "https://revistas.usp.br/revmaesupl/article/download/113546/111501/205406",
+          "access": "Primary ceramic analysis and decoration inventory checked.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "At Emílio Barão, residents handled a variety of clay vessels and worked stone. Two dated pieces of pottery place activity on the hill before and around the onset of European colonization on the coast.",
+        "limitations": "The date estimates touch at 1474 CE. Additional dated material belongs to later activity and cannot be used to date all the objects recovered from the locality.",
+        "discussion": "Smoothing, polishing, painting and texturing gave the pots a range of surfaces. Residents could choose vessels with different finishes for tasks in and around the household.",
+        "provenance": "Compared the archaeological context and published calendar evidence with the cited locality reference.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Source-checked archaeological context and geographic reference."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "eb-se-corrego-do-maranhao-hearth",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Córrego do Maranhão — dated hearths in a Carangola settlement",
+      "culture": {
+        "id": "eb-se-culture-zona",
+        "name": "Zona da Mata Tupiguarani communities",
+        "kind": "culture",
+        "color": "#8a654b"
+      },
+      "location": {
+        "id": "eb-se-place-corrego-do-maranhao",
+        "name": "Córrego do Maranhão",
+        "lon": -42.158,
+        "lat": -20.735,
+        "precision": "Rounded published archaeological-site reference, approximately 0.5 km.",
+        "provenance": "Loures de Oliveira 2012, Table 1, gives 796001 E, 7704594 N. UTM zone 23 south is confirmed in Mageste 2017 Table 1. Converted and rounded given the unspecified datum. https://ojs.ufgd.edu.br/nanduty/article/download/2292/1361/6881"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1280,
+        "end": 1650,
+        "original": "Mageste 2017 Table 10, 2σ: Beta-245433 670–550, Beta-290691 660–520, Beta-290692 550–460, Beta-290693 550–470, Beta-290694 and -290695 510–300 cal BP.",
+        "method": "Converted published calibrated 2σ limits from the 1950 CE reference.",
+        "interpretation": "Several charcoal dates from the site overlap. The dated material spans different sectors and settings.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "On a ridge near Carangola, people left fired pots and charcoal in patches where they worked and used hearths. Charcoal and pottery were found together in a lens exposed along a road cut.",
+          "explanation": "The dates come from several samples and the excavators traced differences between the sectors. The age ranges overlap across the late precolonial and early colonial centuries.",
+          "status": "well-supported",
+          "support": [
+            {
+              "sourceId": "eb-se-src-mageste-2017",
+              "locator": "pp. 209–211, Tables 9–10; p. 115, Table 1",
+              "note": "Documents sample groups, site coordinates and the hearth with associated pottery.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-loures-oliveira",
+              "locator": "Table 1, C. Maranhão",
+              "note": "Supplies the survey coordinate.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-mageste-loures",
+              "locator": "pp. 126–127, Figs. 1–2 and Table 1",
+              "note": "Documents workshop analysis, distribution of samples and decorative treatments.",
+              "stance": "supports"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-se-src-mageste-2017",
+          "authors": "Leandro Elias Canaan Mageste",
+          "year": 2017,
+          "title": "Cronologia e Variabilidade: Os Ceramistas Tupiguarani da Zona da Mata Mineira e do Complexo Lagunar de Araruama",
+          "venue": "Universidade de São Paulo, Museu de Arqueologia e Etnologia",
+          "url": "https://www.academia.edu/94551602/Cronologia_e_Variabilidade_Os_Ceramistas_Tupiguarani_da_Zona_da_Mata_mineira",
+          "access": "Author's full thesis checked for sample inventories, context and coordinates.",
+          "referenceType": "thesis",
+          "publisher": "Universidade de São Paulo, Museu de Arqueologia e Etnologia"
+        },
+        {
+          "id": "eb-se-src-loures-oliveira",
+          "authors": "Ana Paula de Paula Loures de Oliveira",
+          "year": 2012,
+          "title": "Tradição, identidade e região: alguns apontamentos sobre os aspectos teóricos do Projeto de Mapeamento Arqueológico e Cultural da Zona da Mata Mineira",
+          "venue": "Revista Ñanduty 1(1)",
+          "url": "https://ojs.ufgd.edu.br/nanduty/article/download/2292/1361/6881",
+          "access": "Project report site descriptions, locality table and coordinates checked.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "eb-se-src-mageste-loures",
+          "authors": "Leandro Elias Canaan Mageste and Ana Paula de Paula Loures Oliveira",
+          "year": 2011,
+          "title": "Dicotomia ou complementaridade? O eterno debate acerca dos conceitos de estilo e função",
+          "venue": "Revista do Museu de Arqueologia e Etnologia, Suplemento 11:125–131",
+          "url": "https://revistas.usp.br/revmaesupl/article/download/113546/111501/205406",
+          "access": "Primary ceramic analysis and decoration inventory checked.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "On a ridge near Carangola, people left fired pots and charcoal in patches where they worked and used hearths. Charcoal and pottery were found together in a lens exposed along a road cut.",
+        "limitations": "The dates come from several samples and the excavators traced differences between the sectors. The age ranges overlap across the late precolonial and early colonial centuries.",
+        "discussion": "Archaeologists analyzed thousands of fragments from concentrations distributed over the ridge. Some pots had corrugated or incised surfaces, while others carried red and white finishes. The spatial distribution and chronology suggest the ridge was used in different episodes.",
+        "provenance": "Compared the archaeological context and published calendar evidence with the cited locality reference.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Source-checked archaeological context and geographic reference."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "eb-se-cacapava-1-cemetery",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Caçapava 1 — urn burials and pit ovens",
+      "culture": {
+        "id": "eb-se-culture-paraiba-aratu",
+        "name": "Paraíba Valley Aratu-Sapucaí communities",
+        "kind": "culture",
+        "color": "#796443"
+      },
+      "location": {
+        "id": "eb-se-place-cacapava-1",
+        "name": "Caçapava 1",
+        "lon": -45.677,
+        "lat": -23.145,
+        "precision": "Rounded published field-survey locality, approximately 0.5 km.",
+        "provenance": "Caldarelli 1997, p. 152 Quadro 1, records 430697 E, 7440242 N on IBGE 1:50,000 Taubaté sheet SF-23-Y-D-II-2. UTM zone 23 south, datum unspecified. https://www.academia.edu/28390464/Atas_do_Simp%C3%B3sio_sobre_Pol%C3%ADtica_Nacional_do_Meio_Ambiente_e_Patrim%C3%B4nio_Cultural_1997_"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1040,
+        "end": 1430,
+        "original": "Caldarelli, Quadro 3, calendar ranges: Beta-166256 1040–1260, Beta-166257 1280–1400, Beta-166255 1290–1410, Beta-166259 1290–1420, Beta-166258 1280–1430, and Beta-166260 1290–1430 CE.",
+        "method": "Limits transcribed from the field report's published AD column. The five overlapping later results are represented by one window.",
+        "interpretation": "Five urn contexts and one pit oven attest dated use in two sets of sample ranges.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 1040,
+            "end": 1260,
+            "certainty": "approximate",
+            "note": "Beta-166256, Urn 09."
+          },
+          {
+            "start": 1280,
+            "end": 1430,
+            "certainty": "approximate",
+            "note": "Envelope of four overlapping urn results and a pit-oven result."
+          }
+        ]
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "At Caçapava 1, people buried their dead in large clay vessels, sometimes grouping the urns together. Excavators also uncovered pit ovens and found dates spanning the eleventh through early fifteenth centuries.",
+          "explanation": "Each sample dates a particular feature. The early urn range and the later group of ages leave a short gap in the dated evidence.",
+          "status": "well-supported",
+          "support": [
+            {
+              "sourceId": "eb-se-src-caldarelli-cacapava",
+              "locator": "§§1.3–1.6, Quadro 3 and Figure 16",
+              "note": "Documents 36 urns, two pit ovens, the sampled features, calibrated AD estimates and their distribution.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-caldarelli-location",
+              "locator": "p. 152, Quadro 1, SP-PB-Ca.1",
+              "note": "Provides the project’s field grid coordinate and map sheet.",
+              "stance": "supports"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-se-src-caldarelli-cacapava",
+          "authors": "Solange Bezerra Caldarelli",
+          "year": 2005,
+          "title": "Problemáticas arqueológicas inéditas advindas de projetos de contrato: o caso do alto e médio Vale do Paraíba paulista",
+          "venue": "Revista do CEPA 29(41):7–33",
+          "url": "https://www.academia.edu/15061110/Problem%C3%A1ticasArqueol%C3%B3gicasIn%C3%A9ditasAdvindas_de_Projetos_de_Contrato_O_Caso_do_Alto_e_M%C3%A9dio_Vale_Para%C3%ADba_Paulista_2005",
+          "access": "Full author-hosted text checked for cemetery, pit ovens and the Beta Analytic table.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "eb-se-src-caldarelli-location",
+          "authors": "Solange Bezerra Caldarelli",
+          "year": 1997,
+          "title": "Arqueologia do Vale do Paraíba Paulista",
+          "venue": "Atas do Simpósio sobre Política Nacional do Meio Ambiente e Patrimônio Cultural",
+          "url": "https://www.academia.edu/28390464/Atas_do_Simp%C3%B3sio_sobre_Pol%C3%ADtica_Nacional_do_Meio_Ambiente_e_Patrim%C3%B4nio_Cultural_1997_",
+          "access": "Field project coordinates in Quadro 1 checked.",
+          "referenceType": "report",
+          "publisher": "Atas do Simpósio sobre Política Nacional do Meio Ambiente e Patrimônio Cultural"
+        }
+      ],
+      "review": {
+        "summary": "At Caçapava 1, people buried their dead in large clay vessels, sometimes grouping the urns together. Excavators also uncovered pit ovens and found dates spanning the eleventh through early fifteenth centuries.",
+        "limitations": "Each sample dates a particular feature. The early urn range and the later group of ages leave a short gap in the dated evidence.",
+        "discussion": "Excavators recorded thirty-six urns on the open slope near the Ribeirão Dois Córregos. Most had no surviving burial goods. The dated oven gives a separate line of evidence for work with fire at the site.",
+        "provenance": "Compared the archaeological context and published calendar evidence with the cited locality reference.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Source-checked archaeological context and geographic reference."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "eb-se-santa-marina-village",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Santa Marina — household traces in the Paraíba Valley",
+      "culture": {
+        "id": "eb-se-culture-paraiba-tupi",
+        "name": "Paraíba Valley Tupiguarani communities",
+        "kind": "culture",
+        "color": "#8b6453"
+      },
+      "location": {
+        "id": "eb-se-place-santa-marina",
+        "name": "Santa Marina, Jacareí",
+        "lon": -45.92,
+        "lat": -23.29,
+        "precision": "Jardim Santa Marina neighborhood reference, within a few kilometers.",
+        "provenance": "Lopes 2014 locates the site in Jardim Santa Marina, Jacareí, and the 2023 municipal inventory names the local avenue. The municipality's 2025 document gives the Loteamento Jardim Santa Marina reference UTM 23S SIRGAS2000 405457 E, 7423730 N. The pin uses the rounded neighborhood reference. https://www.jacarei.sp.gov.br/wp-content/uploads/2025/06/2-Autorizacao-n%C2%B0-0024.pdf"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1400,
+        "end": 1475,
+        "original": "Lopes 2014, Table 24, charcoal 118822 and 118823, each 1400–1475 cal CE.",
+        "method": "Transcribed from the published calibrated AD column for the two Beta Analytic measurements.",
+        "interpretation": "Two charcoal samples from different lots point to settlement activity in the fifteenth century.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Dark patches of soil at Santa Marina marked places where people had worked or lived. Excavators recovered fragments of clay vessels and worked stone, and two charcoal samples date activity to 1400–1475 CE.",
+          "explanation": "The two samples date particular contexts. Luminescence dates from pottery span more centuries, and some of the dark-soil patches overlap.",
+          "status": "well-supported",
+          "support": [
+            {
+              "sourceId": "eb-se-src-lopes-santa-marina",
+              "locator": "§5.2, pp. 179–181, Table 24 and Figs. 78–79; §5.3",
+              "note": "Reports both calibrated samples and discusses spatial overlap and settlement interpretation.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-santamarina-jacarei",
+              "locator": "Quadro 3, Santa Marina; Mapa 6",
+              "note": "Documents the archaeological site and its neighborhood reference.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-santamarina-anchor",
+              "locator": "fields 10 and 13",
+              "note": "Provides modern coordinate for the named neighborhood anchor.",
+              "stance": "supports"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-se-src-lopes-santa-marina",
+          "authors": "Marcel Lopes",
+          "year": 2014,
+          "title": "Ocupação Tupinambá no vale do Paraíba Paulista: vista a partir da análise do sítio arqueológico Santa Marina",
+          "venue": "Universidade de São Paulo, Museu de Arqueologia e Etnologia",
+          "url": "https://www.academia.edu/35020080/Ocupa%C3%A7%C3%A3o_Tupinamb%C3%A1_no_vale_do_Para%C3%ADba_Paulista_vista_a_partir_da_an%C3%A1lise_do_s%C3%ADtio_arqueol%C3%B3gico_Santa_Marina",
+          "access": "Author's full thesis checked for site description, plan and calibrated charcoal dates.",
+          "referenceType": "thesis",
+          "doi": "10.11606/D.71.2014.tde-21032014-144952",
+          "publisher": "Universidade de São Paulo, Museu de Arqueologia e Etnologia"
+        },
+        {
+          "id": "eb-se-src-santamarina-jacarei",
+          "authors": "Prefeitura de Jacareí",
+          "year": 2023,
+          "title": "Caderno técnico da revisão do Plano Diretor de Jacareí",
+          "venue": "Prefeitura de Jacareí",
+          "url": "https://www.jacarei.sp.gov.br/wp-content/uploads/2023/04/Caderno-t%C3%A9cnico.pdf",
+          "access": "Municipal site list and map checked. Printed site longitude carries a typographical error.",
+          "referenceType": "report",
+          "publisher": "Prefeitura de Jacareí"
+        },
+        {
+          "id": "eb-se-src-santamarina-anchor",
+          "authors": "Prefeitura de Jacareí",
+          "year": 2025,
+          "title": "Autorização 0024 para intervenção no Loteamento Jardim Santa Marina",
+          "venue": "Prefeitura de Jacareí, Meio Ambiente",
+          "url": "https://www.jacarei.sp.gov.br/wp-content/uploads/2025/06/2-Autorizacao-n%C2%B0-0024.pdf",
+          "access": "Official SIRGAS2000 UTM coordinate for the named neighborhood checked.",
+          "referenceType": "report",
+          "publisher": "Prefeitura de Jacareí, Meio Ambiente"
+        }
+      ],
+      "review": {
+        "summary": "Dark patches of soil at Santa Marina marked places where people had worked or lived. Excavators recovered fragments of clay vessels and worked stone, and two charcoal samples date activity to 1400–1475 CE.",
+        "limitations": "The two samples date particular contexts. Luminescence dates from pottery span more centuries, and some of the dark-soil patches overlap.",
+        "discussion": "The excavations recovered materials from household activity. The larger distribution of dark patches may reflect houses and other work areas that shifted as people reused the settlement.",
+        "provenance": "Compared the archaeological context and published calendar evidence with the cited locality reference.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Source-checked archaeological context and geographic reference."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "eb-se-rio-preto-oeste-village",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Rio Preto Oeste — pottery, cooking and a reused urn",
+      "culture": {
+        "id": "eb-se-culture-northern-es-aratu",
+        "name": "Northern Espírito Santo Aratu communities",
+        "kind": "culture",
+        "color": "#72714a"
+      },
+      "location": {
+        "id": "eb-se-place-rio-preto-oeste",
+        "name": "Rio Preto Oeste 1 (RPO-1), São Mateus",
+        "lon": -39.845,
+        "lat": -18.822,
+        "precision": "Excavated settlement area rounded to the nearest 0.001°.",
+        "provenance": "Caldarelli 2005, part 2, pp. 33–34, reports a field reference in the site interior at 411012 E, 7918719 N, SAD69 zone 24 south. Converted to WGS84. https://www.academia.edu/36033086/S%C3%ADtioArqueol%C3%B3gico_RPO1_ES_SalvamentoArqueol%C3%B3gico_Relat%C3%B3rioFinal_2005"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1301,
+        "end": 1400,
+        "original": "Excavator's concluding archaeological assignment to the fourteenth century CE, Caldarelli 2005, pp. 135–136.",
+        "method": "Approximate archaeological phase from the excavation report's concluding assessment. The mapped century comes from that interpretation.",
+        "interpretation": "This is a provisional date for village activity. Exact occupation years remain uncertain.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "On a sandy terrace near São Mateus, people made clay vessels and cooked over fires. Excavators found an urn cut or broken before it was used for burial, and pottery fragments bearing soot and marks left by fingers.",
+          "explanation": "The excavation report assigns the village tentatively to the fourteenth century in its conclusion. Earlier in the report it gives inconsistent charcoal ages, and the team raises the possibility of sample contamination.",
+          "status": "under discussion",
+          "support": [
+            {
+              "sourceId": "eb-se-src-rpo-rescue",
+              "locator": "pp. 1–2, 32–36, 110–112, 129–136",
+              "note": "Documents the site, combustion features, pottery, reused urn and conflicting chronology; conclusion proposes the fourteenth century.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-rpo-field-review",
+              "locator": "§§5.1–5.1.2, Table 4 and field photographs",
+              "note": "Corroborates the archaeological grid, locality, recovery and preservation context.",
+              "stance": "supports"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-se-src-rpo-rescue",
+          "authors": "Solange Bezerra Caldarelli (coord.)",
+          "year": 2005,
+          "title": "Salvamento arqueológico do Sítio Arqueológico RPO-1, São Mateus, ES",
+          "venue": "Scientia Consultoria Científica, archaeological rescue report submitted to IPHAN",
+          "url": "https://www.academia.edu/36033086/S%C3%ADtioArqueol%C3%B3gico_RPO1_ES_SalvamentoArqueol%C3%B3gico_Relat%C3%B3rioFinal_2005",
+          "access": "Full field and laboratory report checked, including maps, artifact descriptions and conflicting chronology passages.",
+          "referenceType": "report",
+          "publisher": "Scientia Consultoria Científica, archaeological rescue report submitted to IPHAN"
+        },
+        {
+          "id": "eb-se-src-rpo-field-review",
+          "authors": "Solange Bezerra Caldarelli",
+          "year": 2019,
+          "title": "Contribuições das pesquisas realizadas pela Scientia Consultoria Científica à Arqueologia Capixaba",
+          "venue": "Conference proceedings, Scientia Consultoria Científica fieldwork review",
+          "url": "https://static.even3.com/anais/237861.pdf",
+          "access": "Full paper, site descriptions, Table 4 and field photos checked.",
+          "referenceType": "report",
+          "publisher": "Conference proceedings, Scientia Consultoria Científica fieldwork review"
+        }
+      ],
+      "review": {
+        "summary": "On a sandy terrace near São Mateus, people made clay vessels and cooked over fires. Excavators found an urn cut or broken before it was used for burial, and pottery fragments bearing soot and marks left by fingers.",
+        "limitations": "The excavation report assigns the village tentatively to the fourteenth century in its conclusion. Earlier in the report it gives inconsistent charcoal ages, and the team raises the possibility of sample contamination.",
+        "discussion": "The excavators found only scattered stone artifacts alongside abundant pottery. Many vessels fit the regional Aratu tradition, while some surface treatments resemble those used by Tupiguarani potters. Those parallels led the team to propose contact among nearby communities.",
+        "provenance": "Compared the archaeological context and published calendar evidence with the cited locality reference.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Source-checked archaeological context and geographic reference."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "eb-se-arapuan-burial-18",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Arapuan — a burial in the top of an older shell mound",
+      "culture": {
+        "id": "eb-se-culture-guanabara-late",
+        "name": "Late Indigenous communities around Guanabara Bay",
+        "kind": "culture",
+        "color": "#6a6259"
+      },
+      "location": {
+        "id": "eb-se-place-arapuan",
+        "name": "Arapuan, Guapimirim",
+        "lon": -42.984,
+        "lat": -22.658,
+        "precision": "Rounded survey location, approximately 0.5 km.",
+        "provenance": "Almeida Filho 2011, pp. 38–39, gives 707119 E and 7492981 N, UTM 23K. The original publication's site map confirms Vale das Pedrinhas between the Guapi River and Caioba canal. https://pt.scribd.com/document/943827320/Jose-Almeida-Filho-2011-Os-Sambaquis-Do-Reconcavo-Da-Baia-de-Guanabara-Municipio-de-Guapimirim-RJ-Monografia-Geoquater-MN-UFRJ"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1473,
+        "end": 1638,
+        "original": "Burial 18: 477–312 cal BP (2σ) in Cunha et al. 2022, Table 1.",
+        "method": "Published calendar calibration with modeled marine contribution and reservoir adjustment, expressed from the 1950 CE reference.",
+        "interpretation": "Burial 18 dates to one use of the mound. Its range straddles the initial colonial period.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "People buried an individual in the upper part of an older shell mound near Guanabara Bay. Bone chemistry suggests this person's diet included a greater share of land-based food than a much older individual buried deeper in the mound.",
+          "explanation": "The published numerical range is 1473–1638 CE, and the researchers emphasize a likely sixteenth- to seventeenth-century context. Their reconstruction of diet relies on isotope models.",
+          "status": "under discussion",
+          "support": [
+            {
+              "sourceId": "eb-se-src-cunha-arapuan",
+              "locator": "pp. 289–293, Table 1, Figs. 1–3",
+              "note": "Reports the upper burial depth, mixed calibration and modeled dietary estimates.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-se-src-almeida-arapuan",
+              "locator": "pp. 38–39, Sambaqui Arapuan",
+              "note": "Publishes the survey location and identifies the deposits.",
+              "stance": "supports"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-se-src-cunha-arapuan",
+          "authors": "Luiz Octávio de C. Cunha, Adilson Dias Salles, Murilo Q. R. Bastos, and Claudia Rodrigues-Carvalho",
+          "year": 2022,
+          "title": "Estudos isotópicos para definir os períodos de ocupação do sítio Arapuan: a datação e a paleodieta",
+          "venue": "Revista do Museu de Arqueologia e Etnologia 38:285–297",
+          "url": "https://revistas.usp.br/revmae/pt_BR/article/download/166377/184243",
+          "access": "Full text, directly dated individuals, calibration method and diet models checked.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "eb-se-src-almeida-arapuan",
+          "authors": "José Almeida Filho",
+          "year": 2011,
+          "title": "Os sambaquis do Recôncavo da Baía de Guanabara, município de Guapimirim, RJ",
+          "venue": "Universidade Federal do Rio de Janeiro, Museu Nacional",
+          "url": "https://pt.scribd.com/document/943827320/Jose-Almeida-Filho-2011-Os-Sambaquis-Do-Reconcavo-Da-Baia-de-Guanabara-Municipio-de-Guapimirim-RJ-Monografia-Geoquater-MN-UFRJ",
+          "access": "Full field survey text, map and coordinate checked.",
+          "referenceType": "thesis",
+          "publisher": "Universidade Federal do Rio de Janeiro, Museu Nacional"
+        }
+      ],
+      "review": {
+        "summary": "People buried an individual in the upper part of an older shell mound near Guanabara Bay. Bone chemistry suggests this person's diet included a greater share of land-based food than a much older individual buried deeper in the mound.",
+        "limitations": "The published numerical range is 1473–1638 CE, and the researchers emphasize a likely sixteenth- to seventeenth-century context. Their reconstruction of diet relies on isotope models.",
+        "discussion": "Arapuan contains burials from widely separated periods. The later individual’s date and diet provide evidence of changing uses of the mound and different ways of obtaining food around the bay.",
+        "provenance": "Compared the archaeological context and published calendar evidence with the cited locality reference.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Source-checked archaeological context and geographic reference."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "eb-ne-boca-do-rio",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Boca do Rio — a village on wooden piles",
+      "culture": {
+        "id": "eb-ne-context-maranhao-stilt",
+        "name": "Maranhão stilt-village communities",
+        "kind": "culture",
+        "color": "#416e74"
+      },
+      "location": {
+        "id": "eb-ne-place-boca-do-rio",
+        "name": "Boca do Rio",
+        "lon": -45.474,
+        "lat": -2.386,
+        "precision": "Rounded plan-derived site-area reference, approximately 0.2 km.",
+        "provenance": "Navarro (2018), Figure 3, UTM zone 23S approximate site center 447295E/9736255N, converted to WGS84 and rounded. https://www.fapema.br/wp-content/uploads/2019/04/Artigo-na-Antiquity.pdf"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 889,
+        "end": 1015,
+        "original": "Beta-406836, wooden pile: 889–1015 cal CE (2023 Table 2). Navarro’s earlier Table 1 gives 885–995 cal CE for the same sample.",
+        "method": "Published Davis and Navarro Table 2 calendar-age range from radiocarbon calibration (SHCal20).",
+        "interpretation": "Dates wood from a surviving pile in a river settlement.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "In the Turiaçu River, people built on a long central framework of posts with smaller clusters around it. Archaeologists recorded 1,071 surviving piles, with figurines and more elaborate pottery concentrated near the middle.",
+          "explanation": "The calendar range estimates the age of dated wood. Construction may be younger if an older part of the tree was sampled.",
+          "status": "well-supported",
+          "support": [
+            {
+              "sourceId": "eb-ne-src-navarro-2018",
+              "locator": "pp. 1590–1591, 1597–1598, Figures 3 and 8",
+              "note": "Documents the mapped piles, ceramics and interpretation of the central space.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-ne-src-davis-navarro-2023",
+              "locator": "Table 2, Beta-406836",
+              "note": "Recalibrates the single dated wooden pile.",
+              "stance": "supports"
+            }
+          ]
+        },
+        {
+          "id": "greenstone",
+          "text": "A small pendant with two perforations was recovered in the central cluster of piles. Its stone is tremolite-actinolite nephrite, for which the study found no known source in Maranhão. The stone or finished pendant most likely came from elsewhere.",
+          "explanation": "The exact source and means of transfer remain unresolved. The riverbed find is associated with the village layout and has no direct calendar date.",
+          "status": "under discussion",
+          "support": [
+            {
+              "sourceId": "eb-ne-src-navarro-et-al-2017",
+              "locator": "Figures 4–8 and sections on underwater collection, the muiraquitã and mineral composition",
+              "note": "Find context and mineral identification from diffraction and spectroscopy.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-ne-src-navarro-2018",
+              "locator": "p. 1597, Figure 8",
+              "note": "Explains recovery in the nucleus and the likely imported material.",
+              "stance": "supports"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-ne-src-navarro-2018",
+          "authors": "Alexandre Guida Navarro",
+          "year": 2018,
+          "title": "New evidence for late first-millennium AD stilt-house settlements in Eastern Amazonia",
+          "venue": "Antiquity 92(366):1586–1603",
+          "url": "https://www.fapema.br/wp-content/uploads/2019/04/Artigo-na-Antiquity.pdf",
+          "access": "Full survey article, calibrated dates in Table 1 and original location figures visually checked.",
+          "referenceType": "journal-article",
+          "doi": "10.15184/aqy.2018.162"
+        },
+        {
+          "id": "eb-ne-src-davis-navarro-2023",
+          "authors": "Christopher Davis and Alexandre Guida Navarro",
+          "year": 2023,
+          "title": "Plan of prehistoric stilt village in Maranhão Brazil may resemble the Pleiades",
+          "venue": "Journal of Archaeological Science: Reports 51:104123",
+          "url": "https://doi.org/10.1016/j.jasrep.2023.104123",
+          "access": "Original article and Table 2 checked using the accessible full-text copy at https://www.academia.edu/105058953/Plan_of_prehistoric_stilt_village_in_Maranh%C3%A3o_Brazil_may_resemble_the_Pleiades .",
+          "referenceType": "journal-article",
+          "doi": "10.1016/j.jasrep.2023.104123"
+        },
+        {
+          "id": "eb-ne-src-navarro-et-al-2017",
+          "authors": "Alexandre Guida Navarro, Marcondes Lima da Costa, Abrahão Sanderson Nunes Fernandes Silva, Rômulo Simões Angélica, Suyanne Santos Rodrigues, and João Costa Gouveia Neto",
+          "year": 2017,
+          "title": "O muiraquitã da estearia da Boca do Rio, Santa Helena, Maranhão: estudo arqueológico, mineralógico e simbólico",
+          "venue": "Boletim do Museu Paraense Emílio Goeldi. Ciências Humanas 12(3):869–894",
+          "url": "https://www.scielo.br/j/bgoeldi/a/F8n4zYkjbChqMFctJCzWrhC/?lang=pt",
+          "access": "Full mineralogical study, find context, X-ray diffraction and micro-Raman results checked.",
+          "referenceType": "journal-article",
+          "doi": "10.1590/1981.81222017000300012"
+        }
+      ],
+      "review": {
+        "summary": "In the Turiaçu River, people built on a long central framework of posts with smaller clusters around it. Archaeologists recorded 1,071 surviving piles, with figurines and more elaborate pottery concentrated near the middle.",
+        "limitations": "The calendar range estimates the age of dated wood. Construction may be younger if an older part of the tree was sampled.",
+        "discussion": "Cooking vessels cluster in the areas interpreted as houses, while fine pottery and figurines occur near the likely gathering space. A carved greenstone pendant from the central area carries evidence of contact beyond the Maranhão wetlands. Its stone was identified by X-ray diffraction and Raman spectroscopy, while the deposit that supplied it is still unknown.",
+        "provenance": "Original account checked against the archaeological sources and geographic references in this record.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added source-checked archaeological evidence."
+        ],
+        "relatedIds": [
+          "eb-ne-cabeludo",
+          "eb-ne-caboclo",
+          "eb-ne-armindio"
+        ]
+      }
+    },
+    {
+      "id": "eb-ne-cabeludo",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Cabeludo — a large village on the Paruá River",
+      "culture": {
+        "id": "eb-ne-context-maranhao-stilt",
+        "name": "Maranhão stilt-village communities",
+        "kind": "culture",
+        "color": "#416e74"
+      },
+      "location": {
+        "id": "eb-ne-place-cabeludo",
+        "name": "Cabeludo",
+        "lon": -45.406,
+        "lat": -2.289,
+        "precision": "Rounded plan-derived site-area reference, approximately 0.2 km.",
+        "provenance": "Navarro (2018), Figure 4, UTM zone 23S approximate site center 454840E/9747000N, converted to WGS84 and rounded. https://www.fapema.br/wp-content/uploads/2019/04/Artigo-na-Antiquity.pdf"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 773,
+        "end": 1222,
+        "original": "Wood Beta-458479 773–987, Beta-430864 885–1013, Beta-458480 990–1148, Beta-515390 1046–1222 cal CE; vessel soot Beta-515391 892–1020 and Beta-492361 995–1151 cal CE.",
+        "method": "Published Davis and Navarro Table 2 radiocarbon ages for four piles and two soot samples, calibrated with SHCal20.",
+        "interpretation": "Overlapping possible dates for several samples, in different parts of the settlement.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 773,
+            "end": 1222,
+            "certainty": "approximate",
+            "note": "Overlapping calibrated results for the six individual samples, with sample-specific ranges given in the original date field."
+          }
+        ]
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "More than a thousand timber piles survive at Cabeludo. A long central cluster and seven smaller groups suggest separate places for gathering and living. A line of posts may have carried a walkway between two groups.",
+          "explanation": "The dated posts and soot attest multiple contexts. Overlapping age ranges do not establish an unbroken run of habitation or the date of the possible walkway.",
+          "status": "well-supported",
+          "support": [
+            {
+              "sourceId": "eb-ne-src-navarro-2018",
+              "locator": "pp. 1590, 1592 and 1598, Figure 4",
+              "note": "Field plan, settlement layout and interpretation of pottery distributions.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-ne-src-davis-navarro-2023",
+              "locator": "Table 2, all six Cabeludo sample rows",
+              "note": "Published reanalysis includes multiple dated posts and vessel soot.",
+              "stance": "supports"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-ne-src-navarro-2018",
+          "authors": "Alexandre Guida Navarro",
+          "year": 2018,
+          "title": "New evidence for late first-millennium AD stilt-house settlements in Eastern Amazonia",
+          "venue": "Antiquity 92(366):1586–1603",
+          "url": "https://www.fapema.br/wp-content/uploads/2019/04/Artigo-na-Antiquity.pdf",
+          "access": "Full survey article, calibrated dates in Table 1 and original location figures visually checked.",
+          "referenceType": "journal-article",
+          "doi": "10.15184/aqy.2018.162"
+        },
+        {
+          "id": "eb-ne-src-davis-navarro-2023",
+          "authors": "Christopher Davis and Alexandre Guida Navarro",
+          "year": 2023,
+          "title": "Plan of prehistoric stilt village in Maranhão Brazil may resemble the Pleiades",
+          "venue": "Journal of Archaeological Science: Reports 51:104123",
+          "url": "https://doi.org/10.1016/j.jasrep.2023.104123",
+          "access": "Original article and Table 2 checked using the accessible full-text copy at https://www.academia.edu/105058953/Plan_of_prehistoric_stilt_village_in_Maranh%C3%A3o_Brazil_may_resemble_the_Pleiades .",
+          "referenceType": "journal-article",
+          "doi": "10.1016/j.jasrep.2023.104123"
+        }
+      ],
+      "review": {
+        "summary": "More than a thousand timber piles survive at Cabeludo. A long central cluster and seven smaller groups suggest separate places for gathering and living. A line of posts may have carried a walkway between two groups.",
+        "limitations": "The dated posts and soot attest multiple contexts. Overlapping age ranges do not establish an unbroken run of habitation or the date of the possible walkway.",
+        "discussion": "The village stood in the Paruá, a tributary of the Turiaçu. Cooking pottery was common in the smaller groups, while figurines and more elaborate pottery concentrated in the larger space.",
+        "provenance": "Original account checked against the archaeological sources and geographic references in this record.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added source-checked archaeological evidence."
+        ],
+        "relatedIds": [
+          "eb-ne-boca-do-rio",
+          "eb-ne-caboclo"
+        ]
+      }
+    },
+    {
+      "id": "eb-ne-caboclo",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Caboclo — three clusters of stilt-house posts",
+      "culture": {
+        "id": "eb-ne-context-maranhao-stilt",
+        "name": "Maranhão stilt-village communities",
+        "kind": "culture",
+        "color": "#416e74"
+      },
+      "location": {
+        "id": "eb-ne-place-caboclo",
+        "name": "Caboclo stilt village",
+        "lon": -45.387,
+        "lat": -2.312,
+        "precision": "Rounded plan-derived site-area reference, approximately 0.2 km.",
+        "provenance": "Navarro (2018), Figure 6, UTM zone 23S approximate site center 457000E/9744500N, converted to WGS84 and rounded. https://www.fapema.br/wp-content/uploads/2019/04/Artigo-na-Antiquity.pdf"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 893,
+        "end": 1023,
+        "original": "Beta-406835, wooden pile: 893–1023 cal CE (2023 Table 2).",
+        "method": "Published Davis and Navarro Table 2 calendar-age range from radiocarbon calibration (SHCal20).",
+        "interpretation": "Dates wood from a surviving pile in a river settlement.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Surveyors mapped 161 wooden piles in three groups in the Turiaçu channel. The groups are similar enough in scale that the excavator interprets them as possible separate houses.",
+          "explanation": "The calendar range estimates the age of dated wood. Construction may be younger if an older part of the tree was sampled.",
+          "status": "well-supported",
+          "support": [
+            {
+              "sourceId": "eb-ne-src-navarro-2018",
+              "locator": "pp. 1590, 1594 and 1598, Figure 6",
+              "note": "Records three clusters at Caboclo and compares them to other settlements.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-ne-src-davis-navarro-2023",
+              "locator": "Table 2, Beta-406835",
+              "note": "Published recalibration of Caboclo wood sample.",
+              "stance": "supports"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-ne-src-navarro-2018",
+          "authors": "Alexandre Guida Navarro",
+          "year": 2018,
+          "title": "New evidence for late first-millennium AD stilt-house settlements in Eastern Amazonia",
+          "venue": "Antiquity 92(366):1586–1603",
+          "url": "https://www.fapema.br/wp-content/uploads/2019/04/Artigo-na-Antiquity.pdf",
+          "access": "Full survey article, calibrated dates in Table 1 and original location figures visually checked.",
+          "referenceType": "journal-article",
+          "doi": "10.15184/aqy.2018.162"
+        },
+        {
+          "id": "eb-ne-src-davis-navarro-2023",
+          "authors": "Christopher Davis and Alexandre Guida Navarro",
+          "year": 2023,
+          "title": "Plan of prehistoric stilt village in Maranhão Brazil may resemble the Pleiades",
+          "venue": "Journal of Archaeological Science: Reports 51:104123",
+          "url": "https://doi.org/10.1016/j.jasrep.2023.104123",
+          "access": "Original article and Table 2 checked using the accessible full-text copy at https://www.academia.edu/105058953/Plan_of_prehistoric_stilt_village_in_Maranh%C3%A3o_Brazil_may_resemble_the_Pleiades .",
+          "referenceType": "journal-article",
+          "doi": "10.1016/j.jasrep.2023.104123"
+        }
+      ],
+      "review": {
+        "summary": "Surveyors mapped 161 wooden piles in three groups in the Turiaçu channel. The groups are similar enough in scale that the excavator interprets them as possible separate houses.",
+        "limitations": "The calendar range estimates the age of dated wood. Construction may be younger if an older part of the tree was sampled.",
+        "discussion": "At Caboclo, the clusters could each have accommodated domestic and communal activities. Boca do Rio and Cabeludo have substantially larger central clusters, showing how neighboring settlements could organize their spaces differently.",
+        "provenance": "Original account checked against the archaeological sources and geographic references in this record.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added source-checked archaeological evidence."
+        ],
+        "relatedIds": [
+          "eb-ne-boca-do-rio",
+          "eb-ne-cabeludo"
+        ]
+      }
+    },
+    {
+      "id": "eb-ne-armindio",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Armíndio — groups of houses in the Turiaçu",
+      "culture": {
+        "id": "eb-ne-context-maranhao-stilt",
+        "name": "Maranhão stilt-village communities",
+        "kind": "culture",
+        "color": "#416e74"
+      },
+      "location": {
+        "id": "eb-ne-place-armindio",
+        "name": "Armíndio",
+        "lon": -45.406,
+        "lat": -2.374,
+        "precision": "Rounded plan-derived site-area reference, approximately 0.2 km.",
+        "provenance": "Navarro (2018), Figure 5, UTM zone 23S approximate site center 454885E/9737555N, converted to WGS84 and rounded. https://www.fapema.br/wp-content/uploads/2019/04/Artigo-na-Antiquity.pdf"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1046,
+        "end": 1222,
+        "original": "Beta-404757, wooden pile: 1046–1222 cal CE (2023 Table 2).",
+        "method": "Published Davis and Navarro Table 2 calendar-age range from radiocarbon calibration (SHCal20).",
+        "interpretation": "Dates wood from a surviving pile in a river settlement.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The piles at Armíndio are spread among small clusters in two groups. Similar-sized clusters led the survey team to interpret them as the supports of separate houses.",
+          "explanation": "The calendar range estimates the age of dated wood. Construction may be younger if an older part of the tree was sampled.",
+          "status": "well-supported",
+          "support": [
+            {
+              "sourceId": "eb-ne-src-navarro-2018",
+              "locator": "pp. 1590 and 1593, Figure 5",
+              "note": "GPS survey records site layout and pile clusters.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-ne-src-davis-navarro-2023",
+              "locator": "Table 2, Beta-404757",
+              "note": "Published revised calibration for the Armíndio pile.",
+              "stance": "supports"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-ne-src-navarro-2018",
+          "authors": "Alexandre Guida Navarro",
+          "year": 2018,
+          "title": "New evidence for late first-millennium AD stilt-house settlements in Eastern Amazonia",
+          "venue": "Antiquity 92(366):1586–1603",
+          "url": "https://www.fapema.br/wp-content/uploads/2019/04/Artigo-na-Antiquity.pdf",
+          "access": "Full survey article, calibrated dates in Table 1 and original location figures visually checked.",
+          "referenceType": "journal-article",
+          "doi": "10.15184/aqy.2018.162"
+        },
+        {
+          "id": "eb-ne-src-davis-navarro-2023",
+          "authors": "Christopher Davis and Alexandre Guida Navarro",
+          "year": 2023,
+          "title": "Plan of prehistoric stilt village in Maranhão Brazil may resemble the Pleiades",
+          "venue": "Journal of Archaeological Science: Reports 51:104123",
+          "url": "https://doi.org/10.1016/j.jasrep.2023.104123",
+          "access": "Original article and Table 2 checked using the accessible full-text copy at https://www.academia.edu/105058953/Plan_of_prehistoric_stilt_village_in_Maranh%C3%A3o_Brazil_may_resemble_the_Pleiades .",
+          "referenceType": "journal-article",
+          "doi": "10.1016/j.jasrep.2023.104123"
+        }
+      ],
+      "review": {
+        "summary": "The piles at Armíndio are spread among small clusters in two groups. Similar-sized clusters led the survey team to interpret them as the supports of separate houses.",
+        "limitations": "The calendar range estimates the age of dated wood. Construction may be younger if an older part of the tree was sampled.",
+        "discussion": "The settlement occupied the Turiaçu channel within the seasonally flooded Maranhão wetlands. Its two sets of posts differ from the large central arrangement at Boca do Rio.",
+        "provenance": "Original account checked against the archaeological sources and geographic references in this record.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added source-checked archaeological evidence."
+        ],
+        "relatedIds": [
+          "eb-ne-boca-do-rio"
+        ]
+      }
+    },
+    {
+      "id": "eb-ne-encantado",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Encantado — wooden piles in the Pericumã basin",
+      "culture": {
+        "id": "eb-ne-context-maranhao-stilt",
+        "name": "Maranhão stilt-village communities",
+        "kind": "culture",
+        "color": "#416e74"
+      },
+      "location": {
+        "id": "eb-ne-place-encantado",
+        "name": "Encantado stilt village",
+        "lon": -45.115,
+        "lat": -2.627,
+        "precision": "Approximate river and lake locality read from the published regional graticule, about 2 km.",
+        "provenance": "Navarro (2018), Figure 1, plotted site 1 south of Pinheiro in the Pericumã basin. https://www.fapema.br/wp-content/uploads/2019/04/Artigo-na-Antiquity.pdf"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 770,
+        "end": 969,
+        "original": "Wood Beta-406837 770–966 and Beta-492359 771–969 cal CE (2023 Table 2).",
+        "method": "Published Davis and Navarro Table 2 calendar-age range from radiocarbon calibration (SHCal20).",
+        "interpretation": "The overlapping ranges date two sampled posts in the same locality.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 770,
+            "end": 969,
+            "certainty": "approximate",
+            "note": "Two overlapping wood-date ranges. An isolated earlier result lies outside this record."
+          }
+        ]
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "People also placed timbers in the seasonally inundated Pericumã basin near present-day Pinheiro, one river basin east of the Turiaçu villages. Two wooden posts date to the late first millennium CE.",
+          "explanation": "A third, much older wood sample is reported separately in the published table. The late samples date episodes of wood growth and use, with potential old-wood effects.",
+          "status": "well-supported",
+          "support": [
+            {
+              "sourceId": "eb-ne-src-navarro-2018",
+              "locator": "pp. 1593–1594, Figure 1 and “Encantado”",
+              "note": "Documents a sampled settlement in a separate river basin.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-ne-src-davis-navarro-2023",
+              "locator": "Table 2, Beta-406837 and Beta-492359",
+              "note": "Both late first-millennium wood ranges are published together with an isolated earlier sample.",
+              "stance": "supports"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-ne-src-navarro-2018",
+          "authors": "Alexandre Guida Navarro",
+          "year": 2018,
+          "title": "New evidence for late first-millennium AD stilt-house settlements in Eastern Amazonia",
+          "venue": "Antiquity 92(366):1586–1603",
+          "url": "https://www.fapema.br/wp-content/uploads/2019/04/Artigo-na-Antiquity.pdf",
+          "access": "Full survey article, calibrated dates in Table 1 and original location figures visually checked.",
+          "referenceType": "journal-article",
+          "doi": "10.15184/aqy.2018.162"
+        },
+        {
+          "id": "eb-ne-src-davis-navarro-2023",
+          "authors": "Christopher Davis and Alexandre Guida Navarro",
+          "year": 2023,
+          "title": "Plan of prehistoric stilt village in Maranhão Brazil may resemble the Pleiades",
+          "venue": "Journal of Archaeological Science: Reports 51:104123",
+          "url": "https://doi.org/10.1016/j.jasrep.2023.104123",
+          "access": "Original article and Table 2 checked using the accessible full-text copy at https://www.academia.edu/105058953/Plan_of_prehistoric_stilt_village_in_Maranh%C3%A3o_Brazil_may_resemble_the_Pleiades .",
+          "referenceType": "journal-article",
+          "doi": "10.1016/j.jasrep.2023.104123"
+        }
+      ],
+      "review": {
+        "summary": "People also placed timbers in the seasonally inundated Pericumã basin near present-day Pinheiro, one river basin east of the Turiaçu villages. Two wooden posts date to the late first millennium CE.",
+        "limitations": "A third, much older wood sample is reported separately in the published table. The late samples date episodes of wood growth and use, with potential old-wood effects.",
+        "discussion": "Encantado gives the settlement pattern geographic depth across neighboring wetlands. The dated timbers overlap in age with posts at some Turiaçu sites. Similar use of flooded waterways is visible in both basins.",
+        "provenance": "Original account checked against the archaeological sources and geographic references in this record.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added source-checked archaeological evidence."
+        ],
+        "relatedIds": [
+          "eb-ne-boca-do-rio",
+          "eb-ne-formoso"
+        ]
+      }
+    },
+    {
+      "id": "eb-ne-formoso",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Formoso — wooden piles and pottery in a seasonal lake",
+      "culture": {
+        "id": "eb-ne-context-maranhao-stilt",
+        "name": "Maranhão stilt-village communities",
+        "kind": "culture",
+        "color": "#416e74"
+      },
+      "location": {
+        "id": "eb-ne-place-formoso",
+        "name": "Formoso stilt village",
+        "lon": -45.387,
+        "lat": -3.253,
+        "precision": "Rounded surveyed site-area coordinates, approximately 0.2 km.",
+        "provenance": "Davis and Navarro (2023), methods text following Table 2, gives 3°15.198′ S, 45°23.223′ W and UTM 457000E/9640400N (zone 23M). https://doi.org/10.1016/j.jasrep.2023.104123"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 441,
+        "end": 1020,
+        "original": "POZ-11300 wood 441–637 cal CE. Later wood: Beta-576497 664–842, Beta-576496 and -576498 680–876, Beta-576500 771–985, Beta-512409 and -576499 772–990. Vessel soot Beta-512408 892–1020 cal CE.",
+        "method": "Published Davis and Navarro Table 2 calendar-age range from radiocarbon calibration (SHCal20).",
+        "interpretation": "An earlier sample is separated from overlapping later dates. The ranges date samples and can be older than installation.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 441,
+            "end": 637,
+            "certainty": "approximate",
+            "note": "Earlier wood assay POZ-11300. This calibrated result crosses the atlas chapter’s 501 CE starting year."
+          },
+          {
+            "start": 664,
+            "end": 1020,
+            "certainty": "approximate",
+            "note": "Later overlapping results for wood and vessel soot. The gap after the earlier sample is excluded."
+          }
+        ]
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Above a seasonally flooded lake in Maranhão, the people of Formoso built structures on wooden posts. Pottery from the site includes incised and punctured decoration, painted vessels and modeled figures.",
+          "explanation": "The early result from a single wood sample is separated by a gap from a cluster of later wood and soot dates. The building layout and specific functions of the clusters are research interpretations.",
+          "status": "well-supported",
+          "support": [
+            {
+              "sourceId": "eb-ne-src-davis-navarro-2023",
+              "locator": "Table 2, Formoso rows; Results §3, Formoso site; Figures 1 and 3",
+              "note": "Full calibrated dates, surveyed coordinate and evidence for the layout and material assemblage.",
+              "stance": "supports"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-ne-src-davis-navarro-2023",
+          "authors": "Christopher Davis and Alexandre Guida Navarro",
+          "year": 2023,
+          "title": "Plan of prehistoric stilt village in Maranhão Brazil may resemble the Pleiades",
+          "venue": "Journal of Archaeological Science: Reports 51:104123",
+          "url": "https://doi.org/10.1016/j.jasrep.2023.104123",
+          "access": "Original article and Table 2 checked using the accessible full-text copy at https://www.academia.edu/105058953/Plan_of_prehistoric_stilt_village_in_Maranh%C3%A3o_Brazil_may_resemble_the_Pleiades .",
+          "referenceType": "journal-article",
+          "doi": "10.1016/j.jasrep.2023.104123"
+        }
+      ],
+      "review": {
+        "summary": "Above a seasonally flooded lake in Maranhão, the people of Formoso built structures on wooden posts. Pottery from the site includes incised and punctured decoration, painted vessels and modeled figures.",
+        "limitations": "The early result from a single wood sample is separated by a gap from a cluster of later wood and soot dates. The building layout and specific functions of the clusters are research interpretations.",
+        "discussion": "The ages come from timber posts and a carbon deposit on pottery. The dates bring Formoso into view earlier than the best-known settlements to the north. Its local pottery brings another set of designs into the history of Maranhão’s wetland settlements.",
+        "provenance": "Original account checked against the archaeological sources and geographic references in this record.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added source-checked archaeological evidence."
+        ],
+        "relatedIds": [
+          "eb-ne-encantado"
+        ]
+      }
+    },
+    {
+      "id": "eb-ne-piragiba",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Praça de Piragiba — clay urns beside the Ribeirão Santana",
+      "culture": {
+        "id": "eb-ne-context-aratu",
+        "name": "Aratu ceramic communities",
+        "kind": "culture",
+        "color": "#8b583e"
+      },
+      "location": {
+        "id": "eb-ne-place-piragiba",
+        "name": "Praça de Piragiba",
+        "lon": -43.833,
+        "lat": -12.198,
+        "precision": "Rounded survey reference, approximately 1 km across the recorded village area.",
+        "provenance": "Fernandes, Penha and Nascimento (2020), pp. 62–64 field table, Piragiba/PP, UTM zone 23S approximate site center 626917E/8651298N, converted to WGS84 and rounded. https://www.academia.edu/42835263/Arqueologia_e_patrim%C3%B4nio_cultural_na_UFRB_10_anos_de_pesquisa_2008_2018_"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1040,
+        "end": 1257,
+        "original": "Femur from burial Un1Ur2, 1040–1257 cal CE, published preliminary calibration. Original burial inventory reports GIF-10999 (870 ± 50 radiocarbon BP).",
+        "method": "Published calibration quoted in Machado’s excavation-related proceedings contribution.",
+        "interpretation": "This is a possible date for one urn burial in the village locality.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "People living beside the Ribeirão Santana buried their dead in clay urns with ceramic lids. The smooth, pear-shaped vessels were often grouped in small clusters. A date on bone from one burial places this use of Piragiba in 1040–1257 CE.",
+          "explanation": "A single dated burial dates one use of the locality. Surface stone tools accumulated across more than one period and have varying relationships to the burial contexts.",
+          "status": "well-supported",
+          "support": [
+            {
+              "sourceId": "eb-ne-src-machado-dates",
+              "locator": "p. 453, §2 “As indústrias líticas lascadas do sítio Praça de Piragiba”",
+              "note": "Identifies human femur Un1Ur2 as the basis for the calibrated range.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-ne-src-machado-palimpsest",
+              "locator": "§2 and §§3.1–3.2; Figure 1",
+              "note": "Describes groups of lidded urns and the mixed surface assemblages.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-ne-src-fernandes-penha-nascimento-2020",
+              "locator": "pp. 62–64, Piragiba PP survey row",
+              "note": "Publishes the village survey reference.",
+              "stance": "context"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-ne-src-machado-dates",
+          "authors": "Juliana de Resende Machado",
+          "year": 2015,
+          "title": "Contribuição da análise tecnológica para a compreensão de indústrias líticas lascadas Aratu",
+          "venue": "Revista Arkeogazte, Anexo 1, Actas de las VII Jornadas de Jóvenes en Investigación Arqueológica, pp. 452–457",
+          "url": "https://www.arkeogazte.org/wp-content/uploads/2019/05/Actas_JIA.pdf",
+          "access": "Expanded original contribution and preliminary 1040–1257 cal CE on femur Un1Ur2 read in the proceedings PDF.",
+          "referenceType": "book-chapter",
+          "publisher": "Arkeogazte",
+          "editors": "Lorena Elorza González de Alaiza, Begoña Hernández Beloqui, Clara Hernando Álvarez, Iraia Sáez de la Fuente, and Carlos Tejerizo García",
+          "pages": "452–457"
+        },
+        {
+          "id": "eb-ne-src-machado-palimpsest",
+          "authors": "Juliana de Resende Machado",
+          "year": 2015,
+          "title": "A coleção lítica de superfície e o palimpsesto no sítio arqueológico Praça de Piragiba (Bahia)",
+          "venue": "Teoria & Sociedade 23(1):41–68",
+          "url": "https://bib44.fafich.ufmg.br/teoriaesociedade/index.php/rts/article/download/176/124",
+          "access": "Full field and lithic study, burial history, Figure 1 and context analysis checked.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "eb-ne-src-fernandes-penha-nascimento-2020",
+          "authors": "Henry Luydy Abraham Fernandes, Ulisses Cyrino Penha, and George Silva Nascimento",
+          "year": 2020,
+          "title": "Metodologia de prospecção de sítios líticos de superfície na região de Piragiba, oeste da Bahia",
+          "venue": "In Arqueologia e patrimônio cultural na UFRB: 10 anos de pesquisas (2008–2018), pp. 40–66",
+          "url": "https://www.academia.edu/42835263/Arqueologia_e_patrim%C3%B4nio_cultural_na_UFRB_10_anos_de_pesquisa_2008_2018_",
+          "access": "Primary survey chapter and table identifying villages and stone-tool scatters checked.",
+          "referenceType": "book-chapter",
+          "publisher": "BasiBooks",
+          "editors": "Henry Luydy Abraham Fernandes and Fabiana Comerlato",
+          "pages": "40–66"
+        }
+      ],
+      "review": {
+        "summary": "People living beside the Ribeirão Santana buried their dead in clay urns with ceramic lids. The smooth, pear-shaped vessels were often grouped in small clusters. A date on bone from one burial places this use of Piragiba in 1040–1257 CE.",
+        "limitations": "A single dated burial dates one use of the locality. Surface stone tools accumulated across more than one period and have varying relationships to the burial contexts.",
+        "discussion": "Repeated excavations and survey have traced the village deposits beneath the modern settlement and across the plain. Knapped stone blades and production debris also occur across the locality. Technological study found a mixture that includes older material, so the urns provide the clearest link to the dated community.",
+        "provenance": "Original account checked against the archaeological sources and geographic references in this record.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added source-checked archaeological evidence."
+        ],
+        "relatedIds": [
+          "eb-ne-canaa-pottery",
+          "eb-ne-evaristo"
+        ]
+      }
+    },
+    {
+      "id": "eb-ne-evaristo",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Serra do Evaristo I — pottery and burials above Baturité",
+      "culture": {
+        "id": "eb-ne-context-aratu",
+        "name": "Aratu ceramic communities",
+        "kind": "culture",
+        "color": "#8b583e"
+      },
+      "location": {
+        "id": "eb-ne-place-evaristo",
+        "name": "Serra do Evaristo I",
+        "lon": -38.919,
+        "lat": -4.378,
+        "precision": "Rounded published site-area coordinate, approximately 0.2 km.",
+        "provenance": "Castro et al. (2015), Figure 1 plan. Freitas et al. (2022), Figure 1A, gives 4°22′40″ S, 38°55′08″ W. https://revista.sabnet.org/ojs/index.php/sab/article/download/881/788/2501"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1297,
+        "end": 1395,
+        "original": "UE011, Beta-328350 charcoal: 653–555 cal BP, printed as 1395–1297 cal CE.",
+        "method": "Published calibrated radiocarbon range reordered from earliest to latest calendar year.",
+        "interpretation": "One dated charcoal context at the site anchors late medieval pottery and burial activity.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "On the slopes above Baturité, people made large pottery vessels and used some of them to bury individuals. Excavators recovered eighteen vessels and identified human bones in six.",
+          "explanation": "The calibrated charcoal sample anchors a context at the site. Individual vessels and burials have their own dates and preservation histories.",
+          "status": "well-supported",
+          "support": [
+            {
+              "sourceId": "eb-ne-src-castro-et-al-2015",
+              "locator": "pp. 203, 206–207, 219–225; Figure 1",
+              "note": "Original charcoal date, vessels and archaeological and osteological analyses.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-ne-src-freitas-et-al-2022-pollen",
+              "locator": "Figure 1A, Table 1",
+              "note": "Site coordinate and charcoal sample material.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-ne-src-oliveira-evaristo",
+              "locator": "Ceramic analysis and discussion",
+              "note": "Associates the assemblage with the Aratu tradition.",
+              "stance": "supports"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-ne-src-castro-et-al-2015",
+          "authors": "Viviane Maria C. de Castro, Claudia Alves de Oliveira, Sérgio Francisco S. M. da Silva, and Igor Pedroza",
+          "year": 2015,
+          "title": "Práticas funerárias dos grupos ceramistas pré-históricos do sítio Serra do Evaristo I, município de Baturité, Ceará",
+          "venue": "Mneme 16(36):201–227",
+          "url": "https://periodicos.ufrn.br/mneme/article/download/5698/6127",
+          "access": "Full excavation article. Sample in the introduction and plan, inventory and deposition descriptions checked.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "eb-ne-src-freitas-et-al-2022-pollen",
+          "authors": "Aline Gonçalves de Freitas, Luzia Maria de Sousa Carvalho, Yannara Brennda da Silva Leôncio, Pedro Elton Douglas Martins, and Sérgio Augusto de Miranda Chaves",
+          "year": 2022,
+          "title": "Estudos em palinologia arqueológica no Nordeste do Brasil",
+          "venue": "Revista de Arqueologia 35(2):9–40",
+          "url": "https://revista.sabnet.org/ojs/index.php/sab/article/download/881/788/2501",
+          "access": "Figure 1 published coordinates and Table 1 original context details and radiocarbon/TL distinction checked.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "eb-ne-src-oliveira-evaristo",
+          "authors": "Verônica Pontes Viana, Valdeci Santos Jr., Daline Lima de Oliveira, Leandro José do Nascimento Souza, João Nilo de Souza Nobre, Thalison dos Santos, and Cristiane de Andrade Buco",
+          "year": 2026,
+          "title": "A Tradição Cerâmica Aratu identificada no Sítio Arqueológico Serra do Evaristo, município de Baturité, estado do Ceará, Brasil",
+          "venue": "Arquivos do Museu de História Natural e Jardim Botânico da UFMG",
+          "url": "https://periodicos.ufmg.br/index.php/mhnjb/article/view/56920",
+          "access": "Published field-analysis article checked for the Aratu affiliation of the ceramics.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "On the slopes above Baturité, people made large pottery vessels and used some of them to bury individuals. Excavators recovered eighteen vessels and identified human bones in six.",
+        "limitations": "The calibrated charcoal sample anchors a context at the site. Individual vessels and burials have their own dates and preservation histories.",
+        "discussion": "The excavated deposits included both adults and children, and the excavators identified several primary burials. The shapes of the vessels link the site to the pottery archaeologists call Aratu.",
+        "provenance": "Original account checked against the archaeological sources and geographic references in this record.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added source-checked archaeological evidence."
+        ],
+        "relatedIds": [
+          "eb-ne-piragiba",
+          "eb-ne-serra-da-barriga"
+        ]
+      }
+    },
+    {
+      "id": "eb-ne-serra-da-barriga",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Serra da Barriga — a hilltop village in Alagoas",
+      "culture": {
+        "id": "eb-ne-context-aratu",
+        "name": "Aratu ceramic communities",
+        "kind": "culture",
+        "color": "#8b583e"
+      },
+      "location": {
+        "id": "eb-ne-place-serra-da-barriga",
+        "name": "Serra da Barriga (SB1)",
+        "lon": -36.09,
+        "lat": -9.17,
+        "precision": "Rounded ridge-area reference, approximately 2 km across the protected locality.",
+        "provenance": "IPHAN and Fundação Cultural Palmares, Serra da Barriga dossier §6.2, surveyed SIRGAS2000 ridge map. Costa (2010), chap. 2 locates SB1 on the Serra da Barriga plateau. https://www.gov.br/palmares/pt-br/midias/dossieserradabarriga.pdf"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 983,
+        "end": 1117,
+        "original": "Site ALUDPSB1 pottery, 1050 ± 67 CE, published thermoluminescence result.",
+        "method": "The published calendar-year TL estimate is represented by its stated error bounds.",
+        "interpretation": "The estimate dates firing of one sherd associated with the Indigenous village.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Indigenous potters on the Serra da Barriga made vessels for cooking and other daily use, along with forms used in burial. Excavation exposed a living surface with pottery from the village on the ridge.",
+          "explanation": "The date comes from one ceramic sample. Later human activities, including the history of Quilombo dos Palmares, left separate traces across the ridge.",
+          "status": "well-supported",
+          "support": [
+            {
+              "sourceId": "eb-ne-src-costa-2010",
+              "locator": "Table 1.2 and n. 4; chap. 2, SB1; chap. 4 ceramic profiles",
+              "note": "Reports a pottery date, mapped excavations, and describes the site's ceramic forms and technology.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-ne-src-serra-iphan",
+              "locator": "§6.2",
+              "note": "Provides a ridge-scale public map reference.",
+              "stance": "context"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-ne-src-costa-2010",
+          "authors": "Rodrigo Lessa Costa",
+          "year": 2010,
+          "title": "Os grupos ceramistas da Serra da Barriga: caracterização da tecnologia cerâmica no contexto da Tradição Aratu",
+          "venue": "Universidade Federal de Pernambuco, master's dissertation",
+          "url": "https://repositorio.ufpe.br/bitstream/123456789/836/1/arquivo835_1.pdf",
+          "access": "Full ceramic study and Table 1.2, with the laboratory method in footnote 4, checked.",
+          "referenceType": "report",
+          "publisher": "Universidade Federal de Pernambuco"
+        },
+        {
+          "id": "eb-ne-src-serra-iphan",
+          "authors": "Instituto do Patrimônio Histórico e Artístico Nacional and Fundação Cultural Palmares",
+          "year": 2017,
+          "title": "Dossiê Serra da Barriga, parte mais alcantilada: Quilombo dos Palmares",
+          "venue": "Dossier for Patrimônio Cultural do Mercosul",
+          "url": "https://www.gov.br/palmares/pt-br/midias/dossieserradabarriga.pdf",
+          "access": "Section 6.2 heritage-area location read from the published survey and map.",
+          "referenceType": "report",
+          "publisher": "Instituto do Patrimônio Histórico e Artístico Nacional"
+        }
+      ],
+      "review": {
+        "summary": "Indigenous potters on the Serra da Barriga made vessels for cooking and other daily use, along with forms used in burial. Excavation exposed a living surface with pottery from the village on the ridge.",
+        "limitations": "The date comes from one ceramic sample. Later human activities, including the history of Quilombo dos Palmares, left separate traces across the ridge.",
+        "discussion": "The surviving ceramics include graphite-finished pieces, smooth everyday vessels, and large containers. Excavated areas give a view of an Indigenous village built centuries before the period in which the Serra da Barriga became central to Palmares.",
+        "provenance": "Original account checked against the archaeological sources and geographic references in this record.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added source-checked archaeological evidence."
+        ],
+        "relatedIds": [
+          "eb-ne-evaristo"
+        ]
+      }
+    },
+    {
+      "id": "eb-ne-canaa-pottery",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Canaã — graphite in everyday pottery beside the Rio Colônia",
+      "culture": {
+        "id": "eb-ne-context-aratu",
+        "name": "Aratu ceramic communities",
+        "kind": "culture",
+        "color": "#8b583e"
+      },
+      "location": {
+        "id": "eb-ne-place-canaa",
+        "name": "Canaã, Rio Colônia",
+        "lon": -39.48,
+        "lat": -14.93,
+        "precision": "Rounded reservoir-area reference, approximately 5 km.",
+        "provenance": "Ribeiro et al. (2023), Figure 1 and site section, locate the archaeological site on the left bank in what became the reservoir. Itabuna water plan (2025), Figure 45, establishes the modern reservoir reference. https://itabuna.ba.gov.br/wp-content/uploads/2025/09/6039-Itabuna-Saneamento-Produto-2-Diagnostico-v7-logo-itabuna.pdf"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1306,
+        "end": 1496,
+        "original": "Graphite-coated sherd C-06-1 (DAT-5426): 620 ± 95 years by thermoluminescence in the report signed February 2021, approximately 1306–1496 CE.",
+        "method": "TL measures time since firing. The approximate CE range references the dated 2021 lab report and its stated uncertainty.",
+        "interpretation": "Approximate firing-age range for a graphite-coated sherd from the deep auger sample.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "At Canaã, potters mixed graphite into some clay vessels and coated others with it. Near broken pots, archaeologists found stone tools and bones of armadillos and other animals, suggesting an area where people prepared food.",
+          "explanation": "The dated coated sherd is distinct from the four pieces measured by XRF. Untested sources remain possible, and disturbed deposits complicate the associations among individual fragments.",
+          "status": "well-supported",
+          "support": [
+            {
+              "sourceId": "eb-ne-src-ribeiro-2021",
+              "locator": "pp. 166–168, §6.2 and Appendix A, laboratory Table 1",
+              "note": "Identifies depth, graphite coating, measurement age and signed 2021 laboratory date.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-ne-src-ribeiro-et-al-2023",
+              "locator": "pp. 150–151 and 155–167; Figures 1, 2, 15–18",
+              "note": "Reports excavated use context and compares ceramic fragments with sampled graphite deposits.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-ne-src-itape-reservoir",
+              "locator": "Figure 45",
+              "note": "Locates the reservoir area used as a public geographic proxy.",
+              "stance": "context"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-ne-src-ribeiro-2021",
+          "authors": "Morgana Cavalcante Ribeiro",
+          "year": 2021,
+          "title": "História indígena de longa duração no Vale do Rio Colônia: o estudo de caso do sítio arqueológico Canaã",
+          "venue": "Universidade Federal do Vale do São Francisco, master's dissertation",
+          "url": "https://www.univasf.edu.br/~tcc/00001f/00001f1f.pdf",
+          "access": "Full dissertation, excavation plan, §6.2 and signed laboratory report in Appendix A checked.",
+          "referenceType": "report",
+          "publisher": "Universidade Federal do Vale do São Francisco"
+        },
+        {
+          "id": "eb-ne-src-ribeiro-et-al-2023",
+          "authors": "Morgana Cavalcante Ribeiro, Rodrigo Lessa Costa, Maria Conceição Soares Meneses Lage, and Benedito Batista Farias Filho",
+          "year": 2023,
+          "title": "O uso do grafite enquanto escolha técnica em cerâmicas da tradição Aratu no sul da Bahia",
+          "venue": "Revista de Arqueologia 36(1):145–169",
+          "url": "https://revista.sabnet.org/ojs/index.php/sab/article/download/1005/855",
+          "access": "Full paper, site and geological maps, comparative XRF spectra and provenance limitations checked.",
+          "referenceType": "journal-article",
+          "doi": "10.24885/sab.v36i1.1005"
+        },
+        {
+          "id": "eb-ne-src-itape-reservoir",
+          "authors": "Prefeitura Municipal de Itabuna and Fundação Instituto de Pesquisas Econômicas",
+          "year": 2025,
+          "title": "Plano Municipal de Saneamento Básico de Itabuna: Produto 2, Diagnóstico",
+          "venue": "Município de Itabuna",
+          "url": "https://itabuna.ba.gov.br/wp-content/uploads/2025/09/6039-Itabuna-Saneamento-Produto-2-Diagnostico-v7-logo-itabuna.pdf",
+          "access": "Figure 45 places the Barragem Itapé on the Rio Colônia and gives a versioned public graticule.",
+          "referenceType": "report",
+          "publisher": "Prefeitura Municipal de Itabuna"
+        }
+      ],
+      "review": {
+        "summary": "At Canaã, potters mixed graphite into some clay vessels and coated others with it. Near broken pots, archaeologists found stone tools and bones of armadillos and other animals, suggesting an area where people prepared food.",
+        "limitations": "The dated coated sherd is distinct from the four pieces measured by XRF. Untested sources remain possible, and disturbed deposits complicate the associations among individual fragments.",
+        "discussion": "One graphite-coated sherd came from the deepest excavated sample. Earlier craft practice can therefore be dated apart from the site's later materials. Elemental tests on other sherds found similarities with graphite from the Jequié area.",
+        "provenance": "Original account checked against the archaeological sources and geographic references in this record.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added source-checked archaeological evidence."
+        ],
+        "relatedIds": [
+          "eb-ne-canaa-graphite-movement",
+          "eb-ne-piragiba"
+        ]
+      }
+    },
+    {
+      "id": "eb-ne-canaa-graphite-movement",
+      "revision": 1,
+      "type": "event",
+      "title": "Canaã — possible graphite supply from the Jequié area",
+      "culture": {
+        "id": "eb-ne-context-aratu",
+        "name": "Aratu ceramic communities",
+        "kind": "culture",
+        "color": "#8b583e"
+      },
+      "location": {
+        "id": "eb-ne-place-jequie-source-area",
+        "name": "Jequié graphite source region",
+        "lon": -40.08,
+        "lat": -13.865,
+        "precision": "Municipal reference for the candidate source area, on the order of tens of kilometres.",
+        "provenance": "Ribeiro et al. (2023), Figure 17 and pp. 159–167, identifies the Jequié source area. INEMA monitoring Quadro 1 places urban Jequié at 13°51′53.9″ S, 40°04′52.2″ W. The pin stands for the region. https://www.ba.gov.br/inema/sites/site-inema/files/migracao_2024/arquivos/wp-content/files/Relatrio__Contas_C2_2013_Final.pdf"
+      },
+      "destination": {
+        "id": "eb-ne-place-canaa",
+        "name": "Canaã, Rio Colônia",
+        "lon": -39.48,
+        "lat": -14.93,
+        "precision": "Rounded reservoir-area reference, approximately 5 km.",
+        "provenance": "Ribeiro et al. (2023), Figure 1 and site section, locate the archaeological site on the left bank in what became the reservoir. Itabuna water plan (2025), Figure 45, establishes the modern reservoir reference. https://itabuna.ba.gov.br/wp-content/uploads/2025/09/6039-Itabuna-Saneamento-Produto-2-Diagnostico-v7-logo-itabuna.pdf"
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1306,
+        "end": 1496,
+        "original": "Graphite-coated sherd C-06-1 (DAT-5426): 620 ± 95 years by thermoluminescence in the report signed February 2021, approximately 1306–1496 CE.",
+        "method": "TL measures time since firing. The approximate CE range references the dated 2021 lab report and its stated uncertainty.",
+        "interpretation": "Approximate context for early graphite use at Canaã. The timing of any specific transfer remains unknown.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "exchange",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 1306,
+            "end": 1496,
+            "certainty": "approximate",
+            "note": "Possibly associated context for regional graphite procurement, based on one independently dated coated sherd."
+          }
+        ],
+        "connection": {
+          "claimId": "evidence",
+          "evidence": "Graphite-coated sherd C-06-1 (DAT-5426): 620 ± 95 years by thermoluminescence in the report signed February 2021, approximately 1306–1496 CE.",
+          "lastEvidence": 1496,
+          "cessation": "unknown",
+          "note": "1496 is the latest boundary of the approximate context range. The length of time this supply relationship operated is unknown."
+        }
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The strongest match among the tested deposits points toward the Jequié area, roughly 130 km from Canaã. Potters used graphite as a coating and mixed it into clay.",
+          "explanation": "The Jequié attribution is provisional. Other deposits remain untested, and the four fragments measured for chemistry lack individual dates. This map view uses the same archaeological evidence as the Canaã site record.",
+          "status": "under discussion",
+          "support": [
+            {
+              "sourceId": "eb-ne-src-ribeiro-2021",
+              "locator": "pp. 166–168, §6.2 and Appendix A, laboratory Table 1",
+              "note": "Identifies depth, graphite coating, measurement age and signed 2021 laboratory date.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-ne-src-ribeiro-et-al-2023",
+              "locator": "pp. 150–151 and 155–167; Figures 1, 2, 15–18",
+              "note": "Reports excavated use context and compares ceramic fragments with sampled graphite deposits.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-ne-src-itape-reservoir",
+              "locator": "Figure 45",
+              "note": "Locates the reservoir area used as a public geographic proxy.",
+              "stance": "context"
+            },
+            {
+              "sourceId": "eb-ne-src-inema-jequie",
+              "locator": "Quadro 1, CON-CON-550",
+              "note": "Sources the geographic anchor for the candidate source region.",
+              "stance": "context"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-ne-src-ribeiro-2021",
+          "authors": "Morgana Cavalcante Ribeiro",
+          "year": 2021,
+          "title": "História indígena de longa duração no Vale do Rio Colônia: o estudo de caso do sítio arqueológico Canaã",
+          "venue": "Universidade Federal do Vale do São Francisco, master's dissertation",
+          "url": "https://www.univasf.edu.br/~tcc/00001f/00001f1f.pdf",
+          "access": "Full dissertation, excavation plan, §6.2 and signed laboratory report in Appendix A checked.",
+          "referenceType": "report",
+          "publisher": "Universidade Federal do Vale do São Francisco"
+        },
+        {
+          "id": "eb-ne-src-ribeiro-et-al-2023",
+          "authors": "Morgana Cavalcante Ribeiro, Rodrigo Lessa Costa, Maria Conceição Soares Meneses Lage, and Benedito Batista Farias Filho",
+          "year": 2023,
+          "title": "O uso do grafite enquanto escolha técnica em cerâmicas da tradição Aratu no sul da Bahia",
+          "venue": "Revista de Arqueologia 36(1):145–169",
+          "url": "https://revista.sabnet.org/ojs/index.php/sab/article/download/1005/855",
+          "access": "Full paper, site and geological maps, comparative XRF spectra and provenance limitations checked.",
+          "referenceType": "journal-article",
+          "doi": "10.24885/sab.v36i1.1005"
+        },
+        {
+          "id": "eb-ne-src-itape-reservoir",
+          "authors": "Prefeitura Municipal de Itabuna and Fundação Instituto de Pesquisas Econômicas",
+          "year": 2025,
+          "title": "Plano Municipal de Saneamento Básico de Itabuna: Produto 2, Diagnóstico",
+          "venue": "Município de Itabuna",
+          "url": "https://itabuna.ba.gov.br/wp-content/uploads/2025/09/6039-Itabuna-Saneamento-Produto-2-Diagnostico-v7-logo-itabuna.pdf",
+          "access": "Figure 45 places the Barragem Itapé on the Rio Colônia and gives a versioned public graticule.",
+          "referenceType": "report",
+          "publisher": "Prefeitura Municipal de Itabuna"
+        },
+        {
+          "id": "eb-ne-src-inema-jequie",
+          "authors": "Instituto do Meio Ambiente e Recursos Hídricos da Bahia",
+          "year": 2013,
+          "title": "Relatório do monitoramento da qualidade das águas: Bacia do rio de Contas",
+          "venue": "Programa Monitora, Governo do Estado da Bahia",
+          "url": "https://www.ba.gov.br/inema/sites/site-inema/files/migracao_2024/arquivos/wp-content/files/Relatrio__Contas_C2_2013_Final.pdf",
+          "access": "Quadro 1, CON-CON-550, gives a public reference in the urban area of Jequié.",
+          "referenceType": "report",
+          "publisher": "Instituto do Meio Ambiente e Recursos Hídricos da Bahia"
+        }
+      ],
+      "review": {
+        "summary": "The strongest match among the tested deposits points toward the Jequié area, roughly 130 km from Canaã. Potters used graphite as a coating and mixed it into clay.",
+        "limitations": "The Jequié attribution is provisional. Other deposits remain untested, and the four fragments measured for chemistry lack individual dates. This map view uses the same archaeological evidence as the Canaã site record.",
+        "discussion": "A portable X-ray fluorescence study compared four Canaã fragments with samples from the Bahia–Minas graphite province. Similar titanium and barium signals favored the Jequié-area sample among the materials tested. People could have procured graphite themselves or obtained it through intermediaries. The line links a candidate source region to the find area.",
+        "provenance": "Original account checked against the archaeological sources and geographic references in this record.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added source-checked archaeological evidence."
+        ],
+        "relatedIds": [
+          "eb-ne-canaa-pottery"
+        ]
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -40.08,
+              -13.865
+            ],
+            [
+              -39.48,
+              -14.93
+            ]
+          ]
+        },
+        "direction": "forward",
+        "precision": "Schematic connection from the candidate Jequié graphite region to Canaã. Actual travel and any intermediate exchanges are unknown.",
+        "provenance": "Ribeiro et al. (2023), Figure 17 and pp. 159–167, identifies the Jequié source area. INEMA monitoring Quadro 1 places urban Jequié at 13°51′53.9″ S, 40°04′52.2″ W. The pin stands for the region. https://www.ba.gov.br/inema/sites/site-inema/files/migracao_2024/arquivos/wp-content/files/Relatrio__Contas_C2_2013_Final.pdf Ribeiro et al. (2023), Figure 1 and site section, locate the archaeological site on the left bank in what became the reservoir. Itabuna water plan (2025), Figure 45, establishes the modern reservoir reference. https://itabuna.ba.gov.br/wp-content/uploads/2025/09/6039-Itabuna-Saneamento-Produto-2-Diagnostico-v7-logo-itabuna.pdf"
+      }
+    },
+    {
+      "id": "eb-ne-jericoacoara-1",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Jericoacoara 1 — fires and tools between coastal dunes",
+      "culture": {
+        "id": "eb-ne-context-ceara-dunes",
+        "name": "Ceará coastal-dune communities",
+        "kind": "culture",
+        "color": "#477785"
+      },
+      "location": {
+        "id": "eb-ne-place-jericoacoara-1",
+        "name": "Jericoacoara 1",
+        "lon": -40.493,
+        "lat": -2.796,
+        "precision": "Rounded placement near excavation Concentrations 1 and 2, site spread about 1 km.",
+        "provenance": "Viana (2018), Figs. 5.16, 5.31 and excavation plans at 40°29′36″–40°29′32″ W and around 2°47′45″ S. https://ri.ufs.br/handle/riufs/10457"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 424,
+        "end": 1026,
+        "original": "C1 charcoal Beta-504658 1526–1367 cal BP (424–583 CE), C1 shell Beta-504659 1487–1285 cal BP (463–665 CE), C2 and C5 charcoal Beta-478976 and -478975 1267–1070 cal BP (683–880 CE), and C1 charcoal Beta-290953 1055–924 cal BP (895–1026 CE). Earlier C2 sample omitted.",
+        "method": "Published calibrated BP ranges expressed as calendar years relative to 1950. The article used SHCal20 for charcoal and Marine20 with a reservoir correction borrowed from Bahia for the shell.",
+        "interpretation": "Separate dated contexts within a shifting coastal-dune landscape. Two overlapping early ranges are displayed together.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 424,
+            "end": 665,
+            "certainty": "approximate",
+            "note": "Overlapping charcoal and marine shell ranges in C1. The charcoal range ends at 583 CE."
+          },
+          {
+            "start": 683,
+            "end": 880,
+            "certainty": "approximate",
+            "note": "Two charcoal samples in C2 and C5 share this published calibrated range."
+          },
+          {
+            "start": 895,
+            "end": 1026,
+            "certainty": "approximate",
+            "note": "A separately dated charcoal sample in Trench 01, C1."
+          }
+        ]
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "In the dunes of western Ceará, people lit hearths, chipped stone tools and used pottery. Some tools were retouched or reused for other tasks, and the excavated layers held shell as well as charcoal.",
+          "explanation": "The layers record repeated use at multiple concentrations. The shell's correction comes from Bahia de Todos os Santos, and the charcoal provides independent dating evidence. Later wind erosion displaced some surface finds.",
+          "status": "well-supported",
+          "support": [
+            {
+              "sourceId": "eb-ne-src-santos-sullasi-2022",
+              "locator": "Figure 1, Table 1 and its calibration note; “Raw material procurement” and discussion",
+              "note": "Gives sample-level ages, the excavated hearth layers, ceramics and types of raw stone used.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-ne-src-viana-2018",
+              "locator": "Chapter 5, excavation concentration plans",
+              "note": "Original coordinate axes and the layout of dated excavation concentrations.",
+              "stance": "context"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-ne-src-santos-sullasi-2022",
+          "authors": "Thalison Santos and Henry Socrates Lavalle Sullasi",
+          "year": 2022,
+          "title": "Tool production and indicators of polyvalent economies during the Upper Holocene in the Jericoacoara 1 archaeological site, Jericoacoara Coastal Plain, West Coast of the State of Ceará, Brazil",
+          "venue": "Boletim do Museu Paraense Emílio Goeldi. Ciências Humanas 17(3):e20210040",
+          "url": "https://boletimch.museu-goeldi.br/wp-content/uploads/2025/03/Humanas_V17N3_baixa.pdf",
+          "access": "Original paper and all six sample rows in Table 1 checked in the publisher’s full issue PDF.",
+          "referenceType": "journal-article",
+          "doi": "10.1590/2178-2547-BGOELDI-2021-0040"
+        },
+        {
+          "id": "eb-ne-src-viana-2018",
+          "authors": "Verônica Pontes Viana",
+          "year": 2018,
+          "title": "Dinâmicas culturais e ambientais na praia de Jericoacoara, Jijoca de Jericoacoara, Ceará – Brasil",
+          "venue": "Universidade Federal de Sergipe, doctoral thesis",
+          "url": "https://ri.ufs.br/handle/riufs/10457",
+          "access": "Full thesis, excavation sections and excavation map axes checked.",
+          "referenceType": "report",
+          "publisher": "Universidade Federal de Sergipe"
+        }
+      ],
+      "review": {
+        "summary": "In the dunes of western Ceará, people lit hearths, chipped stone tools and used pottery. Some tools were retouched or reused for other tasks, and the excavated layers held shell as well as charcoal.",
+        "limitations": "The layers record repeated use at multiple concentrations. The shell's correction comes from Bahia de Todos os Santos, and the charcoal provides independent dating evidence. Later wind erosion displaced some surface finds.",
+        "discussion": "People collected suitable pebbles and stone in the coastal plain. The tool assemblages include flakes, hammerstones and grinders. The archaeologists relate the range of activities to a coastal economy that combined collecting, fishing and hunting.",
+        "provenance": "Original account checked against the archaeological sources and geographic references in this record.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added source-checked archaeological evidence."
+        ],
+        "relatedIds": [
+          "eb-ne-evaristo"
+        ]
+      }
+    },
+    {
+      "id": "eb-ne-baixio-dos-lopes",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Baixio dos Lopes — painted pottery in a secondary burial",
+      "culture": {
+        "id": "eb-ne-context-tupiguarani",
+        "name": "Tupiguarani ceramic communities",
+        "kind": "culture",
+        "color": "#775846"
+      },
+      "location": {
+        "id": "eb-ne-place-baixio-dos-lopes",
+        "name": "Baixio dos Lopes",
+        "lon": -38.999,
+        "lat": -7.492,
+        "precision": "Rounded site-area reference from the published survey, approximately 0.2 km.",
+        "provenance": "Solari et al. (2022), p. 47, Figure 1, SAD69 UTM zone 24S 0500163E/9171908N, converted to WGS84. https://periodicos.ufpe.br/revistas/clioarqueologica/article/view/254543"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1280,
+        "end": 1385,
+        "original": "Beta-447236, carbonate from two teeth of one adult, 1280–1320 or 1350–1385 cal CE.",
+        "method": "Published AMS carbonate calibration for the human teeth. The analysis used enamel because preserved collagen was unavailable.",
+        "interpretation": "Two calibrated possibilities for one individual’s burial context.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 1280,
+            "end": 1320,
+            "certainty": "approximate",
+            "note": "First published calibrated interval for the same adult."
+          },
+          {
+            "start": 1350,
+            "end": 1385,
+            "certainty": "approximate",
+            "note": "Second published calibrated interval for the same adult."
+          }
+        ]
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Near Brejo Santo, mourners placed an adult’s bones in a large vessel painted on the inside and covered the vessel with a ceramic lid. The vessel belongs to the polychrome pottery archaeologists call Tupiguarani.",
+          "explanation": "One adult supplies the direct date. Much of the surrounding site had been disturbed before the rescue dig, and its original extent remains uncertain.",
+          "status": "well-supported",
+          "support": [
+            {
+              "sourceId": "eb-ne-src-solari-baixio-2022",
+              "locator": "pp. 47–49, 54–58 and 64–67, Figures 1, 7, 8 and 10",
+              "note": "Gives the coordinates, ceramic forms, discovery conditions, burial interpretation and both calibrated intervals.",
+              "stance": "supports"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-ne-src-solari-baixio-2022",
+          "authors": "Ana Solari, Daniela Cisneiros, Anne-Marie Pessis, Gabriela Martin, and Elisabeth Medeiros",
+          "year": 2022,
+          "title": "Os remanescentes humanos das urnas funerárias Tupi-Guarani no sítio Baixio dos Lopes, Brejo Santo – CE (720 ± 30 AP)",
+          "venue": "Clio Arqueológica 37(1):45–69",
+          "url": "https://periodicos.ufpe.br/revistas/clioarqueologica/article/view/254543",
+          "access": "Original article, site plan, calibration and excavated ceramic burial descriptions checked.",
+          "referenceType": "journal-article",
+          "doi": "10.51359/2448-2331.2022.254543"
+        }
+      ],
+      "review": {
+        "summary": "Near Brejo Santo, mourners placed an adult’s bones in a large vessel painted on the inside and covered the vessel with a ceramic lid. The vessel belongs to the polychrome pottery archaeologists call Tupiguarani.",
+        "limitations": "One adult supplies the direct date. Much of the surrounding site had been disturbed before the rescue dig, and its original extent remains uncertain.",
+        "discussion": "Stone flakes and tools occurred with the burial. The placement of selected remains in a painted serving vessel is evidence of how a useful pot acquired a new role in a ceremony.",
+        "provenance": "Original account checked against the archaeological sources and geographic references in this record.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added source-checked archaeological evidence."
+        ],
+        "relatedIds": [
+          "eb-ne-evaristo"
+        ]
+      }
+    },
+    {
+      "id": "eb-ne-pedra-do-cachorro",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Pedra do Cachorro — mortuary use of a Catimbau rock shelter",
+      "culture": {
+        "id": "eb-ne-context-agreste",
+        "name": "Agreste shelter communities",
+        "kind": "culture",
+        "color": "#746249"
+      },
+      "location": {
+        "id": "eb-ne-place-pedra-do-cachorro",
+        "name": "Pedra do Cachorro, Buíque",
+        "lon": -37.247,
+        "lat": -8.575,
+        "precision": "Rounded published site-area reference, approximately 0.2 km.",
+        "provenance": "Solari et al. (2016), p. 110 and Figure 2: WGS84 UTM zone 24S 692959E/9051647N, converted to geographic coordinates. https://www.researchgate.net/publication/315636727_ESCAVACOES_ARQUEOLOGICAS_NO_ABRIGO_FUNERARIO_PEDRA_DO_CACHORRO_BUIQUE_-_PE"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1265,
+        "end": 1375,
+        "original": "Human long bone PCe050hbsS01, Sepultamento 01 / Beta-424624: 1265–1305 and 1365–1375 cal CE (2σ), Quadro 1.",
+        "method": "Published AMS calibration of human bone from burial 01.",
+        "interpretation": "Two possible ranges date one adult from a secondary burial in the shelter.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 1265,
+            "end": 1305,
+            "certainty": "approximate",
+            "note": "First published interval of the same direct human bone assay."
+          },
+          {
+            "start": 1365,
+            "end": 1375,
+            "certainty": "approximate",
+            "note": "Second published interval of the same direct human bone assay."
+          }
+        ]
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "In the sandstone shelter of Pedra do Cachorro, people laid an adult man to rest after handling and rearranging his remains. Cuts and fractures on the bones helped archaeologists reconstruct this treatment.",
+          "explanation": "The excavators interpret the marks as intentional treatment of the body in a mortuary context. They do not establish the cause of death. Other burials in the shelter date to much earlier times.",
+          "status": "well-supported",
+          "support": [
+            {
+              "sourceId": "eb-ne-src-solari-pedra-2016",
+              "locator": "pp. 110, 121–123 and 125–127; Figure 2, Quadro 1 and Figure 6",
+              "note": "Gives coordinates, dated bone and both calibrated components. The excavation authors interpret the lesions in a funerary context.",
+              "stance": "supports"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-ne-src-solari-pedra-2016",
+          "authors": "Ana Solari, Anderson Alves-Pereira, Carolina Sá Espinola, Gabriela Martin, Ilca Pacheco da Costa, and Sérgio Francisco Serafim Monteiro da Silva",
+          "year": 2016,
+          "title": "Escavações arqueológicas no abrigo funerário Pedra do Cachorro, Buíque – PE",
+          "venue": "Clio Arqueológica 31(1):105–135",
+          "url": "https://www.researchgate.net/publication/315636727_ESCAVACOES_ARQUEOLOGICAS_NO_ABRIGO_FUNERARIO_PEDRA_DO_CACHORRO_BUIQUE_-_PE",
+          "access": "Full original excavation report, grid and published calibration checked.",
+          "referenceType": "journal-article",
+          "doi": "10.20891/clio.v31i1p105-135"
+        }
+      ],
+      "review": {
+        "summary": "In the sandstone shelter of Pedra do Cachorro, people laid an adult man to rest after handling and rearranging his remains. Cuts and fractures on the bones helped archaeologists reconstruct this treatment.",
+        "limitations": "The excavators interpret the marks as intentional treatment of the body in a mortuary context. They do not establish the cause of death. Other burials in the shelter date to much earlier times.",
+        "discussion": "The site's excavators identified cut marks from disarticulation and percussion marks on fresh bone. These observations help distinguish the way the body was prepared from the site's earlier primary interments.",
+        "provenance": "Original account checked against the archaeological sources and geographic references in this record.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added source-checked archaeological evidence."
+        ],
+        "relatedIds": [
+          "eb-ne-alcobaca"
+        ]
+      }
+    },
+    {
+      "id": "eb-ne-alcobaca",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Alcobaça — a dated burial in a Catimbau shelter",
+      "culture": {
+        "id": "eb-ne-context-agreste",
+        "name": "Agreste shelter communities",
+        "kind": "culture",
+        "color": "#746249"
+      },
+      "location": {
+        "id": "eb-ne-place-alcobaca",
+        "name": "Alcobaça",
+        "lon": -37.194,
+        "lat": -8.54,
+        "precision": "Rounded published site coordinate, approximately 0.2 km.",
+        "provenance": "Bastos et al. (2019), p. 7, gives 8°32′24″ S, 37°11′39″ W. https://fumdham.org.br/wp-content/uploads/2020/03/fumdham-fumdhamentos-xvi-2019-n-1-_674529.pdf"
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 992,
+        "end": 1152,
+        "original": "AL.55-1 / Beta-474452, adult rib, 958–798 cal BP (992–1152 CE).",
+        "method": "Published calibrated BP endpoints in Borges et al. Table 1 expressed as CE relative to 1950. Bastos et al. identifies the dated rib.",
+        "interpretation": "Direct date for one burial, among distinct uses of the shelter.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "At Alcobaça, excavators found human burials among traces of pottery-making, basketry and other activity. The directly dated burial dates to 992–1152 CE.",
+          "explanation": "The radiocarbon assay dates one burial. The other burials, rock art, campfires and objects represent a longer history at the shelter.",
+          "status": "well-supported",
+          "support": [
+            {
+              "sourceId": "eb-ne-src-bastos-et-al-2019",
+              "locator": "pp. 7–10, Table 2, AL.55-1 / Beta-474452",
+              "note": "Documents the context, burial, human rib and published site coordinates.",
+              "stance": "supports"
+            },
+            {
+              "sourceId": "eb-ne-src-borges-et-al-2022",
+              "locator": "Table 1, site 61 / 11, Alcobaça [31]",
+              "note": "Publishes the calibrated range for the single directly dated Alcobaça sample from that reference.",
+              "stance": "supports"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "eb-ne-src-bastos-et-al-2019",
+          "authors": "Murilo Q. R. Bastos, Ana Solari, Sérgio F. S. M. da Silva, and Gabriela Martin",
+          "year": 2019,
+          "title": "Estudo Preliminar de Dieta a Partir de Isótopos em Grupos Caçadores-Coletores do Agreste Pernambucano (Holoceno Recente - Nordeste do Brasil)",
+          "venue": "FUMDHAMentos 16(1):3–18",
+          "url": "https://fumdham.org.br/wp-content/uploads/2020/03/fumdham-fumdhamentos-xvi-2019-n-1-_674529.pdf",
+          "access": "Full analytical report, site descriptions and direct burial sample in Table 2 checked.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "eb-ne-src-borges-et-al-2022",
+          "authors": "Caroline Borges, Ingrid Chanca, and Kevin Salesse",
+          "year": 2022,
+          "title": "Stable isotope data and radiocarbon dates from Brazilian bioarchaeological samples: An extensive compilation",
+          "venue": "Data in Brief 42:108117",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2352340922003274/pdf",
+          "access": "Table 1, site 61/11, uses one human sample from the Bastos et al. (2019) study and publishes its calibrated age range and coordinate.",
+          "referenceType": "journal-article",
+          "doi": "10.1016/j.dib.2022.108117"
+        }
+      ],
+      "review": {
+        "summary": "At Alcobaça, excavators found human burials among traces of pottery-making, basketry and other activity. The directly dated burial dates to 992–1152 CE.",
+        "limitations": "The radiocarbon assay dates one burial. The other burials, rock art, campfires and objects represent a longer history at the shelter.",
+        "discussion": "Several earlier deposits included burned remains and woven plant fibres, while the bones in the dated burial showed no signs of burning. Bone chemistry also differed from individuals studied at two neighboring shelters.",
+        "provenance": "Original account checked against the archaeological sources and geographic references in this record.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added source-checked archaeological evidence."
+        ],
+        "relatedIds": [
+          "eb-ne-pedra-do-cachorro"
+        ]
+      }
+    }
+  ]
+}

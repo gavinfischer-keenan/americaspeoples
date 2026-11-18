@@ -1,3 +1,4 @@
+import easternBrazil from '../data/eastern-brazil-scenes.json';
 import tradeExpansion from '../data/trade-0-1200-scenes.json';
 import {yapMicronesiaTopics,yapMicronesiaOnlyIds} from './yap-micronesia-dives';
 import {comingSoonBTopics,comingSoonBOnlyIds} from './coming-soon-b-topics';
@@ -64,6 +65,6 @@ export const topics:TopicDive[]=[
 const tradeTopic=topics.find(topic=>topic.id==='trade')!;
 tradeTopic.title='Trade networks: the Americas and Pacific';
 tradeTopic.description='Follow stone, food, pottery and other goods through local exchange and ocean connections, then onward into colonial commerce.';
-tradeTopic.recordIds=[...new Set([...tradeTopic.recordIds,...tradeExpansion.recordIds])];
-tradeTopic.scenes=[...tradeTopic.scenes,...tradeExpansion.scenes as StoryScene[]].sort((a,b)=>a.year-b.year);
+tradeTopic.recordIds=[...new Set([...tradeTopic.recordIds,...tradeExpansion.recordIds,...easternBrazil.tradeRecordIds])];
+tradeTopic.scenes=[...tradeTopic.scenes,...tradeExpansion.scenes as StoryScene[],...easternBrazil.tradeScenes as StoryScene[]].sort((a,b)=>a.year-b.year);
 export function topicRecords<T extends DisplayRecord>(topic:TopicDive,all:readonly T[]):T[]{const ids=new Set(topic.recordIds);return all.filter(r=>ids.has(r.id));}

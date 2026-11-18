@@ -12,7 +12,15 @@ const tagged=(r:EvidenceRecord)=>r.overlay?.kind==='trade'||r.history?.kind==='e
 const trade=shared.filter(r=>tagged(r)&&r.history?.kind!=='migration'&&r.overlay?.geometry?.type==='LineString'&&intersects(r));
 const samples=baseline.samples.map((sample:any)=>({year:sample.year,beforeIds:sample.ids,ids:trade.filter(r=>historyState(r as MapRecord,sample.year)==='active').map(r=>r.id)}));
 const pointOrUnmapped=shared.filter(r=>tagged(r)&&r.history?.kind!=='migration'&&r.overlay?.geometry?.type!=='LineString'&&intersects(r));
-const result={version:dataset.version,period:[0,1200],baselineVersion:baseline.version,method:'Shared, explicitly classified exchange observations with line geometry and at least one supported activity window intersecting map years 0–1200. Founding migrations are excluded even where they use the same rendering layer. Multiple materials or dates may describe the same connection; counts are observations, not independent routes, traffic volume or evidence of continuous voyages. Samples use the same activity-window logic as the map.',mappedExchangeIds:trade.map(r=>r.id),pointOrUnmappedIds:pointOrUnmapped.map(r=>r.id),samples};
+// Some exchange finds belong to a wider settlement record. Index the named
+// claim without reclassifying its neighbors or creating a second map marker.
+const pointClaims=JSON.parse(readFileSync('data/trade-0-1200-point-claims.json','utf8')).claims.map((entry:{recordId:string;claimId:string;dateBasis:string})=>{
+ const r=shared.find(r=>r.id===entry.recordId),claim=r?.claims.find(c=>c.id===entry.claimId);
+ if(!r||!claim||!intersects(r)||r.overlay?.geometry?.type==='LineString'||entry.dateBasis!=='associated context')throw Error('Invalid point exchange claim: '+entry.recordId+'/'+entry.claimId);
+ return {...entry,title:r.title,text:claim.text,explanation:claim.explanation,contextDate:r.time};
+});
+const pointIds=[...new Set([...pointOrUnmapped.map(r=>r.id),...pointClaims.map((c:any)=>c.recordId)])];
+const result={version:dataset.version,period:[0,1200],baselineVersion:baseline.version,method:'Shared, explicitly classified exchange observations with line geometry and at least one supported activity window intersecting map years 0–1200. Founding migrations are excluded even where they use the same rendering layer. Multiple materials or dates may describe the same connection; counts are observations, not independent routes, traffic volume or evidence of continuous voyages. Samples use the same activity-window logic as the map. The point inventory also indexes explicitly reviewed exchange claims within settlement records; associated-context dates are identified separately from direct dates of traded objects.',mappedExchangeIds:trade.map(r=>r.id),pointOrUnmappedIds:pointIds,pointOrUnmappedClaims:pointClaims,samples};
 writeFileSync('data/trade-coverage-audit.json',JSON.stringify(result,null,2)+'\n');
 let text=`# Trade and exchange, 0–1200 CE
 
@@ -28,5 +36,6 @@ text+=`\nSource-to-find connections show where materials traveled. A schematic l
 for(const r of trade)text+=`- [${r.title}](../index.html#review/${r.id}) — ${r.time.original}. ${r.history?.connection?.note??r.review.limitations}\n`;
 text+='\n## Exchange evidence still shown as a point or not geographically mapped\n\n';
 for(const r of pointOrUnmapped)text+=`- [${r.title}](../index.html#review/${r.id}) — check the source chronology and provenance before assigning endpoints.\n`;
+for(const c of pointClaims)text+=`- [${c.title}: exchange find](../index.html#review/${c.recordId}) — ${c.text} ${c.explanation} **Associated context:** ${c.contextDate.original} This is part of the same village record, not an additional locality or a dated period of continuous trade.\n`;
 writeFileSync('docs/trade-coverage-audit.md',text);
-console.log(`${trade.length} mapped exchange observations; ${pointOrUnmapped.length} point/unmapped observations in 0–1200`);
+console.log(`${trade.length} mapped exchange observations; ${pointIds.length} point/unmapped observations in 0–1200`);

@@ -1,3 +1,4 @@
+import easternBrazil from '../data/eastern-brazil-expansion-records.json';
 import tradeExpansion from '../data/trade-0-1200-expansion-records.json';
 import regionalContinuity from '../data/three-regional-gaps-expansion-records.json';
 import shieldAleutianLocal from '../data/shield-aleutian-local-records.json';
@@ -65,6 +66,7 @@ export function publishedDataset(
 export const dataset = publishedDataset(
   starter as Dataset,
   [
+    ...easternBrazil.records,
     ...tradeExpansion.records,
     ...regionalContinuity.records,
     ...shieldAleutianLocal.records,
