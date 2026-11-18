@@ -1,0 +1,221 @@
+{
+  "version": "0.26.0",
+  "status": "merged, deployed and publicly verified; current plus one previous release retained",
+  "verifiedAt": "2026-11-18T19:51:07.100346+00:00",
+  "pullRequest": "https://github.com/gavinfischer-keenan/americaspeoples/pull/24",
+  "release": "https://github.com/gavinfischer-keenan/americaspeoples/releases/tag/v0.26.0",
+  "site": "https://americaspeoples.11mosswood.us/",
+  "baseCommit": "d4e56c757f4a9c3b3040950f8d3cb05b32d1ca37",
+  "deployedCommit": "7d5fe1aa66493161cd4fc4f700199a1b828e27f6",
+  "records": 2710,
+  "sharedRecords": 2637,
+  "focusedRecords": 73,
+  "newSharedMapRecords": 68,
+  "guides": 66,
+  "contextualStories": 68,
+  "independentTopics": 27,
+  "availableDirectoryEntries": 102,
+  "terrainMaps": 57,
+  "guideMediaItems": 34,
+  "coverage": [
+    {
+      "region": "Idaho — southern / central",
+      "beforeLocalities": 0,
+      "afterLocalities": 4
+    },
+    {
+      "region": "Kiribati — Gilbert Islands",
+      "beforeLocalities": 0,
+      "afterLocalities": 4
+    },
+    {
+      "region": "Kiribati — Line Islands",
+      "beforeLocalities": 0,
+      "afterLocalities": 8
+    },
+    {
+      "region": "Kiribati — Phoenix Islands",
+      "beforeLocalities": 0,
+      "afterLocalities": 8
+    },
+    {
+      "region": "Louisiana — western coastal plain",
+      "beforeLocalities": 0,
+      "afterLocalities": 7
+    },
+    {
+      "region": "Montana — central / eastern plains",
+      "beforeLocalities": 1,
+      "afterLocalities": 4
+    },
+    {
+      "region": "Nevada — central / eastern basins",
+      "beforeLocalities": 1,
+      "afterLocalities": 5
+    },
+    {
+      "region": "Nevada — southern desert",
+      "beforeLocalities": 1,
+      "afterLocalities": 6
+    },
+    {
+      "region": "Wyoming — eastern plains",
+      "beforeLocalities": 1,
+      "afterLocalities": 6
+    },
+    {
+      "region": "Wyoming — western mountains",
+      "beforeLocalities": 1,
+      "afterLocalities": 5
+    }
+  ],
+  "display": {
+    "scaleAndLocalCrowding": true,
+    "everyEligibleInViewPointRepresented": true,
+    "groupsExpand": true,
+    "playingUsesUniformWidthConnections": true,
+    "sizeDoesNotEncodePopulationOrTradeVolume": true,
+    "pausePreservesCameraDateSelectionAndMembership": true,
+    "sourceCoordinatesUnchanged": true
+  },
+  "continuity": {
+    "priorEvidenceVisibleBetweenAttestationWindows": true,
+    "sourceSupportedHabitationRequiredForCommunityGlyph": true,
+    "explicitSupportingEndingEvidenceRequiredForDepartureCue": true,
+    "legacyEndingMigration": [
+      "Caparra settlement ending, 1519–1521; capital move 1521",
+      "Panamá Viejo destruction 1671; official relocation 1673",
+      "British garrison withdrawal from Port Egmont, 1774",
+      "Spanish evacuation of Puerto Soledad, 1811"
+    ],
+    "routeActivityGapsPreserved": true
+  },
+  "consensus": {
+    "mode": "Deep",
+    "thisBatchCalls": 4,
+    "usedSinceAdditionalAllowance": 30,
+    "additionalAllowance": 75,
+    "remaining": 45,
+    "cumulativeCalls": 110,
+    "rawReportsRemainPrivate": true
+  },
+  "validation": {
+    "fullReleaseStages": 55,
+    "unitTests": 406,
+    "finalPackagedDocumentationTests": 7,
+    "independentReview": "Task reviews and one final scoped fix review passed; no outstanding findings",
+    "publicAssetsChecked": 229,
+    "publicSourceReviews": 24,
+    "neighborPagesVerified": 3,
+    "liveBrowser": {
+      "health": {
+        "status": "ok",
+        "version": "0.26.0",
+        "records": 2710
+      },
+      "checkedRecords": [
+        "st-us-wasden-owl-cave",
+        "st-us-bergstrom-bison-kills",
+        "st-us-baker-village-fremont",
+        "st-us-corn-creek-springs",
+        "st-us-powars-ii-hematite-quarry",
+        "st-us-high-rise-village",
+        "st-la-morgan-summit",
+        "st-ki-buota-taro-pits",
+        "st-ki-orona-hull2",
+        "st-ki-manulu-lagoon-complex",
+        "st-ki-orona-hull2",
+        "st-ki-kiritimati-early-estate",
+        "st-ki-mckean-guano"
+      ],
+      "checks": [
+        "all ten regions inspectable",
+        "attestation gap visible but inactive",
+        "documented Kiritimati and McKean departures",
+        "Alexa stops after its supported service",
+        "desktop playing/paused and tablet",
+        "Micronesia narrative"
+      ],
+      "errors": []
+    },
+    "linuxRetentionTests": 5,
+    "visualInspection": "Desktop playing/paused and tablet; no JavaScript errors or document overflow. No exhaustive contrast-ratio claim."
+  },
+  "deployment": {
+    "status": "deployed",
+    "id": "20261118T194537Z-americas-v0.26.0",
+    "commit": "7d5fe1aa66493161cd4fc4f700199a1b828e27f6",
+    "health": {
+      "status": "ok",
+      "version": "0.26.0",
+      "records": 2710
+    },
+    "static": "/srv/tripofisch/releases/20261118T194537Z-americas-v0.26.0",
+    "api": "/srv/americaspeoples/releases/20261118T194537Z-americas-v0.26.0",
+    "previousVersion": "0.25.0",
+    "rollbackStatic": "/srv/tripofisch/releases/20261118T164737Z-americas-v0.25.0",
+    "rollbackApi": "/srv/americaspeoples/releases/20261118T164737Z-americas-v0.25.0",
+    "unchangedFiles": 388
+  },
+  "packageSha256": "fa0969f8a800d036defe5ec662a53cd73e86b146fdd43080c09104370bc313fc",
+  "githubReleaseAssetsVerified": 5,
+  "retention": {
+    "current": "0.26.0",
+    "previous": "0.25.0",
+    "remainingCleanupTargets": [],
+    "githubReleaseTags": [
+      "v0.26.0",
+      "v0.25.0"
+    ],
+    "localVersionedArchives": [
+      "americas-peoples-v0.25.0-selfhost.zip",
+      "americas-peoples-v0.26.0-selfhost.zip"
+    ],
+    "retiredVersion": "0.24.0",
+    "sourceTagsRetained": true,
+    "unrelatedHostedContentPreserved": true
+  },
+  "temporaryCleanup": {
+    "currentLocalUploadRemoved": true,
+    "edge": {
+      "removed": [
+        "/var/tmp/americas-v0.26.0-staging",
+        "/var/tmp/americas-v0260-payload.tar",
+        "/var/tmp/americas-v0260-deploy.py",
+        "/var/tmp/americas-v0260-test-retention.py"
+      ],
+      "freeBytes": 4056596480
+    },
+    "host": {
+      "removed": [
+        "/var/tmp/americas-v0260-payload.tar",
+        "/var/tmp/americas-v0260-deploy.py",
+        "/var/tmp/americas-v0260-test-retention.py"
+      ],
+      "freeBytes": 78048190464
+    },
+    "cleanupHelpersRemoved": true,
+    "previouslyBlockedLocalUploadsLeftUntouched": [
+      "work/deployment/v0230/payload.tar",
+      "work/deployment/v0231/payload.tar"
+    ]
+  },
+  "implementationDecisions": [
+    {
+      "decision": "Include the ten-region research in this release, following the user’s later request.",
+      "tradeoff": "A larger release and more research calls than the original display-only scope."
+    },
+    {
+      "decision": "Reuse the existing isolated feature checkout.",
+      "tradeoff": "Private working files remain in the existing workspace."
+    },
+    {
+      "decision": "Investigate source regions independently, then integrate one canonical dataset.",
+      "tradeoff": "Requires central identity and source reconciliation, which the release checks exercise."
+    },
+    {
+      "decision": "Keep earlier evidence visible through attestation gaps without marking it active.",
+      "tradeoff": "Some places remain as historical context when the available evidence cannot establish continuous habitation."
+    }
+  ]
+}

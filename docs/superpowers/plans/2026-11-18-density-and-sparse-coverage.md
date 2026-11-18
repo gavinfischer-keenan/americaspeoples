@@ -38,12 +38,12 @@
 
 **Interfaces:** Consume existing DisplayRecord, shared date/state, projection and viewport. Produce pure `densityGroups` helper (typed input/output defined locally and exported) and map renderer integration. Add DOM data attributes for group membership/count accounting and diagnostics. Keep historical/data APIs unchanged.
 
-- [ ] Write failing meaningful unit cases: nearby locations group; sparse stays single; co-located phases count once; input permutation stable; selected/focused records traceable; explicit active/prior counts; dateline and large synthetic fixture; no omitted IDs.
-- [ ] Run tests and observe expected missing feature failures.
-- [ ] Implement deterministic locality grouping with stable anchors within zoom bands and sensible screen-distance tuning. Reuse exact-coordinate groups first. Expand groups on click; member chooser at maximum useful zoom; no source coordinate mutation. Keep selected place/event and active journey accessible. Labels and symbols cooperate; grouped records retain types and current/prior distinction. Represent regional overlays honestly and reduce their interference. Implement gradual regional/local/site detail and actual-change emphasis without camera jumps or fabricated precision.
-- [ ] Strengthen history and legacy movement rendering with opaque dark casing, thicker colored cores and legible arrowheads; migration amber, trade cyan, forced relocation magenta plus shape/text. Preserve unknown/both direction; pause/reduced motion. Bundle only compatible route corridors where useful, with expandable membership. Quiet overview terrain and retain local terrain detail.
-- [ ] Implement the user's playback/paused visual distinction above. Test play/pause does not jump camera/date/selection or lose group members; reduced-motion users retain static emphasis. Paused dense views still use safe grouping rather than returning to unreadable overlapping marks.
-- [ ] Add browser assertions/screenshots for1200/1492/1832/1863, FourCorners, Chaco, centralMexico, easternBrazil, Hawaii and sparse regions. Prove every eligible mapped member represented, Columbus/Taos shareddate discoverability, labels/targets usable, pan continuity, paused/reduced motion, crossing routes, date gaps Formoso650/Primavera1350. Run focused tests/typecheck/build; report measured density/performance before/after. Commit only owned changes.
+- [x] Write failing meaningful unit cases: nearby locations group; sparse stays single; co-located phases count once; input permutation stable; selected/focused records traceable; explicit active/prior counts; dateline and large synthetic fixture; no omitted IDs.
+- [x] Run tests and observe expected missing feature failures.
+- [x] Implement deterministic locality grouping with stable anchors within zoom bands and sensible screen-distance tuning. Reuse exact-coordinate groups first. Expand groups on click; member chooser at maximum useful zoom; no source coordinate mutation. Keep selected place/event and active journey accessible. Labels and symbols cooperate; grouped records retain types and current/prior distinction. Represent regional overlays honestly and reduce their interference. Implement gradual regional/local/site detail and actual-change emphasis without camera jumps or fabricated precision.
+- [x] Strengthen history and legacy movement rendering with opaque dark casing, thicker colored cores and legible arrowheads; migration amber, trade cyan, forced relocation magenta plus shape/text. Preserve unknown/both direction; pause/reduced motion. Bundle only compatible route corridors where useful, with expandable membership. Quiet overview terrain and retain local terrain detail.
+- [x] Implement the user's playback/paused visual distinction above. Test play/pause does not jump camera/date/selection or lose group members; reduced-motion users retain static emphasis. Paused dense views still use safe grouping rather than returning to unreadable overlapping marks.
+- [x] Add browser assertions/screenshots for1200/1492/1832/1863, FourCorners, Chaco, centralMexico, easternBrazil, Hawaii and sparse regions. Prove every eligible mapped member represented, Columbus/Taos shareddate discoverability, labels/targets usable, pan continuity, paused/reduced motion, crossing routes, date gaps Formoso650/Primavera1350. Run focused tests/typecheck/build; report measured density/performance before/after. Commit only owned changes.
 
 ### Task 2: Fill ten sparse regions and audit geographic counts
 
@@ -51,17 +51,17 @@
 
 **Interfaces:** Produce canonical EvidenceRecord[] compatible with existing schema. All sources participate in claims with support or context roles. Include stable locality IDs and explicit history.windows when discontinuous. Root owns canonical integration; independent source investigators own private reports only.
 
-- [ ] Dispatch one complete Consensus Deep request covering all ten; record every call in private ledger, preserve exact final report. Independently verify primary sources and geolocation, reconcile with existing records.
-- [ ] Prepare accepted/rejected source decisions and before counts for IdahoS/C, MontanaC/E, NevadaC/E, NevadaS, WyomingE/W, LouisianaWcoast and Gilbert/Phoenix/Line islands. Aim multiple dated localities/periods each without invented quota data; no1937Phoenix scheme inside1934scope. Avoid duplicate existing Anzick/SilverZone/PuebloGrande/LaPrele/Colby.
-- [ ] Add meaningful tests for accepted region coverage, source participation, known date gaps, public locality precision, correct geographic bin, canonical/master-map membership and duplicate identity. Observe failures before integration.
-- [ ] Integrate accepted evidence with accessible historical text, sources, local timelines and trade/conflict only when supported. Existing guides gain related information/links where relevant; no mandatory new topic mode. Improve sparse audit geographic clipping/dateline grouping and publish before/after with limitations.
-- [ ] Build and run tests/validation; inspect representative scenes and map dates. Commit reviewed data/integration.
+- [x] Dispatch one complete Consensus Deep request covering all ten; record every call in private ledger, preserve exact final report. Independently verify primary sources and geolocation, reconcile with existing records.
+- [x] Prepare accepted/rejected source decisions and before counts for IdahoS/C, MontanaC/E, NevadaC/E, NevadaS, WyomingE/W, LouisianaWcoast and Gilbert/Phoenix/Line islands. Aim multiple dated localities/periods each without invented quota data; no1937Phoenix scheme inside1934scope. Avoid duplicate existing Anzick/SilverZone/PuebloGrande/LaPrele/Colby.
+- [x] Add meaningful tests for accepted region coverage, source participation, known date gaps, public locality precision, correct geographic bin, canonical/master-map membership and duplicate identity. Observe failures before integration.
+- [x] Integrate accepted evidence with accessible historical text, sources, local timelines and trade/conflict only when supported. Existing guides gain related information/links where relevant; no mandatory new topic mode. Improve sparse audit geographic clipping/dateline grouping and publish before/after with limitations.
+- [x] Build and run tests/validation; inspect representative scenes and map dates. Commit reviewed data/integration.
 
 ### Task 3: Verify, release and publish
 
 **Files:** package metadata, release notes, source/license/generated outputs, deployment receipt; private helpers under `../deployment/v0260/` (adjust version if necessary).
 
-- [ ] Independently review Tasks1/2 for spec compliance and quality; fix material issues with targeted tests.
-- [ ] Run complete `npm run verify:release`, visual desktop/tablet checks and fresh whole-branch review. Fix new material findings; broaden only when justified.
-- [ ] Prepare concrete release notes, push/create PR, merge authorized completed work. Build verified release assets, stage with current source/hash guards, deploy atomically, verify live map/API/assets and neighboring sites.
-- [ ] Retain current and one previous release. Do not touch previously rejected old temporary payload deletions. Publish verification receipt and report counts, remaining research calls and live link.
+- [x] Independently review Tasks1/2 for spec compliance and quality; fix material issues with targeted tests.
+- [x] Run complete `npm run verify:release`, visual desktop/tablet checks and fresh whole-branch review. Fix new material findings; broaden only when justified.
+- [x] Prepare concrete release notes, push/create PR, merge authorized completed work. Build verified release assets, stage with current source/hash guards, deploy atomically, verify live map/API/assets and neighboring sites.
+- [x] Retain current and one previous release. Do not touch previously rejected old temporary payload deletions. Publish verification receipt and report counts, remaining research calls and live link.
