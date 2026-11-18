@@ -63,9 +63,11 @@
 
 **Files:** source/reuse notices, release documentation and receipt, `scripts/verify-release.mjs`, new browser checks; private deployment helpers.
 
-- [ ] Add focused browser checks for every new scene and village plan, source credits and guide hierarchy.
-- [ ] Perform one independent whole-branch review; reconcile material findings with regression checks.
-- [ ] Run the full release gate, verify the self-host package and final source data.
-- [ ] Merge/publish/deploy under existing authorization; verify the live site and retain current plus one previous rollback.
+- [x] Add focused browser checks for every new scene and village plan, source credits and guide hierarchy.
+- [x] Perform one independent whole-branch review; reconcile material findings with regression checks.
+- [x] Run the full release gate, verify the self-host package and final source data.
+- [x] Merge/publish/deploy under existing authorization; verify the live site and retain current plus one previous rollback.
+
+Completed through PR20 and the reviewed PR21 packaging fix. The content release passed all45 stages/376unit tests; v0.23.1 adds the missing release-notes HTML with a RED/GREEN artifact regression, package/smoke checks and live verification. Current0.23.1 and previous0.23.0 are the only retained release versions. Server upload/staging cleanup completed. Two local temporary upload archives remain after automatic approval review blocked their deletion; this exception is recorded in the final receipt. Consensus used3calls this batch, leaving60.
 
 Baseline: clean `main` at `5ae8ff4` (v0.22.0 receipt), with 361 unit tests and 44 release stages already verified in this session. Existing checkout and dependencies are reused; no additional worktree or dependency installation is needed.
