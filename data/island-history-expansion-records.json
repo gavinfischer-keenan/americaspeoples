@@ -58,6 +58,20 @@
               "note": "Geographic reference only; not evidence for the historical date or a building footprint."
             }
           ]
+        },
+        {
+          "id": "local-ending",
+          "text": "Spanish settlers withdrew from Puerto Soledad in 1811. Later settlement was a separate episode.",
+          "status": "well-supported",
+          "explanation": "The cited account identifies the named event and year.",
+          "support": [
+            {
+              "sourceId": "islands-falkland-museum",
+              "locator": "1810–1820 entry",
+              "stance": "supports",
+              "note": "Supports the named event; see the separate geographic reference for the map anchor."
+            }
+          ]
         }
       ],
       "sources": [
@@ -99,8 +113,15 @@
       "history": {
         "kind": "settlement",
         "claimId": "event",
-        "endYear": 1811,
-        "endMeaning": "abandoned"
+        "endEvidence": {
+          "start": 1811,
+          "end": 1811,
+          "meaning": "abandoned",
+          "label": "Spanish settlers’ withdrawal",
+          "certainty": "documented",
+          "claimId": "local-ending",
+          "note": "Spanish settlers withdrew from Puerto Soledad in 1811. Later settlement was a separate episode."
+        }
       }
     },
     {
@@ -161,6 +182,20 @@
               "note": "Geographic reference only; not evidence for the historical date or a building footprint."
             }
           ]
+        },
+        {
+          "id": "local-ending",
+          "text": "The British garrison withdrew from Port Egmont. Later visits to the harbour continued.",
+          "status": "well-supported",
+          "explanation": "The cited account identifies the named event and year.",
+          "support": [
+            {
+              "sourceId": "islands-falkland-museum",
+              "locator": "1774 entry",
+              "stance": "supports",
+              "note": "Supports the named event; see the separate geographic reference for the map anchor."
+            }
+          ]
         }
       ],
       "sources": [
@@ -200,8 +235,15 @@
       "history": {
         "kind": "settlement",
         "claimId": "event",
-        "endYear": 1774,
-        "endMeaning": "abandoned"
+        "endEvidence": {
+          "start": 1774,
+          "end": 1774,
+          "meaning": "abandoned",
+          "label": "British garrison withdrawal",
+          "certainty": "documented",
+          "claimId": "local-ending",
+          "note": "The British garrison withdrew from Port Egmont. Later visits to the harbour continued."
+        }
       }
     },
     {

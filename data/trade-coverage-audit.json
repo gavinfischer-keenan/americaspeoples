@@ -1,5 +1,5 @@
 {
-  "version": "0.25.0",
+  "version": "0.26.0",
   "period": [
     0,
     1200
@@ -7,6 +7,8 @@
   "baselineVersion": "0.23.1",
   "method": "Shared, explicitly classified exchange observations with line geometry and at least one supported activity window intersecting map years 0–1200. Founding migrations are excluded even where they use the same rendering layer. Multiple materials or dates may describe the same connection; counts are observations, not independent routes, traffic volume or evidence of continuous voyages. Samples use the same activity-window logic as the map. The point inventory also indexes explicitly reviewed exchange claims within settlement records; associated-context dates are identified separately from direct dates of traded objects.",
   "mappedExchangeIds": [
+    "st-ki-tataga-matau-manra",
+    "st-ki-eiao-tabuaeran",
     "trade-meso-san-martin-ceibal",
     "trade-meso-el-chayal-ceibal",
     "trade-meso-pachuca-teotihuacan",
@@ -164,6 +166,7 @@
         "history-mesoamerica-chaco-macaws"
       ],
       "ids": [
+        "st-ki-eiao-tabuaeran",
         "trade-meso-ixtepeque-tiguilotada",
         "trade-meso-guinope-tiguilotada",
         "trade-meso-diquis-drago",
@@ -183,6 +186,8 @@
         "px-raoul-norfolk-obsidian"
       ],
       "ids": [
+        "st-ki-tataga-matau-manra",
+        "st-ki-eiao-tabuaeran",
         "trade-meso-ixtepeque-tiguilotada",
         "trade-meso-guinope-tiguilotada",
         "trade-pacific-yap-fais",

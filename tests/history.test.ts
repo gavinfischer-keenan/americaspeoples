@@ -91,7 +91,7 @@ test("invalid activity windows and missing supporting claims cannot enter a publ
   };
   assert.ok(validateRecord(r).some((e) => /history|activity/i.test(e)));
 });
-import { historyLabel, historyDates } from "../src/history";
+import { historyState, historyLabel, historyDates } from "../src/history";
 import { dataset } from "../src/published-data";
 
 test("a later abandonment is not shown at the foundation date", () => {
@@ -112,7 +112,7 @@ test("a later abandonment is not shown at the foundation date", () => {
     },
   };
   assert.doesNotMatch(historyLabel(r, 1600), /Documented relocation/);
-  assert.match(historyLabel(r, 1700), /Documented relocation/);
+  assert.doesNotMatch(historyLabel(r, 1700), /Documented relocation/);
   assert.ok(historyDates([r]).includes(1671));
 });
 test("published historical layers preserve date gaps, losses and documented regional continuity", () => {
@@ -184,4 +184,13 @@ test("history routes reject unsupported directions instead of drawing false forw
   );
   route.overlay!.direction = "reverse";
   assert.ok(validateRecord(route).some((e) => e.includes("directions")));
+});
+
+test('attestations keep earlier evidence between windows and after the last window while route gaps stay empty',()=>{
+  const attestation=dataset.records.find(r=>r.id==='eb-ne-formoso')!;
+  for(const [year,expected] of [[440,'outside'],[550,'active'],[650,'past-place'],[900,'active'],[1100,'past-place']] as const){
+    assert.equal(historyState(attestation,year),expected);
+    if(expected==='past-place')assert.match(historyLabel(attestation,year),/earlier evidence.*continuous/i);
+  }
+  assert.equal(historyState({...attestation,history:{...attestation.history!,kind:'exchange'}},650),'outside');
 });

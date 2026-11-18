@@ -1,10 +1,12 @@
 # Where the map has gaps
 
-The current map contains **2,569 shared observations** and 73 focused topic observations. The audit does **not** find that blank regions were empty of people. It shows where this collection needs more dated local history.
+The current map contains **2,637 shared observations** and 73 focused topic observations. The audit does **not** find that blank regions were empty of people. It shows where this collection needs more dated local history.
 
 The preceding v0.24.0 campaign added **53 shared map records** about lower Central America, Brazil's Atlantic coast and the Solomon Islands–Vanuatu region, including three linked route views of local finds. See [the histories and source decisions](three-regional-gaps.html).
 
-The latest eastern Brazil pass adds **30 shared map records**, extending the Atlantic Brazil history with villages, burials and exchange evidence from 501–1500 CE. [Read its source decisions and v0.24.0 before/after comparison](eastern-brazil.html).
+The preceding eastern Brazil pass added **30 shared map records**, extending the Atlantic Brazil history with villages, burials and exchange evidence from 501–1500 CE. [Read its source decisions and v0.24.0 before/after comparison](eastern-brazil.html).
+
+The v0.26.0 campaign adds **68 shared records** across the ten sparsest target areas: western U.S. local histories, coastal Louisiana and the Gilbert, Phoenix and Line islands. [Read the named places, continuity decisions and before/after counts](sparse-ten-histories.html). The full matrix below still exposes periods that need more research.
 
 ## The preceding three-region campaign
 
@@ -28,11 +30,11 @@ The immutable baseline is **v0.23.1: 2,531 total and 2,458 shared records**, bef
 | Alaska / western Arctic | 13 | 15 | 15 | 4 | 8 | 3 | 11 | 31 | 7 |
 | Canadian Arctic / Greenland | 0 | 0 | 3 | 2 | 7 | 4 | 4 | 12 | 0 |
 | Pacific Northwest | 3 | 0 | 2 | 5 | 2 | 0 | 4 | 6 | 13 |
-| California / Southwest | 6 | 14 | 20 | 48 → 49 | 146 → 148 | 21 | 36 | 31 | 20 |
-| Great Plains | 6 | 1 | 2 | 43 → 44 | 140 → 142 | 15 | 7 | 68 | 13 |
+| California / Southwest | 6 → 7 | 14 → 15 | 20 → 22 | 48 → 53 | 146 → 152 | 21 → 22 | 36 | 31 → 38 | 20 |
+| Great Plains | 6 → 8 | 1 → 3 | 2 | 43 → 47 | 140 → 144 | 15 → 16 | 7 → 8 | 68 → 74 | 13 |
 | Northeast / Great Lakes | 21 | 24 | 5 | 13 → 14 | 22 | 40 | 38 | 113 | 20 |
-| Southeastern US | 2 | 2 | 18 | 19 → 20 | 19 → 20 | 21 | 20 | 263 | 23 |
-| Mexico | 9 | 25 | 28 → 29 | 63 → 71 | 45 → 50 | 32 | 22 | 33 | 19 |
+| Southeastern US | 2 | 2 | 18 | 19 → 22 | 19 → 21 | 21 | 20 → 22 | 263 → 269 | 23 |
+| Mexico | 9 | 25 | 28 → 29 | 63 → 73 | 45 → 51 | 32 | 22 | 33 → 37 | 19 |
 | Central America | 0 | 12 | 16 → 19 | 39 → 56 | 22 → 36 | 15 → 17 | 11 | 12 | 13 |
 | Caribbean | 0 | 7 | 10 → 11 | 20 → 23 | 20 → 24 | 53 | 21 | 31 | 21 |
 | Northern South America | 2 | 6 | 7 → 8 | 17 → 21 | 11 → 13 | 20 | 21 | 22 | 18 |
@@ -43,7 +45,7 @@ The immutable baseline is **v0.23.1: 2,531 total and 2,458 shared records**, bef
 | Australia | 9 | 6 | 3 → 4 | 3 → 4 | 7 → 8 | 5 → 6 | 5 → 6 | 59 | 0 |
 | Aotearoa New Zealand | 0 | 0 | 0 | 0 | 4 | 4 | 3 | 9 | 0 |
 | New Guinea / Island Melanesia | 4 | 4 | 16 → 22 | 4 → 11 | 8 → 18 | 8 → 13 | 6 → 7 | 12 → 13 | 2 |
-| Central/Eastern Polynesia | 0 | 0 | 5 | 4 → 5 | 25 → 28 | 6 | 7 | 7 | 2 |
+| Central/Eastern Polynesia | 0 | 0 | 5 | 4 → 5 | 25 → 30 | 6 | 7 | 7 → 14 | 2 |
 | Hawaii | 0 | 0 | 0 | 2 | 10 | 3 | 14 | 21 | 4 |
 
 ## Gaps that remain

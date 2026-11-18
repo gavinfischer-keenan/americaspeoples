@@ -109,6 +109,20 @@
               "note": "Supports the stated chronology and geographic relationship; coordinates and connecting paths are editorial approximations."
             }
           ]
+        },
+        {
+          "id": "local-ending",
+          "text": "The Spanish settlement was abandoned between 1519 and 1521. The colonial capital moved to San Juan in 1521.",
+          "status": "well-supported",
+          "explanation": "Approximate editorial location anchor, not a surveyed historic footprint. End is the latest year of the documented 1519–1521 abandonment interval. This is the end of this Spanish settlement phase, not proof that people disappeared from the surrounding region.",
+          "support": [
+            {
+              "sourceId": "source-1",
+              "locator": "Historical narrative: 1508 establishment; abandonment in 1519–1521; capital moved to San Juan in 1521.",
+              "stance": "supports",
+              "note": "Supports the stated chronology and geographic relationship; coordinates and connecting paths are editorial approximations."
+            }
+          ]
         }
       ],
       "sources": [
@@ -146,8 +160,15 @@
         "kind": "settlement",
         "claimId": "historical-basis",
         "foundingPower": "Spain",
-        "endYear": 1521,
-        "endMeaning": "relocated"
+        "endEvidence": {
+          "start": 1519,
+          "end": 1521,
+          "meaning": "abandoned",
+          "label": "End of Spanish settlement at Caparra",
+          "certainty": "documented",
+          "claimId": "local-ending",
+          "note": "The Spanish settlement was abandoned between 1519 and 1521. The colonial capital moved to San Juan in 1521."
+        }
       }
     },
     {
@@ -503,6 +524,20 @@
               "note": "Supports the stated chronology and geographic relationship; coordinates and connecting paths are editorial approximations."
             }
           ]
+        },
+        {
+          "id": "local-ending",
+          "text": "The 1671 attack destroyed the old urban center. The colonial city officially relocated in 1673.",
+          "status": "well-supported",
+          "explanation": "Approximate editorial location anchor, not a surveyed historic footprint. An ended city-site marker does not mean regional human absence. The municipality continued at its relocated site.",
+          "support": [
+            {
+              "sourceId": "source-1",
+              "locator": "Description, component Panamá Viejo and justification: 1519 foundation, 1671 destruction, official 1673 relocation.",
+              "stance": "supports",
+              "note": "Supports the stated chronology and geographic relationship; coordinates and connecting paths are editorial approximations."
+            }
+          ]
         }
       ],
       "sources": [
@@ -540,8 +575,15 @@
         "kind": "settlement",
         "claimId": "historical-basis",
         "foundingPower": "Spain",
-        "endYear": 1671,
-        "endMeaning": "abandoned"
+        "endEvidence": {
+          "start": 1671,
+          "end": 1671,
+          "meaning": "abandoned",
+          "label": "Destruction of the old colonial city",
+          "certainty": "documented",
+          "claimId": "local-ending",
+          "note": "The 1671 attack destroyed the old urban center. The colonial city officially relocated in 1673."
+        }
       }
     },
     {

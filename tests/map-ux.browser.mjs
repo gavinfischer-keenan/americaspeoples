@@ -26,6 +26,13 @@ try{
  const page=await browser.newPage({viewport:{width:1100,height:700},hasTouch:true}),errors=[];
  page.on('pageerror',e=>{errors.push(e.message);console.error(e.message);});
  await page.goto('http://127.0.0.1:'+server.address().port);
+ const group=page.locator('[data-density-group]');
+ await group.waitFor();
+ assert.deepEqual(JSON.parse(await group.getAttribute('data-member-ids')).sort(),['neighbor','place']);
+ await group.press('Enter');
+ assert.deepEqual((await page.evaluate(()=>selected)).sort(),['neighbor','place']);
+ // Protect the two selected points at overview scale to exercise overlap picking.
+ await page.evaluate(()=>{map.focusRegion([-100,40],2);map.setHighlighted(['place','neighbor']);});
  const point=page.locator('[data-point="-100,40"] .site-dot');await point.waitFor();
  await page.waitForFunction(()=>document.querySelector('svg').viewBox.baseVal.width===980&&document.querySelector('svg').viewBox.baseVal.height===440);
  const center=async locator=>locator.evaluate(el=>{const b=el.getBoundingClientRect();return {x:b.x+b.width/2,y:b.y+b.height/2};});
@@ -90,7 +97,7 @@ try{
  await page.locator('[data-zoom="in"]').click();shippingCenters=await routeCenters();
  assert.ok(Math.abs(Math.hypot(shippingCenters[0].x-shippingCenters[1].x,shippingCenters[0].y-shippingCenters[1].y)-10)<.2,'lane spacing stays ten screen pixels after zoom');
  assert.deepEqual(await page.evaluate(()=>shippingPair.map(route=>route.overlay.geometry.coordinates)),[[[120.98,14.6],[-99.9,16.85]],[[-99.9,16.85],[120.98,14.6]]],'display lanes never alter source coordinates or add waypoints');
- await page.evaluate(()=>{map.update([records.place,records.neighbor,records.area],300);map.focusRegion([-100,40],8);});
+ await page.evaluate(()=>{map.update([records.place,records.neighbor,records.area],300);map.focusRegion([-100,40],8);map.setHighlighted(['place','neighbor']);});
  const beforePinch=(await center(page.locator('[data-point="-99.997,40"] .site-dot'))).x-(await center(point)).x;
  const cdp=await page.context().newCDPSession(page);
  await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:300,y:220,id:1},{x:400,y:220,id:2}]});
@@ -101,7 +108,7 @@ try{
  p=await center(point);assert.ok(Math.abs(p.x-350)<2&&Math.abs(p.y-220)<2,'pinch preserves the anchored city');
  await page.evaluate(()=>{
   const distant={...records.place,id:'distant',location:{...records.place.location,lon:-80}};
-  map.update([records.place,distant],300);map.focusRegion([-100,40],8);
+  map.update([records.place,distant],300);map.focusRegion([-100,40],8);map.setHighlighted(['place','neighbor']);
  });
  const distant=page.locator('[data-point="-80,40"]');
  assert.equal(await distant.getAttribute('tabindex'),'-1');

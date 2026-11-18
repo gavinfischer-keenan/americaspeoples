@@ -25,8 +25,8 @@ try{
    if(!await page.locator('#year-number').isVisible())await page.locator('#time-settings-toggle').click();
    await page.locator('#year-number').fill(String(year));await page.locator('#era').selectOption('CE');
    await page.getByRole('button',{name:'Go to year',exact:true}).click();
-   await page.waitForFunction(({id,expected})=>{const shown=[...document.querySelectorAll('#map-host [data-map-tip]')].some(el=>{const key=el.getAttribute('data-map-tip');return key?.startsWith('records:')&&JSON.parse(key.slice(8)).some(v=>JSON.parse(v)[0]===id);});return shown===expected;},{id,expected});
-   assert.equal(await mapHas(id),expected);
+   await page.waitForFunction(({id,expected})=>[...document.querySelectorAll('#map-host [data-active-member-ids]')].some(el=>JSON.parse(el.dataset.activeMemberIds).includes(id))===expected,{id,expected});
+   assert.equal(await mapHas(id),true,'earlier evidence remains inspectable during a gap');
   }
  }
  await page.goto(base+'/#review/eb-ne-canaa-graphite-movement');await page.locator('[data-action="locate"]').click();

@@ -33,6 +33,20 @@ subregions += [
  ('Kiribati — Phoenix Islands',-175,-169,-6,0),
  ('Kiribati — Line Islands',-162,-150,-12,8),
 ]
+remote.update({'Kiribati — Gilbert Islands','Kiribati — Phoenix Islands','Kiribati — Line Islands','Fiji / Tonga','Fiji / Tonga / Samoa east of dateline'})
+
+# Modern state names in the audit are geographic bins only. Clip their rectangles
+# so a neighboring state's evidence cannot make an empty locality row look filled.
+boundary_path=root/'data/historical-boundaries.json'
+states={r['name']:r['geometry'] for r in json.loads(boundary_path.read_text(encoding='utf8')) if r['kind']=='state' and r['start']<='1934-12-31'<=r['end']} if boundary_path.exists() else {}
+def in_ring(p,ring):
+ inside=False
+ for a,b in zip(ring,[ring[-1]]+ring[:-1]):
+  if (a[1]>p[1])!=(b[1]>p[1]) and p[0]<(b[0]-a[0])*(p[1]-a[1])/(b[1]-a[1])+a[0]:inside=not inside
+ return inside
+def in_geometry(p,g):
+ polygons=[g['coordinates']] if g['type']=='Polygon' else g['coordinates']
+ return any(in_ring(p,rings[0]) and not any(in_ring(p,hole) for hole in rings[1:]) for rings in polygons)
 
 def coord(r):
  o=r.get('overlay');g=o.get('geometry') if o else None
@@ -87,7 +101,8 @@ def link(r):return '<a href="../index.html#review/'+html.escape(r['id'])+'">'+ht
 
 rows=[];matrix=[];gaps=[]
 for name,w,e,s,n in regions+subregions:
- geo=[r for r in records if (p:=coord(r)) and w<=p[0]<=e and s<=p[1]<=n]
+ state=states.get(name.split(' — ')[0]) if ' — ' in name else None
+ geo=[r for r in records if (p:=coord(r)) and w<=p[0]<=e and s<=p[1]<=n and (state is None or in_geometry(p,state))]
  unresolved=[r for r in geo if r['time']['kind']=='unplaced'];cells=[];out=[]
  for label,a,b in bins:
   rs=[r for r in geo if supported_overlap(r,a,b)];l=[r for r in rs if local(r)];c=[r for r in rs if not local(r)];ps=[r for r in l if population(r,a,b)];ls=languages(rs);ids=sites(l)
@@ -113,12 +128,31 @@ summary={'reviewedAt':max((r.get('review',{}).get('reviewedAt','') for r in reco
 incoming=read('data/intake-queue-round12.json',read('data/intake-queue-round11.json',read('data/intake-queue-round10.json',{'batch':None,'items':[]})))
 summary['incomingResearch']=incoming
 summary['version']=version
+ranking_regions={
+ 'Fiji / Tonga':'Fiji / Tonga / Samoa',
+ 'Fiji / Tonga / Samoa east of dateline':'Fiji / Tonga / Samoa',
+ 'Aleutians — west of dateline':'Aleutians',
+ 'Aleutians — east of dateline':'Aleutians',
+}
+ranking_rows={}
+for row in matrix:
+ if row['region']=='Japan / Ryukyus':continue
+ region=ranking_regions.get(row['region'],row['region'])
+ ranking_rows.setdefault(region,[]).append(row)
+ranking=[]
+for region,components in ranking_rows.items():
+ ids=sorted({id for row in components for period in row['periods'] for id in period['localityIds']})
+ undated={id for row in components for id in row['unresolvedLocalityIds']}
+ ranking.append({'region':region,'localityCount':len(ids),'localityIds':ids,'undatedLocalityCount':len(undated)})
+summary['regionalRanking']=sorted(ranking,key=lambda row:(row['localityCount'],row['region']))
+summary['geographicAudit']='Named U.S. state subregions are clipped to bundled 1934 state polygons when available, solely to identify modern geographic bins. No historical map boundaries are changed. The sparse ranking combines the dateline components of the Aleutians and of Fiji/Tonga/Samoa. Japan/Ryukyus falls outside the requested detailed ranking scope. The matrix retains the component rectangles for comparison.'
 summary['recordIds']=[r['id'] for r in records]
 summary['method']=summary['method'].replace('Current base, research, history and shared expansion/context records deduplicated by record ID; focused topic collections excluded.','Canonical published master-map records; focused topic IDs excluded using the same registry as the map. Standalone data fixtures use shared collection files.')
 (root/'data/coverage-audit.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 body="""<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Atlas coverage audit</title><style>body{font:15px/1.6 system-ui;background:#10242e;color:#e8eff1;padding:22px;margin:auto;max-width:1600px}a{color:#8be3dd}h1,h2{line-height:1.2}.scroll{overflow:auto;max-height:75vh}table{border-collapse:collapse;font-size:12px}td,th{padding:9px;border:1px solid #52636a;min-width:115px;vertical-align:top}thead th{position:sticky;top:0;background:#192f39}tbody th{min-width:190px;background:#192f39;text-align:left}.local{background:#1d4b4d}.context{background:#39424f}.gap{background:#142933}summary{cursor:pointer}li{margin:7px 0}small{color:#d4dee2}section{margin:25px 0}</style><a href="../index.html#map">← Atlas</a><h1>Where the collected evidence is thin</h1>"""
 body+=f'<p>{len(records)} current archaeological, historical and interpretive records; {summary["remainingUnplaced"]} remain undated or contextual. Historical chronology review: {summary["formerlyUnplaced"]} originally unplaced records reviewed; {summary["recoveredWindows"]} source/period windows recovered and {summary["splitWindows"]} disjoint windows separated. Historical totals are separate from current coverage. Natural-hazard catalogs are separate.</p>'
 body+='<p><strong>A zero is a collection gap, not evidence that no people lived there.</strong> Matrix values are distinct dated localities / regional or other context records. Expanded cells list local records, which may repeat phases at one locality. A local event does not necessarily show habitation. Undated records are reported separately. Broad date windows do not prove continuous habitation. Boxes and periods overlap deliberately; counts cannot be summed. Routes and records without point anchors are not allocated to a region.</p>'
+body+='<p>'+html.escape(summary['geographicAudit'])+'</p><h2>Sparsest geographic areas</h2><p>Distinct dated places across the full time range; this measures the collection, not population or archaeological survey completeness.</p><ol>'+''.join('<li>'+html.escape(r['region'])+': '+str(r['localityCount'])+' dated places</li>' for r in summary['regionalRanking'][:10])+'</ol>'
 body+=f'<p><a href="../coverage-audit.json">Structured audit and ranked gap cells</a> · <a href="../temporal-review.json">All{summary["formerlyUnplaced"]} chronology decisions</a> · <a href="round8-synthesis.html">Round8 source decisions</a>'
 if (root/'docs/round9-synthesis.html').exists():body+=' · <a href="round9-synthesis.html">Round9 source decisions</a>'
 if (root/'docs/round10-synthesis.html').exists():body+=' · <a href="round10-synthesis.html">Round10 source decisions</a>'

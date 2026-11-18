@@ -8,6 +8,7 @@ const require = createRequire(import.meta.url);
 const node = process.execPath;
 const phases = [
   ["Canonical regional coverage audit", null, ["scripts/coverage-audit.py"]],
+  ["Ten sparse regions coverage and source report", node, ["--import", "tsx", "scripts/sparse-ten-audit.ts"]],
   ["Current broad coverage report", node, ["--import", "tsx", "scripts/world-coverage-audit.ts"]],
   ["Eastern Brazil coverage and source report", node, ["--import", "tsx", "scripts/eastern-brazil-audit.ts"]],
   ["Trade activity-window audit", node, ["--import", "tsx", "scripts/trade-coverage-audit.ts"]],
@@ -108,6 +109,8 @@ const phases = [
     node,
     ["tests/map-rendering.browser.mjs"],
   ],
+  ["Scale, crowding and playback contrast", node, ["tests/map-density.browser.mjs"]],
+  ["Ten sparse regions on the shared master map", node, ["tests/sparse-ten.browser.mjs"]],
   ["Map contrast and direction cues", node, ["scripts/contrast-browser.mjs"]],
   [
     "Keyed panel focus and DOM identity",

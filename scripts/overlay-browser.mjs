@@ -24,7 +24,7 @@ const layerOptions = async () => {
     await page.locator(".layer-disclosure summary").click();
 };
 const synthetic = () =>
-  page.locator("[data-overlay]").filter({ hasText: /Synthetic/ });
+  page.locator('[data-member-ids*="test-trade-overlay"],[data-member-ids*="historical-overlay-"]');
 try {
   await page.goto(url + "#map");
   const d = JSON.parse(await readFile("data/evidence.json", "utf8"));
@@ -185,9 +185,9 @@ try {
     await page
       .locator(".overlay-forced-removal")
       .filter({ hasText: "Synthetic forced-removal" })
-      .locator('path[marker-end="url(#arrow)"]')
+      .locator('path.route-line[marker-end]')
       .count(),
-    1,
+    0, 'An unspecified direction must not gain an arrow from coordinate order.'
   );
   await layerOptions();
   for (const label of [

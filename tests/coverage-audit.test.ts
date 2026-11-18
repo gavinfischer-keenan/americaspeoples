@@ -55,10 +55,15 @@ test("coverage audit counts distinct dated places, separates context and uses cu
     const montanaTwo = record("montana-two", "occupation", { ...place("montana-b"), lon: -114, lat: 47 });
     const aleutianWest = record("aleutian-west", "occupation", { ...place("aleutian-west"), lon: 178, lat: 52 });
     const aleutianEast = record("aleutian-east", "occupation", { ...place("aleutian-east"), lon: -177, lat: 52 });
+    const aleutianRepeated = record("aleutian-east-second-phase", "occupation", { ...aleutianEast.location, id: aleutianWest.location.id });
+    const neighboringMontana = record('montana-inside-idaho-rectangle', 'occupation', {...place('camp-fortunate'), lon:-112.86,lat:44.99});
+    const fijiWest = record('fiji-west', 'occupation', {...place('fiji-west'),lon:178,lat:-18});
+    const fijiEast = record('fiji-east', 'occupation', {...place('fiji-east'),lon:-178,lat:-18});
+    write('data/historical-boundaries.json', JSON.parse(readFileSync('data/historical-boundaries.json','utf8')));
     const separated = record("separate-date-windows", "occurrence", { ...place("separate-place"), lon: -40, lat: -12 });
     separated.time = { kind: "occurrence", start: 400, end: 1100, original: "Two supported windows" };
     separated.history = { kind: "attestation", windows: [{ start: 400, end: 490 }, { start: 1010, end: 1100 }] };
-    write("data/evidence.json", { records: [first, context, undated, route, montanaOne, montanaTwo, aleutianWest, aleutianEast, separated] });
+    write("data/evidence.json", { records: [first, context, undated, route, montanaOne, montanaTwo, aleutianWest, aleutianEast, aleutianRepeated, separated, neighboringMontana, fijiWest, fijiEast] });
     write("data/research-proposals.json", { proposals: [{ record: first }, { record: second }] });
     write("data/new-expansion-records.json", {records:[record('new-expansion','event',{...place('new'),lon:0,lat:0})]});
     write("data/history-records.json", {records:[record('new-history','event',{...place('hist'),lon:0,lat:0})]});
@@ -78,16 +83,23 @@ test("coverage audit counts distinct dated places, separates context and uses cu
     const result = spawnSync(python, [resolve("scripts/coverage-audit.py"), "--root", root], { encoding: "utf8" });
     assert.equal(result.status, 0, result.stderr);
     const audit = JSON.parse(readFileSync(join(root, "data/coverage-audit.json"), "utf8"));
-    assert.equal(audit.recordCount, 12, "shared expansions and history count; duplicates and focused material do not");
+    assert.equal(audit.recordCount, 16, "shared expansions and history count; duplicates and focused material do not");
+    const idaho = audit.matrix.find((r:any)=>r.region==='Idaho — southern / central');
+    assert.ok(idaho.periods.every((p:any)=>!p.localRecordIds.includes(neighboringMontana.id)), 'Montana cannot fill Idaho merely because its point lies inside the search rectangle');
+    assert.equal(audit.regionalRanking.find((r:any)=>r.region==='Fiji / Tonga / Samoa').localityCount, 2, 'dateline halves rank as one island region');
+    assert.deepEqual(audit.regionalRanking.filter((r:any)=>r.region.startsWith('Aleutians')), [{
+      region: 'Aleutians', localityCount: 2, localityIds: ['aleutian-east', 'aleutian-west'], undatedLocalityCount: 0,
+    }], 'Aleutian ranking combines component bins by locality ID');
+    assert.ok(!audit.regionalRanking.some((r:any)=>r.region==='Japan / Ryukyus'), 'mainland origins are outside detailed coverage scope');
     const eastern = audit.matrix.find((r: any) => r.region === 'Eastern Brazil');
     assert.equal(eastern.periods.find((p: any) => p.period === '501–1000CE').localityCount, 0, 'unsupported gaps cannot fill a coverage cell');
     assert.equal(eastern.periods.find((p: any) => p.period === '1001–1500CE').localityCount, 1);
     assert.equal(audit.broadRegionCount, 48); assert.equal(audit.regionCount, 65); assert.equal(audit.periodCount, 12);
     assert.ok(audit.matrix.some((r: any) => r.region === "Gran Chaco"), "interior gaps need an explicit audit region");
-    for (const [name, expected] of [["Aleutians — west of dateline", "aleutian-west"], ["Aleutians — east of dateline", "aleutian-east"]]) {
+    for (const [name, expected] of [["Aleutians — west of dateline", ["aleutian-west"]], ["Aleutians — east of dateline", ["aleutian-east", "aleutian-east-second-phase"]]] as const) {
       const row = audit.matrix.find((r: any) => r.region === name);
       const dated = row.periods.find((p: any) => p.period === "501–1000CE");
-      assert.deepEqual(dated.localRecordIds, [expected]);
+      assert.deepEqual(dated.localRecordIds, expected);
     }
     assert.ok(audit.matrix.some((r: any) => r.region === "Idaho — northern river corridors"));
     assert.ok(audit.matrix.some((r: any) => r.region === "Kiribati — Line Islands"));
@@ -107,10 +119,10 @@ test("coverage audit counts distinct dated places, separates context and uses cu
     assert.deepEqual(audit.intakeItems.map((i: any) => i.id), ["untested"]);
     assert.equal(audit.incomingResearch.batch, "round10-batch1");
     assert.equal(audit.incomingResearch.items[0].id, "idaho");
-    assert.equal(audit.recordCount, 12, "incoming research must not inflate integrated evidence");
+    assert.equal(audit.recordCount, 16, "incoming research must not inflate integrated evidence");
     assert.ok(audit.gapCells.some((g: any) => g.localityCount === 0 && g.classification === "no-included-dated-localities"));
     assert.ok(audit.gapCells.some((g: any) => g.localityCount === 1 && g.classification === "one-included-dated-locality"));
-    assert.ok(audit.gapCells.some((g: any) => g.region === "Montana — western mountains" && g.localityCount === 2 && g.classification === "two-included-dated-localities"));
+    assert.equal(audit.matrix.find((r:any)=>r.region==='Montana — western mountains').periods.find((p:any)=>p.period==='501–1000CE').localityCount,3, 'neighboring Montana record belongs with the two Montana localities');
     assert.ok(audit.nextRoundPriorities.every((g: any) => g.priorityEligible && g.end > -15000 && g.suggestedConsensusQuery.includes(g.region)));
     assert.ok(audit.gapCells.filter((g: any) => g.region === "Hawaii" && g.end <= 0).every((g: any) => !g.priorityEligible));
     const page = readFileSync(join(root, "docs/coverage-audit.html"), "utf8");

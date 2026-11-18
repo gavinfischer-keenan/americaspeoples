@@ -118,8 +118,14 @@ try {
   await page.getByRole("button", { name: "Go to year", exact: true }).click();
   // Manual year entry starts that year. Exact-day events must not appear early.
   const activeAt1864Start=({record:r})=>r.overlay?.geometry&&r.time.start<=1864&&r.time.end>=1864&&(!(r.time.eventDate??r.history?.eventDate)||(r.time.eventDate??r.history?.eventDate)<='1864-01-01');
-  assert.equal(await page.locator(".overlay-forced-removal").count(), snapshot.records.filter(x=>x.record.overlay?.kind==="forced-removal"&&activeAt1864Start(x)).length);
-  assert.equal(await page.locator(".overlay-violence").count(), snapshot.records.filter(x=>x.record.overlay?.kind==="violence"&&activeAt1864Start(x)).length);
+  const represented = new Set(await page.locator("#map-host [data-member-ids]")
+    .evaluateAll(features => features.flatMap(feature => JSON.parse(feature.dataset.memberIds))));
+  for (const kind of ["forced-removal", "violence"]) {
+    const overlays = snapshot.records.filter(({ record }) => record.overlay?.kind === kind);
+    const expected = overlays.filter(activeAt1864Start).map(({ record }) => record.id).sort();
+    const actual = overlays.filter(({ record }) => represented.has(record.id)).map(({ record }) => record.id).sort();
+    assert.deepEqual(actual, expected, `${kind} overlay records represented on January 1, 1864`);
+  }
   await page.goto(origin + "/evidence-appendix.html");
   assert.equal(await page.locator("details[data-evidence-id]").count(), expectedRecords);
   const appendix = await (
