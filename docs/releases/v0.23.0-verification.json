@@ -10,7 +10,7 @@
     "comingSoonEntries": 0
   },
   "version": "0.23.0",
-  "status": "verified release candidate; publication pending",
+  "status": "merged and deployed; public verification identified a missing HTML release-notes page, corrected by v0.23.1",
   "verifiedAt": "2026-11-18T04:10:20.313136+00:00",
   "baseCommit": "5ae8ff4415cece15e2828d8760091a6d8239abbe",
   "newRecords": 51,
@@ -109,5 +109,23 @@
         "url": "https://github.com/gavinfischer-keenan/americaspeoples/raw/refs/tags/v0.23.0/templates/americas-peoples-researched-import.xlsx"
       }
     ]
+  },
+  "pullRequest": "https://github.com/gavinfischer-keenan/americaspeoples/pull/20",
+  "mergeCommit": "aacc1821e199c58f76a0001d174736517ca6afee",
+  "deployment": {
+    "status": "deployed",
+    "id": "20261118T041130Z-americas-v0.23.0",
+    "commit": "aacc1821e199c58f76a0001d174736517ca6afee",
+    "health": {
+      "status": "ok",
+      "version": "0.23.0",
+      "records": 2531
+    },
+    "static": "/srv/tripofisch/releases/20261118T041130Z-americas-v0.23.0",
+    "api": "/srv/americaspeoples/releases/20261118T041130Z-americas-v0.23.0",
+    "previousVersion": "0.22.0",
+    "rollbackStatic": "/srv/tripofisch/releases/20261118T021001Z-americas-v0.22.0",
+    "rollbackApi": "/srv/americaspeoples/releases/20261118T021001Z-americas-v0.22.0",
+    "unchangedFiles": 388
   }
 }
