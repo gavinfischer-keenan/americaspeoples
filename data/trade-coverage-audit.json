@@ -1,11 +1,11 @@
 {
-  "version": "0.24.0",
+  "version": "0.25.0",
   "period": [
     0,
     1200
   ],
   "baselineVersion": "0.23.1",
-  "method": "Shared, explicitly classified exchange observations with line geometry and at least one supported activity window intersecting map years 0–1200. Founding migrations are excluded even where they use the same rendering layer. Multiple materials or dates may describe the same connection; counts are observations, not independent routes, traffic volume or evidence of continuous voyages. Samples use the same activity-window logic as the map.",
+  "method": "Shared, explicitly classified exchange observations with line geometry and at least one supported activity window intersecting map years 0–1200. Founding migrations are excluded even where they use the same rendering layer. Multiple materials or dates may describe the same connection; counts are observations, not independent routes, traffic volume or evidence of continuous voyages. Samples use the same activity-window logic as the map. The point inventory also indexes explicitly reviewed exchange claims within settlement records; associated-context dates are identified separately from direct dates of traded objects.",
   "mappedExchangeIds": [
     "trade-meso-san-martin-ceibal",
     "trade-meso-el-chayal-ceibal",
@@ -49,7 +49,27 @@
     "kapingamarangi-stone-provenance",
     "r11v-cusco-obsidian-continuity",
     "r11v-amazon-feathers-model",
-    "r11v-recuay-coast-interaction"
+    "r11v-recuay-coast-interaction",
+    "eb-ne-boca-do-rio"
+  ],
+  "pointOrUnmappedClaims": [
+    {
+      "recordId": "eb-ne-boca-do-rio",
+      "claimId": "greenstone",
+      "dateBasis": "associated context",
+      "title": "Boca do Rio — a village on wooden piles",
+      "text": "A small pendant with two perforations was recovered in the central cluster of piles. Its stone is tremolite-actinolite nephrite, for which the study found no known source in Maranhão. The stone or finished pendant most likely came from elsewhere.",
+      "explanation": "The exact source and means of transfer remain unresolved. The riverbed find is associated with the village layout and has no direct calendar date.",
+      "contextDate": {
+        "kind": "occurrence",
+        "start": 889,
+        "end": 1015,
+        "original": "Beta-406836, wooden pile: 889–1015 cal CE (2023 Table 2). Navarro’s earlier Table 1 gives 885–995 cal CE for the same sample.",
+        "method": "Published Davis and Navarro Table 2 calendar-age range from radiocarbon calibration (SHCal20).",
+        "interpretation": "Dates wood from a surviving pile in a river settlement.",
+        "approximate": true
+      }
+    }
   ],
   "samples": [
     {

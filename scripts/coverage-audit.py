@@ -45,6 +45,10 @@ def local(r):
 
 def overlaps(t,a,b):return t.get('start') is not None and t.get('end') is not None and t['start']<=b and t['end']>=a
 
+def supported_overlap(r,a,b):
+ windows=r.get('history',{}).get('windows',[])
+ return any(overlaps(w,a,b) for w in windows) if windows else overlaps(r['time'],a,b)
+
 def sites(rs):return sorted({r['location']['id'] for r in rs if local(r)})
 
 def population(r,a,b):
@@ -86,7 +90,7 @@ for name,w,e,s,n in regions+subregions:
  geo=[r for r in records if (p:=coord(r)) and w<=p[0]<=e and s<=p[1]<=n]
  unresolved=[r for r in geo if r['time']['kind']=='unplaced'];cells=[];out=[]
  for label,a,b in bins:
-  rs=[r for r in geo if overlaps(r['time'],a,b)];l=[r for r in rs if local(r)];c=[r for r in rs if not local(r)];ps=[r for r in l if population(r,a,b)];ls=languages(rs);ids=sites(l)
+  rs=[r for r in geo if supported_overlap(r,a,b)];l=[r for r in rs if local(r)];c=[r for r in rs if not local(r)];ps=[r for r in l if population(r,a,b)];ls=languages(rs);ids=sites(l)
   cell={'period':label,'start':a,'end':b,'localRecordIds':[r['id'] for r in l],'contextRecordIds':[r['id'] for r in c],'localityIds':ids,'localityCount':len(ids),'localRecordCount':len(l),'contextRecordCount':len(c),'populationKnownRecordIds':[r['id'] for r in ps],'populationKnownLocalityCount':len(sites(ps)),'languageSourceIds':ls,'languageSourceCount':len(ls)};out.append(cell)
   if len(ids)<=2:
    screened=b<=-15000 or (name in remote and b<=0)

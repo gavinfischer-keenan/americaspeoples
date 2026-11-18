@@ -1,5 +1,7 @@
 # Communities and connections: three regional gaps and early trade
 
+This page records the v0.24.0 campaign. The subsequent [eastern Brazil expansion](eastern-brazil.html) adds the 501–1500 CE localities that remained missing here.
+
 Version 0.24.0 adds **81 shared map records** and corrects **4 existing records**. These are 78 evidence entries plus three linked route representations of local finds, rather than 81 independent discoveries. These additions are part of the master map: changing the year shows them alongside contemporary places, peoples and events elsewhere. Three new regional guides supply 28 contextual chapters. The independent trade topic gains 13 chapters and retains its own clock.
 
 ## Costa Rica and Panama: homes, monuments and skilled work

@@ -9,6 +9,7 @@ const node = process.execPath;
 const phases = [
   ["Canonical regional coverage audit", null, ["scripts/coverage-audit.py"]],
   ["Current broad coverage report", node, ["--import", "tsx", "scripts/world-coverage-audit.ts"]],
+  ["Eastern Brazil coverage and source report", node, ["--import", "tsx", "scripts/eastern-brazil-audit.ts"]],
   ["Trade activity-window audit", node, ["--import", "tsx", "scripts/trade-coverage-audit.ts"]],
   [
     "Unit tests",
@@ -95,6 +96,7 @@ const phases = [
   ["Canadian and Aleutian contextual histories, illustrated guides and reciprocal links", node, ["--import", "tsx", "tests/canada-aleutians.browser.mjs"]],
   ["Shield continuity, local Aleutian histories and licensed village plans", node, ["--import", "tsx", "tests/shield-aleutian-local.browser.mjs"]],
   ["Three regional histories, master-map chapters and tablet guides", node, ["tests/three-regional-gaps.browser.mjs"]],
+  ["Eastern Brazil dates, exchanges and illustrated guide", node, ["tests/eastern-brazil.browser.mjs"]],
   ["Expanded exchange chapters and shared-map trade connections", node, ["tests/trade-coverage.browser.mjs"]],
   ["Regional evidence in the shared movie and packaged source guide", node, ["tests/regional-gaps.browser.mjs"]],
   ["Interior communities, dated connections and conflict windows", node, ["tests/interior-frontiers.browser.mjs"]],

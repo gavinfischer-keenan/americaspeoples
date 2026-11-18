@@ -59,4 +59,10 @@ test('trade audit excludes founding migrations and preserves the original route 
  for(const id of after.mappedExchangeIds){
   const r=dataset.records.find(r=>r.id===id);assert.ok(r&&r.history?.kind!=='migration');
  }
+ const pendant=after.pointOrUnmappedClaims.find((c:any)=>c.recordId==='eb-ne-boca-do-rio'&&c.claimId==='greenstone');
+ assert.ok(pendant);assert.equal(pendant.dateBasis,'associated context');
+ assert.equal(pendant.contextDate.start,889);assert.equal(pendant.contextDate.end,1015);
+ assert.match(pendant.explanation,/no direct calendar date/);
+ assert.equal(after.pointOrUnmappedIds.filter((id:string)=>id==='eb-ne-boca-do-rio').length,1);
+ for(const id of ['eb-ne-cabeludo','eb-ne-caboclo','eb-ne-armindio','eb-ne-encantado'])assert.ok(!after.pointOrUnmappedIds.includes(id));
 });
