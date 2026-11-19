@@ -5,22 +5,23 @@
       "name": "Cabot’s Matthew",
       "start": "1497-05",
       "end": "1497-08",
-      "region": "North Atlantic coast of North America",
-      "note": "Cabot sailed from Bristol in May and returned in August. Sources place the June landfall somewhere on the eastern coast of North America and disagree on the site.",
+      "region": "Bristol and the eastern coast of North America",
+      "note": "Cabot sailed from Bristol in May. The Toby chronicle dates the landing to June 24 and the Bristol return to August 6. The departure day and the location of the eastern North American landing are unresolved.",
       "sourceIds": [
+        "gap-ar-cabot-dcb-full",
         "voy-caboto-heritage",
-        "voy-caboto-dcb",
         "voy-caboto-parks"
       ]
     },
     {
       "id": "caboto-fleet-1498",
       "name": "Cabot’s second fleet",
-      "start": "1498",
-      "end": "1498",
-      "region": "North Atlantic",
-      "note": "The fleet departed England in 1498. The surviving evidence does not establish a continuous route or eventual return.",
+      "start": "1498-05",
+      "end": "1498-07",
+      "region": "Bristol, North Atlantic and Ireland",
+      "note": "A London chronicle records an early May departure. In a July 25 dispatch, Pedro de Ayala reported that one damaged ship had reached an unidentified Irish port. The report does not describe the movements of Cabot or the rest of the fleet.",
       "sourceIds": [
+        "gap-ar-cabot-dcb-full",
         "voy-caboto-dcb"
       ]
     },
@@ -65,30 +66,38 @@
       "start": "1500",
       "end": "1500",
       "region": "North Atlantic",
-      "note": "Corte-Real reached a coast called Terra Verde. Its precise identification remains uncertain.",
+      "note": "The Cantino map’s legend associates this voyage with an ice-bound coast usually identified as Greenland. Its day dates, landing and precise sighting location remain unresolved.",
       "sourceIds": [
+        "gap-ar-corte-real-gaspar",
         "voy-activity-corte-real"
       ]
     },
     {
       "id": "corte-real-second-1501",
       "name": "Gaspar Corte-Real’s second voyage",
-      "start": "1501",
-      "end": "1501",
+      "start": "1501-05",
+      "end": "1501-10",
       "region": "North Atlantic and eastern North America",
-      "note": "Three ships sailed toward Terra Verde. Two returned. Gaspar Corte-Real did not return with them.",
+      "note": "Two ships returned to Lisbon after the expedition sailed along an unidentified North American coast and kidnapped Indigenous people. The third vessel, with Gaspar aboard, did not return.",
       "sourceIds": [
-        "voy-activity-corte-real"
+        "gap-ar-corte-real-gaspar",
+        "gap-ar-pasqualigo-letter",
+        "gap-ar-corte-real-gois"
+      ],
+      "relatedVoyageIds": [
+        "gaspar-corte-real-1501-lisbon"
       ]
     },
     {
       "id": "corte-real-miguel-1502",
       "name": "Miguel Corte-Real’s search",
-      "start": "1502",
-      "end": "1502",
-      "region": "North Atlantic",
-      "note": "The voyage searched for Gaspar Corte-Real’s missing ship. Surviving records leave the search course unresolved.",
+      "start": "1502-05",
+      "end": "1502-08",
+      "region": "North Atlantic and eastern North America",
+      "note": "Góis gives May 10 for the Lisbon departure. An August 20 rendezvous is reported, but its North American location is disputed. Two vessels returned and Miguel’s ship was never heard from again.",
       "sourceIds": [
+        "gap-ar-corte-real-miguel",
+        "gap-ar-corte-real-gois",
         "voy-activity-corte-real"
       ]
     },
@@ -338,13 +347,14 @@
     {
       "id": "mackenzie-arctic-return",
       "name": "Mackenzie’s return from the Beaufort Sea",
-      "start": "1789-08",
+      "start": "1789-07",
       "end": "1789-09",
       "region": "Dehcho and Lake Athabasca",
-      "note": "The party traveled upriver and reached Fort Chipewyan in September. Canoe and portage segments need separate anchors.",
+      "note": "The party resumed the upstream journey in July and reached its original post in September. Dated examples include the Liard confluence, the entrance to Great Slave Lake and portages along the Slave River.",
       "sourceIds": [
         "voy-mackenzie-first-book",
-        "voy-mackenzie-dcb"
+        "voy-mackenzie-dcb",
+        "gap-ar-mackenzie-arctica"
       ],
       "relatedVoyageIds": [
         "mackenzie-arctic-1789"
@@ -353,13 +363,15 @@
     {
       "id": "mackenzie-pacific-return",
       "name": "Mackenzie’s return from the Pacific",
-      "start": "1793-08",
+      "start": "1793-07",
       "end": "1793-08",
-      "region": "Pacific Northwest and Peace River",
-      "note": "The party crossed back toward Fort Fork after the July coastal waypoint, returning to the fort in August.",
+      "region": "Nuxalk–Carrier Grease Trail, Fraser and Peace rivers",
+      "note": "The party returned along the Indigenous trade corridor and recovered the canoe it had cached near the Fraser before the westward crossing. It reached the Peace River departure post on August 24.",
       "sourceIds": [
         "voy-mackenzie-second-book",
-        "voy-mackenzie-dcb"
+        "voy-mackenzie-dcb",
+        "gap-ar-mackenzie-bc-geonames",
+        "gap-ar-mackenzie-arctica"
       ],
       "relatedVoyageIds": [
         "mackenzie-pacific-1793"
@@ -725,26 +737,1461 @@
         "voy-ellsworth-fram",
         "voy-ellsworth-natlib"
       ]
+    },
+    {
+      "id": "bastidas-cosa-1500-1502",
+      "name": "Rodrigo de Bastidas and Juan de la Cosa",
+      "start": "1500",
+      "end": "1502",
+      "region": "Caribbean coasts of present-day Colombia and Panama; Hispaniola",
+      "note": "The expedition followed the coast past the Magdalena and Gulf of Urabá toward Darién before damaged vessels reached Hispaniola. The source labels it 1501–02 but gives a June 1500 departure in the text. The band spans this disagreement.",
+      "sourceIds": [
+        "gap-am-bastidas",
+        "gap-am-bastidas-pares"
+      ]
+    },
+    {
+      "id": "vespucci-portuguese-1501",
+      "name": "Vespucci’s voyage in Portuguese service",
+      "start": "1501",
+      "end": "1502",
+      "region": "South Atlantic and Atlantic coast of South America",
+      "note": "The voyage of 1501–02 has stronger evidence than the 1497–98 voyage attributed to Vespucci. Reported southern limits and modern place identifications remain disputed.",
+      "sourceIds": [
+        "gap-am-vespucci"
+      ]
+    },
+    {
+      "id": "vespucci-1497-attribution",
+      "name": "Voyage attributed to Vespucci in 1497",
+      "start": "1497",
+      "end": "1498",
+      "region": "Atlantic and claimed American coast",
+      "note": "The itinerary attributed to Vespucci for 1497–98 depends on disputed letter evidence. These are the claimed years.",
+      "sourceIds": [
+        "gap-am-vespucci"
+      ]
+    },
+    {
+      "id": "solis-plata-1515-1516",
+      "name": "Díaz de Solís and the Río de la Plata expedition",
+      "start": "1515-10",
+      "end": "1516-11",
+      "region": "Atlantic, southern Brazil, Río de la Plata and Andalusia",
+      "note": "Three ships sailed from Sanlúcar and explored the estuary. Sources differ on the month and sequence of the estuary landings and Solís’s death. Survivors returned by the Brazilian coast, where part of the expedition was stranded.",
+      "sourceIds": [
+        "gap-am-solis",
+        "gap-am-solis-alt"
+      ],
+      "relatedVoyageIds": [
+        "solis-plata-anchors-1515-1516"
+      ]
+    },
+    {
+      "id": "cordova-yucatan-context-1517",
+      "name": "Hernández de Córdoba along the Gulf coast",
+      "start": "1517",
+      "end": "1517",
+      "region": "Yucatán Peninsula, Campeche and Cuba",
+      "note": "After the encounter near Cabo Catoche, the expedition continued along the Yucatán coast to Campeche and Champotón, where Maya defenders inflicted severe losses. The wounded expedition withdrew toward Cuba. Dates of intermediate coastal movements differ between sources.",
+      "sourceIds": [
+        "gap-am-cordova-diaz",
+        "gap-am-cordova-inah"
+      ],
+      "relatedVoyageIds": [
+        "hernandez-cordoba-yucatan-1517"
+      ]
+    },
+    {
+      "id": "grijalva-gulf-context-1518",
+      "name": "Grijalva’s Gulf coast reconnaissance and return",
+      "start": "1518",
+      "end": "1518",
+      "region": "Cozumel, Campeche, Tabasco, Veracruz and Cuba",
+      "note": "Grijalva’s expedition fought at Champotón and surveyed Boca de Términos. It continued to the Sacrificios and San Juan de Ulúa area. Alvarado detached to return to Cuba. The complete westward track and the separate return sailings need more precise anchors.",
+      "sourceIds": [
+        "gap-am-grijalva-diaz",
+        "gap-am-grijalva-baracs"
+      ],
+      "relatedVoyageIds": [
+        "grijalva-yucatan-tabasco-1518"
+      ]
+    },
+    {
+      "id": "cortes-tenochtitlan-1520-1521",
+      "name": "Cortés’s retreat and the siege of Tenochtitlan",
+      "start": "1520",
+      "end": "1521",
+      "region": "Valley of Mexico and Tlaxcala",
+      "note": "Cortés’s group retreated from Tenochtitlan on 30 June 1520. His forces, together with an Indigenous coalition, later besieged and captured the city on 13 August 1521. The coastal route and 1519 advance are shown separately.",
+      "sourceIds": [
+        "gap-am-cortes-tenoch",
+        "gap-am-cortes-tlaxcala"
+      ],
+      "relatedVoyageIds": [
+        "cortes-centla-tenochtitlan-1519"
+      ]
+    },
+    {
+      "id": "narvaez-apalachee-boatbuilding-1528",
+      "name": "Narváez’s Apalachee and Bay of Horses phases",
+      "start": "1528-06",
+      "end": "1528-09",
+      "region": "Apalachee and northern Gulf of Mexico coast",
+      "note": "The force occupied settlements, faced Indigenous resistance, moved toward Aute and built five improvised boats at the Bay of Horses. It set out on 22 September. The precise locations of Aute and the embarkation site need further verification.",
+      "sourceIds": [
+        "gap-am-cabeza",
+        "gap-am-narvaez-nps",
+        "gap-am-mitchem-aute"
+      ],
+      "relatedVoyageIds": [
+        "narvaez-florida-invasion-1527-1528"
+      ]
+    },
+    {
+      "id": "de-soto-anhaica-winter-1539",
+      "name": "De Soto’s winter at Anhaica",
+      "start": "1539-10",
+      "end": "1540-03",
+      "region": "Anhaica, Apalachee (present-day Tallahassee)",
+      "note": "The expedition occupied the Apalachee capital over the winter, consuming local stores and relying on forced labor. Archaeology identifies the site. The dated itinerary anchors the 3 March departure.",
+      "sourceIds": [
+        "gap-am-elvas",
+        "gap-am-anhaica"
+      ],
+      "relatedVoyageIds": [
+        "de-soto-cuba-southeast-1539-1542"
+      ]
+    },
+    {
+      "id": "coronado-tiguex-1540-1541",
+      "name": "Coronado’s Tiguex winter and war",
+      "start": "1540",
+      "end": "1541",
+      "region": "Tiguex Pueblo region, Middle Rio Grande",
+      "note": "Coronado’s expedition wintered in Tiguex. The expedition’s demands and violence led to war, deaths and the displacement of Pueblo communities. Coronado left east toward Quivira on 23 April 1541. Pueblo and route identifications remain approximate.",
+      "sourceIds": [
+        "gap-am-coronado",
+        "gap-am-cor-route"
+      ],
+      "relatedVoyageIds": [
+        "coronado-compostela-hawikuh-1540"
+      ]
+    },
+    {
+      "id": "coronado-quivira-1541",
+      "name": "Coronado’s Quivira detachment",
+      "start": "1541-04",
+      "end": "1541-09",
+      "region": "Rio Grande, Southern Plains and Wichita country",
+      "note": "The army left Tiguex on 23 April. A smaller force continued northeast to Quivira with Plains guides after Coronado sent most of the army back. He returned to the Rio Grande region in September. The details of the Plains itinerary and exact arrival day remain unresolved.",
+      "sourceIds": [
+        "gap-am-coronado",
+        "gap-am-cor-route"
+      ],
+      "relatedVoyageIds": [
+        "coronado-compostela-hawikuh-1540"
+      ]
+    },
+    {
+      "id": "coronado-pueblo-scouting-1540",
+      "name": "Alvarado, Tovar and Cárdenas scouting parties",
+      "start": "1540",
+      "end": "1540",
+      "region": "Acoma, Tiguex and Cicuye; Hopi communities and Grand Canyon",
+      "note": "Hernando de Alvarado left Zuni on 29 August for Acoma, Tiguex and Cicuye. Pedro de Tovar went toward Hopi communities, while García López de Cárdenas traveled to the canyon. These are distinct parties. The dates and sites required for detailed tracks are uneven.",
+      "sourceIds": [
+        "gap-am-coronado",
+        "gap-am-cor-tierra",
+        "gap-am-cor-pecos"
+      ],
+      "relatedVoyageIds": []
+    },
+    {
+      "id": "eliza-nootka-winter-1790",
+      "name": "Eliza and Alberni winter at Nootka Sound",
+      "start": "1790",
+      "end": "1791",
+      "region": "Yuquot / Friendly Cove, Nootka Sound",
+      "note": "The Spanish contingent rebuilt at Yuquot with the agreement of Maquinna as described in the sources. Wet weather, spoiled supplies and scurvy strained the 1790–91 winter. Eliza then renewed survey work in 1791.",
+      "sourceIds": [
+        "gap-am-nara-nw2",
+        "gap-am-nara-nw3"
+      ],
+      "relatedVoyageIds": [
+        "eliza-concepcion-nootka-1790",
+        "eliza-san-carlos-strait-survey-1791"
+      ]
+    },
+    {
+      "id": "roberval-cap-rouge",
+      "name": "Roberval at France-Roy and repatriation",
+      "start": "1542-07",
+      "end": "1543-09",
+      "region": "Cap-Rouge, St. Lawrence River",
+      "note": "The colony occupied Cartier’s former fort from late July 1542. After a difficult winter and exploration toward the Ottawa River, the group abandoned the colony and returned to France in early September 1543.",
+      "sourceIds": [
+        "voy-cartier-cmh-founding"
+      ],
+      "relatedVoyageIds": [
+        "roberval-france-roi-1542"
+      ]
+    },
+    {
+      "id": "frobisher-third-1578-mining",
+      "name": "Frobisher’s mining camp and attempted settlement",
+      "start": "1578-07",
+      "end": "1578-08",
+      "region": "Qallunaaq (Kodlunarn Island), Frobisher Bay",
+      "note": "The damaged fleet gathered near the mining site at the end of July. The fleet repaired ships and loaded ore, while the intended winter colony was dropped after supplies were lost.",
+      "sourceIds": [
+        "voy-frobisher-dcb",
+        "gap-ar-kodlunarn-archaeology"
+      ],
+      "relatedVoyageIds": [
+        "frobisher-third-1578"
+      ]
+    },
+    {
+      "id": "basque-whaling-strait-belle-isle",
+      "name": "Basque whaling in the Strait of Belle Isle",
+      "start": "1540",
+      "end": "1600",
+      "region": "Red Bay, Labrador and Strait of Belle Isle",
+      "note": "Basque crews made repeated fishing and whaling voyages, processing whales at coastal stations. The Red Bay wreck is provisionally identified as the San Juan, reportedly lost in 1565. The band covers the general sixteenth-century whaling period.",
+      "sourceIds": [
+        "gap-ar-red-bay-museum"
+      ]
+    },
+    {
+      "id": "davis-1586-separated-ships",
+      "name": "Davis’s detached Sunshine and North Star",
+      "start": "1586",
+      "end": "1586",
+      "region": "Greenland and Iceland",
+      "note": "Sunshine and North Star were sent to search for a northward passage between Greenland and Iceland. The attempt was blocked by ice and North Star was lost in a storm.",
+      "sourceIds": [
+        "voy-davis-dcb"
+      ],
+      "relatedVoyageIds": []
+    },
+    {
+      "id": "davis-1587-fishing-vessels",
+      "name": "Davis’s detached fishing barks",
+      "start": "1587-06",
+      "end": "1587-09",
+      "region": "West Greenland and North Atlantic",
+      "note": "Elizabeth and Sunshine separated from Davis’s pinnace on June 21 to fish. Their subsequent courses and reunion or return dates require separate evidence.",
+      "sourceIds": [
+        "voy-davis-princeton",
+        "voy-davis-dcb"
+      ],
+      "relatedVoyageIds": []
+    },
+    {
+      "id": "franklin-beechey-winter",
+      "name": "Franklin’s first winter at Beechey Island",
+      "start": "1845",
+      "end": "1846",
+      "region": "Beechey Island, Nunavut",
+      "note": "The chronology of the 1845–46 winter relies on the camp, records and burials. Those sources substantiate the base. The ship-arrival and departure days remain unestablished.",
+      "sourceIds": [
+        "voy-franklin-parks",
+        "gap-ar-beechey-grave-inscriptions",
+        "gap-ar-victory-point-note"
+      ],
+      "relatedVoyageIds": [
+        "franklin-erebus-terror-1845-1848"
+      ]
+    },
+    {
+      "id": "investigator-prince-of-wales-winter",
+      "name": "Investigator’s first winter in Prince of Wales Strait",
+      "start": "1850-09",
+      "end": "1851-07",
+      "region": "Prince of Wales Strait near Princess Royal Islands",
+      "note": "Investigator froze into the strait. Sledge parties explored adjoining shores and demonstrated an opening into Viscount Melville Sound. After the ice released the ship, it withdrew and sailed around the west side of Banks Island.",
+      "sourceIds": [
+        "gap-ar-mcclure-dispatches",
+        "gap-ar-mcclure-osborn"
+      ],
+      "relatedVoyageIds": [
+        "mcclure-investigator-1850-1853"
+      ]
+    },
+    {
+      "id": "pim-relief-crossing",
+      "name": "Bedford Pim’s first Investigator relief journey",
+      "start": "1853-03",
+      "end": "1853-04",
+      "region": "Dealy Island, Viscount Melville Sound and Mercy Bay",
+      "note": "Pim and his companions crossed the frozen sound by sledge from Kellett’s expedition at Dealy Island. They reached Investigator on April 6.",
+      "sourceIds": [
+        "gap-ar-pim-dcb",
+        "gap-ar-mcclure-osborn"
+      ],
+      "relatedVoyageIds": [
+        "mcclure-investigator-relief-1853-1854"
+      ]
+    },
+    {
+      "id": "investigator-crew-beechey-return",
+      "name": "Investigator crew at Beechey Island and return to England",
+      "start": "1854-04",
+      "end": "1854-09",
+      "region": "Viscount Melville Sound, Beechey Island, Greenland and England",
+      "note": "Since both relief ships were beset, the crew traveled by sledge to Beechey Island. They returned to England on September 28 with the crews of the Belcher search expedition.",
+      "sourceIds": [
+        "gap-ar-mcclure-osborn",
+        "gap-ar-investigator-parks"
+      ],
+      "relatedVoyageIds": [
+        "mcclure-investigator-relief-1853-1854"
+      ]
+    },
+    {
+      "id": "sverdrup-goose-fiord-winter-stations",
+      "name": "Fram at Goose Fiord",
+      "start": "1900-09",
+      "end": "1902-08",
+      "region": "Goose Fiord, southern Ellesmere Island",
+      "note": "Fram used the fiord through the third and fourth winters, with nearby boat and sledging activities. Summer ice prevented a 1901 departure.",
+      "sourceIds": [
+        "gap-ar-sverdrup-new-land-2",
+        "voy-fram-second",
+        "gap-ar-fram-crustacea"
+      ],
+      "relatedVoyageIds": [
+        "sverdrup-fram-1898-1902"
+      ]
+    },
+    {
+      "id": "sverdrup-fram-sledge-surveys",
+      "name": "Second Fram expedition’s parallel surveys",
+      "start": "1899",
+      "end": "1902",
+      "region": "Ellesmere, Axel Heiberg, Ringnes islands and north Devon Island",
+      "note": "Separate parties used the winter quarters to survey islands and fjords. Isachsen’s Ringnes traverse and Baumann’s Beechey Island journey have dated selections, while further inland survey points remain at broad seasonal precision.",
+      "sourceIds": [
+        "voy-fram-second",
+        "gap-ar-sverdrup-new-land-1",
+        "gap-ar-sverdrup-new-land-2"
+      ],
+      "relatedVoyageIds": []
+    },
+    {
+      "id": "maud-tessem-knudsen-party",
+      "name": "Tessem and Knudsen’s detached mail and records party",
+      "start": "1919-09",
+      "end": "1919",
+      "region": "Taymyr coast from Maudhavn toward Dikson",
+      "note": "The two men remained at the shore cabin when the ship departed on September 12. Their deaths and the discovery of remains are documented, while their last route and exact death locations remain uncertain.",
+      "sourceIds": [
+        "voy-fram-maud",
+        "gap-ar-maud-mia",
+        "gap-ar-maud-polarhistorie"
+      ],
+      "relatedVoyageIds": []
+    },
+    {
+      "id": "maud-ay-on-chukchi-travel",
+      "name": "Harald Sverdrup’s winter journeys with Chukchi herders",
+      "start": "1919",
+      "end": "1920",
+      "region": "Ayon Island and Chukchi tundra",
+      "note": "Sverdrup traveled with Chukchi participants through the winter, learned from them and returned to the ship on May 17. The route was separate from the Maud.",
+      "sourceIds": [
+        "voy-fram-maud",
+        "gap-ar-arctica-sverdrup"
+      ],
+      "relatedVoyageIds": []
+    },
+    {
+      "id": "maud-final-winter-kolyma",
+      "name": "Maud’s final winter off the Kolyma coast",
+      "start": "1924",
+      "end": "1925",
+      "region": "East Siberian Sea near the Medvezhyi Islands",
+      "note": "After leaving the main drift, the Maud was trapped once more off the Kolyma coast near Four Pillar Island. It escaped in the summer of 1925.",
+      "sourceIds": [
+        "gap-ar-arctica-sverdrup",
+        "gap-ar-maud-mia"
+      ],
+      "relatedVoyageIds": [
+        "maud-wisting-drift-1922-1925"
+      ]
+    },
+    {
+      "id": "maud-omdal-amundsen-wainwright",
+      "name": "Omdal and Amundsen’s Wainwright shore party",
+      "start": "1922-07",
+      "end": "1923-06",
+      "region": "Wainwright, northern Alaska",
+      "note": "The two aviators and equipment traveled separately from the Maud after the expedition split. Omdal wintered ashore. Two dated 1923 air tests mark the end of the intended trans-Arctic effort.",
+      "sourceIds": [
+        "voy-fram-maud",
+        "gap-ar-maud-mia",
+        "gap-ar-arctica-sverdrup"
+      ],
+      "relatedVoyageIds": [
+        "maud-wainwright-air-tests-1923"
+      ]
+    },
+    {
+      "id": "maud-dahl-wisting-test-flights",
+      "name": "Odd Dahl and Oscar Wisting’s Maud ice reconnaissance flights",
+      "start": "1923-07",
+      "end": "1923-07",
+      "region": "East Siberian shelf pack ice",
+      "note": "MiA’s archival chronology dates two short July 16 flights from ice near the ship, followed by a landing accident. The Fram Museum gives May for the pair of flights. Without precise fixes for the individual sorties, the aviation activity remains separate from the ship’s mapped track.",
+      "sourceIds": [
+        "gap-ar-maud-mia",
+        "voy-fram-maud"
+      ],
+      "relatedVoyageIds": []
+    },
+    {
+      "id": "jolliet-marquette-illinois-return",
+      "name": "Jolliet and Marquette’s Illinois River and Great Lakes return",
+      "start": "1673-07",
+      "end": "1673-09",
+      "region": "Mississippi, Illinois River, Illinois–Lake Michigan portage and Green Bay",
+      "note": "After leaving the Quapaw settlement area on July 17, the party paddled back upriver to the Illinois River. An Illinois chief and young men escorted them to Lake Michigan. Green Bay was reached in late September.",
+      "sourceIds": [
+        "voy-marquette-primary",
+        "voy-marquette-cmh"
+      ],
+      "relatedVoyageIds": [
+        "jolliet-marquette-1673"
+      ]
+    },
+    {
+      "id": "roberval-newfoundland-1542",
+      "name": "Roberval at St. John’s before the St. Lawrence voyage",
+      "start": "1542-06",
+      "end": "1542-06",
+      "region": "St. John’s Harbour, Newfoundland",
+      "note": "The ships arrived on 8 June and remained until about the end of the month. The Canadian Museum of History dates departure to 30 June; the participant account uses an approximate month-end description.",
+      "sourceIds": [
+        "gap-ar-roberval-primary",
+        "voy-cartier-cmh-founding"
+      ],
+      "relatedVoyageIds": [
+        "roberval-france-roi-1542"
+      ]
+    },
+    {
+      "id": "nordenskjold-paulet-occupation-1903",
+      "name": "Antarctic survivors at Paulet Island",
+      "start": "1903-02",
+      "end": "1903-11",
+      "region": "Paulet Island, Weddell Sea",
+      "note": "Survivors built and occupied a stone hut until Uruguay retrieved the remaining group after Larsen’s party reached Snow Hill.",
+      "sourceIds": [
+        "gap-an-swedish-paulet",
+        "gap-an-swedish-gu",
+        "gap-an-uruguay-armada"
+      ],
+      "relatedVoyageIds": [
+        "nordenskjold-paulet-winter-1903"
+      ]
+    },
+    {
+      "id": "nordenskjold-hope-crossing-1903",
+      "name": "Hope Bay party reunites with Nordenskjöld",
+      "start": "1903-09",
+      "end": "1903-10",
+      "region": "Hope Bay, Vega Island and Snow Hill Island",
+      "note": "The winter party left Hope Bay in late September, met Nordenskjöld at Vega Island on 12 October and reached Snow Hill later in October.",
+      "sourceIds": [
+        "gap-an-swedish-nord",
+        "gap-an-swedish-hope"
+      ],
+      "relatedVoyageIds": [
+        "nordenskjold-hope-bay-party-1902-1903"
+      ]
+    },
+    {
+      "id": "dumont-durville-pacific-1838-1840",
+      "name": "Astrolabe and Zélée · Pacific and Aotearoa surveys",
+      "start": "1838",
+      "end": "1840",
+      "region": "Pacific Ocean and Aotearoa New Zealand",
+      "note": "The expedition’s main Pacific research separated the two southern seasons. Visits to Aotearoa in 1840 followed the second Antarctic voyage.",
+      "sourceIds": [
+        "gap-an-durville-teara",
+        "gap-an-durville-chile"
+      ],
+      "relatedVoyageIds": [
+        "dumont-durville-astrolabe-zelee-1837-1838",
+        "dumont-durville-astrolabe-zelee-1839-1840"
+      ]
+    },
+    {
+      "id": "valdivia-antarctic-season-1898",
+      "name": "Valdivia · Southern Ocean sampling",
+      "start": "1898-11",
+      "end": "1898-12",
+      "region": "Bouvetøya, Southern Ocean and Kerguelen",
+      "note": "The Antarctic survey formed part of a wider deep-sea expedition. Biological and oceanographic sampling continued on the passage toward Kerguelen.",
+      "sourceIds": [
+        "gap-an-chun"
+      ],
+      "relatedVoyageIds": [
+        "chun-valdivia-1898"
+      ]
+    },
+    {
+      "id": "gauss-gaussberg-sledging-1902",
+      "name": "Gauss · Gaussberg and shore sledging",
+      "start": "1902-03",
+      "end": "1902",
+      "region": "Kaiser Wilhelm II Land and Davis Sea",
+      "note": "A March sledging party reached the volcanic cone now called Gaussberg. Further sledge outings and observations took place during 1902.",
+      "sourceIds": [
+        "gap-an-drygalski-sledge",
+        "gap-an-drygalski-rack"
+      ]
+    },
+    {
+      "id": "shirase-sydney-winter-1911",
+      "name": "Shirase expedition · Sydney winter",
+      "start": "1911-05",
+      "end": "1911-11",
+      "region": "Parsley Bay and Sydney Harbour",
+      "note": "The expedition established a camp and repaired Kainan Maru before the second Ross Sea voyage.",
+      "sourceIds": [
+        "gap-an-shirase-anu",
+        "gap-an-shirase-sydney"
+      ],
+      "relatedVoyageIds": [
+        "shirase-kainan-maru-1910-1912"
+      ]
+    },
+    {
+      "id": "filchner-deutschland-drift-context-1912",
+      "name": "Deutschland · Weddell Sea drift and ice work",
+      "start": "1912-03",
+      "end": "1912-11",
+      "region": "Weddell Sea",
+      "note": "The ice carried the ship north with winter scientific work on the ice. A sledge party undertook a search for the reported Morrell Land and found no land at the presumed location.",
+      "sourceIds": [
+        "gap-an-filchner-scar"
+      ],
+      "relatedVoyageIds": [
+        "filchner-deutschland-drift-1912"
+      ]
+    },
+    {
+      "id": "aae-western-base-1912-1913",
+      "name": "Frank Wild’s Western Base",
+      "start": "1912-02",
+      "end": "1913-02",
+      "region": "Shackleton Ice Shelf, Queen Mary Land",
+      "note": "Wild and seven companions spent one winter at a hut on floating ice. Their parties surveyed west toward Gaussberg and east toward Denman Glacier.",
+      "sourceIds": [
+        "gap-an-aae-west",
+        "gap-an-aae-heritage"
+      ],
+      "relatedVoyageIds": [
+        "mawson-aurora-1911-1912"
+      ]
+    },
+    {
+      "id": "aae-cape-denison-second-winter-1913",
+      "name": "Mawson’s party · second Cape Denison winter",
+      "start": "1913-02",
+      "end": "1913-12",
+      "region": "Cape Denison, Commonwealth Bay",
+      "note": "Members remained after the delayed return of the Far Eastern Party. Aurora recovered the remaining shore party in December.",
+      "sourceIds": [
+        "gap-an-aae-relief",
+        "gap-an-aae-final"
+      ],
+      "relatedVoyageIds": [
+        "mawson-aae-far-eastern-party-1912-1913"
+      ]
+    },
+    {
+      "id": "aae-macquarie-relay-1911-1913",
+      "name": "Ainsworth’s Macquarie Island wireless party",
+      "start": "1911-12",
+      "end": "1913-11",
+      "region": "Macquarie Island",
+      "note": "The island party ran a scientific station and supplied the Cape Denison wireless link to Australia. Aurora collected the expedition party during its final voyage.",
+      "sourceIds": [
+        "gap-an-aae-mac",
+        "gap-an-aae-final"
+      ],
+      "relatedVoyageIds": [
+        "mawson-aurora-1911-1912"
+      ]
+    },
+    {
+      "id": "banzare-air-reconnaissance-1931",
+      "name": "BANZARE · second-season aerial survey",
+      "start": "1931-01",
+      "end": "1931-02",
+      "region": "Wilkes Land, Princess Elizabeth Land and Mac.Robertson Land",
+      "note": "Aircraft reconnaissance included Cape Goodenough and the Banzare Coast in January and Leopold and Astrid Coast, MacKenzie Bay and the Mac.Robertson Coast in February.",
+      "sourceIds": [
+        "gap-an-usgs"
+      ]
+    },
+    {
+      "id": "clerke-final-approach-1779",
+      "name": "Clerke’s final approach and change of command",
+      "start": "1779-08",
+      "end": "1779-08",
+      "region": "Bering Sea and Kamchatka",
+      "note": "Clerke died at sea on 22 August. The ships reached Avacha Bay on 24 August, and Gore and King took their new commands on the 25th. The last selected ship fix under Clerke is 20 August; no fixed death coordinate is inferred.",
+      "sourceIds": [
+        "gap-pa-king-1784",
+        "voy-cook-third-chron"
+      ],
+      "relatedVoyageIds": [
+        "clerke-arctic-return-1779",
+        "gore-king-homeward-1779-1780"
+      ]
+    },
+    {
+      "id": "columbus-hispaniola-1498-1500",
+      "name": "Columbus on Hispaniola, detention and return",
+      "start": "1498-08",
+      "end": "1500-11",
+      "region": "Hispaniola and Atlantic return",
+      "note": "After the Paria voyage, Columbus returned to Hispaniola. Bobadilla removed him from office in 1500 and sent him to Spain in chains. The band includes that return; it is not a continuous occupation at one point.",
+      "sourceIds": [
+        "voy-columbus-third",
+        "voy-columbus-pares"
+      ],
+      "relatedVoyageIds": [
+        "columbus-third-1498-1500"
+      ]
+    },
+    {
+      "id": "columbus-jamaica-stranding-1503-1504",
+      "name": "Columbus’s party stranded on Jamaica",
+      "start": "1503-06",
+      "end": "1504-06",
+      "region": "Northern Jamaica",
+      "note": "The ships reached Jamaica in June 1503 and the rescued party left on 28 June 1504. Puerto Bueno arrival, the later beaching at Santa Gloria and the eclipse are distinct events; the start of a particular beach stay is not assigned a day here.",
+      "sourceIds": [
+        "gap-pa-porras-fourth",
+        "voy-columbus-ign-eclipse"
+      ],
+      "relatedVoyageIds": [
+        "columbus-fourth-1502-1504"
+      ]
+    },
+    {
+      "id": "laperouse-final-pacific-1788",
+      "name": "La Pérouse’s last passage and loss",
+      "start": "1788-03",
+      "end": "1788",
+      "region": "Southwest Pacific; Vanikoro reefs",
+      "note": "After the 10 March departure from Botany Bay, the ships were lost at Vanikoro during 1788. The wreck day and final sailing route are unknown; the year band does not mean the ships survived through December.",
+      "sourceIds": [
+        "gap-pa-phillip-1789",
+        "gap-pa-laperouse-museum"
+      ],
+      "relatedVoyageIds": [
+        "laperouse-1785-1788"
+      ]
     }
   ],
   "sources": [
     {
-      "id": "voy-endurance-rgs",
-      "authors": "Royal Geographical Society and Weddell Sea Expedition",
-      "title": "Shackleton expedition timeline",
-      "year": 2019,
-      "venue": "Royal Geographical Society and Weddell Sea Expedition",
-      "url": "https://www.rgs.org/media/wu2hsebf/wse-shackleton-expedition-timeline.pdf",
-      "access": "Royal Geographical Society’s public event chronology prepared for the Weddell Sea Expedition. See the Canterbury paper for log-derived positions."
+      "id": "gap-am-anhaica",
+      "authors": "Florida Division of Historical Resources",
+      "title": "Hernando de Soto 1539–1540 Winter Encampment at Anhaica Apalachee",
+      "venue": "Florida Department of State",
+      "url": "https://dos.fl.gov/historical/archaeology/projects/hernando-de-soto-1539-1540-winter-encampment-at-anhaica-apalachee/",
+      "access": "State archaeological research identifying the Anhaica winter site in Tallahassee.",
+      "year": null
     },
     {
-      "id": "voy-shackleton-south",
-      "authors": "Ernest Shackleton",
-      "title": "South! The Story of Shackleton's Last Expedition, 1914–1917",
-      "year": 1919,
-      "venue": "Project Gutenberg",
-      "url": "https://www.gutenberg.org/ebooks/5199",
-      "access": "Public-domain participant narrative of the Imperial Trans-Antarctic Expedition. Institutional chronology and navigation analysis support recurring date and position details."
+      "id": "gap-am-bastidas",
+      "authors": "Biblioteca Virtual Miguel de Cervantes",
+      "title": "1501–02, Rodrigo de Bastidas",
+      "venue": "Exploradores y viajeros por España y el nuevo mundo",
+      "url": "https://www.cervantesvirtual.com/portales/exploradores_y_viajeros_espana_y_nuevo_mundo/rodrigo_de_bastidas/",
+      "access": "Institutional account of the Bastidas and de la Cosa voyage. The heading and departure text disagree on the year.",
+      "year": null
+    },
+    {
+      "id": "gap-am-bastidas-pares",
+      "authors": "Portal de Archivos Españoles",
+      "title": "Cosa, Juan de la (ca. 1449–ca. 1510)",
+      "venue": "PARES, Ministerio de Cultura, España",
+      "url": "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/169269",
+      "access": "Spanish archival authority entry identifying de la Cosa as pilot of the Bastidas voyage and outlining its geographic reach.",
+      "year": null
+    },
+    {
+      "id": "gap-am-cabeza",
+      "authors": "Álvar Núñez Cabeza de Vaca; David Carson (translator)",
+      "title": "La Relación / The Account",
+      "year": 1542,
+      "venue": "TexasCounties public translation",
+      "url": "https://www.texascounties.net/articles/discovery-of-texas/theaccount-cabezadevaca.htm",
+      "access": "Eyewitness account with chapter and paragraph numbers. The modern chronology flags dates in the original that conflict with weekdays."
+    },
+    {
+      "id": "gap-am-cor-pecos",
+      "authors": "National Park Service",
+      "title": "Spanish Encounters",
+      "venue": "Pecos National Historical Park",
+      "url": "https://www.nps.gov/peco/learn/historyculture/spanish-encounters.htm",
+      "access": "Institutional place identification and context for the Coronado expedition’s encounter with Cicuye.",
+      "year": null
+    },
+    {
+      "id": "gap-am-cor-route",
+      "authors": "Richard Flint and Shirley Cushing Flint (editors)",
+      "title": "The Coronado Expedition to Tierra Nueva: The 1540–1542 Route Across the Southwest",
+      "year": 2011,
+      "venue": "University Press of Colorado",
+      "url": "https://upcolorado.com/media/acfupload/9781607321248_3.pdf",
+      "access": "Edited scholarship locating the expedition in the Río Sonora and Tiguex regions and distinguishing route alternatives."
+    },
+    {
+      "id": "gap-am-cor-tierra",
+      "authors": "Richard Flint and Shirley Cushing Flint (editors)",
+      "title": "The Coronado Expedition to Tierra Nueva: The 1540–1542 Route Across the Southwest",
+      "year": 2011,
+      "venue": "University Press of Colorado / JSTOR",
+      "url": "https://www.jstor.org/stable/j.ctt46ntfg",
+      "access": "Chapter abstracts include Alvarado’s dated account of the departure from Zuni."
+    },
+    {
+      "id": "gap-am-cordova-diaz",
+      "authors": "Bernal Díaz del Castillo",
+      "title": "Bernal Díaz describe la expedición de Francisco Hernández de Córdoba",
+      "year": 1632,
+      "venue": "Noticonquista, Universidad Nacional Autónoma de México",
+      "url": "https://www.noticonquista.unam.mx/historica/43/1970",
+      "access": "Eyewitness narrative published posthumously. Noticonquista excerpt cites the 1983 edition, pp. 4–14."
+    },
+    {
+      "id": "gap-am-cordova-inah",
+      "authors": "Instituto Nacional de Antropología e Historia",
+      "title": "Náufragos españoles en tierra maya",
+      "venue": "Mediateca INAH",
+      "url": "https://mediateca.inah.gob.mx/repositorio/islandora/object/libro%3A458/datastream/OBJ/view",
+      "access": "Institutional monograph identifying the early March Catoche encounter.",
+      "year": null
+    },
+    {
+      "id": "gap-am-coronado",
+      "authors": "National Park Service",
+      "title": "Stories: The Coronado Expedition",
+      "venue": "Coronado National Memorial, U.S. National Park Service",
+      "url": "https://www.nps.gov/coro/learn/historyculture/stories.htm",
+      "access": "Institutional chronology distinguishing the advance party, separate scouting parties, the Quivira campaign, and the return.",
+      "year": null
+    },
+    {
+      "id": "gap-am-cortes-tenoch",
+      "authors": "Colegio de Ciencias y Humanidades",
+      "title": "Conquista de Tenochtitlan",
+      "venue": "Universidad Nacional Autónoma de México",
+      "url": "https://e1.portalacademico.cch.unam.mx/alumno/historiademexico1/unidad3/conquistademexico/conquistadetenochtitlan",
+      "access": "Institutional chronology with separate 1519 entry, June 1520 retreat and August 1521 fall.",
+      "year": null
+    },
+    {
+      "id": "gap-am-cortes-tlaxcala",
+      "authors": "Noticonquista",
+      "title": "23 de septiembre de 1519: Los españoles se mudan a Tlaxcala",
+      "year": 2019,
+      "venue": "Noticonquista, Universidad Nacional Autónoma de México",
+      "url": "https://www.noticonquista.unam.mx/portada/semanal/1733",
+      "access": "Academic chronology and historical extracts for Tlaxcalan diplomacy and the September move."
+    },
+    {
+      "id": "gap-am-elvas",
+      "authors": "Gentleman of Elvas; Richard Hakluyt (translator)",
+      "title": "A Narrative of the Expedition of Hernando de Soto into Florida",
+      "year": 1609,
+      "venue": "Louisiana Anthology, Louisiana Tech University",
+      "url": "https://louisiana-anthology.org/texts/d%27elvas/d%27elvas--narrative_english.html",
+      "access": "Edited translation of a participant’s account. Read alongside archaeological and historical identifications."
+    },
+    {
+      "id": "gap-am-grijalva-baracs",
+      "authors": "Rodrigo Martínez Baracs",
+      "title": "De las expediciones al Yucatán a la consolidación de la Nueva España",
+      "year": 2022,
+      "venue": "Instituto de Investigaciones Jurídicas, UNAM / Universidad Anáhuac Veracruz",
+      "url": "https://archivos.juridicas.unam.mx/www/bjv/libros/15/7025/8.pdf",
+      "access": "Research comparing Grijalva’s surviving chronologies and Indigenous interpreters, including the Juan Díaz itinerary."
+    },
+    {
+      "id": "gap-am-grijalva-diaz",
+      "authors": "Bernal Díaz del Castillo",
+      "title": "Bernal Díaz describe la expedición de Juan de Grijalva",
+      "year": 1632,
+      "venue": "Noticonquista, Universidad Nacional Autónoma de México",
+      "url": "https://www.noticonquista.unam.mx/historica/57/1970",
+      "access": "Eyewitness narrative giving the feast date at Cozumel and describing the Campeche, Tabasco and Veracruz coast."
+    },
+    {
+      "id": "gap-am-mitchem-aute",
+      "authors": "Jeffrey M. Mitchem",
+      "title": "Archaeological and Ethnohistoric Evidence for the Location of Narvaez’s Aute",
+      "year": 1988,
+      "venue": "Florida Academy of Sciences, 52nd annual meeting",
+      "url": "https://www.academia.edu/1419291/Archaeological_and_Ethnohistoric_Evidence_for_the_Location_of_Narvaezs_Aute",
+      "access": "Research paper considering archaeological support for an embarkation area on Apalachee Bay and competing exact locations."
+    },
+    {
+      "id": "gap-am-nara-nw2",
+      "authors": "Greg Bradsher",
+      "title": "Spanish Explorations of the Pacific Northwest and the First Nootka Sound Settlement, 1790–1791",
+      "year": 2017,
+      "venue": "The Text Message, National Archives",
+      "url": "https://text-message.blogs.archives.gov/2017/10/12/225-years-ago-spanish-explorations-of-the-pacific-northwest-and-the-first-spanish-settlement-in-washington-state-nunez-gaona-neah-bay-1792-part-ii-spanish-explorations-of-the-pacific-northwest-a/",
+      "access": "Archival chronology covering Eliza, Quimper, Fidalgo, Narváez and Carrasco."
+    },
+    {
+      "id": "gap-am-nara-nw3",
+      "authors": "Greg Bradsher",
+      "title": "Establishing and Disbanding the Neah Bay Settlement, 1792",
+      "year": 2017,
+      "venue": "The Text Message, National Archives",
+      "url": "https://text-message.blogs.archives.gov/2017/10/19/establishing-and-disbanding-the-neah-bay-settlement-1792/",
+      "access": "Archival chronology of Fidalgo, Galiano and Valdés, Bodega, Caamaño and the seasonal occupation of Neah Bay."
+    },
+    {
+      "id": "gap-am-narvaez-nps",
+      "authors": "National Park Service",
+      "title": "Brief Maritime History of Florida",
+      "venue": "U.S. National Park Service",
+      "url": "https://www.nps.gov/articles/maritimehistory.htm",
+      "access": "Institutional geographic context for Narváez’s Tampa Bay and Apalachee phases.",
+      "year": null
+    },
+    {
+      "id": "gap-am-solis",
+      "authors": "Instituto de Historia y Cultura Naval",
+      "title": "Expedición de Juan Díaz de Solís (1515–1516)",
+      "venue": "Armada Española, Ministerio de Defensa",
+      "url": "https://armada.defensa.gob.es/ArmadaPortal/page/Portal/ArmadaEspannola/cienciaorgano/prefLang-en/02cienciaihcn--10navegaciones--03expdiazdesolis",
+      "access": "Spanish Navy chronology and voyage visualization. Its January estuary chronology differs from other Navy scholarship.",
+      "year": null
+    },
+    {
+      "id": "gap-am-solis-alt",
+      "authors": "Instituto de Historia y Cultura Naval",
+      "title": "Cuadernos Monográficos del Instituto de Historia y Cultura Naval, 67",
+      "venue": "Armada Española, Ministerio de Defensa",
+      "url": "https://armada.defensa.gob.es/archivo/mardigitalrevistas/cuadernosihcn/67cuaderno/CM67.pdf",
+      "access": "Historical proceedings retaining a late-February estuary chronology.",
+      "year": null
+    },
+    {
+      "id": "gap-am-vespucci",
+      "authors": "Biblioteca Virtual Miguel de Cervantes",
+      "title": "1499–1503, Américo Vespuccio",
+      "venue": "Exploradores y viajeros por España y el nuevo mundo",
+      "url": "https://www.cervantesvirtual.com/portales/exploradores_y_viajeros_espana_y_nuevo_mundo/americo_vespuccio/",
+      "access": "Institutional biography distinguishing supported voyages from problematic letters and route claims.",
+      "year": null
+    },
+    {
+      "id": "gap-an-aae-final",
+      "authors": "Australian Antarctic Division",
+      "title": "The final voyage",
+      "year": 2019,
+      "venue": "Home of the Blizzard, Aurora’s final relief voyage",
+      "url": "https://mawsonshuts.antarctica.gov.au/the-voyages/transporting-the-expedition/the-final-voyage/",
+      "access": "Open access"
+    },
+    {
+      "id": "gap-an-aae-heritage",
+      "authors": "Department of Climate Change, Energy, the Environment and Water",
+      "title": "Mawson Station Heritage Management Plan",
+      "year": 2024,
+      "venue": "Australian Antarctic Program, historical account of Mawson’s Western Base",
+      "url": "https://www.legislation.gov.au/F2025L01596/asmade/2025-12-16/text/original/epub/OEBPS/document_1/document_1.html",
+      "access": "Open access"
+    },
+    {
+      "id": "gap-an-aae-mac",
+      "authors": "Australian Antarctic Division",
+      "title": "An unexpected extension",
+      "year": 2019,
+      "venue": "Home of the Blizzard, Macquarie Island wireless station",
+      "url": "https://mawsonshuts.antarctica.gov.au/macquarie-island/survival/an-unexpected-extension/",
+      "access": "Open access"
+    },
+    {
+      "id": "gap-an-aae-relief",
+      "authors": "Australian Antarctic Division",
+      "title": "Bringing them home",
+      "year": 2019,
+      "venue": "Home of the Blizzard, Aurora’s first relief voyage",
+      "url": "https://mawsonshuts.antarctica.gov.au/the-voyages/transporting-the-expedition/bringing-them-home/",
+      "access": "Open access"
+    },
+    {
+      "id": "gap-an-aae-west",
+      "authors": "Australian Antarctic Division",
+      "title": "Western Party: Introduction",
+      "year": 2019,
+      "venue": "Home of the Blizzard, Western Party records",
+      "url": "https://mawsonshuts.antarctica.gov.au/western-party/introduction/",
+      "access": "Open access"
+    },
+    {
+      "id": "gap-an-chun",
+      "authors": "Carl Chun",
+      "title": "Aus den Tiefen des Weltmeeres",
+      "year": 1900,
+      "venue": "Gustav Fischer, chapters I–VII",
+      "url": "https://www.gutenberg.org/files/46781/old/46781-h/46781-h.htm",
+      "access": "Open access"
+    },
+    {
+      "id": "gap-an-drygalski-rack",
+      "authors": "Ursula Rack",
+      "title": "Sozialhistorische Studie zur Polarforschung",
+      "year": 2010,
+      "venue": "Berichte zur Polar- und Meeresforschung 618, section 3, pp. 62–63",
+      "url": "https://epic.awi.de/id/eprint/29656/1/Rac2010b.pdf",
+      "access": "Open access"
+    },
+    {
+      "id": "gap-an-drygalski-sledge",
+      "authors": "Reinhard A. Krause",
+      "title": "Von Fuchs bis Shackleton: Sechs historische Antarktisexpeditionen",
+      "year": 2014,
+      "venue": "Polarforschung 83(2), pp. 83–93",
+      "url": "https://epic.awi.de/36706/1/Polarforschung_83-2_83-93.pdf",
+      "access": "Open access"
+    },
+    {
+      "id": "gap-an-durville-chile",
+      "authors": "Biblioteca Nacional de Chile",
+      "title": "Jules-Sébastien-César Dumont D’Urville (1790–1842)",
+      "year": 2020,
+      "venue": "Memoria Chilena",
+      "url": "https://www.memoriachilena.gob.cl/602/w3-article-94042.html",
+      "access": "Open access"
+    },
+    {
+      "id": "gap-an-durville-teara",
+      "authors": "John Dunmore",
+      "title": "Dumont d’Urville, Jules Sébastien César",
+      "year": 1990,
+      "venue": "Dictionary of New Zealand Biography, Te Ara",
+      "url": "https://teara.govt.nz/en/biographies/1d19/dumont-durville-jules-sebastien-cesar",
+      "access": "Open access"
+    },
+    {
+      "id": "gap-an-filchner-scar",
+      "authors": "Cornelia Lüdecke",
+      "title": "Steps of Foundation: Proceedings of the First SCAR History Action Group Workshop",
+      "year": 2007,
+      "venue": "Berichte zur Polar- und Meeresforschung 560, Second German Antarctic Expedition, pp. 56–61",
+      "url": "https://epic.awi.de/id/eprint/27231/1/Lde2007b.pdf",
+      "access": "Open access"
+    },
+    {
+      "id": "gap-an-shirase-anu",
+      "authors": "Hilary Shibata",
+      "title": "The Japanese Antarctic Expedition 1910–12",
+      "year": 2015,
+      "venue": "Exploring the Last Continent, ANU Press, ch. 3",
+      "url": "https://press-files.anu.edu.au/downloads/press/p316261/html/ch03.xhtml",
+      "access": "Open access"
+    },
+    {
+      "id": "gap-an-shirase-sydney",
+      "authors": "Shirase Antarctic Expedition Memorial Museum and Dictionary of Sydney contributors",
+      "title": "Japanese Antarctic expedition camp at Parsley Bay 1911",
+      "year": 2020,
+      "venue": "Dictionary of Sydney, State Library of New South Wales",
+      "url": "https://dictionaryofsydney.org/entry/japanese_antarctic_expedition_camp_at_parsley_bay_1911",
+      "access": "Open access"
+    },
+    {
+      "id": "gap-an-swedish-gu",
+      "authors": "University of Gothenburg Library",
+      "title": "Svenska Antarktisexpeditionen 1901–1903",
+      "year": 2023,
+      "venue": "Polarportalen",
+      "url": "https://soa.ub.gu.se/polarportalen/svenska-antarktisexpeditionen-1901-1903",
+      "access": "Open access"
+    },
+    {
+      "id": "gap-an-swedish-hope",
+      "authors": "British Antarctic Survey",
+      "title": "Hope Bay",
+      "year": 2020,
+      "venue": "SCAR Composite Gazetteer of Antarctica, Australian Antarctic Data Centre",
+      "url": "https://data.aad.gov.au/aadc/gaz/display_name.cfm?gaz_id=109369",
+      "access": "Open access"
+    },
+    {
+      "id": "gap-an-swedish-nord",
+      "authors": "University of Gothenburg Library",
+      "title": "Otto Nordenskjöld (1869–1928)",
+      "year": 2023,
+      "venue": "Polarportalen, Otto Nordenskjöld collection",
+      "url": "https://soa.ub.gu.se/polarportalen/otto-nordenskjold-1869-1928",
+      "access": "Open access"
+    },
+    {
+      "id": "gap-an-swedish-paulet",
+      "authors": "Jonathan Westin, Gunnar Almevik, Dag Avango and Kati Lindström",
+      "title": "Paulet Island",
+      "year": 2020,
+      "venue": "University of Gothenburg, Built Cultural Heritage in Antarctica",
+      "url": "https://antarctica.dh.gu.se/paulet.html",
+      "access": "Open access"
+    },
+    {
+      "id": "gap-an-uruguay-armada",
+      "authors": "Armada Argentina",
+      "title": "Se conmemoraron 120 años del rescate de la corbeta ARA Uruguay a la expedición de Otto Nordenskjöld en la Antártida",
+      "year": 2023,
+      "venue": "Gobierno de Argentina",
+      "url": "https://www.argentina.gob.ar/noticias/se-conmemoraron-120-anos-del-rescate-de-la-corbeta-ara-uruguay-la-expedicion-de-otto",
+      "access": "Open access"
+    },
+    {
+      "id": "gap-an-usgs",
+      "authors": "Kenneth J. Bertrand, Fred G. Alberts and the United States Board on Geographic Names",
+      "title": "Geographic Names of Antarctica",
+      "year": 1956,
+      "venue": "Office of Geography, U.S. Department of the Interior, Gazetteer No. 14, revised edition, List of Expeditions",
+      "url": "https://pubs.usgs.gov/fedgov/70039165/report.pdf",
+      "access": "Open access"
+    },
+    {
+      "id": "gap-ar-arctica-sverdrup",
+      "authors": "Encyclopedia Arctica contributors",
+      "title": "Harald Ulrik Sverdrup",
+      "year": 1948,
+      "venue": "Dartmouth Library, Encyclopedia Arctica 15",
+      "url": "https://collections.dartmouth.edu/arctica-beta/html/EA15-70.html",
+      "access": "Digitized contemporary reference manuscript with selected wintering, passage and Seattle dates. Chronological discrepancies are noted where used."
+    },
+    {
+      "id": "gap-ar-beechey-grave-inscriptions",
+      "authors": "James A. Browne",
+      "title": "The North-West Passage and the Fate of Sir John Franklin · monuments and graves at Beechey Island",
+      "year": 1860,
+      "venue": "W. P. Jackson / Canadian Institute for Historical Microreproductions",
+      "url": "https://archive.org/details/cihm_17095",
+      "access": "The appendix transcribes the three 1846 grave inscriptions at Beechey Island."
+    },
+    {
+      "id": "gap-ar-cabot-dcb-full",
+      "authors": "James A. Williamson",
+      "title": "Cabot, John",
+      "year": 1966,
+      "venue": "Dictionary of Canadian Biography",
+      "url": "https://www.biographi.ca/en/bio.php?id_nbr=101",
+      "access": "Discussion of conflicting dates in the Toby chronicle, Day letter and Pasqualigo dispatch, and the fragmentary 1498 account."
+    },
+    {
+      "id": "gap-ar-corte-real-gaspar",
+      "authors": "Marcel Trudel",
+      "title": "Corte-Real, Gaspar",
+      "year": 1966,
+      "venue": "Dictionary of Canadian Biography",
+      "url": "https://www.biographi.ca/en/bio/corte_real_gaspar_1E.html",
+      "access": "Discusses the Cantino map, Venetian correspondence and disagreements over the Atlantic landfalls."
+    },
+    {
+      "id": "gap-ar-corte-real-gois",
+      "authors": "Damião de Góis, quoted by the Câmara Municipal de Angra do Heroísmo",
+      "title": "Crónica do Felicíssimo Rei D. Manuel · Corte-Real departures",
+      "year": 1566,
+      "venue": "Angra do Heroísmo municipal publication",
+      "url": "https://angrosfera.cmah.pt/publi/publicacoes/livros/Memoria-Visita-Regia-3Edicao2.pdf",
+      "access": "Transcription of the later Portuguese royal chronicler’s departure dates. The day dates and fleet size are attributed to that text."
+    },
+    {
+      "id": "gap-ar-corte-real-miguel",
+      "authors": "Marcel Trudel",
+      "title": "Corte-Real, Miguel",
+      "year": 1966,
+      "venue": "Dictionary of Canadian Biography",
+      "url": "https://www.biographi.ca/en/bio/corte_real_miguel_1E.html",
+      "access": "Surviving evidence for the search voyage, proposed rendezvous identification and failure of Miguel’s ship to return."
+    },
+    {
+      "id": "gap-ar-fram-crustacea",
+      "authors": "Georg Ossian Sars",
+      "title": "Crustacea, Report of the Second Norwegian Arctic Expedition in the Fram 1898–1902, no. 18",
+      "year": 1909,
+      "venue": "Videnskabs-Selskabet i Kristiania; University of Toronto digitization",
+      "url": "https://archive.org/details/reportofsecondno03fram",
+      "access": "Scientific field station tables with day-dated collections. The named station anchors supplement the narrative’s winter intervals."
+    },
+    {
+      "id": "gap-ar-investigator-parks",
+      "authors": "Parks Canada",
+      "title": "The history of HMS Investigator and McClure’s Cache",
+      "year": 2024,
+      "venue": "Aulavik National Park",
+      "url": "https://parks.canada.ca/pn-np/nt/aulavik/investigator/hms-investigator",
+      "access": "Institutional site history and relationship to Inuvialuit history and archaeology."
+    },
+    {
+      "id": "gap-ar-kodlunarn-archaeology",
+      "authors": "Parks Canada and Canadian Register of Historic Places",
+      "title": "Kodlunarn Island National Historic Site of Canada",
+      "year": 2008,
+      "venue": "Parks Canada",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=332",
+      "access": "Historic site identification and archaeological evidence for Frobisher’s mining operations."
+    },
+    {
+      "id": "gap-ar-mackenzie-arctica",
+      "authors": "Encyclopedia Arctica contributors",
+      "title": "Sir Alexander Mackenzie",
+      "year": 1948,
+      "venue": "Dartmouth Library, Encyclopedia Arctica 15",
+      "url": "https://collections.dartmouth.edu/arctica-beta/html/EA15-46.html",
+      "access": "Digitized reference manuscript. Includes Slave River, Great Slave Lake, coast and Peace River return chronology."
+    },
+    {
+      "id": "gap-ar-mackenzie-bc-geonames",
+      "authors": "BC Geographical Names Office",
+      "title": "Nuxalk-Carrier Grease Trail / Alexander Mackenzie Heritage Trail",
+      "year": 2013,
+      "venue": "Province of British Columbia",
+      "url": "https://apps.gov.bc.ca/pub/bcgnws/names/68181.html",
+      "access": "Official place-name and cultural background for the Indigenous trade corridor between interior British Columbia and the Pacific coast."
+    },
+    {
+      "id": "gap-ar-maud-mia",
+      "authors": "Roald Amundsen’s Home, MiA Museums in Akershus",
+      "title": "1918–1925 Maud expedition",
+      "year": 2022,
+      "venue": "MiA Museums in Akershus",
+      "url": "https://amundsen.mia.no/en/expeditions/maud-expedition/",
+      "access": "Archival chronology for the Northeast Passage, separate air and land operations and the 1922–25 drift."
+    },
+    {
+      "id": "gap-ar-maud-polarhistorie",
+      "authors": "Norwegian Polar Institute, Polarhistorie",
+      "title": "1918–1925 Amundsens Maud-ekspedisjon",
+      "year": 2020,
+      "venue": "Polarhistorie",
+      "url": "https://polarhistorie.no/ekspedisjoner/amundsens-maud-ekspedisjon/",
+      "access": "Norwegian account of the expedition, ship movements, winter camps, Chukchi collaboration and detached sledge parties."
+    },
+    {
+      "id": "gap-ar-mcclure-dispatches",
+      "authors": "Robert McClure",
+      "title": "The North-West Passage: Capt. M’Clure’s Despatches",
+      "year": 1854,
+      "venue": "Canadian Institute for Historical Microreproductions / Internet Archive",
+      "url": "https://archive.org/details/cihm_47060",
+      "access": "Contemporary despatches with dates, ship movements, observed fixes and sledge survey reports."
+    },
+    {
+      "id": "gap-ar-mcclure-osborn",
+      "authors": "Robert McClure and Sherard Osborn",
+      "title": "The Discovery of the North-West Passage by HMS Investigator",
+      "year": 1856,
+      "venue": "Longman / Canadian Institute for Historical Microreproductions",
+      "url": "https://archive.org/details/cihm_37545",
+      "access": "Participant logs as edited by Osborn. Includes the rescue from Mercy Bay and the crew’s route back through the Canadian Arctic."
+    },
+    {
+      "id": "gap-ar-pasqualigo-letter",
+      "authors": "Pietro Pasqualigo and Alberto Cantino, translated in Clements R. Markham (ed.)",
+      "title": "Letters relating to the voyages of Gaspar Corte-Real",
+      "year": 1893,
+      "venue": "Hakluyt Society / The Journal of Christopher Columbus and Documents Relating to the Voyages of John Cabot and Gaspar Corte Real",
+      "url": "https://www.latinamericanstudies.org/columbus/Columbus-Journal.pdf",
+      "access": "English translation of contemporary letters on returning ships and Indigenous captives."
+    },
+    {
+      "id": "gap-ar-pim-dcb",
+      "authors": "Alan Cooke and Clive Holland",
+      "title": "Pim, Bedford Clapperton Trevelyan",
+      "year": 1982,
+      "venue": "Dictionary of Canadian Biography",
+      "url": "https://www.biographi.ca/en/bio/pim_bedford_clapperton_trevelyan_11E.html",
+      "access": "Biography describing the crossing from Kellett’s winter quarters and the arrival at Investigator on April 6."
+    },
+    {
+      "id": "gap-ar-red-bay-museum",
+      "authors": "Brad Loewen",
+      "title": "Basque Whalers",
+      "year": 2009,
+      "venue": "Canadian Museum of History, Virtual Museum of New France",
+      "url": "https://www.historymuseum.ca/virtual-museum-of-new-france/economic-activities/basque-whalers/",
+      "access": "Institutional synthesis by an archaeologist. It describes repeated seasons and the provisional San Juan wreck identification."
+    },
+    {
+      "id": "gap-ar-roberval-primary",
+      "authors": "Richard Hakluyt, compiler; Roberval expedition account",
+      "title": "The Principal Navigations, Voyages, Traffiques and Discoveries of the English Nation, Vol. XIII: America, Part II",
+      "year": null,
+      "venue": "Project Gutenberg, historical edition",
+      "url": "https://www.gutenberg.org/files/25645/25645-pdf.pdf",
+      "access": "Public-domain participant account in a later edition. The Roberval narrative dates departure approximately to the end of June rather than establishing an exact day."
+    },
+    {
+      "id": "gap-ar-sverdrup-new-land-1",
+      "authors": "Otto Sverdrup, translated by Ethel Harriet Hearn",
+      "title": "New Land: Four Years in the Arctic Regions, volume I",
+      "year": 1904,
+      "venue": "Longmans, Green / University of Toronto digitization",
+      "url": "https://archive.org/details/newlandfouryears01sveruoft",
+      "access": "Participant account including the first two winters and dated ship movements."
+    },
+    {
+      "id": "gap-ar-sverdrup-new-land-2",
+      "authors": "Otto Sverdrup, translated by Ethel Harriet Hearn",
+      "title": "New Land: Four Years in the Arctic Regions, volume II",
+      "year": 1904,
+      "venue": "Longmans, Green / University of Toronto digitization",
+      "url": "https://archive.org/details/newlandfouryears02sveruoft",
+      "access": "Participant account including Goose Fiord, multi-party surveys and the Fram’s 1902 return."
+    },
+    {
+      "id": "gap-ar-victory-point-note",
+      "authors": "Graham Gore, Charles Des Voeux, Francis Crozier and James Fitzjames",
+      "title": "Franklin Expedition Record at Victory Point",
+      "year": 1848,
+      "venue": "National Maritime Museum / Great Unsolved Mysteries in Canadian History",
+      "url": "https://canadianmysteries.ca/sites/franklin/archive/text/FranklinVictoryPoint_en.htm",
+      "access": "Transcription and archive identification of the 1847 and 1848 notes. The first winter year in the manuscript is an error."
+    },
+    {
+      "id": "gap-pa-king-1784",
+      "authors": "James King",
+      "title": "A voyage to the Pacific Ocean, volume III",
+      "year": 1784,
+      "venue": "W. and A. Strahan / G. Nicol / T. Cadell; primary narrative transcription",
+      "url": "https://whalesite.org/cook/1784%20-%20Cook%20-%20v3.htm",
+      "access": "Public-domain primary narrative. Book VI and appendix tables; longitudes over 180 degrees east are converted to west. Dates follow the printed account, without silently converting nautical date conventions."
+    },
+    {
+      "id": "gap-pa-laperouse-museum",
+      "authors": "NSW Migration Heritage Centre",
+      "title": "1788 Atlas du Voyage de Lapérouse",
+      "year": 2010,
+      "venue": "NSW Migration Heritage Centre / Powerhouse Museum",
+      "url": "https://www.migrationheritage.nsw.gov.au/exhibition/objectsthroughtime/laperouse/index.html",
+      "access": "Public museum collection interpretation. Wreck timing is approximate; the cited April/May estimate is not a recovered day-dated ship observation."
+    },
+    {
+      "id": "gap-pa-phillip-1789",
+      "authors": "Arthur Phillip; John Stockdale (publisher)",
+      "title": "The Voyage of Governor Phillip to Botany Bay",
+      "year": 1789,
+      "venue": "John Stockdale / Project Gutenberg Australia",
+      "url": "https://gutenberg.net.au/ebooks/e00101.html",
+      "access": "Public-domain contemporary account, chapters VIII and X. Distinguishes offshore sightings from anchoring on 26 January and departure on 10 March 1788."
+    },
+    {
+      "id": "gap-pa-porras-fourth",
+      "authors": "Diego de Porras; Martín Fernández de Navarrete (editorial notes)",
+      "title": "Relación del cuarto viaje realizado por Cristóbal Colón, 7 de noviembre de 1504",
+      "year": 1504,
+      "venue": "Colección Somoza / Biblioteca Enrique Bolaños",
+      "url": "https://sajurin.enriquebolanos.org/docs/AVB-CS-T1-DOCUMENTO%2002.pdf",
+      "access": "Public-domain primary account with later editorial notes. Navarrete’s parenthetical corrections are distinguished from Porras’s original testimony; the Jamaica arrival correction refers to Puerto Bueno, not automatically Santa Gloria."
+    },
+    {
+      "id": "voy-activity-aad-science",
+      "authors": "Australian Antarctic Program",
+      "title": "A timeline of scientific highlights",
+      "year": 2012,
+      "venue": "Australian Antarctic Program",
+      "url": "https://www.antarctica.gov.au/magazine/issue-22-2012/science/a-timeline-of-scientific-highlights/",
+      "access": "Institutional chronology covers Australian Antarctic fieldwork from the 1911–1914 expedition onward."
+    },
+    {
+      "id": "voy-activity-archives-west",
+      "authors": "U.S. National Archives",
+      "title": "Exploration and Westward Expansion",
+      "year": null,
+      "venue": "U.S. National Archives",
+      "url": "https://www.archives.gov/research/land/exploration-expansion",
+      "access": "Public records guide provides named and dated survey holdings, including Pike and Frémont."
+    },
+    {
+      "id": "voy-activity-charcot",
+      "authors": "France Diplomatie",
+      "title": "La France en Antarctique",
+      "year": null,
+      "venue": "France Diplomatie",
+      "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/antarctique/la-france-en-antarctique",
+      "access": "Government overview identifies the distinct 1903–1905 and 1908–1910 expeditions."
+    },
+    {
+      "id": "voy-activity-colonial-powers",
+      "authors": "Canadian Museum of History",
+      "title": "Other Colonial Powers",
+      "year": null,
+      "venue": "Canadian Museum of History",
+      "url": "https://www.historymuseum.ca/virtual-museum-of-new-france/colonies-and-empires/other-colonial-powers/",
+      "access": "Institutional chronology distinguishes three Frobisher and three Davis expeditions."
+    },
+    {
+      "id": "voy-activity-coronado",
+      "authors": "National Park Service",
+      "title": "Stories: Coronado National Memorial",
+      "year": null,
+      "venue": "National Park Service",
+      "url": "https://www.nps.gov/coro/learn/historyculture/stories.htm",
+      "access": "Public historical account of Cabeza de Vaca and the Coronado expedition through Indigenous territories."
+    },
+    {
+      "id": "voy-activity-corte-real",
+      "authors": "Newfoundland and Labrador Heritage",
+      "title": "The Portuguese Explorers",
+      "year": null,
+      "venue": "Newfoundland and Labrador Heritage",
+      "url": "https://www.heritage.nf.ca/articles/exploration/portuguese.php",
+      "access": "Memorial University historical publication distinguishes the two voyages and the uncertainty of Terra Verde."
+    },
+    {
+      "id": "voy-activity-de-long",
+      "authors": "Library of Congress",
+      "title": "A Brief Timeline of Polar Exploration",
+      "year": null,
+      "venue": "Library of Congress",
+      "url": "https://guides.loc.gov/polar-exploration/timeline",
+      "access": "Manuscript Division collection guide and chronology includes the Jeannette expedition."
+    },
+    {
+      "id": "voy-activity-desoto",
+      "authors": "National Park Service",
+      "title": "De Soto National Memorial official brochure",
+      "year": null,
+      "venue": "National Park Service",
+      "url": "https://npgallery.nps.gov/GetAsset/82a0e0e5-d1f5-4a91-8e81-f8259f8d1dbc/original.pdf",
+      "access": "Public brochure and chronological expedition map document the initial and subsequent movements of the Spanish party."
+    },
+    {
+      "id": "voy-activity-early-antarctic",
+      "authors": "Gaston Godard, Julien Reynes, Jérôme Bascou, René-Pierre Ménot, and Rosaria Palmeri",
+      "title": "First rocks sampled in Antarctica (1840): Insights into the landing area and the Terre Adélie craton",
+      "year": 2017,
+      "venue": "Comptes Rendus Géoscience",
+      "url": "https://comptes-rendus.academie-sciences.fr/geoscience/articles/en/10.1016/j.crte.2016.12.001/",
+      "access": "Open geological research article reviews early Antarctic land sighting reports and dates the French land sampling."
+    },
+    {
+      "id": "voy-activity-filchner",
+      "authors": "Alfred Wegener Institute",
+      "title": "100th anniversary of the Filchner expedition to the Antarctic",
+      "year": 2011,
+      "venue": "Alfred Wegener Institute",
+      "url": "https://www.awi.de/en/about-us/service/press/single-view/100-jahrestag-vom-start-der-filchner-expedition-in-die-antarktis-bedeutende-entdeckungen-im-bevorzugten-gebiet-der-modernen-deutschen-polarforschung.html",
+      "access": "Institutional history identifies expedition dispatch, the Weddell Sea survey, and the 1912 southern return."
+    },
+    {
+      "id": "voy-activity-florida",
+      "authors": "National Park Service",
+      "title": "Brief Maritime History of Florida",
+      "year": null,
+      "venue": "National Park Service",
+      "url": "https://www.nps.gov/articles/maritimehistory.htm",
+      "access": "National Park Service overview of Ponce de León, Narváez and de Soto, with regional dates and encounters."
+    },
+    {
+      "id": "voy-activity-franklin-search",
+      "authors": "Parks Canada",
+      "title": "Who’s who in the Franklin expedition",
+      "year": null,
+      "venue": "Parks Canada",
+      "url": "https://www.pc.gc.ca/lhn-nhs/nu/epaveswrecks/culture/histoire-history/qui-who.",
+      "access": "Wreck-site historical review distinguishes the search expeditions and Inuit reports."
+    },
+    {
+      "id": "voy-activity-greely",
+      "authors": "Smithsonian Institution Archives",
+      "title": "Guide to Records of Expeditions, 1878–1917",
+      "year": null,
+      "venue": "Smithsonian Institution Archives",
+      "url": "https://siarchives.si.edu/oldsite/research/faexplist.htm",
+      "access": "Archival finding aid includes the Lady Franklin Bay expedition and Greely rescue records."
+    },
+    {
+      "id": "voy-activity-heroic-mawson",
+      "authors": "Douglas Mawson",
+      "title": "The Home of the Blizzard: Appendix III",
+      "year": 1915,
+      "venue": "Australian Antarctic Program",
+      "url": "https://www.antarctica.gov.au/about-antarctica/history/exploration-and-expeditions/australasian-antarctic-expedition/home-of-the-blizzard-book/appendix3/",
+      "access": "Public-domain contemporary chronology, edited and published by the Australian Antarctic Division."
+    },
+    {
+      "id": "voy-activity-hudson-rmg",
+      "authors": "Royal Museums Greenwich",
+      "title": "Henry Hudson North-West Passage expedition 1610–11",
+      "year": null,
+      "venue": "Royal Museums Greenwich",
+      "url": "https://www.rmg.co.uk/stories/maritime-history/henry-hudson-north-west-passage-expedition-1610-11",
+      "access": "Institutional chronology places Discovery in James Bay by November 1610 and documents the wintering and eventual departure."
+    },
+    {
+      "id": "voy-activity-mcclure-parks",
+      "authors": "Parks Canada",
+      "title": "McClure, Sir Robert John National Historic Person",
+      "year": null,
+      "venue": "Parks Canada",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1544",
+      "access": "Designation explains the Investigator icebound interval and separate Resolute rescue."
+    },
+    {
+      "id": "voy-activity-north-water",
+      "authors": "Kirsten Hastrup and colleagues",
+      "title": "Living in an oasis: Rapid transformations, resilience, and resistance in the North Water Area societies and ecosystems",
+      "year": 2018,
+      "venue": "Ambio",
+      "url": "https://link.springer.com/article/10.1007/s13280-018-1034-y",
+      "access": "Open historical and ethnographic research using Inuit travel and settlement histories."
+    },
+    {
+      "id": "voy-activity-qikiqtani",
+      "authors": "Qikiqtani Truth Commission",
+      "title": "Community Histories: Mittimatalik",
+      "year": null,
+      "venue": "Qikiqtani Truth Commission",
+      "url": "https://www.qtcommission.ca/en/file-download/download/public/78",
+      "access": "Public history prepared for the Inuit-led Qikiqtani Truth Commission. Supports family departure in the 1850s."
+    },
+    {
+      "id": "voy-activity-shirase",
+      "authors": "Shirase Antarctic Expedition Supporters’ Association",
+      "title": "The Japanese South Polar Expedition, 1910–12: a record of Antarctica",
+      "year": 2011,
+      "venue": "National Library of New Zealand",
+      "url": "https://natlib.govt.nz/records/30217462",
+      "access": "Public archival catalog for an English translation of eyewitness expedition accounts."
+    },
+    {
+      "id": "voy-activity-sol-ign",
+      "authors": "Instituto Geográfico Nacional",
+      "title": "Historical Overview: National Atlas of Spain",
+      "year": 2024,
+      "venue": "Instituto Geográfico Nacional",
+      "url": "https://www.ign.es/web/resources/docs/IGNCnig/ANE/Capitulos/06_Historicaloverview_2024.pdf",
+      "access": "National atlas chapter maps separate early voyages and documents the calendar years of the expeditions."
+    },
+    {
+      "id": "voy-activity-thule",
+      "authors": "National Museum of Denmark",
+      "title": "Tumisiut: in the footsteps of the Fifth Thule Expedition",
+      "year": null,
+      "venue": "National Museum of Denmark",
+      "url": "https://natmus.dk/historisk-viden/forskning/forskningsprojekter/tumisiut-i-5-thule-ekspeditionens-fodspor/om-projektet/",
+      "access": "Museum-led research project documents dates, route and work with contemporary Inuit communities."
     },
     {
       "id": "voy-aht-ross-sea",
@@ -753,60 +2200,6 @@
       "year": null,
       "venue": "Antarctic Heritage Trust",
       "url": "https://nzaht.org/conserve/explorer-bases/scotts-hut-cape-evans/history-of-other-expeditions/",
-      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
-    },
-    {
-      "id": "voy-fram-south",
-      "authors": "Fram Museum",
-      "title": "The Third Fram Expedition 1910–1914",
-      "year": null,
-      "venue": "Fram Museum",
-      "url": "https://frammuseum.no/en/polar-history/expeditions/the-third-fram-expedition-1910-1914/",
-      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
-    },
-    {
-      "id": "voy-fram-gjoa",
-      "authors": "Fram Museum",
-      "title": "The Gjøa Expedition 1903–1906",
-      "year": null,
-      "venue": "Fram Museum",
-      "url": "https://frammuseum.no/en/polar-history/expeditions/the-gjoa-expedition-1903-1906/",
-      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
-    },
-    {
-      "id": "voy-fram-second",
-      "authors": "Fram Museum",
-      "title": "The Second Fram Expedition 1898–1902",
-      "year": null,
-      "venue": "Fram Museum",
-      "url": "https://frammuseum.no/en/polar-history/expeditions/the-second-fram-expedition-1898-1902/",
-      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
-    },
-    {
-      "id": "voy-polar-loc",
-      "authors": "Library of Congress Manuscript Division",
-      "title": "A Brief Timeline of Polar Exploration",
-      "year": null,
-      "venue": "Library of Congress Manuscript Division",
-      "url": "https://guides.loc.gov/polar-exploration/timeline",
-      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
-    },
-    {
-      "id": "voy-polar-nzh",
-      "authors": "New Zealand Ministry for Culture and Heritage",
-      "title": "New Zealand and Antarctica: timeline",
-      "year": null,
-      "venue": "New Zealand Ministry for Culture and Heritage",
-      "url": "https://nzhistory.govt.nz/politics/antarctica-and-nz/timeline",
-      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
-    },
-    {
-      "id": "voy-antarctic-science",
-      "authors": "Australian Antarctic Program",
-      "title": "The scientific era begins",
-      "year": null,
-      "venue": "Australian Antarctic Program",
-      "url": "https://www.antarctica.gov.au/about-antarctica/history/exploration-and-expeditions/the-scientific-era-begins/",
       "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
     },
     {
@@ -819,30 +2212,30 @@
       "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
     },
     {
-      "id": "voy-fram-maud",
-      "authors": "Fram Museum",
-      "title": "The Maud Expedition 1918–1925",
+      "id": "voy-antarctic-science",
+      "authors": "Australian Antarctic Program",
+      "title": "The scientific era begins",
       "year": null,
-      "venue": "Fram Museum",
-      "url": "https://frammuseum.no/en/polar-history/expeditions/the-maud-expedition-1918-1925/",
+      "venue": "Australian Antarctic Program",
+      "url": "https://www.antarctica.gov.au/about-antarctica/history/exploration-and-expeditions/the-scientific-era-begins/",
       "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
     },
     {
-      "id": "voy-ellsworth-fram",
-      "authors": "Fram Museum",
-      "title": "Lincoln Ellsworth 1880–1951",
+      "id": "voy-baffin-dcb",
+      "title": "Baffin, William",
+      "authors": "Ernest S. Dodge",
       "year": null,
-      "venue": "Fram Museum",
-      "url": "https://frammuseum.no/en/polar-history/explorers/lincoln-ellsworth-1880-1951-en/",
-      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
+      "venue": "Dictionary of Canadian Biography",
+      "url": "https://www.biographi.ca/en/bio.php?BioId=34160",
+      "access": "Canadian scholarly biography cites Baffin’s surviving partial journal and earlier voyage chronology."
     },
     {
-      "id": "voy-columbus-ign",
-      "authors": "Montserrat León Guerrero and Instituto Geográfico Nacional",
-      "title": "Viajes de Colón y exploraciones simultáneas",
-      "year": 2020,
-      "venue": "Atlas Nacional de España",
-      "url": "https://www.ign.es/web/resources/acercaDe/libDigPub/06_Referencias_historicas_2020_20230601.pdf",
+      "id": "voy-caboto-dcb",
+      "authors": "Dictionary of Canadian Biography",
+      "title": "Cabot, John",
+      "year": null,
+      "venue": "Dictionary of Canadian Biography",
+      "url": "https://www.biographi.ca/en/bio/101?print=1&revision_id=64",
       "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
     },
     {
@@ -891,15 +2284,6 @@
       "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
     },
     {
-      "id": "voy-hudson-dcb",
-      "authors": "Dictionary of Canadian Biography",
-      "title": "Hudson, Henry",
-      "year": null,
-      "venue": "Dictionary of Canadian Biography",
-      "url": "https://www.biographi.ca/en/bio/343?revision_id=6325",
-      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
-    },
-    {
       "id": "voy-champlain-cmh",
       "authors": "Canadian Museum of History",
       "title": "Samuel de Champlain 1604–1616",
@@ -909,48 +2293,84 @@
       "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
     },
     {
-      "id": "voy-caboto-dcb",
+      "id": "voy-columbus-ign",
+      "authors": "Montserrat León Guerrero and Instituto Geográfico Nacional",
+      "title": "Viajes de Colón y exploraciones simultáneas",
+      "year": 2020,
+      "venue": "Atlas Nacional de España",
+      "url": "https://www.ign.es/web/resources/acercaDe/libDigPub/06_Referencias_historicas_2020_20230601.pdf",
+      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
+    },
+    {
+      "id": "voy-columbus-ign-eclipse",
+      "authors": "Instituto Geográfico Nacional",
+      "title": "Eclipses en la historia",
+      "year": null,
+      "venue": "Instituto Geográfico Nacional",
+      "url": "https://eclipsescdn.ign.es/eclipses-en-la-historia.html",
+      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
+    },
+    {
+      "id": "voy-columbus-pares",
+      "authors": "Spanish Ministry of Culture",
+      "title": "Descubrimiento de América: archives of the four voyages",
+      "year": null,
+      "venue": "Spanish Ministry of Culture",
+      "url": "https://www.cultura.gob.es/cultura/archivos/difusion/mc-difusion/bicentenarios/contexto-historico/imperio-espanol/descubrimiento.html",
+      "access": "Spanish Ministry of Culture’s archival exhibition, with voyage chronology and links to the underlying Columbus documents."
+    },
+    {
+      "id": "voy-columbus-third",
+      "authors": "Fundación Empresas Polar",
+      "title": "Colón, Cristóbal",
+      "year": null,
+      "venue": "Fundación Empresas Polar",
+      "url": "https://bibliofep.fundacionempresaspolar.org/dhv/entradas/c/colon-cristobal/",
+      "access": "Institutional Venezuelan historical biography. Consult the primary narrative alongside its port chronology."
+    },
+    {
+      "id": "voy-cook-pole-osu",
+      "authors": "Ohio State University Libraries",
+      "title": "Frederick A. Cook papers and exhibitions",
+      "year": null,
+      "venue": "Ohio State University Libraries",
+      "url": "https://library.osu.edu/frederick-cook",
+      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
+    },
+    {
+      "id": "voy-cook-third-chron",
+      "authors": "Captain Cook Society",
+      "title": "The Third Voyage (1776–1780)",
+      "year": null,
+      "venue": "Captain Cook Society",
+      "url": "https://www.captaincooksociety.com/cooks-life/overview/the-third-voyage",
+      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
+    },
+    {
+      "id": "voy-davis-dcb",
+      "title": "Davis (Davys), John",
       "authors": "Dictionary of Canadian Biography",
-      "title": "Cabot, John",
       "year": null,
       "venue": "Dictionary of Canadian Biography",
-      "url": "https://www.biographi.ca/en/bio/101?print=1&revision_id=64",
-      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
+      "url": "https://www.biographi.ca/en/bio/161?revision_id=32689",
+      "access": "Canadian scholarly biography dates Davis’s departure from Dartmouth and describes the route."
     },
     {
-      "id": "voy-marquette-cmh",
-      "authors": "Canadian Museum of History",
-      "title": "Jacques Marquette 1673",
+      "id": "voy-davis-princeton",
+      "title": "John Davis: Historical Maps of the Northwest Passage",
+      "authors": "Princeton University Library",
       "year": null,
-      "venue": "Canadian Museum of History",
-      "url": "https://www.historymuseum.ca/virtual-museum-of-new-france/the-explorers/jacques-marquette-1673-1694/",
-      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
+      "venue": "Princeton University Library",
+      "url": "https://static-prod.lib.princeton.edu/visual_materials/maps/websites/northwest-passage/davis.htm",
+      "access": "Special collections essay quotes the expedition account with the date of the Greenland sighting."
     },
     {
-      "id": "voy-jolliet-cmh",
-      "authors": "Canadian Museum of History",
-      "title": "Louis Jolliet 1673–1694",
+      "id": "voy-ellsworth-fram",
+      "authors": "Fram Museum",
+      "title": "Lincoln Ellsworth 1880–1951",
       "year": null,
-      "venue": "Canadian Museum of History",
-      "url": "https://www.historymuseum.ca/virtual-museum-of-new-france/the-explorers/louis-jolliet-1673-1694/",
-      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
-    },
-    {
-      "id": "voy-spanish-portuguese-loc",
-      "authors": "Library of Congress",
-      "title": "Spanish and Portuguese Exploration in the Americas: Primary Source Set",
-      "year": null,
-      "venue": "Library of Congress",
-      "url": "https://www.loc.gov/classroom-materials/spanish-and-portuguese-exploration-in-the-americas/",
-      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
-    },
-    {
-      "id": "voy-ponce-loc",
-      "authors": "Library of Congress",
-      "title": "Today in History: September 27 – Ponce de León",
-      "year": null,
-      "venue": "Library of Congress",
-      "url": "https://www.loc.gov/item/today-in-history/september-27/",
+      "venue": "Fram Museum",
+      "url": "https://frammuseum.no/en/polar-history/explorers/lincoln-ellsworth-1880-1951-en/",
       "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
     },
     {
@@ -963,12 +2383,57 @@
       "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
     },
     {
-      "id": "voy-cook-pole-osu",
-      "authors": "Ohio State University Libraries",
-      "title": "Frederick A. Cook papers and exhibitions",
+      "id": "voy-endurance-nova",
+      "authors": "PBS NOVA",
+      "title": "Shackleton’s Antarctic Odyssey: Timeline 1914–1916",
       "year": null,
-      "venue": "Ohio State University Libraries",
-      "url": "https://library.osu.edu/frederick-cook",
+      "venue": "PBS NOVA",
+      "url": "https://www.pbs.org/wgbh/nova/shackletonexped/1914/timeline.html",
+      "access": "Public editorial timeline drawing on participant records and historical research. Provides dates for the three unsuccessful rescue departures."
+    },
+    {
+      "id": "voy-endurance-rgs",
+      "authors": "Royal Geographical Society and Weddell Sea Expedition",
+      "title": "Shackleton expedition timeline",
+      "year": 2019,
+      "venue": "Royal Geographical Society and Weddell Sea Expedition",
+      "url": "https://www.rgs.org/media/wu2hsebf/wse-shackleton-expedition-timeline.pdf",
+      "access": "Royal Geographical Society’s public event chronology prepared for the Weddell Sea Expedition. See the Canterbury paper for log-derived positions."
+    },
+    {
+      "id": "voy-fram-gjoa",
+      "authors": "Fram Museum",
+      "title": "The Gjøa Expedition 1903–1906",
+      "year": null,
+      "venue": "Fram Museum",
+      "url": "https://frammuseum.no/en/polar-history/expeditions/the-gjoa-expedition-1903-1906/",
+      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
+    },
+    {
+      "id": "voy-fram-maud",
+      "authors": "Fram Museum",
+      "title": "The Maud Expedition 1918–1925",
+      "year": null,
+      "venue": "Fram Museum",
+      "url": "https://frammuseum.no/en/polar-history/expeditions/the-maud-expedition-1918-1925/",
+      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
+    },
+    {
+      "id": "voy-fram-second",
+      "authors": "Fram Museum",
+      "title": "The Second Fram Expedition 1898–1902",
+      "year": null,
+      "venue": "Fram Museum",
+      "url": "https://frammuseum.no/en/polar-history/expeditions/the-second-fram-expedition-1898-1902/",
+      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
+    },
+    {
+      "id": "voy-fram-south",
+      "authors": "Fram Museum",
+      "title": "The Third Fram Expedition 1910–1914",
+      "year": null,
+      "venue": "Fram Museum",
+      "url": "https://frammuseum.no/en/polar-history/expeditions/the-third-fram-expedition-1910-1914/",
       "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
     },
     {
@@ -981,13 +2446,13 @@
       "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
     },
     {
-      "id": "voy-mawson-conservation",
-      "authors": "Australian Antarctic Division",
-      "title": "Mawson’s Huts Historic Site Management Plan",
+      "id": "voy-franklin-parks",
+      "authors": "Parks Canada",
+      "title": "Franklin's 1845 expedition",
       "year": null,
-      "venue": "Australian Antarctic Division",
-      "url": "https://mawsonshuts.antarctica.gov.au/site/assets/files/1595/mawsonshutsmangplanfinal.pdf",
-      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
+      "venue": "Parks Canada",
+      "url": "https://parks.canada.ca/lhn-nhs/nu/epaveswrecks/culture/histoire-history/expedition",
+      "access": "Parks Canada’s wreck-site history and Victory Point note chronology. Exact post-abandonment movements remain uncertain."
     },
     {
       "id": "voy-frobisher-dcb",
@@ -999,22 +2464,31 @@
       "access": "Canadian scholarly biography, citing the original expedition narratives. Date conventions follow the biography."
     },
     {
-      "id": "voy-davis-dcb",
-      "title": "Davis (Davys), John",
-      "authors": "Dictionary of Canadian Biography",
-      "year": null,
-      "venue": "Dictionary of Canadian Biography",
-      "url": "https://www.biographi.ca/en/bio/161?revision_id=32689",
-      "access": "Canadian scholarly biography dates Davis’s departure from Dartmouth and describes the route."
+      "id": "voy-gjoa-loc",
+      "authors": "Roald Amundsen",
+      "title": "The North West Passage: being the record of a voyage of exploration of the ship Gjöa",
+      "venue": "Library of Congress",
+      "url": "https://www.loc.gov/resource/gdc.08035750v1/?st=gallery",
+      "year": 1908,
+      "access": "Digitized participant narrative. The Library of Congress catalog summarizes the winter and the resumption of navigation. Its month for departure differs from the Fram Museum chronology."
     },
     {
-      "id": "voy-baffin-dcb",
-      "title": "Baffin, William",
-      "authors": "Ernest S. Dodge",
+      "id": "voy-hudson-dcb",
+      "authors": "Dictionary of Canadian Biography",
+      "title": "Hudson, Henry",
       "year": null,
       "venue": "Dictionary of Canadian Biography",
-      "url": "https://www.biographi.ca/en/bio.php?BioId=34160",
-      "access": "Canadian scholarly biography cites Baffin’s surviving partial journal and earlier voyage chronology."
+      "url": "https://www.biographi.ca/en/bio/343?revision_id=6325",
+      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
+    },
+    {
+      "id": "voy-jolliet-cmh",
+      "authors": "Canadian Museum of History",
+      "title": "Louis Jolliet 1673–1694",
+      "year": null,
+      "venue": "Canadian Museum of History",
+      "url": "https://www.historymuseum.ca/virtual-museum-of-new-france/the-explorers/louis-jolliet-1673-1694/",
+      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
     },
     {
       "id": "voy-mackenzie-dcb",
@@ -1044,211 +2518,76 @@
       "access": "Public-domain primary journal of the 1793 expedition. Ship, river and overland movements are separately described."
     },
     {
-      "id": "voy-gjoa-loc",
-      "authors": "Roald Amundsen",
-      "title": "The North West Passage: being the record of a voyage of exploration of the ship Gjöa",
-      "venue": "Library of Congress",
-      "url": "https://www.loc.gov/resource/gdc.08035750v1/?st=gallery",
-      "year": 1908,
-      "access": "Digitized participant narrative. The Library of Congress catalog summarizes the winter and the resumption of navigation. Its month for departure differs from the Fram Museum chronology."
-    },
-    {
-      "id": "voy-endurance-nova",
-      "authors": "PBS NOVA",
-      "title": "Shackleton’s Antarctic Odyssey: Timeline 1914–1916",
-      "year": null,
-      "venue": "PBS NOVA",
-      "url": "https://www.pbs.org/wgbh/nova/shackletonexped/1914/timeline.html",
-      "access": "Public editorial timeline drawing on participant records and historical research. Provides dates for the three unsuccessful rescue departures."
-    },
-    {
-      "id": "voy-activity-corte-real",
-      "authors": "Newfoundland and Labrador Heritage",
-      "title": "The Portuguese Explorers",
-      "year": null,
-      "venue": "Newfoundland and Labrador Heritage",
-      "url": "https://www.heritage.nf.ca/articles/exploration/portuguese.php",
-      "access": "Memorial University historical publication distinguishes the two voyages and the uncertainty of Terra Verde."
-    },
-    {
-      "id": "voy-activity-qikiqtani",
-      "authors": "Qikiqtani Truth Commission",
-      "title": "Community Histories: Mittimatalik",
-      "year": null,
-      "venue": "Qikiqtani Truth Commission",
-      "url": "https://www.qtcommission.ca/en/file-download/download/public/78",
-      "access": "Public history prepared for the Inuit-led Qikiqtani Truth Commission. Supports family departure in the 1850s."
-    },
-    {
-      "id": "voy-activity-north-water",
-      "authors": "Kirsten Hastrup and colleagues",
-      "title": "Living in an oasis: Rapid transformations, resilience, and resistance in the North Water Area societies and ecosystems",
-      "year": 2018,
-      "venue": "Ambio",
-      "url": "https://link.springer.com/article/10.1007/s13280-018-1034-y",
-      "access": "Open historical and ethnographic research using Inuit travel and settlement histories."
-    },
-    {
-      "id": "voy-activity-colonial-powers",
+      "id": "voy-marquette-cmh",
       "authors": "Canadian Museum of History",
-      "title": "Other Colonial Powers",
+      "title": "Jacques Marquette 1673",
       "year": null,
       "venue": "Canadian Museum of History",
-      "url": "https://www.historymuseum.ca/virtual-museum-of-new-france/colonies-and-empires/other-colonial-powers/",
-      "access": "Institutional chronology distinguishes three Frobisher and three Davis expeditions."
+      "url": "https://www.historymuseum.ca/virtual-museum-of-new-france/the-explorers/jacques-marquette-1673-1694/",
+      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
     },
     {
-      "id": "voy-activity-florida",
-      "authors": "National Park Service",
-      "title": "Brief Maritime History of Florida",
+      "id": "voy-marquette-primary",
+      "title": "Marquette’s account of his Mississippi expedition",
+      "authors": "Jacques Marquette, translated in Reuben Gold Thwaites’s edition",
+      "year": 1899,
+      "venue": "Jesuit Relations, volume 59, Creighton University",
+      "url": "https://moses.creighton.edu/kripke/jesuitrelations/relations_59.html",
+      "access": "Primary expedition narrative in a public scholarly edition, with original text and English translation."
+    },
+    {
+      "id": "voy-mawson-conservation",
+      "authors": "Australian Antarctic Division",
+      "title": "Mawson’s Huts Historic Site Management Plan",
       "year": null,
-      "venue": "National Park Service",
-      "url": "https://www.nps.gov/articles/maritimehistory.htm",
-      "access": "National Park Service overview of Ponce de León, Narváez and de Soto, with regional dates and encounters."
+      "venue": "Australian Antarctic Division",
+      "url": "https://mawsonshuts.antarctica.gov.au/site/assets/files/1595/mawsonshutsmangplanfinal.pdf",
+      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
     },
     {
-      "id": "voy-activity-coronado",
-      "authors": "National Park Service",
-      "title": "Stories: Coronado National Memorial",
-      "year": null,
-      "venue": "National Park Service",
-      "url": "https://www.nps.gov/coro/learn/historyculture/stories.htm",
-      "access": "Public historical account of Cabeza de Vaca and the Coronado expedition through Indigenous territories."
-    },
-    {
-      "id": "voy-activity-desoto",
-      "authors": "National Park Service",
-      "title": "De Soto National Memorial official brochure",
-      "year": null,
-      "venue": "National Park Service",
-      "url": "https://npgallery.nps.gov/GetAsset/82a0e0e5-d1f5-4a91-8e81-f8259f8d1dbc/original.pdf",
-      "access": "Public brochure and chronological expedition map document the initial and subsequent movements of the Spanish party."
-    },
-    {
-      "id": "voy-activity-archives-west",
-      "authors": "U.S. National Archives",
-      "title": "Exploration and Westward Expansion",
-      "year": null,
-      "venue": "U.S. National Archives",
-      "url": "https://www.archives.gov/research/land/exploration-expansion",
-      "access": "Public records guide provides named and dated survey holdings, including Pike and Frémont."
-    },
-    {
-      "id": "voy-activity-mcclure-parks",
-      "authors": "Parks Canada",
-      "title": "McClure, Sir Robert John National Historic Person",
-      "year": null,
-      "venue": "Parks Canada",
-      "url": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1544",
-      "access": "Designation explains the Investigator icebound interval and separate Resolute rescue."
-    },
-    {
-      "id": "voy-activity-franklin-search",
-      "authors": "Parks Canada",
-      "title": "Who’s who in the Franklin expedition",
-      "year": null,
-      "venue": "Parks Canada",
-      "url": "https://www.pc.gc.ca/lhn-nhs/nu/epaveswrecks/culture/histoire-history/qui-who.",
-      "access": "Wreck-site historical review distinguishes the search expeditions and Inuit reports."
-    },
-    {
-      "id": "voy-activity-greely",
-      "authors": "Smithsonian Institution Archives",
-      "title": "Guide to Records of Expeditions, 1878–1917",
-      "year": null,
-      "venue": "Smithsonian Institution Archives",
-      "url": "https://siarchives.si.edu/oldsite/research/faexplist.htm",
-      "access": "Archival finding aid includes the Lady Franklin Bay expedition and Greely rescue records."
-    },
-    {
-      "id": "voy-activity-de-long",
-      "authors": "Library of Congress",
+      "id": "voy-polar-loc",
+      "authors": "Library of Congress Manuscript Division",
       "title": "A Brief Timeline of Polar Exploration",
       "year": null,
-      "venue": "Library of Congress",
+      "venue": "Library of Congress Manuscript Division",
       "url": "https://guides.loc.gov/polar-exploration/timeline",
-      "access": "Manuscript Division collection guide and chronology includes the Jeannette expedition."
+      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
     },
     {
-      "id": "voy-activity-heroic-mawson",
-      "authors": "Douglas Mawson",
-      "title": "The Home of the Blizzard: Appendix III",
-      "year": 1915,
-      "venue": "Australian Antarctic Program",
-      "url": "https://www.antarctica.gov.au/about-antarctica/history/exploration-and-expeditions/australasian-antarctic-expedition/home-of-the-blizzard-book/appendix3/",
-      "access": "Public-domain contemporary chronology, edited and published by the Australian Antarctic Division."
-    },
-    {
-      "id": "voy-activity-charcot",
-      "authors": "France Diplomatie",
-      "title": "La France en Antarctique",
+      "id": "voy-polar-nzh",
+      "authors": "New Zealand Ministry for Culture and Heritage",
+      "title": "New Zealand and Antarctica: timeline",
       "year": null,
-      "venue": "France Diplomatie",
-      "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/antarctique/la-france-en-antarctique",
-      "access": "Government overview identifies the distinct 1903–1905 and 1908–1910 expeditions."
+      "venue": "New Zealand Ministry for Culture and Heritage",
+      "url": "https://nzhistory.govt.nz/politics/antarctica-and-nz/timeline",
+      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
     },
     {
-      "id": "voy-activity-filchner",
-      "authors": "Alfred Wegener Institute",
-      "title": "100th anniversary of the Filchner expedition to the Antarctic",
-      "year": 2011,
-      "venue": "Alfred Wegener Institute",
-      "url": "https://www.awi.de/en/about-us/service/press/single-view/100-jahrestag-vom-start-der-filchner-expedition-in-die-antarktis-bedeutende-entdeckungen-im-bevorzugten-gebiet-der-modernen-deutschen-polarforschung.html",
-      "access": "Institutional history identifies expedition dispatch, the Weddell Sea survey, and the 1912 southern return."
-    },
-    {
-      "id": "voy-activity-shirase",
-      "authors": "Shirase Antarctic Expedition Supporters’ Association",
-      "title": "The Japanese South Polar Expedition, 1910–12: a record of Antarctica",
-      "year": 2011,
-      "venue": "National Library of New Zealand",
-      "url": "https://natlib.govt.nz/records/30217462",
-      "access": "Public archival catalog for an English translation of eyewitness expedition accounts."
-    },
-    {
-      "id": "voy-activity-thule",
-      "authors": "National Museum of Denmark",
-      "title": "Tumisiut: in the footsteps of the Fifth Thule Expedition",
+      "id": "voy-ponce-loc",
+      "authors": "Library of Congress",
+      "title": "Today in History: September 27 – Ponce de León",
       "year": null,
-      "venue": "National Museum of Denmark",
-      "url": "https://natmus.dk/historisk-viden/forskning/forskningsprojekter/tumisiut-i-5-thule-ekspeditionens-fodspor/om-projektet/",
-      "access": "Museum-led research project documents dates, route and work with contemporary Inuit communities."
+      "venue": "Library of Congress",
+      "url": "https://www.loc.gov/item/today-in-history/september-27/",
+      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
     },
     {
-      "id": "voy-activity-aad-science",
-      "authors": "Australian Antarctic Program",
-      "title": "A timeline of scientific highlights",
-      "year": 2012,
-      "venue": "Australian Antarctic Program",
-      "url": "https://www.antarctica.gov.au/magazine/issue-22-2012/science/a-timeline-of-scientific-highlights/",
-      "access": "Institutional chronology covers Australian Antarctic fieldwork from the 1911–1914 expedition onward."
+      "id": "voy-shackleton-south",
+      "authors": "Ernest Shackleton",
+      "title": "South! The Story of Shackleton's Last Expedition, 1914–1917",
+      "year": 1919,
+      "venue": "Project Gutenberg",
+      "url": "https://www.gutenberg.org/ebooks/5199",
+      "access": "Public-domain participant narrative of the Imperial Trans-Antarctic Expedition. Institutional chronology and navigation analysis support recurring date and position details."
     },
     {
-      "id": "voy-activity-early-antarctic",
-      "authors": "Gaston Godard, Julien Reynes, Jérôme Bascou, René-Pierre Ménot, and Rosaria Palmeri",
-      "title": "First rocks sampled in Antarctica (1840): Insights into the landing area and the Terre Adélie craton",
-      "year": 2017,
-      "venue": "Comptes Rendus Géoscience",
-      "url": "https://comptes-rendus.academie-sciences.fr/geoscience/articles/en/10.1016/j.crte.2016.12.001/",
-      "access": "Open geological research article reviews early Antarctic land sighting reports and dates the French land sampling."
-    },
-    {
-      "id": "voy-activity-sol-ign",
-      "authors": "Instituto Geográfico Nacional",
-      "title": "Historical Overview: National Atlas of Spain",
-      "year": 2024,
-      "venue": "Instituto Geográfico Nacional",
-      "url": "https://www.ign.es/web/resources/docs/IGNCnig/ANE/Capitulos/06_Historicaloverview_2024.pdf",
-      "access": "National atlas chapter maps separate early voyages and documents the calendar years of the expeditions."
-    },
-    {
-      "id": "voy-activity-hudson-rmg",
-      "authors": "Royal Museums Greenwich",
-      "title": "Henry Hudson North-West Passage expedition 1610–11",
+      "id": "voy-spanish-portuguese-loc",
+      "authors": "Library of Congress",
+      "title": "Spanish and Portuguese Exploration in the Americas: Primary Source Set",
       "year": null,
-      "venue": "Royal Museums Greenwich",
-      "url": "https://www.rmg.co.uk/stories/maritime-history/henry-hudson-north-west-passage-expedition-1610-11",
-      "access": "Institutional chronology places Discovery in James Bay by November 1610 and documents the wintering and eventual departure."
+      "venue": "Library of Congress",
+      "url": "https://www.loc.gov/classroom-materials/spanish-and-portuguese-exploration-in-the-americas/",
+      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
     }
   ]
 }

@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { dataset } from "../src/published-data";
 import { importWorkbook } from "../src/xlsx-import";
+import { workbookReferenceId } from '../scripts/workbook-reference';
 test("complete published workbook retains dates, claims, sources and overlay geometry on import", async () => {
   const bytes = await readFile(
     "templates/americas-peoples-researched-import.xlsx",
@@ -30,7 +31,7 @@ test("complete published workbook retains dates, claims, sources and overlay geo
       r.claims.map((c) => [c.id, c.text, c.status, c.explanation]),
     );
     for (const s of r.sources) {
-      const actual = p.record.sources.find((x) => x.id === r.id + "--" + s.id)!;
+      const actual = p.record.sources.find((x) => x.id === workbookReferenceId(r.id,s.id))!;
       assert.ok(actual, `${r.id}: ${s.id}`);
       assert.equal(actual.title, s.title);
       assert.equal(actual.url, s.url);
@@ -41,4 +42,14 @@ test("complete published workbook retains dates, claims, sources and overlay geo
       r.claims.flatMap((c) => c.support).length,
     );
   }
+});
+
+test('long workbook references retain unique bounded identities', () => {
+  assert.equal(workbookReferenceId('visit','source'),'visit--source');
+  const prefix='visit-'+ 'a'.repeat(110);
+  const a=workbookReferenceId(prefix+'1','long-source');
+  const b=workbookReferenceId(prefix+'2','long-source');
+  assert.match(a,/^[a-zA-Z0-9][a-zA-Z0-9._-]{0,119}$/);
+  assert.notEqual(a,b);
+  assert.equal(a,workbookReferenceId(prefix+'1','long-source'));
 });

@@ -92,7 +92,10 @@ test('Norse and Balboa evidence does not manufacture exact departure dates', () 
   const balboa = visits.find(r => r.id === 'visit-balboa-pacific-1513')!;
   assert.equal(balboa.time.start, 1513);
   assert.match(balboa.claims[0].text, /overland/);
-  assert.ok(!catalog.voyages.some(v => /norse|balboa/i.test(v.id)));
+  assert.ok(!catalog.voyages.some(v => /norse/i.test(v.id)));
+  const balboaJourney = catalog.voyages.find(v => /balboa/i.test(v.id));
+  assert.ok(balboaJourney, 'separately sourced departure and Gulf observations are mapped');
+  assert.ok(balboaJourney.stops.every(s => s.arrival !== '1513-09-25'), 'no invented exact summit location');
 });
 
 test('transport distinguishes dated infrastructure from an evidenced service interval', () => {

@@ -91,6 +91,7 @@ const phases = [
   ["Expanded archaeological guides, regional hierarchy and shared local timelines", node, ["--import", "tsx", "tests/six-guides.browser.mjs"]],
   ["Collapsible story panels and labeled site terrain maps", node, ["tests/atlas-usability.browser.mjs"]],
   ["Regional coverage, whole-area map controls and simultaneous polar expeditions", node, ["tests/coverage-expeditions.browser.mjs"]],
+  ["Remaining major voyages, dated endpoints and untraced expedition context", node, ["tests/voyage-gaps.browser.mjs"]],
   ["Readable map evidence, named places and expandable uncertainty", node, ["tests/reader-evidence.browser.mjs"]],
   ["One marker per exact place and attached evidence status", node, ["tests/map-marker-audit.browser.mjs"]],
   ["Island histories, rai topic and licensed source navigation", node, ["--import", "tsx", "tests/island-chain.browser.mjs"]],

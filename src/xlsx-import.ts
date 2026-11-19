@@ -11,6 +11,7 @@ import {
 } from "./bulk-schema";
 import type { EvidenceRecord, SharePackage } from "./model";
 import { tablesToPackage } from "./bulk-import";
+import { MAX_PROPOSALS } from "./proposals";
 export async function importWorkbook(
   buffer: ArrayBuffer,
   records: EvidenceRecord[],
@@ -108,7 +109,7 @@ export async function importWorkbook(
     const sheet = workbook.Sheets[sheetName];
     if (!sheet) throw new Error(`Missing ${sheetName} sheet.`);
     const range = XLSX.utils.decode_range(sheet["!ref"] || "A1");
-    const maxRows=sheetName==='Evidence'||sheetName==='Overlays'?2000:MAX_SUPPORT_ROWS;
+    const maxRows=sheetName==='Evidence'||sheetName==='Overlays'?MAX_PROPOSALS:MAX_SUPPORT_ROWS;
     if (range.e.r > maxRows || range.e.c > 99)
       throw new Error(
         `${sheetName}: too many rows or columns; remove extra formatting and split the batch.`,
