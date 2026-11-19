@@ -1,0 +1,177 @@
+{
+  "version": "0.29.0",
+  "status": "merged, deployed and publicly verified; current and previous server releases retained",
+  "verifiedAt": "2026-11-19T04:12:54.802747+00:00",
+  "pullRequest": "https://github.com/gavinfischer-keenan/americaspeoples/pull/27",
+  "release": "https://github.com/gavinfischer-keenan/americaspeoples/releases/tag/v0.29.0",
+  "site": "https://americaspeoples.11mosswood.us/",
+  "baseCommit": "a367aac",
+  "featureCommit": "6c5802018ee67a7141e4ac216b5494cbd1c093c0",
+  "deployedCommit": "dfb41ee7fdcec7fdd0b57bc4777aaf88acfc7f88",
+  "verifiedTree": "e64a69453159445e57ed65e81c0493fcdb877b3d",
+  "records": 11201,
+  "sharedRecords": 11128,
+  "focusedRecords": 73,
+  "addedRecords": 7709,
+  "newTradeObservations": 38,
+  "newTradeObservationsBefore1200": 30,
+  "enrichedExistingTradeIds": [
+    "r5-huron-obsidian"
+  ],
+  "newTradeChapters": 28,
+  "datedItineraries": 175,
+  "addedJourneysAndPhases": [
+    "orellana-carvajal-amazon-1542",
+    "champlain-wendat-return-1615-1616",
+    "alarcon-maritime-support-1540",
+    "alvarado-padilla-tiguex-1540",
+    "chirikov-st-paul-1741",
+    "matonabbee-hearne-coppermine-1770-1772",
+    "rae-boothia-sledge-1854",
+    "rae-repulse-york-boats-1854",
+    "bougainville-boudeuse-circumnavigation-1766-1769",
+    "dampier-cygnet-pacific-1686-1688",
+    "bellingshausen-vostok-second-antarctic-season-1820-1821",
+    "schouten-le-maire-eendracht-1615-1616",
+    "schouten-amsterdam-return-1616-1617",
+    "slocum-spray-circumnavigation-1895-1898"
+  ],
+  "newVoyageRecords": 145,
+  "expeditionActivityPeriods": 126,
+  "inventorySubjects": 58,
+  "inventoryDispositions": {
+    "held": 6,
+    "partial": 39,
+    "mapped": 11,
+    "disputed": 2
+  },
+  "shipwreckRecords": 7512,
+  "importedWreckCatalogueRecords": 7454,
+  "northAtlanticRecords": 28,
+  "guides": 90,
+  "contextualStories": 84,
+  "independentTopics": 28,
+  "terrainMaps": 127,
+  "sourceMapSheets": 26,
+  "creditedGuideMedia": 39,
+  "atlases": {
+    "repository": "one shared engine with separate atlas manifests",
+    "available": [
+      "Americas"
+    ],
+    "emptyComingSoon": [
+      "Africa & human origins",
+      "Europe & Mediterranean",
+      "Asia & Pacific"
+    ],
+    "previewHistoricalRecords": 0,
+    "americasViewStatePreserved": true
+  },
+  "researchLimits": {
+    "shipwrecks": "Selected dated public inventories and archaeology; incomplete worldwide coverage. Undated/unlocated losses are held, aliases reconciled and original source fields retained.",
+    "trade": "Schematic source-to-find connections follow dated evidence windows. Shared assemblages are not independent confirmations.",
+    "voyages": "Unsupported legs, separate parties, field seasons and unresolved date-line chronology remain qualified.",
+    "norse": "1021 dates cut wood. Greenland abandonment horizons are approximate; papar testimony is later written evidence.",
+    "climate": "Modern climatology and regional wave statistics remain separate from historical conditions.",
+    "ice": "Labeled interpolation between reconstructed outlines preserves source snapshots without extrapolation."
+  },
+  "validation": {
+    "fullReleaseStages": 61,
+    "unitTests": 452,
+    "shipwreckImporterTests": 12,
+    "pythonApiTests": 10,
+    "linuxRetentionTests": 5,
+    "targetedFinalTradeAndTerrainTests": 18,
+    "finalTypeScriptCheck": true,
+    "independentReview": "Separate source/date/identity, map/UI/ice, final trade duplicate and deployment-headroom reviews; material findings resolved.",
+    "runNotes": "Completed across scoped resumptions. Consolidated the duplicate Lake Huron finding and retained its original place anchor; corrected Plum Piece sample material. The final anchor change passed 18 targeted trade/terrain tests and a fresh typecheck; the final build and browser stages used that corrected dataset. Stale topic counts and sea-route versus place-guide assertions were updated without extending timeouts. API tests passed locally; the five platform-dependent retention tests passed against the staged Linux release module.",
+    "publicAssetsChecked": 323,
+    "publicSourceReviews": 48,
+    "neighborPagesVerified": 3,
+    "liveBrowser": {
+      "allFourAtlasDestinations": true,
+      "threeEmptyBasemaps": true,
+      "dateCameraSelectionFiltersRetained": true,
+      "all14AddedVoyageEndpointsAndCitations": true,
+      "maritimeGuidesDesktopAndMobile": 9,
+      "mapViewers": 21,
+      "monthlyClimateRows": 36,
+      "javascriptErrors": [],
+      "hostingAnalytics": "Existing disclosed Cloudflare beacon GET and same-origin /cdn-cgi/rum POST recognized explicitly; no other unexpected requests accepted."
+    },
+    "workbook": {
+      "records": 11201,
+      "everyReviewPageOpened": true,
+      "duplicateReimportClean": true,
+      "compressedBytes": 5422401,
+      "expandedBytes": 43441861,
+      "archiveEntries": 16,
+      "sharedStrings": true,
+      "sha256": "666f56fec6c9f7ef3182d6956a997f7a96bea63ef411169970f13087a350238d"
+    }
+  },
+  "consensus": {
+    "thisBatchCalls": 0,
+    "remaining": 45
+  },
+  "deployment": {
+    "status": "deployed",
+    "id": "20261119T040224Z-americas-v0.29.0",
+    "commit": "dfb41ee7fdcec7fdd0b57bc4777aaf88acfc7f88",
+    "health": {
+      "status": "ok",
+      "version": "0.29.0",
+      "records": 11201
+    },
+    "static": "/srv/tripofisch/releases/20261119T040224Z-americas-v0.29.0",
+    "api": "/srv/americaspeoples/releases/20261119T040224Z-americas-v0.29.0",
+    "previousVersion": "0.28.0",
+    "rollbackStatic": "/srv/tripofisch/releases/20261119T005555Z-americas-v0.28.0",
+    "rollbackApi": "/srv/americaspeoples/releases/20261119T005555Z-americas-v0.28.0",
+    "unchangedFiles": 394
+  },
+  "packageSha256": "1ddd4b9e7f84e17a9764314103b11c894592ba6bebb5e170f5c28e9ce5c41632",
+  "githubReleaseAssetsVerified": 5,
+  "retention": {
+    "applied": true,
+    "targets": [
+      "/srv/americaspeoples/backups/20261119T005555Z-americas-v0.28.0-previous.sqlite3",
+      "/srv/americaspeoples/releases/20261118T235706Z-americas-v0.27.0",
+      "/srv/tripofisch/releases/20261118T235706Z-americas-v0.27.0/americaspeoples-app",
+      "/srv/tripofisch/releases/20261118T235706Z-americas-v0.27.0/downloads/americaspeoples",
+      "/srv/tripofisch/releases/20261118T235706Z-americas-v0.27.0/free-utilities/americaspeoples",
+      "/srv/tripofisch/releases/20261119T005555Z-americas-v0.28.0/downloads/americaspeoples/v0.27.0",
+      "/srv/tripofisch/releases/20261119T040224Z-americas-v0.29.0/downloads/americaspeoples/v0.27.0"
+    ],
+    "keptCurrent": "20261119T040224Z-americas-v0.29.0",
+    "keptPrevious": "0.28.0",
+    "freeBytes": 2290888704
+  },
+  "retentionFinalPlan": {
+    "applied": false,
+    "targets": [],
+    "keptCurrent": "20261119T040224Z-americas-v0.29.0",
+    "keptPrevious": "0.28.0",
+    "freeBytes": 2290888704
+  },
+  "temporaryCleanup": {
+    "container": {
+      "mode": "container",
+      "removed": [
+        "/var/tmp/americas-v0.29.0-staging",
+        "/var/tmp/americas-v0290-payload.tar",
+        "/var/tmp/americas-v0290-deploy.py"
+      ],
+      "freeBytes": 3280457728
+    },
+    "host": {
+      "mode": "host",
+      "removed": [
+        "/var/tmp/americas-v0290-payload.tar",
+        "/var/tmp/americas-v0290-deploy.py",
+        "/var/tmp/americas-v0290-test-retention.py"
+      ],
+      "freeBytes": 78048137216
+    }
+  }
+}

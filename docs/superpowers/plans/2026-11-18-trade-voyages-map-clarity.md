@@ -46,7 +46,7 @@ Files: work/voyage-depth handoffs; canonical data records, itineraries/activity/
 ### Task 4: Review and release
 - [x] Fresh independent source/date/geography and UI/ice review; resolve material findings.
 - [x] Full release gate, workbook round trip, browser regressions and standalone self-host verification.
-- [ ] Merge, publish, verify public API/assets/browser, retain current plus previous release and save receipt.
+- [x] Merge, publish, verify public API/assets/browser, retain current plus previous release and save receipt.
 
 ### Approved additions: North Atlantic continuity and four atlases
 - [x] Record Western/Eastern Greenland settlement and inferred abandonment separately, retain the 1408 written observation, preserve Iceland habitation through 1934, and qualify the later papar testimony.
@@ -54,4 +54,4 @@ Files: work/voyage-depth handoffs; canonical data records, itineraries/activity/
 - [x] Set up Americas; Africa & human origins; Europe & Mediterranean; Asia & Pacific in one repository, with empty COMING SOON basemaps for the latter three.
 - [x] Record shared-engine / separate-manifest ownership and future repository split criteria in docs/multi-atlas-plan.md.
 - [x] Add trade chapters and shipwreck topic; publish six graveyard guides and two major sea-route guides with individually credited maps and climate context.
-- [ ] Finish source-inventory normalization review, regenerated workbook/audits, full gate, publication and live checks.
+- [x] Finish source-inventory normalization review, regenerated workbook/audits, full gate, publication and live checks.
