@@ -1,0 +1,426 @@
+{
+  "reviews": [
+    {
+      "package": "northwest-guide",
+      "decisions": [
+        {
+          "subject": "Narrative scope",
+          "decision": "Historical narrative is restricted to events through 1934. Later archaeological finds are not added as historical events. Modern maps and climatology are clearly dated and separated.",
+          "sources": [
+            "https://open.canada.ca/data/en/dataset/ed9208a8-54dd-516a-9e63-68bc0be258f7",
+            "https://climate.weather.gc.ca/climate_normals/results_1991_2020_e.html?climate_id=2403498&dispBack=0&lstProvince=NU&searchType=stnProv&txtCentralLatMin=0&txtCentralLatSec=0&txtCentralLongMin=0&txtCentralLongSec=0",
+            "https://tc.copernicus.org/articles/16/1609/2022/"
+          ]
+        },
+        {
+          "subject": "Dated voyage evidence",
+          "decision": "Guide recordIds are drawn only from the existing voyage catalog. Ship, sledge-survey and relief groups stay distinct. Geographic descriptions do not add daily observations or route geometry. Excluded departure and return ports outside the northern corridor.",
+          "voyageIds": [
+            "davis-first-1585",
+            "davis-moonshine-1586",
+            "davis-ellen-1587",
+            "bylot-baffin-discovery-1616",
+            "franklin-erebus-terror-1845-1848",
+            "mcclure-investigator-1850-1853",
+            "mcclure-investigator-survey-1852",
+            "mcclure-investigator-relief-1853-1854",
+            "rae-boothia-sledge-1854",
+            "amundsen-gjoa-1903-1906"
+          ]
+        },
+        {
+          "subject": "Franklin uncertainty",
+          "decision": "The Victory Point note records an intention, not a complete retreat itinerary. Its Beechey winter year is an error; the supported winter is 1845–46. No post-abandonment track inferred.",
+          "sources": [
+            "https://canadianmysteries.ca/sites/franklin/archive/text/FranklinVictoryPoint_en.htm",
+            "https://parks.canada.ca/lhn-nhs/nu/epaveswrecks/culture/histoire-history/expedition"
+          ]
+        },
+        {
+          "subject": "Gjøa chronology",
+          "decision": "Nome arrival disagreement (30/31 August 1906) and uncertain resumption after King Point retained; no additional exact stop invented.",
+          "sources": [
+            "https://frammuseum.no/en/polar-history/expeditions/the-gjoa-expedition-1903-1906/",
+            "https://frammuseum.no/en/polar-history/vessels/the-polar-ship-gjoa/",
+            "https://www.loc.gov/resource/gdc.08035750v1/?st=gallery"
+          ]
+        },
+        {
+          "subject": "NRCan map rights and date",
+          "decision": "Official open-data catalog labels MCR0036 Open Government Licence – Canada. Native 7200×6600 source retained at full dimensions. 2012 map, predominantly 2007–11 information; its sea-ice line, communities and boundaries are modern dated context.",
+          "sources": [
+            "https://open.canada.ca/data/en/dataset/ed9208a8-54dd-516a-9e63-68bc0be258f7",
+            "https://natural-resources.canada.ca/maps-tools-publications/maps/atlas-canada/wall-maps",
+            "https://open.canada.ca/en/open-government-licence-canada"
+          ]
+        },
+        {
+          "subject": "IBCAO rights and resolution",
+          "decision": "GEBCO terms explicitly cover grid-derived information products; IBCAO v3 page requests acknowledgment of maps and grids. Full credit and no-endorsement/not-for-navigation conditions retained. The downloadable PDF metadata dates the poster 16 July 2015; bathymetry is the 2012 500 m grid. Rendered once at 200 dpi rather than enlarging a thumbnail.",
+          "sources": [
+            "https://www.gebco.net/data-products/gridded-bathymetry/terms-of-use",
+            "https://www.gebco.net/about/committees-and-groups/scrum/ibcao/ibcao-v3",
+            "https://www.gebco.net/data-products/printable-maps"
+          ]
+        },
+        {
+          "subject": "Historical map provenance",
+          "decision": "The actual printed sheet identifies Smithsonian Report 1906, Plate I, The Geographical Journal May 1907, and surveys by G. Hansen 1903–1906. It is not a modern reconstruction. The scan is 1404×1239; no upsampling.",
+          "sources": [
+            "https://static-prod.lib.princeton.edu/visual_materials/maps/websites/northwest-passage/amundsen.htm"
+          ]
+        },
+        {
+          "subject": "Photographs",
+          "decision": "Only pre-1935 published expedition images selected. Individual photographer and uncaptioned identities are not guessed. Native scan sizes (393–659 pixels wide) disclosed. Modern Princeton prose is summarized independently.",
+          "sources": [
+            "https://static-prod.lib.princeton.edu/visual_materials/maps/websites/northwest-passage/amundsen.htm",
+            "https://www.loc.gov/resource/gdc.08035750v1/?st=gallery"
+          ]
+        },
+        {
+          "subject": "Modern station weather",
+          "decision": "Twelve temperature and wind values extracted directly from saved official Resolute Bay 1991–2020 HTML. Annual values agree with the source. This is a composite land station, not all-route or offshore weather.",
+          "sources": [
+            "https://climate.weather.gc.ca/climate_normals/results_1991_2020_e.html?climate_id=2403498&dispBack=0&lstProvince=NU&searchType=stnProv&txtCentralLatMin=0&txtCentralLatSec=0&txtCentralLongMin=0&txtCentralLongSec=0"
+          ]
+        },
+        {
+          "subject": "Monthly wave statistic",
+          "decision": "Table 4 XLSX supplies all twelve rows from the central Beaufort intermediate model domain. Hs90 is not mean Hs and not maximum individual wave height. Geography, 1979–2019 hindcast period and reported ± values retained. The footnote defines one SD for trends, while the table caption does not separately define median-column spreads; public table calls these reported spreads without inventing a confidence interval. Winter near-zero waves coexist with dense ice.",
+          "sources": [
+            "https://tc.copernicus.org/articles/16/1609/2022/"
+          ]
+        },
+        {
+          "subject": "Historical/modern map use",
+          "decision": "The high-resolution regional maps are orientation references, not new evidence points or authority to interpolate dated routes. All original legends, source labels and credits retained. No shared registries or builders modified by this handoff.",
+          "sources": [
+            "https://open.canada.ca/data/en/dataset/ed9208a8-54dd-516a-9e63-68bc0be258f7",
+            "https://www.gebco.net/data-products/printable-maps"
+          ]
+        }
+      ],
+      "seasonal": {
+        "historicalCutoff": 1934,
+        "separation": "Modern environmental context only; no values assigned to historical expedition dates.",
+        "weather": {
+          "location": "Resolute Bay composite station, Nunavut",
+          "period": "1991–2020",
+          "sourceUrl": "https://climate.weather.gc.ca/climate_normals/results_1991_2020_e.html?climate_id=2403498&dispBack=0&lstProvince=NU&searchType=stnProv&txtCentralLatMin=0&txtCentralLatSec=0&txtCentralLongMin=0&txtCentralLongSec=0",
+          "statistic": "Monthly mean air temperature and mean wind speed; land-station normals, not offshore extremes.",
+          "months": [
+            {
+              "month": "January",
+              "temperatureC": -31.4,
+              "windKmh": 17.6
+            },
+            {
+              "month": "February",
+              "temperatureC": -32.1,
+              "windKmh": 17.5
+            },
+            {
+              "month": "March",
+              "temperatureC": -29.4,
+              "windKmh": 18.7
+            },
+            {
+              "month": "April",
+              "temperatureC": -21.2,
+              "windKmh": 18.1
+            },
+            {
+              "month": "May",
+              "temperatureC": -10.1,
+              "windKmh": 18.7
+            },
+            {
+              "month": "June",
+              "temperatureC": 0.5,
+              "windKmh": 19.4
+            },
+            {
+              "month": "July",
+              "temperatureC": 4.9,
+              "windKmh": 19.4
+            },
+            {
+              "month": "August",
+              "temperatureC": 2.4,
+              "windKmh": 20.2
+            },
+            {
+              "month": "September",
+              "temperatureC": -3.7,
+              "windKmh": 22.3
+            },
+            {
+              "month": "October",
+              "temperatureC": -12.2,
+              "windKmh": 22.6
+            },
+            {
+              "month": "November",
+              "temperatureC": -21.5,
+              "windKmh": 21.4
+            },
+            {
+              "month": "December",
+              "temperatureC": -27.3,
+              "windKmh": 18.4
+            }
+          ],
+          "annual": {
+            "temperatureC": -15.1,
+            "windKmh": 19.5
+          }
+        },
+        "waves": {
+          "source": "https://doi.org/10.5194/tc-16-1609-2022",
+          "locator": "Table 4, monthly rows; median ice concentration and median Hs90 across the simulated intermediate domain",
+          "period": "1979–2019",
+          "scope": "Central Beaufort Sea/Foggy Island Bay, Alaska; not all Northwest Passage waters",
+          "statistic": "90th-percentile significant wave height, retaining the reported variability; not the maximum individual wave height or a historical expedition observation",
+          "values": [
+            {
+              "month": "Jan",
+              "icePercent": "95.8±0.3",
+              "waveHs90Meters": "0.02±0.00"
+            },
+            {
+              "month": "Feb",
+              "icePercent": "96.1±0.3",
+              "waveHs90Meters": "0.02±0.00"
+            },
+            {
+              "month": "Mar",
+              "icePercent": "96.3±0.3",
+              "waveHs90Meters": "0.02±0.00"
+            },
+            {
+              "month": "Apr",
+              "icePercent": "97.3±0.2",
+              "waveHs90Meters": "0.01±0.00"
+            },
+            {
+              "month": "May",
+              "icePercent": "96.9±0.3",
+              "waveHs90Meters": "0.01±0.00"
+            },
+            {
+              "month": "Jun",
+              "icePercent": "85.0±1.5",
+              "waveHs90Meters": "0.02±0.00"
+            },
+            {
+              "month": "Jul",
+              "icePercent": "49.3±9.4",
+              "waveHs90Meters": "0.20±0.16"
+            },
+            {
+              "month": "Aug",
+              "icePercent": "0.2±2.3",
+              "waveHs90Meters": "1.30±0.24"
+            },
+            {
+              "month": "Sep",
+              "icePercent": "0.0±0.0",
+              "waveHs90Meters": "2.00±0.40"
+            },
+            {
+              "month": "Oct",
+              "icePercent": "13.8±7.0",
+              "waveHs90Meters": "2.43±0.54"
+            },
+            {
+              "month": "Nov",
+              "icePercent": "92.2±0.7",
+              "waveHs90Meters": "0.04±0.00"
+            },
+            {
+              "month": "Dec",
+              "icePercent": "95.6±0.4",
+              "waveHs90Meters": "0.02±0.00"
+            }
+          ],
+          "spreadInterpretation": "Reported ± spread retained. The article defines ± as one standard deviation for median trends, but the Table 4 caption does not separately define the spread of the median-value columns. No confidence level or prediction interval is assigned here."
+        }
+      }
+    },
+    {
+      "package": "southern-guide",
+      "decisions": [
+        {
+          "topic": "Temporal boundary",
+          "decision": "Historical narrative ends in 1934. Modern bathymetry, photographs and climatology are labelled as environmental context, never as historical voyage observations."
+        },
+        {
+          "topic": "Local wave heights",
+          "decision": "No twelve-month Magellan/Beagle/Drake numeric wave table supplied: no adequately matched local monthly series was established. Published January/July broad-ocean statistics are retained with scope and metric. Do not interpolate missing months."
+        },
+        {
+          "topic": "Wind figure caption",
+          "decision": "Castillo 2026 Figure 3 labels JFM/AMJ/JAS/OND. Its prose caption expands AMJ as April–May and JAS as June–September, an inconsistency. Asset unchanged, panel codes retained, correct generic three-month grouping stated without reproducing those erroneous expansions."
+        },
+        {
+          "topic": "IBCSO scope",
+          "decision": "Full high-resolution sheet covers 50°S to the pole; do not call it coverage to 40°S or imply that its 500 m grid is a historical sounding survey."
+        },
+        {
+          "topic": "Map rights",
+          "decision": "IBCSO and scientific figures CC BY 4.0. Beagle image downloaded directly from Wellcome’s Public Domain Mark IIIF manifest, not from the differently licensed older Wellcome Images Commons upload. Magellan scan follows archive’s collection-supplied CC BY-NC-SA 3.0 terms even though Commons also labels the underlying old map public domain."
+        },
+        {
+          "topic": "Existing record ownership",
+          "decision": "Selected atlas stop IDs reused; already-owned records placed in referenceRecordIds. No dates, coordinates, voyage lines or shared source registries mutated by this handoff."
+        },
+        {
+          "topic": "Schouten/Le Maire held itinerary gap",
+          "decision": "No matching voyage present in current 172-voyage registry. Primary lead supports Jan 25 passage and Jan 29 Cape Horne naming; Jan 31 continuation past cape. Longitude/latitude estimates in account are unreliable. Any future atlas anchors must use approximate modern named places and explicit source date precision.",
+          "url": "https://whalesite.org/RV/TIERRA/TEXTS/SCHOUTEN.htm"
+        },
+        {
+          "topic": "Slocum held itinerary gap",
+          "decision": "No matching voyage present. Primary text chapter VII explicitly dates Cape Virgins entrance February 11 and Sandy Point February 14, 1896. Later passages and delays require a chapter-by-chapter check before creating a whole itinerary.",
+          "url": "https://www.gutenberg.org/files/6317/6317-h/6317-h.htm"
+        },
+        {
+          "topic": "Dampier scope",
+          "decision": "Existing Cygnet 1686–1688 itinerary is not the 1684 Cape Horn passage. The guide narrates the 1684 route-choice evidence without adding 1684 stops to Cygnet.",
+          "url": "https://whalesite.org/GT/TEXTS/DAMPIER-1.htm"
+        },
+        {
+          "topic": "No recreated historical tracks",
+          "decision": "All downloaded maps are publisher/archive source sheets. No AI-generated maps, invented daily paths, or satellite photos passed off as historical scenery."
+        }
+      ],
+      "seasonal": {
+        "station": {
+          "name": "Carlos Ibáñez, Punta Arenas airport",
+          "stationId": "520006",
+          "period": "1991–2020",
+          "sourceUrl": "https://climatologia.meteochile.gob.cl/application/historico/datosNormales/520006",
+          "months": [
+            {
+              "month": "January",
+              "meanAirTemperatureC": 10.7,
+              "meanMonthlyPrecipitationMm": 38.1
+            },
+            {
+              "month": "February",
+              "meanAirTemperatureC": 10.3,
+              "meanMonthlyPrecipitationMm": 31.5
+            },
+            {
+              "month": "March",
+              "meanAirTemperatureC": 8.9,
+              "meanMonthlyPrecipitationMm": 42.9
+            },
+            {
+              "month": "April",
+              "meanAirTemperatureC": 6.6,
+              "meanMonthlyPrecipitationMm": 45.1
+            },
+            {
+              "month": "May",
+              "meanAirTemperatureC": 4.2,
+              "meanMonthlyPrecipitationMm": 36.9
+            },
+            {
+              "month": "June",
+              "meanAirTemperatureC": 1.9,
+              "meanMonthlyPrecipitationMm": 31.3
+            },
+            {
+              "month": "July",
+              "meanAirTemperatureC": 1.7,
+              "meanMonthlyPrecipitationMm": 30.9
+            },
+            {
+              "month": "August",
+              "meanAirTemperatureC": 2.7,
+              "meanMonthlyPrecipitationMm": 29.5
+            },
+            {
+              "month": "September",
+              "meanAirTemperatureC": 4.6,
+              "meanMonthlyPrecipitationMm": 24.5
+            },
+            {
+              "month": "October",
+              "meanAirTemperatureC": 6.4,
+              "meanMonthlyPrecipitationMm": 24.6
+            },
+            {
+              "month": "November",
+              "meanAirTemperatureC": 8.3,
+              "meanMonthlyPrecipitationMm": 23.1
+            },
+            {
+              "month": "December",
+              "meanAirTemperatureC": 9.7,
+              "meanMonthlyPrecipitationMm": 31.8
+            }
+          ]
+        },
+        "waves": {
+          "sourceUrl": "https://doi.org/10.1175/JPO-D-20-0031.1",
+          "publicationYear": 2020,
+          "spatialScope": "Approximate values for broad high-wave Southern Ocean belt; not point statistics for Cape Horn or either channel",
+          "periodDescription": "33 years of satellite altimetry analysed by Young et al. (2020); exact archive endpoints not independently extracted here",
+          "values": [
+            {
+              "month": "January",
+              "meanSignificantWaveHeightM": 4,
+              "p90SignificantWaveHeightM": 5.5
+            },
+            {
+              "month": "July",
+              "meanSignificantWaveHeightM": 5,
+              "p90SignificantWaveHeightM": 7
+            }
+          ]
+        }
+      }
+    },
+    {
+      "package": "graveyards",
+      "decisions": [
+        {
+          "source": "Regional graveyard totals",
+          "decision": "Context only. No unnamed or randomly positioned points generated from estimated regional totals. Cutoff is loss through 1934, not discovery before 1934."
+        },
+        {
+          "source": "NOAA Thunder Bay",
+          "decision": "82 indexed pages reviewed. Dedicated loss field retained; degrees and decimal minutes converted. Duplicates linked to preexisting named regional records. Later, undated, grouped and position-conflicted entries excluded or held with reason. Public facts are summarized independently; no third-party artwork copied."
+        },
+        {
+          "source": "Hatteras NPS",
+          "decision": "Pre-1935 named losses supplemented from NOAA, NC DNCR and USCG. Laura Barnes original locality distinguished from relocated remains. Lois Joyce 1981 excluded. Exact days added only from explicit dated accounts."
+        },
+        {
+          "source": "Oregon State Parks",
+          "decision": "Five pre-1935 brochure examples included; no day inferred from a year-only or month-only account. The 1930 navigational-mistake anecdote is not repeated as fact. Peacock and Valencia sourced separately."
+        },
+        {
+          "source": "Parks Canada Sable Island",
+          "decision": "Three named 1812 losses, approximate shared regional locality. Working Swift archaeological identification is qualified. Delight omitted as a confident Sable point because locality is disputed."
+        },
+        {
+          "source": "Historic England / CISMAS",
+          "decision": "Existing UKHO records referenced, not duplicated. Modern designation and discovery dates excluded from loss chronology. Third-party map imagery is linked rather than copied without a clear reuse grant."
+        },
+        {
+          "source": "Western Australian Museum",
+          "decision": "Existing museum records referenced, not duplicated. Lost-ship hypotheses do not generate new points. Shipwreck, survivor camps, violence and rescue are treated as distinct historical events."
+        },
+        {
+          "source": "Guide maps",
+          "decision": "Six explicit regional map extents supplied for root rendering with source record IDs. Bounds are editorial geographic frames, not historical coastline or wreck-extent polygons. Additional close extents supplied below for multi-scale inspection."
+        }
+      ],
+      "seasonal": null
+    }
+  ]
+}

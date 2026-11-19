@@ -39,7 +39,9 @@ try{
  // Every place page must ship its registered relief and linked feature labels.
  const {guides}=JSON.parse(await readFile('data/site-guides.json','utf8'));
  const terrain=JSON.parse(await readFile('data/guide-terrain/sources.json','utf8'));
- for(const guide of guides.filter(g=>g.kind!=='culture')){
+ // Sea-route guides use source sheets, exercised by maritime-guides.browser.mjs.
+ const placeGuides=guides.filter(g=>g.kind==='site');
+ for(const guide of placeGuides){
   await page.goto(base+'/'+guide.href);
   const figure=page.locator('.site-overview').first();await figure.waitFor();
   const href=await figure.locator('image').getAttribute('href');
@@ -56,5 +58,5 @@ try{
  await page.locator('.site-overview svg a').first().click();await page.locator('.review-page').waitFor();
  assert.match(page.url(),/#review\//,'a map feature opens its dated evidence');
  assert.deepEqual(errors,[]);
- console.log('PASS independent sidebar collapse, playback persistence, keyboard, tablet and all 35 labeled place terrain maps.');
+ console.log(`PASS independent sidebar collapse, playback persistence, keyboard, tablet and all ${placeGuides.length} labeled place terrain maps.`);
 }finally{await browser.close();await new Promise(r=>server.close(r));}

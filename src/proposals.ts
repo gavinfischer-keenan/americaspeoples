@@ -2,8 +2,8 @@ import type { EvidenceRecord, Proposal, SharePackage } from "./model";
 import { validateRecord } from "./validation";
 // Correction exports preserve both the original and proposed record. Keep this
 // finite byte budget separate from spreadsheet ZIP/row limits and schema checks.
-export const MAX_PACKAGE_BYTES = 32_000_000;
-export const MAX_PROPOSALS = 5000;
+export const MAX_PACKAGE_BYTES = 96_000_000;
+export const MAX_PROPOSALS = 12000;
 export function canonical(value: unknown): string {
   if (Array.isArray(value)) return "[" + value.map(canonical).join(",") + "]";
   if (value && typeof value === "object")

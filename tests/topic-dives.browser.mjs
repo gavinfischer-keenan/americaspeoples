@@ -68,6 +68,7 @@ try{
  await page.screenshot({path:'test-results/topic-trade-mobile.png',fullPage:true});
  const overflow=await page.evaluate(()=>Array.from(document.querySelectorAll('body *')).filter(el=>el.getBoundingClientRect().right>innerWidth+1).slice(0,8).map(el=>[el.tagName,el.className,el.getBoundingClientRect().width]));
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'mobile page does not overflow horizontally: '+JSON.stringify(overflow));
- await page.locator('#topic-next').click();assert.match(await page.locator('#topic-year').innerText(),/1,401 BCE/);
+ await page.locator('#topic-next').click();assert.match(await page.locator('#topic-year').innerText(),/6,951 BCE/);
+ assert.match(await page.locator('#topic-scene').innerText(),/A stone crosses a continent/);
  assert.deepEqual(errors,[]);console.log('Topic clocks, context isolation, review returns, all chapters, mobile and global state restoration passed.');
 }finally{await browser.close();await new Promise(r=>server.close(r));}

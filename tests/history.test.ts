@@ -25,6 +25,10 @@ test("wrecks accumulate after their event without changing the source date or ap
   assert.deepEqual((recordsForView([r], "movie", 1730) as any).history, [r]);
   assert.deepEqual((recordsForView([r], "movie", 1714) as any).history, []);
   assert.equal(r.time.end, 1715);
+  assert.equal(historyOpacity(r,1715),1);
+  assert.ok(historyOpacity(r,1720)!<historyOpacity(r,1716)!);
+  assert.ok(historyOpacity(r,1800)!<.3,'old losses recede into the background');
+  assert.ok(historyOpacity(r,1934)!>=.2,'old wrecks remain visible');
 });
 test("ending an occupation interval retains a historical place, not an active population", () => {
   const r = fixture();

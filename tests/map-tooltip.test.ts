@@ -1,7 +1,22 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { tooltipForRecords, tooltipPosition } from "../src/map-tooltip";
+import { tooltipForRecords, tooltipForPlaces, tooltipPosition } from "../src/map-tooltip";
 import { fixture } from "./fixtures";
+
+test('group previews name distinct places and their activity, with older evidence dated honestly',()=>{
+ const camp=fixture();camp.title='Fishing Bridge camps';camp.review.summary='Hearths and campfires beside Yellowstone Lake.';camp.location!.name='Fishing Bridge';
+ const quarry=fixture();quarry.id='quarry';quarry.title='Obsidian quarry';quarry.location={...quarry.location!,lon:-101,name:'Obsidian Cliff'};quarry.review.summary='People quarried volcanic glass for stone tools.';
+ const phase={...camp,id:'earlier-camp',time:{...camp.time,start:-500,end:-400}};
+ const tip=tooltipForPlaces([phase,camp,quarry],'movie',250,'Fishing Bridge')!;
+ assert.equal(tip.title,'Around Fishing Bridge');
+ assert.equal(tip.items?.length,2,'different phases must not crowd out a second place');
+ assert.match(tip.items![0].summary,/Hearths/);
+ assert.match(tip.items![1].title,/Obsidian/);
+ assert.match(tip.items![0].dates,/Earlier.*100.*200/);
+ assert.doesNotMatch(JSON.stringify(tip),/\d+ records|evidence window|document quality/);
+ assert.match(tooltipForPlaces([camp,quarry],'movie',150)!.items![0].dates,/100 CE/);
+ assert.doesNotMatch(tooltipForPlaces([camp,quarry],'movie',150)!.items![0].dates,/Earlier/);
+});
 
 test("map hover uses catalog review summaries and distinguishes all-time dates from current-year evidence", () => {
   const row = fixture();

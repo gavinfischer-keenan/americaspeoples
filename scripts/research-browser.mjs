@@ -33,27 +33,67 @@ const renderedOverlayCount = async kind => {
   },ids);
 };
 try {
+  // Verify a focused frontend fix before rebuilding the data release; the API and
+  // workbook remain the real release artifacts. The normal gate still uses dist.
+  if (process.env.RESEARCH_BROWSER_SOURCE === '1') {
+    const { build } = await import('esbuild');
+    const bundle = await build({ entryPoints: ['src/bootstrap.ts'], bundle: true, format: 'iife', platform: 'browser', target: ['chrome110'], outfile: 'app.js', loader: { '.geojson': 'json' }, write: false });
+    for (const [extension, contentType] of [['js', 'text/javascript'], ['css', 'text/css']]) {
+      const body = Buffer.from(bundle.outputFiles.find(file => file.path.endsWith('.' + extension)).contents);
+      await fixture.context.route(`**/app.${extension}*`, route => route.fulfill({ contentType, body }));
+    }
+  }
   await mkdir("test-results", { recursive: true });
   await page.goto(url + "#map");
   await page.getByRole("link", { name: "Library", exact: true }).click();
   await page.locator('.library-card[href="#proposals"]').click();
-  await page
-    .getByLabel("Import suggestions")
-    .setInputFiles("templates/americas-peoples-researched-import.xlsx");
-  await page
-    .getByRole("heading", { name: "Review import", exact: true })
-    .waitFor();
+  const importStarted = performance.now();
+  await page.locator('#import-file').setInputFiles("templates/americas-peoples-researched-import.xlsx");
+  // Scope large-batch checks to known controls. A document-wide role query walks
+  // every card and its collapsed comparisons before finding this heading.
+  await page.locator('#confirm-import').waitFor();
+  assert.equal(await page.locator('.proposals-page > h2').textContent(), 'Review import');
+  console.log(`Imported ${expectedRecords} records for review in ${Math.round(performance.now() - importStarted)} ms`);
+  assert.equal(await page.locator('[data-incoming-index]').count(), expectedRecords);
+  assert.equal(await page.locator('[data-incoming-index] pre:not(:empty)').count(), 0, 'Full record JSON must be deferred until its details opens');
+  assert.equal(await page.locator('.comparison[data-comparison-pending]').count(), expectedRecords);
+  assert.equal(await page.locator('.comparison pre').count(), 0, 'Collapsed batch comparisons must not eagerly render source text');
+  console.log('Import preview DOM:', await page.evaluate(() => ({ elements: document.querySelectorAll('*').length, preCharacters: [...document.querySelectorAll('main pre')].reduce((sum, pre) => sum + pre.textContent.length, 0), heapBytes: performance.memory?.usedJSHeapSize })));
+  const inspectedIndex = Math.floor(expectedRecords / 2);
+  const incomingDetails = page.locator(`[data-incoming-index="${inspectedIndex}"]`);
+  await incomingDetails.locator('summary').click();
+  await page.waitForFunction(index => document.querySelector(`[data-incoming-index="${index}"]`)?.getAttribute('data-loaded') === 'true', inspectedIndex);
+  const inspectedRecord = JSON.parse(await incomingDetails.locator('pre').textContent());
+  assert.equal(await page.locator('[data-incoming-index] pre:not(:empty)').count(), 1, 'Opening one record must not render the other incoming JSON blocks');
+  const comparison = page.locator(`[data-proposal-index="${inspectedIndex}"] .comparison`);
+  const comparisonSummary = await comparison.locator('summary').textContent();
+  await comparison.locator('summary').click();
+  await page.waitForFunction(index => !document.querySelector(`[data-proposal-index="${index}"] .comparison`)?.hasAttribute('data-comparison-pending'), inspectedIndex);
+  const inspectedComparison = await comparison.evaluate(details => [...details.querySelectorAll('h4')].map(heading => {
+    const blocks = heading.nextElementSibling.querySelectorAll('pre');
+    return { field: heading.textContent, original: blocks[0].textContent, proposed: blocks[1].textContent };
+  }));
+  const comparisonBody = await comparison.innerHTML();
+  await comparison.locator('summary').click();
+  await comparison.locator('summary').click();
+  assert.equal(await comparison.innerHTML(), comparisonBody, 'Reopening a comparison must not duplicate its contents');
+  assert.equal(await comparison.locator('summary').textContent(), comparisonSummary);
   assert.deepEqual(
     await page.locator(".proposal-card>.tag").allTextContents(),
     Array(expectedRecords).fill("new"),
   );
-  await page
-    .getByRole("button", { name: "Add to local collection", exact: true })
-    .click();
-  await page
-    .getByRole("heading", { name: "Your suggestions", exact: true })
-    .waitFor();
+  await page.locator('#confirm-import').click();
+  await page.locator('#import-file').waitFor();
+  assert.equal(await page.locator('.proposals-page h2').textContent(), 'Your suggestions');
   const pack = await localPackage(page);
+  assert.deepEqual(inspectedRecord, pack.proposals[inspectedIndex].record, 'Opened details retain the exact imported record and all sources');
+  const inspectedProposal = pack.proposals[inspectedIndex];
+  const printable = value => typeof value === 'string' ? value : JSON.stringify(value, null, 2);
+  const changed = [...new Set([...Object.keys(inspectedProposal.baseRecord), ...Object.keys(inspectedProposal.record)])]
+    .filter(field => JSON.stringify(inspectedProposal.baseRecord[field]) !== JSON.stringify(inspectedProposal.record[field]));
+  assert.deepEqual(inspectedComparison, changed.map(field => ({ field, original: printable(inspectedProposal.baseRecord[field]), proposed: printable(inspectedProposal.record[field]) })));
+  assert.equal(await page.locator('.comparison[data-comparison-pending]').count(), expectedRecords, 'The saved batch also defers its comparison bodies');
+  assert.equal(await page.locator('.comparison pre').count(), 0);
   assert.equal(pack.proposals.length, expectedRecords);
   assert.ok(pack.proposals.every((proposal) => proposal.kind === "correction"));
   assert.equal(
@@ -147,19 +187,13 @@ try {
   }
   await page.getByRole("link", { name: "Library", exact: true }).click();
   await page.locator('.library-card[href="#proposals"]').click();
-  await page
-    .getByLabel("Import suggestions")
-    .setInputFiles("templates/americas-peoples-researched-import.xlsx");
-  await page
-    .getByRole("heading", { name: "Review import", exact: true })
-    .waitFor();
-  assert.match(await page.locator("main").innerText(), /duplicate/);
-  await page
-    .getByRole("button", { name: "Add to local collection", exact: true })
-    .click();
-  await page
-    .getByRole("heading", { name: "Your suggestions", exact: true })
-    .waitFor();
+  await page.locator('#import-file').setInputFiles("templates/americas-peoples-researched-import.xlsx");
+  await page.locator('#confirm-import').waitFor();
+  assert.equal(await page.locator('.proposals-page > h2').textContent(), 'Review import');
+  assert.deepEqual(await page.locator('.proposal-card > .tag').allTextContents(), Array(expectedRecords).fill('duplicate'));
+  await page.locator('#confirm-import').click();
+  await page.locator('#import-file').waitFor();
+  assert.equal(await page.locator('.proposals-page h2').textContent(), 'Your suggestions');
   assert.equal(
     await page.locator("[data-proposal-card]").count(),
     expectedRecords,

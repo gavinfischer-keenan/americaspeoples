@@ -5,7 +5,8 @@ export class LatestRequestCache<T> {
   private values = new Map<string, T>();
   private running = new Set<string>();
   private failures = new Map<string, number>();
-  private desired: string | null = null;
+  private required: string[] = [];
+  private optional: string[] = [];
   private listeners = new Set<() => void>();
   private retryTimer: ReturnType<typeof setTimeout> | undefined;
   constructor(
@@ -25,17 +26,20 @@ export class LatestRequestCache<T> {
     this.values.set(key, value);
   }
   state(): "idle" | "ready" | "loading" | "error" {
-    return this.desired === null
+    return !this.required.length
       ? "idle"
-      : this.values.has(this.desired)
+      : this.required.every(key=>this.values.has(key))
         ? "ready"
-        : (this.failures.get(this.desired) ?? 0) > Date.now()
+        : this.required.some(key=>!this.values.has(key)&&(this.failures.get(key)??0)>Date.now())
           ? "error"
           : "loading";
   }
   request(key: string | null) {
-    const changed = key !== this.desired;
-    this.desired = key;
+    this.requestGroup(key?[key]:[]);
+  }
+  requestGroup(required:string[],optional:string[]=[]){
+    const changed=JSON.stringify([required,optional])!==JSON.stringify([this.required,this.optional]);
+    this.required=[...new Set(required)];this.optional=[...new Set(optional)].filter(key=>!this.required.includes(key)).slice(0,Math.max(0,this.maxEntries-this.required.length));
     if (changed) {
       clearTimeout(this.retryTimer);
       this.retryTimer = undefined;
@@ -43,7 +47,7 @@ export class LatestRequestCache<T> {
     this.drain();
   }
   dispose() {
-    this.desired = null;
+    this.required=[];this.optional=[];
     clearTimeout(this.retryTimer);
     this.listeners.clear();
   }
@@ -51,8 +55,8 @@ export class LatestRequestCache<T> {
     for (const listener of this.listeners) listener();
   }
   private drain() {
-    const key = this.desired;
-    if (!key || this.values.has(key) || this.running.has(key)) return;
+    for(const key of [...this.required,...this.optional]){
+    if (this.values.has(key) || this.running.has(key)) continue;
     const wait = (this.failures.get(key) ?? 0) - Date.now();
     if (wait > 0) {
       if (!this.retryTimer)
@@ -61,7 +65,7 @@ export class LatestRequestCache<T> {
           this.drain();
           this.notify();
         }, wait + 1);
-      return;
+      continue;
     }
     if (this.running.size >= this.concurrency) return;
     this.running.add(key);
@@ -70,12 +74,9 @@ export class LatestRequestCache<T> {
         this.values.set(key, value);
         this.failures.delete(key);
         while (this.values.size > this.maxEntries) {
-          const oldest = this.values.keys().next().value!;
-          if (oldest === this.desired) {
-            const keep = this.values.get(oldest)!;
-            this.values.delete(oldest);
-            this.values.set(oldest, keep);
-          } else this.values.delete(oldest);
+          const oldest=[...this.values.keys()].find(candidate=>!this.required.includes(candidate)&&!this.optional.includes(candidate));
+          if(oldest===undefined)break;
+          this.values.delete(oldest);
         }
       })
       .catch(() => {
@@ -86,5 +87,6 @@ export class LatestRequestCache<T> {
         this.drain();
         this.notify();
       });
+    }
   }
 }

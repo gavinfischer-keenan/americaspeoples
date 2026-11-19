@@ -13215,7 +13215,7 @@
     {
       "id": "dumont-durville-astrolabe-zelee-1839-1840",
       "name": "Dumont d’Urville and Jacquinot · Terre Adélie season",
-      "summary": "The second Antarctic field season sailed from Hobart to the Adélie Coast. The two ships observed the mainland and their boat parties sampled rocks on an offshore islet.",
+      "summary": "The ships’ second Antarctic field season from Hobart to the Adélie Coast and back. The 21/22 January offshore-islet sampling is a separate boat-party observation and is not part of this ship itinerary.",
       "scope": "global",
       "precision": "Selected dated anchors. Historical reported fixes and approximate place coordinates are distinguished in the stop notes. Connections between supported observations are schematic.",
       "sourceIds": [
@@ -13226,7 +13226,6 @@
       "recordIds": [
         "visit-dumont-durville-astrolabe-zelee-1839-1840-hobart-tasmania-1839-12-12",
         "visit-dumont-durville-astrolabe-zelee-1839-1840-terre-adelie-coast-from-offshore-1840-01-20",
-        "visit-dumont-durville-astrolabe-zelee-1839-1840-dumoulin-islands-rock-sampling-site-vicinity-1840-01-21",
         "visit-dumont-durville-astrolabe-zelee-1839-1840-southern-ocean-off-cote-clarie-1840-01-30",
         "visit-dumont-durville-astrolabe-zelee-1839-1840-hobart-tasmania-1840-02-18"
       ],
@@ -13262,24 +13261,8 @@
           "sourceIds": [
             "gap-an-durville-rocks"
           ],
-          "recordId": "visit-dumont-durville-astrolabe-zelee-1839-1840-terre-adelie-coast-from-offshore-1840-01-20"
-        },
-        {
-          "name": "Dumoulin Islands, rock-sampling site vicinity",
-          "coordinates": [
-            140.08,
-            -66.62
-          ],
-          "arrival": "1840-01-21",
-          "departure": "1840-01-21",
-          "mode": "land",
-          "phase": "overland",
-          "note": "Men from both ships landed on a small rocky island and removed specimens. The pin marks the archipelago because nineteenth- and twentieth-century identifications of the landing rock differ. Some later chronologies give 22 January.",
-          "sourceIds": [
-            "gap-an-durville-rocks"
-          ],
-          "gapAfter": true,
-          "recordId": "visit-dumont-durville-astrolabe-zelee-1839-1840-dumoulin-islands-rock-sampling-site-vicinity-1840-01-21"
+          "recordId": "visit-dumont-durville-astrolabe-zelee-1839-1840-terre-adelie-coast-from-offshore-1840-01-20",
+          "gapAfter": true
         },
         {
           "name": "Southern Ocean off Côte Clarie",
@@ -15678,9 +15661,2935 @@
         "visit-gore-king-homeward-1779-1780-stromness-orkney-1780-08-22",
         "visit-gore-king-homeward-1779-1780-the-nore-thames-estuary-1780-10-04"
       ]
+    },
+    {
+      "id": "orellana-carvajal-amazon-1542",
+      "name": "Orellana and Carvajal · Amazon descent and larger brigantine return",
+      "summary": "The separately commanded river party continued downstream after leaving Gonzalo Pizarro. Carvajal describes exchanges, forced provisioning and violent attacks on Indigenous river communities. Selected confluences and the ocean exit precede the larger brigantine’s distinct arrival at Cubagua; the smaller vessel arrived two days earlier.",
+      "scope": "global",
+      "precision": "Selected dated observations at representative historical places; unsupported travel between anchors is an explicit gap. Connections between supported observations are schematic.",
+      "sourceIds": [
+        "deep-am-carvajal-medina"
+      ],
+      "recordIds": [
+        "visit-orellana-carvajal-amazon-1542-1542-06-03-1",
+        "visit-orellana-carvajal-amazon-1542-1542-06-10-2",
+        "visit-orellana-carvajal-amazon-1542-1542-08-26-3",
+        "visit-orellana-carvajal-amazon-1542-1542-09-11-4"
+      ],
+      "stops": [
+        {
+          "name": "Rio Negro–Solimões confluence region",
+          "coordinates": [
+            -59.9,
+            -3.14
+          ],
+          "arrival": "1542-06-03",
+          "departure": "1542-06-03",
+          "mode": "river",
+          "phase": "river",
+          "note": "Carvajal saw a dark-water tributary enter from the left on the Saturday before Trinity Sunday. Medina identifies the day as 3 June. This marks the confluence region, not a recovered vessel fix.",
+          "sourceIds": [
+            "deep-am-carvajal-medina"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-orellana-carvajal-amazon-1542-1542-06-03-1"
+        },
+        {
+          "name": "Madeira–Amazon confluence region",
+          "coordinates": [
+            -58.77,
+            -3.38
+          ],
+          "arrival": "1542-06-10",
+          "departure": "1542-06-10",
+          "mode": "river",
+          "phase": "river",
+          "note": "After the Corpus Christi episode and a rest day, the party passed a large tributary entering from the right. Medina identifies it as the Madeira and dates the passage to 10 June.",
+          "sourceIds": [
+            "deep-am-carvajal-medina"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-orellana-carvajal-amazon-1542-1542-06-10-2"
+        },
+        {
+          "name": "Amazon northern outlet, Atlantic transition",
+          "coordinates": [
+            -50.1,
+            0.6
+          ],
+          "arrival": "1542-08-26",
+          "departure": "1542-08-26",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Carvajal explicitly dates the exit to 26 August but also calls it Saint Louis’s day, normally 25 August. The numeric day is retained as a qualified reference. Both brigantines left the river; they separated offshore on the feast of the Beheading of Saint John, without a known position.",
+          "sourceIds": [
+            "deep-am-carvajal-medina"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-orellana-carvajal-amazon-1542-1542-08-26-3"
+        },
+        {
+          "name": "Nueva Cádiz, Cubagua — larger brigantine arrival",
+          "coordinates": [
+            -64.18,
+            10.82
+          ],
+          "arrival": "1542-09-11",
+          "departure": "1542-09-11",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Carvajal and Orellana arrived in the larger brigantine on 11 September after difficulty escaping the Gulf of Paria. They found the smaller brigantine already present. Paria passage dates are relative and no invented daily positions are supplied.",
+          "sourceIds": [
+            "deep-am-carvajal-medina"
+          ],
+          "gapAfter": false,
+          "recordId": "visit-orellana-carvajal-amazon-1542-1542-09-11-4"
+        }
+      ]
+    },
+    {
+      "id": "champlain-wendat-return-1615-1616",
+      "name": "Champlain and Indigenous guides · Great Lakes journey and return",
+      "summary": "Champlain’s own party traveled through the Ottawa–Nipissing–French River corridor to Wendat country, joined an unsuccessful allied campaign, wintered with his hosts and returned via Québec to France. The earlier Le Caron party and the detached interpreter’s travels remain distinct. Unlocated war, hunting and winter legs are gaps.",
+      "scope": "global",
+      "precision": "Selected dated observations at representative historical places; unsupported travel between anchors is an explicit gap. Connections between supported observations are schematic.",
+      "sourceIds": [
+        "deep-am-champlain-otis",
+        "deep-am-champlain-trent"
+      ],
+      "recordIds": [
+        "visit-champlain-wendat-return-1615-1616-1615-07-04-1",
+        "visit-champlain-wendat-return-1615-1616-1615-07-09-2",
+        "visit-champlain-wendat-return-1615-1616-1615-07-26-3",
+        "visit-champlain-wendat-return-1615-1616-1615-08-01-4",
+        "visit-champlain-wendat-return-1615-1616-1615-08-12-5",
+        "visit-champlain-wendat-return-1615-1616-1615-08-17-6",
+        "visit-champlain-wendat-return-1615-1616-1615-12-23-7",
+        "visit-champlain-wendat-return-1615-1616-1616-07-08-8",
+        "visit-champlain-wendat-return-1615-1616-1616-07-11-9",
+        "visit-champlain-wendat-return-1615-1616-1616-07-23-10",
+        "visit-champlain-wendat-return-1615-1616-1616-09-10-11"
+      ],
+      "stops": [
+        {
+          "name": "Québec — departure for the interior",
+          "coordinates": [
+            -71.2,
+            46.81
+          ],
+          "arrival": "1615-07-04",
+          "departure": "1615-07-04",
+          "mode": "river",
+          "phase": "river",
+          "note": "Champlain departed Québec with two men to rejoin his Indigenous allies. Joseph Le Caron and an earlier French contingent had already gone ahead; this route follows Champlain’s later party.",
+          "sourceIds": [
+            "deep-am-champlain-otis"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-champlain-wendat-return-1615-1616-1615-07-04-1"
+        },
+        {
+          "name": "Montréal–Rivière des Prairies approach",
+          "coordinates": [
+            -73.53,
+            45.63
+          ],
+          "arrival": "1615-07-09",
+          "departure": "1615-07-09",
+          "mode": "river",
+          "phase": "river",
+          "note": "Champlain embarked with an interpreter, his attendant and ten Indigenous canoeists, then ascended by the Rivière des Prairies and Ottawa. The marker denotes the Montréal approach; the text does not specify a launch beach.",
+          "sourceIds": [
+            "deep-am-champlain-otis"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-champlain-wendat-return-1615-1616-1615-07-09-2"
+        },
+        {
+          "name": "Lake Nipissing",
+          "coordinates": [
+            -79.85,
+            46.27
+          ],
+          "arrival": "1615-07-26",
+          "departure": "1615-07-26",
+          "mode": "river",
+          "phase": "river",
+          "note": "The canoe party entered Lake Nipissing and was hosted by Nipissing people. Champlain reports a two-day stay, followed by the French River descent; only the directly dated arrival is plotted.",
+          "sourceIds": [
+            "deep-am-champlain-otis"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-champlain-wendat-return-1615-1616-1615-07-26-3"
+        },
+        {
+          "name": "Otouacha, southern Georgian Bay region",
+          "coordinates": [
+            -79.94,
+            44.88
+          ],
+          "arrival": "1615-08-01",
+          "departure": "1615-08-01",
+          "mode": "land",
+          "phase": "overland",
+          "note": "After the French River and Georgian Bay canoe journey, Champlain reached the Wendat village he called Otouacha. This regional reference does not identify a particular archaeological site.",
+          "sourceIds": [
+            "deep-am-champlain-otis"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-champlain-wendat-return-1615-1616-1615-08-01-4"
+        },
+        {
+          "name": "Carhagouha, Wendat country",
+          "coordinates": [
+            -80.02,
+            44.83
+          ],
+          "arrival": "1615-08-12",
+          "departure": "1615-08-14",
+          "mode": "land",
+          "phase": "overland",
+          "note": "Champlain was present when Joseph Le Caron celebrated mass at Carhagouha. Champlain’s party then departed on 14 August to visit other Wendat villages en route to Cahiagué.",
+          "sourceIds": [
+            "deep-am-champlain-otis"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-champlain-wendat-return-1615-1616-1615-08-12-5"
+        },
+        {
+          "name": "Cahiagué, Wendat country near Orillia",
+          "coordinates": [
+            -79.5,
+            44.65
+          ],
+          "arrival": "1615-08-17",
+          "departure": "1615-09-01",
+          "mode": "land",
+          "phase": "overland",
+          "note": "Champlain arrived at the Wendat assembly place on 17 August. He describes the village departure on 1 September, after which the allied force traveled toward Haudenosaunee country. The intervening campaign is represented separately at month precision.",
+          "sourceIds": [
+            "deep-am-champlain-otis",
+            "deep-am-champlain-trent"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-champlain-wendat-return-1615-1616-1615-08-17-6"
+        },
+        {
+          "name": "Cahiagué — return from the campaign",
+          "coordinates": [
+            -79.5,
+            44.65
+          ],
+          "arrival": "1615-12-23",
+          "departure": "1615-12-23",
+          "mode": "land",
+          "phase": "overland",
+          "note": "After the unsuccessful attack, hunting and winter travel, Champlain returned to his Wendat hosts. Slafter’s note cites the 1632 account for 23 December and identifies the village as Cahiagué. Later winter visits are not represented as one uninterrupted stay.",
+          "sourceIds": [
+            "deep-am-champlain-otis",
+            "deep-am-champlain-trent"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-champlain-wendat-return-1615-1616-1615-12-23-7"
+        },
+        {
+          "name": "Falls of Saint Louis, Montréal — return departure",
+          "coordinates": [
+            -73.58,
+            45.47
+          ],
+          "arrival": "1616-07-08",
+          "departure": "1616-07-08",
+          "mode": "river",
+          "phase": "river",
+          "note": "After returning from Wendat country near the end of June, Champlain departed the Falls of Saint Louis with his host Darontal. The upstream return is not interpolated across the winter.",
+          "sourceIds": [
+            "deep-am-champlain-otis"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-champlain-wendat-return-1615-1616-1616-07-08-8"
+        },
+        {
+          "name": "Québec — return and onward departure",
+          "coordinates": [
+            -71.2,
+            46.81
+          ],
+          "arrival": "1616-07-11",
+          "departure": "1616-07-20",
+          "mode": "river",
+          "phase": "river",
+          "note": "Champlain reached Québec on 11 July and remained while repairs and construction proceeded, leaving in barques on 20 July for Tadoussac.",
+          "sourceIds": [
+            "deep-am-champlain-otis"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-champlain-wendat-return-1615-1616-1616-07-11-9"
+        },
+        {
+          "name": "Tadoussac — Atlantic embarkation",
+          "coordinates": [
+            -69.716,
+            48.142
+          ],
+          "arrival": "1616-07-23",
+          "departure": "1616-08-03",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Champlain’s barques reached Tadoussac on 23 July. He embarked in Pont-Gravé’s ready vessel and sailed for France on 3 August; the Atlantic passage has no intermediate fixes here.",
+          "sourceIds": [
+            "deep-am-champlain-otis"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-champlain-wendat-return-1615-1616-1616-07-23-10"
+        },
+        {
+          "name": "Honfleur — return to France",
+          "coordinates": [
+            0.233,
+            49.423
+          ],
+          "arrival": "1616-09-10",
+          "departure": "1616-09-10",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Champlain dates his arrival in Honfleur to 10 September 1616, completing the return after the inland expedition and winter in Wendat country.",
+          "sourceIds": [
+            "deep-am-champlain-otis"
+          ],
+          "gapAfter": false,
+          "recordId": "visit-champlain-wendat-return-1615-1616-1616-09-10-11"
+        }
+      ]
+    },
+    {
+      "id": "alarcon-maritime-support-1540",
+      "name": "Alarcón’s San Pedro and Santa Catalina · maritime support expedition",
+      "summary": "Alarcón sailed separately from Coronado’s overland force, adding San Gabriel en route. At the Colorado mouth he left the ships and used small boats upriver. The dated sea anchors do not place the ocean vessels at any proposed upstream limit.",
+      "scope": "global",
+      "precision": "Selected dated observations at representative historical places; unsupported travel between anchors is an explicit gap. Connections between supported observations are schematic.",
+      "sourceIds": [
+        "deep-am-alarcon-elsasser",
+        "deep-am-winship"
+      ],
+      "recordIds": [
+        "visit-alarcon-maritime-support-1540-1540-05-09-1",
+        "visit-alarcon-maritime-support-1540-1540-08-26-2"
+      ],
+      "stops": [
+        {
+          "name": "Acapulco, probable departure port",
+          "coordinates": [
+            -99.9,
+            16.84
+          ],
+          "arrival": "1540-05-09",
+          "departure": "1540-05-09",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Alarcón’s letter dates departure with San Pedro and Santa Catalina to 9 May but does not name the port. Winship identifies Acapulco as probable. Intermediate calls at Santiago and Guayabal are narrated without dates.",
+          "sourceIds": [
+            "deep-am-alarcon-elsasser",
+            "deep-am-winship"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-alarcon-maritime-support-1540-1540-05-09-1"
+        },
+        {
+          "name": "Colorado River mouth — ship/boat separation",
+          "coordinates": [
+            -114.93,
+            31.78
+          ],
+          "arrival": "1540-08-26",
+          "departure": "1540-08-26",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "At the head of the Gulf the ships remained behind while Alarcón and twenty men began a two-boat ascent on 26 August. The point marks the delta region and the change of party, not a recovered anchorage.",
+          "sourceIds": [
+            "deep-am-alarcon-elsasser"
+          ],
+          "gapAfter": false,
+          "recordId": "visit-alarcon-maritime-support-1540-1540-08-26-2"
+        }
+      ]
+    },
+    {
+      "id": "alvarado-padilla-tiguex-1540",
+      "name": "Alvarado and Padilla · separate reconnaissance to Tiguex",
+      "summary": "Hernando de Alvarado and Juan de Padilla left Coronado’s Zuni headquarters and traveled by Acoma to the Rio Grande. The dated report establishes a separate reconnaissance; later Cicuye and Plains visits lack day-level anchors here.",
+      "scope": "global",
+      "precision": "Selected dated observations at representative historical places; unsupported travel between anchors is an explicit gap. Connections between supported observations are schematic.",
+      "sourceIds": [
+        "deep-am-winship"
+      ],
+      "recordIds": [
+        "visit-alvarado-padilla-tiguex-1540-1540-08-29-1",
+        "visit-alvarado-padilla-tiguex-1540-1540-09-07-2"
+      ],
+      "stops": [
+        {
+          "name": "Háwikuh / Granada, Zuni",
+          "coordinates": [
+            -108.795,
+            34.94
+          ],
+          "arrival": "1540-08-29",
+          "departure": "1540-08-29",
+          "mode": "land",
+          "phase": "overland",
+          "note": "The report places departure on the feast of the Beheading of Saint John, 29 August 1540. This is the detached Alvarado party, not a new movement of Coronado’s whole army.",
+          "sourceIds": [
+            "deep-am-winship"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-alvarado-padilla-tiguex-1540-1540-08-29-1"
+        },
+        {
+          "name": "Tiguex, Middle Rio Grande region",
+          "coordinates": [
+            -106.55,
+            35.31
+          ],
+          "arrival": "1540-09-07",
+          "departure": "1540-09-07",
+          "mode": "land",
+          "phase": "overland",
+          "note": "Alvarado reached the river on the evening before the Nativity of Mary, whose feast is 8 September. He subsequently received representatives from nearby Pueblo communities. The record denotes the region near Bernalillo, not a firmly located camp.",
+          "sourceIds": [
+            "deep-am-winship"
+          ],
+          "gapAfter": false,
+          "recordId": "visit-alvarado-padilla-tiguex-1540-1540-09-07-2"
+        }
+      ]
+    },
+    {
+      "id": "chirikov-st-paul-1741",
+      "name": "Alexei Chirikov’s St. Paul · independent North Pacific voyage",
+      "summary": "St. Paul separated from Bering’s St. Peter and reached the southeast Alaskan coast independently. Two boat parties disappeared after approaching shore. The ship returned through the Aleutians with many men suffering from scurvy. Dates retain the published Russian Old Style convention.",
+      "scope": "global",
+      "precision": "Selected dated observations at approximate named locations or historical observed fixes. All connecting legs remain gaps; no continuous daily track or exact historic mooring is inferred. Connections between supported observations are schematic.",
+      "sourceIds": [
+        "deep-no-golder-bering-1"
+      ],
+      "recordIds": [
+        "visit-chirikov-st-paul-1741-petropavlovsk-harbor-departure-1741-05-29",
+        "visit-chirikov-st-paul-1741-avacha-bay-roadstead-departure-to-sea-1741-06-04",
+        "visit-chirikov-st-paul-1741-southeast-alaska-offshore-of-cape-addington-1741-07-15",
+        "visit-chirikov-st-paul-1741-southeast-alaska-lisianski-strait-approach-1741-07-24",
+        "visit-chirikov-st-paul-1741-adak-island-south-coast-anchorage-1741-09-09",
+        "visit-chirikov-st-paul-1741-agattu-island-eastern-offshore-approach-1741-09-21",
+        "visit-chirikov-st-paul-1741-petropavlovsk-harbor-return-1741-10-12"
+      ],
+      "stops": [
+        {
+          "name": "Petropavlovsk harbor, departure",
+          "coordinates": [
+            158.65,
+            53.02
+          ],
+          "arrival": "1741-05-29",
+          "departure": "1741-05-29",
+          "mode": "sea",
+          "note": "Chirikov distinguishes departure from the inner harbor on May 29 from departure to sea on June 4.",
+          "sourceIds": [
+            "deep-no-golder-bering-1"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-chirikov-st-paul-1741-petropavlovsk-harbor-departure-1741-05-29"
+        },
+        {
+          "name": "Avacha Bay roadstead, departure to sea",
+          "coordinates": [
+            158.65,
+            52.95
+          ],
+          "arrival": "1741-06-04",
+          "departure": "1741-06-04",
+          "mode": "sea",
+          "note": "The two ships waited in the roadstead before putting to sea. Their later separation is not assigned a guessed ocean coordinate.",
+          "sourceIds": [
+            "deep-no-golder-bering-1"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-chirikov-st-paul-1741-avacha-bay-roadstead-departure-to-sea-1741-06-04"
+        },
+        {
+          "name": "Southeast Alaska, offshore of Cape Addington",
+          "coordinates": [
+            -134.1,
+            55.6
+          ],
+          "arrival": "1741-07-15",
+          "departure": "1741-07-15",
+          "mode": "sea",
+          "note": "The journal records sighting the coast early on July 15 and a noon latitude near 55°36′. The editor identifies Cape Addington and Coronation Island from bearings. This is a shipboard observation.",
+          "sourceIds": [
+            "deep-no-golder-bering-1"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-chirikov-st-paul-1741-southeast-alaska-offshore-of-cape-addington-1741-07-15"
+        },
+        {
+          "name": "Southeast Alaska, Lisianski Strait approach",
+          "coordinates": [
+            -136.55,
+            57.83
+          ],
+          "arrival": "1741-07-24",
+          "departure": "1741-07-24",
+          "mode": "sea",
+          "note": "Savelev and three companions were sent to look for Dementiev’s missing party. Bertholf uses the observed 57°50′ latitude and bearings to identify the Lisianski approach; other localities have been proposed. The marker belongs to St. Paul offshore.",
+          "sourceIds": [
+            "deep-no-golder-bering-1"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-chirikov-st-paul-1741-southeast-alaska-lisianski-strait-approach-1741-07-24"
+        },
+        {
+          "name": "Adak Island, south-coast anchorage",
+          "coordinates": [
+            -176.55,
+            51.67
+          ],
+          "arrival": "1741-09-09",
+          "departure": "1741-09-09",
+          "mode": "sea",
+          "note": "The journal entry describes visits by Unangax̂ men in skin boats. Bertholf’s later reconstruction describes the meeting on September 10. The date follows the journal heading, retaining the disagreement.",
+          "sourceIds": [
+            "deep-no-golder-bering-1"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-chirikov-st-paul-1741-adak-island-south-coast-anchorage-1741-09-09"
+        },
+        {
+          "name": "Agattu Island, eastern offshore approach",
+          "coordinates": [
+            173.82,
+            52.43
+          ],
+          "arrival": "1741-09-21",
+          "departure": "1741-09-21",
+          "mode": "sea",
+          "note": "Editorial identifications connect the observed coast to Agattu, Semichi and Attu. Bertholf’s reconstruction places the sighting the morning after September 21; the journal-heading date is retained with uncertainty.",
+          "sourceIds": [
+            "deep-no-golder-bering-1"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-chirikov-st-paul-1741-agattu-island-eastern-offshore-approach-1741-09-21"
+        },
+        {
+          "name": "Petropavlovsk harbor, return",
+          "coordinates": [
+            158.65,
+            53.02
+          ],
+          "arrival": "1741-10-12",
+          "departure": "1741-10-12",
+          "mode": "sea",
+          "note": "The journal and report date St. Paul’s move into the inner harbor to October 12, distinct from the earlier entrance to Avacha Bay.",
+          "sourceIds": [
+            "deep-no-golder-bering-1"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-chirikov-st-paul-1741-petropavlovsk-harbor-return-1741-10-12"
+        }
+      ]
+    },
+    {
+      "id": "matonabbee-hearne-coppermine-1770-1772",
+      "name": "Matonabbee, Samuel Hearne and companions · Coppermine journey",
+      "summary": "Matonabbee led Hearne from Hudson Bay to the Coppermine River and back by Great Slave Lake. Indigenous women’s provisioning and transport work and knowledge from communities sustained the journey. Hearne’s later published account also records the killing of Inuit at Bloody Fall before the river-mouth survey; those descriptions are attributed to him.",
+      "scope": "global",
+      "precision": "Selected dated observations at approximate named locations or historical observed fixes. All connecting legs remain gaps; no continuous daily track or exact historic mooring is inferred. Connections between supported observations are schematic.",
+      "sourceIds": [
+        "deep-no-hearne-tyrrell"
+      ],
+      "recordIds": [
+        "visit-matonabbee-hearne-coppermine-1770-1772-prince-of-wales-fort-churchill-river-1770-12-07",
+        "visit-matonabbee-hearne-coppermine-1770-1772-coppermine-river-mouth-arctic-coast-1771-07-17",
+        "visit-matonabbee-hearne-coppermine-1770-1772-great-slave-lake-northern-shore-east-of-north-arm-1771-12-24",
+        "visit-matonabbee-hearne-coppermine-1770-1772-prince-of-wales-fort-return-1772-06-30"
+      ],
+      "stops": [
+        {
+          "name": "Prince of Wales Fort, Churchill River",
+          "coordinates": [
+            -94.214,
+            58.797
+          ],
+          "arrival": "1770-12-07",
+          "departure": "1770-12-07",
+          "mode": "land",
+          "note": "Hearne began his third attempt under Matonabbee’s guidance. The party traveled mainly on foot, using sledges and small canoes as conditions required.",
+          "sourceIds": [
+            "deep-no-hearne-tyrrell"
+          ],
+          "gapAfter": true,
+          "phase": "overland",
+          "recordId": "visit-matonabbee-hearne-coppermine-1770-1772-prince-of-wales-fort-churchill-river-1770-12-07"
+        },
+        {
+          "name": "Coppermine River mouth, Arctic coast",
+          "coordinates": [
+            -115.09,
+            67.83
+          ],
+          "arrival": "1771-07-17",
+          "departure": "1771-07-18",
+          "mode": "land",
+          "note": "Hearne says the survey to the river mouth began on July 17 and was completed around 1 a.m. on July 18, after the violence at Bloody Fall. The party then began its return.",
+          "sourceIds": [
+            "deep-no-hearne-tyrrell"
+          ],
+          "gapAfter": true,
+          "phase": "overland",
+          "recordId": "visit-matonabbee-hearne-coppermine-1770-1772-coppermine-river-mouth-arctic-coast-1771-07-17"
+        },
+        {
+          "name": "Great Slave Lake, northern shore east of North Arm",
+          "coordinates": [
+            -113.7,
+            62.25
+          ],
+          "arrival": "1771-12-24",
+          "departure": "1771-12-24",
+          "mode": "land",
+          "note": "The party reached the north side of what Hearne called Athapuscow Lake. Tyrrell identifies Great Slave Lake, somewhere east of the North Arm entrance, rather than modern Lake Athabasca.",
+          "sourceIds": [
+            "deep-no-hearne-tyrrell"
+          ],
+          "gapAfter": true,
+          "phase": "overland",
+          "recordId": "visit-matonabbee-hearne-coppermine-1770-1772-great-slave-lake-northern-shore-east-of-north-arm-1771-12-24"
+        },
+        {
+          "name": "Prince of Wales Fort, return",
+          "coordinates": [
+            -94.214,
+            58.797
+          ],
+          "arrival": "1772-06-30",
+          "departure": "1772-06-30",
+          "mode": "land",
+          "note": "After a June 29 river crossing and camp about ten miles from the factory, Hearne records reaching the fort next morning.",
+          "sourceIds": [
+            "deep-no-hearne-tyrrell"
+          ],
+          "gapAfter": true,
+          "phase": "overland",
+          "recordId": "visit-matonabbee-hearne-coppermine-1770-1772-prince-of-wales-fort-return-1772-06-30"
+        }
+      ]
+    },
+    {
+      "id": "rae-boothia-sledge-1854",
+      "name": "John Rae, William Ouligbuck and companions · Boothia sledge survey",
+      "summary": "Rae’s land party crossed from Repulse Bay toward Boothia with Inuit assistance and surveyed part of its western coast. Ouligbuck interpreted and Mistegan made a separate reconnaissance farther north. Inuit travelers supplied information about Franklin’s crews. These mapped positions belong to Rae’s party.",
+      "scope": "global",
+      "precision": "Selected dated observations at approximate named locations or historical observed fixes. All connecting legs remain gaps; no continuous daily track or exact historic mooring is inferred. Connections between supported observations are schematic.",
+      "sourceIds": [
+        "deep-no-rae-report-1854",
+        "deep-no-rae-dcb"
+      ],
+      "recordIds": [
+        "visit-rae-boothia-sledge-1854-repulse-bay-naujaat-departure-1854-03-31",
+        "visit-rae-boothia-sledge-1854-pelly-bay-region-observed-camp-1854-04-20",
+        "visit-rae-boothia-sledge-1854-beecher-river-region-observed-snow-house-1854-04-21",
+        "visit-rae-boothia-sledge-1854-point-de-la-guiche-reported-snow-hut-1854-05-06",
+        "visit-rae-boothia-sledge-1854-repulse-bay-naujaat-return-1854-05-26"
+      ],
+      "stops": [
+        {
+          "name": "Repulse Bay / Naujaat, departure",
+          "coordinates": [
+            -86.25,
+            66.53
+          ],
+          "arrival": "1854-03-31",
+          "departure": "1854-03-31",
+          "mode": "land",
+          "note": "Rae departed the winter base for the Boothia survey.",
+          "sourceIds": [
+            "deep-no-rae-dcb"
+          ],
+          "gapAfter": true,
+          "phase": "overland",
+          "recordId": "visit-rae-boothia-sledge-1854-repulse-bay-naujaat-departure-1854-03-31"
+        },
+        {
+          "name": "Pelly Bay region, observed camp",
+          "coordinates": [
+            -90.30889,
+            68.49111
+          ],
+          "arrival": "1854-04-20",
+          "departure": "1854-04-20",
+          "mode": "land",
+          "note": "Rae observed 68°29′28″ N, 90°18′32″ W while companions sought Inuit travelers. They returned with seventeen Inuit, including people he had met in 1847.",
+          "sourceIds": [
+            "deep-no-rae-report-1854"
+          ],
+          "gapAfter": true,
+          "phase": "overland",
+          "recordId": "visit-rae-boothia-sledge-1854-pelly-bay-region-observed-camp-1854-04-20"
+        },
+        {
+          "name": "Beecher River region, observed snow house",
+          "coordinates": [
+            -90.71167,
+            68.48333
+          ],
+          "arrival": "1854-04-21",
+          "departure": "1854-04-21",
+          "mode": "land",
+          "note": "Two Inuit travelers joined and guided the party. One related information about white men who had died far to the west. Rae placed the night’s river-bed snow house at 68°29′ N, 90°42′42″ W.",
+          "sourceIds": [
+            "deep-no-rae-report-1854"
+          ],
+          "gapAfter": true,
+          "phase": "overland",
+          "recordId": "visit-rae-boothia-sledge-1854-beecher-river-region-observed-snow-house-1854-04-21"
+        },
+        {
+          "name": "Point de la Guiche, reported snow hut",
+          "coordinates": [
+            -94.36611,
+            68.96444
+          ],
+          "arrival": "1854-05-06",
+          "departure": "1854-05-06",
+          "mode": "land",
+          "note": "Rae observed 68°57′52″ N, 94°21′58″ W. Mistegan continued six miles north separately; the main party is not placed at his farthest point.",
+          "sourceIds": [
+            "deep-no-rae-report-1854"
+          ],
+          "gapAfter": true,
+          "phase": "overland",
+          "recordId": "visit-rae-boothia-sledge-1854-point-de-la-guiche-reported-snow-hut-1854-05-06"
+        },
+        {
+          "name": "Repulse Bay / Naujaat, return",
+          "coordinates": [
+            -86.25,
+            66.53
+          ],
+          "arrival": "1854-05-26",
+          "departure": "1854-05-26",
+          "mode": "land",
+          "note": "The party reached its winter home at 5 a.m. on May 26. Further Inuit accounts and expedition relics were obtained before the August boat return.",
+          "sourceIds": [
+            "deep-no-rae-report-1854"
+          ],
+          "gapAfter": true,
+          "phase": "overland",
+          "recordId": "visit-rae-boothia-sledge-1854-repulse-bay-naujaat-return-1854-05-26"
+        }
+      ]
+    },
+    {
+      "id": "rae-repulse-york-boats-1854",
+      "name": "John Rae and companions · boat return to York Factory",
+      "summary": "Rae returned down western Hudson Bay after further conversations with Inuit at Repulse Bay. Ouligbuck left the party at Churchill. Selected port dates do not reconstruct the difficult passage through packed ice in Frozen Strait.",
+      "scope": "global",
+      "precision": "Selected dated observations at approximate named locations or historical observed fixes. All connecting legs remain gaps; no continuous daily track or exact historic mooring is inferred. Connections between supported observations are schematic.",
+      "sourceIds": [
+        "deep-no-rae-report-1854"
+      ],
+      "recordIds": [
+        "visit-rae-repulse-york-boats-1854-repulse-bay-naujaat-boat-departure-1854-08-04",
+        "visit-rae-repulse-york-boats-1854-churchill-river-entrance-1854-08-28",
+        "visit-rae-repulse-york-boats-1854-york-factory-1854-08-31"
+      ],
+      "stops": [
+        {
+          "name": "Repulse Bay / Naujaat, boat departure",
+          "coordinates": [
+            -86.25,
+            66.53
+          ],
+          "arrival": "1854-08-04",
+          "departure": "1854-08-04",
+          "mode": "sea",
+          "note": "Ice delayed departure until August 4. Rae reports difficulty rounding Cape Hope on August 6 and packed ice between Southampton Island and the mainland.",
+          "sourceIds": [
+            "deep-no-rae-report-1854"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-rae-repulse-york-boats-1854-repulse-bay-naujaat-boat-departure-1854-08-04"
+        },
+        {
+          "name": "Churchill River entrance",
+          "coordinates": [
+            -94.185,
+            58.78
+          ],
+          "arrival": "1854-08-28",
+          "departure": "1854-08-28",
+          "mode": "sea",
+          "note": "The party entered Churchill River on the morning of August 28 and was detained that day by a storm. William Ouligbuck landed here.",
+          "sourceIds": [
+            "deep-no-rae-report-1854"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-rae-repulse-york-boats-1854-churchill-river-entrance-1854-08-28"
+        },
+        {
+          "name": "York Factory",
+          "coordinates": [
+            -92.3,
+            57
+          ],
+          "arrival": "1854-08-31",
+          "departure": "1854-08-31",
+          "mode": "sea",
+          "note": "The party landed at York Factory during the forenoon of August 31.",
+          "sourceIds": [
+            "deep-no-rae-report-1854"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-rae-repulse-york-boats-1854-york-factory-1854-08-31"
+        }
+      ]
+    },
+    {
+      "id": "bougainville-boudeuse-circumnavigation-1766-1769",
+      "name": "Bougainville’s Boudeuse · Atlantic, Pacific and homeward voyage",
+      "summary": "Boudeuse’s selected circumnavigation anchors, including the Río de la Plata, Falklands/Malvinas transfer, Pacific provisioning and return. Étoile joined at Rio and separated before the homeward passage; this itinerary follows Boudeuse alone.",
+      "scope": "global",
+      "precision": "Selected dated anchors at approximate named-place coordinates. Unsupported intervening sailing and coastal survey sections are gaps. Dates follow the cited edition; a stay is regional, not an exact mooring. Connections between supported observations are schematic.",
+      "sourceIds": [
+        "deep-sp-bougainville"
+      ],
+      "recordIds": [
+        "visit-bougainville-boudeuse-circumnavigation-1766-1769-mindin-roadstead-loire-estuary-1766-11-15",
+        "visit-bougainville-boudeuse-circumnavigation-1766-1769-brest-roadstead-1766-11-21",
+        "visit-bougainville-boudeuse-circumnavigation-1766-1769-montevideo-bay-1767-01-31",
+        "visit-bougainville-boudeuse-circumnavigation-1766-1769-port-louis-puerto-soledad-falkl-27f826b833",
+        "visit-bougainville-boudeuse-circumnavigation-1766-1769-rio-de-janeiro-roadstead-1767-06-21",
+        "visit-bougainville-boudeuse-circumnavigation-1766-1769-montevideo-bay-second-stay-1767-07-31",
+        "visit-bougainville-boudeuse-circumnavigation-1766-1769-tahiti-eastern-anchorage-region-1768-04-06",
+        "visit-bougainville-boudeuse-circumnavigation-1766-1769-port-praslin-southern-new-ireland-1768-07-06",
+        "visit-bougainville-boudeuse-circumnavigation-1766-1769-batavia-roadstead-1768-09-28",
+        "visit-bougainville-boudeuse-circumnavigation-1766-1769-port-louis-mauritius-isle-of-fr-988db52435",
+        "visit-bougainville-boudeuse-circumnavigation-1766-1769-table-bay-cape-of-good-hope-1769-01-18",
+        "visit-bougainville-boudeuse-circumnavigation-1766-1769-ascension-island-northwest-anch-1f626def99",
+        "visit-bougainville-boudeuse-circumnavigation-1766-1769-saint-malo-1769-03-16"
+      ],
+      "stops": [
+        {
+          "name": "Mindin roadstead, Loire estuary",
+          "coordinates": [
+            -2.16,
+            47.27
+          ],
+          "arrival": "1766-11-15",
+          "departure": "1766-11-15",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Boudeuse began the voyage from the Loire mouth. The point is a regional roadstead reference.",
+          "sourceIds": [
+            "deep-sp-bougainville"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-bougainville-boudeuse-circumnavigation-1766-1769-mindin-roadstead-loire-estuary-1766-11-15"
+        },
+        {
+          "name": "Brest roadstead",
+          "coordinates": [
+            -4.49,
+            48.33
+          ],
+          "arrival": "1766-11-21",
+          "departure": "1766-12-05",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Storm damage forced repairs and changes to the ship’s armament.",
+          "sourceIds": [
+            "deep-sp-bougainville"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-bougainville-boudeuse-circumnavigation-1766-1769-brest-roadstead-1766-11-21"
+        },
+        {
+          "name": "Montevideo Bay",
+          "coordinates": [
+            -56.23,
+            -34.89
+          ],
+          "arrival": "1767-01-31",
+          "departure": "1767-02-28",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "This follows Boudeuse while Bougainville made a separate visit to Buenos Aires; that land/river excursion is not the ship track.",
+          "sourceIds": [
+            "deep-sp-bougainville"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-bougainville-boudeuse-circumnavigation-1766-1769-montevideo-bay-1767-01-31"
+        },
+        {
+          "name": "Port Louis / Puerto Soledad, Falkland Islands / Islas Malvinas",
+          "coordinates": [
+            -58.13,
+            -51.55
+          ],
+          "arrival": "1767-03-25",
+          "departure": "1767-06-02",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "The French settlement was transferred to Spanish administration on 1 April. This records a historical imperial transaction, not an atlas sovereignty judgment.",
+          "sourceIds": [
+            "deep-sp-bougainville"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-bougainville-boudeuse-circumnavigation-1766-1769-port-louis-puerto-soledad-falkl-27f826b833"
+        },
+        {
+          "name": "Rio de Janeiro roadstead",
+          "coordinates": [
+            -43.16,
+            -22.9
+          ],
+          "arrival": "1767-06-21",
+          "departure": "1767-07-15",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Étoile joined the expedition here. Botanical collecting and separate shore parties are not represented by the ship position.",
+          "sourceIds": [
+            "deep-sp-bougainville"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-bougainville-boudeuse-circumnavigation-1766-1769-rio-de-janeiro-roadstead-1767-06-21"
+        },
+        {
+          "name": "Montevideo Bay, second stay",
+          "coordinates": [
+            -56.23,
+            -34.89
+          ],
+          "arrival": "1767-07-31",
+          "departure": "1767-11-14",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Boudeuse waited while Étoile was repaired separately in the Río de la Plata. The ensuing Strait of Magellan transit is deliberately gapped.",
+          "sourceIds": [
+            "deep-sp-bougainville"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-bougainville-boudeuse-circumnavigation-1766-1769-montevideo-bay-second-stay-1767-07-31"
+        },
+        {
+          "name": "Tahiti, eastern anchorage region",
+          "coordinates": [
+            -149.29,
+            -17.6
+          ],
+          "arrival": "1768-04-06",
+          "departure": "1768-04-15",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Trade and meetings with Ereti’s community accompanied the visit; French violence killed or wounded islanders (pp. 232–233). Ahutoru subsequently travelled aboard Boudeuse.",
+          "sourceIds": [
+            "deep-sp-bougainville"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-bougainville-boudeuse-circumnavigation-1766-1769-tahiti-eastern-anchorage-region-1768-04-06"
+        },
+        {
+          "name": "Port Praslin, southern New Ireland",
+          "coordinates": [
+            152.96,
+            -4.73
+          ],
+          "arrival": "1768-07-06",
+          "departure": "1768-07-24",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "The crews repaired and provisioned while suffering scurvy. The northern New Guinea passage is not reconstructed.",
+          "sourceIds": [
+            "deep-sp-bougainville"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-bougainville-boudeuse-circumnavigation-1766-1769-port-praslin-southern-new-ireland-1768-07-06"
+        },
+        {
+          "name": "Batavia roadstead",
+          "coordinates": [
+            106.8,
+            -6.08
+          ],
+          "arrival": "1768-09-28",
+          "departure": "1768-10-16",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "The endpoint is the documented shift out of the road on 16 October, not a claim that both vessels cleared the region that day. Disease affected the crews.",
+          "sourceIds": [
+            "deep-sp-bougainville"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-bougainville-boudeuse-circumnavigation-1766-1769-batavia-roadstead-1768-09-28"
+        },
+        {
+          "name": "Port Louis, Mauritius / Isle of France",
+          "coordinates": [
+            57.49,
+            -20.15
+          ],
+          "arrival": "1768-11-08",
+          "departure": "1768-12-12",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Boudeuse resumed alone; Étoile remained for careening. The account says its date reckoning was adjusted here by one day. Dates retain the printed convention.",
+          "sourceIds": [
+            "deep-sp-bougainville"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-bougainville-boudeuse-circumnavigation-1766-1769-port-louis-mauritius-isle-of-fr-988db52435"
+        },
+        {
+          "name": "Table Bay, Cape of Good Hope",
+          "coordinates": [
+            18.43,
+            -33.9
+          ],
+          "arrival": "1769-01-18",
+          "departure": "1769-01-18",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Selected arrival observation; the full stay is not asserted.",
+          "sourceIds": [
+            "deep-sp-bougainville"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-bougainville-boudeuse-circumnavigation-1766-1769-table-bay-cape-of-good-hope-1769-01-18"
+        },
+        {
+          "name": "Ascension Island, northwest anchorage",
+          "coordinates": [
+            -14.43,
+            -7.92
+          ],
+          "arrival": "1769-02-04",
+          "departure": "1769-02-06",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "An approximate coastal reference for the ship while boat parties caught turtles.",
+          "sourceIds": [
+            "deep-sp-bougainville"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-bougainville-boudeuse-circumnavigation-1766-1769-ascension-island-northwest-anch-1f626def99"
+        },
+        {
+          "name": "Saint-Malo",
+          "coordinates": [
+            -2.03,
+            48.65
+          ],
+          "arrival": "1769-03-16",
+          "departure": "1769-03-16",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Boudeuse returned. Étoile’s separate return is not merged into this track.",
+          "sourceIds": [
+            "deep-sp-bougainville"
+          ],
+          "gapAfter": false,
+          "recordId": "visit-bougainville-boudeuse-circumnavigation-1766-1769-saint-malo-1769-03-16"
+        }
+      ]
+    },
+    {
+      "id": "dampier-cygnet-pacific-1686-1688",
+      "name": "Dampier aboard Cygnet · Mexico to the western Pacific and Australia",
+      "summary": "Dampier’s Cygnet phase follows the trans-Pacific departure from Mexico, Guam, Mindanao, selected South China Sea calls, northwest Australia and his departure from the vessel at Nicobar. Ship and local calendars differ, and the printed account’s dates are retained.",
+      "scope": "global",
+      "precision": "Selected dated anchors at approximate named-place coordinates. Unsupported intervening sailing and coastal survey sections are gaps. Dates follow the cited edition; a stay is regional, not an exact mooring. Connections between supported observations are schematic.",
+      "sourceIds": [
+        "deep-sp-dampier"
+      ],
+      "recordIds": [
+        "visit-dampier-cygnet-pacific-1686-1688-off-cape-corrientes-mexico-1686-03-31",
+        "visit-dampier-cygnet-pacific-1686-1688-guam-west-coast-anchorage-1686-05-21",
+        "visit-dampier-cygnet-pacific-1686-1688-mindanao-river-roadstead-cotabato-region-1686-07-18",
+        "visit-dampier-cygnet-pacific-1686-1688-mindanao-river-departure-1687-01-14",
+        "visit-dampier-cygnet-pacific-1686-1688-pulo-condore-con-ao-northern-roadstead-1687-03-14",
+        "visit-dampier-cygnet-pacific-1686-1688-pulo-condore-con-ao-careening-harbor-1687-03-16",
+        "visit-dampier-cygnet-pacific-1686-1688-pulo-condore-con-ao-second-arrival-1687-05-24",
+        "visit-dampier-cygnet-pacific-1686-1688-king-sound-region-northwest-australia-1688-01-05",
+        "visit-dampier-cygnet-pacific-1686-1688-great-nicobar-west-coast-anchorage-region-1688-05-05"
+      ],
+      "stops": [
+        {
+          "name": "Off Cape Corrientes, Mexico",
+          "coordinates": [
+            -105.7,
+            20.4
+          ],
+          "arrival": "1686-03-31",
+          "departure": "1686-03-31",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Dampier sailed in Swan’s Cygnet with a separate bark under Teat. The crew intended further raiding in Asian waters.",
+          "sourceIds": [
+            "deep-sp-dampier"
+          ],
+          "gapAfter": false,
+          "recordId": "visit-dampier-cygnet-pacific-1686-1688-off-cape-corrientes-mexico-1686-03-31"
+        },
+        {
+          "name": "Guam, west-coast anchorage",
+          "coordinates": [
+            144.64,
+            13.4
+          ],
+          "arrival": "1686-05-21",
+          "departure": "1686-06-02",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "A regional west-coast reference, not an identification of a precise historical mooring. The narrative records taking a friar hostage to obtain provisions.",
+          "sourceIds": [
+            "deep-sp-dampier"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-dampier-cygnet-pacific-1686-1688-guam-west-coast-anchorage-1686-05-21"
+        },
+        {
+          "name": "Mindanao River roadstead, Cotabato region",
+          "coordinates": [
+            124.18,
+            7.2
+          ],
+          "arrival": "1686-07-18",
+          "departure": "1686-07-18",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Modern named-region placement; Dampier’s printed latitude differs from the modern river mouth. Later movements into the river are omitted.",
+          "sourceIds": [
+            "deep-sp-dampier"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-dampier-cygnet-pacific-1686-1688-mindanao-river-roadstead-cotabato-region-1686-07-18"
+        },
+        {
+          "name": "Mindanao River, departure",
+          "coordinates": [
+            124.2,
+            7.2
+          ],
+          "arrival": "1687-01-14",
+          "departure": "1687-01-14",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Cygnet left without Swan under John Read. The ship-calendar dates are retained; Dampier discusses the one-day difference from local reckonings here.",
+          "sourceIds": [
+            "deep-sp-dampier"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-dampier-cygnet-pacific-1686-1688-mindanao-river-departure-1687-01-14"
+        },
+        {
+          "name": "Pulo Condore / Côn Đảo, northern roadstead",
+          "coordinates": [
+            106.61,
+            8.74
+          ],
+          "arrival": "1687-03-14",
+          "departure": "1687-03-14",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Cygnet and a captured prize arrived. A regional island-coast point precedes a separate careening harbor.",
+          "sourceIds": [
+            "deep-sp-dampier"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-dampier-cygnet-pacific-1686-1688-pulo-condore-con-ao-northern-roadstead-1687-03-14"
+        },
+        {
+          "name": "Pulo Condore / Côn Đảo, careening harbor",
+          "coordinates": [
+            106.6,
+            8.69
+          ],
+          "arrival": "1687-03-16",
+          "departure": "1687-04-16",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Approximate island-harbor position; the crew used local produce and resin while repairing the raiding vessel.",
+          "sourceIds": [
+            "deep-sp-dampier"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-dampier-cygnet-pacific-1686-1688-pulo-condore-con-ao-careening-harbor-1687-03-16"
+        },
+        {
+          "name": "Pulo Condore / Côn Đảo, second arrival",
+          "coordinates": [
+            106.61,
+            8.74
+          ],
+          "arrival": "1687-05-24",
+          "departure": "1687-05-24",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "The intervening Gulf of Siam and later China/Batanes cruises remain gaps.",
+          "sourceIds": [
+            "deep-sp-dampier"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-dampier-cygnet-pacific-1686-1688-pulo-condore-con-ao-second-arrival-1687-05-24"
+        },
+        {
+          "name": "King Sound region, northwest Australia",
+          "coordinates": [
+            123.02,
+            -16.58
+          ],
+          "arrival": "1688-01-05",
+          "departure": "1688-03-12",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Cygnet was careened in the region. The primary account records taking Aboriginal people aboard and releasing them; its hostile judgments are not adopted here. Exact cove identification is uncertain.",
+          "sourceIds": [
+            "deep-sp-dampier"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-dampier-cygnet-pacific-1686-1688-king-sound-region-northwest-australia-1688-01-05"
+        },
+        {
+          "name": "Great Nicobar, west-coast anchorage region",
+          "coordinates": [
+            93.73,
+            7.05
+          ],
+          "arrival": "1688-05-05",
+          "departure": "1688-05-05",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Dampier obtained leave to remain ashore. This ends his Cygnet itinerary; his later canoe journey is a different party.",
+          "sourceIds": [
+            "deep-sp-dampier"
+          ],
+          "gapAfter": false,
+          "recordId": "visit-dampier-cygnet-pacific-1686-1688-great-nicobar-west-coast-anchorage-region-1688-05-05"
+        }
+      ]
+    },
+    {
+      "id": "bellingshausen-vostok-second-antarctic-season-1820-1821",
+      "name": "Bellingshausen’s Vostok · second Antarctic field season",
+      "summary": "The missing second southern season, from Macquarie Island through the Pacific sector and toward the South Shetlands. Vostok is the tracked ship; Mirny accompanied it during this season. Published ice observations are approximate reconstructed anchors, with a one-day date-line caveat; no island sighting or landing priority is inferred.",
+      "scope": "global",
+      "precision": "Source-published approximate journal-derived coordinates; occasional interpolated positions are not flagged individually. Dates use the source's explicit 12-day Old Style conversion. Only the observations on/after the eastward crossing of 180 degrees on 17 December retain dateUncertain: the dataset records a deferred one-day ship-calendar adjustment on 17 February 1821. This is a calendar issue, independent of positional uncertainty. Connections between supported observations are schematic.",
+      "sourceIds": [
+        "deep-sp-bell-data",
+        "deep-sp-bell-method",
+        "deep-sp-macquarie"
+      ],
+      "recordIds": [
+        "visit-bellingshausen-vostok-second-antarctic-season-1820-1821-macquarie-island-offshor-c4eb913189",
+        "visit-bellingshausen-vostok-second-antarctic-season-1820-1821-southern-ocean-published-a922aa107e",
+        "visit-bellingshausen-vostok-second-antarctic-season-1820-1821-southern-ocean-published-0599c94525",
+        "visit-bellingshausen-vostok-second-antarctic-season-1820-1821-southern-ocean-published-c42e7e7cae",
+        "visit-bellingshausen-vostok-second-antarctic-season-1820-1821-southern-ocean-published-e474daeb46",
+        "visit-bellingshausen-vostok-second-antarctic-season-1820-1821-southern-ocean-published-acd58eb907",
+        "visit-bellingshausen-vostok-second-antarctic-season-1820-1821-southern-ocean-published-e686de254b",
+        "visit-bellingshausen-vostok-second-antarctic-season-1820-1821-southern-ocean-published-1baec8f723",
+        "visit-bellingshausen-vostok-second-antarctic-season-1820-1821-southern-ocean-published-85f7578ed4",
+        "visit-bellingshausen-vostok-second-antarctic-season-1820-1821-southern-ocean-published-e9bea29879",
+        "visit-bellingshausen-vostok-second-antarctic-season-1820-1821-southern-ocean-published-55ae9a34e2"
+      ],
+      "stops": [
+        {
+          "name": "Macquarie Island, offshore reference",
+          "coordinates": [
+            158.95,
+            -54.5
+          ],
+          "arrival": "1820-11-29",
+          "departure": "1820-12-01",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "The point is offshore and regional; it does not put the ships at the artist’s shore viewpoint.",
+          "sourceIds": [
+            "deep-sp-macquarie"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-bellingshausen-vostok-second-antarctic-season-1820-1821-macquarie-island-offshor-c4eb913189"
+        },
+        {
+          "name": "Southern Ocean, published ship observation 1820-12-02",
+          "coordinates": [
+            159.22,
+            -54.94
+          ],
+          "arrival": "1820-12-02",
+          "departure": "1820-12-02",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Approximate published reconstruction from the journal, not certified as an exact navigational fix. Iceberg density=0; sea-ice presence=0 in the source codes. Date uses the source's explicit 12-day Old Style conversion; this observation precedes crossing 180 degrees longitude.",
+          "sourceIds": [
+            "deep-sp-bell-data"
+          ],
+          "gapAfter": false,
+          "recordId": "visit-bellingshausen-vostok-second-antarctic-season-1820-1821-southern-ocean-published-a922aa107e"
+        },
+        {
+          "name": "Southern Ocean, published ship observation 1820-12-10",
+          "coordinates": [
+            164.22,
+            -62.3
+          ],
+          "arrival": "1820-12-10",
+          "departure": "1820-12-10",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Approximate published reconstruction from the journal, not certified as an exact navigational fix. Iceberg density=2; sea-ice presence=2 in the source codes. Date uses the source's explicit 12-day Old Style conversion; this observation precedes crossing 180 degrees longitude.",
+          "sourceIds": [
+            "deep-sp-bell-data"
+          ],
+          "gapAfter": false,
+          "recordId": "visit-bellingshausen-vostok-second-antarctic-season-1820-1821-southern-ocean-published-0599c94525"
+        },
+        {
+          "name": "Southern Ocean, published ship observation 1820-12-16",
+          "coordinates": [
+            179.33,
+            -62.84
+          ],
+          "arrival": "1820-12-16",
+          "departure": "1820-12-16",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Approximate published reconstruction from the journal, not certified as an exact navigational fix. Iceberg density=0; sea-ice presence=0 in the source codes. Date uses the source's explicit 12-day Old Style conversion; this observation precedes crossing 180 degrees longitude.",
+          "sourceIds": [
+            "deep-sp-bell-data"
+          ],
+          "gapAfter": false,
+          "recordId": "visit-bellingshausen-vostok-second-antarctic-season-1820-1821-southern-ocean-published-c42e7e7cae"
+        },
+        {
+          "name": "Southern Ocean, published ship observation 1820-12-17",
+          "coordinates": [
+            -178.79,
+            -62.34
+          ],
+          "arrival": "1820-12-17",
+          "departure": "1820-12-17",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Approximate published reconstruction from the journal, not certified as an exact navigational fix. Iceberg density=0; sea-ice presence=0 in the source codes. Date retains the dataset convention and may differ by one civil day after the date-line crossing.",
+          "sourceIds": [
+            "deep-sp-bell-data"
+          ],
+          "gapAfter": false,
+          "recordId": "visit-bellingshausen-vostok-second-antarctic-season-1820-1821-southern-ocean-published-e474daeb46"
+        },
+        {
+          "name": "Southern Ocean, published ship observation 1820-12-26",
+          "coordinates": [
+            -161.46,
+            -67.26
+          ],
+          "arrival": "1820-12-26",
+          "departure": "1820-12-26",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Approximate published reconstruction from the journal, not certified as an exact navigational fix. Iceberg density=2; sea-ice presence=2 in the source codes. Date retains the dataset convention and may differ by one civil day after the date-line crossing.",
+          "sourceIds": [
+            "deep-sp-bell-data"
+          ],
+          "gapAfter": false,
+          "recordId": "visit-bellingshausen-vostok-second-antarctic-season-1820-1821-southern-ocean-published-acd58eb907"
+        },
+        {
+          "name": "Southern Ocean, published ship observation 1821-01-12",
+          "coordinates": [
+            -119.8,
+            -67.5
+          ],
+          "arrival": "1821-01-12",
+          "departure": "1821-01-12",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Approximate published reconstruction from the journal, not certified as an exact navigational fix. Iceberg density=3; sea-ice presence=2 in the source codes. Date retains the dataset convention and may differ by one civil day after the date-line crossing.",
+          "sourceIds": [
+            "deep-sp-bell-data"
+          ],
+          "gapAfter": false,
+          "recordId": "visit-bellingshausen-vostok-second-antarctic-season-1820-1821-southern-ocean-published-e686de254b"
+        },
+        {
+          "name": "Southern Ocean, published ship observation 1821-01-22",
+          "coordinates": [
+            -92.62,
+            -69.36
+          ],
+          "arrival": "1821-01-22",
+          "departure": "1821-01-22",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Approximate published reconstruction from the journal, not certified as an exact navigational fix. Iceberg density=2; sea-ice presence=2 in the source codes. Date retains the dataset convention and may differ by one civil day after the date-line crossing.",
+          "sourceIds": [
+            "deep-sp-bell-data"
+          ],
+          "gapAfter": false,
+          "recordId": "visit-bellingshausen-vostok-second-antarctic-season-1820-1821-southern-ocean-published-1baec8f723"
+        },
+        {
+          "name": "Southern Ocean, published ship observation 1821-01-28",
+          "coordinates": [
+            -77.73,
+            -69.16
+          ],
+          "arrival": "1821-01-28",
+          "departure": "1821-01-28",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Approximate published reconstruction from the journal, not certified as an exact navigational fix. Iceberg density=2; sea-ice presence=2 in the source codes. Date retains the dataset convention and may differ by one civil day after the date-line crossing.",
+          "sourceIds": [
+            "deep-sp-bell-data"
+          ],
+          "gapAfter": false,
+          "recordId": "visit-bellingshausen-vostok-second-antarctic-season-1820-1821-southern-ocean-published-85f7578ed4"
+        },
+        {
+          "name": "Southern Ocean, published ship observation 1821-02-06",
+          "coordinates": [
+            -60.3,
+            -62.83
+          ],
+          "arrival": "1821-02-06",
+          "departure": "1821-02-06",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Approximate published reconstruction from the journal, not certified as an exact navigational fix. Iceberg density=0; sea-ice presence=0 in the source codes. Date retains the dataset convention and may differ by one civil day after the date-line crossing.",
+          "sourceIds": [
+            "deep-sp-bell-data"
+          ],
+          "gapAfter": false,
+          "recordId": "visit-bellingshausen-vostok-second-antarctic-season-1820-1821-southern-ocean-published-e9bea29879"
+        },
+        {
+          "name": "Southern Ocean, published ship observation 1821-02-12",
+          "coordinates": [
+            -51.15,
+            -59.35
+          ],
+          "arrival": "1821-02-12",
+          "departure": "1821-02-12",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Approximate published reconstruction from the journal, not certified as an exact navigational fix. Iceberg density=0; sea-ice presence=0 in the source codes. Date retains the dataset convention and may differ by one civil day after the date-line crossing.",
+          "sourceIds": [
+            "deep-sp-bell-data"
+          ],
+          "gapAfter": false,
+          "recordId": "visit-bellingshausen-vostok-second-antarctic-season-1820-1821-southern-ocean-published-55ae9a34e2"
+        }
+      ]
+    },
+    {
+      "id": "schouten-le-maire-eendracht-1615-1616",
+      "name": "Schouten and Le Maire · Eendracht around Cape Horn to Jacatra",
+      "summary": "Eendracht (called Unitie in the English account) sailed with Hoorn from the Netherlands to Patagonia. After Hoorn burned at Puerto Deseado, Eendracht passed the strait between Tierra del Fuego and Isla de los Estados and rounded Cape Horn. The Pacific and East Indies stages end at Jacatra, where the VOC seized the ship. The return aboard Amsterdam is a separate itinerary.",
+      "scope": "global",
+      "precision": "Selected source-dated anchors, with approximate modern port, cape or island reference coordinates. Every intervening unsurveyed track is an explicit gap; markers are not navigational fixes. Connections between supported observations are schematic.",
+      "sourceIds": [
+        "final-gap-schouten-purchas",
+        "final-gap-amh-tafahi",
+        "final-gap-amh-futuna"
+      ],
+      "recordIds": [
+        "visit-schouten-le-maire-eendracht-1615-1616-1615-05-25-1",
+        "visit-schouten-le-maire-eendracht-1615-1616-1615-05-27-2",
+        "visit-schouten-le-maire-eendracht-1615-1616-1615-06-17-3",
+        "visit-schouten-le-maire-eendracht-1615-1616-1615-07-13-4",
+        "visit-schouten-le-maire-eendracht-1615-1616-1615-07-20-5",
+        "visit-schouten-le-maire-eendracht-1615-1616-1615-08-30-6",
+        "visit-schouten-le-maire-eendracht-1615-1616-1615-12-08-7",
+        "visit-schouten-le-maire-eendracht-1615-1616-1616-01-25-8",
+        "visit-schouten-le-maire-eendracht-1615-1616-1616-01-29-9",
+        "visit-schouten-le-maire-eendracht-1615-1616-1616-01-31-10",
+        "visit-schouten-le-maire-eendracht-1615-1616-1616-03-01-11",
+        "visit-schouten-le-maire-eendracht-1615-1616-1616-05-11-12",
+        "visit-schouten-le-maire-eendracht-1615-1616-1616-05-19-13",
+        "visit-schouten-le-maire-eendracht-1615-1616-1616-09-17-14",
+        "visit-schouten-le-maire-eendracht-1615-1616-1616-10-28-15"
+      ],
+      "stops": [
+        {
+          "name": "Hoorn · Eendracht departure",
+          "coordinates": [
+            5.06,
+            52.64
+          ],
+          "arrival": "1615-05-25",
+          "departure": "1615-05-25",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "This is Eendracht’s departure. Hoorn’s later departure is not merged into the same vessel event.",
+          "sourceIds": [
+            "final-gap-schouten-purchas"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-schouten-le-maire-eendracht-1615-1616-1615-05-25-1"
+        },
+        {
+          "name": "Texel roadstead",
+          "coordinates": [
+            4.83,
+            53.0
+          ],
+          "arrival": "1615-05-27",
+          "departure": "1615-06-14",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Tessell identifies Texel; the point is a broad southern roadstead reference.",
+          "sourceIds": [
+            "final-gap-schouten-purchas"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-schouten-le-maire-eendracht-1615-1616-1615-05-27-2"
+        },
+        {
+          "name": "The Downs · Dover watering call",
+          "coordinates": [
+            1.43,
+            51.2
+          ],
+          "arrival": "1615-06-17",
+          "departure": "1615-06-17",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "The point is the roadstead, not a claim that Eendracht entered Dover harbour.",
+          "sourceIds": [
+            "final-gap-schouten-purchas"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-schouten-le-maire-eendracht-1615-1616-1615-06-17-3"
+        },
+        {
+          "name": "Canary Islands passage",
+          "coordinates": [
+            -16.0,
+            28.15
+          ],
+          "arrival": "1615-07-13",
+          "departure": "1615-07-13",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Passage sighting, not a landing.",
+          "sourceIds": [
+            "final-gap-schouten-purchas"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-schouten-le-maire-eendracht-1615-1616-1615-07-13-4"
+        },
+        {
+          "name": "Cap-Vert peninsula anchorage",
+          "coordinates": [
+            -17.47,
+            14.78
+          ],
+          "arrival": "1615-07-20",
+          "departure": "1615-08-01",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Watering negotiations and stormy weather extended this coastal stay.",
+          "sourceIds": [
+            "final-gap-schouten-purchas"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-schouten-le-maire-eendracht-1615-1616-1615-07-20-5"
+        },
+        {
+          "name": "Sierra Leone roadstead",
+          "coordinates": [
+            -13.23,
+            8.5
+          ],
+          "arrival": "1615-08-30",
+          "departure": "1615-08-30",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "A dated roadstead anchor only; the later local movements before departure on 4 September remain unmapped.",
+          "sourceIds": [
+            "final-gap-schouten-purchas"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-schouten-le-maire-eendracht-1615-1616-1615-08-30-6"
+        },
+        {
+          "name": "Puerto Deseado harbour",
+          "coordinates": [
+            -65.9,
+            -47.75
+          ],
+          "arrival": "1615-12-08",
+          "departure": "1616-01-13",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Hoorn burned during careening on 19 December. The surviving Eendracht continued with the expedition; this is an approximate harbour marker, not an exact wreck site.",
+          "sourceIds": [
+            "final-gap-schouten-purchas"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-schouten-le-maire-eendracht-1615-1616-1615-12-08-7"
+        },
+        {
+          "name": "Le Maire Strait passage",
+          "coordinates": [
+            -65.2,
+            -54.85
+          ],
+          "arrival": "1616-01-25",
+          "departure": "1616-01-25",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Modern strait coordinates replace the account’s inaccurate latitude. The later naming ceremony on 12 February is not the passage date.",
+          "sourceIds": [
+            "final-gap-schouten-purchas"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-schouten-le-maire-eendracht-1615-1616-1616-01-25-8"
+        },
+        {
+          "name": "Cape Horn sighting and naming",
+          "coordinates": [
+            -67.29,
+            -55.98
+          ],
+          "arrival": "1616-01-29",
+          "departure": "1616-01-29",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "This marker records the dated sighting and naming, not a landing or exact vessel location. The printed latitude of 57°48′ is substantially south of the actual cape.",
+          "sourceIds": [
+            "final-gap-schouten-purchas"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-schouten-le-maire-eendracht-1615-1616-1616-01-29-9"
+        },
+        {
+          "name": "Cape Horn · final passage reference",
+          "coordinates": [
+            -67.29,
+            -55.98
+          ],
+          "arrival": "1616-01-31",
+          "departure": "1616-01-31",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "A second dated observation of the same landmark; the gap from 29 January retains the intervening tacks and uncertain positions.",
+          "sourceIds": [
+            "final-gap-schouten-purchas"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-schouten-le-maire-eendracht-1615-1616-1616-01-31-10"
+        },
+        {
+          "name": "Juan Fernández · attempted anchorage",
+          "coordinates": [
+            -78.84,
+            -33.64
+          ],
+          "arrival": "1616-03-01",
+          "departure": "1616-03-03",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Eendracht did not secure an anchorage. A shore party landed, while the ship remained offshore.",
+          "sourceIds": [
+            "final-gap-schouten-purchas"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-schouten-le-maire-eendracht-1615-1616-1616-03-01-11"
+        },
+        {
+          "name": "Tafahi · Cocos Island anchorage",
+          "coordinates": [
+            -173.75,
+            -15.85
+          ],
+          "arrival": "1616-05-11",
+          "departure": "1616-05-13",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "The account records trade, Dutch gunfire and casualties. Its accusations against islanders are the voyagers’ interpretation, not a neutral account of intentions.",
+          "sourceIds": [
+            "final-gap-schouten-purchas",
+            "final-gap-amh-tafahi"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-schouten-le-maire-eendracht-1615-1616-1616-05-11-12"
+        },
+        {
+          "name": "Futuna and Alofi · Hoorn Islands sighting",
+          "coordinates": [
+            -178.12,
+            -14.3
+          ],
+          "arrival": "1616-05-19",
+          "departure": "1616-05-19",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Sighting anchor only. The following days of provisioning and exchanges are described in the source; no exact first anchorage coordinate is asserted.",
+          "sourceIds": [
+            "final-gap-schouten-purchas",
+            "final-gap-amh-futuna"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-schouten-le-maire-eendracht-1615-1616-1616-05-19-13"
+        },
+        {
+          "name": "Ternate approaches",
+          "coordinates": [
+            127.38,
+            0.8
+          ],
+          "arrival": "1616-09-17",
+          "departure": "1616-09-17",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "A dated approach reference, not an assertion of the exact anchoring hour or arrival berth. The Pacific islands and New Guinea coast between anchors remain explicit gaps.",
+          "sourceIds": [
+            "final-gap-schouten-purchas"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-schouten-le-maire-eendracht-1615-1616-1616-09-17-14"
+        },
+        {
+          "name": "Jacatra roadstead · Eendracht seized",
+          "coordinates": [
+            106.82,
+            -6.1
+          ],
+          "arrival": "1616-10-28",
+          "departure": "1616-11-01",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Original shipboard date retained. The account then records skipping a day to reconcile the westward circumnavigation with local reckoning. Eendracht’s voyage ends here; the return is on other ships.",
+          "sourceIds": [
+            "final-gap-schouten-purchas"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-schouten-le-maire-eendracht-1615-1616-1616-10-28-15"
+        }
+      ]
+    },
+    {
+      "id": "schouten-amsterdam-return-1616-1617",
+      "name": "Schouten · Amsterdam return from Java",
+      "summary": "After Eendracht was seized, Schouten and Jacob Le Maire boarded Amsterdam in the homebound fleet of Joris van Spilbergen. Le Maire died during the return. These anchors follow Amsterdam, not the separate Zeeland and not Eendracht.",
+      "scope": "global",
+      "precision": "Selected source-dated anchors, with approximate modern port, cape or island reference coordinates. Every intervening unsurveyed track is an explicit gap; markers are not navigational fixes. Connections between supported observations are schematic.",
+      "sourceIds": [
+        "final-gap-schouten-purchas"
+      ],
+      "recordIds": [
+        "visit-schouten-amsterdam-return-1616-1617-1616-12-14-1",
+        "visit-schouten-amsterdam-return-1616-1617-1617-01-24-2",
+        "visit-schouten-amsterdam-return-1616-1617-1617-03-31-3",
+        "visit-schouten-amsterdam-return-1616-1617-1617-04-14-4",
+        "visit-schouten-amsterdam-return-1616-1617-1617-07-01-5"
+      ],
+      "stops": [
+        {
+          "name": "Bantam departure",
+          "coordinates": [
+            106.16,
+            -6.03
+          ],
+          "arrival": "1616-12-14",
+          "departure": "1616-12-14",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "The account explicitly names Schouten and Le Maire aboard Amsterdam. Jacatra-to-Bantam transfer details are held.",
+          "sourceIds": [
+            "final-gap-schouten-purchas"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-schouten-amsterdam-return-1616-1617-1616-12-14-1"
+        },
+        {
+          "name": "Mauritius anchorage",
+          "coordinates": [
+            57.55,
+            -20.25
+          ],
+          "arrival": "1617-01-24",
+          "departure": "1617-01-30",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Island-level reference. No Port Louis or Grand Port berth is invented.",
+          "sourceIds": [
+            "final-gap-schouten-purchas"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-schouten-amsterdam-return-1616-1617-1617-01-24-2"
+        },
+        {
+          "name": "Saint Helena anchorage",
+          "coordinates": [
+            -5.72,
+            -15.95
+          ],
+          "arrival": "1617-03-31",
+          "departure": "1617-04-06",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Amsterdam’s date is retained separately from the other vessel’s earlier arrival. The 6 March Cape passage is only a guess in the source and has no plotted fix.",
+          "sourceIds": [
+            "final-gap-schouten-purchas"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-schouten-amsterdam-return-1616-1617-1617-03-31-3"
+        },
+        {
+          "name": "Ascension sighting",
+          "coordinates": [
+            -14.36,
+            -7.95
+          ],
+          "arrival": "1617-04-14",
+          "departure": "1617-04-14",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "A sighting, not a stop ashore.",
+          "sourceIds": [
+            "final-gap-schouten-purchas"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-schouten-amsterdam-return-1616-1617-1617-04-14-4"
+        },
+        {
+          "name": "Zeeland arrival · Amsterdam",
+          "coordinates": [
+            3.58,
+            51.45
+          ],
+          "arrival": "1617-07-01",
+          "departure": "1617-07-01",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "The place is not the city of Amsterdam: Amsterdam is the ship’s name. Exact harbour is not supplied.",
+          "sourceIds": [
+            "final-gap-schouten-purchas"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-schouten-amsterdam-return-1616-1617-1617-07-01-5"
+        }
+      ]
+    },
+    {
+      "id": "slocum-spray-circumnavigation-1895-1898",
+      "name": "Joshua Slocum · Spray circumnavigation",
+      "summary": "Slocum’s published account follows Spray from Boston through Atlantic crossings, Brazil and the Río de la Plata, a difficult Magellan Strait passage, the Pacific, Australia, the Indian Ocean and the Caribbean return. Newport marks the circumnavigation’s return on 27 June 1898; the final 3 July Fairhaven homecoming is also shown. Captain Howard accompanied the local Montevideo–Buenos Aires excursion described in the book.",
+      "scope": "global",
+      "precision": "Selected source-dated anchors, with approximate modern port, cape or island reference coordinates. Every intervening unsurveyed track is an explicit gap; markers are not navigational fixes. Connections between supported observations are schematic.",
+      "sourceIds": [
+        "final-gap-slocum"
+      ],
+      "recordIds": [
+        "visit-slocum-spray-circumnavigation-1895-1898-1895-04-24-1",
+        "visit-slocum-spray-circumnavigation-1895-1898-1895-07-02-2",
+        "visit-slocum-spray-circumnavigation-1895-1898-1895-07-02-3",
+        "visit-slocum-spray-circumnavigation-1895-1898-1895-07-03-4",
+        "visit-slocum-spray-circumnavigation-1895-1898-1895-07-04-5",
+        "visit-slocum-spray-circumnavigation-1895-1898-1895-07-19-6",
+        "visit-slocum-spray-circumnavigation-1895-1898-1895-07-24-7",
+        "visit-slocum-spray-circumnavigation-1895-1898-1895-08-04-8",
+        "visit-slocum-spray-circumnavigation-1895-1898-1895-09-10-9",
+        "visit-slocum-spray-circumnavigation-1895-1898-1895-09-25-10",
+        "visit-slocum-spray-circumnavigation-1895-1898-1895-09-30-11",
+        "visit-slocum-spray-circumnavigation-1895-1898-1895-10-05-12",
+        "visit-slocum-spray-circumnavigation-1895-1898-1895-11-05-13",
+        "visit-slocum-spray-circumnavigation-1895-1898-1895-12-29-14",
+        "visit-slocum-spray-circumnavigation-1895-1898-1895-12-30-15",
+        "visit-slocum-spray-circumnavigation-1895-1898-1896-02-11-16",
+        "visit-slocum-spray-circumnavigation-1895-1898-1896-02-14-17",
+        "visit-slocum-spray-circumnavigation-1895-1898-1896-02-20-18",
+        "visit-slocum-spray-circumnavigation-1895-1898-1896-03-03-19",
+        "visit-slocum-spray-circumnavigation-1895-1898-1896-03-03-20",
+        "visit-slocum-spray-circumnavigation-1895-1898-1896-03-10-21",
+        "visit-slocum-spray-circumnavigation-1895-1898-1896-04-13-22",
+        "visit-slocum-spray-circumnavigation-1895-1898-1896-04-26-23",
+        "visit-slocum-spray-circumnavigation-1895-1898-1896-07-16-24",
+        "visit-slocum-spray-circumnavigation-1895-1898-1896-10-09-25",
+        "visit-slocum-spray-circumnavigation-1895-1898-1896-10-10-26",
+        "visit-slocum-spray-circumnavigation-1895-1898-1896-12-17-27",
+        "visit-slocum-spray-circumnavigation-1895-1898-1896-12-22-28",
+        "visit-slocum-spray-circumnavigation-1895-1898-1897-04-16-29",
+        "visit-slocum-spray-circumnavigation-1895-1898-1897-04-22-30",
+        "visit-slocum-spray-circumnavigation-1895-1898-1897-05-24-31",
+        "visit-slocum-spray-circumnavigation-1895-1898-1897-05-31-32",
+        "visit-slocum-spray-circumnavigation-1895-1898-1897-06-24-33",
+        "visit-slocum-spray-circumnavigation-1895-1898-1897-07-17-34",
+        "visit-slocum-spray-circumnavigation-1895-1898-1897-09-16-35",
+        "visit-slocum-spray-circumnavigation-1895-1898-1897-09-19-36",
+        "visit-slocum-spray-circumnavigation-1895-1898-1897-10-31-37",
+        "visit-slocum-spray-circumnavigation-1895-1898-1897-11-17-38",
+        "visit-slocum-spray-circumnavigation-1895-1898-1897-12-27-39",
+        "visit-slocum-spray-circumnavigation-1895-1898-1898-03-26-40",
+        "visit-slocum-spray-circumnavigation-1895-1898-1898-04-11-41",
+        "visit-slocum-spray-circumnavigation-1895-1898-1898-04-20-42",
+        "visit-slocum-spray-circumnavigation-1895-1898-1898-04-29-43",
+        "visit-slocum-spray-circumnavigation-1895-1898-1898-05-17-44",
+        "visit-slocum-spray-circumnavigation-1895-1898-1898-05-20-45",
+        "visit-slocum-spray-circumnavigation-1895-1898-1898-05-22-46",
+        "visit-slocum-spray-circumnavigation-1895-1898-1898-05-30-47",
+        "visit-slocum-spray-circumnavigation-1895-1898-1898-06-01-48",
+        "visit-slocum-spray-circumnavigation-1895-1898-1898-06-25-49",
+        "visit-slocum-spray-circumnavigation-1895-1898-1898-06-27-50",
+        "visit-slocum-spray-circumnavigation-1895-1898-1898-07-03-51"
+      ],
+      "stops": [
+        {
+          "name": "Boston departure",
+          "coordinates": [
+            -71.05,
+            42.36
+          ],
+          "arrival": "1895-04-24",
+          "departure": "1895-04-24",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "The chapter explicitly gives Boston as the start.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1895-04-24-1"
+        },
+        {
+          "name": "Yarmouth departure",
+          "coordinates": [
+            -66.12,
+            43.83
+          ],
+          "arrival": "1895-07-02",
+          "departure": "1895-07-02",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Departure-only anchor; the earlier Gloucester, Westport and regional visits remain in the coverage gap.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1895-07-02-2"
+        },
+        {
+          "name": "Cape Sable passage",
+          "coordinates": [
+            -65.61,
+            43.39
+          ],
+          "arrival": "1895-07-02",
+          "departure": "1895-07-02",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "A coastal sighting/reference point, not a landing.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1895-07-02-3"
+        },
+        {
+          "name": "Chebucto Head passage",
+          "coordinates": [
+            -63.52,
+            44.5
+          ],
+          "arrival": "1895-07-03",
+          "departure": "1895-07-03",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "The subsequent George Island departure is not converted into an unreported harbour stay.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1895-07-03-4"
+        },
+        {
+          "name": "Sable Island light sighting",
+          "coordinates": [
+            -60.1,
+            43.9
+          ],
+          "arrival": "1895-07-04",
+          "departure": "1895-07-04",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Sighting only; the marker does not place Spray ashore.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1895-07-04-5"
+        },
+        {
+          "name": "Flores abeam",
+          "coordinates": [
+            -31.13,
+            39.45
+          ],
+          "arrival": "1895-07-19",
+          "departure": "1895-07-19",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "A sighting, not a port call.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1895-07-19-6"
+        },
+        {
+          "name": "Horta departure",
+          "coordinates": [
+            -28.63,
+            38.53
+          ],
+          "arrival": "1895-07-24",
+          "departure": "1895-07-24",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Departure-only anchor; no inferred arrival date is required.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1895-07-24-7"
+        },
+        {
+          "name": "Gibraltar anchorage",
+          "coordinates": [
+            -5.36,
+            36.14
+          ],
+          "arrival": "1895-08-04",
+          "departure": "1895-08-25",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Numerical departure date retained, but 25 August 1895 was Sunday. The book also labels 24 August Sunday; these weekday/date conflicts remain unresolved.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1895-08-04-8"
+        },
+        {
+          "name": "Santo Antão abeam",
+          "coordinates": [
+            -25.17,
+            17.08
+          ],
+          "arrival": "1895-09-10",
+          "departure": "1895-09-10",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "An island sighting, not a landing or anchorage.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1895-09-10-9"
+        },
+        {
+          "name": "Atlantic · North Star encounter",
+          "coordinates": [
+            -26.5,
+            5.0
+          ],
+          "arrival": "1895-09-25",
+          "departure": "1895-09-25",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Unlike the named-place anchors, this point follows Slocum’s printed navigational coordinates.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1895-09-25-10"
+        },
+        {
+          "name": "Atlantic equator crossing",
+          "coordinates": [
+            -29.5,
+            0
+          ],
+          "arrival": "1895-09-30",
+          "departure": "1895-09-30",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Historical navigation fix, not a landfall.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1895-09-30-11"
+        },
+        {
+          "name": "Pernambuco · Recife",
+          "coordinates": [
+            -34.87,
+            -8.06
+          ],
+          "arrival": "1895-10-05",
+          "departure": "1895-10-24",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "The 23 October unmooring/preparation is distinguished from the explicit 24 October departure.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1895-10-05-12"
+        },
+        {
+          "name": "Rio de Janeiro",
+          "coordinates": [
+            -43.15,
+            -22.91
+          ],
+          "arrival": "1895-11-05",
+          "departure": "1895-11-28",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Approximate harbour reference near the named island.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1895-11-05-13"
+        },
+        {
+          "name": "Montevideo · river excursion departure",
+          "coordinates": [
+            -56.22,
+            -34.9
+          ],
+          "arrival": "1895-12-29",
+          "departure": "1895-12-29",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Captain Howard came aboard for the Río de la Plata excursion. This is not represented as an entirely single-handed local leg.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1895-12-29-14"
+        },
+        {
+          "name": "Buenos Aires",
+          "coordinates": [
+            -58.36,
+            -34.61
+          ],
+          "arrival": "1895-12-30",
+          "departure": "1896-01-26",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Arrival is a transparent one-day derivation from the dated departure; the vessel later changed berth.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1895-12-30-15"
+        },
+        {
+          "name": "Cape Virgins · Magellan Strait entrance",
+          "coordinates": [
+            -68.36,
+            -52.33
+          ],
+          "arrival": "1896-02-11",
+          "departure": "1896-02-11",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Cape reference; this is a Magellan Strait transit, not an achieved Cape Horn rounding.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1896-02-11-16"
+        },
+        {
+          "name": "Sandy Point · Punta Arenas",
+          "coordinates": [
+            -70.91,
+            -53.16
+          ],
+          "arrival": "1896-02-14",
+          "departure": "1896-02-19",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Sandy Point is the Punta Arenas port reference.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1896-02-14-17"
+        },
+        {
+          "name": "Cape Froward passage",
+          "coordinates": [
+            -71.3,
+            -53.9
+          ],
+          "arrival": "1896-02-20",
+          "departure": "1896-02-20",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Modern cape reference, not an exact ship position.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1896-02-20-18"
+        },
+        {
+          "name": "Port Tamar departure",
+          "coordinates": [
+            -73.8,
+            -52.94
+          ],
+          "arrival": "1896-03-03",
+          "departure": "1896-03-03",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Approximate bay reference; the subsequent storm forced a long return through Fuegian channels.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1896-03-03-19"
+        },
+        {
+          "name": "Cape Pillar · first Pacific exit",
+          "coordinates": [
+            -74.68,
+            -52.73
+          ],
+          "arrival": "1896-03-03",
+          "departure": "1896-03-03",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "The next days’ storm drift and Cockburn Channel return are held as a gap, not drawn as a completed Cape Horn passage.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1896-03-03-20"
+        },
+        {
+          "name": "St Nicholas Bay · return to the strait",
+          "coordinates": [
+            -71.23,
+            -53.83
+          ],
+          "arrival": "1896-03-10",
+          "departure": "1896-03-10",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "The date is tied to the approach and ensuing arrival narrative, without an invented arrival hour.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1896-03-10-21"
+        },
+        {
+          "name": "Cape Pillar · successful Pacific departure",
+          "coordinates": [
+            -74.68,
+            -52.73
+          ],
+          "arrival": "1896-04-13",
+          "departure": "1896-04-13",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "The cape is a regional exit reference. Port Angosto’s exact local anchorage and repeated unsuccessful attempts remain unmapped.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1896-04-13-22"
+        },
+        {
+          "name": "Juan Fernández",
+          "coordinates": [
+            -78.83,
+            -33.64
+          ],
+          "arrival": "1896-04-26",
+          "departure": "1896-05-05",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "The explicit 26 April date is retained despite the same sentence describing fifteen days out from Cape Pillar, which does not match 13 April exactly.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1896-04-26-23"
+        },
+        {
+          "name": "Apia, Samoa",
+          "coordinates": [
+            -171.76,
+            -13.82
+          ],
+          "arrival": "1896-07-16",
+          "departure": "1896-08-20",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "The undated Marquesas sighting on the Pacific crossing is preserved in the coverage notes instead of receiving an invented day.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1896-07-16-24"
+        },
+        {
+          "name": "Newcastle departure",
+          "coordinates": [
+            151.79,
+            -32.92
+          ],
+          "arrival": "1896-10-09",
+          "departure": "1896-10-09",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Transparent relative-day derivation; Newcastle’s arrival date is not invented.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1896-10-09-25"
+        },
+        {
+          "name": "Sydney · first visit",
+          "coordinates": [
+            151.26,
+            -33.84
+          ],
+          "arrival": "1896-10-10",
+          "departure": "1896-12-06",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Sydney harbour is named.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1896-10-10-26"
+        },
+        {
+          "name": "Waterloo Bay shelter",
+          "coordinates": [
+            146.42,
+            -39.07
+          ],
+          "arrival": "1896-12-17",
+          "departure": "1896-12-17",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "A coastal shelter in the weather-dependent Bass Strait passage.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1896-12-17-27"
+        },
+        {
+          "name": "Melbourne · Hobsons Bay",
+          "coordinates": [
+            144.92,
+            -37.88
+          ],
+          "arrival": "1896-12-22",
+          "departure": "1897-01-24",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Port-scale marker combines named harbour movements; no exact daily berth is asserted.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1896-12-22-28"
+        },
+        {
+          "name": "Devonport departure",
+          "coordinates": [
+            146.37,
+            -41.18
+          ],
+          "arrival": "1897-04-16",
+          "departure": "1897-04-16",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Departure-only anchor; earlier Tamar/Launceston and Tasmanian movements remain a gap.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1897-04-16-29"
+        },
+        {
+          "name": "Sydney · Watsons Bay",
+          "coordinates": [
+            151.28,
+            -33.84
+          ],
+          "arrival": "1897-04-22",
+          "departure": "1897-05-09",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "The named anchorage is Watsons Bay, Port Jackson.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1897-04-22-30"
+        },
+        {
+          "name": "Whitsunday Passage",
+          "coordinates": [
+            148.88,
+            -20.26
+          ],
+          "arrival": "1897-05-24",
+          "departure": "1897-05-24",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Regional channel reference; no interpolated reef-navigation track.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1897-05-24-31"
+        },
+        {
+          "name": "Cooktown",
+          "coordinates": [
+            145.25,
+            -15.46
+          ],
+          "arrival": "1897-05-31",
+          "departure": "1897-06-06",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "The harbour point represents the river entrance and port; it is not a surveyed berth.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1897-05-31-32"
+        },
+        {
+          "name": "Thursday Island departure",
+          "coordinates": [
+            142.22,
+            -10.58
+          ],
+          "arrival": "1897-06-24",
+          "departure": "1897-06-24",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Departure-only marker; the preceding arrival narrative gives no independent exact date.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1897-06-24-33"
+        },
+        {
+          "name": "Keeling Cocos anchorage",
+          "coordinates": [
+            96.88,
+            -12.1
+          ],
+          "arrival": "1897-07-17",
+          "departure": "1897-08-22",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Island-lagoon reference; coastwise details through Timor and the Arafura Sea remain in the gap.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1897-07-17-34"
+        },
+        {
+          "name": "Rodrigues departure",
+          "coordinates": [
+            63.42,
+            -19.68
+          ],
+          "arrival": "1897-09-16",
+          "departure": "1897-09-16",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "The dated departure is used; the approximate length of stay is not turned into a falsely exact arrival.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1897-09-16-35"
+        },
+        {
+          "name": "Mauritius harbour",
+          "coordinates": [
+            57.5,
+            -20.15
+          ],
+          "arrival": "1897-09-19",
+          "departure": "1897-10-26",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Approximate Port Louis harbour reference.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1897-09-19-36"
+        },
+        {
+          "name": "Cape Sainte Marie passage",
+          "coordinates": [
+            45.12,
+            -25.6
+          ],
+          "arrival": "1897-10-31",
+          "departure": "1897-10-31",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Cape reference; no landing or exact offshore fix.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1897-10-31-37"
+        },
+        {
+          "name": "Port Natal · Durban",
+          "coordinates": [
+            31.04,
+            -29.88
+          ],
+          "arrival": "1897-11-17",
+          "departure": "1897-12-14",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Port Natal identifies Durban.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1897-11-17-38"
+        },
+        {
+          "name": "Cape Agulhas passage",
+          "coordinates": [
+            20.0,
+            -34.83
+          ],
+          "arrival": "1897-12-27",
+          "departure": "1897-12-27",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Date is the explicit two-day derivation from 25 December, not an inferred arrival at Cape Town.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1897-12-27-39"
+        },
+        {
+          "name": "Cape Town · Alfred Docks departure",
+          "coordinates": [
+            18.42,
+            -33.9
+          ],
+          "arrival": "1898-03-26",
+          "departure": "1898-03-26",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Departure-only anchor; no invented date for the earlier arrival via Simons Bay.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1898-03-26-40"
+        },
+        {
+          "name": "Saint Helena sighting",
+          "coordinates": [
+            -5.72,
+            -15.95
+          ],
+          "arrival": "1898-04-11",
+          "departure": "1898-04-11",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Sighting marker; the following island visit is described separately. It is not treated as an exact anchoring time.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1898-04-11-41"
+        },
+        {
+          "name": "Saint Helena departure",
+          "coordinates": [
+            -5.72,
+            -15.95
+          ],
+          "arrival": "1898-04-20",
+          "departure": "1898-04-20",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Departure date follows the continuous dated narrative; no daily in-port track is fabricated.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1898-04-20-42"
+        },
+        {
+          "name": "Ascension · verified late-stay anchor",
+          "coordinates": [
+            -14.42,
+            -7.92
+          ],
+          "arrival": "1898-04-29",
+          "departure": "1898-04-30",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "The printed arrival says 27 April but the next paragraph places him ashore on 26 April. This anchor deliberately uses the independently explicit 29–30 April end of the stay.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1898-04-29-43"
+        },
+        {
+          "name": "Devil’s Island abeam",
+          "coordinates": [
+            -52.58,
+            5.29
+          ],
+          "arrival": "1898-05-17",
+          "departure": "1898-05-17",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Offshore sighting only; no landing is asserted.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1898-05-17-44"
+        },
+        {
+          "name": "Tobago sighting",
+          "coordinates": [
+            -60.68,
+            11.24
+          ],
+          "arrival": "1898-05-20",
+          "departure": "1898-05-20",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Landmark reference only; the vessel was offshore.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1898-05-20-45"
+        },
+        {
+          "name": "St George’s, Grenada",
+          "coordinates": [
+            -61.76,
+            12.05
+          ],
+          "arrival": "1898-05-22",
+          "departure": "1898-05-28",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "The date range starts with the roadstead arrival, not the next morning’s inner-harbour berth.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1898-05-22-46"
+        },
+        {
+          "name": "Dominica quarantine call",
+          "coordinates": [
+            -61.4,
+            15.3
+          ],
+          "arrival": "1898-05-30",
+          "departure": "1898-05-30",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Island-coast reference; no unsupported harbour name is supplied.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1898-05-30-47"
+        },
+        {
+          "name": "St John’s, Antigua",
+          "coordinates": [
+            -61.85,
+            17.12
+          ],
+          "arrival": "1898-06-01",
+          "departure": "1898-06-05",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "The 4 June clearance is distinguished from the following day’s departure.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1898-06-01-48"
+        },
+        {
+          "name": "Fire Island offshore storm",
+          "coordinates": [
+            -73.1,
+            40.55
+          ],
+          "arrival": "1898-06-25",
+          "departure": "1898-06-25",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Broad offshore reference, not the position of the storm centre or a landfall.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1898-06-25-49"
+        },
+        {
+          "name": "Newport · return completed",
+          "coordinates": [
+            -71.33,
+            41.48
+          ],
+          "arrival": "1898-06-27",
+          "departure": "1898-06-27",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "The circumnavigation’s return endpoint. The final Fairhaven homecoming is a separate later anchor.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1898-06-27-50"
+        },
+        {
+          "name": "Fairhaven · Acushnet homecoming",
+          "coordinates": [
+            -70.91,
+            41.64
+          ],
+          "arrival": "1898-07-03",
+          "departure": "1898-07-03",
+          "mode": "sea",
+          "phase": "sailing",
+          "note": "Approximate Fairhaven waterfront, not the lost location of the individual mooring post.",
+          "sourceIds": [
+            "final-gap-slocum"
+          ],
+          "gapAfter": true,
+          "recordId": "visit-slocum-spray-circumnavigation-1895-1898-1898-07-03-51"
+        }
+      ]
     }
   ],
   "sources": [
+    {
+      "id": "deep-am-alarcon-elsasser",
+      "authors": "Hernando de Alarcón; Richard Hakluyt (translator); Albert B. Elsasser (editor)",
+      "title": "Explorations of Hernando Alarcon in the Lower Colorado River Region, 1540",
+      "year": 1979,
+      "venue": "Journal of California and Great Basin Anthropology 1(1), pp. 8–37; UC Merced eScholarship",
+      "url": "https://escholarship.org/content/qt86x647bs/qt86x647bs.pdf",
+      "access": "Reprints and annotates Alarcón’s letter through Ramusio and Hakluyt. The Spanish original and promised full report are lost. Printed pages 10–11 and 28–31 give distinct sea and boat phases; modern identification of the upstream limit remains uncertain."
+    },
+    {
+      "id": "deep-am-carvajal-medina",
+      "authors": "Gaspar de Carvajal; José Toribio Medina (editor)",
+      "title": "Descubrimiento del río de las Amazonas",
+      "year": 1894,
+      "venue": "Imprenta de E. Rasco, Seville / Internet Archive",
+      "url": "https://archive.org/details/descubrimientod00carvgoog",
+      "access": "Public-domain participant narrative, printed pp. 1–84, with Medina’s separately identified introduction and documentary appendix. The title-page year is 1894; the colophon records completion in February 1895. Full scanned edition and OCR inspected."
+    },
+    {
+      "id": "deep-am-champlain-otis",
+      "authors": "Samuel de Champlain; Charles Pomeroy Otis (translator); Edmund F. Slafter (editor)",
+      "title": "Voyages of Samuel de Champlain, volume III: 1611–1618",
+      "year": 1882,
+      "venue": "Prince Society, Boston / Canadian Institute for Historical Microreproductions / Internet Archive",
+      "url": "https://archive.org/details/cihm_26913",
+      "access": "Participant narrative with explicit editorial annotations. Printed pp. 111–144 and 184–187 support the selected 1615–16 inland and return observations. The editor’s inferred dates and archaeological identifications are distinguished from Champlain’s words."
+    },
+    {
+      "id": "deep-am-champlain-trent",
+      "authors": "Trent University",
+      "title": "Champlain Committee: Champlain’s Legacy",
+      "year": null,
+      "venue": "Trent University, Champlain College",
+      "url": "https://www.trentu.ca/colleges/champlain-college/champlains-legacy/champlain-committee",
+      "access": "Institutional historical interpretation locates Cahiagué in Wendat country near present Orillia; it does not establish an exact archaeological site for every journal observation."
+    },
+    {
+      "id": "deep-am-winship",
+      "authors": "George Parker Winship (editor); Hernando de Alvarado; Francisco Vázquez de Coronado; Juan Jaramillo",
+      "title": "The Coronado Expedition, 1540–1542",
+      "year": 1896,
+      "venue": "Fourteenth Annual Report of the Bureau of Ethnology, Smithsonian Institution, pp. 329–613 / Internet Archive",
+      "url": "https://archive.org/details/coronadoexpediti00winsrich",
+      "access": "Public-domain source edition. Original reports and letters are distinguished from the editorial itinerary. Printed pp. 385–386 qualify Acapulco as probable; pp. 594–595 contain Alvarado’s dated report; pp. 580–583 contain Coronado’s October 1541 letter."
+    },
+    {
+      "id": "deep-no-golder-bering-1",
+      "authors": "Alexei Chirikov and expedition officers; Frank A. Golder (editor); Ellsworth P. Bertholf (reconstruction)",
+      "title": "Bering’s Voyages, volume I: The Log Books and Official Reports",
+      "year": 1922,
+      "venue": "American Geographical Society / Distributed Proofreaders Canada",
+      "url": "https://www.fadedpage.com/link.php?file=20210337.html",
+      "access": "Edited archival translations. Journal pp. 283–311; report pp. 312–327; later reconstruction pp. 341–348. Old Style dates retained; journal/reconstruction differences remain explicit."
+    },
+    {
+      "id": "deep-no-hearne-tyrrell",
+      "authors": "Samuel Hearne; J. B. Tyrrell (editor)",
+      "title": "A Journey from Prince of Wales’s Fort in Hudson’s Bay to the Northern Ocean",
+      "year": 1911,
+      "venue": "Champlain Society / Distributed Proofreaders Canada",
+      "url": "https://www.fadedpage.com/books/20131133/html.php",
+      "access": "Scholarly edition of the 1795 narrative. Tyrrell’s place identifications are distinguished from Hearne’s testimony."
+    },
+    {
+      "id": "deep-no-rae-dcb",
+      "authors": "R. L. Richards",
+      "title": "Rae, John (1813–93)",
+      "year": 1990,
+      "venue": "Dictionary of Canadian Biography, volume XII",
+      "url": "https://www.biographi.ca/en/bio/rae_john_1813_93_12E.html",
+      "access": "Institutional biography, revised 2020; explicit March 31 departure and expedition context."
+    },
+    {
+      "id": "deep-no-rae-report-1854",
+      "authors": "John Rae",
+      "title": "Report to the Hudson’s Bay Company, York Factory, 1 September 1854",
+      "year": 1854,
+      "venue": "House of Commons sessional papers 1854–55, vol. 35, no. 1898, pp. 835–844 / Great Unsolved Mysteries in Canadian History",
+      "url": "https://canadianmysteries.ca/sites/franklin/archive/text/RaeProceedings1854_en.htm",
+      "access": "Institutional archival transcription and ten original page images. Omissions in the transcription are respected. Includes observed positions, Inuit assistance and testimony, detached reconnaissance and dated return."
+    },
+    {
+      "id": "deep-sp-bell-data",
+      "authors": "Grant R. Bigg",
+      "title": "Documentary extracts from journals and logbooks relating to the circum-Antarctic expeditions of Cook (1772–75) and Bellingshausen (1819–21), Version 1.0",
+      "year": 2024,
+      "venue": "NERC EDS UK Polar Data Centre, bell_ice_data.csv",
+      "url": "https://doi.org/10.5285/bcbc7d2e-4e75-43ad-8d9c-a3a3bd4fb013",
+      "access": "Open Government Licence v3.0. Journal-derived observational dataset; occasional missing positions are interpolated without a per-row flag. Dates were advanced 12 days from Old Style. Date-line correction is separately noted at 17 February 1821."
+    },
+    {
+      "id": "deep-sp-bell-method",
+      "authors": "Grant R. Bigg",
+      "title": "The Southern Ocean marine ice record of the early historical, circum-Antarctic voyages of Cook and Bellingshausen",
+      "year": 2024,
+      "venue": "Climate of the Past 20, 2045–2054, section 2.1",
+      "url": "https://cp.copernicus.org/articles/20/2045/2024/",
+      "access": "CC BY 4.0. Methodological reference for the associated BAS data; no claim that interpolated coordinates are recovered exact fixes."
+    },
+    {
+      "id": "deep-sp-bougainville",
+      "authors": "Louis-Antoine de Bougainville; translated by Johann Reinhold Forster",
+      "title": "A Voyage Round the World",
+      "year": 1772,
+      "venue": "London: J. Nourse and T. Davies; participant narrative, Darwin Online transcription",
+      "url": "https://darwin-online.org.uk/converted/Ancillary/BeagleLibrary/1772_Bougainville_A745.html",
+      "access": "Public-domain primary narrative. Page numbers refer to the 1772 English edition. Dates retain the published ship-calendar convention; the narrative records a one-day adjustment at Mauritius."
+    },
+    {
+      "id": "deep-sp-dampier",
+      "authors": "William Dampier",
+      "title": "A New Voyage Round the World",
+      "year": 1697,
+      "venue": "London: James Knapton; participant narrative, Darwin Online transcription",
+      "url": "https://darwin-online.org.uk/converted/Ancillary/BeagleLibrary/1697_Dampier_A762.html",
+      "access": "Public-domain primary narrative. Dates retain the English account convention. Chapter XIV, pp. 376–378 discusses the difference between ship and local calendar days."
+    },
+    {
+      "id": "deep-sp-macquarie",
+      "authors": "Australian Antarctic Program; account by David Dodd",
+      "title": "This Week on Macquarie Island: 4 December 2020",
+      "year": 2020,
+      "venue": "Australian Antarctic Division, Russia’s Antarctic Expedition to Macquarie Island",
+      "url": "https://www.antarctica.gov.au/news/stations/macquarie-island/2020/this-week-on-macquarie-island-3-december-2020/",
+      "access": "Open access"
+    },
+    {
+      "id": "final-gap-amh-futuna",
+      "authors": "Atlas of Mutual Heritage; Koninklijke Bibliotheek collection",
+      "title": "Schouten and Le Maire at the Hoorn Islands",
+      "referenceType": "web-resource",
+      "venue": "Atlas of Mutual Heritage, object 551 J 49, no. 25",
+      "url": "https://www.atlasofmutualheritage.nl/page/11100/schouten-and-le-maire-at-the-hoorn-islands",
+      "access": "Custodian interpretation identifies the Hoorn Islands as Futuna and Alofi. Used for modern place identification; the dated sighting is anchored in Purchas p. 263. Accessed 18 November 2026; web publication year not supplied.",
+      "year": null
+    },
+    {
+      "id": "final-gap-amh-tafahi",
+      "authors": "Atlas of Mutual Heritage; Koninklijke Bibliotheek collection",
+      "title": "The Eendracht at the Cocos Island (2)",
+      "referenceType": "web-resource",
+      "venue": "Atlas of Mutual Heritage, object pflt 2494, after p. 44",
+      "url": "https://www.atlasofmutualheritage.nl/page/10962/the-eendracht-at-the-cocos-island-2",
+      "access": "Custodian interpretation of the 1622 voyage illustration; used only to identify historical Cocos Island with Tafahi. Dates come from the participant account, not a conflation of the two texts. Accessed 18 November 2026; web publication year not supplied.",
+      "year": null
+    },
+    {
+      "id": "final-gap-schouten-purchas",
+      "authors": "Anonymous participant account attributed to Willem Corneliszoon Schouten; Samuel Purchas (compiler)",
+      "title": "The Relation of a Wonderfull Voiage made by William Cornelison Schouten of Horne, in Hakluytus Posthumus or Purchas His Pilgrimes, volume II",
+      "year": 1905,
+      "referenceType": "book",
+      "venue": "James MacLehose and Sons, Glasgow; reprint of Purchas 1625 / Cornell University Library scan, Internet Archive",
+      "url": "https://archive.org/details/cu31924065997144",
+      "access": "Public-domain first-person voyage narrative, printed pp. 232–284. Full account OCR inspected, with the American passage checked against the transcribed excerpt at https://whalesite.org/RV/TIERRA/TEXTS/SCHOUTEN.htm. The published account is edited and abridged; authorship is not treated as an unmediated autograph diary. Dates retain the numerical dates printed in the source. The account explicitly corrects its circumnavigation day count at Jacatra; no extra calendar conversion has been applied.",
+      "publisher": "James MacLehose and Sons",
+      "volume": "II",
+      "pages": "232–284",
+      "edition": "1905 reprint of the 1625 compilation"
+    },
+    {
+      "id": "final-gap-slocum",
+      "authors": "Joshua Slocum",
+      "title": "Sailing Alone Around the World",
+      "year": 1900,
+      "referenceType": "book",
+      "venue": "The Century Co., New York / Project Gutenberg ebook 6317",
+      "url": "https://www.gutenberg.org/files/6317/6317-h/6317-h.htm",
+      "access": "Public-domain first-person account, chapters II–XX, read in full-text HTML. Working public Gutenberg mirrors: https://dev.gutenberg.org/cache/epub/6317/pg6317-images.html and https://gutenberg.pglaf.org/6/3/1/6317/6317-h/6317-h.htm. Dates are those printed by Slocum, with explicit relative-day derivations identified individually. Conflicts at Gibraltar and Ascension are preserved rather than silently corrected.",
+      "publisher": "The Century Co.",
+      "edition": "Project Gutenberg transcription of the public-domain book"
+    },
     {
       "id": "gap-am-anhaica",
       "authors": "Florida Division of Historical Resources",

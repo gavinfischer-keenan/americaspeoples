@@ -1,6 +1,6 @@
 {
   "name": "americas-peoples",
-  "version": "0.28.0",
+  "version": "0.29.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -16,10 +16,12 @@
     "benchmark": "node --import tsx scripts/benchmark-scalability.ts"
   },
   "dependencies": {
+    "d3-contour": "4.0.2",
     "d3-geo": "3.1.1",
     "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
   },
   "devDependencies": {
+    "@types/d3-contour": "3.0.6",
     "@types/d3-geo": "3.1.0",
     "@types/node": "24.0.0",
     "esbuild": "0.25.5",

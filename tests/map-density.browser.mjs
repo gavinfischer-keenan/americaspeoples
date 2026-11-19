@@ -60,6 +60,24 @@ try{
     metrics.push({name,year,marks:paused.marks,crowded:paused.crowded,represented:paused.ids.length});
   }
   await page.evaluate(()=>{map.focusRegion([-91,34],1);setDate(1492);});
+  // The user's Fishing Bridge example must describe the places in the cluster.
+  await page.evaluate(()=>{map.focusRegion([-110,44],1);setDate(-1165);mode(false);});
+  const fishingId=await page.evaluate(()=>records.find(r=>/Fishing Bridge/.test(r.location?.name??'')).id);
+  const fishingSelector=await page.evaluate(id=>{
+    const node=[...document.querySelectorAll('[data-member-ids][tabindex="0"]')].find(el=>JSON.parse(el.dataset.memberIds).includes(id));
+    if(!node)return null;node.setAttribute('data-fishing-check','true');return '[data-fishing-check]';
+  },fishingId);
+  assert.ok(fishingSelector,'Fishing Bridge has a selectable map feature');
+  await page.locator(fishingSelector).focus();
+  const fishingTip=page.getByRole('tooltip');
+  await fishingTip.waitFor({state:'visible'});
+  assert.doesNotMatch(await fishingTip.innerText(),/\d+ records|in their evidence window|inspect the members/);
+  assert.ok((await fishingTip.innerText()).length>80,'Preview contains a substantive place description');
+  assert.equal(await page.getByRole('tooltip').count(),1);
+  assert.equal(await page.locator(fishingSelector+' title').count(),0,'No duplicate native SVG title');
+  await page.screenshot({path:out+'/fishing-bridge-preview.png'});
+  await page.keyboard.press('Escape');
+  await page.evaluate(()=>{map.focusRegion([-91,34],1);setDate(1492);});
   const single=page.locator('.site:not([data-density-group])[tabindex="0"]').first();
   await single.press('Enter');
   const inspected=await page.evaluate(()=>inspect());

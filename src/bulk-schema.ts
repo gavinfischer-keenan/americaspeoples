@@ -1,6 +1,10 @@
 /** Public spreadsheet contract. Headers are case-sensitive; column order is flexible. */
 export const BULK_SCHEMA_VERSION = 2;
-export const MAX_SUPPORT_ROWS = 10000;
+export const MAX_SUPPORT_ROWS = 30000;
+// Measured 11,010-record catalogue workbook: 5.35 MB ZIP / 42.75 MB expanded.
+// Finite independent limits still apply before spreadsheet parsing.
+export const MAX_WORKBOOK_BYTES = 10_000_000;
+export const MAX_WORKBOOK_EXPANDED_BYTES = 60_000_000;
 export const BULK_HEADERS = {
   Evidence: [
     "start_year",

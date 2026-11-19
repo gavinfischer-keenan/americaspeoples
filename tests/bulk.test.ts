@@ -1,13 +1,13 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { tablesToPackage } from "../src/bulk-import";
-import { BULK_HEADERS, type BulkTables } from "../src/bulk-schema";
+import { BULK_HEADERS, MAX_SUPPORT_ROWS, type BulkTables } from "../src/bulk-schema";
 import { inspectImport, mergeImport } from "../src/proposals";
 import { formatReference } from "../src/citations";
 import { fixture } from "./fixtures";
-test('supporting tables retain a finite 10,000-row limit',()=>{
- const t=tables();t.ClaimSources=Array.from({length:10001},()=>({...t.ClaimSources[0]}));
- assert.throws(()=>tablesToPackage(t,[]),/10000/);
+test('supporting tables retain a finite row limit',()=>{
+ const t=tables();t.ClaimSources=Array.from({length:MAX_SUPPORT_ROWS+1},()=>({...t.ClaimSources[0]}));
+ assert.throws(()=>tablesToPackage(t,[]),new RegExp(String(MAX_SUPPORT_ROWS)));
 });
 export function tables(): BulkTables {
   const blank = (name: keyof typeof BULK_HEADERS) =>

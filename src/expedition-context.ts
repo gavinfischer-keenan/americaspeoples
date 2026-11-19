@@ -23,11 +23,16 @@ export function expeditionsHTML(entries:readonly ActiveExpedition[]):string{
 export interface ExpeditionActivity {id:string;name:string;start:string;end:string;region:string;note:string;sourceIds:string[];relatedVoyageIds?:string[]}
 function periodBound(value:string,end=false):number{
  if(/^\d{4}$/.test(value))return Number(value)+(end?1:0);
+ if(/^\d{4}-\d{2}-\d{2}$/.test(value)){
+  const start=dateValue(value);if(!Number.isFinite(start)||!end)return start;
+  const next=new Date(value+'T00:00:00Z');next.setUTCDate(next.getUTCDate()+1);
+  return dateValue(next.toISOString().slice(0,10));
+ }
  if(!/^\d{4}-(0[1-9]|1[0-2])$/.test(value))return NaN;
  const [y,m]=value.split('-').map(Number);
  return end?(m===12?y+1:dateValue(`${y}-${String(m+1).padStart(2,'0')}-01`)):dateValue(value+'-01');
 }
-/** A coarse window establishes context within the period, never a daily location. */
+/** A dated window establishes activity, never an inferred daily location. */
 export function activityDuring(activities:readonly ExpeditionActivity[],date:number,precise:readonly ActiveExpedition[]=[]):ExpeditionActivity[]{
  return activities.filter(a=>date>=periodBound(a.start)&&date<periodBound(a.end,true)&&!a.relatedVoyageIds?.some(id=>precise.some(e=>e.id===id&&e.coordinates!==null)));
 }
@@ -35,5 +40,5 @@ export function activityWindows(activities:readonly ExpeditionActivity[]):{start
  return activities.map(a=>({start:periodBound(a.start),end:periodBound(a.end,true)})).filter(w=>Number.isFinite(w.start)&&Number.isFinite(w.end)&&w.end>w.start);
 }
 export function expeditionActivityHTML(entries:readonly ExpeditionActivity[],sources:readonly {id:string;title:string;url:string}[]):string{
- return entries.map(e=>`<details class="expedition-period"><summary>${esc(e.name)}<span>Recorded ${esc(e.start)}${e.end!==e.start?'–'+esc(e.end):''} · ${e.start.length>4||e.end.length>4?'month':'year'} precision</span></summary><p>${esc(e.region)}. ${esc(e.note)}</p><p>Dates establish the period; the position on this particular day is not reconstructed.</p>${e.sourceIds.map(id=>{const s=sources.find(s=>s.id===id);return s&&/^https:\/\/[^\s]+$/.test(s.url)?`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)} ↗</a>`:'';}).join(' · ')}</details>`).join('');
+ return entries.map(e=>`<details class="expedition-period"><summary>${esc(e.name)}<span>Recorded ${esc(e.start)}${e.end!==e.start?'–'+esc(e.end):''} · ${e.start.length>7||e.end.length>7?'day':e.start.length>4||e.end.length>4?'month':'year'} precision</span></summary><p>${esc(e.region)}. ${esc(e.note)}</p><p>Dates establish the period; the position on this particular day is not reconstructed.</p>${e.sourceIds.map(id=>{const s=sources.find(s=>s.id===id);return s&&/^https:\/\/[^\s]+$/.test(s.url)?`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)} ↗</a>`:'';}).join(' · ')}</details>`).join('');
 }

@@ -1,17 +1,17 @@
 # Trade and exchange, 0–1200 CE
 
-The shared map now contains **38 mapped exchange observations** intersecting this period, compared with **7** in v0.23.1. These counts exclude founding migrations. They count evidence records; multiple records can describe phases or goods on one connection.
+The shared map now contains **52 mapped exchange observations** intersecting this period, compared with **7** in v0.23.1. These counts exclude founding migrations. They count evidence records; multiple records can describe phases or goods on one connection.
 
 Shared, explicitly classified exchange observations with line geometry and at least one supported activity window intersecting map years 0–1200. Founding migrations are excluded even where they use the same rendering layer. Multiple materials or dates may describe the same connection; counts are observations, not independent routes, traffic volume or evidence of continuous voyages. Samples use the same activity-window logic as the map. The point inventory also indexes explicitly reviewed exchange claims within settlement records; associated-context dates are identified separately from direct dates of traded objects.
 
 | Map year | Before | Now |
 |---|---:|---:|
-| 1 BCE (map year0) | 2 | 5 |
-| 250 CE | 1 | 8 |
-| 500 CE | 1 | 8 |
-| 750 CE | 0 | 9 |
-| 1000 CE | 2 | 15 |
-| 1150 CE | 2 | 10 |
+| 1 BCE (map year0) | 2 | 6 |
+| 250 CE | 1 | 9 |
+| 500 CE | 1 | 12 |
+| 750 CE | 0 | 14 |
+| 1000 CE | 2 | 21 |
+| 1150 CE | 2 | 11 |
 | 1200 CE | 3 | 12 |
 
 Source-to-find connections show where materials traveled. A schematic line does not establish a direct journey, a surveyed road or an annual trading schedule. Activity windows follow the dated assemblages or historical phases cited in each record. An endpoint means the last included evidence unless a source independently supports cessation. Later Inca imperial roads are not assigned to earlier centuries.
@@ -50,6 +50,20 @@ Source-to-find connections show where materials traveled. A schematic line does 
 - [Chinese tradeware at Sembiran and Pacung](../index.html#review/trade-pacific-china-bali-shore) — Chinese ceramics span the eighth through twelfth centuries. Shoreline charcoal ranges include 780–984 and 876–989 cal CE, and inland charcoal immediately below the ash 1020–1150 cal CE.. Different ceramic classes establish recurring imports over several periods. The display uses approximate bounds and does not assign annual traffic or exact ports.
 - [Changsha ceramics aboard the ship lost at Belitung](../index.html#review/trade-pacific-changsha-belitung) — A Changsha bowl bears the date 826 CE. Proposed sailing shortly after 826, with other ceramic comparisons allowing the 840s.. One shipment is documented. The range estimates when it may have travelled and foundered.
 - [Banks Islands obsidian in Tikopia’s Sinapupu and early Tuakamali deposits](../index.html#review/trade-pacific-banks-tikopia-obsidian) — McCoy et al.’s Sinapupu phase estimate ca. 1854 ± 214 to 765 ± 54 cal BP. Early Tuakamali sample UCIAMS-163456 from TK-1 has modeled 1166–1214 cal CE.. The dated layers establish movement of obsidian in successive periods. The displayed phases do not indicate how often travellers moved the material.
+- [Pacific black abalone ornaments reached Chaco Canyon](../index.html#review/trade-deep-na-pacific-abalone-chaco) — Mathien Table 2: Haliotis cracherodii pendant FS 2802 from Pithouse C fill, 900–1000 CE; FS 4772 from Kiva D balk 1, 1000–1040 CE.. The last boundary limits the dated evidence represented here; it is not an independently demonstrated end to exchange.
+- [Gulf-region shell pendants in a Chaco Canyon village](../index.html#review/trade-deep-na-gulf-shell-chaco) — Mathien Table 2: Glycymeris gigantea pendant FS 5077, 900–1000 CE; FS 5956, 920–1120 CE.. The last boundary limits the dated evidence represented here; it is not an independently demonstrated end to exchange.
+- [Casa Diablo obsidian reached San Miguel Island](../index.html#review/trade-deep-na-casa-diablo-san-miguel) — SMI-528 site context, 1480–1120 cal yr BP; projectile point catalog 4729 assigned to Casa Diablo (Lookout Mountain).. The last boundary limits the dated evidence represented here; it is not an independently demonstrated end to exchange.
+- [Southern California shell reached the inland East Bay](../index.html#review/trade-deep-na-southern-shell-santa-rita) — G2b saucer bead CA-ALA-413, CAMS-078740: directly dated 1617–1474 cal BP at 1σ, reported by Burns et al. 2023 p. 44.. The last boundary limits the dated evidence represented here; it is not an independently demonstrated end to exchange.
+- [Georgia cooking vessels in Florida’s Atlantic-coast ceremonies](../index.html#review/trade-deep-na-altamaha-st-johns-pottery) — Late Swift Creek phase, approximately 500–800 CE, as defined on p. 2601; nonlocal G-2 vessels in lower St. Johns mortuary contexts.. The last boundary limits the dated evidence represented here; it is not an independently demonstrated end to exchange.
+- [St. Martin stone supplied axe making on St. Eustatius](../index.html#review/trade-deep-am-stmartin-golden-rock) — Golden Rock Early Ceramic B occupation, cal CE 450–850.. Last evidence is an archaeological context boundary, not proof of cessation. This overlay includes material procurement where exchange versus personal transport is unresolved.
+- [River-gravel stone reaches the Macdonald River shelter](../index.html#review/trade-deep-pa-nepean-macdonald) — MR0031:LevelG2900–2750 cal BP; MR0023:LevelC1700–1150 cal BP. Disjoint windows.. Latest context boundary is not demonstrated cessation.
+- [Malabar pepper in a Berenike storage jar](../index.html#review/trade-deep-ae-berenike) — Jar buried in a courtyard floor in the late first century BCE or early first century CE.. Latest evidence boundary does not establish cessation.
+- [Eastern cloves at Mantai](../index.html#review/trade-deep-ae-mantai) — Mantai Period 10, approximately 900–1100 CE.. Latest evidence boundary does not establish cessation.
+- [Mesopotamian glass beads at Komani](../index.html#review/trade-deep-ae-komani) — Ninth- to tenth-century Komani burial contexts.. Latest evidence boundary does not establish cessation.
+- [Eastern glass reaching Gao Saney workshops](../index.html#review/trade-deep-ae-gao) — Gao Saney Lower eighth–ninth and Upper ninth–tenth century contexts.. Latest evidence boundary does not establish cessation.
+- [Chinese silk in a Palmyra tomb](../index.html#review/trade-deep-ae-palmyra) — Museum catalogue date: approximately 100 CE.. Latest evidence boundary does not establish cessation.
+- [Butternuts reached the Norse site from farther south](../index.html#review/deep-no-butternut-newfoundland) — Norse archaeological context at L'Anse aux Meadows, broadly early eleventh century. A schematic material-source region to archaeological find-region connection. It is not proof of a direct merchant journey or a particular barter transaction.
+- [Arctic walrus ivory reached twelfth-century Kyiv](../index.html#review/deep-no-greenland-walrus-kyiv) — Mid- and late-twelfth-century contexts, shown conservatively at century resolution. A source-region-to-recipient schematic. The line crosses intervening lands only as an evidence connection, not as a literal sea or river track; no inferred intermediate node is asserted.
 - [Northern Tongan volcanic glass at Tikopia](../index.html#review/tikopia-mccoy2020-tongan-glass) — Published approximate import onset 765 cal BP (±54); independent modeled Tuakamali phase onset 1158–1212 cal CE (95% HPD).. The window marks uncertainty around the emergence of Tongan-source imports. The precise arrival of each piece and the end of contact are unknown.
 - [Ixtepeque → Los Naranjos — material provenance](../index.html#review/r8v-ixtepeque-naranjos) — Combined sample contexts800BC–AD550. Access limitations appear in the bibliography. Geographic anchors are approximate. No resident population, ancient language identity or exact transport itinerary is inferred.
 - [Colombia → central Panama — emerald exchange](../index.html#review/r8v-colombia-panama-emeralds) — Recipient contexts ca.AD800–1000. Access limitations appear in the bibliography. Geographic anchors are approximate. No resident population, ancient language identity or exact transport itinerary is inferred.
@@ -67,3 +81,7 @@ Source-to-find connections show where materials traveled. A schematic line does 
 - [Andes–Amazonia — prestige-feather and state-formation hypothesis](../index.html#review/r11v-amazon-feathers-model) — check the source chronology and provenance before assigning endpoints.
 - [Ancash highlands — Recuay / Moche-Gallinazo interaction](../index.html#review/r11v-recuay-coast-interaction) — check the source chronology and provenance before assigning endpoints.
 - [Boca do Rio — a village on wooden piles: exchange find](../index.html#review/eb-ne-boca-do-rio) — A small pendant with two perforations was recovered in the central cluster of piles. Its stone is tremolite-actinolite nephrite, for which the study found no known source in Maranhão. The stone or finished pendant most likely came from elsewhere. The exact source and means of transfer remain unresolved. The riverbed find is associated with the village layout and has no direct calendar date. **Associated context:** Beta-406836, wooden pile: 889–1015 cal CE (2023 Table 2). Navarro’s earlier Table 1 gives 885–995 cal CE for the same sample. This is part of the same village record, not an additional locality or a dated period of continuous trade.
+
+## Earlier exchange
+
+The broader through-1200 inventory includes BCE evidence: **72 mapped exchange observations**, including **27** with a BCE window. The [complete machine-readable audit](../trade-pre1200-audit.json) lists their canonical IDs. Later Mexica tribute and Inka transport remain at their supported fifteenth- and sixteenth-century dates.

@@ -21,7 +21,7 @@ test('three land and sovereignty movies have ordered sourced chapters and live m
    assert.ok(rows.some(r=>s.recordIds.includes(r.id)&&historyState(r,s.year)==='active'&&(r.location||r.overlay?.geometry)),s.id+' needs dated mapped evidence');
   }
  }
- assert.equal(topics.length,27);assert.equal(futureDives.length,0);
+ assert.equal(topics.length,28);assert.equal(futureDives.length,0);
 });
 test('later Hawaii evidence is isolated, audited and linked back to earlier human context',()=>{
  const later=dataset.records.filter(r=>(r.time.end??-Infinity)>1934);

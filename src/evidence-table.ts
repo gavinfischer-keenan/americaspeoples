@@ -51,7 +51,7 @@ export class EvidenceTable {
    <p class="lead">Occupation, occurrences, movements, and events. Open a row for its full review.</p></div><a class="button primary" href="#new">+ Suggest new evidence</a></div>
    <div class="table-filters"><input id="table-search" type="search" maxlength="200" aria-label="Search evidence" placeholder="Search places, cultures, claims…" value="${esc(s.search)}">
    <label>Period<select id="period" aria-label="Table period"><option value="all">All records</option><option value="current">At selected year</option></select></label>
-   <label>Type<select id="type-filter" aria-label="Record type filter">${["all", "occupation", "occurrence", "movement", "event", ...Object.keys(OVERLAY_LABELS)].map((type) => `<option value="${type}">${esc(OVERLAY_LABELS[type as keyof typeof OVERLAY_LABELS] ?? type)}</option>`).join("")}</select></label>
+   <label>Type<select id="type-filter" aria-label="Record type filter">${["all", "wreck", "occupation", "occurrence", "movement", "event", ...Object.keys(OVERLAY_LABELS)].map((type) => `<option value="${type}">${esc(type==='wreck'?'Shipwrecks':OVERLAY_LABELS[type as keyof typeof OVERLAY_LABELS] ?? type)}</option>`).join("")}</select></label>
    <label>Sort<select id="sort" aria-label="Sort evidence"><option value="oldest">Earliest first</option><option value="newest">Latest first</option><option value="name">Name</option></select></label>
    <label class="check"><input id="table-preview" type="checkbox" ${this.inputs.preview() ? "checked" : ""}> Preview suggestions</label></div>
    <p id="table-caption" class="muted" role="status"></p><div class="table-scroll"><table><thead><tr><th>Dates / occupation</th><th>Evidence &amp; location</th><th>Culture / people</th><th>Type</th><th>Evidence status</th><th>Supporting page</th></tr></thead><tbody></tbody></table></div>
@@ -135,7 +135,7 @@ export class EvidenceTable {
     if (this.disposed || this.loading) return;
     const { state: s } = this;
     let rows = this.inputs.rows().filter((r) => {
-      if (s.type !== "all" && (r.overlay?.kind ?? r.type) !== s.type)
+      if (s.type==='wreck' ? r.history?.kind!=='wreck' : s.type !== "all" && (r.overlay?.kind ?? r.type) !== s.type)
         return false;
       if (!s.search.trim()) return true;
       if (!r.proposalKey) return !!this.ids?.has(r.id);

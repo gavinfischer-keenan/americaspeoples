@@ -6,7 +6,7 @@ import history from "../data/history-records.json";
 import research from "../data/research-proposals.json";
 import { dataset } from "../src/published-data";
 import { activeRecords } from "../src/time";
-const expansion = readdirSync("data").filter(name=>name.endsWith("-expansion-records.json")||["shield-aleutian-local-records.json","coming-soon-b-topic-evidence-records.json","coming-soon-a-topic-evidence-records.json","topic-evidence-records.json","pacific-topic-evidence-records.json","pacific-topic-context-records.json","community-topic-evidence-records.json","community-topic-context-records.json","sovereignty-topic-context-records.json","sovereignty-topic-evidence-records.json","remaining-topic-context-records.json","remaining-topic-evidence-records.json"].includes(name)).flatMap(name=>JSON.parse(readFileSync("data/"+name,"utf8")).records);
+const expansion = readdirSync("data").filter(name=>name.endsWith("-expansion-records.json")||["ancient-shipwreck-records.json","shield-aleutian-local-records.json","coming-soon-b-topic-evidence-records.json","coming-soon-a-topic-evidence-records.json","topic-evidence-records.json","pacific-topic-evidence-records.json","pacific-topic-context-records.json","community-topic-evidence-records.json","community-topic-context-records.json","sovereignty-topic-context-records.json","sovereignty-topic-evidence-records.json","remaining-topic-context-records.json","remaining-topic-evidence-records.json"].includes(name)).flatMap(name=>JSON.parse(readFileSync("data/"+name,"utf8")).records);
 test("all author research ships by default without changing its claims or citations", () => {
   assert.equal(
     dataset.records.length,

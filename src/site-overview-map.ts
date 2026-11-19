@@ -157,8 +157,6 @@ export function createSiteAreaOverview(guide:SiteGuide,records:readonly Evidence
 
 /** Whole-area references come first, with the building-scale view retained. */
 export function createGuideMaps(guide:SiteGuide,records:readonly EvidenceRecord[],guides:readonly SiteGuide[]):GuideMap[]{
- const close=createSiteOverview(guide,records,guides);if(!close)return [];
- const area=createSiteAreaOverview(guide,records,guides);
  const configured=areaExtents.maps.filter(m=>m.guideId===guide.id).map(config=>{
   const [w,s,e,n]=config.bounds;
   const height=Math.round(1200/config.aspect),aspect=1200/height;
@@ -174,6 +172,9 @@ export function createGuideMaps(guide:SiteGuide,records:readonly EvidenceRecord[
   const points=collect(nearby,false).map(({local:_local,...point})=>point);
   return {id:config.id,title:config.title,bounds,pixels:[1200,height] as [number,number],points,omittedPoints:0,scopeNote:config.scope};
  });
+ if(guide.kind==='route')return configured;
+ const close=createSiteOverview(guide,records,guides);if(!close)return [];
+ const area=createSiteAreaOverview(guide,records,guides);
  if(configured.length)return [...configured,close];
  return area&&area.points.length>close.points.length?[area,close]:[close];
 }

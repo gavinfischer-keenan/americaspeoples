@@ -6,6 +6,7 @@ import { importWorkbook } from "../src/xlsx-import";
 import data from "../data/evidence.json";
 import historical from './fixtures/evidence-0.2.2.json';
 import { MAX_PROPOSALS } from '../src/proposals';
+import {MAX_WORKBOOK_BYTES,MAX_WORKBOOK_EXPANDED_BYTES} from '../src/bulk-schema';
 import type { Dataset } from "../src/model";
 const records = (data as Dataset).records;
 const template = async () =>
@@ -71,7 +72,7 @@ test("macro files, expanded bombs and unexpected worksheets cannot enter the app
     /Macro/,
   );
   delete parts["xl/vbaProject.bin"];
-  parts["huge.xml"] = new Uint8Array(20_000_001);
+  parts["huge.xml"] = new Uint8Array(MAX_WORKBOOK_EXPANDED_BYTES+1);
   await assert.rejects(
     () => importWorkbook(buffer(zipSync(parts)), records),
     /expanded/,
@@ -88,13 +89,13 @@ test("macro files, expanded bombs and unexpected worksheets cannot enter the app
     /Unexpected worksheet/,
   );
   await assert.rejects(
-    () => importWorkbook(new ArrayBuffer(5_000_001), records),
-    /5 MB/,
+    () => importWorkbook(new ArrayBuffer(MAX_WORKBOOK_BYTES+1), records),
+    /10 MB/,
   );
 });
 test("a forged ZIP size never reaches the second parser as an original compressed stream", async () => {
   const parts = unzipSync(await template());
-  parts["huge.xml"] = new Uint8Array(21_000_000);
+  parts["huge.xml"] = new Uint8Array(MAX_WORKBOOK_EXPANDED_BYTES+1_000_000);
   const bytes = zipSync(parts),
     view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
   let patched = false;

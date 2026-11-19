@@ -87,6 +87,12 @@ export function historyLabel(record: MapRecord, year: number): string {
 
 export function historyOpacity(record: MapRecord, year: number): number | null {
   const state = historyState(record, year);
+  if(record.history?.kind==='wreck'&&record.time.end!==null&&(state==='active'||state==='loss')){
+    // Editorial visual decay only: every loss remains in the historical layer.
+    // For a date range, fading starts after its latest supported loss date.
+    const peak=(record.time.approximate||record.time.start!==record.time.end) ? .75 : 1;
+    return .2+(peak-.2)*Math.exp(-Math.max(0,year-record.time.end)/25);
+  }
   if (
     record.history?.kind === "settlement" &&
     state === "active" &&

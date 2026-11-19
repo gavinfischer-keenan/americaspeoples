@@ -185,12 +185,12 @@ Identical workbook content produces stable bulk proposal identities: repeat impo
 
 | Limit | Maximum |
 | --- | --- |
-| XLSX compressed file | 5 MB |
-| XLSX decompressed contents | 20 MB |
-| Evidence or Overlays data rows in XLSX | 5,000 per sheet; 5,000 proposals total |
-| Data rows in each supporting sheet | 10,000 each in Claims, References, and ClaimSources |
+| XLSX compressed file | 10 MB |
+| XLSX decompressed contents | 60 MB |
+| Evidence or Overlays data rows in XLSX | 12,000 per sheet; 12,000 proposals total |
+| Data rows in each supporting sheet | 30,000 each in Claims, References, and ClaimSources |
 | Characters in one cell | 32,767 |
-| Resulting native proposal JSON package | 32 MB UTF-8, at most 5000 proposals |
+| Resulting native proposal JSON package | 96 MB UTF-8, at most 12000 proposals |
 | Per-record claims and sources | 100 of each |
 | Source mappings per claim | 100 |
 
@@ -228,7 +228,7 @@ Use `forced-removal` for supported coerced displacement, with directed schematic
 
 `reach_radius_km` is an optional Overlays column used only with `overlay_type=cultural-reach`, `geometry_basis=schematic` and a Point center. It is an illustrative geographic envelope, not an established historical border. Population and reach columns are accepted without making older schema-1/schema-2 workbooks obsolete.
 
-Native JSON is bounded to 32 MB and 5000 proposals. Corrections preserve both the original and proposed record, so serialized size can be much larger than the visible spreadsheet. Release verification checks the complete current researched workbook; larger future contributions must still fit the documented limits. Compressed XLSX remains limited to 5 MB, expanded ZIP content to 20 MB, archive entries to 200, evidence/overlay rows to 5000 per sheet (5000 combined proposals total), supporting rows to 10000 per sheet, and columns to 100. Formula, macro, external-link, unsafe-URL and prototype-key checks remain enabled.
+Native JSON is bounded to 96 MB and 12000 proposals. Corrections preserve both the original and proposed record, so serialized size can be much larger than the visible spreadsheet. Release verification checks the complete current researched workbook; larger future contributions must still fit the documented limits. Compressed XLSX remains limited to 10 MB, expanded ZIP content to 60 MB, archive entries to 200, evidence/overlay rows to 12000 per sheet (12000 combined proposals total), supporting rows to 30000 per sheet, and columns to 100. Formula, macro, external-link, unsafe-URL and prototype-key checks remain enabled.
 
 
 Overlay `direction` is optional: `forward` follows the first endpoint to the last, `reverse` reverses it, `both` denotes two-way exchange, and `multidirectional` displays a four-headed symbol for broad dispersal. Set it only when the cited evidence supports that interpretation; a blank cell means direction is unspecified. Arrows are schematic cues, not reconstructed itineraries.

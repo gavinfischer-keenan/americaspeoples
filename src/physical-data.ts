@@ -5,6 +5,8 @@ import type { EvidenceRecord } from "./model";
 import { getJSON, pages, manifest } from "./client-data";
 import { LatestRequestCache } from "./latest-request-cache";
 import { openHazardDate, isUncertainHazard } from "./physical-rules";
+import {iceBracket,interpolateIce} from './ice-interpolation';
+import type {IceGeometry} from './ice-geometry';
 
 export type HazardEvent = (typeof hazardArchive.events)[number];
 type IceSnapshot = (typeof iceArchive.snapshots)[number];
@@ -28,7 +30,19 @@ const timeCache = new Map<string, Pick<EvidenceRecord, "time">[]>();
 const iceCache = new LatestRequestCache<IceSnapshot>((key) =>
   getJSON("/api/ice/" + key),
 );
-iceCache.subscribe(emit);
+let lastIceLoadState=iceCache.state();
+iceCache.subscribe(()=>{
+  const state=iceCache.state();
+  // Optional neighbor downloads do not change the visible frame. Avoid tearing
+  // down the SVG merely because a future animation frame became available.
+  if(state!==lastIceLoadState){lastIceLoadState=state;emit();}
+});
+export interface IceFrame {
+  scenario:string;ageCalBP:number;olderAge:number;youngerAge:number;
+  geometry:IceGeometry;interpolated:boolean;held:boolean;key:string;
+}
+const iceFrames=new Map<string,IceFrame>();
+let lastIceFrame:IceFrame|null=null;
 
 function changedCatalog() {
   physicalRevision++;
@@ -42,6 +56,7 @@ export function setPhysicalData(
   ice: typeof iceArchive,
 ) {
   hazardEvents = hazards.events;
+  iceFrames.clear();lastIceFrame=null;
   iceIndex = ice.snapshots.map((s) => ({
     scenario: s.scenario,
     ageCalBP: s.ageCalBP,
@@ -92,7 +107,7 @@ export function fullHazard(id: string): Promise<HazardEvent> {
 export function hazardDetail(id: string) {
   return fullHazards.get(id);
 }
-/** Source snapshots remain discrete. Never interpolate an ice boundary. */
+/** Nearest source anchor, for callers checking dataset availability. */
 export function iceTarget(year: number, scenario = "optimal") {
   const age = 1950 - year,
     all = iceIndex.filter((s) => s.scenario === scenario);
@@ -107,17 +122,34 @@ export function iceTarget(year: number, scenario = "optimal") {
   );
 }
 export function requestIce(year: number, scenario: string) {
-  const target = iceTarget(year, scenario);
-  iceCache.request(target ? target.scenario + "/" + target.ageCalBP : null);
+  const bracket=iceBracket(iceIndex,year,scenario);
+  if(!bracket){lastIceFrame=null;iceCache.request(null);lastIceLoadState=iceCache.state();return;}
+  const key=(age:number)=>scenario+'/'+age;
+  const ages=iceIndex.filter(s=>s.scenario===scenario).map(s=>s.ageCalBP);
+  const neighbors=[bracket.youngerAge-500,bracket.olderAge+500].filter(age=>ages.includes(age));
+  iceCache.requestGroup([...new Set([bracket.olderAge,bracket.youngerAge])].map(key),neighbors.map(key));
+  lastIceLoadState=iceCache.state();
 }
 export function iceLoadState() {
   return iceCache.state();
 }
-export function iceSnapshot(year: number, scenario = "optimal") {
-  const target = iceTarget(year, scenario);
-  return target
-    ? (iceCache.get(target.scenario + "/" + target.ageCalBP) ?? null)
-    : null;
+export function iceSnapshot(year: number, scenario = "optimal"):IceFrame|null {
+  const bracket=iceBracket(iceIndex,year,scenario);
+  if(!bracket){lastIceFrame=null;return null;}
+  const older=iceCache.get(scenario+'/'+bracket.olderAge),younger=iceCache.get(scenario+'/'+bracket.youngerAge);
+  if(!older||!younger)return lastIceFrame?.scenario===scenario?{...lastIceFrame,held:true}:null;
+  const fraction=Math.round(bracket.fraction*256)/256,key=`${scenario}/${bracket.olderAge}/${bracket.youngerAge}/${fraction}`;
+  let frame=iceFrames.get(key);
+  if(!frame){
+    frame={scenario,ageCalBP:bracket.olderAge-(bracket.olderAge-bracket.youngerAge)*fraction,olderAge:bracket.olderAge,youngerAge:bracket.youngerAge,
+      geometry:interpolateIce(older.geometry as IceGeometry,younger.geometry as IceGeometry,fraction),interpolated:bracket.olderAge!==bracket.youngerAge,held:false,key};
+    iceFrames.set(key,frame);if(iceFrames.size>24)iceFrames.delete(iceFrames.keys().next().value!);
+  }
+  lastIceFrame=frame;return frame;
+}
+export function iceFrameLabel(frame:IceFrame){
+ const ages=frame.interpolated?`${frame.olderAge.toLocaleString()}–${frame.youngerAge.toLocaleString()} cal BP`:`${frame.ageCalBP.toLocaleString()} cal BP`;
+ return `NADI-1 ${frame.scenario.toUpperCase()} · ${frame.interpolated?'Interpolated ice, approximate edge':'Dated reconstruction, approximate edge'} · ${ages}${frame.held?' · Previous outline retained while selected dates load':''}`;
 }
 function filterKey(hidden: ReadonlySet<string>, includeUncertain: boolean) {
   return [...hidden].sort().join(",") + "|" + includeUncertain;
