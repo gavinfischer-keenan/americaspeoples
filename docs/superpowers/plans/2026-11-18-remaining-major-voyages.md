@@ -44,4 +44,4 @@ Files: docs/voyage-coverage-review.md, README.md, docs/verification.md, package 
 - [x] Verify representative American, Arctic and Antarctic phases on the shared clock, including concurrent parties and untraced intervals.
 - [x] Perform fresh source/date/geography review and resolve material findings.
 - [x] Build and run the release gate; preserve successful results when only a narrow follow-up test needs adjustment.
-- [ ] Merge, publish, verify the live API/assets/browser and retain current plus previous release.
+- [x] Merge, publish, verify the live API/assets/browser and retain current plus previous release.

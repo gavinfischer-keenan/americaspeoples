@@ -21,7 +21,7 @@ try{
   await mkdir('test-results',{recursive:true});
   await page.goto(base+'/#movie');
   await page.getByRole('button',{name:'Pause',exact:true}).click();
-  for(const fragment of ['galiano','narvaez','mcclure','sverdrup','maud','gauss','charcot','filchner','ellsworth','clerke','gore']){
+  for(const fragment of ['galiano','narvaez','mcclure','sverdrup','maud','gauss','charcot','filchner','ellsworth-wyatt-earp-1933-1934','ellsworth-wyatt-earp-1934','clerke','gore']){
     const v=voyages.find(v=>v.id.includes(fragment));assert.ok(v,fragment);
     await choose(v);await progress(10000);
     assert.match(await page.locator('#voyage-position').innerText(),new RegExp('^'+v.stops.at(-1).departure));
