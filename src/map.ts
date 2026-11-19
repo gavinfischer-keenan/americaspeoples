@@ -10,15 +10,15 @@ import {routeEndpointLabels,routeDirectionLabels} from './map-route-labels';
 import { guideForRecord } from "./site-guides";
 import { populationAt } from "./population";
 import type { DisplayRecord } from "./model";
-import { temporalState, temporalOpacity, formatYear, timeLabel, isDisputed, END_YEAR } from "./time";
+import { temporalState, temporalOpacity, timeLabel, isDisputed, END_YEAR } from "./time";
 import { OVERLAY_LABELS } from "./overlays";
 import { esc, $ } from "./dom";
 import { disputeLevel } from "./disputes";
 import {placeGroups,placeKey} from "./map-place-groups";
 import { boundsInViewport } from "./map-filters";
 import { historyState, historyOpacity, historyLabel } from './history';
-import {iceSnapshot,eventsAt,oceanPaths,isUncertainHazard} from './physical';
-import {MapTooltip,tooltipForRecords,tooltipForHazard,type MapTooltipContent,type MapMode} from './map-tooltip';
+import {iceSnapshot,iceFrameLabel,eventsAt,oceanPaths,isUncertainHazard} from './physical';
+import {MapTooltip,tooltipForRecords,tooltipForPlaces,tooltipForHazard,type MapTooltipContent,type MapMode} from './map-tooltip';
 import { AtlasContext } from './atlas-context';
 export interface MapInteraction {mode:MapMode;playing:boolean;onPause:()=>void}
 export interface PhysicalOptions {ice:boolean; iceScenario:string; currents:boolean; winds:boolean; hidden:ReadonlySet<string>; uncertain:boolean}
@@ -494,7 +494,10 @@ export class MapView {
     const path=geoPath(this.projection);
     let background='';
     const ice=this.physical.ice?iceSnapshot(this.year,this.physical.iceScenario):null;
-    if(ice){const key=`${this.scope}-${ice.scenario}-${ice.ageCalBP}`;if(!this.icePaths.has(key))this.icePaths.set(key,path(ice.geometry as any)??'');background+=`<g class="ice-context"><title>NADI-1 ${ice.scenario}: ${ice.ageCalBP.toLocaleString()} cal BP snapshot, not an interpolated boundary. See Climate sources.</title><path d="${this.icePaths.get(key)}"/></g>`;}
+    let iceLabel=this.element.querySelector<HTMLDivElement>('.ice-context-label');
+    if(!iceLabel){iceLabel=document.createElement('div');iceLabel.className='ice-context-label';this.element.append(iceLabel);}
+    iceLabel.hidden=!ice;iceLabel.textContent=ice?iceFrameLabel(ice):'';
+    if(ice){const key=`${this.scope}-${ice.key}`;if(!this.icePaths.has(key)){this.icePaths.set(key,path(ice.geometry as any)??'');if(this.icePaths.size>24)this.icePaths.delete(this.icePaths.keys().next().value!);}background+=`<g class="ice-context"><desc>${esc(iceFrameLabel(ice))}. See Climate sources for interpolation method.</desc><path d="${this.icePaths.get(key)}"/></g>`;}
     for(const flow of oceanPaths){
       if(flow.kind==='wind'?!this.physical.winds:!this.physical.currents)continue;
       // Reference flows never change with the selected year, only projection.
@@ -529,6 +532,7 @@ export class MapView {
       overlays = "";
     const groupedKeys=new Set<string>();
     const anchors:DensityAnchor[]=[];
+    const wreckAnchors:DensityAnchor[]=[];
     const screenBounds=this.viewBounds(0);
     const journey=this.context.voyages.find(voyage=>voyage.id===this.context.options.voyageId);
     const journeyStops=new Set(journey?.stops.map(stop=>stop.recordId));
@@ -537,23 +541,26 @@ export class MapView {
       const p=this.projection(key.split(',').map(Number) as MapPoint);
       if(!p||!intersectsView([p,p],viewport))continue;
       const states=rows.map(row=>historyState(row,this.year));
-      anchors.push({key,x:p[0]*band,y:p[1]*band,inView:intersectsView([p,p],screenBounds),active:states.filter(state=>state==='active').length,
+      const onlyWrecks=rows.every(row=>row.history?.kind==='wreck');
+      (onlyWrecks?wreckAnchors:anchors).push({key,x:p[0]*band,y:p[1]*band,inView:intersectsView([p,p],screenBounds),active:states.filter(state=>state==='active').length,
         prior:states.filter(state=>['past-place','founded','loss'].includes(state)).length,
-        protectedPoint:rows.some(row=>(this.highlighted.has(row.id)||journeyStops.has(row.id)||row.id===focusedId))});
+        protectedPoint:rows.some(row=>(this.highlighted.has(row.id)||journeyStops.has(row.id)||row.id===focusedId||row.history?.kind==='wreck'&&this.interaction?.mode==='movie'&&row.time.end!==null&&this.year>=row.time.end&&this.year-row.time.end<2))});
     }
     let communities='';
     const spacing=(this.scale<6?52:this.scale<80?36:25)*({compact:1.3,standard:1,detailed:.76}[this.densityPreference]);
-    for(const group of densityGroups(anchors,spacing)){
+    for(const group of [...densityGroups(anchors,spacing),...densityGroups(wreckAnchors,spacing)]){
       if(group.members.length===1)continue;
       const rows=group.members.flatMap(member=>this.places.get(member.key)!);
+      if(rows.every(row=>row.history?.kind==='wreck'))group.key='wreck:'+group.key;
       for(const member of group.members)groupedKeys.add(member.key);
       groups.set(group.key,rows);
       const anchorRow=this.places.get(group.anchor.key)![0];
       const name=compactPlaceName((anchorRow.location?.name??anchorRow.title).split(/ [—–] /)[0]);
       const p=this.projection(group.anchor.key.split(',').map(Number) as MapPoint)!;
       const hasHabitation=rows.some(row=>historyState(row,this.year)==='active'&&row.history?.kind==='habitation'&&!placeChange(row.history,this.year));
-      const glyph=(hasHabitation&&this.interaction?.mode!=='explore')?'M-9,5V-2l4-4 4,4V5ZM0,5V-4l4-4 5,5V5Z':'M-8,1l4-4 4,4-4,4ZM0,-2l4-4 4,4-4,4Z';
-      communities+=`<g data-point="${group.key}" data-density-group="${group.members.length}" data-active="${group.active}" data-prior="${group.prior}" data-anchor-name="${esc(name)}" class="community-group ${group.active||this.interaction?.mode==='explore'?'':'community-context'}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><circle class="community-hit" r="15"/><path class="community-glyph" d="${glyph}"/><text class="community-count" x="10" y="-6">${group.members.length}</text><text class="community-name" x="18" y="11">Near ${esc(name)}</text></g>`;
+      const wrecks=rows.every(row=>row.history?.kind==='wreck');
+      const glyph=wrecks?'M0,-7V7 M-7,2Q0,13 7,2 M-3,-4H3 M-7,2V6 M7,2V6':(hasHabitation&&this.interaction?.mode!=='explore')?'M-9,5V-2l4-4 4,4V5ZM0,5V-4l4-4 5,5V5Z':'M-8,1l4-4 4,4-4,4ZM0,-2l4-4 4,4-4,4Z';
+      communities+=`<g data-point="${group.key}" data-density-group="${group.members.length}" data-active="${group.active}" data-prior="${group.prior}" data-anchor-name="${esc(name)}" class="community-group ${wrecks?'wreck-group':group.active||this.interaction?.mode==='explore'?'':'community-context'}" ${wrecks?`data-history-kind="wreck" style="opacity:${Math.max(...rows.map(row=>this.opacity(row)))}"`:''} transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><circle class="community-hit" r="15"/><path class="community-glyph" d="${glyph}"/><text class="community-count" x="10" y="-6">${group.members.length}</text><text class="community-name" x="18" y="11">${wrecks?'Losses near':'Near'} ${esc(name)}</text></g>`;
     }
     for (const [index, r] of this.records.entries()) {
       const locationKey=placeKey(r);
@@ -595,7 +602,7 @@ export class MapView {
         const shared=colocated??[r];
         if(shared[0]!==r)continue;
         const wreck=r.history.kind==='wreck';
-        arrows+=`<g data-overlay="${index}" data-record-id="${esc(r.id)}" data-history-kind="${r.history.kind}" class="history-marker history-${r.history.kind} ${this.interaction?.mode!=='explore'&&this.uncertainty(r)?'history-possible':''}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})" style="--history-color:${r.culture.color};opacity:${this.opacity(r)}"><title>${esc(r.title)} — ${esc(historyLabel(r,this.year))}</title><circle class="history-hit" r="13"/>${wreck?'<path class="wreck-symbol" d="M0,-7V7 M-7,2Q0,13 7,2 M-3,-4H3 M-7,2V6 M7,2V6"/><circle class="wreck-eye" cy="-9" r="2"/>':'<path class="settlement-symbol" d="M0,-7L7,0L0,7L-7,0Z"/>'}${shared.length>1?`<text class="site-count" x="10" y="-10">${shared.length}</text>`:''}${this.scale>=4||shared.some(x=>this.highlighted.has(x.id))?`<text class="history-place-label" x="12" y="4">${esc(compactPlaceName(r.location.name))}</text>`:''}</g>`;
+        arrows+=`<g data-overlay="${index}" data-record-id="${esc(r.id)}" data-history-kind="${r.history.kind}" class="history-marker history-${r.history.kind} ${this.interaction?.mode!=='explore'&&this.uncertainty(r)?'history-possible':''}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})" style="--history-color:${r.culture.color};opacity:${Math.max(...shared.map(row=>this.opacity(row)))}"><title>${esc(r.title)} — ${esc(historyLabel(r,this.year))}</title><circle class="history-hit" r="13"/>${wreck?'<path class="wreck-symbol" d="M0,-7V7 M-7,2Q0,13 7,2 M-3,-4H3 M-7,2V6 M7,2V6"/><circle class="wreck-eye" cy="-9" r="2"/>':'<path class="settlement-symbol" d="M0,-7L7,0L0,7L-7,0Z"/>'}${shared.length>1?`<text class="site-count" x="10" y="-10">${shared.length}</text>`:''}${this.scale>=4||shared.some(x=>this.highlighted.has(x.id))?`<text class="history-place-label" x="12" y="4">${esc(compactPlaceName(r.location.name))}</text>`:''}</g>`;
         continue;
       }
       if (r.overlay) {
@@ -667,7 +674,7 @@ export class MapView {
     }
     let markers = "", pastMarkers = "";
     for (const [key, rows] of groups) {
-      if(key.startsWith("cell:"))continue;
+      if(key.startsWith("cell:")||key.startsWith("wreck:cell:"))continue;
       const r = rows[0],
         p = this.projection([r.location!.lon, r.location!.lat]);
       if (!p) continue;
@@ -725,12 +732,7 @@ export class MapView {
             if(playing)feature.insertAdjacentHTML('beforeend',`<text class="change-caption" x="19" y="-12">${esc(caption)}</text>`);
           }
         }
-        content=feature.dataset.densityGroup?{
-          title:`Near ${feature.dataset.anchorName} · ${feature.dataset.densityGroup} mapped locations`,
-          summary:this.interaction?.mode==='explore'?`${rows.length} records from all periods. Open to inspect the members.`:
-            `${rows.length} records. ${feature.dataset.active} in their evidence window, ${feature.dataset.prior} earlier. Open to inspect the members.`,
-          dates:feature.dataset.change??(this.interaction?.mode==='explore'?'All-time Explore view':formatYear(this.year))
-        }:tooltipForRecords(rows,this.interaction?.mode??'movie',this.year);
+        content=feature.dataset.densityGroup?tooltipForPlaces(rows,this.interaction?.mode??'movie',this.year,feature.dataset.anchorName):tooltipForRecords(rows,this.interaction?.mode??'movie',this.year);
         key=(feature.dataset.context!==undefined?'context:':'records:')+JSON.stringify(rows.map(row=>JSON.stringify([row.id,row.proposalKey??null])).sort());
       }
       if(!content)continue;
@@ -747,7 +749,7 @@ export class MapView {
         feature.insertAdjacentHTML('beforeend',`<circle class="evidence-status-ring" r="${radius}" aria-hidden="true"/>`);
       }
       feature.dataset.mapTip=key;
-      feature.setAttribute('aria-label',content.title+'. '+content.summary+' '+content.dates);
+      feature.setAttribute('aria-label',content.title+'. '+content.summary+' '+(content.items??[]).map(item=>item.title+'. '+item.summary+' '+item.dates).join(' ')+' '+content.dates);
       // SVG titles also summon a browser tooltip over our catalog popup.
       // Preserve the symbol/provenance explanation without that second popup.
       for(const title of feature.querySelectorAll('title')){

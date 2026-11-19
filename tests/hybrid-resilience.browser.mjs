@@ -92,8 +92,14 @@ try{
   });
   await page.goto(origin+'/#map');await page.locator('.map-canvas > svg').waitFor();
   await page.locator('#toggle-layers').click();
+  await jump(page,18050);
+  await page.waitForFunction(()=>document.querySelector('.ice-context-label')?.textContent.includes('20,000'));
+  const previousOutline=await page.locator('.ice-context path').getAttribute('d');
   await jump(page,20050);await until(()=>held.has('22000'),'22000 snapshot was not held');
+  assert.equal(await page.locator('.ice-context path').getAttribute('d'),previousOutline,'retain the visible outline while a new bracket loads');
+  assert.match(await page.locator('.ice-context-label').innerText(),/Previous outline retained/);
   await jump(page,22050);await until(()=>held.has('24000'),'24000 snapshot was not held');
+  assert.equal(await page.locator('.ice-context path').getAttribute('d'),previousOutline);
   await jump(page,10000);
   assert.equal(started.includes('12000'),false,'A queued latest snapshot exceeded the two-request bound');
   held.get('22000')();
@@ -107,6 +113,8 @@ try{
   assert.equal(await page.locator('#ice-status').innerText(),latest);
   assert.doesNotMatch(latest,/could not load|retrying/i);
   assert.ok(await page.locator('.ice-context path').count()>0);
+  assert.doesNotMatch(await page.locator('.ice-context-label').innerText(),/retained/);
+  await jump(page,1877,'CE');assert.equal(await page.locator('.ice-context path').count(),0,'do not retain ice outside source coverage');
  });
 
  await scenario('search-debounce-cancellation',async(page,context)=>{

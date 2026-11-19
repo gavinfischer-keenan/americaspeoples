@@ -1,0 +1,3117 @@
+{
+  "records": [
+    {
+      "id": "wreck-graveyard-oriental",
+      "revision": 1,
+      "type": "event",
+      "title": "Oriental — 1862 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-oriental-place",
+        "name": "Pea Island, Outer Banks",
+        "lat": 35.72,
+        "lon": -75.49,
+        "precision": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice.",
+        "provenance": "Named loss locality in the linked institutional account."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1862,
+        "end": 1862,
+        "original": "1862-05-16",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1862-05-16"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "The Federal troop transport Oriental grounded in fog off Pea Island on 16 May 1862.",
+          "status": "well-supported",
+          "explanation": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-oriental",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "1862-05-16"
+            },
+            {
+              "sourceId": "graveyard-source-hatteras",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "1862-05-16"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-oriental",
+          "authors": "NOAA / East Carolina University",
+          "title": "NOAA / East Carolina University — 2010 Nearshore Expedition shipwrecks",
+          "year": 2010,
+          "venue": "NOAA / East Carolina University",
+          "url": "https://sanctuaries.noaa.gov/missions/2010ecu_nearshore/shipwrecks.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://sanctuaries.noaa.gov/missions/2010ecu_nearshore/shipwrecks.html",
+          "publisher": "NOAA / East Carolina University"
+        },
+        {
+          "id": "graveyard-source-hatteras",
+          "authors": "National Park Service",
+          "title": "National Park Service — Lost to the Perils of the Sea",
+          "year": 2018,
+          "venue": "National Park Service",
+          "url": "https://www.nps.gov/caha/learn/historyculture/shipwrecks.htm",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://www.nps.gov/caha/learn/historyculture/shipwrecks.htm",
+          "publisher": "National Park Service"
+        }
+      ],
+      "review": {
+        "summary": "The Federal troop transport Oriental grounded in fog off Pea Island on 16 May 1862.",
+        "limitations": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-monitor",
+      "revision": 1,
+      "type": "event",
+      "title": "USS Monitor — 1862 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-monitor-place",
+        "name": "NOAA published wreck locality, southeast of Cape Hatteras",
+        "lat": 35.002,
+        "lon": -75.406,
+        "precision": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+        "provenance": "Named loss locality in the linked institutional account."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1862,
+        "end": 1862,
+        "original": "1862-12-31",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1862-12-31"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "USS Monitor sank in a storm off Cape Hatteras on 31 December 1862 while under tow.",
+          "status": "well-supported",
+          "explanation": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-monitor",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "1862-12-31"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-monitor",
+          "authors": "NOAA Monitor National Marine Sanctuary",
+          "title": "NOAA Monitor National Marine Sanctuary — USS Monitor",
+          "year": null,
+          "venue": "NOAA Monitor National Marine Sanctuary",
+          "url": "https://monitor.noaa.gov/shipwrecks/uss_monitor.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://monitor.noaa.gov/shipwrecks/uss_monitor.html",
+          "publisher": "NOAA Monitor National Marine Sanctuary"
+        }
+      ],
+      "review": {
+        "summary": "USS Monitor sank in a storm off Cape Hatteras on 31 December 1862 while under tow.",
+        "limitations": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-huron",
+      "revision": 1,
+      "type": "event",
+      "title": "USS Huron — 1877 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-huron-place",
+        "name": "Nags Head beach, Outer Banks",
+        "lat": 35.97,
+        "lon": -75.63,
+        "precision": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice.",
+        "provenance": "Named loss locality in the linked institutional account."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1877,
+        "end": 1877,
+        "original": "1877-11-24",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1877-11-24"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "USS Huron grounded near Nags Head on 24 November 1877 during rough weather and poor visibility.",
+          "status": "well-supported",
+          "explanation": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-huron",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "1877-11-24"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-huron",
+          "authors": "North Carolina DNCR",
+          "title": "North Carolina DNCR — The Wreck of the Huron",
+          "year": 2016,
+          "venue": "North Carolina DNCR",
+          "url": "https://www.dncr.nc.gov/blog/2016/11/24/wreck-huron-outer-banks-1877",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://www.dncr.nc.gov/blog/2016/11/24/wreck-huron-outer-banks-1877",
+          "publisher": "North Carolina DNCR"
+        }
+      ],
+      "review": {
+        "summary": "USS Huron grounded near Nags Head on 24 November 1877 during rough weather and poor visibility.",
+        "limitations": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-metropolis",
+      "revision": 1,
+      "type": "event",
+      "title": "Metropolis — 1878 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-metropolis-place",
+        "name": "Currituck / Corolla coast, Outer Banks",
+        "lat": 36.33,
+        "lon": -75.81,
+        "precision": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice.",
+        "provenance": "Named loss locality in the linked institutional account."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1878,
+        "end": 1878,
+        "original": "1878-01-31",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1878-01-31"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "Metropolis grounded off Currituck on 31 January 1878 while carrying workers and railroad supplies toward Brazil.",
+          "status": "well-supported",
+          "explanation": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-metropolis",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "1878-01-31"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-metropolis",
+          "authors": "North Carolina DNCR",
+          "title": "North Carolina DNCR — Wreck of the Metropolis",
+          "year": 2023,
+          "venue": "North Carolina DNCR",
+          "url": "https://www.dncr.nc.gov/blog/2023/12/01/wreck-metropolis-33",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://www.dncr.nc.gov/blog/2023/12/01/wreck-metropolis-33",
+          "publisher": "North Carolina DNCR"
+        }
+      ],
+      "review": {
+        "summary": "Metropolis grounded off Currituck on 31 January 1878 while carrying workers and railroad supplies toward Brazil.",
+        "limitations": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-laura-barnes",
+      "revision": 1,
+      "type": "event",
+      "title": "Laura Barnes — 1921 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-laura-barnes-place",
+        "name": "Bodie Island ocean beach, approximate original stranding area",
+        "lat": 35.84,
+        "lon": -75.56,
+        "precision": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice.",
+        "provenance": "Named loss locality in the linked institutional account."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1921,
+        "end": 1921,
+        "original": "1921-06-01",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1921-06-01"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "Laura Barnes came ashore near Bodie Island in dense fog on 1 June 1921; the Coast Guard rescued the crew.",
+          "status": "well-supported",
+          "explanation": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice. NPS states that the remains were later moved about one mile south to Coquina Beach. This marker represents the broad original stranding area, not the relocated display or an exact original coordinate.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-hatteras",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "1921-06-01"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-hatteras",
+          "authors": "National Park Service",
+          "title": "National Park Service — Lost to the Perils of the Sea",
+          "year": 2018,
+          "venue": "National Park Service",
+          "url": "https://www.nps.gov/caha/learn/historyculture/shipwrecks.htm",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://www.nps.gov/caha/learn/historyculture/shipwrecks.htm",
+          "publisher": "National Park Service"
+        }
+      ],
+      "review": {
+        "summary": "Laura Barnes came ashore near Bodie Island in dense fog on 1 June 1921; the Coast Guard rescued the crew.",
+        "limitations": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice. NPS states that the remains were later moved about one mile south to Coquina Beach. This marker represents the broad original stranding area, not the relocated display or an exact original coordinate.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-ga-kohler",
+      "revision": 1,
+      "type": "event",
+      "title": "G.A. Kohler — 1933 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-ga-kohler-place",
+        "name": "Outer Banks beach south of Salvo",
+        "lat": 35.49,
+        "lon": -75.48,
+        "precision": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice.",
+        "provenance": "Named loss locality in the linked institutional account."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1933,
+        "end": 1933,
+        "original": "1933-08-23",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1933-08-23"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "The schooner G.A. Kohler was driven ashore by the hurricane of 23 August 1933.",
+          "status": "well-supported",
+          "explanation": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice. The hull was later burned for metal salvage; persistence does not imply that an intact ship remains.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-kohler",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "1933-08-23"
+            },
+            {
+              "sourceId": "graveyard-source-hatteras",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "1933-08-23"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-kohler",
+          "authors": "U.S. Coast Guard",
+          "title": "U.S. Coast Guard — Proceedings, May 1989, shipwreck captions",
+          "year": 1989,
+          "venue": "U.S. Coast Guard",
+          "url": "https://www.dco.uscg.mil/Portals/9/DCO%20Documents/Proceedings%20Magazine/Archive/1989/Vol46_No3_May1989.pdf",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://www.dco.uscg.mil/Portals/9/DCO%20Documents/Proceedings%20Magazine/Archive/1989/Vol46_No3_May1989.pdf",
+          "publisher": "U.S. Coast Guard"
+        },
+        {
+          "id": "graveyard-source-hatteras",
+          "authors": "National Park Service",
+          "title": "National Park Service — Lost to the Perils of the Sea",
+          "year": 2018,
+          "venue": "National Park Service",
+          "url": "https://www.nps.gov/caha/learn/historyculture/shipwrecks.htm",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://www.nps.gov/caha/learn/historyculture/shipwrecks.htm",
+          "publisher": "National Park Service"
+        }
+      ],
+      "review": {
+        "summary": "The schooner G.A. Kohler was driven ashore by the hurricane of 23 August 1933.",
+        "limitations": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice. The hull was later burned for metal salvage; persistence does not imply that an intact ship remains.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-peacock",
+      "revision": 1,
+      "type": "event",
+      "title": "USS Peacock — 1841 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-peacock-place",
+        "name": "Columbia River entrance, approximate historical bar locality",
+        "lat": 46.26,
+        "lon": -124.06,
+        "precision": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice.",
+        "provenance": "Named loss locality in the linked institutional account."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1841,
+        "end": 1841,
+        "original": "1841-07-18",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1841-07-18"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "USS Peacock grounded while crossing the Columbia Bar on 18 July 1841 and broke up after the crew and expedition records were rescued.",
+          "status": "well-supported",
+          "explanation": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice. The channel and shoals have changed since 1841. This rounded river-mouth reference does not locate surviving remains.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-peacock",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "1841-07-18"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-peacock",
+          "authors": "Naval History and Heritage Command",
+          "title": "Naval History and Heritage Command — Peacock I–II",
+          "year": null,
+          "venue": "Naval History and Heritage Command",
+          "url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/p/peacock-i.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://www.history.navy.mil/research/histories/ship-histories/danfs/p/peacock-i.html",
+          "publisher": "Naval History and Heritage Command"
+        }
+      ],
+      "review": {
+        "summary": "USS Peacock grounded while crossing the Columbia Bar on 18 July 1841 and broke up after the crew and expedition records were rescued.",
+        "limitations": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice. The channel and shoals have changed since 1841. This rounded river-mouth reference does not locate surviving remains.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-shark",
+      "revision": 1,
+      "type": "event",
+      "title": "USS Shark — 1846 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-shark-place",
+        "name": "Columbia River bar, approximate historical entrance locality",
+        "lat": 46.24,
+        "lon": -124.03,
+        "precision": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice.",
+        "provenance": "Named loss locality in the linked institutional account."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1846,
+        "end": 1846,
+        "original": "1846-09-10",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1846-09-10"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "USS Shark broke up after grounding on the Columbia Bar on 10 September 1846.",
+          "status": "well-supported",
+          "explanation": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice. Scattered debris and carronades reached beaches far from the original loss. The marker is a bar-level reference.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-oregon",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "1846-09-10"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-oregon",
+          "authors": "Oregon State Parks",
+          "title": "Oregon State Parks — Graveyard of the Pacific / Columbia River Bar, 2020",
+          "year": 2020,
+          "venue": "Oregon State Parks",
+          "url": "https://stateparks.oregon.gov/index.cfm?do=main.loadFile&load=_siteFiles/publications/46058_Graveyard_of_Pacific_2020(web)101052.pdf",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://stateparks.oregon.gov/index.cfm?do=main.loadFile&load=_siteFiles/publications/46058_Graveyard_of_Pacific_2020(web)101052.pdf",
+          "publisher": "Oregon State Parks"
+        }
+      ],
+      "review": {
+        "summary": "USS Shark broke up after grounding on the Columbia Bar on 10 September 1846.",
+        "limitations": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice. Scattered debris and carronades reached beaches far from the original loss. The marker is a bar-level reference.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-great-republic",
+      "revision": 1,
+      "type": "event",
+      "title": "Great Republic — 1879 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-great-republic-place",
+        "name": "Sand Island, Columbia River entrance",
+        "lat": 46.26,
+        "lon": -124.03,
+        "precision": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice.",
+        "provenance": "Named loss locality in the linked institutional account."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1879,
+        "end": 1879,
+        "original": "1879",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull."
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "Great Republic grounded at Sand Island in 1879; passengers escaped, but a capsized final lifeboat killed crew members.",
+          "status": "well-supported",
+          "explanation": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice. The source used here gives the loss year. No precise day is assigned.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-oregon",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "1879"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-oregon",
+          "authors": "Oregon State Parks",
+          "title": "Oregon State Parks — Graveyard of the Pacific / Columbia River Bar, 2020",
+          "year": 2020,
+          "venue": "Oregon State Parks",
+          "url": "https://stateparks.oregon.gov/index.cfm?do=main.loadFile&load=_siteFiles/publications/46058_Graveyard_of_Pacific_2020(web)101052.pdf",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://stateparks.oregon.gov/index.cfm?do=main.loadFile&load=_siteFiles/publications/46058_Graveyard_of_Pacific_2020(web)101052.pdf",
+          "publisher": "Oregon State Parks"
+        }
+      ],
+      "review": {
+        "summary": "Great Republic grounded at Sand Island in 1879; passengers escaped, but a capsized final lifeboat killed crew members.",
+        "limitations": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice. The source used here gives the loss year. No precise day is assigned.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-peter-iredale",
+      "revision": 1,
+      "type": "event",
+      "title": "Peter Iredale — 1906 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-peter-iredale-place",
+        "name": "Clatsop Beach, Fort Stevens",
+        "lat": 46.18,
+        "lon": -123.98,
+        "precision": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice.",
+        "provenance": "Named loss locality in the linked institutional account."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1906,
+        "end": 1906,
+        "original": "1906-10-25",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1906-10-25"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "Peter Iredale ran ashore on Clatsop Beach on 25 October 1906 while approaching the Columbia River to load wheat.",
+          "status": "well-supported",
+          "explanation": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-iredale",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "1906-10-25"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-iredale",
+          "authors": "Oregon Historical Society",
+          "title": "Oregon Historical Society — The Wreck of the Peter Iredale",
+          "year": null,
+          "venue": "Oregon Historical Society",
+          "url": "https://www.oregonhistoryproject.org/articles/historical-records/the-wreck-of-the-peter-iredale/",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://www.oregonhistoryproject.org/articles/historical-records/the-wreck-of-the-peter-iredale/",
+          "publisher": "Oregon Historical Society"
+        }
+      ],
+      "review": {
+        "summary": "Peter Iredale ran ashore on Clatsop Beach on 25 October 1906 while approaching the Columbia River to load wheat.",
+        "limitations": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-valencia",
+      "revision": 1,
+      "type": "event",
+      "title": "S.S. Valencia — 1906 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-valencia-place",
+        "name": "Walla Walla Reef south of Pachena Point, Vancouver Island",
+        "lat": 48.78,
+        "lon": -125.15,
+        "precision": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice.",
+        "provenance": "Named loss locality in the linked institutional account."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1906,
+        "end": 1906,
+        "original": "1906-01-22",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1906-01-22"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "S.S. Valencia struck the coast near Pachena Point late on 22 January 1906 and was destroyed over the following day and a half.",
+          "status": "well-supported",
+          "explanation": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice. The date identifies the first grounding, not a single moment at which every part of the vessel sank. Rounded coastal locality.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-valencia",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "1906-01-22"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-valencia",
+          "authors": "Parks Canada",
+          "title": "Parks Canada — The Sinking of the S.S. Valencia",
+          "year": 2017,
+          "venue": "Parks Canada",
+          "url": "https://www.canada.ca/en/parks-canada/news/2017/06/the_sinking_of_thessvalencia.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://www.canada.ca/en/parks-canada/news/2017/06/the_sinking_of_thessvalencia.html",
+          "publisher": "Parks Canada"
+        }
+      ],
+      "review": {
+        "summary": "S.S. Valencia struck the coast near Pachena Point late on 22 January 1906 and was destroyed over the following day and a half.",
+        "limitations": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice. The date identifies the first grounding, not a single moment at which every part of the vessel sank. Rounded coastal locality.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-laurel",
+      "revision": 1,
+      "type": "event",
+      "title": "S.S. Laurel — 1929 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-laurel-place",
+        "name": "Peacock Spit, Columbia River entrance",
+        "lat": 46.28,
+        "lon": -124.08,
+        "precision": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice.",
+        "provenance": "Named loss locality in the linked institutional account."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1929,
+        "end": 1929,
+        "original": "June 1929",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull."
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "S.S. Laurel was driven onto Peacock Spit in June 1929 and broke apart in the storm.",
+          "status": "well-supported",
+          "explanation": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice. The official brochure gives June 1929; no day is inferred. Historical spit-level locality.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-oregon",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "June 1929"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-oregon",
+          "authors": "Oregon State Parks",
+          "title": "Oregon State Parks — Graveyard of the Pacific / Columbia River Bar, 2020",
+          "year": 2020,
+          "venue": "Oregon State Parks",
+          "url": "https://stateparks.oregon.gov/index.cfm?do=main.loadFile&load=_siteFiles/publications/46058_Graveyard_of_Pacific_2020(web)101052.pdf",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://stateparks.oregon.gov/index.cfm?do=main.loadFile&load=_siteFiles/publications/46058_Graveyard_of_Pacific_2020(web)101052.pdf",
+          "publisher": "Oregon State Parks"
+        }
+      ],
+      "review": {
+        "summary": "S.S. Laurel was driven onto Peacock Spit in June 1929 and broke apart in the storm.",
+        "limitations": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice. The official brochure gives June 1929; no day is inferred. Historical spit-level locality.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-admiral-benson",
+      "revision": 1,
+      "type": "event",
+      "title": "Admiral Benson — 1930 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-admiral-benson-place",
+        "name": "Peacock Spit west of the North Jetty",
+        "lat": 46.27,
+        "lon": -124.08,
+        "precision": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice.",
+        "provenance": "Named loss locality in the linked institutional account."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1930,
+        "end": 1930,
+        "original": "1930",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull."
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "Admiral Benson struck Peacock Spit in 1930, west of the North Jetty.",
+          "status": "well-supported",
+          "explanation": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice. The official brochure supplies the year. Its story about officers mistaking Laurel for an aid to navigation is expressly hearsay and is not asserted here.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-oregon",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "1930"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-oregon",
+          "authors": "Oregon State Parks",
+          "title": "Oregon State Parks — Graveyard of the Pacific / Columbia River Bar, 2020",
+          "year": 2020,
+          "venue": "Oregon State Parks",
+          "url": "https://stateparks.oregon.gov/index.cfm?do=main.loadFile&load=_siteFiles/publications/46058_Graveyard_of_Pacific_2020(web)101052.pdf",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://stateparks.oregon.gov/index.cfm?do=main.loadFile&load=_siteFiles/publications/46058_Graveyard_of_Pacific_2020(web)101052.pdf",
+          "publisher": "Oregon State Parks"
+        }
+      ],
+      "review": {
+        "summary": "Admiral Benson struck Peacock Spit in 1930, west of the North Jetty.",
+        "limitations": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice. The official brochure supplies the year. Its story about officers mistaking Laurel for an aid to navigation is expressly hearsay and is not asserted here.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-sable-swift",
+      "revision": 1,
+      "type": "event",
+      "title": "Swift — 1812 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-sable-swift-place",
+        "name": "Northeast Sable Island, regional convoy-loss locality",
+        "lat": 43.96,
+        "lon": -59.8,
+        "precision": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice.",
+        "provenance": "Named loss locality in the linked institutional account."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1812,
+        "end": 1812,
+        "original": "1812-09-27",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1812-09-27"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "The sloop Swift was one of three vessels lost at Sable Island on 27 September 1812 during a passage from Bermuda to Newfoundland.",
+          "status": "well-supported",
+          "explanation": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice. The three shared markers denote the same broad historical locality; they do not claim identical surveyed positions. Parks Canada treats identification of the hull excavated in 2025 as Swift as a working interpretation, not a confirmed identification.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-sablearch",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "1812-09-27"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-sablearch",
+          "authors": "Parks Canada",
+          "title": "Parks Canada — Excavating a shipwreck on Sable Island, 2026",
+          "year": 2026,
+          "venue": "Parks Canada",
+          "url": "https://www.parks.canada.ca/pn-np/ns/sable/culture/archeologie-archaeology/epave-shipwreck",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://www.parks.canada.ca/pn-np/ns/sable/culture/archeologie-archaeology/epave-shipwreck",
+          "publisher": "Parks Canada"
+        }
+      ],
+      "review": {
+        "summary": "The sloop Swift was one of three vessels lost at Sable Island on 27 September 1812 during a passage from Bermuda to Newfoundland.",
+        "limitations": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice. The three shared markers denote the same broad historical locality; they do not claim identical surveyed positions. Parks Canada treats identification of the hull excavated in 2025 as Swift as a working interpretation, not a confirmed identification.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-sable-emeline",
+      "revision": 1,
+      "type": "event",
+      "title": "Emeline — 1812 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-sable-emeline-place",
+        "name": "Northeast Sable Island, regional convoy-loss locality",
+        "lat": 43.96,
+        "lon": -59.8,
+        "precision": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice.",
+        "provenance": "Named loss locality in the linked institutional account."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1812,
+        "end": 1812,
+        "original": "1812-09-27",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1812-09-27"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "The schooner Emeline was one of three vessels lost at Sable Island on 27 September 1812 during a passage from Bermuda to Newfoundland.",
+          "status": "well-supported",
+          "explanation": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice. The three shared markers denote the same broad historical locality; they do not claim identical surveyed positions. Parks Canada treats identification of the hull excavated in 2025 as Swift as a working interpretation, not a confirmed identification.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-sablearch",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "1812-09-27"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-sablearch",
+          "authors": "Parks Canada",
+          "title": "Parks Canada — Excavating a shipwreck on Sable Island, 2026",
+          "year": 2026,
+          "venue": "Parks Canada",
+          "url": "https://www.parks.canada.ca/pn-np/ns/sable/culture/archeologie-archaeology/epave-shipwreck",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://www.parks.canada.ca/pn-np/ns/sable/culture/archeologie-archaeology/epave-shipwreck",
+          "publisher": "Parks Canada"
+        }
+      ],
+      "review": {
+        "summary": "The schooner Emeline was one of three vessels lost at Sable Island on 27 September 1812 during a passage from Bermuda to Newfoundland.",
+        "limitations": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice. The three shared markers denote the same broad historical locality; they do not claim identical surveyed positions. Parks Canada treats identification of the hull excavated in 2025 as Swift as a working interpretation, not a confirmed identification.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-sable-barbadoes",
+      "revision": 1,
+      "type": "event",
+      "title": "HMS Barbadoes — 1812 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-sable-barbadoes-place",
+        "name": "Northeast Sable Island, regional convoy-loss locality",
+        "lat": 43.96,
+        "lon": -59.8,
+        "precision": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice.",
+        "provenance": "Named loss locality in the linked institutional account."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1812,
+        "end": 1812,
+        "original": "1812-09-27",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1812-09-27"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "The naval frigate HMS Barbadoes was one of three vessels lost at Sable Island on 27 September 1812 during a passage from Bermuda to Newfoundland.",
+          "status": "well-supported",
+          "explanation": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice. The three shared markers denote the same broad historical locality; they do not claim identical surveyed positions. Parks Canada treats identification of the hull excavated in 2025 as Swift as a working interpretation, not a confirmed identification.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-sablearch",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "1812-09-27"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-sablearch",
+          "authors": "Parks Canada",
+          "title": "Parks Canada — Excavating a shipwreck on Sable Island, 2026",
+          "year": 2026,
+          "venue": "Parks Canada",
+          "url": "https://www.parks.canada.ca/pn-np/ns/sable/culture/archeologie-archaeology/epave-shipwreck",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://www.parks.canada.ca/pn-np/ns/sable/culture/archeologie-archaeology/epave-shipwreck",
+          "publisher": "Parks Canada"
+        }
+      ],
+      "review": {
+        "summary": "The naval frigate HMS Barbadoes was one of three vessels lost at Sable Island on 27 September 1812 during a passage from Bermuda to Newfoundland.",
+        "limitations": "Approximate locality rounded to 0.01 degrees from the named coast or shoal in the source; not a surveyed wreck position or navigation advice. The three shared markers denote the same broad historical locality; they do not claim identical surveyed positions. Parks Canada treats identification of the hull excavated in 2025 as Swift as a working interpretation, not a confirmed identification.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-thunderbay-barney",
+      "revision": 1,
+      "type": "event",
+      "title": "F.T. Barney — 1868 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-thunderbay-barney-place",
+        "name": "NOAA published locality of F.T. Barney",
+        "lat": 45.486,
+        "lon": -83.843,
+        "precision": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+        "provenance": "NOAA Thunder Bay vessel-page GPS field, converted from degrees and decimal minutes; original field preserved in the source audit."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1868,
+        "end": 1868,
+        "original": "October 23, 1868",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1868-10-23"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "F.T. Barney is documented by NOAA as wrecked October 23, 1868.",
+          "status": "well-supported",
+          "explanation": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45°29.150’ W83°50.550’.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-noaa-thunderbay-barney",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "October 23, 1868"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-noaa-thunderbay-barney",
+          "authors": "NOAA Thunder Bay National Marine Sanctuary",
+          "title": "NOAA Thunder Bay National Marine Sanctuary — F.T. Barney",
+          "year": null,
+          "venue": "NOAA Thunder Bay National Marine Sanctuary",
+          "url": "https://thunderbay.noaa.gov/shipwrecks/barney.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://thunderbay.noaa.gov/shipwrecks/barney.html",
+          "publisher": "NOAA Thunder Bay National Marine Sanctuary"
+        }
+      ],
+      "review": {
+        "summary": "F.T. Barney is documented by NOAA as wrecked October 23, 1868.",
+        "limitations": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45°29.150’ W83°50.550’.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-thunderbay-choctaw",
+      "revision": 1,
+      "type": "event",
+      "title": "Choctaw — 1915 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-thunderbay-choctaw-place",
+        "name": "NOAA published locality of Choctaw",
+        "lat": 45.534,
+        "lon": -83.509,
+        "precision": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+        "provenance": "NOAA Thunder Bay vessel-page GPS field, converted from degrees and decimal minutes; original field preserved in the source audit."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1915,
+        "end": 1915,
+        "original": "July 12, 1915",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1915-07-12"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "Choctaw is documented by NOAA as wrecked July 12, 1915.",
+          "status": "well-supported",
+          "explanation": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45°32.0563' W83°30.55594'.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-noaa-thunderbay-choctaw",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "July 12, 1915"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-noaa-thunderbay-choctaw",
+          "authors": "NOAA Thunder Bay National Marine Sanctuary",
+          "title": "NOAA Thunder Bay National Marine Sanctuary — Choctaw",
+          "year": null,
+          "venue": "NOAA Thunder Bay National Marine Sanctuary",
+          "url": "https://thunderbay.noaa.gov/shipwrecks/choctaw.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://thunderbay.noaa.gov/shipwrecks/choctaw.html",
+          "publisher": "NOAA Thunder Bay National Marine Sanctuary"
+        }
+      ],
+      "review": {
+        "summary": "Choctaw is documented by NOAA as wrecked July 12, 1915.",
+        "limitations": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45°32.0563' W83°30.55594'.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-thunderbay-corsair",
+      "revision": 1,
+      "type": "event",
+      "title": "Corsair — 1872 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-thunderbay-corsair-place",
+        "name": "NOAA published locality of Corsair",
+        "lat": 44.782,
+        "lon": -83.124,
+        "precision": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+        "provenance": "NOAA Thunder Bay vessel-page GPS field, converted from degrees and decimal minutes; original field preserved in the source audit."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1872,
+        "end": 1872,
+        "original": "September 29, 1872",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1872-09-29"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "Corsair is documented by NOAA as wrecked September 29, 1872.",
+          "status": "well-supported",
+          "explanation": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N44° 46.922’ W83° 07.426’.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-noaa-thunderbay-corsair",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "September 29, 1872"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-noaa-thunderbay-corsair",
+          "authors": "NOAA Thunder Bay National Marine Sanctuary",
+          "title": "NOAA Thunder Bay National Marine Sanctuary — Corsair",
+          "year": null,
+          "venue": "NOAA Thunder Bay National Marine Sanctuary",
+          "url": "https://thunderbay.noaa.gov/shipwrecks/corsair.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://thunderbay.noaa.gov/shipwrecks/corsair.html",
+          "publisher": "NOAA Thunder Bay National Marine Sanctuary"
+        }
+      ],
+      "review": {
+        "summary": "Corsair is documented by NOAA as wrecked September 29, 1872.",
+        "limitations": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N44° 46.922’ W83° 07.426’.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-thunderbay-corsican",
+      "revision": 1,
+      "type": "event",
+      "title": "Corsican — 1893 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-thunderbay-corsican-place",
+        "name": "NOAA published locality of Corsican",
+        "lat": 44.913,
+        "lon": -83.055,
+        "precision": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+        "provenance": "NOAA Thunder Bay vessel-page GPS field, converted from degrees and decimal minutes; original field preserved in the source audit."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1893,
+        "end": 1893,
+        "original": "June 1, 1893",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1893-06-01"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "Corsican is documented by NOAA as wrecked June 1, 1893.",
+          "status": "well-supported",
+          "explanation": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N44°54.760' W83°03.300'.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-noaa-thunderbay-corsican",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "June 1, 1893"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-noaa-thunderbay-corsican",
+          "authors": "NOAA Thunder Bay National Marine Sanctuary",
+          "title": "NOAA Thunder Bay National Marine Sanctuary — Corsican",
+          "year": null,
+          "venue": "NOAA Thunder Bay National Marine Sanctuary",
+          "url": "https://thunderbay.noaa.gov/shipwrecks/corsican.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://thunderbay.noaa.gov/shipwrecks/corsican.html",
+          "publisher": "NOAA Thunder Bay National Marine Sanctuary"
+        }
+      ],
+      "review": {
+        "summary": "Corsican is documented by NOAA as wrecked June 1, 1893.",
+        "limitations": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N44°54.760' W83°03.300'.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-thunderbay-defiance",
+      "revision": 1,
+      "type": "event",
+      "title": "Defiance — 1854 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-thunderbay-defiance-place",
+        "name": "NOAA published locality of Defiance",
+        "lat": 45.234,
+        "lon": -83.278,
+        "precision": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+        "provenance": "NOAA Thunder Bay vessel-page GPS field, converted from degrees and decimal minutes; original field preserved in the source audit."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1854,
+        "end": 1854,
+        "original": "October 20, 1854",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1854-10-20"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "Defiance is documented by NOAA as wrecked October 20, 1854.",
+          "status": "well-supported",
+          "explanation": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45° 14.058' W83° 16.707'. NOAA dates the paired collision losses on its two vessel pages to 20 and 21 October 1854 respectively; the one-day discrepancy is retained rather than silently harmonized.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-noaa-thunderbay-defiance",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "October 20, 1854"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-noaa-thunderbay-defiance",
+          "authors": "NOAA Thunder Bay National Marine Sanctuary",
+          "title": "NOAA Thunder Bay National Marine Sanctuary — Defiance",
+          "year": null,
+          "venue": "NOAA Thunder Bay National Marine Sanctuary",
+          "url": "https://thunderbay.noaa.gov/shipwrecks/defiance.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://thunderbay.noaa.gov/shipwrecks/defiance.html",
+          "publisher": "NOAA Thunder Bay National Marine Sanctuary"
+        }
+      ],
+      "review": {
+        "summary": "Defiance is documented by NOAA as wrecked October 20, 1854.",
+        "limitations": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45° 14.058' W83° 16.707'. NOAA dates the paired collision losses on its two vessel pages to 20 and 21 October 1854 respectively; the one-day discrepancy is retained rather than silently harmonized.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-thunderbay-dump_scow",
+      "revision": 1,
+      "type": "event",
+      "title": "Dump Scow — 1930 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-thunderbay-dump_scow-place",
+        "name": "NOAA published locality of Dump Scow",
+        "lat": 45.213,
+        "lon": -83.3,
+        "precision": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+        "provenance": "NOAA Thunder Bay vessel-page GPS field, converted from degrees and decimal minutes; original field preserved in the source audit."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1930,
+        "end": 1930,
+        "original": "Circa 1930",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "Dump Scow is documented by NOAA as wrecked Circa 1930.",
+          "status": "well-supported",
+          "explanation": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45°12.760' W83°17.974'.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-noaa-thunderbay-dump_scow",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "Circa 1930"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-noaa-thunderbay-dump_scow",
+          "authors": "NOAA Thunder Bay National Marine Sanctuary",
+          "title": "NOAA Thunder Bay National Marine Sanctuary — Dump Scow",
+          "year": null,
+          "venue": "NOAA Thunder Bay National Marine Sanctuary",
+          "url": "https://thunderbay.noaa.gov/shipwrecks/dump_scow.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://thunderbay.noaa.gov/shipwrecks/dump_scow.html",
+          "publisher": "NOAA Thunder Bay National Marine Sanctuary"
+        }
+      ],
+      "review": {
+        "summary": "Dump Scow is documented by NOAA as wrecked Circa 1930.",
+        "limitations": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45°12.760' W83°17.974'.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-thunderbay-egyptian",
+      "revision": 1,
+      "type": "event",
+      "title": "Egyptian — 1897 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-thunderbay-egyptian-place",
+        "name": "NOAA published locality of Egyptian",
+        "lat": 44.835,
+        "lon": -82.909,
+        "precision": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+        "provenance": "NOAA Thunder Bay vessel-page GPS field, converted from degrees and decimal minutes; original field preserved in the source audit."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1897,
+        "end": 1897,
+        "original": "December 1, 1897",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1897-12-01"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "Egyptian is documented by NOAA as wrecked December 1, 1897.",
+          "status": "well-supported",
+          "explanation": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N44° 50.092' W82° 54.515'.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-noaa-thunderbay-egyptian",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "December 1, 1897"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-noaa-thunderbay-egyptian",
+          "authors": "NOAA Thunder Bay National Marine Sanctuary",
+          "title": "NOAA Thunder Bay National Marine Sanctuary — Egyptian",
+          "year": null,
+          "venue": "NOAA Thunder Bay National Marine Sanctuary",
+          "url": "https://thunderbay.noaa.gov/shipwrecks/egyptian.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://thunderbay.noaa.gov/shipwrecks/egyptian.html",
+          "publisher": "NOAA Thunder Bay National Marine Sanctuary"
+        }
+      ],
+      "review": {
+        "summary": "Egyptian is documented by NOAA as wrecked December 1, 1897.",
+        "limitations": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N44° 50.092' W82° 54.515'.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-thunderbay-etruria",
+      "revision": 1,
+      "type": "event",
+      "title": "Etruria — 1905 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-thunderbay-etruria-place",
+        "name": "NOAA published locality of Etruria",
+        "lat": 45.483,
+        "lon": -83.474,
+        "precision": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+        "provenance": "NOAA Thunder Bay vessel-page GPS field, converted from degrees and decimal minutes; original field preserved in the source audit."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1905,
+        "end": 1905,
+        "original": "June 18, 1905",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1905-06-18"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "Etruria is documented by NOAA as wrecked June 18, 1905.",
+          "status": "well-supported",
+          "explanation": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45°28.981' W83°28.4198'.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-noaa-thunderbay-etruria",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "June 18, 1905"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-noaa-thunderbay-etruria",
+          "authors": "NOAA Thunder Bay National Marine Sanctuary",
+          "title": "NOAA Thunder Bay National Marine Sanctuary — Etruria",
+          "year": null,
+          "venue": "NOAA Thunder Bay National Marine Sanctuary",
+          "url": "https://thunderbay.noaa.gov/shipwrecks/etruria.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://thunderbay.noaa.gov/shipwrecks/etruria.html",
+          "publisher": "NOAA Thunder Bay National Marine Sanctuary"
+        }
+      ],
+      "review": {
+        "summary": "Etruria is documented by NOAA as wrecked June 18, 1905.",
+        "limitations": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45°28.981' W83°28.4198'.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-thunderbay-florida",
+      "revision": 1,
+      "type": "event",
+      "title": "Florida — 1897 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-thunderbay-florida-place",
+        "name": "NOAA published locality of Florida",
+        "lat": 45.296,
+        "lon": -83.284,
+        "precision": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+        "provenance": "NOAA Thunder Bay vessel-page GPS field, converted from degrees and decimal minutes; original field preserved in the source audit."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1897,
+        "end": 1897,
+        "original": "May 21, 1897",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1897-05-21"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "Florida is documented by NOAA as wrecked May 21, 1897.",
+          "status": "well-supported",
+          "explanation": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45° 17.781’ W83° 17.011’.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-noaa-thunderbay-florida",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "May 21, 1897"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-noaa-thunderbay-florida",
+          "authors": "NOAA Thunder Bay National Marine Sanctuary",
+          "title": "NOAA Thunder Bay National Marine Sanctuary — Florida",
+          "year": null,
+          "venue": "NOAA Thunder Bay National Marine Sanctuary",
+          "url": "https://thunderbay.noaa.gov/shipwrecks/florida.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://thunderbay.noaa.gov/shipwrecks/florida.html",
+          "publisher": "NOAA Thunder Bay National Marine Sanctuary"
+        }
+      ],
+      "review": {
+        "summary": "Florida is documented by NOAA as wrecked May 21, 1897.",
+        "limitations": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45° 17.781’ W83° 17.011’.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-thunderbay-franz",
+      "revision": 1,
+      "type": "event",
+      "title": "W.C. Franz — 1934 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-thunderbay-franz-place",
+        "name": "NOAA published locality of W.C. Franz",
+        "lat": 44.648,
+        "lon": -82.907,
+        "precision": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+        "provenance": "NOAA Thunder Bay vessel-page GPS field, converted from degrees and decimal minutes; original field preserved in the source audit."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1934,
+        "end": 1934,
+        "original": "November 21, 1934",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1934-11-21"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "W.C. Franz is documented by NOAA as wrecked November 21, 1934.",
+          "status": "well-supported",
+          "explanation": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N44°38.875’ W82°54.392’.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-noaa-thunderbay-franz",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "November 21, 1934"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-noaa-thunderbay-franz",
+          "authors": "NOAA Thunder Bay National Marine Sanctuary",
+          "title": "NOAA Thunder Bay National Marine Sanctuary — W.C. Franz",
+          "year": null,
+          "venue": "NOAA Thunder Bay National Marine Sanctuary",
+          "url": "https://thunderbay.noaa.gov/shipwrecks/franz.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://thunderbay.noaa.gov/shipwrecks/franz.html",
+          "publisher": "NOAA Thunder Bay National Marine Sanctuary"
+        }
+      ],
+      "review": {
+        "summary": "W.C. Franz is documented by NOAA as wrecked November 21, 1934.",
+        "limitations": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N44°38.875’ W82°54.392’.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-thunderbay-haltiner",
+      "revision": 1,
+      "type": "event",
+      "title": "Haltiner Barge (aka Scanlon’s Barge ) — 1929 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-thunderbay-haltiner-place",
+        "name": "NOAA published locality of Haltiner Barge (aka Scanlon’s Barge )",
+        "lat": 45.036,
+        "lon": -83.327,
+        "precision": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+        "provenance": "NOAA Thunder Bay vessel-page GPS field, converted from degrees and decimal minutes; original field preserved in the source audit."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1929,
+        "end": 1929,
+        "original": "Circa 1929",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "Haltiner Barge (aka Scanlon’s Barge ) is documented by NOAA as wrecked Circa 1929.",
+          "status": "well-supported",
+          "explanation": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45° 02.146’ W83° 19.631’.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-noaa-thunderbay-haltiner",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "Circa 1929"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-noaa-thunderbay-haltiner",
+          "authors": "NOAA Thunder Bay National Marine Sanctuary",
+          "title": "NOAA Thunder Bay National Marine Sanctuary — Haltiner Barge (aka Scanlon’s Barge )",
+          "year": null,
+          "venue": "NOAA Thunder Bay National Marine Sanctuary",
+          "url": "https://thunderbay.noaa.gov/shipwrecks/haltiner.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://thunderbay.noaa.gov/shipwrecks/haltiner.html",
+          "publisher": "NOAA Thunder Bay National Marine Sanctuary"
+        }
+      ],
+      "review": {
+        "summary": "Haltiner Barge (aka Scanlon’s Barge ) is documented by NOAA as wrecked Circa 1929.",
+        "limitations": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45° 02.146’ W83° 19.631’.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-thunderbay-isaac_m_scott",
+      "revision": 1,
+      "type": "event",
+      "title": "Isaac M. Scott — 1913 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-thunderbay-isaac_m_scott-place",
+        "name": "NOAA published locality of Isaac M. Scott",
+        "lat": 45.065,
+        "lon": -83.039,
+        "precision": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+        "provenance": "NOAA Thunder Bay vessel-page GPS field, converted from degrees and decimal minutes; original field preserved in the source audit."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1913,
+        "end": 1913,
+        "original": "November 10, 1913",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1913-11-10"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "Isaac M. Scott is documented by NOAA as wrecked November 10, 1913.",
+          "status": "well-supported",
+          "explanation": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45° 03.920’ W83° 02.353’.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-noaa-thunderbay-isaac_m_scott",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "November 10, 1913"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-noaa-thunderbay-isaac_m_scott",
+          "authors": "NOAA Thunder Bay National Marine Sanctuary",
+          "title": "NOAA Thunder Bay National Marine Sanctuary — Isaac M. Scott",
+          "year": null,
+          "venue": "NOAA Thunder Bay National Marine Sanctuary",
+          "url": "https://thunderbay.noaa.gov/shipwrecks/isaac_m_scott.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://thunderbay.noaa.gov/shipwrecks/isaac_m_scott.html",
+          "publisher": "NOAA Thunder Bay National Marine Sanctuary"
+        }
+      ],
+      "review": {
+        "summary": "Isaac M. Scott is documented by NOAA as wrecked November 10, 1913.",
+        "limitations": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45° 03.920’ W83° 02.353’.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-thunderbay-john_j_audubon",
+      "revision": 1,
+      "type": "event",
+      "title": "John J. Audubon — 1854 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-thunderbay-john_j_audubon-place",
+        "name": "NOAA published locality of John J. Audubon",
+        "lat": 45.289,
+        "lon": -83.339,
+        "precision": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+        "provenance": "NOAA Thunder Bay vessel-page GPS field, converted from degrees and decimal minutes; original field preserved in the source audit."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1854,
+        "end": 1854,
+        "original": "October 21, 1854",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1854-10-21"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "John J. Audubon is documented by NOAA as wrecked October 21, 1854.",
+          "status": "well-supported",
+          "explanation": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45°17.331' W83°20.351'. NOAA dates the paired collision losses on its two vessel pages to 20 and 21 October 1854 respectively; the one-day discrepancy is retained rather than silently harmonized.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-noaa-thunderbay-john_j_audubon",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "October 21, 1854"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-noaa-thunderbay-john_j_audubon",
+          "authors": "NOAA Thunder Bay National Marine Sanctuary",
+          "title": "NOAA Thunder Bay National Marine Sanctuary — John J. Audubon",
+          "year": null,
+          "venue": "NOAA Thunder Bay National Marine Sanctuary",
+          "url": "https://thunderbay.noaa.gov/shipwrecks/john_j_audubon.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://thunderbay.noaa.gov/shipwrecks/john_j_audubon.html",
+          "publisher": "NOAA Thunder Bay National Marine Sanctuary"
+        }
+      ],
+      "review": {
+        "summary": "John J. Audubon is documented by NOAA as wrecked October 21, 1854.",
+        "limitations": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45°17.331' W83°20.351'. NOAA dates the paired collision losses on its two vessel pages to 20 and 21 October 1854 respectively; the one-day discrepancy is retained rather than silently harmonized.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-thunderbay-kyle_spangler",
+      "revision": 1,
+      "type": "event",
+      "title": "Kyle Spangler — 1860 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-thunderbay-kyle_spangler-place",
+        "name": "NOAA published locality of Kyle Spangler",
+        "lat": 45.384,
+        "lon": -83.435,
+        "precision": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+        "provenance": "NOAA Thunder Bay vessel-page GPS field, converted from degrees and decimal minutes; original field preserved in the source audit."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1860,
+        "end": 1860,
+        "original": "November 7, 1860",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1860-11-07"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "Kyle Spangler is documented by NOAA as wrecked November 7, 1860.",
+          "status": "well-supported",
+          "explanation": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45° 23.011’ W83° 26.115’.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-noaa-thunderbay-kyle_spangler",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "November 7, 1860"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-noaa-thunderbay-kyle_spangler",
+          "authors": "NOAA Thunder Bay National Marine Sanctuary",
+          "title": "NOAA Thunder Bay National Marine Sanctuary — Kyle Spangler",
+          "year": null,
+          "venue": "NOAA Thunder Bay National Marine Sanctuary",
+          "url": "https://thunderbay.noaa.gov/shipwrecks/kyle_spangler.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://thunderbay.noaa.gov/shipwrecks/kyle_spangler.html",
+          "publisher": "NOAA Thunder Bay National Marine Sanctuary"
+        }
+      ],
+      "review": {
+        "summary": "Kyle Spangler is documented by NOAA as wrecked November 7, 1860.",
+        "limitations": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45° 23.011’ W83° 26.115’.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-thunderbay-m_f_merrick",
+      "revision": 1,
+      "type": "event",
+      "title": "M.F. Merrick — 1889 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-thunderbay-m_f_merrick-place",
+        "name": "NOAA published locality of M.F. Merrick",
+        "lat": 45.47,
+        "lon": -83.446,
+        "precision": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+        "provenance": "NOAA Thunder Bay vessel-page GPS field, converted from degrees and decimal minutes; original field preserved in the source audit."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1889,
+        "end": 1889,
+        "original": "May 17, 1889",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1889-05-17"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "M.F. Merrick is documented by NOAA as wrecked May 17, 1889.",
+          "status": "well-supported",
+          "explanation": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45°28.22457' W83°26.77704'.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-noaa-thunderbay-m_f_merrick",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "May 17, 1889"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-noaa-thunderbay-m_f_merrick",
+          "authors": "NOAA Thunder Bay National Marine Sanctuary",
+          "title": "NOAA Thunder Bay National Marine Sanctuary — M.F. Merrick",
+          "year": null,
+          "venue": "NOAA Thunder Bay National Marine Sanctuary",
+          "url": "https://thunderbay.noaa.gov/shipwrecks/m_f_merrick.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://thunderbay.noaa.gov/shipwrecks/m_f_merrick.html",
+          "publisher": "NOAA Thunder Bay National Marine Sanctuary"
+        }
+      ],
+      "review": {
+        "summary": "M.F. Merrick is documented by NOAA as wrecked May 17, 1889.",
+        "limitations": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45°28.22457' W83°26.77704'.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-thunderbay-newell_eddy",
+      "revision": 1,
+      "type": "event",
+      "title": "Newell A. Eddy — 1893 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-thunderbay-newell_eddy-place",
+        "name": "NOAA published locality of Newell A. Eddy",
+        "lat": 45.781,
+        "lon": -84.23,
+        "precision": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+        "provenance": "NOAA Thunder Bay vessel-page GPS field, converted from degrees and decimal minutes; original field preserved in the source audit."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1893,
+        "end": 1893,
+        "original": "April 22, 1893",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1893-04-22"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "Newell A. Eddy is documented by NOAA as wrecked April 22, 1893.",
+          "status": "well-supported",
+          "explanation": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45° 46.885’ W84° 13.817’.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-noaa-thunderbay-newell_eddy",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "April 22, 1893"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-noaa-thunderbay-newell_eddy",
+          "authors": "NOAA Thunder Bay National Marine Sanctuary",
+          "title": "NOAA Thunder Bay National Marine Sanctuary — Newell A. Eddy",
+          "year": null,
+          "venue": "NOAA Thunder Bay National Marine Sanctuary",
+          "url": "https://thunderbay.noaa.gov/shipwrecks/newell_eddy.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://thunderbay.noaa.gov/shipwrecks/newell_eddy.html",
+          "publisher": "NOAA Thunder Bay National Marine Sanctuary"
+        }
+      ],
+      "review": {
+        "summary": "Newell A. Eddy is documented by NOAA as wrecked April 22, 1893.",
+        "limitations": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45° 46.885’ W84° 13.817’.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-thunderbay-norman",
+      "revision": 1,
+      "type": "event",
+      "title": "Norman — 1895 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-thunderbay-norman-place",
+        "name": "NOAA published locality of Norman",
+        "lat": 45.312,
+        "lon": -83.279,
+        "precision": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+        "provenance": "NOAA Thunder Bay vessel-page GPS field, converted from degrees and decimal minutes; original field preserved in the source audit."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1895,
+        "end": 1895,
+        "original": "May 30, 1895",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1895-05-30"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "Norman is documented by NOAA as wrecked May 30, 1895.",
+          "status": "well-supported",
+          "explanation": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45°18.694' W83°16.737'.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-noaa-thunderbay-norman",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "May 30, 1895"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-noaa-thunderbay-norman",
+          "authors": "NOAA Thunder Bay National Marine Sanctuary",
+          "title": "NOAA Thunder Bay National Marine Sanctuary — Norman",
+          "year": null,
+          "venue": "NOAA Thunder Bay National Marine Sanctuary",
+          "url": "https://thunderbay.noaa.gov/shipwrecks/norman.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://thunderbay.noaa.gov/shipwrecks/norman.html",
+          "publisher": "NOAA Thunder Bay National Marine Sanctuary"
+        }
+      ],
+      "review": {
+        "summary": "Norman is documented by NOAA as wrecked May 30, 1895.",
+        "limitations": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45°18.694' W83°16.737'.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-thunderbay-northwestern",
+      "revision": 1,
+      "type": "event",
+      "title": "Northwestern — 1850 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-thunderbay-northwestern-place",
+        "name": "NOAA published locality of Northwestern",
+        "lat": 45.448,
+        "lon": -83.697,
+        "precision": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+        "provenance": "NOAA Thunder Bay vessel-page GPS field, converted from degrees and decimal minutes; original field preserved in the source audit."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1850,
+        "end": 1850,
+        "original": "September 30, 1850",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1850-09-30"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "Northwestern is documented by NOAA as wrecked September 30, 1850.",
+          "status": "well-supported",
+          "explanation": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45°26.885’ W83°41.817'.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-noaa-thunderbay-northwestern",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "September 30, 1850"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-noaa-thunderbay-northwestern",
+          "authors": "NOAA Thunder Bay National Marine Sanctuary",
+          "title": "NOAA Thunder Bay National Marine Sanctuary — Northwestern",
+          "year": null,
+          "venue": "NOAA Thunder Bay National Marine Sanctuary",
+          "url": "https://thunderbay.noaa.gov/shipwrecks/northwestern.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://thunderbay.noaa.gov/shipwrecks/northwestern.html",
+          "publisher": "NOAA Thunder Bay National Marine Sanctuary"
+        }
+      ],
+      "review": {
+        "summary": "Northwestern is documented by NOAA as wrecked September 30, 1850.",
+        "limitations": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45°26.885’ W83°41.817'.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-thunderbay-ohio",
+      "revision": 1,
+      "type": "event",
+      "title": "Ohio — 1894 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-thunderbay-ohio-place",
+        "name": "NOAA published locality of Ohio",
+        "lat": 45.513,
+        "lon": -83.504,
+        "precision": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+        "provenance": "NOAA Thunder Bay vessel-page GPS field, converted from degrees and decimal minutes; original field preserved in the source audit."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1894,
+        "end": 1894,
+        "original": "September 26, 1894",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1894-09-26"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "Ohio is documented by NOAA as wrecked September 26, 1894.",
+          "status": "well-supported",
+          "explanation": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45°30.78802' W83°30.21978'.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-noaa-thunderbay-ohio",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "September 26, 1894"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-noaa-thunderbay-ohio",
+          "authors": "NOAA Thunder Bay National Marine Sanctuary",
+          "title": "NOAA Thunder Bay National Marine Sanctuary — Ohio",
+          "year": null,
+          "venue": "NOAA Thunder Bay National Marine Sanctuary",
+          "url": "https://thunderbay.noaa.gov/shipwrecks/ohio.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://thunderbay.noaa.gov/shipwrecks/ohio.html",
+          "publisher": "NOAA Thunder Bay National Marine Sanctuary"
+        }
+      ],
+      "review": {
+        "summary": "Ohio is documented by NOAA as wrecked September 26, 1894.",
+        "limitations": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45°30.78802' W83°30.21978'.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-thunderbay-persian",
+      "revision": 1,
+      "type": "event",
+      "title": "Persian — 1868 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-thunderbay-persian-place",
+        "name": "NOAA published locality of Persian",
+        "lat": 45.699,
+        "lon": -84.153,
+        "precision": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+        "provenance": "NOAA Thunder Bay vessel-page GPS field, converted from degrees and decimal minutes; original field preserved in the source audit."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1868,
+        "end": 1868,
+        "original": "September 16, 1868",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1868-09-16"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "Persian is documented by NOAA as wrecked September 16, 1868.",
+          "status": "well-supported",
+          "explanation": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45° 41.961’ W84° 09.174’.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-noaa-thunderbay-persian",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "September 16, 1868"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-noaa-thunderbay-persian",
+          "authors": "NOAA Thunder Bay National Marine Sanctuary",
+          "title": "NOAA Thunder Bay National Marine Sanctuary — Persian",
+          "year": null,
+          "venue": "NOAA Thunder Bay National Marine Sanctuary",
+          "url": "https://thunderbay.noaa.gov/shipwrecks/persian.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://thunderbay.noaa.gov/shipwrecks/persian.html",
+          "publisher": "NOAA Thunder Bay National Marine Sanctuary"
+        }
+      ],
+      "review": {
+        "summary": "Persian is documented by NOAA as wrecked September 16, 1868.",
+        "limitations": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45° 41.961’ W84° 09.174’.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-thunderbay-pewabic",
+      "revision": 1,
+      "type": "event",
+      "title": "Pewabic — 1865 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-thunderbay-pewabic-place",
+        "name": "NOAA published locality of Pewabic",
+        "lat": 44.965,
+        "lon": -83.104,
+        "precision": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+        "provenance": "NOAA Thunder Bay vessel-page GPS field, converted from degrees and decimal minutes; original field preserved in the source audit."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1865,
+        "end": 1865,
+        "original": "August 9, 1865",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1865-08-09"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "Pewabic is documented by NOAA as wrecked August 9, 1865.",
+          "status": "well-supported",
+          "explanation": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N44°57.890' W83° 06.236'.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-noaa-thunderbay-pewabic",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "August 9, 1865"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-noaa-thunderbay-pewabic",
+          "authors": "NOAA Thunder Bay National Marine Sanctuary",
+          "title": "NOAA Thunder Bay National Marine Sanctuary — Pewabic",
+          "year": null,
+          "venue": "NOAA Thunder Bay National Marine Sanctuary",
+          "url": "https://thunderbay.noaa.gov/shipwrecks/pewabic.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://thunderbay.noaa.gov/shipwrecks/pewabic.html",
+          "publisher": "NOAA Thunder Bay National Marine Sanctuary"
+        }
+      ],
+      "review": {
+        "summary": "Pewabic is documented by NOAA as wrecked August 9, 1865.",
+        "limitations": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N44°57.890' W83° 06.236'.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-thunderbay-typo",
+      "revision": 1,
+      "type": "event",
+      "title": "Typo — 1899 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-thunderbay-typo-place",
+        "name": "NOAA published locality of Typo",
+        "lat": 44.991,
+        "lon": -83.037,
+        "precision": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+        "provenance": "NOAA Thunder Bay vessel-page GPS field, converted from degrees and decimal minutes; original field preserved in the source audit."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1899,
+        "end": 1899,
+        "original": "October 14, 1899",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1899-10-14"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "Typo is documented by NOAA as wrecked October 14, 1899.",
+          "status": "well-supported",
+          "explanation": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N44°59.480' W83°02.229'.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-noaa-thunderbay-typo",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "October 14, 1899"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-noaa-thunderbay-typo",
+          "authors": "NOAA Thunder Bay National Marine Sanctuary",
+          "title": "NOAA Thunder Bay National Marine Sanctuary — Typo",
+          "year": null,
+          "venue": "NOAA Thunder Bay National Marine Sanctuary",
+          "url": "https://thunderbay.noaa.gov/shipwrecks/typo.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://thunderbay.noaa.gov/shipwrecks/typo.html",
+          "publisher": "NOAA Thunder Bay National Marine Sanctuary"
+        }
+      ],
+      "review": {
+        "summary": "Typo is documented by NOAA as wrecked October 14, 1899.",
+        "limitations": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N44°59.480' W83°02.229'.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-thunderbay-w_h_gilbert",
+      "revision": 1,
+      "type": "event",
+      "title": "W.H. Gilbert — 1914 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-thunderbay-w_h_gilbert-place",
+        "name": "NOAA published locality of W.H. Gilbert",
+        "lat": 44.837,
+        "lon": -82.979,
+        "precision": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+        "provenance": "NOAA Thunder Bay vessel-page GPS field, converted from degrees and decimal minutes; original field preserved in the source audit."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1914,
+        "end": 1914,
+        "original": "May 22, 1914",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1914-05-22"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "W.H. Gilbert is documented by NOAA as wrecked May 22, 1914.",
+          "status": "well-supported",
+          "explanation": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N44°50.195' W82°58.722'.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-noaa-thunderbay-w_h_gilbert",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "May 22, 1914"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-noaa-thunderbay-w_h_gilbert",
+          "authors": "NOAA Thunder Bay National Marine Sanctuary",
+          "title": "NOAA Thunder Bay National Marine Sanctuary — W.H. Gilbert",
+          "year": null,
+          "venue": "NOAA Thunder Bay National Marine Sanctuary",
+          "url": "https://thunderbay.noaa.gov/shipwrecks/w_h_gilbert.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://thunderbay.noaa.gov/shipwrecks/w_h_gilbert.html",
+          "publisher": "NOAA Thunder Bay National Marine Sanctuary"
+        }
+      ],
+      "review": {
+        "summary": "W.H. Gilbert is documented by NOAA as wrecked May 22, 1914.",
+        "limitations": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N44°50.195' W82°58.722'.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "wreck-graveyard-thunderbay-windiate",
+      "revision": 1,
+      "type": "event",
+      "title": "Cornelia B. Windiate — 1875 loss",
+      "culture": {
+        "id": "historic-maritime-losses",
+        "name": "Maritime losses; see vessel and source attribution",
+        "kind": "unknown",
+        "color": "#c4b8ed"
+      },
+      "location": {
+        "id": "wreck-graveyard-thunderbay-windiate-place",
+        "name": "NOAA published locality of Cornelia B. Windiate",
+        "lat": 45.325,
+        "lon": -83.218,
+        "precision": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice.",
+        "provenance": "NOAA Thunder Bay vessel-page GPS field, converted from degrees and decimal minutes; original field preserved in the source audit."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1875,
+        "end": 1875,
+        "original": "November 27, 1875",
+        "method": "Documented historical loss date; modern discovery, survey and designation dates are excluded.",
+        "interpretation": "The persistent marker records a historical loss, not continuous survival of the hull.",
+        "eventDate": "1875-11-27"
+      },
+      "history": {
+        "kind": "wreck",
+        "claimId": "loss",
+        "group": "Historical loss inventory"
+      },
+      "claims": [
+        {
+          "id": "loss",
+          "text": "Cornelia B. Windiate is documented by NOAA as wrecked November 27, 1875.",
+          "status": "well-supported",
+          "explanation": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45° 19.526’ W83° 13.106’.",
+          "support": [
+            {
+              "sourceId": "graveyard-source-noaa-thunderbay-windiate",
+              "locator": "Named vessel account and loss date",
+              "stance": "supports",
+              "note": "November 27, 1875"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "graveyard-source-noaa-thunderbay-windiate",
+          "authors": "NOAA Thunder Bay National Marine Sanctuary",
+          "title": "NOAA Thunder Bay National Marine Sanctuary — Cornelia B. Windiate",
+          "year": null,
+          "venue": "NOAA Thunder Bay National Marine Sanctuary",
+          "url": "https://thunderbay.noaa.gov/shipwrecks/windiate.html",
+          "access": "Public institutional source checked 18 November 2026. Independently written factual summary; source artwork and photographs are not reproduced.",
+          "referenceType": "web-resource",
+          "identifier": "https://thunderbay.noaa.gov/shipwrecks/windiate.html",
+          "publisher": "NOAA Thunder Bay National Marine Sanctuary"
+        }
+      ],
+      "review": {
+        "summary": "Cornelia B. Windiate is documented by NOAA as wrecked November 27, 1875.",
+        "limitations": "Public source position rounded to 0.001 degrees; a documented wreck-location reference, not the vessel outline or navigation advice. Publisher position is N45° 19.526’ W83° 13.106’.",
+        "discussion": "Loss dates and approximate localities are kept separate from the dates and positions of discovery, relocation or excavation.",
+        "provenance": "Manual review of the named institutional sources. No voyage track or casualty count inferred.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "18 November 2026: added source-dated regional maritime loss."
+        ],
+        "relatedIds": []
+      }
+    }
+  ]
+}

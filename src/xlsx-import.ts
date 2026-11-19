@@ -4,6 +4,8 @@ import {
   BULK_HEADERS,
   BULK_SCHEMA_VERSION,
   MAX_SUPPORT_ROWS,
+  MAX_WORKBOOK_BYTES,
+  MAX_WORKBOOK_EXPANDED_BYTES,
   OVERLAY_HEADERS,
   type BulkRow,
   type BulkTables,
@@ -16,17 +18,17 @@ export async function importWorkbook(
   buffer: ArrayBuffer,
   records: EvidenceRecord[],
 ): Promise<SharePackage> {
-  if (buffer.byteLength > 5_000_000)
-    throw new Error("Workbook exceeds the 5 MB file limit. Split the batch.");
+  if (buffer.byteLength > MAX_WORKBOOK_BYTES)
+    throw new Error("Workbook exceeds the 10 MB file limit. Split the batch.");
   let declared = 0,
     entries = 0;
   const zipped = unzipSync(new Uint8Array(buffer), {
     filter(file) {
       entries++;
       declared += file.originalSize;
-      if (entries > 200 || declared > 20_000_000)
+      if (entries > 200 || declared > MAX_WORKBOOK_EXPANDED_BYTES)
         throw new Error(
-          "Workbook exceeds the 20 MB expanded limit or 200 archive entries.",
+          "Workbook exceeds the 60 MB expanded limit or 200 archive entries.",
         );
       if (/vbaProject|\.bin$|externalLinks\//i.test(file.name))
         throw new Error(
@@ -37,7 +39,7 @@ export async function importWorkbook(
   });
   if (
     !zipped["xl/workbook.xml"] ||
-    Object.values(zipped).reduce((n, x) => n + x.length, 0) > 20_000_000
+    Object.values(zipped).reduce((n, x) => n + x.length, 0) > MAX_WORKBOOK_EXPANDED_BYTES
   )
     throw new Error("Invalid or oversized XLSX workbook.");
   // Rebuild from bounded buffers: never let a second ZIP parser inflate the original archive.

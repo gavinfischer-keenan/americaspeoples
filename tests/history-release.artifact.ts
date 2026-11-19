@@ -4,13 +4,14 @@ import {readFile} from 'node:fs/promises';
 import {unzipSync,strFromU8} from 'fflate';
 import {version} from '../package.json';
 import {dataset} from '../src/published-data';
+import {MAX_SUPPORT_ROWS} from '../src/bulk-schema';
 
 test('packaged contributor docs describe supported date windows and current workbook limits',async()=>{
  const files=unzipSync(await readFile(`release/americas-peoples-v${version}-selfhost.zip`));
  const history=strFromU8(files['americas-peoples/web/docs/history-update.html']);
  const bulk=strFromU8(files['americas-peoples/web/docs/bulk-import-guide.html']);
  assert.match(history,/Dated finds.*attestation/);
- assert.match(bulk,/10,000 each in Claims/);
+ assert.ok(bulk.includes(MAX_SUPPORT_ROWS.toLocaleString('en-US')+' each in Claims'));
  assert.match(bulk,/intervening gaps are excluded/);
 });
 
@@ -24,7 +25,7 @@ test('the packaged evidence appendix contains every canonical published record e
 
 test('the complete topic release includes the new guides and current coverage',async()=>{
  const files=unzipSync(await readFile(`release/americas-peoples-v${version}-selfhost.zip`));
- for(const name of ['coverage-15-review','voyage-coverage-review','remaining-topic-dives','world-coverage-audit','australasia-archaeology','interior-frontiers','shield-aleutian-local-histories','three-regional-gaps','trade-coverage-audit','eastern-brazil']){
+ for(const name of ['multi-atlas-plan','maritime-trade-expansion','coverage-15-review','voyage-coverage-review','remaining-topic-dives','world-coverage-audit','australasia-archaeology','interior-frontiers','shield-aleutian-local-histories','three-regional-gaps','trade-coverage-audit','eastern-brazil']){
   assert.ok(files[`americas-peoples/web/docs/${name}.md`],name);
   assert.ok(files[`americas-peoples/web/docs/${name}.html`],name);
  }

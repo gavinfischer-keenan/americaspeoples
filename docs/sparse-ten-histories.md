@@ -15,7 +15,7 @@ The same ten geographic bins are compared with locality IDs frozen at v0.25.0. M
 | Idaho — southern / central | 0 | 4 |
 | Kiribati — Gilbert Islands | 0 | 4 |
 | Kiribati — Line Islands | 0 | 8 |
-| Kiribati — Phoenix Islands | 0 | 8 |
+| Kiribati — Phoenix Islands | 0 | 9 |
 | Louisiana — western coastal plain | 0 | 7 |
 | Montana — central / eastern plains | 1 | 4 |
 | Nevada — central / eastern basins | 1 | 5 |

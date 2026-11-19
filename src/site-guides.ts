@@ -7,7 +7,7 @@ import { esc } from './dom';
  */
 export interface SiteGuide {
  id:string; title:string; href:string; region:string; description:string;
- recordIds:string[]; kind:'site'|'culture'; report:string; relatedGuideIds?:string[];
+ recordIds:string[]; kind:'site'|'culture'|'route'; report:string; relatedGuideIds?:string[];
  storyId?:string; topicId?:string; parentGuideId?:string; level?:'region'|'complex'|'building'; referenceRecordIds?:string[];
  mapAspectRatio?:number;
  /** Optional local terrain selection; the guide and shared movie retain all evidence. */
@@ -21,5 +21,5 @@ export function guideLink(id: string): string {
   return guide ? `<a class="site-guide-link" href="${esc(guide.href)}">◈ Explore ${esc(guide.title)} · Site guide ↗</a>` : '';
 }
 export function siteGuideIndex(): string {
-  return `<article class="review-page"><div class="eyebrow">PLACES / ARCHITECTURE / CONNECTIONS</div><h2>Places and cultures</h2><p class="lead">Detailed studies of individual complexes and their surrounding communities.</p><p>Each page separates buildings, settlements and wider networks. Research reviews retain their citations and access limits; a regional date is not a construction date for every building.</p>${['site','culture'].map(kind => `<h3>${kind==='site'?'Places and complexes':'Cultures and civilizations'}</h3><div class="guide-grid">${siteGuides.filter(g=>g.kind===kind).map(g => `<section><h3><a href="${esc(g.href)}">${esc(g.title)} ↗</a></h3><p>${esc(g.region)}</p><p>${esc(g.description)}</p></section>`).join('')}</div>`).join('')}<p>On the map, the ◈ symbol and “Site guide available” identify evidence connected to a published page. Natural events have a separate map-layer control; an event near a settlement does not establish an impact.</p></article>`;
+  return `<article class="review-page"><div class="eyebrow">PLACES / ARCHITECTURE / CONNECTIONS</div><h2>Places and cultures</h2><p class="lead">Detailed studies of individual complexes and their surrounding communities.</p><p>Each page separates buildings, settlements and wider networks. Research reviews retain their citations and access limits; a regional date is not a construction date for every building.</p>${['site','route','culture'].map(kind => `<h3>${kind==='site'?'Places and complexes':kind==='route'?'Sea routes and maritime histories':'Cultures and civilizations'}</h3><div class="guide-grid">${siteGuides.filter(g=>g.kind===kind).map(g => `<section><h3><a href="${esc(g.href)}">${esc(g.title)} ↗</a></h3><p>${esc(g.region)}</p><p>${esc(g.description)}</p></section>`).join('')}</div>`).join('')}<p>On the map, the ◈ symbol and “Site guide available” identify evidence connected to a published page. Natural events have a separate map-layer control; an event near a settlement does not establish an impact.</p></article>`;
 }

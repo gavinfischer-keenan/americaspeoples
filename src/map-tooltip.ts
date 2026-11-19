@@ -2,14 +2,36 @@ import {disputeLevel} from './disputes';
 import type { DisplayRecord } from "./model";
 import type { HazardEvent } from "./physical-data";
 import { formatYear, timeLabel } from "./time";
-import {readerSummary,readerLocation,readerDateMeaning} from './reader-evidence';
+import {readerSummary,readerLocation} from './reader-evidence';
+import {placeKey} from './map-place-groups';
+import {historyState} from './history';
 
 export interface MapTooltipContent {
   title: string;
   summary: string;
   dates: string;
+  items?: {title:string;summary:string;dates:string}[];
 }
 export type MapMode = "movie" | "explore";
+
+const datesFor=(row:DisplayRecord,mode:MapMode,year:number)=>
+  (mode==='movie'&&historyState(row,year)==='past-place'?'Earlier: ':'')+timeLabel(row.time);
+
+/** A cluster previews distinct places, not a count of database rows. */
+export function tooltipForPlaces(rows:readonly DisplayRecord[],mode:MapMode,year:number,anchorName?:string):MapTooltipContent|null{
+  if(!rows.length)return null;
+  const places=new Map<string,DisplayRecord[]>();
+  for(const row of rows){const key=placeKey(row)??row.id;places.set(key,[...(places.get(key)??[]),row]);}
+  const rank=(r:DisplayRecord)=>mode==='movie'&&historyState(r,year)==='active'?0:1;
+  const representatives=[...places.values()].map(group=>[...group].sort((a,b)=>rank(a)-rank(b)||(b.time.end??-Infinity)-(a.time.end??-Infinity)||a.id.localeCompare(b.id))[0]);
+  representatives.sort((a,b)=>rank(a)-rank(b));
+  return {
+    title:anchorName?`Around ${anchorName}`:'Places here',
+    summary:'',
+    items:representatives.slice(0,3).map(row=>({title:row.title,summary:readerSummary(row),dates:datesFor(row,mode,year)})),
+    dates:(representatives.length>3?`Open for all ${representatives.length} places. `:'Open to explore these places. ')+(mode==='explore'?'All-time view.':`Map: ${formatYear(year)}.`),
+  };
+}
 
 /** Uses only catalog fields already in memory; hover never requests record detail. */
 export function tooltipForRecords(
@@ -18,6 +40,13 @@ export function tooltipForRecords(
   year: number,
 ): MapTooltipContent | null {
   if (!rows.length) return null;
+  if(rows.length>1){
+    const content=tooltipForPlaces(rows,mode,year,readerLocation(rows[0]))!;
+    const ordered=[...rows].sort((a,b)=>Number(historyState(b,year)==='active')-Number(historyState(a,year)==='active'));
+    content.items=ordered.slice(0,3).map(row=>({title:row.title,summary:readerSummary(row),dates:datesFor(row,mode,year)}));
+    content.dates=(rows.length>3?`Open for all ${rows.length} finds and episodes. `:'Open to explore this place. ')+(mode==='explore'?'All-time view.':`Map: ${formatYear(year)}.`);
+    return content;
+  }
   const unresolved = rows.some(
     (r) =>
       r.time.kind === "unplaced" ||
@@ -25,13 +54,13 @@ export function tooltipForRecords(
       r.time.end === null,
   );
   return {
-    title: (rows.length>1?`${rows.length} records at this map point · `:"")+rows.map((r) => r.title).join(" · "),
+    title: rows[0].title,
     summary: rows
       .map(readerSummary)
       .filter(Boolean)
       .join(" "),
     dates:
-      rows.map((r) => timeLabel(r.time)).join("; ") +
+      rows.map((r) => datesFor(r,mode,year)).join("; ") +
       ". " +
       (rows.some(r=>disputeLevel(r)==='disputed')?"Disputed interpretation (red rim). ":rows.some(r=>disputeLevel(r)==='discussion')?"Interpretation under discussion (gold rim). ":"")+
       (unresolved
@@ -39,8 +68,7 @@ export function tooltipForRecords(
         : mode === "explore"
           ? "All-time Explore view."
           : `Movie year ${formatYear(year)}.`) +
-      '\nWhere: '+[...new Set(rows.map(readerLocation))].join('; ')+
-      '\n'+[...new Set(rows.map(readerDateMeaning))].join(' '),
+      '\n'+[...new Set(rows.map(readerLocation))].join('; '),
   };
 }
 export function tooltipForHazard(event: HazardEvent): MapTooltipContent {
@@ -93,6 +121,7 @@ export class MapTooltip {
   private readonly title = document.createElement("strong");
   private readonly summary = document.createElement("p");
   private readonly dates = document.createElement("p");
+  private readonly items = document.createElement("ul");
   private owner: Element | null = null;
   private readonly dismissOutside = (event: Event) => {
     if (!(event.target instanceof Node) || !this.owner?.contains(event.target)) this.hide();
@@ -105,7 +134,8 @@ export class MapTooltip {
     this.element.id = "map-hover-tooltip-" + ++nextTooltip;
     this.element.setAttribute("role", "tooltip");
     this.dates.className = "map-hover-dates";
-    this.element.append(this.title, this.summary, this.dates);
+    this.items.className = 'map-hover-places';
+    this.element.append(this.title, this.summary, this.items, this.dates);
   }
   show(
     content: MapTooltipContent,
@@ -120,6 +150,14 @@ export class MapTooltip {
     const shorten=(text:string,limit:number)=>text.length<=limit?text:text.slice(0,limit).replace(/\s+\S*$/,'')+'…';
     this.title.textContent = shorten(content.title,150);
     this.summary.textContent = shorten(content.summary,260);
+    this.summary.hidden=!content.summary;
+    this.items.replaceChildren();
+    this.items.hidden=!content.items?.length;
+    for(const item of content.items??[]){
+      const li=document.createElement('li'),name=document.createElement('strong'),description=document.createElement('p'),dates=document.createElement('span');
+      name.textContent=shorten(item.title,100);description.textContent=shorten(item.summary,155);dates.textContent=item.dates;dates.className='map-hover-dates';
+      li.append(name,description,dates);this.items.append(li);
+    }
     this.dates.textContent = shorten(content.dates,260);
     if (!this.element.isConnected) {
       document.body.append(this.element);

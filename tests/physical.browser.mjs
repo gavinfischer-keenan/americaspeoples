@@ -10,8 +10,10 @@ try{
  const jump=async(y,era='CE')=>{await page.getByLabel('Year number',{exact:true}).fill(String(y));await page.getByLabel('Era',{exact:true}).selectOption(era);await page.getByRole('button',{name:'Go to year',exact:true}).click();};
  await page.locator('#toggle-layers').click();
  await jump(18050,'BCE');await page.locator('.ice-context path').first().waitFor();assert.ok(await page.locator('.ice-context path').count());assert.match(await page.locator('#ice-status').innerText(),/20,000/);
- await jump(11966,'BCE');await page.waitForFunction(()=>document.querySelector('#ice-status').textContent.includes('14,000'));
- const iceBox=await page.locator('.ice-context path').boundingBox(),mapBox=await page.locator('#map-host').boundingBox();
+ await jump(11966,'BCE');await page.waitForFunction(()=>document.querySelector('#ice-status').textContent.includes('14,000')&&!document.querySelector('#ice-status').textContent.includes('retained'));
+ await page.locator('.ice-context path').waitFor({state:'visible'});
+ const {iceBox,mapBox}=await page.evaluate(()=>({iceBox:document.querySelector('.ice-context path').getBoundingClientRect().toJSON(),mapBox:document.querySelector('#map-host').getBoundingClientRect().toJSON()}));
+ assert.match(await page.locator('.ice-context-label').innerText(),/Interpolated ice, approximate edge/);
  assert.ok(iceBox.height<mapBox.height*.5,'14,000 BP ice must not paint the whole globe');
  await page.screenshot({path:'test-results/ice-11966-bce.png'});
  await page.getByLabel('Ice boundary scenario').selectOption('max');await page.waitForFunction(()=>document.querySelector('#ice-status').textContent.includes('MAX'));assert.match(await page.locator('#ice-status').innerText(),/MAX/);

@@ -5,10 +5,12 @@ import ice from '../data/ice-snapshots.json';
 import hazards from '../data/hazard-events.json';
 setPhysicalData(hazards,ice);
 import {dataset} from '../src/published-data';
-test('ice boundaries use an explicitly dated nearest snapshot, never extrapolation',()=>{
+test('ice boundaries retain source endpoints and label interpolation without extrapolation',()=>{
  assert.equal(iceSnapshot(-30000),null);assert.equal(iceSnapshot(1500),null);
  const s=iceSnapshot(1950-20000)!;assert.equal(s.ageCalBP,20000);assert.equal(s.scenario,'optimal');
  assert.equal(iceSnapshot(1950-20000,'min')!.scenario,'min');
+ const between=iceSnapshot(1950-19750)!;assert.equal(between.interpolated,true);assert.equal(between.olderAge,20000);assert.equal(between.youngerAge,19500);
+ assert.equal(s.interpolated,false);
 });
 test('climate events retain source, method and uncertainty and only appear at their dates',()=>{
  const events=eventsAt(1877,new Set());assert.ok(events.some(e=>e.kind==='el-nino'));

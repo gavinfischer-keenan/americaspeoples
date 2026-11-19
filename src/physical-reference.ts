@@ -29,7 +29,7 @@ export const physicalSources = [
     url: "https://doi.org/10.1016/j.quascirev.2023.108345",
     data: "https://doi.org/10.5281/zenodo.8161764",
     method:
-      "49 dated ice-sheet polygon snapshots, 25,000–1,500 calendar years BP (epoch1950). Author MIN, MAX and OPTIMAL scenarios retained. Nearest snapshot is used, with its own age shown; no interpolation. WGS84 polygons simplified at0.12° for display.",
+      "49 dated ice-sheet outlines per scenario, 25,000–1,000 calendar years BP (epoch 1950). Author MIN, MAX and OPTIMAL scenarios retained. At source dates, show the archived WGS84 polygons simplified at 0.12°. Between dates, linearly interpolate signed approximate distances on a 0.25° display grid and extract a smooth contour; the eight-neighbor distance calculation uses longitude scaled at 60° N. Source ages and interpolation are labeled. Frames are rounded to 1/256 of a 500-year interval (about two years). This is illustrative edge interpolation, not a glacier-dynamics model. During loading, retain and label the previous outline from the same scenario.",
     limits:
       "North American ice sheets only; reconstructed boundaries, not measured certainty. Does not reconstruct sea ice, shorelines or navigable open water. Outside dataset dates, no ice geometry is shown; that does not mean ice absence.",
     license:

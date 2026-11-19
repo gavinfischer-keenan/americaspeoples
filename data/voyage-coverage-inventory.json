@@ -564,19 +564,16 @@
       "dates": "1837–1840",
       "datePrecision": "year",
       "status": "partial",
-      "note": "Both Antarctic seasons are separately mapped. The 1840 chronology distinguishes the sighting on 20 January and sampling on a small offshore island on 21 January under the source’s convention.",
+      "note": "The Antarctic ship route is corrected to exclude the separate Dumoulin Islands landing party; its evidence identifier is preserved as an isolated point.",
       "sourceIds": [
-        "gap-an-durville-chile",
-        "gap-an-durville-rocks",
-        "gap-an-durville-teara",
-        "gap-an-durville-portraits"
+        "gap-an-durville-rocks"
       ],
       "mappedVoyageIds": [
         "dumont-durville-astrolabe-zelee-1837-1838",
         "dumont-durville-astrolabe-zelee-1839-1840"
       ],
       "remainingQuestions": [
-        "Extract dated South Orkney and South Shetland approaches and the Pacific survey itinerary from the multi-volume official expedition narrative."
+        "Pacific survey itinerary, first-voyage 1826–1829 work and separate local boat movements still need primary dated extraction."
       ],
       "reviewedAt": "2026-11-18"
     },
@@ -774,7 +771,7 @@
       "dates": "1513–1543",
       "datePrecision": "year",
       "status": "partial",
-      "note": "Dated anchor sets cover Balboa’s Darién crossing, Hernández de Córdoba and Grijalva in the Gulf, Cortés’s coastal and overland advance, the Narváez fleet and separate survivor and return journeys, de Soto and Moscoso, and Coronado’s advance party.",
+      "note": "Dated anchor sets cover Balboa’s Darién crossing, Hernández de Córdoba and Grijalva in the Gulf, Cortés’s coastal and overland advance, the Narváez fleet and separate survivor and return journeys, de Soto and Moscoso, and Coronado’s advance party. The deeper pass adds the separate Alarcón maritime force, explicit boat-party observations, and Alvarado/Padilla’s reconnaissance to Tiguex.",
       "sourceIds": [
         "gap-am-balboa",
         "gap-am-cordova-diaz",
@@ -784,7 +781,9 @@
         "gap-am-elvas",
         "gap-am-coronado",
         "gap-am-cor-route",
-        "gap-am-mitchem-aute"
+        "gap-am-mitchem-aute",
+        "deep-am-alarcon-elsasser",
+        "deep-am-winship"
       ],
       "mappedVoyageIds": [
         "balboa-darien-pacific-1513",
@@ -796,13 +795,15 @@
         "cabeza-de-vaca-return-1537",
         "de-soto-cuba-southeast-1539-1542",
         "moscoso-mississippi-gulf-1543",
-        "coronado-compostela-hawikuh-1540"
+        "coronado-compostela-hawikuh-1540",
+        "alarcon-maritime-support-1540",
+        "alvarado-padilla-tiguex-1540"
       ],
       "remainingQuestions": [
         "Trace the intermediate west Yucatán calls and Cuba returns for Córdoba and Grijalva. Compare the inconsistent Grijalva departure dates and the 8 and 10 June Tabasco chronology.",
         "Resolve Narváez’s Apalachee and Aute camps, the Bay of Horses, and the separate boat paths. Determine individual route hypotheses for Cabeza de Vaca and his companions.",
         "Resolve the exact sequence and places in de Soto’s late inland phases, including Mabila and the Mississippi crossings. Refine Moscoso’s winter site, split voyages and Gulf landings.",
-        "Develop day-level tracks for Coronado’s Plains campaign and the distinct Alarcón, Alvarado, Tovar and Cárdenas parties.",
+        "Coronado’s Plains camp and Quivira dates remain unresolved. Jaramillo gives the river crossing on Saints Peter and Paul (29 June), while later chronologies vary; no precise Arkansas crossing or Quivira arrival is fabricated. Alarcón’s upstream limit, Tovar and Cárdenas routes still need geographically defensible anchors.",
         "Refine Cortés’s Cuba and Cozumel legs and the separate movements of the 1520 retreat and 1521 siege."
       ],
       "reviewedAt": "2026-11-18"
@@ -970,12 +971,12 @@
     },
     {
       "id": "late-malaspina",
-      "name": "Malaspina’s disputed-day Nootka and omitted survey ports",
+      "name": "Malaspina and Bustamante · remaining survey phases",
       "region": "Pacific and South America",
       "dates": "1789–1794",
-      "datePrecision": "day range",
+      "datePrecision": "year",
       "status": "partial",
-      "note": "Manila, Doubtful Sound, Port Jackson departure, Vavaʻu and the Montevideo–Cádiz return are added. Nootka’s 12/13 August uncertainty remains explicit.",
+      "note": "The expanded baseline already covers selected Philippines, southwest Pacific and return stages; no unverified daily additions are made.",
       "sourceIds": [
         "gap-pa-malaspina-auckland",
         "voy-malaspina-nara"
@@ -996,8 +997,8 @@
         "malaspina-bustamante-1789-1794"
       ],
       "remainingQuestions": [
-        "Exact Nootka arrival is disputed by one day; it must not be rendered as a two-day stay.",
-        "Earlier South American ports, the separate Atrevida Macao visit and overland scientific parties need further date/position extraction."
+        "Prioritize earlier South American port sequence, Atrevida’s separate Macao survey and scientific shore parties.",
+        "Retain Nootka arrival as disputed 12/13 August, never a two-day stay."
       ],
       "reviewedAt": "2026-11-18"
     },
@@ -1263,9 +1264,426 @@
       "dates": "1616",
       "datePrecision": "year",
       "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "orellana-amazon-1541-1546",
+      "name": "Orellana, Carvajal and the Amazon expeditions",
+      "region": "Amazon basin and Caribbean",
+      "dates": "1541–1546",
+      "datePrecision": "day and year",
+      "status": "partial",
+      "mappedVoyageIds": [
+        "orellana-carvajal-amazon-1542"
+      ],
+      "sourceIds": [
+        "deep-am-carvajal-medina"
+      ],
+      "note": "A previously absent family gains lower-Amazon confluence observations, ocean exit and larger-vessel return. The smaller brigantine’s earlier arrival is a separate point. Upper-river and second-expedition activity remain at supported coarse precision.",
+      "remainingQuestions": [
+        "Reconcile early Coca/Napo camps and river identifications before drawing a route from the December 1541 separation.",
+        "The 26 August numeric ocean-exit date conflicts with the Saint Louis feast label.",
+        "Resolve the offshore brigantine separation location, Paria passage dates, second-expedition delta channels and survivor routes."
+      ],
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "champlain-great-lakes-1615-1616",
+      "name": "Champlain’s Great Lakes campaign and return",
+      "region": "St. Lawrence, Great Lakes and Atlantic",
+      "dates": "1615–1616",
+      "datePrecision": "day and month",
+      "status": "partial",
+      "mappedVoyageIds": [
+        "champlain-wendat-return-1615-1616"
+      ],
+      "sourceIds": [
+        "deep-am-champlain-otis",
+        "deep-am-champlain-trent"
+      ],
+      "note": "The previously unmapped 1615–16 phase now carries Champlain’s party through Wendat country and its documented return to France. Regional pins and gaps separate it from the earlier Le Caron party, the detached interpreter, and unsettled war/winter sites.",
+      "remainingQuestions": [
+        "Resolve competing archaeological identifications of Otouacha, Carhagouha, Cahiagué and the attacked Haudenosaunee fort before adding tighter geometry.",
+        "Date and locate the separate Le Caron and interpreter parties, additional winter visits, and Champlain’s other voyages including 1603, Acadian surveys and 1613."
+      ],
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "chirikov-st-paul-1741",
+      "name": "Chirikov’s St. Paul and detached boats",
+      "region": "North Pacific",
+      "dates": "1741",
+      "datePrecision": "year",
+      "status": "partial",
+      "note": "Previously absent family gains seven ship anchors and separate boat-dispatch activities.",
+      "sourceIds": [
+        "deep-no-golder-bering-1"
+      ],
+      "mappedVoyageIds": [
+        "chirikov-st-paul-1741"
+      ],
+      "remainingQuestions": [
+        "Reconcile September 9/10 Adak and September 21/22 Agattu against the original log; selected dates follow journal headings.",
+        "Boat landing sites and fate remain unresolved.",
+        "Recover corrected daily ocean fixes before enabling interpolation."
+      ],
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "matonabbee-hearne-1770-1772",
+      "name": "Matonabbee and Hearne’s Coppermine journey",
+      "region": "Northern North America",
+      "dates": "1770–1772",
+      "datePrecision": "year",
+      "status": "partial",
+      "note": "Previously absent family gains secure endpoints, river-mouth survey and regionally located Great Slave Lake arrival.",
+      "sourceIds": [
+        "deep-no-hearne-tyrrell"
+      ],
+      "mappedVoyageIds": [
+        "matonabbee-hearne-coppermine-1770-1772"
+      ],
+      "remainingQuestions": [
+        "Intermediate lake identifications require further geographic and Indigenous place-name research.",
+        "Earlier attempts and separate family movements are not mapped."
+      ],
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "rae-boothia-1853-1854",
+      "name": "Rae’s survey and Inuit testimony",
+      "region": "Canadian Arctic",
+      "dates": "1853–1854",
+      "datePrecision": "year",
+      "status": "partial",
+      "note": "Year-level evidence gains separate land and boat routes and Mistegan’s independent reconnaissance.",
+      "sourceIds": [
+        "deep-no-rae-report-1854",
+        "deep-no-rae-dcb"
+      ],
+      "mappedVoyageIds": [
+        "rae-boothia-sledge-1854",
+        "rae-repulse-york-boats-1854"
+      ],
+      "remainingQuestions": [
+        "Extract the 1853 boats and Quoich River exploration from the full correspondence.",
+        "Reconcile historical longitude errors without substituting later memorial coordinates.",
+        "Mistegan’s exact endpoint remains unlocated."
+      ],
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "bougainville-circumnavigation",
+      "name": "Bougainville, Boudeuse and Étoile",
+      "region": "Atlantic and Pacific",
+      "dates": "1766–1769",
+      "datePrecision": "year",
+      "status": "partial",
+      "note": "Previously absent family. Thirteen Boudeuse anchors now cover the outward Atlantic, American ports, Pacific and return; Étoile’s separate homeward movement is coarse activity.",
+      "mappedVoyageIds": [
+        "bougainville-boudeuse-circumnavigation-1766-1769"
+      ],
+      "remainingQuestions": [
+        "Extract Étoile’s independent outward and return logs and Jeanne Baret/Commerson shore-party chronology.",
+        "Recover Strait of Magellan, Tuamotu, Samoa, Vanuatu, Louisiade and New Guinea intermediate positions before drawing these gaps.",
+        "Resolve the printed ship-calendar adjustment against civil dates before declaring universal exact event dates."
+      ],
+      "sourceIds": [
+        "deep-sp-bougainville"
+      ],
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "dampier-circumnavigations",
+      "name": "Dampier’s American and Pacific voyages",
+      "region": "Americas, western Pacific and Australia",
+      "dates": "1679–1711",
+      "datePrecision": "year",
+      "status": "partial",
+      "note": "Previously absent family. Nine Cygnet anchors cover the major 1686–1688 trans-Pacific and Asian/Australian phase.",
+      "mappedVoyageIds": [
+        "dampier-cygnet-pacific-1686-1688"
+      ],
+      "remainingQuestions": [
+        "Extract the 1679–1682 Caribbean/Darién phase, Bachelor’s Delight 1683–1685, the Nicobar canoe party and later voyages as independent identities.",
+        "Verify precise Guam, Mindanao and northwest Australia anchorages without treating obsolete latitude values as modern exact locations."
+      ],
+      "sourceIds": [
+        "deep-sp-dampier"
+      ],
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "bellingshausen-lazarev",
+      "name": "Bellingshausen and Lazarev",
+      "region": "Antarctica and Pacific",
+      "dates": "1819–1821",
+      "datePrecision": "year",
+      "status": "partial",
+      "note": "The second Antarctic season is added using the BAS published dataset; approximate reconstructed positions and calendar uncertainty are explicit.",
+      "mappedVoyageIds": [
+        "bellingshausen-lazarev-1819-1820",
+        "bellingshausen-vostok-second-antarctic-season-1820-1821"
+      ],
+      "remainingQuestions": [
+        "Check each selected dataset coordinate against the original journal because interpolated coordinates are not individually flagged.",
+        "Extract the first-season continuation and separate Mirny/Vostok returns after 17 March 1820.",
+        "Reconcile Old Style, ship day and the February 1821 date-line correction; do not settle sighting priority from an anniversary timeline."
+      ],
+      "sourceIds": [
+        "deep-sp-bell-data",
+        "deep-sp-bell-method"
+      ],
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "wilkes-vessel-and-party-gaps",
+      "name": "Wilkes · United States Exploring Expedition",
+      "region": "Americas, Pacific and Antarctica",
+      "dates": "1838–1842",
+      "datePrecision": "year",
+      "status": "partial",
+      "note": "Existing three-anchor expedition track remains very partial. No new merged fleet route is proposed in this bounded pass.",
+      "mappedVoyageIds": [
+        "wilkes-united-states-exploring-1838-1841"
+      ],
+      "remainingQuestions": [
+        "Extract Vincennes, Peacock, Porpoise and Flying Fish independently from Wilkes’s five-volume Narrative; Columbia-bar travel must not automatically continue the Antarctic ship.",
+        "Add 1839 South American/Antarctic sorties, 1840 Fiji survey, Hawaiian work, Peacock wreck and separate Columbia/Sacramento overland parties only after party-specific chronology is established."
+      ],
+      "sourceIds": [
+        "voy-wilkes-ohs",
+        "voy-wilkes-usna",
+        "voy-wilkes-loc"
+      ],
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "cavendish-circumnavigation",
+      "name": "Cavendish · first and second expeditions",
+      "region": "Americas and Pacific",
+      "dates": "1586–1593",
+      "datePrecision": "year",
+      "status": "partial",
+      "note": "Significant absent family identified, held behind source-ready Bougainville, Dampier and Bellingshausen in this bounded pass.",
+      "mappedVoyageIds": [],
+      "remainingQuestions": [
+        "Extract Pretty’s narrative in Hakluyt for the 1586–1588 voyage and separate the 1591–1593 ships/parties. No day-dated anchors have been asserted from biographical summaries."
+      ],
+      "sourceIds": [],
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "schouten-le-maire-cape-horn-and-return",
+      "name": "Schouten and Le Maire, Cape Horn and the global return",
+      "region": "Atlantic, Patagonia, South Pacific and East Indies",
+      "dates": "1615–1617",
+      "datePrecision": "year",
+      "status": "partial",
+      "mappedVoyageIds": [
+        "schouten-le-maire-eendracht-1615-1616",
+        "schouten-amsterdam-return-1616-1617"
+      ],
+      "sourceIds": [
+        "final-gap-schouten-purchas",
+        "final-gap-amh-tafahi",
+        "final-gap-amh-futuna"
+      ],
+      "remainingQuestions": [
+        "Reconcile the Tuamotu island names and New Guinea stages against Le Maire’s independent journal and scanned originals before assigning additional modern coordinates.",
+        "Resolve the source’s corrupt December death-day text for Jacob Le Maire; do not infer a death position from the return route.",
+        "Determine the exact Mauritius anchorage and Zeeland arrival harbour. The account gives only island/province-level places.",
+        "Keep the recorded Jacatra one-day discrepancy and the source calendar convention visible when comparing other chronologies."
+      ],
+      "note": "Twenty selected anchors distinguish the Eendracht voyage from the return aboard Amsterdam. Modern named-place locations replace demonstrably inaccurate southern latitudes. No daily track or globally complete voyage inventory is claimed.",
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "slocum-spray-global-circumnavigation",
+      "name": "Slocum and Spray, with American and global stages",
+      "region": "North and South America, Pacific, Australia, Indian Ocean and Atlantic",
+      "dates": "1895–1898",
+      "datePrecision": "year",
+      "status": "partial",
+      "mappedVoyageIds": [
+        "slocum-spray-circumnavigation-1895-1898"
+      ],
+      "sourceIds": [
+        "final-gap-slocum"
+      ],
+      "remainingQuestions": [
+        "Reconcile the Gibraltar departure weekday/date conflict and the Ascension 26/27 April arrival contradiction with another edition or Slocum’s surviving journal.",
+        "Identify the unnamed Uruguay stranding beach of 11 December 1895 and the exact temporary Fuegian shelters without invented geographic precision.",
+        "Resolve the undated Marquesas sighting and the printed Nukahiva/southernmost-island discrepancy.",
+        "Complete the early New England/Nova Scotia visits, Tasmania circuit, local reef navigation, Simons Bay shelter and undated Cape Town arrival from additional date evidence."
+      ],
+      "note": "Selected dated anchors span the full circumnavigation and final homecoming. Gaps represent absent track evidence, not an assertion that the voyage jumped directly between ports. Newport return and Fairhaven homecoming remain distinct; the local river excursion passenger is disclosed.",
+      "reviewedAt": "2026-11-18"
     }
   ],
   "sources": [
+    {
+      "id": "deep-am-alarcon-elsasser",
+      "authors": "Hernando de Alarcón; Richard Hakluyt (translator); Albert B. Elsasser (editor)",
+      "title": "Explorations of Hernando Alarcon in the Lower Colorado River Region, 1540",
+      "year": 1979,
+      "venue": "Journal of California and Great Basin Anthropology 1(1), pp. 8–37; UC Merced eScholarship",
+      "url": "https://escholarship.org/content/qt86x647bs/qt86x647bs.pdf",
+      "access": "Reprints and annotates Alarcón’s letter through Ramusio and Hakluyt. The Spanish original and promised full report are lost. Printed pages 10–11 and 28–31 give distinct sea and boat phases; modern identification of the upstream limit remains uncertain."
+    },
+    {
+      "id": "deep-am-carvajal-medina",
+      "authors": "Gaspar de Carvajal; José Toribio Medina (editor)",
+      "title": "Descubrimiento del río de las Amazonas",
+      "year": 1894,
+      "venue": "Imprenta de E. Rasco, Seville / Internet Archive",
+      "url": "https://archive.org/details/descubrimientod00carvgoog",
+      "access": "Public-domain participant narrative, printed pp. 1–84, with Medina’s separately identified introduction and documentary appendix. The title-page year is 1894; the colophon records completion in February 1895. Full scanned edition and OCR inspected."
+    },
+    {
+      "id": "deep-am-champlain-otis",
+      "authors": "Samuel de Champlain; Charles Pomeroy Otis (translator); Edmund F. Slafter (editor)",
+      "title": "Voyages of Samuel de Champlain, volume III: 1611–1618",
+      "year": 1882,
+      "venue": "Prince Society, Boston / Canadian Institute for Historical Microreproductions / Internet Archive",
+      "url": "https://archive.org/details/cihm_26913",
+      "access": "Participant narrative with explicit editorial annotations. Printed pp. 111–144 and 184–187 support the selected 1615–16 inland and return observations. The editor’s inferred dates and archaeological identifications are distinguished from Champlain’s words."
+    },
+    {
+      "id": "deep-am-champlain-trent",
+      "authors": "Trent University",
+      "title": "Champlain Committee: Champlain’s Legacy",
+      "year": null,
+      "venue": "Trent University, Champlain College",
+      "url": "https://www.trentu.ca/colleges/champlain-college/champlains-legacy/champlain-committee",
+      "access": "Institutional historical interpretation locates Cahiagué in Wendat country near present Orillia; it does not establish an exact archaeological site for every journal observation."
+    },
+    {
+      "id": "deep-am-winship",
+      "authors": "George Parker Winship (editor); Hernando de Alvarado; Francisco Vázquez de Coronado; Juan Jaramillo",
+      "title": "The Coronado Expedition, 1540–1542",
+      "year": 1896,
+      "venue": "Fourteenth Annual Report of the Bureau of Ethnology, Smithsonian Institution, pp. 329–613 / Internet Archive",
+      "url": "https://archive.org/details/coronadoexpediti00winsrich",
+      "access": "Public-domain source edition. Original reports and letters are distinguished from the editorial itinerary. Printed pp. 385–386 qualify Acapulco as probable; pp. 594–595 contain Alvarado’s dated report; pp. 580–583 contain Coronado’s October 1541 letter."
+    },
+    {
+      "id": "deep-no-golder-bering-1",
+      "authors": "Alexei Chirikov and expedition officers; Frank A. Golder (editor); Ellsworth P. Bertholf (reconstruction)",
+      "title": "Bering’s Voyages, volume I: The Log Books and Official Reports",
+      "year": 1922,
+      "venue": "American Geographical Society / Distributed Proofreaders Canada",
+      "url": "https://www.fadedpage.com/link.php?file=20210337.html",
+      "access": "Edited archival translations. Journal pp. 283–311; report pp. 312–327; later reconstruction pp. 341–348. Old Style dates retained; journal/reconstruction differences remain explicit."
+    },
+    {
+      "id": "deep-no-hearne-tyrrell",
+      "authors": "Samuel Hearne; J. B. Tyrrell (editor)",
+      "title": "A Journey from Prince of Wales’s Fort in Hudson’s Bay to the Northern Ocean",
+      "year": 1911,
+      "venue": "Champlain Society / Distributed Proofreaders Canada",
+      "url": "https://www.fadedpage.com/books/20131133/html.php",
+      "access": "Scholarly edition of the 1795 narrative. Tyrrell’s place identifications are distinguished from Hearne’s testimony."
+    },
+    {
+      "id": "deep-no-rae-dcb",
+      "authors": "R. L. Richards",
+      "title": "Rae, John (1813–93)",
+      "year": 1990,
+      "venue": "Dictionary of Canadian Biography, volume XII",
+      "url": "https://www.biographi.ca/en/bio/rae_john_1813_93_12E.html",
+      "access": "Institutional biography, revised 2020; explicit March 31 departure and expedition context."
+    },
+    {
+      "id": "deep-no-rae-report-1854",
+      "authors": "John Rae",
+      "title": "Report to the Hudson’s Bay Company, York Factory, 1 September 1854",
+      "year": 1854,
+      "venue": "House of Commons sessional papers 1854–55, vol. 35, no. 1898, pp. 835–844 / Great Unsolved Mysteries in Canadian History",
+      "url": "https://canadianmysteries.ca/sites/franklin/archive/text/RaeProceedings1854_en.htm",
+      "access": "Institutional archival transcription and ten original page images. Omissions in the transcription are respected. Includes observed positions, Inuit assistance and testimony, detached reconnaissance and dated return."
+    },
+    {
+      "id": "deep-sp-bell-data",
+      "authors": "Grant R. Bigg",
+      "title": "Documentary extracts from journals and logbooks relating to the circum-Antarctic expeditions of Cook (1772–75) and Bellingshausen (1819–21), Version 1.0",
+      "year": 2024,
+      "venue": "NERC EDS UK Polar Data Centre, bell_ice_data.csv",
+      "url": "https://doi.org/10.5285/bcbc7d2e-4e75-43ad-8d9c-a3a3bd4fb013",
+      "access": "Open Government Licence v3.0. Journal-derived observational dataset; occasional missing positions are interpolated without a per-row flag. Dates were advanced 12 days from Old Style. Date-line correction is separately noted at 17 February 1821."
+    },
+    {
+      "id": "deep-sp-bell-method",
+      "authors": "Grant R. Bigg",
+      "title": "The Southern Ocean marine ice record of the early historical, circum-Antarctic voyages of Cook and Bellingshausen",
+      "year": 2024,
+      "venue": "Climate of the Past 20, 2045–2054, section 2.1",
+      "url": "https://cp.copernicus.org/articles/20/2045/2024/",
+      "access": "CC BY 4.0. Methodological reference for the associated BAS data; no claim that interpolated coordinates are recovered exact fixes."
+    },
+    {
+      "id": "deep-sp-bougainville",
+      "authors": "Louis-Antoine de Bougainville; translated by Johann Reinhold Forster",
+      "title": "A Voyage Round the World",
+      "year": 1772,
+      "venue": "London: J. Nourse and T. Davies; participant narrative, Darwin Online transcription",
+      "url": "https://darwin-online.org.uk/converted/Ancillary/BeagleLibrary/1772_Bougainville_A745.html",
+      "access": "Public-domain primary narrative. Page numbers refer to the 1772 English edition. Dates retain the published ship-calendar convention; the narrative records a one-day adjustment at Mauritius."
+    },
+    {
+      "id": "deep-sp-dampier",
+      "authors": "William Dampier",
+      "title": "A New Voyage Round the World",
+      "year": 1697,
+      "venue": "London: James Knapton; participant narrative, Darwin Online transcription",
+      "url": "https://darwin-online.org.uk/converted/Ancillary/BeagleLibrary/1697_Dampier_A762.html",
+      "access": "Public-domain primary narrative. Dates retain the English account convention. Chapter XIV, pp. 376–378 discusses the difference between ship and local calendar days."
+    },
+    {
+      "id": "final-gap-amh-futuna",
+      "authors": "Atlas of Mutual Heritage; Koninklijke Bibliotheek collection",
+      "title": "Schouten and Le Maire at the Hoorn Islands",
+      "referenceType": "web-resource",
+      "venue": "Atlas of Mutual Heritage, object 551 J 49, no. 25",
+      "url": "https://www.atlasofmutualheritage.nl/page/11100/schouten-and-le-maire-at-the-hoorn-islands",
+      "access": "Custodian interpretation identifies the Hoorn Islands as Futuna and Alofi. Used for modern place identification; the dated sighting is anchored in Purchas p. 263. Accessed 18 November 2026; web publication year not supplied.",
+      "year": null
+    },
+    {
+      "id": "final-gap-amh-tafahi",
+      "authors": "Atlas of Mutual Heritage; Koninklijke Bibliotheek collection",
+      "title": "The Eendracht at the Cocos Island (2)",
+      "referenceType": "web-resource",
+      "venue": "Atlas of Mutual Heritage, object pflt 2494, after p. 44",
+      "url": "https://www.atlasofmutualheritage.nl/page/10962/the-eendracht-at-the-cocos-island-2",
+      "access": "Custodian interpretation of the 1622 voyage illustration; used only to identify historical Cocos Island with Tafahi. Dates come from the participant account, not a conflation of the two texts. Accessed 18 November 2026; web publication year not supplied.",
+      "year": null
+    },
+    {
+      "id": "final-gap-schouten-purchas",
+      "authors": "Anonymous participant account attributed to Willem Corneliszoon Schouten; Samuel Purchas (compiler)",
+      "title": "The Relation of a Wonderfull Voiage made by William Cornelison Schouten of Horne, in Hakluytus Posthumus or Purchas His Pilgrimes, volume II",
+      "year": 1905,
+      "referenceType": "book",
+      "venue": "James MacLehose and Sons, Glasgow; reprint of Purchas 1625 / Cornell University Library scan, Internet Archive",
+      "url": "https://archive.org/details/cu31924065997144",
+      "access": "Public-domain first-person voyage narrative, printed pp. 232–284. Full account OCR inspected, with the American passage checked against the transcribed excerpt at https://whalesite.org/RV/TIERRA/TEXTS/SCHOUTEN.htm. The published account is edited and abridged; authorship is not treated as an unmediated autograph diary. Dates retain the numerical dates printed in the source. The account explicitly corrects its circumnavigation day count at Jacatra; no extra calendar conversion has been applied.",
+      "publisher": "James MacLehose and Sons",
+      "volume": "II",
+      "pages": "232–284",
+      "edition": "1905 reprint of the 1625 compilation"
+    },
+    {
+      "id": "final-gap-slocum",
+      "authors": "Joshua Slocum",
+      "title": "Sailing Alone Around the World",
+      "year": 1900,
+      "referenceType": "book",
+      "venue": "The Century Co., New York / Project Gutenberg ebook 6317",
+      "url": "https://www.gutenberg.org/files/6317/6317-h/6317-h.htm",
+      "access": "Public-domain first-person account, chapters II–XX, read in full-text HTML. Working public Gutenberg mirrors: https://dev.gutenberg.org/cache/epub/6317/pg6317-images.html and https://gutenberg.pglaf.org/6/3/1/6317/6317-h/6317-h.htm. Dates are those printed by Slocum, with explicit relative-day derivations identified individually. Conflicts at Gibraltar and Ascension are preserved rather than silently corrected.",
+      "publisher": "The Century Co.",
+      "edition": "Project Gutenberg transcription of the public-domain book"
+    },
     {
       "id": "gap-am-balboa",
       "authors": "Armada Española",
@@ -1650,39 +2068,12 @@
       "access": "Open access"
     },
     {
-      "id": "gap-an-durville-chile",
-      "authors": "Biblioteca Nacional de Chile",
-      "title": "Jules-Sébastien-César Dumont D’Urville (1790–1842)",
-      "year": 2020,
-      "venue": "Memoria Chilena",
-      "url": "https://www.memoriachilena.gob.cl/602/w3-article-94042.html",
-      "access": "Open access"
-    },
-    {
-      "id": "gap-an-durville-portraits",
-      "authors": "National Portrait Gallery Australia",
-      "title": "Jules Sebastien Cesar Dumont d’Urville",
-      "year": 2020,
-      "venue": "National Portrait Gallery",
-      "url": "https://portrait.gov.au/people/jules-sebastien-cesar-dumont-durville-1790",
-      "access": "Open access"
-    },
-    {
       "id": "gap-an-durville-rocks",
       "authors": "Gaston Godard et al.",
       "title": "First rocks sampled in Antarctica (1840): Insights into the landing area and the Terre Adélie craton",
       "year": 2017,
       "venue": "Comptes Rendus Geoscience 349, pp. 12–21",
       "url": "https://comptes-rendus.academie-sciences.fr/geoscience/item/10.1016/j.crte.2016.12.001.pdf",
-      "access": "Open access"
-    },
-    {
-      "id": "gap-an-durville-teara",
-      "authors": "John Dunmore",
-      "title": "Dumont d’Urville, Jules Sébastien César",
-      "year": 1990,
-      "venue": "Dictionary of New Zealand Biography, Te Ara",
-      "url": "https://teara.govt.nz/en/biographies/1d19/dumont-durville-jules-sebastien-cesar",
       "access": "Open access"
     },
     {
@@ -2629,6 +3020,33 @@
       "venue": "Verrazzano historical project",
       "url": "https://verrazzano.org/it/la-lettera",
       "access": "Primary letter as transcribed. Dates departure from the Desertas islands."
+    },
+    {
+      "id": "voy-wilkes-loc",
+      "authors": "Library of Congress",
+      "title": "After Lewis & Clark: chart of the Columbia River",
+      "year": null,
+      "venue": "Library of Congress",
+      "url": "https://www.loc.gov/exhibits/lewisandclark/lewis-after.html",
+      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
+    },
+    {
+      "id": "voy-wilkes-ohs",
+      "authors": "Oregon Historical Society",
+      "title": "United States Exploring Expedition (1838–1842)",
+      "year": null,
+      "venue": "Oregon Historical Society",
+      "url": "https://www.oregonencyclopedia.org/articles/united_states_exploring_expedition_1838_1842_/",
+      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
+    },
+    {
+      "id": "voy-wilkes-usna",
+      "authors": "United States Naval Academy",
+      "title": "The U.S. Exploring Expedition in Antarctica",
+      "year": null,
+      "venue": "United States Naval Academy",
+      "url": "https://www.usna.edu/Library/sca/blog/posts/US_antarctica.php",
+      "access": "Public institutional, primary, or original research source. See the stop note for the supported observation."
     }
   ]
 }

@@ -1,6 +1,6 @@
 # Where the map has gaps
 
-The current map contains **3,419 shared observations** and 73 focused topic observations. The audit does **not** find that blank regions were empty of people. It shows where this collection needs more dated local history.
+The current map contains **11,128 shared observations** and 73 focused topic observations. The audit does **not** find that blank regions were empty of people. It shows where this collection needs more dated local history.
 
 The preceding v0.24.0 campaign added **53 shared map records** about lower Central America, Brazil's Atlantic coast and the Solomon Islands–Vanuatu region, including three linked route views of local finds. See [the histories and source decisions](three-regional-gaps.html).
 
@@ -29,25 +29,25 @@ The immutable baseline is **v0.23.1: 2,531 total and 2,458 shared records**, bef
 
 | Region | −50000…−10001 | −10000…−3001 | −3000…−1 | 0…999 | 1000…1491 | 1492…1699 | 1700…1799 | 1800…1934 | Undated now |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| Alaska / western Arctic | 13 | 15 | 15 | 4 | 8 | 3 | 11 → 41 | 31 → 41 | 7 |
-| Canadian Arctic / Greenland | 0 | 0 | 3 | 2 | 7 | 4 → 30 | 4 → 10 | 12 → 57 | 0 |
-| Pacific Northwest | 3 | 0 | 2 | 5 | 2 | 0 | 4 → 61 | 6 → 14 | 13 |
-| California / Southwest | 6 → 7 | 14 → 16 | 20 → 23 | 48 → 55 | 146 → 154 | 21 → 24 | 36 → 49 | 31 → 42 | 20 |
-| Great Plains | 6 → 8 | 1 → 3 | 2 | 43 → 47 | 140 → 144 | 15 → 18 | 7 → 8 | 68 → 74 | 13 |
-| Northeast / Great Lakes | 21 | 24 | 5 | 13 → 14 | 22 → 23 | 40 → 66 | 38 | 113 → 117 | 20 |
-| Southeastern US | 2 | 2 | 18 | 19 → 23 | 19 → 24 | 21 → 37 | 20 → 24 | 263 → 271 | 23 |
-| Mexico | 9 | 25 | 28 → 29 | 63 → 73 | 45 → 51 | 32 → 51 | 22 → 44 | 33 → 37 | 19 |
-| Central America | 0 | 12 | 16 → 19 | 39 → 60 | 22 → 38 | 15 → 22 | 11 | 12 → 13 | 13 |
-| Caribbean | 0 | 7 | 10 → 12 | 20 → 27 | 20 → 29 | 53 → 81 | 21 → 23 | 31 → 35 | 21 |
-| Northern South America | 2 | 6 | 7 → 9 | 17 → 27 | 11 → 18 | 20 → 31 | 21 → 22 | 22 → 24 | 18 |
-| Andes | 4 | 5 | 29 | 33 → 38 | 52 → 53 | 40 | 8 | 19 → 20 | 36 |
-| Amazon interior | 2 | 8 | 3 | 12 → 18 | 28 → 33 | 23 | 18 | 11 | 25 |
-| Brazil Atlantic | 0 | 0 → 4 | 2 → 10 | 1 → 19 | 1 → 28 | 12 → 23 | 6 | 15 → 18 | 4 |
-| Southern Cone | 10 | 15 → 16 | 2 → 4 | 2 → 3 | 7 → 8 | 17 → 19 | 15 → 16 | 19 → 45 | 16 |
-| Australia | 9 | 6 | 3 → 4 | 3 → 4 | 7 → 8 | 5 → 6 | 5 → 8 | 59 → 71 | 0 |
+| Alaska / western Arctic | 13 | 15 | 15 | 4 | 8 | 3 | 11 → 43 | 31 → 41 | 7 |
+| Canadian Arctic / Greenland | 0 | 0 | 3 → 6 | 2 → 8 | 7 → 18 | 4 → 33 | 4 → 17 | 12 → 71 | 0 |
+| Pacific Northwest | 3 | 0 | 2 | 5 | 2 | 0 | 4 → 61 | 6 → 21 | 13 |
+| California / Southwest | 6 → 7 | 14 → 17 | 20 → 23 | 48 → 59 | 146 → 156 | 21 → 29 | 36 → 49 | 31 → 49 | 20 |
+| Great Plains | 6 → 8 | 1 → 3 | 2 | 43 → 47 | 140 → 144 | 15 → 20 | 7 → 8 | 68 → 74 | 13 |
+| Northeast / Great Lakes | 21 | 24 | 5 | 13 → 16 | 22 → 25 | 40 → 76 | 38 → 40 | 113 → 491 | 20 |
+| Southeastern US | 2 | 2 | 18 → 19 | 19 → 24 | 19 → 24 | 21 → 37 | 20 → 24 | 263 → 277 | 23 |
+| Mexico | 9 | 25 | 28 → 32 | 63 → 74 | 45 → 53 | 32 → 58 | 22 → 45 | 33 → 39 | 19 |
+| Central America | 0 | 12 | 16 → 21 | 39 → 60 | 22 → 38 | 15 → 23 | 11 → 12 | 12 → 14 | 13 |
+| Caribbean | 0 | 7 | 10 → 13 | 20 → 28 | 20 → 29 | 53 → 83 | 21 → 26 | 31 → 61 | 21 |
+| Northern South America | 2 | 6 | 7 → 9 | 17 → 27 | 11 → 18 | 20 → 34 | 21 → 22 | 22 → 31 | 18 |
+| Andes | 4 → 5 | 5 → 7 | 29 → 31 | 33 → 38 | 52 → 53 | 40 → 43 | 8 | 19 → 22 | 36 |
+| Amazon interior | 2 → 3 | 8 → 10 | 3 → 4 | 12 → 18 | 28 → 33 | 23 → 27 | 18 | 11 → 12 | 25 |
+| Brazil Atlantic | 0 | 0 → 4 | 2 → 10 | 1 → 19 | 1 → 28 | 12 → 23 | 6 → 7 | 15 → 25 | 4 |
+| Southern Cone | 10 | 15 → 16 | 2 → 4 | 2 → 3 | 7 → 8 | 17 → 23 | 15 → 20 | 19 → 143 | 16 |
+| Australia | 9 | 6 | 3 → 5 | 3 → 5 | 7 → 10 | 5 → 11 | 5 → 10 | 59 → 205 | 0 |
 | Aotearoa New Zealand | 0 | 0 | 0 | 0 | 4 → 5 | 4 → 5 | 3 → 4 | 9 → 23 | 0 |
-| New Guinea / Island Melanesia | 4 | 4 | 16 → 22 | 4 → 11 | 8 → 18 | 8 → 13 | 6 → 8 | 12 → 13 | 2 |
-| Central/Eastern Polynesia | 0 | 0 | 5 | 4 → 5 | 25 → 36 | 6 → 9 | 7 → 9 | 7 → 16 | 2 |
+| New Guinea / Island Melanesia | 4 | 4 | 16 → 27 | 4 → 11 | 8 → 18 | 8 → 13 | 6 → 9 | 12 → 19 | 2 |
+| Central/Eastern Polynesia | 0 | 0 | 5 | 4 → 5 | 25 → 36 | 6 → 10 | 7 → 10 | 7 → 22 | 2 |
 | Hawaii | 0 | 0 | 0 | 2 | 10 | 3 | 14 → 19 | 21 → 22 | 4 |
 
 ## Gaps that remain

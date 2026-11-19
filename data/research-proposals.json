@@ -36443,7 +36443,7 @@
       "baseRecord": null,
       "record": {
         "id": "saba-plum-piece-archaic",
-        "revision": 4,
+        "revision": 5,
         "type": "event",
         "title": "Plum Piece, Saba: dated inland seasonal camp",
         "culture": {
@@ -36460,22 +36460,22 @@
           "start": -1874,
           "end": -1519,
           "approximate": true,
-          "original": "Charcoal GrN-27563 3300 ± 30 BP and GrN-27564 3320 ± 30 BP; reported 2σ calibration 1875–1520 cal BC.",
-          "method": "Published calendar chronology; cal BP converted as 1950 minus BP, BCE as 1 minus BCE.",
+          "original": "Landcrab samples GrN-27562 3430 ± 30 BP, GrN-27563 3300 ± 30 BP and GrN-27564 3320 ± 30 BP; reported combined 2σ calibration 1875–1520 cal BC.",
+          "method": "Published landcrab radiocarbon measurements and the authors’ combined calibrated calendar envelope; BCE converted as 1 minus BCE. No new calibration.",
           "interpretation": "Published combined calibrated envelope; title's 3300 BP is not converted directly into a calendar year."
         },
         "claims": [
           {
             "id": "plum-date",
-            "text": "Two charcoal dates support an Archaic occupation at inland Plum Piece within 1875–1520 cal BC.",
+            "text": "Three landcrab radiocarbon dates support an Archaic occupation at inland Plum Piece within 1875–1520 cal BC.",
             "status": "well-supported",
             "explanation": "The claim retains the cited evidence's archaeological scope and does not identify a biological ancestry or a historically named people.",
             "support": [
               {
                 "sourceId": "hofman2003-plum",
-                "locator": "Chronology, p. 16",
+                "locator": "Printed p. 16 (PDF p. 5), undisturbed midden chronology: GrN-27562, GrN-27563 and GrN-27564",
                 "stance": "supports",
-                "note": "Original radiocarbon ages and the authors' calibrated result are distinguished."
+                "note": "The source identifies three landcrab samples, not charcoal, and reports the combined 2σ envelope. The calibrated boundaries are unchanged."
               }
             ]
           },
@@ -36515,8 +36515,8 @@
             "title": "Plum Piece: Evidence for Archaic Seasonal Occupation on Saba, Northern Lesser Antilles around 3300 BP",
             "year": 2003,
             "venue": "Journal of Caribbean Archaeology 4:12–27",
-            "url": "https://www.researchgate.net/publication/28322214_Plum_Piece_Evidence_for_Archaic_Seasonal_Occupation_on_Saba_Northern_Lesser_Antilles_around_3300_BP",
-            "access": "Author-uploaded primary full text read in chronology, faunal analysis and discussion sections.",
+            "url": "https://www.floridamuseum.ufl.edu/wp-content/uploads/sites/44/2017/04/plumpiece.pdf",
+            "access": "Publisher-hosted primary full text checked 2026-11-18: printed p. 16 for all three landcrab samples and the calibrated envelope; pp. 17–18 and 23 for Long Island flint and procurement interpretation.",
             "referenceType": "journal-article"
           },
           {
@@ -36532,17 +36532,20 @@
           }
         ],
         "review": {
-          "summary": "Two charcoal dates place activity at inland Plum Piece around 1875–1520 BCE. Land-crab and shearwater remains suggest a seasonal camp, while transported flint points to connections beyond the immediate locality.",
+          "summary": "Three landcrab radiocarbon dates place activity at inland Plum Piece around 1875–1520 BCE. Landcrab and shearwater remains suggest a seasonal camp, while transported flint points to connections beyond the immediate locality.",
           "limitations": "Exact public camp coordinate not verified. The later 2006 study is logged as related work, not an independent dated settlement.",
-          "discussion": "The primary paper supplies calibrated dates. Regional claims that translate '3300 BP' into '3300 BC' are incorrect.",
+          "discussion": "The primary paper supplies calibrated dates. Regional claims that translate '3300 BP' into '3300 BC' are incorrect. The related material-movement record describes Long Island flint from this same dated camp assemblage; it is not independent confirmation or a second occupation.",
           "provenance": "Primary-source review of the two ABC-islands exports; staged for a future combined working-data intake only, with no website publication. Full author-supplied synthesis archive: docs/intake/index.html. Original synthesis is secondary provenance, not a substitute for the cited primary study.",
-          "reviewedAt": "2026-11-16",
+          "reviewedAt": "2026-11-18",
           "history": [
             "2026-10-28: linked existing official geographic references explicitly as location context, without changing archaeological dating.",
             "2026-10-28: Added explicitly schematic regional placement; no exact archaeological coordinate asserted.",
-            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes."
+            "2026-11-16: Reader-facing description updated: Replace process-focused or generic inspector text with the existing record’s factual finding and material uncertainty; no new research, dates, locations, claims or source changes.",
+            "2026-11-18: Corrected the earlier review’s two-charcoal-sample description to the three landcrab samples explicitly reported by Hofman and Hoogland 2003, p. 16. Retained the published date bounds and separate camp and material-provenance claims; cross-linked the shared assemblage."
           ],
-          "relatedIds": []
+          "relatedIds": [
+            "trade-deep-am-long-island-plum-piece"
+          ]
         },
         "overlay": {
           "kind": "regional-evidence",
@@ -54266,14 +54269,14 @@
     },
     {
       "id": "author-r5-huron-obsidian",
-      "version": 1,
+      "version": 2,
       "kind": "new",
       "targetId": null,
       "baseRevision": null,
       "baseRecord": null,
       "record": {
         "id": "r5-huron-obsidian",
-        "revision": 2,
+        "revision": 3,
         "type": "event",
         "title": "Lake Huron — obsidian from Oregon",
         "culture": {
@@ -54292,27 +54295,66 @@
         },
         "destination": null,
         "routeKind": "schematic",
+        "overlay": {
+          "kind": "trade",
+          "basis": "schematic",
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -119.7,
+                43.4
+              ],
+              [
+                -82.5,
+                44.9
+              ]
+            ]
+          },
+          "direction": "forward",
+          "precision": "Material-source region to archaeological find region. The straight line is schematic; intermediate stops, paths and transport methods are unresolved. The record’s place anchor remains the Lake Huron find context; the Oregon source region is represented by the first line coordinate.",
+          "provenance": "O’Shea et al. 2021 Results identify Wagontire. The point represents the broad central Oregon source area, not a quarry extraction coordinate. O’Shea et al. 2021 Fig. 1 and Materials and methods locate sediment sample DA-1 between hunting structures on the submerged ridge. The map anchor is deliberately regional."
+        },
         "time": {
           "kind": "occurrence",
           "start": -7050,
           "end": -6850,
-          "original": "Associated occupation context: 9000–8800 cal yr BP (7051–6851 BCE)",
-          "method": "O’Shea et al. 2021 full text, Archaeological context: radiocarbon determinations at the recovery depth/elevation. Calendar conversion is 1950 minus cal BP.",
-          "interpretation": "Dates the associated occupation context, not direct radiocarbon dating of obsidian or the duration of a trade service.",
+          "original": "Occupation associated with DA-1 depth/elevation: 9000–8800 cal yr BP.",
+          "method": "Obsidian identified independently by three laboratories; source attribution by high-definition XRF and neutron activation analysis. Radiocarbon-associated occupation range converted with 1950 minus cal BP.",
+          "interpretation": "The range dates the occupation associated with the sample's elevation, not either flake directly.",
           "approximate": true
+        },
+        "history": {
+          "kind": "exchange",
+          "claimId": "finding",
+          "windows": [
+            {
+              "start": -7050,
+              "end": -6850,
+              "certainty": "approximate",
+              "note": "The range dates the occupation associated with the sample's elevation, not either flake directly."
+            }
+          ],
+          "connection": {
+            "claimId": "finding",
+            "evidence": "Occupation associated with DA-1 depth/elevation: 9000–8800 cal yr BP.",
+            "lastEvidence": -6850,
+            "cessation": "unknown",
+            "note": "The last boundary limits the dated evidence represented here; it is not an independently demonstrated end to exchange."
+          }
         },
         "claims": [
           {
             "id": "finding",
-            "text": "Two obsidian flakes recovered from an early Holocene submerged Lake Huron context were geochemically sourced to Wagontire in central Oregon, more than 4,000 km away.",
+            "text": "Two tiny flakes beneath Lake Huron match obsidian from central Oregon. They probably came from the resharpening of one carefully kept tool at a hunting place used about 9,000 years ago.",
+            "explanation": "The material travelled about 4,000 km, but the archaeological evidence does not reveal its path. The authors favor movement through several hands; direct procurement, frequency and the communities involved remain unresolved. The two flakes do not prove a regular continent-wide trading service.",
             "status": "well-supported",
-            "explanation": "Source and find location establish material movement, not a mapped travel route, direct trade between endpoints or a journey by one person.",
             "support": [
               {
                 "sourceId": "r5-oshea2021",
-                "stance": "supports",
-                "locator": "Abstract and source access notes",
-                "note": "Supports the scoped finding; dates, interpretation and access limits are retained."
+                "locator": "Materials and methods, DA-1 context; Results; Discussion; Fig. 1 and Table 1",
+                "note": "Supports the age association, laboratory source attribution and explicit uncertainty about movement mechanisms.",
+                "stance": "supports"
               }
             ]
           }
@@ -54320,46 +54362,34 @@
         "sources": [
           {
             "id": "r5-oshea2021",
-            "authors": "O’Shea, J. M.; et al.",
-            "title": "Central Oregon obsidian from a submerged early Holocene archaeological site beneath Lake Huron",
+            "authors": "John M. O’Shea, Ashley K. Lemke, Brendan S. Nash, Elisabeth P. Sonnenburg, Jeffery R. Ferguson, Alex J. Nyers, and Danielle J. Riebe",
             "year": 2021,
-            "venue": "See linked primary publication",
+            "title": "Central Oregon obsidian from a submerged early Holocene archaeological site beneath Lake Huron",
+            "venue": "PLOS ONE 16(5):e0250840",
+            "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0250840",
             "doi": "10.1371/journal.pone.0250840",
-            "url": "https://doi.org/10.1371/journal.pone.0250840",
-            "access": "Publisher full text accessed via Europe PMC XML, including Archaeological context and associated 9000–8800 cal yr BP statement; no recalibration performed.",
+            "access": "Full open article, Materials and methods, Results, Discussion, Figs. 1–4 and Table 1 checked.",
             "referenceType": "journal-article"
           }
         ],
         "review": {
-          "summary": "Two obsidian flakes recovered from an early Holocene submerged Lake Huron context were geochemically sourced to Wagontire in central Oregon, more than 4,000 km away.",
-          "limitations": "Contextual age rather than a date measured on the stone. Source and find location establish material movement, not a mapped travel route, direct trade between endpoints or a journey by one person.",
-          "discussion": "Population size is unknown. Archaeological culture, ancestry, language and present-day identity are not interchangeable.",
-          "provenance": "Round5 author-supplied research leads reconciled against the cited sources on 2026-10-28.",
-          "reviewedAt": "2026-10-29",
+          "summary": "Two tiny flakes beneath Lake Huron match obsidian from central Oregon. They probably came from the resharpening of one carefully kept tool at a hunting place used about 9,000 years ago.",
+          "limitations": "The material travelled about 4,000 km, but the archaeological evidence does not reveal its path. The authors favor movement through several hands; direct procurement, frequency and the communities involved remain unresolved. The two flakes do not prove a regular continent-wide trading service.",
+          "discussion": "This deeply pre-1200 connection is evidence of human material movement across regions. It is represented as one occurrence, not continuous exchange throughout the long period before later Great Lakes networks.",
+          "provenance": "Round5 author-supplied research leads reconciled against the cited sources on 2026-10-28. Source passages and chronology checked on 2026-11-18. Locations are generalized public regional anchors; all connecting geometry is schematic.",
+          "reviewedAt": "2026-11-18",
           "history": [
             "2026-10-28: reviewed for v0.3.4.",
-            "2026-10-29:280-record chronology review: general-or-multiple-contexts. This comparative, methodological or multi-event finding has no one event date. Display its original chronological guidance and geographic context, without interpreting it as a contemporaneous settlement."
+            "2026-10-29:280-record chronology review: general-or-multiple-contexts. This comparative, methodological or multi-event finding has no one event date. Display its original chronological guidance and geographic context, without interpreting it as a contemporaneous settlement.",
+            "2026-11-18: Reused the existing Lake Huron finding after a full-source trade review; enriched the point with a schematic Wagontire-to-find-region connection. The proposed trade-deep-na-wagontire-lake-huron duplicate was consolidated here, not counted as a second observation. Preserved the original Lake Huron place anchor for local and regional histories."
           ],
           "relatedIds": []
-        },
-        "overlay": {
-          "kind": "trade",
-          "basis": "schematic",
-          "geometry": {
-            "type": "Point",
-            "coordinates": [
-              -82.5,
-              44.9
-            ]
-          },
-          "precision": "Approximate Lake Huron, Alpena-Amberley Ridge anchor; 120 km approximate scope is editorial spatial uncertainty, not an excavated location, territory or measured confidence interval.",
-          "provenance": "Fuzzy setting only; no exact site coordinates or boundaries inferred."
         }
       },
       "rationale": "Author-supplied literature intake with primary source/access checks.",
       "state": "ready",
       "createdAt": "2026-10-29T05:57:05.985Z",
-      "updatedAt": "2026-10-29T05:57:05.985Z"
+      "updatedAt": "2026-11-18T00:00:00.000Z"
     },
     {
       "id": "author-r5-andean-parrot-trade",

@@ -1,27 +1,27 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {inspectImport,mergeImport,makePackage,parsePackage} from '../src/proposals';
+import {inspectImport,mergeImport,makePackage,parsePackage,MAX_PROPOSALS,MAX_PACKAGE_BYTES} from '../src/proposals';
 import {fixture,proposal} from './fixtures';
 
 const unique=(n:number)=>({...proposal(),id:`limit-${n}`});
 
 test('merge rejects an oversized combined collection without changing either input',()=>{
- const existing=Array.from({length:5000},(_,i)=>unique(i));
- const incoming=[unique(5000)];
- assert.equal(parsePackage(JSON.stringify(makePackage(existing))).proposals.length,5000);
+ const existing=Array.from({length:MAX_PROPOSALS},(_,i)=>unique(i));
+ const incoming=[unique(MAX_PROPOSALS)];
+ assert.equal(parsePackage(JSON.stringify(makePackage(existing))).proposals.length,MAX_PROPOSALS);
  const before=JSON.stringify(existing);
- assert.throws(()=>mergeImport(incoming,existing),/5000/);
+ assert.throws(()=>mergeImport(incoming,existing),new RegExp(String(MAX_PROPOSALS)));
  assert.equal(JSON.stringify(existing),before);
  assert.equal(incoming.length,1);
- assert.equal(mergeImport([existing[0]],existing).length,5000);
+ assert.equal(mergeImport([existing[0]],existing).length,MAX_PROPOSALS);
 });
 
 test('merge checks combined byte limits and validates new content before returning',()=>{
- const batch=(offset:number)=>Array.from({length:161},(_,i)=>({...unique(i+offset),rationale:'x'.repeat(100000)}));
+ const batch=(offset:number)=>Array.from({length:Math.ceil(MAX_PACKAGE_BYTES/200000)+1},(_,i)=>({...unique(i+offset),rationale:'x'.repeat(100000)}));
  const existing=batch(0),incoming=batch(1000);
  parsePackage(JSON.stringify(makePackage(existing)));
  parsePackage(JSON.stringify(makePackage(incoming)));
- assert.throws(()=>mergeImport(incoming,existing),/32 MB/);
+ assert.throws(()=>mergeImport(incoming,existing),/96 MB/);
  const invalid=unique(200);invalid.record.sources[0].url='javascript:alert(1)';
  assert.throws(()=>mergeImport([invalid],[]));
 });

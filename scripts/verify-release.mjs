@@ -7,6 +7,7 @@ import { chromium } from "playwright";
 const require = createRequire(import.meta.url);
 const node = process.execPath;
 const phases = [
+  ["Shipwreck date and identity normalization", null, ["scripts/test_shipwreck_import.py"]],
   ["Canonical regional coverage audit", null, ["scripts/coverage-audit.py"]],
   ["Ten sparse regions coverage and source report", node, ["--import", "tsx", "scripts/sparse-ten-audit.ts"]],
   ["Current broad coverage report", node, ["--import", "tsx", "scripts/world-coverage-audit.ts"]],
@@ -40,6 +41,9 @@ const phases = [
     node,
     ["--import", "tsx", "scripts/build.ts"],
   ],
+  ["Four-atlas navigation and empty previews", node, ["scripts/browser-atlases.mjs"]],
+  ["Wreck density, fresh losses and accumulated background", node, ["tests/wreck-density.browser.mjs"]],
+  ["Maritime guide maps and seasonal tables", node, ["tests/maritime-guides.browser.mjs"]],
   ["Packaged history documentation", node, ["--import", "tsx", "--test", "tests/history-release.artifact.ts"]],
   ["Python API integration and release retention", null, ["-m", "unittest", "discover", "-s", "server", "-p", "test_*.py"]],
   [
@@ -129,6 +133,9 @@ if (process.argv.includes("--list")) {
   for (const [index, [label]] of phases.entries())
     console.log(`${index + 1}. ${label}`);
 } else {
+  const resumeArg=process.argv.find(value=>value.startsWith('--from-phase='));
+  const firstPhase=resumeArg?Number(resumeArg.split('=')[1]):1;
+  if(!Number.isInteger(firstPhase)||firstPhase<1||firstPhase>phases.length)throw Error('Invalid --from-phase number.');
   const pythonCandidates = process.env.PYTHON_PATH
     ? [process.env.PYTHON_PATH]
     : ["python", "python3"];
@@ -155,6 +162,7 @@ if (process.argv.includes("--list")) {
     BROWSER_PATH: browserPath,
   };
   for (const [index, [label, command, args]] of phases.entries()) {
+    if(index+1<firstPhase)continue;
     console.log(`\n[${index + 1}/${phases.length}] ${label}`);
     const result = spawnSync(command || python, args, {
       env,
@@ -170,6 +178,6 @@ if (process.argv.includes("--list")) {
     console.log(`PASS: ${label}`);
   }
   console.log(
-    "\nRelease verification passed. No publication or deployment was performed.",
+    `\nRelease verification phases ${firstPhase}–${phases.length} passed. No publication or deployment was performed.`,
   );
 }

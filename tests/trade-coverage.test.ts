@@ -6,6 +6,20 @@ import {topicOnlyIds,topics} from '../src/topic-dives';
 import {historyState} from '../src/history';
 import {activeRecords} from '../src/time';
 
+test('Lake Huron source review enriches one finding and one chapter without duplicating the flakes',()=>{
+ const finds=dataset.records.filter(r=>r.sources.some(s=>s.doi==='10.1371/journal.pone.0250840'));
+ assert.equal(finds.length,1,'the same DA-1 flakes must not become a second evidence record');
+ const r=finds[0];assert.equal(r.id,'r5-huron-obsidian');
+ assert.equal(r.overlay?.geometry?.type,'LineString');
+ assert.deepEqual([r.location?.lon,r.location?.lat],[-82.5,44.9],'the canonical place remains the Lake Huron find context');
+ assert.deepEqual([r.time.start,r.time.end],[-7050,-6850]);
+ assert.equal(r.history?.kind,'exchange');
+ assert.match(r.review.limitations,/path|direct procurement/i);
+ const chapters=topics.find(t=>t.id==='trade')!.scenes.filter(s=>s.recordIds.includes(r.id));
+ assert.equal(chapters.length,1);assert.equal(chapters[0].id,'trade-huron');
+ assert.equal(historyState(r,chapters[0].year),'active');
+});
+
 test('new exchange links use supported activity windows and remain on the master map',()=>{
  const {records}=JSON.parse(readFileSync('data/trade-0-1200-expansion-records.json','utf8'));
  const trade=topics.find(topic=>topic.id==='trade')!;

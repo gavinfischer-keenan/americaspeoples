@@ -1,0 +1,2621 @@
+{
+  "records": [
+    {
+      "id": "deep-no-iceland-greenland985",
+      "revision": 1,
+      "type": "event",
+      "title": "From Iceland to Greenland — Norse settlement around 985–986",
+      "culture": {
+        "id": "norse",
+        "name": "Norse",
+        "kind": "people",
+        "color": "#dfba7a"
+      },
+      "location": {
+        "id": "deep-no-place-iceland-greenland985",
+        "name": "Hvammsfjörður region, western Iceland",
+        "lon": -22,
+        "lat": 65,
+        "precision": "Regional origin associated with Erik's household; not a known departure harbour.",
+        "provenance": "Named locality identified by the cited source; generalized map coordinates."
+      },
+      "destination": {
+        "id": "deep-no-iceland-greenland985-destination",
+        "name": "Eastern Settlement, Qassiarsuk/Brattahlíð region",
+        "lon": -45.52,
+        "lat": 61.15,
+        "precision": "Generalized locality or source-region anchor; not an excavated find coordinate or a recorded ship position.",
+        "provenance": "Wallace paragraphs 4–6 and Natmus settlement geography."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 985,
+        "end": 986,
+        "original": "circa 985 or 986 CE; historical tradition, not an exact sailing date",
+        "method": "Archaeological context or historical synthesis; exact scope specified in the claim and source locators.",
+        "interpretation": "The date window is the evidence's chronological resolution, not the duration of a single journey.",
+        "approximate": true
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Households from Iceland established Norse farming settlements in southwestern Greenland around 985–986.",
+          "status": "well-supported",
+          "explanation": "Wallace traces Erik's Icelandic household and followers to Greenland; the Danish National Museum dates the Eastern and Western settlements to approximately 985. These sources support a migration connection at year-scale precision.",
+          "support": [
+            {
+              "sourceId": "deep-no-wallace2003",
+              "locator": "Numbered paragraphs 4–6, Icelandic household, migration and 985/986 chronology",
+              "stance": "supports",
+              "note": "Households from Iceland established Norse farming settlements in southwestern Greenland around 985–986."
+            },
+            {
+              "sourceId": "deep-no-natmus-norse",
+              "locator": "Opening chronology and Geographical areas of the Norse settlements",
+              "stance": "supports",
+              "note": "Households from Iceland established Norse farming settlements in southwestern Greenland around 985–986."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-no-wallace2003",
+          "authors": "Birgitta Wallace",
+          "year": 2003,
+          "title": "The Norse in Newfoundland: L'Anse aux Meadows and Vinland",
+          "venue": "Newfoundland and Labrador Studies 19(1):5–43",
+          "volume": "19",
+          "issue": "1",
+          "pages": "5–43",
+          "url": "https://journals.lib.unb.ca/index.php/NFLDS/article/download/140/236?inline=1",
+          "access": "Full numbered-paragraph HTML read; archaeological sections and saga discussion distinguished. The journal issue is 2003 despite later online publication metadata.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "deep-no-natmus-norse",
+          "authors": "National Museum of Denmark",
+          "year": null,
+          "title": "Prehistory of Greenland: Norse",
+          "venue": "National Museum of Denmark, Arctic Research",
+          "url": "https://natmus.dk/organisation/forskning-og-kulturarv/nyere-tid-og-verdens-kulturer/etnografisk-samling/arktisk-forskning/prehistory-of-greenland/norse/",
+          "access": "Full institutional account read. Its statement that imported timber has not been identified is superseded by Guðmundsdóttir's research and is not adopted.",
+          "referenceType": "web-resource"
+        }
+      ],
+      "review": {
+        "summary": "Households from Iceland established Norse farming settlements in southwestern Greenland around 985–986.",
+        "limitations": "No exact day, named embarkation beach or itinerary is known from this evidence. Both the Eastern and Western settlements were on Greenland's west side; this endpoint represents the Eastern Settlement.",
+        "discussion": "Wallace traces Erik's Icelandic household and followers to Greenland; the Danish National Museum dates the Eastern and Western settlements to approximately 985. These sources support a migration connection at year-scale precision.",
+        "provenance": "Norse in America and North Atlantic source audit; archaeological material, later saga narratives and schematic connections distinguished.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added source-located Norse and North Atlantic evidence."
+        ],
+        "relatedIds": [
+          "lanse-1021"
+        ]
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -22,
+              65
+            ],
+            [
+              -45.52,
+              61.15
+            ]
+          ]
+        },
+        "direction": "forward",
+        "precision": "Schematic connection; no precise track, unrecorded stop or journey duration is asserted.",
+        "provenance": "Source and destination regions only. Sailing required rounding southern Greenland; this straight evidence connection is not a navigable track."
+      },
+      "history": {
+        "kind": "migration",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 985,
+            "end": 986,
+            "certainty": "approximate",
+            "note": "circa 985 or 986 CE; historical tradition, not an exact sailing date"
+          }
+        ],
+        "connection": {
+          "evidence": "Households from Iceland established Norse farming settlements in southwestern Greenland around 985–986.",
+          "lastEvidence": 986,
+          "cessation": "unknown",
+          "note": "Source and destination regions only. Sailing required rounding southern Greenland; this straight evidence connection is not a navigable track.",
+          "claimId": "evidence"
+        }
+      }
+    },
+    {
+      "id": "deep-no-greenland-newfoundland",
+      "revision": 1,
+      "type": "event",
+      "title": "From Greenland to Newfoundland — the Norse connection",
+      "culture": {
+        "id": "norse",
+        "name": "Norse",
+        "kind": "people",
+        "color": "#dfba7a"
+      },
+      "location": {
+        "id": "deep-no-place-greenland-newfoundland",
+        "name": "Norse Eastern Settlement, southwestern Greenland",
+        "lon": -45.52,
+        "lat": 61.15,
+        "precision": "Rounded regional locality reference, not an individual sample findspot.",
+        "provenance": "Named locality identified by the cited source; generalized map coordinates."
+      },
+      "destination": {
+        "id": "deep-no-greenland-newfoundland-destination",
+        "name": "L'Anse aux Meadows, Newfoundland",
+        "lon": -55.55,
+        "lat": 51.58,
+        "precision": "Generalized locality or source-region anchor; not an excavated find coordinate or a recorded ship position.",
+        "provenance": "Existing stable lanse-1021 generalized property locator; Newfoundland, across the Strait of Belle Isle from Labrador."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 990,
+        "end": 1050,
+        "original": "Early eleventh-century context; short-lived archaeological samples at L'Anse aux Meadows broadly 990–1050, with cutting activity independently fixed to 1021",
+        "method": "Archaeological context or historical synthesis; exact scope specified in the claim and source locators.",
+        "interpretation": "The date window is the evidence's chronological resolution, not the duration of a single journey.",
+        "approximate": true
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Norse seafarers connected Greenland's settlements with L'Anse aux Meadows on Newfoundland's northern peninsula.",
+          "status": "well-supported",
+          "explanation": "The archaeological site and the 1021 wood date establish activity in Newfoundland. Kuitems and colleagues' regional map locates the Greenland settlements from which the Norse ventured west; later sagas provide differing voyage narratives.",
+          "support": [
+            {
+              "sourceId": "deep-no-kuitems2022",
+              "locator": "Main text, precise 1021 date; Extended Data Fig. 1 regional context and Fig. 4 divergent saga sequences",
+              "stance": "supports",
+              "note": "Norse seafarers connected Greenland's settlements with L'Anse aux Meadows on Newfoundland's northern peninsula."
+            },
+            {
+              "sourceId": "deep-no-wallace2003",
+              "locator": "Numbered paragraphs 6–14 and 43",
+              "stance": "supports",
+              "note": "Norse seafarers connected Greenland's settlements with L'Anse aux Meadows on Newfoundland's northern peninsula."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-no-kuitems2022",
+          "authors": "Margot Kuitems, Birgitta L. Wallace, Charles Lindsay, et al.",
+          "year": 2022,
+          "title": "Evidence for European presence in the Americas in AD 1021",
+          "venue": "Nature 601:388–391",
+          "volume": "601",
+          "pages": "388–391",
+          "doi": "10.1038/s41586-021-03972-8",
+          "url": "https://www.nature.com/articles/s41586-021-03972-8",
+          "access": "Full article and Extended Data Figs. 1, 2 and 4 inspected, including the full-text XML at https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8770119/fullTextXML. Published online 20 October 2021; volume year 2022.",
+          "referenceType": "journal-article"
+        },
+        {
+          "id": "deep-no-wallace2003",
+          "authors": "Birgitta Wallace",
+          "year": 2003,
+          "title": "The Norse in Newfoundland: L'Anse aux Meadows and Vinland",
+          "venue": "Newfoundland and Labrador Studies 19(1):5–43",
+          "volume": "19",
+          "issue": "1",
+          "pages": "5–43",
+          "url": "https://journals.lib.unb.ca/index.php/NFLDS/article/download/140/236?inline=1",
+          "access": "Full numbered-paragraph HTML read; archaeological sections and saga discussion distinguished. The journal issue is 2003 despite later online publication metadata.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "Norse seafarers connected Greenland's settlements with L'Anse aux Meadows on Newfoundland's northern peninsula.",
+        "limitations": "The line is a broad source-region connection. It does not date arrival to 1021, identify the crew as Leif's, or confirm a sequence of Labrador/Baffin landfalls. The 990–1050 window brackets context, not a sixty-year voyage.",
+        "discussion": "The archaeological site and the 1021 wood date establish activity in Newfoundland. Kuitems and colleagues' regional map locates the Greenland settlements from which the Norse ventured west; later sagas provide differing voyage narratives.",
+        "provenance": "Norse in America and North Atlantic source audit; archaeological material, later saga narratives and schematic connections distinguished.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added source-located Norse and North Atlantic evidence."
+        ],
+        "relatedIds": [
+          "lanse-1021"
+        ]
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -45.52,
+              61.15
+            ],
+            [
+              -55.55,
+              51.58
+            ]
+          ]
+        },
+        "direction": "forward",
+        "precision": "Schematic connection; no precise track, unrecorded stop or journey duration is asserted.",
+        "provenance": "Schematic Greenland–Newfoundland connection supported by archaeology and regional historical context. Precise Atlantic course and departure settlement are unresolved."
+      },
+      "history": {
+        "kind": "migration",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 990,
+            "end": 1050,
+            "certainty": "approximate",
+            "note": "Early eleventh-century context; short-lived archaeological samples at L'Anse aux Meadows broadly 990–1050, with cutting activity independently fixed to 1021"
+          }
+        ],
+        "connection": {
+          "evidence": "Norse seafarers connected Greenland's settlements with L'Anse aux Meadows on Newfoundland's northern peninsula.",
+          "lastEvidence": 1050,
+          "cessation": "unknown",
+          "note": "Schematic Greenland–Newfoundland connection supported by archaeology and regional historical context. Precise Atlantic course and departure settlement are unresolved.",
+          "claimId": "evidence"
+        }
+      }
+    },
+    {
+      "id": "deep-no-lanse-workshops",
+      "revision": 1,
+      "type": "occupation",
+      "title": "L'Anse aux Meadows — halls, ironworking and boat repair",
+      "culture": {
+        "id": "norse",
+        "name": "Norse",
+        "kind": "people",
+        "color": "#dfba7a"
+      },
+      "location": {
+        "id": "deep-no-place-lanse-workshops",
+        "name": "L'Anse aux Meadows, Newfoundland",
+        "lon": -55.55,
+        "lat": 51.58,
+        "precision": "Rounded regional locality reference, not an individual sample findspot.",
+        "provenance": "Named locality identified by the cited source; generalized map coordinates."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 990,
+        "end": 1050,
+        "original": "Early eleventh-century archaeological context; broad short-lived sample range 990–1050, not a continuous occupation span",
+        "method": "Archaeological context or historical synthesis; exact scope specified in the claim and source locators.",
+        "interpretation": "The date window is the evidence's chronological resolution, not the duration of a single journey.",
+        "approximate": true
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "People at L'Anse aux Meadows built turf-and-timber halls, worked iron and repaired boats.",
+          "status": "well-supported",
+          "explanation": "The eight building remains form three complexes beside a brook and peat bogs. Modified nails and woodworking debris help explain the site's practical work as a small overseas base.",
+          "support": [
+            {
+              "sourceId": "deep-no-parks-designation",
+              "locator": "Character-Defining Elements: three complexes, eight buildings, bloomery and boat repair",
+              "stance": "supports",
+              "note": "People at L'Anse aux Meadows built turf-and-timber halls, worked iron and repaired boats."
+            },
+            {
+              "sourceId": "deep-no-wallace2003",
+              "locator": "Numbered paragraphs 30–31 and 43",
+              "stance": "supports",
+              "note": "People at L'Anse aux Meadows built turf-and-timber halls, worked iron and repaired boats."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-no-parks-designation",
+          "authors": "Parks Canada",
+          "year": null,
+          "title": "L'Anse aux Meadows National Historic Site of Canada",
+          "venue": "Directory of Federal Heritage Designations",
+          "url": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?i=58759&id=236",
+          "access": "Description of Historic Place and Character-Defining Elements read. Older plaque language identifying Leif's camp or causes of abandonment is not treated as secure evidence.",
+          "referenceType": "web-resource"
+        },
+        {
+          "id": "deep-no-wallace2003",
+          "authors": "Birgitta Wallace",
+          "year": 2003,
+          "title": "The Norse in Newfoundland: L'Anse aux Meadows and Vinland",
+          "venue": "Newfoundland and Labrador Studies 19(1):5–43",
+          "volume": "19",
+          "issue": "1",
+          "pages": "5–43",
+          "url": "https://journals.lib.unb.ca/index.php/NFLDS/article/download/140/236?inline=1",
+          "access": "Full numbered-paragraph HTML read; archaeological sections and saga discussion distinguished. The journal issue is 2003 despite later online publication metadata.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "People at L'Anse aux Meadows built turf-and-timber halls, worked iron and repaired boats.",
+        "limitations": "Workshop remains have not all been individually dated to 1021. The exact arrival, occupancy length, departing year and named inhabitants remain uncertain.",
+        "discussion": "The eight building remains form three complexes beside a brook and peat bogs. Modified nails and woodworking debris help explain the site's practical work as a small overseas base.",
+        "provenance": "Norse in America and North Atlantic source audit; archaeological material, later saga narratives and schematic connections distinguished.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added source-located Norse and North Atlantic evidence."
+        ],
+        "relatedIds": [
+          "lanse-1021"
+        ]
+      },
+      "history": {
+        "kind": "habitation",
+        "claimId": "evidence"
+      }
+    },
+    {
+      "id": "deep-no-butternut-newfoundland",
+      "revision": 1,
+      "type": "event",
+      "title": "Butternuts reached the Norse site from farther south",
+      "culture": {
+        "id": "norse",
+        "name": "Norse",
+        "kind": "people",
+        "color": "#dfba7a"
+      },
+      "location": {
+        "id": "deep-no-place-butternut-newfoundland",
+        "name": "Butternut range in New Brunswick and the St Lawrence region",
+        "lon": -66.5,
+        "lat": 47,
+        "precision": "Broad botanical source-region reference; no single gathering place has been identified.",
+        "provenance": "Named locality identified by the cited source; generalized map coordinates."
+      },
+      "destination": {
+        "id": "deep-no-butternut-newfoundland-destination",
+        "name": "L'Anse aux Meadows, Newfoundland",
+        "lon": -55.55,
+        "lat": 51.58,
+        "precision": "Generalized locality or source-region anchor; not an excavated find coordinate or a recorded ship position.",
+        "provenance": "Wallace's excavated butternut finds, paragraphs 30 and 54."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 990,
+        "end": 1050,
+        "original": "Norse archaeological context at L'Anse aux Meadows, broadly early eleventh century",
+        "method": "Archaeological context or historical synthesis; exact scope specified in the claim and source locators.",
+        "interpretation": "The date window is the evidence's chronological resolution, not the duration of a single journey.",
+        "approximate": true
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Butternut nuts and worked butternut wood at L'Anse aux Meadows came from a region south of Newfoundland.",
+          "status": "well-supported",
+          "explanation": "Wallace identifies a worked burl and three nuts, and discusses possible source areas in New Brunswick and along the St Lawrence. They establish material movement beyond the Newfoundland site, without locating a southern Norse camp.",
+          "support": [
+            {
+              "sourceId": "deep-no-wallace2003",
+              "locator": "Numbered paragraphs 30 and 54; northern native range and worked butternut burl",
+              "stance": "supports",
+              "note": "Butternut nuts and worked butternut wood at L'Anse aux Meadows came from a region south of Newfoundland."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-no-wallace2003",
+          "authors": "Birgitta Wallace",
+          "year": 2003,
+          "title": "The Norse in Newfoundland: L'Anse aux Meadows and Vinland",
+          "venue": "Newfoundland and Labrador Studies 19(1):5–43",
+          "volume": "19",
+          "issue": "1",
+          "pages": "5–43",
+          "url": "https://journals.lib.unb.ca/index.php/NFLDS/article/download/140/236?inline=1",
+          "access": "Full numbered-paragraph HTML read; archaeological sections and saga discussion distinguished. The journal issue is 2003 despite later online publication metadata.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "Butternut nuts and worked butternut wood at L'Anse aux Meadows came from a region south of Newfoundland.",
+        "limitations": "The source could be any suitable locality within the plant's southern range. Direct collection and movement through Indigenous contacts cannot be distinguished by these finds; neither a reciprocal trade nor an exact Hóp location is established.",
+        "discussion": "Wallace identifies a worked burl and three nuts, and discusses possible source areas in New Brunswick and along the St Lawrence. They establish material movement beyond the Newfoundland site, without locating a southern Norse camp.",
+        "provenance": "Norse in America and North Atlantic source audit; archaeological material, later saga narratives and schematic connections distinguished.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added source-located Norse and North Atlantic evidence."
+        ],
+        "relatedIds": [
+          "lanse-1021"
+        ]
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -66.5,
+              47
+            ],
+            [
+              -55.55,
+              51.58
+            ]
+          ]
+        },
+        "direction": "forward",
+        "precision": "Schematic connection; no precise track, unrecorded stop or journey duration is asserted.",
+        "provenance": "A schematic material-source region to archaeological find-region connection. It is not proof of a direct merchant journey or a particular barter transaction."
+      },
+      "history": {
+        "kind": "exchange",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 990,
+            "end": 1050,
+            "certainty": "approximate",
+            "note": "Norse archaeological context at L'Anse aux Meadows, broadly early eleventh century"
+          }
+        ],
+        "connection": {
+          "evidence": "Butternut nuts and worked butternut wood at L'Anse aux Meadows came from a region south of Newfoundland.",
+          "lastEvidence": 1050,
+          "cessation": "unknown",
+          "note": "A schematic material-source region to archaeological find-region connection. It is not proof of a direct merchant journey or a particular barter transaction.",
+          "claimId": "evidence"
+        }
+      }
+    },
+    {
+      "id": "deep-no-igaliku-imported-wood",
+      "revision": 1,
+      "type": "event",
+      "title": "Igaliku/Garðar — imported North American and European wood",
+      "culture": {
+        "id": "norse",
+        "name": "Norse",
+        "kind": "people",
+        "color": "#dfba7a"
+      },
+      "location": {
+        "id": "deep-no-place-igaliku-imported-wood",
+        "name": "Igaliku/Garðar, southern Greenland",
+        "lon": -45.42,
+        "lat": 60.99,
+        "precision": "Rounded regional locality reference, not an individual sample findspot.",
+        "provenance": "Named locality identified by the cited source; generalized map coordinates."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1100,
+        "end": 1400,
+        "original": "Igaliku wood contexts: phase 1, 1100–1300 CE; phase 2, 1300–1400 CE",
+        "method": "Archaeological context or historical synthesis; exact scope specified in the claim and source locators.",
+        "interpretation": "The date window is the evidence's chronological resolution, not the duration of a single journey.",
+        "approximate": true
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Small amounts of imported wood reached the bishop's farm at Igaliku alongside local wood and driftwood.",
+          "status": "well-supported",
+          "explanation": "Microscopic identification found jack pine and hemlock, taxa assigned to North American sources, with European beech and oak. The author separates these rare imports from the much larger local and driftwood supply.",
+          "support": [
+            {
+              "sourceId": "deep-no-gudmundsdottir2024",
+              "locator": "Printed/PDF pp. 79–82, Table 9 and Figures 56–58; mixed upper deposits discussed on p. 79",
+              "stance": "supports",
+              "note": "Small amounts of imported wood reached the bishop's farm at Igaliku alongside local wood and driftwood."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-no-gudmundsdottir2024",
+          "authors": "Lísabet Guðmundsdóttir",
+          "year": 2024,
+          "title": "Wood Utilisation Strategies in Norse Greenland (985–1500 AD)",
+          "venue": "PhD dissertation, Faculty of Philosophy, History and Archaeology, University of Iceland",
+          "publisher": "University of Iceland",
+          "identifier": "ISBN 978-9935-9700-7-7",
+          "url": "https://opinvisindi.is/server/api/core/bitstreams/d871f843-89c1-4456-aac5-b50728d13d57/content",
+          "access": "Title and copyright pages, printed/PDF pp. 79–82, Table 9 and Figures 56–58 inspected. Igaliku contexts divide into 1100–1300 and 1300–1400; later mixed deposits noted.",
+          "referenceType": "report"
+        }
+      ],
+      "review": {
+        "summary": "Small amounts of imported wood reached the bishop's farm at Igaliku alongside local wood and driftwood.",
+        "limitations": "A particular American forest, landing, ship, intermediary or annual shipment cannot be identified. The later phase contains potentially mixed deposits. No named transatlantic route is plotted from this point.",
+        "discussion": "Microscopic identification found jack pine and hemlock, taxa assigned to North American sources, with European beech and oak. The author separates these rare imports from the much larger local and driftwood supply.",
+        "provenance": "Norse in America and North Atlantic source audit; archaeological material, later saga narratives and schematic connections distinguished.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added source-located Norse and North Atlantic evidence."
+        ],
+        "relatedIds": [
+          "lanse-1021"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 1100,
+            "end": 1300,
+            "certainty": "approximate",
+            "note": "Earlier Igaliku context group."
+          },
+          {
+            "start": 1300,
+            "end": 1400,
+            "certainty": "approximate",
+            "note": "Later Igaliku context group; disturbance and mixing acknowledged."
+          }
+        ]
+      }
+    },
+    {
+      "id": "deep-no-greenland-walrus-kyiv",
+      "revision": 1,
+      "type": "event",
+      "title": "Arctic walrus ivory reached twelfth-century Kyiv",
+      "culture": {
+        "id": "norse",
+        "name": "Norse",
+        "kind": "people",
+        "color": "#dfba7a"
+      },
+      "location": {
+        "id": "deep-no-place-greenland-walrus-kyiv",
+        "name": "Western Greenland and eastern Canadian Arctic walrus-source region",
+        "lon": -55,
+        "lat": 70,
+        "precision": "Broad western-clade reference; not a known hunting ground or Greenland export harbour.",
+        "provenance": "Named locality identified by the cited source; generalized map coordinates."
+      },
+      "destination": {
+        "id": "deep-no-greenland-walrus-kyiv-destination",
+        "name": "Podil district, Kyiv, Ukraine",
+        "lon": 30.52,
+        "lat": 50.47,
+        "precision": "Generalized locality or source-region anchor; not an excavated find coordinate or a recorded ship position.",
+        "provenance": "35 Spaska Street archaeological site, Horizons 5 and 6; generalized Podil locality."
+      },
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1100,
+        "end": 1199,
+        "original": "Mid- and late-twelfth-century contexts, shown conservatively at century resolution",
+        "method": "Archaeological context or historical synthesis; exact scope specified in the claim and source locators.",
+        "interpretation": "The date window is the evidence's chronological resolution, not the duration of a single journey.",
+        "approximate": true
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Walrus remains excavated in Kyiv connect its ivory supply with the western Arctic and Norse Greenland's trade network.",
+          "status": "well-supported",
+          "explanation": "Five analysed specimens belong to a genetic clade restricted to western Greenland and Arctic Canada. Their prepared tusk sockets and isotope evidence support the authors' interpretation of trade through Norse Greenland.",
+          "support": [
+            {
+              "sourceId": "deep-no-barrett2022",
+              "locator": "§2(a), 35 Spaska Street Horizons 5–6 and mid-/late-twelfth-century dates; §2(b), western-clade range; §3–4 and Figs. 2–4",
+              "stance": "supports",
+              "note": "Walrus remains excavated in Kyiv connect its ivory supply with the western Arctic and Norse Greenland's trade network."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-no-barrett2022",
+          "authors": "James H. Barrett, Natalia Khamaiko, Giada Ferrari, Angélica Cuevas, Catherine Kneale, Anne Karin Hufthammer, Albína Hulda Pálsdóttir, and Bastiaan Star",
+          "year": 2022,
+          "title": "Walruses on the Dnieper: new evidence for the intercontinental trade of Greenlandic ivory in the Middle Ages",
+          "venue": "Proceedings of the Royal Society B 289(1972):20212773",
+          "volume": "289",
+          "issue": "1972",
+          "pages": "20212773",
+          "doi": "10.1098/rspb.2021.2773",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8984804/",
+          "access": "Full primary article read, especially §2(a), §2(b), §3, §4 and Figs. 2–4. The western genetic clade spans western Greenland and the eastern Canadian Arctic; transit via Norse Greenland is the authors' historical interpretation.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "Walrus remains excavated in Kyiv connect its ivory supply with the western Arctic and Norse Greenland's trade network.",
+        "limitations": "The biological source is a wide region. Norse Greenland transit is an archaeological-historical inference; individual hunters, intermediaries, European ports and the complete route to Kyiv are not identified.",
+        "discussion": "Five analysed specimens belong to a genetic clade restricted to western Greenland and Arctic Canada. Their prepared tusk sockets and isotope evidence support the authors' interpretation of trade through Norse Greenland.",
+        "provenance": "Norse in America and North Atlantic source audit; archaeological material, later saga narratives and schematic connections distinguished.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added source-located Norse and North Atlantic evidence."
+        ],
+        "relatedIds": [
+          "lanse-1021"
+        ]
+      },
+      "overlay": {
+        "kind": "trade",
+        "basis": "schematic",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -55,
+              70
+            ],
+            [
+              30.52,
+              50.47
+            ]
+          ]
+        },
+        "direction": "forward",
+        "precision": "Schematic connection; no precise track, unrecorded stop or journey duration is asserted.",
+        "provenance": "A source-region-to-recipient schematic. The line crosses intervening lands only as an evidence connection, not as a literal sea or river track; no inferred intermediate node is asserted."
+      },
+      "history": {
+        "kind": "exchange",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": 1100,
+            "end": 1199,
+            "certainty": "approximate",
+            "note": "Mid- and late-twelfth-century contexts, shown conservatively at century resolution"
+          }
+        ],
+        "connection": {
+          "evidence": "Walrus remains excavated in Kyiv connect its ivory supply with the western Arctic and Norse Greenland's trade network.",
+          "lastEvidence": 1199,
+          "cessation": "unknown",
+          "note": "A source-region-to-recipient schematic. The line crosses intervening lands only as an evidence connection, not as a literal sea or river track; no inferred intermediate node is asserted.",
+          "claimId": "evidence"
+        }
+      }
+    },
+    {
+      "id": "deep-no-qassiarsuk-farms",
+      "revision": 2,
+      "type": "occupation",
+      "title": "Qassiarsuk and the Eastern Settlement — Norse farms and later abandonment",
+      "culture": {
+        "id": "norse",
+        "name": "Norse",
+        "kind": "people",
+        "color": "#dfba7a"
+      },
+      "location": {
+        "id": "deep-no-place-qassiarsuk-farms",
+        "name": "Qassiarsuk/Brattahlíð and the Eastern Settlement",
+        "lon": -45.52,
+        "lat": 61.15,
+        "precision": "Rounded regional locality reference, not an individual sample findspot.",
+        "provenance": "Named locality identified by the cited source; generalized map coordinates."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 985,
+        "end": 1450,
+        "original": "Circa 985 to the mid-fifteenth century, regional Eastern Settlement chronology",
+        "method": "Institutional archaeological synthesis and published review of written and radiocarbon evidence.",
+        "interpretation": "985 and 1450 are approximate regional anchors. They do not establish identical foundation or abandonment dates for every farm at Qassiarsuk.",
+        "approximate": true
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Norse farms around Qassiarsuk combined grazing and household production with hunting in Greenland's fjords.",
+          "status": "well-supported",
+          "explanation": "The farm evidence is placed in the broader Eastern Settlement chronology; it does not date every building to 985–1450.",
+          "support": [
+            {
+              "sourceId": "deep-no-natmus-norse",
+              "locator": "Opening chronology, Geographical areas, Subsistence and History of research (Brattahlíð)",
+              "stance": "supports",
+              "note": "Norse farms around Qassiarsuk combined grazing and household production with hunting in Greenland's fjords."
+            },
+            {
+              "sourceId": "deep-no-unesco-kujataa",
+              "locator": "Outstanding Universal Value: tenth–fifteenth-century Norse and separate eighteenth-century Inuit farming phases",
+              "stance": "supports",
+              "note": "Norse farms around Qassiarsuk combined grazing and household production with hunting in Greenland's fjords."
+            }
+          ]
+        },
+        {
+          "id": "regional-abandonment",
+          "text": "The Eastern Settlement persisted after the 1408 written record and was probably abandoned around the middle of the fifteenth century.",
+          "status": "well-supported",
+          "explanation": "Archaeology and radiocarbon evidence extend occupation beyond the final dated wedding account. The approximate 1450 end refers to the settlement region.",
+          "support": [
+            {
+              "sourceId": "deep-nc-borreggine2023",
+              "locator": "Introduction and Background",
+              "stance": "supports",
+              "note": "Radiocarbon evidence extends occupation roughly half a century after the wedding; regional abandonment is placed in the mid-fifteenth century."
+            },
+            {
+              "sourceId": "deep-nc-nka-peasants",
+              "locator": "Exhibition chronology",
+              "stance": "supports",
+              "note": "Norse Greenlanders described from the end of the tenth century to about 1450."
+            },
+            {
+              "sourceId": "deep-no-natmus-norse",
+              "locator": "Opening chronology",
+              "stance": "supports",
+              "note": "Eastern Settlement archaeology continues at least to the mid-fifteenth century."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-no-natmus-norse",
+          "authors": "National Museum of Denmark",
+          "year": null,
+          "title": "Prehistory of Greenland: Norse",
+          "venue": "National Museum of Denmark, Arctic Research",
+          "url": "https://natmus.dk/organisation/forskning-og-kulturarv/nyere-tid-og-verdens-kulturer/etnografisk-samling/arktisk-forskning/prehistory-of-greenland/norse/",
+          "access": "Full institutional account read. Its statement that imported timber has not been identified is superseded by Guðmundsdóttir's research and is not adopted.",
+          "referenceType": "web-resource"
+        },
+        {
+          "id": "deep-no-unesco-kujataa",
+          "authors": "UNESCO World Heritage Centre",
+          "year": null,
+          "title": "Kujataa Greenland: Norse and Inuit Farming at the Edge of the Ice Cap",
+          "venue": "World Heritage List, property 1536",
+          "url": "https://whc.unesco.org/en/list/1536/",
+          "access": "Property description and Outstanding Universal Value read; separate Norse tenth–fifteenth-century and Inuit farming phases identified.",
+          "referenceType": "web-resource"
+        },
+        {
+          "id": "deep-nc-borreggine2023",
+          "authors": "Marisa Borreggine; Konstantin Latychev; Sophie Coulson; Evelyn M. Powell; Jerry X. Mitrovica; Glenn A. Milne; Richard B. Alley",
+          "title": "Sea-level rise in Southwest Greenland as a contributor to Viking abandonment",
+          "year": 2023,
+          "venue": "Proceedings of the National Academy of Sciences",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10151458/",
+          "access": "Full article XML read through Europe PMC; Introduction and Background distinguish Western c.1350 from Eastern mid-fifteenth-century abandonment. Environmental model is one contributing hypothesis.",
+          "referenceType": "journal-article",
+          "doi": "10.1073/pnas.2209615120",
+          "volume": "120",
+          "issue": "17",
+          "pages": "e2209615120"
+        },
+        {
+          "id": "deep-nc-nka-peasants",
+          "authors": "Greenland National Museum and Archives",
+          "title": "Arctic peasants — Norse Greenlanders",
+          "year": null,
+          "venue": "Permanent exhibition",
+          "url": "https://en.nka.gl/museum/exhibitions/arctic-peasants-norse-greenlanders/",
+          "access": "Institutional exhibition account read: regional locations and approximate c.1000–1450 period.",
+          "referenceType": "web-resource"
+        }
+      ],
+      "review": {
+        "summary": "Norse farming around Qassiarsuk belongs to the Eastern Settlement, whose regional occupation continued into the mid-fifteenth century.",
+        "limitations": "The 1450 marker is an inferred, approximate regional abandonment anchor. It is neither the proven date of the last departure nor a dated ending for each Qassiarsuk farm.",
+        "discussion": "The last surviving dated written event, the Hvalsey wedding in 1408, is distinct from settlement abandonment. Later archaeological evidence prevents treating 1408 as the end of habitation.",
+        "provenance": "Norse in America and North Atlantic source audit; archaeological material, later saga narratives and schematic connections distinguished.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added source-located Norse and North Atlantic evidence.",
+          "2026-11-18: Distinguished regional abandonment from last written attestation; added inferred approximate mid-fifteenth-century end evidence."
+        ],
+        "relatedIds": [
+          "lanse-1021",
+          "deep-nc-western-settlement",
+          "deep-nc-hvalsey-wedding1408",
+          "deep-nc-iceland-continuity"
+        ]
+      },
+      "history": {
+        "kind": "habitation",
+        "claimId": "evidence",
+        "endMeaning": "abandoned",
+        "endEvidence": {
+          "start": 1450,
+          "end": 1450,
+          "meaning": "abandoned",
+          "certainty": "inferred",
+          "label": "Abandoned around the mid-1400s",
+          "claimId": "regional-abandonment",
+          "note": "1450 is an editorial anchor for a regional mid-fifteenth-century interpretation. Occupation continued after 1408; no precise last-person departure is known."
+        }
+      }
+    },
+    {
+      "id": "deep-na-independence-bronlund",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Independence I camps around Jørgen Brønlund Fjord",
+      "culture": {
+        "id": "independence-i",
+        "name": "Independence I communities",
+        "kind": "people",
+        "color": "#678b85"
+      },
+      "location": {
+        "id": "deep-na-place-independence-bronlund",
+        "name": "Jørgen Brønlund Fjord, Peary Land",
+        "lon": -30.5,
+        "lat": 82.2,
+        "precision": "Fjord-region anchor; several camps, not a single excavated dwelling.",
+        "provenance": "The cited institutional source identifies this named place. Coordinates are generalized modern locality references."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": -2399,
+        "end": -1799,
+        "original": "circa 2400–1800 BCE; museum chronology for the principal Peary Land phase",
+        "method": "Archaeological or documentary chronology as specified in the claim and source locator.",
+        "interpretation": "The interval describes the supported archaeological phase or institutional activity, not occupation on every day.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "habitation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Early communities camped around Jørgen Brønlund Fjord and hunted muskoxen, seals and birds.",
+          "status": "well-supported",
+          "explanation": "The museum locates a major concentration of Independence I camps here. Its terrestrial-bone chronology places arrival around 2400 BCE, with the principal Peary Land population declining around 2000–1800 BCE.",
+          "support": [
+            {
+              "sourceId": "deep-na-natmus-independence",
+              "locator": "Chronology; settlement concentrations at Midsommersøerne and Jørgen Brønlund Fjord; subsistence",
+              "stance": "supports",
+              "note": "Early communities camped around Jørgen Brønlund Fjord and hunted muskoxen, seals and birds."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-na-natmus-independence",
+          "authors": "National Museum of Denmark",
+          "year": null,
+          "title": "Prehistory of Greenland: Independence I",
+          "venue": "National Museum of Denmark, Arctic Research",
+          "url": "https://natmus.dk/organisation/forskning-og-kulturarv/nyere-tid-og-verdens-kulturer/etnografisk-samling/arktisk-forskning/prehistory-of-greenland/independence-i/",
+          "access": "Institutional account read, including calibrated chronology, settlement concentrations and subsistence sections.",
+          "referenceType": "web-resource"
+        }
+      ],
+      "review": {
+        "summary": "Early communities camped around Jørgen Brønlund Fjord and hunted muskoxen, seals and birds.",
+        "limitations": "The dates describe a regional archaeological phase. Scattered later determinations do not justify continuous occupation of every camp. This does not identify Greenland's first individual landing.",
+        "discussion": "The museum locates a major concentration of Independence I camps here. Its terrestrial-bone chronology places arrival around 2400 BCE, with the principal Peary Land population declining around 2000–1800 BCE.",
+        "provenance": "Source-grounded North Atlantic coverage handoff; institutional and primary archaeological accounts checked. Generalized place points carry no territorial boundaries.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added dated place evidence in the Greenland–Iceland coverage audit."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "deep-na-qeqertasussuk-saqqaq",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Qeqertasussuk — Saqqaq hunting and island life",
+      "culture": {
+        "id": "saqqaq",
+        "name": "Saqqaq communities",
+        "kind": "people",
+        "color": "#678b85"
+      },
+      "location": {
+        "id": "deep-na-place-qeqertasussuk-saqqaq",
+        "name": "Qeqertasussuk, southern Disko Bay",
+        "lon": -51.2,
+        "lat": 68.6,
+        "precision": "Generalized southern Disko Bay island-area anchor, not an excavation coordinate.",
+        "provenance": "The cited institutional source identifies this named place. Coordinates are generalized modern locality references."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": -2399,
+        "end": -1399,
+        "original": "circa 2400–1400 BCE, the site-study chronology cited by the museum",
+        "method": "Archaeological or documentary chronology as specified in the claim and source locator.",
+        "interpretation": "The interval describes the supported archaeological phase or institutional activity, not occupation on every day.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "habitation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Qeqertasussuk preserves tools, wood and animal remains from Saqqaq people living from the rich resources of Disko Bay.",
+          "status": "well-supported",
+          "explanation": "The preserved assemblage records a varied hunting and gathering economy. The museum's bibliography explicitly identifies the site's 2400–1400 BCE study window.",
+          "support": [
+            {
+              "sourceId": "deep-na-natmus-saqqaq",
+              "locator": "Subsistence and Qeqertasussuk discussion; bibliography: Meldgaard 2004, Ancient Harp Seal Hunters of Disko Bay, subtitle 2400–1400 BC",
+              "stance": "supports",
+              "note": "Qeqertasussuk preserves tools, wood and animal remains from Saqqaq people living from the rich resources of Disko Bay."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-na-natmus-saqqaq",
+          "authors": "National Museum of Denmark",
+          "year": null,
+          "title": "Prehistory of Greenland: Saqqaq",
+          "venue": "National Museum of Denmark, Arctic Research",
+          "url": "https://natmus.dk/organisation/forskning-og-kulturarv/nyere-tid-og-verdens-kulturer/etnografisk-samling/arktisk-forskning/prehistory-of-greenland/saqqaq/",
+          "access": "Account read, including Qeqertasussuk and bibliography identifying Meldgaard's site study as 2400–1400 BC.",
+          "referenceType": "web-resource"
+        }
+      ],
+      "review": {
+        "summary": "Qeqertasussuk preserves tools, wood and animal remains from Saqqaq people living from the rich resources of Disko Bay.",
+        "limitations": "This broad site phase is not continuous residence by a single household, and the modern point is deliberately generalized.",
+        "discussion": "The preserved assemblage records a varied hunting and gathering economy. The museum's bibliography explicitly identifies the site's 2400–1400 BCE study window.",
+        "provenance": "Source-grounded North Atlantic coverage handoff; institutional and primary archaeological accounts checked. Generalized place points carry no territorial boundaries.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added dated place evidence in the Greenland–Iceland coverage audit."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "deep-na-nipisat-saqqaq",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Nipisat — repeated Saqqaq visits to an island hunting place",
+      "culture": {
+        "id": "saqqaq",
+        "name": "Saqqaq communities",
+        "kind": "people",
+        "color": "#678b85"
+      },
+      "location": {
+        "id": "deep-na-place-nipisat-saqqaq",
+        "name": "Nipisat island, south of Sisimiut",
+        "lon": -53.5,
+        "lat": 66.8,
+        "precision": "Rounded island-area anchor; source places the site 15 km south of Sisimiut.",
+        "provenance": "The cited institutional source identifies this named place. Coordinates are generalized modern locality references."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": -2019,
+        "end": -809,
+        "original": "2020–1740, 1860–1325 and 1310–810 cal BCE occupation phases",
+        "method": "Archaeological or documentary chronology as specified in the claim and source locator.",
+        "interpretation": "The interval describes the supported archaeological phase or institutional activity, not occupation on every day.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence",
+        "windows": [
+          {
+            "start": -2019,
+            "end": -1739,
+            "certainty": "approximate",
+            "note": "Phase 1: 2020–1740 cal BCE."
+          },
+          {
+            "start": -1859,
+            "end": -1324,
+            "certainty": "approximate",
+            "note": "Phase 2: 1860–1325 cal BCE."
+          },
+          {
+            "start": -1309,
+            "end": -809,
+            "certainty": "approximate",
+            "note": "Phase 3: 1310–810 cal BCE; problematic 520 BCE date omitted."
+          }
+        ]
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Nipisat's hearths and animal remains record repeated seasonal visits by Saqqaq hunters over more than a millennium.",
+          "status": "well-supported",
+          "explanation": "Thirty-three radiocarbon determinations underpin three phases. Tools and food remains reveal marine hunting alongside mainland caribou procurement; the primary report describes short visits in spring, summer and early autumn.",
+          "support": [
+            {
+              "sourceId": "deep-na-godtfredsen-mobjerg2004",
+              "locator": "Detailed abstract, chronological phases 1–3 and final seasonal-subsistence paragraphs",
+              "stance": "supports",
+              "note": "Nipisat's hearths and animal remains record repeated seasonal visits by Saqqaq hunters over more than a millennium."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-na-godtfredsen-mobjerg2004",
+          "authors": "Anne Birgitte Godtfredsen and Tinna Møbjerg",
+          "year": 2004,
+          "title": "Nipisat – a Saqqaq Culture Site in Sisimiut, Central West Greenland",
+          "venue": "Meddelelser om Grønland, Man & Society 31",
+          "url": "https://tidsskrift.dk/meddrgroenland_man_soc/article/view/147038",
+          "doi": "10.7146/mog-ms.v31.147038",
+          "volume": "31",
+          "access": "Primary monograph's detailed institutional abstract read: 33 radiocarbon determinations, three occupation phases and seasonal subsistence evidence.",
+          "referenceType": "journal-article"
+        }
+      ],
+      "review": {
+        "summary": "Nipisat's hearths and animal remains record repeated seasonal visits by Saqqaq hunters over more than a millennium.",
+        "limitations": "The problematic 520 BCE determination is excluded. The encompassing interval is not year-round or uninterrupted residence.",
+        "discussion": "Thirty-three radiocarbon determinations underpin three phases. Tools and food remains reveal marine hunting alongside mainland caribou procurement; the primary report describes short visits in spring, summer and early autumn.",
+        "provenance": "Source-grounded North Atlantic coverage handoff; institutional and primary archaeological accounts checked. Generalized place points carry no territorial boundaries.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added dated place evidence in the Greenland–Iceland coverage audit."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "deep-na-qilakitsoq-clothing",
+      "revision": 1,
+      "type": "event",
+      "title": "Qilakitsoq — Inuit clothing and family history around 1475",
+      "culture": {
+        "id": "inuit",
+        "name": "Inuit",
+        "kind": "people",
+        "color": "#678b85"
+      },
+      "location": {
+        "id": "deep-na-place-qilakitsoq-clothing",
+        "name": "Qilakitsoq, Uummannaq area",
+        "lon": -52.1,
+        "lat": 70.6,
+        "precision": "Generalized Uummannaq-area anchor; not precise burial coordinates.",
+        "provenance": "The cited institutional source identifies this named place. Coordinates are generalized modern locality references."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1475,
+        "end": 1475,
+        "original": "circa 1475 CE",
+        "method": "Archaeological or documentary chronology as specified in the claim and source locator.",
+        "interpretation": "The interval describes the supported archaeological phase or institutional activity, not occupation on every day.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Two graves at Qilakitsoq preserve the clothing and personal histories of eight Inuit people.",
+          "status": "well-supported",
+          "explanation": "The museum dates the burials to approximately 1475. Clothing and the relationships among the people provide unusually detailed evidence of late medieval Inuit life in Greenland.",
+          "support": [
+            {
+              "sourceId": "deep-na-nka-qilakitsoq",
+              "locator": "Exhibition account: dating around 1475, two graves and clothing",
+              "stance": "supports",
+              "note": "Two graves at Qilakitsoq preserve the clothing and personal histories of eight Inuit people."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-na-nka-qilakitsoq",
+          "authors": "Greenland National Museum and Archives",
+          "year": null,
+          "title": "Qilakitsormiut",
+          "venue": "Nye mennesker – Thulekulturen",
+          "url": "https://da.nka.gl/museet/udstillinger/nye-mennesker-thulekulturen/qilakitsormiut/",
+          "access": "Museum exhibition account read: approximately 1475, eight people in two graves, clothing and family relationships.",
+          "referenceType": "web-resource"
+        }
+      ],
+      "review": {
+        "summary": "Two graves at Qilakitsoq preserve the clothing and personal histories of eight Inuit people.",
+        "limitations": "The approximate date concerns these burials; it does not date all houses at Qilakitsoq, identify the cause of death, or imply an end to Inuit life.",
+        "discussion": "The museum dates the burials to approximately 1475. Clothing and the relationships among the people provide unusually detailed evidence of late medieval Inuit life in Greenland.",
+        "provenance": "Source-grounded North Atlantic coverage handoff; institutional and primary archaeological accounts checked. Generalized place points carry no territorial boundaries.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added dated place evidence in the Greenland–Iceland coverage audit."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "deep-na-nuuk-egede-house",
+      "revision": 1,
+      "type": "event",
+      "title": "Nuuk — a colonial mission house built in 1728",
+      "culture": {
+        "id": "kalaallit-danish",
+        "name": "Kalaallit and Danish colonial communities",
+        "kind": "people",
+        "color": "#678b85"
+      },
+      "location": {
+        "id": "deep-na-place-nuuk-egede-house",
+        "name": "Historic harbour, Nuuk",
+        "lon": -51.74,
+        "lat": 64.17,
+        "precision": "Rounded locality anchor; not a surveyed excavation or building footprint.",
+        "provenance": "The cited institutional source identifies this named place. Coordinates are generalized modern locality references."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1728,
+        "end": 1728,
+        "original": "1728, construction date in the protected-building register",
+        "method": "Archaeological or documentary chronology as specified in the claim and source locator.",
+        "interpretation": "The interval describes the supported archaeological phase or institutional activity, not occupation on every day.",
+        "approximate": false
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Hans Egede's house at Nuuk dates to 1728, marking a durable colonial mission establishment on this inhabited coast.",
+          "status": "well-supported",
+          "explanation": "The protected-building register identifies the surviving house as B-37. This local anchor distinguishes Nuuk from the earlier 1721 mission on Hope Island.",
+          "support": [
+            {
+              "sourceId": "deep-na-nka-sermersooq-buildings",
+              "locator": "Nuuk table, B-37, Hans Egedes Hus, Opført 1728",
+              "stance": "supports",
+              "note": "Hans Egede's house at Nuuk dates to 1728, marking a durable colonial mission establishment on this inhabited coast."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-na-nka-sermersooq-buildings",
+          "authors": "Greenland National Museum and Archives",
+          "year": null,
+          "title": "Fredede bygninger: Sermersooq Kommune",
+          "venue": "Greenlandic protected-building register",
+          "url": "https://da.nka.gl/museet/bygningsfredning/fredede-bygninger/find-dit-hus/sermersooq-kommune/",
+          "access": "Nuuk table read, especially B-37 Hans Egedes Hus (1728) and B-43 Proviantbod (1850).",
+          "referenceType": "web-resource"
+        }
+      ],
+      "review": {
+        "summary": "Hans Egede's house at Nuuk dates to 1728, marking a durable colonial mission establishment on this inhabited coast.",
+        "limitations": "The house's construction is not the beginning of Indigenous occupation. The 1721 mission is a different locality.",
+        "discussion": "The protected-building register identifies the surviving house as B-37. This local anchor distinguishes Nuuk from the earlier 1721 mission on Hope Island.",
+        "provenance": "Source-grounded North Atlantic coverage handoff; institutional and primary archaeological accounts checked. Generalized place points carry no territorial boundaries.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added dated place evidence in the Greenland–Iceland coverage audit."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "deep-na-igaliku-tuperna-olsen",
+      "revision": 1,
+      "type": "event",
+      "title": "Igaliku — Tuperna and Anders Olsen's family renewed farming in 1782",
+      "culture": {
+        "id": "kalaallit",
+        "name": "Kalaallit farming families",
+        "kind": "people",
+        "color": "#678b85"
+      },
+      "location": {
+        "id": "deep-na-place-igaliku-tuperna-olsen",
+        "name": "Igaliku, southern Greenland",
+        "lon": -45.42,
+        "lat": 60.99,
+        "precision": "Rounded locality anchor; not a surveyed excavation or building footprint.",
+        "provenance": "The cited institutional source identifies this named place. Coordinates are generalized modern locality references."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1782,
+        "end": 1782,
+        "original": "1782, family relocation to Igaliku",
+        "method": "Archaeological or documentary chronology as specified in the claim and source locator.",
+        "interpretation": "The interval describes the supported archaeological phase or institutional activity, not occupation on every day.",
+        "approximate": false
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Tuperna, Anders Olsen and their family established themselves at Igaliku in 1782 after farming at Upernaviarsuk.",
+          "status": "well-supported",
+          "explanation": "NKA's archaeological report connects the brief 1780–81 Upernaviarsuk farm with the family's move to Igaliku. It situates the renewed farming economy within Inuit and colonial family history.",
+          "support": [
+            {
+              "sourceId": "deep-na-nka-202104",
+              "locator": "PDF p. 6, NKAH 848 Anders Olsens Gård",
+              "stance": "supports",
+              "note": "Tuperna, Anders Olsen and their family established themselves at Igaliku in 1782 after farming at Upernaviarsuk."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-na-nka-202104",
+          "authors": "Greenland National Museum and Archives",
+          "year": 2021,
+          "title": "Field report 2021/04: NKAH 848, Anders Olsens Gård",
+          "venue": "NKA archaeological field report",
+          "publisher": "Greenland National Museum and Archives",
+          "identifier": "2021/04",
+          "url": "https://en.nka.gl/fileadmin/user_upload/Cruise_Ship_Resources/2021/202104_1.pdf",
+          "access": "PDF p. 6, NKAH 848 section read: Anders Olsen, Tuperna and family at Upernaviarsuk in 1780–81 and Igaliku in 1782.",
+          "referenceType": "report"
+        }
+      ],
+      "review": {
+        "summary": "Tuperna, Anders Olsen and their family established themselves at Igaliku in 1782 after farming at Upernaviarsuk.",
+        "limitations": "This is a dated family relocation and farming anchor; it does not imply direct continuity between the medieval Norse and eighteenth-century farms.",
+        "discussion": "NKA's archaeological report connects the brief 1780–81 Upernaviarsuk farm with the family's move to Igaliku. It situates the renewed farming economy within Inuit and colonial family history.",
+        "provenance": "Source-grounded North Atlantic coverage handoff; institutional and primary archaeological accounts checked. Generalized place points carry no territorial boundaries.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added dated place evidence in the Greenland–Iceland coverage audit."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "deep-na-nuuk-provision-store",
+      "revision": 1,
+      "type": "event",
+      "title": "Nuuk — a provision store on the colonial harbour in 1850",
+      "culture": {
+        "id": "kalaallit-danish",
+        "name": "Kalaallit and Danish colonial communities",
+        "kind": "people",
+        "color": "#678b85"
+      },
+      "location": {
+        "id": "deep-na-place-nuuk-provision-store",
+        "name": "Historic harbour, Nuuk",
+        "lon": -51.74,
+        "lat": 64.17,
+        "precision": "Rounded locality anchor; not a surveyed excavation or building footprint.",
+        "provenance": "The cited institutional source identifies this named place. Coordinates are generalized modern locality references."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1850,
+        "end": 1850,
+        "original": "1850, construction date in the protected-building register",
+        "method": "Archaeological or documentary chronology as specified in the claim and source locator.",
+        "interpretation": "The interval describes the supported archaeological phase or institutional activity, not occupation on every day.",
+        "approximate": false
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "A provision store built at Nuuk in 1850 anchors the town's harbour-based supply and trade economy.",
+          "status": "well-supported",
+          "explanation": "The building register records B-43 as a Proviantbod, linking the surviving harbour fabric to nineteenth-century provisioning.",
+          "support": [
+            {
+              "sourceId": "deep-na-nka-sermersooq-buildings",
+              "locator": "Nuuk table, B-43, Proviantbod, Opført 1850",
+              "stance": "supports",
+              "note": "A provision store built at Nuuk in 1850 anchors the town's harbour-based supply and trade economy."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-na-nka-sermersooq-buildings",
+          "authors": "Greenland National Museum and Archives",
+          "year": null,
+          "title": "Fredede bygninger: Sermersooq Kommune",
+          "venue": "Greenlandic protected-building register",
+          "url": "https://da.nka.gl/museet/bygningsfredning/fredede-bygninger/find-dit-hus/sermersooq-kommune/",
+          "access": "Nuuk table read, especially B-37 Hans Egedes Hus (1728) and B-43 Proviantbod (1850).",
+          "referenceType": "web-resource"
+        }
+      ],
+      "review": {
+        "summary": "A provision store built at Nuuk in 1850 anchors the town's harbour-based supply and trade economy.",
+        "limitations": "The building date alone does not establish a specific cargo, overseas source port or trade volume.",
+        "discussion": "The building register records B-43 as a Proviantbod, linking the surviving harbour fabric to nineteenth-century provisioning.",
+        "provenance": "Source-grounded North Atlantic coverage handoff; institutional and primary archaeological accounts checked. Generalized place points carry no territorial boundaries.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added dated place evidence in the Greenland–Iceland coverage audit."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "deep-na-thule-trading-station",
+      "revision": 1,
+      "type": "event",
+      "title": "Uummannaq/Dundas — the Thule trading station opened in 1910",
+      "culture": {
+        "id": "inughuit",
+        "name": "Inughuit and visiting traders",
+        "kind": "people",
+        "color": "#678b85"
+      },
+      "location": {
+        "id": "deep-na-place-thule-trading-station",
+        "name": "Old Thule, Uummannaq/Dundas, North Star Bay",
+        "lon": -68.8,
+        "lat": 76.57,
+        "precision": "Rounded locality anchor; not a surveyed excavation or building footprint.",
+        "provenance": "The cited institutional source identifies this named place. Coordinates are generalized modern locality references."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1910,
+        "end": 1910,
+        "original": "1910, establishment of the Thule trading station",
+        "method": "Archaeological or documentary chronology as specified in the claim and source locator.",
+        "interpretation": "The interval describes the supported archaeological phase or institutional activity, not occupation on every day.",
+        "approximate": false
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "The Thule trading station linked local hunting products to commerce that helped finance Arctic expeditions.",
+          "status": "well-supported",
+          "explanation": "The Arctic Institute's archival source collection identifies the station founded by Knud Rasmussen and Peter Freuchen in 1910 and its trade in hides and furs.",
+          "support": [
+            {
+              "sourceId": "deep-na-arctic-institute-thule",
+              "locator": "Source 5, document A359, lb. 2; accompanying 1910 foundation and trade account",
+              "stance": "supports",
+              "note": "The Thule trading station linked local hunting products to commerce that helped finance Arctic expeditions."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-na-arctic-institute-thule",
+          "authors": "Arctic Institute, Denmark",
+          "year": null,
+          "title": "Grønlandsregistranten: Kildesamling 4 – Ekspeditioner",
+          "venue": "Arctic Institute source collection",
+          "url": "https://arktiskinstitut.dk/vidensdatabaserne/groenlandsregistranten/kildesamling-4-ekspeditioner",
+          "access": "Source 5, transfer document A359, lb. 2, and its contextual account read: Rasmussen and Freuchen founded Thule station in 1910; hunting-product trade financed expeditions.",
+          "referenceType": "web-resource"
+        }
+      ],
+      "review": {
+        "summary": "The Thule trading station linked local hunting products to commerce that helped finance Arctic expeditions.",
+        "limitations": "The anchor is old Thule/Dundas, not Qaanaaq, which was established after this atlas's 1934 limit. Founding the post did not begin Inughuit occupation of the region.",
+        "discussion": "The Arctic Institute's archival source collection identifies the station founded by Knud Rasmussen and Peter Freuchen in 1910 and its trade in hides and furs.",
+        "provenance": "Source-grounded North Atlantic coverage handoff; institutional and primary archaeological accounts checked. Generalized place points carry no territorial boundaries.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added dated place evidence in the Greenland–Iceland coverage audit."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "deep-na-ittoqqortoormiit1925",
+      "revision": 1,
+      "type": "event",
+      "title": "Ittoqqortoormiit — a new East Greenland town in 1925",
+      "culture": {
+        "id": "tunumiit-kalaallit",
+        "name": "Tunumiit and Kalaallit settlers",
+        "kind": "people",
+        "color": "#678b85"
+      },
+      "location": {
+        "id": "deep-na-place-ittoqqortoormiit1925",
+        "name": "Ittoqqortoormiit, Scoresby Sound",
+        "lon": -21.96,
+        "lat": 70.49,
+        "precision": "Rounded locality anchor; not a surveyed excavation or building footprint.",
+        "provenance": "The cited institutional source identifies this named place. Coordinates are generalized modern locality references."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1925,
+        "end": 1925,
+        "original": "1925, establishment in the municipal history",
+        "method": "Archaeological or documentary chronology as specified in the claim and source locator.",
+        "interpretation": "The interval describes the supported archaeological phase or institutional activity, not occupation on every day.",
+        "approximate": false
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Ittoqqortoormiit was established in 1925 within a policy of extending settlement along Greenland's east coast.",
+          "status": "well-supported",
+          "explanation": "The municipal plan situates the town's founding in its historical settlement context. The new town developed through the lives and hunting work of Greenlandic settlers.",
+          "support": [
+            {
+              "sourceId": "deep-na-sermersooq-itto-plan",
+              "locator": "Printed p. 10, town history and 1925 establishment",
+              "stance": "supports",
+              "note": "Ittoqqortoormiit was established in 1925 within a policy of extending settlement along Greenland's east coast."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-na-sermersooq-itto-plan",
+          "authors": "Kommuneqarfik Sermersooq",
+          "year": null,
+          "title": "Kommuneplan: Ittoqqortoormiit",
+          "venue": "Municipal plan, historical background",
+          "publisher": "Kommuneqarfik Sermersooq",
+          "url": "https://kp.sermersooq.gl/media/2039/kommuneplan_ittoqqortoormiit.pdf",
+          "access": "Printed p. 10 historical account read, identifying the town's establishment in 1925 and the settlement-policy context.",
+          "referenceType": "report"
+        }
+      ],
+      "review": {
+        "summary": "Ittoqqortoormiit was established in 1925 within a policy of extending settlement along Greenland's east coast.",
+        "limitations": "This dates the modern town. It does not erase earlier Indigenous use of the Scoresby Sound region or date an individual family's voyage.",
+        "discussion": "The municipal plan situates the town's founding in its historical settlement context. The new town developed through the lives and hunting work of Greenlandic settlers.",
+        "provenance": "Source-grounded North Atlantic coverage handoff; institutional and primary archaeological accounts checked. Generalized place points carry no territorial boundaries.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added dated place evidence in the Greenland–Iceland coverage audit."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "deep-na-reykjavik-old-wall",
+      "revision": 1,
+      "type": "event",
+      "title": "Reykjavík — a wall from the settlement-period landscape",
+      "culture": {
+        "id": "icelandic-settlers",
+        "name": "Early Icelandic settlers",
+        "kind": "people",
+        "color": "#678b85"
+      },
+      "location": {
+        "id": "deep-na-place-reykjavik-old-wall",
+        "name": "Aðalstræti settlement site, Reykjavík",
+        "lon": -21.943,
+        "lat": 64.147,
+        "precision": "Rounded locality anchor; not a surveyed excavation or building footprint.",
+        "provenance": "The cited institutional source identifies this named place. Coordinates are generalized modern locality references."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 869,
+        "end": 873,
+        "original": "circa 871 ± 2 CE tephra marker associated with the older wall",
+        "method": "Archaeological or documentary chronology as specified in the claim and source locator.",
+        "interpretation": "The interval describes the supported archaeological phase or institutional activity, not occupation on every day.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "An older wall beneath Reykjavík's later town preserves evidence from Iceland's settlement-period landscape.",
+          "status": "well-supported",
+          "explanation": "The City Museum relates the wall north of the excavated longhouse to the tephra horizon conventionally dated 871 ± 2. This anchors early activity without identifying a named first settler.",
+          "support": [
+            {
+              "sourceId": "deep-na-reykjavik-settlement-museum",
+              "locator": "The Settlement Exhibition: older wall north of the longhouse and 871 ± 2 chronology",
+              "stance": "supports",
+              "note": "An older wall beneath Reykjavík's later town preserves evidence from Iceland's settlement-period landscape."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-na-reykjavik-settlement-museum",
+          "authors": "Reykjavík City Museum",
+          "year": null,
+          "title": "The Settlement Exhibition",
+          "venue": "Reykjavík City Museum",
+          "url": "https://borgarsogusafn.is/en/exhibitions/the-settlement-exhibition",
+          "access": "Exhibition description read: older wall associated with tephra dated 871 ± 2, longhouse dated 930–1000, and Aðalstræti 10 built in 1762 for the Innréttingar enterprises.",
+          "referenceType": "web-resource"
+        }
+      ],
+      "review": {
+        "summary": "An older wall beneath Reykjavík's later town preserves evidence from Iceland's settlement-period landscape.",
+        "limitations": "This is the marker's published date range, not a four-year construction project or proof that no people reached Iceland earlier.",
+        "discussion": "The City Museum relates the wall north of the excavated longhouse to the tephra horizon conventionally dated 871 ± 2. This anchors early activity without identifying a named first settler.",
+        "provenance": "Source-grounded North Atlantic coverage handoff; institutional and primary archaeological accounts checked. Generalized place points carry no territorial boundaries.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added dated place evidence in the Greenland–Iceland coverage audit."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "deep-na-reykjavik-longhouse",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Reykjavík — a tenth-century household at Aðalstræti",
+      "culture": {
+        "id": "icelandic-settlers",
+        "name": "Early Icelandic settlers",
+        "kind": "people",
+        "color": "#678b85"
+      },
+      "location": {
+        "id": "deep-na-place-reykjavik-longhouse",
+        "name": "Aðalstræti longhouse, Reykjavík",
+        "lon": -21.943,
+        "lat": 64.147,
+        "precision": "Rounded locality anchor; not a surveyed excavation or building footprint.",
+        "provenance": "The cited institutional source identifies this named place. Coordinates are generalized modern locality references."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 930,
+        "end": 1000,
+        "original": "930–1000 CE, museum chronology of the excavated hall",
+        "method": "Archaeological or documentary chronology as specified in the claim and source locator.",
+        "interpretation": "The interval describes the supported archaeological phase or institutional activity, not occupation on every day.",
+        "approximate": false
+      },
+      "history": {
+        "kind": "habitation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "A turf-built longhouse at Aðalstræti records household life in tenth-century Reykjavík.",
+          "status": "well-supported",
+          "explanation": "The excavated hall under the Settlement Exhibition dates to approximately 930–1000 and sits beside an earlier wall, showing multiple phases within the locality.",
+          "support": [
+            {
+              "sourceId": "deep-na-reykjavik-settlement-museum",
+              "locator": "The Settlement Exhibition: excavated longhouse dated 930–1000",
+              "stance": "supports",
+              "note": "A turf-built longhouse at Aðalstræti records household life in tenth-century Reykjavík."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-na-reykjavik-settlement-museum",
+          "authors": "Reykjavík City Museum",
+          "year": null,
+          "title": "The Settlement Exhibition",
+          "venue": "Reykjavík City Museum",
+          "url": "https://borgarsogusafn.is/en/exhibitions/the-settlement-exhibition",
+          "access": "Exhibition description read: older wall associated with tephra dated 871 ± 2, longhouse dated 930–1000, and Aðalstræti 10 built in 1762 for the Innréttingar enterprises.",
+          "referenceType": "web-resource"
+        }
+      ],
+      "review": {
+        "summary": "A turf-built longhouse at Aðalstræti records household life in tenth-century Reykjavík.",
+        "limitations": "The hall's archaeological dating does not identify its occupants by a saga name or date all nearby activity.",
+        "discussion": "The excavated hall under the Settlement Exhibition dates to approximately 930–1000 and sits beside an earlier wall, showing multiple phases within the locality.",
+        "provenance": "Source-grounded North Atlantic coverage handoff; institutional and primary archaeological accounts checked. Generalized place points carry no territorial boundaries.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added dated place evidence in the Greenland–Iceland coverage audit."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "deep-na-thingvellir-assembly",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Þingvellir — the assembly landscape from 930 to 1798",
+      "culture": {
+        "id": "icelanders",
+        "name": "Icelanders",
+        "kind": "people",
+        "color": "#678b85"
+      },
+      "location": {
+        "id": "deep-na-place-thingvellir-assembly",
+        "name": "Þingvellir assembly site",
+        "lon": -21.12,
+        "lat": 64.26,
+        "precision": "Rounded locality anchor; not a surveyed excavation or building footprint.",
+        "provenance": "The cited institutional source identifies this named place. Coordinates are generalized modern locality references."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 930,
+        "end": 1798,
+        "original": "930–1798, assembly meetings at Þingvellir",
+        "method": "Archaeological or documentary chronology as specified in the claim and source locator.",
+        "interpretation": "The interval describes the supported archaeological phase or institutional activity, not occupation on every day.",
+        "approximate": false
+      },
+      "history": {
+        "kind": "habitation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Þingvellir hosted Iceland's assembly, bringing people together for law, disputes and political decisions.",
+          "status": "well-supported",
+          "explanation": "The park dates the assembly's establishment to 930 and its meetings here through 1798. Its powers changed under royal rule; many visible booth remains are later than the Commonwealth.",
+          "support": [
+            {
+              "sourceId": "deep-na-thingvellir-history",
+              "locator": "History: Althing establishment and duration",
+              "stance": "supports",
+              "note": "Þingvellir hosted Iceland's assembly, bringing people together for law, disputes and political decisions."
+            },
+            {
+              "sourceId": "deep-na-unesco-thingvellir",
+              "locator": "Description: assembly remains and seventeenth–eighteenth-century booths",
+              "stance": "supports",
+              "note": "Þingvellir hosted Iceland's assembly, bringing people together for law, disputes and political decisions."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-na-thingvellir-history",
+          "authors": "Þingvellir National Park",
+          "year": null,
+          "title": "History",
+          "venue": "Þingvellir National Park education",
+          "url": "https://www.thingvellir.is/en/education/history/",
+          "access": "Institutional history read: assembly established in 930, meetings at Þingvellir through 1798 and the Commonwealth period.",
+          "referenceType": "web-resource"
+        },
+        {
+          "id": "deep-na-unesco-thingvellir",
+          "authors": "UNESCO World Heritage Centre",
+          "year": null,
+          "title": "Þingvellir National Park",
+          "venue": "World Heritage List, property 1152",
+          "url": "https://whc.unesco.org/en/list/1152/",
+          "access": "Property account read; distinguishes medieval remains from most visible booth remains of the seventeenth and eighteenth centuries.",
+          "referenceType": "web-resource"
+        }
+      ],
+      "review": {
+        "summary": "Þingvellir hosted Iceland's assembly, bringing people together for law, disputes and political decisions.",
+        "limitations": "The interval does not mean uninterrupted independence or unchanged institutions. Visible ruins should not all be assigned to 930.",
+        "discussion": "The park dates the assembly's establishment to 930 and its meetings here through 1798. Its powers changed under royal rule; many visible booth remains are later than the Commonwealth.",
+        "provenance": "Source-grounded North Atlantic coverage handoff; institutional and primary archaeological accounts checked. Generalized place points carry no territorial boundaries.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added dated place evidence in the Greenland–Iceland coverage audit."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "deep-na-skalholt-bishopric",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Skálholt — a bishop's seat and centre of learning",
+      "culture": {
+        "id": "icelanders",
+        "name": "Icelanders",
+        "kind": "people",
+        "color": "#678b85"
+      },
+      "location": {
+        "id": "deep-na-place-skalholt-bishopric",
+        "name": "Skálholt, southern Iceland",
+        "lon": -20.525,
+        "lat": 64.126,
+        "precision": "Rounded locality anchor; not a surveyed excavation or building footprint.",
+        "provenance": "The cited institutional source identifies this named place. Coordinates are generalized modern locality references."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1056,
+        "end": 1801,
+        "original": "1056–1801, episcopal centre",
+        "method": "Archaeological or documentary chronology as specified in the claim and source locator.",
+        "interpretation": "The interval describes the supported archaeological phase or institutional activity, not occupation on every day.",
+        "approximate": false
+      },
+      "history": {
+        "kind": "habitation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Skálholt became an episcopal centre in 1056 and remained a major place of worship, learning and administration.",
+          "status": "well-supported",
+          "explanation": "The heritage agency traces the bishop's seat through Catholic and Lutheran phases until its formal transfer to Reykjavík in 1801.",
+          "support": [
+            {
+              "sourceId": "deep-na-minjastofnun-skalholt",
+              "locator": "Skálholt heritage account: Ísleifur 1056, episcopal seat through 1801, school history",
+              "stance": "supports",
+              "note": "Skálholt became an episcopal centre in 1056 and remained a major place of worship, learning and administration."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-na-minjastofnun-skalholt",
+          "authors": "Minjastofnun Íslands",
+          "year": null,
+          "title": "Skálholt",
+          "venue": "Cultural Heritage Agency of Iceland",
+          "url": "https://www.minjastofnun.is/is/ahugaverdir-stadir/skalholt",
+          "access": "Icelandic heritage account read: bishopric founded in 1056, function through 1801 and school history.",
+          "referenceType": "web-resource"
+        }
+      ],
+      "review": {
+        "summary": "Skálholt became an episcopal centre in 1056 and remained a major place of worship, learning and administration.",
+        "limitations": "The date applies to the institution and archaeological place, not to the present modern cathedral or uninterrupted operation of a particular school building.",
+        "discussion": "The heritage agency traces the bishop's seat through Catholic and Lutheran phases until its formal transfer to Reykjavík in 1801.",
+        "provenance": "Source-grounded North Atlantic coverage handoff; institutional and primary archaeological accounts checked. Generalized place points carry no territorial boundaries.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added dated place evidence in the Greenland–Iceland coverage audit."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "deep-na-hafnarfjordur-hanse",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Hafnarfjörður — German merchants and an Icelandic harbour",
+      "culture": {
+        "id": "icelandic-hanse",
+        "name": "Icelandic communities and German merchants",
+        "kind": "people",
+        "color": "#678b85"
+      },
+      "location": {
+        "id": "deep-na-place-hafnarfjordur-hanse",
+        "name": "Hafnarfjörður harbour",
+        "lon": -21.95,
+        "lat": 64.065,
+        "precision": "Rounded locality anchor; not a surveyed excavation or building footprint.",
+        "provenance": "The cited institutional source identifies this named place. Coordinates are generalized modern locality references."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1490,
+        "end": 1602,
+        "original": "circa 1490–1602, German trading dominance before the Danish monopoly",
+        "method": "Archaeological or documentary chronology as specified in the claim and source locator.",
+        "interpretation": "The interval describes the supported archaeological phase or institutional activity, not occupation on every day.",
+        "approximate": true
+      },
+      "history": {
+        "kind": "habitation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Hafnarfjörður became an important harbour for German merchants trading with Icelanders.",
+          "status": "well-supported",
+          "explanation": "The cultural-landscape report identifies German dominance after 1490 and its end with the Danish monopoly in 1602. The harbour provided a place where Icelandic production and imported goods met.",
+          "support": [
+            {
+              "sourceId": "deep-na-minjastofnun-landscape",
+              "locator": "Section 3.2.2.4, printed p. 47, Hafnarfjörður",
+              "stance": "supports",
+              "note": "Hafnarfjörður became an important harbour for German merchants trading with Icelanders."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-na-minjastofnun-landscape",
+          "authors": "Minjastofnun Íslands",
+          "year": null,
+          "title": "Menningar- og búsetulandslag",
+          "venue": "Icelandic cultural-landscape heritage report",
+          "publisher": "Minjastofnun Íslands",
+          "url": "https://www.minjastofnun.is/media/skjol-i-grein/Menningar-og-busetulandslag.pdf",
+          "access": "Section 3.2.2.4, printed p. 47 read: Hafnarfjörður's English and German trading periods, German dominance after 1490 and Danish monopoly from 1602.",
+          "referenceType": "report"
+        }
+      ],
+      "review": {
+        "summary": "Hafnarfjörður became an important harbour for German merchants trading with Icelanders.",
+        "limitations": "The period is approximate and does not date every merchant, building or voyage. No precise shipping track is inferred.",
+        "discussion": "The cultural-landscape report identifies German dominance after 1490 and its end with the Danish monopoly in 1602. The harbour provided a place where Icelandic production and imported goods met.",
+        "provenance": "Source-grounded North Atlantic coverage handoff; institutional and primary archaeological accounts checked. Generalized place points carry no territorial boundaries.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added dated place evidence in the Greenland–Iceland coverage audit."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "deep-na-reykjavik-innrettingar",
+      "revision": 1,
+      "type": "event",
+      "title": "Reykjavík — a workshop town taking shape in 1762",
+      "culture": {
+        "id": "icelanders",
+        "name": "Icelanders",
+        "kind": "people",
+        "color": "#678b85"
+      },
+      "location": {
+        "id": "deep-na-place-reykjavik-innrettingar",
+        "name": "Aðalstræti 10, Reykjavík",
+        "lon": -21.943,
+        "lat": 64.147,
+        "precision": "Rounded locality anchor; not a surveyed excavation or building footprint.",
+        "provenance": "The cited institutional source identifies this named place. Coordinates are generalized modern locality references."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1762,
+        "end": 1762,
+        "original": "1762, construction of Aðalstræti 10",
+        "method": "Archaeological or documentary chronology as specified in the claim and source locator.",
+        "interpretation": "The interval describes the supported archaeological phase or institutional activity, not occupation on every day.",
+        "approximate": false
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Aðalstræti 10 was built for the Innréttingar enterprises in 1762, part of Reykjavík's growth as a place of manufacturing and work.",
+          "status": "well-supported",
+          "explanation": "The City Museum uses the surviving building to interpret the industrial enterprises and the town's subsequent urban life.",
+          "support": [
+            {
+              "sourceId": "deep-na-reykjavik-settlement-museum",
+              "locator": "The Settlement Exhibition and Aðalstræti 10: house built in 1762 for Innréttingar",
+              "stance": "supports",
+              "note": "Aðalstræti 10 was built for the Innréttingar enterprises in 1762, part of Reykjavík's growth as a place of manufacturing and work."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-na-reykjavik-settlement-museum",
+          "authors": "Reykjavík City Museum",
+          "year": null,
+          "title": "The Settlement Exhibition",
+          "venue": "Reykjavík City Museum",
+          "url": "https://borgarsogusafn.is/en/exhibitions/the-settlement-exhibition",
+          "access": "Exhibition description read: older wall associated with tephra dated 871 ± 2, longhouse dated 930–1000, and Aðalstræti 10 built in 1762 for the Innréttingar enterprises.",
+          "referenceType": "web-resource"
+        }
+      ],
+      "review": {
+        "summary": "Aðalstræti 10 was built for the Innréttingar enterprises in 1762, part of Reykjavík's growth as a place of manufacturing and work.",
+        "limitations": "This is a dated building within urban development, not the founding date of Reykjavík.",
+        "discussion": "The City Museum uses the surviving building to interpret the industrial enterprises and the town's subsequent urban life.",
+        "provenance": "Source-grounded North Atlantic coverage handoff; institutional and primary archaeological accounts checked. Generalized place points carry no territorial boundaries.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added dated place evidence in the Greenland–Iceland coverage audit."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "deep-na-iceland-sovereignty1918",
+      "revision": 1,
+      "type": "event",
+      "title": "Reykjavík — Iceland became a sovereign kingdom in 1918",
+      "culture": {
+        "id": "icelanders",
+        "name": "Icelanders",
+        "kind": "people",
+        "color": "#678b85"
+      },
+      "location": {
+        "id": "deep-na-place-iceland-sovereignty1918",
+        "name": "Parliamentary Reykjavík",
+        "lon": -21.94,
+        "lat": 64.147,
+        "precision": "Rounded locality anchor; not a surveyed excavation or building footprint.",
+        "provenance": "The cited institutional source identifies this named place. Coordinates are generalized modern locality references."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1918,
+        "end": 1918,
+        "original": "1 December 1918, Act of Union",
+        "method": "Archaeological or documentary chronology as specified in the claim and source locator.",
+        "interpretation": "The interval describes the supported archaeological phase or institutional activity, not occupation on every day.",
+        "approximate": false,
+        "eventDate": "1918-12-01"
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Iceland became a sovereign kingdom on 1 December 1918 while sharing a monarch with Denmark.",
+          "status": "well-supported",
+          "explanation": "The official parliamentary history records the Act of Union and Denmark's continuing responsibility for foreign affairs under the arrangement.",
+          "support": [
+            {
+              "sourceId": "deep-na-althingi2018",
+              "locator": "Printed p. 9, Act of Union of 1 December 1918",
+              "stance": "supports",
+              "note": "Iceland became a sovereign kingdom on 1 December 1918 while sharing a monarch with Denmark."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-na-althingi2018",
+          "authors": "Alþingi",
+          "year": 2018,
+          "title": "Althingi",
+          "venue": "Official parliamentary information booklet",
+          "publisher": "Alþingi",
+          "url": "https://www.althingi.is/pdf/Althingi2018_enska.pdf",
+          "access": "Printed pp. 6–11 read for parliamentary history, 1918 sovereignty and 1934 franchise; location refers to Parliament House in Reykjavík, not national territorial geometry.",
+          "referenceType": "report"
+        }
+      ],
+      "review": {
+        "summary": "Iceland became a sovereign kingdom on 1 December 1918 while sharing a monarch with Denmark.",
+        "limitations": "The Reykjavík point represents a national constitutional change; it is not a territorial border or a claim that Iceland became a republic in 1918.",
+        "discussion": "The official parliamentary history records the Act of Union and Denmark's continuing responsibility for foreign affairs under the arrangement.",
+        "provenance": "Source-grounded North Atlantic coverage handoff; institutional and primary archaeological accounts checked. Generalized place points carry no territorial boundaries.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added dated place evidence in the Greenland–Iceland coverage audit."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "deep-na-iceland-franchise1934",
+      "revision": 1,
+      "type": "event",
+      "title": "Reykjavík — the franchise widened in 1934",
+      "culture": {
+        "id": "icelanders",
+        "name": "Icelanders",
+        "kind": "people",
+        "color": "#678b85"
+      },
+      "location": {
+        "id": "deep-na-place-iceland-franchise1934",
+        "name": "Alþingi, Reykjavík",
+        "lon": -21.94,
+        "lat": 64.147,
+        "precision": "Rounded locality anchor; not a surveyed excavation or building footprint.",
+        "provenance": "The cited institutional source identifies this named place. Coordinates are generalized modern locality references."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1934,
+        "end": 1934,
+        "original": "1934, franchise reforms",
+        "method": "Archaeological or documentary chronology as specified in the claim and source locator.",
+        "interpretation": "The interval describes the supported archaeological phase or institutional activity, not occupation on every day.",
+        "approximate": false
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "evidence"
+      },
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "In 1934 Iceland removed remaining financial restrictions on voting and lowered the voting age to 21.",
+          "status": "well-supported",
+          "explanation": "Alþingi's history records this step after earlier expansions of voting rights to women and men. It places a concrete institutional change at the end of the atlas period.",
+          "support": [
+            {
+              "sourceId": "deep-na-althingi2018",
+              "locator": "Printed pp. 10–11, Voting rights and number of Members: 1934 reform",
+              "stance": "supports",
+              "note": "In 1934 Iceland removed remaining financial restrictions on voting and lowered the voting age to 21."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-na-althingi2018",
+          "authors": "Alþingi",
+          "year": 2018,
+          "title": "Althingi",
+          "venue": "Official parliamentary information booklet",
+          "publisher": "Alþingi",
+          "url": "https://www.althingi.is/pdf/Althingi2018_enska.pdf",
+          "access": "Printed pp. 6–11 read for parliamentary history, 1918 sovereignty and 1934 franchise; location refers to Parliament House in Reykjavík, not national territorial geometry.",
+          "referenceType": "report"
+        }
+      ],
+      "review": {
+        "summary": "In 1934 Iceland removed remaining financial restrictions on voting and lowered the voting age to 21.",
+        "limitations": "This is a national voting-rights measure represented by the parliamentary locality, not a claim that every resident then had a vote.",
+        "discussion": "Alþingi's history records this step after earlier expansions of voting rights to women and men. It places a concrete institutional change at the end of the atlas period.",
+        "provenance": "Source-grounded North Atlantic coverage handoff; institutional and primary archaeological accounts checked. Generalized place points carry no territorial boundaries.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added dated place evidence in the Greenland–Iceland coverage audit."
+        ],
+        "relatedIds": []
+      }
+    },
+    {
+      "id": "deep-nc-western-settlement",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Western Settlement — Norse farms and abandonment around 1350",
+      "culture": {
+        "id": "norse",
+        "name": "Norse",
+        "kind": "people",
+        "color": "#dfba7a"
+      },
+      "location": {
+        "id": "deep-nc-western-settlement-place",
+        "name": "Western Settlement, inner fjords of the present Nuuk region",
+        "lon": -50.5,
+        "lat": 64.3,
+        "precision": "Rounded reference coordinate; geographic scope is stated in the record, not a claim of exact extent.",
+        "provenance": "Named region or site located from the cited institutional and scholarly accounts."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 1000,
+        "end": 1350,
+        "original": "Late tenth / early eleventh century to approximately the middle of the fourteenth century",
+        "method": "Source-located historical and archaeological synthesis; the interpretation specifies what is dated.",
+        "interpretation": "1000 and 1350 are rounded regional display anchors. Farms were established and left at different times; neither endpoint dates a single arrival or the departure of the last inhabitant.",
+        "approximate": true
+      },
+      "claims": [
+        {
+          "id": "habitation",
+          "text": "Norse farming communities occupied the Western Settlement in the Nuuk fjords from around the turn of the first millennium.",
+          "status": "well-supported",
+          "explanation": "The museums place this regional settlement near the beginning of Norse Greenland; the rounded c.1000 start represents late-tenth/early-eleventh-century occupation.",
+          "support": [
+            {
+              "sourceId": "deep-no-natmus-norse",
+              "locator": "Opening chronology and Geographical areas",
+              "stance": "supports",
+              "note": "Western and Eastern settlements began almost simultaneously; Western farms lay in the present Nuuk area."
+            },
+            {
+              "sourceId": "deep-nc-nka-peasants",
+              "locator": "Arctic peasants exhibition overview",
+              "stance": "supports",
+              "note": "Regional Norse settlement context begins around 1000."
+            }
+          ]
+        },
+        {
+          "id": "abandonment",
+          "text": "The Western Settlement was abandoned around the middle of the fourteenth century.",
+          "status": "well-supported",
+          "explanation": "The institutional synthesis and research article agree on an approximate c.1350 regional end. This is an inference about settlement cessation, not a precisely witnessed final departure.",
+          "support": [
+            {
+              "sourceId": "deep-no-natmus-norse",
+              "locator": "Opening chronology",
+              "stance": "supports",
+              "note": "Western Settlement depopulated in the middle of the fourteenth century."
+            },
+            {
+              "sourceId": "deep-nc-borreggine2023",
+              "locator": "Background",
+              "stance": "supports",
+              "note": "Western abandonment placed at approximately 1350, about a century before Eastern abandonment."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-no-natmus-norse",
+          "authors": "National Museum of Denmark",
+          "year": null,
+          "title": "Prehistory of Greenland: Norse",
+          "venue": "National Museum of Denmark, Arctic Research",
+          "url": "https://natmus.dk/organisation/forskning-og-kulturarv/nyere-tid-og-verdens-kulturer/etnografisk-samling/arktisk-forskning/prehistory-of-greenland/norse/",
+          "access": "Full institutional account read. Its statement that imported timber has not been identified is superseded by Guðmundsdóttir's research and is not adopted.",
+          "referenceType": "web-resource"
+        },
+        {
+          "id": "deep-nc-nka-peasants",
+          "authors": "Greenland National Museum and Archives",
+          "title": "Arctic peasants — Norse Greenlanders",
+          "year": null,
+          "venue": "Permanent exhibition",
+          "url": "https://en.nka.gl/museum/exhibitions/arctic-peasants-norse-greenlanders/",
+          "access": "Institutional exhibition account read: regional locations and approximate c.1000–1450 period.",
+          "referenceType": "web-resource"
+        },
+        {
+          "id": "deep-nc-borreggine2023",
+          "authors": "Marisa Borreggine; Konstantin Latychev; Sophie Coulson; Evelyn M. Powell; Jerry X. Mitrovica; Glenn A. Milne; Richard B. Alley",
+          "title": "Sea-level rise in Southwest Greenland as a contributor to Viking abandonment",
+          "year": 2023,
+          "venue": "Proceedings of the National Academy of Sciences",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10151458/",
+          "access": "Full article XML read through Europe PMC; Introduction and Background distinguish Western c.1350 from Eastern mid-fifteenth-century abandonment. Environmental model is one contributing hypothesis.",
+          "referenceType": "journal-article",
+          "doi": "10.1073/pnas.2209615120",
+          "volume": "120",
+          "issue": "17",
+          "pages": "e2209615120"
+        }
+      ],
+      "review": {
+        "summary": "The Western Settlement has both an approximate beginning and an approximate abandonment, around a century before the Eastern Settlement.",
+        "limitations": "The point represents a fjord region, not modern Nuuk town or a single excavated farm. No destination is inferred for departing residents.",
+        "discussion": "Settlement decline should not be equated with a dated disappearance of every individual. The mapped regional endpoint summarizes archaeological and historical interpretation.",
+        "provenance": "Norse continuity and settlement-end source audit; regional occupation, dated events and later literary testimony kept distinct.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added source-located continuity and retreat evidence."
+        ],
+        "relatedIds": [
+          "deep-no-qassiarsuk-farms",
+          "deep-nc-iceland-continuity"
+        ]
+      },
+      "history": {
+        "kind": "habitation",
+        "claimId": "habitation",
+        "endMeaning": "abandoned",
+        "endEvidence": {
+          "start": 1350,
+          "end": 1350,
+          "meaning": "abandoned",
+          "certainty": "inferred",
+          "label": "Abandoned around the mid-1300s",
+          "claimId": "abandonment",
+          "note": "1350 is an editorial anchor for an approximate mid-fourteenth-century regional abandonment, not an exact final-departure date or confidence interval."
+        }
+      }
+    },
+    {
+      "id": "deep-nc-iceland-continuity",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Iceland — a continuing population from settlement through 1934",
+      "culture": {
+        "id": "icelanders",
+        "name": "Icelanders",
+        "kind": "people",
+        "color": "#678b85"
+      },
+      "location": {
+        "id": "deep-nc-iceland-continuity-place",
+        "name": "Iceland — island-wide population continuity",
+        "lon": -19,
+        "lat": 65,
+        "precision": "Rounded reference coordinate; geographic scope is stated in the record, not a claim of exact extent.",
+        "provenance": "Named region or site located from the cited institutional and scholarly accounts."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": 870,
+        "end": 1934,
+        "original": "Settlement from around 870; population continues beyond the atlas endpoint of 1934",
+        "method": "Source-located historical and archaeological synthesis; the interpretation specifies what is dated.",
+        "interpretation": "This is island-wide habitation, not the lifetime of one building, institution or unchanging culture. The 1934 endpoint is the atlas coverage limit and does not mark abandonment.",
+        "approximate": true
+      },
+      "claims": [
+        {
+          "id": "continuity",
+          "text": "Iceland remained inhabited after its settlement around 870, with Icelandic society continuing through 1934 and beyond.",
+          "status": "well-supported",
+          "explanation": "The museum traces Icelanders from settlement through successive cultural and political changes; parliamentary history also documents the society at the atlas endpoint.",
+          "support": [
+            {
+              "sourceId": "deep-nc-nationalmuseum-iceland",
+              "locator": "Exhibition overview and chronological sections",
+              "stance": "supports",
+              "note": "Settlement from Norway and Norse communities in the British Isles; continuing cultural history to the present."
+            },
+            {
+              "sourceId": "deep-na-althingi2018",
+              "locator": "Historical overview through 1918 and electoral changes in 1934",
+              "stance": "supports",
+              "note": "Documents Icelandic political life at the endpoint rather than a settlement ending."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-nc-nationalmuseum-iceland",
+          "authors": "National Museum of Iceland",
+          "title": "Making of a Nation — Heritage and history in Iceland",
+          "year": null,
+          "venue": "Permanent exhibition",
+          "url": "https://thjodminjasafn.is/en/syningar-og-vidburdir/thjod-verdur-til",
+          "access": "Institutional chronology read: settlement around 870 from Norway and Norse settlements in the British Isles, followed by the changing history of Icelanders to the present.",
+          "referenceType": "web-resource"
+        },
+        {
+          "id": "deep-na-althingi2018",
+          "authors": "Alþingi",
+          "year": 2018,
+          "title": "Althingi",
+          "venue": "Official parliamentary information booklet",
+          "publisher": "Alþingi",
+          "url": "https://www.althingi.is/pdf/Althingi2018_enska.pdf",
+          "access": "Printed pp. 6–11 read for parliamentary history, 1918 sovereignty and 1934 franchise; location refers to Parliament House in Reykjavík, not national territorial geometry.",
+          "referenceType": "report"
+        }
+      ],
+      "review": {
+        "summary": "Iceland’s population continues while particular overseas Norse colonies end.",
+        "limitations": "The rounded point stands for the island, including its inhabited regions; it does not place an early farm in the interior. Continuity does not mean unchanged ancestry, institutions, religion or Viking-age culture.",
+        "discussion": "The Icelanders label follows a changing population with origins in the settlement period, including arrivals from Norway and the British Isles. Separate local and institutional records retain their own dates.",
+        "provenance": "Norse continuity and settlement-end source audit; regional occupation, dated events and later literary testimony kept distinct.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added source-located continuity and retreat evidence."
+        ],
+        "relatedIds": [
+          "deep-na-thingvellir-assembly",
+          "deep-na-skalholt-bishopric",
+          "deep-na-iceland-sovereignty1918",
+          "deep-na-iceland-franchise1934"
+        ]
+      },
+      "history": {
+        "kind": "habitation",
+        "claimId": "continuity",
+        "continuity": "ongoing",
+        "endMeaning": "unknown"
+      }
+    },
+    {
+      "id": "deep-nc-hvalsey-wedding1408",
+      "revision": 1,
+      "type": "event",
+      "title": "Hvalsey — a wedding recorded on 16 September 1408",
+      "culture": {
+        "id": "norse",
+        "name": "Norse",
+        "kind": "people",
+        "color": "#dfba7a"
+      },
+      "location": {
+        "id": "deep-nc-hvalsey-wedding1408-place",
+        "name": "Hvalsey church / Qaqortukulooq, Eastern Settlement",
+        "lon": -45.78,
+        "lat": 60.83,
+        "precision": "Rounded reference coordinate; geographic scope is stated in the record, not a claim of exact extent.",
+        "provenance": "Named region or site located from the cited institutional and scholarly accounts."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1408,
+        "end": 1408,
+        "original": "16 September 1408",
+        "method": "Source-located historical and archaeological synthesis; the interpretation specifies what is dated.",
+        "interpretation": "The historical event is dated to a day. It is an attestation of activity at Hvalsey, not the beginning or end of all Eastern Settlement occupation.",
+        "approximate": false,
+        "eventDate": "1408-09-16"
+      },
+      "claims": [
+        {
+          "id": "wedding",
+          "text": "A wedding took place at Hvalsey church on 16 September 1408.",
+          "status": "well-supported",
+          "explanation": "The Greenland National Museum’s report explicitly dates this event, commemorated by the 2008 Hvalsey conference.",
+          "support": [
+            {
+              "sourceId": "deep-nc-nka-annual2008",
+              "locator": "p.14, Andre arrangementer / The Hvalsey Conference 2008",
+              "stance": "supports",
+              "note": "Explicit 16 September 1408 date and identification as the final event known from surviving written sources."
+            }
+          ]
+        },
+        {
+          "id": "not-abandonment",
+          "text": "The 1408 wedding does not date the abandonment of Norse Greenland.",
+          "status": "well-supported",
+          "explanation": "Archaeological occupation extends beyond the last written attestation.",
+          "support": [
+            {
+              "sourceId": "deep-nc-borreggine2023",
+              "locator": "Introduction and Background",
+              "stance": "supports",
+              "note": "Radiocarbon evidence continues approximately half a century beyond the last written wedding record."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-nc-nka-annual2008",
+          "authors": "Nunatta Katersugaasivia Allagaateqarfialu / Greenland National Museum and Archives",
+          "title": "Årsrapport 2008",
+          "year": 2008,
+          "venue": "Annual report",
+          "url": "https://nka.gl/fileadmin/user_upload/Aarsrapport_2008.12.pdf",
+          "access": "PDF p.14 read and visually checked: conference commemorated the Hvalsey wedding of 16 September 1408.",
+          "referenceType": "web-resource",
+          "pages": "14"
+        },
+        {
+          "id": "deep-nc-borreggine2023",
+          "authors": "Marisa Borreggine; Konstantin Latychev; Sophie Coulson; Evelyn M. Powell; Jerry X. Mitrovica; Glenn A. Milne; Richard B. Alley",
+          "title": "Sea-level rise in Southwest Greenland as a contributor to Viking abandonment",
+          "year": 2023,
+          "venue": "Proceedings of the National Academy of Sciences",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10151458/",
+          "access": "Full article XML read through Europe PMC; Introduction and Background distinguish Western c.1350 from Eastern mid-fifteenth-century abandonment. Environmental model is one contributing hypothesis.",
+          "referenceType": "journal-article",
+          "doi": "10.1073/pnas.2209615120",
+          "volume": "120",
+          "issue": "17",
+          "pages": "e2209615120"
+        }
+      ],
+      "review": {
+        "summary": "A precisely dated written event within a settlement whose final abandonment is less precisely known.",
+        "limitations": "No departure track or final population count is supplied. The exact date belongs to the wedding; it should not lend false day-level precision to settlement decline.",
+        "discussion": "The church is an identifiable locality. A full construction-to-abandonment lifespan is not asserted here because the checked evidence for this record concerns the wedding.",
+        "provenance": "Norse continuity and settlement-end source audit; regional occupation, dated events and later literary testimony kept distinct.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added source-located continuity and retreat evidence."
+        ],
+        "relatedIds": [
+          "deep-no-qassiarsuk-farms"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "wedding",
+        "eventDate": "1408-09-16"
+      }
+    },
+    {
+      "id": "deep-nc-ari-papar-account",
+      "revision": 1,
+      "type": "occurrence",
+      "title": "Ari’s account of the papar — a later Icelandic tradition",
+      "culture": {
+        "id": "icelanders",
+        "name": "Icelanders",
+        "kind": "people",
+        "color": "#678b85"
+      },
+      "location": {
+        "id": "deep-nc-ari-papar-account-place",
+        "name": "Iceland — place described by Ari’s text, not an identified monastery",
+        "lon": -19,
+        "lat": 64.7,
+        "precision": "Rounded reference coordinate; geographic scope is stated in the record, not a claim of exact extent.",
+        "provenance": "Named region or site located from the cited institutional and scholarly accounts."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "occurrence",
+        "start": 1122,
+        "end": 1133,
+        "original": "Íslendingabók composed circa 1122–1133; its papar story concerns an undated period before Norse settlement",
+        "method": "Source-located historical and archaeological synthesis; the interpretation specifies what is dated.",
+        "interpretation": "1122–1133 dates the composition of the surviving textual account. It is not a monk-arrival interval, an occupation duration, a date of surviving manuscript material or an eleven-year voyage.",
+        "approximate": true
+      },
+      "claims": [
+        {
+          "id": "text",
+          "text": "Ari’s early-twelfth-century Íslendingabók describes Irish Christian residents called papar before Norse settlement in Iceland.",
+          "status": "well-supported",
+          "explanation": "Chapter 1 reports their departure and interprets objects they allegedly left as Irish. The introductory dating comes from the bishops addressed in Ari’s prologue.",
+          "support": [
+            {
+              "sourceId": "deep-nc-ari-gronlie2006",
+              "locator": "Introduction p.xiii; chapter 1 p.4",
+              "stance": "supports",
+              "note": "Composition 1122–1133 and the account of earlier Irish Christian residents."
+            }
+          ]
+        },
+        {
+          "id": "presence-uncertain",
+          "text": "Ari’s account does not securely establish when or where Irish monks lived in Iceland.",
+          "status": "under discussion",
+          "explanation": "The story is later testimony. The checked scholarly assessments do not identify securely attributable pre-Norse monastic archaeology; readings of Dicuil and place names remain debated.",
+          "support": [
+            {
+              "sourceId": "deep-nc-ari-gronlie2006",
+              "locator": "Note 18, p.17",
+              "stance": "supports",
+              "note": "Discusses Irish monastic voyaging, possible place-name transmission and absence of archaeological corroboration."
+            },
+            {
+              "sourceId": "deep-nc-kristinsson2005",
+              "locator": "Discussion of Ari, Dicuil, Papey and archaeological remains",
+              "stance": "supports",
+              "note": "Explains why the sources do not prove a specific Icelandic monastic settlement."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "deep-nc-ari-gronlie2006",
+          "authors": "Ari Þorgilsson; translated with introduction and notes by Siân Grønlie",
+          "title": "Íslendingabók — Kristni saga: The Book of the Icelanders — The Story of the Conversion",
+          "year": 2006,
+          "venue": "Viking Society for Northern Research, Text Series XVIII",
+          "url": "http://www.vsnrweb-publications.org.uk/Text%20Series/IslKr.pdf",
+          "access": "Publisher PDF downloaded and read: introduction p.xiii, chapter 1 p.4, and note 18 p.17. Chapter page visually checked. Source composition is dated 1122–1133, not 2006.",
+          "referenceType": "book",
+          "publisher": "Viking Society for Northern Research, University College London",
+          "pages": "xiii, 4, 17",
+          "identifier": "ISBN 978-0-903521-71-0"
+        },
+        {
+          "id": "deep-nc-kristinsson2005",
+          "authors": "Axel Kristinsson; translated by Nicholas Jones",
+          "title": "Is there any tangible proof that there were Irish monks in Iceland before the time of the Viking settlements?",
+          "year": 2005,
+          "venue": "University of Iceland, Icelandic Web of Science",
+          "url": "https://www.why.is/svar.php?id=4802&lang=en",
+          "access": "Full scholarly answer read; evaluates Ari, Dicuil, place names and archaeological ambiguity. This dated assessment is not represented as a new archaeological survey.",
+          "referenceType": "web-resource"
+        }
+      ],
+      "review": {
+        "summary": "A recorded tradition about possible Irish Christian predecessors, presented at the date of the text that attests it.",
+        "limitations": "The reference coordinate is only for Iceland as the subject of the narrative. It is not Ari’s writing desk, Papey monastery, a landing point, or a sailing destination. No precise arrival year or route is assigned.",
+        "discussion": "Papar is normally interpreted here as Irish monks or religious exiles. Their possible presence remains distinguishable from Ari’s securely observable statement. Dicuil’s Thule and Brendan traditions are not promoted into verified tracks.",
+        "provenance": "Norse continuity and settlement-end source audit; regional occupation, dated events and later literary testimony kept distinct.",
+        "reviewedAt": "2026-11-18",
+        "history": [
+          "2026-11-18: Added source-located continuity and retreat evidence."
+        ],
+        "relatedIds": [
+          "deep-nc-iceland-continuity"
+        ]
+      },
+      "history": {
+        "kind": "attestation",
+        "claimId": "text"
+      }
+    }
+  ]
+}

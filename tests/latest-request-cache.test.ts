@@ -2,6 +2,18 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { LatestRequestCache } from "../src/latest-request-cache";
 const flush = () => new Promise((r) => setTimeout(r, 0));
+
+test('a bracket loads both required anchors before optional neighbors and protects both from eviction',async()=>{
+ const calls:string[]=[];const pending=new Map<string,(s:string)=>void>();
+ const cache=new LatestRequestCache<string>(key=>{calls.push(key);return new Promise(resolve=>pending.set(key,resolve));},3,2);
+ try{
+  cache.requestGroup(['older','younger'],['next']);assert.deepEqual(calls,['older','younger']);
+  pending.get('older')!('a');await flush();assert.equal(cache.state(),'loading');assert.deepEqual(calls,['older','younger','next']);
+  pending.get('younger')!('b');await flush();assert.equal(cache.state(),'ready');
+  pending.get('next')!('c');await flush();assert.equal(cache.get('older'),'a');assert.equal(cache.get('younger'),'b');
+  cache.requestGroup([],[]);assert.equal(cache.state(),'idle');
+ }finally{cache.dispose();}
+});
 test("latest desired snapshot is drained after stale failures without inheriting their error", async () => {
   const work = new Map<
     string,

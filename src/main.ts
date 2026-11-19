@@ -1,3 +1,4 @@
+import {MAX_WORKBOOK_BYTES} from './bulk-schema';
 import {sharedContextHTML} from './topic-context';
 import { recordsForView, retainCurrentSelection, canSelect, type AtlasMode } from "./atlas-view";
 import { effectiveClimateHidden } from "./physical-rules";
@@ -19,6 +20,8 @@ import { availableVoyageRecords, scopedVoyageDate, scopedVoyageProgress, advance
 import { movieContextHTML } from './movie-context';
 import {localChronologyHTML} from './local-chronology';
 import { appShell, mapShell, libraryHTML } from "./atlas-shell";
+import { loadAtlasManifest, resolveAtlasRoute } from "./atlas-catalog";
+import { atlasNavigationHTML, atlasPreviewHTML } from "./atlas-switcher";
 import { stories } from "./stories";
 import { sampleStory, sceneStartMs, storyDurationMs, storyElapsedAtYear } from "./story-player";
 import { exploreRecords, exploreCategory, exploreCategories, regions, type ExploreCategory } from "./explore";
@@ -48,6 +51,7 @@ import {
   climateKinds,
   climateCategory,
   iceSnapshot,
+  iceFrameLabel,
   iceTarget,
   requestIce,
   eventsAt,
@@ -776,13 +780,13 @@ function renderMapData() {
   );
   const ice = showIce ? iceSnapshot(year, iceScenario) : null;
   $("#ice-status").textContent = ice
-    ? `NADI-1 ${ice.scenario.toUpperCase()} snapshot: ${ice.ageCalBP.toLocaleString()} cal BP (${formatYear(1950 - ice.ageCalBP)}). Nearest source snapshot; no interpolated edge. Age difference ${Math.abs(1950 - year - ice.ageCalBP).toLocaleString()} years.`
+    ? iceFrameLabel(ice)+'. Between source dates, the edge is interpolated for display; it is not a measured glacier position or a physical retreat model.'
     : showIce && iceTarget(year, iceScenario)
       ? iceLoadState() === "error"
         ? "Ice snapshot could not load; retrying automatically. Missing geometry is not ice absence."
         : "Loading the dated ice snapshot from the atlas server."
       : showIce
-        ? "No NADI-1 snapshot for this year (coverage25,000–1,500cal BP). This does not mean ice absence."
+        ? "No NADI-1 snapshot for this year (coverage 25,000–1,000 cal BP). This does not mean ice absence."
         : "Ice boundaries hidden.";
   const hazards = atlasMode === "movie" ? eventsAt(year, currentClimateHidden(), showUncertainHazards) : [];
   $("#hazard-status").innerHTML =
@@ -935,8 +939,21 @@ function exportProposals(list: Proposal[]) {
     announce((error as Error).message);
   }
 }
+function bindDeferredComparisons(container: Element, items: readonly Proposal[]) {
+  container.addEventListener('toggle', event => {
+    const details = event.target;
+    if (!(details instanceof HTMLDetailsElement) || !details.open || !details.hasAttribute('data-comparison-pending')) return;
+    const index = Number(details.closest<HTMLElement>('[data-proposal-index]')!.dataset.proposalIndex);
+    const template = document.createElement('template');
+    template.innerHTML = comparisonHTML(items[index]);
+    // Keep the user's summary and focus; add the same body as an individual review.
+    details.append(...Array.from(template.content.firstElementChild!.childNodes).slice(1));
+    details.removeAttribute('data-comparison-pending');
+  }, true);
+}
 function proposalsPage() {
-  main.innerHTML = `<article class="proposals-page"><div class="page-heading"><div><div class="eyebrow">A LOCAL RESEARCH WORKSPACE</div><h2>Your suggestions</h2><p class="lead">Add evidence. Propose a correction. Share the supporting research.</p></div><a class="button primary" href="#new">+ Suggest new evidence</a></div><p id="storage-status" class="notice">${storageAvailable ? "Browser storage is available as a convenience. Download your suggestions for a portable backup." : "Browser storage is unavailable. Download your suggestions before closing this page."}</p><div class="actions"><button id="export-selected">Send to others</button><button id="select-all">Select all</button><label class="button file-button">Import suggestions<input type="file" id="import-file" aria-label="Import suggestions" accept=".json,.xlsx,application/json,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"></label></div><p class="muted">Sharing downloads a file; nothing is uploaded or emailed. Imported suggestions remain unreviewed. Complete suggestions can be previewed on the map.</p><div class="actions"><a href="docs/bulk-import-guide.html">Bulk import guide</a><a href="templates/americas-peoples-import.xlsx" download>Download spreadsheet template</a><a href="templates/americas-peoples-researched-import.xlsx" download>Download researched batch</a></div><p class="muted">Bulk entry: use the XLSX template for records, claims, references and source mappings. Excel, LibreOffice, or a downloaded Google Sheets workbook can be used.</p><div id="import-error" role="alert"></div><div class="proposal-list">${proposals.length ? proposals.map((p, i) => `<section class="proposal-card" data-proposal-card><label class="check"><input type="checkbox" data-share="${i}" aria-label="Select proposal ${i + 1}"><span class="tag proposal-tag">${esc(p.state)} · ${esc(p.kind)} · v${p.version}</span></label><h3>${esc(p.record.title || "Untitled draft")}</h3><p>${esc(p.rationale || "No rationale yet.")}</p><div class="actions"><a href="#proposal/${i}">Detailed review</a><a href="#edit/${i}">Edit suggestion</a></div>${comparisonHTML(p)}</section>`).join("") : '<div class="empty large"><h3>A place for the next finding.</h3><p>Start a new evidence row or open a reviewed record and choose Suggest correction.</p></div>'}</div></article>`;
+  main.innerHTML = `<article class="proposals-page"><div class="page-heading"><div><div class="eyebrow">A LOCAL RESEARCH WORKSPACE</div><h2>Your suggestions</h2><p class="lead">Add evidence. Propose a correction. Share the supporting research.</p></div><a class="button primary" href="#new">+ Suggest new evidence</a></div><p id="storage-status" class="notice">${storageAvailable ? "Browser storage is available as a convenience. Download your suggestions for a portable backup." : "Browser storage is unavailable. Download your suggestions before closing this page."}</p><div class="actions"><button id="export-selected">Send to others</button><button id="select-all">Select all</button><label class="button file-button">Import suggestions<input type="file" id="import-file" aria-label="Import suggestions" accept=".json,.xlsx,application/json,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"></label></div><p class="muted">Sharing downloads a file; nothing is uploaded or emailed. Imported suggestions remain unreviewed. Complete suggestions can be previewed on the map.</p><div class="actions"><a href="docs/bulk-import-guide.html">Bulk import guide</a><a href="templates/americas-peoples-import.xlsx" download>Download spreadsheet template</a><a href="templates/americas-peoples-researched-import.xlsx" download>Download researched batch</a></div><p class="muted">Bulk entry: use the XLSX template for records, claims, references and source mappings. Excel, LibreOffice, or a downloaded Google Sheets workbook can be used.</p><div id="import-error" role="alert"></div><div class="proposal-list">${proposals.length ? proposals.map((p, i) => `<section class="proposal-card" data-proposal-card data-proposal-index="${i}"><label class="check"><input type="checkbox" data-share="${i}" aria-label="Select proposal ${i + 1}"><span class="tag proposal-tag">${esc(p.state)} · ${esc(p.kind)} · v${p.version}</span></label><h3>${esc(p.record.title || "Untitled draft")}</h3><p>${esc(p.rationale || "No rationale yet.")}</p><div class="actions"><a href="#proposal/${i}">Detailed review</a><a href="#edit/${i}">Edit suggestion</a></div>${comparisonHTML(p, true)}</section>`).join("") : '<div class="empty large"><h3>A place for the next finding.</h3><p>Start a new evidence row or open a reviewed record and choose Suggest correction.</p></div>'}</div></article>`;
+  bindDeferredComparisons(main.querySelector('.proposals-page')!, proposals);
   $("#export-selected").addEventListener("click", () =>
     exportProposals(
       [...main.querySelectorAll<HTMLInputElement>("[data-share]:checked")].map(
@@ -958,8 +975,8 @@ function proposalsPage() {
     try {
       const full = await completeDataset();
       if (file.name.toLowerCase().endsWith(".xlsx")) {
-        if (file.size > 5_000_000)
-          throw new Error("Workbook exceeds the 5 MB file limit.");
+        if (file.size > MAX_WORKBOOK_BYTES)
+          throw new Error(`Workbook exceeds the ${MAX_WORKBOOK_BYTES / 1_000_000} MB file limit.`);
         pending = await importWorkbook(await file.arrayBuffer(), full.records);
       } else if (file.name.toLowerCase().endsWith(".json")) {
         if (file.size > MAX_PACKAGE_BYTES)
@@ -987,7 +1004,17 @@ async function importPage() {
   const full = await completeDataset();
   if (location.hash !== "#import" || pending !== requested) return;
   const report = inspectImport(pending.proposals, proposals, full.records);
-  main.innerHTML = `<article class="proposals-page"><a href="#proposals" class="back-link">← Your suggestions</a><h2>Review import</h2><p class="lead">${report.length} suggestions. Nothing has been added yet.</p><p>Duplicate copies are skipped. Conflicting copies are retained separately for your review. No bundled evidence will change.</p>${report.map((item) => `<section class="proposal-card"><span class="tag">${item.status}</span><h3>${esc(item.proposal.record.title || "Untitled draft")}</h3><p>${esc(item.reason)}</p><p>${esc(item.proposal.rationale)}</p>${comparisonHTML(item.proposal)}<details><summary>Full incoming record and sources</summary><pre>${esc(JSON.stringify(item.proposal.record, null, 2))}</pre></details></section>`).join("")}<div class="actions"><button id="confirm-import" class="primary">Add to local collection</button><a href="#proposals">Cancel</a></div></article>`;
+  main.innerHTML = `<article class="proposals-page"><a href="#proposals" class="back-link">← Your suggestions</a><h2>Review import</h2><p class="lead">${report.length} suggestions. Nothing has been added yet.</p><p>Duplicate copies are skipped. Conflicting copies are retained separately for your review. No bundled evidence will change.</p>${report.map((item, index) => `<section class="proposal-card" data-proposal-index="${index}"><span class="tag">${item.status}</span><h3>${esc(item.proposal.record.title || "Untitled draft")}</h3><p>${esc(item.reason)}</p><p>${esc(item.proposal.rationale)}</p>${comparisonHTML(item.proposal, true)}<details data-incoming-index="${index}"><summary>Full incoming record and sources</summary><pre></pre></details></section>`).join("")}<div class="actions"><button id="confirm-import" class="primary">Add to local collection</button><a href="#proposals">Cancel</a></div></article>`;
+  bindDeferredComparisons(main.querySelector('.proposals-page')!, report.map(item => item.proposal));
+  // Keep the full batch reviewable without eagerly creating every source JSON block.
+  // Capture toggle on this page only: the report and handler leave with its DOM.
+  main.querySelector('.proposals-page')!.addEventListener('toggle', event => {
+    const details = event.target;
+    if (!(details instanceof HTMLDetailsElement) || !details.open || details.dataset.incomingIndex === undefined || details.dataset.loaded) return;
+    const item = report[Number(details.dataset.incomingIndex)];
+    details.querySelector('pre')!.textContent = JSON.stringify(item.proposal.record, null, 2);
+    details.dataset.loaded = 'true';
+  }, true);
   $("#confirm-import").addEventListener("click", () => {
     try {
       const next = mergeImport(pending!.proposals, proposals);
@@ -1061,21 +1088,28 @@ async function route() {
   mountedMap = false;
   map.clearHover();
   stop();
-  const activeNav=diveRoute?'#dives':hash==='#explore'?'#explore':['#map','#movie'].includes(hash)||hash.startsWith('#story/')?'#movie':'#library';
+  const plannedAtlas=resolveAtlasRoute(hash);
+  const activeNav=plannedAtlas?'':diveRoute?'#dives':hash==='#explore'?'#explore':['#map','#movie'].includes(hash)||hash.startsWith('#story/')?'#movie':'#library';
   document
-    .querySelectorAll("nav a")
+    .querySelectorAll('nav[aria-label="Main navigation"] a')
     .forEach((a) =>
       a.classList.toggle("active", a.getAttribute("href") === activeNav),
     );
+  $('#atlas-destinations').innerHTML=atlasNavigationHTML(plannedAtlas??'americas');
+  document.querySelector<HTMLDetailsElement>('.atlas-switcher')!.open=false;
   document.body.classList.remove("movie-playing","focus-view");
   const mapRoute=["#map","#movie","#explore"].includes(hash);
   document.body.classList.toggle('topic-page',hash.startsWith('#topic/'));
   document.body.classList.toggle('atlas-page',mapRoute);
   document.body.classList.toggle('reading-page',!mapRoute);
+  document.body.classList.toggle('atlas-preview-page',Boolean(plannedAtlas));
   $(".timeline").hidden=!mapRoute;
   document.body.classList.remove('exploring');
   try {
-    if (["#map", "#movie", "#explore"].includes(hash)) {
+    if (plannedAtlas) {
+      main.innerHTML=atlasPreviewHTML(loadAtlasManifest(plannedAtlas),land as import('d3-geo').GeoPermissibleObjects,lastAtlasRoute);
+    }
+    else if (["#map", "#movie", "#explore"].includes(hash)) {
       const nextMode=hash === "#explore" ? "explore" : "movie";
       if(nextMode!==atlasMode){placeQuery='';placeCategory='all';}
       atlasMode = nextMode;

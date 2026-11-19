@@ -2,6 +2,11 @@ import sparseTen from '../data/sparse-ten-expansion-records.json';
 import regionalCoverage from '../data/coverage-15-expansion-records.json';
 import easternBrazil from '../data/eastern-brazil-expansion-records.json';
 import tradeExpansion from '../data/trade-0-1200-expansion-records.json';
+import tradeNetworks from '../data/trade-network-expansion-records.json';
+import northAtlantic from '../data/north-atlantic-expansion-records.json';
+import shipwrecks from '../data/shipwreck-expansion-records.json';
+import ancientShipwrecks from '../data/ancient-shipwreck-records.json';
+import graveyards from '../data/graveyard-expansion-records.json';
 import regionalContinuity from '../data/three-regional-gaps-expansion-records.json';
 import shieldAleutianLocal from '../data/shield-aleutian-local-records.json';
 import canadaExpansion from '../data/canada-expansion-records.json';
@@ -72,6 +77,11 @@ export const dataset = publishedDataset(
     ...regionalCoverage.records,
     ...easternBrazil.records,
     ...tradeExpansion.records,
+    ...tradeNetworks.records,
+    ...northAtlantic.records,
+    ...shipwrecks.records,
+    ...ancientShipwrecks.records,
+    ...graveyards.records,
     ...regionalContinuity.records,
     ...shieldAleutianLocal.records,
     ...canadaExpansion.records, ...aleutianExpansion.records, ...research.proposals.map((p) => p.record), ...islandHistory.records,...islandChain.records,...yapMicronesia.records,

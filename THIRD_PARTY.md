@@ -28,6 +28,20 @@ Public domain generalized land geometry from https://github.com/nvkelso/natural-
 
 ## d3-geo
 
+The ice display also uses d3-contour 4.0.2, Copyright 2012–2023 Mike Bostock, under the following ISC permission and disclaimer (also retained in the dependency's LICENSE).
+
+Permission to use, copy, modify, and/or distribute this software for any purpose
+with or without fee is hereby granted, provided that the above copyright notice
+and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS
+OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
+THIS SOFTWARE.
+
 Copyright 2010-2024 Mike Bostock
 
 Permission to use, copy, modify, and/or distribute this software for any purpose
@@ -338,7 +352,7 @@ SOFTWARE.
 
 ## NADI-1 physical context and hazard catalogs(v0.3.7)
 
-Dalton et al.(2023), North American Deglacial Isochrones1, QSR321:108345, https://doi.org/10.1016/j.quascirev.2023.108345. GIS dataset https://doi.org/10.5281/zenodo.8161764, CC BY 4.0. Modified: simplified WGS84 polygons at 0.12degrees, ring orientation adapted for d3, nearest dated snapshot; author minimum/maximum/optimal scenarios preserved. No interpolated boundary or open-water reconstruction.
+Dalton et al.(2023), North American Deglacial Isochrones1, QSR321:108345, https://doi.org/10.1016/j.quascirev.2023.108345. GIS dataset https://doi.org/10.5281/zenodo.8161764, CC BY 4.0. Modified: simplified WGS84 polygons at 0.12degrees, ring orientation adapted for d3; author minimum/maximum/optimal scenarios preserved. Source dates retain those outlines. Between source dates, the atlas displays explicitly labeled approximate signed-distance interpolation on a 0.25degree grid; this is not part of the authors' reconstruction and is not a glacier-dynamics, sea-ice or open-water model. The public source panel documents the method and both bracketing ages.
 
 Gergis and Fowler(2009), A history of ENSO events since A.D.1525, Climatic Change92:343–387, https://doi.org/10.1007/s10584-008-9476-z. NOAA/WDS data https://doi.org/10.25921/ebpz-a913;1525–1934 subset. Original data fields retained. Investigator attribution and NOAA use constraints apply; no NOAA endorsement.
 
@@ -464,3 +478,29 @@ Figure 4 from Buarque, Baumann, Barbosa-Guimarães and Cordeiro (2020), *Entre d
 The 16 source-map assets in `data/guide-maps/` retain the item-level source, creator, rights statement, processing description, dimensions and SHA-256 in `data/guide-maps/manifest.json`, published as `sites/maps/manifest.json`. They include U.S. BLM and NPS public-domain cartography, the public-domain 1912 Machu Picchu/Urubamba survey published in 1913, and credited CC BY 4.0 Casarabe study figures. Public-domain works remain unrestricted; CC BY works retain that license independently of the atlas's noncommercial original text. Historical interpretation and map dates are preserved in captions. Linked reference maps are not redistributed where reuse rights have not been established.
 
 The larger guide relief images use the existing Mapzen/Tilezen terrain source and its provider attribution elsewhere in this notice. Source tile URLs and hashes, Mercator bounds, output pixels, approximate grid sampling and contour intervals are recorded in `data/guide-terrain/sources.json`. These are modern terrain references. A larger output image does not increase the accuracy of the underlying elevation survey.
+
+## Maritime inventories and route-guide maps
+
+Historical loss markers retain publisher field provenance. Original dataset terms remain in force. The atlas does not relicense these sources.
+
+- **shipcatalog-ukho-202610** — Open Government Licence v3.0 [Source](https://datahub.admiralty.co.uk/portal/sharing/rest/content/items/60c0908526b844a68494c038a457e1a7/data). [Licence](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
+- **shipcatalog-ireland** — Public inventory accessed 18 November 2026. CC BY 4.0; attribution to National Monuments Service, Government of Ireland. [Source](https://www.archaeology.ie/advice-and-support/locate-a-monument-or-wreck/wreck-viewer/).
+- **shipcatalog-wam** — Public inventory accessed 18 November 2026. CC BY 4.0. This spatial subset is smaller than the full museum inventory. [Source](https://catalogue.data.wa.gov.au/dataset/shipwrecks).
+- **shipcatalog-michigan** — Public inventory accessed 18 November 2026. Only factual vessel, loss-year and location fields are reproduced; photographs and descriptive prose are excluded. [Source](https://www.michiganpreserves.org/divers-guide/).
+- **shipcatalog-farallones** — Public inventory accessed 18 November 2026. US federal government factual inventory; underlying photographs retain their individual credits and are not included. [Source](https://www.arcgis.com/home/item.html?id=83fb39636e48428f915237ec403e859a).
+- **shipcatalog-wisconsin** — Public inventory accessed 18 November 2026. Only factual vessel, loss-year and location fields are reproduced; photographs and descriptive prose are excluded. [Source](https://dnr.wisconsin.gov/topic/parks/watertrails).
+
+NOAA Thunder Bay, NOAA Greater Farallones, National Park Service, US Coast Guard and state institutional wreck pages are cited for factual vessel names, loss dates and public locations. No third-party wreck photographs or descriptive catalogue prose are copied. Individually credited exceptions retain their terms.
+
+- **North Atlantic regions in the 1021 dating study** — R. Klaarenbeek, in Kuitems et al. (2022); Evidence for European presence in the Americas in AD 1021. DOI 10.1038/s41586-021-03972-8. CC-BY-4.0. [Source](https://www.nature.com/articles/s41586-021-03972-8); [rights](https://creativecommons.org/licenses/by/4.0/). Original repository image converted to WebP at its native size; no upscaling. The relief map above is independently rendered at higher pixel resolution.
+- **L’Anse aux Meadows: excavated structures and dated wood** — Kuitems et al. (2022), after Wallace (2003); Evidence for European presence in the Americas in AD 1021. DOI 10.1038/s41586-021-03972-8. CC-BY-4.0. [Source](https://www.nature.com/articles/s41586-021-03972-8); [rights](https://creativecommons.org/licenses/by/4.0/). Original repository image converted to WebP at its native size; no upscaling. The relief map above is independently rendered at higher pixel resolution.
+- **Northern Canada: the complete regional reference sheet** — Natural Resources Canada, Atlas of Canada Reference Map Series, Northern Canada / Nord du Canada, MCR0036, 2012, scale 1:4,000,000. Contains information licensed under the Open Government Licence – Canada. Open Government Licence – Canada. [Source](https://open.canada.ca/data/en/dataset/ed9208a8-54dd-516a-9e63-68bc0be258f7); [rights](https://open.canada.ca/en/open-government-licence-canada). Converted to WebP at the downloaded 7,200 × 6,600 pixels; no enlargement, cropping, added route lines or retouching. The legend and source credits remain on the sheet.
+- **The whole Arctic Ocean: IBCAO bathymetry and relief** — IBCAO Editorial Board; map by Martin Jakobsson, Stockholm University. Jakobsson et al., The International Bathymetric Chart of the Arctic Ocean (IBCAO) Version 3.0, Geophysical Research Letters (2012), doi:10.1029/2012GL052219. Distributed by GEBCO. GEBCO public-domain terms for grid-derived information products. [Source](https://www.gebco.net/data-products/printable-maps); [rights](https://www.gebco.net/data-products/gridded-bathymetry/terms-of-use). Rendered from the full PDF sheet at 200 dpi to 8,662 × 10,237 pixels, then encoded as WebP. Labels, legend and credits preserved. The underlying grid spacing is 500 m, with uneven survey coverage; output pixels do not imply 500 m measured accuracy everywhere.
+- **Hansen’s map of Gjøa and the 1903–06 Arctic surveys** — Map to illustrate the voyage and Arctic explorations of Capt. Roald Amundsen, from surveys by Lieut. G. Hansen, 1903 to 1906. The Geographical Journal, May 1907; Smithsonian Report, 1906, Plate I. Digitized by Princeton University Library. Public domain in the United States. [Source](https://static-prod.lib.princeton.edu/visual_materials/maps/websites/northwest-passage/amundsen.htm); [rights](https://static-prod.lib.princeton.edu/visual_materials/maps/websites/northwest-passage/amundsen.htm). Converted to WebP at its native 1,404 × 1,239 pixels. This modest-resolution historical scan supplements the large modern sheets; it has not been enlarged or redrawn.
+- **The whole Southern Ocean: IBCSO v2 bathymetric chart** — Dorschel et al. (2022); chart by Simon Dreutter, IBCSO / Alfred Wegener Institute / GEBCO / Seabed 2030. PANGAEA dataset 937574. CC BY 4.0. [Source](https://doi.pangaea.de/10.1594/PANGAEA.937574); [rights](https://creativecommons.org/licenses/by/4.0/). Full PDF sheet rendered to 5,460 × 6,500 pixels and converted to WebP; no labels, borders or legend removed.
+- **The full Strait of Magellan: Admiralty survey chart** — Great Britain Hydrographic Office; surveys directed by Phillip Parker King, Pringle Stokes and Robert FitzRoy; engraved by J. & C. Walker. David Rumsey Map Collection, David Rumsey Map Center, Stanford Libraries, 11940.000. CC BY-NC-SA 3.0 (digitization terms supplied by the collection). [Source](https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~306175~90077866); [rights](https://www.davidrumsey.com/about/copyright-and-permissions). Complete 23,588 × 15,478 source scan reduced to 9,000 pixels wide and converted to WebP; source fold lines and original labels preserved. The source’s separately stated noncommercial/share-alike terms remain attached to this derivative.
+- **Beagle’s Tierra del Fuego: channels, islands and Cape Horn** — Robert FitzRoy / HMS Beagle survey; J. & C. Walker engravers, 1839. Wellcome Collection, b33288136, volume II, foldout chart. Public Domain Mark 1.0. [Source](https://wellcomecollection.org/works/cun78dra); [rights](https://iiif.wellcomecollection.org/presentation/v2/b33288136_0002). Full 6,420 × 4,405 Wellcome IIIF scan converted to WebP without cropping, retouching or added route lines.
+- **Wind across the whole southern archipelago in four seasons** — Castillo et al. (2026), Ocean Science 22, 2221–2247, Figure 3; ERA5 reanalysis data © ECMWF/Copernicus. CC BY 4.0. [Source](https://os.copernicus.org/articles/22/2221/2026/); [rights](https://creativecommons.org/licenses/by/4.0/). Published figure retained in full at 1,892 × 1,127 pixels and converted to WebP. Panel codes retained; the source caption’s inconsistent prose expansion of AMJ/JAS is not repeated.
+- **Summer wind, wave-height and current maps around Antarctica** — Derkani et al. (2021), Earth System Science Data 13, 1189–1209, Figure 5. CC BY 4.0. [Source](https://essd.copernicus.org/articles/13/1189/2021/); [rights](https://creativecommons.org/licenses/by/4.0/). Full six-panel figure converted to WebP at 2,067 × 2,348 pixels; colour scales, panel labels and route retained. The 2° bins cannot resolve individual channels.
+
+Route-guide photographs preserve the individual creators, source URLs, licence statements and modification notes in `data/guide-media/manifest.json` and in the displayed captions. The native source image dimensions are retained in the manifests; derivatives are not claimed as higher-resolution originals.

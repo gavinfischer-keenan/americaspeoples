@@ -34,7 +34,7 @@ export function reviewHTML(
  </details><section><h3>Bibliography</h3><p class="muted">Citations and explanations are available offline. Publication links require an internet connection.</p><ol class="bibliography">${r.sources.map((s) => `<li id="source-${esc(s.id)}"><p>${esc(formatReference(s))}</p>${safeURL(s.url) ? `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">Open scholarly source ↗</a>` : ""}<p class="muted">Access and verification: ${esc(s.access)}</p></li>`).join("")}</ol></section>
  ${r.review.relatedIds.length ? `<section><h3>Related evidence and context</h3><ul>${r.review.relatedIds.map((id) => `<li><a href="#review/${encodeURIComponent(id)}">${esc(d.records.find((x) => x.id === id)?.title ?? id)}</a></li>`).join("")}</ul></section>` : ""}</article>`;
 }
-export function comparisonHTML(p: Proposal): string {
+export function comparisonHTML(p: Proposal, deferContent = false): string {
   if (!p.baseRecord) return "";
   const a = p.baseRecord,
     b = p.record;
@@ -44,5 +44,5 @@ export function comparisonHTML(p: Proposal): string {
   const changed = keys.filter(
     (k) => JSON.stringify(a[k]) !== JSON.stringify(b[k]),
   );
-  return `<details class="comparison"><summary>Compare with original · ${changed.length} changed fields · base revision ${p.baseRevision}</summary>${changed.length ? changed.map((k) => `<h4>${esc(k)}</h4><div class="compare-columns"><div><strong>Original</strong><pre>${esc(typeof a[k] === "string" ? a[k] : JSON.stringify(a[k], null, 2))}</pre></div><div><strong>Proposed</strong><pre>${esc(typeof b[k] === "string" ? b[k] : JSON.stringify(b[k], null, 2))}</pre></div></div>`).join("") : "<p>No record fields changed. This copy is being shared for discussion.</p>"}</details>`;
+  return `<details class="comparison"${deferContent ? " data-comparison-pending" : ""}><summary>Compare with original · ${changed.length} changed fields · base revision ${p.baseRevision}</summary>${deferContent ? "" : changed.length ? changed.map((k) => `<h4>${esc(k)}</h4><div class="compare-columns"><div><strong>Original</strong><pre>${esc(typeof a[k] === "string" ? a[k] : JSON.stringify(a[k], null, 2))}</pre></div><div><strong>Proposed</strong><pre>${esc(typeof b[k] === "string" ? b[k] : JSON.stringify(b[k], null, 2))}</pre></div></div>`).join("") : "<p>No record fields changed. This copy is being shared for discussion.</p>"}</details>`;
 }
