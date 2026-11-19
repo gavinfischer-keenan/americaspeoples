@@ -1,3 +1,4 @@
+import {isPlayableVoyage,MOVIE_END_DATE,sampleMapVoyage} from './shared-movie';
 import {sampleVoyage,dateValue,type Voyage,type VoyagePhase} from './voyages';
 import {esc} from './dom';
 
@@ -10,9 +11,10 @@ export function expeditionPhase(voyage:Voyage,frame:NonNullable<ReturnType<typeo
 export interface ActiveExpedition {id:string;name:string;position:string;phase:string;coordinates:[number,number]|null;inView:boolean}
 /** The clock, not camera scope or selected itinerary, determines contemporaries. */
 export function activeExpeditions(voyages:readonly Voyage[],date:number,inView:(p:[number,number])=>boolean):ActiveExpedition[]{
+ if(date>MOVIE_END_DATE)return [];
  return voyages.flatMap(v=>{
-  if(date<dateValue(v.stops[0].arrival)||date>dateValue(v.stops.at(-1)!.departure))return [];
-  const f=sampleVoyage(v.stops,date);
+  if(!isPlayableVoyage(v)||date<dateValue(v.stops[0].arrival)||date>dateValue(v.stops.at(-1)!.departure))return [];
+  const f=sampleMapVoyage(v,date);
   return [{id:v.id,name:v.name,position:f?.stopName??'Position not reconstructed between documented anchors',phase:f?expeditionPhase(v,f):'Expedition in progress',coordinates:f?.coordinates??null,inView:!!f&&inView(f.coordinates)}];
  });
 }
@@ -34,10 +36,15 @@ function periodBound(value:string,end=false):number{
 }
 /** A dated window establishes activity, never an inferred daily location. */
 export function activityDuring(activities:readonly ExpeditionActivity[],date:number,precise:readonly ActiveExpedition[]=[]):ExpeditionActivity[]{
+ if(date>MOVIE_END_DATE)return [];
  return activities.filter(a=>date>=periodBound(a.start)&&date<periodBound(a.end,true)&&!a.relatedVoyageIds?.some(id=>precise.some(e=>e.id===id&&e.coordinates!==null)));
 }
 export function activityWindows(activities:readonly ExpeditionActivity[]):{start:number;end:number}[]{
- return activities.map(a=>({start:periodBound(a.start),end:periodBound(a.end,true)})).filter(w=>Number.isFinite(w.start)&&Number.isFinite(w.end)&&w.end>w.start);
+ return activities.flatMap(a=>{
+  const start=periodBound(a.start),end=periodBound(a.end,true);
+  if(!Number.isFinite(start)||!Number.isFinite(end)||end<=start||start>MOVIE_END_DATE)return [];
+  return [{start,end:Math.min(MOVIE_END_DATE,end)}];
+ });
 }
 export function expeditionActivityHTML(entries:readonly ExpeditionActivity[],sources:readonly {id:string;title:string;url:string}[]):string{
  return entries.map(e=>`<details class="expedition-period"><summary>${esc(e.name)}<span>Recorded ${esc(e.start)}${e.end!==e.start?'–'+esc(e.end):''} · ${e.start.length>7||e.end.length>7?'day':e.start.length>4||e.end.length>4?'month':'year'} precision</span></summary><p>${esc(e.region)}. ${esc(e.note)}</p><p>Dates establish the period; the position on this particular day is not reconstructed.</p>${e.sourceIds.map(id=>{const s=sources.find(s=>s.id===id);return s&&/^https:\/\/[^\s]+$/.test(s.url)?`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)} ↗</a>`:'';}).join(' · ')}</details>`).join('');

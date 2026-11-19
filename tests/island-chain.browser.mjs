@@ -17,7 +17,7 @@ try{
   await page.locator('.site-overview').first().waitFor();
   assert.ok((await page.locator('#architecture').innerText()).split(/\s+/).length>500);
   await page.locator(`a[href="../#story/${story.id}"]`).click();
-  for(const [i,scene] of story.scenes.entries()){
+  for(const [i,scene] of story.scenes.filter(scene=>scene.year<=1900).entries()){
    if(i)await page.getByRole('button',{name:'Next scene',exact:true}).click();
    await page.getByRole('heading',{name:scene.title,exact:true}).waitFor();
    const titles=scene.recordIds.map(id=>records.find(r=>r.id===id)).filter(r=>r?.location&&r.time.start<=scene.year&&r.time.end>=scene.year).map(r=>r.title);
@@ -37,7 +37,7 @@ try{
  assert.equal(await page.locator('.guide-photo').count(),2);
  await page.locator('a[href="../#topic/rai-stone-money"]').click();
  await page.locator('.topic-guide-link').waitFor();
- for(const [i,scene] of yapMicronesiaTopics[0].scenes.entries()){
+ for(const [i,scene] of yapMicronesiaTopics[0].scenes.filter(scene=>scene.year<=1900).entries()){
   if(i)await page.getByRole('button',{name:'Next topic chapter',exact:true}).click();
   await page.getByRole('heading',{name:scene.title,exact:true}).waitFor();
  }

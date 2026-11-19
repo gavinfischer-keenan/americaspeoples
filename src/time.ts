@@ -1,5 +1,16 @@
 import type { EvidenceRecord, TimeExtent, MapRecord } from "./model";
-export const END_YEAR = 1934;
+export const END_YEAR = 1900;
+export const ARCHIVE_END_YEAR = 1934;
+
+/** A spanning interval keeps its documented bounds. Only the map's eligibility is limited. */
+export function recordInTimeline(record:Pick<MapRecord,"time"|"history">, maxYear=END_YEAR):boolean {
+  const {time,history}=record;
+  const onset=time.eventDate??history?.eventDate;
+  if(onset && /^\d{4}-\d{2}-\d{2}$/.test(onset) && Number(onset.slice(0,4))>maxYear)return false;
+  if(time.kind==="unplaced")return true;
+  return time.start!==null && time.start<=maxYear &&
+    (!history?.windows?.length || history.windows.some(window=>window.start<=maxYear));
+}
 export function formatYear(year: number): string {
   return `${(year <= 0 ? 1 - year : year).toLocaleString("en-US")} ${year <= 0 ? "BCE" : "CE"}`;
 }

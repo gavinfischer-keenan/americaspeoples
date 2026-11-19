@@ -1,3 +1,4 @@
+import {yapMicronesiaTopics} from '../src/yap-micronesia-dives';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {dataset} from '../src/published-data';
@@ -10,7 +11,8 @@ test('island communities and documented rai voyages enter shared history; themat
   assert.ok(dataset.records.find(r=>r.id===id),id);assert.ok(!topicOnlyIds.has(id),id);
  }
  for(const id of ['topic-rai-making','topic-rai-boats','topic-rai-obligations'])assert.ok(topicOnlyIds.has(id));
- const topic=topics.find(t=>t.id==='rai-stone-money')!;assert.equal(topic.scenes.length,12);
+ const topic=topics.find(t=>t.id==='rai-stone-money')!;const archive=yapMicronesiaTopics.find(t=>t.id===topic.id)!;
+ assert.equal(archive.scenes.length,12);assert.deepEqual(topic.scenes,archive.scenes.filter(s=>s.year<=1900));
  assert.ok(topic.recordIds.includes('ym-cheyne-stone-gift-1843'));
  for(const id of ['borneo-brunei','cebu-philippines','timor','new-guinea-islands','micronesian-island-networks']){
   const guide=siteGuides.find(g=>g.id===id)!;assert.ok(guide);

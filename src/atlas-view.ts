@@ -1,3 +1,4 @@
+import {END_YEAR,recordInTimeline} from "./time";
 import type { MapRecord } from "./model";
 import { historyState } from "./history";
 
@@ -8,18 +9,21 @@ export function recordsForView<T extends MapRecord>(
   records: readonly T[],
   mode: AtlasMode,
   year: number,
+  endYear=END_YEAR,
 ): { dated: T[]; context: T[]; history: T[] } {
+  const eligible=records.filter(record=>recordInTimeline(record,endYear));
+  if(mode==="movie"&&year>endYear)return {dated:[],context:[],history:[]};
   return mode === "movie"
     ? {
-        dated: records.filter((r) => historyState(r, year) === "active"),
+        dated: eligible.filter((r) => historyState(r, year) === "active"),
         context: [],
-        history: records.filter((r) =>
+        history: eligible.filter((r) =>
           ["past-place", "founded", "loss"].includes(historyState(r, year)),
         ),
       }
     : {
-        dated: records.filter((r) => r.time.kind !== "unplaced"),
-        context: records.filter((r) => r.time.kind === "unplaced"),
+        dated: eligible.filter((r) => r.time.kind !== "unplaced"),
+        context: eligible.filter((r) => r.time.kind === "unplaced"),
         history: [],
       };
 }

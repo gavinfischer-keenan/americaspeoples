@@ -13,7 +13,7 @@ test('a topic clock is independent, can seek any date, and returns to chapters e
 });
 test('topic playback stops at the final chapter and manual timeline uses its own limits',()=>{
  const s=new TopicSession(story);s.advance(1e9);assert.equal(s.year,200);assert.equal(s.completed,true);
- s.seekYear(-1e9);assert.equal(s.year,s.minYear);s.seekYear(1e9);assert.equal(s.year,1934);
+ s.seekYear(-1e9);assert.equal(s.year,s.minYear);s.seekYear(1e9);assert.equal(s.year,1900);
  s.seekScene(0);assert.equal(s.completed,false);assert.equal(s.year,100);
 });
 
@@ -31,5 +31,5 @@ test('only the approved Hawaii topic can seek and play through 1959',()=>{
  hawaii.seekYear(1960);assert.equal(hawaii.year,1959);
  hawaii.seekYear(1958);hawaii.advance(1000);assert.equal(hawaii.year,1959);assert.equal(hawaii.completed,true);
  hawaii.seekScene(0);hawaii.advance(1e9);assert.equal(hawaii.year,1959);assert.equal(hawaii.completed,true);
- const other=new TopicSession({...story,id:'territorial-purchases'});other.seekYear(1959);assert.equal(other.year,1934);
+ const other=new TopicSession({...story,id:'territorial-purchases'});other.seekYear(1959);assert.equal(other.year,1900);
 });

@@ -1,3 +1,4 @@
+import {END_YEAR} from './time';
 export type BoundaryKind='acquisition'|'colony'|'territory'|'state'|'reservation'|'nation';
 export interface BoundaryGeometry {type:'Polygon'|'MultiPolygon';coordinates:any[]}
 export interface PoliticalBoundary {
@@ -8,7 +9,7 @@ export interface PoliticalBoundary {
 export interface BoundarySource {id:string;title:string;url:string;license:string;note:string}
 /** Annual map state is December 31; never show both sides of a midyear replacement. */
 export function boundariesAt(rows:readonly PoliticalBoundary[],year:number):PoliticalBoundary[]{
- if(!Number.isSafeInteger(year)||year<1||year>1934)return [];
+ if(!Number.isSafeInteger(year)||year<1||year>END_YEAR)return [];
  const date=String(year).padStart(4,'0')+'-12-31';
  return rows.filter(r=>r.start<=date&&r.end>=date);
 }

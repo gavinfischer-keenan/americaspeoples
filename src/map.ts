@@ -25,6 +25,8 @@ export interface PhysicalOptions {ice:boolean; iceScenario:string; currents:bool
 export interface MapCamera {scope:MapScope;center:MapPoint;pixelScale:number;rotation:[number,number,number]}
 const compactPlaceName=(name:string)=>name.length<=40?name:name.slice(0,39).trimEnd()+'…';
 export class MapView {
+  populationScale:'bands'|'log'='bands';
+  namedRouteEndpoints=false;
   readonly context=new AtlasContext();
   readonly element = document.createElement("div");
   private densityPreference:'compact'|'standard'|'detailed'='standard';
@@ -190,7 +192,7 @@ export class MapView {
           this.resetView();
         } else this.zoom(target.dataset.zoom === "in" ? 1.35 : 1 / 1.35);
       } else if (!moved&&svg.contains(e.target as Node)) {
-        if(target?.hasAttribute('data-density-group')){this.activateFeature(target);return;}
+        if(target?.hasAttribute('data-density-group')||target?.hasAttribute('data-route-endpoint')){this.activateFeature(target);return;}
         const rows=e.detail===0&&target?this.featureRows(target):this.pick(this.clientPoint(e.clientX,e.clientY),(e as PointerEvent).pointerType==='touch');
         if(rows.length){e.preventDefault();this.selectRows(rows);}
       }
@@ -330,7 +332,7 @@ export class MapView {
   private declutterLabels(){
     const viewport=$('svg',this.element).getBoundingClientRect();
     if(!viewport.width||!viewport.height)return;
-    const labels=[...this.element.querySelectorAll<SVGTextElement>('.settlement-label,.history-place-label,.route-endpoint-label text,.route-direction-label text,.community-name,.change-caption,.boundary-label')].map(label=>({label,selected:!!label.closest('.is-highlighted,.route-endpoint-label'),bounds:label.getBoundingClientRect()}));
+    const labels=[...this.element.querySelectorAll<SVGTextElement>('.settlement-label,.history-place-label,.route-endpoint-label text,.named-route-endpoint text,.route-direction-label text,.community-name,.change-caption,.boundary-label')].map(label=>({label,selected:!!label.closest('.is-highlighted,.route-endpoint-label'),bounds:label.getBoundingClientRect()}));
     const priority=(entry:typeof labels[number])=>entry.label.classList.contains('change-caption')?1:entry.selected?2:0;
     labels.sort((a,b)=>priority(b)-priority(a));
     const placed:DOMRect[]=[...this.element.querySelectorAll('.map-controls,.map-caption,.community-glyph,.site-dot,.settlement-symbol,.wreck-symbol')].map(node=>node.getBoundingClientRect());
@@ -417,6 +419,7 @@ export class MapView {
     if(element.dataset.context!==undefined)return this.contextAnchors.get(element.dataset.context)??[];
     if(element.dataset.overlay!==undefined){
       const record=this.records[Number(element.dataset.overlay)];if(!record)return [];
+      if(element.dataset.routeEndpoint)return [record];
       return this.places.get(placeKey(record)??"none")??[record];
     }
     if(element.dataset.point!==undefined)return this.drawnPoints.get(element.dataset.point)??[];
@@ -447,6 +450,25 @@ export class MapView {
     }
     for(const r of this.contextRecords){const p=this.geometry.get(r).contextPoint;if(p)candidates.push({key:JSON.stringify([r.id,r.proposalKey??null]),value:r,kind:'context',point:screen(p)});}
     return pickCandidates(candidates,point,touch);
+  }
+  private routeEndpoints(symbolScale:number):string {
+    if(!this.namedRouteEndpoints)return '';
+    const viewport=this.viewBounds(0);
+    const unselected:string[]=[],selected:string[]=[];
+    for(const [index,record] of this.records.entries()){
+      if(!record.location||!record.destination||historyState(record,this.year)!=='active')continue;
+      const output=this.highlighted.has(record.id)?selected:unselected;
+      for(const role of ['origin','destination'] as const){
+        const place=role==='origin'?record.location:record.destination;
+        const point=this.projection([place.lon,place.lat]);
+        if(!point||!intersectsView([point,point],viewport))continue;
+        const right=point[0]*this.scale+this.tx>this.width/2;
+        output.push(`<g class="named-route-endpoint" data-overlay="${index}" data-route-endpoint="${role}" data-endpoint-record="${esc(record.id)}" transform="translate(${point[0]},${point[1]}) scale(${symbolScale})" style="cursor:pointer">
+          <circle r="10" fill="transparent"/><circle r="4" fill="#fff2c5" stroke="#183847" stroke-width="1.5"/>
+          <text x="${right?-8:8}" y="${role==='origin'?-7:15}" text-anchor="${right?'end':'start'}" style="font-size:12px;fill:#fff8de;stroke:#183847;stroke-width:3px;paint-order:stroke">${esc(place.name)}</text></g>`);
+      }
+    }
+    return unselected.join('')+selected.join('');
   }
   private viewportFit() {
     const box = $("svg", this.element).getBoundingClientRect();
@@ -576,7 +598,7 @@ export class MapView {
           const start=direction==='reverse'||direction==='both',end=direction==='forward'||direction==='both';
           const marker='url(#corridor-'+r.history.kind+')';
           const lane=lanes.get(r);
-          arrows+=`<g data-overlay="${index}" data-history-route="${esc(r.id)}" data-direction="${direction??'unknown'}" class="history-route route-${r.history.kind} ${active?'route-active':''}" ${lane?`transform="translate(${lane[0]},${lane[1]})"`:''} style="opacity:${this.opacity(r)}"><title>${esc(r.title)} — ${esc(historyLabel(r,this.year))}${lane?' — Separate display lane; source endpoints unchanged':''}</title><path class="route-halo" d="${d}"/><path class="route-line" d="${d}" ${end?`marker-end="${marker}"`:''} ${start?`marker-start="${marker}"`:''}/><path class="route-flow" d="${d}"/><path class="overlay-line-hit" d="${d}" style="stroke-width:${16/this.scale}px"/></g>`;
+          arrows+=`<g data-overlay="${index}" data-history-route="${esc(r.id)}" data-direction="${direction??'unknown'}" class="history-route route-${r.history.kind} network-${r.overlay?.networkKind??'trade'} ${active?'route-active':''}" ${lane?`transform="translate(${lane[0]},${lane[1]})"`:''} style="opacity:${this.opacity(r)}"><title>${esc(r.title)} — ${esc(historyLabel(r,this.year))}${lane?' — Separate display lane; source endpoints unchanged':''}</title><path class="route-halo" d="${d}"/><path class="route-line" d="${d}" ${end?`marker-end="${marker}"`:''} ${start?`marker-start="${marker}"`:''}/><path class="route-flow" d="${d}"/><path class="overlay-line-hit" d="${d}" style="stroke-width:${16/this.scale}px"/></g>`;
           const directionLabel=routeDirectionLabels[r.id];
           if(lane&&directionLabel&&this.highlighted.has(r.id)){
             const line=this.geometry.get(r).lines.reduce((longest,line)=>line.length>longest.length?line:longest,[] as MapPoint[]),mid=line[Math.floor(line.length/2)];
@@ -609,7 +631,7 @@ export class MapView {
         const o = r.overlay,
           g = o.geometry;
         if (!g) continue;
-        const cls = `overlay-feature overlay-${o.kind} ${o.basis === "schematic" ? "overlay-schematic" : ""} ${this.uncertainty(r) ? "overlay-uncertain" : ""}`;
+        const cls = `overlay-feature overlay-${o.kind} network-${o.networkKind??'trade'} ${o.basis === "schematic" ? "overlay-schematic" : ""} ${this.uncertainty(r) ? "overlay-uncertain" : ""}`;
         const title = esc(
           `${r.title} — ${OVERLAY_LABELS[o.kind]}, ${o.basis}${r.linguistics ? " — " + r.linguistics.languages.map(x => x.name).join(" / ") + " — " + (r.linguistics.relationship?.kind ?? "affiliation") : ""}${isDisputed(r) ? " *" : ""}`,
         );
@@ -684,11 +706,11 @@ export class MapView {
       const past=this.interaction?.mode!=='explore'&&rows.every(x=>historyState(x,this.year)==='past-place');
       const population = this.interaction?.mode==='explore'
         ? {radius:6,outerRadius:6,unknown:false,label:'Explore size is a reference; inspect dated estimates'}
-        : populationAt(rows.filter(x=>historyState(x,this.year)==='active'), this.year);
+        : populationAt(rows.filter(x=>historyState(x,this.year)==='active'), this.year,this.populationScale);
       const marker = `<g data-point="${key}" style="opacity:${Math.max(...rows.map((x) => this.opacity(x)))}" class="site ${past ? "past-place" : ""} ${possible ? "possible" : ""} ${rows.some((x) => x.proposalKey) ? "proposal-point" : ""}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><title>${esc(rows.map((x) => x.title + " — " + x.culture.name + " — " + timeLabel(x.time)).join("; "))} — ${esc(population.label)}${possible ? " — uncertain time" : ""}${rows.some(x => guideForRecord(x.id)) ? " — Site guide available" : ""}</title>${rows.some(x => guideForRecord(x.id)) ? `<text class="site-guide-marker" x="-17" y="17" aria-hidden="true">◈</text>` : ""}<circle class="site-halo" r="${Math.max(13, population.outerRadius + 4)}"/>${population.outerRadius > population.radius ? `<circle class="population-range" r="${population.outerRadius}" style="fill:${r.culture.color}"/>` : ""}<circle class="site-dot" r="${population.radius}" style="--site-color:${r.culture.color}"/>${population.unknown ? `<circle class="population-unknown" r="${population.radius}" fill="url(#population-unknown)"/>` : ""}${this.scale >= 16 || rows.some(x=>this.highlighted.has(x.id)) ? `<text class="settlement-label" x="${population.outerRadius + 5}" y="4">${esc(compactPlaceName(r.location!.name))}</text>` : ""}${rows.length > 1 ? `<text class="site-count" x="11" y="-8">${rows.length}</text>` : ""}</g>`;
       if(past)pastMarkers+=marker;else markers+=marker;
     }
-    $(".features", this.element).innerHTML = overlays + arrows + pastMarkers + communities + markers + physicalMarkers + endpointLabels;
+    $(".features", this.element).innerHTML = overlays + arrows + pastMarkers + communities + markers + physicalMarkers + endpointLabels + this.routeEndpoints(symbolScale);
     // Rebuild catalog-only tooltip lookup with the rendered feature identities.
     // Retain hover across a redraw only when the same records remain visible.
     this.tips.clear();
@@ -703,7 +725,7 @@ export class MapView {
         if(event){content=tooltipForHazard(event);key='hazard:'+event.id;}
       }else{
         if(feature.dataset.context!==undefined)rows=this.contextAnchors.get(feature.dataset.context)??[];
-        else if(feature.dataset.overlay!==undefined){const row=this.records[Number(feature.dataset.overlay)];if(row)rows=this.places.get(placeKey(row)??"none")??[row];}
+        else if(feature.dataset.overlay!==undefined)rows=this.featureRows(feature);
         else rows=groups.get(feature.dataset.point!)??[];
         feature.dataset.memberIds=JSON.stringify(rows.map(r=>r.id));
         if(this.interaction?.mode==='movie')feature.dataset.activeMemberIds=JSON.stringify(rows.filter(r=>historyState(r,this.year)==='active').map(r=>r.id));
@@ -734,6 +756,12 @@ export class MapView {
         }
         content=feature.dataset.densityGroup?tooltipForPlaces(rows,this.interaction?.mode??'movie',this.year,feature.dataset.anchorName):tooltipForRecords(rows,this.interaction?.mode??'movie',this.year);
         key=(feature.dataset.context!==undefined?'context:':'records:')+JSON.stringify(rows.map(row=>JSON.stringify([row.id,row.proposalKey??null])).sort());
+        if(content&&feature.dataset.routeEndpoint&&rows.length){
+          const origin=feature.dataset.routeEndpoint==='origin';
+          const place=origin?rows[0].location:rows[0].destination;
+          if(place)content.title=(origin?'Origin: ':'Destination: ')+place.name;
+          key+=':'+feature.dataset.routeEndpoint;
+        }
       }
       if(!content)continue;
       if(feature.dataset.endingNote)content.summary=feature.dataset.endingNote+' '+content.summary;
@@ -768,7 +796,7 @@ export class MapView {
       }
       this.tips.set(key,content);
       if(this.hovered?.key===key)hoveredFeature=feature;
-      if(focused===key||(focusedId&&rows.some(r=>r.id===focusedId)))focusedFeature=feature;
+      if(focused===key||(!focusedElement?.dataset.routeEndpoint&&!feature.dataset.routeEndpoint&&focusedId&&rows.some(r=>r.id===focusedId)))focusedFeature=feature;
     }
     this.updateTabStops();
     this.declutterLabels();

@@ -1,5 +1,5 @@
 import type { EvidenceRecord, MapRecord } from "./model";
-import { END_YEAR, formatYear, temporalState } from "./time";
+import { ARCHIVE_END_YEAR, END_YEAR, formatYear, temporalState } from "./time";
 import {contextDateMeaning} from './date-context';
 
 export type HistoryState =
@@ -41,6 +41,11 @@ export function historyState(record: MapRecord, year: number): HistoryState {
   return "outside";
 }
 
+export function ongoingHabitationLabel(record: MapRecord): string {
+  const archival=record.time.end===ARCHIVE_END_YEAR ? ` The archive records continuing habitation through ${ARCHIVE_END_YEAR}.` : '';
+  return `The shared map ends in ${END_YEAR}.${archival} Community history continues beyond the map.`;
+}
+
 export function historyLabel(record: MapRecord, year: number): string {
   const state = historyState(record, year),
     h = record.history;
@@ -56,7 +61,7 @@ export function historyLabel(record: MapRecord, year: number): string {
     return `${year<e.end?'Possible':e.certainty==='inferred'?'Inferred':'Documented'} ${action} · ${range}. ${e.note} The earlier place remains historical context.`;
   }
   if(h?.kind==='habitation'&&state!=='outside'&&h.continuity==='ongoing')
-    return 'Evidence of continuing habitation; the display ends in 1934, while community history continues. This is not a year-by-year population count.';
+    return ongoingHabitationLabel(record);
   if (h?.kind === "wreck" && state !== "outside")
     return `Historical loss · ${h.eventDate || formatYear(record.time.start!)}${h.group ? " · " + h.group : ""}. Remains and salvage are separate from the sinking date.`;
   if (
@@ -175,7 +180,7 @@ export function validateHistory(r: EvidenceRecord): string[] {
     h.endYear !== undefined &&
     (!Number.isSafeInteger(h.endYear) ||
       h.endYear < (r.time?.end ?? Infinity) ||
-      h.endYear > END_YEAR ||
+      h.endYear > ARCHIVE_END_YEAR ||
       !["abandoned", "relocated"].includes(h.endMeaning ?? ""))
   )
     errors.push("Invalid history end year.");
@@ -198,12 +203,12 @@ export function validateHistory(r: EvidenceRecord): string[] {
     errors.push('Habitation history requires a located occupation interval.');
   if(h.kind==='visit'&&(!r.location||r.overlay||r.type!=='event'))errors.push('Visit history requires a located event.');
   if(h.kind==='attestation'&&(!r.location||r.overlay))errors.push('Attestation history requires a located evidence point.');
-  if(h.continuity!==undefined&&(h.continuity!=='ongoing'||h.kind!=='habitation'||r.time?.end!==END_YEAR||h.endEvidence||h.endYear!==undefined))
-    errors.push('Ongoing habitation must reach the display horizon without an abandonment ending.');
+  if(h.continuity!==undefined&&(h.continuity!=='ongoing'||h.kind!=='habitation'||(r.time?.end!==ARCHIVE_END_YEAR&&r.time?.end!==END_YEAR)||h.endEvidence||h.endYear!==undefined))
+    errors.push('Ongoing habitation must reach the map or archive endpoint and have no abandonment ending.');
   if(h.endEvidence!==undefined){
     const e=h.endEvidence;
     if(e?.label!==undefined&&(typeof e.label!=='string'||!e.label.trim()||e.label.length>60))errors.push('Invalid ending label.');
-    if(!e||typeof e!=='object'||!Number.isSafeInteger(e.start)||!Number.isSafeInteger(e.end)||e.start>e.end||e.start<(r.time?.start??Infinity)||e.end>END_YEAR||!['abandoned','relocated'].includes(e.meaning)||!['documented','inferred'].includes(e.certainty)||!supported(e.claimId)||typeof e.note!=='string'||!e.note.trim()||!['habitation','settlement'].includes(h.kind)||h.endYear!==undefined)
+    if(!e||typeof e!=='object'||!Number.isSafeInteger(e.start)||!Number.isSafeInteger(e.end)||e.start>e.end||e.start<(r.time?.start??Infinity)||e.end>ARCHIVE_END_YEAR||!['abandoned','relocated'].includes(e.meaning)||!['documented','inferred'].includes(e.certainty)||!supported(e.claimId)||typeof e.note!=='string'||!e.note.trim()||!['habitation','settlement'].includes(h.kind)||h.endYear!==undefined)
       errors.push('Invalid or unsupported history ending evidence.');
   }
   if(h.connection!==undefined){

@@ -55,5 +55,7 @@ test('Hopi 1882 coordinates and qualified shared use persist to the supported at
   assert.ok(hopi.sourceIds.includes('reservation-navajo-act-1934'));
   assert.equal(boundariesAt([hopi], 1881).length, 0);
   assert.equal(boundariesAt([hopi], 1882).length, 1);
-  assert.equal(boundariesAt([hopi], 1934).length, 1);
+  assert.equal(hopi.end,'1934-12-31');
+  assert.equal(boundariesAt([hopi], 1900).length, 1);
+  assert.equal(boundariesAt([hopi], 1901).length, 0);
 });

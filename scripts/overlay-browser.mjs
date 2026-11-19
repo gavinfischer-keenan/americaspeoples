@@ -205,25 +205,25 @@ try {
     "1000000",
   );
   assert.ok(
-    (await page.locator("#range-end").innerText()).includes("1,934 CE"),
+    (await page.locator("#range-end").innerText()).includes("1,900 CE"),
   );
-  await go(1935);
-  assert.match(await page.locator("#time-error").innerText(), /1934/);
-  await go(1933);
+  await go(1901);
+  assert.match(await page.locator("#time-error").innerText(), /1900/);
+  await go(1899);
   await page.getByLabel("Playback speed").selectOption("1000");
   await page.getByRole("button", { name: "Play", exact: true }).click();
   await page.waitForFunction(
-    () => document.querySelector("#current-year")?.textContent === "1,934 CE",
+    () => document.querySelector("#current-year")?.textContent === "1,900 CE",
   );
   await page.getByRole("button", { name: "Play", exact: true }).waitFor();
-  assert.match(await page.locator('#map-instruction').innerText(),/1934-12-31/);
+  assert.match(await page.locator('#map-instruction').innerText(),/1900-12-31/);
   assert.equal(
     await page.getByRole("button", { name: "Play", exact: true }).count(),
     1,
   );
   assert.match(
     await page.locator("#range-end").innerText(),
-    /Indian Reorganization Act/,
+    /1,900 CE.*End of this atlas/,
   );
   fixture.assertPrivacy();
   console.log(

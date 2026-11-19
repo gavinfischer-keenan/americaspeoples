@@ -10,19 +10,21 @@ const base=process.env.BASE_URL?.replace(/\/$/,'')||`http://127.0.0.1:${server.a
 try{
  const {voyages}=JSON.parse(await readFile('data/voyages.json','utf8'));
  await page.goto(base+'/#movie');await page.getByRole('button',{name:'Pause',exact:true}).click();
- const caird=voyages.find(v=>v.id.includes('caird')),elephant=voyages.find(v=>v.id.includes('elephant'));
- await page.getByLabel('Follow an expedition',{exact:true}).selectOption(caird.id);
+ const sledgeParty=voyages.find(v=>v.id==='nansen-johansen-1895-1896'),fram=voyages.find(v=>v.id==='nansen-fram-arctic-1893-1896');
+ assert.ok(voyages.some(v=>v.id.includes('caird')&&v.stops[0].arrival.startsWith('1916')));
+ assert.equal(await page.locator('#watch-voyage option[value*=caird]').count(),0);
+ await page.getByLabel('Follow an expedition',{exact:true}).selectOption(sledgeParty.id);
  await page.locator('#voyage-progress').evaluate(el=>{el.value='5000';el.dispatchEvent(new Event('input',{bubbles:true}));});
  const date=(await page.locator('#voyage-position').innerText()).slice(0,10);
- await page.locator(`[data-follow-expedition="${elephant.id}"]`).waitFor();
- assert.match(await page.locator('#expeditions-now').innerText(),/Caird/);
- await page.locator(`[data-follow-expedition="${elephant.id}"]`).click();
+ await page.locator(`[data-follow-expedition="${fram.id}"]`).waitFor();
+ assert.match(await page.locator('#expeditions-now').innerText(),/Nansen|Johansen/);
+ await page.locator(`[data-follow-expedition="${fram.id}"]`).click();
  assert.equal((await page.locator('#voyage-position').innerText()).slice(0,10),date,'locating a contemporary party preserves the exact shared date');
- assert.equal(await page.getByLabel('Follow an expedition',{exact:true}).inputValue(),elephant.id);
- await page.screenshot({path:'test-results/expeditions-shackleton-desktop.png'});
+ assert.equal(await page.getByLabel('Follow an expedition',{exact:true}).inputValue(),fram.id);
+ await page.screenshot({path:'test-results/expeditions-fram-desktop.png'});
  await page.setViewportSize({width:390,height:844});
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
- await page.screenshot({path:'test-results/expeditions-shackleton-mobile.png'});
+ await page.screenshot({path:'test-results/expeditions-fram-mobile.png'});
  for(const width of [1440,390,320]){
   await page.setViewportSize({width,height:960});
   const panel=await page.locator('#expeditions-now').boundingBox(),controls=await page.locator('.map-controls').boundingBox();

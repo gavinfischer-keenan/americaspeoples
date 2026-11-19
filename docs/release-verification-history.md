@@ -378,3 +378,20 @@ The hosted site’s existing, disclosed Cloudflare analytics was observed during
 This campaign used no Consensus calls; **45 remain** in the authorized additional allowance. Public writing was independently authored from the cited sources, with private source-check excerpts excluded. Map assets and inventory data retain their individual reuse terms.
 
 Public asset checks, live browser outcomes, Linux retention checks and current/previous server retention are recorded in [the v0.29.0 release receipt](https://github.com/gavinfischer-keenan/americaspeoples/blob/main/docs/releases/v0.29.0-verification.json).
+
+
+## v0.30.0 — world deep dives
+
+Version **0.30.0** adds **41 guide pages**, including the Dead Sea Scrolls, and **87 paired originals and translations**. The Americas catalogue remains at **11,201 records**, with 175 itineraries, 126 expedition activity periods, 90 existing guides, 84 contextual stories and 28 topic movies. There are 168 terrain frames across the complete guide collection, 26 additional source-map sheets, and 18 new writing photographs with individual rights and checksums.
+
+The Africa, Europe and Asia–Pacific destinations offer guides while their broad historical maps remain marked **COMING SOON**. Guide ages are independent of the shared movie's clock. Original texts retain their language tags, translator credits, original-witness descriptions and dated colonial or ancient contexts. Known and unknown reuse rights remain distinct. See [world guide scope and sources](world-deep-dives.md).
+
+The regional voyage guides reference 251 documented stops across 80 existing itineraries. Their 114 regional associations reuse the canonical catalogue, with matching names, dates, ordered stop indices and reciprocal membership checks. Opening a voyage waits only for its catalogue. An off-scope departure can be previewed; Play and Restart retain the existing geographical playback scope.
+
+Independent reviews checked guide projection, crowded locality labels, navigation, paired-text sources and rights, packaged assets, original-language accessibility, and phone layouts. All 342 current locality pins were checked against the cartographic projection. Eighteen image checksums and the two bundled script fonts have provenance records. The writing collection includes 18 complete licensed translations; excerpts without an open license remain short, individually credited quotations.
+
+The required aggregate command is `npm run verify:release`. It runs 62 phases, including source audits, unit tests, TypeScript, evidence validation, production packaging, SQLite/API checks and the browser suites. The new browser phase covers regional navigation, guide maps, direct voyage entry with a delayed unrelated layer, writing filters, all original images, script fonts and 320/390/1440-pixel layouts. Deployment uses staged immutable app/database releases, verifies the packaged guide files and retains the prior verified release for rollback.
+
+All 62 release phases completed, including 466 unit tests. A legacy directory test was updated to scroll its target into view after the new guides moved it below the viewport; the remaining phases then passed without extending timeouts. The final merged package passed the world-guide browser and extracted self-host checks again. Public verification compared 430 assets, 48 source reviews and three neighboring pages. All five Linux retention tests passed, and live checks covered the writing collection, Dead Sea Scrolls, regional navigation and canonical voyage playback without JavaScript errors.
+
+The verified server retains v0.30.0 and v0.29.0 for rollback. Outcomes and hashes are recorded in [the v0.30.0 deployment receipt](https://github.com/gavinfischer-keenan/americaspeoples/blob/main/docs/releases/v0.30.0-verification.json). Existing Cloudflare analytics remains disclosed; private drafts stay local. Earlier completed release observations are retained in [verification history](release-verification-history.md).

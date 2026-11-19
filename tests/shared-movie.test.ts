@@ -41,6 +41,7 @@ test("every itinerary omits off-scope time but retains Pacific and American trav
     assert.equal(inAtlas(p), true);
   for (const v of voyages) {
     const windows = scopedVoyageWindows(v);
+    if(v.stops[0].arrival>='1901-01-01'){assert.deepEqual(windows,[]);continue;}
     assert.ok(windows.length);
     for (let i = 0; i <= 100; i++) {
       const date = scopedVoyageDate(v, i / 100),

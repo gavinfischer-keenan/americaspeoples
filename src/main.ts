@@ -9,19 +9,21 @@ import "./atlas-ui.css";
 import './atlas-context.css';
 import './topic-dives.css';
 import {topics,topicOnlyIds} from './topic-dives';
+import {topicEndYear} from './topic-scope';
 import {mountTopicPage} from './topic-page';
 import {storyDetailsHTML} from './story-details';
 import {guideMovieNavigationHTML} from './guide-navigation';
 import type {MapCamera} from './map';
 import { atlasAssets, loadAtlasAssets, loadVoyageCatalogue } from './atlas-assets';
-import { sampleVoyage, voyageDate, dateValue } from './voyages';
+import { voyageDate, dateValue } from './voyages';
 import {activeExpeditions,expeditionsHTML,expeditionPhase,activityDuring,activityWindows,expeditionActivityHTML} from './expedition-context';
-import { availableVoyageRecords, scopedVoyageDate, scopedVoyageProgress, advanceMovieClock, datedContextKey, storySceneDate, MOVIE_END_DATE } from './shared-movie';
+import { availableVoyageRecords, scopedVoyageDate, scopedVoyageProgress, advanceMovieClock, datedContextKey, storySceneDate, MOVIE_END_DATE, isPlayableVoyage, displayedVoyageStops, sampleMapVoyage } from './shared-movie';
 import { movieContextHTML } from './movie-context';
 import {localChronologyHTML} from './local-chronology';
 import { appShell, mapShell, libraryHTML } from "./atlas-shell";
 import { loadAtlasManifest, resolveAtlasRoute } from "./atlas-catalog";
 import { atlasNavigationHTML, atlasPreviewHTML } from "./atlas-switcher";
+import {loadEurope,mountEurope} from './europe-page';
 import {voyageGuideLinksHTML} from './world-guides';
 import { stories } from "./stories";
 import { sampleStory, sceneStartMs, storyDurationMs, storyElapsedAtYear } from "./story-player";
@@ -41,6 +43,7 @@ import {
   earliestYear,
   timeLabel,
   END_YEAR,
+  recordInTimeline,
 } from "./time";
 import { timelinePosition, timelineYear, type TimelineScale } from "./timeline";
 import { MapView } from "./map";
@@ -82,7 +85,7 @@ import { importWorkbook } from "./xlsx-import";
 import { encodeLocalCollection, decodeLocalCollection } from "./local-storage";
 import { contextHTML } from "./context";
 
-const minYear = earliestYear(dataset.records);
+const minYear = earliestYear(dataset.records.filter(r=>!topicOnlyIds.has(r.id)&&recordInTimeline(r)));
 let year = minYear,
   playing = false,
   speed: number | "smart" = "smart",
@@ -132,7 +135,7 @@ const isGuidedStory=()=>mountedMap&&atlasMode==='movie'&&storyId!=='free';
 const hiddenHistory = new Set<string>();
 let showPastPlaces = true;
 let showBoundaries=true,showRails=true,showVoyages=true,voyageId='',voyageClock=0;
-const selectedVoyage=()=>atlasAssets.voyages.find(v=>v.id===voyageId);
+const selectedVoyage=()=>atlasAssets.voyages.find(v=>v.id===voyageId&&isPlayableVoyage(v));
 let tableController: EvidenceTable | undefined;
 const tableState: EvidenceTableState = {
   search: "",
@@ -153,7 +156,7 @@ let showUndated = true,
 let iceScenario = "optimal";
 const hiddenClimate = new Set<string>();
 const mapRows = () =>
-  filterMapRecords(rows().filter(r=>!topicOnlyIds.has(r.id)), hiddenLayers, showModeled).filter(
+  filterMapRecords(rows().filter(r=>!topicOnlyIds.has(r.id)&&recordInTimeline(r)), hiddenLayers, showModeled).filter(
     (r) => !hiddenClimate.has(climateCategory(r) ?? "") && (!r.history || !hiddenHistory.has(r.history.kind)),
   );
 const storeKey = "americas-peoples-proposals-v1";
@@ -270,7 +273,7 @@ function showWholeMovie(){
 function renderConcurrentContext(){
   renderExpeditionsNow();
   const host=document.querySelector('#concurrent-context');if(!host||atlasMode!=='movie')return;
-  const v=selectedVoyage(),frame=v&&sampleVoyage(v.stops,voyageClock);
+  const v=selectedVoyage(),frame=v&&sampleMapVoyage(v,voyageClock);
   const local=map.localChronology(mapRows());
   const html=local.length?localChronologyHTML(local,year):movieContextHTML(currentVisible,year,frame?.coordinates);
   if(host.innerHTML!==html)host.innerHTML=html;
@@ -391,7 +394,7 @@ function bounds(recenter = false) {
   $("#range-start").textContent = formatYear(rangeStart);
   $("#range-end").textContent =
     formatYear(rangeEnd) +
-    (rangeEnd === END_YEAR ? " · Indian Reorganization Act" : "");
+    (rangeEnd === END_YEAR ? " · End of this atlas" : "");
   $("#timeline-note").textContent =
     timelineScale === "log"
       ? "Logarithmic scale · equal distances cover unequal years"
@@ -701,13 +704,13 @@ function mountHistoricalContext(){
   $('#expeditions-now').addEventListener('click',e=>{
     const button=(e.target as Element).closest<HTMLButtonElement>('[data-follow-expedition]');if(!button)return;
     const date=voyageId?voyageClock:movieClock;
-    const v=atlasAssets.voyages.find(v=>v.id===button.dataset.followExpedition),frame=v&&sampleVoyage(v.stops,date);if(!v)return;
+    const v=atlasAssets.voyages.find(v=>v.id===button.dataset.followExpedition),frame=v&&sampleMapVoyage(v,date);if(!v)return;
     stop();closeDetails();useFreeTimeline();voyageId=v.id;voyageClock=date;showVoyages=true;
     setYear(Math.floor(date),false);if(frame)map.focusRegion(frame.coordinates,2,'world');
     renderHistoricalContext();renderStory();syncTransport();syncVoyage();
     if(!frame)$<HTMLDetailsElement>('#voyage-controls details').open=true;
   });
-  $('#layer-options > .visible-heading').insertAdjacentHTML('afterend',`<section class="historical-options"><h3>Borders, journeys &amp; railways</h3><label class="check"><input id="show-boundaries" type="checkbox" ${showBoundaries?'checked':''}> Dotted historical boundaries</label><label class="check"><input id="show-rails" type="checkbox" ${showRails?'checked':''}> Accumulated railway construction</label><label class="check"><input id="show-voyages" type="checkbox" ${showVoyages?'checked':''}> Expeditions active this year</label><form id="context-year-form" class="context-year"><label for="context-year">Map year · CE</label><input id="context-year" type="number" min="1" max="1934" value="${Math.max(1,year)}"><button>Go</button></form><p class="fine">Borders are the dated administrative record at year end, not exclusive occupation or proof of control. Railway lines accumulate built or attested infrastructure; continued service is not implied.</p><label>Follow a dated journey<select id="voyage-select"><option value="">Choose an expedition…</option></select></label><p id="context-load-status" role="status"></p><details><summary>Boundaries in this view &amp; sources</summary><div id="context-catalog" class="context-catalog"></div></details><a href="docs/atlas-expansion.html" target="_blank">Dates, sources &amp; remaining gaps ↗</a></section>`);
+  $('#layer-options > .visible-heading').insertAdjacentHTML('afterend',`<section class="historical-options"><h3>Borders, journeys &amp; railways</h3><label class="check"><input id="show-boundaries" type="checkbox" ${showBoundaries?'checked':''}> Dotted historical boundaries</label><label class="check"><input id="show-rails" type="checkbox" ${showRails?'checked':''}> Accumulated railway construction</label><label class="check"><input id="show-voyages" type="checkbox" ${showVoyages?'checked':''}> Expeditions active this year</label><form id="context-year-form" class="context-year"><label for="context-year">Map year · CE</label><input id="context-year" type="number" min="1" max="1900" value="${Math.max(1,year)}"><button>Go</button></form><p class="fine">Borders are the dated administrative record at year end, not exclusive occupation or proof of control. Railway lines accumulate built or attested infrastructure; continued service is not implied.</p><label>Follow a dated journey<select id="voyage-select"><option value="">Choose an expedition…</option></select></label><p id="context-load-status" role="status"></p><details><summary>Boundaries in this view &amp; sources</summary><div id="context-catalog" class="context-catalog"></div></details><a href="docs/atlas-expansion.html" target="_blank">Dates, sources &amp; remaining gaps ↗</a></section>`);
   $('#story-scene').insertAdjacentHTML('beforebegin','<section id="voyage-controls" class="voyage-controls" aria-label="Dated expedition" hidden><strong id="voyage-title"></strong><p id="voyage-position"></p><input id="voyage-progress" type="range" min="0" max="10000" value="0" aria-label="Expedition date"><details><summary>Itinerary &amp; evidence</summary><p id="voyage-precision"></p><div id="voyage-evidence" class="context-catalog"></div></details><button id="close-voyage">Return to timeline</button></section>');
   for(const [id,change] of [['show-boundaries',(v:boolean)=>showBoundaries=v],['show-rails',(v:boolean)=>showRails=v],['show-voyages',(v:boolean)=>showVoyages=v]] as const)$('#'+id).addEventListener('change',e=>{change((e.target as HTMLInputElement).checked);renderMapData();});
   $('#context-year-form').addEventListener('submit',e=>{e.preventDefault();const value=Number($<HTMLInputElement>('#context-year').value);if(Number.isInteger(value)&&value>=1&&value<=END_YEAR)setYear(value);});
@@ -727,7 +730,8 @@ function renderHistoricalContext(){
   const status=document.querySelector('#context-load-status');if(!status)return;
   status.textContent=!atlasAssets.ready?'Loading dated geography…':atlasAssets.errors.length?`Could not load: ${atlasAssets.errors.join(', ')}. Missing layers do not mean historical absence.`:`${atlasAssets.boundaries.length.toLocaleString()} dated boundary versions · ${atlasAssets.voyages.length} itineraries.`;
   const selector=$<HTMLSelectElement>('#voyage-select');
-  if(selector.options.length!==atlasAssets.voyages.length+1)selector.innerHTML='<option value="">Choose an expedition…</option>'+atlasAssets.voyages.map(v=>`<option value="${esc(v.id)}">${esc(v.name)}</option>`).join('');
+  const playableVoyages=atlasAssets.voyages.filter(isPlayableVoyage);
+  if(selector.options.length!==playableVoyages.length+1)selector.innerHTML='<option value="">Choose an expedition…</option>'+playableVoyages.map(v=>`<option value="${esc(v.id)}">${esc(v.name)}</option>`).join('');
   const watch=$<HTMLSelectElement>('#watch-voyage');watch.innerHTML=selector.innerHTML;watch.value=voyageId;
   $('#boundary-date-status').textContent=showBoundaries?`Dotted boundaries · ${formatYear(year)} year-end · gaps are missing coverage`:showRails?`Rail construction recorded through ${formatYear(year)}`:'';
   selector.value=voyageId;$<HTMLInputElement>('#show-voyages').checked=showVoyages;$<HTMLInputElement>('#context-year').value=String(Math.max(1,year));
@@ -736,7 +740,7 @@ function renderHistoricalContext(){
   if(v){
     $('#voyage-title').textContent=v.name;
     $('#voyage-precision').textContent=v.precision+' The moving symbol interpolates between dated stops; it is not a daily position log. '+(v.scope==='global'?'The full expedition remains on the shared clock, including polar and offscreen stages.':'Playback skips segments beyond the Americas–Pacific atlas; scope crossings are interpolated.')+' Hollow stops are later in the itinerary. Symbols distinguish sea, river, land, ice drift and wintering where recorded.';
-    $('#voyage-evidence').innerHTML=`<p>${esc(v.summary)}</p>`+v.stops.map(s=>`<p><b>${esc(s.name)}</b> · ${esc(s.arrival)}–${esc(s.departure)}<br>${esc(s.note)}</p>`).join('')+v.sourceIds.map(id=>{const source=atlasAssets.voyageSources.find(s=>s.id===id);return source?`<p><a href="${esc(source.url)}" target="_blank" rel="noopener">${esc(source.title)} ↗</a></p>`:'';}).join('');
+    $('#voyage-evidence').innerHTML=`<p>${esc(v.summary)}</p>`+displayedVoyageStops(v).map(s=>`<p><b>${esc(s.name)}</b> · ${esc(s.arrival)}–${esc(s.departure)}<br>${esc(s.note)}</p>`).join('')+v.sourceIds.map(id=>{const source=atlasAssets.voyageSources.find(s=>s.id===id);return source?`<p><a href="${esc(source.url)}" target="_blank" rel="noopener">${esc(source.title)} ↗</a></p>`:'';}).join('');
     $('#voyage-evidence').insertAdjacentHTML('beforeend',voyageGuideLinksHTML(v.id));
     syncVoyage();
   }
@@ -747,7 +751,7 @@ function renderBoundaryCatalog(){
 }
 function syncVoyage(){
   const v=selectedVoyage();if(!v||!mountedMap)return;
-  const frame=sampleVoyage(v.stops,voyageClock);
+  const frame=sampleMapVoyage(v,voyageClock);
   $('#voyage-position').textContent=`${voyageDate(voyageClock)} · ${frame?expeditionPhase(v,frame)+': '+frame.stopName:'Expedition in progress; position not reconstructed between documented anchors'} · ${playing?'Following journey':'Press Play to follow the journey'}.`;
   $<HTMLInputElement>('#voyage-progress').value=String(Math.round(scopedVoyageProgress(v,voyageClock)*10000));
   $('#voyage-progress').setAttribute('aria-valuetext',voyageDate(voyageClock));
@@ -873,6 +877,7 @@ function reviewPage(r: FullDisplayRecord, p?: Proposal, index?: number, shared=f
   main.innerHTML = reviewHTML(r, dataset, p);
   const originTopic=topics.find(t=>t.id===reviewTopic);
   const sourceTopic=shared?undefined:(topics.find(t=>t.id===reviewTopic&&t.recordIds.includes(r.id))??(topicOnlyIds.has(r.id)?topics.find(t=>t.recordIds.includes(r.id)):undefined));
+  const withinTimeline=recordInTimeline(r,sourceTopic?topicEndYear(sourceTopic.id):END_YEAR);
   if(shared)$<HTMLButtonElement>('[data-action="locate"]',main).textContent='Show in shared atlas';
   if(sourceTopic)main.insertAdjacentHTML('beforeend',sharedContextHTML([r.id],dataset.records));
   if(sourceTopic||originTopic){
@@ -910,7 +915,10 @@ function reviewPage(r: FullDisplayRecord, p?: Proposal, index?: number, shared=f
         "Evidence row shared for discussion; no changes proposed.";
     exportProposals([share]);
   });
-  $('[data-action="locate"]', main).addEventListener("click", () => {
+  const locate=$<HTMLButtonElement>('[data-action="locate"]',main);
+  if(!withinTimeline){locate.disabled=true;locate.textContent='Archive record — after the 1900 map limit';locate.title='The original dated evidence remains available here. Ordinary map playback ends in 1900.';}
+  locate.addEventListener("click", () => {
+    if(!withinTimeline)return;
     if(sourceTopic){pendingTopicLocation=r;location.hash='#topic/'+sourceTopic.id;return;}
     storyId='free';storySceneIndex=-1;placeQuery='';placeCategory='all';explorePeriod='all';
     if (r.time.kind === "unplaced") showUndated = true;
@@ -1104,12 +1112,19 @@ async function route() {
   document.body.classList.toggle('topic-page',hash.startsWith('#topic/'));
   document.body.classList.toggle('atlas-page',mapRoute);
   document.body.classList.toggle('reading-page',!mapRoute);
-  document.body.classList.toggle('atlas-preview-page',Boolean(plannedAtlas));
+  document.body.classList.toggle('atlas-preview-page',Boolean(plannedAtlas&&plannedAtlas!=='europe'));
+  document.body.classList.toggle('europe-page',plannedAtlas==='europe');
   $(".timeline").hidden=!mapRoute;
   document.body.classList.remove('exploring');
   try {
-    if (plannedAtlas) {
-      main.innerHTML=atlasPreviewHTML(loadAtlasManifest(plannedAtlas),land as import('d3-geo').GeoPermissibleObjects,lastAtlasRoute);
+    if(plannedAtlas==='europe'){
+      main.innerHTML='<p class="review-page" role="status">Opening Europe’s places and connections…</p>';
+      const europe=await loadEurope();if(generation!==routeGeneration)return;
+      disposeTopic=mountEurope(main,europe,land,lastAtlasRoute);
+    }
+    else if (plannedAtlas) {
+      const manifest=loadAtlasManifest(plannedAtlas);
+      if(manifest.status==='coming-soon')main.innerHTML=atlasPreviewHTML(manifest,land as import('d3-geo').GeoPermissibleObjects,lastAtlasRoute);
     }
     else if(hash.startsWith('#voyage/')){
       main.innerHTML='<article class="review-page"><p role="status">Opening the documented journey…</p></article>';
@@ -1120,6 +1135,7 @@ async function route() {
       const requested=decodeURIComponent(hash.slice(8));
       const voyage=atlasAssets.voyages.find(v=>v.id===requested);
       if(!voyage)throw Error('Journey not found.');
+      if(!isPlayableVoyage(voyage))throw Error('This journey belongs after the 1900 end of this atlas. Its research remains in the archive.');
       openingPlayback=false;useFreeTimeline();voyageId=voyage.id;showVoyages=true;
       voyageClock=dateValue(voyage.stops[0].arrival);setYear(Math.floor(voyageClock),false);
       topicOriginCamera=undefined;map.overview('world');

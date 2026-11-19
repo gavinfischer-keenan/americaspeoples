@@ -1227,8 +1227,8 @@ export const sixGuideStories:Story[]=[
   {
     "id": "canyon-de-chelly",
     "title": "Canyon de Chelly / Tséyi’: a living homeland",
-    "subtitle": "Canyon de Chelly through eight local chapters",
-    "description": "Follow distinct Pueblo building phases, a named Diné artistic attribution, military violence, forced removal and the 1931 monument within Navajo land. Feature points and broad historical anchors retain different geographic precision.",
+    "subtitle": "Canyon de Chelly through seven local chapters",
+    "description": "Follow distinct Pueblo building phases, a named Diné artistic attribution, military violence, and forced removal within Navajo land. Feature points and broad historical anchors retain different geographic precision.",
     "scenes": [
       {
         "id": "beneath-the-masonry",
@@ -1369,7 +1369,7 @@ export const sixGuideStories:Story[]=[
     "id": "four-corners",
     "title": "Four Corners: movement, communities and continuing homelands",
     "subtitle": "A regional history with local places to explore",
-    "description": "Follow changing settlement, regional connections, migration, colonial coercion and continuing Pueblo, Diné and Ute histories from early farming communities to 1934.",
+    "description": "Follow changing settlement, regional connections, migration, colonial coercion and continuing Pueblo, Diné and Ute histories from early farming communities to Weeminuche resistance in 1895.",
     "scenes": [
       {
         "id": "fc-homes-650",

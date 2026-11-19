@@ -11,7 +11,7 @@ const record=(id:string)=>{const r=dataset.records.find(r=>r.id===id);assert.ok(
 test('new observations belong to the shared world and export collection',()=>{
  for(const r of incoming.records){
   assert.ok(!topicOnlyIds.has(r.id));assert.ok(record(r.id));
-  assert.ok(recordsForView(dataset.records,'movie',r.time.start).dated.some(x=>x.id===r.id),r.id);
+  assert.equal(recordsForView(dataset.records,'movie',r.time.start).dated.some(x=>x.id===r.id),r.time.start<=1900,r.id);
   for(const id of r.review.relatedIds)assert.ok(record(id).review.relatedIds.includes(r.id),r.id+' reciprocal '+id);
  }
 });

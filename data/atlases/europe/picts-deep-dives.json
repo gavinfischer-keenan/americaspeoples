@@ -1,0 +1,518 @@
+{
+  "schemaVersion": 1,
+  "guides": [
+    {
+      "id": "world-picts",
+      "atlasIds": [
+        "europe"
+      ],
+      "category": "cultures",
+      "title": "The Picts, their kingdoms and the emergence of Alba",
+      "description": "Origins, language, settlements, conflicts and the changing names of power in early medieval northern Britain.",
+      "intro": "The early stone carvings at Dunnicaer, an ogham inscription at Dyce and the royal name on the Dupplin Cross each preserve a different piece of Pictland. Excavations show what people built, ate and made. Names and documents offer evidence about language, rulers and communities. Reading them together reveals how power and identity changed in northern Britain and why the later kingdom of Alba cannot be traced to one founding battle or one year.",
+      "scope": "The map covers modern Scotland. The guide follows Pictish archaeology and political history from late Roman Britain into the ninth- and tenth-century formation of Alba, with connections to neighboring peoples and later interpretations. The map places selected sites and disputed battle localities on modern terrain.",
+      "map": {
+        "bounds": [
+          -8.85,
+          54.6,
+          -0.55,
+          60.93
+        ],
+        "scope": "Selected sites across the northeast, the Moray Firth, Perthshire, Angus and Orkney. The two proposed locations for the 685 battle are labeled as hypotheses. The political geography changed over time.",
+        "points": [
+          {
+            "id": "dunnicaer",
+            "label": "Dunnicaer sea stack, Stonehaven",
+            "coordinates": [
+              -2.2,
+              56.951
+            ],
+            "date": "Third–fourth centuries CE, associated contexts",
+            "description": "The excavated promontory stronghold and nearby carved fragments help date an early phase of the Pictish symbol tradition. Individual stone-cutting dates are uncertain.",
+            "sources": [
+              "https://doi.org/10.15184/aqy.2018.68"
+            ]
+          },
+          {
+            "id": "rhynie",
+            "label": "Rhynie, Strathbogie",
+            "coordinates": [
+              -2.837,
+              57.329
+            ],
+            "date": "Fourth–sixth centuries CE",
+            "description": "Excavation, finds and radiocarbon estimates support a concentration of high-status activity, craft and long-distance contacts.",
+            "sources": [
+              "https://eprints.gla.ac.uk/183879/",
+              "https://www.frontiersin.org/journals/environmental-archaeology/articles/10.3389/fearc.2023.1208908/full"
+            ]
+          },
+          {
+            "id": "burghead",
+            "label": "Burghead, Moray Firth",
+            "coordinates": [
+              -3.497,
+              57.706
+            ],
+            "date": "Early medieval fort phases",
+            "description": "A coastal fortified center preserves large fortifications and traces of buildings, craft and everyday life.",
+            "sources": [
+              "https://her.aberdeenshire.gov.uk/Monument/MAB43099",
+              "https://www.frontiersin.org/journals/environmental-archaeology/articles/10.3389/fearc.2023.1208908/full"
+            ]
+          },
+          {
+            "id": "burrian",
+            "label": "Broch of Burrian, North Ronaldsay",
+            "coordinates": [
+              -2.422,
+              59.356
+            ],
+            "date": "570–655 cal CE for the dated bone",
+            "description": "A carved ox toe bone from the broch gives direct radiocarbon evidence for a portable object bearing Pictish symbols.",
+            "sources": [
+              "https://doi.org/10.15184/aqy.2018.68"
+            ]
+          },
+          {
+            "id": "birsay",
+            "label": "Brough of Birsay, Orkney",
+            "coordinates": [
+              -3.336,
+              59.135
+            ],
+            "date": "Early medieval Pictish and later Norse phases",
+            "description": "A carved stone and earlier material lie within a locality with substantial later Norse buildings. Nearby Buckquoy offers an additional radiocarbon sequence.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/brough-of-birsay/history-and-stories/",
+              "https://eprints.gla.ac.uk/370606/"
+            ]
+          },
+          {
+            "id": "dyce",
+            "label": "Dyce, lower Don valley",
+            "coordinates": [
+              -2.208,
+              57.227
+            ],
+            "date": "Early medieval, multiple stone phases",
+            "description": "An ogham inscription accompanies Christian and Pictish imagery on one of the sculptured stones.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/dyce-symbol-stones/history-and-stories/",
+              "https://eprints.gla.ac.uk/2522/"
+            ]
+          },
+          {
+            "id": "portmahomack",
+            "label": "Portmahomack, Tarbat peninsula",
+            "coordinates": [
+              -3.826,
+              57.835
+            ],
+            "date": "Early medieval monastic phase",
+            "description": "Excavation uncovered remains associated with a Pictish monastery and specialized craft, including stone sculpture and evidence of manuscript production.",
+            "sources": [
+              "https://portal.historicenvironment.scot/designation/SM12793"
+            ]
+          },
+          {
+            "id": "aberlemno",
+            "label": "Aberlemno, Angus",
+            "coordinates": [
+              -2.783,
+              56.699
+            ],
+            "date": "Early medieval carved stones",
+            "description": "Several stones differ in date and form. An encounter appears on a cross-slab whose connection to the battle of 685 is debated.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/aberlemno-sculptured-stones/history-and-stories/",
+              "https://doi.org/10.15184/aqy.2018.68"
+            ]
+          },
+          {
+            "id": "dunnichen",
+            "label": "Dunnichen, Angus, proposed battle area",
+            "coordinates": [
+              -2.795,
+              56.624
+            ],
+            "date": "685 CE, location debated",
+            "description": "Dunnichen is the traditional localization of Dun Nechtain. The location of the recorded encounter remains disputed.",
+            "sources": [
+              "https://research-portal.st-andrews.ac.uk/en/publications/dun-nechtain-fortriu-and-the-geography-of-the-picts/",
+              "https://www.historicenvironment.scot/visit/all/aberlemno-sculptured-stones/history-and-stories/"
+            ]
+          },
+          {
+            "id": "dunachton",
+            "label": "Dunachton, Badenoch, proposed battle area",
+            "coordinates": [
+              -4.02,
+              57.107
+            ],
+            "date": "685 CE, alternative location proposed",
+            "description": "A historical and place-name argument locates the encounter instead in the Badenoch area. The pin shows the hypothesis, not an excavated battlefield.",
+            "sources": [
+              "https://research-portal.st-andrews.ac.uk/en/publications/dun-nechtain-fortriu-and-the-geography-of-the-picts/"
+            ]
+          },
+          {
+            "id": "st-vigeans",
+            "label": "St Vigeans, near Arbroath",
+            "coordinates": [
+              -2.582,
+              56.572
+            ],
+            "date": "Early medieval, Drosten Stone phase",
+            "description": "The Drosten Stone uses letters alongside sculpture and names, offering an unusually important but limited source for written language.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/st-vigeans-sculptured-stones-museum/history-and-stories/",
+              "https://eprints.gla.ac.uk/2522/"
+            ]
+          },
+          {
+            "id": "forteviot",
+            "label": "Forteviot, Strathearn",
+            "coordinates": [
+              -3.538,
+              56.34
+            ],
+            "date": "Late Pictish and early Alba royal landscape",
+            "description": "Forteviot is connected with early medieval kingship within a landscape that accumulated monuments over a much longer span.",
+            "sources": [
+              "https://portal.historicenvironment.scot/designation/SM4232",
+              "https://scarf.scot/regional/pkarf/early-medieval/6-2-historical-background/"
+            ]
+          },
+          {
+            "id": "dupplin",
+            "label": "Dupplin Cross, former hillside setting",
+            "coordinates": [
+              -3.568,
+              56.356
+            ],
+            "date": "Late eighth–early ninth century CE",
+            "description": "The cross bears a name identified with Custantín son of Uurguist. Its original Strathearn setting is distinct from its conservation at Dunning.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/st-serfs-church-and-dupplin-cross/",
+              "https://scarf.scot/regional/pkarf/early-medieval/6-2-historical-background/"
+            ]
+          },
+          {
+            "id": "sueno",
+            "label": "Sueno’s Stone, Forres",
+            "coordinates": [
+              -3.599,
+              57.611
+            ],
+            "date": "About the ninth–tenth centuries CE",
+            "description": "The large cross-slab pairs Christian imagery with a battle scene. The event or people shown are uncertain.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/suenos-stone/history-and-stories/",
+              "https://eprints.gla.ac.uk/104300/"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "Where the name and the evidence begin",
+          "paragraphs": [
+            {
+              "text": "Ancient authors used Picti from late Roman times. The label appeared in a context where Roman writers described peoples beyond their effective control, and the usage changed over subsequent centuries. It gives a date for written naming, while the communities and ways of life it came to describe have longer local histories. Bede later offered an origin account involving Scythia and Ireland. His book is valuable evidence for eighth-century views of Britain and its languages. Its migration story does not establish a route for a whole population.",
+              "sources": [
+                "https://doi.org/10.1080/03044181.2022.2076723",
+                "https://dcc.dickinson.edu/bede-historia-ecclesiastica/book-1/chapter-1-1",
+                "https://doi.org/10.15184/aqy.2018.68"
+              ]
+            },
+            {
+              "text": "Direct dating and cultural context can answer different questions. The symbols at Dunnicaer are associated with an early fortified site, and the investigators found evidence for an earlier phase of the tradition than had often been assumed. The bone from North Ronaldsay could be dated directly, although its radiocarbon interval dates the organic material rather than the precise moment it was incised. Ancient DNA from early medieval burials contributes evidence about the people sampled. Two genome-wide sequences are far too few to supply a genetic definition of Pictish identity or a date for its emergence.",
+              "sources": [
+                "https://doi.org/10.15184/aqy.2018.68",
+                "https://journals.plos.org/plosgenetics/article?id=10.1371%2Fjournal.pgen.1010360"
+              ]
+            }
+          ],
+          "columns": [
+            "Horizon",
+            "What the evidence supports"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Late Roman period",
+                "Picti occurs in Roman written evidence, while archaeology traces local cultures beyond the imperial frontier."
+              ],
+              "sources": [
+                "https://doi.org/10.1080/03044181.2022.2076723",
+                "https://doi.org/10.15184/aqy.2018.68"
+              ]
+            },
+            {
+              "cells": [
+                "Fourth–sixth centuries",
+                "Dunnicaer and Rhynie provide context for early symbols, fortified places, craft and selective long-distance connections."
+              ],
+              "sources": [
+                "https://doi.org/10.15184/aqy.2018.68",
+                "https://eprints.gla.ac.uk/183879/"
+              ]
+            },
+            {
+              "cells": [
+                "Seventh–eighth centuries",
+                "Better-attested kings and monasteries belong to a landscape shared by Pictish, Gaelic-speaking, Brittonic and Anglo-Saxon polities."
+              ],
+              "sources": [
+                "https://scarf.scot/regional/pkarf/early-medieval/6-2-historical-background/",
+                "https://portal.historicenvironment.scot/designation/SM12793",
+                "https://celt.ucc.ie/published/T100001A.html"
+              ]
+            },
+            {
+              "cells": [
+                "Ninth century",
+                "The 839 defeat in Fortriu, continuing Norse activity and changes in Pictish kingship overlap without forming a single transition date."
+              ],
+              "sources": [
+                "https://celt.ucc.ie/published/T100001A.html",
+                "https://academic.oup.com/edinburgh-scholarship-online/book/15491/chapter-abstract/170154112",
+                "https://eprints.gla.ac.uk/370606/"
+              ]
+            },
+            {
+              "cells": [
+                "Around 900 and the tenth century",
+                "Irish annals use Alba for the kingdom of Cinaed mac Ailpín’s descendants. Its later geography and meanings continued to change."
+              ],
+              "sources": [
+                "https://celt.ucc.ie/published/T100001A.html",
+                "https://eprints.gla.ac.uk/104300/",
+                "https://edinburghuniversitypress.com/book-from-pictland-to-alba-789-1070.html"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "More than one center of settlement and power",
+          "paragraphs": [
+            {
+              "text": "Rhynie’s enclosures, imported material, animal remains and evidence for skilled work put people back into a story often told through royal names. Burghead’s fortifications and the remains of buildings give a coastal example. Evidence of what people ate or kept differs from evidence for the patron of an enclosure. Similar objects may circulate between communities without establishing that all those places answered to the same ruler.",
+              "sources": [
+                "https://eprints.gla.ac.uk/183879/",
+                "https://her.aberdeenshire.gov.uk/Monument/MAB43099",
+                "https://www.frontiersin.org/journals/environmental-archaeology/articles/10.3389/fearc.2023.1208908/full"
+              ]
+            },
+            {
+              "text": "Fortriu is often located around the Moray Firth following reassessment of the written geography. Other Pictish districts lay farther south, and Perthshire records connections with Atholl and Dál Riata. Northumbria and the Brittonic kingdom centered at Alt Clut were significant neighbors. Some rulers’ reach expanded across those places at particular dates. A map that colors all of modern Scotland as Pictland would hide the difference between a royal title, a political coalition and permanent control.",
+              "sources": [
+                "https://research-portal.st-andrews.ac.uk/en/publications/dun-nechtain-fortriu-and-the-geography-of-the-picts/",
+                "https://scarf.scot/regional/pkarf/early-medieval/6-2-historical-background/",
+                "https://eprints.gla.ac.uk/104300/"
+              ]
+            },
+            {
+              "text": "The Pictish victory over Northumbria in 685 is attested, but the battlefield is harder to locate. Dunnichen in Angus is the traditional identification. Badenoch has been proposed on historical and geographical grounds. The Aberlemno cross-slab includes a battle scene whose identification with the encounter is possible. The scene cannot locate the battle unless its subject is independently established.",
+              "sources": [
+                "https://research-portal.st-andrews.ac.uk/en/publications/dun-nechtain-fortriu-and-the-geography-of-the-picts/",
+                "https://www.historicenvironment.scot/visit/all/aberlemno-sculptured-stones/history-and-stories/",
+                "https://celt.ucc.ie/published/T100001A.html"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "What survives of the language",
+          "paragraphs": [
+            {
+              "text": "Place names, personal names and the reading of inscriptions support a Brittonic Celtic language closely related to the group that also includes Welsh, Cornish and Breton. Some forms are explicable in more than one Celtic language, and names can cross linguistic boundaries. A few surviving inscriptions offer only narrow views of a region whose inhabitants could use different languages in churches, courts, exchanges and households.",
+              "sources": [
+                "https://eprints.gla.ac.uk/2522/",
+                "https://dcc.dickinson.edu/bede-historia-ecclesiastica/book-1/chapter-1-1",
+                "https://www.historicenvironment.scot/visit/all/st-vigeans-sculptured-stones-museum/history-and-stories/"
+              ]
+            },
+            {
+              "text": "Ogham is a script with a history in Ireland, used in northern Britain as well. Finding it on a slab does not itself identify the language of the inscription. Weathering, damaged strokes and short texts can produce several credible readings. Some stone carvings bear Pictish symbols such as animals and geometric signs alongside letters and crosses. The symbols may have communicated names or identities, but their function and precise readings remain open. They cannot yet be read as a body of translated sentences.",
+              "sources": [
+                "https://doi.org/10.15184/aqy.2018.68",
+                "https://eprints.gla.ac.uk/2522/",
+                "https://www.historicenvironment.scot/visit/all/dyce-symbol-stones/history-and-stories/"
+              ]
+            },
+            {
+              "text": "The Drosten Stone uses letters and personal names. On the Dupplin Cross a royal name has been identified with Custantín son of Uurguist, who ruled in the late eighth and early ninth centuries. Both examples make visible the combination of inscription and local sculpture without settling how many languages the carvers or patrons used in other settings.",
+              "sources": [
+                "https://www.historicenvironment.scot/visit/all/st-vigeans-sculptured-stones-museum/history-and-stories/",
+                "https://www.historicenvironment.scot/visit/all/st-serfs-church-and-dupplin-cross/",
+                "https://eprints.gla.ac.uk/2522/",
+                "https://scarf.scot/regional/pkarf/early-medieval/6-2-historical-background/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "What changed between Pictland and Alba",
+          "paragraphs": [
+            {
+              "text": "In 839 the Annals of Ulster record a defeat of the men of Fortriu and name several leaders killed. The location of the battle remains unknown. Later in the century, Norse forces besieged Alt Clut and shaped settlements and power in the northern and western islands. Orkney’s excavated sites can speak to this transition at household level. At Buckquoy, radiocarbon dates and successive building phases are stronger evidence for local chronology than an island-wide story inferred from one change in material culture.",
+              "sources": [
+                "https://celt.ucc.ie/published/T100001A.html",
+                "https://academic.oup.com/edinburgh-scholarship-online/book/15491/chapter-abstract/170154112",
+                "https://www.historicenvironment.scot/visit/all/brough-of-birsay/history-and-stories/",
+                "https://eprints.gla.ac.uk/370606/"
+              ]
+            },
+            {
+              "text": "Cinaed mac Ailpín’s ninth-century kingship became the center of later Scottish foundation traditions. Irish chroniclers continued to use Pictish royal titles for members of his dynasty, then used Alba regularly from around 900. The annal recording his grandson Domnall’s death is an important marker of that change. Gaelization, shifts in royal patronage and changes in political language occurred over generations. The deaths of leaders and the change in names are evidence for political transformation. They provide no evidence that the population of Pictland was exterminated.",
+              "sources": [
+                "https://celt.ucc.ie/published/T100001A.html",
+                "https://eprints.gla.ac.uk/104300/",
+                "https://edinburghuniversitypress.com/book-from-pictland-to-alba-789-1070.html"
+              ]
+            },
+            {
+              "text": "Forteviot, Dunkeld and other religious and royal settings retained importance across several phases. The later region called Scotland incorporated areas with different histories, and Alba itself had changing extents and meanings. Strathclyde, Norse-ruled islands and districts south of the Forth did not all share one political fate in the ninth century. Reading these trajectories together gives a more faithful chronology than choosing a single founding year.",
+              "sources": [
+                "https://scarf.scot/regional/pkarf/early-medieval/6-2-historical-background/",
+                "https://portal.historicenvironment.scot/designation/SM4232",
+                "https://eprints.gla.ac.uk/104300/",
+                "https://edinburghuniversitypress.com/book-from-pictland-to-alba-789-1070.html"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Picti: from Roman name to internal identity",
+          "url": "https://doi.org/10.1080/03044181.2022.2076723"
+        },
+        {
+          "title": "Bede, Ecclesiastical History, Book I in Latin",
+          "url": "https://dcc.dickinson.edu/bede-historia-ecclesiastica/book-1/chapter-1-1"
+        },
+        {
+          "title": "Direct and associated dating of early Pictish symbols",
+          "url": "https://doi.org/10.15184/aqy.2018.68"
+        },
+        {
+          "title": "Scottish Archaeological Research Framework, early medieval Perth and Kinross",
+          "url": "https://scarf.scot/regional/pkarf/early-medieval/6-2-historical-background/"
+        },
+        {
+          "title": "A powerful place in Pictland: analysis of the fourth- to sixth-century Rhynie center",
+          "url": "https://eprints.gla.ac.uk/183879/"
+        },
+        {
+          "title": "Burghead Fort, Historic Environment Record",
+          "url": "https://her.aberdeenshire.gov.uk/Monument/MAB43099"
+        },
+        {
+          "title": "Animal and subsistence evidence from Pictish sites",
+          "url": "https://www.frontiersin.org/journals/environmental-archaeology/articles/10.3389/fearc.2023.1208908/full"
+        },
+        {
+          "title": "Alex Woolf on Dun Nechtain and the geography of Fortriu",
+          "url": "https://research-portal.st-andrews.ac.uk/en/publications/dun-nechtain-fortriu-and-the-geography-of-the-picts/"
+        },
+        {
+          "title": "Aberlemno sculptured stones and the battle interpretation",
+          "url": "https://www.historicenvironment.scot/visit/all/aberlemno-sculptured-stones/history-and-stories/"
+        },
+        {
+          "title": "Annals of Ulster, English edition, University College Cork",
+          "url": "https://celt.ucc.ie/published/T100001A.html"
+        },
+        {
+          "title": "Dauvit Broun, Britain and the beginning of Scotland",
+          "url": "https://eprints.gla.ac.uk/104300/"
+        },
+        {
+          "title": "Alex Woolf, From Pictland to Alba, 789–1070",
+          "url": "https://edinburghuniversitypress.com/book-from-pictland-to-alba-789-1070.html"
+        },
+        {
+          "title": "Alex Woolf, Last Days of the Pictish Kingdom (839–89)",
+          "url": "https://academic.oup.com/edinburgh-scholarship-online/book/15491/chapter-abstract/170154112"
+        },
+        {
+          "title": "Brough of Birsay archaeology and successive phases",
+          "url": "https://www.historicenvironment.scot/visit/all/brough-of-birsay/history-and-stories/"
+        },
+        {
+          "title": "Buckquoy and Pictish–Norse transition in Orkney",
+          "url": "https://eprints.gla.ac.uk/370606/"
+        },
+        {
+          "title": "Katherine Forsyth, Language in Pictland: spoken and written",
+          "url": "https://eprints.gla.ac.uk/2522/"
+        },
+        {
+          "title": "Dyce symbol stones and ogham inscription",
+          "url": "https://www.historicenvironment.scot/visit/all/dyce-symbol-stones/history-and-stories/"
+        },
+        {
+          "title": "Drosten Stone and St Vigeans sculptured stones",
+          "url": "https://www.historicenvironment.scot/visit/all/st-vigeans-sculptured-stones-museum/history-and-stories/"
+        },
+        {
+          "title": "Portmahomack monastery, scheduled archaeology and excavations",
+          "url": "https://portal.historicenvironment.scot/designation/SM12793"
+        },
+        {
+          "title": "Forteviot funerary and ritual complex",
+          "url": "https://portal.historicenvironment.scot/designation/SM4232"
+        },
+        {
+          "title": "St Serf’s Church and the Dupplin Cross",
+          "url": "https://www.historicenvironment.scot/visit/all/st-serfs-church-and-dupplin-cross/"
+        },
+        {
+          "title": "Sueno’s Stone and interpretation of the battle scenes",
+          "url": "https://www.historicenvironment.scot/visit/all/suenos-stone/history-and-stories/"
+        },
+        {
+          "title": "Morez et al., early medieval Pictish genomes",
+          "url": "https://journals.plos.org/plosgenetics/article?id=10.1371%2Fjournal.pgen.1010360"
+        },
+        {
+          "title": "Historic Scotland Picts Guide",
+          "url": "https://www.historicenvironment.scot/publications/all/publication/?publicationid=6bb1af01-cda9-4d6f-9bdc-a66d0112df3e"
+        }
+      ],
+      "relatedGuideIds": [
+        "world-scotland-history",
+        "world-scotland-stones",
+        "world-england",
+        "world-ireland-history",
+        "world-norway",
+        "world-voyages-europe"
+      ],
+      "referenceMaps": [
+        {
+          "title": "Historic Environment Scotland Picts Guide",
+          "url": "https://www.historicenvironment.scot/publications/all/publication/?publicationid=6bb1af01-cda9-4d6f-9bdc-a66d0112df3e",
+          "description": "Regional maps and illustrated entries for Pictish stones and archaeological sites."
+        },
+        {
+          "title": "Perth and Kinross historical research framework",
+          "url": "https://scarf.scot/regional/pkarf/early-medieval/6-2-historical-background/",
+          "description": "Regional survey, with archaeological site links and a discussion of competing interpretations of early medieval territories."
+        },
+        {
+          "title": "Rhynie project plans and figures",
+          "url": "https://eprints.gla.ac.uk/183879/",
+          "description": "Archaeological trench, enclosure and landscape figures published with the research analysis."
+        },
+        {
+          "title": "Forteviot scheduled site map",
+          "url": "https://portal.historicenvironment.scot/designation/SM4232",
+          "description": "Modern designation map and inventory of the ritual landscape. Protection boundaries are a modern administrative designation."
+        }
+      ]
+    }
+  ]
+}

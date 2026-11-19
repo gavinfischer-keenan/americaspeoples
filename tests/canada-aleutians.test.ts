@@ -1,3 +1,4 @@
+import {canadaAleutianStories} from '../src/canada-aleutian-stories';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
@@ -10,8 +11,10 @@ test('Canada regional histories and the Aleutians are connected guides in the sh
   for(const id of ['canada','canada-pacific','canada-prairies','canada-northwest','canada-arctic','canada-great-lakes','canada-st-lawrence','canada-atlantic','aleutian-islands']){
     const guide=siteGuides.find(g=>g.id===id);assert.ok(guide,id);
     const story=stories.find(s=>s.id===guide.storyId);assert.ok(story,id+' needs a contextual movie');
-    assert.ok(story.scenes.length>=6,id);
-    for(const scene of story.scenes){assert.ok(scene.year<=1934);for(const rid of scene.recordIds){assert.ok(dataset.records.some(r=>r.id===rid),rid);assert.ok(!topicOnlyIds.has(rid),rid+' must be shared');}}
+    const archive=canadaAleutianStories.find(s=>s.id===guide.storyId)!;
+  assert.ok(archive.scenes.length>=6,id);
+  assert.deepEqual(story.scenes,archive.scenes.filter(s=>s.year<=1900));
+    for(const scene of story.scenes){assert.ok(scene.year<=1900);for(const rid of scene.recordIds){assert.ok(dataset.records.some(r=>r.id===rid),rid);assert.ok(!topicOnlyIds.has(rid),rid+' must be shared');}}
     if(id.startsWith('canada-'))assert.equal(guide.parentGuideId,'canada');
   }
 });

@@ -4,9 +4,25 @@ import { htmlEscape as esc, safeSourceURL, type Enrichment, type GuideMedia } fr
 import { physicalSources } from '../src/physical-reference';
 import {readWorldGuides} from './world-guide-data';
 import {readWritingExamples,type WritingExample} from './writing-collection';
+import {readEuropeData} from './europe-build';
+import {normalizeEurope,type EuropeSource} from '../src/europe-data';
+import {validateEuropeBoundaries,type EuropeBoundaryBundle} from '../src/europe-boundaries';
+import type {BoundarySource} from '../src/boundaries';
+import type {WorldGuideMedia} from './world-guide-media';
 
 type Source = { url: string; title?: string; authors?: string; doi?: string };
-type AttributionInputs = { writing?:WritingExample[]; records: { id: string; sources: Source[] }[]; pages: { id: string; sources: Source[]; sections?: { paragraphs: { sources: string[] }[]; rows: { sources: string[] }[] }[] }[]; enrichment: Enrichment; media: GuideMedia; manifests: { file: string; data: unknown; reused: boolean; license?: string }[]; materials?: (Source & {license: string; licenseUrl: string; note: string})[] };
+type AttributionInputs = {
+  records: { id: string; sources: Source[] }[];
+  pages: { id: string; sources: Source[]; sections?: { paragraphs: { sources: string[] }[]; rows: { sources: string[] }[] }[] }[];
+  enrichment: Enrichment;
+  media: GuideMedia;
+  manifests: { file: string; data: unknown; reused: boolean; license?: string }[];
+  materials?: (Source & {license: string; licenseUrl: string; note: string})[];
+  writing?: WritingExample[];
+  europeSources?: EuropeSource[];
+  europeBoundaries?: EuropeBoundaryBundle & {sources: (BoundarySource & {download?: string})[]};
+  worldMedia?: WorldGuideMedia[];
+};
 export type AttributionEntry = { title: string; urls: string[]; creators: string[]; kind: string; license: string; licenseUrls: string[]; notes: string[]; usedIn: string[] };
 const unknownLicense = 'Referenced only; reuse license not verified';
 const doiKey = (value: string) => value.trim().replace(/^https?:\/\/(?:dx\.)?doi\.org\//i, '').toLowerCase();
@@ -33,6 +49,7 @@ export function collectSourceAttributions(input: AttributionInputs): Attribution
     entries.set(key, entry);
   };
   for (const record of input.records) for (const source of record.sources) add(source, 'Record: ' + record.id);
+  for (const source of input.europeSources ?? []) add(source, 'Europe source: ' + source.id);
   for (const page of input.pages) {
     for (const source of page.sources) add(source, 'Guide: ' + page.id);
     for (const section of page.sections ?? []) for (const block of [...section.paragraphs, ...section.rows]) for (const url of block.sources) add({url}, 'Guide: ' + page.id);
@@ -42,6 +59,10 @@ export function collectSourceAttributions(input: AttributionInputs): Attribution
     for (const source of page.reading) add(source, 'Further reading: ' + page.id);
   }
   for (const manifest of input.manifests) {
+    if (manifest.file === 'data/voyages.json') {
+      const archive = manifest.data as {sources: (Source & {id: string})[]};
+      for (const source of archive.sources) add(source, 'Voyage source: ' + source.id);
+    }
     if(manifest.file==='data/world-guide-context-sources.json'){
       const data=manifest.data as {assets:{sourceUrl:string;downloadUrl:string;title:string;copyright?:string;publisher?:string;license:string;licenseUrl:string;processing:string}[]};
       for(const a of data.assets)add({url:a.sourceUrl,title:a.title,authors:a.copyright??a.publisher},manifest.file,{kind:a.license.startsWith('SIL')?'Bundled font':'Reused geographic data',license:a.license,licenseUrls:[a.licenseUrl],urls:[a.downloadUrl],notes:[a.processing]});
@@ -63,10 +84,33 @@ export function collectSourceAttributions(input: AttributionInputs): Attribution
     walk(manifest.data);
   }
   for (const material of input.materials ?? []) add(material,'Geographic source notices',{kind:'Reused geographic data',license:material.license,licenseUrls:[material.licenseUrl],notes:[material.note]});
+  const boundaryBundle = input.europeBoundaries;
+  if (boundaryBundle) {
+    for (const source of boundaryBundle.sources) {
+      const licenseUrls = source.id === 'ristat'
+        ? ['https://creativecommons.org/publicdomain/zero/1.0/', 'https://hdl.handle.net/10622/DN9QDM']
+        : urlsIn(source.license);
+      const reuse = 'download' in source && source.download ? {
+        kind: 'Reused historical boundary data', license: source.license, licenseUrls, urls: [source.download],
+      } : {};
+      add(source, 'Boundary source: ' + source.id, {...reuse, notes: [source.note]});
+      for (const boundary of boundaryBundle.boundaries) {
+        if (boundary.sourceIds.includes(source.id)) add(source, 'Boundary: ' + boundary.id);
+      }
+    }
+  }
   for (const image of input.media.images) {
     const label = image.role === 'site-plan' ? 'Historical map / chart' : 'Photograph';
     const kind = image.role === 'site-plan' ? 'Reused historical map / chart' : 'Reused photograph';
     add({url:image.sourcePage,title:image.title,authors:image.creator}, label + ': ' + image.file, {kind,license:image.license,licenseUrls:[image.licenseUrl],urls:[image.sourceUrl],notes:[image.licenseEvidence,image.changes,'The atlas’s noncommercial terms do not apply to this image. Used in: '+image.guideIds.join(', ')]});
+  }
+  for (const image of input.worldMedia ?? []) {
+    const source = {url: image.sourceUrl, title: image.title, authors: image.credit};
+    add(source, 'World guide image: ' + image.id, {
+      kind: 'Reused photograph', license: image.license, licenseUrls: [image.licenseUrl], urls: [image.imageUrl],
+      notes: ['The image file is reproduced unchanged under its own terms.'],
+    });
+    for (const guideId of image.guideIds) add(source, 'Guide: ' + guideId);
   }
   for(const e of input.writing??[]){
     const o=e.original,t=e.translation,where='Writing pair: '+e.id;
@@ -104,11 +148,14 @@ export function collectSourceAttributions(input: AttributionInputs): Attribution
 }
 
 export async function loadAttributionInputs(): Promise<AttributionInputs> {
-  const [{dataset}, pages, enrichment, media] = await Promise.all([
+  const [{dataset}, pages, enrichment, media, europe, europeBoundaries, worldMedia] = await Promise.all([
     import('../src/published-data'),
     readFile('data/site-guide-content.json','utf8').then(JSON.parse),
     readFile('data/guide-enrichment.json','utf8').then(JSON.parse),
     readFile('data/guide-media/manifest.json','utf8').then(JSON.parse),
+    readEuropeData(),
+    readFile('data/atlases/europe/boundaries.json','utf8').then(JSON.parse).then(validateEuropeBoundaries),
+    readFile('data/world-guide-media.json','utf8').then(JSON.parse).then((manifest: {assets: WorldGuideMedia[]}) => manifest.assets),
   ]);
   const manifests: AttributionInputs['manifests'] = [];
   const walk = async (directory: string) => {
@@ -117,6 +164,7 @@ export async function loadAttributionInputs(): Promise<AttributionInputs> {
       if (item.isDirectory()) { await walk(file); continue; }
       // Raw event pages are represented by their fetch manifest and cited records.
       if (!item.name.endsWith('.json') || (directory === 'data/physical-sources' && !/manifest|import/.test(item.name)) || ['site-guide-content.json','guide-enrichment.json','shipwreck-catalog-details.json'].includes(item.name) || directory === 'data/guide-media') continue;
+      if (file === 'data/world-guide-media.json' || (directory === 'data/atlases/europe' && (item.name.endsWith('-evidence.json') || item.name === 'boundaries.json'))) continue;
       const reused = /(?:boundary-sources|terrain\/sources|guide-maps\/manifest|physical-sources\/fetch-manifest|rail-network\.json)/.test(file);
       const data = JSON.parse(await readFile(file,'utf8'));
       const license = file === 'data/guide-terrain/sources.json' ? 'Mixed elevation-source terms; preserve Mapzen/Tilezen and upstream credits in the linked attribution document.' : file === 'data/rail-network.json' ? data.provenance.license : undefined;
@@ -128,7 +176,7 @@ export async function loadAttributionInputs(): Promise<AttributionInputs> {
   for (const file of ['THIRD_PARTY.md','LICENSE.md','README.md','DEPLOYMENT.md']) manifests.push({file,data:await readFile(file,'utf8'),reused:false});
   const materials = [{url:'https://www.geonames.org/export/',title:'GeoNames gazetteer country extracts',authors:'GeoNames',license:'CC BY 4.0',licenseUrl:'https://creativecommons.org/licenses/by/4.0/',note:'Selected modern reference coordinates from public country dumps, rounded for public display; feature IDs and source URLs remain in the relevant records. Historical claims are independently sourced. GeoNames data retains CC BY 4.0; the atlas’s noncommercial restriction does not replace it.'}];
   const world=await readWorldGuides();
-  return {records:dataset.records,pages:[...pages.pages,...world.map(g=>({id:g.id,sources:g.sources}))],enrichment,media,manifests,materials,writing:await readWritingExamples()};
+  return {records:[...dataset.records,...normalizeEurope(europe)],pages:[...pages.pages,...world.map(g=>({id:g.id,sources:g.sources}))],enrichment,media,manifests,materials,writing:await readWritingExamples(),europeSources:europe.sources,europeBoundaries,worldMedia};
 }
 
 function noticeHTML(markdown: string): string {
@@ -156,5 +204,5 @@ export async function buildSourceAttributions(shell: (title: string, body: strin
   await mkdir('sites',{recursive:true});
   await writeFile('sites/sources-attributions.js',sourceAttributionScript);
   await writeFile('sites/sources-attributions.html',shell('Sources, attributions & licenses',sourceAttributionHTML(entries,thirdParty,projectLicense)));
-  await writeFile('sites/sources-attributions.json',JSON.stringify({generatedAt:'2026-11-17',scope:'Canonical records, guide citations and reading links, public data metadata and third-party notices',entries},null,2)+'\n');
+  await writeFile('sites/sources-attributions.json',JSON.stringify({generatedAt:'2026-11-18',scope:'Canonical and Europe evidence records, guide citations and images, boundary data, public data metadata and third-party notices',entries},null,2)+'\n');
 }

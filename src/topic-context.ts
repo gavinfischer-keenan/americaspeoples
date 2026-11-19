@@ -2,14 +2,14 @@ import type {DisplayRecord} from './model';
 import {topics,topicOnlyIds} from './topic-dives';
 import {futureDives,topicConnections} from './deep-dive-backlog';
 import {esc} from './dom';
-import {timeLabel} from './time';
+import {recordInTimeline,timeLabel} from './time';
 import {siteGuides} from './site-guides';
 import {guidesLinkedToTopic} from './guide-connections';
 
 export function sharedContextRecords(ids:readonly string[],all:readonly DisplayRecord[]):DisplayRecord[]{
  const byId=new Map(all.map(r=>[r.id,r])),found=new Map<string,DisplayRecord>();
  for(const id of ids){const r=byId.get(id);if(!r)continue;
-  for(const candidate of [r.id,...r.review.relatedIds]){const c=byId.get(candidate);if(c&&!topicOnlyIds.has(c.id))found.set(c.id,c);}
+  for(const candidate of [r.id,...r.review.relatedIds]){const c=byId.get(candidate);if(c&&!topicOnlyIds.has(c.id)&&recordInTimeline(c))found.set(c.id,c);}
  }
  return [...found.values()];
 }

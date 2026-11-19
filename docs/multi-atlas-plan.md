@@ -2,6 +2,8 @@
 
 ## Approved scope
 
+**Northern expansion in v0.31.0:** Europe is activated as a playable atlas through 1900, beginning with the northern regions. Africa and Asia remain guide-first previews. The original placeholder implementation below records the initial architecture; the current implementation and next-pass decisions are documented in [Northern Europe — release review](northern-europe-next-pass.md). The user superseded the initial local hold with authorization to publish this release after verification.
+
 The atlas names are **Americas**, **Africa & human origins**, **Europe & Mediterranean**, and **Asia & Pacific**. Americas remains the working atlas. The other three initially contain only a modern coastline preview and a large **COMING SOON** label. They contain no evidence records, historical overlays, events, claims, stories, or copied research.
 
 Keep one repository and one shared application. Separate the atlas configuration and future data ownership instead of creating three copies of the renderer. The existing renderer, timeline, source-review interfaces, accessibility behavior and release checks should evolve together. Independent repositories would duplicate those systems now; consider that split only when independent teams, release schedules or hosting requirements make it worthwhile.

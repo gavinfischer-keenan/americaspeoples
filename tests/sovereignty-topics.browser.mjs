@@ -2,9 +2,10 @@ import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {mkdir} from 'node:fs/promises';
 import {createStaticServer} from '../scripts/static-server.mjs';
-import {sovereigntyTopics} from '../src/sovereignty-topic-dives.ts';
+import {sovereigntyTopics as archiveEntries} from '../src/sovereignty-topic-dives.ts';
 import {dataset} from '../src/published-data.ts';
 import {historyState} from '../src/history.ts';
+const sovereigntyTopics=archiveEntries.map(entry=>({...entry,scenes:entry.scenes.filter(scene=>scene.year<=(entry.id==='hawaii-statehood'?1959:1900))}));
 const server=createStaticServer('dist');await new Promise(r=>server.listen(0,'127.0.0.1',r));
 const browser=await chromium.launch({executablePath:process.env.BROWSER_PATH||'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',headless:true});
 const page=await browser.newPage({viewport:{width:1440,height:960}}),errors=[];
@@ -21,7 +22,7 @@ try{
   console.log(`PASS ${t.id}: ${t.scenes.length} chapters, camera and current evidence`);
  }
  await page.goto(base+'/#topic/hawaii-statehood');await page.locator('#topic-play').waitFor();
- assert.match(await page.locator('.topic-scope-note').innerText(),/1959.*1934/);
+ assert.match(await page.locator('.topic-scope-note').innerText(),/1959.*1900/);
  await page.locator('.topic-date-controls summary').click();
  await page.locator('#topic-year-input').fill('1959');await page.locator('#topic-era').selectOption('CE');await page.locator('#topic-date-form button').click();
  assert.match(await page.locator('#topic-year').innerText(),/1,959/);
@@ -35,7 +36,7 @@ try{
  assert.equal(await page.locator('#story-select').inputValue(),'free');
  await page.goto(base+'/#topic/territorial-purchases');await page.locator('.topic-date-controls summary').click();
  await page.locator('#topic-year-input').fill('1959');await page.locator('#topic-date-form button').click();
- assert.match(await page.locator('#topic-date-error').innerText(),/1,934/);
+ assert.match(await page.locator('#topic-date-error').innerText(),/1,900/);
  console.log('PASS Hawaii manual date, slider, review action and shared-context clock isolation');
  for(const [width,height,label] of [[1440,960,'desktop'],[1024,768,'tablet-landscape'],[768,1024,'tablet-portrait']]){
   await page.setViewportSize({width,height});await page.goto(base+'/#topic/forced-relocations');await page.locator('[data-topic-scene="10"]').click();

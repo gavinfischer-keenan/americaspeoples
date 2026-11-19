@@ -14,7 +14,8 @@ test('Explore ignores movie year while retaining unresolved chronology separatel
   const a=recordsForView(dataset.records,'explore',1200),b=recordsForView(dataset.records,'explore',-20000);
   assert.deepEqual(a,b);
   assert.ok(a.context.length>0);
-  assert.equal(a.dated.length+a.context.length,dataset.records.length);
+  assert.ok(a.dated.every(r=>r.time.start!==null&&r.time.start<=1900));
+  assert.ok(a.dated.length+a.context.length<dataset.records.length);
   assert.ok(canSelect('explore',true));
   assert.ok(!canSelect('movie',true));
   assert.ok(canSelect('movie',false));

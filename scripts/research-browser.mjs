@@ -159,8 +159,9 @@ try {
     await renderedOverlayCount("forced-removal"),
     overlayCount("forced-removal", 1837),
   );
-  await go(1934);
-  assert.match(
+  await go(1900);
+  assert.ok(dataset.records.some(r=>r.time.start===1934&&r.title.includes("Indian Reorganization Act")), "The 1934 event remains in the archive");
+  assert.doesNotMatch(
     await page.locator("#visible-records").innerText(),
     /Indian Reorganization Act/,
   );
