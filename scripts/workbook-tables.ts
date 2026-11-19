@@ -3,6 +3,7 @@ import {unzipSync,zipSync} from 'fflate';
 import { dataset } from "../src/published-data";
 import { version as appVersion } from '../package.json';
 import { BULK_HEADERS, OVERLAY_HEADERS } from "../src/bulk-schema";
+import { workbookReferenceId } from './workbook-reference';
 
 const tables: Record<string, unknown[][]> = {
   Readme: [
@@ -114,7 +115,7 @@ for (const r of dataset.records) {
     });
   tables[key].push(headers.map((h) => row[h] ?? ""));
   // Scope reference IDs by record; historical batches may use the same short ID for different references.
-  const refID = (id: string) => r.id + "--" + id;
+  const refID = (id: string) => workbookReferenceId(r.id, id);
   for (const s of r.sources) {
     const sr: Record<string, unknown> = {
       ...s,
@@ -145,9 +146,9 @@ await writeFile("data/workbook-tables.json", JSON.stringify(tables));
 const XLSX = await import("xlsx");
 const workbook = XLSX.utils.book_new();
 for(const [name,rows] of Object.entries(tables)) XLSX.utils.book_append_sheet(workbook,XLSX.utils.aoa_to_sheet(rows),name);
-// Recompress the same XML parts efficiently so the full evidence workbook stays
-// within the existing import byte limits as the atlas grows.
-const workbookBytes=XLSX.write(workbook,{type:"buffer",bookType:"xlsx",compression:true});
+// Share repeated source/review strings before compressing the XML, keeping the
+// full evidence workbook within both existing expanded and compressed limits.
+const workbookBytes=XLSX.write(workbook,{type:"buffer",bookType:"xlsx",compression:true,bookSST:true});
 await writeFile("templates/americas-peoples-researched-import.xlsx", zipSync(unzipSync(workbookBytes),{level:9}));
 console.log(
   Object.fromEntries(Object.entries(tables).map(([k, v]) => [k, v.length - 1])),

@@ -5,6 +5,7 @@ import { unzipSync, zipSync, strFromU8, strToU8 } from "fflate";
 import { importWorkbook } from "../src/xlsx-import";
 import data from "../data/evidence.json";
 import historical from './fixtures/evidence-0.2.2.json';
+import { MAX_PROPOSALS } from '../src/proposals';
 import type { Dataset } from "../src/model";
 const records = (data as Dataset).records;
 const template = async () =>
@@ -52,6 +53,15 @@ test("formula cells are rejected instead of being evaluated or imported as cache
     () => importWorkbook(buffer(zipSync(parts)), records),
     /formulas are not supported/,
   );
+});
+
+test('evidence worksheet dimensions remain bounded by the proposal limit', async () => {
+  const parts=unzipSync(await template());
+  const name='xl/worksheets/sheet2.xml';
+  const xml=strFromU8(parts[name]);
+  assert.ok(xml.includes('</x:sheetData>'));
+  parts[name]=strToU8(xml.replace('</x:sheetData>',`<x:row r="${MAX_PROPOSALS+2}"><x:c r="A${MAX_PROPOSALS+2}" t="str"><x:v>extra</x:v></x:c></x:row></x:sheetData>`));
+  await assert.rejects(()=>importWorkbook(buffer(zipSync(parts)),records),/Evidence: too many rows/);
 });
 test("macro files, expanded bombs and unexpected worksheets cannot enter the app", async () => {
   const parts = unzipSync(await template());
