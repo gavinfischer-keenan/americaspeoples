@@ -1,0 +1,210 @@
+{
+  "version": "0.30.0",
+  "status": "merged, deployed and publicly verified; current and previous server releases retained",
+  "verifiedAt": "2026-11-19T06:49:05.570760+00:00",
+  "pullRequest": "https://github.com/gavinfischer-keenan/americaspeoples/pull/28",
+  "release": "https://github.com/gavinfischer-keenan/americaspeoples/releases/tag/v0.30.0",
+  "site": "https://americaspeoples.11mosswood.us/",
+  "baseCommit": "697918f71e583db50128e50864ca2d61d5896f7c",
+  "featureCommit": "6cd411567e59c8c79fd040e9ad1f97a9078882e9",
+  "deployedCommit": "1f9fab7ef7ea78d57c3668545520542dccc65d31",
+  "verifiedTree": "1562d67ec5e9c64583a2d746e159c66a30ac1b57",
+  "stats": {
+    "records": 11201,
+    "shared": 11128,
+    "focused": 73,
+    "guides": 90,
+    "stories": 84,
+    "topics": 28,
+    "terrain": 168,
+    "sourceMaps": 26,
+    "voyages": 175,
+    "activityBands": 126,
+    "regionalRecords": 70,
+    "regions": 15,
+    "worldGuides": 41,
+    "writingPairs": 87,
+    "writingImages": 18,
+    "writingFonts": 2
+  },
+  "newWorldGuides": 41,
+  "pairedWritingExamples": 87,
+  "originalWitnessImages": 18,
+  "completeLicensedTranslations": 18,
+  "canonicalVoyagesLinked": 80,
+  "regionalVoyageAssociations": 114,
+  "datedRegionalStops": 251,
+  "americasRecordsAndVoyagesUnchanged": true,
+  "scope": "Guide-only world expansion; regional historical movie maps remain coming soon. Geological ages, manuscript dates, discovery dates and post-1934 guide continuations remain separate.",
+  "validation": {
+    "fullReleaseStages": 62,
+    "unitTests": 466,
+    "shipwreckImporterTests": 12,
+    "pythonApiTests": 10,
+    "linuxRetentionTests": 5,
+    "typescript": true,
+    "independentReviews": "Core map and voyage review, paired corpus and rights review, writing accessibility/package review; findings fixed and verified.",
+    "runNotes": "Phases 1–34 passed in the initial run. The expanded directory placed a legacy test mouse target below the viewport; the test now scrolls to the target before clicking. Phases 35–62 then passed. No timeouts were extended. Exact asset preservation was checked with Git attributes after the aggregate suite. The merged source tree matches the reviewed feature tree; the final merged package passed the world-guide browser and extracted self-host checks again.",
+    "publicAssetsChecked": 430,
+    "publicSourceReviews": 48,
+    "neighborPagesVerified": 3,
+    "liveBrowser": {
+      "version": "0.30.0",
+      "records": 11201,
+      "regionalGuides": true,
+      "deadSea": true,
+      "writingPairs": 87,
+      "images": 18,
+      "fonts": 2,
+      "widths": [
+        1440,
+        390,
+        320
+      ],
+      "voyageDepartureAndScopedPlayback": true,
+      "errors": [],
+      "requests": 104,
+      "analyticsObserved": [
+        {
+          "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+          "method": "GET"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        },
+        {
+          "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+          "method": "GET"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        },
+        {
+          "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+          "method": "GET"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        },
+        {
+          "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+          "method": "GET"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        }
+      ]
+    },
+    "workbook": {
+      "records": 11201,
+      "everyReviewPageOpened": true,
+      "duplicateReimportClean": true,
+      "compressedBytes": 5422405,
+      "expandedBytes": 43441861,
+      "archiveEntries": 16,
+      "sha256": "c5bce9d35ab7afc79ce7a5dfe05ea711ba944c5a91f23737642867ebc5db73f8",
+      "mergedRebuildNote": "The final rebuilt workbook has byte-identical contents in every ZIP entry to the committed workbook; ZIP container metadata differs."
+    }
+  },
+  "deployment": {
+    "status": "deployed",
+    "id": "20261119T064116Z-americas-v0.30.0",
+    "commit": "1f9fab7ef7ea78d57c3668545520542dccc65d31",
+    "health": {
+      "status": "ok",
+      "version": "0.30.0",
+      "records": 11201
+    },
+    "static": "/srv/tripofisch/releases/20261119T064116Z-americas-v0.30.0",
+    "api": "/srv/americaspeoples/releases/20261119T064116Z-americas-v0.30.0",
+    "previousVersion": "0.29.0",
+    "rollbackStatic": "/srv/tripofisch/releases/20261119T040224Z-americas-v0.29.0",
+    "rollbackApi": "/srv/americaspeoples/releases/20261119T040224Z-americas-v0.29.0",
+    "unchangedFiles": 394
+  },
+  "artifacts": [
+    {
+      "filename": "americas-peoples-v0.30.0-selfhost.zip",
+      "repositoryPath": "downloads/americas-peoples-v0.30.0-selfhost.zip",
+      "bytes": 304872768,
+      "sha256": "25d2c6aea4c381f969422310af2d5fb3d8eb14cbb6449d5f0ca1c64ccdd97923",
+      "url": "https://github.com/gavinfischer-keenan/americaspeoples/releases/download/v0.30.0/americas-peoples-v0.30.0-selfhost.zip"
+    },
+    {
+      "filename": "americas-peoples-import.xlsx",
+      "repositoryPath": "templates/americas-peoples-import.xlsx",
+      "bytes": 302388,
+      "sha256": "ed0abc070fc522e4ad2e3a7c97d3f7f109ed6265c4735ed186559a4e6079c794",
+      "url": "https://github.com/gavinfischer-keenan/americaspeoples/releases/download/v0.30.0/americas-peoples-import.xlsx"
+    },
+    {
+      "filename": "americas-peoples-researched-import.xlsx",
+      "repositoryPath": "templates/americas-peoples-researched-import.xlsx",
+      "bytes": 5422405,
+      "sha256": "c5bce9d35ab7afc79ce7a5dfe05ea711ba944c5a91f23737642867ebc5db73f8",
+      "url": "https://github.com/gavinfischer-keenan/americaspeoples/releases/download/v0.30.0/americas-peoples-researched-import.xlsx"
+    }
+  ],
+  "retention": {
+    "applied": true,
+    "targets": [
+      "/srv/americaspeoples/backups/20261119T040224Z-americas-v0.29.0-previous.sqlite3",
+      "/srv/americaspeoples/releases/20261119T005555Z-americas-v0.28.0",
+      "/srv/tripofisch/releases/20261119T005555Z-americas-v0.28.0/americaspeoples-app",
+      "/srv/tripofisch/releases/20261119T005555Z-americas-v0.28.0/downloads/americaspeoples",
+      "/srv/tripofisch/releases/20261119T005555Z-americas-v0.28.0/free-utilities/americaspeoples",
+      "/srv/tripofisch/releases/20261119T040224Z-americas-v0.29.0/downloads/americaspeoples/v0.28.0",
+      "/srv/tripofisch/releases/20261119T064116Z-americas-v0.30.0/downloads/americaspeoples/v0.28.0"
+    ],
+    "keptCurrent": "20261119T064116Z-americas-v0.30.0",
+    "keptPrevious": "0.29.0",
+    "freeBytes": 1475923968
+  },
+  "retentionFinalPlan": {
+    "applied": false,
+    "targets": [],
+    "keptCurrent": "20261119T064116Z-americas-v0.30.0",
+    "keptPrevious": "0.29.0",
+    "freeBytes": 1475923968
+  },
+  "temporaryCleanup": {
+    "container": {
+      "mode": "container",
+      "removed": [
+        "/var/tmp/americas-v0.30.0-staging",
+        "/var/tmp/americas-v0300-payload.tar",
+        "/var/tmp/americas-v0300-deploy.py"
+      ],
+      "freeBytes": 2747170816
+    },
+    "host": {
+      "mode": "host",
+      "removed": [
+        "/var/tmp/americas-v0300-payload.tar",
+        "/var/tmp/americas-v0300-deploy.py",
+        "/var/tmp/americas-v0300-test-retention.py"
+      ],
+      "freeBytes": 78044733440
+    }
+  }
+}

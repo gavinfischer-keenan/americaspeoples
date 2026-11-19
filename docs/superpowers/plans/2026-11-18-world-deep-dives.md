@@ -51,3 +51,7 @@ Research workers own separate JSON files under data/atlases/<atlas>/; each file 
 - Core and corpus reviews resolved voyage-loading, stop-order/membership, bounds, crowded labels, image quality, passage alignment, rights metadata, original-language tags, narrow-phone controls and reciprocal Americas links.
 - Focused browser pass verifies regional guide navigation, full-area maps, 87 searchable pairs, all 18 images and both script fonts. Final aggregate release gate follows these fixes.
 - User-authorized single publication remains the final step; no next-round expansion starts automatically.
+
+## Completed publication
+
+PR 28 merged the combined v0.30.0 release. All 62 verification phases completed with 466 unit tests; the directory mouse test now scrolls its target into view. The final merged package passed guide/browser and extracted self-host checks again. The deployed release passed 430 public asset comparisons, 48 source reviews, three neighboring-page checks, live world-guide/writing/voyage browser tests, and five Linux retention tests. Current v0.30.0 and rollback v0.29.0 are retained; temporary uploads were removed. The versioned deployment receipt records the exact commit and artifact hashes. This round is complete; stop for user review before new expansion.
