@@ -2,9 +2,11 @@ import { readFile, readdir, writeFile, mkdir } from 'node:fs/promises';
 import { marked } from 'marked';
 import { htmlEscape as esc, safeSourceURL, type Enrichment, type GuideMedia } from './guide-enrichment';
 import { physicalSources } from '../src/physical-reference';
+import {readWorldGuides} from './world-guide-data';
+import {readWritingExamples,type WritingExample} from './writing-collection';
 
 type Source = { url: string; title?: string; authors?: string; doi?: string };
-type AttributionInputs = { records: { id: string; sources: Source[] }[]; pages: { id: string; sources: Source[]; sections?: { paragraphs: { sources: string[] }[]; rows: { sources: string[] }[] }[] }[]; enrichment: Enrichment; media: GuideMedia; manifests: { file: string; data: unknown; reused: boolean; license?: string }[]; materials?: (Source & {license: string; licenseUrl: string; note: string})[] };
+type AttributionInputs = { writing?:WritingExample[]; records: { id: string; sources: Source[] }[]; pages: { id: string; sources: Source[]; sections?: { paragraphs: { sources: string[] }[]; rows: { sources: string[] }[] }[] }[]; enrichment: Enrichment; media: GuideMedia; manifests: { file: string; data: unknown; reused: boolean; license?: string }[]; materials?: (Source & {license: string; licenseUrl: string; note: string})[] };
 export type AttributionEntry = { title: string; urls: string[]; creators: string[]; kind: string; license: string; licenseUrls: string[]; notes: string[]; usedIn: string[] };
 const unknownLicense = 'Referenced only; reuse license not verified';
 const doiKey = (value: string) => value.trim().replace(/^https?:\/\/(?:dx\.)?doi\.org\//i, '').toLowerCase();
@@ -40,6 +42,11 @@ export function collectSourceAttributions(input: AttributionInputs): Attribution
     for (const source of page.reading) add(source, 'Further reading: ' + page.id);
   }
   for (const manifest of input.manifests) {
+    if(manifest.file==='data/world-guide-context-sources.json'){
+      const data=manifest.data as {assets:{sourceUrl:string;downloadUrl:string;title:string;copyright?:string;publisher?:string;license:string;licenseUrl:string;processing:string}[]};
+      for(const a of data.assets)add({url:a.sourceUrl,title:a.title,authors:a.copyright??a.publisher},manifest.file,{kind:a.license.startsWith('SIL')?'Bundled font':'Reused geographic data',license:a.license,licenseUrls:[a.licenseUrl],urls:[a.downloadUrl],notes:[a.processing]});
+      continue;
+    }
     const walk = (value: unknown, inheritedLicense = manifest.license ?? '') => {
       if (typeof value === 'string') { for (const url of urlsIn(value)) add({url}, manifest.file); return; }
       if (!value || typeof value !== 'object') return;
@@ -60,6 +67,11 @@ export function collectSourceAttributions(input: AttributionInputs): Attribution
     const label = image.role === 'site-plan' ? 'Historical map / chart' : 'Photograph';
     const kind = image.role === 'site-plan' ? 'Reused historical map / chart' : 'Reused photograph';
     add({url:image.sourcePage,title:image.title,authors:image.creator}, label + ': ' + image.file, {kind,license:image.license,licenseUrls:[image.licenseUrl],urls:[image.sourceUrl],notes:[image.licenseEvidence,image.changes,'The atlas’s noncommercial terms do not apply to this image. Used in: '+image.guideIds.join(', ')]});
+  }
+  for(const e of input.writing??[]){
+    const o=e.original,t=e.translation,where='Writing pair: '+e.id;
+    add({url:o.sourceUrl,title:e.objectId,authors:o.creator},where,{kind:o.kind==='image'?'Reused object photograph':'Original-language transcription',license:o.license,licenseUrls:[o.licenseUrl],notes:[o.note]});
+    add({url:t.sourceUrl,title:e.objectId,authors:t.translator},where,{kind:'Original / translated writing witness',license:[o.sourceUrl===t.sourceUrl?o.license:'',t.license??t.rightsNote].filter(Boolean).join(' · '),licenseUrls:t.licenseUrl?[t.licenseUrl]:[],notes:[t.rightsNote,'English '+t.kind+'; original and translation rights are displayed separately on the paired text.']});
   }
   // Individual gazetteer references keep the known provider terms too.
   for (const entry of entries.values()) {
@@ -115,7 +127,8 @@ export async function loadAttributionInputs(): Promise<AttributionInputs> {
   manifests.push({file:'src/physical-reference.ts',data:physicalSources.map(source => ({...source,referenceOnly:['nadi1','gergis2009','ocean','enso-mechanism'].includes(source.id)})),reused:true});
   for (const file of ['THIRD_PARTY.md','LICENSE.md','README.md','DEPLOYMENT.md']) manifests.push({file,data:await readFile(file,'utf8'),reused:false});
   const materials = [{url:'https://www.geonames.org/export/',title:'GeoNames gazetteer country extracts',authors:'GeoNames',license:'CC BY 4.0',licenseUrl:'https://creativecommons.org/licenses/by/4.0/',note:'Selected modern reference coordinates from public country dumps, rounded for public display; feature IDs and source URLs remain in the relevant records. Historical claims are independently sourced. GeoNames data retains CC BY 4.0; the atlas’s noncommercial restriction does not replace it.'}];
-  return {records:dataset.records,pages:pages.pages,enrichment,media,manifests,materials};
+  const world=await readWorldGuides();
+  return {records:dataset.records,pages:[...pages.pages,...world.map(g=>({id:g.id,sources:g.sources}))],enrichment,media,manifests,materials,writing:await readWritingExamples()};
 }
 
 function noticeHTML(markdown: string): string {

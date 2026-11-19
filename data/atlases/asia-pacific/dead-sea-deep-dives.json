@@ -1,0 +1,331 @@
+{
+  "schemaVersion": 1,
+  "guides": [
+    {
+      "id": "world-dead-sea-scrolls",
+      "atlasIds": [
+        "asia-pacific",
+        "europe"
+      ],
+      "category": "subjects",
+      "title": "The Dead Sea Scrolls: manuscripts, caves and the lives around them",
+      "description": "Read the scrolls as ancient physical objects, a diverse body of Jewish writings, and part of a wider desert archive of everyday documents.",
+      "intro": "The Dead Sea Scrolls are many manuscripts by many hands. Some preserve biblical books; others contain interpretation, prayers, calendars and community rules. The caves also belong to a larger landscape of refuge and documentary survival, including the papers people kept to protect property and family interests.",
+      "scope": "The ancient manuscripts and their landscapes come first. Discovery from 1947 onward, conservation and modern research are a separately dated continuation beyond the shared movie’s 1934 endpoint. Geographic labels do not adjudicate ownership or sovereignty.",
+      "map": {
+        "bounds": [
+          34.85,
+          30.9,
+          36.15,
+          32.15
+        ],
+        "scope": "The northwest Dead Sea, Judean Desert manuscript regions, Jerusalem and Amman. Qumran is in the West Bank. Cave-region markers are approximate public references, not entrances or access directions; museums are explicitly modern collection locations.",
+        "points": [
+          {
+            "id": "qumran",
+            "label": "Khirbet Qumran and nearby caves",
+            "coordinates": [
+              35.46,
+              31.74
+            ],
+            "date": "Manuscripts mainly 3rd century BCE–1st century CE; discoveries 1947–1956",
+            "description": "The principal cave group lies beside the northwest Dead Sea. The settlement and the individual manuscripts have different chronologies.",
+            "sources": [
+              "https://www.deadseascrolls.org.il/learn-about-the-scrolls/introduction?locale=en_US",
+              "https://www.loc.gov/exhibits/scrolls/libr.html",
+              "https://whc.unesco.org/en/tentativelists/5707"
+            ]
+          },
+          {
+            "id": "murabbaat",
+            "label": "Wadi Murabba’at manuscript region",
+            "coordinates": [
+              35.38,
+              31.59
+            ],
+            "date": "Including documents of the 2nd century CE",
+            "description": "A separate discovery region within the wider Judean Desert corpus. Its documents should not be assigned to a Qumran community merely because they survived in desert caves.",
+            "sources": [
+              "https://www.deadseascrolls.org.il/learn-about-the-scrolls/discovery-sites?locale=en_US"
+            ]
+          },
+          {
+            "id": "hever",
+            "label": "Nahal Hever: Cave of the Letters region",
+            "coordinates": [
+              35.34,
+              31.43
+            ],
+            "date": "Babatha documents before the Bar Kokhba revolt; found in 1961",
+            "description": "The archive contained 35 personal legal and financial documents. The location of preservation differs from the places where the transactions occurred.",
+            "sources": [
+              "https://www.deadseascrolls.org.il/learn-about-the-scrolls/discovery-sites?locale=en_US",
+              "https://oi-idb-static.uchicago.edu/multimedia/1024/saoc66.pdf"
+            ]
+          },
+          {
+            "id": "masada",
+            "label": "Masada manuscript region",
+            "coordinates": [
+              35.35,
+              31.32
+            ],
+            "date": "Late Second Temple period",
+            "description": "The fortress is another manuscript discovery setting. Finds from separate sites retain their own archaeological contexts.",
+            "sources": [
+              "https://www.deadseascrolls.org.il/learn-about-the-scrolls/discovery-sites?locale=en_US"
+            ]
+          },
+          {
+            "id": "jerusalem",
+            "label": "Jerusalem: Shrine of the Book",
+            "coordinates": [
+              35.2,
+              31.77
+            ],
+            "date": "Modern collection and conservation location",
+            "description": "The Israel Museum preserves several major scrolls and provides a high-resolution digital viewer. This pin marks present custody, not ancient authorship.",
+            "sources": [
+              "https://dss.collections.imj.org.il/"
+            ]
+          },
+          {
+            "id": "amman",
+            "label": "Amman: Jordan Museum",
+            "coordinates": [
+              35.93,
+              31.95
+            ],
+            "date": "Copper Scroll found in 1952; modern museum location",
+            "description": "The Copper Scroll was recovered from Qumran Cave 3. Its current museum location is distinct from its findspot.",
+            "sources": [
+              "https://www.jm-qr-objects.jo/en/objects/dead-sea-scrolls"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "A library of different texts, not one lost book",
+          "paragraphs": [
+            {
+              "text": "The Qumran manuscripts include biblical texts and other Jewish writings from the late Second Temple world. Their differences in spelling, wording and arrangement matter: textual history includes copying, selection and interpretation rather than a single unchanged master document. An ancient copy can be much younger than the composition it preserves.",
+              "sources": [
+                "https://www.deadseascrolls.org.il/learn-about-the-scrolls/introduction?locale=en_US",
+                "https://www.loc.gov/exhibits/scrolls/libr.html"
+              ]
+            },
+            {
+              "text": "The larger expression “Dead Sea Scrolls” is sometimes used for material from several desert discovery regions. This guide separates the Qumran cave manuscripts from later documentary archives. A marriage or property paper from Nahal Hever cannot automatically explain how a Qumran group organized itself.",
+              "sources": [
+                "https://www.deadseascrolls.org.il/learn-about-the-scrolls/discovery-sites?locale=en_US",
+                "https://oi-idb-static.uchicago.edu/multimedia/1024/saoc66.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Languages, scripts and the work of a scribe",
+          "paragraphs": [
+            {
+              "text": "Hebrew predominates in the Qumran corpus, alongside Aramaic and a smaller body of Greek. Script and language are different categories: paleo-Hebrew characters, square scripts and cryptic writing systems do not all represent different languages. Letter forms, corrections, margins and changes of hand help researchers examine how an object was copied and used.",
+              "sources": [
+                "https://www.deadseascrolls.org.il/learn-about-the-scrolls/languages-and-scripts?locale=en_US"
+              ]
+            },
+            {
+              "text": "The digital archives let readers inspect fragments at a scale unavailable in many display cases. A translation still depends on identifying letters, arranging fragments and distinguishing preserved wording from restoration. Editorial brackets and uncertain readings are part of the evidence, not typographical clutter to remove for a cleaner story.",
+              "sources": [
+                "https://www.deadseascrolls.org.il/explore-the-archive/search?locale=en_US",
+                "https://dss.collections.imj.org.il/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Qumran, community rules and disputed connections",
+          "paragraphs": [
+            {
+              "text": "The relationship between the settlement, the caves and the people who copied or collected the manuscripts remains a subject of archaeological and historical argument. The familiar Essene interpretation is influential, but it does not identify every writer or prove that all manuscripts were produced beside the caves. The guide therefore keeps physical findspots separate from proposed communities.",
+              "sources": [
+                "https://www.cambridge.org/core/books/abs/archaeology-of-the-holy-land/archaeology-of-qumran-and-the-dead-sea-scrolls/F823694476FAC3FC28C2FBAABE43106F"
+              ]
+            },
+            {
+              "text": "The Community Rule describes an ordered religious community, while other manuscripts preserve different concerns and literary traditions. Such rules can reveal aspirations, authority and discipline. They do not establish that every person living nearby followed them exactly, or that all Second Temple Jews belonged to one group.",
+              "sources": [
+                "https://dss.collections.imj.org.il/",
+                "https://www.loc.gov/exhibits/scrolls/libr.html"
+              ]
+            }
+          ],
+          "columns": [
+            "Manuscript or collection",
+            "What makes it different",
+            "What it does not establish"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Great Isaiah Scroll",
+                "A substantially preserved biblical manuscript; the digital viewer enables comparison across its columns.",
+                "The copying date is not the date Isaiah was first composed."
+              ],
+              "sources": [
+                "https://dss.collections.imj.org.il/"
+              ]
+            },
+            {
+              "cells": [
+                "Community Rule",
+                "A prescriptive text concerning a religious community and its conduct.",
+                "Rules alone cannot reconstruct every member’s daily behavior."
+              ],
+              "sources": [
+                "https://dss.collections.imj.org.il/"
+              ]
+            },
+            {
+              "cells": [
+                "Copper Scroll",
+                "A metal document listing locations associated with hidden valuables.",
+                "The text does not prove that every listed cache existed or has been identified."
+              ],
+              "sources": [
+                "https://www.jm-qr-objects.jo/en/objects/dead-sea-scrolls"
+              ]
+            },
+            {
+              "cells": [
+                "Babatha archive",
+                "Personal legal and financial papers preserved together at Nahal Hever.",
+                "This later archive is not a set of Qumran sectarian rules."
+              ],
+              "sources": [
+                "https://www.deadseascrolls.org.il/learn-about-the-scrolls/discovery-sites?locale=en_US",
+                "https://oi-idb-static.uchicago.edu/multimedia/1024/saoc66.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "The everyday papers people chose to keep",
+          "paragraphs": [
+            {
+              "text": "Babatha’s documents bring the story down to property, marriage, guardianship and legal action. They show a woman and her household operating through written records in a multilingual setting. Keeping papers could preserve a claim across family changes or political upheaval. Their survival in a refuge cave is also a reminder that an archive’s last resting place may be far from an ordinary home.",
+              "sources": [
+                "https://oi-idb-static.uchicago.edu/multimedia/1024/saoc66.pdf"
+              ]
+            },
+            {
+              "text": "The Cave of the Letters archive contained a wrapped group of 35 documents in a leather purse. This is a different kind of evidence from a monumental inscription: a selection of papers someone carried and retained. The wider writing collection links these documentary habits with receipts, contracts and household messages elsewhere.",
+              "sources": [
+                "https://www.deadseascrolls.org.il/learn-about-the-scrolls/discovery-sites?locale=en_US"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Dating parchment, handwriting and copies",
+          "paragraphs": [
+            {
+              "text": "Radiocarbon analysis dates organic writing material, while paleography compares handwriting. Neither automatically supplies a precise day of copying. A 2025 study combined new radiocarbon measurements with a model of handwriting features to reassess manuscript dates. Its results are estimates with uncertainty, dependent on samples, calibration and the training evidence.",
+              "sources": [
+                "https://doi.org/10.1371/journal.pone.0323185"
+              ]
+            },
+            {
+              "text": "Dates should therefore remain attached to particular manuscripts and methods. A proposed earlier date for one fragment does not move the entire collection backwards, identify its author or settle when a biblical work was composed. The manuscript, the text it preserves and the modern publication each have their own date.",
+              "sources": [
+                "https://doi.org/10.1371/journal.pone.0323185"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Discovery, custody and reading today",
+          "paragraphs": [
+            {
+              "text": "Bedouin discoveries in 1947 opened the modern story of the Qumran scrolls, followed by further searches and excavations. Palestinian, Jordanian, Israeli and international institutions now preserve different parts of that history. The UNESCO tentative-list submission records Qumran’s place in Palestinian heritage; it is a submission, not a World Heritage inscription.",
+              "sources": [
+                "https://whc.unesco.org/en/tentativelists/5707",
+                "https://www.cambridge.org/core/books/abs/archaeology-of-the-holy-land/archaeology-of-qumran-and-the-dead-sea-scrolls/F823694476FAC3FC28C2FBAABE43106F"
+              ]
+            },
+            {
+              "text": "The Copper Scroll is displayed in Amman, while the Israel Museum and Israel Antiquities Authority provide major digital collections. Present custody, archaeological origin and claims about ownership are different questions. The linked institutional viewers provide original images without treating a modern museum label as the complete history of an ancient object.",
+              "sources": [
+                "https://www.jm-qr-objects.jo/en/objects/dead-sea-scrolls",
+                "https://dss.collections.imj.org.il/",
+                "https://www.deadseascrolls.org.il/explore-the-archive/search?locale=en_US"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Israel Antiquities Authority: introduction to the Dead Sea Scrolls",
+          "url": "https://www.deadseascrolls.org.il/learn-about-the-scrolls/introduction?locale=en_US"
+        },
+        {
+          "title": "Israel Antiquities Authority: languages and scripts",
+          "url": "https://www.deadseascrolls.org.il/learn-about-the-scrolls/languages-and-scripts?locale=en_US"
+        },
+        {
+          "title": "Israel Antiquities Authority: discovery sites",
+          "url": "https://www.deadseascrolls.org.il/learn-about-the-scrolls/discovery-sites?locale=en_US"
+        },
+        {
+          "title": "Israel Museum: Digital Dead Sea Scrolls",
+          "url": "https://dss.collections.imj.org.il/"
+        },
+        {
+          "title": "Library of Congress: The Qumran Library",
+          "url": "https://www.loc.gov/exhibits/scrolls/libr.html"
+        },
+        {
+          "title": "Jordan Museum: Dead Sea Scrolls and Copper Scroll",
+          "url": "https://www.jm-qr-objects.jo/en/objects/dead-sea-scrolls"
+        },
+        {
+          "title": "Jodi Magness: The Archaeology of Qumran and the Dead Sea Scrolls",
+          "url": "https://www.cambridge.org/core/books/abs/archaeology-of-the-holy-land/archaeology-of-qumran-and-the-dead-sea-scrolls/F823694476FAC3FC28C2FBAABE43106F"
+        },
+        {
+          "title": "Popović et al. (2025): radiocarbon and AI-based writing-style analysis",
+          "url": "https://doi.org/10.1371/journal.pone.0323185"
+        },
+        {
+          "title": "State of Palestine submission to UNESCO: Qumran tentative-list dossier",
+          "url": "https://whc.unesco.org/en/tentativelists/5707"
+        },
+        {
+          "title": "Bagnall (2011): Everyday Writing in the Graeco-Roman East, including the Babatha archive",
+          "url": "https://oi-idb-static.uchicago.edu/multimedia/1024/saoc66.pdf"
+        },
+        {
+          "title": "Israel Antiquities Authority: digital fragment archive",
+          "url": "https://www.deadseascrolls.org.il/explore-the-archive/search?locale=en_US"
+        }
+      ],
+      "referenceMaps": [
+        {
+          "title": "IAA discovery-site overview",
+          "url": "https://www.deadseascrolls.org.il/learn-about-the-scrolls/discovery-sites?locale=en_US",
+          "description": "Regional context distinguishing Qumran, Murabba’at, Nahal Hever and other discovery areas; separate manuscript and excavation histories."
+        },
+        {
+          "title": "Qumran tentative-list site dossier",
+          "url": "https://whc.unesco.org/en/tentativelists/5707",
+          "description": "Landscape and archaeological context in the State of Palestine’s submission; not a final World Heritage inscription or an adjudication of disputed claims."
+        },
+        {
+          "title": "Israel Museum: full-resolution scroll viewer",
+          "url": "https://dss.collections.imj.org.il/",
+          "description": "Original manuscript imagery for close reading, including the Great Isaiah Scroll and Community Rule; consult the institution’s reproduction terms."
+        }
+      ]
+    }
+  ]
+}

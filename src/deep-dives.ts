@@ -2,6 +2,7 @@ import {topics} from './topic-dives';
 import {stories} from './stories';
 import {siteGuides} from './site-guides';
 import {esc} from './dom';
+import {worldGuides} from './world-guides';
 
 export const diveCategories=[
  {id:'subjects',title:'Subjects',mark:'↔',description:'Follow a crop, a craft, a trade network or a chapter of shared history.'},
@@ -23,6 +24,7 @@ const expansionPlaces=new Set(['chaco','hovenweep','mesa-verde','canyons-of-the-
 const combinedStories=new Set(siteGuides.map(g=>g.storyId).filter(Boolean));
 const planned=(id:string,title:string,description:string,category:DiveCategory):DeepDive=>({id,title,description,category,links:[]});
 const availableDives:DeepDive[]=[
+ ...worldGuides.map(g=>({id:g.id,title:g.title,description:g.description,category:g.category,links:[{href:g.href,label:'Read guide' as const}]})),
  ...topics.map(t=>({id:'topic-'+t.id,title:t.title,description:t.description,category:topicCategory[t.id]??'subjects',links:[{href:'#topic/'+t.id,label:'Independent movie' as const},...siteGuides.filter(g=>g.topicId===t.id).map(g=>({href:g.href,label:'Read guide' as const}))]})),
  ...siteGuides.filter(g=>!g.topicId).map(g=>({id:'place-'+g.id,title:g.title,description:g.description,category:(g.kind==='culture'?'cultures':g.kind==='route'?'subjects':'places') as DiveCategory,
   links:[{href:g.href,label:'Read guide' as const},...stories.filter(s=>s.id===g.storyId).map(s=>({href:'#story/'+s.id,label:'Contextual movie' as const}))],

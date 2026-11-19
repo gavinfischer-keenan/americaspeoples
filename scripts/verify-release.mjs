@@ -42,6 +42,7 @@ const phases = [
     ["--import", "tsx", "scripts/build.ts"],
   ],
   ["Four-atlas navigation and empty previews", node, ["scripts/browser-atlases.mjs"]],
+  ["World deep dives, original texts and connected voyages", node, ["tests/world-guides.browser.mjs"]],
   ["Wreck density, fresh losses and accumulated background", node, ["tests/wreck-density.browser.mjs"]],
   ["Maritime guide maps and seasonal tables", node, ["tests/maritime-guides.browser.mjs"]],
   ["Packaged history documentation", node, ["--import", "tsx", "--test", "tests/history-release.artifact.ts"]],

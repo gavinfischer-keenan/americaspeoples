@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 1,
+  "guides": [
+    {
+      "id": "world-voyages-europe",
+      "atlasIds": [
+        "europe"
+      ],
+      "category": "subjects",
+      "title": "Europe: departures, returns and American connections",
+      "description": "Ports, passages and return journeys linked to the same dated voyages already shown in the Americas and Pacific atlas.",
+      "intro": "Follow the voyages beyond the edge of one regional map. A departure port, an island stop and a return anchorage are parts of the same journey, with the same evidence and the same limits on what can be reconstructed.",
+      "scope": "This directory connects the existing voyage catalogue across regional guides. It does not add speculative stages or change the shared movie. Representative mapped anchors introduce the area; the complete dated regional list follows below.",
+      "map": {
+        "bounds": [
+          -33,
+          35,
+          33,
+          72
+        ],
+        "scope": "Selected documented geographic anchors across the whole regional connection area. Dates label particular visits, not the foundation of the ports. Offshore sightings retain their offshore status.",
+        "points": [
+          {
+            "id": "port-1",
+            "label": "Plymouth, departure",
+            "coordinates": [
+              -4.17,
+              50.35
+            ],
+            "date": "1831-12-27",
+            "description": "One documented anchor in HMS Beagle: selected ship itinerary, 1831–1836. Volume II, p. 42. Departure endpoint; no earlier stay is implied. The complete connection list below retains other visits and their separate dates.",
+            "sources": [
+              "https://darwin-online.org.uk/content/contentblock?itemID=F10.2&basepage=1&viewtype=text",
+              "https://darwin-online.org.uk/content/contentblock?itemID=A575&basepage=1&viewtype=text"
+            ]
+          },
+          {
+            "id": "port-2",
+            "label": "Palos, departure",
+            "coordinates": [
+              -6.88,
+              37.23
+            ],
+            "date": "1492-08-03",
+            "description": "One documented anchor in Columbus: selected first-voyage anchors, 1492–1493. Journal, 3 August 1492. The complete connection list below retains other visits and their separate dates.",
+            "sources": [
+              "https://ems.kcl.ac.uk/content/etext/e020.html"
+            ]
+          },
+          {
+            "id": "port-3",
+            "label": "Sanlúcar de Barrameda, departure",
+            "coordinates": [
+              -6.35,
+              36.79
+            ],
+            "date": "1519-09-20",
+            "description": "One documented anchor in Magellan–Elcano expedition: selected anchors, 1519–1522. Chronological summary; departure from Sanlúcar. The complete connection list below retains other visits and their separate dates.",
+            "sources": [
+              "https://philhistoricsites.nhcp.gov.ph/registry_database/mactan-ruta-ng-ekspedisyon-magallanes-elcano-sa-pilipinas/",
+              "https://www.gutenberg.org/ebooks/74723",
+              "https://www.cultura.gob.es/dam/jcr%3Adfe6784f-db0b-4a48-bad4-6effb345a5ec/af-folleto-somosafro-web-def.pdf"
+            ]
+          },
+          {
+            "id": "port-4",
+            "label": "Lisbon",
+            "coordinates": [
+              -9.14,
+              38.7
+            ],
+            "date": "1493-03-04 – 1493-03-13",
+            "description": "One documented anchor in Columbus: selected first-voyage anchors, 1492–1493. Journal, 4–13 March 1493. Regional Tagus anchorage; weather and movement within the estuary are not resolved. The complete connection list below retains other visits and their separate dates.",
+            "sources": [
+              "https://ems.kcl.ac.uk/content/etext/e020.html"
+            ]
+          },
+          {
+            "id": "port-5",
+            "label": "Saint-Malo, France",
+            "coordinates": [
+              -2.03,
+              48.65
+            ],
+            "date": "1534-04-20",
+            "description": "One documented anchor in Jacques Cartier · first voyage. Departure for the Gulf of St. Lawrence. The complete connection list below retains other visits and their separate dates.",
+            "sources": [
+              "https://www.historymuseum.ca/virtual-museum-of-new-france/the-explorers/jacques-cartier-1534-1542/"
+            ]
+          },
+          {
+            "id": "port-6",
+            "label": "Brest, France",
+            "coordinates": [
+              -4.49,
+              48.38
+            ],
+            "date": "1785-08-01",
+            "description": "One documented anchor in La Pérouse’s Boussole and Astrolabe · selected Pacific anchors. Departure of the two frigates. The complete connection list below retains other visits and their separate dates.",
+            "sources": [
+              "https://files02.sl.nsw.gov.au/fotoweb/pdf/3957/39570660.pdf"
+            ]
+          },
+          {
+            "id": "port-7",
+            "label": "Hoorn · Eendracht departure",
+            "coordinates": [
+              5.06,
+              52.64
+            ],
+            "date": "1615-05-25",
+            "description": "One documented anchor in Schouten and Le Maire · Eendracht around Cape Horn to Jacatra. This is Eendracht’s departure. Hoorn’s later departure is not merged into the same vessel event. The complete connection list below retains other visits and their separate dates.",
+            "sources": [
+              "https://archive.org/details/cu31924065997144"
+            ]
+          },
+          {
+            "id": "port-8",
+            "label": "London, England",
+            "coordinates": [
+              0.0,
+              51.5
+            ],
+            "date": "1901-07-31",
+            "description": "One documented anchor in Scott’s Discovery · ship and Ross Island base. Discovery sailed from London, before outfitting and a royal visit at Cowes. The complete connection list below retains other visits and their separate dates.",
+            "sources": [
+              "https://nzaht.org/conserve/explorer-bases/scotts-hut-hut-point/history-of-expedition/"
+            ]
+          },
+          {
+            "id": "port-9",
+            "label": "Kristiania (Oslo), Norway",
+            "coordinates": [
+              10.74,
+              59.91
+            ],
+            "date": "1903-06-16",
+            "description": "One documented anchor in Amundsen’s Gjøa · Northwest Passage. The Fram Museum’s route table lists departure on 16 June. The complete connection list below retains other visits and their separate dates.",
+            "sources": [
+              "https://frammuseum.no/en/polar-history/expeditions/the-gjoa-expedition-1903-1906/"
+            ]
+          },
+          {
+            "id": "port-10",
+            "label": "Shetland Islands, offshore",
+            "coordinates": [
+              -1.6,
+              60.24
+            ],
+            "date": "1576-06-26",
+            "description": "One documented anchor in Martin Frobisher · First Arctic voyage. The three-vessel fleet reached the Shetlands after delays. The point approximates waters off the islands. The complete connection list below retains other visits and their separate dates.",
+            "sources": [
+              "https://www.biographi.ca/en/bio/frobisher_martin_1E.html"
+            ]
+          },
+          {
+            "id": "port-11",
+            "label": "Flores abeam",
+            "coordinates": [
+              -31.13,
+              39.45
+            ],
+            "date": "1895-07-19",
+            "description": "One documented anchor in Joshua Slocum · Spray circumnavigation. A sighting, not a port call. The complete connection list below retains other visits and their separate dates.",
+            "sources": [
+              "https://www.gutenberg.org/files/6317/6317-h/6317-h.htm"
+            ]
+          },
+          {
+            "id": "port-12",
+            "label": "Horta departure",
+            "coordinates": [
+              -28.63,
+              38.53
+            ],
+            "date": "1895-07-24",
+            "description": "One documented anchor in Joshua Slocum · Spray circumnavigation. Departure-only anchor; no inferred arrival date is required. The complete connection list below retains other visits and their separate dates.",
+            "sources": [
+              "https://www.gutenberg.org/files/6317/6317-h/6317-h.htm"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "One journey across several regions",
+          "paragraphs": [
+            {
+              "text": "The dated lists retain each itinerary’s original descriptions. A documented landfall, a roadstead stay and a passage offshore are different kinds of evidence. Where the source leaves a gap, a linking animation is an illustration rather than a recovered daily ship track.",
+              "sources": [
+                "https://darwin-online.org.uk/content/contentblock?itemID=F10.2&basepage=1&viewtype=text",
+                "https://darwin-online.org.uk/content/contentblock?itemID=A575&basepage=1&viewtype=text",
+                "https://ems.kcl.ac.uk/content/etext/e020.html"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Read departures and returns together",
+          "paragraphs": [
+            {
+              "text": "The same port can occur more than once in a journey, and several expeditions can share a harbor. Keeping those visits separate makes it possible to follow preparation, outbound movement and return without turning a port into one timeless event.",
+              "sources": [
+                "https://darwin-online.org.uk/content/contentblock?itemID=F10.2&basepage=1&viewtype=text",
+                "https://darwin-online.org.uk/content/contentblock?itemID=A575&basepage=1&viewtype=text",
+                "https://ems.kcl.ac.uk/content/etext/e020.html"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Narrative of the surveying voyages of His Majesty’s Ships Adventure and Beagle, volume II: Proceedings of the second expedition, 1831–36",
+          "url": "https://darwin-online.org.uk/content/contentblock?itemID=F10.2&basepage=1&viewtype=text"
+        },
+        {
+          "title": "Darwin’s itinerary on the voyage of the Beagle",
+          "url": "https://darwin-online.org.uk/content/contentblock?itemID=A575&basepage=1&viewtype=text"
+        },
+        {
+          "title": "Journal of the first voyage of Columbus",
+          "url": "https://ems.kcl.ac.uk/content/etext/e020.html"
+        },
+        {
+          "title": "Mactan: Ruta ng Ekspedisyon Magallanes–Elcano sa Pilipinas",
+          "url": "https://philhistoricsites.nhcp.gov.ph/registry_database/mactan-ruta-ng-ekspedisyon-magallanes-elcano-sa-pilipinas/"
+        },
+        {
+          "title": "The first voyage round the world, by Magellan",
+          "url": "https://www.gutenberg.org/ebooks/74723"
+        },
+        {
+          "title": "Somos Afro: the Magellan–Elcano expedition and its African participants",
+          "url": "https://www.cultura.gob.es/dam/jcr%3Adfe6784f-db0b-4a48-bad4-6effb345a5ec/af-folleto-somosafro-web-def.pdf"
+        },
+        {
+          "title": "Jacques Cartier 1534–1542",
+          "url": "https://www.historymuseum.ca/virtual-museum-of-new-france/the-explorers/jacques-cartier-1534-1542/"
+        },
+        {
+          "title": "A memoir on the voyage of d’Entrecasteaux, in search of La Pérouse",
+          "url": "https://files02.sl.nsw.gov.au/fotoweb/pdf/3957/39570660.pdf"
+        },
+        {
+          "title": "The Relation of a Wonderfull Voiage made by William Cornelison Schouten of Horne, in Hakluytus Posthumus or Purchas His Pilgrimes, volume II",
+          "url": "https://archive.org/details/cu31924065997144"
+        },
+        {
+          "title": "History of Scott's Expedition: National Antarctic Expedition 1901–04",
+          "url": "https://nzaht.org/conserve/explorer-bases/scotts-hut-hut-point/history-of-expedition/"
+        },
+        {
+          "title": "The Gjøa Expedition 1903–1906",
+          "url": "https://frammuseum.no/en/polar-history/expeditions/the-gjoa-expedition-1903-1906/"
+        },
+        {
+          "title": "Frobisher, Sir Martin",
+          "url": "https://www.biographi.ca/en/bio/frobisher_martin_1E.html"
+        },
+        {
+          "title": "Sailing Alone Around the World",
+          "url": "https://www.gutenberg.org/files/6317/6317-h/6317-h.htm"
+        }
+      ],
+      "voyageIds": [
+        "beagle-1831-1836",
+        "magellan-elcano-1519-1522",
+        "columbus-first-1492-1493",
+        "cook-endeavour-1768-1770",
+        "drake-1577-1579",
+        "endurance-ship-1914-1915",
+        "scott-discovery-1901-1904",
+        "nimrod-ship-1907-1908",
+        "scott-terra-nova-1910-1911",
+        "amundsen-fram-south-1910-1911",
+        "amundsen-fram-return-1912-1914",
+        "franklin-erebus-terror-1845-1848",
+        "amundsen-gjoa-1903-1906",
+        "nansen-fram-arctic-1893-1896",
+        "nansen-johansen-1895-1896",
+        "belgica-1897-1898",
+        "nordenskjold-antarctic-1901-1903",
+        "columbus-second-1493-1496",
+        "columbus-third-1498-1500",
+        "columbus-fourth-1502-1504",
+        "cartier-first-1534",
+        "cartier-second-1535-1536",
+        "laperouse-1785-1788",
+        "malaspina-bustamante-1789-1794",
+        "cartier-third-1541",
+        "norge-transpolar-flight-1926",
+        "amundsen-ellsworth-n24-n25-1925",
+        "shackleton-quest-1921-1922",
+        "bruce-scotia-1902-1904",
+        "frobisher-first-1576",
+        "davis-first-1585",
+        "bylot-baffin-discovery-1616",
+        "solis-plata-anchors-1515-1516",
+        "narvaez-florida-invasion-1527-1528",
+        "cabeza-de-vaca-return-1537",
+        "pinzon-hispaniola-palos-1500",
+        "roberval-france-roi-1542",
+        "gaspar-corte-real-1501-lisbon",
+        "frobisher-second-1577",
+        "frobisher-third-1578",
+        "davis-moonshine-1586",
+        "davis-ellen-1587",
+        "bylot-baffin-discovery-1615",
+        "sverdrup-fram-1898-1902",
+        "maud-northeast-passage-1918-1920",
+        "wild-quest-1922",
+        "biscoe-tula-lively-1830-1832",
+        "dumont-durville-astrolabe-zelee-1837-1838",
+        "chun-valdivia-1898",
+        "drygalski-gauss-1902-1903",
+        "charcot-francais-1903-1905",
+        "charcot-pourquoi-pas-1908-1910",
+        "gore-king-homeward-1779-1780",
+        "champlain-wendat-return-1615-1616",
+        "bougainville-boudeuse-circumnavigation-1766-1769",
+        "schouten-le-maire-eendracht-1615-1616",
+        "schouten-amsterdam-return-1616-1617",
+        "slocum-spray-circumnavigation-1895-1898"
+      ]
+    }
+  ]
+}

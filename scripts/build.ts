@@ -18,6 +18,8 @@ import { validateDataset } from "../src/validation";
 import { marked } from "marked";
 import { createAppendix, renderAppendix } from "./appendix";
 import { buildSiteGuides } from "./site-guide-build";
+import {syncWorldGuideIndex} from './world-guide-data';
+await syncWorldGuideIndex();
 const { version } = JSON.parse(await readFile("package.json", "utf8"));
 const research = JSON.parse(
   await readFile("data/research-proposals.json", "utf8"),
@@ -100,6 +102,9 @@ for(const [from,to] of [
  ["data/land-detailed.geojson","land-detailed.geojson"],
  ["data/rail-network.json","rail-network.json"],
  ["data/voyages.json","voyages.json"],
+ ["data/atlas-voyage-links.json","atlas-voyage-links.json"],
+ ["data/world-guide-context-sources.json","world-guide-context-sources.json"],
+ ["docs/world-deep-dives.md","docs/world-deep-dives.md"],
  ["data/expedition-activity.json","expedition-activity.json"],
  ["data/voyage-coverage-inventory.json","voyage-coverage-inventory.json"],
  ["data/coverage-15-baseline.json","coverage-15-baseline.json"],

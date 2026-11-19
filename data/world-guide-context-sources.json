@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-11-19",
+  "assets": [
+    {
+      "id": "natural-earth-rivers-and-lake-centerlines",
+      "title": "Natural Earth 1:10,000,000 rivers and lake centerlines",
+      "file": "data/world-guide-rivers.geojson",
+      "sha256": "c245bbf7f31817be4c0511bc68e4630f7acde0708fd673724c7c20745c2a4933",
+      "bytes": 5914499,
+      "sourceUrl": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_rivers_lake_centerlines.geojson",
+      "downloadUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_rivers_lake_centerlines.geojson",
+      "sourceSha256": "bb854a900ecbd3b408df46d5e16e3e0f974ba55993f9d8b5c26e855273c0905a",
+      "sourceBytes": 7307743,
+      "publisher": "Natural Earth",
+      "datasetUrl": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-rivers-lake-centerlines/",
+      "license": "Public domain",
+      "licenseUrl": "https://www.naturalearthdata.com/about/terms-of-use/",
+      "features": 1455,
+      "processing": "Preserves all 1,455 MultiLineString geometries and retains the source name_en value as name. Removes other feature properties and the redundant collection-level bounding box and CRS metadata.",
+      "scope": "Generalized modern drainage and lake centerlines for guide maps."
+    },
+    {
+      "id": "noto-sans-cuneiform",
+      "title": "Noto Sans Cuneiform Regular",
+      "file": "data/writing-media/NotoSansCuneiform-Regular.ttf",
+      "sha256": "b4e0a892514fcb1beb081c8b652fb36689f77105491d1796c2c3f5a59b4524d2",
+      "bytes": 1425840,
+      "sourceUrl": "https://github.com/google/fonts/blob/main/ofl/notosanscuneiform/NotoSansCuneiform-Regular.ttf",
+      "downloadUrl": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanscuneiform/NotoSansCuneiform-Regular.ttf",
+      "projectUrl": "https://github.com/notofonts/cuneiform",
+      "copyright": "Copyright 2022 The Noto Project Authors",
+      "license": "SIL Open Font License 1.1",
+      "licenseUrl": "https://github.com/google/fonts/blob/main/ofl/notosanscuneiform/OFL.txt",
+      "licenseFile": "data/writing-media/NotoSansCuneiform-OFL.txt",
+      "licenseSha256": "83e16aed35737ea80911a82938ad4bfe762fde24928010c2c80d21ece07bec14",
+      "licenseBytes": 4385,
+      "processing": "The bundled font and license text match the upstream files byte for byte."
+    },
+    {
+      "id": "noto-sans-coptic",
+      "title": "Noto Sans Coptic Regular",
+      "file": "data/writing-media/NotoSansCoptic-Regular.ttf",
+      "sha256": "51990af1bb0df7be8bfe98fda97769cecfa36eee15381e5504df400276abd735",
+      "bytes": 92512,
+      "sourceUrl": "https://github.com/google/fonts/blob/main/ofl/notosanscoptic/NotoSansCoptic-Regular.ttf",
+      "downloadUrl": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanscoptic/NotoSansCoptic-Regular.ttf",
+      "projectUrl": "https://github.com/notofonts/coptic",
+      "copyright": "Copyright 2022 The Noto Project Authors",
+      "license": "SIL Open Font License 1.1",
+      "licenseUrl": "https://github.com/google/fonts/blob/main/ofl/notosanscoptic/OFL.txt",
+      "licenseFile": "data/writing-media/NotoSansCoptic-OFL.txt",
+      "licenseSha256": "322570ceef6e9935b2422470682e42481903eb444fc416455c32c2c3c888c78c",
+      "licenseBytes": 4382,
+      "processing": "The bundled font and license text match the upstream files byte for byte."
+    }
+  ],
+  "guideTerrain": {
+    "manifest": "data/guide-terrain/sources.json",
+    "scope": "Source elevation tiles, map bounds, processing, image sizes, and SHA-256 for each guide terrain asset."
+  },
+  "writingCorpus": {
+    "directory": "data/writing-examples",
+    "files": [
+      "americas.json",
+      "east-asian-latin.json",
+      "egypt.json",
+      "greek.json",
+      "mesopotamia.json"
+    ],
+    "assetDirectory": "data/writing-media",
+    "scope": "Each entry records its original witness and published English reading. Original records carry source, creator and reuse terms, plus filename, dimensions and SHA-256 for a bundled image. Translation records credit the edition and translator and state the scope and rights for the selected reading."
+  }
+}

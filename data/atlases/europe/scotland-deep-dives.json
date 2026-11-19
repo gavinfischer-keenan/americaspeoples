@@ -1,0 +1,2109 @@
+{
+  "schemaVersion": 1,
+  "guides": [
+    {
+      "id": "world-scotland-stones",
+      "atlasIds": [
+        "europe"
+      ],
+      "category": "subjects",
+      "title": "Scotland’s standing stones, settlements and tombs",
+      "description": "A map of regional monument traditions, with guides to Orkney, Shetland, Calanais and Kilmartin Glen.",
+      "intro": "At Stenness, tall uprights stand inside a ditch. At Loanhead of Daviot, two upright stones frame a slab laid on its side. At Clava, rings of standing stones surround burial cairns. Each design belongs to a particular landscape and history. The map brings together examples from the Scottish mainland and islands, including places where houses, fields and burials help explain how people lived alongside the monuments.",
+      "scope": "A comparative guide to selected prehistoric sites, principally fourth- to second-millennium BCE settlements, tombs and standing stones. Individual guides explore the local sequences and selected later occupations.",
+      "map": {
+        "bounds": [
+          -8.85,
+          54.6,
+          -0.55,
+          60.93
+        ],
+        "scope": "Approximate locations of selected monuments from Dumfries and Galloway to Unst. Use the individual landscape guides for neighboring sites and closer maps.",
+        "points": [
+          {
+            "id": "cairn-holy",
+            "label": "Cairn Holy, Galloway",
+            "coordinates": [
+              -4.386,
+              54.88
+            ],
+            "date": "4th millennium BCE",
+            "description": "Two chambered burial cairns overlook Wigtown Bay. The tall slabs at Cairn Holy I belong to the entrance façade.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/cairn-holy-chambered-cairns/history-and-stories/"
+            ]
+          },
+          {
+            "id": "twelve-apostles",
+            "label": "Twelve Apostles, Dumfries",
+            "coordinates": [
+              -3.6517,
+              55.0978
+            ],
+            "date": "Prehistoric",
+            "description": "A large stone ring near the River Nith, well south of the better-known northern circles.",
+            "sources": [
+              "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM641"
+            ]
+          },
+          {
+            "id": "machrie-moor",
+            "label": "Machrie Moor, Arran",
+            "coordinates": [
+              -5.315,
+              55.539
+            ],
+            "date": "Neolithic–Bronze Age",
+            "description": "Timber settings, stone rings, cairns and traces of farming lie across the moor.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/machrie-moor-standing-stones/history-and-stories/",
+              "https://blog.historicenvironment.scot/2026/07/ask-an-archaeologist-a-new-circle-at-machrie-moor/"
+            ]
+          },
+          {
+            "id": "temple-wood",
+            "label": "Temple Wood, Kilmartin Glen",
+            "coordinates": [
+              -5.4985,
+              56.1237
+            ],
+            "date": "Neolithic–Bronze Age",
+            "description": "Earlier timber and stone settings were followed by burials. The nearby linear cemetery preserves other funerary phases.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/kilmartin-glen-temple-wood-stone-circle/history-and-stories/",
+              "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/9CDEB4C09EA1156F220BAD7CE4316E31/S0079497X24000100a.pdf/sailing-to-calanais-monument-complexes-and-the-sea-in-the-neolithic-of-western-scotland-and-beyond.pdf"
+            ]
+          },
+          {
+            "id": "clava",
+            "label": "Balnuaran of Clava",
+            "coordinates": [
+              -4.075,
+              57.474
+            ],
+            "date": "Early Bronze Age, later reuse",
+            "description": "Three main cairns are surrounded by uprights. Two have passages, while the central ring cairn has an open interior.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/clava-cairns/history-and-stories/"
+            ]
+          },
+          {
+            "id": "tomnaverie",
+            "label": "Tomnaverie, Aberdeenshire",
+            "coordinates": [
+              -2.845,
+              57.124
+            ],
+            "date": "Late 3rd millennium BCE",
+            "description": "The recumbent ring encloses a cairn on a hill near Tarland.",
+            "sources": [
+              "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM90303",
+              "https://www.aberdeenshire.gov.uk/leisure-sport-and-culture/archaeology/special-archaeology-in-the-area/recumbent-stone-circles/"
+            ]
+          },
+          {
+            "id": "loanhead",
+            "label": "Loanhead of Daviot",
+            "coordinates": [
+              -2.421,
+              57.3494
+            ],
+            "date": "Late Neolithic–Bronze Age",
+            "description": "Cremation deposits and an adjacent cemetery preserve evidence of burial over multiple phases.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/loanhead-stone-circle/history-and-stories/",
+              "https://www.aberdeenshire.gov.uk/leisure-sport-and-culture/archaeology/special-archaeology-in-the-area/recumbent-stone-circles/"
+            ]
+          },
+          {
+            "id": "calanais",
+            "label": "Calanais I, Lewis",
+            "coordinates": [
+              -6.7451,
+              58.1973
+            ],
+            "date": "Around 2900–2600 BCE for initial erection",
+            "description": "The circle, avenue and rows form the largest and most elaborate site in the Loch Roag group.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/calanais-standing-stones/history-and-stories/",
+              "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/9CDEB4C09EA1156F220BAD7CE4316E31/S0079497X24000100a.pdf/sailing-to-calanais-monument-complexes-and-the-sea-in-the-neolithic-of-western-scotland-and-beyond.pdf"
+            ]
+          },
+          {
+            "id": "stenness",
+            "label": "Stones of Stenness, Orkney",
+            "coordinates": [
+              -3.2077,
+              58.9931
+            ],
+            "date": "Around 3000 BCE",
+            "description": "Tall standing stones and an enclosing ditch sit beside the lochs and near settlement remains.",
+            "sources": [
+              "https://www.historicenvironment.scot/protect-and-care/protected-historic-places/world-heritage-sites/heart-of-neolithic-orkney/",
+              "https://www.cambridge.org/core/journals/antiquity/article/islands-of-history-the-late-neolithic-timescape-of-orkney/0E5FE57F1C35F712E4E1590151F88781"
+            ]
+          },
+          {
+            "id": "brodgar",
+            "label": "Ring of Brodgar, Orkney",
+            "coordinates": [
+              -3.2306,
+              59
+            ],
+            "date": "Probably mid to later 3rd millennium BCE",
+            "description": "The stone ring and ditch stand on a narrow strip of land with nearby burial mounds.",
+            "sources": [
+              "https://www.historicenvironment.scot/protect-and-care/protected-historic-places/world-heritage-sites/heart-of-neolithic-orkney/",
+              "https://www.cambridge.org/core/journals/antiquity/article/islands-of-history-the-late-neolithic-timescape-of-orkney/0E5FE57F1C35F712E4E1590151F88781"
+            ]
+          },
+          {
+            "id": "bordastubble",
+            "label": "Bordastubble, Unst",
+            "coordinates": [
+              -0.9451,
+              60.7067
+            ],
+            "date": "Prehistoric, exact phase uncertain",
+            "description": "A tall monolith and a smaller upright associated with a cairn show another kind of stone setting in Shetland.",
+            "sources": [
+              "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM2039"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "Several traditions developed over time",
+          "paragraphs": [
+            {
+              "text": "A henge is an enclosure defined by a bank and a ditch. It can contain a stone circle, as at Stenness, while other stone circles stand without a henge. A cairn is a mound of stones. Some cairns cover chambers that were entered through passages. Others cover small stone boxes, called cists, or deposits of cremated remains. At sites like Clava and Temple Wood these categories overlap because builders combined different forms or changed the monument over time.",
+              "sources": [
+                "https://scarf.scot/national/scarf-neolithic-panel-report/6-identity-society-belief-systems/6-3-2-neolithic-cosmology/6-2-3-the-chronological-framework-and-overview-of-monuments/",
+                "https://www.historicenvironment.scot/protect-and-care/protected-historic-places/world-heritage-sites/heart-of-neolithic-orkney/",
+                "https://www.historicenvironment.scot/visit/all/clava-cairns/history-and-stories/",
+                "https://www.historicenvironment.scot/visit/all/kilmartin-glen-temple-wood-stone-circle/history-and-stories/"
+              ]
+            }
+          ],
+          "columns": [
+            "Date",
+            "Change or site",
+            "Basis for dating"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "4th millennium BCE",
+                "Early farming communities build chambered cairns and timber settings.",
+                "Cairn Holy’s chambers and the earliest Temple Wood features provide examples."
+              ],
+              "sources": [
+                "https://www.historicenvironment.scot/visit/all/cairn-holy-chambered-cairns/history-and-stories/",
+                "https://www.historicenvironment.scot/visit/all/kilmartin-glen-temple-wood-stone-circle/history-and-stories/"
+              ]
+            },
+            {
+              "cells": [
+                "Around 3000–2600 BCE",
+                "Large settings emerge at Stenness and Calanais.",
+                "Excavated deposits and regional radiocarbon models help place construction."
+              ],
+              "sources": [
+                "https://www.historicenvironment.scot/visit/all/calanais-standing-stones/history-and-stories/",
+                "https://www.cambridge.org/core/journals/antiquity/article/islands-of-history-the-late-neolithic-timescape-of-orkney/0E5FE57F1C35F712E4E1590151F88781"
+              ]
+            },
+            {
+              "cells": [
+                "Late 3rd–early 2nd millennia BCE",
+                "Recumbent circles and cairns take shape in northeast Scotland.",
+                "Excavations at sites such as Loanhead and Tomnaverie distinguish cairns, stone rings and episodes of cremation."
+              ],
+              "sources": [
+                "https://www.historicenvironment.scot/visit/all/loanhead-stone-circle/history-and-stories/",
+                "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM90303",
+                "https://www.aberdeenshire.gov.uk/leisure-sport-and-culture/archaeology/special-archaeology-in-the-area/recumbent-stone-circles/"
+              ]
+            },
+            {
+              "cells": [
+                "Around 2000 BCE",
+                "Stone settings at Machrie Moor follow earlier timber monuments.",
+                "Excavated postholes, stone sockets and associated deposits establish their order."
+              ],
+              "sources": [
+                "https://www.historicenvironment.scot/visit/all/machrie-moor-standing-stones/history-and-stories/"
+              ]
+            },
+            {
+              "cells": [
+                "2026 CE",
+                "Magnetic survey identifies a likely additional ring at Machrie Moor.",
+                "Subsurface anomalies show a circular pattern. The possible ring remains unexcavated."
+              ],
+              "sources": [
+                "https://blog.historicenvironment.scot/2026/07/ask-an-archaeologist-a-new-circle-at-machrie-moor/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Regional forms make different parts of a circle prominent",
+          "paragraphs": [
+            {
+              "text": "The recumbent circles of northeast Scotland emphasize a horizontal block set between tall flankers, usually in the southern or southwestern arc. Their standing stones often decrease in height away from that side. At Clava, the stones surround cairns and reflect a different approach to the setting of the dead, although the grading of stones invites comparison. Farther west, Calanais uses a long northern approach and shorter rows extending out from the circle. At Machrie Moor the builders used different stones and arrangements even within one group of monuments.",
+              "sources": [
+                "https://www.aberdeenshire.gov.uk/leisure-sport-and-culture/archaeology/special-archaeology-in-the-area/recumbent-stone-circles/",
+                "https://www.historicenvironment.scot/visit/all/clava-cairns/history-and-stories/",
+                "https://www.historicenvironment.scot/visit/all/calanais-standing-stones/history-and-stories/",
+                "https://www.historicenvironment.scot/visit/all/machrie-moor-standing-stones/history-and-stories/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Burial, farming and movement belong on the same map",
+          "paragraphs": [
+            {
+              "text": "Excavating a stone setting can expose traces of what people did before or after it was built. The chambers of Cairn Holy preserve an early funerary tradition, while at Loanhead cremations occur both within the wider circle complex and in a separate enclosure. At Machrie Moor, houses and field systems place farming close to the monuments. Those spatial associations matter even when several centuries separated the activities.",
+              "sources": [
+                "https://www.historicenvironment.scot/visit/all/cairn-holy-chambered-cairns/history-and-stories/",
+                "https://www.historicenvironment.scot/visit/all/loanhead-stone-circle/history-and-stories/",
+                "https://www.historicenvironment.scot/visit/all/machrie-moor-standing-stones/history-and-stories/"
+              ]
+            },
+            {
+              "text": "The sea gave some communities access to other shores as well as a boundary. Work on past sea levels around Lewis and Argyll shows that today’s coastlines are a poor substitute for a reconstruction of Neolithic approaches. Comparing a place like Calanais with Kilmartin, where some motifs resemble examples from Ireland, can suggest connections worth investigating. The resemblance alone leaves the routes, dates and people involved open.",
+              "sources": [
+                "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/9CDEB4C09EA1156F220BAD7CE4316E31/S0079497X24000100a.pdf/sailing-to-calanais-monument-complexes-and-the-sea-in-the-neolithic-of-western-scotland-and-beyond.pdf",
+                "https://www.historicenvironment.scot/visit/all/kilmartin-glen-temple-wood-stone-circle/history-and-stories/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "How archaeology dates a stone setting",
+          "paragraphs": [
+            {
+              "text": "Radiocarbon dating usually measures material found around stones, such as charcoal or bone in a socket or ditch. Archaeologists use the position of the sample to decide whether it dates construction, an earlier surface or later use. A gap between two phases can disappear when a site is summarized in a single date. Surveys can add features to the map too. In 2026 a team recorded an oval arrangement of buried anomalies at Machrie Moor, but only excavation could establish what occupied those pits. Even when the orientation of an existing setting is measurable, its significance to the builders remains a separate question.",
+              "sources": [
+                "https://scarf.scot/national/scarf-neolithic-panel-report/6-identity-society-belief-systems/6-3-2-neolithic-cosmology/6-2-3-the-chronological-framework-and-overview-of-monuments/",
+                "https://www.cambridge.org/core/journals/antiquity/article/islands-of-history-the-late-neolithic-timescape-of-orkney/0E5FE57F1C35F712E4E1590151F88781",
+                "https://blog.historicenvironment.scot/2026/07/ask-an-archaeologist-a-new-circle-at-machrie-moor/"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "The chronological framework and overview of monuments — Scottish Archaeological Research Framework",
+          "url": "https://scarf.scot/national/scarf-neolithic-panel-report/6-identity-society-belief-systems/6-3-2-neolithic-cosmology/6-2-3-the-chronological-framework-and-overview-of-monuments/"
+        },
+        {
+          "title": "Recumbent stone circles — Aberdeenshire Council",
+          "url": "https://www.aberdeenshire.gov.uk/leisure-sport-and-culture/archaeology/special-archaeology-in-the-area/recumbent-stone-circles/"
+        },
+        {
+          "title": "Loanhead Stone Circle — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/loanhead-stone-circle/history-and-stories/"
+        },
+        {
+          "title": "Tomnaverie stone circle — Historic Environment Scotland",
+          "url": "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM90303"
+        },
+        {
+          "title": "Clava Cairns — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/clava-cairns/history-and-stories/"
+        },
+        {
+          "title": "Machrie Moor Standing Stones — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/machrie-moor-standing-stones/history-and-stories/"
+        },
+        {
+          "title": "A new circle at Machrie Moor? — Historic Environment Scotland survey team",
+          "url": "https://blog.historicenvironment.scot/2026/07/ask-an-archaeologist-a-new-circle-at-machrie-moor/"
+        },
+        {
+          "title": "Cairn Holy Chambered Cairns — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/cairn-holy-chambered-cairns/history-and-stories/"
+        },
+        {
+          "title": "Twelve Apostles stone circle — Historic Environment Scotland",
+          "url": "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM641"
+        },
+        {
+          "title": "The Heart of Neolithic Orkney — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/protect-and-care/protected-historic-places/world-heritage-sites/heart-of-neolithic-orkney/"
+        },
+        {
+          "title": "Islands of History: the Late Neolithic timescape of Orkney — Bayliss and colleagues",
+          "url": "https://www.cambridge.org/core/journals/antiquity/article/islands-of-history-the-late-neolithic-timescape-of-orkney/0E5FE57F1C35F712E4E1590151F88781"
+        },
+        {
+          "title": "Calanais Standing Stones — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/calanais-standing-stones/history-and-stories/"
+        },
+        {
+          "title": "Temple Wood Stone Circle — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/kilmartin-glen-temple-wood-stone-circle/history-and-stories/"
+        },
+        {
+          "title": "Bordastubble standing stones and cairn — Historic Environment Scotland",
+          "url": "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM2039"
+        },
+        {
+          "title": "Sailing to Calanais: monument complexes and the sea — Garrow and Sturt",
+          "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/9CDEB4C09EA1156F220BAD7CE4316E31/S0079497X24000100a.pdf/sailing-to-calanais-monument-complexes-and-the-sea-in-the-neolithic-of-western-scotland-and-beyond.pdf"
+        },
+        {
+          "title": "PastMap — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/learn/archives-collections-and-libraries/pastmap/"
+        }
+      ],
+      "relatedGuideIds": [
+        "world-orkney",
+        "world-shetland",
+        "world-calanais",
+        "world-kilmartin"
+      ],
+      "referenceMaps": [
+        {
+          "title": "PastMap national archaeology and designation layers",
+          "url": "https://www.historicenvironment.scot/learn/archives-collections-and-libraries/pastmap/",
+          "description": "Historic Environment Scotland’s national map combines site records, scheduled areas and local archaeological inventories."
+        },
+        {
+          "title": "Machrie Moor survey and circles",
+          "url": "https://blog.historicenvironment.scot/2026/07/ask-an-archaeologist-a-new-circle-at-machrie-moor/",
+          "description": "The Historic Environment Scotland survey team’s annotated plan locates known circles and the newly detected ring of anomalies."
+        },
+        {
+          "title": "Calanais and Kilmartin in their coastal settings",
+          "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/9CDEB4C09EA1156F220BAD7CE4316E31/S0079497X24000100a.pdf/sailing-to-calanais-monument-complexes-and-the-sea-in-the-neolithic-of-western-scotland-and-beyond.pdf",
+          "description": "Published archaeological maps compare the distribution of monuments around Loch Roag and Kilmartin Glen with the terrain and changing coastline."
+        }
+      ]
+    },
+    {
+      "id": "world-orkney",
+      "atlasIds": [
+        "europe"
+      ],
+      "category": "places",
+      "title": "Neolithic Orkney’s houses, tombs and stone circles",
+      "description": "From Skara Brae and the Brodgar isthmus to the settlements and chambered tombs of the outer islands.",
+      "intro": "Between the lochs of Harray and Stenness, a short stretch of ground connects the Stones of Stenness, the Ness of Brodgar and the Ring of Brodgar. Houses at Barnhouse and the tomb at Maeshowe enlarge that picture. Farther across the islands, settlements and cairns show how widely people built in stone and how differently they used it.",
+      "scope": "The guide follows domestic, ceremonial and burial evidence across Neolithic Orkney, along with selected later reuse and the changing setting of the Brodgar isthmus.",
+      "map": {
+        "bounds": [
+          -3.49,
+          58.68,
+          -2.24,
+          59.43
+        ],
+        "scope": "Approximate locations across the Orkney archipelago. The four World Heritage monuments are on Mainland, while other mapped examples extend to Rousay, Westray, Papa Westray and Sanday.",
+        "points": [
+          {
+            "id": "skara-brae",
+            "label": "Skara Brae, Bay of Skaill",
+            "coordinates": [
+              -3.3417,
+              59.0487
+            ],
+            "date": "Later 4th–3rd millennia BCE",
+            "description": "Linked drystone houses, passages and fitted stone furnishings preserve a settlement near the coast.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/skara-brae/history-and-stories/",
+              "https://www.cambridge.org/core/journals/antiquity/article/islands-of-history-the-late-neolithic-timescape-of-orkney/0E5FE57F1C35F712E4E1590151F88781"
+            ]
+          },
+          {
+            "id": "stenness",
+            "label": "Stones of Stenness",
+            "coordinates": [
+              -3.2077,
+              58.9931
+            ],
+            "date": "Around 3000 BCE",
+            "description": "A small ring of tall slabs stood inside a bank and ditch. Excavation recovered evidence of a central arrangement.",
+            "sources": [
+              "https://journals.socantscot.org/index.php/psas/article/view/8930",
+              "https://www.cambridge.org/core/journals/antiquity/article/islands-of-history-the-late-neolithic-timescape-of-orkney/0E5FE57F1C35F712E4E1590151F88781",
+              "https://haveyoursay.historicenvironment.scot/heritage/have-your-say-hono-management-plan/supporting_documents/2025%20Orkney%20WHS%20Managament%20Plan_Online_ACCESSIBLE%203_OS%20Maps.pdf"
+            ]
+          },
+          {
+            "id": "barnhouse",
+            "label": "Barnhouse settlement",
+            "coordinates": [
+              -3.2078,
+              58.9958
+            ],
+            "date": "Early 3rd millennium BCE",
+            "description": "Houses and the unusually large Structure Eight stood north of Stenness toward the shore of Harray.",
+            "sources": [
+              "https://www.nessofbrodgar.co.uk/around-the-ness-the-barnhouse-settlement/",
+              "https://www.orkney.gov.uk/documents/oirmp-strategic-environmental-assessment-environmental-report-2/html"
+            ]
+          },
+          {
+            "id": "ness-of-brodgar",
+            "label": "Ness of Brodgar",
+            "coordinates": [
+              -3.2131,
+              58.9975
+            ],
+            "date": "From around 3300 BCE, with major activity in the 3rd millennium",
+            "description": "Excavation exposed several generations of large stone buildings on the neck of land between the lochs.",
+            "sources": [
+              "https://www.nessofbrodgar.co.uk/about/",
+              "https://ora.ox.ac.uk/objects/uuid%3Af2f37d03-ebfd-4c4c-8ddb-c9e3c7d30bdd",
+              "https://www.nessofbrodgar.co.uk/excavation-2/"
+            ]
+          },
+          {
+            "id": "ring-of-brodgar",
+            "label": "Ring of Brodgar",
+            "coordinates": [
+              -3.2306,
+              59
+            ],
+            "date": "Probably mid to late 3rd millennium BCE",
+            "description": "A large stone circle with a rock-cut ditch. Several nearby mounds represent separate construction events.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/ring-of-brodgar-stone-circle-and-henge/history-and-stories/",
+              "https://www.cambridge.org/core/journals/antiquity/article/islands-of-history-the-late-neolithic-timescape-of-orkney/0E5FE57F1C35F712E4E1590151F88781",
+              "https://www.orkney.gov.uk/documents/oirmp-strategic-environmental-assessment-environmental-report-2/html"
+            ]
+          },
+          {
+            "id": "maeshowe",
+            "label": "Maeshowe chambered cairn",
+            "coordinates": [
+              -3.1883,
+              58.9967
+            ],
+            "date": "Neolithic, with medieval reuse",
+            "description": "A long passage leads to a corbelled chamber and side cells. Norse visitors later cut runes into the walls.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/maeshowe-chambered-cairn/history-and-stories/",
+              "https://haveyoursay.historicenvironment.scot/heritage/have-your-say-hono-management-plan/supporting_documents/2025%20Orkney%20WHS%20Managament%20Plan_Online_ACCESSIBLE%203_OS%20Maps.pdf"
+            ]
+          },
+          {
+            "id": "loch-harray",
+            "label": "Loch of Harray",
+            "coordinates": [
+              -3.207,
+              59.029
+            ],
+            "date": "Landscape context",
+            "description": "The eastern loch frames Barnhouse and the isthmus. Water levels and local shorelines changed during prehistory.",
+            "sources": [
+              "https://research-repository.st-andrews.ac.uk/handle/10023/10825",
+              "https://haveyoursay.historicenvironment.scot/heritage/have-your-say-hono-management-plan/supporting_documents/2025%20Orkney%20WHS%20Managament%20Plan_Online_ACCESSIBLE%203_OS%20Maps.pdf"
+            ]
+          },
+          {
+            "id": "loch-stenness",
+            "label": "Loch of Stenness",
+            "coordinates": [
+              -3.239,
+              58.978
+            ],
+            "date": "Landscape context",
+            "description": "This loch lies west of the isthmus. Sediment cores record a transition from fresh to brackish water.",
+            "sources": [
+              "https://research-repository.st-andrews.ac.uk/handle/10023/10825",
+              "https://haveyoursay.historicenvironment.scot/heritage/have-your-say-hono-management-plan/supporting_documents/2025%20Orkney%20WHS%20Managament%20Plan_Online_ACCESSIBLE%203_OS%20Maps.pdf"
+            ]
+          },
+          {
+            "id": "midhowe",
+            "label": "Midhowe chambered cairn, Rousay",
+            "coordinates": [
+              -3.0998,
+              59.1575
+            ],
+            "date": "Neolithic",
+            "description": "Upright slabs divide an elongated burial chamber into compartments along the Rousay shore.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/midhowe-chambered-cairn/",
+              "https://www.orkney.gov.uk/documents/oirmp-strategic-environmental-assessment-environmental-report-2/html"
+            ]
+          },
+          {
+            "id": "links-noltland",
+            "label": "Links of Noltland, Westray",
+            "coordinates": [
+              -3.0069,
+              59.3253
+            ],
+            "date": "From around 3300 BCE, with Bronze Age phases",
+            "description": "Dunes preserved extensive evidence of farming, houses, burials and changing settlement layouts.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/links-of-noltland/",
+              "https://www.orkney.gov.uk/documents/oirmp-strategic-environmental-assessment-environmental-report-2/html"
+            ]
+          },
+          {
+            "id": "knap-of-howar",
+            "label": "Knap of Howar, Papa Westray",
+            "coordinates": [
+              -2.9014,
+              59.3511
+            ],
+            "date": "Later 4th–3rd millennia BCE",
+            "description": "Two thick-walled buildings stand adjoining one another near the west coast of the island.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/knap-of-howar/history-and-stories/",
+              "https://www.cambridge.org/core/journals/antiquity/article/islands-of-history-the-late-neolithic-timescape-of-orkney/0E5FE57F1C35F712E4E1590151F88781"
+            ]
+          },
+          {
+            "id": "quoyness",
+            "label": "Quoyness chambered cairn, Sanday",
+            "coordinates": [
+              -2.5676,
+              59.2256
+            ],
+            "date": "Neolithic",
+            "description": "A passage leads to a tall central chamber with side cells on the Els Ness peninsula.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/quoyness-chambered-cairn/history-and-stories/",
+              "https://www.orkney.gov.uk/documents/oirmp-strategic-environmental-assessment-environmental-report-2/html"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "The monuments belong to overlapping phases",
+          "paragraphs": [
+            {
+              "text": "Radiocarbon measurements from occupation layers, hearths and tomb deposits date particular events. Researchers compare those measurements with the order of layers and buildings to model activity. On Orkney, this work shows periods of overlap as well as shifts between islands and within Mainland. The proximity of two sites on the modern map cannot establish that their main phases were contemporary.",
+              "sources": [
+                "https://www.cambridge.org/core/journals/antiquity/article/islands-of-history-the-late-neolithic-timescape-of-orkney/0E5FE57F1C35F712E4E1590151F88781",
+                "https://ora.ox.ac.uk/objects/uuid%3Af2f37d03-ebfd-4c4c-8ddb-c9e3c7d30bdd",
+                "https://link.springer.com/article/10.1007/s10963-022-09166-y"
+              ]
+            }
+          ],
+          "columns": [
+            "Date",
+            "Change or site",
+            "Basis for dating"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Later 4th millennium BCE",
+                "Settlement at Knap of Howar and activity in the area of Skara Brae.",
+                "Radiocarbon models allow different ranges for early activity and the surviving houses."
+              ],
+              "sources": [
+                "https://www.historicenvironment.scot/visit/all/knap-of-howar/history-and-stories/",
+                "https://www.cambridge.org/core/journals/antiquity/article/islands-of-history-the-late-neolithic-timescape-of-orkney/0E5FE57F1C35F712E4E1590151F88781"
+              ]
+            },
+            {
+              "cells": [
+                "Around 3300 BCE",
+                "An early building at Ness of Brodgar.",
+                "Excavation dates Structure Five earlier than much of the monumental complex."
+              ],
+              "sources": [
+                "https://www.nessofbrodgar.co.uk/about/",
+                "https://ora.ox.ac.uk/objects/uuid%3Af2f37d03-ebfd-4c4c-8ddb-c9e3c7d30bdd"
+              ]
+            },
+            {
+              "cells": [
+                "Around 3000 BCE",
+                "Stenness henge and use of nearby Barnhouse.",
+                "Excavation recovered dated deposits and Grooved Ware pottery."
+              ],
+              "sources": [
+                "https://journals.socantscot.org/index.php/psas/article/view/8930",
+                "https://www.nessofbrodgar.co.uk/around-the-ness-the-barnhouse-settlement/",
+                "https://www.cambridge.org/core/journals/antiquity/article/islands-of-history-the-late-neolithic-timescape-of-orkney/0E5FE57F1C35F712E4E1590151F88781"
+              ]
+            },
+            {
+              "cells": [
+                "Mid to later 3rd millennium BCE",
+                "Likely digging of the great Brodgar ditch.",
+                "Dating sediment and modeling site development constrain a range, with uncertainty for the uprights."
+              ],
+              "sources": [
+                "https://www.cambridge.org/core/journals/antiquity/article/islands-of-history-the-late-neolithic-timescape-of-orkney/0E5FE57F1C35F712E4E1590151F88781",
+                "https://www.historicenvironment.scot/visit/all/ring-of-brodgar-stone-circle-and-henge/history-and-stories/"
+              ]
+            },
+            {
+              "cells": [
+                "Around 2500–2400 BCE",
+                "Late activity around Structure Ten at the Ness.",
+                "Radiocarbon models distinguish late hearth use and later deposits, including cattle bone."
+              ],
+              "sources": [
+                "https://www.nessofbrodgar.co.uk/about/",
+                "https://ora.ox.ac.uk/objects/uuid%3Af2f37d03-ebfd-4c4c-8ddb-c9e3c7d30bdd"
+              ]
+            },
+            {
+              "cells": [
+                "12th century CE",
+                "Norse inscriptions are left at Maeshowe.",
+                "The runes belong to a later entry into the prehistoric mound."
+              ],
+              "sources": [
+                "https://www.historicenvironment.scot/visit/all/maeshowe-chambered-cairn/history-and-stories/"
+              ]
+            },
+            {
+              "cells": [
+                "1999 and 2024 CE",
+                "World Heritage inscription and end of Ness field excavation.",
+                "The protection designation and excavation history are documented separately."
+              ],
+              "sources": [
+                "https://whc.unesco.org/en/list/514/",
+                "https://www.nessofbrodgar.co.uk/about/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "What survives of the houses",
+          "paragraphs": [
+            {
+              "text": "At Skara Brae, slabs delineate beds, hearths, storage and the familiar shelves often called dressers. Covered passages link houses built among accumulated settlement debris. Barnhouse has comparable stone houses and an exceptionally large building built around a central hearth. At Knap of Howar, two elongated buildings are joined by a passage. The different layouts provide evidence about how households or activities were organized, and about rebuilding through time.",
+              "sources": [
+                "https://www.historicenvironment.scot/protect-and-care/protected-historic-places/world-heritage-sites/heart-of-neolithic-orkney/",
+                "https://www.historicenvironment.scot/visit/all/skara-brae/history-and-stories/",
+                "https://www.nessofbrodgar.co.uk/around-the-ness-the-barnhouse-settlement/",
+                "https://www.historicenvironment.scot/visit/all/knap-of-howar/history-and-stories/"
+              ]
+            },
+            {
+              "text": "On Westray, Links of Noltland widens the view beyond the central monuments. Houses and deposits in the dunes record successive phases of farming and occupation. Some settlements are known well because accumulated sand or debris protected walls and interiors. The present distribution of well-preserved houses also reflects where archaeologists have excavated and where features survived coastal change.",
+              "sources": [
+                "https://www.historicenvironment.scot/visit/all/links-of-noltland/",
+                "https://link.springer.com/article/10.1007/s10963-022-09166-y"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "From henge to monumental buildings",
+          "paragraphs": [
+            {
+              "text": "Stenness was planned as a modest-sized ring with very tall stones and a central feature. The Ring of Brodgar surrounds a much larger open space with a rock-cut ditch. At the Ness between them, excavators recorded unusually wide buildings with piers, colored and incised stones, and an architectural sequence reaching beneath the visible structures. The project interprets some phases as gatherings. The differences between these buildings and ordinary houses help make that case, while the exact activities within them remain under study.",
+              "sources": [
+                "https://journals.socantscot.org/index.php/psas/article/view/8930",
+                "https://www.historicenvironment.scot/visit/all/ring-of-brodgar-stone-circle-and-henge/history-and-stories/",
+                "https://www.nessofbrodgar.co.uk/about/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Chambers for the dead",
+          "paragraphs": [
+            {
+              "text": "Maeshowe’s passage admits the low winter sun near midwinter, a property of its architectural orientation. The chamber and side cells make a different use of stone from the houses. Midhowe has a long series of stalls, while at Quoyness side chambers open off a central room. Differences in layout offer ways to compare how access and deposition were organized. The runes at Maeshowe are direct evidence of medieval visitors and belong to a separate chapter in its history.",
+              "sources": [
+                "https://www.historicenvironment.scot/visit/all/maeshowe-chambered-cairn/history-and-stories/",
+                "https://www.historicenvironment.scot/visit/all/midhowe-chambered-cairn/",
+                "https://www.historicenvironment.scot/visit/all/quoyness-chambered-cairn/history-and-stories/",
+                "https://www.historicenvironment.scot/protect-and-care/protected-historic-places/world-heritage-sites/heart-of-neolithic-orkney/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "A land bridge in a changing landscape",
+          "paragraphs": [
+            {
+              "text": "Surveys of the Brodgar isthmus and samples from the loch bed trace a changing relationship between land and water. The researchers found evidence that Stenness became brackish during the Neolithic and identified now-submerged terrain near the monuments. This work gives the land bridge a history of its own. It also cautions against inferring ancient views, routes or access from a photo of the two lochs as they look today.",
+              "sources": [
+                "https://research-repository.st-andrews.ac.uk/handle/10023/10825",
+                "https://link.springer.com/article/10.1007/s10963-022-09166-y"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Heart of Neolithic Orkney — UNESCO World Heritage Centre",
+          "url": "https://whc.unesco.org/en/list/514/"
+        },
+        {
+          "title": "The Heart of Neolithic Orkney — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/protect-and-care/protected-historic-places/world-heritage-sites/heart-of-neolithic-orkney/"
+        },
+        {
+          "title": "Heart of Neolithic Orkney management plan and Ordnance Survey maps — Historic Environment Scotland",
+          "url": "https://haveyoursay.historicenvironment.scot/heritage/have-your-say-hono-management-plan/supporting_documents/2025%20Orkney%20WHS%20Managament%20Plan_Online_ACCESSIBLE%203_OS%20Maps.pdf"
+        },
+        {
+          "title": "Skara Brae — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/skara-brae/history-and-stories/"
+        },
+        {
+          "title": "The Barnhouse Settlement — Ness of Brodgar Project",
+          "url": "https://www.nessofbrodgar.co.uk/around-the-ness-the-barnhouse-settlement/"
+        },
+        {
+          "title": "The Ness of Brodgar monumental complex — Ness of Brodgar Project",
+          "url": "https://www.nessofbrodgar.co.uk/about/"
+        },
+        {
+          "title": "Excavation and trench locations — Ness of Brodgar Project",
+          "url": "https://www.nessofbrodgar.co.uk/excavation-2/"
+        },
+        {
+          "title": "Chronological modelling at Ness of Brodgar — Card and colleagues",
+          "url": "https://ora.ox.ac.uk/objects/uuid%3Af2f37d03-ebfd-4c4c-8ddb-c9e3c7d30bdd"
+        },
+        {
+          "title": "The Stones of Stenness: excavation and the Stone of Odin — Ritchie",
+          "url": "https://journals.socantscot.org/index.php/psas/article/view/8930"
+        },
+        {
+          "title": "Ring of Brodgar — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/ring-of-brodgar-stone-circle-and-henge/history-and-stories/"
+        },
+        {
+          "title": "Maeshowe — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/maeshowe-chambered-cairn/history-and-stories/"
+        },
+        {
+          "title": "Knap of Howar — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/knap-of-howar/history-and-stories/"
+        },
+        {
+          "title": "Links of Noltland — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/links-of-noltland/"
+        },
+        {
+          "title": "Midhowe Chambered Cairn — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/midhowe-chambered-cairn/"
+        },
+        {
+          "title": "Quoyness Chambered Cairn — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/quoyness-chambered-cairn/history-and-stories/"
+        },
+        {
+          "title": "Orkney archaeological inventory and grid references — Orkney Islands Council",
+          "url": "https://www.orkney.gov.uk/documents/oirmp-strategic-environmental-assessment-environmental-report-2/html"
+        },
+        {
+          "title": "Islands of History: the Late Neolithic timescape of Orkney — Bayliss and colleagues",
+          "url": "https://www.cambridge.org/core/journals/antiquity/article/islands-of-history-the-late-neolithic-timescape-of-orkney/0E5FE57F1C35F712E4E1590151F88781"
+        },
+        {
+          "title": "Landscapes for Neolithic People in Mainland, Orkney — Bunting and colleagues",
+          "url": "https://link.springer.com/article/10.1007/s10963-022-09166-y"
+        },
+        {
+          "title": "The early environment of the Brodgar Isthmus — Bates and colleagues",
+          "url": "https://research-repository.st-andrews.ac.uk/handle/10023/10825"
+        }
+      ],
+      "relatedGuideIds": [
+        "world-scotland-stones",
+        "world-shetland"
+      ],
+      "referenceMaps": [
+        {
+          "title": "World Heritage monuments and the two lochs",
+          "url": "https://haveyoursay.historicenvironment.scot/heritage/have-your-say-hono-management-plan/supporting_documents/2025%20Orkney%20WHS%20Managament%20Plan_Online_ACCESSIBLE%203_OS%20Maps.pdf",
+          "description": "Historic Environment Scotland’s management-plan maps show the central peninsula, associated mounds, Skara Brae and the modern protected setting."
+        },
+        {
+          "title": "Ness of Brodgar excavation trenches",
+          "url": "https://www.nessofbrodgar.co.uk/excavation-2/",
+          "description": "Excavation plans and views orient the buildings and fieldwork areas on the narrow peninsula."
+        },
+        {
+          "title": "Mainland Orkney settlement and environmental sampling",
+          "url": "https://link.springer.com/article/10.1007/s10963-022-09166-y",
+          "description": "The first figure situates archaeological sites, the central cluster and the places used to reconstruct past vegetation."
+        }
+      ]
+    },
+    {
+      "id": "world-shetland",
+      "atlasIds": [
+        "europe"
+      ],
+      "category": "places",
+      "title": "Shetland’s early farms, standing stones and brochs",
+      "description": "A mapped history from coastal middens, the houses and fields of West Mainland, and Unst’s standing stones to later Iron Age and Norse settlements.",
+      "intro": "The low banks at Scord of Brouster, the massive stone at Bordastubble and the tower at Mousa tell stories separated by centuries and sometimes millennia. Shetland’s islands preserve evidence of coastal food gathering, farming, stone quarrying, burial and later drystone construction. The map links places for comparison across the archipelago.",
+      "scope": "This guide follows Shetland’s earliest dated coastal deposits, Neolithic and Bronze Age fields, burials and stones, then selected Iron Age and Norse settlements on and around Mainland.",
+      "map": {
+        "bounds": [
+          -2.22,
+          59.48,
+          -0.61,
+          60.92
+        ],
+        "scope": "Approximate locations from Fair Isle to Unst. The points include coastal settings and wide activity areas as well as named buildings and monuments.",
+        "points": [
+          {
+            "id": "west-voe",
+            "label": "West Voe of Sumburgh",
+            "coordinates": [
+              -1.3016,
+              59.8751
+            ],
+            "date": "Around 4000–3250 BCE for midden sequence",
+            "description": "Shell deposits and intervening sand trace activity at an earlier coastline. The cultural attribution of the earliest activity is debated.",
+            "sources": [
+              "https://www.cambridge.org/core/journals/antiquity-project-gallery/article/mesolithic-in-the-northern-isles-the-preliminary-evaluation-of-an-oyster-midden-at-west-voe-sumburgh-shetland-uk/C7DAE778CE11495BAFD91EED69963F21",
+              "https://scarf.scot/regional/sirfa/shetland/period-based-summaries/palaeolithic-mesolithic/",
+              "https://doi.org/10.1007/s10816-018-9386-y"
+            ]
+          },
+          {
+            "id": "sumburgh-cist",
+            "label": "Sumburgh burial area",
+            "coordinates": [
+              -1.3015,
+              59.8787
+            ],
+            "date": "Later 4th millennium BCE",
+            "description": "A stone-lined cist contained the remains of multiple people. This point marks the general Sumburgh vicinity.",
+            "sources": [
+              "https://doi.org/10.1007/s10816-018-9386-y",
+              "https://scarf.scot/national/scarf-neolithic-panel-report/3-the-detailed-picture-issues-of-regional-and-chronological-resolution/3-3-regional-summaries/3-3-7-shetland/"
+            ]
+          },
+          {
+            "id": "scord-of-brouster",
+            "label": "Scord of Brouster",
+            "coordinates": [
+              -1.5394,
+              60.2483
+            ],
+            "date": "Neolithic activity and later house phases",
+            "description": "Excavation recorded houses, field banks, clearance cairns and artifacts. Much of the surviving settlement probably dates to the Bronze Age or later.",
+            "sources": [
+              "https://era.ed.ac.uk/bitstream/handle/1842/29647/Scholma-Mason2018vol2.pdf?isAllowed=y&sequence=2",
+              "https://journals.socantscot.org/index.php/sair/article/download/908/906/905",
+              "https://scarf.scot/national/scarf-neolithic-panel-report/3-the-detailed-picture-issues-of-regional-and-chronological-resolution/3-3-regional-summaries/3-3-7-shetland/"
+            ]
+          },
+          {
+            "id": "stanydale",
+            "label": "Stanydale settlement and hall",
+            "coordinates": [
+              -1.4865,
+              60.2348
+            ],
+            "date": "Late Neolithic–Bronze Age, broad attribution",
+            "description": "A large building with a concave front stands among houses, cairns and ancient field banks. Its conventional name is Stanydale Temple.",
+            "sources": [
+              "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM3314",
+              "https://www.historicenvironment.scot/visit/all/stanydale-temple/history-and-stories/"
+            ]
+          },
+          {
+            "id": "islesburgh",
+            "label": "Islesburgh cairn and settlement area",
+            "coordinates": [
+              -1.3957,
+              60.399
+            ],
+            "date": "Prehistoric burial and settlement",
+            "description": "This representative point locates an area with a heel-shaped cairn and traces of early settlement in Northmavine.",
+            "sources": [
+              "https://pureadmin.qub.ac.uk/ws/files/135795819/The_Border_of_Farming.pdf",
+              "https://doi.org/10.1080/15564894.2021.1880506"
+            ]
+          },
+          {
+            "id": "north-roe",
+            "label": "North Roe quarry landscape",
+            "coordinates": [
+              -1.4,
+              60.58
+            ],
+            "date": "Neolithic and later stone use",
+            "description": "Felsite quarries across North Roe supplied material for distinctive stone axes and knives. The marker represents the wider area.",
+            "sources": [
+              "https://doi.org/10.1080/15564894.2021.1880506",
+              "https://scarf.scot/national/scarf-neolithic-panel-report/3-the-detailed-picture-issues-of-regional-and-chronological-resolution/3-3-regional-summaries/3-3-7-shetland/"
+            ]
+          },
+          {
+            "id": "bordastubble",
+            "label": "Bordastubble standing stones and cairn, Unst",
+            "coordinates": [
+              -0.9451,
+              60.7067
+            ],
+            "date": "Prehistoric, exact date uncertain",
+            "description": "One monolith is about 3.8 metres high. A second upright stands within a low cairn and may have formed part of it.",
+            "sources": [
+              "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM2039"
+            ]
+          },
+          {
+            "id": "mousa",
+            "label": "Mousa Broch",
+            "coordinates": [
+              -1.1826,
+              59.9947
+            ],
+            "date": "Iron Age",
+            "description": "The stone tower preserves much of its height and an intramural stair within the double wall.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/mousa-broch/history-and-stories/",
+              "https://whc.unesco.org/en/tentativelists/6691/"
+            ]
+          },
+          {
+            "id": "old-scatness",
+            "label": "Old Scatness broch and village",
+            "coordinates": [
+              -1.3069,
+              59.8787
+            ],
+            "date": "Mid-1st millennium BCE onward",
+            "description": "A broch and later roundhouses preserve a long Iron Age construction sequence north of Jarlshof.",
+            "sources": [
+              "https://www.research.ed.ac.uk/en/publications/brochs-and-beyond-excavations-at-old-scatness-shetland/",
+              "https://whc.unesco.org/en/tentativelists/6691/"
+            ]
+          },
+          {
+            "id": "jarlshof",
+            "label": "Jarlshof, Sumburgh",
+            "coordinates": [
+              -1.2911,
+              59.8687
+            ],
+            "date": "Late Neolithic–17th century CE, several phases",
+            "description": "Bronze Age buildings, an Iron Age broch and wheelhouses, Norse longhouses and a later laird’s house occupy the same promontory.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/jarlshof-prehistoric-and-norse-settlement/history-and-stories/",
+              "https://www.historicenvironment.scot/publications/all/publication/?publicationId=dc07f6c5-003e-427f-ad18-a57000d1fbec",
+              "https://whc.unesco.org/en/tentativelists/6691/"
+            ]
+          },
+          {
+            "id": "fair-isle",
+            "label": "Fair Isle",
+            "coordinates": [
+              -1.625,
+              59.534
+            ],
+            "date": "Maritime context",
+            "description": "The island lies between the main Shetland group and Orkney. It provides context for possible inter-island movement.",
+            "sources": [
+              "https://doi.org/10.1080/15564894.2021.1880506"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "From the coastal middens to the Norse farmstead",
+          "paragraphs": [
+            {
+              "text": "Coastal deposits contain some of the earliest dated traces of human activity in Shetland. They preserve shells, animal remains and, in later deposits, pottery. On shore and farther inland, other sites yield house floors, burial deposits and the waste left by stone tool making. Since each site preserves a different part of the record, the best dated layers can be centuries away from the visible stone buildings.",
+              "sources": [
+                "https://www.cambridge.org/core/journals/antiquity-project-gallery/article/mesolithic-in-the-northern-isles-the-preliminary-evaluation-of-an-oyster-midden-at-west-voe-sumburgh-shetland-uk/C7DAE778CE11495BAFD91EED69963F21",
+                "https://scarf.scot/regional/sirfa/shetland/period-based-summaries/palaeolithic-mesolithic/",
+                "https://scarf.scot/national/scarf-neolithic-panel-report/3-the-detailed-picture-issues-of-regional-and-chronological-resolution/3-3-regional-summaries/3-3-7-shetland/",
+                "https://doi.org/10.1080/15564894.2021.1880506"
+              ]
+            }
+          ],
+          "columns": [
+            "Date",
+            "Change or site",
+            "Basis for dating"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Around 4000–3250 BCE",
+                "Successive middens accumulate at West Voe.",
+                "Shell dating and the sediments between deposits frame the sequence. Its earliest cultural attribution remains debated."
+              ],
+              "sources": [
+                "https://www.cambridge.org/core/journals/antiquity-project-gallery/article/mesolithic-in-the-northern-isles-the-preliminary-evaluation-of-an-oyster-midden-at-west-voe-sumburgh-shetland-uk/C7DAE778CE11495BAFD91EED69963F21",
+                "https://scarf.scot/regional/sirfa/shetland/period-based-summaries/palaeolithic-mesolithic/",
+                "https://doi.org/10.1007/s10816-018-9386-y"
+              ]
+            },
+            {
+              "cells": [
+                "Later 4th millennium BCE",
+                "Multiple burial at Sumburgh and early felsite working elsewhere.",
+                "Human bones and material from dated archaeological contexts provide separate evidence."
+              ],
+              "sources": [
+                "https://doi.org/10.1007/s10816-018-9386-y",
+                "https://doi.org/10.1080/15564894.2021.1880506",
+                "https://scarf.scot/national/scarf-neolithic-panel-report/3-the-detailed-picture-issues-of-regional-and-chronological-resolution/3-3-regional-summaries/3-3-7-shetland/"
+              ]
+            },
+            {
+              "cells": [
+                "Late 3rd–2nd millennia BCE",
+                "Farming settlements and field systems develop through multiple phases.",
+                "The excavated Scord of Brouster sequence includes substantial post-Neolithic activity."
+              ],
+              "sources": [
+                "https://era.ed.ac.uk/bitstream/handle/1842/29647/Scholma-Mason2018vol2.pdf?isAllowed=y&sequence=2",
+                "https://scarf.scot/national/scarf-neolithic-panel-report/3-the-detailed-picture-issues-of-regional-and-chronological-resolution/3-3-regional-summaries/3-3-7-shetland/",
+                "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM3314"
+              ]
+            },
+            {
+              "cells": [
+                "Mid-1st millennium BCE",
+                "Broch construction at Old Scatness.",
+                "Excavated and radiocarbon-dated layers anchor the local sequence."
+              ],
+              "sources": [
+                "https://www.research.ed.ac.uk/en/publications/brochs-and-beyond-excavations-at-old-scatness-shetland/",
+                "https://whc.unesco.org/en/tentativelists/6691/"
+              ]
+            },
+            {
+              "cells": [
+                "1st millennium CE",
+                "Wheelhouses and later Norse building at Jarlshof.",
+                "New building types and stratigraphy distinguish these occupations."
+              ],
+              "sources": [
+                "https://www.historicenvironment.scot/visit/all/jarlshof-prehistoric-and-norse-settlement/history-and-stories/",
+                "https://www.historicenvironment.scot/publications/all/publication/?publicationId=dc07f6c5-003e-427f-ad18-a57000d1fbec"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Houses, fields and the Stanydale hall",
+          "paragraphs": [
+            {
+              "text": "At Scord of Brouster the field banks and heaps of stone cleared from cultivation sit beside oval houses. Excavation showed that the houses do not form a single building episode. Some traces are Neolithic and much of the dated settlement belongs later. At nearby Stanydale, a large heel-shaped building shares aspects of local houses and burial cairns. The size, central hearth and unusual contents of the excavated structure support several readings of its use. Temple is its historical label and the building’s purpose remains open.",
+              "sources": [
+                "https://era.ed.ac.uk/bitstream/handle/1842/29647/Scholma-Mason2018vol2.pdf?isAllowed=y&sequence=2",
+                "https://scarf.scot/national/scarf-neolithic-panel-report/3-the-detailed-picture-issues-of-regional-and-chronological-resolution/3-3-regional-summaries/3-3-7-shetland/",
+                "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM3314",
+                "https://www.historicenvironment.scot/visit/all/stanydale-temple/history-and-stories/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Standing stones, cairns and journeys across the islands",
+          "paragraphs": [
+            {
+              "text": "The uprights at Bordastubble stand high on Unst. Their size and construction differ, and the smaller stone may have been built into a burial mound. Elsewhere the heel-shaped cairns have a concave front and a passage leading to one or more chambers. Felsite offers separate evidence for island connections. Tools made from material quarried in North Roe have been found as far south as Sumburgh and as far north as Unst. Those findspots show movement of objects and materials, while particular sea routes remain reconstructions.",
+              "sources": [
+                "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM2039",
+                "https://pureadmin.qub.ac.uk/ws/files/135795819/The_Border_of_Farming.pdf",
+                "https://doi.org/10.1080/15564894.2021.1880506"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Later towers, roundhouses and wheelhouses",
+          "paragraphs": [
+            {
+              "text": "Mousa preserves the height and wall construction that is reduced to low courses at many other broch sites. At Old Scatness, archaeologists can date a broch and see how later residents remodeled or built around it. At Jarlshof, the superimposed structures include round buildings and wheelhouses whose radial walls organized space around a hearth. Norse builders later left a different pattern of longhouses. The building sequence spans millennia, with breaks in occupation, and gives little basis for linking Iron Age towers to the people who erected Neolithic or Bronze Age stones.",
+              "sources": [
+                "https://www.historicenvironment.scot/visit/all/mousa-broch/history-and-stories/",
+                "https://www.research.ed.ac.uk/en/publications/brochs-and-beyond-excavations-at-old-scatness-shetland/",
+                "https://www.historicenvironment.scot/visit/all/jarlshof-prehistoric-and-norse-settlement/history-and-stories/",
+                "https://whc.unesco.org/en/tentativelists/6691/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Why a coastal site can be both exposed and preserved",
+          "paragraphs": [
+            {
+              "text": "Windblown sand buried successive building phases at Jarlshof. Storms later exposed the structures. At West Voe, coastal erosion brought the shell middens to light but also removed part of their setting. Inland, peat can mask walls or old fields. Reading these landscapes therefore depends on excavations, surviving ground traces and the histories of the modern shores as well as the visible monuments.",
+              "sources": [
+                "https://www.historicenvironment.scot/visit/all/jarlshof-prehistoric-and-norse-settlement/history-and-stories/",
+                "https://www.cambridge.org/core/journals/antiquity-project-gallery/article/mesolithic-in-the-northern-isles-the-preliminary-evaluation-of-an-oyster-midden-at-west-voe-sumburgh-shetland-uk/C7DAE778CE11495BAFD91EED69963F21",
+                "https://era.ed.ac.uk/bitstream/handle/1842/29647/Scholma-Mason2018vol2.pdf?isAllowed=y&sequence=2",
+                "https://scarf.scot/national/scarf-neolithic-panel-report/3-the-detailed-picture-issues-of-regional-and-chronological-resolution/3-3-regional-summaries/3-3-7-shetland/"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "West Voe midden excavation — Melton and Nicholson",
+          "url": "https://www.cambridge.org/core/journals/antiquity-project-gallery/article/mesolithic-in-the-northern-isles-the-preliminary-evaluation-of-an-oyster-midden-at-west-voe-sumburgh-shetland-uk/C7DAE778CE11495BAFD91EED69963F21"
+        },
+        {
+          "title": "Shetland Palaeolithic and Mesolithic research agenda — Scottish Archaeological Research Framework",
+          "url": "https://scarf.scot/regional/sirfa/shetland/period-based-summaries/palaeolithic-mesolithic/"
+        },
+        {
+          "title": "Prehistoric Coastal Mass Burials — Cain, Goff and McFadgen",
+          "url": "https://doi.org/10.1007/s10816-018-9386-y"
+        },
+        {
+          "title": "Shetland Neolithic evidence — Scottish Archaeological Research Framework",
+          "url": "https://scarf.scot/national/scarf-neolithic-panel-report/3-the-detailed-picture-issues-of-regional-and-chronological-resolution/3-3-regional-summaries/3-3-7-shetland/"
+        },
+        {
+          "title": "Scord of Brouster archaeological contexts — Scholma-Mason",
+          "url": "https://era.ed.ac.uk/bitstream/handle/1842/29647/Scholma-Mason2018vol2.pdf?isAllowed=y&sequence=2"
+        },
+        {
+          "title": "Quartz artefacts from Scord of Brouster — Ballin",
+          "url": "https://journals.socantscot.org/index.php/sair/article/download/908/906/905"
+        },
+        {
+          "title": "Stanydale settlement, fields and cairns designation — Historic Environment Scotland",
+          "url": "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM3314"
+        },
+        {
+          "title": "Stanydale Temple — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/stanydale-temple/history-and-stories/"
+        },
+        {
+          "title": "Bordastubble standing stones and cairn — Historic Environment Scotland",
+          "url": "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM2039"
+        },
+        {
+          "title": "Heel-shaped cairns and Shetland quarry landscapes — Mahler and colleagues",
+          "url": "https://pureadmin.qub.ac.uk/ws/files/135795819/The_Border_of_Farming.pdf"
+        },
+        {
+          "title": "Insular networks and Shetland stone tool distribution — Megarry and colleagues",
+          "url": "https://doi.org/10.1080/15564894.2021.1880506"
+        },
+        {
+          "title": "Mousa Broch — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/mousa-broch/history-and-stories/"
+        },
+        {
+          "title": "Jarlshof — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/jarlshof-prehistoric-and-norse-settlement/history-and-stories/"
+        },
+        {
+          "title": "Jarlshof Statement of Significance — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/publications/all/publication/?publicationId=dc07f6c5-003e-427f-ad18-a57000d1fbec"
+        },
+        {
+          "title": "Brochs and Beyond: excavations at Old Scatness — Dockrill and Bond",
+          "url": "https://www.research.ed.ac.uk/en/publications/brochs-and-beyond-excavations-at-old-scatness-shetland/"
+        },
+        {
+          "title": "Mousa, Old Scatness and Jarlshof — UK World Heritage Tentative List submission",
+          "url": "https://whc.unesco.org/en/tentativelists/6691/"
+        },
+        {
+          "title": "Shetland Historic Environment Record and PastMap — Shetland Islands Council",
+          "url": "https://www.shetland.gov.uk/archaeology-2/historic-environment-record"
+        }
+      ],
+      "relatedGuideIds": [
+        "world-scotland-stones",
+        "world-orkney"
+      ],
+      "referenceMaps": [
+        {
+          "title": "Shetland archaeological sites in their island setting",
+          "url": "https://www.shetland.gov.uk/archaeology-2/historic-environment-record",
+          "description": "The local council’s Historic Environment Record explains how to enable the Shetland records in the national PastMap viewer."
+        },
+        {
+          "title": "Felsite quarries and tool finds across Shetland",
+          "url": "https://doi.org/10.1080/15564894.2021.1880506",
+          "description": "The archaeological figures map the locations of prehistoric sites and felsite objects from Northmavine to the outer islands."
+        },
+        {
+          "title": "Jarlshof settlement phases and site plans",
+          "url": "https://www.historicenvironment.scot/publications/all/publication/?publicationId=dc07f6c5-003e-427f-ad18-a57000d1fbec",
+          "description": "The conservation statement includes plans and illustrations to distinguish the multi-period site’s buildings and phases."
+        }
+      ]
+    },
+    {
+      "id": "world-calanais",
+      "atlasIds": [
+        "europe"
+      ],
+      "category": "places",
+      "title": "Calanais and the stone settings of Loch Roag",
+      "description": "The Lewis stone circle, avenue and burial cairn in a wider landscape of ridges, lochs and satellite monuments.",
+      "intro": "The long avenue on the west coast of Lewis leads to a stone circle, a taller central monolith and a small burial cairn. Other rings and stone settings occupy neighboring ridges and the shores of Loch Roag. Peat and changes in sea level have transformed the land between them, altering what people can see of the prehistoric landscape.",
+      "scope": "The guide covers the architecture and use of Calanais I, nearby settings, and the effects of farming, peat accumulation and coastal change on the archaeological record around Loch Roag.",
+      "map": {
+        "bounds": [
+          -6.86,
+          58.156,
+          -6.648,
+          58.237
+        ],
+        "scope": "Approximate locations across the Loch Roag setting from Great Bernera to the ridges east of Calanais I. Individual arms and the cairn at Calanais I are represented by nearby points.",
+        "points": [
+          {
+            "id": "calanais-circle",
+            "label": "Calanais I circle and central monolith",
+            "coordinates": [
+              -6.7451,
+              58.1973
+            ],
+            "date": "Around 2900–2600 BCE for initial erection",
+            "description": "Thirteen perimeter stones frame the main circle. A particularly tall monolith and the remains of a chambered cairn stand within it.",
+            "sources": [
+              "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM90054",
+              "https://www.historicenvironment.scot/visit/all/calanais-standing-stones/history-and-stories/",
+              "https://www.historicenvironment.scot/publications/all/publication/?publicationId=b6aee5fd-5980-4872-a2e0-a63c00cc7b68"
+            ]
+          },
+          {
+            "id": "calanais-avenue",
+            "label": "Calanais I north avenue",
+            "coordinates": [
+              -6.74525,
+              58.19785
+            ],
+            "date": "Neolithic, exact sequence debated",
+            "description": "Two lines of stones narrow toward the ring. The shorter rows approach the circle from three other directions.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/calanais-standing-stones/history-and-stories/",
+              "https://www.historicenvironment.scot/publications/all/publication/?publicationId=b6aee5fd-5980-4872-a2e0-a63c00cc7b68"
+            ]
+          },
+          {
+            "id": "cnoc-an-tursa",
+            "label": "Cnoc an Tursa",
+            "coordinates": [
+              -6.7452,
+              58.1967
+            ],
+            "date": "Landscape context",
+            "description": "The outcrop beyond the southern row has been suggested as a meaningful part of the monument’s setting.",
+            "sources": [
+              "https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/795d66fc-e87b-459d-9ea4-b3b1007b36d8"
+            ]
+          },
+          {
+            "id": "calanais-two",
+            "label": "Calanais II, Cnoc Ceann a’ Ghàrraidh",
+            "coordinates": [
+              -6.7291,
+              58.1942
+            ],
+            "date": "Prehistoric, several phases",
+            "description": "A ring of upright and fallen stones encloses traces of a cairn and sockets for timber posts.",
+            "sources": [
+              "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM5433",
+              "https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/6f1c2191-d825-4388-91d6-a80700d63df3"
+            ]
+          },
+          {
+            "id": "calanais-three",
+            "label": "Calanais III, Cnoc Fillibhir Bheag",
+            "coordinates": [
+              -6.7243,
+              58.1954
+            ],
+            "date": "Prehistoric",
+            "description": "Partly fallen stones define an outer ring and an inner setting on a nearby ridge.",
+            "sources": [
+              "https://her.cne-siar.gov.uk/Monument/MWE4167",
+              "https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/6f1c2191-d825-4388-91d6-a80700d63df3"
+            ]
+          },
+          {
+            "id": "calanais-four",
+            "label": "Calanais IV, Ceann Thulabhig",
+            "coordinates": [
+              -6.7136,
+              58.1756
+            ],
+            "date": "Prehistoric",
+            "description": "A small ring of standing and fallen stones surrounds a central cairn south of the main group.",
+            "sources": [
+              "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM5457",
+              "https://calanais.org/discover/exploring-other-calanais-sites/"
+            ]
+          },
+          {
+            "id": "calanais-six",
+            "label": "Calanais VI, Cùl a’ Chleit",
+            "coordinates": [
+              -6.685,
+              58.1757
+            ],
+            "date": "Prehistoric",
+            "description": "Remains of a stone setting overlook the Blackwater River east of the main circle.",
+            "sources": [
+              "https://calanais.org/discover/exploring-other-calanais-sites/",
+              "https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/6f1c2191-d825-4388-91d6-a80700d63df3"
+            ]
+          },
+          {
+            "id": "calanais-eight",
+            "label": "Calanais VIII, Cleitir on Great Bernera",
+            "coordinates": [
+              -6.8293,
+              58.2056
+            ],
+            "date": "Prehistoric",
+            "description": "An arc of slabs stands at the edge of a rocky slope above a channel between waters of Loch Roag.",
+            "sources": [
+              "https://her.cne-siar.gov.uk/Monument/MWE4112",
+              "https://www.mdpi.com/2072-4292/11/24/2975"
+            ]
+          },
+          {
+            "id": "calanais-ten",
+            "label": "Calanais X, Na Dromannan",
+            "coordinates": [
+              -6.717,
+              58.2039
+            ],
+            "date": "Prehistoric",
+            "description": "Most stones are fallen. Work after peat removal has helped clarify the arrangement of the setting.",
+            "sources": [
+              "https://calanais.org/discover/exploring-other-calanais-sites/",
+              "https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/6f1c2191-d825-4388-91d6-a80700d63df3"
+            ]
+          },
+          {
+            "id": "calanais-eleven",
+            "label": "Calanais XI, Beinn Bheag",
+            "coordinates": [
+              -6.7325,
+              58.2221
+            ],
+            "date": "Prehistoric setting with later shielings",
+            "description": "A surviving stone and buried features provide evidence for a more extensive setting above the loch.",
+            "sources": [
+              "https://hbsmrweb-westernisles.esdm.co.uk/Monument/MWE4151",
+              "https://www.mdpi.com/2072-4292/11/24/2975"
+            ]
+          },
+          {
+            "id": "loch-roag",
+            "label": "East Loch Roag",
+            "coordinates": [
+              -6.787,
+              58.211
+            ],
+            "date": "Landscape context",
+            "description": "The sheltered sea loch connects the settings to routes around western Lewis. Marine surveys have explored its submerged ground.",
+            "sources": [
+              "https://scapetrust.org/wp-content/uploads/reports/CalanaisCoastalSurvey-SCAPE-Report_withAppendices.pdf",
+              "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/9CDEB4C09EA1156F220BAD7CE4316E31/S0079497X24000100a.pdf/sailing-to-calanais-monument-complexes-and-the-sea-in-the-neolithic-of-western-scotland-and-beyond.pdf",
+              "https://www.mdpi.com/2072-4292/11/24/2975"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "A standing circle acquired a burial chamber",
+          "paragraphs": [
+            {
+              "text": "At Calanais I, the avenue approaches a ring on a low rise. A larger monolith commands its interior, with short rows branching east, west and south. Excavations showed that the small chambered cairn was introduced after the circle had been erected. The surviving stone plan therefore contains work from separate moments. Archaeologists have also examined the adjacent rock outcrop as part of the setting, though its role remains an interpretation.",
+              "sources": [
+                "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM90054",
+                "https://www.historicenvironment.scot/visit/all/calanais-standing-stones/history-and-stories/",
+                "https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/795d66fc-e87b-459d-9ea4-b3b1007b36d8",
+                "https://www.historicenvironment.scot/publications/all/publication/?publicationId=b6aee5fd-5980-4872-a2e0-a63c00cc7b68"
+              ]
+            }
+          ],
+          "columns": [
+            "Date",
+            "Change or site",
+            "Basis for dating"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Before the circle",
+                "People cultivated ground near the site.",
+                "Excavation identified evidence of earlier activity beneath or around monument features."
+              ],
+              "sources": [
+                "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM90054",
+                "https://www.historicenvironment.scot/publications/all/publication/?publicationId=b6aee5fd-5980-4872-a2e0-a63c00cc7b68"
+              ]
+            },
+            {
+              "cells": [
+                "Around 2900–2600 BCE",
+                "People erect the main circle.",
+                "The published excavation chronology uses dated material and relative sequences of deposits."
+              ],
+              "sources": [
+                "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM90054",
+                "https://www.historicenvironment.scot/publications/all/publication/?publicationId=b6aee5fd-5980-4872-a2e0-a63c00cc7b68"
+              ]
+            },
+            {
+              "cells": [
+                "Later Neolithic and Bronze Age",
+                "A small chambered cairn is added and subsequently disturbed.",
+                "Excavated relationships place the burial structure after the ring. The later history includes disturbance and possible further ritual use."
+              ],
+              "sources": [
+                "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM90054",
+                "https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/795d66fc-e87b-459d-9ea4-b3b1007b36d8"
+              ]
+            },
+            {
+              "cells": [
+                "Around 1000–500 BCE",
+                "Peat progressively covers parts of the site.",
+                "Stratigraphy and environmental evidence show peat growing over the older surface."
+              ],
+              "sources": [
+                "https://www.historicenvironment.scot/visit/all/calanais-standing-stones/history-and-stories/",
+                "https://www.historicenvironment.scot/publications/all/publication/?publicationId=b6aee5fd-5980-4872-a2e0-a63c00cc7b68"
+              ]
+            },
+            {
+              "cells": [
+                "1857 CE",
+                "Peat clearance exposes the lower stones and cairn.",
+                "Historical drawings and accounts document the exposed monument."
+              ],
+              "sources": [
+                "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM90054",
+                "https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/795d66fc-e87b-459d-9ea4-b3b1007b36d8"
+              ]
+            },
+            {
+              "cells": [
+                "1979–88 CE",
+                "Modern survey and excavation record the site and its phases.",
+                "The research included excavation at the ring and alignments, published by Patrick Ashmore."
+              ],
+              "sources": [
+                "https://www.historicenvironment.scot/publications/all/publication/?publicationId=b6aee5fd-5980-4872-a2e0-a63c00cc7b68"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Different kinds of setting around Loch Roag",
+          "paragraphs": [
+            {
+              "text": "Calanais II and III are close to the main ring but have different plans. The second site has a cairn and evidence of a timber setting. At the third, an inner setting lies within a broader ring. Calanais IV encloses another small cairn. On Great Bernera, the stones at Cleitir form an arc on a slope facing water. Several more sites survive as fallen stones or partly buried features. The distribution shows repeated choices to build in this landscape, with much less certainty about how closely in time their builders worked.",
+              "sources": [
+                "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM5433",
+                "https://her.cne-siar.gov.uk/Monument/MWE4167",
+                "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM5457",
+                "https://her.cne-siar.gov.uk/Monument/MWE4112",
+                "https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/6f1c2191-d825-4388-91d6-a80700d63df3"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "People worked the ground before and after the stones",
+          "paragraphs": [
+            {
+              "text": "Cultivation at the main site places the monument in land already used by farming communities. The relationship is more secure than the location of their homes. Historic Environment Scotland notes that no contemporary settlement has been recognized beside the main ring. Later shieling huts at Beinn Bheag and the remains of a house and drying kiln near Calanais I demonstrate further uses of the ground. These later buildings cannot fill the gap in Neolithic settlement evidence.",
+              "sources": [
+                "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM90054",
+                "https://hbsmrweb-westernisles.esdm.co.uk/Monument/MWE4151",
+                "https://www.historicenvironment.scot/publications/all/publication/?publicationId=b6aee5fd-5980-4872-a2e0-a63c00cc7b68"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "A coast that changed and a landscape hidden by peat",
+          "paragraphs": [
+            {
+              "text": "Researchers have combined field survey, coring and geophysical work on land and in the sea loch. Offshore sediments and buried surfaces point to changes in shoreline and vegetation. At Site XI, anomalies and surveyed remains strengthen the case that a single upright was one element of a larger stone setting. A network of sites, outlooks and potentially navigable approaches helps explain why the loch matters to the monuments. Reconstructed shorelines and routes remain estimates.",
+              "sources": [
+                "https://www.mdpi.com/2072-4292/11/24/2975",
+                "https://scapetrust.org/wp-content/uploads/reports/CalanaisCoastalSurvey-SCAPE-Report_withAppendices.pdf",
+                "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/9CDEB4C09EA1156F220BAD7CE4316E31/S0079497X24000100a.pdf/sailing-to-calanais-monument-complexes-and-the-sea-in-the-neolithic-of-western-scotland-and-beyond.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "From alignment to interpretation",
+          "paragraphs": [
+            {
+              "text": "The bearings of the rows and the position of the local horizon can be measured. Researchers have compared them to where the Moon or Sun would have appeared at particular times, as well as to nearby hills and outcrops. Such studies help describe the experiences a setting could have offered. Establishing which views mattered to the builders, and which were intended when stones were first placed, remains more difficult.",
+              "sources": [
+                "https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/795d66fc-e87b-459d-9ea4-b3b1007b36d8",
+                "https://www.historicenvironment.scot/publications/all/publication/?publicationId=b6aee5fd-5980-4872-a2e0-a63c00cc7b68"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Calanais Standing Stones designation and archaeological summary — Historic Environment Scotland",
+          "url": "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM90054"
+        },
+        {
+          "title": "Calanais Standing Stones — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/calanais-standing-stones/history-and-stories/"
+        },
+        {
+          "title": "Calanais Standing Stones Statement of Significance — Historic Environment Scotland",
+          "url": "https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/795d66fc-e87b-459d-9ea4-b3b1007b36d8"
+        },
+        {
+          "title": "Calanais Survey and Excavation, 1979–88 — Patrick Ashmore",
+          "url": "https://www.historicenvironment.scot/publications/all/publication/?publicationId=b6aee5fd-5980-4872-a2e0-a63c00cc7b68"
+        },
+        {
+          "title": "The Calanais standing stones and their settings — Historic Environment Scotland",
+          "url": "https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/6f1c2191-d825-4388-91d6-a80700d63df3"
+        },
+        {
+          "title": "Other Calanais sites — Urras nan Tursachan",
+          "url": "https://calanais.org/discover/exploring-other-calanais-sites/"
+        },
+        {
+          "title": "Calanais II scheduled circle and cairn — Historic Environment Scotland",
+          "url": "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM5433"
+        },
+        {
+          "title": "Calanais III — Western Isles Historic Environment Record",
+          "url": "https://her.cne-siar.gov.uk/Monument/MWE4167"
+        },
+        {
+          "title": "Calanais IV stone circle and cairn — Historic Environment Scotland",
+          "url": "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM5457"
+        },
+        {
+          "title": "Calanais VIII at Great Bernera — Western Isles Historic Environment Record",
+          "url": "https://her.cne-siar.gov.uk/Monument/MWE4112"
+        },
+        {
+          "title": "Beinn Bheag — Western Isles Historic Environment Record",
+          "url": "https://hbsmrweb-westernisles.esdm.co.uk/Monument/MWE4151"
+        },
+        {
+          "title": "Geophysical Investigation of the Neolithic Calanais Landscape — Bates and colleagues",
+          "url": "https://www.mdpi.com/2072-4292/11/24/2975"
+        },
+        {
+          "title": "Calanais Coastal Survey — SCAPE Trust",
+          "url": "https://scapetrust.org/wp-content/uploads/reports/CalanaisCoastalSurvey-SCAPE-Report_withAppendices.pdf"
+        },
+        {
+          "title": "Sailing to Calanais: monument complexes and the sea — Garrow and Sturt",
+          "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/9CDEB4C09EA1156F220BAD7CE4316E31/S0079497X24000100a.pdf/sailing-to-calanais-monument-complexes-and-the-sea-in-the-neolithic-of-western-scotland-and-beyond.pdf"
+        }
+      ],
+      "relatedGuideIds": [
+        "world-scotland-stones",
+        "world-kilmartin"
+      ],
+      "referenceMaps": [
+        {
+          "title": "Plans of the main ring, rows and excavation trenches",
+          "url": "https://www.historicenvironment.scot/publications/all/publication/?publicationId=b6aee5fd-5980-4872-a2e0-a63c00cc7b68",
+          "description": "Patrick Ashmore’s excavation report includes detailed plans and drawings of the ring, avenue, rows, burial cairn and investigated deposits."
+        },
+        {
+          "title": "Loch Roag stone settings and Calanais XI survey",
+          "url": "https://www.mdpi.com/2072-4292/11/24/2975",
+          "description": "Figures 1 and 2 locate satellite monuments and show survey coverage around the buried setting at Beinn Bheag."
+        },
+        {
+          "title": "Loch Roag coastal survey and palaeolandscape",
+          "url": "https://scapetrust.org/wp-content/uploads/reports/CalanaisCoastalSurvey-SCAPE-Report_withAppendices.pdf",
+          "description": "The SCAPE Trust report maps fieldwork around the loch’s shores and documents intertidal deposits and archaeological remains."
+        }
+      ]
+    },
+    {
+      "id": "world-kilmartin",
+      "atlasIds": [
+        "europe"
+      ],
+      "category": "places",
+      "title": "Kilmartin Glen’s cairns, stone settings and rock art",
+      "description": "A valley-wide guide from the linear cemetery and Temple Wood to carved rock above the watershed and the later stronghold of Dunadd.",
+      "intro": "From Kilmartin village, a line of cairns follows the broad valley floor. Standing stones and carved rock lie nearby, and farther south the River Add passes Dunadd. Builders returned to some of these places many times. The valley landscape helps place the monuments in relation to each other while their excavated sequences distinguish when and how people used them.",
+      "scope": "This guide covers the Neolithic and Bronze Age cemetery, stone settings and rock art of Kilmartin Glen, the evidence for later settlement and the early medieval stronghold at Dunadd.",
+      "map": {
+        "bounds": [
+          -5.55,
+          55.994,
+          -5.405,
+          56.167
+        ],
+        "scope": "Approximate locations from Kilmartin village along the glen, River Add and Mòine Mhòr toward Cairnbaan and Achnabreck. Nearby points mark individual cairns rather than the extent of the cemetery.",
+        "points": [
+          {
+            "id": "kilmartin-village",
+            "label": "Kilmartin village",
+            "coordinates": [
+              -5.4858,
+              56.1334
+            ],
+            "date": "Modern context and medieval churchyard",
+            "description": "The village and churchyard are next to the north end of the prehistoric cemetery.",
+            "sources": [
+              "https://www.kilmartin.org/self-guided-trail",
+              "https://static1.squarespace.com/static/5f8852ba3eb3f02e513a2f51/t/68adb7021ff0e92cc83747f2/1756215042847/Kilmartin_Map_A3%2BTear%2BOff_v3.pdf"
+            ]
+          },
+          {
+            "id": "glebe",
+            "label": "Glebe Cairn",
+            "coordinates": [
+              -5.4889,
+              56.1339
+            ],
+            "date": "Bronze Age",
+            "description": "The northernmost large cairn of the linear cemetery, immediately west of the village.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/kilmartin-glen-glebe-cairn/",
+              "https://www.historicenvironment.scot/visit/all/kilmartin-glen-nether-largie-mid-cairn/history-and-stories/",
+              "https://static1.squarespace.com/static/5f8852ba3eb3f02e513a2f51/t/68adb7021ff0e92cc83747f2/1756215042847/Kilmartin_Map_A3%2BTear%2BOff_v3.pdf"
+            ]
+          },
+          {
+            "id": "nether-north",
+            "label": "Nether Largie North Cairn",
+            "coordinates": [
+              -5.4927,
+              56.129
+            ],
+            "date": "Bronze Age",
+            "description": "A burial cist’s capstone carries many cup marks and two axe motifs.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/kilmartin-glen-nether-largie-north-cairn/",
+              "https://static1.squarespace.com/static/5f8852ba3eb3f02e513a2f51/t/68adb7021ff0e92cc83747f2/1756215042847/Kilmartin_Map_A3%2BTear%2BOff_v3.pdf"
+            ]
+          },
+          {
+            "id": "nether-mid",
+            "label": "Nether Largie Mid Cairn",
+            "coordinates": [
+              -5.4936,
+              56.1267
+            ],
+            "date": "Bronze Age",
+            "description": "In the middle of the cemetery, the cairn contains two cists, with axe carvings in one.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/kilmartin-glen-nether-largie-mid-cairn/history-and-stories/",
+              "https://static1.squarespace.com/static/5f8852ba3eb3f02e513a2f51/t/68adb7021ff0e92cc83747f2/1756215042847/Kilmartin_Map_A3%2BTear%2BOff_v3.pdf"
+            ]
+          },
+          {
+            "id": "nether-south",
+            "label": "Nether Largie South Cairn",
+            "coordinates": [
+              -5.4951,
+              56.1245
+            ],
+            "date": "Neolithic with Bronze Age additions",
+            "description": "A four-part chamber survives within the oldest of the five main cairns.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/kilmartin-glen-nether-largie-south-cairn/",
+              "https://static1.squarespace.com/static/5f8852ba3eb3f02e513a2f51/t/68adb7021ff0e92cc83747f2/1756215042847/Kilmartin_Map_A3%2BTear%2BOff_v3.pdf"
+            ]
+          },
+          {
+            "id": "temple-wood",
+            "label": "Temple Wood circles and cairns",
+            "coordinates": [
+              -5.4985,
+              56.1237
+            ],
+            "date": "Neolithic–Bronze Age",
+            "description": "Timber and stone settings and later burials preserve overlapping building phases.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/kilmartin-glen-temple-wood-stone-circle/history-and-stories/",
+              "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM90300"
+            ]
+          },
+          {
+            "id": "nether-stones",
+            "label": "Nether Largie standing stones",
+            "coordinates": [
+              -5.496,
+              56.1217
+            ],
+            "date": "Prehistoric",
+            "description": "Several stones survive in the fields east of Temple Wood, with carvings on some of the uprights.",
+            "sources": [
+              "https://static1.squarespace.com/static/5f8852ba3eb3f02e513a2f51/t/60367e0261d5a34b0a904f0e/1614183940402/Largie-Stone-Excavation-DSR.pdf",
+              "https://www.kilmartin.org/self-guided-trail",
+              "https://static1.squarespace.com/static/5f8852ba3eb3f02e513a2f51/t/68adb7021ff0e92cc83747f2/1756215042847/Kilmartin_Map_A3%2BTear%2BOff_v3.pdf"
+            ]
+          },
+          {
+            "id": "ri-cruin",
+            "label": "Ri Cruin Cairn",
+            "coordinates": [
+              -5.4999,
+              56.1167
+            ],
+            "date": "Bronze Age",
+            "description": "The southernmost of the five main cairns yielded rare axe carvings in a stone cist.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/kilmartin-glen-ri-cruin-cairn/history-and-stories/",
+              "https://static1.squarespace.com/static/5f8852ba3eb3f02e513a2f51/t/68adb7021ff0e92cc83747f2/1756215042847/Kilmartin_Map_A3%2BTear%2BOff_v3.pdf"
+            ]
+          },
+          {
+            "id": "dunchraigaig",
+            "label": "Dunchraigaig Cairn",
+            "coordinates": [
+              -5.4871,
+              56.1147
+            ],
+            "date": "Early Bronze Age, engravings possibly earlier",
+            "description": "Deer and other animal engravings survive on the underside of a capstone in the burial cairn.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/kilmartin-glen-dunchraigaig-cairn/history-and-stories/",
+              "https://www.cambridge.org/core/journals/cambridge-archaeological-journal/article/revealing-the-earliest-animal-engravings-in-scotland-the-dunchraigaig-deer-kilmartin/97D9C0E59F5D0F667673862E1076C6EE"
+            ]
+          },
+          {
+            "id": "ballymeanoch",
+            "label": "Ballymeanoch standing stones",
+            "coordinates": [
+              -5.4868,
+              56.111
+            ],
+            "date": "Prehistoric, multiple phases",
+            "description": "Rows of stones stand near a cairn and a ditched burial monument farther south.",
+            "sources": [
+              "https://www.prehistoricsociety.org/sites/prehistoricsociety.org/files/resources/ps-signpost_ballymeanoch.pdf",
+              "https://static1.squarespace.com/static/5f8852ba3eb3f02e513a2f51/t/68adb7021ff0e92cc83747f2/1756215042847/Kilmartin_Map_A3%2BTear%2BOff_v3.pdf"
+            ]
+          },
+          {
+            "id": "baluachraig",
+            "label": "Baluachraig rock art",
+            "coordinates": [
+              -5.4901,
+              56.116
+            ],
+            "date": "Prehistoric",
+            "description": "Cup-and-ring motifs occupy natural rock outcrops near Dunchraigaig and Ballymeanoch.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/kilmartin-glen-baluachraig-rock-art/",
+              "https://static1.squarespace.com/static/5f8852ba3eb3f02e513a2f51/t/68adb7021ff0e92cc83747f2/1756215042847/Kilmartin_Map_A3%2BTear%2BOff_v3.pdf"
+            ]
+          },
+          {
+            "id": "bruach-druimein",
+            "label": "Bruach an Druimein excavations",
+            "coordinates": [
+              -5.5083,
+              56.1167
+            ],
+            "date": "Prehistoric burials, later settlement",
+            "description": "Excavations on a gravel terrace identified cists, Iron Age timber roundhouses and later activity.",
+            "sources": [
+              "https://archaeologydataservice.ac.uk/archiveDS/archiveDownload?t=arch-310-1%2Fdissemination%2Fpdf%2Fsair27.pdf"
+            ]
+          },
+          {
+            "id": "dunadd",
+            "label": "Dunadd Fort",
+            "coordinates": [
+              -5.4786,
+              56.0861
+            ],
+            "date": "Iron Age and early medieval phases",
+            "description": "The fort above the Add and the wetland became a power center in Gaelic Dál Riata.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/kilmartin-glen-dunadd-fort/history-and-stories/",
+              "https://static1.squarespace.com/static/5f8852ba3eb3f02e513a2f51/t/68adb7021ff0e92cc83747f2/1756215042847/Kilmartin_Map_A3%2BTear%2BOff_v3.pdf"
+            ]
+          },
+          {
+            "id": "moine-mhor",
+            "label": "Mòine Mhòr and the River Add",
+            "coordinates": [
+              -5.527,
+              56.095
+            ],
+            "date": "Landscape context",
+            "description": "The wetland spreads across the lowest part of the landscape before the River Add reaches the coast.",
+            "sources": [
+              "https://static1.squarespace.com/static/5f8852ba3eb3f02e513a2f51/t/68adb7021ff0e92cc83747f2/1756215042847/Kilmartin_Map_A3%2BTear%2BOff_v3.pdf",
+              "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/9CDEB4C09EA1156F220BAD7CE4316E31/S0079497X24000100a.pdf/sailing-to-calanais-monument-complexes-and-the-sea-in-the-neolithic-of-western-scotland-and-beyond.pdf"
+            ]
+          },
+          {
+            "id": "achnabreck",
+            "label": "Achnabreck rock art",
+            "coordinates": [
+              -5.4465,
+              56.062
+            ],
+            "date": "Broadly late Neolithic–Bronze Age",
+            "description": "Large cups, rings and spiral motifs occupy several outcrops on a wooded hillside.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/kilmartin-glen-achnabreck-rock-art/history-and-stories/",
+              "https://static1.squarespace.com/static/5f8852ba3eb3f02e513a2f51/t/68adb7021ff0e92cc83747f2/1756215042847/Kilmartin_Map_A3%2BTear%2BOff_v3.pdf"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "Burial and monument-making followed several sequences",
+          "paragraphs": [
+            {
+              "text": "The surviving cairns form a line about two kilometers long. That spatial pattern brings together structures of different ages. At Nether Largie South, an older chamber was incorporated into a reworked mound with later cists. Across the field at Temple Wood an earlier timber setting and two areas of stone construction preceded or overlapped later funerary activity. Excavation can date the relationship between features more securely than the year individual stones were raised.",
+              "sources": [
+                "https://www.historicenvironment.scot/visit/all/kilmartin-glen-nether-largie-mid-cairn/history-and-stories/",
+                "https://www.historicenvironment.scot/visit/all/kilmartin-glen-nether-largie-south-cairn/",
+                "https://www.historicenvironment.scot/visit/all/kilmartin-glen-temple-wood-stone-circle/history-and-stories/",
+                "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM90300"
+              ]
+            }
+          ],
+          "columns": [
+            "Date",
+            "Change or site",
+            "Basis for dating"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "4th millennium BCE",
+                "The earliest chamber and settings in the glen.",
+                "Nether Largie South preserves a Neolithic chamber. At Temple Wood, excavated traces mark a timber setting."
+              ],
+              "sources": [
+                "https://www.historicenvironment.scot/visit/all/kilmartin-glen-nether-largie-south-cairn/",
+                "https://www.historicenvironment.scot/visit/all/kilmartin-glen-temple-wood-stone-circle/history-and-stories/"
+              ]
+            },
+            {
+              "cells": [
+                "Around 3000 BCE",
+                "Stone is set at Temple Wood.",
+                "Excavation identified uprights and the partial replacement of the earlier timber setting."
+              ],
+              "sources": [
+                "https://www.historicenvironment.scot/visit/all/kilmartin-glen-temple-wood-stone-circle/history-and-stories/",
+                "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM90300"
+              ]
+            },
+            {
+              "cells": [
+                "Late 3rd–2nd millennia BCE",
+                "Further cairns, cists and monuments are built and reused.",
+                "The glen’s linear cemetery and Dunchraigaig have multiple deposits and architectural phases."
+              ],
+              "sources": [
+                "https://www.historicenvironment.scot/visit/all/kilmartin-glen-nether-largie-mid-cairn/history-and-stories/",
+                "https://www.historicenvironment.scot/visit/all/kilmartin-glen-ri-cruin-cairn/history-and-stories/",
+                "https://www.historicenvironment.scot/visit/all/kilmartin-glen-dunchraigaig-cairn/history-and-stories/"
+              ]
+            },
+            {
+              "cells": [
+                "1st millennium BCE and later",
+                "Timber roundhouses and other activity at Bruach an Druimein.",
+                "Postholes and associated deposits identify later use of the gravel terrace."
+              ],
+              "sources": [
+                "https://archaeologydataservice.ac.uk/archiveDS/archiveDownload?t=arch-310-1%2Fdissemination%2Fpdf%2Fsair27.pdf"
+              ]
+            },
+            {
+              "cells": [
+                "Around 500–800 CE",
+                "Dunadd’s prominence in Dál Riata.",
+                "Archaeology and written records identify an early medieval fort and craft center."
+              ],
+              "sources": [
+                "https://www.historicenvironment.scot/visit/all/kilmartin-glen-dunadd-fort/history-and-stories/"
+              ]
+            },
+            {
+              "cells": [
+                "2020–2021 CE",
+                "Animal engravings are identified and announced at Dunchraigaig.",
+                "Survey and examination documented deer and other forms within the cairn."
+              ],
+              "sources": [
+                "https://www.historicenvironment.scot/visit/all/kilmartin-glen-dunchraigaig-cairn/history-and-stories/",
+                "https://www.cambridge.org/core/journals/cambridge-archaeological-journal/article/revealing-the-earliest-animal-engravings-in-scotland-the-dunchraigaig-deer-kilmartin/97D9C0E59F5D0F667673862E1076C6EE"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Standing stones and cairns along the glen floor",
+          "paragraphs": [
+            {
+              "text": "People burying their dead in the glen sometimes altered older monuments. Temple Wood’s stones were linked with smaller slabs as the site accumulated new burials. Grave objects included a decorated Beaker and arrowheads. At Ballymeanoch a different combination of carved uprights, a kerbed cairn and a ditched monument occupies ground at the southern end of the cemetery area. These groupings make sense at valley scale while leaving the dates and purposes of some individual stones uncertain.",
+              "sources": [
+                "https://www.historicenvironment.scot/visit/all/kilmartin-glen-temple-wood-stone-circle/history-and-stories/",
+                "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM90300",
+                "https://www.prehistoricsociety.org/sites/prehistoricsociety.org/files/resources/ps-signpost_ballymeanoch.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Carvings on bedrock, uprights and burial slabs",
+          "paragraphs": [
+            {
+              "text": "At Achnabreck, pecked cups, concentric rings and spirals cover outcrops. Other carvings occur on portable slabs or standing stones. At Nether Largie North an engraved stone capped a burial cist, showing that the stone’s latest use was in the cairn. Whether the carvings were added for that burial or a marked slab was reused remains a separate question. The animal forms at Dunchraigaig are especially unusual. Their position on a capstone helps constrain their age, even though no direct date for the act of carving is available.",
+              "sources": [
+                "https://www.historicenvironment.scot/visit/all/kilmartin-glen-achnabreck-rock-art/history-and-stories/",
+                "https://www.historicenvironment.scot/visit/all/kilmartin-glen-nether-largie-north-cairn/",
+                "https://www.cambridge.org/core/journals/cambridge-archaeological-journal/article/revealing-the-earliest-animal-engravings-in-scotland-the-dunchraigaig-deer-kilmartin/97D9C0E59F5D0F667673862E1076C6EE"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Settlement is harder to see than burial",
+          "paragraphs": [
+            {
+              "text": "The large mounds make burials highly visible on today’s valley floor. Houses built in timber leave a different record. At Bruach an Druimein, excavation revealed the postholes of Iron Age roundhouses and material associated with later metalworking. Earlier prehistoric activity is suggested by worked stone and burnt deposits, but evidence for dwellings contemporary with the earliest monuments is less secure. The excavation therefore adds to a long settlement history, while its best-defined houses belong to a later period.",
+              "sources": [
+                "https://archaeologydataservice.ac.uk/archiveDS/archiveDownload?t=arch-310-1%2Fdissemination%2Fpdf%2Fsair27.pdf",
+                "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/9CDEB4C09EA1156F220BAD7CE4316E31/S0079497X24000100a.pdf/sailing-to-calanais-monument-complexes-and-the-sea-in-the-neolithic-of-western-scotland-and-beyond.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "The River Add and the later fort",
+          "paragraphs": [
+            {
+              "text": "Dunadd stands above the River Add and Mòine Mhòr. In the early medieval period it was a stronghold associated with Dál Riata. Finds from metalworking and imported pottery place the fort in networks beyond the glen. A carved footprint and basin have been interpreted in relation to royal inauguration. In the much earlier monument landscape, past sea-level models also suggest different coastal and wetland approaches than those visible today, although the exact routes to individual sites remain uncertain.",
+              "sources": [
+                "https://www.historicenvironment.scot/visit/all/kilmartin-glen-dunadd-fort/history-and-stories/",
+                "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/9CDEB4C09EA1156F220BAD7CE4316E31/S0079497X24000100a.pdf/sailing-to-calanais-monument-complexes-and-the-sea-in-the-neolithic-of-western-scotland-and-beyond.pdf",
+                "https://static1.squarespace.com/static/5f8852ba3eb3f02e513a2f51/t/68adb7021ff0e92cc83747f2/1756215042847/Kilmartin_Map_A3%2BTear%2BOff_v3.pdf"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Explore the area map — Kilmartin Museum",
+          "url": "https://static1.squarespace.com/static/5f8852ba3eb3f02e513a2f51/t/68adb7021ff0e92cc83747f2/1756215042847/Kilmartin_Map_A3%2BTear%2BOff_v3.pdf"
+        },
+        {
+          "title": "Kilmartin Glen self-guided trail — Kilmartin Museum",
+          "url": "https://www.kilmartin.org/self-guided-trail"
+        },
+        {
+          "title": "Temple Wood history — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/kilmartin-glen-temple-wood-stone-circle/history-and-stories/"
+        },
+        {
+          "title": "Temple Wood circles and cairns designation — Historic Environment Scotland",
+          "url": "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM90300"
+        },
+        {
+          "title": "Glebe Cairn — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/kilmartin-glen-glebe-cairn/"
+        },
+        {
+          "title": "Nether Largie North Cairn — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/kilmartin-glen-nether-largie-north-cairn/"
+        },
+        {
+          "title": "Nether Largie Mid Cairn — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/kilmartin-glen-nether-largie-mid-cairn/history-and-stories/"
+        },
+        {
+          "title": "Nether Largie South Cairn — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/kilmartin-glen-nether-largie-south-cairn/"
+        },
+        {
+          "title": "Ri Cruin Cairn — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/kilmartin-glen-ri-cruin-cairn/history-and-stories/"
+        },
+        {
+          "title": "Nether Largie Standing Stone excavation report — Kilmartin Museum",
+          "url": "https://static1.squarespace.com/static/5f8852ba3eb3f02e513a2f51/t/60367e0261d5a34b0a904f0e/1614183940402/Largie-Stone-Excavation-DSR.pdf"
+        },
+        {
+          "title": "Ballymeanoch prehistoric monuments — The Prehistoric Society",
+          "url": "https://www.prehistoricsociety.org/sites/prehistoricsociety.org/files/resources/ps-signpost_ballymeanoch.pdf"
+        },
+        {
+          "title": "Dunchraigaig Cairn history — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/kilmartin-glen-dunchraigaig-cairn/history-and-stories/"
+        },
+        {
+          "title": "The Dunchraigaig Deer — Valdez-Tullett and colleagues",
+          "url": "https://www.cambridge.org/core/journals/cambridge-archaeological-journal/article/revealing-the-earliest-animal-engravings-in-scotland-the-dunchraigaig-deer-kilmartin/97D9C0E59F5D0F667673862E1076C6EE"
+        },
+        {
+          "title": "Achnabreck prehistoric rock carvings — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/kilmartin-glen-achnabreck-rock-art/history-and-stories/"
+        },
+        {
+          "title": "Baluachraig Rock Art — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/kilmartin-glen-baluachraig-rock-art/"
+        },
+        {
+          "title": "Dunadd Fort history — Historic Environment Scotland",
+          "url": "https://www.historicenvironment.scot/visit/all/kilmartin-glen-dunadd-fort/history-and-stories/"
+        },
+        {
+          "title": "Bruach an Druimein excavation report — Abernethy and colleagues",
+          "url": "https://archaeologydataservice.ac.uk/archiveDS/archiveDownload?t=arch-310-1%2Fdissemination%2Fpdf%2Fsair27.pdf"
+        },
+        {
+          "title": "Sailing to Calanais: monument complexes and the sea — Garrow and Sturt",
+          "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/9CDEB4C09EA1156F220BAD7CE4316E31/S0079497X24000100a.pdf/sailing-to-calanais-monument-complexes-and-the-sea-in-the-neolithic-of-western-scotland-and-beyond.pdf"
+        }
+      ],
+      "relatedGuideIds": [
+        "world-scotland-stones",
+        "world-calanais"
+      ],
+      "referenceMaps": [
+        {
+          "title": "Kilmartin Museum’s map of the glen and its sites",
+          "url": "https://static1.squarespace.com/static/5f8852ba3eb3f02e513a2f51/t/68adb7021ff0e92cc83747f2/1756215042847/Kilmartin_Map_A3%2BTear%2BOff_v3.pdf",
+          "description": "The museum map locates all five main cairns, nearby standing stones and rock art, the lower wetland, the River Add and Dunadd."
+        },
+        {
+          "title": "Kilmartin monuments in a reconstructed coastal setting",
+          "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/9CDEB4C09EA1156F220BAD7CE4316E31/S0079497X24000100a.pdf/sailing-to-calanais-monument-complexes-and-the-sea-in-the-neolithic-of-western-scotland-and-beyond.pdf",
+          "description": "The archaeological study compares regional site distribution, terrain and possible prehistoric shorelines with a similar landscape on Lewis."
+        },
+        {
+          "title": "Temple Wood’s two settings and burial phases",
+          "url": "https://portal.historicenvironment.scot/apex/f?p=1505:300:::::VIEWTYPE,VIEWREF:designation,SM90300",
+          "description": "Historic Environment Scotland’s designation includes a measured extent and the relationship of the excavated circles and cairns."
+        }
+      ]
+    }
+  ]
+}

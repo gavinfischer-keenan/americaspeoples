@@ -13,7 +13,7 @@ import {mountTopicPage} from './topic-page';
 import {storyDetailsHTML} from './story-details';
 import {guideMovieNavigationHTML} from './guide-navigation';
 import type {MapCamera} from './map';
-import { atlasAssets, loadAtlasAssets } from './atlas-assets';
+import { atlasAssets, loadAtlasAssets, loadVoyageCatalogue } from './atlas-assets';
 import { sampleVoyage, voyageDate, dateValue } from './voyages';
 import {activeExpeditions,expeditionsHTML,expeditionPhase,activityDuring,activityWindows,expeditionActivityHTML} from './expedition-context';
 import { availableVoyageRecords, scopedVoyageDate, scopedVoyageProgress, advanceMovieClock, datedContextKey, storySceneDate, MOVIE_END_DATE } from './shared-movie';
@@ -22,6 +22,7 @@ import {localChronologyHTML} from './local-chronology';
 import { appShell, mapShell, libraryHTML } from "./atlas-shell";
 import { loadAtlasManifest, resolveAtlasRoute } from "./atlas-catalog";
 import { atlasNavigationHTML, atlasPreviewHTML } from "./atlas-switcher";
+import {voyageGuideLinksHTML} from './world-guides';
 import { stories } from "./stories";
 import { sampleStory, sceneStartMs, storyDurationMs, storyElapsedAtYear } from "./story-player";
 import { exploreRecords, exploreCategory, exploreCategories, regions, type ExploreCategory } from "./explore";
@@ -736,6 +737,7 @@ function renderHistoricalContext(){
     $('#voyage-title').textContent=v.name;
     $('#voyage-precision').textContent=v.precision+' The moving symbol interpolates between dated stops; it is not a daily position log. '+(v.scope==='global'?'The full expedition remains on the shared clock, including polar and offscreen stages.':'Playback skips segments beyond the Americas–Pacific atlas; scope crossings are interpolated.')+' Hollow stops are later in the itinerary. Symbols distinguish sea, river, land, ice drift and wintering where recorded.';
     $('#voyage-evidence').innerHTML=`<p>${esc(v.summary)}</p>`+v.stops.map(s=>`<p><b>${esc(s.name)}</b> · ${esc(s.arrival)}–${esc(s.departure)}<br>${esc(s.note)}</p>`).join('')+v.sourceIds.map(id=>{const source=atlasAssets.voyageSources.find(s=>s.id===id);return source?`<p><a href="${esc(source.url)}" target="_blank" rel="noopener">${esc(source.title)} ↗</a></p>`:'';}).join('');
+    $('#voyage-evidence').insertAdjacentHTML('beforeend',voyageGuideLinksHTML(v.id));
     syncVoyage();
   }
 }
@@ -1109,6 +1111,20 @@ async function route() {
     if (plannedAtlas) {
       main.innerHTML=atlasPreviewHTML(loadAtlasManifest(plannedAtlas),land as import('d3-geo').GeoPermissibleObjects,lastAtlasRoute);
     }
+    else if(hash.startsWith('#voyage/')){
+      main.innerHTML='<article class="review-page"><p role="status">Opening the documented journey…</p></article>';
+      const available=await voyagesReady;
+      if(generation!==routeGeneration)return;
+      if(!available)throw Error('The voyage catalogue could not be loaded. Reload this page to try again.');
+      map.context.voyages=atlasAssets.voyages;
+      const requested=decodeURIComponent(hash.slice(8));
+      const voyage=atlasAssets.voyages.find(v=>v.id===requested);
+      if(!voyage)throw Error('Journey not found.');
+      openingPlayback=false;useFreeTimeline();voyageId=voyage.id;showVoyages=true;
+      voyageClock=dateValue(voyage.stops[0].arrival);setYear(Math.floor(voyageClock),false);
+      topicOriginCamera=undefined;map.overview('world');
+      location.replace('#movie');return;
+    }
     else if (["#map", "#movie", "#explore"].includes(hash)) {
       const nextMode=hash === "#explore" ? "explore" : "movie";
       if(nextMode!==atlasMode){placeQuery='';placeCategory='all';}
@@ -1211,10 +1227,11 @@ async function route() {
 window.addEventListener("hashchange", route);
 bounds(true);
 setYear(year,false);
-route();
+const voyagesReady=loadVoyageCatalogue();
 void loadAtlasAssets(()=>{
   map.context.boundaries=atlasAssets.boundaries;map.context.rails=atlasAssets.rails;map.context.voyages=atlasAssets.voyages;
   if(mountedMap)renderMapData();
   if(openingPlayback&&atlasAssets.ready&&mountedMap&&atlasMode==='movie'&&storyId==='free'&&!voyageId){openingPlayback=false;map.overview('americas');if(!playing)$('#play').click();}
-},value=>map.setDetailedLand(value));
+},value=>map.setDetailedLand(value),voyagesReady);
+route();
 requestAnimationFrame(tick);

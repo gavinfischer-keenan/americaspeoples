@@ -14,21 +14,36 @@ export function watchDetailedLand(listener:(land:any)=>void):()=>void{
  if(detailedLand)listener(detailedLand);
  return ()=>{landListeners.delete(listener);};
 }
-export async function loadAtlasAssets(changed:()=>void,land:(value:any)=>void):Promise<void>{
- const read=async(name:string)=>{const response=await fetch(name);if(!response.ok)throw new Error(name);return response.json();};
+async function read(name:string){
+ const response=await fetch(name);
+ if(!response.ok)throw new Error(name);
+ return response.json();
+}
+export async function loadVoyageCatalogue():Promise<boolean>{
+ try{
+  const value=await read('voyages.json');
+  atlasAssets.voyages=value.voyages;
+  atlasAssets.voyageSources=value.sources;
+  return true;
+ }catch{
+  atlasAssets.errors.push('Voyage itineraries');
+  return false;
+ }
+}
+export async function loadAtlasAssets(changed:()=>void,land:(value:any)=>void,voyagesReady=loadVoyageCatalogue()):Promise<void>{
  const boundaries=['historical','colonial','national','early-national','reservation'];
  const sources=['boundary-sources','expanded-boundary-sources','early-national-boundary-sources','reservation-boundary-sources'];
  const tasks:[string,()=>Promise<void>][]=[
   ...boundaries.map(name=>[`${name} boundaries`,async()=>{atlasAssets.boundaries.push(...await read(`${name}-boundaries.json`));}] as [string,()=>Promise<void>]),
   ...sources.map(name=>[name,async()=>{atlasAssets.boundarySources.push(...await read(`${name}.json`));}] as [string,()=>Promise<void>]),
   ['Historical railway network',async()=>{atlasAssets.rails.push(...(await read('rail-network.json')).segments);}],
-  ['Voyage itineraries',async()=>{const value=await read('voyages.json');atlasAssets.voyages=value.voyages;atlasAssets.voyageSources=value.sources;}],
   ['Expedition date windows',async()=>{const value=await read('expedition-activity.json');atlasAssets.expeditionActivities=value.activities;atlasAssets.activitySources=value.sources;}],
   ['Detailed coastlines',async()=>{detailedLand=await read('land-detailed.geojson');land(detailedLand);for(const listener of landListeners)listener(detailedLand);}],
  ];
  // A missing regional file must not erase every other successfully loaded layer.
  atlasAssets.rails=regionalRailSegments(transport.records as unknown as EvidenceRecord[]);
- await Promise.all(tasks.map(async([name,task])=>{try{await task();}catch{atlasAssets.errors.push(name);}}));
+ const layers=tasks.map(async([name,task])=>{try{await task();}catch{atlasAssets.errors.push(name);}});
+ await Promise.all([voyagesReady,...layers]);
  atlasAssets.boundaries.sort((a,b)=>a.id.localeCompare(b.id));
  atlasAssets.ready=true;changed();
 }
