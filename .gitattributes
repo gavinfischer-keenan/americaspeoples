@@ -4,3 +4,6 @@ docs/intake/*.txt -text -whitespace
 data/physical-sources/* -text -whitespace
 # Preserve original cited research documents and their generated rendering.
 sites/reports/* -text -whitespace
+# Keep cited world-map and writing witnesses byte-identical to their manifests.
+data/world-guide-rivers.geojson -text -whitespace
+data/writing-media/* -text -whitespace
