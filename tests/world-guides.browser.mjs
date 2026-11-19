@@ -7,16 +7,24 @@ const fixture=await browserFixture();
 const {page}=fixture;
 const errors=[];page.on('pageerror',e=>errors.push(e.message));
 const index=JSON.parse(await readFile('data/world-guide-index.json','utf8')).guides;
+const mediaManifest=JSON.parse(await readFile('data/world-guide-media.json','utf8')).assets;
 await mkdir('test-results',{recursive:true});
 try{
  for(const atlas of ['africa','europe','asia-pacific']){
   await page.goto(fixture.url+'#atlas/'+atlas);
+  if(atlas==='europe'){
+   await page.locator('#europe-map .world').waitFor();
+   const hrefs=await page.locator('#europe-guide-list a').evaluateAll(links=>links.map(a=>a.getAttribute('href')));
+   for(const guide of index.filter(g=>g.atlasIds.includes(atlas)))assert.ok(hrefs.includes('sites/'+guide.id+'.html'),guide.id);
+   assert.equal(await page.locator('.atlas-coming-soon').count(),0);
+   continue;
+  }
   await page.locator('.regional-guides').waitFor();
   assert.equal(await page.locator('.regional-guides .dive-card').count(),index.filter(g=>g.atlasIds.includes(atlas)).length);
   assert.equal(await page.locator('.timeline').isVisible(),false);
   assert.equal(await page.locator('.atlas-coming-soon').textContent(),'COMING SOON');
  }
- for(const id of ['world-lucy','world-human-family','world-hadrians-wall','world-stonehenge','world-orkney','world-tibet-dalai-lamas','world-angkor-wat','world-voyages-europe']){
+ for(const id of ['world-lucy','world-human-family','world-hadrians-wall','world-stonehenge','world-orkney','world-tibet-dalai-lamas','world-angkor-wat','world-voyages-europe','world-picts','world-otzi','world-cold-preserved-people','world-andean-summit-children']){
   await page.goto(fixture.url+'sites/'+id+'.html');
   await page.locator('h1').waitFor();
   assert.ok(await page.locator('.world-findings li').count(),id);
@@ -44,9 +52,26 @@ try{
   await page.goto(fixture.url+'sites/world-hadrians-wall.html');
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
   await page.screenshot({path:`test-results/world-wall-${width}.png`,fullPage:true});
-  await page.goto(fixture.url+'#atlas/europe');await page.locator('.regional-guides').waitFor();
+  await page.goto(fixture.url+'#atlas/europe');await page.locator('#europe-map .world').waitFor();
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
   await page.screenshot({path:`test-results/world-europe-${width}.png`,fullPage:true});
  }
- assert.deepEqual(errors,[]);console.log('PASS regional deep dives, full-area maps, dated finds, canonical voyage round trip and mobile layouts.');
+ for(const id of ['world-otzi','world-cold-preserved-people','world-andean-summit-children']){
+  await page.goto(fixture.url+'sites/'+id+'.html');
+  const media=page.locator('#guide-media');await media.scrollIntoViewIfNeeded();
+  assert.equal(await media.locator('img').count(),2);
+  for(const img of await media.locator('img').all()){
+   await img.scrollIntoViewIfNeeded();
+   await img.evaluate(image=>image.decode());
+   const imagePath=await img.getAttribute('src');
+   const source=mediaManifest.find(asset=>'media/'+asset.file===imagePath);assert.ok(source);
+   assert.deepEqual(await img.evaluate(image=>[image.naturalWidth,image.naturalHeight]),[source.width,source.height]);
+   assert.ok((await img.getAttribute('alt'))?.length>20);
+  }
+  assert.equal(await media.getByRole('link',{name:'Image source',exact:true}).count(),2);
+  assert.equal(await media.getByRole('link',{name:'Full-size image',exact:true}).count(),2);
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+  await media.screenshot({path:`test-results/${id}-media-phone.png`});
+ }
+ assert.deepEqual(errors,[]);console.log('PASS regional deep dives, full-area maps, dated finds, canonical voyage round trip, licensed media and mobile layouts.');
 }finally{await fixture.close();}

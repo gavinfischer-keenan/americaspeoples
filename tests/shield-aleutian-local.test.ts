@@ -1,3 +1,4 @@
+import {shieldAleutianLocalStories} from '../src/shield-aleutian-local-stories';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
@@ -12,9 +13,11 @@ test('inland Shield and local Aleutian guides keep regional parents and active s
   const guide=siteGuides.find(g=>g.id===id);assert.ok(guide,`Missing ${id} guide`);
   assert.equal(guide.parentGuideId,parent);
   const story=stories.find(s=>s.id===guide.storyId);assert.ok(story,`${id} needs a contextual movie`);
-  assert.ok(story.scenes.length>=5);
+  const archive=shieldAleutianLocalStories.find(s=>s.id===guide.storyId)!;
+  assert.ok(archive.scenes.length>=5);
+  assert.deepEqual(story.scenes,archive.scenes.filter(s=>s.year<=1900));
   for(const scene of story.scenes){
-   assert.ok(scene.year<=1934);
+   assert.ok(scene.year<=1900);
    const records=scene.recordIds.map(id=>dataset.records.find(r=>r.id===id));
    assert.ok(records.every(Boolean));
    assert.ok(records.every(r=>!topicOnlyIds.has(r!.id)));

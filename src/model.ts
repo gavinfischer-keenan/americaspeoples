@@ -72,6 +72,8 @@ export interface Review {
   relatedIds: string[];
 }
 export interface Overlay {
+  /** Transport styling retains the common sourced-connection geometry. */
+  networkKind?: "trade" | "road" | "rail";
   direction?: "forward" | "reverse" | "both" | "multidirectional";
   radiusKm?: number;
   kind:

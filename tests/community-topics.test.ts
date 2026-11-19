@@ -1,3 +1,4 @@
+import {communityTopics} from '../src/community-topic-dives';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {dataset} from '../src/published-data';
@@ -24,11 +25,17 @@ test('Casarabe geography enriches the original centers without splitting their e
 
 test('three community movies have ordered, currently supported mapped evidence in every chapter',()=>{
  for(const id of ids){
-  const topic=topics.find(t=>t.id===id);assert.ok(topic,'Missing '+id);assert.ok(topic.scenes.length>=7);
-  const rows=topicRecords(topic,dataset.records);assert.equal(rows.length,topic.recordIds.length);
+  const topic=topics.find(t=>t.id===id);assert.ok(topic,'Missing '+id);const archive=communityTopics.find(entry=>entry.id===id)!;
+  assert.ok(archive.scenes.length>=7);
+  assert.deepEqual(topic.scenes,archive.scenes.filter(scene=>scene.year<=1900));
+  const rows=topicRecords(topic,dataset.records);const expected=topic.recordIds.filter(recordId=>{
+   const row=dataset.records.find(r=>r.id===recordId);assert.ok(row,recordId);
+   return row.time.start===null||row.time.start<=1900;
+  });
+  assert.deepEqual(rows.map(row=>row.id).sort(),expected.sort());
   let year=-Infinity;
   for(const scene of topic.scenes){
-   assert.ok(scene.year>=year&&scene.year<=1934,scene.id);year=scene.year;
+   assert.ok(scene.year>=year&&scene.year<=1900,scene.id);year=scene.year;
    assert.ok(scene.recordIds.every(id=>topic.recordIds.includes(id)),scene.id);
    assert.ok(rows.some(r=>scene.recordIds.includes(r.id)&&historyState(r,scene.year)==='active'&&(r.location||r.overlay?.geometry)),scene.id+' needs current mapped evidence');
    assert.ok(scene.body.length>=180&&scene.note.length>=55,scene.id+' needs useful context');
@@ -66,7 +73,7 @@ test('coercive routes and emancipation events keep their different clocks and ac
 
 test('new shared places remain globally eligible and related records resolve reciprocally',()=>{
  for(const id of ['community-ganondagan','community-grand-river','r11v-cotoca-centre','r11v-landivar-centre','community-haiti-independence','community-putumayo-violence']){
-  const r=row(id);assert.ok(!topicOnlyIds.has(id));assert.ok(sharedContextRecords([id],dataset.records).some(x=>x.id===id));
+  const r=row(id);assert.ok(!topicOnlyIds.has(id));assert.equal(sharedContextRecords([id],dataset.records).some(x=>x.id===id),r.time.start!==null&&r.time.start<=1900);
   for(const related of r.review.relatedIds)assert.ok(row(related).review.relatedIds.includes(id),id+' ↔ '+related);
  }
  const subject=row('topic-haudenosaunee-lacrosse-meaning');assert.ok(topicOnlyIds.has(subject.id));

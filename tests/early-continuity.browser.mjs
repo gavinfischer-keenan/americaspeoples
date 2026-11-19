@@ -2,7 +2,8 @@ import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {readFile,mkdir} from 'node:fs/promises';
 import {createStaticServer} from '../scripts/static-server.mjs';
-import {earlyContinuityStories} from '../src/early-continuity-stories.ts';
+import {earlyContinuityStories as archiveEntries} from '../src/early-continuity-stories.ts';
+const earlyContinuityStories=archiveEntries.map(entry=>({...entry,scenes:entry.scenes.filter(scene=>scene.year<=1900)}));
 const server=createStaticServer('dist');await new Promise(r=>server.listen(0,'127.0.0.1',r));
 const browser=await chromium.launch({executablePath:process.env.BROWSER_PATH||'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',headless:true});
 const page=await browser.newPage({viewport:{width:1440,height:960}}),errors=[];
@@ -50,6 +51,6 @@ try{
  await page.screenshot({path:'test-results/early-tablet.png'});
  const doc=await page.goto(origin+'/docs/early-continuity.html');assert.equal(doc.status(),200);
  assert.match(await page.locator('body').innerText(),/70\/100/);
- assert.deepEqual(errors,[]);console.log('PASS all 19 new contextual scenes, shared world after zoom-out, guides and categorised return links, 37 exported records, early/Pacific locate and tablet layout.');
+ assert.deepEqual(errors,[]);console.log('PASS all in-range contextual scenes, shared world after zoom-out, guides and categorised return links, 37 exported records, early/Pacific locate and tablet layout.');
 }catch(error){await page.screenshot({path:'test-results/early-failure.png',timeout:5000}).catch(()=>{});throw error;}
 finally{await browser.close();await new Promise(r=>server.close(r));}

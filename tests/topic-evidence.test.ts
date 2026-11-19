@@ -1,3 +1,4 @@
+import {topicEndYear} from '../src/topic-scope';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {dataset} from '../src/published-data';
@@ -10,9 +11,11 @@ import {historyHTML} from '../src/history-review';
 
 test('twenty-eight focused topics resolve dated chapters, map evidence and independent membership',()=>{
  assert.deepEqual(topics.map(t=>t.id),['shipwrecks','rai-stone-money','austronesian-languages','australian-wool','australian-mining','andean-languages','iroquoian-languages','maya-languages','pacific-fur-trades','whaling','spanish-treasure','missionaries','pottery','obsidian','copper','forced-relocations','hawaii-statehood','territorial-purchases','haudenosaunee','amazonian-peoples','caribbean-enslavement','sweet-potatoes','boats','dogs','horses','maize','trade','languages']);
+ const catalog=new Map(dataset.records.map(r=>[r.id,r]));
  for(const t of topics){
   const rows=topicRecords(t,dataset.records);assert.ok(rows.length>=5,t.id);
-  assert.equal(rows.length,t.recordIds.length,t.id+' missing evidence');
+  const expected=t.recordIds.filter(id=>{const r=catalog.get(id);assert.ok(r,id);return r.time.start===null||r.time.start<=topicEndYear(t.id);});
+  assert.deepEqual(rows.map(r=>r.id).sort(),expected.sort(),t.id+' eligible evidence');
   let previous=-Infinity;
   for(const s of t.scenes){
    assert.ok(s.year>=previous,s.id);previous=s.year;

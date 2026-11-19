@@ -24,7 +24,7 @@ async function year(value){
 }
 try{
  await mkdir('test-results',{recursive:true});
- for(const id of ['interior-barcelos-labor','interior-san-fernando-1750','interior-galibi-1925']){
+ for(const id of ['interior-barcelos-labor','interior-san-fernando-1750']){
   const r=records.find(row=>row.id===id);assert.ok(r);
   await locate(id);
   assert.equal(await page.locator('#year-number').inputValue(),String(r.time.start));
@@ -34,6 +34,10 @@ try{
   assert.ok(box&&box.x+box.width>map.x&&box.x<map.x+map.width&&box.y+box.height>map.y&&box.y<map.y+map.height,id+' visible');
   await page.screenshot({path:`test-results/${id}.png`});
  }
+ const archived=records.find(r=>r.id==='interior-galibi-1925');assert.equal(archived.time.start,1925);
+ await page.goto(origin+'/#review/'+archived.id);
+ await page.locator('[data-action="locate"]').waitFor();
+ assert.ok(await page.locator('[data-action="locate"]').isDisabled(),'Post-1900 record remains in the archive');
  await locate('interior-barcelos-borba-1758');
  const route=page.locator('[data-history-route="interior-barcelos-borba-1758"]');
  await route.waitFor();

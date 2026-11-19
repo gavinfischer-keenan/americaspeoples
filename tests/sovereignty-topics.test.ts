@@ -1,3 +1,4 @@
+import {sovereigntyTopics} from '../src/sovereignty-topic-dives';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {dataset} from '../src/published-data';
@@ -11,8 +12,14 @@ import audit from '../data/topic-context-audit.json';
 const row=(id:string)=>{const r=dataset.records.find(r=>r.id===id);assert.ok(r,'Missing '+id);return r;};
 test('three land and sovereignty movies have ordered sourced chapters and live map evidence',()=>{
  for(const id of ['forced-relocations','hawaii-statehood','territorial-purchases']){
-  const t=topics.find(t=>t.id===id);assert.ok(t,'Missing '+id);assert.ok(t.scenes.length>=8);
-  const rows=topicRecords(t,dataset.records);assert.equal(rows.length,t.recordIds.length);
+  const t=topics.find(t=>t.id===id);assert.ok(t,'Missing '+id);const archive=sovereigntyTopics.find(entry=>entry.id===id)!;
+  assert.ok(archive.scenes.length>=8);
+  assert.deepEqual(t.scenes,archive.scenes.filter(scene=>scene.year<=topicEndYear(id)));
+  const rows=topicRecords(t,dataset.records);const expected=t.recordIds.filter(recordId=>{
+   const row=dataset.records.find(r=>r.id===recordId);assert.ok(row,recordId);
+   return row.time.start===null||row.time.start<=topicEndYear(id);
+  });
+  assert.deepEqual(rows.map(row=>row.id).sort(),expected.sort());
   let previous=-Infinity;
   for(const s of t.scenes){
    assert.ok(s.year>=previous&&s.year<=topicEndYear(id),s.id);previous=s.year;

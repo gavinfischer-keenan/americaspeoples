@@ -1,4 +1,4 @@
-import {END_YEAR} from './time';
+import {END_YEAR,ARCHIVE_END_YEAR} from './time';
 
 /** User-approved exception; a topic endpoint never changes the shared atlas. */
 export function topicEndYear(topicId:string):number {
@@ -13,5 +13,10 @@ export const extendedTopicOnlyIds=new Set([
  'topic-hawaii-admission-1959',
 ]);
 export function recordEndYear(recordId:string):number {
- return extendedTopicOnlyIds.has(recordId)?topicEndYear('hawaii-statehood'):END_YEAR;
+ return extendedTopicOnlyIds.has(recordId)?topicEndYear('hawaii-statehood'):ARCHIVE_END_YEAR;
+}
+
+/** Select dated chapters for a published timeline, preserving their source dates. */
+export function chaptersThrough<T extends {scenes:{year:number}[]}>(story:T, endYear:number):T{
+ return {...story,scenes:story.scenes.filter(scene=>scene.year<=endYear)};
 }

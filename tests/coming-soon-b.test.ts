@@ -1,3 +1,4 @@
+import {comingSoonBStories} from '../src/coming-soon-b-stories';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {dataset} from '../src/published-data';
@@ -57,7 +58,9 @@ test('nine new place and culture movies retain current shared evidence and subst
  for(const id of [...places,...cultures]){
   const guide=siteGuides.find(g=>g.id===id);assert.ok(guide,id);
   const story=stories.find(s=>s.id===guide.storyId);assert.ok(story,id);
-  assert.ok(story.scenes.length>=5,id+' chapters');
+  const archive=comingSoonBStories.find(s=>s.id===guide.storyId)!;
+  assert.ok(archive.scenes.length>=5,id+' archived chapters');
+  assert.deepEqual(story.scenes,archive.scenes.filter(scene=>scene.year<=1900));
   for(const scene of story.scenes){
    assert.ok(scene.body.length>250,scene.title+' detail');
    assert.ok(scene.recordIds.some(id=>{const r=byId.get(id);return r?.location&&!topicOnlyIds.has(id)&&historyState(r,scene.year)==='active';}),scene.title+' current shared location');
@@ -71,7 +74,7 @@ test('Austronesian, wool and mining studies use independent timelines with dated
   const topic=topics.find(t=>t.id===id);assert.ok(topic,id);
   assert.ok(topic.scenes.length>=6,id+' chapters');
   for(const scene of topic.scenes){
-   assert.ok(scene.year<=1934,scene.title+' shared historical scope');
+   assert.ok(scene.year<=1900,scene.title+' shared historical scope');
    assert.ok(scene.body.length>250,scene.title+' detail');
    assert.ok(scene.recordIds.some(id=>{const r=byId.get(id);return r?.location&&historyState(r,scene.year)==='active';}),scene.title+' current mapped evidence');
   }
@@ -85,7 +88,7 @@ test('new local history reaches the master with reciprocal links and qualified s
   assert.ok(r.sources.length&&r.claims.length,r.id);
   if(r.location)assert.ok(r.location.precision&&r.location.provenance,r.id+' location basis');
   for(const id of r.review.relatedIds)assert.ok(byId.get(id)?.review.relatedIds.includes(r.id),r.id+' reciprocal '+id);
-  if(!topicOnlyIds.has(r.id)&&r.time.start!==null)assert.ok(recordsForView(dataset.records,'movie',r.time.start).dated.some(x=>x.id===r.id),r.id+' master');
+  if(!topicOnlyIds.has(r.id)&&r.time.start!==null)assert.equal(recordsForView(dataset.records,'movie',r.time.start).dated.some(x=>x.id===r.id),r.time.start<=1900,r.id+' master');
  }
 });
 test('reused Oyster Cove relocation retains its distinct origin and destination',()=>{

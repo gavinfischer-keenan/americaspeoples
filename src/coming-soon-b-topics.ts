@@ -123,7 +123,7 @@ export const comingSoonBTopics:TopicDive[]=[
     "subtitle": "Follow farms, stations, ports and wool ships alongside coerced labour, dispossession and resistance.",
     "description": "Follow farms, stations, ports and wool ships alongside coerced labour, dispossession and resistance.",
     "method": "Separate animal introductions, grants, actual construction, documented transport and violent displacement. A town marker is not a claim of consent. Wool voyage geometry is schematic and its dated window is distinct from the ship’s whole career.",
-    "dateNote": "1788–1934. Precise event years coexist with explicitly competing construction estimates. The last chapter is bounded by the atlas range, not by the end of pastoral or Indigenous history.",
+    "dateNote": "1788–1891. The chapters distinguish documented events from competing estimates for building dates. Pastoral and Indigenous histories continue beyond the last chapter.",
     "recordIds": [
       "regional-sydney-1788",
       "d19-au-first-fleet-1787-1788",
@@ -388,7 +388,7 @@ export const comingSoonBTopics:TopicDive[]=[
     "subtitle": "Coal, copper and gold build settlements and export networks while reshaping land, work and family life.",
     "description": "Coal, copper and gold build settlements and export networks while reshaping land, work and family life.",
     "method": "Date actual operations and buildings separately from discoveries, charters and opening ceremonies. Indigenous mining and migrant communities are included alongside violent exclusion. Technical processing evidence remains focused; built places and conflicts feed the shared map.",
-    "dateNote": "1804–1934, with the 1801–1802 Newcastle attempt explained as earlier context. No continuous activity is inferred from a single report. The Burra mine’s operating interval is not the lifetime of the town.",
+    "dateNote": "1804–1893, with the 1801–1802 Newcastle attempt explained as earlier context. No continuous activity is inferred from a single report. The Burra mine’s operating interval is not the lifetime of the town.",
     "recordIds": [
       "d19-au-newcastle-1804",
       "d19-au-burra-mining-1845-1877",

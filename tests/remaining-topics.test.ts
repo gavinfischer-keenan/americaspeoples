@@ -1,3 +1,4 @@
+import {remainingTopics} from '../src/remaining-topic-dives';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {dataset} from '../src/published-data';
@@ -9,10 +10,16 @@ import audit from '../data/topic-context-audit.json';
 const ids=['pacific-fur-trades','whaling','spanish-treasure','missionaries','pottery','obsidian','copper'];
 test('all requested movies are playable with sourced chronological chapters and live evidence',()=>{
  for(const id of ids){
-  const t=topics.find(t=>t.id===id);assert.ok(t,'Missing '+id);assert.ok(t.scenes.length>=6);
-  const rows=topicRecords(t,dataset.records);assert.equal(rows.length,t.recordIds.length);
+  const t=topics.find(t=>t.id===id);assert.ok(t,'Missing '+id);const archive=remainingTopics.find(entry=>entry.id===id)!;
+  assert.ok(archive.scenes.length>=6);
+  assert.deepEqual(t.scenes,archive.scenes.filter(scene=>scene.year<=1900));
+  const rows=topicRecords(t,dataset.records);const expected=t.recordIds.filter(recordId=>{
+   const row=dataset.records.find(r=>r.id===recordId);assert.ok(row,recordId);
+   return row.time.start===null||row.time.start<=1900;
+  });
+  assert.deepEqual(rows.map(row=>row.id).sort(),expected.sort());
   let before=-Infinity;
-  for(const s of t.scenes){assert.ok(s.year>=before&&s.year<=1934,s.id);before=s.year;assert.ok(s.body.length>=180&&s.note.length>=55,s.id);assert.ok(s.recordIds.every(x=>t.recordIds.includes(x)));assert.ok(rows.some(r=>s.recordIds.includes(r.id)&&historyState(r,s.year)==='active'&&(r.location||r.overlay?.geometry)),s.id+' mapped current evidence');}
+  for(const s of t.scenes){assert.ok(s.year>=before&&s.year<=1900,s.id);before=s.year;assert.ok(s.body.length>=180&&s.note.length>=55,s.id);assert.ok(s.recordIds.every(x=>t.recordIds.includes(x)));assert.ok(rows.some(r=>s.recordIds.includes(r.id)&&historyState(r,s.year)==='active'&&(r.location||r.overlay?.geometry)),s.id+' mapped current evidence');}
   assert.ok(topicConnections[id]?.length);
  }
  assert.equal(topics.length,28);assert.equal(futureDives.length,0);assert.doesNotMatch(futureDivesHTML(),/NOT YET PLAYABLE|data-future-topic/);

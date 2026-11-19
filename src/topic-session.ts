@@ -1,6 +1,6 @@
 import type { Story } from './stories';
 import { sampleStory, sceneStartMs } from './story-player';
-import { topicEndYear } from './topic-scope';
+import { chaptersThrough, topicEndYear } from './topic-scope';
 
 /** A topic owns its clock. It has no reference to the shared atlas state. */
 export class TopicSession {
@@ -11,10 +11,13 @@ export class TopicSession {
   completed=false;
   readonly minYear:number;
   readonly maxYear:number;
-  constructor(readonly story:Story,evidenceStartYear?:number){
+  readonly story:Story;
+  constructor(story:Story,evidenceStartYear?:number){
     this.maxYear=topicEndYear(story.id);
-    this.minYear=Math.min(...story.scenes.map(s=>s.year),Number.isFinite(evidenceStartYear)?evidenceStartYear!:Infinity);
-    this.year=story.scenes[0].year;
+    this.story=chaptersThrough(story,this.maxYear);
+    if(!this.story.scenes.length)throw Error("No dated chapters within this timeline");
+    this.minYear=Math.min(...this.story.scenes.map(s=>s.year),Number.isFinite(evidenceStartYear)?evidenceStartYear!:Infinity);
+    this.year=this.story.scenes[0].year;
   }
   seekYear(year:number){
     if(!Number.isFinite(year))return;

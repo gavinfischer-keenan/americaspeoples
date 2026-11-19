@@ -275,7 +275,7 @@ export const islandChainStories:Story[]=[
         "year": 1899,
         "title": "Another contested colonial power",
         "body": "American occupation displaced Cebu’s revolutionary government in February 1899. Later reversals between civil and military administration, including port closure and reopening, show how uneven the transition remained. The city’s connected economy endured under new political conditions, while residents’ experience cannot be reduced to a single transfer date.",
-        "note": "Month-level historical attestation; the guide carries the administrative sequence through 1902 and keeps later developments within 1934.",
+        "note": "The source dates this administrative change to the month.",
         "recordIds": [
           "island-cebu-1899"
         ],

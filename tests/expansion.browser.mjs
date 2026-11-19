@@ -1,5 +1,5 @@
 import {tsImport} from 'tsx/esm/api';
-const {scopedVoyageProgress}=await tsImport('../src/shared-movie.ts',import.meta.url);
+const {scopedVoyageProgress,isPlayableVoyage}=await tsImport('../src/shared-movie.ts',import.meta.url);
 import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
@@ -15,7 +15,7 @@ const boundaryNames=()=>page.locator('#context-catalog strong').allTextContents(
 const year=async value=>{await page.locator('#context-year').fill(String(value));await page.locator('#context-year-form button').click();};
 try{
  await page.goto(origin+'/#movie');
- await page.waitForFunction(count=>document.querySelectorAll('#watch-voyage option').length===count,voyageCatalog.voyages.length+1);
+ await page.waitForFunction(count=>document.querySelectorAll('#watch-voyage option').length===count,voyageCatalog.voyages.filter(isPlayableVoyage).length+1);
  await page.getByLabel('Follow an expedition',{exact:true}).selectOption('beagle-1831-1836');
  const controls=await page.locator('#voyage-controls').boundingBox(),map=await page.locator('#map-host').boundingBox();
  assert.ok(controls.x+controls.width<=map.x,'journey controls do not cover the map');

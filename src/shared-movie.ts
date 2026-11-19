@@ -21,8 +21,11 @@ export const inVoyageScope=(v:Voyage,point:readonly number[])=>v.scope==='global
 export function scopedVoyageWindows(v: Voyage): MovieWindow[] {
   const cached = windowsCache.get(v);
   if (cached) return cached;
+  if(!v.stops.length || dateValue(v.stops[0].arrival)>MOVIE_END_DATE){
+    windowsCache.set(v,[]);return [];
+  }
   if(v.scope==='global'){
-    const windows=[{start:dateValue(v.stops[0].arrival),end:dateValue(v.stops.at(-1)!.departure)}];
+    const windows=[{start:dateValue(v.stops[0].arrival),end:Math.min(MOVIE_END_DATE,dateValue(v.stops.at(-1)!.departure))}];
     windowsCache.set(v,windows);return windows;
   }
   const pieces: MovieWindow[] = [];
@@ -30,6 +33,7 @@ export function scopedVoyageWindows(v: Voyage): MovieWindow[] {
     const stop = v.stops[i],
       arrival = dateValue(stop.arrival),
       departure = dateValue(stop.departure);
+    if (arrival>MOVIE_END_DATE)break;
     if (inAtlas(stop.coordinates))
       pieces.push({ start: arrival, end: departure });
     const next = v.stops[i + 1];
@@ -70,6 +74,8 @@ export function scopedVoyageWindows(v: Voyage): MovieWindow[] {
   }
   const merged: MovieWindow[] = [];
   for (const p of pieces) {
+    if(p.start>MOVIE_END_DATE)continue;
+    p.end=Math.min(p.end,MOVIE_END_DATE);
     const last = merged.at(-1);
     if (last && p.start <= last.end + 1e-9)
       last.end = Math.max(last.end, p.end);
@@ -78,9 +84,24 @@ export function scopedVoyageWindows(v: Voyage): MovieWindow[] {
   windowsCache.set(v, merged);
   return merged;
 }
+export const isPlayableVoyage=(voyage:Voyage):boolean=>scopedVoyageWindows(voyage).length>0;
+
+/** Keep the original dates and notes for the stops already reached by the policy horizon. */
+export const displayedVoyageStops=(voyage:Voyage)=>voyage.stops.filter(s=>dateValue(s.arrival)<=MOVIE_END_DATE);
+
+/** A later anchor still defines the leg's interpolation but is not a displayed destination. */
+export function sampleMapVoyage(voyage:Voyage,date:number){
+  if(!Number.isFinite(date)||date>MOVIE_END_DATE)return null;
+  const frame=sampleVoyage(voyage.stops,date);
+  if(frame?.status==='traveling' && dateValue(voyage.stops[frame.leg+1].arrival)>MOVIE_END_DATE){
+    return {...frame,stopName:'Under way from '+voyage.stops[frame.leg].name};
+  }
+  return frame;
+}
 export function scopedVoyageDate(v: Voyage, progress: number): number {
   const windows = scopedVoyageWindows(v);
   if (!windows.length) return NaN;
+  if(progress>=1)return windows.at(-1)!.end;
   let remaining =
     Math.max(0, Math.min(1, progress)) *
     windows.reduce((n, w) => n + w.end - w.start, 0);
@@ -94,7 +115,7 @@ export function scopedVoyageDate(v: Voyage, progress: number): number {
 export function scopedVoyageProgress(v: Voyage, date: number): number {
   const windows = scopedVoyageWindows(v),
     total = windows.reduce((n, w) => n + w.end - w.start, 0);
-  if (!total) return 0;
+  if (!total) return windows.length && date>=windows.at(-1)!.end ? 1 : 0;
   return (
     windows.reduce(
       (n, w) => n + Math.max(0, Math.min(date, w.end) - w.start),

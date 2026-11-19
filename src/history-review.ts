@@ -1,14 +1,14 @@
 import type { MapRecord } from "./model";
 import { esc } from "./dom";
 import { formatYear } from "./time";
-import { HISTORY_LABELS } from "./history";
+import { HISTORY_LABELS, ongoingHabitationLabel } from "./history";
 
 /** Shared explanation in interactive and downloadable source reviews. */
 export function historyHTML(r: MapRecord): string {
   const h = r.history;
   if (!h) return "";
   const detail = h.kind==='attestation' && h.windows ? `<p>Separate supported dates for this evidence. Between ranges the map retains earlier evidence as historical context.</p><ul>${h.windows.map(w=>`<li><strong>${formatYear(w.start)}–${formatYear(w.end)}</strong><p>${esc(w.note)}</p></li>`).join('')}</ul>` : h.kind==='attestation' ? '<p>A dated find, document or model remains as explicitly dated earlier evidence. It does not establish continuous presence, first arrival, a language boundary, or the beginning of a language. Read the source date and location precision separately.</p>' : h.kind==='visit' ? '<p>A dated visit remains as historical context after the visit ends. It does not establish settlement, continuous occupation, or later sovereignty.</p>' : h.kind==='habitation'
-    ? `<p>Occupation evidence is separate from founding or the first European account. ${h.continuity==='ongoing'?'Community history continues beyond the 1934 display horizon.':'The recorded interval describes the available evidence; its end alone does not establish abandonment.'}</p>`
+    ? `<p>Occupation evidence is separate from founding or the first European account. ${h.continuity==='ongoing'?ongoingHabitationLabel(r):'The recorded interval describes the available evidence; its end alone does not establish abandonment.'}</p>`
     : h.windows
     ? `<p>Only these supported windows appear in Movie. Gaps are unresolved contact, not proof of isolation. Animation does not measure voyage frequency.</p><ul>${h.windows.map((w) => `<li><strong>${formatYear(w.start)}–${formatYear(w.end)}</strong> · ${esc(w.certainty)}<p>${esc(w.note)}</p></li>`).join("")}</ul>`
     : h.kind === "wreck"

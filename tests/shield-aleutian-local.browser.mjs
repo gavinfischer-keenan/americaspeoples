@@ -2,12 +2,13 @@ import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {readFile,mkdir} from 'node:fs/promises';
 import {createStaticServer} from '../scripts/static-server.mjs';
-import {shieldAleutianLocalStories} from '../src/shield-aleutian-local-stories.ts';
+import {shieldAleutianLocalStories as archiveEntries} from '../src/shield-aleutian-local-stories.ts';
 
-assert.ok(shieldAleutianLocalStories.length>=4,'The Shield and local Aleutian stories must be populated');
+assert.ok(archiveEntries.length>=4,'The Shield and local Aleutian stories must be populated');
 const plans=JSON.parse(await readFile('data/village-plans.json','utf8')).plans;
 assert.ok(plans.some(p=>p.mediaId)&&plans.some(p=>p.diagram),'A historical chart and original explanatory diagram must be populated');
 const records=JSON.parse(await readFile('dist/dataset.json','utf8')).records;
+const shieldAleutianLocalStories=archiveEntries.map(entry=>({...entry,scenes:entry.scenes.filter(scene=>scene.year<=1900)}));
 const server=createStaticServer('dist');await new Promise(r=>server.listen(0,'127.0.0.1',r));
 const browser=await chromium.launch({executablePath:process.env.BROWSER_PATH||'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',headless:true});
 const page=await browser.newPage({viewport:{width:1440,height:960}}),errors=[];

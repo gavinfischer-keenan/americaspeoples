@@ -12,7 +12,8 @@ test('the four approved atlases keep Americas on its current route', async () =>
   assert.deepEqual(atlases.map(a => a.title), ['Americas', 'Africa & human origins', 'Europe & Mediterranean', 'Asia & Pacific']);
   assert.equal(atlases[0].href, '#movie');
   assert.equal(atlases[0].status, 'available');
-  assert.ok(atlases.slice(1).every(a => a.status === 'coming-soon'));
+  assert.equal(atlases.find(a=>a.id==='europe')?.status,'available');
+  assert.ok(atlases.filter(a=>['africa','asia-pacific'].includes(a.id)).every(a=>a.status==='coming-soon'));
 });
 
 test('future routes resolve only their exact registered destination', async () => {
@@ -25,7 +26,7 @@ test('future routes resolve only their exact registered destination', async () =
 
 test('every future manifest is empty and cannot accidentally enable research content', async () => {
   const { loadAtlasManifest, validatePlannedAtlasManifest } = await catalog();
-  for (const id of ['africa', 'europe', 'asia-pacific'] as const) {
+  for (const id of ['africa', 'asia-pacific'] as const) {
     const manifest = loadAtlasManifest(id);
     const onDisk = JSON.parse(readFileSync(new URL(`../data/atlases/${id}/manifest.json`, import.meta.url), 'utf8'));
     assert.deepEqual(manifest, onDisk);
@@ -41,7 +42,7 @@ test('future maps contain only the basemap and the coming-soon message', async (
   const { loadAtlasManifest } = await catalog();
   const { atlasPreviewHTML } = await import('../src/atlas-switcher');
   const land = JSON.parse(readFileSync(new URL('../data/land.geojson', import.meta.url), 'utf8'));
-  const outputs = ['africa', 'europe', 'asia-pacific'].map(id => atlasPreviewHTML(loadAtlasManifest(id as 'africa' | 'europe' | 'asia-pacific'), land));
+  const outputs = (['africa', 'asia-pacific'] as const).map(id => {const manifest=loadAtlasManifest(id);assert.equal(manifest.status,'coming-soon');if(manifest.status!=='coming-soon')throw Error('Unexpected active manifest');return atlasPreviewHTML(manifest,land);});
   for (const html of outputs) {
     assert.match(html, /COMING SOON/);
     assert.match(html, /class="atlas-preview-land" d="M/);

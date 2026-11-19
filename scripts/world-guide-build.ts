@@ -8,12 +8,13 @@ import {readWorldGuides} from './world-guide-data';
 import {worldVoyagesHTML,type AtlasVoyageLink} from './world-voyage-links';
 import type {Voyage} from '../src/voyages';
 import {copyWritingAssets,writingCollectionHTML,writingCollectionCSS} from './writing-collection';
+import {copyWorldGuideMedia,worldGuideMediaHTML,worldGuideMediaCSS} from './world-guide-media';
 
 type Terrain={id:string;bounds:number[];file:string;sha256:string;pixels:number[];sampleSpacingMeters:number;contourIntervalMeters:number};
-const atlasNames={africa:'Africa & human origins',europe:'Europe & Mediterranean','asia-pacific':'Asia & Pacific'};
+const atlasNames={americas:'Americas',africa:'Africa & human origins',europe:'Europe & Mediterranean','asia-pacific':'Asia & Pacific'};
 const sourceLinks=(urls:string[],g:WorldGuide)=>`<span class="world-citations">${urls.map(u=>`<a href="${esc(u)}">[${g.sources.findIndex(s=>s.url===u)+1}]</a>`).join(' ')}</span>`;
 
-export function worldGuideHTML(g:WorldGuide,guides:WorldGuide[],land:GeoPermissibleObjects,terrain?:Terrain,voyagesHTML='',rivers?:GeoPermissibleObjects,writingHTML=''):string{
+export function worldGuideHTML(g:WorldGuide,guides:WorldGuide[],land:GeoPermissibleObjects,terrain?:Terrain,voyagesHTML='',rivers?:GeoPermissibleObjects,writingHTML='',mediaHTML=''):string{
  const layout=worldMapLayout(g),[w,,e,n]=layout.bounds;
  const north=Math.log(Math.tan(Math.PI/4+n*Math.PI/360));
  const scale=1200/((e-w)*Math.PI/180);
@@ -49,7 +50,7 @@ export function worldGuideHTML(g:WorldGuide,guides:WorldGuide[],land:GeoPermissi
  const sections=g.sections.map((section,i)=>`<section id="reading-${i}"><h2>${esc(section.heading)}</h2>${section.paragraphs.map(p=>`<p>${esc(p.text)} ${sourceLinks(p.sources,g)}</p>`).join('')}${section.rows?.length?`<div class="table-scroll"><table><thead><tr>${section.columns!.map(c=>`<th scope="col">${esc(c)}</th>`).join('')}<th scope="col">Sources</th></tr></thead><tbody>${section.rows.map(r=>`<tr>${r.cells.map((c,i)=>i?`<td>${esc(c)}</td>`:`<th scope="row">${esc(c)}</th>`).join('')}<td>${sourceLinks(r.sources,g)}</td></tr>`).join('')}</tbody></table></div>`:''}</section>`).join('');
  const references=g.referenceMaps?.length?`<section id="reference-maps"><h2>Archaeological plans and wider reference maps</h2><p>Open the source maps for their original detail, legends and dates. Their coverage and reproduction terms belong to the issuing institution.</p>${g.referenceMaps.map(m=>`<article class="site-card"><h3><a href="${esc(m.url)}">${esc(m.title)} ↗</a></h3><p>${esc(m.description)}</p></article>`).join('')}</section>`:'';
  const related=g.relatedGuideIds?.map(id=>guides.find(item=>item.id===id)!).filter(Boolean)??[];
- return `<div class="eyebrow">THE HUMAN ATLASES · DEEP DIVE</div><h1>${esc(g.title)}</h1><p class="lead">${esc(g.intro)}</p><p>${esc(g.scope)}</p><nav class="world-atlas-links" aria-label="Atlas homes">${g.id==='world-everyday-writing'?'<a href="../#map">← Americas</a> · ':''}${g.atlasIds.map(a=>`<a href="../#atlas/${a}">← ${esc(atlasNames[a])}</a>`).join(' · ')}</nav><nav class="local-nav" aria-label="Page sections">${writingHTML?'<a href="#everyday-texts">Originals and translations</a>':''}<a href="#area-map">Map and dated finds</a>${g.sections.map((s,i)=>`<a href="#reading-${i}">${esc(s.heading)}</a>`).join('')}${references?'<a href="#reference-maps">Reference maps</a>':''}${voyagesHTML?'<a href="#connected-voyages">Connected voyages</a>':''}<a href="#sources">Sources</a></nav>${map}${sections}${references}${voyagesHTML}${writingHTML}${related.length?`<section><h2>Continue exploring</h2><ul>${related.map(r=>`<li><a href="${r.id}.html">${esc(r.title)}</a> — ${esc(r.description)}</li>`).join('')}</ul></section>`:''}<section id="sources"><h2>Sources for this guide</h2><ol>${g.sources.map((s,i)=>`<li id="source-${i+1}"><a href="${esc(s.url)}">${esc(s.title)}</a></li>`).join('')}</ol><p>Independently authored summaries. Geological ages, historical dates and modern discovery dates are kept distinct. Maps in these guides do not add events to the Americas movie.</p></section>`;
+ return `<div class="eyebrow">THE HUMAN ATLASES · DEEP DIVE</div><h1>${esc(g.title)}</h1><p class="lead">${esc(g.intro)}</p><p>${esc(g.scope)}</p><nav class="world-atlas-links" aria-label="Atlas homes">${g.id==='world-everyday-writing'?'<a href="../#map">← Americas</a> · ':''}${g.atlasIds.map(a=>`<a href="../${a==='americas'?'#movie':'#atlas/'+a}">← ${esc(atlasNames[a])}</a>`).join(' · ')}</nav><nav class="local-nav" aria-label="Page sections">${writingHTML?'<a href="#everyday-texts">Originals and translations</a>':''}<a href="#area-map">Map and dated finds</a>${g.sections.map((s,i)=>`<a href="#reading-${i}">${esc(s.heading)}</a>`).join('')}${references?'<a href="#reference-maps">Reference maps</a>':''}${voyagesHTML?'<a href="#connected-voyages">Connected voyages</a>':''}<a href="#sources">Sources</a></nav>${mediaHTML}${map}${sections}${references}${voyagesHTML}${writingHTML}${related.length?`<section><h2>Continue exploring</h2><ul>${related.map(r=>`<li><a href="${r.id}.html">${esc(r.title)}</a> — ${esc(r.description)}</li>`).join('')}</ul></section>`:''}<section id="sources"><h2>Sources for this guide</h2><ol>${g.sources.map((s,i)=>`<li id="source-${i+1}"><a href="${esc(s.url)}">${esc(s.title)}</a></li>`).join('')}</ol><p>Independently authored summaries. Geological ages, historical dates and modern discovery dates are kept distinct. Maps in these guides do not add events to the Americas movie.</p></section>`;
 }
 
 export const worldGuideCSS=`.world-map{margin:1.5rem 0}.world-map figcaption{font-size:.85rem;margin-top:.6rem}.world-findings{padding-left:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,310px),1fr));gap:1rem 2.5rem}.world-findings li{padding:.6rem .8rem;background:white;border-bottom:2px solid #acc3c7;scroll-margin-top:1rem}.world-findings h3{margin:.3rem 0}.world-findings p{margin:.5rem 0}.find-date{font-weight:700;color:#865815}.world-citations{white-space:nowrap;font-size:.85rem}.world-citations a{margin-right:.4rem}.world-atlas-links{padding:.8rem 0}.voyage-stops{font-size:.9rem}.world-map svg a:focus-visible circle{stroke:#d74e0b;stroke-width:5}`;
@@ -57,6 +58,7 @@ export const worldGuideCSS=`.world-map{margin:1.5rem 0}.world-map figcaption{fon
 export async function buildWorldGuides(shell:(title:string,body:string,up?:string,css?:string)=>string){
  const guides=await readWorldGuides();
  const writing=await copyWritingAssets();
+ const media=await copyWorldGuideMedia();
  const land=JSON.parse(await readFile('data/land-detailed.geojson','utf8'));
  const rivers=JSON.parse(await readFile('data/world-guide-rivers.geojson','utf8'));
  const connections=JSON.parse(await readFile('data/atlas-voyage-links.json','utf8')) as {links:AtlasVoyageLink[]};
@@ -68,11 +70,11 @@ export async function buildWorldGuides(shell:(title:string,body:string,up?:strin
   if(!map||map.bounds.some((v,i)=>Math.abs(v-layout.bounds[i])>1e-8))throw Error('Missing or stale world terrain '+guide.id);
   const bytes=await readFile('data/guide-terrain/'+map.file);
   if(createHash('sha256').update(bytes).digest('hex')!==map.sha256)throw Error('World terrain hash mismatch '+guide.id);
-  const connectionsHTML=guide.voyageIds?worldVoyagesHTML(guide.atlasIds[0],connections.links,voyages.voyages,voyages.sources,guide.voyageIds):'';
+  const connectionsHTML=guide.voyageIds&&guide.atlasIds[0]!=='americas'?worldVoyagesHTML(guide.atlasIds[0],connections.links,voyages.voyages,voyages.sources,guide.voyageIds):'';
   const allTexts=guide.id==='world-everyday-writing';
   const pairs=allTexts?writing:writing.filter(e=>e.guideIds?.includes(guide.id));
   const writingHTML=writingCollectionHTML(pairs,allTexts)+(pairs.length&&!allTexts?'<p><a href="world-everyday-writing.html#everyday-texts">Explore all original texts and translations →</a></p>':'');
-  await writeFile(`sites/${guide.id}.html`,shell(guide.title,worldGuideHTML(guide,guides,land,map,connectionsHTML,rivers,writingHTML),'../',worldGuideCSS+(pairs.length?writingCollectionCSS:'')));
+  await writeFile(`sites/${guide.id}.html`,shell(guide.title,worldGuideHTML(guide,guides,land,map,connectionsHTML,rivers,writingHTML,worldGuideMediaHTML(guide.id,media)),'../',worldGuideCSS+worldGuideMediaCSS+(pairs.length?writingCollectionCSS:'')));
  }
  return guides;
 }

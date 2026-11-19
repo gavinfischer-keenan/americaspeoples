@@ -21,6 +21,8 @@ const saved=new Map<string,SavedTopic>();
 /** This controller never receives or changes the shared atlas clock or filters. */
 export function mountTopicPage(host:HTMLElement,topic:TopicDive,all:readonly DisplayRecord[],land:any,returnHref="#movie",initialRecord?:DisplayRecord):()=>void{
  const records=topicRecords(topic,all);
+ const eligibleIds=new Set(records.map(r=>r.id));
+ topic={...topic,scenes:topic.scenes.map(scene=>({...scene,recordIds:scene.recordIds.filter(id=>eligibleIds.has(id))}))};
  const guide=siteGuides.find(g=>g.topicId===topic.id);
  const evidenceStartYear=Math.min(...records.flatMap(r=>r.time.start===null?[]:[r.time.start]));
  const state=saved.get(topic.id)??{session:new TopicSession(topic,evidenceStartYear)};saved.set(topic.id,state);
@@ -60,7 +62,7 @@ export function mountTopicPage(host:HTMLElement,topic:TopicDive,all:readonly Dis
   if(year!==drawnYear||reframe){
    // Topic controls display a whole year; only expedition playback has a day-level clock.
    const eligible=availableVoyageRecords(records,[],year+1-1e-9);
-   const view=recordsForView(eligible,'movie',year);
+   const view=recordsForView(eligible,'movie',year,session.maxYear);
    const shown=[...view.dated,...view.history];
    selected=selected.filter(r=>shown.some(v=>v.id===r.id));renderDetails();
    map.update(shown,year,[],{ice:false,iceScenario:'optimal',currents:false,winds:false,hidden:new Set(climateKinds),uncertain:false});

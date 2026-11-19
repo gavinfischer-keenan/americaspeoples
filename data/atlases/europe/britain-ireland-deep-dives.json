@@ -1,0 +1,2991 @@
+{
+  "schemaVersion": 1,
+  "guides": [
+    {
+      "id": "world-england",
+      "atlasIds": [
+        "europe"
+      ],
+      "category": "places",
+      "title": "England from ice-age landscapes to 1900",
+      "description": "Early people, Roman towns, port cities, industry and reform across England.",
+      "intro": "England’s earliest record begins with footprints in Norfolk and worked flint in Suffolk. Much later, the archive includes boat planks near Dover, Roman road remains, medieval land surveys and factory disputes. These sources measure different things and make different lives visible. Follow several of them across the map to see how movement, labour and authority changed between the Pleistocene and 1900.",
+      "scope": "Selected histories in the area now called England, with cross-border connections wherever the record allows. The mapped places represent discoveries, built sites or documented events.",
+      "map": {
+        "bounds": [
+          -7,
+          49.8,
+          2.4,
+          56.1
+        ],
+        "scope": "Approximate discovery sites, built places and historical reference localities on a modern basemap.",
+        "points": [
+          {
+            "id": "happisburgh-footprints",
+            "label": "Happisburgh coast, Norfolk",
+            "coordinates": [
+              1.54,
+              52.825
+            ],
+            "date": "About 1 million–780,000 years ago",
+            "description": "A footprint surface records several people walking across estuarine mud on a landscape now on the Norfolk coast.",
+            "sources": [
+              "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0088329"
+            ]
+          },
+          {
+            "id": "boxgrove-fossils",
+            "label": "Boxgrove area, West Sussex",
+            "coordinates": [
+              -0.704,
+              50.863
+            ],
+            "date": "About 480,000 years ago",
+            "description": "A lower leg bone and two teeth accompany an archaeological record of activity near an ancient shoreline.",
+            "sources": [
+              "https://www.nhm.ac.uk/discover/news/2022/november/earliest-human-fossils-in-the-uk-reveal-how-europeans-connected.html"
+            ]
+          },
+          {
+            "id": "goughs-cave-return",
+            "label": "Gough’s Cave, Cheddar",
+            "coordinates": [
+              -2.766,
+              51.282
+            ],
+            "date": "About 14,700 years ago",
+            "description": "Bones, stone tools and worked antler preserve evidence of activity as people returned to Britain late in the Ice Age.",
+            "sources": [
+              "https://www.nhm.ac.uk/discover/the-cannibals-of-goughs-cave.html"
+            ]
+          },
+          {
+            "id": "star-carr-shore",
+            "label": "Star Carr, Vale of Pickering",
+            "coordinates": [
+              -0.432,
+              54.215
+            ],
+            "date": "About 9300–8500 BCE",
+            "description": "A Mesolithic site on a former lakeshore preserved timber, animal bone, tools and worked antler in waterlogged deposits.",
+            "sources": [
+              "https://historicengland.org.uk/listing/the-list/list-entry/1401425/"
+            ]
+          },
+          {
+            "id": "sweet-track-build",
+            "label": "Shapwick Heath, Somerset",
+            "coordinates": [
+              -2.824,
+              51.163
+            ],
+            "date": "3807–3806 BCE",
+            "description": "The Sweet Track crossed wet ground. Preserved timbers made precise tree-ring dating possible.",
+            "sources": [
+              "https://historicengland.org.uk/listing/heritage-gateway/results/record/7ae57b43-b498-445d-8bed-e1e4f9b8947c/10739"
+            ]
+          },
+          {
+            "id": "dover-boat",
+            "label": "Dover waterfront",
+            "coordinates": [
+              1.315,
+              51.125
+            ],
+            "date": "Around 1550 BCE",
+            "description": "Preserved oak planks of a Bronze Age boat were found in waterlogged ground in Dover.",
+            "sources": [
+              "https://heritage.kent.gov.uk/Monument/MKE15994"
+            ]
+          },
+          {
+            "id": "must-farm-fire",
+            "label": "Must Farm, Peterborough fen edge",
+            "coordinates": [
+              -0.102,
+              52.563
+            ],
+            "date": "About 900–800 BCE",
+            "description": "A settlement built over a wet channel burned. The collapse preserved objects near where people last used them.",
+            "sources": [
+              "https://historicengland.org.uk/whats-new/in-your-area/east-of-england/must-farm-story-told-in-new-publications/"
+            ]
+          },
+          {
+            "id": "richborough-roman-landing",
+            "label": "Richborough, Kent",
+            "coordinates": [
+              1.332,
+              51.294
+            ],
+            "date": "43 CE",
+            "description": "Roman ditches and a gate mark a landing and supply point associated with the Claudian invasion.",
+            "sources": [
+              "https://www.english-heritage.org.uk/visit/places/richborough-roman-fort-and-amphitheatre/history-and-stories/recreating-a-roman-gate"
+            ]
+          },
+          {
+            "id": "watling-street-road",
+            "label": "Londinium, London",
+            "coordinates": [
+              -0.092,
+              51.511
+            ],
+            "date": "Mid–later first century CE",
+            "description": "A major road linked Dover and Canterbury to London, then passed through St Albans and Towcester towards Wroxeter.",
+            "sources": [
+              "https://historicengland.org.uk/listing/heritage-gateway/results/record/0d636742-8028-4a8c-8b7c-e1f9aaf2d338/a59da6a8-588f-4462-8ddb-86ebb3a362ed"
+            ]
+          },
+          {
+            "id": "wroxeter-roman-town",
+            "label": "Wroxeter, Shropshire",
+            "coordinates": [
+              -2.648,
+              52.674
+            ],
+            "date": "About 90–200 CE",
+            "description": "A Roman town developed at the site of an earlier legionary fortress near the Severn.",
+            "sources": [
+              "https://www.english-heritage.org.uk/visit/places/wroxeter-roman-city/history/"
+            ]
+          },
+          {
+            "id": "hadrians-wall-construction",
+            "label": "Housesteads sector, Hadrian’s Wall",
+            "coordinates": [
+              -2.37,
+              55.011
+            ],
+            "date": "From 122 CE, main construction phase",
+            "description": "The wall, ditches, forts, roads and gates brought a new military infrastructure to the Tyne–Solway corridor.",
+            "sources": [
+              "https://www.english-heritage.org.uk/faqs-hadrians-wall/"
+            ]
+          },
+          {
+            "id": "sutton-hoo-ship-burial",
+            "label": "Sutton Hoo, Suffolk",
+            "coordinates": [
+              1.339,
+              52.089
+            ],
+            "date": "Early seventh century CE",
+            "description": "A burial mound contained a ship imprint and a chamber with armour, vessels and other objects.",
+            "sources": [
+              "https://www.britishmuseum.org/sites/default/files/2021-05/large_print_guide_room_41.pdf"
+            ]
+          },
+          {
+            "id": "lindisfarne-monastery",
+            "label": "Lindisfarne, Northumberland",
+            "coordinates": [
+              -1.802,
+              55.669
+            ],
+            "date": "635 CE",
+            "description": "A community founded by Aidan became a religious and artistic centre connected to Iona and the Northumbrian court.",
+            "sources": [
+              "https://www.english-heritage.org.uk/visit/places/lindisfarne-priory/history/"
+            ]
+          },
+          {
+            "id": "coppergate-york",
+            "label": "Coppergate, York",
+            "coordinates": [
+              -1.081,
+              53.957
+            ],
+            "date": "Around 900–1050 CE",
+            "description": "Timber buildings, tools and discarded goods from Coppergate preserve a record of craft production and trade.",
+            "sources": [
+              "https://www.jorvikvikingcentre.co.uk/about/jorvik-story/coppergate-dig/"
+            ]
+          },
+          {
+            "id": "battle-hastings",
+            "label": "Battle, East Sussex",
+            "coordinates": [
+              0.488,
+              50.912
+            ],
+            "date": "14 October 1066",
+            "description": "William of Normandy defeated Harold II’s army inland from the Sussex coast.",
+            "sources": [
+              "https://www.english-heritage.org.uk/visit/places/1066-battle-of-hastings-abbey-and-battlefield/history-and-stories/battle-of-hastings-location/"
+            ]
+          },
+          {
+            "id": "domesday-survey",
+            "label": "Winchester, royal administration reference",
+            "coordinates": [
+              -1.318,
+              51.061
+            ],
+            "date": "1086 CE",
+            "description": "Royal commissioners recorded estates, livestock, some inhabitants and values across much of England.",
+            "sources": [
+              "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/domesday-book/"
+            ]
+          },
+          {
+            "id": "runnymede-magna-carta",
+            "label": "Runnymede, Surrey",
+            "coordinates": [
+              -0.566,
+              51.443
+            ],
+            "date": "June 1215",
+            "description": "The charter addressed demands involving taxation, liberty and the relationship between royal and baronial authority.",
+            "sources": [
+              "https://www.nationalarchives.gov.uk/education/resources/significant-events/magna-carta-agreed-1215/"
+            ]
+          },
+          {
+            "id": "dissolution-abbeys",
+            "label": "Fountains Abbey, North Yorkshire",
+            "coordinates": [
+              -1.582,
+              54.11
+            ],
+            "date": "1536–1540 CE",
+            "description": "Religious property passed to the Crown as Henry VIII’s government closed monastic houses across England and Wales.",
+            "sources": [
+              "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/dissolution-monasteries-1536-1540/"
+            ]
+          },
+          {
+            "id": "iron-bridge-erected",
+            "label": "Ironbridge, Shropshire",
+            "coordinates": [
+              -2.485,
+              52.628
+            ],
+            "date": "1779 CE, main arch erected",
+            "description": "A cast-iron arch was assembled above a river corridor already important for making and moving goods.",
+            "sources": [
+              "https://www.english-heritage.org.uk/visit/places/iron-bridge/history"
+            ]
+          },
+          {
+            "id": "peterloo-protest",
+            "label": "St Peter’s Field, Manchester",
+            "coordinates": [
+              -2.247,
+              53.476
+            ],
+            "date": "16 August 1819",
+            "description": "A large reform meeting at St Peter’s Field called for parliamentary change. Armed forces entered the crowd and killed and injured participants.",
+            "sources": [
+              "https://www.nationalarchives.gov.uk/explore-the-collection/explore-by-time-period/georgians/the-peterloo-massacre/"
+            ]
+          },
+          {
+            "id": "liverpool-manchester-railway",
+            "label": "Crown Street area, Liverpool",
+            "coordinates": [
+              -2.963,
+              53.404
+            ],
+            "date": "15 September 1830",
+            "description": "A public railway linked two industrial and commercial centres in northwest England.",
+            "sources": [
+              "https://blog.scienceandindustrymuseum.org.uk/the-stephensons-part-ii/"
+            ]
+          },
+          {
+            "id": "matchgirls-1888",
+            "label": "Bow, east London",
+            "coordinates": [
+              -0.028,
+              51.53
+            ],
+            "date": "July 1888",
+            "description": "Workers at the Bryant and May factory struck following complaints over pay and conditions.",
+            "sources": [
+              "https://edm.parliament.uk/early-day-motion/56721/matchgirls-industrial-action-1888"
+            ]
+          },
+          {
+            "id": "london-census-series",
+            "label": "London, historical administrative county",
+            "coordinates": [
+              -0.128,
+              51.509
+            ],
+            "date": "Census checkpoints, 1861–1891",
+            "description": "Four census checkpoints record growth from 2.81 million in 1861 to 4.23 million in 1891 within the historical comparison area.",
+            "sources": [
+              "https://www.visionofbritain.org.uk/census/table/EW1911GEN_M11"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "Changing landscapes and early work",
+          "paragraphs": [
+            {
+              "text": "The tracks at Happisburgh and the bones at Boxgrove belong to different Pleistocene landscapes. The long gaps between them are part of the archaeological record. At Star Carr, waterlogged lake-edge deposits preserve evidence of more recent hunter-gatherers. Later still, pegged wooden walkways in the Somerset Levels show how farming communities engineered routes across wet ground.",
+              "sources": [
+                "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0088329",
+                "https://www.nhm.ac.uk/discover/news/2022/november/earliest-human-fossils-in-the-uk-reveal-how-europeans-connected.html",
+                "https://historicengland.org.uk/listing/the-list/list-entry/1401425/",
+                "https://historicengland.org.uk/listing/heritage-gateway/results/record/7ae57b43-b498-445d-8bed-e1e4f9b8947c/10739"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Coastal travel, town streets and Rome",
+          "paragraphs": [
+            {
+              "text": "The Dover boat documents Bronze Age woodworking and seafaring. Roman ditches at Richborough belong to a later invasion and supply system. Roads linked ports, forts and civilian towns. At Wroxeter, a military site developed into an urban settlement with its own public buildings and households. The separate Hadrian’s Wall guide traces the frontier at the scale of forts, crossings and neighbouring settlements.",
+              "sources": [
+                "https://heritage.kent.gov.uk/Monument/MKE15994",
+                "https://www.english-heritage.org.uk/visit/places/richborough-roman-fort-and-amphitheatre/history-and-stories/recreating-a-roman-gate",
+                "https://historicengland.org.uk/listing/heritage-gateway/results/record/0d636742-8028-4a8c-8b7c-e1f9aaf2d338/a59da6a8-588f-4462-8ddb-86ebb3a362ed",
+                "https://www.english-heritage.org.uk/visit/places/wroxeter-roman-city/history/",
+                "https://www.english-heritage.org.uk/faqs-hadrians-wall/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "North Sea contacts and medieval power",
+          "paragraphs": [
+            {
+              "text": "The Sutton Hoo burial joined local power to a wider world of ships and traded or gifted objects. Lindisfarne drew people and books across the North Sea and Irish Sea, while York’s excavated workshops show the ordinary trade and craft of a later urban community. After 1066 a new ruling elite used tools such as the Domesday survey to record land and its resources.",
+              "sources": [
+                "https://www.britishmuseum.org/sites/default/files/2021-05/large_print_guide_room_41.pdf",
+                "https://www.english-heritage.org.uk/visit/places/lindisfarne-priory/history/",
+                "https://www.jorvikvikingcentre.co.uk/about/jorvik-story/coppergate-dig/",
+                "https://www.english-heritage.org.uk/visit/places/1066-battle-of-hastings-abbey-and-battlefield/history-and-stories/battle-of-hastings-location/",
+                "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/domesday-book/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Land, representation and the royal state",
+          "paragraphs": [
+            {
+              "text": "The Runnymede agreement and later parliamentary summons grew from conflicts over how kings should govern. Surviving documents usually speak in the voices of people who could call assemblies, grant charters or order surveys. Tudor records of the dissolution also expose transfers of property that changed work, welfare and land use around former monasteries.",
+              "sources": [
+                "https://www.nationalarchives.gov.uk/education/resources/significant-events/magna-carta-agreed-1215/",
+                "https://www.parliament.uk/about/living-heritage/evolutionofparliament/originsofparliament/birthofparliament/overview/simondemontfort/demontfortparliament/",
+                "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/dissolution-monasteries-1536-1540/",
+                "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/state-papers-domestic-1642-1660"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Industry, Atlantic trade and urban protest",
+          "paragraphs": [
+            {
+              "text": "The Severn’s ironworks and the Liverpool–Manchester railway moved goods through expanding industrial districts. Liverpool investment also enabled forced Atlantic transportation, as the Brookes voyage record documents. In the new industrial towns people organised over public representation and conditions at work. The records of Peterloo and the Bow matchworkers show different tools of protest and collective action.",
+              "sources": [
+                "https://www.slavevoyages.org/voyage/80666/",
+                "https://www.english-heritage.org.uk/visit/places/iron-bridge/history",
+                "https://www.nationalarchives.gov.uk/explore-the-collection/explore-by-time-period/georgians/the-peterloo-massacre/",
+                "https://blog.scienceandindustrymuseum.org.uk/the-stephensons-part-ii/",
+                "https://edm.parliament.uk/early-day-motion/56721/matchgirls-industrial-action-1888"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Measuring urban growth",
+          "paragraphs": [
+            {
+              "text": "For London, the nineteenth-century census comparisons count nearly 2.81 million people in 1861 and 4.23 million in 1891 within the administrative county used by the retrospective table. Its geographic scope differs from the broader metropolitan area. The exhibition in Hyde Park gives another view of the city during this period, as a place where imperial and industrial goods were staged for a mass public.",
+              "sources": [
+                "https://www.visionofbritain.org.uk/census/table/EW1911GEN_M11",
+                "https://www.vam.ac.uk/articles/the-great-exhibition-of-1851"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Hominin footprints at Happisburgh",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0088329"
+        },
+        {
+          "title": "Boxgrove and European hominin fossils",
+          "url": "https://www.nhm.ac.uk/discover/news/2022/november/earliest-human-fossils-in-the-uk-reveal-how-europeans-connected.html"
+        },
+        {
+          "title": "The archaeology of Gough’s Cave",
+          "url": "https://www.nhm.ac.uk/discover/the-cannibals-of-goughs-cave.html"
+        },
+        {
+          "title": "Star Carr scheduled monument",
+          "url": "https://historicengland.org.uk/listing/the-list/list-entry/1401425/"
+        },
+        {
+          "title": "Sweet Track, Shapwick Heath",
+          "url": "https://historicengland.org.uk/listing/heritage-gateway/results/record/7ae57b43-b498-445d-8bed-e1e4f9b8947c/10739"
+        },
+        {
+          "title": "Dover Bronze Age boat find record",
+          "url": "https://heritage.kent.gov.uk/Monument/MKE15994"
+        },
+        {
+          "title": "Must Farm Bronze Age settlement publications",
+          "url": "https://historicengland.org.uk/whats-new/in-your-area/east-of-england/must-farm-story-told-in-new-publications/"
+        },
+        {
+          "title": "Recreating the Roman gate at Richborough",
+          "url": "https://www.english-heritage.org.uk/visit/places/richborough-roman-fort-and-amphitheatre/history-and-stories/recreating-a-roman-gate"
+        },
+        {
+          "title": "Scheduled Watling Street road corridor",
+          "url": "https://historicengland.org.uk/listing/heritage-gateway/results/record/0d636742-8028-4a8c-8b7c-e1f9aaf2d338/a59da6a8-588f-4462-8ddb-86ebb3a362ed"
+        },
+        {
+          "title": "History of Wroxeter Roman City",
+          "url": "https://www.english-heritage.org.uk/visit/places/wroxeter-roman-city/history/"
+        },
+        {
+          "title": "Hadrian’s Wall background and dates",
+          "url": "https://www.english-heritage.org.uk/faqs-hadrians-wall/"
+        },
+        {
+          "title": "Sutton Hoo and early medieval Europe collection guide",
+          "url": "https://www.britishmuseum.org/sites/default/files/2021-05/large_print_guide_room_41.pdf"
+        },
+        {
+          "title": "History of Lindisfarne Priory",
+          "url": "https://www.english-heritage.org.uk/visit/places/lindisfarne-priory/history/"
+        },
+        {
+          "title": "The Coppergate Dig",
+          "url": "https://www.jorvikvikingcentre.co.uk/about/jorvik-story/coppergate-dig/"
+        },
+        {
+          "title": "The location of the Battle of Hastings",
+          "url": "https://www.english-heritage.org.uk/visit/places/1066-battle-of-hastings-abbey-and-battlefield/history-and-stories/battle-of-hastings-location/"
+        },
+        {
+          "title": "Domesday Book research guide",
+          "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/domesday-book/"
+        },
+        {
+          "title": "Magna Carta agreed at Runnymede",
+          "url": "https://www.nationalarchives.gov.uk/education/resources/significant-events/magna-carta-agreed-1215/"
+        },
+        {
+          "title": "Records of the Dissolution",
+          "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/dissolution-monasteries-1536-1540/"
+        },
+        {
+          "title": "History of the Iron Bridge",
+          "url": "https://www.english-heritage.org.uk/visit/places/iron-bridge/history"
+        },
+        {
+          "title": "The Peterloo Massacre",
+          "url": "https://www.nationalarchives.gov.uk/explore-the-collection/explore-by-time-period/georgians/the-peterloo-massacre/"
+        },
+        {
+          "title": "The Stephensons and the Liverpool and Manchester Railway",
+          "url": "https://blog.scienceandindustrymuseum.org.uk/the-stephensons-part-ii/"
+        },
+        {
+          "title": "Parliamentary record of the 1888 matchgirls’ action",
+          "url": "https://edm.parliament.uk/early-day-motion/56721/matchgirls-industrial-action-1888"
+        },
+        {
+          "title": "1911 Census general report, Table 11, comparative population by census year",
+          "url": "https://www.visionofbritain.org.uk/census/table/EW1911GEN_M11"
+        },
+        {
+          "title": "Simon de Montfort’s Parliament",
+          "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/originsofparliament/birthofparliament/overview/simondemontfort/demontfortparliament/"
+        },
+        {
+          "title": "Civil War and Interregnum state papers",
+          "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/state-papers-domestic-1642-1660"
+        },
+        {
+          "title": "SlaveVoyages record 80666",
+          "url": "https://www.slavevoyages.org/voyage/80666/"
+        },
+        {
+          "title": "The Great Exhibition of 1851",
+          "url": "https://www.vam.ac.uk/articles/the-great-exhibition-of-1851"
+        }
+      ],
+      "relatedGuideIds": [
+        "world-britain-ireland-ice-age",
+        "world-stonehenge",
+        "world-hadrians-wall",
+        "world-wales"
+      ],
+      "referenceMaps": [
+        {
+          "title": "Historic England National Heritage List map",
+          "url": "https://historicengland.org.uk/listing/the-list/map-search/",
+          "description": "Search scheduled archaeological sites, structures and historic battlefields in England."
+        },
+        {
+          "title": "Early modern maps in the National Archives",
+          "url": "https://www.nationalarchives.gov.uk/explore-the-collection/explore-by-time-period/early-modern/early-modern-maps/",
+          "description": "View maps created for particular administrative, estate and coastal purposes."
+        },
+        {
+          "title": "Historical census geographies",
+          "url": "https://www.visionofbritain.org.uk/travellers/Cen_Guide/19",
+          "description": "Identify the historical units used in the census before comparing place totals."
+        }
+      ]
+    },
+    {
+      "id": "world-wales",
+      "atlasIds": [
+        "europe"
+      ],
+      "category": "places",
+      "title": "Wales from the first people to 1900",
+      "description": "Cave archaeology, maritime exchange, Welsh polities, language, coal and slate.",
+      "intro": "Cave burials, copper workings and forts form part of the record of Wales, alongside books, contested marches and industrial landscapes. Some connections ran along the Welsh coast, some crossed to Ireland, and others followed river valleys into the borderlands. The map connects selected places across those different settings.",
+      "scope": "Places in modern Wales and the Welsh borderlands, from the Middle Pleistocene to the onset of the Penrhyn dispute in 1900. Early regional labels follow the relevant archaeological or documentary evidence.",
+      "map": {
+        "bounds": [
+          -5.65,
+          51.19,
+          -2.43,
+          53.65
+        ],
+        "scope": "Approximate discovery sites, built places and historical reference localities on a modern basemap.",
+        "points": [
+          {
+            "id": "pontnewydd-teeth",
+            "label": "Pontnewydd Cave area, Denbighshire",
+            "coordinates": [
+              -3.432,
+              53.23
+            ],
+            "date": "About 230,000 years ago",
+            "description": "Teeth and stone artefacts recovered in the Elwy valley provide early evidence of human activity in what is now Wales.",
+            "sources": [
+              "https://museum.wales/curatorial/archaeology/early-prehistory/"
+            ]
+          },
+          {
+            "id": "paviland-burial",
+            "label": "Goat’s Hole, Gower",
+            "coordinates": [
+              -4.252,
+              51.548
+            ],
+            "date": "About 34,000–33,000 years ago",
+            "description": "The remains of a young man were found with red ochre and worked objects in a cave above the Gower coast.",
+            "sources": [
+              "https://rcahmw.gov.uk/paviland-cave-gower/"
+            ]
+          },
+          {
+            "id": "kendricks-cave-burials",
+            "label": "Great Orme, Llandudno",
+            "coordinates": [
+              -3.704,
+              53.325
+            ],
+            "date": "About 13,500 years ago",
+            "description": "Human remains from the cave preserve a late-glacial funerary record and some of Britain’s earliest recovered human DNA.",
+            "sources": [
+              "https://www.nhm.ac.uk/discover/news/2022/october/oldest-human-dna-uk-reveals-two-distinct-populations-ice-age-Britain.html"
+            ]
+          },
+          {
+            "id": "bryn-celli-ddu-tomb",
+            "label": "Bryn Celli Ddu, Anglesey",
+            "coordinates": [
+              -4.235,
+              53.207
+            ],
+            "date": "Around 3000 BCE",
+            "description": "The monument preserves a sequence from a henge and stones to a passage tomb with a mound.",
+            "sources": [
+              "https://cadw.gov.wales/more-about-bryn-celli-ddu"
+            ]
+          },
+          {
+            "id": "great-orme-copper",
+            "label": "Great Orme, Llandudno",
+            "coordinates": [
+              -3.84,
+              53.328
+            ],
+            "date": "About 1700–900 BCE",
+            "description": "A network of tunnels preserves evidence of the extraction of copper ore in north Wales.",
+            "sources": [
+              "https://webapps.bgs.ac.uk/Memoirs/docs/B01553.html"
+            ]
+          },
+          {
+            "id": "castell-henllys-roundhouses",
+            "label": "Castell Henllys, Pembrokeshire",
+            "coordinates": [
+              -4.74,
+              52.019
+            ],
+            "date": "Later first millennium BCE",
+            "description": "Excavation identified roundhouse sites within a fortified settlement.",
+            "sources": [
+              "https://www.pembrokeshirecoast.wales/castell-henllys/about-castell-henllys/"
+            ]
+          },
+          {
+            "id": "llyn-cerrig-bach-deposits",
+            "label": "Llyn Cerrig Bach, Anglesey",
+            "coordinates": [
+              -4.551,
+              53.254
+            ],
+            "date": "About 300 BCE–100 CE",
+            "description": "Weapons, tools and fittings from vehicles and harnesses survived around a former lake margin.",
+            "sources": [
+              "https://museum.wales/media/50248/Iron-Age-Wales---Gods-and-War-compressed.pdf"
+            ]
+          },
+          {
+            "id": "caerleon-legion",
+            "label": "Caerleon, Newport",
+            "coordinates": [
+              -2.956,
+              51.61
+            ],
+            "date": "Around 75–80 CE",
+            "description": "Barracks, baths and an amphitheatre preserve part of a Roman legionary centre by the Usk.",
+            "sources": [
+              "https://cadw.gov.wales/learn/sites-through-centuries/roman-wales"
+            ]
+          },
+          {
+            "id": "segontium-fort",
+            "label": "Segontium, Caernarfon",
+            "coordinates": [
+              -4.269,
+              53.136
+            ],
+            "date": "Around 77–78 CE",
+            "description": "The fort at Segontium formed part of Rome’s occupation of north Wales.",
+            "sources": [
+              "https://cadw.gov.wales/visit/places-to-visit/segontium-roman-fort"
+            ]
+          },
+          {
+            "id": "offas-dyke",
+            "label": "Offa’s Dyke near Chirk",
+            "coordinates": [
+              -3.077,
+              53.036
+            ],
+            "date": "Later eighth century CE",
+            "description": "A broad bank and ditch crossed selected landscapes between Mercia and Welsh kingdoms.",
+            "sources": [
+              "https://historicengland.org.uk/images-books/publications/iha-linear-frontiers/heag208-linear-frontiers/"
+            ]
+          },
+          {
+            "id": "elisegs-pillar-inscription",
+            "label": "Eliseg’s Pillar, Llantysilio",
+            "coordinates": [
+              -3.187,
+              52.992
+            ],
+            "date": "Early ninth century CE",
+            "description": "A cross shaft associated with the rulers of Powys carried a lengthy Latin inscription commemorating named ancestors.",
+            "sources": [
+              "https://cadw.gov.wales/visit/places-to-visit/elisegs-pillar"
+            ]
+          },
+          {
+            "id": "st-davids-cathedral-build",
+            "label": "St Davids, Pembrokeshire",
+            "coordinates": [
+              -5.268,
+              51.881
+            ],
+            "date": "1181 CE, commencement",
+            "description": "Work began on the cathedral associated with Bishop Peter de Leia at a much older sacred site.",
+            "sources": [
+              "https://stdavidscathedral.org.uk/history-cathedral"
+            ]
+          },
+          {
+            "id": "caernarfon-castle",
+            "label": "Caernarfon, Gwynedd",
+            "coordinates": [
+              -4.277,
+              53.139
+            ],
+            "date": "From 1283 into the 1300s",
+            "description": "Edward I’s conquest was followed by a castle and new walled settlement by the Menai Strait.",
+            "sources": [
+              "https://cadw.gov.wales/more-about-castell-caernarfon"
+            ]
+          },
+          {
+            "id": "pennal-letter",
+            "label": "Pennal, Dyfi valley",
+            "coordinates": [
+              -3.856,
+              52.589
+            ],
+            "date": "31 March 1406",
+            "description": "The surviving Latin letter from Owain Glyndŵr to Charles VI of France set out demands concerning church governance and international allegiance.",
+            "sources": [
+              "https://www.library.wales/discover-learn/digital-exhibitions/manuscripts/the-middle-ages/pennal-letter"
+            ]
+          },
+          {
+            "id": "morgan-welsh-bible",
+            "label": "Llanrhaeadr-ym-Mochnant, associated parish",
+            "coordinates": [
+              -3.3,
+              52.825
+            ],
+            "date": "1588 CE",
+            "description": "William Morgan’s Welsh translation of the Bible appeared in print in 1588.",
+            "sources": [
+              "https://www.library.wales/discover-learn/digital-exhibitions/printed-material/1588-welsh-bible"
+            ]
+          },
+          {
+            "id": "blaenavon-ironworks",
+            "label": "Blaenavon, Monmouthshire",
+            "coordinates": [
+              -3.084,
+              51.775
+            ],
+            "date": "1789 CE opening",
+            "description": "Blaenavon’s furnaces and worker housing formed part of a rapid expansion of heavy industry.",
+            "sources": [
+              "https://museum.wales/childrenoftherevolution/community/resources/blaenafon-1842/"
+            ]
+          },
+          {
+            "id": "penydarren-locomotive",
+            "label": "Penydarren, Merthyr Tydfil",
+            "coordinates": [
+              -3.368,
+              51.747
+            ],
+            "date": "21 February 1804",
+            "description": "Richard Trevithick demonstrated his locomotive on an industrial route down the valley to Abercynon.",
+            "sources": [
+              "https://museum.wales/media/60169/Birth-of-the-Railway-Locomotive--Trevithick-and-the-Penydarren-Locomotive-min_11zon.pdf"
+            ]
+          },
+          {
+            "id": "pontcysyllte-aqueduct",
+            "label": "Pontcysyllte, Dee valley",
+            "coordinates": [
+              -3.087,
+              52.97
+            ],
+            "date": "1805 CE completion",
+            "description": "A cast-iron trough took a navigable canal high above the Dee valley.",
+            "sources": [
+              "https://whc.unesco.org/document/191124"
+            ]
+          },
+          {
+            "id": "merthyr-rising",
+            "label": "Merthyr Tydfil",
+            "coordinates": [
+              -3.377,
+              51.747
+            ],
+            "date": "June 1831",
+            "description": "Protests among industrial workers in Merthyr took place amid severe hardship and changed wage and employment conditions.",
+            "sources": [
+              "https://cadw.gov.wales/sites/default/files/2019-05/Merthyr%20Tydfil-%20Understanding%20Urban%20Character_1.pdf"
+            ]
+          },
+          {
+            "id": "newport-chartist-rising",
+            "label": "Westgate, Newport",
+            "coordinates": [
+              -2.996,
+              51.588
+            ],
+            "date": "4 November 1839",
+            "description": "Chartists descended from industrial districts to Newport, where soldiers fired on the crowd outside the Westgate.",
+            "sources": [
+              "https://archives.library.wales/index.php/thanksgiving-to-almighty-after-failure-of-chartist-insurrection-in-newport"
+            ]
+          },
+          {
+            "id": "rebecca-riots",
+            "label": "Efailwen area, west Wales",
+            "coordinates": [
+              -4.743,
+              51.854
+            ],
+            "date": "1839–1843 CE, selected years",
+            "description": "Protesters destroyed or attacked toll gates after disputes about charges and wider economic distress.",
+            "sources": [
+              "https://museum.wales/media/38754/St-Fagans-activities.pdf"
+            ]
+          },
+          {
+            "id": "penrhyn-strike-begins",
+            "label": "Penrhyn Quarry, Bethesda",
+            "coordinates": [
+              -4.061,
+              53.163
+            ],
+            "date": "November 1900",
+            "description": "Quarry workers struck in a dispute over working conditions, pay and control of labour.",
+            "sources": [
+              "https://museum.wales/news/1386/Quarrymen-swap-Industrial-workshops-for-Castle-splendour-as-part-of-major-redevelopment-programme-at-the-National-Slate-Museum/"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "Caves and journeys",
+          "paragraphs": [
+            {
+              "text": "The teeth and stone artefacts from Pontnewydd predate the deeply coloured burial at Paviland by a vast interval. Gower’s cliffs and the Great Orme’s caves now frame modern coasts. At different points in the Ice Age, people approached these places through very different environments. Dates from the caves describe separate episodes and surviving people.",
+              "sources": [
+                "https://museum.wales/curatorial/archaeology/early-prehistory/",
+                "https://rcahmw.gov.uk/paviland-cave-gower/",
+                "https://www.nhm.ac.uk/discover/news/2022/october/oldest-human-dna-uk-reveals-two-distinct-populations-ice-age-Britain.html"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Farming communities and the work of metals",
+          "paragraphs": [
+            {
+              "text": "The mound at Bryn Celli Ddu reused the site of an older enclosure. The Great Orme mine shows miners following and working ore veins in a different part of the landscape. At Castell Henllys the postholes of houses anchor reconstructions of community life. Some of the most elaborate regional Iron Age objects, including parts of vehicles and weapons, survived near a former Anglesey lake.",
+              "sources": [
+                "https://cadw.gov.wales/more-about-bryn-celli-ddu",
+                "https://webapps.bgs.ac.uk/Memoirs/docs/B01553.html",
+                "https://www.pembrokeshirecoast.wales/castell-henllys/about-castell-henllys/",
+                "https://museum.wales/media/50248/Iron-Age-Wales---Gods-and-War-compressed.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Forts, borderlands and Welsh polities",
+          "paragraphs": [
+            {
+              "text": "Caerleon and Segontium preserve different scales of Rome’s military presence. Later, an earthwork associated with Mercian king Offa crossed parts of the borderlands. Near Llantysilio the rulers of Powys used a carved Latin inscription on Eliseg’s Pillar to recall dynastic ties. The earthwork and the inscription tell different stories about power across a shifting frontier.",
+              "sources": [
+                "https://cadw.gov.wales/learn/sites-through-centuries/roman-wales",
+                "https://cadw.gov.wales/visit/places-to-visit/segontium-roman-fort",
+                "https://historicengland.org.uk/images-books/publications/iha-linear-frontiers/heag208-linear-frontiers/",
+                "https://cadw.gov.wales/visit/places-to-visit/elisegs-pillar"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Conquest, diplomacy and Welsh in print",
+          "paragraphs": [
+            {
+              "text": "Medieval church networks centred on places such as St Davids. Edward I’s castle and walled town at Caernarfon changed access to land and commerce after conquest. Glyndŵr later used diplomatic correspondence to pursue a different status for Wales and its church. Tudor legislation reorganised secular administration, while William Morgan’s 1588 Bible supported widespread use of written Welsh in worship.",
+              "sources": [
+                "https://stdavidscathedral.org.uk/history-cathedral",
+                "https://cadw.gov.wales/more-about-castell-caernarfon",
+                "https://www.library.wales/discover-learn/digital-exhibitions/manuscripts/the-middle-ages/pennal-letter",
+                "https://www.legislation.gov.uk/aep/Hen8/34-35/26/contents/england",
+                "https://www.library.wales/discover-learn/digital-exhibitions/printed-material/1588-welsh-bible"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Iron, slate and protest",
+          "paragraphs": [
+            {
+              "text": "Furnaces, coalfields, canals and tramroads connected south Wales to markets far from the valleys. The Merthyr and Newport risings and rural toll protests arose from different pressures and forms of organisation. In the northwest, quarry workers’ dispute at Penrhyn began in 1900. Working sites, settlements and transport routes explain how industrial output depended on everyday lives.",
+              "sources": [
+                "https://museum.wales/childrenoftherevolution/community/resources/blaenafon-1842/",
+                "https://museum.wales/media/60169/Birth-of-the-Railway-Locomotive--Trevithick-and-the-Penydarren-Locomotive-min_11zon.pdf",
+                "https://whc.unesco.org/document/191124",
+                "https://cadw.gov.wales/sites/default/files/2019-05/Merthyr%20Tydfil-%20Understanding%20Urban%20Character_1.pdf",
+                "https://archives.library.wales/index.php/thanksgiving-to-almighty-after-failure-of-chartist-insurrection-in-newport",
+                "https://museum.wales/media/38754/St-Fagans-activities.pdf",
+                "https://museum.wales/news/1386/Quarrymen-swap-Industrial-workshops-for-Castle-splendour-as-part-of-major-redevelopment-programme-at-the-National-Slate-Museum/"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Early prehistory collections",
+          "url": "https://museum.wales/curatorial/archaeology/early-prehistory/"
+        },
+        {
+          "title": "Paviland Cave, Gower",
+          "url": "https://rcahmw.gov.uk/paviland-cave-gower/"
+        },
+        {
+          "title": "Late Ice Age human DNA from Britain",
+          "url": "https://www.nhm.ac.uk/discover/news/2022/october/oldest-human-dna-uk-reveals-two-distinct-populations-ice-age-Britain.html"
+        },
+        {
+          "title": "Bryn Celli Ddu monument and archaeology",
+          "url": "https://cadw.gov.wales/more-about-bryn-celli-ddu"
+        },
+        {
+          "title": "Geology and mining of the Great Orme",
+          "url": "https://webapps.bgs.ac.uk/Memoirs/docs/B01553.html"
+        },
+        {
+          "title": "About Castell Henllys",
+          "url": "https://www.pembrokeshirecoast.wales/castell-henllys/about-castell-henllys/"
+        },
+        {
+          "title": "Iron Age Wales and Llyn Cerrig Bach",
+          "url": "https://museum.wales/media/50248/Iron-Age-Wales---Gods-and-War-compressed.pdf"
+        },
+        {
+          "title": "Roman Wales and Caerleon",
+          "url": "https://cadw.gov.wales/learn/sites-through-centuries/roman-wales"
+        },
+        {
+          "title": "Segontium Roman Fort",
+          "url": "https://cadw.gov.wales/visit/places-to-visit/segontium-roman-fort"
+        },
+        {
+          "title": "Linear Frontiers, including Offa’s Dyke",
+          "url": "https://historicengland.org.uk/images-books/publications/iha-linear-frontiers/heag208-linear-frontiers/"
+        },
+        {
+          "title": "Eliseg’s Pillar",
+          "url": "https://cadw.gov.wales/visit/places-to-visit/elisegs-pillar"
+        },
+        {
+          "title": "History of St Davids Cathedral",
+          "url": "https://stdavidscathedral.org.uk/history-cathedral"
+        },
+        {
+          "title": "Caernarfon Castle building history",
+          "url": "https://cadw.gov.wales/more-about-castell-caernarfon"
+        },
+        {
+          "title": "The Pennal Letter",
+          "url": "https://www.library.wales/discover-learn/digital-exhibitions/manuscripts/the-middle-ages/pennal-letter"
+        },
+        {
+          "title": "The 1588 Welsh Bible",
+          "url": "https://www.library.wales/discover-learn/digital-exhibitions/printed-material/1588-welsh-bible"
+        },
+        {
+          "title": "Blaenavon industrial chronology",
+          "url": "https://museum.wales/childrenoftherevolution/community/resources/blaenafon-1842/"
+        },
+        {
+          "title": "The Penydarren Locomotive",
+          "url": "https://museum.wales/media/60169/Birth-of-the-Railway-Locomotive--Trevithick-and-the-Penydarren-Locomotive-min_11zon.pdf"
+        },
+        {
+          "title": "Pontcysyllte Aqueduct and Canal management plan",
+          "url": "https://whc.unesco.org/document/191124"
+        },
+        {
+          "title": "Merthyr Tydfil, Understanding Urban Character",
+          "url": "https://cadw.gov.wales/sites/default/files/2019-05/Merthyr%20Tydfil-%20Understanding%20Urban%20Character_1.pdf"
+        },
+        {
+          "title": "Contemporary account of the Newport Chartist rising",
+          "url": "https://archives.library.wales/index.php/thanksgiving-to-almighty-after-failure-of-chartist-insurrection-in-newport"
+        },
+        {
+          "title": "Poverty, inequality and road tolls in nineteenth-century Wales",
+          "url": "https://museum.wales/media/38754/St-Fagans-activities.pdf"
+        },
+        {
+          "title": "Penrhyn Quarry archives and strike history",
+          "url": "https://museum.wales/news/1386/Quarrymen-swap-Industrial-workshops-for-Castle-splendour-as-part-of-major-redevelopment-programme-at-the-National-Slate-Museum/"
+        },
+        {
+          "title": "Laws in Wales Act 1542",
+          "url": "https://www.legislation.gov.uk/aep/Hen8/34-35/26/contents/england"
+        }
+      ],
+      "relatedGuideIds": [
+        "world-britain-ireland-ice-age",
+        "world-england",
+        "world-ireland-history"
+      ],
+      "referenceMaps": [
+        {
+          "title": "Cadw’s Wales history map",
+          "url": "https://cadw.gov.wales/visit/best-history/wales-history-map",
+          "description": "Explore selected Welsh historic sites, including sites in the care of Cadw."
+        },
+        {
+          "title": "Cof Cymru historic asset records",
+          "url": "https://cadw.gov.wales/advice-support/cof-cymru",
+          "description": "Find mapped monument, building and protected-landscape records."
+        },
+        {
+          "title": "Pontcysyllte Aqueduct and Canal management plan",
+          "url": "https://whc.unesco.org/document/191124",
+          "description": "Consult plans and mapped extents of the historic canal, aqueduct and their setting."
+        }
+      ]
+    },
+    {
+      "id": "world-scotland-history",
+      "atlasIds": [
+        "europe"
+      ],
+      "category": "places",
+      "title": "Scotland and its islands through 1900",
+      "description": "Mainland and island histories from hunter-gatherers to medieval polities, mills, crofting and rail.",
+      "intro": "From struck flint in South Lanarkshire to the steel spans of the Forth Bridge, surviving places record very different ways of moving, living and governing. Scotland’s mainland and islands connect to each other and to Ireland, Scandinavia and wider Atlantic routes. Those connections have their own timelines.",
+      "scope": "Mainland Scotland, the Hebrides, Orkney and Shetland through 1900. Separate landscape guides cover selected island and mainland monuments in greater depth.",
+      "map": {
+        "bounds": [
+          -8.8,
+          54.62,
+          -0.4,
+          61
+        ],
+        "scope": "Approximate discovery sites, built places and historical reference localities on a modern basemap.",
+        "points": [
+          {
+            "id": "howburn-late-glacial",
+            "label": "Howburn Farm area, South Lanarkshire",
+            "coordinates": [
+              -3.575,
+              55.665
+            ],
+            "date": "About 12,500–10,500 BCE",
+            "description": "Flint points and other artefacts indicate activity by hunter-gatherers in southern Scotland towards the end of the last Ice Age.",
+            "sources": [
+              "https://scarf.scot/regional/sesarf/sesarf-case-studies/howburn-farm-and-the-scottish-hamburgian/"
+            ]
+          },
+          {
+            "id": "cramond-hearth",
+            "label": "Cramond, Edinburgh",
+            "coordinates": [
+              -3.301,
+              55.979
+            ],
+            "date": "About 8500–8300 BCE",
+            "description": "Hearths, flint and charred hazelnut shells document visits to a landscape beside the River Almond and Firth of Forth.",
+            "sources": [
+              "https://archaeologydataservice.ac.uk/catalogue/adsdata/arch-2301-1/dissemination/pdf/2004_SAVILLE_Mesolithic_Scotland.pdf"
+            ]
+          },
+          {
+            "id": "knap-of-howar-houses",
+            "label": "Knap of Howar, Papa Westray",
+            "coordinates": [
+              -2.901,
+              59.349
+            ],
+            "date": "About 3800–2800 BCE",
+            "description": "Two adjoining houses preserve partitions and furniture fixed in stone.",
+            "sources": [
+              "https://archaeologydataservice.ac.uk/archiveDS/archiveDownload?t=arch-352-1%2Fdissemination%2Fpdf%2Fvol_113%2F113_040_121.pdf"
+            ]
+          },
+          {
+            "id": "skara-brae-houses",
+            "label": "Skara Brae, Mainland Orkney",
+            "coordinates": [
+              -3.342,
+              59.049
+            ],
+            "date": "About 3100–2500 BCE",
+            "description": "Stone furniture and hearths survive within partly sunken structures grouped near the Bay of Skaill.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/skara-brae/history-and-stories/"
+            ]
+          },
+          {
+            "id": "calanais-circle",
+            "label": "Calanais, Isle of Lewis",
+            "coordinates": [
+              -6.744,
+              58.198
+            ],
+            "date": "About 2900–2600 BCE",
+            "description": "A stone circle and lines of uprights dominate a low ridge on the Isle of Lewis.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/calanais-standing-stones/history-and-stories/"
+            ]
+          },
+          {
+            "id": "mousa-broch",
+            "label": "Mousa, Shetland",
+            "coordinates": [
+              -1.183,
+              59.995
+            ],
+            "date": "About 300–100 BCE",
+            "description": "Mousa preserves an Iron Age dry-stone tower with passages and stairs within its wall.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/mousa-broch/"
+            ]
+          },
+          {
+            "id": "trimontium-fort",
+            "label": "Newstead, Scottish Borders",
+            "coordinates": [
+              -2.696,
+              55.598
+            ],
+            "date": "Around 79–105 CE",
+            "description": "Military roads and a strategic river crossing shaped Roman activity at Trimontium.",
+            "sources": [
+              "https://www.trimontium.co.uk/learning/trimontium-fort/"
+            ]
+          },
+          {
+            "id": "antonine-wall-construction",
+            "label": "Rough Castle sector, Falkirk",
+            "coordinates": [
+              -3.947,
+              55.994
+            ],
+            "date": "Around 142–143 CE",
+            "description": "The Roman army built a turf rampart, ditch, forts and a military road farther north than Hadrian’s Wall.",
+            "sources": [
+              "https://blog.historicenvironment.scot/2018/09/roamin-with-the-romans/"
+            ]
+          },
+          {
+            "id": "dunadd-power",
+            "label": "Dunadd, Argyll",
+            "coordinates": [
+              -5.478,
+              56.081
+            ],
+            "date": "About 550–800 CE",
+            "description": "A fortified rocky hill became an important site within Dál Riata.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/kilmartin-glen-dunadd-fort/history-and-stories/"
+            ]
+          },
+          {
+            "id": "iona-columba",
+            "label": "Iona, Inner Hebrides",
+            "coordinates": [
+              -6.394,
+              56.334
+            ],
+            "date": "563 CE, traditional foundation",
+            "description": "Columba and companions are traditionally recorded as founding a monastery on the island in 563.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/iona-abbey-and-nunnery/history-and-stories/"
+            ]
+          },
+          {
+            "id": "portmahomack-monastery",
+            "label": "Portmahomack, Tarbat peninsula",
+            "coordinates": [
+              -3.83,
+              57.837
+            ],
+            "date": "About 650–800 CE",
+            "description": "Excavation near the Tarbat Old Parish Church uncovered workshops, carved stone and traces of an early medieval monastery.",
+            "sources": [
+              "https://pure.york.ac.uk/portal/en/publications/an-iona-of-the-east-the-early-medieval-monastery-at-portmahomack-/"
+            ]
+          },
+          {
+            "id": "brough-birsay-settlement",
+            "label": "Brough of Birsay, Mainland Orkney",
+            "coordinates": [
+              -3.329,
+              59.14
+            ],
+            "date": "About eighth–eleventh centuries CE",
+            "description": "An island reached by tidal causeway preserves evidence of Pictish activity and a later Norse settlement.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/brough-of-birsay/"
+            ]
+          },
+          {
+            "id": "jarlshof-norse-farms",
+            "label": "Jarlshof, Sumburgh, Shetland",
+            "coordinates": [
+              -1.291,
+              59.869
+            ],
+            "date": "About ninth–twelfth centuries CE",
+            "description": "Longhouses and related structures preserve a record of Norse farming at Jarlshof.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/jarlshof-prehistoric-and-norse-settlement/history-and-stories/"
+            ]
+          },
+          {
+            "id": "st-magnus-cathedral",
+            "label": "Kirkwall, Orkney",
+            "coordinates": [
+              -2.958,
+              58.982
+            ],
+            "date": "1137 CE foundation",
+            "description": "Earl Rognvald began a cathedral dedicated to Magnus in the centre of Kirkwall.",
+            "sources": [
+              "https://www.orkney.gov.uk/latest-news/cathedral-commended-at-scottish-parliament/"
+            ]
+          },
+          {
+            "id": "lewis-chessmen-hoard",
+            "label": "Uig area, Isle of Lewis",
+            "coordinates": [
+              -7.005,
+              58.178
+            ],
+            "date": "Later twelfth century CE",
+            "description": "Elaborately carved figures associated with Lewis belong to medieval networks carrying walrus ivory, objects and games.",
+            "sources": [
+              "https://www.nms.ac.uk/discover-catalogue/chess-and-ludo-board-games-with-south-asian-origins"
+            ]
+          },
+          {
+            "id": "bannockburn-battle",
+            "label": "Bannockburn area, Stirling",
+            "coordinates": [
+              -3.938,
+              56.092
+            ],
+            "date": "23–24 June 1314",
+            "description": "The fighting near Stirling was a major turning point in the struggle over the Scottish crown and kingdom.",
+            "sources": [
+              "https://portal.historicenvironment.scot/apex/f?p=1505%3A300%3A%3A%3A%3A%3AVIEWTYPE%2CVIEWREF%3Adesignation%2CBTL4"
+            ]
+          },
+          {
+            "id": "arbroath-letter",
+            "label": "Arbroath Abbey",
+            "coordinates": [
+              -2.581,
+              56.561
+            ],
+            "date": "6 April 1320",
+            "description": "Named Scottish nobles addressed a letter to Pope John XXII defending Robert I and asserting their kingdom’s independence.",
+            "sources": [
+              "https://www.nrscotland.gov.uk/learning-and-events/the-declaration-of-arbroath/transcription-of-the-declaration-of-arbroath/"
+            ]
+          },
+          {
+            "id": "orkney-shetland-scottish-crown",
+            "label": "Kirkwall, Orkney reference locality",
+            "coordinates": [
+              -2.96,
+              58.981
+            ],
+            "date": "1468–1472 CE",
+            "description": "The islands were pledged in connection with a royal marriage and incorporated into the Scottish Crown.",
+            "sources": [
+              "https://www.shetlandmuseumandarchives.org.uk/blog/550-years-ago-how-shetland-became-part-of-scotland"
+            ]
+          },
+          {
+            "id": "st-andrews-reformation",
+            "label": "St Andrews, Fife",
+            "coordinates": [
+              -2.792,
+              56.341
+            ],
+            "date": "1559–1560 CE",
+            "description": "At St Andrews, Protestant reform and conflict transformed established religious houses during a broader change across Scotland.",
+            "sources": [
+              "https://www.historicenvironment.scot/visit/all/blackfriars-chapel/history-and-stories/"
+            ]
+          },
+          {
+            "id": "acts-of-union-1707",
+            "label": "Edinburgh, Scottish parliamentary reference",
+            "coordinates": [
+              -3.19,
+              55.949
+            ],
+            "date": "1 May 1707",
+            "description": "Acts in Edinburgh and Westminster joined England and Scotland in a new parliamentary union.",
+            "sources": [
+              "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/act-of-union-1707/overview/united-into-one-kingdom/"
+            ]
+          },
+          {
+            "id": "culloden-battle",
+            "label": "Culloden Moor, Inverness area",
+            "coordinates": [
+              -4.092,
+              57.479
+            ],
+            "date": "16 April 1746",
+            "description": "Government troops defeated the force led by Charles Edward Stuart on moorland near Inverness.",
+            "sources": [
+              "https://portal.historicenvironment.scot/apex/f?p=1505%3A300%3A%3A%3A%3A%3AVIEWTYPE%2CVIEWREF%3Adesignation%2CBTL6"
+            ]
+          },
+          {
+            "id": "new-lanark-mills",
+            "label": "New Lanark, Clyde valley",
+            "coordinates": [
+              -3.781,
+              55.663
+            ],
+            "date": "Founded in 1785; selected early operation",
+            "description": "Water power supported a mill settlement where workers lived close to the factory buildings.",
+            "sources": [
+              "https://www.historicenvironment.scot/protect-and-care/protected-historic-places/world-heritage-sites/new-lanark/"
+            ]
+          },
+          {
+            "id": "strathnaver-clearances",
+            "label": "Strathnaver, Sutherland",
+            "coordinates": [
+              -4.258,
+              58.413
+            ],
+            "date": "Selected clearances, 1814–1819",
+            "description": "Estate restructuring pushed farming households out of inland settlements in Sutherland.",
+            "sources": [
+              "https://blog.historicenvironment.scot/2025/04/the-highland-clearances/"
+            ]
+          },
+          {
+            "id": "crofters-act",
+            "label": "Braes, Isle of Skye, representative locality",
+            "coordinates": [
+              -6.196,
+              57.402
+            ],
+            "date": "1886 CE",
+            "description": "The Crofters Holdings (Scotland) Act gave qualifying crofters stronger tenure protections and created a process for setting fair rents.",
+            "sources": [
+              "https://api.parliament.uk/historic-hansard/acts/crofters-holdings-scotland-act"
+            ]
+          },
+          {
+            "id": "forth-bridge-opens",
+            "label": "South Queensferry, Firth of Forth",
+            "coordinates": [
+              -3.398,
+              55.992
+            ],
+            "date": "4 March 1890",
+            "description": "A steel cantilever bridge linked the south and north sides of the Forth.",
+            "sources": [
+              "https://blog.historicenvironment.scot/2017/03/forth-bridge/"
+            ]
+          },
+          {
+            "id": "glasgow-census-1891",
+            "label": "Glasgow burgh census area",
+            "coordinates": [
+              -4.254,
+              55.86
+            ],
+            "date": "1891 census",
+            "description": "The Scottish census’s ages table reports a Glasgow burgh total of 511,415 people.",
+            "sources": [
+              "https://www.visionofbritain.org.uk/census/table/S1891AGE_M%5B1%5D?show=DB&u_id=10359752"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "After the ice",
+          "paragraphs": [
+            {
+              "text": "South Lanarkshire’s late-glacial flint scatter resembles tools found elsewhere in northern Europe, giving archaeologists a basis for assessing its age. Mesolithic hearths and hazelnut shells at Cramond can be placed more closely in time. Offshore and coastal sediments preserve changes in sea level and the Storegga tsunami, helping explain why some early coastal settings are difficult to find or recognise today.",
+              "sources": [
+                "https://scarf.scot/regional/sesarf/sesarf-case-studies/howburn-farm-and-the-scottish-hamburgian/",
+                "https://archaeologydataservice.ac.uk/catalogue/adsdata/arch-2301-1/dissemination/pdf/2004_SAVILLE_Mesolithic_Scotland.pdf",
+                "https://scarf.scot/national/palaeolithic-mesolithic-panel-report/3-environment/3-4-relative-sea-level-changes-during-the-last-15000-years/3-4-2-storegga-tsunami/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Island houses and monument landscapes",
+          "paragraphs": [
+            {
+              "text": "Stone houses in Orkney preserve hearths, rooms and furniture. Uprights at Calanais in Lewis and the surviving tower at Mousa in Shetland belong to other landscapes and activities separated by long periods of time. The linked island guides show how these buildings fit among smaller remains, farms and routes by sea.",
+              "sources": [
+                "https://archaeologydataservice.ac.uk/archiveDS/archiveDownload?t=arch-352-1%2Fdissemination%2Fpdf%2Fvol_113%2F113_040_121.pdf",
+                "https://www.historicenvironment.scot/visit/all/skara-brae/history-and-stories/",
+                "https://www.historicenvironment.scot/visit/all/calanais-standing-stones/history-and-stories/",
+                "https://www.historicenvironment.scot/visit/all/mousa-broch/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Military corridors and maritime communities",
+          "paragraphs": [
+            {
+              "text": "Roman military movement left roads and fortifications, including the Antonine line and the corridor near Trimontium. Later, Dunadd organised craft, exchange and royal authority in Argyll, while religious communities at Iona and Portmahomack developed different ties around the Irish Sea and North Sea. These networks can be traced through excavation, objects and historical records.",
+              "sources": [
+                "https://www.trimontium.co.uk/learning/trimontium-fort/",
+                "https://www.historicenvironment.scot/visit/all/dere-street-roman-road/history-and-stories/",
+                "https://blog.historicenvironment.scot/2018/09/roamin-with-the-romans/",
+                "https://www.historicenvironment.scot/visit/all/kilmartin-glen-dunadd-fort/history-and-stories/",
+                "https://www.historicenvironment.scot/visit/all/iona-abbey-and-nunnery/history-and-stories/",
+                "https://pure.york.ac.uk/portal/en/publications/an-iona-of-the-east-the-early-medieval-monastery-at-portmahomack-/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Norse settlements, Scottish kingdoms and unions",
+          "paragraphs": [
+            {
+              "text": "Norse households at Jarlshof and the cathedral at Kirkwall are evidence for northern island histories. The pledges and annexation of Orkney and Shetland between 1468 and 1472 changed their relationship to the Scottish Crown. Mainland struggles over sovereignty produced events and documents such as Bannockburn and the Arbroath letter. Parliamentary union with England followed in 1707, a century after the union of crowns.",
+              "sources": [
+                "https://www.historicenvironment.scot/visit/all/brough-of-birsay/",
+                "https://www.historicenvironment.scot/visit/all/jarlshof-prehistoric-and-norse-settlement/history-and-stories/",
+                "https://www.orkney.gov.uk/latest-news/cathedral-commended-at-scottish-parliament/",
+                "https://www.shetlandmuseumandarchives.org.uk/blog/550-years-ago-how-shetland-became-part-of-scotland",
+                "https://portal.historicenvironment.scot/apex/f?p=1505%3A300%3A%3A%3A%3A%3AVIEWTYPE%2CVIEWREF%3Adesignation%2CBTL4",
+                "https://www.nrscotland.gov.uk/learning-and-events/the-declaration-of-arbroath/transcription-of-the-declaration-of-arbroath/",
+                "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/act-of-union-1707/overview/united-into-one-kingdom/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Land, work and movement",
+          "paragraphs": [
+            {
+              "text": "Culloden and its aftermath changed some patterns of authority in the Highlands. Later estate decisions brought displacement in places such as Sutherland. Crofters drew on local organisation to press for protections. In the industrial regions the mills at New Lanark, the growing population of Glasgow and the Forth railway crossing illustrate different effects of demands for labour and transport.",
+              "sources": [
+                "https://portal.historicenvironment.scot/apex/f?p=1505%3A300%3A%3A%3A%3A%3AVIEWTYPE%2CVIEWREF%3Adesignation%2CBTL6",
+                "https://www.historicenvironment.scot/protect-and-care/protected-historic-places/world-heritage-sites/new-lanark/",
+                "https://blog.historicenvironment.scot/2025/04/the-highland-clearances/",
+                "https://api.parliament.uk/historic-hansard/acts/crofters-holdings-scotland-act",
+                "https://blog.historicenvironment.scot/2017/03/forth-bridge/",
+                "https://www.visionofbritain.org.uk/census/table/S1891AGE_M%5B1%5D?show=DB&u_id=10359752"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Howburn Farm and the Scottish Hamburgian",
+          "url": "https://scarf.scot/regional/sesarf/sesarf-case-studies/howburn-farm-and-the-scottish-hamburgian/"
+        },
+        {
+          "title": "Mesolithic Scotland and its Neighbours",
+          "url": "https://archaeologydataservice.ac.uk/catalogue/adsdata/arch-2301-1/dissemination/pdf/2004_SAVILLE_Mesolithic_Scotland.pdf"
+        },
+        {
+          "title": "Excavation of the Neolithic farmstead at Knap of Howar",
+          "url": "https://archaeologydataservice.ac.uk/archiveDS/archiveDownload?t=arch-352-1%2Fdissemination%2Fpdf%2Fvol_113%2F113_040_121.pdf"
+        },
+        {
+          "title": "Skara Brae settlement history",
+          "url": "https://www.historicenvironment.scot/visit/all/skara-brae/history-and-stories/"
+        },
+        {
+          "title": "Calanais Standing Stones",
+          "url": "https://www.historicenvironment.scot/visit/all/calanais-standing-stones/history-and-stories/"
+        },
+        {
+          "title": "Mousa Broch",
+          "url": "https://www.historicenvironment.scot/visit/all/mousa-broch/"
+        },
+        {
+          "title": "Trimontium Roman Fort",
+          "url": "https://www.trimontium.co.uk/learning/trimontium-fort/"
+        },
+        {
+          "title": "Roman archaeology and the Antonine Wall",
+          "url": "https://blog.historicenvironment.scot/2018/09/roamin-with-the-romans/"
+        },
+        {
+          "title": "Dunadd Fort and Dál Riata",
+          "url": "https://www.historicenvironment.scot/visit/all/kilmartin-glen-dunadd-fort/history-and-stories/"
+        },
+        {
+          "title": "Iona Abbey history",
+          "url": "https://www.historicenvironment.scot/visit/all/iona-abbey-and-nunnery/history-and-stories/"
+        },
+        {
+          "title": "An Iona of the East",
+          "url": "https://pure.york.ac.uk/portal/en/publications/an-iona-of-the-east-the-early-medieval-monastery-at-portmahomack-/"
+        },
+        {
+          "title": "Brough of Birsay",
+          "url": "https://www.historicenvironment.scot/visit/all/brough-of-birsay/"
+        },
+        {
+          "title": "Jarlshof settlement history",
+          "url": "https://www.historicenvironment.scot/visit/all/jarlshof-prehistoric-and-norse-settlement/history-and-stories/"
+        },
+        {
+          "title": "St Magnus Cathedral’s history",
+          "url": "https://www.orkney.gov.uk/latest-news/cathedral-commended-at-scottish-parliament/"
+        },
+        {
+          "title": "Chess and the Lewis pieces",
+          "url": "https://www.nms.ac.uk/discover-catalogue/chess-and-ludo-board-games-with-south-asian-origins"
+        },
+        {
+          "title": "Inventory of Historic Battlefields, Bannockburn",
+          "url": "https://portal.historicenvironment.scot/apex/f?p=1505%3A300%3A%3A%3A%3A%3AVIEWTYPE%2CVIEWREF%3Adesignation%2CBTL4"
+        },
+        {
+          "title": "Declaration of Arbroath transcription",
+          "url": "https://www.nrscotland.gov.uk/learning-and-events/the-declaration-of-arbroath/transcription-of-the-declaration-of-arbroath/"
+        },
+        {
+          "title": "How Shetland became part of Scotland",
+          "url": "https://www.shetlandmuseumandarchives.org.uk/blog/550-years-ago-how-shetland-became-part-of-scotland"
+        },
+        {
+          "title": "St Andrews Blackfriars Chapel and the Reformation",
+          "url": "https://www.historicenvironment.scot/visit/all/blackfriars-chapel/history-and-stories/"
+        },
+        {
+          "title": "United into One Kingdom",
+          "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/act-of-union-1707/overview/united-into-one-kingdom/"
+        },
+        {
+          "title": "Culloden Battlefield inventory",
+          "url": "https://portal.historicenvironment.scot/apex/f?p=1505%3A300%3A%3A%3A%3A%3AVIEWTYPE%2CVIEWREF%3Adesignation%2CBTL6"
+        },
+        {
+          "title": "New Lanark World Heritage Site",
+          "url": "https://www.historicenvironment.scot/protect-and-care/protected-historic-places/world-heritage-sites/new-lanark/"
+        },
+        {
+          "title": "The Highland Clearances",
+          "url": "https://blog.historicenvironment.scot/2025/04/the-highland-clearances/"
+        },
+        {
+          "title": "Crofters Holdings (Scotland) Act",
+          "url": "https://api.parliament.uk/historic-hansard/acts/crofters-holdings-scotland-act"
+        },
+        {
+          "title": "The Forth Bridge and the Queensferry rail link",
+          "url": "https://blog.historicenvironment.scot/2017/03/forth-bridge/"
+        },
+        {
+          "title": "1891 Census of Scotland, Glasgow burgh age table",
+          "url": "https://www.visionofbritain.org.uk/census/table/S1891AGE_M%5B1%5D?show=DB&u_id=10359752"
+        },
+        {
+          "title": "The Storegga tsunami evidence",
+          "url": "https://scarf.scot/national/palaeolithic-mesolithic-panel-report/3-environment/3-4-relative-sea-level-changes-during-the-last-15000-years/3-4-2-storegga-tsunami/"
+        },
+        {
+          "title": "History and route of Dere Street",
+          "url": "https://www.historicenvironment.scot/visit/all/dere-street-roman-road/history-and-stories/"
+        }
+      ],
+      "relatedGuideIds": [
+        "world-britain-ireland-ice-age",
+        "world-scotland-stones",
+        "world-orkney",
+        "world-shetland",
+        "world-calanais",
+        "world-kilmartin",
+        "world-ulster-history"
+      ],
+      "referenceMaps": [
+        {
+          "title": "PastMap historic environment viewer",
+          "url": "https://www.historicenvironment.scot/learn/archives-collections-and-libraries/pastmap/",
+          "description": "Search national and local archaeology, buildings and historic environment records across Scotland."
+        },
+        {
+          "title": "National Library of Scotland historical map collections",
+          "url": "https://geo.nls.uk/search/help.html",
+          "description": "Find detailed historical map sheets and learn how their places and historical administrative names are indexed."
+        },
+        {
+          "title": "Forth Bridge World Heritage nomination",
+          "url": "https://whc.unesco.org/uploads/nominations/1485.pdf",
+          "description": "View plans and historic engineering context for the Forth crossing."
+        }
+      ]
+    },
+    {
+      "id": "world-ireland-history",
+      "atlasIds": [
+        "europe"
+      ],
+      "category": "places",
+      "title": "Ireland from early settlement to 1900",
+      "description": "An island-wide guide to prehistoric settlement, medieval Ireland, plantation, famine and land reform.",
+      "intro": "The history on this map belongs to the whole island of Ireland. A marked bear bone, passage graves, harbour excavations, letters from exiles and census tables offer distinct views of life on the island. Sites in the north connect to the separate Ulster guide, which follows movements across present-day jurisdictions and the North Channel.",
+      "scope": "Selected evidence from across Ireland through 1900, including north–south and overseas connections. Modern jurisdictions locate sources and sites.",
+      "map": {
+        "bounds": [
+          -10.9,
+          51.3,
+          -5.28,
+          55.58
+        ],
+        "scope": "Approximate discovery sites, built places and historical reference localities on a modern basemap.",
+        "points": [
+          {
+            "id": "castlepook-reindeer-mark",
+            "label": "Castlepook Cave area, County Cork",
+            "coordinates": [
+              -8.595,
+              52.23
+            ],
+            "date": "About 33,000 years ago, possible evidence",
+            "description": "A reindeer bone from the Castlepook cave assemblage has a mark interpreted by zooarchaeologist Ruth Carden as the result of stone-tool butchery.",
+            "sources": [
+              "https://www.corkcoco.ie/sites/default/files/2023-06/heritage-artefacts-of-county-cork-2021.pdf"
+            ]
+          },
+          {
+            "id": "edenvale-bear-cutmarks",
+            "label": "Edenvale cave area, County Clare",
+            "coordinates": [
+              -8.973,
+              52.79
+            ],
+            "date": "12,810–12,590 calibrated years BP",
+            "description": "Cut marks on a bear kneecap from the Alice and Gwendoline cave assemblage provide dated evidence of a late-glacial human presence in Ireland.",
+            "sources": [
+              "https://mariondowd.com/wp-content/uploads/2025/04/2016-qsr-palaeolithic-ireland.pdf"
+            ]
+          },
+          {
+            "id": "mount-sandel-huts",
+            "label": "Mount Sandel, Coleraine",
+            "coordinates": [
+              -6.654,
+              55.11
+            ],
+            "date": "About 7750–7540 calibrated BCE",
+            "description": "Circular patterns of postholes and pits mark Mesolithic occupation above the River Bann.",
+            "sources": [
+              "https://www.cambridge.org/core/journals/proceedings-of-the-prehistoric-society/article/abs/new-bayesian-chronology-for-mesolithic-occupation-at-mount-sandel-northern-ireland/51EC4111C92E2D5FD128928277103028"
+            ]
+          },
+          {
+            "id": "hermitage-cremation",
+            "label": "Hermitage area, County Limerick",
+            "coordinates": [
+              -8.445,
+              52.711
+            ],
+            "date": "About 7540–7320 BCE",
+            "description": "A pit contained cremated bone and a ground stone axe at a riverside Mesolithic burial site.",
+            "sources": [
+              "https://pure.york.ac.uk/portal/en/publications/stone-dead-uncovering-early-mesolithic-mortuary-rites-hermitage-i/"
+            ]
+          },
+          {
+            "id": "ceide-fields",
+            "label": "Céide Fields, County Mayo",
+            "coordinates": [
+              -9.457,
+              54.308
+            ],
+            "date": "Fourth millennium BCE, disputed dating",
+            "description": "Buried walls preserve a large system of enclosed land on the north Mayo coast.",
+            "sources": [
+              "https://egqsj.copernicus.org/articles/69/1/2020/egqsj-69-1-2020.html"
+            ]
+          },
+          {
+            "id": "newgrange-passage-tomb",
+            "label": "Newgrange, County Meath",
+            "coordinates": [
+              -6.475,
+              53.695
+            ],
+            "date": "Around 3200 BCE",
+            "description": "A long passage and inner chamber sit within a mound whose entrance aligns towards the winter solstice sunrise.",
+            "sources": [
+              "https://heritageireland.ie/places-to-visit/bru-na-boinne-visitor-centre-newgrange-knowth-and-dowth/"
+            ]
+          },
+          {
+            "id": "giants-ring-earthwork",
+            "label": "Giant’s Ring, Ballynahatty",
+            "coordinates": [
+              -5.953,
+              54.532
+            ],
+            "date": "Later Neolithic, third millennium BCE bracket",
+            "description": "A large circular enclosure and the remains of a passage tomb survive in a landscape with other Neolithic funerary and ceremonial sites.",
+            "sources": [
+              "https://www.communities-ni.gov.uk/heritage-sites/giants-ring"
+            ]
+          },
+          {
+            "id": "ross-island-copper",
+            "label": "Ross Island, Killarney",
+            "coordinates": [
+              -9.529,
+              52.041
+            ],
+            "date": "About 2400–2000 BCE",
+            "description": "Early Bronze Age finds and workings at Ross Island preserve evidence of copper production near the Lakes of Killarney.",
+            "sources": [
+              "https://microsites.museum.ie/bronzeagehandlingbox/object-copper.html"
+            ]
+          },
+          {
+            "id": "dun-aonghasa-late-bronze",
+            "label": "Dún Aonghasa, Inis Mór",
+            "coordinates": [
+              -9.766,
+              53.125
+            ],
+            "date": "About 1100–800 BCE",
+            "description": "Excavation at the cliff-top fort identified settlement activity and Late Bronze Age deposits.",
+            "sources": [
+              "https://heritageireland.ie/places-to-visit/dun-aonghasa/"
+            ]
+          },
+          {
+            "id": "tara-royal-landscape",
+            "label": "Hill of Tara, County Meath",
+            "coordinates": [
+              -6.611,
+              53.579
+            ],
+            "date": "About fifth–seventh centuries CE",
+            "description": "An extensive monument landscape came to hold an important place in traditions of early Irish kingship.",
+            "sources": [
+              "https://heritageireland.ie/places-to-visit/hill-of-tara/"
+            ]
+          },
+          {
+            "id": "clonmacnoise-foundation",
+            "label": "Clonmacnoise, County Offaly",
+            "coordinates": [
+              -7.987,
+              53.325
+            ],
+            "date": "Mid-sixth century CE",
+            "description": "A religious community associated with Ciarán developed by a junction of overland and river routes.",
+            "sources": [
+              "https://heritageireland.ie/places-to-visit/clonmacnoise-monastic-site/"
+            ]
+          },
+          {
+            "id": "glendalough-monastery",
+            "label": "Glendalough, County Wicklow",
+            "coordinates": [
+              -6.327,
+              53.011
+            ],
+            "date": "Later sixth century CE, traditional foundation",
+            "description": "The monastic community traditionally associated with Kevin occupied a valley framed by lakes and steep slopes.",
+            "sources": [
+              "https://heritageireland.ie/visit/places-to-visit/glendalough-monastic-site-and-visitor-centre/highlights/"
+            ]
+          },
+          {
+            "id": "nendrum-tide-mill",
+            "label": "Nendrum, Mahee Island, Strangford Lough",
+            "coordinates": [
+              -5.645,
+              54.499
+            ],
+            "date": "Around 619–621 CE",
+            "description": "Water stored behind a dam drove a mill as the tide receded.",
+            "sources": [
+              "https://excavations.ie/report/1999/Down/0004037/"
+            ]
+          },
+          {
+            "id": "book-of-kells-manuscript",
+            "label": "Kells, County Meath",
+            "coordinates": [
+              -6.878,
+              53.727
+            ],
+            "date": "Around 800 CE",
+            "description": "The manuscript’s calligraphy and layered decoration preserve evidence of skilled early medieval bookmaking.",
+            "sources": [
+              "https://www.tcd.ie/library/research-collections/book-of-kells.php"
+            ]
+          },
+          {
+            "id": "viking-dublin-longphort",
+            "label": "Medieval Dublin and the Liffey",
+            "coordinates": [
+              -6.273,
+              53.345
+            ],
+            "date": "841–917 CE, recorded base and return",
+            "description": "Written and archaeological evidence documents a ninth-century seaborne base and the later development of a trading town.",
+            "sources": [
+              "https://source.museum.ie/en-ie/collections-research/irish-antiquities-division-collections/collections-list-%281%29/viking"
+            ]
+          },
+          {
+            "id": "waterford-viking-port",
+            "label": "Waterford waterfront",
+            "coordinates": [
+              -7.105,
+              52.259
+            ],
+            "date": "914 CE, recorded establishment",
+            "description": "A site at a bend of the Suir developed as a seaborne stronghold and exchange centre.",
+            "sources": [
+              "https://heritageireland.ie/ga/blag/sagas-sceals-the-hiberno-norse-of-waterford/"
+            ]
+          },
+          {
+            "id": "trim-castle-build",
+            "label": "Trim, County Meath",
+            "coordinates": [
+              -6.787,
+              53.555
+            ],
+            "date": "From the 1170s into the early 1200s",
+            "description": "A major stone castle developed from the fortified seat associated with Hugh de Lacy.",
+            "sources": [
+              "https://heritageireland.ie/assets/uploads/2016/03/heritiage-ireland-ezine-issue3.pdf"
+            ]
+          },
+          {
+            "id": "carrickfergus-castle",
+            "label": "Carrickfergus, County Antrim",
+            "coordinates": [
+              -5.807,
+              54.715
+            ],
+            "date": "Late twelfth century CE",
+            "description": "John de Courcy’s expansion into east Ulster brought a stronghold to a rock overlooking the lough.",
+            "sources": [
+              "https://www.communities-ni.gov.uk/heritage-sites/carrickfergus-castle"
+            ]
+          },
+          {
+            "id": "donegal-odonnell-castle",
+            "label": "Donegal town",
+            "coordinates": [
+              -8.109,
+              54.655
+            ],
+            "date": "Fifteenth century CE",
+            "description": "A tower and castle complex by the River Eske preserves a centre associated with the O’Donnell lordship of Tír Chonaill.",
+            "sources": [
+              "https://heritageireland.ie/visit/places-to-visit/donegal-castle/"
+            ]
+          },
+          {
+            "id": "flight-of-earls",
+            "label": "Rathmullan area, County Donegal",
+            "coordinates": [
+              -7.534,
+              55.095
+            ],
+            "date": "September 1607",
+            "description": "Hugh O’Neill, Rory O’Donnell, Cúchonnacht Maguire and followers embarked for continental Europe.",
+            "sources": [
+              "https://www.askaboutireland.ie/reading-room/history-heritage/history-of-ireland/the-flight-of-the-earls-1/the-route-to-rome/"
+            ]
+          },
+          {
+            "id": "derry-plantation-walls",
+            "label": "Derry/Londonderry",
+            "coordinates": [
+              -7.32,
+              54.996
+            ],
+            "date": "1613–1618 CE",
+            "description": "A circuit of walls was built around the plantation city under the auspices of London companies.",
+            "sources": [
+              "https://www.communities-ni.gov.uk/heritage-sites/derry-walls"
+            ]
+          },
+          {
+            "id": "battle-boyne",
+            "label": "Oldbridge, County Meath",
+            "coordinates": [
+              -6.421,
+              53.722
+            ],
+            "date": "1690 CE",
+            "description": "Forces of William III defeated the army of James II at crossings of the River Boyne.",
+            "sources": [
+              "https://heritageireland.ie/places-to-visit/battle-of-the-boyne-visitor-centre-oldbridge-estate/"
+            ]
+          },
+          {
+            "id": "vinegar-hill-1798",
+            "label": "Vinegar Hill, Enniscorthy",
+            "coordinates": [
+              -6.551,
+              52.507
+            ],
+            "date": "21 June 1798",
+            "description": "Rebels in County Wexford established a camp on Vinegar Hill during the 1798 uprising.",
+            "sources": [
+              "https://heritageireland.ie/unguided-sites/vinegar-hill-windmill/"
+            ]
+          },
+          {
+            "id": "ireland-union-commences",
+            "label": "Former Irish Parliament, Dublin",
+            "coordinates": [
+              -6.26,
+              53.345
+            ],
+            "date": "1 January 1801",
+            "description": "The acts of union replaced the separate Dublin Parliament with representation in the parliament at Westminster.",
+            "sources": [
+              "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliamentandireland/collections/ireland/act-of-union-1800/"
+            ]
+          },
+          {
+            "id": "dublin-kingstown-railway",
+            "label": "Westland Row, Dublin",
+            "coordinates": [
+              -6.248,
+              53.344
+            ],
+            "date": "1834 CE opening",
+            "description": "William Dargan helped build the line linking Dublin with the port then called Kingstown.",
+            "sources": [
+              "https://www.dib.ie/index.php/node/17953"
+            ]
+          },
+          {
+            "id": "irish-great-famine",
+            "label": "Skibbereen, west Cork",
+            "coordinates": [
+              -9.268,
+              51.55
+            ],
+            "date": "1845–1852 CE, conventional broad dates",
+            "description": "Repeated crop failure in a society with unequal access to land and food produced widespread hunger, mortality and emigration.",
+            "sources": [
+              "https://nationalarchives.ie/help-with-research/research-guides/famine-records-distress-papers-and-the-relief-commission/"
+            ]
+          },
+          {
+            "id": "jeanie-johnston-crossings",
+            "label": "Blennerville and Tralee Bay, County Kerry",
+            "coordinates": [
+              -9.699,
+              52.266
+            ],
+            "date": "1848–1855 CE",
+            "description": "The ship repeatedly carried emigrants from County Kerry to North America during and after the Great Famine.",
+            "sources": [
+              "https://jeaniejohnston.ie/history/canada-history-of-the-ship/"
+            ]
+          },
+          {
+            "id": "ireland-land-act",
+            "label": "Dublin, land administration reference",
+            "coordinates": [
+              -6.26,
+              53.346
+            ],
+            "date": "1881 CE",
+            "description": "The Act established ways of setting fair rents and changed protections for qualifying tenants in Ireland.",
+            "sources": [
+              "https://www.irishstatutebook.ie/eli/1881/act/49/enacted/en/print.html"
+            ]
+          },
+          {
+            "id": "dublin-census-1891",
+            "label": "Dublin municipal borough",
+            "coordinates": [
+              -6.26,
+              53.349
+            ],
+            "date": "Census checkpoints, 1841–1891",
+            "description": "The Dublin borough total rose from 232,726 in 1841 to 258,369 in 1851, then varied across later census dates.",
+            "sources": [
+              "https://www.cso.ie/en/media/csoie/statistics/archive/census1891/438_Area%2C_houses%2C_and_population%2C_Vol._I%2C_Ireland%2C_1891_Dublin.pdf",
+              "https://www.cso.ie/en/media/csoie/census/census1926results/volume3/C_1_1926_V3.pdf"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "What can a cave bone show?",
+          "paragraphs": [
+            {
+              "text": "A reindeer bone from Castlepook has a reported cut mark and an age of about 33,000 years. This possible evidence predates the better-established cut marks on a bear bone from County Clare. The surviving finds are sparse and record individual actions. Later, work at Mount Sandel and Hermitage reveals early postglacial evidence of housing, food processing and burial.",
+              "sources": [
+                "https://www.corkcoco.ie/sites/default/files/2023-06/heritage-artefacts-of-county-cork-2021.pdf",
+                "https://mariondowd.com/wp-content/uploads/2025/04/2016-qsr-palaeolithic-ireland.pdf",
+                "https://www.cambridge.org/core/journals/proceedings-of-the-prehistoric-society/article/abs/new-bayesian-chronology-for-mesolithic-occupation-at-mount-sandel-northern-ireland/51EC4111C92E2D5FD128928277103028",
+                "https://pure.york.ac.uk/portal/en/publications/stone-dead-uncovering-early-mesolithic-mortuary-rites-hermitage-i/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Fields, tombs and copper",
+          "paragraphs": [
+            {
+              "text": "The wall lines below peat at Céide Fields, passage tombs in Meath and the Giant’s Ring near Belfast preserve different uses of land. How much of the field network at Céide belongs to the earliest farming phase remains under discussion. Copper workings at Ross Island and settlement evidence on Inis Mór widen the record to places of resource extraction and habitation.",
+              "sources": [
+                "https://egqsj.copernicus.org/articles/69/1/2020/egqsj-69-1-2020.html",
+                "https://heritageireland.ie/places-to-visit/bru-na-boinne-visitor-centre-newgrange-knowth-and-dowth/",
+                "https://www.communities-ni.gov.uk/heritage-sites/giants-ring",
+                "https://microsites.museum.ie/bronzeagehandlingbox/object-copper.html",
+                "https://heritageireland.ie/places-to-visit/dun-aonghasa/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Royal places, monasteries and ports",
+          "paragraphs": [
+            {
+              "text": "Tara acquired great significance in traditions of Irish kingship. Clonmacnoise grew at a strategic water and land crossing, and Nendrum’s tide mill shows the scale of a monastery’s engineering and food processing. The Gospel book associated with Kells and Iona followed a religious network, while excavations in Dublin and written accounts about Waterford document different routes by sea.",
+              "sources": [
+                "https://heritageireland.ie/places-to-visit/hill-of-tara/",
+                "https://heritageireland.ie/places-to-visit/clonmacnoise-monastic-site/",
+                "https://excavations.ie/report/1999/Down/0004037/",
+                "https://www.tcd.ie/library/research-collections/book-of-kells.php",
+                "https://source.museum.ie/en-ie/collections-research/irish-antiquities-division-collections/collections-list-%281%29/viking",
+                "https://heritageireland.ie/ga/blag/sagas-sceals-the-hiberno-norse-of-waterford/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Lordships, plantation and parliamentary union",
+          "paragraphs": [
+            {
+              "text": "The strongholds at Trim, Carrickfergus and Donegal grew from distinct forms of lordship. Ulster leaders went into exile in 1607, and Crown-backed plantations recast holdings in the early seventeenth century. Campaigns around the Boyne and uprisings such as those in 1798 followed other struggles over rule. Union with Great Britain took effect in 1801.",
+              "sources": [
+                "https://heritageireland.ie/assets/uploads/2016/03/heritiage-ireland-ezine-issue3.pdf",
+                "https://www.communities-ni.gov.uk/heritage-sites/carrickfergus-castle",
+                "https://heritageireland.ie/visit/places-to-visit/donegal-castle/",
+                "https://www.askaboutireland.ie/reading-room/history-heritage/history-of-ireland/the-flight-of-the-earls-1/the-route-to-rome/",
+                "https://www.communities-ni.gov.uk/heritage-sites/derry-walls",
+                "https://heritageireland.ie/places-to-visit/battle-of-the-boyne-visitor-centre-oldbridge-estate/",
+                "https://heritageireland.ie/unguided-sites/vinegar-hill-windmill/",
+                "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliamentandireland/collections/ireland/act-of-union-1800/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Famine, emigration and urban change",
+          "paragraphs": [
+            {
+              "text": "The Dublin–Kingstown railway began operating in 1834, a decade before potato blight deepened widespread hardship. Relief records document a part of the catastrophe, and passengers such as those on the Jeanie Johnston connect it to North American ports. Campaigns over land continued into the later century. In Dublin, repeated censuses describe the borough’s changing population within one published historical comparison area.",
+              "sources": [
+                "https://www.dib.ie/index.php/node/17953",
+                "https://nationalarchives.ie/help-with-research/research-guides/famine-records-distress-papers-and-the-relief-commission/",
+                "https://jeaniejohnston.ie/history/canada-history-of-the-ship/",
+                "https://www.irishstatutebook.ie/eli/1881/act/49/enacted/en/print.html",
+                "https://www.cso.ie/en/media/csoie/statistics/archive/census1891/438_Area%2C_houses%2C_and_population%2C_Vol._I%2C_Ireland%2C_1891_Dublin.pdf",
+                "https://www.cso.ie/en/media/csoie/census/census1926results/volume3/C_1_1926_V3.pdf"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Heritage Artefacts of County Cork, Castlepook bone",
+          "url": "https://www.corkcoco.ie/sites/default/files/2023-06/heritage-artefacts-of-county-cork-2021.pdf"
+        },
+        {
+          "title": "First evidence of a Late Upper Palaeolithic human presence in Ireland",
+          "url": "https://mariondowd.com/wp-content/uploads/2025/04/2016-qsr-palaeolithic-ireland.pdf"
+        },
+        {
+          "title": "A new Bayesian chronology for Mesolithic occupation at Mount Sandel",
+          "url": "https://www.cambridge.org/core/journals/proceedings-of-the-prehistoric-society/article/abs/new-bayesian-chronology-for-mesolithic-occupation-at-mount-sandel-northern-ireland/51EC4111C92E2D5FD128928277103028"
+        },
+        {
+          "title": "Stone Dead at Hermitage",
+          "url": "https://pure.york.ac.uk/portal/en/publications/stone-dead-uncovering-early-mesolithic-mortuary-rites-hermitage-i/"
+        },
+        {
+          "title": "Long-term human impact and environmental change at Céide Fields",
+          "url": "https://egqsj.copernicus.org/articles/69/1/2020/egqsj-69-1-2020.html"
+        },
+        {
+          "title": "Brú na Bóinne",
+          "url": "https://heritageireland.ie/places-to-visit/bru-na-boinne-visitor-centre-newgrange-knowth-and-dowth/"
+        },
+        {
+          "title": "Giant’s Ring",
+          "url": "https://www.communities-ni.gov.uk/heritage-sites/giants-ring"
+        },
+        {
+          "title": "Copper and Ross Island",
+          "url": "https://microsites.museum.ie/bronzeagehandlingbox/object-copper.html"
+        },
+        {
+          "title": "Dún Aonghasa archaeological site",
+          "url": "https://heritageireland.ie/places-to-visit/dun-aonghasa/"
+        },
+        {
+          "title": "Hill of Tara history and monuments",
+          "url": "https://heritageireland.ie/places-to-visit/hill-of-tara/"
+        },
+        {
+          "title": "Clonmacnoise Monastic Site",
+          "url": "https://heritageireland.ie/places-to-visit/clonmacnoise-monastic-site/"
+        },
+        {
+          "title": "Glendalough monastic site highlights",
+          "url": "https://heritageireland.ie/visit/places-to-visit/glendalough-monastic-site-and-visitor-centre/highlights/"
+        },
+        {
+          "title": "Nendrum tidal mill primary excavation report",
+          "url": "https://excavations.ie/report/1999/Down/0004037/"
+        },
+        {
+          "title": "The Book of Kells",
+          "url": "https://www.tcd.ie/library/research-collections/book-of-kells.php"
+        },
+        {
+          "title": "Viking archaeology in the National Museum of Ireland",
+          "url": "https://source.museum.ie/en-ie/collections-research/irish-antiquities-division-collections/collections-list-%281%29/viking"
+        },
+        {
+          "title": "The Hiberno-Norse of Waterford",
+          "url": "https://heritageireland.ie/ga/blag/sagas-sceals-the-hiberno-norse-of-waterford/"
+        },
+        {
+          "title": "Trim Castle historical account",
+          "url": "https://heritageireland.ie/assets/uploads/2016/03/heritiage-ireland-ezine-issue3.pdf"
+        },
+        {
+          "title": "Carrickfergus Castle",
+          "url": "https://www.communities-ni.gov.uk/heritage-sites/carrickfergus-castle"
+        },
+        {
+          "title": "Donegal Castle",
+          "url": "https://heritageireland.ie/visit/places-to-visit/donegal-castle/"
+        },
+        {
+          "title": "The route to Rome from Rathmullan",
+          "url": "https://www.askaboutireland.ie/reading-room/history-heritage/history-of-ireland/the-flight-of-the-earls-1/the-route-to-rome/"
+        },
+        {
+          "title": "The Derry Walls",
+          "url": "https://www.communities-ni.gov.uk/heritage-sites/derry-walls"
+        },
+        {
+          "title": "Battle of the Boyne at Oldbridge",
+          "url": "https://heritageireland.ie/places-to-visit/battle-of-the-boyne-visitor-centre-oldbridge-estate/"
+        },
+        {
+          "title": "Vinegar Hill Windmill and the 1798 rebellion",
+          "url": "https://heritageireland.ie/unguided-sites/vinegar-hill-windmill/"
+        },
+        {
+          "title": "Act for the Union of Great Britain and Ireland",
+          "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliamentandireland/collections/ireland/act-of-union-1800/"
+        },
+        {
+          "title": "William Dargan and Ireland’s first railway",
+          "url": "https://www.dib.ie/index.php/node/17953"
+        },
+        {
+          "title": "Famine records, distress papers and relief",
+          "url": "https://nationalarchives.ie/help-with-research/research-guides/famine-records-distress-papers-and-the-relief-commission/"
+        },
+        {
+          "title": "History of the Jeanie Johnston",
+          "url": "https://jeaniejohnston.ie/history/canada-history-of-the-ship/"
+        },
+        {
+          "title": "Land Law (Ireland) Act, 1881",
+          "url": "https://www.irishstatutebook.ie/eli/1881/act/49/enacted/en/print.html"
+        },
+        {
+          "title": "1891 Census of Ireland, Dublin Table V",
+          "url": "https://www.cso.ie/en/media/csoie/statistics/archive/census1891/438_Area%2C_houses%2C_and_population%2C_Vol._I%2C_Ireland%2C_1891_Dublin.pdf"
+        },
+        {
+          "title": "1926 Census of Population, Volume III, Table 9, historical Dublin borough counts",
+          "url": "https://www.cso.ie/en/media/csoie/census/census1926results/volume3/C_1_1926_V3.pdf"
+        }
+      ],
+      "relatedGuideIds": [
+        "world-ulster-history",
+        "world-britain-ireland-ice-age",
+        "world-scotland-history",
+        "world-wales"
+      ],
+      "referenceMaps": [
+        {
+          "title": "National Monuments Service Historic Environment Viewer",
+          "url": "https://www.archaeology.ie/advice-and-support/locate-a-monument-or-wreck/historic-environment-viewer/",
+          "description": "Locate monument records and mapped archaeological places south of the present border."
+        },
+        {
+          "title": "Down Survey of Ireland",
+          "url": "https://www.downsurvey.ie/",
+          "description": "Inspect surviving seventeenth-century maps, landownership records and their modern georeferencing."
+        },
+        {
+          "title": "Historical Irish census reports",
+          "url": "https://www.cso.ie/en/statistics/historicalreports/census1891/",
+          "description": "Find original population reporting units and district tables for Irish places."
+        }
+      ]
+    },
+    {
+      "id": "world-ulster-history",
+      "atlasIds": [
+        "europe"
+      ],
+      "category": "places",
+      "title": "Ulster and the north of Ireland through 1900",
+      "description": "Early settlement, Gaelic and Anglo-Norman sites, plantations, dissent and manufacturing in the north.",
+      "intro": "The Bann, the Foyle, Lough Erne and Strangford Lough carried people and materials through the north of Ireland. Ports along the North Channel reached out to Scotland, while medieval and early modern centres were part of histories that also include Donegal. Use the points to explore these connections and the growth of industrial Belfast.",
+      "scope": "Northern Ireland and selected related places in historical Ulster before 1900. Historical Ulster spans the present-day border, and its boundaries and systems of rule changed over time.",
+      "map": {
+        "bounds": [
+          -8.9,
+          53.95,
+          -5.3,
+          55.5
+        ],
+        "scope": "Approximate discovery sites, built places and historical reference localities on a modern basemap.",
+        "points": [
+          {
+            "id": "mount-sandel-huts",
+            "label": "Mount Sandel, Coleraine",
+            "coordinates": [
+              -6.654,
+              55.11
+            ],
+            "date": "About 7750–7540 calibrated BCE",
+            "description": "Circular patterns of postholes and pits mark Mesolithic occupation above the River Bann.",
+            "sources": [
+              "https://www.cambridge.org/core/journals/proceedings-of-the-prehistoric-society/article/abs/new-bayesian-chronology-for-mesolithic-occupation-at-mount-sandel-northern-ireland/51EC4111C92E2D5FD128928277103028"
+            ]
+          },
+          {
+            "id": "giants-ring-earthwork",
+            "label": "Giant’s Ring, Ballynahatty",
+            "coordinates": [
+              -5.953,
+              54.532
+            ],
+            "date": "Later Neolithic, third millennium BCE bracket",
+            "description": "A large circular enclosure and the remains of a passage tomb survive in a landscape with other Neolithic funerary and ceremonial sites.",
+            "sources": [
+              "https://www.communities-ni.gov.uk/heritage-sites/giants-ring"
+            ]
+          },
+          {
+            "id": "beaghmore-circles",
+            "label": "Beaghmore, County Tyrone",
+            "coordinates": [
+              -6.94,
+              54.701
+            ],
+            "date": "Bronze Age, broad bracket",
+            "description": "A cluster of low stone circles, rows and cairns was uncovered in a boggy landscape.",
+            "sources": [
+              "https://www.communities-ni.gov.uk/heritage-sites/beaghmore-stone-circles"
+            ]
+          },
+          {
+            "id": "navan-fort-timber",
+            "label": "Navan Fort, County Armagh",
+            "coordinates": [
+              -6.696,
+              54.347
+            ],
+            "date": "95 BCE timber date",
+            "description": "Tree-ring dating anchors a large timber structure within a complex with several successive building phases.",
+            "sources": [
+              "https://onlinelibrary.wiley.com/doi/full/10.1111/ojoa.12198"
+            ]
+          },
+          {
+            "id": "broighter-gold",
+            "label": "Broighter area, County Londonderry",
+            "coordinates": [
+              -6.975,
+              55.061
+            ],
+            "date": "First century BCE",
+            "description": "A hoard found near the mouth of the Roe included a decorated gold collar and a small boat with equipment.",
+            "sources": [
+              "https://cms.museum.ie/ga-IE/Collections-Research/Collection/The-Treasury/Artefact/The-Broighter-Collar/26dc0a99-6da3-40a3-8ae1-78b0c6513dc5"
+            ]
+          },
+          {
+            "id": "nendrum-tide-mill",
+            "label": "Nendrum, Mahee Island, Strangford Lough",
+            "coordinates": [
+              -5.645,
+              54.499
+            ],
+            "date": "Around 619–621 CE",
+            "description": "Water stored behind a dam drove a mill as the tide receded.",
+            "sources": [
+              "https://excavations.ie/report/1999/Down/0004037/"
+            ]
+          },
+          {
+            "id": "devenish-round-tower",
+            "label": "Devenish, Lower Lough Erne",
+            "coordinates": [
+              -7.66,
+              54.383
+            ],
+            "date": "Twelfth century CE",
+            "description": "A tall stone round tower survives among churches, crosses and burial remains on an island in Lough Erne.",
+            "sources": [
+              "https://www.communities-ni.gov.uk/heritage-sites/devenish-ecclesiastical-site"
+            ]
+          },
+          {
+            "id": "carrickfergus-castle",
+            "label": "Carrickfergus, County Antrim",
+            "coordinates": [
+              -5.807,
+              54.715
+            ],
+            "date": "Late twelfth century CE",
+            "description": "John de Courcy’s expansion into east Ulster brought a stronghold to a rock overlooking the lough.",
+            "sources": [
+              "https://www.communities-ni.gov.uk/heritage-sites/carrickfergus-castle"
+            ]
+          },
+          {
+            "id": "donegal-odonnell-castle",
+            "label": "Donegal town",
+            "coordinates": [
+              -8.109,
+              54.655
+            ],
+            "date": "Fifteenth century CE",
+            "description": "A tower and castle complex by the River Eske preserves a centre associated with the O’Donnell lordship of Tír Chonaill.",
+            "sources": [
+              "https://heritageireland.ie/visit/places-to-visit/donegal-castle/"
+            ]
+          },
+          {
+            "id": "dunluce-macdonnells",
+            "label": "Dunluce Castle, County Antrim",
+            "coordinates": [
+              -6.58,
+              55.211
+            ],
+            "date": "Later sixteenth and early seventeenth centuries",
+            "description": "The castle became a seat of the MacDonnells, whose relationships and political interests crossed the North Channel.",
+            "sources": [
+              "https://www.communities-ni.gov.uk/heritage-sites/dunluce-castle"
+            ]
+          },
+          {
+            "id": "flight-of-earls",
+            "label": "Rathmullan area, County Donegal",
+            "coordinates": [
+              -7.534,
+              55.095
+            ],
+            "date": "September 1607",
+            "description": "Hugh O’Neill, Rory O’Donnell, Cúchonnacht Maguire and followers embarked for continental Europe.",
+            "sources": [
+              "https://www.askaboutireland.ie/reading-room/history-heritage/history-of-ireland/the-flight-of-the-earls-1/the-route-to-rome/"
+            ]
+          },
+          {
+            "id": "derry-plantation-walls",
+            "label": "Derry/Londonderry",
+            "coordinates": [
+              -7.32,
+              54.996
+            ],
+            "date": "1613–1618 CE",
+            "description": "A circuit of walls was built around the plantation city under the auspices of London companies.",
+            "sources": [
+              "https://www.communities-ni.gov.uk/heritage-sites/derry-walls"
+            ]
+          },
+          {
+            "id": "jennymount-mill",
+            "label": "Jennymount Mill, Belfast",
+            "coordinates": [
+              -5.92,
+              54.618
+            ],
+            "date": "Mid–later nineteenth century CE",
+            "description": "A mill complex developed near the waterfront as linen manufacturers expanded production.",
+            "sources": [
+              "https://apps.communities-ni.gov.uk/Buildings/buildview.aspx?id=4149"
+            ]
+          },
+          {
+            "id": "belfast-shipbuilding",
+            "label": "Queen’s Island shipyard district, Belfast",
+            "coordinates": [
+              -5.901,
+              54.609
+            ],
+            "date": "From 1861 through the 1890s",
+            "description": "A nineteenth-century shipbuilding firm enlarged its operations on Queen’s Island.",
+            "sources": [
+              "https://visitbelfast.com/explore/city-areas/belfast-historic-waterfront-and-maritime-mile/quays-docks-and-slipways/"
+            ]
+          },
+          {
+            "id": "belfast-census-1891",
+            "label": "Belfast city census area",
+            "coordinates": [
+              -5.93,
+              54.598
+            ],
+            "date": "1891 census",
+            "description": "The census returned 255,950 people for its City of Belfast tabulation.",
+            "sources": [
+              "https://www.cso.ie/en/media/csoie/statistics/archive/census1891/442_Area%2C_houses%2C_and_population%2C_Vol._III%2C_Ireland%2C_1891_Antrim.pdf"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "Hunter-gatherers and farming landscapes",
+          "paragraphs": [
+            {
+              "text": "Hut plans and pits at Mount Sandel reveal early postglacial work and settlement above the Bann. The broad bank at Ballynahatty preserves a Neolithic monument beside related but differently dated features. At Beaghmore, peat kept multiple stone settings and cairns visible to archaeologists, even where individual dates are hard to determine.",
+              "sources": [
+                "https://www.cambridge.org/core/journals/proceedings-of-the-prehistoric-society/article/abs/new-bayesian-chronology-for-mesolithic-occupation-at-mount-sandel-northern-ireland/51EC4111C92E2D5FD128928277103028",
+                "https://www.communities-ni.gov.uk/heritage-sites/giants-ring",
+                "https://www.communities-ni.gov.uk/heritage-sites/beaghmore-stone-circles"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Timber structures, precious metal and mills",
+          "paragraphs": [
+            {
+              "text": "The circular timber structure at Navan Fort is one stage in a long-used landscape. The gold miniature boat deposited near the Roe offers an unusual record of ancient water travel and skill, through the decisions of a craftsperson. Early medieval communities placed working infrastructure beside navigable water, as the mill on Mahee Island and the monastic buildings on Devenish demonstrate.",
+              "sources": [
+                "https://onlinelibrary.wiley.com/doi/full/10.1111/ojoa.12198",
+                "https://cms.museum.ie/ga-IE/Collections-Research/Collection/The-Treasury/Artefact/The-Broighter-Collar/26dc0a99-6da3-40a3-8ae1-78b0c6513dc5",
+                "https://excavations.ie/report/1999/Down/0004037/",
+                "https://www.communities-ni.gov.uk/heritage-sites/devenish-ecclesiastical-site"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Gaelic and settler power",
+          "paragraphs": [
+            {
+              "text": "The strongholds at Carrickfergus, Donegal and Dunluce belonged to overlapping histories of Anglo-Norman expansion, Gaelic lordship and cross-channel kinship. The Flight of the Earls and the construction of a fortified plantation town on the Foyle mark different parts of the shift to more direct Crown rule and large-scale changes in landholding.",
+              "sources": [
+                "https://www.communities-ni.gov.uk/heritage-sites/carrickfergus-castle",
+                "https://heritageireland.ie/visit/places-to-visit/donegal-castle/",
+                "https://www.communities-ni.gov.uk/heritage-sites/dunluce-castle",
+                "https://www.askaboutireland.ie/reading-room/history-heritage/history-of-ireland/the-flight-of-the-earls-1/the-route-to-rome/",
+                "https://www.communities-ni.gov.uk/heritage-sites/derry-walls"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Textile work, shipbuilding and urban life",
+          "paragraphs": [
+            {
+              "text": "Belfast’s linen works and shipyards gathered workers and capital near the harbour. At Jennymount, expansions preserve evidence of a mill’s changing needs. The shipyards occupied a different part of the waterfront and developed on a different scale. The 1891 census counts 255,950 people within the city scope used in its table, a date-specific measure of an industrial city.",
+              "sources": [
+                "https://apps.communities-ni.gov.uk/Buildings/buildview.aspx?id=4149",
+                "https://visitbelfast.com/explore/city-areas/belfast-historic-waterfront-and-maritime-mile/quays-docks-and-slipways/",
+                "https://www.cso.ie/en/media/csoie/statistics/archive/census1891/442_Area%2C_houses%2C_and_population%2C_Vol._III%2C_Ireland%2C_1891_Antrim.pdf"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "A new Bayesian chronology for Mesolithic occupation at Mount Sandel",
+          "url": "https://www.cambridge.org/core/journals/proceedings-of-the-prehistoric-society/article/abs/new-bayesian-chronology-for-mesolithic-occupation-at-mount-sandel-northern-ireland/51EC4111C92E2D5FD128928277103028"
+        },
+        {
+          "title": "Giant’s Ring",
+          "url": "https://www.communities-ni.gov.uk/heritage-sites/giants-ring"
+        },
+        {
+          "title": "Beaghmore Stone Circles",
+          "url": "https://www.communities-ni.gov.uk/heritage-sites/beaghmore-stone-circles"
+        },
+        {
+          "title": "Re-imagining Navan Fort",
+          "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/ojoa.12198"
+        },
+        {
+          "title": "The Broighter Collar",
+          "url": "https://cms.museum.ie/ga-IE/Collections-Research/Collection/The-Treasury/Artefact/The-Broighter-Collar/26dc0a99-6da3-40a3-8ae1-78b0c6513dc5"
+        },
+        {
+          "title": "Nendrum tidal mill primary excavation report",
+          "url": "https://excavations.ie/report/1999/Down/0004037/"
+        },
+        {
+          "title": "Devenish Ecclesiastical Site",
+          "url": "https://www.communities-ni.gov.uk/heritage-sites/devenish-ecclesiastical-site"
+        },
+        {
+          "title": "Carrickfergus Castle",
+          "url": "https://www.communities-ni.gov.uk/heritage-sites/carrickfergus-castle"
+        },
+        {
+          "title": "Donegal Castle",
+          "url": "https://heritageireland.ie/visit/places-to-visit/donegal-castle/"
+        },
+        {
+          "title": "Dunluce Castle",
+          "url": "https://www.communities-ni.gov.uk/heritage-sites/dunluce-castle"
+        },
+        {
+          "title": "The route to Rome from Rathmullan",
+          "url": "https://www.askaboutireland.ie/reading-room/history-heritage/history-of-ireland/the-flight-of-the-earls-1/the-route-to-rome/"
+        },
+        {
+          "title": "The Derry Walls",
+          "url": "https://www.communities-ni.gov.uk/heritage-sites/derry-walls"
+        },
+        {
+          "title": "Jennymount Mill listed building record",
+          "url": "https://apps.communities-ni.gov.uk/Buildings/buildview.aspx?id=4149"
+        },
+        {
+          "title": "Historic quays, docks and slipways",
+          "url": "https://visitbelfast.com/explore/city-areas/belfast-historic-waterfront-and-maritime-mile/quays-docks-and-slipways/"
+        },
+        {
+          "title": "1891 Census of Ireland, City of Belfast",
+          "url": "https://www.cso.ie/en/media/csoie/statistics/archive/census1891/442_Area%2C_houses%2C_and_population%2C_Vol._III%2C_Ireland%2C_1891_Antrim.pdf"
+        }
+      ],
+      "relatedGuideIds": [
+        "world-ireland-history",
+        "world-scotland-history",
+        "world-britain-ireland-ice-age"
+      ],
+      "referenceMaps": [
+        {
+          "title": "Northern Ireland Historic Environment Map Viewer",
+          "url": "https://www.communities-ni.gov.uk/services/historic-environment-map-viewer",
+          "description": "Explore mapped archaeology, listed buildings and other historic records north of the present border."
+        },
+        {
+          "title": "Down Survey of Ireland",
+          "url": "https://www.downsurvey.ie/",
+          "description": "Inspect surviving seventeenth-century maps, landownership records and their modern georeferencing."
+        }
+      ]
+    },
+    {
+      "id": "world-britain-ireland-ice-age",
+      "atlasIds": [
+        "europe"
+      ],
+      "category": "subjects",
+      "title": "Early people and changing landscapes of Britain and Ireland",
+      "description": "Footprints, cave remains and hearths from intermittent Pleistocene activity to postglacial settlement.",
+      "intro": "One coastal find records footsteps in ancient mud. Another is a set of teeth. Others are marks on bones, hearth debris and worked stone. The map brings these discoveries together to show where and when archaeologists can place early activity in Britain and Ireland, across a record with long breaks.",
+      "scope": "Selected early hominin and postglacial evidence across Britain and Ireland. Dates before written history come from geological dating, radiocarbon measurements and comparison of objects. Rounded ages retain their uncertainty on the timeline.",
+      "map": {
+        "bounds": [
+          -10.95,
+          49.8,
+          2.5,
+          59.65
+        ],
+        "scope": "Approximate discovery sites, built places and historical reference localities on a modern basemap.",
+        "points": [
+          {
+            "id": "happisburgh-footprints",
+            "label": "Happisburgh coast, Norfolk",
+            "coordinates": [
+              1.54,
+              52.825
+            ],
+            "date": "About 1 million–780,000 years ago",
+            "description": "A footprint surface records several people walking across estuarine mud on a landscape now on the Norfolk coast.",
+            "sources": [
+              "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0088329"
+            ]
+          },
+          {
+            "id": "pakefield-flints",
+            "label": "Pakefield coast, Suffolk",
+            "coordinates": [
+              1.741,
+              52.456
+            ],
+            "date": "About 700,000 years ago",
+            "description": "Sharp flakes and a flint core are evidence of human activity in a warm Pleistocene landscape.",
+            "sources": [
+              "https://www.nature.com/articles/nature04227"
+            ]
+          },
+          {
+            "id": "boxgrove-fossils",
+            "label": "Boxgrove area, West Sussex",
+            "coordinates": [
+              -0.704,
+              50.863
+            ],
+            "date": "About 480,000 years ago",
+            "description": "A lower leg bone and two teeth accompany an archaeological record of activity near an ancient shoreline.",
+            "sources": [
+              "https://www.nhm.ac.uk/discover/news/2022/november/earliest-human-fossils-in-the-uk-reveal-how-europeans-connected.html"
+            ]
+          },
+          {
+            "id": "swanscombe-skull",
+            "label": "Barnfield Pit, Swanscombe",
+            "coordinates": [
+              0.302,
+              51.441
+            ],
+            "date": "About 400,000 years ago",
+            "description": "Three pieces of the same skull were recovered at different times in river-terrace deposits at Swanscombe.",
+            "sources": [
+              "https://historicengland.org.uk/images-books/publications/curating-the-palaeolithic/cs-ebbsfleet-academy/"
+            ]
+          },
+          {
+            "id": "pontnewydd-teeth",
+            "label": "Pontnewydd Cave area, Denbighshire",
+            "coordinates": [
+              -3.432,
+              53.23
+            ],
+            "date": "About 230,000 years ago",
+            "description": "Teeth and stone artefacts recovered in the Elwy valley provide early evidence of human activity in what is now Wales.",
+            "sources": [
+              "https://museum.wales/curatorial/archaeology/early-prehistory/"
+            ]
+          },
+          {
+            "id": "paviland-burial",
+            "label": "Goat’s Hole, Gower",
+            "coordinates": [
+              -4.252,
+              51.548
+            ],
+            "date": "About 34,000–33,000 years ago",
+            "description": "The remains of a young man were found with red ochre and worked objects in a cave above the Gower coast.",
+            "sources": [
+              "https://rcahmw.gov.uk/paviland-cave-gower/"
+            ]
+          },
+          {
+            "id": "castlepook-reindeer-mark",
+            "label": "Castlepook Cave area, County Cork",
+            "coordinates": [
+              -8.595,
+              52.23
+            ],
+            "date": "About 33,000 years ago, possible evidence",
+            "description": "A reindeer bone from the Castlepook cave assemblage has a mark interpreted by zooarchaeologist Ruth Carden as the result of stone-tool butchery.",
+            "sources": [
+              "https://www.corkcoco.ie/sites/default/files/2023-06/heritage-artefacts-of-county-cork-2021.pdf"
+            ]
+          },
+          {
+            "id": "goughs-cave-return",
+            "label": "Gough’s Cave, Cheddar",
+            "coordinates": [
+              -2.766,
+              51.282
+            ],
+            "date": "About 14,700 years ago",
+            "description": "Bones, stone tools and worked antler preserve evidence of activity as people returned to Britain late in the Ice Age.",
+            "sources": [
+              "https://www.nhm.ac.uk/discover/the-cannibals-of-goughs-cave.html"
+            ]
+          },
+          {
+            "id": "howburn-late-glacial",
+            "label": "Howburn Farm area, South Lanarkshire",
+            "coordinates": [
+              -3.575,
+              55.665
+            ],
+            "date": "About 12,500–10,500 BCE",
+            "description": "Flint points and other artefacts indicate activity by hunter-gatherers in southern Scotland towards the end of the last Ice Age.",
+            "sources": [
+              "https://scarf.scot/regional/sesarf/sesarf-case-studies/howburn-farm-and-the-scottish-hamburgian/"
+            ]
+          },
+          {
+            "id": "kendricks-cave-burials",
+            "label": "Great Orme, Llandudno",
+            "coordinates": [
+              -3.704,
+              53.325
+            ],
+            "date": "About 13,500 years ago",
+            "description": "Human remains from the cave preserve a late-glacial funerary record and some of Britain’s earliest recovered human DNA.",
+            "sources": [
+              "https://www.nhm.ac.uk/discover/news/2022/october/oldest-human-dna-uk-reveals-two-distinct-populations-ice-age-Britain.html"
+            ]
+          },
+          {
+            "id": "creswell-cave-art",
+            "label": "Creswell Crags",
+            "coordinates": [
+              -1.199,
+              53.263
+            ],
+            "date": "At least about 12,800 years old",
+            "description": "A dated layer of mineral growth over an engraving places people’s image-making in the Late Upper Palaeolithic.",
+            "sources": [
+              "https://historicengland.org.uk/research/results/reports/5467/Uranium-SeriesDatingofFlowstonesOverlyingtheEngravingsatCreswellCragsDerbyshire"
+            ]
+          },
+          {
+            "id": "edenvale-bear-cutmarks",
+            "label": "Edenvale cave area, County Clare",
+            "coordinates": [
+              -8.973,
+              52.79
+            ],
+            "date": "12,810–12,590 calibrated years BP",
+            "description": "Cut marks on a bear kneecap from the Alice and Gwendoline cave assemblage provide dated evidence of a late-glacial human presence in Ireland.",
+            "sources": [
+              "https://mariondowd.com/wp-content/uploads/2025/04/2016-qsr-palaeolithic-ireland.pdf"
+            ]
+          },
+          {
+            "id": "star-carr-shore",
+            "label": "Star Carr, Vale of Pickering",
+            "coordinates": [
+              -0.432,
+              54.215
+            ],
+            "date": "About 9300–8500 BCE",
+            "description": "A Mesolithic site on a former lakeshore preserved timber, animal bone, tools and worked antler in waterlogged deposits.",
+            "sources": [
+              "https://historicengland.org.uk/listing/the-list/list-entry/1401425/"
+            ]
+          },
+          {
+            "id": "cramond-hearth",
+            "label": "Cramond, Edinburgh",
+            "coordinates": [
+              -3.301,
+              55.979
+            ],
+            "date": "About 8500–8300 BCE",
+            "description": "Hearths, flint and charred hazelnut shells document visits to a landscape beside the River Almond and Firth of Forth.",
+            "sources": [
+              "https://archaeologydataservice.ac.uk/catalogue/adsdata/arch-2301-1/dissemination/pdf/2004_SAVILLE_Mesolithic_Scotland.pdf"
+            ]
+          },
+          {
+            "id": "mount-sandel-huts",
+            "label": "Mount Sandel, Coleraine",
+            "coordinates": [
+              -6.654,
+              55.11
+            ],
+            "date": "About 7750–7540 calibrated BCE",
+            "description": "Circular patterns of postholes and pits mark Mesolithic occupation above the River Bann.",
+            "sources": [
+              "https://www.cambridge.org/core/journals/proceedings-of-the-prehistoric-society/article/abs/new-bayesian-chronology-for-mesolithic-occupation-at-mount-sandel-northern-ireland/51EC4111C92E2D5FD128928277103028"
+            ]
+          },
+          {
+            "id": "hermitage-cremation",
+            "label": "Hermitage area, County Limerick",
+            "coordinates": [
+              -8.445,
+              52.711
+            ],
+            "date": "About 7540–7320 BCE",
+            "description": "A pit contained cremated bone and a ground stone axe at a riverside Mesolithic burial site.",
+            "sources": [
+              "https://pure.york.ac.uk/portal/en/publications/stone-dead-uncovering-early-mesolithic-mortuary-rites-hermitage-i/"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "Footprints, flakes and fossils",
+          "paragraphs": [
+            {
+              "text": "Footprints at Happisburgh carry a geological age range of about one million to 780,000 years ago. Pakefield and Boxgrove preserve evidence of other periods. At Boxgrove, bone and teeth give researchers a different way to ask about human ancestry than flint alone. The Welsh teeth at Pontnewydd document an early Neanderthal presence substantially later in the Middle Pleistocene.",
+              "sources": [
+                "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0088329",
+                "https://www.nature.com/articles/nature04227",
+                "https://www.nhm.ac.uk/discover/news/2022/november/earliest-human-fossils-in-the-uk-reveal-how-europeans-connected.html",
+                "https://historicengland.org.uk/images-books/publications/curating-the-palaeolithic/cs-ebbsfleet-academy/",
+                "https://museum.wales/curatorial/archaeology/early-prehistory/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Burials and the reach of sparse finds",
+          "paragraphs": [
+            {
+              "text": "At Paviland the age of the ochre burial comes from the human remains themselves. In Ireland, the Castlepook claim depends on interpretation of a mark on a reindeer bone from a historic collection. Bone from an Irish bear gives stronger late-glacial evidence of human activity through microscopic study and radiocarbon dating. Neither Irish cave by itself records the length of anyone’s stay.",
+              "sources": [
+                "https://rcahmw.gov.uk/paviland-cave-gower/",
+                "https://www.corkcoco.ie/sites/default/files/2023-06/heritage-artefacts-of-county-cork-2021.pdf",
+                "https://mariondowd.com/wp-content/uploads/2025/04/2016-qsr-palaeolithic-ireland.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Different paths back as climate shifted",
+          "paragraphs": [
+            {
+              "text": "Human remains at Gough’s Cave and Kendrick’s Cave have yielded genetic evidence for people with different ancestry affinities, within a small and unevenly preserved sample. At Howburn, similarities in the shape and working of stone tools matter more to dating than a layer sealed by later deposits. Flowstone above a carving at Creswell confines the age of the image from the other direction, giving a minimum age for the engraving.",
+              "sources": [
+                "https://www.nhm.ac.uk/discover/the-cannibals-of-goughs-cave.html",
+                "https://scarf.scot/regional/sesarf/sesarf-case-studies/howburn-farm-and-the-scottish-hamburgian/",
+                "https://www.nhm.ac.uk/discover/news/2022/october/oldest-human-dna-uk-reveals-two-distinct-populations-ice-age-Britain.html",
+                "https://historicengland.org.uk/research/results/reports/5467/Uranium-SeriesDatingofFlowstonesOverlyingtheEngravingsatCreswellCragsDerbyshire"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Water, camps and burial after deglaciation",
+          "paragraphs": [
+            {
+              "text": "Wet ground preserved timber around Star Carr, while charred hazelnut shells helped date activity at Cramond. Pits and postholes at Mount Sandel anchor an early chronological sequence in the north of Ireland. The cremation at Hermitage reveals evidence of funerary practice. Sediments from the Storegga tsunami record part of the changing coastal geography, with the effects on individual settlements difficult to establish.",
+              "sources": [
+                "https://historicengland.org.uk/listing/the-list/list-entry/1401425/",
+                "https://archaeologydataservice.ac.uk/catalogue/adsdata/arch-2301-1/dissemination/pdf/2004_SAVILLE_Mesolithic_Scotland.pdf",
+                "https://www.cambridge.org/core/journals/proceedings-of-the-prehistoric-society/article/abs/new-bayesian-chronology-for-mesolithic-occupation-at-mount-sandel-northern-ireland/51EC4111C92E2D5FD128928277103028",
+                "https://pure.york.ac.uk/portal/en/publications/stone-dead-uncovering-early-mesolithic-mortuary-rites-hermitage-i/",
+                "https://scarf.scot/national/palaeolithic-mesolithic-panel-report/3-environment/3-4-relative-sea-level-changes-during-the-last-15000-years/3-4-2-storegga-tsunami/"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Hominin footprints at Happisburgh",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0088329"
+        },
+        {
+          "title": "The earliest record of human activity in northern Europe",
+          "url": "https://www.nature.com/articles/nature04227"
+        },
+        {
+          "title": "Boxgrove and European hominin fossils",
+          "url": "https://www.nhm.ac.uk/discover/news/2022/november/earliest-human-fossils-in-the-uk-reveal-how-europeans-connected.html"
+        },
+        {
+          "title": "The Lower Palaeolithic at Swanscombe and Ebbsfleet",
+          "url": "https://historicengland.org.uk/images-books/publications/curating-the-palaeolithic/cs-ebbsfleet-academy/"
+        },
+        {
+          "title": "Early prehistory collections",
+          "url": "https://museum.wales/curatorial/archaeology/early-prehistory/"
+        },
+        {
+          "title": "Paviland Cave, Gower",
+          "url": "https://rcahmw.gov.uk/paviland-cave-gower/"
+        },
+        {
+          "title": "Heritage Artefacts of County Cork, Castlepook bone",
+          "url": "https://www.corkcoco.ie/sites/default/files/2023-06/heritage-artefacts-of-county-cork-2021.pdf"
+        },
+        {
+          "title": "The archaeology of Gough’s Cave",
+          "url": "https://www.nhm.ac.uk/discover/the-cannibals-of-goughs-cave.html"
+        },
+        {
+          "title": "Howburn Farm and the Scottish Hamburgian",
+          "url": "https://scarf.scot/regional/sesarf/sesarf-case-studies/howburn-farm-and-the-scottish-hamburgian/"
+        },
+        {
+          "title": "Late Ice Age human DNA from Britain",
+          "url": "https://www.nhm.ac.uk/discover/news/2022/october/oldest-human-dna-uk-reveals-two-distinct-populations-ice-age-Britain.html"
+        },
+        {
+          "title": "Uranium-series dating of Creswell Crags engravings",
+          "url": "https://historicengland.org.uk/research/results/reports/5467/Uranium-SeriesDatingofFlowstonesOverlyingtheEngravingsatCreswellCragsDerbyshire"
+        },
+        {
+          "title": "First evidence of a Late Upper Palaeolithic human presence in Ireland",
+          "url": "https://mariondowd.com/wp-content/uploads/2025/04/2016-qsr-palaeolithic-ireland.pdf"
+        },
+        {
+          "title": "Star Carr scheduled monument",
+          "url": "https://historicengland.org.uk/listing/the-list/list-entry/1401425/"
+        },
+        {
+          "title": "Mesolithic Scotland and its Neighbours",
+          "url": "https://archaeologydataservice.ac.uk/catalogue/adsdata/arch-2301-1/dissemination/pdf/2004_SAVILLE_Mesolithic_Scotland.pdf"
+        },
+        {
+          "title": "A new Bayesian chronology for Mesolithic occupation at Mount Sandel",
+          "url": "https://www.cambridge.org/core/journals/proceedings-of-the-prehistoric-society/article/abs/new-bayesian-chronology-for-mesolithic-occupation-at-mount-sandel-northern-ireland/51EC4111C92E2D5FD128928277103028"
+        },
+        {
+          "title": "Stone Dead at Hermitage",
+          "url": "https://pure.york.ac.uk/portal/en/publications/stone-dead-uncovering-early-mesolithic-mortuary-rites-hermitage-i/"
+        },
+        {
+          "title": "The Storegga tsunami evidence",
+          "url": "https://scarf.scot/national/palaeolithic-mesolithic-panel-report/3-environment/3-4-relative-sea-level-changes-during-the-last-15000-years/3-4-2-storegga-tsunami/"
+        }
+      ],
+      "relatedGuideIds": [
+        "world-england",
+        "world-wales",
+        "world-scotland-history",
+        "world-ireland-history",
+        "world-ulster-history",
+        "world-stonehenge"
+      ],
+      "referenceMaps": [
+        {
+          "title": "Pathways to Ancient Britain",
+          "url": "https://www.nhm.ac.uk/our-science/research/projects/pathways-ancient-britain.html",
+          "description": "Follow the research programme’s links to the sites and deposits that inform Britain’s early human record."
+        },
+        {
+          "title": "Historic England National Heritage List map",
+          "url": "https://historicengland.org.uk/listing/the-list/map-search/",
+          "description": "Search scheduled archaeological sites, structures and historic battlefields in England."
+        },
+        {
+          "title": "PastMap historic environment viewer",
+          "url": "https://www.historicenvironment.scot/learn/archives-collections-and-libraries/pastmap/",
+          "description": "Search national and local archaeology, buildings and historic environment records across Scotland."
+        },
+        {
+          "title": "National Monuments Service Historic Environment Viewer",
+          "url": "https://www.archaeology.ie/advice-and-support/locate-a-monument-or-wreck/historic-environment-viewer/",
+          "description": "Locate monument records and mapped archaeological places south of the present border."
+        }
+      ]
+    }
+  ]
+}

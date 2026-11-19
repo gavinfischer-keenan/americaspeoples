@@ -16,6 +16,16 @@ export interface PlannedAtlasManifest {
   overlayFiles: string[];
   sourceIds: string[];
 }
+export interface ActiveEuropeManifest extends Omit<PlannedAtlasManifest,'id'|'status'> {
+  id:'europe';status:'available';
+}
+export type RegionalAtlasManifest=PlannedAtlasManifest|ActiveEuropeManifest;
+export function validateActiveEuropeManifest(value:unknown):ActiveEuropeManifest {
+  const m=value as ActiveEuropeManifest;
+  if(!m||m.schemaVersion!==1||m.id!=='europe'||m.status!=='available'||!m.title?.trim()||!Array.isArray(m.dataFiles)||!m.dataFiles.includes('europe-catalogue.json'))throw Error('Invalid active Europe manifest');
+  if(!Array.isArray(m.map?.center)||m.map.center.length!==2||!m.map.center.every(Number.isFinite))throw Error('Invalid Europe map configuration');
+  return m;
+}
 
 const plannedIds: readonly string[] = ['africa', 'europe', 'asia-pacific'];
 const contentLists = ['dataFiles', 'recordIds', 'storyIds', 'overlayFiles', 'sourceIds'] as const;
@@ -38,14 +48,14 @@ export function validatePlannedAtlasManifest(value: unknown): PlannedAtlasManife
   return m;
 }
 
-const manifests: Record<PlannedAtlasId, PlannedAtlasManifest> = {
+const manifests: Record<PlannedAtlasId, RegionalAtlasManifest> = {
   africa: validatePlannedAtlasManifest(africa),
-  europe: validatePlannedAtlasManifest(europe),
+  europe: validateActiveEuropeManifest(europe),
   'asia-pacific': validatePlannedAtlasManifest(asiaPacific),
 };
 
-/** Bundled configuration only; this hook never loads a regional evidence catalog. */
-export function loadAtlasManifest(id: PlannedAtlasId): PlannedAtlasManifest {
+/** Bundled configuration; evidence is loaded separately by the active controller. */
+export function loadAtlasManifest(id: PlannedAtlasId): RegionalAtlasManifest {
   return manifests[id];
 }
 

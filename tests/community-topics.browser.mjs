@@ -29,10 +29,12 @@ try{
  await page.locator('#topic-play').waitFor();
  console.log('PASS queue promotion and related-history links');
 
- for(const [id,count] of [['haudenosaunee',9],['amazonian-peoples',8],['caribbean-enslavement',14]]){
+ for(const id of ['haudenosaunee','amazonian-peoples','caribbean-enslavement']){
+  const archive=communityTopics.find(t=>t.id===id);
+  const topic={...archive,scenes:archive.scenes.filter(scene=>scene.year<=1900)},count=topic.scenes.length;
   await page.goto(base+'/#topic/'+id);await page.locator('#topic-play').waitFor();
   assert.equal(await page.locator('[data-topic-scene]').count(),count);
-  const topic=communityTopics.find(t=>t.id===id);
+
   for(let i=0;i<count;i++){
    await page.locator(`[data-topic-scene="${i}"]`).click();
    assert.equal(await page.locator(`[data-topic-scene="${i}"]`).getAttribute('aria-current'),'step');
@@ -45,7 +47,7 @@ try{
   console.log(`PASS ${id}: ${count} chapters with visible evidence and explanatory text`);
  }
  // A date on a linked shared record must be its own supported date, then return intact.
- await page.goto(base+'/#topic/haudenosaunee');await page.locator('[data-topic-scene="8"]').click();
+ await page.goto(base+'/#topic/haudenosaunee');await page.locator('[data-topic-scene="6"]').click();
  await page.locator('.topic-context a[href="#context/community-canandaigua-1794"]').click();
  await page.locator('[data-action="locate"]').click();await page.locator('#map-host .world').waitFor();
  assert.equal(await page.locator('#year-number').inputValue(),'1794');
@@ -53,9 +55,9 @@ try{
  assert.equal(await page.getByLabel('Follow an expedition',{exact:true}).inputValue(),'');
  await page.getByRole('link',{name:'Deep dives',exact:true}).click();await page.locator('.dive-tabs a[href="#dives/cultures"]').click();
  await page.locator('a[href="#topic/haudenosaunee"]').click();await page.locator('#topic-play').waitFor();
- assert.equal(await page.locator('[data-topic-scene="8"]').getAttribute('aria-current'),'step');
- assert.match(await page.locator('#topic-year').innerText(),/1,932/);
- console.log('PASS linked shared evidence uses 1794 and preserves the independent 1932 chapter');
+ assert.equal(await page.locator('[data-topic-scene="6"]').getAttribute('aria-current'),'step');
+ assert.match(await page.locator('#topic-year').innerText(),/1,784/);
+ console.log('PASS linked shared evidence uses 1794 and preserves the independent 1784 chapter');
 
  for(const [w,h,label] of [[1440,960,'desktop'],[1024,768,'tablet-landscape'],[768,1024,'tablet-portrait']]){
   await page.setViewportSize({width:w,height:h});

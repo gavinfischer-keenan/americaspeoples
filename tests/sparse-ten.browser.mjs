@@ -23,11 +23,15 @@ try{
  for(const id of samples){await locate(id);assert.ok(await page.locator('#selected-records').innerText().then(t=>t.includes(records.find(r=>r.id===id).title)),id);}
  await locate('st-ki-orona-hull2');await year(1330);await represented('st-ki-orona-hull2');
  assert.equal(await page.evaluate(()=>[...document.querySelectorAll('#map-host [data-active-member-ids]')].some(el=>JSON.parse(el.dataset.activeMemberIds).includes('st-ki-orona-hull2'))),false);
- await locate('st-ki-kiritimati-early-estate');await year(1908);await represented('st-ki-kiritimati-early-estate');
+ await locate('st-ki-kiritimati-early-estate');await year(1900);await represented('st-ki-kiritimati-early-estate');
+ assert.ok(records.find(r=>r.id==='st-ki-kiritimati-early-estate').history.endEvidence.start>1900);
+ await locate('st-ki-mckean-guano');await year(1871);await represented('st-ki-mckean-guano');
  assert.equal(await page.locator('#map-host [data-local-ending="abandoned"]').count()>0,true);
- await page.screenshot({path:'test-results/sparse-ten-kiritimati-hiatus.png'});
- await locate('st-ki-sydney-butaritari-alexa');await page.locator('[data-history-route="st-ki-sydney-butaritari-alexa"]').waitFor();
- await year(1930);assert.equal(await page.locator('[data-history-route="st-ki-sydney-butaritari-alexa"]').count(),0);
+ await page.screenshot({path:'test-results/sparse-ten-mckean-ending.png'});
+ await page.goto(base+'/#review/st-ki-sydney-butaritari-alexa');await page.locator('[data-action="locate"]').waitFor();
+ assert.ok(await page.locator('[data-action="locate"]').isDisabled(),'The 1912–1929 Alexa route remains archival');
+ await locate('st-ki-honolulu-napia-copra');await page.locator('[data-history-route="st-ki-honolulu-napia-copra"]').waitFor();
+ await year(1898);assert.equal(await page.locator('[data-history-route="st-ki-honolulu-napia-copra"]').count(),0);
  for(const width of [1440,1024]){
   await page.setViewportSize({width,height:960});await page.goto(base+'/sites/micronesian-island-networks.html');
   await page.getByRole('heading',{name:'Gardens, workshops and trading towns across Kiribati'}).scrollIntoViewIfNeeded();
@@ -35,6 +39,6 @@ try{
   await page.screenshot({path:`test-results/sparse-ten-micronesia-${width}.png`});
  }
  for(const path of ['docs/sparse-ten-histories.html','sparse-ten-coverage.json'])assert.equal((await page.request.get(base+'/'+path)).status(),200);
- assert.deepEqual(errors,[]);console.log('PASS: ten regional master-map locations, prior evidence in gaps, documented Kiritimati departure, Alexa activity, and tablet guide.');
+ assert.deepEqual(errors,[]);console.log('PASS: ten regional master-map locations, prior evidence in gaps, documented McKean departure, supported 1897 route, archival Alexa chronology, and tablet guide.');
 }catch(e){await page.screenshot({path:'test-results/sparse-ten-failure.png'}).catch(()=>{});throw e;}
 finally{await browser.close();await new Promise(r=>server.close(r));}

@@ -23,8 +23,12 @@ try{
   await page.getByRole('button',{name:'Pause',exact:true}).click();
   for(const fragment of ['galiano','narvaez','mcclure','sverdrup','maud','gauss','charcot','filchner','ellsworth-wyatt-earp-1933-1934','ellsworth-wyatt-earp-1934','clerke','gore']){
     const v=voyages.find(v=>v.id.includes(fragment));assert.ok(v,fragment);
+    if(v.stops[0].arrival>'1900-12-31'){
+      assert.equal(await page.locator(`#watch-voyage option[value="${v.id}"]`).count(),0,fragment+' is archived outside map years');
+      continue;
+    }
     await choose(v);await progress(10000);
-    assert.match(await page.locator('#voyage-position').innerText(),new RegExp('^'+v.stops.at(-1).departure));
+    assert.match(await page.locator('#voyage-position').innerText(),new RegExp('^'+(v.stops.at(-1).departure>'1900-12-31'?'1900-12-31':v.stops.at(-1).departure)));
     assert.ok(await page.locator('#voyage-evidence a').count()>0,fragment+' citations');
   }
   const gore=voyages.find(v=>v.id==='gore-king-homeward-1779-1780');

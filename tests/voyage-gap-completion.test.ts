@@ -44,11 +44,15 @@ test('every earlier coverage question has a fresh documented disposition', () =>
   }
 });
 
-test('independent Arctic parties remain visible while their associated ship has a position', () => {
+test('the archive retains simultaneous Arctic parties after the shared map cutoff', () => {
   const date=dateValue('1920-01-15');
   const precise=activeExpeditions(voyages,date,()=>false);
-  assert.ok(precise.some(v=>v.id==='maud-northeast-passage-1918-1920' && v.coordinates));
-  assert.ok(activityDuring(activity.activities,date,precise).some(a=>a.id==='maud-ay-on-chukchi-travel'));
+  const ship=voyages.find(v=>v.id==='maud-northeast-passage-1918-1920')!;
+  assert.ok(sampleVoyage(ship.stops,date)?.coordinates);
+  const party=activity.activities.find(a=>a.id==='maud-ay-on-chukchi-travel')!;
+  assert.deepEqual([party.start,party.end],['1919','1920']);
+  assert.deepEqual(precise,[]);
+  assert.deepEqual(activityDuring(activity.activities,date,precise),[]);
 });
 
 test('disputed pole and undated wreck evidence does not become an exact itinerary position', () => {
@@ -68,9 +72,13 @@ test('a shipwreck journey does not turn its ordinary port observations into hist
 });
 
 test('separate BANZARE field seasons and flights do not imply continuous activity', () => {
-  assert.ok(!activeExpeditions(voyages,dateValue('1930-07-01'),()=>false).some(v=>v.id.includes('banzare')));
+  const banzare=voyages.filter(v=>v.id.includes('banzare'));
+  assert.ok(banzare.length>0);
+  assert.ok(!banzare.some(v=>sampleVoyage(v.stops,dateValue('1930-07-01'))));
   assert.ok(!activeExpeditions(voyages,dateValue('1930-01-02'),()=>false).some(v=>v.id.includes('banzare-air')));
   const precise=activeExpeditions(voyages,dateValue('1931-02-11'),()=>false);
   const independent=activityDuring(activity.activities,dateValue('1931-02-11'),precise);
-  assert.ok(independent.some(a=>/BANZARE/i.test(a.name)&&/air|flight|aerial/i.test(a.name+' '+a.note)),'air reconnaissance remains visible alongside the ship');
+  const flight=activity.activities.find(a=>a.id==='banzare-air-reconnaissance-1931')!;
+  assert.deepEqual([flight.start,flight.end],['1931-01','1931-02']);
+  assert.deepEqual(independent,[]);
 });

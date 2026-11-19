@@ -1,3 +1,5 @@
+import {chaptersThrough,topicEndYear} from './topic-scope';
+import {recordInTimeline} from './time';
 import easternBrazil from '../data/eastern-brazil-scenes.json';
 import tradeExpansion from '../data/trade-0-1200-scenes.json';
 import tradeResearch from '../data/trade-network-scenes.json';
@@ -20,7 +22,7 @@ const languageIds=['austronesian-model','molina','lima','tupi','guarani','massac
 /** Only new focused material is omitted from the shared map. Existing evidence stays. */
 export const topicOnlyIds=new Set([...yapMicronesiaOnlyIds,...comingSoonBOnlyIds,...queueLanguageOnlyIds,...remainingTopicOnlyIds,...sovereigntyTopicOnlyIds,...communityTopicOnlyIds,...horseIds,...maizeIds,...languageIds,'topic-trade-balsa',...pacificTopicOnlyIds]);
 const sharedDateNote='The map shows included evidence at this date and explicitly dated earlier finds. Empty space is a coverage gap, not evidence of absence. Select a marker to see what was actually dated.';
-export const topics:TopicDive[]=[
+const sourceTopics:TopicDive[]=[
  shipwreckTopic as TopicDive,
  ...yapMicronesiaTopics,
  ...comingSoonBTopics, ...queueLanguageTopics, ...remainingTopics,...sovereigntyTopics,...communityTopics,...pacificTopics,
@@ -65,9 +67,10 @@ export const topics:TopicDive[]=[
 
  ]},
 ];
-const tradeTopic=topics.find(topic=>topic.id==='trade')!;
+const tradeTopic=sourceTopics.find(topic=>topic.id==='trade')!;
 tradeTopic.title='Trade networks: materials moving across the world';
 tradeTopic.description='Follow stone, food, pottery and other goods through local exchange and ocean connections, then onward into colonial commerce.';
 tradeTopic.recordIds=[...new Set([...tradeTopic.recordIds,...tradeExpansion.recordIds,...tradeResearch.recordIds,...easternBrazil.tradeRecordIds])];
 tradeTopic.scenes=[...tradeTopic.scenes,...tradeExpansion.scenes as StoryScene[],...tradeResearch.scenes as StoryScene[],...easternBrazil.tradeScenes as StoryScene[]].sort((a,b)=>a.year-b.year);
-export function topicRecords<T extends DisplayRecord>(topic:TopicDive,all:readonly T[]):T[]{const ids=new Set(topic.recordIds);return all.filter(r=>ids.has(r.id));}
+export const topics=sourceTopics.map(topic=>chaptersThrough(topic,topicEndYear(topic.id))).filter(topic=>topic.scenes.length);
+export function topicRecords<T extends DisplayRecord>(topic:TopicDive,all:readonly T[]):T[]{const ids=new Set(topic.recordIds);return all.filter(r=>ids.has(r.id)&&recordInTimeline(r,topicEndYear(topic.id)));}

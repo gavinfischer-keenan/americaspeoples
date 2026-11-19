@@ -126,8 +126,8 @@ test("playback lands on evidence boundaries so high speeds do not skip one-year 
     year: 1041,
     boundary: false,
   });
-  assert.deepEqual(advancePlayback([r], 1930, 20), {
-    year: 1934,
+  assert.deepEqual(advancePlayback([r], 1895, 20), {
+    year: 1900,
     boundary: false,
   });
 });

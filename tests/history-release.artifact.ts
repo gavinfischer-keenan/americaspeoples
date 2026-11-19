@@ -9,6 +9,8 @@ import {MAX_SUPPORT_ROWS} from '../src/bulk-schema';
 test('packaged contributor docs describe supported date windows and current workbook limits',async()=>{
  const files=unzipSync(await readFile(`release/americas-peoples-v${version}-selfhost.zip`));
  const history=strFromU8(files['americas-peoples/web/docs/history-update.html']);
+ assert.ok(files['americas-peoples/web/docs/northern-europe-next-pass.html']);
+ for(const note of ['arctic-review','warfare-and-picts','cold-preserved-people'])assert.ok(files[`americas-peoples/web/docs/research/northern-europe/${note}.md`],note);
  const bulk=strFromU8(files['americas-peoples/web/docs/bulk-import-guide.html']);
  assert.match(history,/Dated finds.*attestation/);
  assert.ok(bulk.includes(MAX_SUPPORT_ROWS.toLocaleString('en-US')+' each in Claims'));

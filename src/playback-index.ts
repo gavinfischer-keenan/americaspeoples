@@ -38,11 +38,11 @@ export class PlaybackIndex{
    // advancePlayback examines any non-null endpoint, independently of smart pacing.
    if(t.start!==null)stops.push(t.start);
    if(t.end!==null)stops.push(t.end);
-   if(t.start===null||t.end===null)continue;
+   if(t.start===null||t.end===null||t.start>END_YEAR)continue;
    const weight=Math.min(1,1000/Math.max(1,t.end-t.start+1));
    if(t.start<=t.end){starts.push([t.start,weight]);ends.push([t.end,weight]);}
    for(const date of new Set([t.start,t.end,t.certainStart,t.certainEnd]))
-    if(date!==undefined)nearby.push(date);
+    if(date!==undefined&&date<=END_YEAR)nearby.push(date);
   }
   this.starts=new WeightedDates(starts);this.ends=new WeightedDates(ends);
   this.nearby=nearby.sort((a,b)=>a-b);

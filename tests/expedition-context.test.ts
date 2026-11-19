@@ -8,27 +8,27 @@ import {PlaybackIndex} from '../src/playback-index';
 import {AtlasContext} from '../src/atlas-context';
 
 const polar={id:'polar-test',name:'Polar <expedition>',summary:'Test chronology',scope:'global',sourceIds:[],recordIds:[],precision:'Schematic',stops:[
- {name:'Ice camp',coordinates:[-45,-75],arrival:'1915-01-18',departure:'1915-10-27',mode:'sea',phase:'wintering',note:'Stationary winter'},
- {name:'Island',coordinates:[-55,-61],arrival:'1916-04-15',departure:'1916-04-24',mode:'sea',phase:'rescue',note:'Documented camp'},
+ {name:'Ice camp',coordinates:[-45,-75],arrival:'1895-01-18',departure:'1895-10-27',mode:'sea',phase:'wintering',note:'Stationary winter'},
+ {name:'Island',coordinates:[-55,-61],arrival:'1896-04-15',departure:'1896-04-24',mode:'sea',phase:'rescue',note:'Documented camp'},
 ]} as Voyage;
 
 test('global expeditions preserve polar wintering and full dated extent',()=>{
- assert.deepEqual(scopedVoyageWindows(polar),[{start:dateValue('1915-01-18'),end:dateValue('1916-04-24')}]);
+ assert.deepEqual(scopedVoyageWindows(polar),[{start:dateValue('1895-01-18'),end:dateValue('1896-04-24')}]);
  assert.ok(scopedVoyageGeometry(polar).coordinates.flat().some(p=>p[1]<-70));
 });
 
 test('a polar traveler is drawn when its position is in the viewport',()=>{
  const context=new AtlasContext();context.voyages=[polar];
- context.options={boundaries:false,rails:false,voyages:true,voyageId:'',voyageDate:dateValue('1915-06-01')};
- const html=context.draw(geoEquirectangular(),1915,1,true);
+ context.options={boundaries:false,rails:false,voyages:true,voyageId:'',voyageDate:dateValue('1895-06-01')};
+ const html=context.draw(geoEquirectangular(),1895,1,true);
  assert.match(html,/data-voyage="polar-test"/);
  assert.match(html,/Wintering/);
 });
 
 test('locating a legacy expedition outside its playback scope still draws its documented position',()=>{
  const context=new AtlasContext();context.voyages=[{...polar,scope:'atlas'}];
- context.options={boundaries:false,rails:false,voyages:true,voyageId:polar.id,voyageDate:dateValue('1915-06-01')};
- const html=context.draw(geoEquirectangular(),1915,1,true);
+ context.options={boundaries:false,rails:false,voyages:true,voyageId:polar.id,voyageDate:dateValue('1895-06-01')};
+ const html=context.draw(geoEquirectangular(),1895,1,true);
  assert.match(html,/data-voyage="polar-test"/);
  assert.match(html,/voyage-stop/);
 });
@@ -37,11 +37,11 @@ const mod=existsSync(new URL('../src/expedition-context.ts',import.meta.url))?aw
 test('contemporary list includes simultaneous offscreen voyages without future or completed trips',()=>{
  assert.ok(mod,'expedition context module');
  const second={...polar,id:'second',name:'Second'};
- const date=dateValue('1915-06-01');
+ const date=dateValue('1895-06-01');
  const entries=mod.activeExpeditions([polar,second],date,()=>false);
  assert.equal(entries.length,2);assert.ok(entries.every(e=>!e.inView));
- assert.equal(mod.activeExpeditions([polar],dateValue('1914-12-31'),()=>true).length,0);
- assert.equal(mod.activeExpeditions([polar],dateValue('1916-05-01'),()=>true).length,0);
+ assert.equal(mod.activeExpeditions([polar],dateValue('1894-12-31'),()=>true).length,0);
+ assert.equal(mod.activeExpeditions([polar],dateValue('1896-05-01'),()=>true).length,0);
  const html=mod.expeditionsHTML(entries);
  assert.match(html,/Outside this view/);assert.match(html,/Wintering/);
  assert.match(html,/data-follow-expedition="polar-test"/);
@@ -51,18 +51,18 @@ test('contemporary list includes simultaneous offscreen voyages without future o
 test('a documented expedition with an untraced interval remains listed without an invented position or connecting track',()=>{
  assert.ok(mod);
  const gap={...polar,stops:polar.stops.map((s,i)=>({...s,...(i===0?{gapAfter:true}:{})}))};
- const entries=mod.activeExpeditions([gap],dateValue('1916-01-01'),()=>true);
+ const entries=mod.activeExpeditions([gap],dateValue('1896-01-01'),()=>true);
  assert.equal(entries.length,1);assert.equal(entries[0].coordinates,null);
  assert.match(entries[0].position,/not reconstructed/);
  const geometry=scopedVoyageGeometry(gap);
  assert.ok(geometry.coordinates.every(line=>line.every(p=>p[0]===line[0][0]&&p[1]===line[0][1])));
 });
 
-test('the final atlas year includes expeditions occurring after January 1934',()=>{
+test('the final atlas year includes expeditions occurring after January 1900',()=>{
  const index=new PlaybackIndex([]);
- const frame=advanceMovieClock(1934,0.5,1,index,[],false);
- assert.ok(frame.date>1934);
- assert.ok(advanceMovieClock(dateValue('1934-12-30'),10,1,index,[],false).date<=dateValue('1934-12-31'));
+ const frame=advanceMovieClock(1900,0.5,1,index,[],false);
+ assert.ok(frame.date>1900);
+ assert.ok(advanceMovieClock(dateValue('1900-12-30'),10,1,index,[],false).date<=dateValue('1900-12-31'));
 });
 
 test('coarse voyage dates remain labelled windows, with no invented daily position',()=>{

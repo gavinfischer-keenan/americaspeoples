@@ -1,11 +1,13 @@
 import type { EvidenceRecord } from "./model";
-export function populationRadius(n: number): number {
+export function populationRadius(n: number,scale:'bands'|'log'='bands'): number {
+  if(scale==='log')return Math.min(29,3+Math.log10(1+Math.max(0,n))*3);
   return n <= 500 ? 5 : n <= 2500 ? 7 : n <= 10000 ? 10 : n <= 50000 ? 13 : 17;
 }
 /** No interpolation, extrapolation, or addition of overlapping estimates. */
 export function populationAt(
   rows: readonly Pick<EvidenceRecord, "population">[],
   year: number,
+  scale:'bands'|'log'='bands',
 ) {
   const estimates = [
     ...new Map(
@@ -28,9 +30,9 @@ export function populationAt(
     max = Math.max(...estimates.map((p) => p.max));
   return {
     unknown: false,
-    radius: populationRadius(min),
-    outerRadius: populationRadius(max),
-    label: `${min.toLocaleString("en-US")}–${max.toLocaleString("en-US")} residents${estimates.length > 1 ? " — envelope of alternative estimates; not a sum" : ""}`,
+    radius: populationRadius(min,scale),
+    outerRadius: populationRadius(max,scale),
+    label: `${min.toLocaleString("en-US")}–${max.toLocaleString("en-US")} residents${estimates.some(p=>p.scope.startsWith('Interpolated between'))?' · interpolated between dated observations':''}${estimates.length > 1 ? " — envelope of alternative estimates; not a sum" : ""}`,
   };
 }
 export function validatePopulation(r: EvidenceRecord): string[] {

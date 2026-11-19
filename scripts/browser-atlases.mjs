@@ -40,20 +40,27 @@ try {
   const catalogRequests = () => fixture.requests.filter(request => new URL(request.url).pathname === '/api/catalog').length;
   const catalogsBefore = catalogRequests();
   const destinations = [['africa', 'Africa & human origins'], ['europe', 'Europe & Mediterranean'], ['asia-pacific', 'Asia & Pacific']];
+  assert.ok(!fixture.requests.some(r => r.url.endsWith('/europe-catalogue.json')), 'Americas must not fetch the Europe catalogue');
   for (const [id, title] of destinations) {
     await page.locator('.atlas-switcher > summary').focus();
     await page.keyboard.press('Enter');
     await page.locator(`#atlas-destinations a[href="#atlas/${id}"]`).click();
-    await page.waitForFunction(expected => document.querySelector('#atlas-preview-title')?.textContent === expected, title);
-    assert.equal(await page.locator('#atlas-preview-title').textContent(), title);
-    assert.equal(await page.locator('#main svg path').count(), 2, 'Only ocean and coastline paths belong in a future map');
-    assert.equal(await page.locator('#main .features, #main [data-record], #main [data-voyage], #main circle, #main image').count(), 0);
+    if (id === 'europe') {
+      await page.locator('#europe-map .world').waitFor();
+      assert.equal(await page.locator('#europe-date').isVisible(), true);
+      assert.ok(await page.locator('#europe-region option').count() > 1);
+      assert.equal(await page.locator('.atlas-coming-soon').count(), 0);
+    } else {
+      await page.waitForFunction(expected => document.querySelector('#atlas-preview-title')?.textContent === expected, title);
+      assert.equal(await page.locator('#main svg path').count(), 2, 'Only modern ocean and coastlines belong on a future map');
+      assert.equal(await page.locator('#main .features, #main [data-record], #main [data-voyage], #main circle, #main image').count(), 0);
+      assert.equal(await page.locator('.atlas-coming-soon').textContent(), 'COMING SOON');
+    }
     assert.equal(await page.locator('.timeline').isVisible(), false);
-    assert.equal(await page.locator('.atlas-coming-soon').textContent(), 'COMING SOON');
     assert.equal(await page.locator('.atlas-switcher').getAttribute('open'), null);
     assert.equal(await page.locator(`#atlas-destinations a[href="#atlas/${id}"]`).getAttribute('aria-current'), 'page');
   }
-  assert.equal(catalogRequests(), catalogsBefore, 'Switching future atlases must not fetch additional evidence catalogs');
+  assert.equal(catalogRequests(), catalogsBefore, 'Switching regional atlases must not fetch the Americas catalogue twice');
 
   await page.getByRole('link', { name: 'Return to Americas' }).click();
   await page.waitForSelector('#map-host .world');
@@ -74,8 +81,11 @@ try {
     const [id, title] = destinations[index % destinations.length];
     await page.goto(fixture.url + '#atlas/' + id);
     await page.reload();
-    await page.waitForSelector('#atlas-preview-title');
-    assert.equal(await page.locator('#atlas-preview-title').textContent(), title);
+    if (id === 'europe') await page.locator('#europe-map .world').waitFor();
+    else {
+      await page.waitForSelector('#atlas-preview-title');
+      assert.equal(await page.locator('#atlas-preview-title').textContent(), title);
+    }
     await page.locator('.atlas-switcher > summary').click();
     const layout = await page.evaluate(() => ({ width: innerWidth, scroll: document.documentElement.scrollWidth, menu: document.querySelector('.atlas-destinations').getBoundingClientRect().toJSON() }));
     assert.ok(layout.scroll <= layout.width, JSON.stringify(layout));
@@ -85,7 +95,7 @@ try {
     assert.equal(new URL(page.url()).hash, '#movie');
   }
   fixture.assertPrivacy();
-  console.log(`Atlas navigation passed (${process.env.ATLAS_BROWSER_SOURCE === '1' ? 'frontend bundled in memory' : 'built release'}): three empty previews; date, camera, selection and filter retained; keyboard menu; direct routes; widths 320–800px.`);
+  console.log(`Atlas navigation passed (${process.env.ATLAS_BROWSER_SOURCE === '1' ? 'frontend bundled in memory' : 'built release'}): one active European atlas and two geographic previews; date, camera, selection and filter retained; keyboard menu; direct routes; widths 320–800px.`);
 } finally {
   await fixture.close();
 }
