@@ -1,0 +1,1107 @@
+{
+  "version": "0.32.0",
+  "status": "merged, deployed and publicly verified; current and previous server releases retained",
+  "verifiedAt": "2026-11-19T11:05:02.846213+00:00",
+  "pullRequest": "https://github.com/gavinfischer-keenan/americaspeoples/pull/30",
+  "release": "https://github.com/gavinfischer-keenan/americaspeoples/releases/tag/v0.32.0",
+  "site": "https://tripofisch.com/spread-of-peoples/",
+  "application": "https://americaspeoples.11mosswood.us/",
+  "baseCommit": "8d880f11de1914b9d5fa6833a701f5fae0f9e3ed",
+  "featureCommit": "9156588da93ea9c1e8f17f6a62135978c5d07661",
+  "mergeCommit": "d9468273e606c709c8b30a542885355ff08989db",
+  "deployedCommit": "d9468273e606c709c8b30a542885355ff08989db",
+  "verifiedTree": "c53d5f4c31fe2d5ea5a8b2057c4a5d75b5cd14d7",
+  "stats": {
+    "archiveRecords": 11201,
+    "worldEvidence": 264,
+    "worldSourceEntries": 267,
+    "worldWaves": 40,
+    "worldTerritorialVersions": 13,
+    "newStudies": 4,
+    "worldSummaryEvidence": 5842,
+    "worldSummaryUniqueReferences": 4330,
+    "worldGuides": 64,
+    "humanFamilyFoundation": {
+      "evidence": 194,
+      "waves": 16,
+      "taxa": 27
+    },
+    "africaNewObservations": 130,
+    "africaEarlyObservations": 156,
+    "africaEarlyEndAstronomicalYear": -14999,
+    "consensusDeepRuns": "110+ (owner-supplied lifetime figure)",
+    "consensusMatchedCitedPapers": 159,
+    "newCompletedConsensusDeepReviews": 2
+  },
+  "scope": "World-first entrance and four regional paths with shared controls; all principal hominin branches, genetics and interbreeding discussion; four dated historical studies. Africa through 15,000 BCE is a sourced growing inventory, not an exhaustive site census. Modern basemap, schematic connections, approximate locations and disputed chronology remain qualified.",
+  "validation": {
+    "fullReleaseStages": 66,
+    "unitTests": 506,
+    "typescript": true,
+    "packageTests": 7,
+    "deploymentAndCleanupFixtures": 25,
+    "linuxRetentionFixtures": 5,
+    "aggregateRunNotes": "Successful aggregate ranges: 1–7, 8–32, 33–56 and 57–66. Original failed logs are retained. Fixes address an unused import, a test that captured a pre-resize camera, tablet header/toolbar overflow, and a real same-frame menu/camera race. Menus now retract in the capture phase before target handlers measure the map. No camera assertion was weakened or timeout extended. Final build r3 passed the complete world/Africa, Europe and shared-panel browser suites, extracted self-host smoke and all seven packaged-document checks. TypeScript, the 506-unit suite, 25 deployment/cleanup fixtures and five Linux retention fixtures passed.",
+    "finalCompiledChecks": [
+      "world and early Africa browser suite",
+      "Europe browser suite including tablet",
+      "shared panels and navigation",
+      "extracted self-host API smoke",
+      "seven package-document tests"
+    ],
+    "americasArchiveUnchanged": true,
+    "canonicalVoyagesUnchanged": true,
+    "stagedWebAssetChecksums": 791,
+    "stagedTripofischFiles": 10,
+    "unrelatedOriginFilesUnchanged": 392,
+    "publicAssetAndContentChecks": [
+      {
+        "url": "https://americaspeoples.11mosswood.us/app.js",
+        "check": "exact SHA-256",
+        "sha256": "b028bf6e3bcfed92af75e7e861b94f4636ebca88f0d180d53a6cf8b9ad2ddedc",
+        "bytes": 2075392
+      },
+      {
+        "url": "https://americaspeoples.11mosswood.us/app.css",
+        "check": "exact SHA-256",
+        "sha256": "8963e3a8e8864d6a10af707ec63659884ad60467fec40ec249a472ca0ecb9b9d",
+        "bytes": 117979
+      },
+      {
+        "url": "https://americaspeoples.11mosswood.us/world-catalogue.json",
+        "check": "exact SHA-256",
+        "sha256": "ba2f9982f03cba782698535db80bb2afe7bf90a57f092ca031717e791b9e9107",
+        "bytes": 414183
+      },
+      {
+        "url": "https://americaspeoples.11mosswood.us/world-summary.json",
+        "check": "exact SHA-256",
+        "sha256": "850447eba51c57faefd4717888e86aa81655cc462359041a9ab4bd903d35e867",
+        "bytes": 4132
+      },
+      {
+        "url": "https://americaspeoples.11mosswood.us/europe-catalogue.json",
+        "check": "exact SHA-256",
+        "sha256": "984425bfaf2a55077014bf0fc1ea2b53c6c7dddf8a69069c0c7a9fb8000aa73a",
+        "bytes": 2097355
+      },
+      {
+        "url": "https://americaspeoples.11mosswood.us/guide-terrain/world-genghis-khan.webp",
+        "check": "exact SHA-256",
+        "sha256": "49d235d14ac6cf09b5751f675813f7cb74e405546f87e44a9f2172799c96894c",
+        "bytes": 1091868
+      },
+      {
+        "url": "https://americaspeoples.11mosswood.us/guide-terrain/world-hannibal.webp",
+        "check": "exact SHA-256",
+        "sha256": "07db29cc934c0c1699aa0abaa4d81e914a2fcc804fa9d5a0a57c8712330153de",
+        "bytes": 839528
+      },
+      {
+        "url": "https://americaspeoples.11mosswood.us/guide-terrain/world-marco-polo.webp",
+        "check": "exact SHA-256",
+        "sha256": "427d073848085b763cc7c9214b783088a5c2d794d512676bce109bbcd63f3487",
+        "bytes": 852858
+      },
+      {
+        "url": "https://americaspeoples.11mosswood.us/guide-terrain/world-silk-roads.webp",
+        "check": "exact SHA-256",
+        "sha256": "e00e7ff40f9541417c28abaea5d610bfd58aa14f1cafafe3fca7c35bad43a179",
+        "bytes": 782376
+      },
+      {
+        "url": "https://tripofisch.com/spread-of-peoples/world-catalogue.json",
+        "check": "exact SHA-256",
+        "sha256": "ba2f9982f03cba782698535db80bb2afe7bf90a57f092ca031717e791b9e9107",
+        "bytes": 414183
+      },
+      {
+        "url": "https://tripofisch.com/spread-of-peoples/world-site.css",
+        "check": "exact SHA-256",
+        "sha256": "fd7a27b2c98fa49749b6ac4b57e27cd1369b49c856e3e2f799b95cb6749a7056",
+        "bytes": 19481
+      },
+      {
+        "url": "https://tripofisch.com/spread-of-peoples/world-site.js",
+        "check": "exact SHA-256",
+        "sha256": "664be24f9562bd57625e110fe5356e595d8db06807c67f1bf347a4a7c3175b05",
+        "bytes": 167903
+      },
+      {
+        "url": "https://tripofisch.com/spread-of-peoples/world-summary.json",
+        "check": "exact SHA-256",
+        "sha256": "850447eba51c57faefd4717888e86aa81655cc462359041a9ab4bd903d35e867",
+        "bytes": 4132
+      },
+      {
+        "url": "https://americaspeoples.11mosswood.us/sites/world-genghis-khan.html",
+        "check": "visible text and required anchors/links match frozen HTML; bytes not compared"
+      },
+      {
+        "url": "https://americaspeoples.11mosswood.us/sites/world-hannibal.html",
+        "check": "visible text and required anchors/links match frozen HTML; bytes not compared"
+      },
+      {
+        "url": "https://americaspeoples.11mosswood.us/sites/world-marco-polo.html",
+        "check": "visible text and required anchors/links match frozen HTML; bytes not compared"
+      },
+      {
+        "url": "https://americaspeoples.11mosswood.us/sites/world-silk-roads.html",
+        "check": "visible text and required anchors/links match frozen HTML; bytes not compared"
+      },
+      {
+        "url": "https://americaspeoples.11mosswood.us/sites/world-human-family.html",
+        "check": "visible text and required anchors/links match frozen HTML; bytes not compared"
+      },
+      {
+        "url": "https://americaspeoples.11mosswood.us/sites/sources-attributions.html",
+        "check": "research-credit section only; visible text and required anchors/links match frozen HTML; bytes not compared"
+      },
+      {
+        "url": "https://tripofisch.com/",
+        "check": "staged visible text and required anchors/links; no HTML byte claim"
+      },
+      {
+        "url": "https://tripofisch.com/free-utilities/",
+        "check": "staged visible text and required anchors/links; no HTML byte claim"
+      },
+      {
+        "url": "https://tripofisch.com/free-utilities/americaspeoples/",
+        "check": "staged visible text and required anchors/links; no HTML byte claim"
+      },
+      {
+        "url": "https://tripofisch.com/privacy/",
+        "check": "existing neighbor visible text and required anchors/links preserved"
+      },
+      {
+        "url": "https://healthconverter.11mosswood.us/",
+        "check": "existing neighbor visible text and required anchors/links preserved"
+      },
+      {
+        "url": "https://projectmanager.11mosswood.us/",
+        "check": "existing neighbor visible text and required anchors/links preserved"
+      }
+    ],
+    "publicBrowser": {
+      "status": "passed",
+      "checks": [
+        {
+          "name": "public-globe-and-compact-consensus",
+          "passed": true,
+          "durationMs": 563,
+          "details": {
+            "consensus": "Consensus ↗ 110+ Deep research runs 159 cited papers"
+          }
+        },
+        {
+          "name": "regional-iframe-and-full-window-americas",
+          "passed": true,
+          "durationMs": 11775,
+          "details": {
+            "url": "https://americaspeoples.11mosswood.us/#movie",
+            "title": "The Spread of Peoples — Alaska Blackfish",
+            "mapPaths": 11,
+            "bodyExcerpt": "Skip to content\n◈\nThe Spread of Peoples\nALASKA BLACKFISH\nWorld\nAmericas\nExplore\nDeep dives\nLibrary\nAtlases ⌄\nAbout the atlas ↗\nWorld\nRegion: Americas\nMap settings\nFacts\nIn this view\n1\nMadjedbebe - modeled early occupation onset *\nPacific an"
+          }
+        },
+        {
+          "name": "regional-iframe-and-full-window-africa",
+          "passed": true,
+          "durationMs": 1418,
+          "details": {
+            "url": "https://americaspeoples.11mosswood.us/#atlas/africa",
+            "title": "The Spread of Peoples — Alaska Blackfish",
+            "mapPaths": 3,
+            "bodyExcerpt": "◉\nThe Spread of Peoples\nALASKA BLACKFISH\nWorld\nAmericas\nExplore\nDeep dives\nLibrary\n\nTHE SPREAD OF PEOPLES · FIRST BROAD FRAMEWORK\n\nAfrica & human origins\n\nEvidence anchors and broad connections. A foundation for the detailed histories still"
+          }
+        },
+        {
+          "name": "regional-iframe-and-full-window-europe",
+          "passed": true,
+          "durationMs": 7093,
+          "details": {
+            "url": "https://americaspeoples.11mosswood.us/#atlas/europe",
+            "title": "The Spread of Peoples — Alaska Blackfish",
+            "mapPaths": 11,
+            "bodyExcerpt": "Skip to content\n◈\nThe Spread of Peoples\nALASKA BLACKFISH\nWorld\nAmericas\nExplore\nDeep dives\nLibrary\nAtlases ⌄\nAbout the atlas ↗\n\nEUROPE · THE NORTHERN BEGINNING\n\nPlaces, kingdoms and connections\nEarlier human family & dispersals\nWorld\nRegion"
+          }
+        },
+        {
+          "name": "regional-iframe-and-full-window-asia-pacific",
+          "passed": true,
+          "durationMs": 1514,
+          "details": {
+            "url": "https://americaspeoples.11mosswood.us/#atlas/asia-pacific",
+            "title": "The Spread of Peoples — Alaska Blackfish",
+            "mapPaths": 4,
+            "bodyExcerpt": "◉\nThe Spread of Peoples\nALASKA BLACKFISH\nWorld\nAmericas\nExplore\nDeep dives\nLibrary\n\nTHE SPREAD OF PEOPLES · FIRST BROAD FRAMEWORK\n\nAsia & Pacific\n\nEvidence anchors and broad connections. A foundation for the detailed histories still to come"
+          }
+        },
+        {
+          "name": "public-world-navigation-390",
+          "passed": true,
+          "durationMs": 366,
+          "details": {
+            "width": 390,
+            "scroll": 390,
+            "nav": [
+              {
+                "text": "World",
+                "x": 30,
+                "right": 72.5625,
+                "width": 42.5625
+              },
+              {
+                "text": "Americas",
+                "x": 96.5625,
+                "right": 160.796875,
+                "width": 64.234375
+              },
+              {
+                "text": "Africa & human origins",
+                "x": 184.796875,
+                "right": 348.09375,
+                "width": 163.296875
+              },
+              {
+                "text": "Europe & Mediterranean",
+                "x": 30,
+                "right": 205.140625,
+                "width": 175.140625
+              },
+              {
+                "text": "Asia & Pacific",
+                "x": 229.140625,
+                "right": 323.9375,
+                "width": 94.796875
+              },
+              {
+                "text": "Human-family movie",
+                "x": 30,
+                "right": 177.65625,
+                "width": 147.65625
+              }
+            ]
+          }
+        },
+        {
+          "name": "regional-mobile-americas-390",
+          "passed": true,
+          "durationMs": 5121,
+          "details": {
+            "width": 360,
+            "scroll": 360,
+            "nav": [
+              {
+                "text": "World",
+                "x": 14,
+                "right": 52.53125,
+                "width": 38.53125
+              },
+              {
+                "text": "Americas",
+                "x": 72.953125,
+                "right": 128.796875,
+                "width": 55.84375
+              },
+              {
+                "text": "Explore",
+                "x": 149.203125,
+                "right": 196.5,
+                "width": 47.296875
+              },
+              {
+                "text": "Deep dives",
+                "x": 216.921875,
+                "right": 281.96875,
+                "width": 65.046875
+              },
+              {
+                "text": "Library",
+                "x": 302.375,
+                "right": 346,
+                "width": 43.625
+              },
+              {
+                "text": "World",
+                "x": 10,
+                "right": 57.265625,
+                "width": 47.265625
+              },
+              {
+                "text": "Region: Americas",
+                "x": 62.265625,
+                "right": 163.65625,
+                "width": 101.390625
+              },
+              {
+                "text": "Map settings",
+                "x": 168.65625,
+                "right": 245.53125,
+                "width": 76.875
+              },
+              {
+                "text": "Facts",
+                "x": 307.921875,
+                "right": 350,
+                "width": 42.078125
+              }
+            ]
+          }
+        },
+        {
+          "name": "regional-mobile-africa-390",
+          "passed": true,
+          "durationMs": 795,
+          "details": {
+            "width": 360,
+            "scroll": 360,
+            "nav": [
+              {
+                "text": "World",
+                "x": 16,
+                "right": 50.6875,
+                "width": 34.6875
+              },
+              {
+                "text": "Americas",
+                "x": 66.6875,
+                "right": 118.34375,
+                "width": 51.65625
+              },
+              {
+                "text": "Explore",
+                "x": 134.34375,
+                "right": 176.765625,
+                "width": 42.421875
+              },
+              {
+                "text": "Deep dives",
+                "x": 192.765625,
+                "right": 254.359375,
+                "width": 61.59375
+              },
+              {
+                "text": "Library",
+                "x": 270.359375,
+                "right": 310.296875,
+                "width": 39.9375
+              },
+              {
+                "text": "World",
+                "x": 20,
+                "right": 67.265625,
+                "width": 47.265625
+              },
+              {
+                "text": "Region: Africa",
+                "x": 72.265625,
+                "right": 157.203125,
+                "width": 84.9375
+              },
+              {
+                "text": "Map settings",
+                "x": 162.203125,
+                "right": 243.078125,
+                "width": 80.875
+              },
+              {
+                "text": "Facts",
+                "x": 297.921875,
+                "right": 340,
+                "width": 42.078125
+              }
+            ]
+          }
+        },
+        {
+          "name": "regional-mobile-europe-390",
+          "passed": true,
+          "durationMs": 3357,
+          "details": {
+            "width": 360,
+            "scroll": 360,
+            "nav": [
+              {
+                "text": "World",
+                "x": 14,
+                "right": 52.53125,
+                "width": 38.53125
+              },
+              {
+                "text": "Americas",
+                "x": 72.953125,
+                "right": 128.796875,
+                "width": 55.84375
+              },
+              {
+                "text": "Explore",
+                "x": 149.203125,
+                "right": 196.5,
+                "width": 47.296875
+              },
+              {
+                "text": "Deep dives",
+                "x": 216.921875,
+                "right": 281.96875,
+                "width": 65.046875
+              },
+              {
+                "text": "Library",
+                "x": 302.375,
+                "right": 346,
+                "width": 43.625
+              },
+              {
+                "text": "World",
+                "x": 26,
+                "right": 73.265625,
+                "width": 47.265625
+              },
+              {
+                "text": "Region: Europe",
+                "x": 78.265625,
+                "right": 169.765625,
+                "width": 91.5
+              },
+              {
+                "text": "Map settings",
+                "x": 174.765625,
+                "right": 255.640625,
+                "width": 80.875
+              },
+              {
+                "text": "Facts",
+                "x": 291.921875,
+                "right": 334,
+                "width": 42.078125
+              }
+            ]
+          }
+        },
+        {
+          "name": "regional-mobile-asia-pacific-390",
+          "passed": true,
+          "durationMs": 725,
+          "details": {
+            "width": 360,
+            "scroll": 360,
+            "nav": [
+              {
+                "text": "World",
+                "x": 16,
+                "right": 50.6875,
+                "width": 34.6875
+              },
+              {
+                "text": "Americas",
+                "x": 66.6875,
+                "right": 118.34375,
+                "width": 51.65625
+              },
+              {
+                "text": "Explore",
+                "x": 134.34375,
+                "right": 176.765625,
+                "width": 42.421875
+              },
+              {
+                "text": "Deep dives",
+                "x": 192.765625,
+                "right": 254.359375,
+                "width": 61.59375
+              },
+              {
+                "text": "Library",
+                "x": 270.359375,
+                "right": 310.296875,
+                "width": 39.9375
+              },
+              {
+                "text": "World",
+                "x": 20,
+                "right": 67.265625,
+                "width": 47.265625
+              },
+              {
+                "text": "Region: Asia & Pacific",
+                "x": 72.265625,
+                "right": 194.65625,
+                "width": 122.390625
+              },
+              {
+                "text": "Map settings",
+                "x": 199.65625,
+                "right": 280.53125,
+                "width": 80.875
+              },
+              {
+                "text": "Facts",
+                "x": 297.921875,
+                "right": 340,
+                "width": 42.078125
+              }
+            ]
+          }
+        },
+        {
+          "name": "public-world-navigation-320",
+          "passed": true,
+          "durationMs": 361,
+          "details": {
+            "width": 320,
+            "scroll": 320,
+            "nav": [
+              {
+                "text": "World",
+                "x": 30,
+                "right": 72.5625,
+                "width": 42.5625
+              },
+              {
+                "text": "Americas",
+                "x": 96.5625,
+                "right": 160.796875,
+                "width": 64.234375
+              },
+              {
+                "text": "Africa & human origins",
+                "x": 30,
+                "right": 193.296875,
+                "width": 163.296875
+              },
+              {
+                "text": "Europe & Mediterranean",
+                "x": 30,
+                "right": 205.140625,
+                "width": 175.140625
+              },
+              {
+                "text": "Asia & Pacific",
+                "x": 30,
+                "right": 124.796875,
+                "width": 94.796875
+              },
+              {
+                "text": "Human-family movie",
+                "x": 30,
+                "right": 177.65625,
+                "width": 147.65625
+              }
+            ]
+          }
+        },
+        {
+          "name": "regional-mobile-americas-320",
+          "passed": true,
+          "durationMs": 4802,
+          "details": {
+            "width": 290,
+            "scroll": 290,
+            "nav": [
+              {
+                "text": "World",
+                "x": 14,
+                "right": 52.53125,
+                "width": 38.53125
+              },
+              {
+                "text": "Americas",
+                "x": 55.453125,
+                "right": 111.296875,
+                "width": 55.84375
+              },
+              {
+                "text": "Explore",
+                "x": 114.203125,
+                "right": 161.5,
+                "width": 47.296875
+              },
+              {
+                "text": "Deep dives",
+                "x": 164.421875,
+                "right": 229.46875,
+                "width": 65.046875
+              },
+              {
+                "text": "Library",
+                "x": 232.375,
+                "right": 276,
+                "width": 43.625
+              },
+              {
+                "text": "World",
+                "x": 10,
+                "right": 57.265625,
+                "width": 47.265625
+              },
+              {
+                "text": "Region: Americas",
+                "x": 62.265625,
+                "right": 163.65625,
+                "width": 101.390625
+              },
+              {
+                "text": "Map settings",
+                "x": 168.65625,
+                "right": 245.53125,
+                "width": 76.875
+              },
+              {
+                "text": "Facts",
+                "x": 237.921875,
+                "right": 280,
+                "width": 42.078125
+              }
+            ]
+          }
+        },
+        {
+          "name": "regional-mobile-africa-320",
+          "passed": true,
+          "durationMs": 929,
+          "details": {
+            "width": 290,
+            "scroll": 290,
+            "nav": [
+              {
+                "text": "World",
+                "x": 16,
+                "right": 50.6875,
+                "width": 34.6875
+              },
+              {
+                "text": "Americas",
+                "x": 66.6875,
+                "right": 118.34375,
+                "width": 51.65625
+              },
+              {
+                "text": "Explore",
+                "x": 134.34375,
+                "right": 176.765625,
+                "width": 42.421875
+              },
+              {
+                "text": "Deep dives",
+                "x": 192.765625,
+                "right": 254.359375,
+                "width": 61.59375
+              },
+              {
+                "text": "Library",
+                "x": 16,
+                "right": 55.9375,
+                "width": 39.9375
+              },
+              {
+                "text": "World",
+                "x": 20,
+                "right": 67.265625,
+                "width": 47.265625
+              },
+              {
+                "text": "Region: Africa",
+                "x": 72.265625,
+                "right": 157.203125,
+                "width": 84.9375
+              },
+              {
+                "text": "Map settings",
+                "x": 162.203125,
+                "right": 243.078125,
+                "width": 80.875
+              },
+              {
+                "text": "Facts",
+                "x": 227.921875,
+                "right": 270,
+                "width": 42.078125
+              }
+            ]
+          }
+        },
+        {
+          "name": "regional-mobile-europe-320",
+          "passed": true,
+          "durationMs": 3955,
+          "details": {
+            "width": 290,
+            "scroll": 290,
+            "nav": [
+              {
+                "text": "World",
+                "x": 14,
+                "right": 52.53125,
+                "width": 38.53125
+              },
+              {
+                "text": "Americas",
+                "x": 55.453125,
+                "right": 111.296875,
+                "width": 55.84375
+              },
+              {
+                "text": "Explore",
+                "x": 114.203125,
+                "right": 161.5,
+                "width": 47.296875
+              },
+              {
+                "text": "Deep dives",
+                "x": 164.421875,
+                "right": 229.46875,
+                "width": 65.046875
+              },
+              {
+                "text": "Library",
+                "x": 232.375,
+                "right": 276,
+                "width": 43.625
+              },
+              {
+                "text": "World",
+                "x": 26,
+                "right": 73.265625,
+                "width": 47.265625
+              },
+              {
+                "text": "Region: Europe",
+                "x": 78.265625,
+                "right": 169.765625,
+                "width": 91.5
+              },
+              {
+                "text": "Map settings",
+                "x": 174.765625,
+                "right": 255.640625,
+                "width": 80.875
+              },
+              {
+                "text": "Facts",
+                "x": 221.921875,
+                "right": 264,
+                "width": 42.078125
+              }
+            ]
+          }
+        },
+        {
+          "name": "regional-mobile-asia-pacific-320",
+          "passed": true,
+          "durationMs": 932,
+          "details": {
+            "width": 290,
+            "scroll": 290,
+            "nav": [
+              {
+                "text": "World",
+                "x": 16,
+                "right": 50.6875,
+                "width": 34.6875
+              },
+              {
+                "text": "Americas",
+                "x": 66.6875,
+                "right": 118.34375,
+                "width": 51.65625
+              },
+              {
+                "text": "Explore",
+                "x": 134.34375,
+                "right": 176.765625,
+                "width": 42.421875
+              },
+              {
+                "text": "Deep dives",
+                "x": 192.765625,
+                "right": 254.359375,
+                "width": 61.59375
+              },
+              {
+                "text": "Library",
+                "x": 16,
+                "right": 55.9375,
+                "width": 39.9375
+              },
+              {
+                "text": "World",
+                "x": 20,
+                "right": 67.265625,
+                "width": 47.265625
+              },
+              {
+                "text": "Region: Asia & Pacific",
+                "x": 72.265625,
+                "right": 194.65625,
+                "width": 122.390625
+              },
+              {
+                "text": "Map settings",
+                "x": 20,
+                "right": 100.875,
+                "width": 80.875
+              },
+              {
+                "text": "Facts",
+                "x": 227.921875,
+                "right": 270,
+                "width": 42.078125
+              }
+            ]
+          }
+        },
+        {
+          "name": "deployed-release-version",
+          "passed": true,
+          "durationMs": 142,
+          "details": {
+            "version": "0.32.0",
+            "recordCount": 11201
+          }
+        },
+        {
+          "name": "live-world-catalogue",
+          "passed": true,
+          "durationMs": 97,
+          "details": {
+            "evidence": 264,
+            "studies": [
+              "genghis-khan",
+              "hannibal",
+              "marco-polo",
+              "silk-roads"
+            ]
+          }
+        },
+        {
+          "name": "early-africa-endpoint-search-and-history",
+          "passed": true,
+          "durationMs": 1000,
+          "details": {
+            "record": "africa-south-kalambo-structure",
+            "date": -497050,
+            "query": "Kalambo"
+          }
+        },
+        {
+          "name": "live-study-genghis-khan",
+          "passed": true,
+          "durationMs": 442,
+          "details": {
+            "title": "Genghis Khan: conquest, camps and cities",
+            "guide": "https://americaspeoples.11mosswood.us/sites/world-genghis-khan.html",
+            "record": "genghis-avraga"
+          }
+        },
+        {
+          "name": "live-study-marco-polo",
+          "passed": true,
+          "durationMs": 732,
+          "details": {
+            "title": "Marco Polo: journey and account",
+            "guide": "https://americaspeoples.11mosswood.us/sites/world-marco-polo.html",
+            "record": "polo-venice-out"
+          }
+        },
+        {
+          "name": "live-study-silk-roads",
+          "passed": true,
+          "durationMs": 727,
+          "details": {
+            "title": "Silk Roads: cities and connections",
+            "guide": "https://americaspeoples.11mosswood.us/sites/world-silk-roads.html",
+            "record": "silk-weiyang"
+          }
+        },
+        {
+          "name": "live-study-hannibal",
+          "passed": true,
+          "durationMs": 701,
+          "details": {
+            "title": "Hannibal: the campaign and the elephants",
+            "guide": "https://americaspeoples.11mosswood.us/sites/world-hannibal.html",
+            "record": "hannibal-cordoba-elephant"
+          }
+        },
+        {
+          "name": "americas-and-europe-retain-date-and-camera",
+          "passed": true,
+          "durationMs": 12522,
+          "details": {
+            "americas": {
+              "date": "1,860 CE",
+              "camera": "translate(-190.75,-132.65000000000003) scale(1.35)"
+            },
+            "europe": {
+              "date": "1,864 CE",
+              "camera": "translate(-2292.4,-854.2996857380165) scale(5.4)"
+            }
+          }
+        },
+        {
+          "name": "unrelated-parent-embedding-is-rejected",
+          "passed": true,
+          "durationMs": 4133,
+          "details": {
+            "csp": "default-src 'none'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors https://tripofisch.com",
+            "browserRefusal": "Framing 'https://americaspeoples.11mosswood.us/' violates the following Content Security Policy directive: \"frame-ancestors https://tripofisch.com\". The request has been blocked.\n",
+            "frameUrl": ""
+          }
+        },
+        {
+          "name": "no-unexpected-application-errors-or-csp-refusals",
+          "passed": true,
+          "durationMs": 19
+        }
+      ],
+      "browser": "157.0.4341.60",
+      "startedAt": "2026-11-19T11:02:28.877Z",
+      "finishedAt": "2026-11-19T11:03:33.769Z"
+    },
+    "publicCompatibility": {
+      "startedAt": "2026-11-19T11:04:09.048Z",
+      "checks": [
+        {
+          "name": "legacy-Americas-redirect",
+          "passed": true,
+          "url": "https://tripofisch.com/spread-of-peoples/americas/"
+        },
+        {
+          "name": "preserved-Americas-introduction-and-images",
+          "passed": true,
+          "url": "https://tripofisch.com/spread-of-peoples/americas/about.html",
+          "images": [
+            {
+              "src": "https://tripofisch.com/assets/alaska-blackfish-logo.jpg",
+              "loaded": true
+            },
+            {
+              "src": "https://tripofisch.com/assets/americaspeoples-zoomed-out-overview.png",
+              "loaded": true
+            },
+            {
+              "src": "https://tripofisch.com/assets/americaspeoples-zoomed-in-chaco.png",
+              "loaded": true
+            },
+            {
+              "src": "https://tripofisch.com/assets/americaspeoples-zoomed-in-andes.png",
+              "loaded": true
+            },
+            {
+              "src": "https://tripofisch.com/assets/americaspeoples-zoomed-in-pacific.png",
+              "loaded": true
+            },
+            {
+              "src": "https://tripofisch.com/assets/americaspeoples-deep-dives-list.png",
+              "loaded": true
+            },
+            {
+              "src": "https://tripofisch.com/assets/americaspeoples-chaco-terrain-guide.png",
+              "loaded": true
+            }
+          ]
+        }
+      ],
+      "status": "passed",
+      "finishedAt": "2026-11-19T11:04:10.371Z"
+    },
+    "publicCheckerCorrections": "No application change after publication: the credit-prefix checker now handles bounded gzip content from the CDN; the browser checker activates each target tab before pointer input. Instrumentation reproduced missing pointer events only on an inactive cross-origin iframe; all eight regional mobile cases passed with an active tab. Lazy gallery images were scrolled into view and decoded before checking them. Original failed reports remain in local operational records.",
+    "gateReceiptSha256": "5a0895d0db6d2626f19465478f62a1d2d63334984d8b97d8b3adfd04f4649e94",
+    "publicAssetsReceiptSha256": "b14264dc7600b0d14d54c69f2dac5d809ece3568618acea83f4fe17bfb23ae9c",
+    "publicBrowserReceiptSha256": "585a9f104bf58d5f777bba84a91a89421659091974de708295657c9fe3ef77d5",
+    "independentReview": "Source, chronology, pointer/focus behavior and deployment safeguards reviewed. The final menu ordering correction and tablet layout fixes were verified with targeted regression and compiled browser suites."
+  },
+  "deployment": {
+    "status": "deployed",
+    "id": "20261119T105227Z-americas-v0.32.0",
+    "commit": "d9468273e606c709c8b30a542885355ff08989db",
+    "health": {
+      "status": "ok",
+      "version": "0.32.0",
+      "records": 11201
+    },
+    "static": "/srv/tripofisch/releases/20261119T105227Z-americas-v0.32.0",
+    "api": "/srv/americaspeoples/releases/20261119T105227Z-americas-v0.32.0",
+    "previousVersion": "0.31.0",
+    "rollbackStatic": "/srv/tripofisch/releases/20261119T081317Z-americas-v0.31.0",
+    "rollbackApi": "/srv/americaspeoples/releases/20261119T081317Z-americas-v0.31.0",
+    "unchangedFiles": 392,
+    "caddyBackup": "/srv/americaspeoples/deployment-receipts/20261119T105227Z-americas-v0.32.0.Caddyfile.before",
+    "caddyBeforeSha256": "987e1b254067e743dcf1636234473c540154380df3f624e38396b1d46943e2ca",
+    "caddyAfterSha256": "0a4f89b482ecf05fe25ca3070a95a9d55498e4c294ec9e84633639e4b2b4a1ae"
+  },
+  "artifacts": [
+    {
+      "filename": "americas-peoples-v0.32.0-selfhost.zip",
+      "repositoryPath": "downloads/americas-peoples-v0.32.0-selfhost.zip",
+      "bytes": 345939661,
+      "sha256": "48ad599d360d2a163aba0920ddee542f16b260c0c1ed055da1d011d0fc21d2e9",
+      "url": "https://github.com/gavinfischer-keenan/americaspeoples/releases/download/v0.32.0/americas-peoples-v0.32.0-selfhost.zip"
+    },
+    {
+      "filename": "americas-peoples-import.xlsx",
+      "repositoryPath": "templates/americas-peoples-import.xlsx",
+      "bytes": 302388,
+      "sha256": "ed0abc070fc522e4ad2e3a7c97d3f7f109ed6265c4735ed186559a4e6079c794",
+      "url": "https://github.com/gavinfischer-keenan/americaspeoples/releases/download/v0.32.0/americas-peoples-import.xlsx"
+    },
+    {
+      "filename": "americas-peoples-researched-import.xlsx",
+      "repositoryPath": "templates/americas-peoples-researched-import.xlsx",
+      "bytes": 5422401,
+      "sha256": "3816dbe742f38dbb011b4331e33ce61f25e0f84cd9b3392ebdf0c345cd513a87",
+      "url": "https://github.com/gavinfischer-keenan/americaspeoples/releases/download/v0.32.0/americas-peoples-researched-import.xlsx"
+    }
+  ],
+  "githubAssetDigestsVerified": 5,
+  "retention": {
+    "applied": true,
+    "targets": [
+      "/srv/americaspeoples/backups/20261119T081317Z-americas-v0.31.0-previous.sqlite3",
+      "/srv/americaspeoples/releases/20261119T064116Z-americas-v0.30.0",
+      "/srv/tripofisch/releases/20261119T064116Z-americas-v0.30.0/americaspeoples-app",
+      "/srv/tripofisch/releases/20261119T064116Z-americas-v0.30.0/downloads/americaspeoples",
+      "/srv/tripofisch/releases/20261119T064116Z-americas-v0.30.0/free-utilities/americaspeoples",
+      "/srv/tripofisch/releases/20261119T081317Z-americas-v0.31.0/downloads/americaspeoples/v0.30.0",
+      "/srv/tripofisch/releases/20261119T105227Z-americas-v0.32.0/downloads/americaspeoples/v0.30.0"
+    ],
+    "keptCurrent": "20261119T105227Z-americas-v0.32.0",
+    "keptPrevious": "0.31.0",
+    "freeBytes": 2021195776
+  },
+  "retentionFinalPlan": {
+    "applied": false,
+    "targets": [],
+    "keptCurrent": "20261119T105227Z-americas-v0.32.0",
+    "keptPrevious": "0.31.0",
+    "freeBytes": 2021195776
+  },
+  "temporaryCleanup": {
+    "id": "20261119T105227Z-americas-v0.32.0",
+    "container": {
+      "mode": "container",
+      "id": "20261119T105227Z-americas-v0.32.0",
+      "removed": [
+        "/var/tmp/americas-v0.32.0-staging",
+        "/var/tmp/americas-v0320-deploy.py"
+      ],
+      "freeBytes": 2367492096,
+      "permanentReceiptRetained": true,
+      "caddyBackupRetained": true
+    },
+    "host": {
+      "removed": [
+        "/var/tmp/americas-v0320-payload.tar",
+        "/var/tmp/americas-v0320-deploy.py"
+      ],
+      "freeBytes": 78044680192
+    }
+  },
+  "limitations": [
+    "Regional and early-Africa coverage remains uneven.",
+    "Reference counts measure source coverage, not votes or independent confirmations.",
+    "Public phone checks use browser viewports at 390 and 320 pixels, not physical devices.",
+    "Provider Deep Research reports remain private; the published atlas contains authored summaries and independently cited sources."
+  ]
+}

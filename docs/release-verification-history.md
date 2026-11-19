@@ -2,6 +2,10 @@
 
 These are dated observations for past builds, not the current hosting contract.
 
+## Version 0.32.0 — November 19, 2026
+
+The world entrance, four regional paths, human-family framework, genetics discussion, four historical studies and early-Africa expansion were merged in PR #30 and published together. All 66 aggregate phases passed across retained resumed logs; the final compiled map and package checks passed. Live verification passed 25 browser checks, 25 asset/content checks and the preserved Americas redirect and gallery checks. The server retains v0.32.0 and the previous v0.31.0 pair with its matching database backup. The [release receipt](releases/v0.32.0-verification.json) records the deployed commit, artifact hashes, counts, public checks and cleanup results.
+
 # Release verification
 
 Release 0.2.1 — October 28, 2026.

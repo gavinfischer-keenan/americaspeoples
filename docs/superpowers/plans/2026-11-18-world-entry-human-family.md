@@ -28,10 +28,12 @@ One site with regional paths; all principal hominin branches belong in scope. Or
 
 - Baseline: clean main at 8d880f1; feature branch `feat/world-entry-human-family`. Reusing the existing checkout follows the desktop workspace instruction; no new worktree was requested.
 - The user chose paths and explicitly expanded scope to all earlier hominins and geographically differentiated interbreeding evidence.
-- Last deployed baseline: v0.31.0. Source and content are implemented; final verification and paired publication are in progress.
+- Starting deployed baseline: v0.31.0. Version 0.32.0 is now merged, published and publicly verified; v0.31.0 remains the paired rollback release.
 
 - 2026-11-19: User authorized final compilation, checks and live publication before stopping for the night. Full release verification, immutable staging, paired website/header changes and public checks are required.
 
 - Independent reviews cleared source, chronology corrections, pointer/focus fixes and the paired deployment procedure. The final Africa inventory adds 130 observations; the focused chapter contains 156 observations through astronomical year −14,999. Two Consensus Deep reviews completed; their private outputs stay outside publication.
 
 - Final source verification: all 66 aggregate phases passed across retained resumed logs. The packaged world, Africa, Europe and shared-panel suites passed after the final menu-timing correction; 506 unit tests, TypeScript, package smoke and deployment/retention safety checks passed. Paired publication and public verification follow the existing release process.
+
+- Published 2026-11-19 from merge d9468273e606c709c8b30a542885355ff08989db (PR #30). All 25 public browser checks, 25 public asset/content checks and the legacy redirect/gallery checks passed. Current v0.32.0, previous v0.31.0, the matching database backup and permanent deployment/Caddy receipts remain on the server. Obsolete atlas components and the four verified temporary upload paths were cleaned up. See `docs/releases/v0.32.0-verification.json` for the actual hashes, counts, checks and operational receipts.
