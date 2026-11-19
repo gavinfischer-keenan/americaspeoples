@@ -1,3 +1,4 @@
+import {mapSetting} from '../scripts/browser-fixture.mjs';
 import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
 import { createStaticServer } from '../scripts/static-server.mjs';
@@ -8,7 +9,7 @@ page.on('pageerror',e=>{errors.push(e.message);console.error('PAGE ERROR',e.mess
 const origin=`http://127.0.0.1:${server.address().port}`;
 const point=id=>page.locator(`#map-host [data-member-ids*='"${id}"']`).first();
 try{
- await page.goto(origin);await page.getByRole('button',{name:'Pause',exact:true}).waitFor();
+ await page.goto(origin+'/#movie');await page.getByRole('button',{name:'Pause',exact:true}).waitFor();
  assert.equal(await page.locator('#story-select').inputValue(),'free');
  assert.equal(await page.getByLabel('Map region',{exact:true}).inputValue(),'americas');
  await page.getByRole('button',{name:'Pause',exact:true}).click();
@@ -23,7 +24,7 @@ try{
  await page.getByRole('button',{name:'Pause',exact:true}).click();
  assert.equal(await page.locator('#year-number').inputValue(),'1492');
  assert.ok(await point('settlement-taos-habitation').count(),'Taos shares Columbus’s world');
- await page.getByLabel('Follow an expedition',{exact:true}).selectOption('beagle-1831-1836');
+ await mapSetting(page, () => page.getByLabel('Follow an expedition',{exact:true}).selectOption('beagle-1831-1836'));
  assert.match(await page.locator('#voyage-position').innerText(),/1832/,'starts after Europe and Cape Verde');
  assert.ok(await point('settlement-taos-habitation').count(),'selected voyage retains other communities');
  const beagle=page.locator('[data-voyage="beagle-1831-1836"]');
@@ -32,14 +33,14 @@ try{
  assert.notEqual(await beagle.getAttribute('transform'),before);
  assert.match(await page.locator('#voyage-position').innerText(),/Press Play/);
  const paused=await beagle.getAttribute('transform');
- await page.getByLabel('Follow an expedition',{exact:true}).selectOption('');
+ await mapSetting(page, () => page.getByLabel('Follow an expedition',{exact:true}).selectOption(''));
  assert.equal(await page.locator('#year-number').inputValue(),'1832');
  assert.equal(await beagle.getAttribute('transform'),paused);
  await page.getByRole('button',{name:'Play',exact:true}).click();await page.waitForTimeout(150);await page.getByRole('button',{name:'Pause',exact:true}).click();
  assert.equal(await page.locator('#year-number').inputValue(),'1832','leaving a journey retains the full shared clock');
- await page.getByLabel('Follow an expedition',{exact:true}).selectOption('beagle-1831-1836');
+ await mapSetting(page, () => page.getByLabel('Follow an expedition',{exact:true}).selectOption('beagle-1831-1836'));
  await page.locator('#voyage-progress').press('End');assert.match(await page.locator('#voyage-position').innerText(),/1836-04/,'ends before Mauritius and Africa');
- await page.getByLabel('Choose a story',{exact:true}).selectOption('chaco-connections');
+ await mapSetting(page, () => page.getByLabel('Choose a story',{exact:true}).selectOption('chaco-connections'));
  await page.locator('#story-progress').press('End');
  await page.locator('[data-terrain="chaco"]').waitFor();
  assert.ok(await page.locator('[data-local-record="site-chaco-pueblo-bonito"]').count(),'local chronology exposes dated building phases');
@@ -65,18 +66,18 @@ try{
  assert.equal(await page.locator('#year-number').inputValue(),'850');
  assert.equal(await point('site-chaco-kin-kletso').count(),0,'later construction stays off the map when a local phase changes the global date');
  await page.getByRole('button',{name:'Close details',exact:true}).click();
- await page.getByLabel('Choose a story',{exact:true}).selectOption('chaco-connections');
+ await mapSetting(page, () => page.getByLabel('Choose a story',{exact:true}).selectOption('chaco-connections'));
  await page.getByRole('button',{name:'Restart story',exact:true}).click();
  await page.locator('#story-progress').press('End'); // The expanded early chapters now precede the Taos occupation record.
  await page.getByRole('button',{name:'Reset map view',exact:true}).click();
  assert.ok(await point('settlement-taos-habitation').count(),'story timeline retains other places on zoom-out');
- await page.getByLabel('Choose a story',{exact:true}).selectOption('hawaii-connections');
+ await mapSetting(page, () => page.getByLabel('Choose a story',{exact:true}).selectOption('hawaii-connections'));
  await page.locator('[data-scene="6"]').click();
  await page.locator('[data-terrain="hawaiian-islands"]').waitFor();
  assert.equal(await page.locator('#year-number').inputValue(),'1795');
  assert.ok(await page.locator('#map-host [data-overlay]').filter({hasText:'Nuʻuanu'}).count(),'Oʻahu local conflict is visible in context');
  await page.screenshot({path:'test-results/shared-history-hawaii.png'});
- await page.locator('#whole-movie').click();
+ await mapSetting(page,()=>page.locator('#whole-movie').click());
  assert.equal(await page.locator('#story-select').inputValue(),'free');
  assert.equal(await page.getByLabel('Map region',{exact:true}).inputValue(),'americas');
  await page.screenshot({path:'test-results/shared-history-desktop.png'});

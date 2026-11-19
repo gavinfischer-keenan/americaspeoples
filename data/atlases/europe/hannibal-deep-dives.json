@@ -1,0 +1,592 @@
+{
+  "schemaVersion": 1,
+  "guides": [
+    {
+      "id": "world-hannibal",
+      "atlasIds": [
+        "europe",
+        "africa"
+      ],
+      "category": "subjects",
+      "title": "Hannibal: the campaign and the elephants",
+      "description": "A dated journey across Iberia, the Alps, Italy and North Africa, separating ancient accounts from archaeological evidence and disputed routes.",
+      "intro": "Hannibal’s war crossed cities, mountains and political alliances. Its elephants are famous; what can be established about their route, survival and material traces requires much closer reading.",
+      "scope": "Selected Second Punic War episodes, 219–202 BCE, with earlier Punic urban and elephant-bone context. No exact Alpine pass or Zama battlefield is asserted; no population is inferred from troop or casualty totals.",
+      "map": {
+        "bounds": [
+          -7,
+          30,
+          20,
+          48
+        ],
+        "scope": "Approximate evidence localities and broad campaign regions. Modern terrain is a geographic aid, not a reconstruction of historical coasts, roads or boundaries.",
+        "points": [
+          {
+            "id": "hannibal-cartagena",
+            "label": "Qart Hadast: the Punic fortified town",
+            "coordinates": [
+              -0.978,
+              37.606
+            ],
+            "date": "229–209 BCE",
+            "description": "The surviving Punic wall gives material evidence for the fortified city from which the Barcid campaigns were supplied. Foundation in 229 BCE follows the site museum’s chronology; the interval is a selected Punic phase, ending with Scipio’s capture, not the entire life of Cartagena.",
+            "sources": [
+              "https://puertodeculturas.cartagena.es/ficha_muralla_punica.asp?idioma=2"
+            ]
+          },
+          {
+            "id": "hannibal-saguntum",
+            "label": "Saguntum: siege and the road to war",
+            "coordinates": [
+              -0.277,
+              39.68
+            ],
+            "date": "219 BCE",
+            "description": "Hannibal’s siege of Saguntum preceded the invasion of Italy. The city anchor does not trace the siege works. Ancient narratives frame responsibility for war from partisan perspectives.",
+            "sources": [
+              "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3%2A.html"
+            ]
+          },
+          {
+            "id": "hannibal-rhone",
+            "label": "Rhône crossing: people, boats and elephants",
+            "coordinates": [
+              4.68,
+              44.12
+            ],
+            "date": "218 BCE",
+            "description": "Polybius describes a contested river passage and special preparations for transporting elephants. The exact crossing site is disputed. This lower-Rhône anchor and the animated line locate a broad episode, not a known ford.",
+            "sources": [
+              "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3%2A.html"
+            ]
+          },
+          {
+            "id": "hannibal-alps",
+            "label": "Western Alps: the unresolved pass",
+            "coordinates": [
+              6.8,
+              45.1
+            ],
+            "date": "218 BCE",
+            "description": "The army crossed the Western Alps and entered northern Italy; the identification of the pass remains debated. The marker is deliberately regional. Neither the Traversette nor Clapier hypothesis is presented as established, and no elephant-bone identification secures the route.",
+            "sources": [
+              "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3%2A.html",
+              "https://www.research.herts.ac.uk/ws/portalfiles/portal/77527686/htaf020.pdf"
+            ]
+          },
+          {
+            "id": "hannibal-taurini",
+            "label": "Taurini: force after the crossing",
+            "coordinates": [
+              7.68,
+              45.07
+            ],
+            "date": "218 BCE",
+            "description": "Polybius reports an attack on the Taurini after the descent into Italy. The Turin-area marker approximates an ancient community’s locality; it does not identify an excavated assault horizon.",
+            "sources": [
+              "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3%2A.html"
+            ]
+          },
+          {
+            "id": "hannibal-ticinus",
+            "label": "Ticinus: the cavalry encounter",
+            "coordinates": [
+              8.85,
+              45.2
+            ],
+            "date": "218 BCE",
+            "description": "A cavalry action brought Hannibal into contact with the consul Publius Cornelius Scipio. The broader Ticino/Po landscape is shown; the exact battlefield is unresolved and the river system has changed.",
+            "sources": [
+              "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3%2A.html"
+            ]
+          },
+          {
+            "id": "hannibal-trebia",
+            "label": "Trebia: battle in the river plain",
+            "coordinates": [
+              9.63,
+              45.0
+            ],
+            "date": "218 BCE",
+            "description": "Hannibal defeated a Roman army near the Trebia; elephants belong to the ancient account of this campaign. The locality is a river-region reconstruction. Modern field boundaries are not ancient battle lines.",
+            "sources": [
+              "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3%2A.html"
+            ]
+          },
+          {
+            "id": "hannibal-arno",
+            "label": "Etrurian marshes: animals and exhaustion",
+            "coordinates": [
+              10.9,
+              43.75
+            ],
+            "date": "217 BCE",
+            "description": "Polybius describes an exhausting marsh crossing and Hannibal riding the surviving elephant. The text’s animal count is a reported episode, not a fossil inventory. The wetland corridor is broad and is not a reconstructed 217 BCE shoreline.",
+            "sources": [
+              "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3%2A.html"
+            ]
+          },
+          {
+            "id": "hannibal-trasimene",
+            "label": "Lake Trasimene: the ambush",
+            "coordinates": [
+              12.08,
+              43.18
+            ],
+            "date": "217 BCE",
+            "description": "A Roman army under Flaminius was ambushed beside Lake Trasimene. Battlefield proposals differ in detail. The regional point does not authenticate a particular modern memorial or every number in the ancient account.",
+            "sources": [
+              "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3%2A.html"
+            ]
+          },
+          {
+            "id": "hannibal-cannae",
+            "label": "Cannae: victory without capturing Rome",
+            "coordinates": [
+              16.13,
+              41.3
+            ],
+            "date": "216 BCE",
+            "description": "Cannae was a major Roman defeat, followed by changes in alliances across southern Italy. The site anchor is approximate. Ancient force and casualty figures vary and are not used here as population observations.",
+            "sources": [
+              "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3%2A.html",
+              "https://www.livius.org/sources/content/livy/livy-periochae-21-25/"
+            ]
+          },
+          {
+            "id": "hannibal-capua",
+            "label": "Capua: alliance and Roman recapture",
+            "coordinates": [
+              14.25,
+              41.08
+            ],
+            "date": "216–211 BCE",
+            "description": "Capua joined Hannibal’s side after Cannae and was recaptured by Rome in 211 BCE. The marker is ancient Capua at modern Santa Maria Capua Vetere, not the later town of Capua. Alliance did not erase local institutions.",
+            "sources": [
+              "https://www.livius.org/sources/content/livy/livy-periochae-21-25/",
+              "https://www.livius.org/sources/content/livy/livy-periochae-26-30/"
+            ]
+          },
+          {
+            "id": "hannibal-tarentum",
+            "label": "Tarentum: city and citadel divided",
+            "coordinates": [
+              17.23,
+              40.47
+            ],
+            "date": "212–209 BCE",
+            "description": "Hannibal gained Tarentum while the Roman garrison held its citadel; Rome recovered the city in 209 BCE. A single city dot cannot express divided control. The surviving Roman citadel is a reason not to colour the whole urban area as uncontested Punic possession.",
+            "sources": [
+              "https://www.livius.org/sources/content/livy/livy-periochae-21-25/",
+              "https://www.livius.org/sources/content/livy/livy-periochae-26-30/"
+            ]
+          },
+          {
+            "id": "hannibal-rome",
+            "label": "Near Rome: the 211 BCE diversion",
+            "coordinates": [
+              12.54,
+              41.95
+            ],
+            "date": "211 BCE",
+            "description": "Hannibal moved near Rome while Capua was under siege. This was an approach and encampment, not capture of Rome. The Anio-area point is schematic.",
+            "sources": [
+              "https://www.livius.org/sources/content/livy/livy-periochae-26-30/"
+            ]
+          },
+          {
+            "id": "hannibal-metaurus",
+            "label": "Metaurus: Hasdrubal’s failed reinforcement",
+            "coordinates": [
+              13.02,
+              43.75
+            ],
+            "date": "207 BCE",
+            "description": "Hasdrubal’s separate army was defeated before it could join Hannibal. This is campaign context, not a battle Hannibal personally commanded. The precise battlefield remains disputed.",
+            "sources": [
+              "https://www.livius.org/sources/content/livy/livy-periochae-26-30/"
+            ]
+          },
+          {
+            "id": "hannibal-croton",
+            "label": "Croton and the Lacinian coast: departure for Africa",
+            "coordinates": [
+              17.2,
+              39.02
+            ],
+            "date": "203 BCE",
+            "description": "Hannibal’s remaining Italian base lay in the south before the army returned to Africa. The coast anchor does not reconstruct the fleet’s harbour movements or exact sea course.",
+            "sources": [
+              "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/15%2A.html"
+            ]
+          },
+          {
+            "id": "hannibal-zama",
+            "label": "Zama: the final battle of the war",
+            "coordinates": [
+              9.45,
+              36.1
+            ],
+            "date": "202 BCE",
+            "description": "Scipio and his allies defeated Hannibal’s army; elephants again feature in Polybius’ account. Regional Tunisian anchor only: the battlefield identification is disputed. These elephants are not presumed to be the animals that crossed the Alps sixteen years earlier.",
+            "sources": [
+              "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/15%2A.html"
+            ]
+          },
+          {
+            "id": "hannibal-cordoba-elephant",
+            "label": "Córdoba: a real elephant bone, a limited attribution",
+            "coordinates": [
+              -4.79,
+              37.87
+            ],
+            "date": "Fourth–third centuries BCE; likely Punic military context",
+            "description": "A carpal bone from Colina de los Quemados was radiocarbon-dated to the fourth–third centuries BCE; associated evidence suggests a Punic military context. The 2026 report does not identify an individual animal or tie it to Hannibal’s Alpine column. The broad dating range must remain distinct from the inferred Second Punic War context.",
+            "sources": [
+              "https://portalcientifico.uam.es/en/ipublic/item/10674359"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "A Mediterranean war, not only an Alpine crossing",
+          "paragraphs": [
+            {
+              "text": "Hannibal’s expedition is often reduced to elephants in the snow. The campaign makes more sense when followed from the fortified Punic base at Qart Hadast, through the siege of Saguntum and the invasion of Italy, to shifting alliances in southern Italy and the eventual return to Africa. Victory at Cannae did not equal the capture of Rome. The war also involved commanders and armies elsewhere; Hasdrubal’s defeat at the Metaurus appears here as the loss of a separate reinforcing force, not a battle commanded by Hannibal.",
+              "sources": [
+                "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3%2A.html",
+                "https://www.livius.org/sources/content/livy/livy-periochae-26-30/"
+              ]
+            },
+            {
+              "text": "The dated map distinguishes archaeological places from literary episodes. A surviving Punic wall can establish a fortified urban phase. A historian’s description can place an army in a river region. A modern polygon can summarise a broad political reconstruction. None of these provides an excavated track through every valley or a reliable headcount of everyone who lived within a coloured boundary.",
+              "sources": [
+                "https://puertodeculturas.cartagena.es/ficha_muralla_punica.asp?idioma=2",
+                "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3%2A.html",
+                "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/5f433377139a6eeaeacbdc894b70f8805b72c8b5"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "The written witnesses and their distance from events",
+          "paragraphs": [
+            {
+              "text": "Polybius wrote after the Second Punic War and sought to explain Rome’s rise. His narrative is more than a list of dates: it offers arguments about command, terrain, logistics and political decisions. That purpose makes it rich evidence, while also requiring scrutiny of speeches, numerical claims and explanations of success or failure. The surviving books and fragments are not contemporary field reports.",
+              "sources": [
+                "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3%2A.html",
+                "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/15%2A.html"
+              ]
+            },
+            {
+              "text": "Livy and the ancient summaries of his books add another Roman narrative tradition. The Periochae are compressed summaries, and modern bracketed dates on a translation page are editorial aids. At Tarentum, their distinction between the captured city and a Roman-held citadel is crucial. At Rome, they describe an approach and encampment, not conquest. Reading those distinctions is more useful than colouring every named place as wholly controlled by one side.",
+              "sources": [
+                "https://www.livius.org/sources/content/livy/livy-periochae-21-25/",
+                "https://www.livius.org/sources/content/livy/livy-periochae-26-30/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "What can be said about the elephants",
+          "paragraphs": [
+            {
+              "text": "Polybius reports thirty-seven elephants in the Rhône-crossing episode and describes the work required to move them through difficult Alpine ground. Elephants also appear in his account of the Trebia campaign and in the later marsh-crossing story, where Hannibal rides the remaining animal. These are ancient literary numbers and scenes. They do not justify a precise survival graph, a known species for every animal, or the familiar unsupported assertion that most died while actually crossing the Alps.",
+              "sources": [
+                "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3%2A.html"
+              ]
+            },
+            {
+              "text": "At Zama, Polybius describes elephants again, with an outcome affected by frightened animals and Roman arrangements. That army belonged to a different phase of the war, sixteen years after the first crossing. The narrative does not make those animals survivors of the original Alpine column. The map keeps the 218 BCE and 202 BCE episodes separate.",
+              "sources": [
+                "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/15%2A.html"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "A bone from Córdoba: stronger material evidence, narrower conclusions",
+          "paragraphs": [
+            {
+              "text": "The 2026 Colina de los Quemados study reports a real elephant carpal bone from an archaeological context in Córdoba. Its author-university abstract places the radiocarbon result between the fourth and third centuries BCE. Associated artillery stones, coins and other context suggest a military episode linked to the Second Punic War. The bone is more direct evidence for the presence of an elephant than a literary scene, but it is not an individual identified as one of Hannibal’s elephants.",
+              "sources": [
+                "https://portalcientifico.uam.es/en/ipublic/item/10674359"
+              ]
+            },
+            {
+              "text": "The map preserves the broad dating range instead of assigning the bone to the year of the Alpine crossing. It also distinguishes the age evidence from the proposed association with a war. The retrieved institutional abstract supports that cautious interpretation; it does not establish which army owned the animal, whether it died in combat, or any passage through an Alpine valley.",
+              "sources": [
+                "https://portalcientifico.uam.es/en/ipublic/item/10674359"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Why the Alpine pass remains unresolved",
+          "paragraphs": [
+            {
+              "text": "Modern proposals combine readings of ancient topography with route experiments, geology and environmental traces. These approaches can test whether a proposed path is possible; possibility is different from identification. Bainbridge and Cracolici’s recent study follows the long debate and the ways disciplinary claims have sometimes been made more decisive than the surviving evidence allows. The route question remains open.",
+              "sources": [
+                "https://www.research.herts.ac.uk/ws/portalfiles/portal/77527686/htaf020.pdf"
+              ]
+            },
+            {
+              "text": "The map therefore uses a broad western-Alpine connector with no named pass asserted at its central vertex. Neither the Col du Clapier nor Col de la Traversette is designated as the correct answer. The same restraint applies to the Rhône crossing, the Ticinus and Metaurus battlefields, and the final Zama location. The points are regional anchors, with uncertainty stated where a reader encounters the evidence.",
+              "sources": [
+                "https://www.research.herts.ac.uk/ws/portalfiles/portal/77527686/htaf020.pdf",
+                "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3%2A.html",
+                "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/15%2A.html"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Campaign episodes and divided control",
+          "paragraphs": [
+            {
+              "text": "Ancient BCE dates are displayed conventionally. Internally, 219 BCE is astronomical year −218, and 202 BCE is −201. This conversion avoids moving the campaign by a year or inserting an extra year between 1 BCE and 1 CE.",
+              "sources": [
+                "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/5f433377139a6eeaeacbdc894b70f8805b72c8b5"
+              ]
+            }
+          ],
+          "columns": [
+            "Place or phase",
+            "Date",
+            "Interpretation"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Qart Hadast",
+                "Punic phase 229–209 BCE in the site museum chronology",
+                "Surviving wall; foundation tradition and Roman capture are different observations."
+              ],
+              "sources": [
+                "https://puertodeculturas.cartagena.es/ficha_muralla_punica.asp?idioma=2"
+              ]
+            },
+            {
+              "cells": [
+                "Saguntum, Rhône and Alps",
+                "219–218 BCE",
+                "Siege and invasion sequence; precise river and mountain routes remain disputed."
+              ],
+              "sources": [
+                "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3%2A.html"
+              ]
+            },
+            {
+              "cells": [
+                "Ticinus and Trebia",
+                "218 BCE",
+                "Northern Italian engagements; regional anchors, not battle-line surveys."
+              ],
+              "sources": [
+                "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3%2A.html"
+              ]
+            },
+            {
+              "cells": [
+                "Etrurian marshes and Trasimene",
+                "217 BCE",
+                "A difficult movement and an ambush, with narrative detail distinguished from excavation."
+              ],
+              "sources": [
+                "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3%2A.html"
+              ]
+            },
+            {
+              "cells": [
+                "Cannae and Capua",
+                "216 BCE onward",
+                "Battle and alliance change; Capua recaptured in 211 BCE."
+              ],
+              "sources": [
+                "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3%2A.html",
+                "https://www.livius.org/sources/content/livy/livy-periochae-21-25/",
+                "https://www.livius.org/sources/content/livy/livy-periochae-26-30/"
+              ]
+            },
+            {
+              "cells": [
+                "Tarentum",
+                "212–209 BCE",
+                "Punic control of the city coexisted with a Roman-held citadel."
+              ],
+              "sources": [
+                "https://www.livius.org/sources/content/livy/livy-periochae-21-25/",
+                "https://www.livius.org/sources/content/livy/livy-periochae-26-30/"
+              ]
+            },
+            {
+              "cells": [
+                "Near Rome and Metaurus",
+                "211 and 207 BCE",
+                "An unsuccessful strategic diversion and the defeat of a separate reinforcing army."
+              ],
+              "sources": [
+                "https://www.livius.org/sources/content/livy/livy-periochae-26-30/"
+              ]
+            },
+            {
+              "cells": [
+                "Southern Italy to Africa; Zama",
+                "203–202 BCE",
+                "Withdrawal and a new theatre; the exact sailing track and battlefield are not reconstructed."
+              ],
+              "sources": [
+                "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/15%2A.html"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Territory is not a measure of the army’s presence",
+          "paragraphs": [
+            {
+              "text": "Nine Carthage versions are selected from Cliopatria’s dated historical-polity reconstruction and clipped to this study’s 219–202 BCE window. They retain whole source components rather than filling a hull around battle points. Their irregular source intervals can combine changes within several years; the final interval may also combine battle and subsequent treaty adjustments. They are broad political context, not a claim that Hannibal continuously occupied every place inside them.",
+              "sources": [
+                "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/5f433377139a6eeaeacbdc894b70f8805b72c8b5",
+                "https://doi.org/10.1038/s41597-025-04516-9"
+              ]
+            },
+            {
+              "text": "Allied communities retained local interests, citadels could remain in opposing hands, and armies moved beyond settled control. Tarentum’s divided city and citadel make the problem concrete. Routes are therefore displayed as qualified campaign connections and territories as a separate reconstruction. An active route does not manufacture a frontier, and an old battle point does not demonstrate ongoing occupation.",
+              "sources": [
+                "https://www.livius.org/sources/content/livy/livy-periochae-21-25/",
+                "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/5f433377139a6eeaeacbdc894b70f8805b72c8b5"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Population numbers that this map does not invent",
+          "paragraphs": [
+            {
+              "text": "The sources used here do not provide comparable dated resident totals for every mapped city. Ancient troop strengths, battlefield deaths, captives and Roman citizen registrations measure different groups. Even a genuine registration figure would not equal the population of the city of Rome. Numeric population observations are consequently omitted rather than assigning city totals from military counts or area. The absence of a number means that this draft has not established it.",
+              "sources": [
+                "https://www.livius.org/sources/content/livy/livy-periochae-26-30/",
+                "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3%2A.html"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Sources, access and degrees of confidence",
+          "paragraphs": [
+            {
+              "text": "Access was checked on 18 November 2026. The archaeological paper’s publisher page blocked full-text retrieval; its author-university abstract was available. The public-domain Polybius translations and open Alpine study were directly readable. Modern discovery and publication years never become ancient occupation dates.",
+              "sources": [
+                "https://portalcientifico.uam.es/en/ipublic/item/10674359",
+                "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3%2A.html",
+                "https://www.research.herts.ac.uk/ws/portalfiles/portal/77527686/htaf020.pdf"
+              ]
+            }
+          ],
+          "columns": [
+            "Evidence",
+            "Checked access",
+            "Limit"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Polybius and Livy summaries",
+                "Public translations",
+                "Ancient testimony, not contemporary instrument measurements."
+              ],
+              "sources": [
+                "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3%2A.html",
+                "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/15%2A.html",
+                "https://www.livius.org/sources/content/livy/livy-periochae-21-25/"
+              ]
+            },
+            {
+              "cells": [
+                "Punic wall at Cartagena",
+                "Official archaeological museum account",
+                "Material urban evidence; foundation chronology follows the named source."
+              ],
+              "sources": [
+                "https://puertodeculturas.cartagena.es/ficha_muralla_punica.asp?idioma=2"
+              ]
+            },
+            {
+              "cells": [
+                "Córdoba elephant bone",
+                "2026 author-university abstract",
+                "A dated bone and proposed war context; no individual attribution to Hannibal."
+              ],
+              "sources": [
+                "https://portalcientifico.uam.es/en/ipublic/item/10674359"
+              ]
+            },
+            {
+              "cells": [
+                "Alpine-route scholarship",
+                "Full 2026 article, online since 2025",
+                "Documents unresolved debate; no route hypothesis promoted to certainty."
+              ],
+              "sources": [
+                "https://www.research.herts.ac.uk/ws/portalfiles/portal/77527686/htaf020.pdf"
+              ]
+            },
+            {
+              "cells": [
+                "Territory geometry",
+                "Pinned Cliopatria archive and licence",
+                "CC BY 4.0 approximate polity outline; annual authority and local allegiance are not encoded."
+              ],
+              "sources": [
+                "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/5f433377139a6eeaeacbdc894b70f8805b72c8b5"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Bennett et al. / Seshat (2025), Cliopatria historical polity geometry",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/5f433377139a6eeaeacbdc894b70f8805b72c8b5"
+        },
+        {
+          "title": "Bennett et al. (2025), Cliopatria: a geospatial database of world-wide political entities",
+          "url": "https://doi.org/10.1038/s41597-025-04516-9"
+        },
+        {
+          "title": "Polybius, Histories III, W. R. Paton translation (1922)",
+          "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3%2A.html"
+        },
+        {
+          "title": "Polybius, Histories XV, W. R. Paton translation (1925)",
+          "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/15%2A.html"
+        },
+        {
+          "title": "Livy, Periochae 21–25, translated by Jona Lendering",
+          "url": "https://www.livius.org/sources/content/livy/livy-periochae-21-25/"
+        },
+        {
+          "title": "Livy, Periochae 26–30, translated by Jona Lendering",
+          "url": "https://www.livius.org/sources/content/livy/livy-periochae-26-30/"
+        },
+        {
+          "title": "Bainbridge and Cracolici (2026; online 2025), Tall talks about elephants: Hannibal’s crossing through disciplines",
+          "url": "https://www.research.herts.ac.uk/ws/portalfiles/portal/77527686/htaf020.pdf"
+        },
+        {
+          "title": "Martínez Sánchez et al. (2026), The elephant in the oppidum",
+          "url": "https://portalcientifico.uam.es/en/ipublic/item/10674359"
+        },
+        {
+          "title": "Cartagena Puerto de Culturas, Punic Wall archaeological museum",
+          "url": "https://puertodeculturas.cartagena.es/ficha_muralla_punica.asp?idioma=2"
+        }
+      ],
+      "relatedGuideIds": [
+        "world-human-family"
+      ]
+    }
+  ]
+}

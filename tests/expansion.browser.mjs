@@ -1,3 +1,4 @@
+import {mapSetting} from '../scripts/browser-fixture.mjs';
 import {tsImport} from 'tsx/esm/api';
 const {scopedVoyageProgress,isPlayableVoyage}=await tsImport('../src/shared-movie.ts',import.meta.url);
 import { chromium } from 'playwright';
@@ -16,9 +17,9 @@ const year=async value=>{await page.locator('#context-year').fill(String(value))
 try{
  await page.goto(origin+'/#movie');
  await page.waitForFunction(count=>document.querySelectorAll('#watch-voyage option').length===count,voyageCatalog.voyages.filter(isPlayableVoyage).length+1);
- await page.getByLabel('Follow an expedition',{exact:true}).selectOption('beagle-1831-1836');
+ await mapSetting(page, () => page.getByLabel('Follow an expedition',{exact:true}).selectOption('beagle-1831-1836'));
  const controls=await page.locator('#voyage-controls').boundingBox(),map=await page.locator('#map-host').boundingBox();
- assert.ok(controls.x+controls.width<=map.x,'journey controls do not cover the map');
+ assert.ok(controls.x+controls.width<=map.x||controls.x>=map.x+map.width,'journey controls do not cover the map');
  assert.ok(await page.locator('[data-voyage="beagle-1831-1836"]').count());
  const before=await page.locator('[data-voyage="beagle-1831-1836"]').getAttribute('transform');
  await page.getByRole('button',{name:'Play',exact:true}).click();await page.waitForTimeout(650);
@@ -32,13 +33,13 @@ try{
  const salvador=records.find(r=>r.id==='visit-beagle-1831-1836-3'),point=`[data-point="${salvador.location.lon},${salvador.location.lat}"]`;
  await seek('1832-02-27T12:00:00Z');assert.doesNotMatch((await page.locator(point).count())?await page.locator(point).getAttribute('aria-label'):'',/Beagle/);
  await seek('1832-02-28T12:00:00Z');assert.match(await page.locator(point).getAttribute('aria-label'),/Beagle/);
- await page.getByLabel('Choose a story',{exact:true}).selectOption('pacific-arrivals');assert.ok(await page.locator('#voyage-controls').isHidden());
- await page.getByRole('button',{name:'Layers',exact:true}).click();
+ await mapSetting(page, () => page.getByLabel('Choose a story',{exact:true}).selectOption('pacific-arrivals'));assert.ok(await page.locator('#voyage-controls').isHidden());
+ await page.getByRole('button',{name: 'Map settings',exact:true}).click();
  await year(1844);assert.ok(!(await boundaryNames()).includes('Florida Territory'),'Pacific scene viewport excludes Florida');
  await page.getByRole('button',{name:'Close layers',exact:true}).click();
- await page.getByLabel('Map region',{exact:true}).selectOption('americas');
+ await mapSetting(page, () => page.getByLabel('Map region',{exact:true}).selectOption('americas'));
  await page.getByRole('button',{name:'Reset map view',exact:true}).click();
- await page.getByRole('button',{name:'Show layers',exact:true}).click();
+ await page.getByRole('button',{name: 'Map settings',exact:true}).click();
  await year(1844);await page.getByText('Boundaries in this view & sources',{exact:true}).click();assert.ok((await boundaryNames()).includes('Florida Territory'));
  await year(1845);assert.ok(!(await boundaryNames()).includes('Florida Territory'));
  assert.ok((await boundaryNames()).includes('Florida'));
@@ -48,7 +49,7 @@ try{
  await year(1900);assert.ok(await page.locator('.historical-rails path').count()>earlyRails);
  await page.getByRole('button',{name:'Close layers',exact:true}).click();
  await page.getByRole('link',{name:'Explore',exact:true}).click();
- await page.getByLabel('Search places and evidence',{exact:true}).fill('Taos Pueblo:');
+ await mapSetting(page, () => page.getByLabel('Search places and evidence',{exact:true}).fill('Taos Pueblo:'));
  await page.locator('#visible-records button').filter({hasText:'Taos Pueblo:'}).click();
  assert.match(await page.locator('#selected-records').innerText(),/continuing habitation/);
  await page.getByRole('button',{name:'Close details',exact:true}).click();

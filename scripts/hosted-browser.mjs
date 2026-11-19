@@ -1,3 +1,4 @@
+import {mapSetting} from './browser-fixture.mjs';
 import fsSnapshot from "node:fs";
 const snapshot=JSON.parse(fsSnapshot.readFileSync("dist/evidence-appendix.json","utf8"));
 const expectedRecords=snapshot.records.length;
@@ -104,14 +105,14 @@ try {
       .proposals.length,
     expectedRecords + saved.proposals.length,
   );
-  await page.getByRole("link", { name: "Watch", exact: true }).click();
-  await page.locator("#story-select").selectOption("free");
+  await page.getByRole("link", { name: 'Americas', exact: true }).click();
+  await mapSetting(page, () => page.locator("#story-select").selectOption("free"));
   await page.getByRole("button", { name: "Reset map view", exact: true }).click();
   await page.locator("#toggle-layers").click();
   await page.locator(".culture-disclosure summary").click();
   // Check the published map independently of the preserved local draft.
-  await page.getByLabel("Preview complete suggestions").uncheck();
-  await page.locator("#close-layers").click();
+  await mapSetting(page, () => page.getByLabel("Preview complete suggestions").uncheck());
+  assert.equal(await page.locator("#toggle-layers").getAttribute("aria-expanded"),"false");
   await page.locator("#time-settings-toggle").click();
   await page.getByLabel("Year number", { exact: true }).fill("1864");
   await page.getByLabel("Era", { exact: true }).selectOption("CE");
@@ -162,7 +163,7 @@ try {
     requests.every((r) => r.url.startsWith(origin + "/") && r.method === "GET"),
   );
   assert.ok(requests.some(r=>r.url.includes('/api/records/ai-colony-16')));
-  const geographicAssets=new Set(['historical-boundaries.json','colonial-boundaries.json','national-boundaries.json','early-national-boundaries.json','reservation-boundaries.json','boundary-sources.json','expanded-boundary-sources.json','early-national-boundary-sources.json','reservation-boundary-sources.json','rail-network.json','voyages.json','expedition-activity.json','land-detailed.geojson'].map(name=>'/'+name));
+  const geographicAssets=new Set(['world-summary.json','historical-boundaries.json','colonial-boundaries.json','national-boundaries.json','early-national-boundaries.json','reservation-boundaries.json','boundary-sources.json','expanded-boundary-sources.json','early-national-boundary-sources.json','reservation-boundary-sources.json','rail-network.json','voyages.json','expedition-activity.json','land-detailed.geojson'].map(name=>'/'+name));
   assert.ok(requests.filter(r=>r.type==='fetch').every(r=>new URL(r.url).pathname.startsWith('/api/')||geographicAssets.has(new URL(r.url).pathname)));
   assert.deepEqual(errors, []);
   assert.deepEqual(violations, []);

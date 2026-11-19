@@ -20,6 +20,7 @@ import { createAppendix, renderAppendix } from "./appendix";
 import { buildSiteGuides } from "./site-guide-build";
 import {syncWorldGuideIndex} from './world-guide-data';
 import {buildEuropeCatalogue} from './europe-build';
+import {buildWorldCatalogue} from './world-build';
 await syncWorldGuideIndex();
 const { version } = JSON.parse(await readFile("package.json", "utf8"));
 const research = JSON.parse(
@@ -63,6 +64,9 @@ await writeFile(
 );
 const names = ["index.html", "app.js", "app.css"];
 names.push(...await buildEuropeCatalogue());
+names.push(...await buildWorldCatalogue());
+await build({entryPoints:['src/world-site.ts'],bundle:true,format:'iife',platform:'browser',target:['chrome110','firefox115','safari16'],outfile:'dist/tripofisch-site/spread-of-peoples/world-site.js',minify:true,legalComments:'eof',loader:{'.geojson':'json'}});
+names.push('tripofisch-site/spread-of-peoples/world-site.js','tripofisch-site/spread-of-peoples/world-site.css');
 await mkdir("dist/terrain",{recursive:true});
 for(const name of await readdir("data/terrain")){await copyFile("data/terrain/"+name,"dist/terrain/"+name);names.push("terrain/"+name);}
 await mkdir("dist/guide-terrain",{recursive:true});

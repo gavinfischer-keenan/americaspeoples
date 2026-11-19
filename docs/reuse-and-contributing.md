@@ -4,12 +4,12 @@ Americas Peoples is intended to remain free to access, without advertising or pa
 
 ## The chosen licenses
 
-| Component | License | Practical effect |
-| --- | --- | --- |
-| Original software | PolyForm Noncommercial 1.0.0 | Permits noncommercial use, copying, distribution, and modification; retains notices; contains software-specific patent provisions. |
-| Original educational text and copyrightable curated data | CC BY-NC-SA 4.0 | Permits attributed noncommercial redistribution and adaptation; shared adaptations retain compatible NonCommercial and ShareAlike terms. |
-| HGIS de las Indias and CShapes boundary derivatives | Their own CC BY-NC-SA 4.0 terms | Original attribution and notices remain; our license cannot remove their restrictions. |
-| Other external components | Their individual licenses | Public-domain geography stays public domain; dependency licenses and other dataset terms remain attached. |
+| Component                                                | License                         | Practical effect                                                                                                                         |
+| -------------------------------------------------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Original software                                        | PolyForm Noncommercial 1.0.0    | Permits noncommercial use, copying, distribution, and modification; retains notices; contains software-specific patent provisions.       |
+| Original educational text and copyrightable curated data | CC BY-NC-SA 4.0                 | Permits attributed noncommercial redistribution and adaptation; shared adaptations retain compatible NonCommercial and ShareAlike terms. |
+| HGIS de las Indias and CShapes boundary derivatives      | Their own CC BY-NC-SA 4.0 terms | Original attribution and notices remain; our license cannot remove their restrictions.                                                   |
+| Other external components                                | Their individual licenses       | Public-domain geography stays public domain; dependency licenses and other dataset terms remain attached.                                |
 
 The full terms and scope are in [LICENSE.md](../LICENSE.md). Software and educational content are separate works with separate permissions; this is not a choice to apply a more permissive license to the whole bundle. Neither license is a mechanism for claiming ownership over historical facts or public-domain works.
 
@@ -25,11 +25,13 @@ There are tradeoffs. This is source-available, not open source under the Open So
 
 ## Consensus and scholarly sources
 
-Consensus is used to discover literature and organize private research. Its Terms of Service, reviewed on 15 November 2026 and dated 25 June 2025, give limited personal copying permissions for Site Content and prohibit broader redistribution and systematic compilation without authorization. They do not provide a clear general open-publication license for generated research reports. The broad User Materials clause is not an explicit grant to us to relicense all output.
+We use [Consensus](https://consensus.app/) to discover literature. Its Deep Research reviews help us find relevant studies and understand the surrounding research. We do not reproduce those full reviews here. Visit Consensus to explore reviews and the literature yourself; access may require your own account.
 
-Accordingly, full generated reports, quoted passages, and raw research responses stay out of the public atlas and redistributable packages unless an applicable written permission is obtained. Research records use original explanations checked against the underlying publications, archives, or institutional sources, with honest access notes. Paper copyrights and dataset licenses are independent of a paid Consensus subscription. A citation is not permission to reproduce a paper. The atlas has no live Consensus dependency and gives visitors no access to the owner's account.
+The atlas’s own [deep dives](../index.html#dives) are separately authored, mostly with AI assistance, and checked against the cited primary publications, archives and institutional sources. They include evidence, dates, competing interpretations and links you can follow. The atlas has no live Consensus dependency and does not provide access to the project owner’s account.
 
-This is a conservative publication practice based on the terms available to us, not a claim that Consensus has prohibited every possible use of an AI answer. Any connector-specific written publication grant would need separate verification. We do not imply endorsement by Consensus or cited researchers.
+We appreciate the Consensus team’s work. Of the paper-discovery and research-summary tools we have tried, we have found it the most useful for reaching relevant literature quickly. This is an independent TripoFisch project, with no paid endorsement or sponsorship from Consensus. The full acknowledgement is on [Sources & licenses](../sites/sources-attributions.html#consensus-discovery).
+
+Scholarly papers, external datasets and images retain their own rights and access terms. A citation links to evidence; it does not grant permission to reproduce the source. The component licenses above and the item-specific notices continue to apply.
 
 ## How to help
 
@@ -46,3 +48,9 @@ Use the Library's contribution tools to prepare and download a suggestion, or su
 - [CShapes source and licensing](https://icr.ethz.ch/data/cshapes/)
 
 License choices cannot resolve uncertain ownership, authorize sensitive disclosures, or retroactively revoke rights already granted. New third-party imports must be reviewed individually.
+
+### Research counter method (19 November 2026)
+
+The **110+ Deep Research runs** total is supplied by the project owner, whose earlier research archive includes at least 83 PDF reports. It covers the broader project history, including work outside the retained machine-readable ledgers.
+
+The **159 cited papers** counter is a documented subset: distinct DOI-backed entries shared by saved Deep Research citations and the atlas bibliography, matched using normalized DOI/URL identities across 11 retained structured reports, including the new world and Africa reviews. The public side includes published map records, deep dives, guide enrichment, European sources, world sources and voyage sources. Explicit DOI metadata, DOI resolver and publisher DOI URLs, and Nature article URLs are normalized to one lowercase DOI identity; unresolved aliases remain outside this conservative subset. Research proposals and intake-queue citations are excluded. It does not claim to be the complete lifetime paper total, a click count, or proof that each paper was first discovered through Consensus. Research ledgers also include polling calls; those calls are not additional Deep runs. No private report text is republished by these counters.

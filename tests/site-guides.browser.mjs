@@ -1,3 +1,4 @@
+import {mapSetting} from '../scripts/browser-fixture.mjs';
 import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
@@ -34,14 +35,14 @@ try {
  await page.setViewportSize({width:390,height:844});await page.goto(origin+'/sites/hovenweep.html');
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  await page.setViewportSize({width:1500,height:1000});await page.goto(origin+'/#map');
- await page.locator('#story-select').selectOption('free');await page.getByRole('button',{name:'Reset map view',exact:true}).click();await page.locator('#time-settings-toggle').click();await page.locator('#toggle-layers').click();
+ await mapSetting(page, () => page.locator('#story-select').selectOption('free'));await page.getByRole('button',{name:'Reset map view',exact:true}).click();await page.locator('#time-settings-toggle').click();await page.locator('#toggle-layers').click();
  await page.getByLabel('Year number',{exact:true}).fill('1877');await page.getByLabel('Era',{exact:true}).selectOption('CE');await page.getByRole('button',{name:'Go to year',exact:true}).click();
  await page.locator('.hazard-el-nino').first().waitFor();
- await page.locator('[data-climate="tsunami"]').uncheck();
- await page.locator('#show-natural-events').uncheck();
+ await mapSetting(page, () => page.locator('[data-climate="tsunami"]').uncheck());
+ await mapSetting(page, () => page.locator('#show-natural-events').uncheck());
  assert.equal(await page.locator('.hazard-volcano,.hazard-earthquake,.hazard-tsunami').count(),0);
  assert.ok(await page.locator('.hazard-el-nino').count());
- await page.locator('#show-natural-events').check();assert.ok(!await page.locator('[data-climate="tsunami"]').isChecked());
+ await mapSetting(page, () => page.locator('#show-natural-events').check());assert.ok(!await page.locator('[data-climate="tsunami"]').isChecked());
  assert.ok(await page.locator('.hazard-volcano,.hazard-earthquake').count());
  await page.goto(origin+'/#physical');await page.getByLabel('Natural hazard kind').selectOption('earthquake');
  assert.match(await page.locator('#hazard-results-count').innerText(),/1,580/);

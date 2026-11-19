@@ -1,0 +1,25 @@
+# Southern and south-central Africa: independent review
+
+Reviewed 19 November 2026. Catalogue: `data/world/africa-south.json`, 37 observations and 44 source entries. This is a bounded independent chronology, bibliography and location audit, not an exhaustive reassessment of every fossil or archaeological debate.
+
+## Material corrections
+
+- **Rose Cottage:** the [Loftus et al. (2019) author manuscript](https://sites.lsa.umich.edu/brianstewart/wp-content/uploads/sites/1097/2023/06/Loftus_etal_2019JAA.pdf), Table 4 and section 5.1, places layer G beyond 30 ka calibrated BP. The former 22.2–20.8 ka label incorrectly assigned a young phase to G. The glacial marker now represents sparse Wal/Be occupations around 20–17 ka calibrated BP. The older broad 50–30 ka marker is narrowed to the approximately 35–30 ka final-MSA/early-LSA chronology. Neither interval means continuous residence or population replacement.
+- **White Paintings Shelter:** [Nash et al. (2016)](https://doi.org/10.1016/j.jhevol.2016.05.004), section 2.4, reports sediment OSL ages 94.3 ± 9.4 and 66.4 ± 6.5 ka. Those replace the unsupported shorthand 90–50 ka. The numeric envelope covers the two uncertainties, 103.7–59.9 ka. Refits demonstrate substantial artifact movement, so these sediment ages do not securely date each artifact; basal deposits may exceed 100 ka. The source for that warning is [Staurset and Coulson (2014)](https://doi.org/10.1016/j.jhevol.2014.04.006), whose link is now the verified DOI.
+- Sixteen source labels were corrected or expanded. Substantive identity corrections include **Marin-Monfort et al.**, not Fernández-Jalvo as first author, for [Wonderwerk 2026](https://doi.org/10.1371/journal.pone.0347480); **Padilla-Iglesias, Grove and Blinkhorn**, not Mesfin, for [the 2023 Central African study](https://doi.org/10.1016/j.quascirev.2023.108390); and the actual [Baldreki et al. (2024)](https://doi.org/10.5334/oq.132) title describing **enamel amino acid geochronology**, not a new speleothem chronology. Kathu Pan's 2017 raw-material paper is authored by Wilkins alone. Melikane, Likonong and Katanda titles now identify the linked papers correctly.
+
+## Findings retained
+
+Sehonghong's approximately 25–23 ka calibrated intensive phase is supported by [Pargeter, Loftus and Mitchell (2017)](https://doi.org/10.1016/j.jasrep.2017.01.027). Its earlier 57.6 ± 2.3 ka context is explicitly stated in [Gregory, Mitchell and Pargeter (2023)](https://doi.org/10.1007/s41982-023-00138-y). Mumbwa's older than 170 ka, 130–105 ka and approximately 40 ka occupation phases appear in the [2023 author manuscript](https://livrepository.liverpool.ac.uk/3168380/1/Steyn%20et%20al_Manuscript%20final%20version%20for%20Larry.pdf); the newly dated later burials are not assigned to those occupations.
+
+Twin Rivers retains the qualified published 270–170 ka archaeological interpretation. The 2024 amino-acid study identifies relative-age variation and reworking; it does not provide a calibrated new chronology that makes all artifacts securely contemporaneous with nearby speleothems. Kalambo's three dated clusters and minimum-age treatment agree with [Barham et al. (2023)](https://doi.org/10.1038/s41586-023-06557-9). Katanda retains associated-sediment dating limitations rather than claiming direct dates on bone points.
+
+Coordinates were screened against the cited regional locality descriptions and selected primary/project tables. Confirmed examples include Taung's Dart deposits, Kathu Pan, Twin Rivers, Kalambo's UNESCO header longitude, Klasies' DMS coordinates (its decimal headings are reversed), and Katanda's ROCEEH-attributed regional point. No additional coordinate change was required. Points remain approximate, not excavation plans. Some database pages timed out during this independent pass; original inspection/access notes are retained rather than falsely claiming all 44 sources were reopened in full.
+
+The source metadata audit used publisher/PubMed/Crossref records, open articles and author copies at varying access levels. Full-text access is claimed only where recorded. No duplicate dated observation was found against existing ancestors/dispersal anchors: for example, Blombos' new 100 ka workshop differs from the existing 73 ka drawing.
+
+## Verification and remaining limits
+
+Every southern interval is ordered and ends at or before astronomical year -14999 (15,000 BCE); calibrated BP converts with 1950 minus age. No population estimates or migration/territory polygons were introduced. Combined schema/reference validation passed for seven world shards: 264 evidence records and 267 source entries. Dedicated checks also verified source use, Shum Laka removal and Rose Cottage calibrated conversion. Surface chronologies and disputed cave associations still need specialist review as the catalogue grows.
+
+Separately, the northern shard's uncalibrated Shum Laka marker was removed and retained only in its research queue. It now has 45 observations and 39 sources after two verified chronology updates. No private Consensus review is reproduced in these notes.

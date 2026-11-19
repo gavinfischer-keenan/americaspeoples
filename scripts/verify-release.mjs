@@ -41,6 +41,7 @@ const phases = [
     node,
     ["--import", "tsx", "scripts/build.ts"],
   ],
+  ["World hub, human family and four dated studies", node, ["tests/world.browser.mjs"]],
   ["Atlas navigation, active Europe and remaining previews", node, ["scripts/browser-atlases.mjs"]],
   ["Northern Europe movie, boundaries, networks and population", node, ["tests/europe.browser.mjs"]],
   ["World deep dives, original texts and connected voyages", node, ["tests/world-guides.browser.mjs"]],
@@ -130,6 +131,8 @@ const phases = [
     node,
     ["tests/hybrid-resilience.browser.mjs"],
   ],
+  ["Shared map disclosure keyboard focus", node, ["tests/map-navigation.browser.mjs"]],
+  ["Globe land picking and letterboxed map dragging", node, ["tests/world-pointer.browser.mjs"]],
 ];
 if (process.argv.includes("--list")) {
   for (const [index, [label]] of phases.entries())

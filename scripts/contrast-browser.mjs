@@ -1,3 +1,4 @@
+import {mapSetting} from './browser-fixture.mjs';
 import { chromium } from "playwright";
 import { createStaticServer } from "./static-server.mjs";
 import { mkdir, writeFile } from "node:fs/promises";
@@ -15,8 +16,8 @@ try {
     viewport: { width: 1600, height: 1000 },
   });
   await mkdir("test-results", { recursive: true });
-  await page.goto(`http://127.0.0.1:${server.address().port}`);
-  await page.locator("#story-select").selectOption("free");
+  await page.goto(`http://127.0.0.1:${server.address().port}/#movie`);
+  await mapSetting(page, () => page.locator("#story-select").selectOption("free"));
   await page.getByRole("button", { name: "Reset map view", exact: true }).click();
   await page.locator("#time-settings-toggle").click();
   await page.getByLabel("Year number", { exact: true }).fill("17000");

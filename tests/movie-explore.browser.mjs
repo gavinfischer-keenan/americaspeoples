@@ -1,3 +1,4 @@
+import {mapSetting,showMapEvidence} from '../scripts/browser-fixture.mjs';
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
@@ -10,7 +11,7 @@ const records=JSON.parse(await readFile('dist/dataset.json','utf8')).records,byI
 const ids=()=>page.locator('#visible-records button').evaluateAll(nodes=>nodes.map(n=>JSON.parse(n.dataset.mapRecordKey)[0]));
 const jump=async(y)=>{if(!(await page.locator('#time-settings').isVisible()))await page.locator('#time-settings-toggle').click();await page.getByLabel('Year number',{exact:true}).fill(String(y));await page.getByLabel('Era',{exact:true}).selectOption('CE');await page.getByRole('button',{name:'Go to year',exact:true}).click();};
 try {
- await page.goto(origin);await page.locator('#story-select').selectOption('free');await page.getByRole('button',{name:'Reset map view',exact:true}).click();await page.locator('#toggle-sites').click();assert.equal(await page.getByRole('link',{name:'Watch',exact:true}).count(),1);
+ await page.goto(origin+'/#movie');await mapSetting(page, () => page.locator('#story-select').selectOption('free'));await page.getByRole('button',{name:'Reset map view',exact:true}).click();await showMapEvidence(page);assert.equal(await page.getByRole('link',{name: 'Americas',exact:true}).count(),1);
  await jump(1200);await page.locator('#time-settings-toggle').click();assert.equal(await page.locator('.undated-context').count(),0);assert.ok(await page.locator('.context-list').isHidden());
  const movie=await ids();assert.ok(movie.length>0);
  const current=await page.locator('#visible-records button[data-temporal-status="current"]').evaluateAll(nodes=>nodes.map(n=>JSON.parse(n.dataset.mapRecordKey)[0]));
@@ -38,7 +39,7 @@ try {
  await page.locator('#context-records button').first().click();assert.match(await page.locator('#selected-records').innerText(),/The date has not been established/);
  await page.getByRole('button',{name:'Close details',exact:true}).click();
  const before=await page.locator('#visible-count').innerText();await page.getByRole('button',{name:'Zoom in',exact:true}).click();await page.getByRole('button',{name:'Zoom in',exact:true}).click();await page.getByRole('button',{name:'Zoom in',exact:true}).click();await page.waitForFunction(previous=>document.querySelector('#visible-count').textContent!==previous,before);
- await page.getByRole('link',{name:'Watch',exact:true}).click();await page.locator('#story-select').selectOption('free');await page.locator('.timeline').waitFor({state:'visible'});assert.ok(await page.locator('.timeline').isVisible());assert.equal(await page.locator('.undated-context').count(),0);assert.ok(await page.locator('.context-list').isHidden());
+ await page.getByRole('link',{name: 'Americas',exact:true}).click();await mapSetting(page, () => page.locator('#story-select').selectOption('free'));await page.locator('.timeline').waitFor({state:'visible'});assert.ok(await page.locator('.timeline').isVisible());assert.equal(await page.locator('.undated-context').count(),0);assert.ok(await page.locator('.context-list').isHidden());
  await page.setViewportSize({width:390,height:844});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  assert.deepEqual(errors,[]);console.log('PASS: Movie temporal isolation, stale selection, first-click pause, subsequent selection, hover, all-period Explore/context details, viewport list and mobile layout.');
 } finally {await browser.close();server.close();}

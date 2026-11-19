@@ -1,3 +1,4 @@
+import {mapSetting} from '../scripts/browser-fixture.mjs';
 import assert from 'node:assert/strict';
 import {readFile, mkdir} from 'node:fs/promises';
 import {chromium} from 'playwright';
@@ -11,7 +12,7 @@ const browser=await chromium.launch({executablePath:process.env.BROWSER_PATH||'C
 const page=await browser.newPage({viewport:{width:1440,height:960}}),errors=[];
 page.on('pageerror',error=>errors.push(error.message));
 const choose=async v=>{
-  await page.getByLabel('Follow an expedition',{exact:true}).selectOption(v.id);
+  await mapSetting(page, () => page.getByLabel('Follow an expedition',{exact:true}).selectOption(v.id));
   assert.match(await page.locator('#voyage-position').innerText(),new RegExp('^'+v.stops[0].arrival));
 };
 const progress=async value=>page.locator('#voyage-progress').evaluate((el,value)=>{

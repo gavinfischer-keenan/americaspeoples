@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {mapSetting} from '../scripts/browser-fixture.mjs';
 import {chromium} from 'playwright';
 import {createStaticServer} from '../scripts/static-server.mjs';
 const server=createStaticServer('dist');await new Promise(r=>server.listen(0,'127.0.0.1',r));
@@ -35,7 +36,7 @@ try{
  await page.goto(base+'/#movie');
  if(await page.getByRole('button',{name:'Pause',exact:true}).isVisible())await page.getByRole('button',{name:'Pause',exact:true}).click();
  await page.setViewportSize({width:1440,height:960});
- await page.locator('#whole-movie').click();
+ await mapSetting(page,()=>page.locator('#whole-movie').click());
  await page.locator('[data-movie-year="1000"]').click();
  const hawaii=page.locator('#map-host [data-overlay][aria-label*="Hawaiʻi: alternative Bayesian colonization estimates"]');
  const feature=await hawaii.boundingBox();assert.ok(feature);

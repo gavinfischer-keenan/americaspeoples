@@ -1,3 +1,4 @@
+import {mapSetting} from '../scripts/browser-fixture.mjs';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {chromium} from 'playwright';
@@ -13,7 +14,7 @@ try{
  const sledgeParty=voyages.find(v=>v.id==='nansen-johansen-1895-1896'),fram=voyages.find(v=>v.id==='nansen-fram-arctic-1893-1896');
  assert.ok(voyages.some(v=>v.id.includes('caird')&&v.stops[0].arrival.startsWith('1916')));
  assert.equal(await page.locator('#watch-voyage option[value*=caird]').count(),0);
- await page.getByLabel('Follow an expedition',{exact:true}).selectOption(sledgeParty.id);
+ await mapSetting(page, () => page.getByLabel('Follow an expedition',{exact:true}).selectOption(sledgeParty.id));
  await page.locator('#voyage-progress').evaluate(el=>{el.value='5000';el.dispatchEvent(new Event('input',{bubbles:true}));});
  const date=(await page.locator('#voyage-position').innerText()).slice(0,10);
  await page.locator(`[data-follow-expedition="${fram.id}"]`).waitFor();

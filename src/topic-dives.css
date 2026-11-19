@@ -32,6 +32,18 @@
 }
 @media(max-width:480px){.topbar .brand h1,.topbar .brand small{display:none}.topbar nav{flex:1;justify-content:space-between;margin-left:0}.topbar{padding:0 12px;gap:12px}.topbar nav a{padding:10px 9px}.library-grid{grid-template-columns:minmax(0,1fr)}}
 
+/* Tablet controls wrap without squeezing the title or pushing transport below the viewport. */
+@media(min-width:701px) and (max-width:1000px){
+ .topic-toolbar{flex-wrap:wrap;gap:10px}
+ .topic-toolbar>div{flex:1 0 100%}
+ .topic-toolbar label{min-width:0;flex:1}
+ .topic-toolbar select{width:170px;flex:1}
+ .topic-page #app{height:100dvh;display:flex;flex-direction:column}
+ .topic-page .topbar{flex-shrink:0}
+ .topic-page .shell{flex:1;min-height:0}
+ .topic-page #main{height:100%;min-height:0}
+}
+
 .topic-context,.related-dives{border-top:1px solid #bbc7bd;margin-top:22px;padding-top:14px}
 .topic-context h3,.related-dives h3{font-size:20px;margin:0 0 10px}
 .topic-context a{display:block;padding:12px 0;border-bottom:1px solid #d4d9cd;overflow-wrap:anywhere}

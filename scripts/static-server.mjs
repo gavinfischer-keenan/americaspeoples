@@ -20,7 +20,7 @@ const mime = {
   ".xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
   ".zip": "application/zip",
 };
-export function createStaticServer(directory) {
+export function createStaticServer(directory, options = {}) {
   const root = path.resolve(directory);
   // Actual production Python/SQLite API behind the test static frontend.
   const backend=spawn(process.env.PYTHON_PATH||'python',['server/app.py','--db','release/atlas.sqlite3','--root',root,'--port','0'],{windowsHide:true,stdio:['ignore','pipe','pipe']});
@@ -32,6 +32,11 @@ export function createStaticServer(directory) {
   const server=http.createServer(async (req, res) => {
     for (const [name, value] of Object.entries(hostingHeaders))
       res.setHeader(name, value);
+    // Local website QA may frame the atlas from its explicitly supplied loopback origin.
+    if(options.frameOrigin && /^http:\/\/127\.0\.0\.1:\d+$/.test(options.frameOrigin)){
+      res.setHeader('Content-Security-Policy',hostingHeaders['Content-Security-Policy'].replace("frame-ancestors 'none'",'frame-ancestors '+options.frameOrigin));
+      res.removeHeader('X-Frame-Options');
+    }
     if (!["GET", "HEAD"].includes(req.method)) {
       res.writeHead(405);
       res.end();

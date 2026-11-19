@@ -57,11 +57,11 @@ try{
    chapters++;
   }
   await page.locator('.topic-toolbar a').filter({hasText:'Shared atlas'}).click();
-  await page.locator('#story-select').waitFor();
+  await page.locator('#story-select').waitFor({state:'attached'});
  }
  await page.setViewportSize({width:1024,height:768});
  for(const route of ['#dives/places','#story/teotihuacan','#topic/andean-languages']){
-  await page.goto(base+'/'+route);await page.locator(route.includes('story')?'#story-select':route.includes('topic')?'#topic-next':'.dive-card').first().waitFor();
+  await page.goto(base+'/'+route);await page.locator(route.includes('story')?'#story-select':route.includes('topic')?'#topic-next':'.dive-card').first().waitFor({state:route.includes('story')?'attached':'visible'});
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),route+' tablet');
  }
  await page.screenshot({path:'test-results/coming-soon-a-tablet.png'});

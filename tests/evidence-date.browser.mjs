@@ -1,3 +1,4 @@
+import {mapSetting} from '../scripts/browser-fixture.mjs';
 import assert from 'node:assert/strict';
 import {chromium} from 'playwright';
 import {createStaticServer} from '../scripts/static-server.mjs';
@@ -19,8 +20,8 @@ try{
  await page.locator('#selected-records h4').waitFor();
  assert.match(await page.locator('body').innerText(),/Shared date: 1854-12-03/);
  await page.goto(base+'/#explore');
- await page.locator('#explore-period').selectOption('all');
- await page.locator('#place-search').fill('Eureka');
+ await mapSetting(page, () => page.locator('#explore-period').selectOption('all'));
+ await mapSetting(page, () => page.locator('#place-search').fill('Eureka'));
  await page.locator('#visible-records [data-map-record-key]').filter({hasText:'Eureka'}).first().click();
  await page.locator('#show-selection-year').click();
  await page.locator('#selected-records h4').waitFor();
