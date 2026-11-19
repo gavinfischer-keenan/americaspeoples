@@ -1,0 +1,252 @@
+{
+  "version": "0.31.0",
+  "status": "merged, deployed and publicly verified; current and previous server releases retained",
+  "verifiedAt": "2026-11-19T08:27:16.394252+00:00",
+  "pullRequest": "https://github.com/gavinfischer-keenan/americaspeoples/pull/29",
+  "release": "https://github.com/gavinfischer-keenan/americaspeoples/releases/tag/v0.31.0",
+  "site": "https://americaspeoples.11mosswood.us/",
+  "baseCommit": "cf268bd153a647ab691130a7eb86075c013bb616",
+  "featureCommit": "0cf7cb64e38b0b6a0e965c3708bb4036279a037e",
+  "mergeCommit": "f837c5e57c530b7e6e3d39364ec425d803d5e478",
+  "deployedCommit": "e5bce7f478ddd550e1810af5b7997325b93bd934",
+  "verifiedTree": "91035b106b3937c7ee41c83a1e189265d17b3638",
+  "stats": {
+    "records": 11201,
+    "shared": 11128,
+    "focused": 73,
+    "guides": 90,
+    "stories": 84,
+    "topics": 28,
+    "terrain": 187,
+    "sourceMaps": 26,
+    "voyages": 175,
+    "activityBands": 126,
+    "regionalRecords": 70,
+    "regions": 15,
+    "ordinaryEnd": 1900,
+    "hawaiiEnd": 1959,
+    "worldGuides": 60,
+    "writingPairs": 87,
+    "writingImages": 18,
+    "writingFonts": 2,
+    "guidePhotos": 6,
+    "europeEntries": 396,
+    "europeSources": 378,
+    "europeBoundaryVersions": 362,
+    "europeVoyages": 25,
+    "europePopulationObservations": 17
+  },
+  "newWorldGuides": 19,
+  "newWarfareEntries": 75,
+  "ordinaryTimelineEnd": 1900,
+  "hawaiiStatehoodEnd": 1959,
+  "scope": "Playable northern Europe with selected coverage; independent clock, dated sourced territories, towns, networks and warfare. Africa and Asia-Pacific remain guide-first previews.",
+  "validation": {
+    "fullReleaseStages": 63,
+    "unitTests": 491,
+    "typescript": true,
+    "packageTests": 7,
+    "linuxRetentionTests": 5,
+    "deploymentRecoveryTests": 9,
+    "independentReview": "Region clock preservation and named/selectable route endpoints were corrected and re-reviewed. Arctic chronology and source reuse were independently checked.",
+    "runNotes": "All 63 phases passed across resumed ranges 1-22, 23-28, 29-48 and 49-63. Legacy expectations were updated for the 1900 endpoint and eligible voyage count; a test initialization-order error was corrected. No timeouts were extended. The final v0.31.0 build passed the expanded Europe suite and package checks. The merged build passed Europe and extracted self-host checks again. A final release commit changed only the version field in six generated coverage reports; source content and counts were identical.",
+    "workbook": "Every ZIP entry in the rebuilt researched workbook is byte-identical to the committed workbook; only ZIP container metadata differs.",
+    "americasArchiveUnchanged": true,
+    "canonicalVoyagesUnchanged": true,
+    "stagedAssetChecksums": 314,
+    "publicAssetsChecked": 481,
+    "publicSourceReviews": 48,
+    "neighborPagesVerified": 3,
+    "liveBrowser": {
+      "status": "passed",
+      "version": "0.31.0",
+      "records": 11201,
+      "checks": "Full Europe browser suite against public origin",
+      "widths": [
+        1440,
+        390,
+        320
+      ],
+      "errors": [],
+      "requests": 83,
+      "analyticsObserved": [
+        {
+          "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+          "method": "GET"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        },
+        {
+          "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+          "method": "GET"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        },
+        {
+          "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+          "method": "GET"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        },
+        {
+          "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+          "method": "GET"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        },
+        {
+          "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+          "method": "GET"
+        },
+        {
+          "url": "https://americaspeoples.11mosswood.us/cdn-cgi/rum?",
+          "method": "POST"
+        }
+      ]
+    }
+  },
+  "deployment": {
+    "status": "deployed",
+    "id": "20261119T081317Z-americas-v0.31.0",
+    "commit": "e5bce7f478ddd550e1810af5b7997325b93bd934",
+    "health": {
+      "status": "ok",
+      "version": "0.31.0",
+      "records": 11201
+    },
+    "static": "/srv/tripofisch/releases/20261119T081317Z-americas-v0.31.0",
+    "api": "/srv/americaspeoples/releases/20261119T081317Z-americas-v0.31.0",
+    "previousVersion": "0.30.0",
+    "rollbackStatic": "/srv/tripofisch/releases/20261119T064116Z-americas-v0.30.0",
+    "rollbackApi": "/srv/americaspeoples/releases/20261119T064116Z-americas-v0.30.0",
+    "unchangedFiles": 394
+  },
+  "artifacts": [
+    {
+      "filename": "americas-peoples-v0.31.0-selfhost.zip",
+      "repositoryPath": "downloads/americas-peoples-v0.31.0-selfhost.zip",
+      "bytes": 340059435,
+      "sha256": "b27a69f02845162925eadf5d2296fb8b12a4b47ac086c448a19742cf21ab3d7f",
+      "url": "https://github.com/gavinfischer-keenan/americaspeoples/releases/download/v0.31.0/americas-peoples-v0.31.0-selfhost.zip"
+    },
+    {
+      "filename": "americas-peoples-import.xlsx",
+      "repositoryPath": "templates/americas-peoples-import.xlsx",
+      "bytes": 302388,
+      "sha256": "ed0abc070fc522e4ad2e3a7c97d3f7f109ed6265c4735ed186559a4e6079c794",
+      "url": "https://github.com/gavinfischer-keenan/americaspeoples/releases/download/v0.31.0/americas-peoples-import.xlsx"
+    },
+    {
+      "filename": "americas-peoples-researched-import.xlsx",
+      "repositoryPath": "templates/americas-peoples-researched-import.xlsx",
+      "bytes": 5422404,
+      "sha256": "bd356c03444f4ce7e901f3cf9f99a3048613d9210ff11efa88683bd22e85663d",
+      "url": "https://github.com/gavinfischer-keenan/americaspeoples/releases/download/v0.31.0/americas-peoples-researched-import.xlsx"
+    }
+  ],
+  "stagingRecovery": "The headroom guard stopped before creating release directories. A locked resume verified the frozen TAR, metadata, unpacked ZIP and landing hashes before reclaiming only the redundant container TAR. The original host TAR and prior release were retained until public verification. The safety reserve was unchanged.",
+  "retention": {
+    "applied": true,
+    "targets": [
+      "/srv/americaspeoples/backups/20261119T064116Z-americas-v0.30.0-previous.sqlite3",
+      "/srv/americaspeoples/releases/20261119T040224Z-americas-v0.29.0",
+      "/srv/tripofisch/releases/20261119T040224Z-americas-v0.29.0/americaspeoples-app",
+      "/srv/tripofisch/releases/20261119T040224Z-americas-v0.29.0/downloads/americaspeoples",
+      "/srv/tripofisch/releases/20261119T040224Z-americas-v0.29.0/free-utilities/americaspeoples",
+      "/srv/tripofisch/releases/20261119T064116Z-americas-v0.30.0/downloads/americaspeoples/v0.29.0",
+      "/srv/tripofisch/releases/20261119T081317Z-americas-v0.31.0/downloads/americaspeoples/v0.29.0"
+    ],
+    "keptCurrent": "20261119T081317Z-americas-v0.31.0",
+    "keptPrevious": "0.30.0",
+    "freeBytes": 1426563072
+  },
+  "retentionFinalPlan": {
+    "applied": false,
+    "targets": [],
+    "keptCurrent": "20261119T081317Z-americas-v0.31.0",
+    "keptPrevious": "0.30.0",
+    "freeBytes": 1426563072
+  },
+  "temporaryCleanup": {
+    "container": {
+      "mode": "container",
+      "removed": [
+        "/var/tmp/americas-v0.31.0-staging",
+        "/var/tmp/americas-v0310-deploy.py"
+      ],
+      "freeBytes": 2472415232
+    },
+    "host": {
+      "mode": "host",
+      "removed": [
+        "/var/tmp/americas-v0310-payload.tar",
+        "/var/tmp/americas-v0310-deploy.py"
+      ],
+      "freeBytes": 78044717056
+    }
+  }
+}

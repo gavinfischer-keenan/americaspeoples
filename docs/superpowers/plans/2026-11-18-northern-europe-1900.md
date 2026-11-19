@@ -55,7 +55,7 @@ Optional `population` observations are `{year,min,max,basis:'census'|'estimate',
 - [x] Normalize and validate the Europe evidence catalog; retain stable source IDs and links to guides and canonical Atlantic voyages. Do not duplicate established Greenland/Iceland evidence when reuse is supported.
 - [x] Implement the Europe map controller: earliest-to-1900 timeline, play/pause, period/region/category/search filters, evidence selection, sourced details, guide links, camera controls, and retained state across atlas switches.
 - [x] Activate the Europe manifest/navigation; leave other planned maps unchanged. Add modern terrain maps to new deep dives and source links to authoritative archaeological plans.
-- [ ] Review all boundary cases, source/date/identity coverage, desktop and phone behavior; fix findings. Run meaningful focused tests and applicable release checks, then publish the authorized release and verify it publicly.
+- [x] Review all boundary cases, source/date/identity coverage, desktop and phone behavior; fix findings. Run meaningful focused tests and applicable release checks, then publish the authorized release and verify it publicly.
 
 ## Research handoff contract
 
