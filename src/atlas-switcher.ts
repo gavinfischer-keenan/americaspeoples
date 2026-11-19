@@ -1,10 +1,11 @@
 import { geoOrthographic, geoPath, type GeoPermissibleObjects } from 'd3-geo';
 import { atlases, type AtlasId, type PlannedAtlasManifest } from './atlas-catalog';
 import { esc } from './dom';
+import {regionalGuidesHTML,worldGuides} from './world-guides';
 
 export function atlasNavigationHTML(current: AtlasId = 'americas'): string {
   return `<nav class="atlas-destinations" aria-label="Choose an atlas">${atlases.map(atlas =>
-    `<a href="${atlas.href}"${atlas.id === current ? ' aria-current="page"' : ''}><span>${esc(atlas.title)}</span><small>${atlas.status === 'available' ? 'Open atlas' : 'Coming soon'}</small></a>`,
+    `<a href="${atlas.href}"${atlas.id === current ? ' aria-current="page"' : ''}><span>${esc(atlas.title)}</span><small>${atlas.status === 'available' ? 'Open atlas' : worldGuides.some(g=>g.atlasIds.includes(atlas.id as PlannedAtlasManifest['id'])) ? 'Read deep dives · map coming soon' : 'Coming soon'}</small></a>`,
   ).join('')}</nav>`;
 }
 
@@ -16,6 +17,7 @@ export function atlasPreviewHTML(manifest: PlannedAtlasManifest, land: GeoPermis
   const back = returnHref === '#explore' ? '#explore' : '#movie';
   return `<article class="atlas-preview" aria-labelledby="atlas-preview-title">
     <div class="atlas-preview-heading"><div><p class="eyebrow">THE HUMAN ATLASES</p><h2 id="atlas-preview-title">${esc(manifest.title)}</h2></div><a class="back-link" href="${back}">← Return to Americas</a></div>
+    ${regionalGuidesHTML(manifest.id)}
     <figure class="atlas-preview-figure"><div class="atlas-preview-map">
       <svg viewBox="0 0 1000 600" role="img" aria-label="Modern coastline map of ${esc(manifest.title)}. Coming soon."><path class="atlas-preview-ocean" d="${path({ type: 'Sphere' })}"/><path class="atlas-preview-land" d="${path(land)}"/></svg>
       <strong class="atlas-coming-soon" aria-hidden="true">COMING SOON</strong>

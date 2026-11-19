@@ -25,6 +25,7 @@ try{
  assert.equal(await page.locator('#place-search').inputValue(),'Taos');
  assert.equal(await page.locator('#map-host .world').getAttribute('transform'),camera);
  await page.goto(base+'/#dives/subjects');
+ await page.locator('[data-dive="topic-australian-wool"] h3').scrollIntoViewIfNeeded();
  const wool=await page.locator('[data-dive="topic-australian-wool"] h3').boundingBox();
  await page.mouse.click(wool.x+wool.width/2,wool.y+wool.height/2);
  await page.locator('#topic-play').waitFor();

@@ -26,6 +26,18 @@ The 0.10 additions use factual coordinates from NPS NPMap public archaeological 
 
 Public domain generalized land geometry from https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_land.geojson, retrieved 2026-10-28. Terms: https://www.naturalearthdata.com/about/terms-of-use/. Modern reference coastlines only. Original file is stored in data/land.geojson; dependency/network access is unnecessary at runtime.
 
+## Natural Earth rivers and lake centerlines
+
+The regional guide basemaps use a generalized modern drainage and lake-centerline dataset at 1:10,000,000. The bundled GeoJSON preserves all 1,455 source line geometries and reduces each feature’s attributes to its English name. Natural Earth places the source geometry in the public domain. [Original GeoJSON](https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_rivers_lake_centerlines.geojson) · [Natural Earth terms](https://www.naturalearthdata.com/about/terms-of-use/) · [Asset and upstream hashes](https://github.com/gavinfischer-keenan/americaspeoples/blob/refs/tags/v0.30.0/data/world-guide-context-sources.json).
+
+## Noto fonts for original-script texts
+
+Noto Sans Cuneiform Regular and Noto Sans Coptic Regular are copyright 2022 The Noto Project Authors and licensed under the SIL Open Font License 1.1. The font binaries and complete license texts are bundled together and match the Google Fonts distributions byte for byte. [Cuneiform license](https://github.com/gavinfischer-keenan/americaspeoples/blob/refs/tags/v0.30.0/data/writing-media/NotoSansCuneiform-OFL.txt) · [Coptic license](https://github.com/gavinfischer-keenan/americaspeoples/blob/refs/tags/v0.30.0/data/writing-media/NotoSansCoptic-OFL.txt) · [Upstream files and SHA-256](https://github.com/gavinfischer-keenan/americaspeoples/blob/refs/tags/v0.30.0/data/world-guide-context-sources.json).
+
+## Historical writing witnesses and English readings
+
+Each object record credits the original artifact or scholarly transcription and carries its own source and rights. The bundled original-image records also give the creator, image source, local file, dimensions, and SHA-256. English translations credit their edition and translator, identify the extent included, and retain their own terms or excerpt notice. Reuse is governed by those item-level rights. [Writing corpus records](https://github.com/gavinfischer-keenan/americaspeoples/tree/refs/tags/v0.30.0/data/writing-examples) · [Collection method](docs/world-deep-dives.md#everyday-writing).
+
 ## d3-geo
 
 The ice display also uses d3-contour 4.0.2, Copyright 2012–2023 Mike Bostock, under the following ISC permission and disclaimer (also retained in the dependency's LICENSE).

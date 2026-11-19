@@ -1,0 +1,1126 @@
+{
+  "schemaVersion": 1,
+  "guides": [
+    {
+      "id": "world-everyday-writing",
+      "atlasIds": [
+        "africa",
+        "europe",
+        "asia-pacific"
+      ],
+      "category": "languages",
+      "title": "Everyday writing: receipts, complaints and ordinary lives",
+      "description": "Explore 87 paired originals and translations: food, animals, wages, deliveries, debts, quarrels and invitations across the ancient world and colonial Americas.",
+      "intro": "A missing tunic, a donkey sale, a demand for beer, a silk payroll. Written objects preserve practical concerns alongside monuments and royal histories. This collection places the original witness beside its English translation so that a small transaction can become a person’s story.",
+      "scope": "Ancient writing and separately dated colonial Indigenous American texts are brought together here. These are selected witnesses, not a ranking of the earliest languages or a claim that the same kinds of archives survive everywhere. The ordinary examples are searchable below; royal and ceremonial texts provide explicitly labeled comparisons.",
+      "map": {
+        "bounds": [
+          -120,
+          -25,
+          125,
+          60
+        ],
+        "scope": "Selected places represented in the collection, spanning Mediterranean papyri, Mesopotamian tablets, Chinese documents and Indigenous American writing. Points retain each example’s findspot or collection context. They do not draw a transmission route between scripts; unlocated witnesses remain unplotted.",
+        "points": [
+          {
+            "id": "meso-girsu-workers-children",
+            "label": "Girsu (Tello)",
+            "coordinates": [
+              46.18,
+              31.56
+            ],
+            "date": "About 2500–2340 BCE",
+            "description": "A barley allocation for women and children. The barley account sets out different allocations for groups attached to an institution. The tablet records their rations from the perspective of the people who managed the grain.",
+            "sources": [
+              "https://oracc.museum.upenn.edu/epsd2/admin/ed3b/P020116?cuneify"
+            ]
+          },
+          {
+            "id": "meso-umma-hired-workers",
+            "label": "Probably Umma (Tell Jokha)",
+            "coordinates": [
+              45.89,
+              31.67
+            ],
+            "date": "About 2042 BCE (museum dating)",
+            "description": "Barley wages for irrigation work. The record calculates how many working days it takes to clear grass and thornbush. It names a foreman, records the wage and bears a scribe’s seal. The sila was a measure of capacity.",
+            "sources": [
+              "https://www.metmuseum.org/art/collection/search/324536"
+            ]
+          },
+          {
+            "id": "meso-kanesh-donkey-drivers",
+            "label": "Probably Kaneš (Kültepe)",
+            "coordinates": [
+              35.63,
+              38.85
+            ],
+            "date": "About 20th–19th century BCE",
+            "description": "Don’t give the donkey drivers money. The merchant Puzur-Ashur orders his brothers to withhold money from his donkey drivers. The same letter concerns a family business dispute and travel companions reportedly detained on their way to Kaneš.",
+            "sources": [
+              "https://www.metmuseum.org/art/collection/search/325842"
+            ]
+          },
+          {
+            "id": "meso-dilbat-harvest-repayment",
+            "label": "Probably Dilbat",
+            "coordinates": [
+              44.467,
+              32.295
+            ],
+            "date": "About 1780 BCE (museum dating)",
+            "description": "Repaying a loan in barley at harvest. Two men received a loan of barley from a woman named Dan-erissa. The line quoted comes from the clause stipulating repayment on harvest day. Cylinder seals left impressions on the clay.",
+            "sources": [
+              "https://www.metmuseum.org/art/collection/search/321821"
+            ]
+          },
+          {
+            "id": "meso-p334041",
+            "label": "Nineveh (findspot)",
+            "coordinates": [
+              43.15,
+              36.36
+            ],
+            "date": "721–705 BCE",
+            "description": "Timber counted after a fire. The writer distinguishes beams by size and separates intact timber from the pieces damaged by fire.",
+            "sources": [
+              "https://oracc.museum.upenn.edu/saao/saa01/P334041?cuneify"
+            ]
+          },
+          {
+            "id": "egypt-heqanakht-rations",
+            "label": "Deir el-Bahri, western Thebes, Egypt",
+            "coordinates": [
+              32.606,
+              25.739
+            ],
+            "date": "ca. 1961–1917 BCE",
+            "description": "A father defends the household rations. A priest who managed agricultural income writes to his relatives after a poor Nile flood. The letter sets out reduced rations and how the grain is to be distributed.",
+            "sources": [
+              "https://www.metmuseum.org/art/collection/search/545446"
+            ]
+          },
+          {
+            "id": "egypt-keep-sihathor-off-list",
+            "label": "Valley of the Queens, western Thebes, Egypt",
+            "coordinates": [
+              32.591,
+              25.728
+            ],
+            "date": "Fifteenth century BCE, Eighteenth Dynasty",
+            "description": "Do not give one to Sihathor. The overseer of the treasury sends distribution instructions, probably concerning preparations for a burial. Damage to the surrounding lines leaves the precise item uncertain.",
+            "sources": [
+              "https://rivista.museoegizio.it/article/p-turin-provv-3581-an-eighteenth-dynasty-letter-from-the-valley-of-the-queens-in-context/"
+            ]
+          },
+          {
+            "id": "egypt-amarna-horses",
+            "label": "Tell el-Amarna, Egypt",
+            "coordinates": [
+              30.896,
+              27.645
+            ],
+            "date": "ca. 1347–1330 BCE",
+            "description": "Two horses sent to Egypt. Aššur-uballiṭ of Assyria sends an envoy and gifts to open relations with the Egyptian court. The letter was found in Egypt and records Akkadian.",
+            "sources": [
+              "https://www.metmuseum.org/art/collection/search/544695"
+            ]
+          },
+          {
+            "id": "egypt-strike-hungry",
+            "label": "Deir el-Medina, western Thebes, Egypt",
+            "coordinates": [
+              32.601,
+              25.728
+            ],
+            "date": "Twelfth century BCE, year 29 of Ramesses III",
+            "description": "Tomb workers leave their posts. The royal tomb crew stops work when food rations fall overdue. The scribe Amunnakht records the workers’ demand and the series of protests that followed.",
+            "sources": [
+              "https://commons.wikimedia.org/wiki/File:The_so-called_%27Strike_Papyrus%27_written_by_Amunnakht_-_Museo_Egizio_Turin_C_1880_p01.jpg"
+            ]
+          },
+          {
+            "id": "egypt-turin-map-houses",
+            "label": "Wadi Hammamat, Egypt (area depicted on the map)",
+            "coordinates": [
+              33.57,
+              25.98
+            ],
+            "date": "Twelfth century BCE, reign of Ramesses IV",
+            "description": "The houses of the goldworkers. A work map places goldworkers’ housing near routes, rock formations and a temple. The papyrus’s connection to Deir el-Medina is likely. The map marker represents the area depicted in the ancient drawing.",
+            "sources": [
+              "https://commons.wikimedia.org/wiki/File:Turin_Papyrus_(geological_map)_-_Museo_Egizio_Turin_C_1879_1969_1899_p01.jpg"
+            ]
+          },
+          {
+            "id": "greek-tm-28329",
+            "label": "Oxyrhynchos, Egypt",
+            "coordinates": [
+              30.65,
+              28.53
+            ],
+            "date": "176–200 CE (catalogue range)",
+            "description": "Paying donkeys and drivers to move hay. Animals, drivers and laborers appear together in an itemized cost calculation.",
+            "sources": [
+              "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28329.xml"
+            ]
+          },
+          {
+            "id": "greek-tm-28445",
+            "label": "Tebtynis (Arsinoites), Egypt",
+            "coordinates": [
+              30.76,
+              29.12
+            ],
+            "date": "101–200 CE (catalogue range)",
+            "description": "Four drachmas for rent. A small payment survives as a terse record rather than a personal narrative.",
+            "sources": [
+              "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28445.xml"
+            ]
+          },
+          {
+            "id": "maya-fresh-cacao-cup",
+            "label": "Northern Yucatán Peninsula, Mexico",
+            "coordinates": [
+              -89.96,
+              20.56
+            ],
+            "date": "600–900 CE",
+            "description": "A cup for fresh cacao. The next part of the label identifies the owner as a sajal, a member of the local nobility. The diagonal writing comes upright as the cup is tilted. The map points to the Oxkintok area, which the museum proposes as the likely region of this ceramic style.",
+            "sources": [
+              "https://www.metmuseum.org/art/collection/search/761272"
+            ]
+          },
+          {
+            "id": "maya-princeton-vase-chocolate",
+            "label": "Mirador Basin, Petén, Guatemala",
+            "coordinates": [
+              -89.73,
+              17.7
+            ],
+            "date": "670–750 CE",
+            "description": "A chocolate cup with its owner named. The rim dedicates the cup, gives the kind of chocolate it was meant to hold, and names its owner as Muwaan K’uk’. Below, a woman pours chocolate from one vessel to another to make it froth. The map shows the approximate Nakbé region where the museum places production.",
+            "sources": [
+              "https://artmuseum.princeton.edu/art/collections/objects/32221"
+            ]
+          },
+          {
+            "id": "nahuatl-codex-sierra-silk-payroll",
+            "label": "Santa Catalina Texupan, Mixteca Alta, Oaxaca, Mexico",
+            "coordinates": [
+              -97.468,
+              17.665
+            ],
+            "date": "1553 CE",
+            "description": "Forty-two pesos for work on silk. The community account places a painting of silk workers and signs for the amount alongside the Nahuatl entry and a total of 42 pesos. The map points to today’s Santiago Tejupan, near the historic community.",
+            "sources": [
+              "https://repositorioinstitucional.buap.mx/items/fb0bb6ab-0b54-4796-bbde-02a8598e3125/full"
+            ]
+          },
+          {
+            "id": "nahuatl-coyoacan-land-payment",
+            "label": "Santiago Xochac and the Coyoacán region, Mexico",
+            "coordinates": [
+              -99.16,
+              19.35
+            ],
+            "date": "1573 CE",
+            "description": "Ten pesos and four reales for a plot. Pedro de Santiago and Toribio Silvestre confirm receiving money for their land near the Xochimilco boundary. They say the proceeds paid for two high masses for their father. The marker is at Coyoacán, the regional reference point for the sale.",
+            "sources": [
+              "https://enl.wired-humanities.org/bc16/elements/bc16a/000"
+            ]
+          },
+          {
+            "id": "nahuatl-alvaro-butcher-land",
+            "label": "Apçolco, Coyoacán, Mexico",
+            "coordinates": [
+              -99.16,
+              19.35
+            ],
+            "date": "1575 CE",
+            "description": "Four pesos for the butcher’s land. In the document recording his sale of house and land to the Dominican vicar, Juan Alvaro lists who sold him the separate plots and the prices he paid. The marker is at Coyoacán, the wider town named in the record.",
+            "sources": [
+              "https://enl.wired-humanities.org/bc20/elements/bc20a/000"
+            ]
+          },
+          {
+            "id": "china-liye-brushes-ink",
+            "label": "Liye, ancient Qianling, Hunan, China",
+            "coordinates": [
+              109.295,
+              28.789
+            ],
+            "date": "Qin period, late third century BCE",
+            "description": "The brushes and ink you asked for. Xin writes to Lü Bo, acknowledges an earlier letter and sends the requested writing supplies with a courier named Shao.",
+            "sources": [
+              "https://brill.com/view/journals/bsms/8/1/article-p87_4.pdf"
+            ]
+          },
+          {
+            "id": "china-shuihudi-send-cash",
+            "label": "Shuihudi cemetery, Yunmeng County, Hubei, China (approximate locality)",
+            "coordinates": [
+              113.74,
+              31.023
+            ],
+            "date": "Qin period, late third century BCE",
+            "description": "Send cash and leave the summer clothes. While away from home, Heifu gets word to his family about what he needs. This line preserves the preference in plain terms. The letter’s carrier has not been established.",
+            "sources": [
+              "https://brill.com/view/journals/bsms/8/1/article-p87_4.pdf"
+            ]
+          },
+          {
+            "id": "china-xuanquan-traveler-messages",
+            "label": "Xuanquan Posthouse, Dunhuang, Gansu, China",
+            "coordinates": [
+              95.3294,
+              40.2647
+            ],
+            "date": "Han period, 206 BCE–220 CE",
+            "description": "A traveler brings several messages. Jian learns that Zhonggong is well through written messages carried by a traveler. The find comes from the Han postal station in the Dunhuang region.",
+            "sources": [
+              "https://brill.com/view/journals/bsms/8/1/article-p87_4.pdf"
+            ]
+          },
+          {
+            "id": "china-dunhuang-late-wine-fine",
+            "label": "Mogao Cave 17, near Dunhuang, Gansu, China",
+            "coordinates": [
+              94.804,
+              40.037
+            ],
+            "date": "886 CE, Late Tang",
+            "description": "Late for the feast, owe a beaker of wine. A local association asks its members to assemble near Jiejia Hermitage for an annual meeting and feast. The circular was passed among members, and a person who skipped the event entirely owed a larger fine.",
+            "sources": [
+              "https://shahon.org/wp-content/uploads/2010/02/She-association-circulars-from-Dunhuang.pdf"
+            ]
+          },
+          {
+            "id": "latin-londinium-merchandise-debt",
+            "label": "Walbrook, Roman Londinium, London, England",
+            "coordinates": [
+              -0.091,
+              51.513
+            ],
+            "date": "8 January 57 CE",
+            "description": "A debt of 105 denarii. Tibullus acknowledges a debt to Gratus for merchandise already sold and delivered. Both men were freedmen. The tablet preserves its date and the amount owed.",
+            "sources": [
+              "https://romaninscriptionsofbritain.org/inscriptions/TabLondBloomberg44"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "How to read the originals",
+          "paragraphs": [
+            {
+              "text": "Some originals are photographs of the surviving object. Others are published original-language transcriptions in modern type. A normalized sign view is an editorial reading, not a facsimile of the ancient hand. Notes identify those differences, damaged passages and editorial uncertainty. English excerpts are labeled as excerpts, with translator and edition beside them.",
+              "sources": [
+                "https://www.metmuseum.org/art/collection/search/761272",
+                "https://www.metmuseum.org/hubs/open-access"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Different archives, different lives",
+          "paragraphs": [
+            {
+              "text": "The collection preserves its dated local contexts. A colonial Nahuatl or Quechua document cannot serve as a direct window into an unchanged pre-contact society. A vessel label, an account, a letter and a legal narrative also record different kinds of action. Read the object description before treating a colorful line as evidence of a general custom.",
+              "sources": [
+                "https://www.metmuseum.org/art/collection/search/761272"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/761272",
+          "title": "The Met’s object record and reading"
+        },
+        {
+          "url": "https://www.metmuseum.org/hubs/open-access",
+          "title": "The Metropolitan Museum of Art — Open Access and CC0"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/316711",
+          "title": "The Met’s object record and reading"
+        },
+        {
+          "url": "https://www.metmuseum.org/perspectives/maya-drinking-cup",
+          "title": "James Doyle on Maya vessel labels"
+        },
+        {
+          "url": "https://artmuseum.princeton.edu/art/collections/objects/32221",
+          "title": "Princeton Vase object record, digital image, and reading"
+        },
+        {
+          "url": "https://artmuseum.princeton.edu/art/our-collections/image-use-and-access",
+          "title": "Princeton University Art Museum public-domain image policy"
+        },
+        {
+          "url": "https://repositorioinstitucional.buap.mx/items/fb0bb6ab-0b54-4796-bbde-02a8598e3125/full",
+          "title": "BUAP manuscript catalogue and public-domain rights statement"
+        },
+        {
+          "url": "https://repositorioinstitucional.buap.mx/server/api/core/bitstreams/d41bddd8-5554-498d-8ed3-a195679ad18d/content#page=9",
+          "title": "BUAP scan, page 9"
+        },
+        {
+          "url": "https://www.history21.com/wp-content/uploads/2022/12/Silk-Trade-2.4-Primary-Source-Sierra-texupan-codex-1.pdf#page=4",
+          "title": "Plate 9 excerpt and Terraciano’s translation"
+        },
+        {
+          "url": "https://www.oupress.com/9780806168470/codex-sierra/",
+          "title": "University of Oklahoma Press edition and translation"
+        },
+        {
+          "url": "https://enl.wired-humanities.org/bc16/elements/bc16a/000",
+          "title": "Early Nahuatl Library, Coyoacán land sale, folio a"
+        },
+        {
+          "url": "https://enl.wired-humanities.org/bc20/elements/bc20a/000",
+          "title": "Early Nahuatl Library, Juan Alvaro’s sale, folio a"
+        },
+        {
+          "url": "https://enl.wired-humanities.org/1607hask/elements/1607hask423v/000",
+          "title": "Early Nahuatl Library, María Ximénez’s testament, folio 423v"
+        },
+        {
+          "url": "https://enl.wired-humanities.org/bc04/elements/bc04c/000",
+          "title": "Early Nahuatl Library, Juan de Guzmán’s testament, folio c"
+        },
+        {
+          "url": "https://enl.wired-humanities.org/bc28/elements/bc28a/000",
+          "title": "Early Nahuatl Library, San Martín petition, first page"
+        },
+        {
+          "url": "https://enl.wired-humanities.org/bc17/elements/bc17c/000",
+          "title": "Early Nahuatl Library, Azcapotzalco land sale, page 3"
+        },
+        {
+          "url": "https://ticha.haverford.edu/en/texts/Tl675b/",
+          "title": "Ticha, facsimile and transcription of Sebastiana de Mendoza’s will"
+        },
+        {
+          "url": "https://doi.org/10.19130/iifl.tlalocan.2018.480",
+          "title": "Tlalocan, English translation and interlinear analysis"
+        },
+        {
+          "url": "https://www.academia.edu/38184447/The_Zapotec_Language_Testament_of_Sebastiana_de_Mendoza_c_1675_Munro_et_al_2018_",
+          "title": "Accessible copy of the Tlalocan article with its line-by-line English translation"
+        },
+        {
+          "url": "https://ticha.haverford.edu/en/text/Ma733/0/",
+          "title": "Ticha, facsimile, transcription, interlinear analysis, and translation of the Jiménez will"
+        },
+        {
+          "url": "https://escriturasvirreinales.wordpress.com/wp-content/uploads/2014/03/121103492-manuscrito-quechua-de-huarochiri.pdf",
+          "title": "Gérald Taylor’s original-spelling Quechua transcription, chapter 30"
+        },
+        {
+          "url": "https://www.ifea.org.pe/libreria/travaux/260/",
+          "title": "Publisher’s catalogue for Gerald Taylor’s paleographic edition"
+        },
+        {
+          "url": "https://www.jstor.org/stable/10.7560/730526",
+          "title": "Salomon and Urioste’s English translation, chapter 30"
+        },
+        {
+          "url": "https://dedenbachsalazar.de/?page_id=71",
+          "title": "Sabine Dedenbach-Salazar Sáenz on the Huarochirí manuscript’s date and Indigenous authorship"
+        },
+        {
+          "title": "Lü Jing, An Investigation of Private Letters in the Liye Qin Slips, translated by Georgijs Dunajevs, Bamboo and Silk 8 (2025)",
+          "url": "https://brill.com/view/journals/bsms/8/1/article-p87_4.pdf"
+        },
+        {
+          "title": "Hunan Provincial Government, Ancient City of Liye and the excavated Qin slips",
+          "url": "https://www.enghunan.gov.cn/hneng/Tourism/TourHunan/xiangxi_1/TouristAttractions_13/202004/t20200417_11958166.html"
+        },
+        {
+          "url": "https://www.researchgate.net/publication/390165186_An_Investigation_of_Private_Letters_in_the_Liye_Qin_Slips",
+          "title": "Lü Jing’s open-access full text, mirror of the peer-reviewed edition"
+        },
+        {
+          "title": "Thies Staack, Drafting, Copying, and Adding Notes, Bamboo and Silk 2 (2019), example 15",
+          "url": "https://brill.com/view/journals/bsms/2/2/article-p290_290.pdf"
+        },
+        {
+          "url": "https://www.academia.edu/38936644/_Drafting_Copying_and_Adding_Notes_On_the_Semantic_Field_of_Writing_as_Reflected_by_Qin_and_Early_Han_Legal_and_Administrative_Documents",
+          "title": "Thies Staack’s author-posted chapter copy"
+        },
+        {
+          "title": "Smithsonian Libraries, archaeological publication on the Qin tombs at Shuihudi, Yunmeng County",
+          "url": "https://www.si.edu/object/siris_sil_883344"
+        },
+        {
+          "title": "UNESCO World Heritage Centre, official maps for the Silk Roads route network and the Xuanquan Posthouse",
+          "url": "https://whc.unesco.org/en/list/1442/maps/"
+        },
+        {
+          "title": "Encyclopedia of China, Han wooden slips excavated at Gurendi, Zhangjiajie",
+          "url": "https://www.zgbk.com/ecph/words?ID=392570&SiteID=1&SubID=195619&Type=bkzyb"
+        },
+        {
+          "title": "Imre Galambos, She Association Circulars from Dunhuang, pp. 860–861, translation adapted from Lionel Giles",
+          "url": "https://shahon.org/wp-content/uploads/2010/02/She-association-circulars-from-Dunhuang.pdf"
+        },
+        {
+          "title": "International Dunhuang Programme, Late Tang association circular Or.8210/S.1453",
+          "url": "https://idp.bl.uk/discover/learning/dunhuang/dunhuang-articles/daily-life/entertainment-and-social-life/"
+        },
+        {
+          "title": "Roger S. O. Tomlin, Bloomberg London writing tablet 44",
+          "url": "https://romaninscriptionsofbritain.org/inscriptions/TabLondBloomberg44"
+        },
+        {
+          "title": "Roman Inscriptions of Britain, terms of use for texts and EpiDoc editions",
+          "url": "https://romaninscriptionsofbritain.org/about/terms-of-use"
+        },
+        {
+          "title": "Roger S. O. Tomlin, Bloomberg London writing tablet 45",
+          "url": "https://romaninscriptionsofbritain.org/inscriptions/TabLondBloomberg45"
+        },
+        {
+          "title": "Alan K. Bowman and J. David Thomas, Vindolanda ink tablet 628",
+          "url": "https://romaninscriptionsofbritain.org/inscriptions/TabVindol628"
+        },
+        {
+          "title": "Alan K. Bowman and J. David Thomas, Vindolanda ink tablet 346",
+          "url": "https://romaninscriptionsofbritain.org/inscriptions/TabVindol346"
+        },
+        {
+          "title": "Ancient Graffiti Project, Pompeii food and prices, AGP-EDR167574",
+          "url": "https://ancientgraffiti.org/Graffiti/graffito/AGP-EDR167574"
+        },
+        {
+          "title": "Ancient Graffiti Project, epigraphic conventions",
+          "url": "https://ancientgraffiti.org/about/main/epigraphic-conventions/"
+        },
+        {
+          "title": "Ancient Graffiti Project, Herculaneum baths food list, AGP-EDR154177",
+          "url": "https://ancientgraffiti.org/Graffiti/graffito/AGP-EDR154177"
+        },
+        {
+          "url": "https://assets.cambridge.org/97810090/74582/excerpt/9781009074582_excerpt.pdf",
+          "title": "James P. Allen, Heqanakht Letter II, quoted in Famine and Feast in Ancient Egypt"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/545446",
+          "title": "The Met, Heqanakht Letter II, accession 22.3.517"
+        },
+        {
+          "url": "https://tla.digital/object/VMCQMGHZXVFWXIHSQMJGRZAXX4",
+          "title": "Thesaurus Linguae Aegyptiae, Heqanakht Letter II"
+        },
+        {
+          "url": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+          "title": "The Met, Open Access policy"
+        },
+        {
+          "url": "https://rivista.museoegizio.it/article/p-turin-provv-3581-an-eighteenth-dynasty-letter-from-the-valley-of-the-queens-in-context/",
+          "title": "Kathrin Gabler and Daniel Soliman, the Valley of the Queens letter"
+        },
+        {
+          "url": "https://rivista.museoegizio.it/wp-content/themes/annotum-base/assets/pdf/Guidelines_for_authors.pdf",
+          "title": "Rivista del Museo Egizio, author guidelines and photo licensing"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/544695",
+          "title": "The Met, letter from Aššur-uballiṭ of Assyria to the king of Egypt"
+        },
+        {
+          "url": "https://resources.metmuseum.org/resources/metpublications/pdf/Cuneiform_Texts_in_The_Metropolitan_Museum_of_Art_Volume_I_Tablets_Cones_and_Bricks_of_the_Third_.pdf",
+          "title": "Cuneiform Texts in The Metropolitan Museum of Art, Volume I"
+        },
+        {
+          "url": "https://collezionepapiri.museoegizio.it/en-GB/section/Papyrus-Collection/History-and-content/Highlights-Turin-Strike-Papyrus/",
+          "title": "Museo Egizio, Strike Papyrus and its English exhibition translations"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:The_so-called_%27Strike_Papyrus%27_written_by_Amunnakht_-_Museo_Egizio_Turin_C_1880_p01.jpg",
+          "title": "Museo Egizio, CC0 photograph of the recto of the Strike Papyrus"
+        },
+        {
+          "url": "https://collezionepapiri.museoegizio.it/en-GB/document/9",
+          "title": "Juan José Archidona Ramírez, Turin mine map labels for Museo Egizio"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Turin_Papyrus_(geological_map)_-_Museo_Egizio_Turin_C_1879_1969_1899_p01.jpg",
+          "title": "Museo Egizio, CC0 photograph of the recto of the Turin mine map"
+        },
+        {
+          "url": "https://rivista.museoegizio.it/article/papyrus-turin-cat-1883-cat-2095-a-new-edition-of-an-already-known-papyrus/",
+          "title": "Martina Landrino, new edition of Turin Cat. 1883 + Cat. 2095"
+        },
+        {
+          "url": "https://www.attalus.org/egypt/rosettastone.html",
+          "title": "Carol Andrews, English translation of the Greek text, line 54"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:The_Rosetta_Stone.jpg",
+          "title": "Donald Macbeth, 1922 photograph of the Rosetta Stone"
+        },
+        {
+          "url": "https://www.britishmuseum.org/sites/default/files/2022-10/Hieroglyphs_unlocking_ancient_Egypt_large_print_guide_The_British_Museum.pdf",
+          "title": "British Museum, Hieroglyphs: Unlocking Ancient Egypt exhibition guide"
+        },
+        {
+          "url": "https://sais.webspace.durham.ac.uk/delta/rashid/",
+          "title": "Durham University, Survey of Ancient Inundation Systems fieldwork in Rashid"
+        },
+        {
+          "url": "https://rivista.museoegizio.it/article/a-demotic-receipt-for-the-cubit-tax-on-pigeon-houses-from-drytons-family-archive-turin-o-dem-suppl-12791-tm-44876/",
+          "title": "Mariantonietta Pascalicchio, a Demotic receipt for pigeon-house tax"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/473398",
+          "title": "Metropolitan Museum of Art, Coptic ostracon with a letter from Joseph"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/473404",
+          "title": "The Met, ostracon from Maria and Susanna to Panachora"
+        },
+        {
+          "url": "https://scholar.cu.edu.eg/sites/default/files/muf/files/ten_coptic_ostraca_at_the_ifao_bifao_119_2019_6.pdf",
+          "title": "Anne Boud’hors, Esther Garel and colleagues, Ten Coptic Ostraca at the IFAO"
+        },
+        {
+          "url": "https://petrieproject.com/book/egyptian-tales-1st-series-ivth-to-the-xiith-dynasty",
+          "title": "W. M. Flinders Petrie, Egyptian Tales, Khafra’s Tale"
+        },
+        {
+          "url": "https://www.gutenberg.org/ebooks/7386",
+          "title": "Project Gutenberg catalogue and public-domain identification, ebook 7386"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Papyrus_Berlin_3033_(columns_I-III)_(recto).tif",
+          "title": "Staatliche Museen zu Berlin, Westcar Papyrus, recto columns I–III"
+        },
+        {
+          "title": "DDbDP: original-language critical transcription",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28329.xml"
+        },
+        {
+          "title": "Published English translation supplied through Papyri.info",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/Translations/28/28329-1.xml"
+        },
+        {
+          "title": "HGV: provenance, date and publication metadata",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/HGV_meta_EpiDoc/HGV29/28329.xml"
+        },
+        {
+          "title": "Papyri.info: project, editions and editorial history",
+          "url": "https://papyri.info/docs/about"
+        },
+        {
+          "title": "DDbDP: original-language critical transcription",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28330.xml"
+        },
+        {
+          "title": "Published English translation supplied through Papyri.info",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/Translations/28/28330-1.xml"
+        },
+        {
+          "title": "HGV: provenance, date and publication metadata",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/HGV_meta_EpiDoc/HGV29/28330.xml"
+        },
+        {
+          "title": "DDbDP: original-language critical transcription",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28331.xml"
+        },
+        {
+          "title": "Published English translation supplied through Papyri.info",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/Translations/28/28331-1.xml"
+        },
+        {
+          "title": "HGV: provenance, date and publication metadata",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/HGV_meta_EpiDoc/HGV29/28331.xml"
+        },
+        {
+          "title": "DDbDP: original-language critical transcription",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28334.xml"
+        },
+        {
+          "title": "Published English translation supplied through Papyri.info",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/Translations/28/28334-1.xml"
+        },
+        {
+          "title": "HGV: provenance, date and publication metadata",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/HGV_meta_EpiDoc/HGV29/28334.xml"
+        },
+        {
+          "title": "DDbDP: original-language critical transcription",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28339.xml"
+        },
+        {
+          "title": "Published English translation supplied through Papyri.info",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/Translations/28/28339-1.xml"
+        },
+        {
+          "title": "HGV: provenance, date and publication metadata",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/HGV_meta_EpiDoc/HGV29/28339.xml"
+        },
+        {
+          "title": "DDbDP: original-language critical transcription",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28342.xml"
+        },
+        {
+          "title": "Published English translation supplied through Papyri.info",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/Translations/28/28342-1.xml"
+        },
+        {
+          "title": "HGV: provenance, date and publication metadata",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/HGV_meta_EpiDoc/HGV29/28342.xml"
+        },
+        {
+          "title": "DDbDP: original-language critical transcription",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28352.xml"
+        },
+        {
+          "title": "Published English translation supplied through Papyri.info",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/Translations/28/28352-1.xml"
+        },
+        {
+          "title": "HGV: provenance, date and publication metadata",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/HGV_meta_EpiDoc/HGV29/28352.xml"
+        },
+        {
+          "title": "DDbDP: original-language critical transcription",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28356.xml"
+        },
+        {
+          "title": "Published English translation supplied through Papyri.info",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/Translations/28/28356-1.xml"
+        },
+        {
+          "title": "HGV: provenance, date and publication metadata",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/HGV_meta_EpiDoc/HGV29/28356.xml"
+        },
+        {
+          "title": "DDbDP: original-language critical transcription",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28362.xml"
+        },
+        {
+          "title": "Published English translation supplied through Papyri.info",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/Translations/28/28362-1.xml"
+        },
+        {
+          "title": "HGV: provenance, date and publication metadata",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/HGV_meta_EpiDoc/HGV29/28362.xml"
+        },
+        {
+          "title": "DDbDP: original-language critical transcription",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28363.xml"
+        },
+        {
+          "title": "Published English translation supplied through Papyri.info",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/Translations/28/28363-1.xml"
+        },
+        {
+          "title": "HGV: provenance, date and publication metadata",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/HGV_meta_EpiDoc/HGV29/28363.xml"
+        },
+        {
+          "title": "DDbDP: original-language critical transcription",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28364.xml"
+        },
+        {
+          "title": "Published English translation supplied through Papyri.info",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/Translations/28/28364-1.xml"
+        },
+        {
+          "title": "HGV: provenance, date and publication metadata",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/HGV_meta_EpiDoc/HGV29/28364.xml"
+        },
+        {
+          "title": "DDbDP: original-language critical transcription",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28365.xml"
+        },
+        {
+          "title": "Published English translation supplied through Papyri.info",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/Translations/28/28365-1.xml"
+        },
+        {
+          "title": "HGV: provenance, date and publication metadata",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/HGV_meta_EpiDoc/HGV29/28365.xml"
+        },
+        {
+          "title": "DDbDP: original-language critical transcription",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28367.xml"
+        },
+        {
+          "title": "Published English translation supplied through Papyri.info",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/Translations/28/28367-1.xml"
+        },
+        {
+          "title": "HGV: provenance, date and publication metadata",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/HGV_meta_EpiDoc/HGV29/28367.xml"
+        },
+        {
+          "title": "DDbDP: original-language critical transcription",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28405.xml"
+        },
+        {
+          "title": "Published English translation supplied through Papyri.info",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/Translations/28/28405-1.xml"
+        },
+        {
+          "title": "HGV: provenance, date and publication metadata",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/HGV_meta_EpiDoc/HGV29/28405.xml"
+        },
+        {
+          "title": "DDbDP: original-language critical transcription",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28410.xml"
+        },
+        {
+          "title": "Published English translation supplied through Papyri.info",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/Translations/28/28410-1.xml"
+        },
+        {
+          "title": "HGV: provenance, date and publication metadata",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/HGV_meta_EpiDoc/HGV29/28410.xml"
+        },
+        {
+          "title": "DDbDP: original-language critical transcription",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28445.xml"
+        },
+        {
+          "title": "Published English translation supplied through Papyri.info",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/Translations/28/28445-1.xml"
+        },
+        {
+          "title": "HGV: provenance, date and publication metadata",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/HGV_meta_EpiDoc/HGV29/28445.xml"
+        },
+        {
+          "title": "DDbDP: original-language critical transcription",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28535.xml"
+        },
+        {
+          "title": "Published English translation supplied through Papyri.info",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/Translations/28/28535-1.xml"
+        },
+        {
+          "title": "HGV: provenance, date and publication metadata",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/HGV_meta_EpiDoc/HGV29/28535.xml"
+        },
+        {
+          "title": "DDbDP: original-language critical transcription",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28541.xml"
+        },
+        {
+          "title": "Published English translation supplied through Papyri.info",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/Translations/28/28541-1.xml"
+        },
+        {
+          "title": "HGV: provenance, date and publication metadata",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/HGV_meta_EpiDoc/HGV29/28541.xml"
+        },
+        {
+          "title": "DDbDP: original-language critical transcription",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28901.xml"
+        },
+        {
+          "title": "Published English translation supplied through Papyri.info",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/Translations/28/28901-1.xml"
+        },
+        {
+          "title": "HGV: provenance, date and publication metadata",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/HGV_meta_EpiDoc/HGV29/28901.xml"
+        },
+        {
+          "title": "DDbDP: original-language critical transcription",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28912.xml"
+        },
+        {
+          "title": "Published English translation supplied through Papyri.info",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/Translations/28/28912-1.xml"
+        },
+        {
+          "title": "HGV: provenance, date and publication metadata",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/HGV_meta_EpiDoc/HGV29/28912.xml"
+        },
+        {
+          "title": "DDbDP: original-language critical transcription",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28913.xml"
+        },
+        {
+          "title": "Published English translation supplied through Papyri.info",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/Translations/28/28913-1.xml"
+        },
+        {
+          "title": "HGV: provenance, date and publication metadata",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/HGV_meta_EpiDoc/HGV29/28913.xml"
+        },
+        {
+          "title": "DDbDP: original-language critical transcription",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28933.xml"
+        },
+        {
+          "title": "Published English translation supplied through Papyri.info",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/Translations/28/28933-1.xml"
+        },
+        {
+          "title": "HGV: provenance, date and publication metadata",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/HGV_meta_EpiDoc/HGV29/28933.xml"
+        },
+        {
+          "title": "DDbDP: original-language critical transcription",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28994.xml"
+        },
+        {
+          "title": "Published English translation supplied through Papyri.info",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/Translations/28/28994-1.xml"
+        },
+        {
+          "title": "HGV: provenance, date and publication metadata",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/HGV_meta_EpiDoc/HGV29/28994.xml"
+        },
+        {
+          "title": "DDbDP: original-language critical transcription",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28995.xml"
+        },
+        {
+          "title": "Published English translation supplied through Papyri.info",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/Translations/28/28995-1.xml"
+        },
+        {
+          "title": "HGV: provenance, date and publication metadata",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/HGV_meta_EpiDoc/HGV29/28995.xml"
+        },
+        {
+          "title": "DDbDP: original-language critical transcription",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/DDbDP/28/28998.xml"
+        },
+        {
+          "title": "Published English translation supplied through Papyri.info",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/Translations/28/28998-1.xml"
+        },
+        {
+          "title": "HGV: provenance, date and publication metadata",
+          "url": "https://raw.githubusercontent.com/papyri/idp.data/master/HGV_meta_EpiDoc/HGV29/28998.xml"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/epsd2/admin/ed3b/P020116",
+          "title": "ePSD2 — edition of VAT 04643"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/epsd2/admin/ed3b/P020116?cuneify",
+          "title": "Oracc — cuneiform sign view"
+        },
+        {
+          "url": "https://cdli.earth/artifacts/20116",
+          "title": "Cuneiform Digital Library Initiative — artifact record and reading"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/doc/about/aboutoracc/",
+          "title": "Oracc — reuse of project editions"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/324536",
+          "title": "The Metropolitan Museum of Art — object record"
+        },
+        {
+          "url": "https://cdli.earth/artifacts/108716",
+          "title": "Cuneiform Digital Library Initiative — artifact record"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/325842",
+          "title": "The Metropolitan Museum of Art — object record"
+        },
+        {
+          "url": "https://cdli.earth/artifacts/273578",
+          "title": "Cuneiform Digital Library Initiative — artifact record"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/321821",
+          "title": "The Metropolitan Museum of Art — object record"
+        },
+        {
+          "title": "Oracc Geographical Names — Dilbat (Tell ed-Deilam)",
+          "url": "https://oracc.museum.upenn.edu/geonames/cbd/qpn/D.html"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa01/P334041",
+          "title": "State Archives of Assyria Online — SAA 01 100. Counting Timber after a Fire (ABL 0092)"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa01/P334041?cuneify",
+          "title": "Oracc cuneiform sign view — P334041"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa01/P334334",
+          "title": "State Archives of Assyria Online — SAA 01 067. The Bathroom of the Hilanu Palace (ABL 0487)"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa01/P334334?cuneify",
+          "title": "Oracc cuneiform sign view — P334334"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa05/P313628",
+          "title": "State Archives of Assyria Online — SAA 05 026. No Water in the River (CT 53 213)"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa05/P313628?cuneify",
+          "title": "Oracc cuneiform sign view — P313628"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa06/P334986",
+          "title": "State Archives of Assyria Online — SAA 06 036. Šumma-ilani Loans Silver for 50 Percent Interest (695-I-12) (ADD 0034)"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa06/P334986?cuneify",
+          "title": "Oracc cuneiform sign view — P334986"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa06/P335010",
+          "title": "State Archives of Assyria Online — SAA 06 081. Addati, Harem Governess, Lends Two Minas of Silver (694-VIII-1) (ADD 0058)"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa06/P335010?cuneify",
+          "title": "Oracc cuneiform sign view — P335010"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa06/P335066",
+          "title": "State Archives of Assyria Online — SAA 06 323. Remanni-Adad Loans Silver, 75 Rams, and a Heifer (664-X-25) (ADD 0115)"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa06/P335066?cuneify",
+          "title": "Oracc cuneiform sign view — P335066"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa07/P335620",
+          "title": "State Archives of Assyria Online — SAA 07 142. Bread and Beer to Various Personnel (ADD 0757)"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa07/P335620?cuneify",
+          "title": "Oracc cuneiform sign view — P335620"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa07/P335911",
+          "title": "State Archives of Assyria Online — SAA 07 130. Various Foods from Officials to the Lady of the House (ADD 1104)"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa07/P335911?cuneify",
+          "title": "Oracc cuneiform sign view — P335911"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa07/P335924",
+          "title": "State Archives of Assyria Online — SAA 07 143. Daily Record of Bread Received (ADD 1127)"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa07/P335924?cuneify",
+          "title": "Oracc cuneiform sign view — P335924"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa13/P334153",
+          "title": "State Archives of Assyria Online — SAA 13 145. The Temple Weavers are Behind on their Quota (ABL 0209)"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa13/P334153?cuneify",
+          "title": "Oracc cuneiform sign view — P334153"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa13/P334438",
+          "title": "State Archives of Assyria Online — SAA 13 133. A Faulty Offering Sheep (ABL 0634)"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa13/P334438?cuneify",
+          "title": "Oracc cuneiform sign view — P334438"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa13/P334484",
+          "title": "State Archives of Assyria Online — SAA 13 084. Report of Arrival of Horses: Nisan 6 (ABL 0686)"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa13/P334484?cuneify",
+          "title": "Oracc cuneiform sign view — P334484"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa14/P224948",
+          "title": "State Archives of Assyria Online — SAA 14 428. Inurta-šarru-uṣur Lends Donkey Legs (*626-I) (TIM 11 05)"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa14/P224948?cuneify",
+          "title": "Oracc cuneiform sign view — P224948"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa14/P224962",
+          "title": "State Archives of Assyria Online — SAA 14 439. Delivery Contract for a Donkey Mare (656-VI-1) (TIM 11 19)"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa14/P224962?cuneify",
+          "title": "Oracc cuneiform sign view — P224962"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa14/P335269",
+          "title": "State Archives of Assyria Online — SAA 14 040. Kakkullanu Buys His Neighbour’s House in Nineveh (*625-III-17) (ADD 0325)"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa14/P335269?cuneify",
+          "title": "Oracc cuneiform sign view — P335269"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa16/P313428",
+          "title": "State Archives of Assyria Online — SAA 16 040. Complaints by Blacksmiths (CT 53 013)"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa16/P313428?cuneify",
+          "title": "Oracc cuneiform sign view — P313428"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa16/P313566",
+          "title": "State Archives of Assyria Online — SAA 16 088. Donkey Trade at Nineveh (CT 53 151)"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa16/P313566?cuneify",
+          "title": "Oracc cuneiform sign view — P313566"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa16/P334221",
+          "title": "State Archives of Assyria Online — SAA 16 026. Doctor for a Sick Maid (ABL 0341)"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa16/P334221?cuneify",
+          "title": "Oracc cuneiform sign view — P334221"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa16/P334816",
+          "title": "State Archives of Assyria Online — SAA 16 065. Divination Taught to a Goldsmith’s Son (ABL 1245)"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa16/P334816?cuneify",
+          "title": "Oracc cuneiform sign view — P334816"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa18/P334274",
+          "title": "State Archives of Assyria Online — SAA 18 001. Dressing down the ‘Non-Babylonians’ (ABL 0403)"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa18/P334274?cuneify",
+          "title": "Oracc cuneiform sign view — P334274"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa01/P334520",
+          "title": "State Archives of Assyria Online — SAA 01 036. Floods in Central Assyria (ABL 0731)"
+        },
+        {
+          "url": "https://oracc.museum.upenn.edu/saao/saa01/P334520?cuneify",
+          "title": "Oracc cuneiform sign view — P334520"
+        }
+      ],
+      "relatedGuideIds": [
+        "world-egyptian-writing",
+        "world-rosetta-stone",
+        "world-mesopotamian-writing",
+        "world-dead-sea-scrolls",
+        "world-roman-cities",
+        "world-confucian-traditions"
+      ]
+    }
+  ]
+}

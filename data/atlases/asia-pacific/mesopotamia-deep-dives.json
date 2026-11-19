@@ -1,0 +1,496 @@
+{
+  "schemaVersion": 1,
+  "guides": [
+    {
+      "id": "world-mesopotamian-writing",
+      "atlasIds": [
+        "asia-pacific",
+        "europe"
+      ],
+      "category": "subjects",
+      "title": "Mesopotamia and the lives written on clay",
+      "description": "Follow cuneiform across the Tigris and Euphrates, from early accounts at Uruk to merchants’ letters, school exercises and the collections at Nineveh.",
+      "intro": "Someone counted barley. Someone borrowed silver. A pupil copied the signs on the other side of a clay tablet. These objects record the work of people who rarely appear by name in monuments, as well as the ambitions of the merchants, officials and kings who employed scribes.",
+      "scope": "Selected writing sites in the Tigris and Euphrates river systems and connected sites in Anatolia and Iran, from the late fourth millennium BCE through the first millennium BCE. Dates are approximate unless a specific year is given.",
+      "map": {
+        "bounds": [
+          32,
+          28,
+          50.8,
+          41.5
+        ],
+        "scope": "Approximate locations of excavation sites, cities and an inscription on modern terrain. River channels and the Gulf shoreline have shifted since antiquity.",
+        "points": [
+          {
+            "id": "uruk",
+            "label": "Uruk (Warka)",
+            "coordinates": [
+              45.64,
+              31.32
+            ],
+            "date": "Late fourth millennium BCE",
+            "description": "Early tablets preserve numerical and commodity signs. Some of the signs can be identified even where the language remains uncertain.",
+            "sources": [
+              "https://www.metmuseum.org/essays/the-origins-of-writing",
+              "https://www.metmuseum.org/art/collection/search/327385",
+              "https://whc.unesco.org/en/list/1481/"
+            ]
+          },
+          {
+            "id": "girsu",
+            "label": "Girsu (Tello), in the state of Lagash",
+            "coordinates": [
+              46.18,
+              31.56
+            ],
+            "date": "About 2500–2340 BCE",
+            "description": "A large administrative tablet lists barley rations, including allocations associated with women, children and enslaved people.",
+            "sources": [
+              "https://cdli.earth/artifacts/20116"
+            ]
+          },
+          {
+            "id": "umma",
+            "label": "Umma (Tell Jokha)",
+            "coordinates": [
+              45.89,
+              31.67
+            ],
+            "date": "About 2100–2000 BCE",
+            "description": "Administrative records distinguish tasks such as ploughing and harrowing, and list grain and bread rations.",
+            "sources": [
+              "https://cdli.earth/publications/153533"
+            ]
+          },
+          {
+            "id": "ur",
+            "label": "Ur (Tell el-Muqayyar)",
+            "coordinates": [
+              46.1,
+              30.96
+            ],
+            "date": "Early second millennium BCE",
+            "description": "School tablets from Ur and neighbouring cities help reconstruct how scribes learned signs, vocabulary and record keeping.",
+            "sources": [
+              "https://oracc.museum.upenn.edu/obmc/oldbabylonianschool/index.html",
+              "https://whc.unesco.org/en/list/1481/"
+            ]
+          },
+          {
+            "id": "nippur",
+            "label": "Nippur",
+            "coordinates": [
+              45.23,
+              32.13
+            ],
+            "date": "Early second millennium BCE",
+            "description": "Groups of tablets from houses include model contracts and exercises in signs, words and literature.",
+            "sources": [
+              "https://oracc.museum.upenn.edu/obmc/oldbabylonianschool/index.html",
+              "https://oracc.museum.upenn.edu/obmc/oldbabylonianmodelcontracts/"
+            ]
+          },
+          {
+            "id": "babylon",
+            "label": "Babylon",
+            "coordinates": [
+              44.42,
+              32.54
+            ],
+            "date": "Early second millennium BCE onward",
+            "description": "Babylon was a political centre through many periods of cuneiform use, including the rule of Hammurabi.",
+            "sources": [
+              "https://whc.unesco.org/en/list/278/",
+              "https://www.metmuseum.org/essays/the-isin-larsa-and-old-babylonian-periods-2004-1595-b-c"
+            ]
+          },
+          {
+            "id": "ashur",
+            "label": "Ashur (Qal’at Sherqat)",
+            "coordinates": [
+              43.26,
+              35.46
+            ],
+            "date": "Early second millennium BCE",
+            "description": "Merchants from this Tigris city carried cuneiform correspondence, commercial practices and clay sealing to trading settlements in Anatolia.",
+            "sources": [
+              "https://whc.unesco.org/en/list/1130/",
+              "https://www.metmuseum.org/essays/the-old-assyrian-period"
+            ]
+          },
+          {
+            "id": "kanesh",
+            "label": "Kaneš (Kültepe)",
+            "coordinates": [
+              35.63,
+              38.85
+            ],
+            "date": "Early second millennium BCE",
+            "description": "Household archives in the lower town preserve loans, letters and lawsuits from the Old Assyrian trading network.",
+            "sources": [
+              "https://www.metmuseum.org/essays/the-old-assyrian-period",
+              "https://www.metmuseum.org/art/collection/search/325846"
+            ]
+          },
+          {
+            "id": "nineveh",
+            "label": "Nineveh (Kuyunjik, Mosul)",
+            "coordinates": [
+              43.15,
+              36.36
+            ],
+            "date": "Seventh century BCE",
+            "description": "Tablets and fragments from multiple collections include copies commissioned or acquired by Ashurbanipal.",
+            "sources": [
+              "https://oracc.museum.upenn.edu/asbp/rlasb/AssemblingtheLibrary/index.html",
+              "https://oracc.museum.upenn.edu/asbp/rlasb/Project/index.html"
+            ]
+          },
+          {
+            "id": "bisotun",
+            "label": "Bisotun (Behistun)",
+            "coordinates": [
+              47.44,
+              34.39
+            ],
+            "date": "About 520 BCE",
+            "description": "Darius I’s cliff inscription presents royal accounts in Old Persian, Elamite and Babylonian. Comparing versions helped nineteenth-century decipherers.",
+            "sources": [
+              "https://whc.unesco.org/en/list/1222/",
+              "https://www.iranicaonline.org/articles/rawlinson-ii/"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "From counters and signs to writing",
+          "paragraphs": [
+            {
+              "text": "The earliest large group of surviving clay records in southern Mesopotamia comes from Uruk in the late fourth millennium BCE. Tablets marked with numerals and signs recorded commodities such as grain. The system is called proto-cuneiform. Many signs probably denoted goods, quantities or officials, but readings of individual signs and the language underlying the earliest records remain uncertain. One tablet attributed to Uruk appears to account for malt and barley groats.",
+              "sources": [
+                "https://www.metmuseum.org/essays/the-origins-of-writing",
+                "https://www.metmuseum.org/art/collection/search/327385"
+              ]
+            },
+            {
+              "text": "Scribes increasingly impressed the tips of their styluses into moist clay, leaving the wedges that give cuneiform its name. Signs could represent words, syllables or categories such as divine names. Sumerian and Akkadian are different languages that used cuneiform. Akkadian also had varieties, including the Assyrian and Babylonian forms found in letters and records from different regions and centuries.",
+              "sources": [
+                "https://www.metmuseum.org/essays/the-origins-of-writing",
+                "https://oracc.museum.upenn.edu/dcclt/intro/lexical_intro.html",
+                "https://www.metmuseum.org/essays/the-old-assyrian-period",
+                "https://whc.unesco.org/en/list/1222/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Counting work, equipment and food",
+          "paragraphs": [
+            {
+              "text": "The cities of the lower Tigris and Euphrates grew in a landscape of channels and wetlands. Their institutions collected and issued goods, and the accounts show what administrators chose to measure. One early tablet records individual allocations of copper knives. A Girsu tablet calculates categories of barley rations, including those assigned to enslaved women and children. Later accounts from Umma record barley and bread for female workers and their sons, or distinguish labour spent ploughing and harrowing fields. Such records tell us more about how institutions assigned work and provisions than about how recipients experienced it.",
+              "sources": [
+                "https://whc.unesco.org/en/list/1481/",
+                "https://www.metmuseum.org/art/collection/search/325500",
+                "https://cdli.earth/artifacts/20116",
+                "https://cdli.earth/publications/153533"
+              ]
+            },
+            {
+              "text": "Work could also be counted in days. A tablet attributed to Umma calculates the time needed to clear grass and thornbush and sets barley wages for hired workers. It names a foreman and identifies a scribe through a cylinder seal. The account ties a particular field, a work schedule and a rate of pay together on a tablet that fits in one hand.",
+              "sources": [
+                "https://www.metmuseum.org/art/collection/search/324536",
+                "https://resources.metmuseum.org/resources/metpublications/pdf/Cuneiform_Texts_in_The_Metropolitan_Museum_of_Art_Volume_I_Tablets_Cones_and_Bricks_of_the_Third_.pdf",
+                "https://cdli.earth/artifacts/20116"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Merchants, households and disputes",
+          "paragraphs": [
+            {
+              "text": "In the early second millennium BCE, merchants based in Ashur traded with communities across Anatolia. At Kaneš, a major trading centre, merchants’ archives contain loans, commercial memoranda and letters to business partners and family members. Caravans carried tin and textiles. Clay letters carried questions and orders. For some documents, seals impressed on a clay envelope identified participants or witnesses. Opening the envelope exposed the tablet inside.",
+              "sources": [
+                "https://www.metmuseum.org/essays/the-old-assyrian-period",
+                "https://www.metmuseum.org/art/collection/search/325846"
+              ]
+            },
+            {
+              "text": "Two merchants in a lawsuit from Kaneš each claimed a private archive and accused the other of stealing its contents. The documents and cylinder seals inside were worth fighting over, and some tablets had been entrusted to the archive by other people. A household’s clay records could establish debts, transactions and claims long after the goods had moved on. The surviving text records testimony and a request to transfer the case to Ashur. The outcome remains unknown.",
+              "sources": [
+                "https://www.metmuseum.org/art/collection/search/325846"
+              ]
+            },
+            {
+              "text": "Centuries later, records found at Nineveh preserve other kinds of business. A delivery contract lists what is due if the recipient never receives a promised donkey mare and her young. In a separate letter, blacksmiths list what they have delivered and explain that they have run out of firewood. The contract sets terms in advance. The letter documents an obstacle the workers wanted someone in authority to address.",
+              "sources": [
+                "https://oracc.museum.upenn.edu/saao/saa14/P224962",
+                "https://oracc.museum.upenn.edu/saao/saa16/P313428"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "How a scribe learned",
+          "paragraphs": [
+            {
+              "text": "A small round exercise tablet preserves a teacher’s model on one face and a pupil’s practice on the other. More advanced exercises from Nippur and other cities included word lists, metrology and sample contracts before students copied literary compositions. Model contracts taught the language of loans, leases, marriages and other transactions. A contract on a school tablet may therefore be evidence of instruction, even when its formula resembles a real agreement.",
+              "sources": [
+                "https://oracc.museum.upenn.edu/obmc/oldbabylonianschool/index.html",
+                "https://www.metmuseum.org/art/collection/search/321878",
+                "https://oracc.museum.upenn.edu/obmc/oldbabylonianmodelcontracts/",
+                "https://oracc.museum.upenn.edu/dcclt/intro/lexical_intro.html"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Libraries and the survival of stories",
+          "paragraphs": [
+            {
+              "text": "Cuneiform preserved proverbs, incantations, reports and literature alongside everyday documents. Akkadian poems about Gilgamesh and stories about a great flood are attested in the Old Babylonian period. Much later, Ashurbanipal acquired and copied texts for royal collections at Nineveh. Short scribal notes called colophons can identify ownership or link a tablet to a particular collection. Other collections belonged to temples or private individuals. At Nineveh, nineteenth-century excavations recovered many fragments whose exact findspots were rarely recorded.",
+              "sources": [
+                "https://www.metmuseum.org/essays/the-isin-larsa-and-old-babylonian-periods-2004-1595-b-c",
+                "https://oracc.museum.upenn.edu/asbp/rlasb/AssemblingtheLibrary/index.html",
+                "https://oracc.museum.upenn.edu/asbp/rlasb/Project/index.html",
+                "https://ccp.yale.edu/introduction/cities-and-libraries"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Reading the wedges again",
+          "paragraphs": [
+            {
+              "text": "Darius I’s inscription at Bisotun presents related accounts of his rise to power in Old Persian, Elamite and Babylonian. In the nineteenth century, scholars including Henry Rawlinson and Edward Hincks tested readings of cuneiform against multiple texts. In 1857, a comparison of independently prepared translations of an Assyrian inscription helped establish that the methods worked. Faded signs, broken edges and uncertain names still produce different readings. A translator’s brackets often identify words lost or restored rather than intact writing.",
+              "sources": [
+                "https://whc.unesco.org/en/list/1222/",
+                "https://www.iranicaonline.org/articles/rawlinson-ii/",
+                "https://oracc.museum.upenn.edu/asbp/rlasb/Project/index.html"
+              ]
+            },
+            {
+              "text": "Clay can survive where other writing materials decay. Some archives, including houses at Kaneš, were preserved by destruction and fire. Archaeologists and conservators document findspots, photograph each surface and sometimes scan tablet fragments or sealed clay envelopes. Digital catalogues let readers trace an edition to the object and compare different readings. An image presents the marks on an object. A transliteration identifies signs using another writing system, and a translation offers an interpretation of the text.",
+              "sources": [
+                "https://www.metmuseum.org/art/collection/search/325846",
+                "https://www.britishmuseum.org/sites/default/files/2022-11/Scientific_Research_newsletter_Issue_4_2018.pdf",
+                "https://cdli.earth/terms-of-use",
+                "https://oracc.museum.upenn.edu/dcclt/intro/lexical_intro.html"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Dates and surviving records",
+          "paragraphs": [],
+          "columns": [
+            "Date",
+            "Record or development"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Late fourth millennium BCE",
+                "Early accounts at Uruk record commodities with proto-cuneiform signs."
+              ],
+              "sources": [
+                "https://www.metmuseum.org/essays/the-origins-of-writing",
+                "https://www.metmuseum.org/art/collection/search/327385"
+              ]
+            },
+            {
+              "cells": [
+                "About 2500–2340 BCE",
+                "A Girsu barley account sorts rations into groups."
+              ],
+              "sources": [
+                "https://cdli.earth/artifacts/20116"
+              ]
+            },
+            {
+              "cells": [
+                "About 2100–2000 BCE",
+                "Umma accounts document work and provisions under the Third Dynasty of Ur."
+              ],
+              "sources": [
+                "https://cdli.earth/publications/153533"
+              ]
+            },
+            {
+              "cells": [
+                "Early second millennium BCE",
+                "Household archives at Kaneš preserve Old Assyrian merchant correspondence and transactions."
+              ],
+              "sources": [
+                "https://www.metmuseum.org/essays/the-old-assyrian-period",
+                "https://www.metmuseum.org/art/collection/search/325846"
+              ]
+            },
+            {
+              "cells": [
+                "Early second millennium BCE",
+                "Exercises from Nippur reveal a sequence of scribal instruction."
+              ],
+              "sources": [
+                "https://oracc.museum.upenn.edu/obmc/oldbabylonianschool/index.html",
+                "https://oracc.museum.upenn.edu/dcclt/intro/lexical_intro.html"
+              ]
+            },
+            {
+              "cells": [
+                "Seventh century BCE",
+                "Ashurbanipal assembles collections at Nineveh."
+              ],
+              "sources": [
+                "https://oracc.museum.upenn.edu/asbp/rlasb/AssemblingtheLibrary/index.html",
+                "https://oracc.museum.upenn.edu/asbp/rlasb/Project/index.html"
+              ]
+            },
+            {
+              "cells": [
+                "About 520 BCE",
+                "Darius I’s multilingual inscription is carved at Bisotun."
+              ],
+              "sources": [
+                "https://whc.unesco.org/en/list/1222/"
+              ]
+            },
+            {
+              "cells": [
+                "1857 CE",
+                "Independent translations of an Assyrian inscription are compared."
+              ],
+              "sources": [
+                "https://www.iranicaonline.org/articles/rawlinson-ii/"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "The Metropolitan Museum of Art — The Origins of Writing",
+          "url": "https://www.metmuseum.org/essays/the-origins-of-writing"
+        },
+        {
+          "title": "The Metropolitan Museum of Art — Account Concerning Malt and Barley Groats",
+          "url": "https://www.metmuseum.org/art/collection/search/327385"
+        },
+        {
+          "title": "UNESCO World Heritage Centre — The Ahwar of Southern Iraq",
+          "url": "https://whc.unesco.org/en/list/1481/"
+        },
+        {
+          "title": "The Metropolitan Museum of Art — Distribution of Copper Knives",
+          "url": "https://www.metmuseum.org/art/collection/search/325500"
+        },
+        {
+          "title": "Cuneiform Digital Library Initiative — Girsu Barley Account VAT 04643",
+          "url": "https://cdli.earth/artifacts/20116"
+        },
+        {
+          "title": "Cuneiform Digital Library Initiative — Neo-Sumerian Administrative Texts from Umma",
+          "url": "https://cdli.earth/publications/153533"
+        },
+        {
+          "title": "UNESCO World Heritage Centre — Ashur (Qal’at Sherqat)",
+          "url": "https://whc.unesco.org/en/list/1130/"
+        },
+        {
+          "title": "The Metropolitan Museum of Art — The Old Assyrian Period",
+          "url": "https://www.metmuseum.org/essays/the-old-assyrian-period"
+        },
+        {
+          "title": "The Metropolitan Museum of Art — Record of a Lawsuit",
+          "url": "https://www.metmuseum.org/art/collection/search/325846"
+        },
+        {
+          "title": "Open Richly Annotated Cuneiform Corpus — The Old Babylonian School",
+          "url": "https://oracc.museum.upenn.edu/obmc/oldbabylonianschool/index.html"
+        },
+        {
+          "title": "The Metropolitan Museum of Art — Student Exercise Tablet",
+          "url": "https://www.metmuseum.org/art/collection/search/321878"
+        },
+        {
+          "title": "Open Richly Annotated Cuneiform Corpus — Old Babylonian Model Contracts",
+          "url": "https://oracc.museum.upenn.edu/obmc/oldbabylonianmodelcontracts/"
+        },
+        {
+          "title": "Digital Corpus of Cuneiform Lexical Texts — Lexical Introduction",
+          "url": "https://oracc.museum.upenn.edu/dcclt/intro/lexical_intro.html"
+        },
+        {
+          "title": "UNESCO World Heritage Centre — Babylon",
+          "url": "https://whc.unesco.org/en/list/278/"
+        },
+        {
+          "title": "The Metropolitan Museum of Art — The Isin-Larsa and Old Babylonian Periods",
+          "url": "https://www.metmuseum.org/essays/the-isin-larsa-and-old-babylonian-periods-2004-1595-b-c"
+        },
+        {
+          "title": "British Museum and LMU Munich — Assembling the Library",
+          "url": "https://oracc.museum.upenn.edu/asbp/rlasb/AssemblingtheLibrary/index.html"
+        },
+        {
+          "title": "British Museum and LMU Munich — Reading the Library of Ashurbanipal",
+          "url": "https://oracc.museum.upenn.edu/asbp/rlasb/Project/index.html"
+        },
+        {
+          "title": "Yale Cuneiform Commentaries Project — Cities and Libraries",
+          "url": "https://ccp.yale.edu/introduction/cities-and-libraries"
+        },
+        {
+          "title": "UNESCO World Heritage Centre — Bisotun",
+          "url": "https://whc.unesco.org/en/list/1222/"
+        },
+        {
+          "title": "Encyclopaedia Iranica — Rawlinson’s Contributions to Assyriology",
+          "url": "https://www.iranicaonline.org/articles/rawlinson-ii/"
+        },
+        {
+          "title": "British Museum — Scientific Research Newsletter, Issue 4",
+          "url": "https://www.britishmuseum.org/sites/default/files/2022-11/Scientific_Research_newsletter_Issue_4_2018.pdf"
+        },
+        {
+          "title": "Cuneiform Digital Library Initiative — Terms and Scope of the Archive",
+          "url": "https://cdli.earth/terms-of-use"
+        },
+        {
+          "title": "The Metropolitan Museum of Art — Record of Irrigation Work",
+          "url": "https://www.metmuseum.org/art/collection/search/324536"
+        },
+        {
+          "title": "Marcel Sigrist — Ur III Texts in Cuneiform Texts in The Metropolitan Museum of Art",
+          "url": "https://resources.metmuseum.org/resources/metpublications/pdf/Cuneiform_Texts_in_The_Metropolitan_Museum_of_Art_Volume_I_Tablets_Cones_and_Bricks_of_the_Third_.pdf"
+        },
+        {
+          "title": "State Archives of Assyria Online — Delivery Contract for a Donkey Mare",
+          "url": "https://oracc.museum.upenn.edu/saao/saa14/P224962"
+        },
+        {
+          "title": "State Archives of Assyria Online — Complaints by Blacksmiths",
+          "url": "https://oracc.museum.upenn.edu/saao/saa16/P313428"
+        }
+      ],
+      "referenceMaps": [
+        {
+          "title": "Mesopotamian archaeological sites",
+          "url": "https://whc.unesco.org/document/168850",
+          "description": "The Ashur nomination dossier contains a reference map with archaeological sites along both river systems."
+        },
+        {
+          "title": "The Ahwar, Uruk, Ur and Eridu",
+          "url": "https://whc.unesco.org/en/list/1481/maps/",
+          "description": "UNESCO’s property maps show the marshes and the three archaeological areas in the lower river plain."
+        },
+        {
+          "title": "Bisotun inscription and site",
+          "url": "https://whc.unesco.org/en/list/1222/maps/",
+          "description": "The World Heritage map index locates the protected site and its documented limits."
+        }
+      ]
+    }
+  ]
+}

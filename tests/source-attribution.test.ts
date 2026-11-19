@@ -1,5 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+
+test('bundled world rivers and fonts retain known source licenses',async()=>{
+ const mod=await import('../scripts/source-attribution-build');
+ const data=JSON.parse(await readFile('data/world-guide-context-sources.json','utf8'));
+ const entries=mod.collectSourceAttributions({records:[],pages:[],enrichment:{pages:[]},media:{images:[]},manifests:[{file:'data/world-guide-context-sources.json',data,reused:true}]});
+ assert.equal(entries.length,3);
+ for(const asset of data.assets){const entry=entries.find(e=>e.urls.includes(asset.sourceUrl));assert.ok(entry);assert.equal(entry.license,asset.license);assert.ok(entry.urls.includes(asset.downloadUrl));assert.ok(entry.licenseUrls.includes(asset.licenseUrl));}
+});
 
 test('source register preserves every canonical citation, folds DOI aliases, and never invents permission', async () => {
   const mod = await import('../scripts/source-attribution-build').catch(() => null);
