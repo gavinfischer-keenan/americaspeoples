@@ -64,4 +64,4 @@ Interface: dated voyages with sources, phase precision and optional movement-mod
 Files: release/version metadata; documentation; verification receipt.
 - [x] Run npm test, npm run typecheck, npm run validate, npm run build and npm run verify:release; inspect every result.
 - [x] Inspect guides and shared movie in browser; run one fresh whole-branch review and resolve actionable findings.
-- [ ] Follow established repository deployment, verify live version/assets and report exact delivered scope and remaining limitations.
+- [x] Follow established repository deployment, verify live version/assets and report exact delivered scope and remaining limitations.

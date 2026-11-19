@@ -1,0 +1,227 @@
+{
+  "version": "0.27.0",
+  "status": "merged, deployed and publicly verified; current and previous server releases retained",
+  "verifiedAt": "2026-11-19T00:03:36.037639+00:00",
+  "pullRequest": "https://github.com/gavinfischer-keenan/americaspeoples/pull/25",
+  "release": "https://github.com/gavinfischer-keenan/americaspeoples/releases/tag/v0.27.0",
+  "site": "https://americaspeoples.11mosswood.us/",
+  "baseCommit": "bb1e8d4",
+  "deployedCommit": "ad83f83d175e2a08d21ecfbbe2eec935180cff76",
+  "records": 2984,
+  "sharedRecords": 2911,
+  "focusedRecords": 73,
+  "newRegionalRecords": 70,
+  "newVoyageRecords": 204,
+  "guides": 81,
+  "placeGuides": 72,
+  "contextualStories": 83,
+  "independentTopics": 27,
+  "availableDirectoryEntries": 117,
+  "terrainMaps": 116,
+  "sourceMapSheets": 16,
+  "datedItineraries": 74,
+  "expeditionActivityPeriods": 59,
+  "coverage": [
+    {
+      "id": "northern-idaho",
+      "region": "Idaho — northern river corridors",
+      "beforeLocalities": 2,
+      "afterLocalities": 7
+    },
+    {
+      "id": "rapa-nui",
+      "region": "Rapa Nui",
+      "beforeLocalities": 2,
+      "afterLocalities": 6
+    },
+    {
+      "id": "western-montana",
+      "region": "Montana — western mountains",
+      "beforeLocalities": 3,
+      "afterLocalities": 8
+    },
+    {
+      "id": "southern-lesser-antilles",
+      "region": "Southern Lesser Antilles",
+      "beforeLocalities": 3,
+      "afterLocalities": 9
+    },
+    {
+      "id": "northern-inland-louisiana",
+      "region": "Louisiana — northern / inland",
+      "beforeLocalities": 4,
+      "afterLocalities": 8
+    },
+    {
+      "id": "northwestern-nevada",
+      "region": "Nevada — northwestern basins",
+      "beforeLocalities": 4,
+      "afterLocalities": 9
+    },
+    {
+      "id": "northern-lesser-antilles",
+      "region": "Northern Lesser Antilles",
+      "beforeLocalities": 4,
+      "afterLocalities": 8
+    },
+    {
+      "id": "venezuela",
+      "region": "Venezuela",
+      "beforeLocalities": 4,
+      "afterLocalities": 9
+    },
+    {
+      "id": "fiji-tonga-samoa",
+      "region": "Fiji / Tonga / Samoa",
+      "beforeLocalities": 10,
+      "afterLocalities": 15
+    },
+    {
+      "id": "northern-mexico-baja",
+      "region": "Northern Mexico / Baja",
+      "beforeLocalities": 11,
+      "afterLocalities": 15
+    },
+    {
+      "id": "central-east-polynesia",
+      "region": "Societies / Cooks / Marquesas",
+      "beforeLocalities": 12,
+      "afterLocalities": 16
+    },
+    {
+      "id": "aotearoa",
+      "region": "Aotearoa New Zealand",
+      "beforeLocalities": 13,
+      "afterLocalities": 17
+    },
+    {
+      "id": "southeast-tidewater",
+      "region": "Southeast / Tidewater",
+      "beforeLocalities": 13,
+      "afterLocalities": 17
+    },
+    {
+      "id": "northern-central-america",
+      "region": "Honduras / El Salvador / Nicaragua",
+      "beforeLocalities": 15,
+      "afterLocalities": 20
+    },
+    {
+      "id": "patagonia-tierra-del-fuego",
+      "region": "Patagonia / Tierra del Fuego",
+      "beforeLocalities": 17,
+      "afterLocalities": 22
+    }
+  ],
+  "coverageMethod": "Frozen baseline locality IDs plus all dated regional additions inside each original rectangle and state clip. Other releases or expedition additions are excluded.",
+  "maps": {
+    "allPlaceGuidesZoomable": true,
+    "terrainPixelsWide": 3600,
+    "chacoAndMachuPicchuPixelsWide": 4800,
+    "chacoRoadSurveySheets": 6,
+    "nativeSourceDimensionsAndTerrainSamplingDisclosed": true,
+    "creditsAndReuseTermsPreserved": true
+  },
+  "voyages": {
+    "newTracks": 64,
+    "simultaneousParties": true,
+    "offscreenLocatePreservesDate": true,
+    "untracedLegsDoNotInventPositions": true,
+    "yearAndMonthPrecisionPreserved": true,
+    "sharedClockEnds": "1934-12-31",
+    "scope": "Curated major Americas and polar expeditions; partial and held routes remain documented in the published coverage inventory."
+  },
+  "tooltips": {
+    "duplicateNativeTooltipRemoved": true,
+    "accessibleDescriptionsPreserved": true,
+    "outsidePointerAndFocusDismiss": true,
+    "escapeDismisses": true,
+    "redrawDoesNotRestoreDismissedHover": true,
+    "livePointerHoverVerified": true
+  },
+  "consensus": {
+    "thisBatchCalls": 0,
+    "remaining": 45,
+    "privateSourceCheckExcerptsExcluded": true
+  },
+  "validation": {
+    "fullReleaseStages": 56,
+    "unitTests": 427,
+    "finalMapAndPackagedArtifactTests": 25,
+    "linuxRetentionTests": 5,
+    "independentReview": "Fresh branch review and tooltip diagnosis completed; no outstanding findings.",
+    "runNotes": "Cahokia whole-area label correction; legacy single-map/native-title test assumptions updated. Runtime tooltip behavior verified with real pointer hover.",
+    "publicAssetsChecked": 289,
+    "publicSourceReviews": 23,
+    "neighborPagesVerified": 3,
+    "liveBrowser": {
+      "simultaneousShackletonParties": true,
+      "datePreservingLocate": true,
+      "all15GuidePages": true,
+      "desktopAndMobileControls": true,
+      "nativeMapZoomAndFullscreen": true,
+      "singleTooltipAndFocusDismissal": true,
+      "javascriptErrors": []
+    },
+    "extraPolarSourceChecks": {
+      "datesAndSourcesVerified": true,
+      "verifiedRecords": [
+        "visit-endurance-ship-1914-1915-3",
+        "visit-endurance-james-caird-1916-2",
+        "visit-endurance-yelcho-1916-3"
+      ]
+    }
+  },
+  "deployment": {
+    "status": "deployed",
+    "id": "20261118T235706Z-americas-v0.27.0",
+    "commit": "ad83f83d175e2a08d21ecfbbe2eec935180cff76",
+    "health": {
+      "status": "ok",
+      "version": "0.27.0",
+      "records": 2984
+    },
+    "static": "/srv/tripofisch/releases/20261118T235706Z-americas-v0.27.0",
+    "api": "/srv/americaspeoples/releases/20261118T235706Z-americas-v0.27.0",
+    "previousVersion": "0.26.0",
+    "rollbackStatic": "/srv/tripofisch/releases/20261118T194537Z-americas-v0.26.0",
+    "rollbackApi": "/srv/americaspeoples/releases/20261118T194537Z-americas-v0.26.0",
+    "unchangedFiles": 394
+  },
+  "packageSha256": "5a98618a048d9222728d79899a24c77b242e3bf15682a1f2883610358c8d9b2c",
+  "githubReleaseAssetsVerified": 5,
+  "retention": {
+    "current": "0.27.0",
+    "previous": "0.26.0",
+    "remainingCleanupTargets": [],
+    "unrelatedHostedContentPreserved": true,
+    "githubArchivesSeparateFromServerRetention": true
+  },
+  "temporaryCleanup": {
+    "container": {
+      "mode": "container",
+      "removed": [
+        "/var/tmp/americas-v0.27.0-staging",
+        "/var/tmp/americas-v0270-payload.tar",
+        "/var/tmp/americas-v0270-deploy.py",
+        "/var/tmp/americas-v0270-test-retention.py"
+      ],
+      "freeBytes": 3839516672
+    },
+    "host": {
+      "mode": "host",
+      "removed": [
+        "/var/tmp/americas-v0270-payload.tar",
+        "/var/tmp/americas-v0270-deploy.py",
+        "/var/tmp/americas-v0270-test-retention.py"
+      ],
+      "freeBytes": 78048174080
+    }
+  },
+  "links": {
+    "densityReview": "https://americaspeoples.11mosswood.us/docs/coverage-15-review.html",
+    "voyageReview": "https://americaspeoples.11mosswood.us/docs/voyage-coverage-review.html",
+    "chaco": "https://americaspeoples.11mosswood.us/sites/chaco.html",
+    "machuPicchu": "https://americaspeoples.11mosswood.us/sites/machu-picchu.html"
+  }
+}
