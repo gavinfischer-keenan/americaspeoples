@@ -57,7 +57,7 @@ def plan_retention(api_root,web_root,receipt):
             for path in downloads.iterdir():
                 if re.fullmatch(r'v\d+\.\d+\.\d+',path.name) and path.name not in versions:add(path)
         else:
-            for rel in ['americaspeoples-app','free-utilities/americaspeoples','downloads/americaspeoples']:
+            for rel in ['americaspeoples-app','spread-of-peoples','free-utilities/americaspeoples','downloads/americaspeoples']:
                 path=web/rel
                 if path.exists() or path.is_symlink():add(path)
     return sorted(targets,key=str)

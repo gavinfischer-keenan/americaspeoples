@@ -18,7 +18,7 @@ try{
   const response=await page.goto(origin+'/sites/'+story.id+'.html');assert.equal(response.status(),200);
   await page.locator('a[href="../#dives/places"]').waitFor();
   await page.locator(`a[href="../#story/${story.id}"]`).click();
-  await page.locator('#story-select').waitFor();assert.equal(await page.locator('#story-select').inputValue(),story.id);
+  await page.locator('#story-select').waitFor({state:'attached'});assert.equal(await page.locator('#story-select').inputValue(),story.id);
   for(const [i,scene] of story.scenes.entries()){
    if(i)await page.getByRole('button',{name:'Next scene',exact:true}).click();
    await page.getByRole('heading',{name:scene.title,exact:true}).waitFor();
@@ -47,7 +47,7 @@ try{
   assert.ok((await page.locator('#selected-records').innerText()).includes(r.title));
  }
  await page.setViewportSize({width:1024,height:768});await page.goto(origin+'/#story/upano');
- await page.locator('#story-select').waitFor();assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+ await page.locator('#story-select').waitFor({state:'attached'});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  await page.screenshot({path:'test-results/early-tablet.png'});
  const doc=await page.goto(origin+'/docs/early-continuity.html');assert.equal(doc.status(),200);
  assert.match(await page.locator('body').innerText(),/70\/100/);

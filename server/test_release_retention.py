@@ -15,6 +15,9 @@ class RetentionSafety(unittest.TestCase):
             (api/'server').mkdir();(api/'server/app.py').write_text('app')
             for rel in ['americaspeoples-app','free-utilities/americaspeoples','downloads/americaspeoples']:(web/rel).mkdir(parents=True)
             (web/'americaspeoples-app/app.js').write_text('atlas')
+            (web/'spread-of-peoples/americas').mkdir(parents=True)
+            (web/'spread-of-peoples/index.html').write_text('world '+ident)
+            (web/'spread-of-peoples/americas/index.html').write_text('americas '+ident)
             (web/'unrelated.txt').write_text('other site')
             for version in ['v0.9.0','v0.10.0','v0.11.0']:(web/'downloads/americaspeoples'/version).mkdir()
         self.current_api=self.api/'releases'/self.ids[2];self.previous_api=self.api/'releases'/self.ids[1]
@@ -41,6 +44,10 @@ class RetentionSafety(unittest.TestCase):
         old=self.web/'releases'/self.ids[0]
         self.assertEqual((old/'unrelated.txt').read_text(),'other site')
         self.assertFalse((old/'americaspeoples-app').exists())
+        self.assertFalse((old/'spread-of-peoples').exists())
+        for web in [self.current_web,self.previous_web]:
+            self.assertEqual((web/'spread-of-peoples/index.html').read_text(),'world '+web.name)
+            self.assertEqual((web/'spread-of-peoples/americas/index.html').read_text(),'americas '+web.name)
 
     def test_changed_current_or_missing_rollback_refuses_plan(self):
         self.receipt['api']=str(self.previous_api)

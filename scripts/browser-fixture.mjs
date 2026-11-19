@@ -89,13 +89,42 @@ export async function localPackage(page) {
 }
 
 export async function previewSuggestions(page) {
-  const disclosure = page.locator(".culture-disclosure");
-  if (!(await disclosure.evaluate((el) => el.open)))
-    await disclosure.locator("summary").click();
-  await page.getByLabel("Preview complete suggestions").check();
+  await mapSetting(page, async () => {
+    const disclosure = page.locator(".culture-disclosure");
+    if (!(await disclosure.evaluate((el) => el.open)))
+      await disclosure.locator("summary").click();
+    await page.getByLabel("Preview complete suggestions").check();
+  });
 }
 
 export async function layerOptions(page) {
-  if (!(await page.locator("#layer-options").isVisible()))
-    await page.locator("#toggle-layers").click();
+  await openMapSettings(page);
+}
+
+export async function openMapSettings(page) {
+  const toggle = page.getByRole("button", { name: "Map settings", exact: true });
+  if ((await toggle.getAttribute("aria-expanded")) !== "true") await toggle.click();
+}
+
+// Use the same menu interaction as a person: each selection may close settings.
+export async function mapSetting(page, action) {
+  await openMapSettings(page);
+  await action();
+  const toggle = page.getByRole("button", { name: "Map settings", exact: true });
+  if ((await toggle.getAttribute("aria-expanded")) === "true") await toggle.click();
+  // Settings changes the normal-flow map height. A click can finish before the
+  // map's ResizeObserver updates its projection and camera for the new viewport.
+  await page.waitForFunction(() => {
+    const svg = document.querySelector("#map-host svg, #europe-map svg");
+    if (!(svg instanceof SVGSVGElement)) return true;
+    const box = svg.getBoundingClientRect();
+    return box.width < 1 || box.height < 1 ||
+      (svg.viewBox.baseVal.width === Math.round(box.width) &&
+       svg.viewBox.baseVal.height === Math.round(box.height));
+  });
+}
+
+export async function showMapEvidence(page) {
+  if (!(await page.locator("#site-panel").isVisible()))
+    await mapSetting(page, () => page.locator("#toggle-sites").click());
 }

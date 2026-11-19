@@ -1,0 +1,1155 @@
+{
+  "schemaVersion": 1,
+  "guides": [
+    {
+      "id": "world-marco-polo",
+      "atlasIds": [
+        "asia-pacific",
+        "europe"
+      ],
+      "category": "subjects",
+      "title": "Marco Polo: journey, cities and a difficult book",
+      "description": "A dated reading of Polo’s reported travels, the world he described and the evidence behind the map.",
+      "intro": "Marco Polo’s account opens a window onto a connected thirteenth-century world. Its place names range far beyond a personal itinerary: some passages report travel, others describe cities, repeat stories or organize information for readers. Follow the journey while keeping those different kinds of evidence in view.",
+      "scope": "1254–1324 CE, with mapped journey phases mainly 1271–1295 and the account’s composition around 1298. Dates and routes are approximate where the evidence is approximate.",
+      "map": {
+        "bounds": [
+          4,
+          -5,
+          145,
+          51
+        ],
+        "scope": "Mediterranean to East Asia and the Indian Ocean. Points distinguish reported journey stages, described cities and secondhand geography; Japan has no journey connection.",
+        "points": [
+          {
+            "id": "polo-venice-out",
+            "label": "Venice: departure with father and uncle",
+            "coordinates": [
+              12.34,
+              45.44
+            ],
+            "date": "1271 CE",
+            "description": "The prologue places Marco with Niccolò and Maffeo on the departure for Acre. Marco did not accompany their earlier Asian journey. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0089.html.en",
+              "https://www.treccani.it/enciclopedia/marco-polo_(Dizionario-Biografico)/"
+            ]
+          },
+          {
+            "id": "polo-acre",
+            "label": "Acre: papal negotiations",
+            "coordinates": [
+              35.07,
+              32.92
+            ],
+            "date": "1271 CE",
+            "description": "The account brings the three Polos to Acre during preparations for travel east. The family’s movements around Acre include return visits; the point is not an exact dated arrival. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0089.html.en",
+              "https://www.treccani.it/enciclopedia/marco-polo_(Dizionario-Biografico)/"
+            ]
+          },
+          {
+            "id": "polo-ayas",
+            "label": "Ayas: Cilician gateway",
+            "coordinates": [
+              35.79,
+              36.77
+            ],
+            "date": "1271 CE; repeated departure preparations",
+            "description": "Ayas, called Laiazzo, appears in the departure sequence between Acre and inland Asia. The map simplifies repeated journeys between these ports. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://www.treccani.it/enciclopedia/marco-polo_(Dizionario-Biografico)/"
+            ]
+          },
+          {
+            "id": "polo-hormuz-out",
+            "label": "Mainland Hormuz: outward-journey reconstruction",
+            "coordinates": [
+              57.07,
+              27.1
+            ],
+            "date": "Within the outward journey, 1271–1275 CE",
+            "description": "Polo describes Curmos as a port receiving Indian merchandise. This is an approximate mainland old-Hormuz anchor near Minab, not the later island city. The book supplies no secure stop year. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0131.html.en",
+              "https://www.treccani.it/enciclopedia/marco-polo_(Dizionario-Biografico)/",
+              "https://www.persee.fr/doc/befeo_0336-1519_2001_num_88_1_3509"
+            ]
+          },
+          {
+            "id": "polo-kashgar",
+            "label": "Kashgar: described in the eastward sequence",
+            "coordinates": [
+              75.99,
+              39.47
+            ],
+            "date": "Within the outward journey, 1271–1275 CE",
+            "description": "The Cascar chapter describes an oasis of gardens, crafts and merchants. A place in the book’s geographical sequence is not an independently dated personal visit. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0151.html.en"
+            ]
+          },
+          {
+            "id": "polo-shangdu",
+            "label": "Shangdu: reported arrival at Kublai’s court",
+            "coordinates": [
+              116.185,
+              42.358
+            ],
+            "date": "About 1275 CE",
+            "description": "Shangdu is conventionally identified with the court reached near the end of the outward journey. The arrival year is a historical reconstruction; palace descriptions do not locate every movement of the Polos. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0193.html.ja",
+              "https://www.treccani.it/enciclopedia/marco-polo_(Dizionario-Biografico)/",
+              "https://whc.unesco.org/en/list/1389/maps/",
+              "https://www.iranicaonline.org/articles/polo-marco/"
+            ]
+          },
+          {
+            "id": "polo-khanbaliq",
+            "label": "Khanbaliq: the court described in the book",
+            "coordinates": [
+              116.4,
+              39.9
+            ],
+            "date": "Reported Yuan years, approximately 1275–1292 CE",
+            "description": "The account describes Kublai’s winter court at Cambaluc, present-day Beijing. This broad narrative setting does not imply uninterrupted residence or confirm every claimed office. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0215.html.en",
+              "https://edizionicafoscari.it/media/pdf/books/978-88-6969-854-5/978-88-6969-854-5-ch-10_OMEdPd9.pdf"
+            ]
+          },
+          {
+            "id": "polo-hangzhou",
+            "label": "Hangzhou: a detailed city description",
+            "coordinates": [
+              120.15,
+              30.25
+            ],
+            "date": "After the 1276 conquest, within the reported Yuan years",
+            "description": "Quinsai is identified as Hangzhou, whose waterways, markets and urban life receive extended treatment. No precise visit year is established here. Manuscript versions differ; the book’s impressive numbers are not used as a census. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://risorse-esterne.edizionicafoscari.it/lemmi/Quinsai.html"
+            ]
+          },
+          {
+            "id": "polo-quanzhou",
+            "label": "Quanzhou: reported embarkation for the return",
+            "coordinates": [
+              118.59,
+              24.906
+            ],
+            "date": "Approximately 1291–1292 CE",
+            "description": "The return is conventionally reconstructed as embarking at Quanzhou, the book’s Çaiton. The departure date is approximate. Independent port archaeology establishes the trading setting, not Polo’s individual presence. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://www.treccani.it/enciclopedia/marco-polo_(Dizionario-Biografico)/",
+              "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0359.html.en",
+              "https://whc.unesco.org/en/decisions/7934",
+              "https://whc.unesco.org/en/list/1561/maps/",
+              "https://www.iranicaonline.org/articles/polo-marco/"
+            ]
+          },
+          {
+            "id": "polo-sumatra",
+            "label": "Northern Sumatra: a claimed weather delay",
+            "coordinates": [
+              97.2,
+              5.15
+            ],
+            "date": "Within the return voyage, about 1292–1293 CE",
+            "description": "In the Samarra chapter, Marco explicitly claims a five-month stay caused by bad weather. The kingdom’s exact identification and the travel chronology remain uncertain; this point represents northern Sumatra broadly. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://it.wikisource.org/wiki/Milione/163",
+              "https://www.treccani.it/enciclopedia/marco-polo_(Dizionario-Biografico)/"
+            ]
+          },
+          {
+            "id": "polo-hormuz-return",
+            "label": "Mainland Hormuz: reported sea-journey endpoint",
+            "coordinates": [
+              57.07,
+              27.1
+            ],
+            "date": "Approximately 1293–1295 CE; reconstructions differ",
+            "description": "The maritime return is reconstructed as reaching Hormuz before travel back toward the Mediterranean. The broad date is not a harbor log; old mainland Hormuz is represented approximately. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://www.treccani.it/enciclopedia/marco-polo_(Dizionario-Biografico)/",
+              "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0131.html.en",
+              "https://www.persee.fr/doc/befeo_0336-1519_2001_num_88_1_3509",
+              "https://doi.org/10.1017/eaa.2017.21"
+            ]
+          },
+          {
+            "id": "polo-trebizond",
+            "label": "Trebizond: named on the homeward route",
+            "coordinates": [
+              39.72,
+              41
+            ],
+            "date": "Before the 1295 return to Venice",
+            "description": "The prologue names Trebizond among the stages of the return west. The text gives a sequence, not an exact arrival date. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0101.html.en"
+            ]
+          },
+          {
+            "id": "polo-constantinople",
+            "label": "Constantinople: named on the homeward route",
+            "coordinates": [
+              28.97,
+              41.01
+            ],
+            "date": "Before the 1295 return to Venice",
+            "description": "Constantinople follows Trebizond in the prologue’s homeward sequence. This date window is inferred from the return narrative, not proof of continuous residence. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0101.html.en"
+            ]
+          },
+          {
+            "id": "polo-negroponte",
+            "label": "Negroponte: a homeward stop",
+            "coordinates": [
+              23.6,
+              38.46
+            ],
+            "date": "Before the 1295 return to Venice",
+            "description": "The prologue lists Negroponte, the Venetian name associated with Euboea, before Venice. Chalkis is a regional harbor anchor; the text does not supply an exact landing location or day. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0101.html.en"
+            ]
+          },
+          {
+            "id": "polo-venice-home",
+            "label": "Venice: the stated return",
+            "coordinates": [
+              12.34,
+              45.44
+            ],
+            "date": "1295 CE",
+            "description": "The prologue dates the family’s arrival back in Venice to 1295. Arrival is a biographical event, not a foundation or population estimate for Venice. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0101.html.en"
+            ]
+          },
+          {
+            "id": "polo-genoa",
+            "label": "Genoa: a book takes shape",
+            "coordinates": [
+              8.93,
+              44.41
+            ],
+            "date": "Approximately 1298–1299 CE",
+            "description": "Tradition places the production of Polo’s account with Rustichello during imprisonment in Genoa. This marks the account’s composition context, not another stop on the Asian journey; circumstances of capture remain debated. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://www.loc.gov/resource/gdcwdl.wdl_14300/?sp=1&st=grid",
+              "https://www.treccani.it/enciclopedia/marco-polo_(Dizionario-Biografico)/",
+              "https://www.iranicaonline.org/articles/polo-marco/"
+            ]
+          },
+          {
+            "id": "polo-japan-hearsay",
+            "label": "Japan / Cipangu: described, not visited",
+            "coordinates": [
+              138,
+              37
+            ],
+            "date": "Account compiled about 1298 CE",
+            "description": "The book’s Cipangu material belongs to secondhand reporting about Japan. No Polo journey connection leads here. The date marks the account, and the regional anchor does not identify a landing or settlement. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://edizionicafoscari.it/media/pdf/article/annali-di-ca-foscari-serie-orientale/2018/1/art-10.14277-2385-3042-2018-001-16_1FrBTkm.pdf",
+              "https://www.loc.gov/resource/gdcwdl.wdl_14300/?sp=1&st=grid"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "Begin with the family, then the journey",
+          "paragraphs": [
+            {
+              "text": "Marco joined his father Niccolò and uncle Maffeo after their earlier visit to Asia. The opening chapter places the three together on the departure from Venice for Acre. Keeping the two family journeys separate prevents a common map error: Marco should not appear on his relatives’ earlier travels through the Black Sea and Central Asia.",
+              "sources": [
+                "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0089.html.en",
+                "https://www.iranicaonline.org/articles/polo-marco/"
+              ]
+            },
+            {
+              "text": "The playable chronology uses a few broad phases. It gives room to the uncertain years between departure and arrival, rather than assigning an exact year to every town in a geographical description. A line shows the reconstructed connection; a point’s note explains whether it represents a visit claim, a described place or the later creation of the book.",
+              "sources": [
+                "https://www.treccani.it/enciclopedia/marco-polo_(Dizionario-Biografico)/",
+                "https://www.iranicaonline.org/articles/polo-marco/"
+              ]
+            }
+          ],
+          "columns": [
+            "Period",
+            "Scene",
+            "How to read it"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "1271",
+                "Venice, Acre and Ayas",
+                "Opening journey; repeated preparations are simplified."
+              ],
+              "sources": [
+                "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0089.html.en",
+                "https://www.treccani.it/enciclopedia/marco-polo_(Dizionario-Biografico)/"
+              ]
+            },
+            {
+              "cells": [
+                "1271–1275",
+                "Across Iran and Central Asia",
+                "Broad reconstruction; stop dates are usually unavailable."
+              ],
+              "sources": [
+                "https://www.treccani.it/enciclopedia/marco-polo_(Dizionario-Biografico)/"
+              ]
+            },
+            {
+              "cells": [
+                "About 1275–1292",
+                "Yuan courts and cities",
+                "Narrative setting, with individual movements uncertain."
+              ],
+              "sources": [
+                "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0215.html.en",
+                "https://www.iranicaonline.org/articles/polo-marco/"
+              ]
+            },
+            {
+              "cells": [
+                "About 1291–1295",
+                "Maritime and western return",
+                "Approximate overlapping phases, ending with Venice in 1295."
+              ],
+              "sources": [
+                "https://www.iranicaonline.org/articles/polo-marco/",
+                "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0101.html.en"
+              ]
+            },
+            {
+              "cells": [
+                "About 1298–1299",
+                "Genoa and the account",
+                "Composition context, separate from the Asian journey."
+              ],
+              "sources": [
+                "https://www.loc.gov/resource/gdcwdl.wdl_14300/?sp=1&st=grid"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Iranian ports and Central Asian oases",
+          "paragraphs": [
+            {
+              "text": "Hormuz mattered because it joined inland routes with Indian Ocean commerce. The book’s Curmos chapter lists goods brought by ships, making the port a useful reminder that land and sea routes worked together. The mapped site is old Hormuz on the mainland near Minab; the familiar later island city would give the journey the wrong geographical setting.",
+              "sources": [
+                "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0131.html.en",
+                "https://www.persee.fr/doc/befeo_0336-1519_2001_num_88_1_3509"
+              ]
+            },
+            {
+              "text": "Kashgar appears in the book’s eastward geographical sequence as a place of cultivation, craft production and trade. Those observations make an oasis intelligible as a lived settlement. They do not supply a dated entry in a travel diary. Here its location supports a broad reconstruction without pretending to identify a particular caravan track or day of arrival.",
+              "sources": [
+                "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0151.html.en"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Courts were places with their own histories",
+          "paragraphs": [
+            {
+              "text": "Shangdu and Khanbaliq belonged to a world already organized around Mongol rule, Chinese cities and regional institutions. Shangdu’s archaeological remains include a planned city and waterworks; UNESCO dates its design to 1256. That history precedes the reported Polo arrival and should not be mistaken for an event created by the visitor.",
+              "sources": [
+                "https://whc.unesco.org/en/list/1389/"
+              ]
+            },
+            {
+              "text": "The account describes Kublai’s winter palace at Cambaluc, while the Shangdu chapter describes another court setting. Scholarship compares such passages with Yuan evidence about palaces and administration. Comparisons can test specific observations, but a convincing description does not independently establish every office, mission or year claimed for the author.",
+              "sources": [
+                "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0215.html.en",
+                "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0193.html.ja",
+                "https://edizionicafoscari.it/media/pdf/books/978-88-6969-854-5/978-88-6969-854-5-ch-10_OMEdPd9.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Read the cities at street level",
+          "paragraphs": [
+            {
+              "text": "Hangzhou, called Quinsai, receives unusually extensive treatment: waterways, markets and public spaces matter as much as rulers. Ca’ Foscari’s critical commentary shows why versions matter: details differ between manuscript traditions and later editions. The map therefore records a described city in a broad period, and leaves out apparently precise population totals that cannot be treated as a modern census.",
+              "sources": [
+                "https://risorse-esterne.edizionicafoscari.it/lemmi/Quinsai.html"
+              ]
+            },
+            {
+              "text": "Quanzhou supplies an independent material setting for maritime commerce. Its heritage landscape includes docks, bridges, religious places and production sites serving a wider hinterland. These remains establish the scale and organization of a port society during the Song–Yuan period; by themselves they cannot prove that a particular traveller stood at a particular dock.",
+              "sources": [
+                "https://whc.unesco.org/en/decisions/7934",
+                "https://whc.unesco.org/en/list/1561/maps/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "A sea journey governed by weather",
+          "paragraphs": [
+            {
+              "text": "The Samarra passage is unusually personal: Marco claims a five-month weather delay. Its account of waiting contrasts with a smooth line drawn across a modern map. Northern Sumatra is shown as a regional anchor because the medieval kingdom’s precise identification is uncertain; the display does not turn the text’s duration into an invented calendar of sailing dates.",
+              "sources": [
+                "https://it.wikisource.org/wiki/Milione/163"
+              ]
+            },
+            {
+              "text": "The homeward prologue names Trebizond, Constantinople and Negroponte before placing the return to Venice in 1295. Those names support a sequence, while the spaces between them remain schematic. The maritime endpoint at Hormuz is dated broadly because published reconstructions differ.",
+              "sources": [
+                "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0101.html.en",
+                "https://www.persee.fr/doc/befeo_0336-1519_2001_num_88_1_3509",
+                "https://doi.org/10.1017/eaa.2017.21"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "What did the writer actually see?",
+          "paragraphs": [
+            {
+              "text": "Japan is the clearest caution on this map. Polo’s Cipangu description is secondhand, and its geography and wealth claims require criticism. The marker represents a place described in the account around the time of composition. No journey line reaches it.",
+              "sources": [
+                "https://edizionicafoscari.it/media/pdf/article/annali-di-ca-foscari-serie-orientale/2018/1/art-10.14277-2385-3042-2018-001-16_1FrBTkm.pdf"
+              ]
+            },
+            {
+              "text": "The surviving work passed through different languages and manuscripts; its earliest version is lost. The Library of Congress describes a mixture of travel reporting, practical information, legend and hearsay. Reading it critically means asking about each passage’s genre and transmission, rather than choosing between believing everything and dismissing the whole account.",
+              "sources": [
+                "https://www.iranicaonline.org/articles/polo-marco/",
+                "https://www.loc.gov/resource/gdcwdl.wdl_14300/?sp=1&st=grid"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Objects can test context without identifying a traveller",
+          "paragraphs": [
+            {
+              "text": "An archaeological study by Lin Meicun and Ran Zhang reassessed a Chinese porcelain jar in Venice and related finds across the Indian Ocean. The authors argue that its date and distribution support an association with Polo’s era and journey. The association remains an interpretation: an object’s manufacture and movement do not automatically provide its owner’s itinerary.",
+              "sources": [
+                "https://doi.org/10.1017/eaa.2017.21"
+              ]
+            },
+            {
+              "text": "Use the linked institutional maps to examine the places behind the narrative. They map surviving heritage sites and their components, not thirteenth-century political borders or an exact Polo route. The paired Silk Roads guide widens the view to other documents and settlements across much longer periods.",
+              "sources": [
+                "https://whc.unesco.org/en/list/1389/maps/",
+                "https://whc.unesco.org/en/list/1561/maps/"
+              ]
+            }
+          ]
+        }
+      ],
+      "relatedGuideIds": [
+        "world-silk-roads"
+      ],
+      "referenceMaps": [
+        {
+          "title": "UNESCO map of the Site of Xanadu",
+          "url": "https://whc.unesco.org/en/list/1389/maps/",
+          "description": "Archaeological property extent and official coordinates for Shangdu; useful context for the court landscape."
+        },
+        {
+          "title": "UNESCO maps of Quanzhou",
+          "url": "https://whc.unesco.org/en/list/1561/maps/",
+          "description": "Separate harbor, bridge, religious and production components; these show a port system rather than a single landing point."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Marco Polo, Description of the World, Moule–Pelliot (1938), prologue, p. 81",
+          "url": "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0089.html.en"
+        },
+        {
+          "title": "Marco Polo, Description of the World, prologue, p. 93",
+          "url": "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0101.html.en"
+        },
+        {
+          "title": "Marco Polo, Description of the World, p. 123",
+          "url": "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0131.html.en"
+        },
+        {
+          "title": "Marco Polo, Description of the World, p. 143",
+          "url": "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0151.html.en"
+        },
+        {
+          "title": "Marco Polo, Description of the World, p. 185",
+          "url": "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0193.html.ja"
+        },
+        {
+          "title": "Marco Polo, Description of the World, p. 207",
+          "url": "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0215.html.en"
+        },
+        {
+          "title": "Marco Polo, Description of the World, p. 351",
+          "url": "https://dsr.nii.ac.jp/toyobunko/III-2-F-c-39/V-1/page/0359.html.en"
+        },
+        {
+          "title": "Marco Polo, Milione, chapter 163: Samarra",
+          "url": "https://it.wikisource.org/wiki/Milione/163"
+        },
+        {
+          "title": "Ca’ Foscari critical digital edition: Quinsai",
+          "url": "https://risorse-esterne.edizionicafoscari.it/lemmi/Quinsai.html"
+        },
+        {
+          "title": "Giuseppe Gullino (2015), Polo, Marco, Dizionario Biografico degli Italiani",
+          "url": "https://www.treccani.it/enciclopedia/marco-polo_(Dizionario-Biografico)/"
+        },
+        {
+          "title": "Library of Congress: The Travels of Marco Polo, manuscript catalogue",
+          "url": "https://www.loc.gov/resource/gdcwdl.wdl_14300/?sp=1&st=grid"
+        },
+        {
+          "title": "Sonia Favi (2018): Production and Circulation of Vernacular Italian Books Related to the Jesuit Mission in Japan in the Sixteenth Century",
+          "url": "https://edizionicafoscari.it/media/pdf/article/annali-di-ca-foscari-serie-orientale/2018/1/art-10.14277-2385-3042-2018-001-16_1FrBTkm.pdf"
+        },
+        {
+          "title": "Hans Ulrich Vogel, Marco Polo and the Political Economy of the Yuan Empire",
+          "url": "https://edizionicafoscari.it/media/pdf/books/978-88-6969-854-5/978-88-6969-854-5-ch-10_OMEdPd9.pdf"
+        },
+        {
+          "title": "UNESCO: Site of Xanadu maps",
+          "url": "https://whc.unesco.org/en/list/1389/maps/"
+        },
+        {
+          "title": "UNESCO World Heritage Committee: Quanzhou (2021)",
+          "url": "https://whc.unesco.org/en/decisions/7934"
+        },
+        {
+          "title": "UNESCO: Quanzhou maps",
+          "url": "https://whc.unesco.org/en/list/1561/maps/"
+        },
+        {
+          "title": "Hormuz in Yuan and Ming sources (2001)",
+          "url": "https://www.persee.fr/doc/befeo_0336-1519_2001_num_88_1_3509"
+        },
+        {
+          "title": "Michele Bernardini: Polo, Marco, Encyclopaedia Iranica (2008)",
+          "url": "https://www.iranicaonline.org/articles/polo-marco/"
+        },
+        {
+          "title": "Lin Meicun and Ran Zhang (2018): A Chinese Porcelain Jar Associated with Marco Polo",
+          "url": "https://doi.org/10.1017/eaa.2017.21"
+        },
+        {
+          "title": "UNESCO: Site of Xanadu",
+          "url": "https://whc.unesco.org/en/list/1389/"
+        }
+      ]
+    },
+    {
+      "id": "world-silk-roads",
+      "atlasIds": [
+        "asia-pacific",
+        "europe",
+        "africa"
+      ],
+      "category": "subjects",
+      "title": "Silk Roads: changing networks of towns, ports and people",
+      "description": "Selected land and sea connections from Han-era cities to fourteenth-century merchant instructions, grounded in dated evidence.",
+      "intro": "Silk Roads is a useful plural name for many overlapping connections. Cities, farms, ports and households made those connections possible. The playable scenes follow particular evidence through time, so an ancient port, a Sogdian letter and a Mongol-era handbook keep their own historical settings.",
+      "scope": "Selected evidence from 200 BCE to 1500 CE. This is a documented cross-section, not a claim to include every route or to date the beginning and end of Eurasian exchange.",
+      "map": {
+        "bounds": [
+          25,
+          5,
+          125,
+          55
+        ],
+        "scope": "Eastern Mediterranean, Red Sea, Central Asia, South Asia and China. Archaeological phases and dated textual reports appear separately; connections are schematic examples of changing networks.",
+        "points": [
+          {
+            "id": "silk-weiyang",
+            "label": "Chang’an: foundation of Weiyang Palace",
+            "coordinates": [
+              108.8572,
+              34.3044
+            ],
+            "date": "200 BCE: reported palace construction",
+            "description": "Weiyang Palace places a major Han political center at the eastern end of later exchange corridors. A palace-construction date is not the birth date of an entire transcontinental network. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://www.mea.gov.in/images/pdf/India-ChinaEncyclopedia_Vol-2.pdf",
+              "https://whc.unesco.org/en/list/1442/",
+              "https://whc.unesco.org/en/list/1442/maps/"
+            ]
+          },
+          {
+            "id": "silk-taxila-sirkap",
+            "label": "Taxila: the foundation of Sirkap",
+            "coordinates": [
+              72.83,
+              33.756
+            ],
+            "date": "About 150 BCE; mid-second century BCE",
+            "description": "The fortified Sirkap settlement illustrates urban development at a South Asian crossroads. 150 BCE is a display anchor for 'mid-second century BCE', not an exact founding year. The wider Taxila landscape is much older. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://whc.unesco.org/en/list/139/"
+            ]
+          },
+          {
+            "id": "silk-luoyang",
+            "label": "Luoyang: Eastern Han capital",
+            "coordinates": [
+              112.6214,
+              34.7311
+            ],
+            "date": "Eastern Han period, 25–220 CE",
+            "description": "Luoyang anchors an imperial urban phase at the eastern end of the corridor system. The interval selects one capital phase; it is not the complete lifespan of Luoyang. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://whc.unesco.org/uploads/activities/documents/activity-631-1.pdf",
+              "https://whc.unesco.org/en/list/1442/maps/"
+            ]
+          },
+          {
+            "id": "silk-palmyra",
+            "label": "Palmyra: caravan oasis and monumental city",
+            "coordinates": [
+              38.267,
+              34.551
+            ],
+            "date": "First–second centuries CE",
+            "description": "The surviving urban ensemble reflects connections between local, Mediterranean and Persian traditions. Architectural influence is not proof that every resident or object travelled the whole distance to China. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://whc.unesco.org/en/list/23/"
+            ]
+          },
+          {
+            "id": "silk-berenike",
+            "label": "Berenike: a Red Sea trading port",
+            "coordinates": [
+              35.47,
+              23.91
+            ],
+            "date": "Periplus context: mid-to-late first century CE",
+            "description": "The Periplus begins its maritime geography with Egyptian Red Sea ports including Berenike. This is a broad textual activity window, not the foundation date of the port. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://depts.washington.edu/silkroad/texts/periplus/periplus.html",
+              "https://depts.washington.edu/silkroad/texts/texts.html"
+            ]
+          },
+          {
+            "id": "silk-cana",
+            "label": "Cana: Arabian incense and sea connections",
+            "coordinates": [
+              48.33,
+              14.03
+            ],
+            "date": "Periplus context: mid-to-late first century CE",
+            "description": "The Periplus describes Cana receiving incense from inland and trading with Indian and Persian ports. Bir Ali is an approximate locality identification; the narrative does not establish a timeless shipping lane. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://depts.washington.edu/silkroad/texts/periplus/periplus.html"
+            ]
+          },
+          {
+            "id": "silk-barygaza",
+            "label": "Barygaza: navigation and local expertise",
+            "coordinates": [
+              72.99,
+              21.7
+            ],
+            "date": "Periplus context: mid-to-late first century CE",
+            "description": "The account describes river pilots helping ships negotiate the approach to Barygaza, near modern Bharuch. The source describes particular commercial conditions; it is not a census or a complete port history. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://depts.washington.edu/silkroad/texts/periplus/periplus.html"
+            ]
+          },
+          {
+            "id": "silk-niya-documents",
+            "label": "Niya: documents from an oasis society",
+            "coordinates": [
+              82.7,
+              37.95
+            ],
+            "date": "Approximately 235–325 CE",
+            "description": "Kharosthi documents preserve administration and everyday transactions in the Niya oasis region. Dates describe the document corpus; its people and institutions cannot be reduced to passing caravans. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://depts.washington.edu/silkroad/texts/niyadocts.html",
+              "https://depts.washington.edu/silkroad/texts/texts.html"
+            ]
+          },
+          {
+            "id": "silk-dunhuang-letters",
+            "label": "Near Dunhuang: the Sogdian Ancient Letters",
+            "coordinates": [
+              93.87,
+              40.35
+            ],
+            "date": "Approximately 313–314 CE",
+            "description": "Letters recovered west of Dunhuang connect merchant households, distant business and interrupted communications. The findspot is represented near the western frontier corridor, not the town center. Dating is a scholarly reconstruction. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://depts.washington.edu/silkroad/texts/sogdlet.html"
+            ]
+          },
+          {
+            "id": "silk-mogao",
+            "label": "Mogao: a long sequence of Buddhist caves",
+            "coordinates": [
+              94.81,
+              40.04
+            ],
+            "date": "From 366 CE; principal sequence through the fourteenth century",
+            "description": "Cave temples and manuscripts document many centuries of religious and artistic activity near Dunhuang. The endpoint rounds the end of the fourteenth century; individual caves have different dates and later histories. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://whc.unesco.org/en/list/440/"
+            ]
+          },
+          {
+            "id": "silk-penjikent",
+            "label": "Ancient Penjikent: an inhabited Sogdian town",
+            "coordinates": [
+              67.624,
+              39.487
+            ],
+            "date": "Fifth–eighth centuries CE",
+            "description": "Excavation reveals houses, temples, workshops and monumental art in an urban settlement. The broad archaeological interval is not an exact foundation-to-destruction chronology. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://whc.unesco.org/en/tentativelists/5790/",
+              "https://whc.unesco.org/en/decisions/8394"
+            ]
+          },
+          {
+            "id": "silk-suyab",
+            "label": "Suyab: a changing urban and religious center",
+            "coordinates": [
+              75.2033,
+              42.8019
+            ],
+            "date": "Sixth–eleventh centuries CE",
+            "description": "Archaeology at Ak-Beshim documents a city with Buddhist, Christian and other religious material. The broad period includes rebuilding and political change; cultural labels do not identify a uniform population. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://www.iranicaonline.org/articles/suyab/",
+              "https://whc.unesco.org/en/list/1442/maps/"
+            ]
+          },
+          {
+            "id": "silk-balasagun",
+            "label": "Balasagun: a Chuy valley city",
+            "coordinates": [
+              75.2503,
+              42.7467
+            ],
+            "date": "Tenth–fourteenth centuries CE",
+            "description": "Burana represents the medieval city of Balasagun and its surviving religious architecture. A broad occupation interval does not imply unchanged boundaries, rulers or population. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://unesco.ru/en/news/47-balasagun/",
+              "https://whc.unesco.org/en/list/1442/maps/"
+            ]
+          },
+          {
+            "id": "silk-bukhara",
+            "label": "Bukhara: Samanid architectural evidence",
+            "coordinates": [
+              64.41,
+              39.777
+            ],
+            "date": "Tenth century CE",
+            "description": "The Samanid mausoleum anchors an early medieval architectural phase in Bukhara. The city predates this monument; much visible urban fabric belongs to later periods. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://whc.unesco.org/en/list/602/"
+            ]
+          },
+          {
+            "id": "silk-merv",
+            "label": "Merv: Seljuk capital phase",
+            "coordinates": [
+              62.18,
+              37.66
+            ],
+            "date": "Eleventh–twelfth centuries CE",
+            "description": "Merv’s archaeological landscape includes a major Seljuk capital phase. This selected phase is only part of a much longer sequence of settlements in the oasis. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://whc.unesco.org/en/list/886/",
+              "https://whc.unesco.org/en/decisions/8394"
+            ]
+          },
+          {
+            "id": "silk-quanzhou-port",
+            "label": "Quanzhou: a Song–Yuan maritime emporium",
+            "coordinates": [
+              118.59,
+              24.906
+            ],
+            "date": "Tenth–fourteenth centuries CE",
+            "description": "Ports, bridges, religious monuments and production sites document an extensive trading city and its hinterland. The component sites have different histories; the interval describes the emporium phase, not simultaneous construction. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://whc.unesco.org/en/decisions/7934",
+              "https://whc.unesco.org/en/list/1561/maps/"
+            ]
+          },
+          {
+            "id": "silk-tana",
+            "label": "Tana: a merchant handbook’s western starting point",
+            "coordinates": [
+              39.42,
+              47.11
+            ],
+            "date": "Handbook compiled around 1340 CE",
+            "description": "Pegolotti’s instructions start the overland journey to Cathay at Tana, near modern Azov. The approximate date belongs to the handbook; Pegolotti did not claim to have personally travelled this entire route. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://depts.washington.edu/silkroad/texts/pegol.html"
+            ]
+          },
+          {
+            "id": "silk-urgench",
+            "label": "Urgench: a trading stop in Pegolotti",
+            "coordinates": [
+              59.16,
+              42.32
+            ],
+            "date": "Handbook compiled around 1340 CE",
+            "description": "The handbook recommends Urgench as a place where merchants could sell goods on the journey east. This is advice about a route, not a dated expedition or a measurement of traffic. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://depts.washington.edu/silkroad/texts/pegol.html"
+            ]
+          },
+          {
+            "id": "silk-samarkand",
+            "label": "Samarkand: Timurid urban development",
+            "coordinates": [
+              66.975,
+              39.655
+            ],
+            "date": "Fourteenth–fifteenth centuries CE",
+            "description": "The Timurid city’s monuments and plan represent a later phase of Central Asian urban connections. Samarkand’s older Afrasiab settlement has a separate history; this date range does not imply uninterrupted prosperity. Coordinates are approximate locality anchors.",
+            "sources": [
+              "https://whc.unesco.org/en/list/603/"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "A network changes with its users",
+          "paragraphs": [
+            {
+              "text": "The modern label gathers land and maritime exchanges under one name. It should not suggest that a single authority built one road, that silk was the only cargo, or that most merchants crossed the whole continent. UNESCO’s overview describes connections carrying goods and knowledge in multiple directions. The map makes that plurality visible through separate dated scenes.",
+              "sources": [
+                "https://www.unesco.org/en/silk-roads/about-silk-roads"
+              ]
+            },
+            {
+              "text": "Two UNESCO corridor studies provide different geographical scales. Chang’an–Tianshan follows eastern capitals, oasis towns and mountain corridors. Zarafshan–Karakum follows a Central Asian chain toward Merv and distinguishes Sogdian, medieval Islamic and later phases. Neither study supplies a universal timetable for every settlement shown here.",
+              "sources": [
+                "https://whc.unesco.org/en/list/1442/",
+                "https://whc.unesco.org/en/decisions/8394"
+              ]
+            }
+          ],
+          "columns": [
+            "Selected scene",
+            "Evidence",
+            "Limit"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "200 BCE–220 CE",
+                "Han political centers and eastern corridors",
+                "A capital or palace date is not a founding date for the whole network."
+              ],
+              "sources": [
+                "https://www.mea.gov.in/images/pdf/India-ChinaEncyclopedia_Vol-2.pdf",
+                "https://whc.unesco.org/uploads/activities/documents/activity-631-1.pdf",
+                "https://whc.unesco.org/en/list/1442/"
+              ]
+            },
+            {
+              "cells": [
+                "First century CE",
+                "Periplus descriptions of maritime markets",
+                "A text describes commercial knowledge, not every voyage."
+              ],
+              "sources": [
+                "https://depts.washington.edu/silkroad/texts/periplus/periplus.html"
+              ]
+            },
+            {
+              "cells": [
+                "235–325 and 313–314 CE",
+                "Niya documents and Sogdian letters",
+                "Different corpora illuminate different communities and moments."
+              ],
+              "sources": [
+                "https://depts.washington.edu/silkroad/texts/niyadocts.html",
+                "https://depts.washington.edu/silkroad/texts/sogdlet.html"
+              ]
+            },
+            {
+              "cells": [
+                "Fifth–twelfth centuries",
+                "Oasis towns and regional exchange",
+                "Archaeological phases include local change and interruption."
+              ],
+              "sources": [
+                "https://whc.unesco.org/en/tentativelists/5790/",
+                "https://www.iranicaonline.org/articles/suyab/",
+                "https://whc.unesco.org/en/decisions/8394"
+              ]
+            },
+            {
+              "cells": [
+                "Around 1340 CE",
+                "Pegolotti’s trading instructions",
+                "A handbook is not its author’s personal itinerary."
+              ],
+              "sources": [
+                "https://depts.washington.edu/silkroad/texts/pegol.html"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "The cities were more than stops",
+          "paragraphs": [
+            {
+              "text": "Weiyang Palace in Chang’an anchors an early Han political center, while Luoyang marks an Eastern Han capital phase. Farther southwest, Sirkap at Taxila was founded around the middle of the second century BCE. These are different kinds of urban evidence. Their dates should remain attached to the particular palace, city phase or foundation being described.",
+              "sources": [
+                "https://www.mea.gov.in/images/pdf/India-ChinaEncyclopedia_Vol-2.pdf",
+                "https://whc.unesco.org/uploads/activities/documents/activity-631-1.pdf",
+                "https://whc.unesco.org/en/list/139/"
+              ]
+            },
+            {
+              "text": "Ancient Penjikent’s houses, temples and workshops show a town in which people lived and worked. Suyab adds another record of urban change, with excavated religious buildings and inscriptions. Balasagun’s later occupation and monuments belong to a distinct nearby settlement. A shared corridor did not make these places culturally identical or politically continuous.",
+              "sources": [
+                "https://whc.unesco.org/en/tentativelists/5790/",
+                "https://www.iranicaonline.org/articles/suyab/",
+                "https://unesco.ru/en/news/47-balasagun/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Small documents, human consequences",
+          "paragraphs": [
+            {
+              "text": "The Kharosthi documents from the Niya region preserve local administration and transactions. Their approximate 235–325 date range belongs to the corpus, not to the entire life of the oasis. Such records allow the map to include settled institutions alongside the better-known long-distance travellers.",
+              "sources": [
+                "https://depts.washington.edu/silkroad/texts/niyadocts.html",
+                "https://depts.washington.edu/silkroad/texts/texts.html"
+              ]
+            },
+            {
+              "text": "The Sogdian Ancient Letters, dated about 313–314, reveal commercial connections and personal vulnerability together. Letters associated with Miwnay and her daughter expose abandonment and hardship; another reports disruption affecting distant business. A line from Samarkand’s commercial world toward the Dunhuang region represents those ties, not a known courier’s track.",
+              "sources": [
+                "https://depts.washington.edu/silkroad/texts/sogdlet.html"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Ports required local knowledge and labour",
+          "paragraphs": [
+            {
+              "text": "The first-century Periplus connects Red Sea, Arabian and Indian markets. At Barygaza it describes difficult approaches and local pilots; at Cana it links maritime exchange with inland incense. These passages make navigation, water, timing and regional expertise part of the story. The sea connection is a selected commercial scene, not a permanent lane that every ship followed.",
+              "sources": [
+                "https://depts.washington.edu/silkroad/texts/periplus/periplus.html"
+              ]
+            },
+            {
+              "text": "Quanzhou’s tenth–fourteenth-century evidence moves the maritime view to China. The mapped heritage components include transport infrastructure, places of worship and manufacturing areas. A port’s overseas connections depended on work inland as well as ships offshore. The map dates the trading-city phase while acknowledging that its individual structures were built at different times.",
+              "sources": [
+                "https://whc.unesco.org/en/decisions/7934",
+                "https://whc.unesco.org/en/list/1561/maps/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Religion, art and the work of interpretation",
+          "paragraphs": [
+            {
+              "text": "At Mogao, cave temples and manuscripts preserve a long sequence beginning in the fourth century and extending through the fourteenth. They show that religious and intellectual activity belonged to the oasis landscape. Their varied dates matter: a millennium of artistic production should not appear as one event caused by a single caravan.",
+              "sources": [
+                "https://whc.unesco.org/en/list/440/"
+              ]
+            },
+            {
+              "text": "Palmyra’s first–second-century monuments combine several architectural traditions at a caravan oasis. Bukhara’s Samanid mausoleum and Merv’s Seljuk phase represent later urban settings. Objects and buildings provide evidence of interaction, but a stylistic resemblance alone cannot reconstruct the ancestry, language or travel history of all the people who lived beside them.",
+              "sources": [
+                "https://whc.unesco.org/en/list/23/",
+                "https://whc.unesco.org/en/list/602/",
+                "https://whc.unesco.org/en/list/886/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Read a merchant’s instructions as instructions",
+          "paragraphs": [
+            {
+              "text": "Around 1340, Pegolotti’s handbook described stages from Tana through Central Asia toward Cathay. It discussed practical needs such as interpreters and supplies. Its route belongs to a particular commercial and political setting; the author did not claim to have personally made the full journey. The two playable links isolate the western stages and the onward connection rather than inventing daily progress.",
+              "sources": [
+                "https://depts.washington.edu/silkroad/texts/pegol.html"
+              ]
+            },
+            {
+              "text": "The same distinction applies to Marco Polo. A report can contain useful knowledge of cities and markets without supplying a personal visit to every place it names. Compare the companion guide’s reported journey with these wider networks to see how one traveller’s narrative differs from a regional history.",
+              "sources": [
+                "https://www.loc.gov/resource/gdcwdl.wdl_14300/?sp=1&st=grid",
+                "https://risorse-esterne.edizionicafoscari.it/lemmi/Quinsai.html"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "The timeline stops; exchange does not",
+          "paragraphs": [
+            {
+              "text": "Samarkand’s fourteenth–fifteenth-century Timurid development closes this selection with another changing urban landscape. Older Afrasiab and the later city are related places with distinct material histories. Ending this study at 1500 is a choice of scope, not evidence that trade or cultural contact ended then.",
+              "sources": [
+                "https://whc.unesco.org/en/list/603/",
+                "https://www.unesco.org/en/silk-roads/about-silk-roads"
+              ]
+            },
+            {
+              "text": "All points are locality anchors. Broad centuries describe selected occupation or artistic phases; single years may instead locate the approximate date of a text. Population totals are omitted where no defensible settlement count was established. The linked maps identify heritage components and modern conservation extents, not historic ethnic territories or complete route surveys.",
+              "sources": [
+                "https://whc.unesco.org/en/list/1442/maps/",
+                "https://whc.unesco.org/en/list/1675/maps/",
+                "https://whc.unesco.org/en/list/1561/maps/"
+              ]
+            }
+          ]
+        }
+      ],
+      "relatedGuideIds": [
+        "world-marco-polo"
+      ],
+      "referenceMaps": [
+        {
+          "title": "UNESCO Chang’an–Tianshan corridor maps",
+          "url": "https://whc.unesco.org/en/list/1442/maps/",
+          "description": "Component-site coordinates and official maps for the eastern overland corridor."
+        },
+        {
+          "title": "UNESCO Zarafshan–Karakum corridor maps",
+          "url": "https://whc.unesco.org/en/list/1675/maps/",
+          "description": "Mapped components along a Central Asian corridor from the Zarafshan valley toward Merv."
+        },
+        {
+          "title": "UNESCO Quanzhou component maps",
+          "url": "https://whc.unesco.org/en/list/1561/maps/",
+          "description": "The maritime emporium shown through its dispersed infrastructure, production and religious sites."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Ca’ Foscari critical digital edition: Quinsai",
+          "url": "https://risorse-esterne.edizionicafoscari.it/lemmi/Quinsai.html"
+        },
+        {
+          "title": "Library of Congress: The Travels of Marco Polo, manuscript catalogue",
+          "url": "https://www.loc.gov/resource/gdcwdl.wdl_14300/?sp=1&st=grid"
+        },
+        {
+          "title": "UNESCO: About the Silk Roads",
+          "url": "https://www.unesco.org/en/silk-roads/about-silk-roads"
+        },
+        {
+          "title": "UNESCO: Chang’an–Tianshan Corridor",
+          "url": "https://whc.unesco.org/en/list/1442/"
+        },
+        {
+          "title": "UNESCO: Chang’an–Tianshan Corridor maps",
+          "url": "https://whc.unesco.org/en/list/1442/maps/"
+        },
+        {
+          "title": "UNESCO World Heritage Committee: Zarafshan–Karakum Corridor (2023)",
+          "url": "https://whc.unesco.org/en/decisions/8394"
+        },
+        {
+          "title": "UNESCO: Zarafshan–Karakum Corridor maps",
+          "url": "https://whc.unesco.org/en/list/1675/maps/"
+        },
+        {
+          "title": "India Ministry of External Affairs: Encyclopedia of India–China Cultural Contacts, volume II",
+          "url": "https://www.mea.gov.in/images/pdf/India-ChinaEncyclopedia_Vol-2.pdf"
+        },
+        {
+          "title": "UNESCO/ICOMOS thematic study: Heritage Sites of Astronomy and Archaeoastronomy",
+          "url": "https://whc.unesco.org/uploads/activities/documents/activity-631-1.pdf"
+        },
+        {
+          "title": "T. Burrow (1940): A Translation of the Kharosthi Documents from Chinese Turkestan; Silk Road Seattle edition",
+          "url": "https://depts.washington.edu/silkroad/texts/niyadocts.html"
+        },
+        {
+          "title": "University of Washington: Silk Road narratives catalogue",
+          "url": "https://depts.washington.edu/silkroad/texts/texts.html"
+        },
+        {
+          "title": "Nicholas Sims-Williams: Sogdian Ancient Letters; introduction by Daniel Waugh",
+          "url": "https://depts.washington.edu/silkroad/texts/sogdlet.html"
+        },
+        {
+          "title": "UNESCO: Mogao Caves",
+          "url": "https://whc.unesco.org/en/list/440/"
+        },
+        {
+          "title": "Gregory Semenov: Suyāb, Encyclopaedia Iranica",
+          "url": "https://www.iranicaonline.org/articles/suyab/"
+        },
+        {
+          "title": "Kyrgyz National Commission for UNESCO: Balasagun Town (Burana)",
+          "url": "https://unesco.ru/en/news/47-balasagun/"
+        },
+        {
+          "title": "Tajikistan submission to UNESCO: Silk Roads sites, Ancient Penjikent",
+          "url": "https://whc.unesco.org/en/tentativelists/5790/"
+        },
+        {
+          "title": "UNESCO: Samarkand – Crossroad of Cultures",
+          "url": "https://whc.unesco.org/en/list/603/"
+        },
+        {
+          "title": "UNESCO: Historic Centre of Bukhara",
+          "url": "https://whc.unesco.org/en/list/602/"
+        },
+        {
+          "title": "UNESCO: Ancient Merv",
+          "url": "https://whc.unesco.org/en/list/886/"
+        },
+        {
+          "title": "UNESCO: Taxila",
+          "url": "https://whc.unesco.org/en/list/139/"
+        },
+        {
+          "title": "UNESCO: Site of Palmyra",
+          "url": "https://whc.unesco.org/en/list/23/"
+        },
+        {
+          "title": "Periplus of the Erythraean Sea, University of Washington edition",
+          "url": "https://depts.washington.edu/silkroad/texts/periplus/periplus.html"
+        },
+        {
+          "title": "UNESCO World Heritage Committee: Quanzhou (2021)",
+          "url": "https://whc.unesco.org/en/decisions/7934"
+        },
+        {
+          "title": "UNESCO: Quanzhou maps",
+          "url": "https://whc.unesco.org/en/list/1561/maps/"
+        },
+        {
+          "title": "Francesco Balducci Pegolotti: Merchant Handbook, circa 1340",
+          "url": "https://depts.washington.edu/silkroad/texts/pegol.html"
+        }
+      ]
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import {mapSetting} from '../scripts/browser-fixture.mjs';
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {createStaticServer} from '../scripts/static-server.mjs';
@@ -9,13 +10,13 @@ async function check(label,fn){const p=await browser.newPage({viewport:{width:14
 async function viaLibrary(p){await p.getByRole('link',{name:'Library',exact:true}).click();await p.locator('.library-card[href="#dives"]').click();await p.locator('.dive-tabs a[href="#dives/subjects"]').click();await p.locator('a[href="#topic/horses"]').click();await p.locator('#topic-play').waitFor();}
 try{
  await check('Explore state survives topic entry through Library',async p=>{
-  await p.goto(base+'/#explore');await p.locator('#place-search').fill('Taos');
+  await p.goto(base+'/#explore');await mapSetting(p, () => p.locator('#place-search').fill('Taos'));
   await p.getByRole('button',{name:'Zoom in',exact:true}).click();const camera=await p.locator('#map-host .world').getAttribute('transform');
   await viaLibrary(p);await p.locator('.topic-toolbar a').filter({hasText:'Shared atlas'}).click();await p.locator('#map-host').waitFor();
   assert.equal(p.url().split('#')[1],'explore');assert.equal(await p.locator('#place-search').inputValue(),'Taos');sameCamera(await p.locator('#map-host .world').getAttribute('transform'),camera);
  });
  await check('Guided camera survives a reading-page detour',async p=>{
-  await p.goto(base);await p.getByRole('button',{name:'Pause',exact:true}).click();await p.locator('#story-select').selectOption('peoples-of-the-north');await p.getByRole('button',{name:'Zoom in',exact:true}).click();const camera=await p.locator('#map-host .world').getAttribute('transform');
+  await p.goto(base+'/#movie');await p.getByRole('button',{name:'Pause',exact:true}).click();await mapSetting(p, () => p.locator('#story-select').selectOption('peoples-of-the-north'));await p.getByRole('button',{name:'Zoom in',exact:true}).click();const camera=await p.locator('#map-host .world').getAttribute('transform');
   await viaLibrary(p);await p.locator('.topic-toolbar a').filter({hasText:'Shared atlas'}).click();await p.locator('#map-host').waitFor();assert.equal(await p.locator('#story-select').inputValue(),'peoples-of-the-north');sameCamera(await p.locator('#map-host .world').getAttribute('transform'),camera);
  });
  await check('Manual topic heading stays on the playing date',async p=>{
@@ -26,7 +27,7 @@ try{
   await p.goto(base+'/#explore');const color=await p.locator('.header-about').evaluate(el=>getComputedStyle(el).color);await p.getByRole('link',{name:'Deep dives',exact:true}).click();await p.locator('.dive-tabs a[href="#dives/subjects"]').click();await p.locator('a[href="#topic/horses"]').click();await p.locator('#topic-play').waitFor();assert.equal(await p.locator('.header-about').evaluate(el=>getComputedStyle(el).color),color);
  });
  await check('Topic evidence opens its shared context and clears expedition focus',async p=>{
-  await p.goto(base);await p.getByRole('button',{name:'Pause',exact:true}).click();await p.getByLabel('Follow an expedition',{exact:true}).selectOption('beagle-1831-1836');
+  await p.goto(base+'/#movie');await p.getByRole('button',{name:'Pause',exact:true}).click();await mapSetting(p, () => p.getByLabel('Follow an expedition',{exact:true}).selectOption('beagle-1831-1836'));
   await p.getByRole('link',{name:'Deep dives',exact:true}).click();await p.locator('.dive-tabs a[href="#dives/subjects"]').click();await p.locator('a[href="#topic/horses"]').click();await p.locator('#topic-play').waitFor();
   assert.ok(await p.locator('.topic-context [data-shared-context]').count()>0,'linked shared history is available');
   await p.locator('.topic-context a[href="#context/settlement-la-isabela"]').click();await p.locator('[data-action="locate"]').click();await p.locator('#map-host .world').waitFor();

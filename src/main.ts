@@ -21,9 +21,12 @@ import { availableVoyageRecords, scopedVoyageDate, scopedVoyageProgress, advance
 import { movieContextHTML } from './movie-context';
 import {localChronologyHTML} from './local-chronology';
 import { appShell, mapShell, libraryHTML } from "./atlas-shell";
+import {mountMapNavigation,type MapNavigation} from './map-navigation';
 import { loadAtlasManifest, resolveAtlasRoute } from "./atlas-catalog";
 import { atlasNavigationHTML, atlasPreviewHTML } from "./atlas-switcher";
 import {loadEurope,mountEurope} from './europe-page';
+import {worldRoute} from './world-model';
+import {mountWorldPage} from './world-page';
 import {voyageGuideLinksHTML} from './world-guides';
 import { stories } from "./stories";
 import { sampleStory, sceneStartMs, storyDurationMs, storyElapsedAtYear } from "./story-player";
@@ -111,7 +114,7 @@ let currentVisible: DisplayRecord[] = [];
 let storyId='free', storyElapsed=0, storySceneIndex=-1, storyRate=1;
 let pendingStoryYear:number|null=null;
 let movieClock=minYear;
-let openingPlayback=!location.hash||['#map','#movie'].includes(location.hash);
+let openingPlayback=['#map','#movie'].includes(location.hash);
 let placeQuery='', placeCategory:ExploreCategory='all', explorePeriod:'all'|'current'='all';
 let selectionCandidates:DisplayRecord[]=[];
 let pendingLocation:DisplayRecord|null=null;
@@ -207,6 +210,7 @@ const map = new MapView(
   () => {renderVisible();renderBoundaryCatalog();},
 );
 let mountedMap = false;
+let mapNavigation:MapNavigation|undefined;
 main.addEventListener("click", event => {
   if (mountedMap && atlasMode === "movie" && playing && (event.target as Element).closest("#visible-records,#context-records,#selected-records,#hazard-status")) {
     event.preventDefault(); event.stopImmediatePropagation(); stop();
@@ -351,8 +355,6 @@ function closeDetails(){
   $('#detail-panel').hidden=true;
   focusDrawer('detail-panel',false);
   $('.atlas-layout').classList.add('detail-panel-hidden');
-  $('#toggle-details').setAttribute('aria-expanded','false');
-  $('#toggle-details').textContent='Details';
   map.setHighlighted(isGuidedStory()?currentStory().scenes[Math.max(0,storySceneIndex)].recordIds:[]);
   renderVisible();
 }
@@ -371,7 +373,7 @@ function mountAtlasControls(){
   $('#explore-category').addEventListener('change',e=>{placeCategory=(e.target as HTMLSelectElement).value as ExploreCategory;renderMapData();});
   $('#explore-period').addEventListener('change',e=>{explorePeriod=(e.target as HTMLSelectElement).value as 'all'|'current';$('.timeline').hidden=atlasMode==='explore'&&explorePeriod==='all';syncTransport();renderMapData();});
   $('#explore-region').addEventListener('change',e=>{const r=regions.find(r=>r.id===(e.target as HTMLSelectElement).value);if(r){stop();placeQuery='';$<HTMLInputElement>('#place-search').value='';map.focusRegion(r.center,r.zoom,r.scope);renderVisible();}});
-  $('#focus-mode').addEventListener('click',()=>{const focus=document.body.classList.toggle('focus-view');$('#focus-mode').setAttribute('aria-pressed',String(focus));$('#focus-mode').textContent=focus?'Exit focus':'Focus view';});
+  $('#focus-mode').addEventListener('click',()=>{const focus=document.body.classList.toggle('focus-view');$('#focus-mode').setAttribute('aria-pressed',String(focus));$('#focus-mode').textContent=focus?'Exit focus':'Focus view';if(focus){if($('#toggle-details').getAttribute('aria-expanded')==='true')$('#toggle-details').click();}else mapNavigation?.showFacts();});
   $('#close-layers').addEventListener('click',()=>$('#toggle-layers').click());
   $('#focus-selection').addEventListener('click',()=>{if(selected.length)map.focusRecords(selected);});
   $('#show-selection-year').addEventListener('click',()=>{const r=selected[0];if(!r||r.time.start===null)return;setRecordYear(r);if(atlasMode==='explore'){explorePeriod='current';$<HTMLSelectElement>('#explore-period').value='current';$('.timeline').hidden=false;syncTransport();renderMapData();}map.focusRecords([r]);selectEvidence([r]);});
@@ -506,7 +508,7 @@ $('#time-settings-toggle').addEventListener('click',()=>{const panel=$('#time-se
 document.addEventListener('keydown',e=>{
   if(!mountedMap)return;
   if(e.key==='Escape'){
-    if(!$('#layer-options').hidden)$('#toggle-layers').click();
+    if($('#toggle-layers').getAttribute('aria-expanded')==='true'){$('#toggle-layers').click();$('#toggle-layers').focus();}
     else if(!$('#detail-panel').hidden)closeDetails();
     else if(document.body.classList.contains('focus-view'))$('#focus-mode').click();
   }
@@ -576,6 +578,7 @@ document.addEventListener("visibilitychange", () => {
   if (document.hidden) stop();
 });
 function mapPage() {
+  mapNavigation?.dispose();
   mountedMap = true;
   const languageModels = dataset.records.filter((r) => r.linguistics);
   const languageLinks = atlasMode === "explore" && languageModels.length
@@ -596,31 +599,14 @@ function mapPage() {
     $("#layer-options").insertAdjacentHTML("afterbegin", '<p class="fine">Explore combines research evidence across periods. Dated physical snapshots and event symbols belong to Movie; <a href="#physical">browse the full natural-event catalog</a>.</p>');
   }
   $("#map-host").append(map.element);
+  const layout=$('.atlas-layout');layout.classList.add('shared-map-layout');
+  const facts=document.createElement('aside');facts.id='atlas-facts';facts.className='atlas-facts';facts.setAttribute('aria-label','Selected facts and visible evidence');
+  layout.prepend(facts);facts.append($('#detail-panel'),$('#site-panel'),$('#expeditions-now'),$('#story-panel'));$('#site-panel').hidden=false;
+  mapNavigation=mountMapNavigation($('#atlas-map-navigation'),{region:'americas',settings:[$('#story-picker-section'),$('.explore-intro'),$('#atlas-map-settings-controls'),$('#layer-options')],facts:[facts],settingsToggleId:'toggle-layers',factsToggleId:'toggle-details',onFactsToggle:open=>{layout.classList.toggle('map-facts-hidden',!open);if(open){document.body.classList.remove('focus-view');$('#focus-mode').setAttribute('aria-pressed','false');$('#focus-mode').textContent='Focus view';}}});
+  $('.layers-panel').hidden=true;
+  $('#whole-movie').setAttribute('data-map-menu-choice','');
   panels = new MapPanels(main, (items) => { selectEvidence(items); if(items.length===1 && placeQuery.trim())map.focusRecords(items); });
-  for (const [button, panel, noun] of [
-    ["toggle-sites", "site-panel", "site list"],
-    ["toggle-details", "detail-panel", "details"],
-  ]) {
-    $("#" + button).addEventListener("click", () => {
-      const target = $("#" + panel);
-      target.hidden = !target.hidden;
-      $("#" + button).setAttribute("aria-expanded", String(!target.hidden));
-      $("#" + button).textContent =
-        `${target.hidden ? "Show" : "Hide"} ${noun}`;
-      $(".atlas-layout").classList.toggle(panel + "-hidden", target.hidden);
-      if(panel==='detail-panel')focusDrawer('detail-panel',!target.hidden);
-    });
-  }
-  $("#toggle-layers").addEventListener("click", () => {
-    const options = $("#layer-options");
-    options.hidden = !options.hidden;
-    $(".atlas-layout").classList.toggle("layers-open", !options.hidden);
-    $("#toggle-layers").textContent = options.hidden
-      ? "Show layers"
-      : "Hide layers";
-    $("#toggle-layers").setAttribute("aria-expanded", String(!options.hidden));
-    focusDrawer('layer-options',!options.hidden);
-  });
+  $('#toggle-sites').addEventListener('click',()=>{const panel=$('#site-panel');panel.hidden=!panel.hidden;$('#toggle-sites').setAttribute('aria-expanded',String(!panel.hidden));$('#toggle-sites').textContent=panel.hidden?'Show places list':'Hide places list';});
   for (const [id, change] of [
     ["show-undated", (v: boolean) => (showUndated = v)],
     ["show-ice", (v: boolean) => (showIce = v)],
@@ -827,8 +813,8 @@ function openDetails(){
   const wasHidden=$('#detail-panel').hidden;
   $('#detail-panel').hidden=false;
   $('.atlas-layout').classList.remove('detail-panel-hidden');
-  $('#toggle-details').setAttribute('aria-expanded','true');
-  $('#toggle-details').textContent='Hide details';
+  mapNavigation?.showFacts();
+  $('#atlas-facts').scrollTop=0;
   if(wasHidden)focusDrawer('detail-panel',true);
 }
 function renderVisible() {
@@ -1055,7 +1041,7 @@ main.addEventListener("click", (event) => {
   if ((event.target as Element).closest("[data-retry-physical]"))
     void initializePhysical();
 });
-let previousHash = location.hash || "#movie";
+let previousHash = location.hash || "#world";
 let reverting = false;
 let routeGeneration = 0;
 let disposeTopic:(()=>void)|undefined;
@@ -1067,7 +1053,7 @@ let reviewTopic:string|undefined;
 let pendingTopicLocation:DisplayRecord|undefined;
 async function route() {
   const generation = ++routeGeneration;
-  const hash = location.hash || "#movie";
+  const hash = location.hash || "#world";
   if (reverting) {
     reverting = false;
     return;
@@ -1091,6 +1077,7 @@ async function route() {
   const diveRoute=hash==='#dives'||hash.startsWith('#dives/')||hash==='#sites'||hash==='#topics'||hash.startsWith('#topics/')||hash.startsWith('#topic/');
   if(diveRoute&&!topicOriginCamera){topicOriginCamera=lastAtlasCamera;topicOriginRoute=lastAtlasRoute;}
   disposeTopic?.();disposeTopic=undefined;
+  mapNavigation?.dispose();mapNavigation=undefined;
   previousHash = hash;
   tableController?.dispose();
   tableController = undefined;
@@ -1099,6 +1086,7 @@ async function route() {
   map.clearHover();
   stop();
   const plannedAtlas=resolveAtlasRoute(hash);
+  const worldDestination=worldRoute(hash);
   const activeNav=plannedAtlas?'':diveRoute?'#dives':hash==='#explore'?'#explore':['#map','#movie'].includes(hash)||hash.startsWith('#story/')?'#movie':'#library';
   document
     .querySelectorAll('nav[aria-label="Main navigation"] a')
@@ -1112,12 +1100,19 @@ async function route() {
   document.body.classList.toggle('topic-page',hash.startsWith('#topic/'));
   document.body.classList.toggle('atlas-page',mapRoute);
   document.body.classList.toggle('reading-page',!mapRoute);
-  document.body.classList.toggle('atlas-preview-page',Boolean(plannedAtlas&&plannedAtlas!=='europe'));
+  document.body.classList.toggle('atlas-preview-page',false);
   document.body.classList.toggle('europe-page',plannedAtlas==='europe');
+  document.body.classList.toggle('world-route-page',worldDestination!==null);
+  document.body.classList.toggle('world-surface',worldDestination!==null);
   $(".timeline").hidden=!mapRoute;
   document.body.classList.remove('exploring');
   try {
-    if(plannedAtlas==='europe'){
+    if(worldDestination){
+      main.innerHTML='<p class="world-load" role="status">Opening the world atlas…</p>';
+      const container=document.createElement('div');const cleanup=await mountWorldPage(container,worldDestination,land);
+      if(generation!==routeGeneration){cleanup();return;}main.replaceChildren(container);disposeTopic=cleanup;
+    }
+    else if(plannedAtlas==='europe'){
       main.innerHTML='<p class="review-page" role="status">Opening Europe’s places and connections…</p>';
       const europe=await loadEurope();if(generation!==routeGeneration)return;
       disposeTopic=mountEurope(main,europe,land,lastAtlasRoute);

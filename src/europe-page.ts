@@ -1,4 +1,5 @@
 import {MapView, type MapCamera} from './map';
+import {mountMapNavigation} from './map-navigation';
 import {watchDetailedLand} from './atlas-assets';
 import {validateEuropeData,normalizeEurope,europeSelection,europeDates,europeCategories,europePopulationView,type EuropeData} from './europe-data';
 import {END_YEAR,formatYear,parseYear} from './time';
@@ -35,7 +36,7 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
  const state=saved??{year:first,clock:first,region:'all',category:'all',query:'',past:true,warfare:true,interpolate:true,borders:true,trade:true,road:true,rail:true,voyages:true,selected:''};saved=state;
  let disposed=false,playing=false,frame=0,last=0,elapsed=0,rate=1,filtered:EvidenceRecord[]=[],dates:number[]=[],drawing=false,segmentStart=state.clock,segmentTarget:number|undefined,lastPaint=0;
  host.innerHTML=`<section class="europe-atlas" aria-label="Europe history movie">
-  <header class="europe-heading"><div><p class="eyebrow">EUROPE · THE NORTHERN BEGINNING</p><h1>Places, kingdoms and connections</h1></div><a href="${returnHref==='#explore'?'#explore':'#movie'}">↔ Americas</a><a href="#dives/places">Deep dives</a></header>
+  <header class="europe-heading"><div><p class="eyebrow">EUROPE · THE NORTHERN BEGINNING</p><h1>Places, kingdoms and connections</h1></div><a href="#origins/europe">Earlier human family &amp; dispersals</a></header><div id="europe-navigation"></div>
   <div class="europe-layout"><aside class="europe-reader" aria-label="Europe evidence and layers">
    <p class="europe-scope">From the earliest evidence to 1900. Start with the northern countries; follow their connections outward. Selected evidence, with gaps still to fill.</p>
    <div class="europe-filters"><label>Region<select id="europe-region"><option value="all">All northern regions</option>${data.regions.map(r=>`<option value="${esc(r.id)}">${esc(r.title)}</option>`).join('')}</select></label>
@@ -44,8 +45,9 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
    <details class="europe-layers"><summary>Map layers &amp; how to read them</summary>
    ${(['past','borders','trade','road','rail','interpolate','warfare','voyages'] as const).map(id=>`<label><input type="checkbox" data-europe-layer="${id}"${checked(state[id])}> ${{past:'Earlier places',borders:'Dated political territories',trade:'Trade connections',road:'Roads',rail:'Railways',interpolate:'Interpolate comparable town populations',warfare:'Raids, battles & warfare',voyages:'Voyages & migrations'}[id]}</label>`).join('')}
    <p>Territories follow their cited dates. Dotted or dashed outlines mark approximate extent or claims; shared crowns do not imply uniform control.</p><p><span class="network-key trade"></span> Trade · <span class="network-key road"></span> Road · <span class="network-key rail"></span> Rail. Connections are schematic unless the source specifies a mapped trace. Opening dates alone do not prove continuous service.</p><p>Town dots use a logarithmic size scale for dated resident estimates where available. Hatched dots mean population unknown. Comparable census series may interpolate between observations when enabled. Interpolation is labeled; counts are never extrapolated.</p><p>Subdued earlier places are historical context, not evidence of continuing occupation. Regional filters use modern geographic names.</p></details>
-   <details open><summary>Connected expeditions</summary><div id="europe-voyages"></div></details><section id="europe-details" aria-label="Selected place"></section>
+   <section id="europe-details" aria-label="Selected place"></section>
    <details class="europe-now" open><summary>What is here at this time</summary><p id="europe-date-note"></p><div id="europe-list"></div></details>
+   <details><summary>Connected expeditions</summary><div id="europe-voyages"></div></details>
    <details><summary>Roads and rails recorded by this date</summary><div id="europe-built-networks"></div></details><details class="europe-territories"><summary>Territories at this date &amp; sources</summary><div id="europe-boundary-list"></div></details>
    <details><summary>Regional guides</summary><div id="europe-guide-list"></div></details>
   </aside><div class="europe-map-wrap"><div id="europe-map"></div><div class="europe-map-status"><strong id="europe-map-date"></strong><span>Modern relief and coastlines · historical layers are dated separately</span></div><button id="europe-home" class="europe-home">Northern view</button></div></div>
@@ -54,7 +56,8 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
   <form id="europe-date-form"><label>Year<input id="europe-date" inputmode="numeric" aria-label="Europe year"></label><select id="europe-era-input" aria-label="Europe year era"><option>CE</option><option>BCE</option></select><button>Go</button><span id="europe-date-error" role="status"></span></form>
   <p class="europe-playback-note">Playback visits supported date changes. Deep-time spacing is compressed; uncertain ranges are not continuous occupation.</p></footer></section>`;
  const el=<T extends HTMLElement=HTMLElement>(selector:string)=>host.querySelector<T>(selector)!;
- const map=new MapView(land as any,(rows:DisplayRecord[])=>{pause();const r=rows[0];if(r){state.selected=r.id;renderDetails();map.setHighlighted(rows.map(r=>r.id));}},()=>{if(!disposed&&!drawing)renderList();});
+ const navigation=mountMapNavigation(el('#europe-navigation'),{region:'europe',settings:[el('.europe-filters'),el('.europe-layers'),el('.europe-scope')],facts:[el('.europe-reader')],onFactsToggle:open=>el('.europe-layout').classList.toggle('map-facts-hidden',!open)});
+ const map=new MapView(land as any,(rows:DisplayRecord[])=>{pause();const r=rows[0];if(r){state.selected=r.id;navigation.showFacts();renderDetails();map.setHighlighted(rows.map(r=>r.id));}},()=>{if(!disposed&&!drawing)renderList();});
  el('#europe-map').append(map.element);map.populationScale='log';map.namedRouteEndpoints=true;
  map.element.querySelector('svg')?.setAttribute('aria-label','Northern Europe history map. Use the evidence list for keyboard access.');
  map.context.boundaries=payload.boundaries;
@@ -129,7 +132,7 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
   const point=button.dataset.europeRouteFocus==='origin'?record?.location:record?.destination;
   if(point){pause();map.focusRegion([point.lon,point.lat],12,'world');}
  });
- el('.europe-atlas').addEventListener('click',function onClick(e){const button=(e.target as HTMLElement).closest<HTMLButtonElement>('[data-europe-record]');if(button){const r=all.find(r=>r.id===button.dataset.europeRecord);if(r){pause();state.selected=r.id;map.focus(r);renderDetails();}}});
+ el('.europe-atlas').addEventListener('click',function onClick(e){const button=(e.target as HTMLElement).closest<HTMLButtonElement>('[data-europe-record]');if(button){const r=all.find(r=>r.id===button.dataset.europeRecord);if(r){pause();state.selected=r.id;navigation.showFacts();map.focus(r);renderDetails();}}});
  el('#europe-guide-list').innerHTML=worldGuides.filter(g=>g.atlasIds.includes('europe')).map(g=>`<p><a href="${esc(g.href)}">${esc(g.title)} ↗</a></p>`).join('');
  function tick(now:number){
   if(disposed)return;
@@ -152,5 +155,5 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
  }
  const visibility=()=>{if(document.hidden)pause();};document.addEventListener('visibilitychange',visibility);
  refilter();map.setInteraction({mode:'movie',playing:false,onPause:pause});render();frame=requestAnimationFrame(tick);
- return ()=>{state.camera=map.camera();disposed=true;playing=false;cancelAnimationFrame(frame);stopLand();document.removeEventListener('visibilitychange',visibility);map.clearHover();map.dispose();};
+ return ()=>{state.camera=map.camera();disposed=true;playing=false;cancelAnimationFrame(frame);stopLand();navigation.dispose();document.removeEventListener('visibilitychange',visibility);map.clearHover();map.dispose();};
 }

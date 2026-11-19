@@ -1,3 +1,4 @@
+import {mapSetting} from '../scripts/browser-fixture.mjs';
 import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
 import { mkdir } from 'node:fs/promises';
@@ -7,8 +8,8 @@ await mkdir('test-results',{recursive:true});
 const browser=await chromium.launch({executablePath:process.env.BROWSER_PATH||'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',headless:true});
 const page=await browser.newPage({viewport:{width:1440,height:1000}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
 try {
- await page.goto(`http://127.0.0.1:${server.address().port}`);
- await page.locator('#story-select').selectOption('free');
+ await page.goto(`http://127.0.0.1:${server.address().port}/#movie`);
+ await mapSetting(page, () => page.locator('#story-select').selectOption('free'));
  await page.locator('#time-settings-toggle').click();
  assert.equal(await page.getByLabel('Playback speed').inputValue(),'smart');
  assert.equal(await page.getByLabel('Timeline scale').inputValue(),'log');

@@ -1,3 +1,4 @@
+import {mapSetting,showMapEvidence} from './browser-fixture.mjs';
 import assert from "node:assert/strict";
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import {
@@ -8,9 +9,9 @@ import {
 const fixture = await browserFixture();
 const { page, url } = fixture;
 const freeTimeline = async () => {
-  await page.locator("#story-select").selectOption("free");
+  await mapSetting(page, () => page.locator("#story-select").selectOption("free"));
   await page.getByRole("button", { name: "Reset map view", exact: true }).click();
-  if (!(await page.locator("#site-panel").isVisible())) await page.locator("#toggle-sites").click();
+  if (!(await page.locator("#site-panel").isVisible())) await showMapEvidence(page);
   if (!(await page.locator("#time-settings").isVisible())) await page.locator("#time-settings-toggle").click();
 };
 const failed = [];
@@ -224,12 +225,12 @@ try {
       await page
         .getByRole("heading", { name: "Your suggestions", exact: true })
         .waitFor();
-      await page.getByRole("link", { name: "Watch", exact: true }).click();
+      await page.getByRole("link", { name: 'Americas', exact: true }).click();
       await freeTimeline();
       await page.locator("#time-settings-toggle").click();
       await page.locator("#toggle-layers").click();
       await previewSuggestions(page);
-      await page.locator("#close-layers").click();
+      assert.equal(await page.locator("#toggle-layers").getAttribute("aria-expanded"),"false");
       await page.locator("#time-settings-toggle").click();
       for (const [year, count] of [
         [100, 2],

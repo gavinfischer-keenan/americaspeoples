@@ -59,7 +59,7 @@ try{
   }
   console.log(`PASS independent ${id}: ${topic.scenes.length} current chapters`);
   await page.locator('.topic-toolbar a').filter({hasText:'Shared atlas'}).click();
-  await page.locator('#story-select').waitFor();
+  await page.locator('#story-select').waitFor({state:'attached'});
  }
  for(const category of ['subjects','places','languages','cultures']){
   await page.goto(base+'/#dives/'+category);await page.locator('.dive-card').first().waitFor();
@@ -67,7 +67,7 @@ try{
  }
  await page.setViewportSize({width:1024,height:768});
  for(const route of ['#dives/places','#story/budj-bim','#topic/australian-wool']){
-  await page.goto(base+'/'+route);await page.locator(route.includes('story')?'#story-select':route.includes('topic')?'#topic-next':'.dive-card').first().waitFor();
+  await page.goto(base+'/'+route);await page.locator(route.includes('story')?'#story-select':route.includes('topic')?'#topic-next':'.dive-card').first().waitFor({state:route.includes('story')?'attached':'visible'});
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),route+' tablet');
  }
  await page.screenshot({path:'test-results/coming-soon-b-tablet.png'});

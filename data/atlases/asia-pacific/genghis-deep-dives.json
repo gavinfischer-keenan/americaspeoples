@@ -1,0 +1,568 @@
+{
+  "schemaVersion": 1,
+  "guides": [
+    {
+      "id": "world-genghis-khan",
+      "atlasIds": [
+        "asia-pacific"
+      ],
+      "category": "subjects",
+      "title": "Genghis Khan: conquest, camps and cities",
+      "description": "Dated campaigns, archaeological settlements and changing territorial reconstructions, with the limits of the chronicles kept visible.",
+      "intro": "From the Onon assembly to Central Asian cities and the final Tangut war, follow the evidence for Chinggis Khan’s reign and distinguish it from the empire his successors built.",
+      "scope": "A first sourced study of the 1206–1227 reign, with earlier Avraga radiocarbon context and a clearly marked 1235 successor-era city. Campaign vectors are schematic; urban populations remain unknown where no defensible series exists.",
+      "map": {
+        "bounds": [
+          50,
+          25,
+          122,
+          54
+        ],
+        "scope": "Approximate evidence localities and broad campaign regions. Modern terrain is a geographic aid, not a reconstruction of historical coasts, roads or boundaries.",
+        "points": [
+          {
+            "id": "genghis-onon",
+            "label": "Onon basin: the 1206 assembly",
+            "coordinates": [
+              109.7,
+              48.5
+            ],
+            "date": "1206 CE",
+            "description": "Temüjin’s elevation as Chinggis Khan formalised a newly consolidated steppe coalition. Regional anchor in the Onon basin; the assembly’s exact location is not established here. A foundation of political authority is not a newly founded city.",
+            "sources": [
+              "https://www.iranicaonline.org/articles/cengiz-khan/",
+              "https://altaica.ru/SECRET/lib/Rachewiltz_Secret%20History%20of%20the%20Mongols%20%28popular%29_2015.pdf"
+            ]
+          },
+          {
+            "id": "genghis-avraga",
+            "label": "Avraga: archaeology of a proposed imperial camp",
+            "coordinates": [
+              109.16,
+              47.2
+            ],
+            "date": "Calibrated samples: mid-12th to 15th centuries; main occupation around Chinggis Khan’s lifetime",
+            "description": "Livestock radiocarbon supports main occupation during and shortly after Chinggis Khan’s lifetime; some platform use is later. Broad envelope of the published calibrated samples, not uninterrupted occupation. The association with a particular ruler is a historical interpretation. No supported resident count is available.",
+            "sources": [
+              "https://researchportalplus.anu.edu.au/en/publications/stable-isotope-and-radiocarbon-analyses-of-livestock-from-the-mon/"
+            ]
+          },
+          {
+            "id": "genghis-tangut1209",
+            "label": "Tangut country: the 1209 invasion",
+            "coordinates": [
+              106.23,
+              38.49
+            ],
+            "date": "1209 CE",
+            "description": "The Mongols invaded Western Xia, whose Tangut rulers controlled northwestern Chinese corridors. Yinchuan is a regional-capital anchor, not a surveyed 1209 siege perimeter. This phase did not end the Tangut state.",
+            "sources": [
+              "https://royalarmouries.org/objects-and-stories/stories/the-mongols/rise-of-the-mongols"
+            ]
+          },
+          {
+            "id": "genghis-jin1211",
+            "label": "Northern Jin frontier: invasion in 1211",
+            "coordinates": [
+              114.9,
+              40.8
+            ],
+            "date": "1211 CE",
+            "description": "The campaign against the Jin opened a prolonged war in northern China. Zhangjiakou-area marker locates the broad frontier approach, not an authenticated battlefield. Final Jin conquest occurred in 1234, after Chinggis Khan’s death.",
+            "sources": [
+              "https://www.iranicaonline.org/articles/cengiz-khan/"
+            ]
+          },
+          {
+            "id": "genghis-qara-khitai",
+            "label": "Qara Khitai: the western advance",
+            "coordinates": [
+              75.25,
+              42.75
+            ],
+            "date": "1218 CE",
+            "description": "The overthrow of the Qara Khitai realm brought Mongol forces toward Khwarazm. The Balasagun-area anchor stands for the regional political transition; it does not claim that Chinggis personally captured this town on a known day.",
+            "sources": [
+              "https://www.iranicaonline.org/articles/cengiz-khan/",
+              "https://royalarmouries.org/objects-and-stories/stories/the-mongols/rise-of-the-mongols"
+            ]
+          },
+          {
+            "id": "genghis-otrar",
+            "label": "Otrar: siege and the archaeological problem",
+            "coordinates": [
+              68.3,
+              42.85
+            ],
+            "date": "1219–1220 CE",
+            "description": "Otrar’s siege belongs to the opening western invasion. Excavated abandonment in part of the city predates that assault. A burned or deserted urban layer cannot automatically be attributed to 1219. The shahristan abandonment discussed by Campbell had begun by about 1150.",
+            "sources": [
+              "https://royalarmouries.org/objects-and-stories/stories/the-mongols/rise-of-the-mongols",
+              "https://ora.ox.ac.uk/objects/uuid%3A78c64807-5c43-43d9-999b-06ed6943d35b"
+            ]
+          },
+          {
+            "id": "genghis-bukhara",
+            "label": "Bukhara: capture and subsequent rebuilding",
+            "coordinates": [
+              64.42,
+              39.77
+            ],
+            "date": "1220 CE",
+            "description": "Bukhara and its citadel fell in 1220; the sources also describe rebuilding under Mongol governors. Capture, expulsion and rebuilding are separate processes. Later descriptions of prosperity do not yield a defensible 1220 resident total.",
+            "sources": [
+              "https://www.iranicaonline.org/articles/bukhara-iii/"
+            ]
+          },
+          {
+            "id": "genghis-samarkand",
+            "label": "Samarkand: the 1220 conquest",
+            "coordinates": [
+              66.99,
+              39.67
+            ],
+            "date": "1220 CE",
+            "description": "Samarkand fell during the Transoxanian campaign. The locality identifies the city region, not the exact extent of destruction. Narrative casualties are not converted into population figures.",
+            "sources": [
+              "https://www.iranicaonline.org/articles/cengiz-khan/",
+              "https://royalarmouries.org/objects-and-stories/stories/the-mongols/rise-of-the-mongols"
+            ]
+          },
+          {
+            "id": "genghis-gurganj",
+            "label": "Gurganj: the Khwarazmian capital",
+            "coordinates": [
+              59.08,
+              42.32
+            ],
+            "date": "1221 CE",
+            "description": "Mongol commanders besieged and captured the capital in 1221. Kunya-Urgench is the historic locality; modern Urgench farther away is not substituted. Destruction traditions require source criticism, not a numerical death toll.",
+            "sources": [
+              "https://www.iranicaonline.org/articles/jalal-al-din-kvarazmsahi-mengbirni/"
+            ]
+          },
+          {
+            "id": "genghis-merv",
+            "label": "Merv: conquest and changing urban life",
+            "coordinates": [
+              62.17,
+              37.66
+            ],
+            "date": "1221 CE",
+            "description": "Merv experienced a severe contraction around the conquest, while archaeology complicates the familiar picture of a single total-burning event. Campbell’s synthesis distinguishes depopulation and desertion from uniform destruction. A precise pre-conquest population and reliable casualty total remain unavailable.",
+            "sources": [
+              "https://ora.ox.ac.uk/objects/uuid%3A78c64807-5c43-43d9-999b-06ed6943d35b"
+            ]
+          },
+          {
+            "id": "genghis-nishapur",
+            "label": "Nishapur: a destructive campaign in 1221",
+            "coordinates": [
+              58.82,
+              36.2
+            ],
+            "date": "1221 CE",
+            "description": "Mongol conquest ended Khwarazmian rule at Nishapur. Earlier earthquakes and shifts of the urban core complicate attribution of individual ruins. The marker does not validate the immense death totals in later narratives.",
+            "sources": [
+              "https://www.iranicaonline.org/articles/nishapur-i/"
+            ]
+          },
+          {
+            "id": "genghis-bamiyan-document",
+            "label": "Bamiyan: an administrative voice before conquest",
+            "coordinates": [
+              67.83,
+              34.82
+            ],
+            "date": "Approximately 1214–1221 CE",
+            "description": "A Persian administrative order mobilises commanders and peasants, preserving a local institutional perspective before the conquest. The corpus dates the document approximately 1214–1221. The collection’s attributed Bamiyan geography is not a recorded archaeological findspot or proof that its order concerns the Mongol assault.",
+            "sources": [
+              "https://www.invisible-east.org/corpus/93/"
+            ]
+          },
+          {
+            "id": "genghis-bamiyan1221",
+            "label": "Bamiyan: the 1221 assault",
+            "coordinates": [
+              67.84,
+              34.82
+            ],
+            "date": "1221 CE",
+            "description": "Accounts connect the city’s devastation with the Mongol attack of 1221. Shahr-i Ghulghula and the valley provide a regional anchor. The literary story about vengeance is not a measured casualty series.",
+            "sources": [
+              "https://www.iranicaonline.org/articles/bamian-town-in-central-afghanistan/bamian-ii-history-and-monuments/"
+            ]
+          },
+          {
+            "id": "genghis-indus",
+            "label": "Indus: defeat of Jalal al-Din",
+            "coordinates": [
+              72.23,
+              33.77
+            ],
+            "date": "1221 CE",
+            "description": "Chinggis Khan’s army defeated Jalal al-Din near the Indus; the defeated ruler escaped across the river. The river-region marker is schematic. Sources differ on the battle’s season, and this map does not assert a proven crossing point or precise day.",
+            "sources": [
+              "https://www.iranicaonline.org/articles/jalal-al-din-kvarazmsahi-mengbirni/"
+            ]
+          },
+          {
+            "id": "genghis-karakorum-camp",
+            "label": "Karakorum: the 1220 camp choice",
+            "coordinates": [
+              102.82,
+              47.2
+            ],
+            "date": "1220 CE",
+            "description": "The Orkhon locality selected for an imperial camp became the site of Karakorum under the next khan. A camp choice is not the completion of a city. Later walls, streets and palace features must not all be dated to Chinggis Khan.",
+            "sources": [
+              "https://www.cambridge.org/core/journals/antiquity/article/mapping-karakorum-the-capital-of-the-mongol-empire/6E86EC9807E3354074D101D1AA15056F"
+            ]
+          },
+          {
+            "id": "genghis-tangut-final",
+            "label": "Western Xia: the final Tangut campaign",
+            "coordinates": [
+              106.23,
+              38.49
+            ],
+            "date": "1226–1227 CE",
+            "description": "The last campaign destroyed the Tangut state; Chinggis Khan died in 1227. The capital-region point does not locate his death or burial. Later empire boundaries do not establish his personal conquests.",
+            "sources": [
+              "https://altaica.ru/SECRET/lib/Rachewiltz_Secret%20History%20of%20the%20Mongols%20%28popular%29_2015.pdf"
+            ]
+          },
+          {
+            "id": "genghis-karakorum-city",
+            "label": "Karakorum: Ögödei’s city, successor context",
+            "coordinates": [
+              102.82,
+              47.2
+            ],
+            "date": "1235 CE: successor-period construction",
+            "description": "City and palace construction under Ögödei makes the distinction between the earlier camp and a built imperial capital visible. Explicit successor context, not a conquest or urban foundation completed by Chinggis Khan. Surveyed settlement extent cannot be converted directly into a census.",
+            "sources": [
+              "https://www.cambridge.org/core/journals/antiquity/article/mapping-karakorum-the-capital-of-the-mongol-empire/6E86EC9807E3354074D101D1AA15056F"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "A ruler’s lifetime and an empire that continued growing",
+          "paragraphs": [
+            {
+              "text": "This study centres on Chinggis Khan, widely known in English as Genghis Khan, and the campaigns of his reign, 1206–1227. A coalition assembled on the Mongolian plateau became an imperial power operating across very different agricultural and pastoral landscapes. The later Mongol Empire was larger than the realm he personally ruled. Northern China was not completely conquered under him: the Jin dynasty fell in 1234. Conflating his career with all thirteenth-century Mongol expansion puts later armies, cities and frontiers into the wrong decades.",
+              "sources": [
+                "https://www.iranicaonline.org/articles/cengiz-khan/"
+              ]
+            },
+            {
+              "text": "The map therefore separates campaign episodes, camp and city evidence, and changing source-derived territorial reconstructions. Its Karakorum point for 1235 is explicitly successor context. These layers answer different questions: where a narrative places an action; what an excavated settlement reveals; and how a modern historical atlas reconstructs a polity. Agreement between them is useful, but none substitutes automatically for the others.",
+              "sources": [
+                "https://www.cambridge.org/core/journals/antiquity/article/mapping-karakorum-the-capital-of-the-mongol-empire/6E86EC9807E3354074D101D1AA15056F",
+                "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/5f433377139a6eeaeacbdc894b70f8805b72c8b5"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Reading the conquest through different kinds of sources",
+          "paragraphs": [
+            {
+              "text": "The Secret History is an indispensable Mongolian narrative, yet it is a retrospective court-centred account with literary scenes, memorable speeches and dynastic concerns. Persian histories and later scholarly syntheses preserve other perspectives, including accounts of attacks on urban populations. Neither a vivid speech nor an enormous casualty figure should be treated as a recorded transcript or a counted total. This guide follows the broad chronology while keeping such claims visibly distinct from physical observations.",
+              "sources": [
+                "https://altaica.ru/SECRET/lib/Rachewiltz_Secret%20History%20of%20the%20Mongols%20%28popular%29_2015.pdf",
+                "https://www.iranicaonline.org/articles/cengiz-khan/"
+              ]
+            },
+            {
+              "text": "An administrative document offers a much narrower but valuable view. A Persian order in the Bamiyan Papers tells officers to assemble commanders and peasants. Its editors assign it to approximately 1214–1221. That range overlaps the final pre-conquest years, but the document does not itself identify a Mongol assault. Its attributed regional origin also does not turn an unrecorded findspot into an excavated location. Such small records preserve local institutions that conquest-centred histories can otherwise obscure.",
+              "sources": [
+                "https://www.invisible-east.org/corpus/93/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Camps, cities and the people who sustained an army",
+          "paragraphs": [
+            {
+              "text": "Avraga is associated with an imperial winter camp. Analyses of livestock bones and teeth support principal occupation during and perhaps shortly after Chinggis Khan’s lifetime, alongside later use of a substantial platform. The dated animals matter because a mobile court depended on managed herds and supplies. The samples do not identify a particular ruler by themselves, and the full radiocarbon envelope is much broader than a single residence episode. On the map, that envelope is retained rather than reduced to an exact founding year.",
+              "sources": [
+                "https://researchportalplus.anu.edu.au/en/publications/stable-isotope-and-radiocarbon-analyses-of-livestock-from-the-mon/"
+              ]
+            },
+            {
+              "text": "Karakorum illustrates a second distinction. The 1220 camp choice belongs to Chinggis Khan’s lifetime; the urban project and palace associated with Ögödei belong to the next reign. Archaeological survey identifies streets, buildings and occupation beyond familiar walls. Empty-looking areas can have been deliberately kept for mobile dwellings, and the thickness of deposits varies. A surveyed area is therefore evidence about settlement organisation, not a direct conversion table from hectares to inhabitants.",
+              "sources": [
+                "https://www.cambridge.org/core/journals/antiquity/article/mapping-karakorum-the-capital-of-the-mongol-empire/6E86EC9807E3354074D101D1AA15056F"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "A sequence of campaigns, not one continuous marching column",
+          "paragraphs": [
+            {
+              "text": "The animated connections show a geographical sequence at a readable scale. Their intermediate bends do not add evidence. They must not be read as traced roads, verified camps or a single general’s route, and their movement encodes neither marching speed nor troop strength.",
+              "sources": [
+                "https://www.iranicaonline.org/articles/cengiz-khan/",
+                "https://altaica.ru/SECRET/lib/Rachewiltz_Secret%20History%20of%20the%20Mongols%20%28popular%29_2015.pdf"
+              ]
+            }
+          ],
+          "columns": [
+            "Episode",
+            "Dated framework",
+            "How the map qualifies it"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Onon assembly",
+                "1206",
+                "A regional assembly anchor; no securely fixed meeting site."
+              ],
+              "sources": [
+                "https://www.iranicaonline.org/articles/cengiz-khan/"
+              ]
+            },
+            {
+              "cells": [
+                "Tangut and Jin fronts",
+                "1209 and 1211",
+                "Distinct wars; the earlier Tangut invasion did not end Western Xia."
+              ],
+              "sources": [
+                "https://royalarmouries.org/objects-and-stories/stories/the-mongols/rise-of-the-mongols"
+              ]
+            },
+            {
+              "cells": [
+                "Qara Khitai and the Khwarazm frontier",
+                "1218–1219",
+                "Regional expansion; the Balasagun anchor is not a personal itinerary claim."
+              ],
+              "sources": [
+                "https://www.iranicaonline.org/articles/cengiz-khan/"
+              ]
+            },
+            {
+              "cells": [
+                "Otrar, Bukhara and Samarkand",
+                "1219–1220",
+                "Several commanders and army divisions; one route line cannot describe all operations."
+              ],
+              "sources": [
+                "https://royalarmouries.org/objects-and-stories/stories/the-mongols/rise-of-the-mongols",
+                "https://www.iranicaonline.org/articles/bukhara-iii/"
+              ]
+            },
+            {
+              "cells": [
+                "Khorasan, Bamiyan and the Indus",
+                "1221",
+                "Separate operations; disputed seasons and precise battlefield sites remain unresolved."
+              ],
+              "sources": [
+                "https://www.iranicaonline.org/articles/jalal-al-din-kvarazmsahi-mengbirni/",
+                "https://www.iranicaonline.org/articles/nishapur-i/",
+                "https://www.iranicaonline.org/articles/bamian-town-in-central-afghanistan/bamian-ii-history-and-monuments/"
+              ]
+            },
+            {
+              "cells": [
+                "Final Tangut war",
+                "1226–1227",
+                "A campaign region, not an identified death or burial location."
+              ],
+              "sources": [
+                "https://altaica.ru/SECRET/lib/Rachewiltz_Secret%20History%20of%20the%20Mongols%20%28popular%29_2015.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Captured cities: violence, abandonment and recovery",
+          "paragraphs": [
+            {
+              "text": "Bukhara’s capture and later reconstruction are both part of the record. Nishapur’s conquest occurred in a city whose built landscape had already shifted after earthquakes and other political changes. Accounts of destruction at Bamiyan likewise need to be read beside surviving urban remains and the documentary record. A point marking conquest is not a claim that every neighbourhood ended on the same day.",
+              "sources": [
+                "https://www.iranicaonline.org/articles/bukhara-iii/",
+                "https://www.iranicaonline.org/articles/nishapur-i/",
+                "https://www.iranicaonline.org/articles/bamian-town-in-central-afghanistan/bamian-ii-history-and-monuments/"
+              ]
+            },
+            {
+              "text": "Campbell’s archaeological comparison is particularly important at Otrar and Merv. Some abandonment previously associated with Otrar’s Mongol siege predates it by decades. At Merv, the excavated pattern is better described as depopulation and desertion than a citywide destruction horizon. This does not make the campaigns harmless. It changes which consequences can be demonstrated at a particular excavation and prevents a famous narrative from assigning dates to every ruined wall.",
+              "sources": [
+                "https://ora.ox.ac.uk/objects/uuid%3A78c64807-5c43-43d9-999b-06ed6943d35b"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "What the territory versions do and do not show",
+          "paragraphs": [
+            {
+              "text": "Four licensed Cliopatria versions cover source intervals 1206–1209, 1210–1215, 1216–1219 and 1220–1226. These are historical-atlas reconstructions, simplified for display while retaining whole source polygon components. They are not surveyed borders or a complete annual record of control. A change at a source interval boundary cannot supply the precise day on which a district changed hands, and territory colour does not measure settlement density, allegiance or the reach of taxation.",
+              "sources": [
+                "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/5f433377139a6eeaeacbdc894b70f8805b72c8b5",
+                "https://doi.org/10.1038/s41597-025-04516-9"
+              ]
+            },
+            {
+              "text": "The next available Mongol polygon spans 1227–1235. Showing it as a precise frontier at Chinggis Khan’s death would silently include a successor-era reconstruction. It is intentionally omitted from this study. The absence of an outline in 1227 is a gap in this selected geometry, not disappearance of the empire; dated campaign points continue to show the final Tangut campaign.",
+              "sources": [
+                "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/5f433377139a6eeaeacbdc894b70f8805b72c8b5"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Population and loss: what remains unquantified",
+          "paragraphs": [
+            {
+              "text": "No numeric settlement populations are attached to these anchors. The consulted evidence supports occupation, campaigns, abandonment or reconstruction, but does not supply comparable dated censuses for the mapped settlements. Reported enemy losses, defenders, households, deported artisans and residents are different quantities. Treating any of them as a city’s total population would create precision the sources cannot support. Unknown does not mean zero.",
+              "sources": [
+                "https://ora.ox.ac.uk/objects/uuid%3A78c64807-5c43-43d9-999b-06ed6943d35b",
+                "https://www.cambridge.org/core/journals/antiquity/article/mapping-karakorum-the-capital-of-the-mongol-empire/6E86EC9807E3354074D101D1AA15056F",
+                "https://www.iranicaonline.org/articles/bukhara-iii/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Source access and study limits",
+          "paragraphs": [
+            {
+              "text": "Access was checked on 18 November 2026. Publisher restrictions are not presented as full-text verification. Each map observation links its own sources and limitations, allowing the broad framework to be expanded without turning a reconstruction into a fact.",
+              "sources": [
+                "https://researchportalplus.anu.edu.au/en/publications/stable-isotope-and-radiocarbon-analyses-of-livestock-from-the-mon/",
+                "https://ora.ox.ac.uk/objects/uuid%3A78c64807-5c43-43d9-999b-06ed6943d35b",
+                "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/5f433377139a6eeaeacbdc894b70f8805b72c8b5"
+              ]
+            }
+          ],
+          "columns": [
+            "Source family",
+            "Access checked",
+            "Use in this study"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Secret History / scholarly chronology",
+                "Open translation and public scholarly entries",
+                "Campaign framework with retrospective narrative limits."
+              ],
+              "sources": [
+                "https://altaica.ru/SECRET/lib/Rachewiltz_Secret%20History%20of%20the%20Mongols%20%28popular%29_2015.pdf",
+                "https://www.iranicaonline.org/articles/cengiz-khan/"
+              ]
+            },
+            {
+              "cells": [
+                "Avraga and Karakorum archaeology",
+                "ANU author abstract; full Cambridge research text",
+                "Chronological association, settlement organisation and successor context."
+              ],
+              "sources": [
+                "https://researchportalplus.anu.edu.au/en/publications/stable-isotope-and-radiocarbon-analyses-of-livestock-from-the-mon/",
+                "https://www.cambridge.org/core/journals/antiquity/article/mapping-karakorum-the-capital-of-the-mongol-empire/6E86EC9807E3354074D101D1AA15056F"
+              ]
+            },
+            {
+              "cells": [
+                "Oxford urban-conquest thesis",
+                "Institutional indexed abstract and metadata; full PDF access unavailable",
+                "Only its stated Otrar/Merv conclusions, not uncited excavation details."
+              ],
+              "sources": [
+                "https://ora.ox.ac.uk/objects/uuid%3A78c64807-5c43-43d9-999b-06ed6943d35b"
+              ]
+            },
+            {
+              "cells": [
+                "Bamiyan document",
+                "Full digital edition and translation",
+                "A dated administrative voice with uncertain findspot."
+              ],
+              "sources": [
+                "https://www.invisible-east.org/corpus/93/"
+              ]
+            },
+            {
+              "cells": [
+                "Cliopatria",
+                "Pinned archive and licence verified",
+                "CC BY 4.0 source-derived geometry; the following broader interval is omitted."
+              ],
+              "sources": [
+                "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/5f433377139a6eeaeacbdc894b70f8805b72c8b5"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Bennett et al. / Seshat (2025), Cliopatria historical polity geometry",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/5f433377139a6eeaeacbdc894b70f8805b72c8b5"
+        },
+        {
+          "title": "Bennett et al. (2025), Cliopatria: a geospatial database of world-wide political entities",
+          "url": "https://doi.org/10.1038/s41597-025-04516-9"
+        },
+        {
+          "title": "The Secret History of the Mongols, translated by Igor de Rachewiltz, shorter edition edited by John C. Street (2015)",
+          "url": "https://altaica.ru/SECRET/lib/Rachewiltz_Secret%20History%20of%20the%20Mongols%20%28popular%29_2015.pdf"
+        },
+        {
+          "title": "David Morgan, Čengīz Khan (Encyclopaedia Iranica, 1990; revised 2013)",
+          "url": "https://www.iranicaonline.org/articles/cengiz-khan/"
+        },
+        {
+          "title": "Royal Armouries, Rise of the Mongols",
+          "url": "https://royalarmouries.org/objects-and-stories/stories/the-mongols/rise-of-the-mongols"
+        },
+        {
+          "title": "Fenner et al. (2020), Stable isotope and radiocarbon analyses of livestock from Avraga",
+          "url": "https://researchportalplus.anu.edu.au/en/publications/stable-isotope-and-radiocarbon-analyses-of-livestock-from-the-mon/"
+        },
+        {
+          "title": "Bemmann et al. (2021), Mapping Karakorum, the capital of the Mongol Empire",
+          "url": "https://www.cambridge.org/core/journals/antiquity/article/mapping-karakorum-the-capital-of-the-mongol-empire/6E86EC9807E3354074D101D1AA15056F"
+        },
+        {
+          "title": "Campbell (2021), Cities and the Mongol Conquest: Urban Change in Central Asia 1200–1400",
+          "url": "https://ora.ox.ac.uk/objects/uuid%3A78c64807-5c43-43d9-999b-06ed6943d35b"
+        },
+        {
+          "title": "Yuri Bregel, Bukhara iii: After the Mongol Invasion",
+          "url": "https://www.iranicaonline.org/articles/bukhara-iii/"
+        },
+        {
+          "title": "C. E. Bosworth, Jalāl-al-Din Ḵvārazmšāh(i) Mengübirni",
+          "url": "https://www.iranicaonline.org/articles/jalal-al-din-kvarazmsahi-mengbirni/"
+        },
+        {
+          "title": "C. E. Bosworth, Nishapur i: Historical Geography and History",
+          "url": "https://www.iranicaonline.org/articles/nishapur-i/"
+        },
+        {
+          "title": "Bāmīān ii: History and monuments (Encyclopaedia Iranica)",
+          "url": "https://www.iranicaonline.org/articles/bamian-town-in-central-afghanistan/bamian-ii-history-and-monuments/"
+        },
+        {
+          "title": "Invisible East Digital Corpus 93: National Library of Israel Ms.Heb.8333.106",
+          "url": "https://www.invisible-east.org/corpus/93/"
+        }
+      ],
+      "relatedGuideIds": [
+        "world-human-family"
+      ]
+    }
+  ]
+}

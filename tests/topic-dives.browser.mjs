@@ -1,3 +1,4 @@
+import {mapSetting} from '../scripts/browser-fixture.mjs';
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {createStaticServer} from '../scripts/static-server.mjs';
@@ -8,8 +9,8 @@ page.on('pageerror',e=>errors.push(e.message));
 const base=`http://127.0.0.1:${server.address().port}`;
 const world=()=>page.locator('#map-host .world').getAttribute('transform');
 try{
- await page.goto(base);await page.getByRole('button',{name:'Pause',exact:true}).click();
- await page.getByLabel('Follow an expedition',{exact:true}).selectOption('beagle-1831-1836');
+ await page.goto(base+'/#movie');await page.getByRole('button',{name:'Pause',exact:true}).click();
+ await mapSetting(page, () => page.getByLabel('Follow an expedition',{exact:true}).selectOption('beagle-1831-1836'));
  const year=await page.locator('#year-number').inputValue(),voyage=await page.locator('#voyage-position').innerText();
  await page.getByRole('button',{name:'Zoom in',exact:true}).click();await page.waitForTimeout(120);
  const camera=await world();
@@ -41,7 +42,7 @@ try{
  assert.equal(await page.locator('#voyage-position').innerText(),voyage,'fractional expedition date retained');
  assert.equal(await world(),camera,'global camera restored');
  await page.getByRole('link',{name:'Explore',exact:true}).click();
- await page.locator('#place-search').fill('Taos');
+ await mapSetting(page, () => page.locator('#place-search').fill('Taos'));
  const exploreCamera=await world();
  await page.getByRole('link',{name:'Deep dives',exact:true}).click();await page.locator('.dive-tabs a[href="#dives/subjects"]').click();await page.locator('a[href="#topic/horses"]').click();
  await page.locator('#topic-play').click();await page.waitForTimeout(500);await page.locator('#topic-play').click();
@@ -57,7 +58,7 @@ try{
  for(const size of [{width:1024,height:768},{width:768,height:1024}]){
   await page.setViewportSize(size);await page.goto(base+'/#topic/sweet-potatoes');await page.locator('#topic-play').waitFor();await page.locator('#topic-restart').click();
   const box=await page.locator('#topic-map').boundingBox();assert.ok(box.width>300&&box.height>300,'tablet map retains usable space');
-  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'tablet has no horizontal overflow');
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'tablet has no horizontal overflow at '+size.width+'px');
   const play=await page.locator('#topic-play').boundingBox();assert.ok(play.y+play.height<=size.height,'tablet transport remains on screen');
   await page.locator('#topic-next').click();assert.match(await page.locator('#topic-year').innerText(),/1,300/);
   await page.screenshot({path:`test-results/topic-sweet-tablet-${size.width}.png`,fullPage:true});

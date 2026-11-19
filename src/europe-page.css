@@ -9,6 +9,8 @@
 .europe-atlas .historical-rails .network-road{stroke:#b8e69e;stroke-dasharray:7 4}
 .europe-atlas .historical-rails .network-rail{stroke:#9adbed;stroke-dasharray:3 3}
 .europe-layout{grid-template-rows:minmax(0,1fr)}
+.europe-layout.map-facts-hidden{grid-template-columns:minmax(0,1fr)}
+.europe-reader[hidden]{display:none!important}.europe-reader #europe-details .europe-selected{margin-top:0}.europe-atlas .map-navigation{flex-shrink:0}.europe-atlas .map-navigation-settings .europe-layers{margin:0}.europe-atlas .map-navigation-settings .europe-layers summary{padding:0 0 8px}.europe-atlas .map-navigation-settings .europe-scope{font-size:12px;flex-basis:100%;max-width:none;margin:0}
 .europe-map-wrap{min-height:0;overflow:hidden}
 .europe-map-wrap .map-canvas>svg{display:block}
 @media(max-width:700px){.europe-map-wrap{min-height:320px}}
@@ -17,6 +19,13 @@
 .europe-reader .europe-selected .eyebrow{color:#665523}
 .europe-reader .fine,.europe-reader small,.europe-atlas .europe-hint{color:#415e61}
 .europe-map-wrap .map-controls select{background:#16363e;color:#e5efe8}
+@media(min-width:701px) and (max-width:1000px){
+ body.europe-page #app{height:100dvh;display:flex;flex-direction:column}
+ body.europe-page .topbar{flex-shrink:0}
+ body.europe-page .shell{flex:1;min-height:0;padding:0 24px}
+ body.europe-page #main{height:100%;min-height:0}
+ body.europe-page .europe-atlas{height:100%;min-height:0}
+}
 @media(max-width:700px){
  .europe-layout{display:contents}
  .europe-map-wrap{order:1;height:43dvh;min-height:300px}

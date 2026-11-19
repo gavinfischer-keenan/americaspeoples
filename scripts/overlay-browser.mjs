@@ -1,3 +1,4 @@
+import {mapSetting} from './browser-fixture.mjs';
 import { readFile } from "node:fs/promises";
 import assert from "node:assert/strict";
 import {
@@ -13,7 +14,7 @@ const dateOptions = async () => {
   if (!(await page.locator("#time-settings").isVisible())) await page.locator("#time-settings-toggle").click();
 };
 const freeTimeline = async () => {
-  await page.locator("#story-select").selectOption("free");
+  await mapSetting(page, () => page.locator("#story-select").selectOption("free"));
   await page.getByRole("button", { name: "Reset map view", exact: true }).click();
   await dateOptions();
 };
@@ -100,7 +101,7 @@ try {
   await page
     .getByRole("button", { name: "Add to local collection", exact: true })
     .click();
-  await page.getByRole("link", { name: "Watch", exact: true }).click();
+  await page.getByRole("link", { name: 'Americas', exact: true }).click();
   await freeTimeline();
   await page.getByLabel("Year number", { exact: true }).fill("100");
   await page.getByLabel("Era", { exact: true }).selectOption("CE");
@@ -112,9 +113,9 @@ try {
   await layerOptions();
   assert.equal(await synthetic().count(), 1);
   assert.equal(await page.locator("path.movement.proposal-path").count(), 0);
-  await page.getByLabel("Trade overlays", { exact: true }).uncheck();
+  await mapSetting(page, () => page.getByLabel("Trade overlays", { exact: true }).uncheck());
   assert.equal(await synthetic().count(), 0);
-  await page.getByLabel("Trade overlays", { exact: true }).check();
+  await mapSetting(page, () => page.getByLabel("Trade overlays", { exact: true }).check());
   await dateOptions();
   for (const [y, n] of [
     [111, 0],
@@ -127,7 +128,11 @@ try {
     assert.equal(await synthetic().count(), n);
   }
   await page.locator("#time-settings-toggle").click();
-  await synthetic().click();
+  const routePoint=await synthetic().locator('path.overlay-line-hit').evaluate(path=>{
+    const point=path.getPointAtLength(path.getTotalLength()/2),screen=new DOMPoint(point.x,point.y).matrixTransform(path.getScreenCTM());
+    return {x:screen.x,y:screen.y};
+  });
+  await page.mouse.click(routePoint.x,routePoint.y);
   // Place-first picking may expose a nearby town before a route in an overview.
   // The overlap chooser must still make the intended overlay selectable.
   if(!(await page.locator('#selected-records').innerText()).includes('Synthetic exchange overlay'))
@@ -141,10 +146,10 @@ try {
     .getByRole("heading", { name: "Overlay geometry", exact: true })
     .waitFor();
   assert.match(await page.locator("main").innerText(), /schematic/);
-  await page.getByRole("link", { name: "Watch", exact: true }).click();
+  await page.getByRole("link", { name: 'Americas', exact: true }).click();
   await freeTimeline();
   await layerOptions();
-  await page.getByLabel("Trade overlays", { exact: true }).uncheck();
+  await mapSetting(page, () => page.getByLabel("Trade overlays", { exact: true }).uncheck());
   await page.evaluate(() => (location.hash = "#proposal/0"));
   await page
     .getByRole("button", { name: "Show on map at this time", exact: true })
@@ -164,7 +169,7 @@ try {
   const stored = await localPackage(page);
   assert.deepEqual(stored.proposals[0].record.overlay, r.overlay);
   assert.equal(stored.schemaVersion, 2);
-  await page.getByRole("link", { name: "Watch", exact: true }).click();
+  await page.getByRole("link", { name: 'Americas', exact: true }).click();
   await freeTimeline();
   await layerOptions();
   const go = async (y) => {
@@ -195,9 +200,9 @@ try {
     "Massacre / violence overlays",
     "Forced removal overlays",
   ]) {
-    await page.getByLabel(label, { exact: true }).uncheck();
+    await mapSetting(page, () => page.getByLabel(label, { exact: true }).uncheck());
     assert.equal(await synthetic().count(), 2);
-    await page.getByLabel(label, { exact: true }).check();
+    await mapSetting(page, () => page.getByLabel(label, { exact: true }).check());
     assert.equal(await synthetic().count(), 3);
   }
   assert.equal(

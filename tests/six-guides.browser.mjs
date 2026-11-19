@@ -15,7 +15,7 @@ const records=JSON.parse(await readFile('dist/dataset.json','utf8')).records;
 let chapters=0;
 try{
  await mkdir('test-results',{recursive:true});
- await page.goto(base+'/#story/machu-picchu');await page.locator('#story-select').waitFor();
+ await page.goto(base+'/#story/machu-picchu');await page.locator('#story-select').waitFor({state:'attached'});
  const sun=page.locator('[data-record-id="g20-mp-sun"]'),residence=page.locator('[data-record-id="g20-mp-royal-residence"]');
  await sun.waitFor();await residence.waitFor();
  await page.waitForFunction(()=>{const sun=document.querySelector('[data-record-id="g20-mp-sun"]'),residence=document.querySelector('[data-record-id="g20-mp-royal-residence"]');if(!sun||!residence)return false;const a=sun.getBoundingClientRect(),b=residence.getBoundingClientRect();return a.width>0&&b.width>0&&Math.hypot(a.x+a.width/2-b.x-b.width/2,a.y+a.height/2-b.y-b.height/2)>=12;});
@@ -82,7 +82,7 @@ try{
  }
  await page.setViewportSize({width:1024,height:768});
  for(const id of ['chaco','cahokia','machu-picchu']){
-  const guide=siteGuides.find(g=>g.id===id);await page.goto(base+'/#story/'+guide.storyId);await page.locator('#story-select').waitFor();
+  const guide=siteGuides.find(g=>g.id===id);await page.goto(base+'/#story/'+guide.storyId);await page.locator('#story-select').waitFor({state:'attached'});
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),id+' tablet width');
   assert.ok((await page.locator('#map-host').boundingBox()).height>=300,id+' tablet map');
   await page.waitForFunction(()=>[...document.querySelectorAll('#map-host [data-record-id],#map-host [data-point]')].some(el=>{const b=el.getBoundingClientRect(),m=document.querySelector('#map-host').getBoundingClientRect();return b.width>0&&b.left<m.right&&b.right>m.left&&b.top<m.bottom&&b.bottom>m.top}));

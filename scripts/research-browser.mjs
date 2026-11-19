@@ -1,3 +1,4 @@
+import {mapSetting,showMapEvidence} from './browser-fixture.mjs';
 import assert from "node:assert/strict";
 import { mkdir } from "node:fs/promises";
 import {
@@ -124,13 +125,13 @@ try {
         `Checked ${i + 1}/${pack.proposals.length} imported review pages`,
       );
   }
-  await page.getByRole("link", { name: "Watch", exact: true }).click();
-  await page.locator("#story-select").selectOption("free");
+  await page.getByRole("link", { name: 'Americas', exact: true }).click();
+  await mapSetting(page, () => page.locator("#story-select").selectOption("free"));
   await page.getByRole("button", { name: "Reset map view", exact: true }).click();
-  await page.locator("#toggle-sites").click();
+  await showMapEvidence(page);
   await page.locator("#toggle-layers").click();
   await previewSuggestions(page);
-  await page.locator("#close-layers").click();
+  assert.equal(await page.locator("#toggle-layers").getAttribute("aria-expanded"),"false");
   await page.locator("#time-settings-toggle").click();
   await page.getByLabel("Era", { exact: true }).selectOption("CE");
   const go = async (y) => {

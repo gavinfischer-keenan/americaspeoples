@@ -19,7 +19,14 @@ export interface PlannedAtlasManifest {
 export interface ActiveEuropeManifest extends Omit<PlannedAtlasManifest,'id'|'status'> {
   id:'europe';status:'available';
 }
-export type RegionalAtlasManifest=PlannedAtlasManifest|ActiveEuropeManifest;
+export interface ActiveFoundationManifest extends Omit<PlannedAtlasManifest,'id'|'status'> {id:'africa'|'asia-pacific';status:'available'}
+export type RegionalAtlasManifest=PlannedAtlasManifest|ActiveEuropeManifest|ActiveFoundationManifest;
+export function validateFoundationManifest(value:unknown):ActiveFoundationManifest {
+ const m=value as ActiveFoundationManifest;
+ if(!m||m.schemaVersion!==1||!['africa','asia-pacific'].includes(m.id)||m.status!=='available'||!m.title?.trim()||!Array.isArray(m.dataFiles)||!m.dataFiles.includes('world-catalogue.json'))throw Error('Invalid foundation atlas manifest');
+ if(!Array.isArray(m.map?.center)||m.map.center.length!==2||!m.map.center.every(Number.isFinite))throw Error('Invalid foundation map configuration');
+ return m;
+}
 export function validateActiveEuropeManifest(value:unknown):ActiveEuropeManifest {
   const m=value as ActiveEuropeManifest;
   if(!m||m.schemaVersion!==1||m.id!=='europe'||m.status!=='available'||!m.title?.trim()||!Array.isArray(m.dataFiles)||!m.dataFiles.includes('europe-catalogue.json'))throw Error('Invalid active Europe manifest');
@@ -49,9 +56,9 @@ export function validatePlannedAtlasManifest(value: unknown): PlannedAtlasManife
 }
 
 const manifests: Record<PlannedAtlasId, RegionalAtlasManifest> = {
-  africa: validatePlannedAtlasManifest(africa),
+  africa: validateFoundationManifest(africa),
   europe: validateActiveEuropeManifest(europe),
-  'asia-pacific': validatePlannedAtlasManifest(asiaPacific),
+  'asia-pacific': validateFoundationManifest(asiaPacific),
 };
 
 /** Bundled configuration; evidence is loaded separately by the active controller. */

@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {mkdir} from 'node:fs/promises';
-import {browserFixture} from '../scripts/browser-fixture.mjs';
+import {browserFixture,mapSetting} from '../scripts/browser-fixture.mjs';
 
 const fixture=await browserFixture();
 const {page}=fixture;
@@ -18,12 +18,14 @@ async function seek(year){
 const recordButton=id=>page.locator(`#europe-list [data-europe-record="${id}"]`);
 const marker=id=>page.locator(`#europe-map [data-member-ids*='"${id}"']`).first();
 async function layer(id,enabled){
- const group=page.locator('.europe-layers');
- if(!await group.evaluate(el=>el.open))await group.locator('summary').click();
- await group.locator(`[data-europe-layer="${id}"]`).setChecked(enabled);
+ await mapSetting(page,async()=>{
+  const group=page.locator('.europe-layers');
+  if(!await group.evaluate(el=>el.open))await group.locator('summary').click();
+  await group.locator(`[data-europe-layer="${id}"]`).setChecked(enabled);
+ });
 }
 async function filter(query){
- await page.locator('#europe-search').fill(query);
+ await mapSetting(page,()=>page.locator('#europe-search').fill(query));
 }
 async function choose(entry){
  await filter(entry.title);
@@ -82,9 +84,9 @@ try{
  await seek(1863);
  assert.match(await bounds.textContent(),/Danish monarchy · kingdom and duchies/);
  await seek(1864);
- await page.locator('#europe-region').selectOption('denmark');
+ await mapSetting(page,()=>page.locator('#europe-region').selectOption('denmark'));
  assert.equal(await page.locator('#europe-year').textContent(),yearLabel(1864),'Selecting a region preserves the clock');
- await page.locator('#europe-region').selectOption('all');
+ await mapSetting(page,()=>page.locator('#europe-region').selectOption('all'));
  assert.equal(await page.locator('#europe-year').textContent(),yearLabel(1864));
  assert.match(await bounds.textContent(),/Danish kingdom after the Treaty of Vienna/);
  assert.doesNotMatch(await bounds.textContent(),/Danish monarchy · kingdom and duchies/);
@@ -178,15 +180,20 @@ try{
  await page.locator('#europe-home').click();
  await seek(1864);
  const layers=page.locator('.europe-layers');
- if(await layers.evaluate(el=>el.open))await layers.locator('summary').click();
+ if(await layers.evaluate(el=>el.open))await mapSetting(page,()=>layers.locator('summary').click());
  await mkdir('work',{recursive:true});
  await page.screenshot({path:'work/europe-desktop.png'});
+ await page.setViewportSize({width:768,height:1024});
+ await page.locator('#europe-home').click();
+ const tabletTransport=await page.locator('.europe-timeline').boundingBox();
+ assert.ok(tabletTransport.y+tabletTransport.height<=1025,'Tablet transport fits below the wrapped header');
+ assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Tablet has no horizontal overflow');
  for(const width of [390,320]){
   await page.setViewportSize({width,height:844});
   await page.locator('#europe-home').click();
   await filter('');
   await seek(1900);
-  const dimensions=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,map:document.querySelector('#europe-map').getBoundingClientRect().height}));
+  const dimensions=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,map:document.querySelector('#europe-map').getBoundingClientRect().height,overflow:[...document.querySelectorAll('body *')].filter(el=>el instanceof HTMLElement).map(el=>({tag:el.tagName,id:el.id,classes:el.className,right:el.getBoundingClientRect().right})).filter(el=>el.right>innerWidth+1).slice(0,8)}));
   assert.ok(dimensions.scroll<=width,JSON.stringify(dimensions));
   assert.ok(dimensions.map>200,JSON.stringify(dimensions));
   assert.equal(await page.locator('#europe-play').isVisible(),true);

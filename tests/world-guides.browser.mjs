@@ -7,6 +7,7 @@ const fixture=await browserFixture();
 const {page}=fixture;
 const errors=[];page.on('pageerror',e=>errors.push(e.message));
 const index=JSON.parse(await readFile('data/world-guide-index.json','utf8')).guides;
+const world=JSON.parse(await readFile((process.env.DIST_PATH||'dist')+'/world-catalogue.json','utf8'));
 const mediaManifest=JSON.parse(await readFile('data/world-guide-media.json','utf8')).assets;
 await mkdir('test-results',{recursive:true});
 try{
@@ -19,12 +20,15 @@ try{
    assert.equal(await page.locator('.atlas-coming-soon').count(),0);
    continue;
   }
-  await page.locator('.regional-guides').waitFor();
-  assert.equal(await page.locator('.regional-guides .dive-card').count(),index.filter(g=>g.atlasIds.includes(atlas)).length);
+  await page.locator('#family-map .family-land').waitFor();
+  assert.equal(await page.locator('.atlas-coming-soon').count(),0);
+  assert.equal(await page.locator('#family-play').isVisible(),true);
+  const evidence=world.evidence.filter(e=>e.regionIds.includes(atlas));
+  assert.ok((await page.locator('.family-map-top').textContent()).includes(evidence.length+' evidence anchors'));
+  for(const study of (world.studies||[]).filter(s=>s.regionIds.includes(atlas)))assert.equal(await page.locator('.family-study-links a[href="#study/'+study.id+'"]').count(),1);
   assert.equal(await page.locator('.timeline').isVisible(),false);
-  assert.equal(await page.locator('.atlas-coming-soon').textContent(),'COMING SOON');
  }
- for(const id of ['world-lucy','world-human-family','world-hadrians-wall','world-stonehenge','world-orkney','world-tibet-dalai-lamas','world-angkor-wat','world-voyages-europe','world-picts','world-otzi','world-cold-preserved-people','world-andean-summit-children']){
+ for(const id of ['world-lucy','world-human-family','world-hadrians-wall','world-stonehenge','world-orkney','world-tibet-dalai-lamas','world-angkor-wat','world-voyages-europe','world-picts','world-otzi','world-cold-preserved-people','world-andean-summit-children',...(world.studies||[]).map(s=>s.guideId)]){
   await page.goto(fixture.url+'sites/'+id+'.html');
   await page.locator('h1').waitFor();
   assert.ok(await page.locator('.world-findings li').count(),id);

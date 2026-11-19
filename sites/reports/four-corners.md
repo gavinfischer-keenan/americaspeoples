@@ -1,7 +1,7 @@
 # Four Corners architecture and settlements
 
-The original third-party research response is retained privately and is not included in this public distribution. Redistribution permission has not been established.
+We use Consensus to discover literature. Its full Deep Research reviews are retained privately; we do not reproduce them here.
 
-[Open the research source on Consensus](https://consensus.app/search/conduct-a-very-deep-detailed-archaeological-litera/5yo24CbYSriJg0OEe4GCtg/)
+[Explore this research on Consensus](https://consensus.app/search/conduct-a-very-deep-detailed-archaeological-litera/5yo24CbYSriJg0OEe4GCtg/)
 
-Independently written place guides and their scholarly source links remain available in the atlas.
+Visit Consensus to explore its reviews and the literature yourself; access may require your own account. The atlas’s own deep dives are separately authored and checked against linked primary sources.
