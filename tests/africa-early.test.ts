@@ -101,3 +101,55 @@ test('Asia-Pacific and Europe cover earliest hominins through 10,000 BCE with co
   assert.ok([...eurUrls].some(u=>u.includes(host)),`Europe pre-10k includes ${host}`);
  }
 });
+
+test('Europe and Asia-Pacific extend systematically to 1900 CE with zero sparse gaps and 21 flagship Deep Dives',async()=>{
+ const {data}=await loadWorldShards();
+ const eurHolocene=data.evidence.filter(e=>e.id.startsWith('euho-')&&inWorldScope(e,'europe'));
+ const asiaHolocene=data.evidence.filter(e=>e.id.startsWith('asho-')&&inWorldScope(e,'asia-pacific'));
+ assert.equal(eurHolocene.length,37,'Holocene Europe covers 37 regional sites from Mesolithic Star Carr to 1900 CE');
+ assert.equal(asiaHolocene.length,48,'Holocene Asia-Pacific covers 48 regional sites from Göbekli Tepe to 1900 CE');
+ assert.ok(eurHolocene.some(e=>e.end===1900),'Europe extends cleanly to 1900 CE');
+ assert.ok(asiaHolocene.some(e=>e.end===1900),'Asia-Pacific extends cleanly to 1900 CE');
+ for(const needle of ['Star Carr','Lepenski Vir','Linearbandkeramik','Malta','Carnac','Pile Dwellings','Trypillia','Brú na Bóinne','Knossos','Mycenae','Nebra','Heuneburg','Athens','Ostia','Ravenna','Córdoba','Novgorod','Amsterdam','Ironbridge']){
+  assert.ok(eurHolocene.some(e=>e.title.includes(needle)),`Missing Holocene Europe site: ${needle}`);
+ }
+ for(const needle of ['Göbekli Tepe','Çatalhöyük','Uruk','Hattusha','Babylon','Pasargadae','Petra','Palmyra','Mehrgarh','Mohenjo-daro','Dholavira','Taxila','Ajanta','Chola','Hampi','Fatehpur Sikri','Shangshan','Liangzhu','Yinxu','Jingdezhen','Forbidden City','Sannai Maruyama','Kofun','Botai','Samarkand','Óc Eo','Srivijaya','Borobudur','Bagan','Kuk Swamp','Teouma','Nan Madol']){
+  assert.ok(asiaHolocene.some(e=>e.title.includes(needle)),`Missing Holocene Asia-Pacific site: ${needle}`);
+ }
+
+ const africaAll=data.evidence.filter(e=>inWorldScope(e,'africa'));
+ assert.equal(africaAll.length,377,'Africa reaches 377 evidence records after gap-fill and UNESCO supplement');
+ assert.ok(africaAll.filter(e=>e.end>-15000).length>=220,'Africa post-15,000 BCE coverage exceeds 220 records');
+ for(const needle of ['Wadi Kubbaniya','Afalou','Al-Khiday','Tadrart Acacus','Memphis','Thebes','Abu Simbel','Timgad','Kondoa','Twyfelfontein']){
+  assert.ok(africaAll.some(e=>e.title.includes(needle)),`Missing Africa UNESCO/sparse-gap site: ${needle}`);
+ }
+
+ const wins=[
+  [-15000,-12001],[-12000,-10001],[-10000,-8501],[-8500,-7001],[-7000,-6001],[-6000,-5001],
+  [-5000,-4001],[-4000,-3301],[-3300,-2601],[-2600,-2001],[-2000,-1601],[-1600,-1201],
+  [-1200,-801],[-800,-501],[-500,-201],[-200,0],[1,250],[251,500],[501,700],[701,900],
+  [901,1100],[1101,1300],[1301,1520],[1521,1650],[1651,1780],[1781,1900]
+ ];
+ for(const [region,minAllowed] of [['africa',7],['europe',4],['asia-pacific',5]] as const){
+  const regEv=data.evidence.filter(e=>inWorldScope(e,region));
+  for(const [a,b] of wins){
+   const c=regEv.filter(e=>e.start<=b&&e.end>=a).length;
+   assert.ok(c>=minAllowed,`Region ${region} window ${a}..${b} count ${c} >= ${minAllowed}`);
+  }
+ }
+
+ const guides=await readWorldGuides();
+ const newGuideIds=[
+  'world-pyramids-memphis-thebes','world-timbuktu-gao-mali','world-lalibela-harar-ethiopia',
+  'world-carthage-leptis-north-africa','world-gobekli-catalhoyuk-anatolia','world-uruk-babylon-nineveh',
+  'world-mohenjo-daro-harappa-indus','world-persepolis-pasargadae-iran','world-petra-palmyra-levant',
+  'world-knossos-mycenae-athens','world-pompeii-rome-ostia','world-borobudur-bagan-se-asia'
+ ];
+ for(const id of newGuideIds){
+  const g=guides.find(x=>x.id===id);
+  assert.ok(g,`Missing UNESCO flagship Deep Dive ${id}`);
+  assert.equal(g.category,'places');
+  assert.ok(g.sources.some(s=>s.url.includes('doi.org')),`Guide ${id} includes peer-reviewed DOI sources`);
+  assert.ok(g.sources.some(s=>s.url.includes('whc.unesco.org')),`Guide ${id} includes official UNESCO WHC dossier`);
+ }
+});

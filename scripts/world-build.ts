@@ -190,9 +190,9 @@ export function createWorldSummary(input: SummaryInput): WorldSummary {
     africa:
       "Prehistoric to 1900 CE coverage across Southern, South-Central, East, Central, Horn, West, Saharan, Nile, North Africa and Indian Ocean islands.",
     europe:
-      "Earliest hominin to 10,000 BCE Pleistocene foundations, Mediterranean trade and playable northern Europe history.",
+      "Earliest hominin to 1900 CE coverage spanning Pleistocene refugia, Mesolithic–Neolithic dispersals, Aegean palaces, Imperial Rome, Rus’ river corridors and industrial Britain.",
     "asia-pacific":
-      "Earliest hominin to 10,000 BCE across the Levant, Arabia, Caucasus, Siberia, South/East/SE Asia and Sahul, plus Silk Roads and Pacific detail.",
+      "Earliest hominin to 1900 CE coverage across Anatolia, Mesopotamia, Levant, Persia, Indus–South Asia, East Asia, Korea/Japan, Central Asian steppes, Southeast Asia and Sahul–Oceania.",
   };
   return {
     version: input.version,
