@@ -98,24 +98,34 @@ try{
  assert.equal(await page.locator('.world-atlas .world-region-card').count(),summary.regions.length);
  assert.ok(!fixture.requests.some(r=>new URL(r.url).pathname.startsWith('/api/')),'Bare root must not start the Americas API');
  assert.ok(!fixture.requests.some(r=>/\/(world|europe)-catalogue\.json$/.test(new URL(r.url).pathname)),'Hub loads summary rather than either full catalogue');
+ assert.equal(await page.locator('.world-foundation-callout').count(),0,'World root must not promote whole-world movie callout');
+ assert.equal(await page.locator('.world-studies').count(),0,'World root must not promote study cards');
+ assert.ok((await page.locator('#world-globe .world-region-divider').count())>=1,'World globe renders region dividing lines');
  for(const region of summary.regions){
   const card=page.locator('.world-region-card[data-region="'+region.id+'"]');
   assert.equal(await card.getAttribute('href'),regionRoutes[region.id]);
-  assert.ok((await card.textContent()).includes(region.earliestLabel));
+  const cardText=await card.textContent();
+  assert.ok(cardText.includes(region.earliestLabel));
+  assert.ok(cardText.includes(region.references.toLocaleString('en-US')),region.id+' card shows reference count');
+  assert.ok(cardText.includes(region.records.toLocaleString('en-US')),region.id+' card shows event/record count');
  }
- for(const study of studies)assert.equal(await page.locator('.world-studies a[href="#study/'+study.id+'"]').count(),1);
  const sphere=await page.locator('#world-globe .world-ocean').getAttribute('d');
  await page.getByRole('button',{name:'Show all regions',exact:true}).click();
  assert.equal(await page.locator('#world-projection').getAttribute('aria-pressed'),'true');
  assert.notEqual(await page.locator('#world-globe .world-ocean').getAttribute('d'),sphere);
  assert.equal(await page.locator('#world-globe .world-map-region').count(),summary.regions.length);
+ for(const region of summary.regions){
+  const badgeText=await page.locator('#world-globe .world-map-region[data-region="'+region.id+'"]').textContent();
+  assert.ok(badgeText.includes('refs')&&badgeText.includes('events'),region.id+' globe label shows stats');
+ }
  assert.equal(await page.getByRole('button',{name:'Rotate west',exact:true}).isDisabled(),true);
  assert.equal(await page.getByRole('button',{name:'Rotate east',exact:true}).isDisabled(),true);
  await page.getByRole('button',{name:'Show globe',exact:true}).click();
  assert.equal(await page.locator('#world-projection').getAttribute('aria-pressed'),'false');
  assert.equal(await page.getByRole('button',{name:'Rotate east',exact:true}).isEnabled(),true);
 
- await page.getByRole('link',{name:'Play the human-family map',exact:true}).click();
+ assert.equal(await page.locator('.world-dives-note a[href="#dives"]').count(),1,'World page links to Deep Dives directory');
+ await openPlayer('#origins');
  await page.locator('#family-map .family-land').waitFor();
  assert.equal(await page.locator('.family-heading h1').textContent(),'The branching human family');
  assert.equal(await page.locator('#family-year').textContent(),yearLabel(firstWorld));
@@ -220,11 +230,33 @@ try{
  const pause=page.getByRole('button',{name:'Pause',exact:true});if(await pause.isVisible())await pause.click();
  assert.ok(fixture.requests.some(r=>new URL(r.url).pathname==='/api/manifest'),'Americas API starts on explicit navigation');
 
+ await page.goto(fixture.url+'#world');await page.locator('#world-globe').waitFor();
+ await page.locator('.world-dives-note a[href="#dives"]').click();
+ await page.locator('.dive-category[href="#dives/subjects"]').click();
+ await page.locator('.dive-grid').first().waitFor();
+ assert.equal(await page.locator('.dive-grid a[href="#origins"]').count(),1,'Human-family movie is filed inside Deep Dives');
+ for(const study of studies)assert.equal(await page.locator('.dive-grid a[href="#study/'+study.id+'"]').count(),1,study.id+' is filed inside Deep Dives');
+ await page.locator('.dive-grid a[href="#origins"]').first().click();
+ await page.locator('#family-map .family-land').waitFor();
+ assert.equal(await page.locator('.family-heading h1').textContent(),'The branching human family');
+
+ await page.goto(fixture.url+'#atlas/africa');
+ await page.locator('#family-map .family-land').waitFor();
+ await page.locator('#family-play').click();
+ await page.waitForFunction(()=>document.querySelector('.family-page')?.classList.contains('is-playing'));
+ assert.equal(await page.locator('#family-happening-now').isVisible(),true,'Live happening-now panel visible during playback');
+ assert.equal(await page.locator('#family-map-banner').isVisible(),true,'Live map banner visible during playback');
+ await page.locator('#family-play').click();
+
  await page.setViewportSize({width:390,height:844});
  for(const hash of ['#world','#origins','#atlas/africa/early',...studies.map(s=>'#study/'+s.id)]){
   await page.goto(fixture.url+hash);
   await page.locator(hash==='#world'?'#world-globe .world-land':'#family-map .family-land').waitFor();
   await noHorizontalOverflow(hash+' at 390px');
+  const navBoxes=await page.locator('.world-top nav a').evaluateAll(els=>els.map(el=>({text:el.textContent,rect:el.getBoundingClientRect()})));
+  for(const item of navBoxes){
+   assert.ok(item.rect.left>=0&&item.rect.right<=391,'Nav link fits 390px width: '+item.text);
+  }
   if(hash!=='#world'){
    await openSettings();await noHorizontalOverflow(hash+' settings');await page.keyboard.press('Escape');
    await showFacts(false);await noHorizontalOverflow(hash+' map');await showFacts();

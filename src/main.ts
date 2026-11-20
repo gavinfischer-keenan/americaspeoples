@@ -23,7 +23,7 @@ import {localChronologyHTML} from './local-chronology';
 import { appShell, mapShell, libraryHTML } from "./atlas-shell";
 import {mountMapNavigation,type MapNavigation} from './map-navigation';
 import { loadAtlasManifest, resolveAtlasRoute } from "./atlas-catalog";
-import { atlasNavigationHTML, atlasPreviewHTML } from "./atlas-switcher";
+import { atlasPreviewHTML } from "./atlas-switcher";
 import {loadEurope,mountEurope} from './europe-page';
 import {worldRoute} from './world-model';
 import {mountWorldPage} from './world-page';
@@ -281,7 +281,12 @@ function renderConcurrentContext(){
   const local=map.localChronology(mapRows());
   const html=local.length?localChronologyHTML(local,year):movieContextHTML(currentVisible,year,frame?.coordinates);
   if(host.innerHTML!==html)host.innerHTML=html;
-  if(storyId==='free')$('#cinema-caption').innerHTML=`<span class="eyebrow">${esc(formatYear(year))} · ALL HISTORIES</span><h3>${v?esc(v.name):'The world, together.'}</h3><p>Communities, journeys and events share this date. Zoom out to see other regions.</p>`;
+  if(storyId==='free'){
+    const inView=map.visibleRecords();
+    const activeAtYear=inView.filter(r=>r.time.start!==null&&r.time.start<=year&&(r.time.end===null||r.time.end>=year));
+    const headlines=[...activeAtYear].sort((a,b)=>(a.time.start===year?0:1)-(b.time.start===year?0:1)||Math.abs(year-(a.time.start??year))-Math.abs(year-(b.time.start??year))).slice(0,3).map(r=>r.title);
+    $('#cinema-caption').innerHTML=`<span class="eyebrow">${esc(formatYear(year))} · IN THIS VIEW</span><h3>${v?esc(v.name):`${activeAtYear.length} active record${activeAtYear.length===1?'':'s'} · ${inView.length} mapped`}</h3><p>${headlines.length?esc(headlines.join(' · ')):'Zoom out or advance along the timeline to follow regional events.'}</p>`;
+  }
 }
 function renderExpeditionsNow(){
   const panel=document.querySelector<HTMLDetailsElement>('#expeditions-now');if(!panel||!mountedMap)return;
@@ -485,6 +490,7 @@ $("#play").addEventListener("click", () => {
   if(voyage&&scopedVoyageProgress(voyage,voyageClock)>=1-1e-9){voyageClock=scopedVoyageDate(voyage,0);setYear(Math.floor(voyageClock),false);syncVoyage();}
   if (isGuidedStory() && sampleStory(currentStory(),storyElapsed).completed) seekScene(0);
   else if (!voyage && !isGuidedStory() && movieClock >= MOVIE_END_DATE) setYear(minYear);
+  mapNavigation?.closeMenus();
   playing = true;
   selected = [];
   renderMapData();
@@ -601,7 +607,7 @@ function mapPage() {
   $("#map-host").append(map.element);
   const layout=$('.atlas-layout');layout.classList.add('shared-map-layout');
   const facts=document.createElement('aside');facts.id='atlas-facts';facts.className='atlas-facts';facts.setAttribute('aria-label','Selected facts and visible evidence');
-  layout.prepend(facts);facts.append($('#detail-panel'),$('#site-panel'),$('#expeditions-now'),$('#story-panel'));$('#site-panel').hidden=false;
+  layout.prepend(facts);facts.append($('#detail-panel'),$('#story-panel'),$('#expeditions-now'),$('#site-panel'));$('#site-panel').hidden=false;
   mapNavigation=mountMapNavigation($('#atlas-map-navigation'),{region:'americas',settings:[$('#story-picker-section'),$('.explore-intro'),$('#atlas-map-settings-controls'),$('#layer-options')],facts:[facts],settingsToggleId:'toggle-layers',factsToggleId:'toggle-details',onFactsToggle:open=>{layout.classList.toggle('map-facts-hidden',!open);if(open){document.body.classList.remove('focus-view');$('#focus-mode').setAttribute('aria-pressed','false');$('#focus-mode').textContent='Focus view';}}});
   $('.layers-panel').hidden=true;
   $('#whole-movie').setAttribute('data-map-menu-choice','');
@@ -1087,14 +1093,12 @@ async function route() {
   stop();
   const plannedAtlas=resolveAtlasRoute(hash);
   const worldDestination=worldRoute(hash);
-  const activeNav=plannedAtlas?'':diveRoute?'#dives':hash==='#explore'?'#explore':['#map','#movie'].includes(hash)||hash.startsWith('#story/')?'#movie':'#library';
+  const activeNav=worldDestination==='world'?'#world':(worldDestination==='africa'||worldDestination==='africa-early')?'#atlas/africa':(plannedAtlas==='europe'||worldDestination==='europe')?'#atlas/europe':worldDestination==='asia-pacific'?'#atlas/asia-pacific':(worldDestination==='origins'||worldDestination?.startsWith('study:')||diveRoute)?'#dives':hash==='#explore'?'#explore':['#map','#movie'].includes(hash)||hash.startsWith('#story/')?'#movie':'#library';
   document
     .querySelectorAll('nav[aria-label="Main navigation"] a')
     .forEach((a) =>
       a.classList.toggle("active", a.getAttribute("href") === activeNav),
     );
-  $('#atlas-destinations').innerHTML=atlasNavigationHTML(plannedAtlas??'americas');
-  document.querySelector<HTMLDetailsElement>('.atlas-switcher')!.open=false;
   document.body.classList.remove("movie-playing","focus-view");
   const mapRoute=["#map","#movie","#explore"].includes(hash);
   document.body.classList.toggle('topic-page',hash.startsWith('#topic/'));

@@ -50,7 +50,7 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
    <details><summary>Connected expeditions</summary><div id="europe-voyages"></div></details>
    <details><summary>Roads and rails recorded by this date</summary><div id="europe-built-networks"></div></details><details class="europe-territories"><summary>Territories at this date &amp; sources</summary><div id="europe-boundary-list"></div></details>
    <details><summary>Regional guides</summary><div id="europe-guide-list"></div></details>
-  </aside><div class="europe-map-wrap"><div id="europe-map"></div><div class="europe-map-status"><strong id="europe-map-date"></strong><span>Modern relief and coastlines · historical layers are dated separately</span></div><button id="europe-home" class="europe-home">Northern view</button></div></div>
+  </aside><div class="europe-map-wrap"><div id="europe-map"></div><div class="europe-map-status"><strong id="europe-map-date"></strong><span id="europe-map-headline">Modern relief and coastlines · historical layers are dated separately</span></div><button id="europe-home" class="europe-home">Northern view</button></div></div>
   <footer class="europe-timeline"><div class="europe-transport"><button id="europe-play">Play history</button><button id="europe-previous" aria-label="Previous dated change">◀</button><button id="europe-next" aria-label="Next dated change">▶</button><label>Pace<select id="europe-rate"><option value="1">Steady</option><option value="2">2×</option><option value="4">4×</option></select></label><label>Jump to<select id="europe-era"><option value="">Choose a period…</option>${[[first,'Earliest evidence'],[-11999,'After the last ice age'],[-3999,'Farming & monuments'],[1,'First century CE'],[793,'Viking age'],[1200,'Medieval networks'],[1500,'Early modern'],[1750,'Industry & empire'],[1850,'Railway age'],[1900,'1900']].filter(([y])=>Number(y)>=first).map(([y,t])=>`<option value="${y}">${t}</option>`).join('')}</select></label></div>
   <label class="europe-slider-label">Map year <output id="europe-year"></output><input id="europe-slider" type="range" min="0" max="1000000" step="1" aria-label="Europe map year"></label>
   <form id="europe-date-form"><label>Year<input id="europe-date" inputmode="numeric" aria-label="Europe year"></label><select id="europe-era-input" aria-label="Europe year era"><option>CE</option><option>BCE</option></select><button>Go</button><span id="europe-date-error" role="status"></span></form>
@@ -66,7 +66,7 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
  const stopLand=watchDetailedLand(detail=>map.setDetailedLand(detail));
  if(state.camera)map.restoreCamera(state.camera);else map.focusRegion([-8,56],4,'world');
  el<HTMLSelectElement>('#europe-region').value=state.region;el<HTMLSelectElement>('#europe-category').value=state.category;
- function pause(){playing=false;elapsed=0;segmentTarget=undefined;el('#europe-play').textContent='Play history';map.setInteraction({mode:'movie',playing:false,onPause:pause});}
+ function pause(){playing=false;elapsed=0;segmentTarget=undefined;el('.europe-atlas').classList.remove('is-playing');el('#europe-play').textContent='Play history';map.setInteraction({mode:'movie',playing:false,onPause:pause});}
  function refilter(){
   filtered=all.filter(r=>{const e=entries.get(r.id)!;return (state.region==='all'||e.regionId===state.region)&&(state.category==='all'||e.category===state.category)&&(!state.query||`${e.title} ${e.place} ${e.summary} ${e.detail}`.toLocaleLowerCase().includes(state.query.toLocaleLowerCase()))&&(!e.networkKind||state[e.networkKind])&&(state.warfare||e.category!=='conflict')&&(state.voyages||e.category!=='voyage'||!!e.networkKind);});
   dates=europeDates(filtered.map(r=>entries.get(r.id)!));
@@ -78,6 +78,7 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
  function currentEntries(){return filtered.filter(r=>historyState(r,state.year)==='active');}
  function renderDetails(){
   const e=entries.get(state.selected);
+  el('#europe-details').classList.toggle('has-selection',Boolean(e));
   if(!e){el('#europe-details').innerHTML='<p class="europe-hint">Select a place or connection to read what happened, its dates, and the evidence.</p>';return;}
   const selected=all.find(r=>r.id===e.id)!;
   const current=historyState(selected,state.year)==='active';
@@ -107,14 +108,18 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
   map.context.rails=builtNetworks().filter(r=>r.time.end!<state.year).map(r=>({id:'europe-built-'+r.id,name:r.title,start:r.time.start!,geometry:r.overlay!.geometry,sourceId:r.sources[0].id,precision:r.overlay!.precision,note:'Recorded infrastructure; continued service and survival are not established.',networkKind:entries.get(r.id)!.networkKind as 'road'|'rail'}));map.context.options.rails=state.road||state.rail;
   map.context.options.boundaries=state.borders;map.context.options.voyages=state.voyages;map.context.options.voyageDate=state.clock;
   map.update(europeSelection(filtered,state.year,state.past).map(r=>europePopulationView(r,entries.get(r.id)!,state.year,state.interpolate)),state.year,[],{ice:false,iceScenario:'optimal',currents:false,winds:false,hidden:new Set(climateKinds),uncertain:false});
+  el('.europe-atlas').classList.toggle('is-playing',playing);
   el('#europe-year').textContent=formatYear(state.year);el('#europe-map-date').textContent=state.clock>0&&state.clock!==state.year?voyageDate(state.clock):formatYear(state.year);
+  const activeHere=currentEntries();
+  const headlines=[...activeHere].sort((a,b)=>(entries.get(a.id)!.start===state.year?0:1)-(entries.get(b.id)!.start===state.year?0:1)).slice(0,2).map(r=>r.title);
+  el('#europe-map-headline').textContent=headlines.length?headlines.join(' · '):'Modern relief and coastlines · historical layers are dated separately';
   el<HTMLInputElement>('#europe-slider').value=String(Math.round(timelinePosition(state.year,first,END_YEAR,'log')*1_000_000));el('#europe-slider').setAttribute('aria-valuetext',formatYear(state.year));
   el<HTMLInputElement>('#europe-date').value=String(state.year<=0?1-state.year:state.year);el<HTMLSelectElement>('#europe-era-input').value=state.year<=0?'BCE':'CE';
   map.setHighlighted(state.selected?[state.selected]:[]);renderDetails();renderList();drawing=false;
  }
  function seek(year:number,select=true){state.clock=Math.max(first,Math.min(MOVIE_END_DATE,year));state.year=Math.floor(state.clock);if(select){const e=filtered.find(r=>r.time.start===state.year)??currentEntries()[0];state.selected=e?.id??'';}render();}
  function step(direction:number){pause();const target=direction>0?dates.find(y=>y>state.clock):[...dates].reverse().find(y=>y<state.clock);if(target!==undefined)seek(target);}
- el('#europe-play').addEventListener('click',()=>{if(playing){pause();return;}if(state.clock>=(dates.at(-1)??END_YEAR))seek(dates[0]??first);playing=true;elapsed=0;segmentStart=state.clock;segmentTarget=undefined;el('#europe-play').textContent='Pause';map.setInteraction({mode:'movie',playing:true,onPause:pause});});
+ el('#europe-play').addEventListener('click',()=>{if(playing){pause();return;}navigation.closeMenus();if(state.clock>=(dates.at(-1)??END_YEAR))seek(dates[0]??first,false);playing=true;elapsed=0;segmentStart=state.clock;segmentTarget=undefined;el('.europe-atlas').classList.add('is-playing');el('#europe-play').textContent='Pause';map.setInteraction({mode:'movie',playing:true,onPause:pause});});
  el('#europe-previous').addEventListener('click',()=>step(-1));el('#europe-next').addEventListener('click',()=>step(1));
  el('#europe-rate').addEventListener('change',e=>{rate=Number((e.target as HTMLSelectElement).value);});
  el('#europe-era').addEventListener('change',e=>{const value=(e.target as HTMLSelectElement).value;if(value){pause();seek(Number(value));}});
@@ -141,7 +146,7 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
    if(segmentTarget===undefined){segmentStart=state.clock;segmentTarget=dates.find(y=>y>state.clock);if(segmentTarget===undefined)pause();}
    if(segmentTarget!==undefined){
     elapsed+=dt*rate;
-    if(elapsed>=3500){seek(segmentTarget);elapsed=0;segmentTarget=undefined;if(state.clock>=(dates.at(-1)??END_YEAR))pause();}
+    if(elapsed>=3500){seek(segmentTarget,false);elapsed=0;segmentTarget=undefined;if(state.clock>=(dates.at(-1)??END_YEAR))pause();}
     else if(elapsed>1500&&now-lastPaint>100){
      const ratio=(elapsed-1500)/2000;
      const nextClock=segmentStart+(segmentTarget-segmentStart)*ratio;

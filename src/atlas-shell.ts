@@ -4,13 +4,11 @@ import { OVERLAY_LABELS } from './overlays';
 import { climateKinds,climateLabels } from './physical';
 import { regions,exploreCategories } from './explore';
 import { stories } from './stories';
-import { atlasNavigationHTML } from './atlas-switcher';
 
 export function appShell(count:number,endYear:number):string{return `
 <a class="skip-link" href="#main" data-skip-content>Skip to content</a>
 <header class="topbar"><a class="brand" href="#world"><span class="brand-mark" aria-hidden="true">◈</span><span><h1>The Spread of Peoples</h1><small>ALASKA BLACKFISH</small></span></a>
-<nav aria-label="Main navigation"><a href="#world">World</a><a href="#movie">Americas</a><a href="#explore">Explore</a><a href="#dives">Deep dives</a><a href="#library">Library</a></nav>
-<details class="atlas-switcher"><summary>Atlases <span aria-hidden="true">⌄</span></summary><div id="atlas-destinations">${atlasNavigationHTML()}</div></details>
+<nav aria-label="Main navigation"><a href="#world">World</a><a href="#movie">Americas</a><a href="#atlas/africa">Africa</a><a href="#atlas/europe">Europe</a><a href="#atlas/asia-pacific">Asia &amp; Pacific</a><a href="#explore">Explore</a><a href="#dives">Deep dives</a><a href="#library">Library</a></nav>
 <a class="header-about" href="#about" aria-label="About this atlas">About the atlas ↗</a></header>
 <div class="shell"><main id="main" tabindex="-1"></main></div>
 <footer class="timeline" aria-label="Playback and date">

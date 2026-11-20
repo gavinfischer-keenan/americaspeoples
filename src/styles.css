@@ -1633,7 +1633,7 @@ body.exploring .shell{padding-bottom:0}body.exploring .atlas-layout{height:calc(
 
 /* Atlas destinations share navigation; future regions have a separate empty map. */
 .topbar .atlas-switcher{position:relative;flex:0 0 auto;margin-left:auto}
-@media(min-width:761px) and (max-width:1000px){header.topbar{height:auto;min-height:88px;flex-wrap:wrap;padding:12px 20px;gap:8px 20px}header.topbar .brand{min-width:0;flex:1 1 auto}header.topbar>nav[aria-label="Main navigation"]{order:2;flex:1 0 100%;height:34px;margin:0}.topbar>.header-about{display:none}}
+@media(min-width:761px) and (max-width:1000px){header.topbar{height:auto;min-height:64px;flex-wrap:wrap;padding:8px 16px;gap:6px 14px}header.topbar .brand{min-width:0;flex:1 1 auto}header.topbar>nav[aria-label="Main navigation"]{order:2;flex:1 0 100%;height:auto;flex-wrap:wrap;gap:4px;margin:0}.topbar>.header-about{display:none}}
 .atlas-switcher>summary{list-style:none;cursor:pointer;color:#f2e5c9;border:1px solid #688087;border-radius:7px;padding:8px 13px;font-size:13px;font-weight:700;white-space:nowrap}
 .atlas-switcher>summary::-webkit-details-marker{display:none}
 .atlas-switcher>summary span{margin-left:8px}
@@ -1643,7 +1643,7 @@ body.exploring .shell{padding-bottom:0}body.exploring .atlas-layout{height:calc(
 .topbar .atlas-destinations a{display:flex;flex-direction:column;align-items:flex-start;gap:2px;white-space:normal;border:0;padding:12px 14px;border-radius:6px;color:#e9eee8;font-size:14px;line-height:1.35}
 .topbar .atlas-destinations a small{color:#a8bec0;font-size:11px}
 .topbar .atlas-destinations a[aria-current="page"]{background:#294b54;color:#ffdf9f}
-@media(max-width:380px){.topbar nav[aria-label="Main navigation"] a{font-size:11px!important;padding:8px 5px!important}}
+@media(max-width:380px){.topbar nav[aria-label="Main navigation"] a{font-size:10.5px!important;padding:4px 6px!important}}
 body.atlas-preview-page .shell{padding:0 24px 32px}
 .atlas-preview{max-width:1250px;margin:0 auto;padding:35px 0 0}
 .atlas-preview-heading{display:flex;align-items:center;justify-content:space-between;gap:25px;margin-bottom:22px}
@@ -1659,11 +1659,11 @@ body.atlas-preview-page .shell{padding:0 24px 32px}
 .atlas-preview-figure figcaption{padding-top:12px;font-size:11px;color:#abc0c0}
 @media(max-width:1100px){header.topbar{gap:18px}.topbar .atlas-switcher>summary{padding:8px 10px}.topbar nav[aria-label="Main navigation"] a{padding:9px 11px}}
 @media(max-width:760px){
-  header.topbar{height:101px;min-height:101px;flex-wrap:wrap;gap:0 12px;padding:10px 14px 5px;align-content:space-between}
+  header.topbar{height:auto;min-height:54px;flex-wrap:wrap;gap:6px 10px;padding:8px 12px;align-content:flex-start}
   .topbar .brand{width:auto;flex:0 1 auto}
   header.topbar .brand h1{display:block;font-size:clamp(14px,4vw,18px)}
-  .topbar nav[aria-label="Main navigation"]{order:3;width:100%;height:35px;flex:1 0 100%;margin:0;justify-content:space-between;gap:2px}
-  .topbar nav[aria-label="Main navigation"] a{font-size:12px;padding:8px 12px}
+  .topbar nav[aria-label="Main navigation"]{order:3;width:100%;height:auto;flex:1 0 100%;flex-wrap:wrap;overflow:visible;margin:0;justify-content:flex-start;gap:3px 4px}
+  .topbar nav[aria-label="Main navigation"] a{font-size:11px;padding:5px 7px}
   .topbar .atlas-switcher{margin-left:auto}
   .topbar .atlas-destinations{top:calc(100% + 7px)}
   body.atlas-preview-page .shell{padding:0 14px 24px}

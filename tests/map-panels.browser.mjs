@@ -45,7 +45,7 @@ try{
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'no horizontal overflow at '+width);
  }
  await page.screenshot({path:'test-results/map-panels-mobile.png',fullPage:true});
- await page.setViewportSize({width:1440,height:1000});await page.getByRole('button',{name:'Region: Americas',exact:true}).click();await page.getByRole('link',{name:'Europe',exact:true}).click();
+ await page.setViewportSize({width:1440,height:1000});await page.getByRole('button',{name:'Region: Americas',exact:true}).click();await page.getByRole('navigation',{name:'Choose a region',exact:true}).getByRole('link',{name:'Europe',exact:true}).click();
  await page.locator('#europe-map').waitFor();assert.equal(await settings().getAttribute('aria-expanded'),'false');assert.equal(await page.locator('.europe-filters').isVisible(),false);
  await openSettings();await page.locator('#europe-category').selectOption('habitation');assert.equal(await settings().getAttribute('aria-expanded'),'false');
  await facts().click();assert.equal(await page.locator('.europe-reader').isVisible(),false);await facts().click();

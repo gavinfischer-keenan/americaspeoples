@@ -23,8 +23,15 @@ const storyCategory:Record<string,DiveCategory>={
 const expansionPlaces=new Set(['chaco','hovenweep','mesa-verde','canyons-of-the-ancients','machu-picchu','cahokia']);
 const combinedStories=new Set(siteGuides.map(g=>g.storyId).filter(Boolean));
 const planned=(id:string,title:string,description:string,category:DiveCategory):DeepDive=>({id,title,description,category,links:[]});
+const worldGuideMovies: Record<string, string> = {
+ 'world-human-family': '#origins',
+ 'world-genghis-khan': '#study/genghis-khan',
+ 'world-marco-polo': '#study/marco-polo',
+ 'world-silk-roads': '#study/silk-roads',
+ 'world-hannibal': '#study/hannibal',
+};
 const availableDives:DeepDive[]=[
- ...worldGuides.map(g=>({id:g.id,title:g.title,description:g.description,category:g.category,links:[{href:g.href,label:'Read guide' as const}]})),
+ ...worldGuides.map(g=>({id:g.id,title:g.title,description:g.description,category:g.category,links:[{href:g.href,label:'Read guide' as const},...(worldGuideMovies[g.id]?[{href:worldGuideMovies[g.id],label:'Independent movie' as const}]:[])]})),
  ...topics.map(t=>({id:'topic-'+t.id,title:t.title,description:t.description,category:topicCategory[t.id]??'subjects',links:[{href:'#topic/'+t.id,label:'Independent movie' as const},...siteGuides.filter(g=>g.topicId===t.id).map(g=>({href:g.href,label:'Read guide' as const}))]})),
  ...siteGuides.filter(g=>!g.topicId).map(g=>({id:'place-'+g.id,title:g.title,description:g.description,category:(g.kind==='culture'?'cultures':g.kind==='route'?'subjects':'places') as DiveCategory,
   links:[{href:g.href,label:'Read guide' as const},...stories.filter(s=>s.id===g.storyId).map(s=>({href:'#story/'+s.id,label:'Contextual movie' as const}))],

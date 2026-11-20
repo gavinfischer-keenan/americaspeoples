@@ -340,7 +340,7 @@ export class MapView {
     for(const {label,selected,bounds} of labels){
       const visible=bounds.right>=viewport.left&&bounds.left<=viewport.right&&bounds.bottom>=viewport.top&&bounds.top<=viewport.bottom;
       const caption=label.classList.contains('change-caption');
-      const limited=caption&&changeCaptions>=2||label.classList.contains('community-name')&&communityNames>=((this.scale<6?6:14)*({compact:.65,standard:1,detailed:1.45}[this.densityPreference]));
+      const limited=caption&&changeCaptions>=6||label.classList.contains('community-name')&&communityNames>=((this.scale<6?6:14)*({compact:.65,standard:1,detailed:1.45}[this.densityPreference]));
       const collides=limited||placed.some(other=>bounds.left<other.right+6&&bounds.right>other.left-6&&bounds.top<other.bottom+4&&bounds.bottom>other.top-4);
       const show=(!caption&&selected)||(visible&&!collides);
       label.style.visibility=show?'visible':'hidden';

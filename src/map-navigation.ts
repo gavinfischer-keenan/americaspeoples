@@ -9,7 +9,7 @@ export interface MapNavigationOptions {
  settingsToggleId?:string;
  factsToggleId?:string;
 }
-export interface MapNavigation {showFacts():void;dispose():void}
+export interface MapNavigation {showFacts():void;closeMenus():void;dispose():void}
 let sequence=0;
 const destinations=[['americas','Americas','#movie'],['africa','Africa','#atlas/africa'],['europe','Europe','#atlas/europe'],['asia-pacific','Asia & Pacific','#atlas/asia-pacific']] as const;
 
@@ -48,5 +48,5 @@ export function mountMapNavigation(host:HTMLElement,options:MapNavigationOptions
  root.addEventListener('keydown',event=>{if(event.key==='Escape'&&(!settingsPanel.hidden||!regionPanel.hidden)){const focus=!settingsPanel.hidden?settingsButton:regionButton;event.preventDefault();event.stopPropagation();closeMenus();focus.focus();}},listen);
  strip.append(world,regionButton,settingsButton,factsButton);root.append(strip,regionPanel,settingsPanel);host.append(root);
  options.onFactsToggle?.(factsOpen);
- return {showFacts(){if(!disposed){closeMenus();setFacts(true);}},dispose(){if(disposed)return;disposed=true;controller.abort();for(const {element,marker,hidden} of origins){marker.replaceWith(element);element.hidden=hidden;}for(const {element,hidden,id} of originalFacts){element.hidden=hidden;element.id=id;}root.remove();}};
+ return {showFacts(){if(!disposed){closeMenus();setFacts(true);}},closeMenus(){if(!disposed)closeMenus();},dispose(){if(disposed)return;disposed=true;controller.abort();for(const {element,marker,hidden} of origins){marker.replaceWith(element);element.hidden=hidden;}for(const {element,hidden,id} of originalFacts){element.hidden=hidden;element.id=id;}root.remove();}};
 }

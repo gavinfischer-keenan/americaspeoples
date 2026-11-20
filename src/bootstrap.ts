@@ -27,7 +27,7 @@ if (!supported) {
       if(destination){
         document.body.classList.add('world-surface');
         const {worldHeader,mountWorldPage}=await import('./world-page');if(current!==generation)return;
-        document.getElementById('app')!.innerHTML=worldHeader()+'<main id="world-main"><p class="world-load" role="status">Opening the world atlas…</p></main>';
+        document.getElementById('app')!.innerHTML=worldHeader(location.hash||'#world')+'<main id="world-main"><p class="world-load" role="status">Opening the world atlas…</p></main>';
         const container=document.createElement('div');const cleanup=await mountWorldPage(container,destination,worldLand);
         if(current!==generation){cleanup();return;}dispose=cleanup;document.getElementById('world-main')!.replaceChildren(container);
       }else{

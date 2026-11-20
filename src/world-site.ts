@@ -2,8 +2,7 @@ import land from "../data/land.geojson";
 import { mountWorldHub } from "./world-page";
 import type { WorldSummary } from "./world-model";
 const root = document.getElementById("world-site")!;
-document.body.classList.add("world-surface");
-const base = root.dataset.baseRoot ?? "/spread-of-peoples/";
+root.classList.add("world-surface");
 const origin =
   root.dataset.appOrigin ?? "https://americaspeoples.11mosswood.us";
 fetch(root.dataset.summaryUrl ?? "./world-summary.json")
@@ -13,13 +12,13 @@ fetch(root.dataset.summaryUrl ?? "./world-summary.json")
   })
   .then((summary) =>
     mountWorldHub(root, summary, land, {
-      regionHref: (id) => base + id + "/",
-      originsHref: origin + "/#origins",
+      regionHref: (id) =>
+        origin + "/" + (id === "americas" ? "#movie" : "#atlas/" + id),
+      divesHref: origin + "/#dives",
       guideHref: origin + "/sites/world-human-family.html",
-      studyHref: (id) => origin + "/#study/" + id,
-      earlyAfricaHref: origin + "/#atlas/africa/early",
       sourcesHref:
         origin + "/sites/sources-attributions.html#consensus-discovery",
+      globeOnly: true,
     }),
   )
   .catch(() => {
