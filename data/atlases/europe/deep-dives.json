@@ -3061,6 +3061,610 @@
         "world-arabia-incense-oases-empires",
         "world-chinese-explorers"
       ]
+    },
+    {
+      "id": "world-ancient-shipwrecks",
+      "atlasIds": [
+        "europe",
+        "africa",
+        "asia-pacific"
+      ],
+      "category": "subjects",
+      "title": "Shipwrecks of Antiquity: Sunken Hulls & Maritime Worlds",
+      "description": "How ancient and medieval shipwrecks across the Mediterranean, Nile, Red Sea, North Atlantic, Indian Ocean, and East China Sea preserve exact sinking dates, hull engineering, and lost cargoes.",
+      "intro": "Before printing presses or shipping ledgers survived intact, the seafloor acted as humanity's most reliable maritime archive. Across the Old World—from Egypt's 2550 BCE cedar barques and Bronze Age Aegean ingot carriers to Punic war fleets, Roman 400-ton wine ships, Arab-Indian stitched dhows, and Southern Song bulkhead junks—shipwrecks capture instantaneous moments of global trade.",
+      "scope": "Synthesizes excavated Bronze Age through early-16th-century shipwrecks across the Mediterranean, Black Sea, Red Sea, Atlantic-Baltic Europe, South/Southeast Asia, and East Asia; pairs with the playable timeline study #study/ancient-shipwrecks.",
+      "map": {
+        "bounds": [
+          -10,
+          -10,
+          136,
+          62
+        ],
+        "scope": "Selected Old World ancient and medieval shipwreck localities plotted at their underwater excavation or buried harbor coordinates.",
+        "points": [
+          {
+            "id": "ship-pt-newport",
+            "label": "Newport Medieval Ship (Wales)",
+            "coordinates": [
+              -2.99,
+              51.58
+            ],
+            "date": "c. 1468–1469 CE",
+            "description": "Clinker-built Basque/Atlantic oak wine freighter lost refitting on the River Usk.",
+            "sources": [
+              "https://doi.org/10.1111/1095-9270.12053"
+            ]
+          },
+          {
+            "id": "ship-pt-mazarron",
+            "label": "Mazarrón 1 & 2 Phoenician Wrecks",
+            "coordinates": [
+              -1.26,
+              37.56
+            ],
+            "date": "c. 625–575 BCE",
+            "description": "Stitched-and-mortised Archaic Phoenician lead/silver traders preserved in Murcia sand.",
+            "sources": [
+              "https://doi.org/10.1111/1095-9270.12337"
+            ]
+          },
+          {
+            "id": "ship-pt-ferriby",
+            "label": "Ferriby & Dover Sewn Bronze Boats",
+            "coordinates": [
+              -0.51,
+              53.71
+            ],
+            "date": "c. 1930–1520 BCE",
+            "description": "Europe's earliest yew-stitched oak seafaring vessels spanning the Humber and English Channel.",
+            "sources": [
+              "https://doi.org/10.1111/j.1095-9270.2005.00041.x",
+              "https://doi.org/10.1111/j.1095-9270.2006.00084.x"
+            ]
+          },
+          {
+            "id": "ship-pt-giens",
+            "label": "Madrague de Giens Wine Freighter",
+            "coordinates": [
+              6.12,
+              43.03
+            ],
+            "date": "c. 75–60 BCE",
+            "description": "40-meter Roman double-planked carrier hauling ~6,000–7,000 Italian wine amphorae.",
+            "sources": [
+              "https://doi.org/10.4000/archaeonautica.3587"
+            ]
+          },
+          {
+            "id": "ship-pt-oseberg-skuldelev",
+            "label": "Oseberg & Skuldelev Viking Ships",
+            "coordinates": [
+              10.44,
+              59.27
+            ],
+            "date": "834–1070 CE",
+            "description": "Benchmark Norse clinker ship burials and Roskilde Fjord's five specialized blockade vessels.",
+            "sources": [
+              "https://doi.org/10.1080/21662282.2016.1245885",
+              "https://doi.org/10.4000/archaeonautica.2554"
+            ]
+          },
+          {
+            "id": "ship-pt-bremen-cog",
+            "label": "Bremen Hanseatic Oak Cog",
+            "coordinates": [
+              8.79,
+              53.07
+            ],
+            "date": "1380 CE",
+            "description": "Flat-bottomed 24 m Hanseatic bulk cargo ship with sternpost rudder and high castle.",
+            "sources": [
+              "https://doi.org/10.4000/archaeonautica.2699"
+            ]
+          },
+          {
+            "id": "ship-pt-egadi",
+            "label": "Egadi Punic War Naval Rams",
+            "coordinates": [
+              12.33,
+              37.98
+            ],
+            "date": "241 BCE",
+            "description": "25 inscribed bronze warship rams marking the decisive Roman victory over Carthage.",
+            "sources": [
+              "https://doi.org/10.3389/fmars.2021.772499"
+            ]
+          },
+          {
+            "id": "ship-pt-antikythera",
+            "label": "Antikythera Mechanism Wreck",
+            "coordinates": [
+              23.31,
+              35.89
+            ],
+            "date": "c. 70–60 BCE",
+            "description": "Hellenistic treasure ship carrying marble sculptures and an astronomical geared calculator.",
+            "sources": [
+              "https://doi.org/10.1080/10572414.2026.2679631",
+              "https://doi.org/10.1057/s41599-018-0210-9"
+            ]
+          },
+          {
+            "id": "ship-pt-blacksea",
+            "label": "Black Sea Anoxic Greek Wreck",
+            "coordinates": [
+              28.15,
+              42.32
+            ],
+            "date": "c. 400 BCE",
+            "description": "Classical merchantman preserved with intact mast and rigging 2 km deep off Bulgaria.",
+            "sources": [
+              "https://doi.org/10.1017/s0570608423000054"
+            ]
+          },
+          {
+            "id": "ship-pt-uluburun",
+            "label": "Uluburun & Kekova Ingot Wrecks",
+            "coordinates": [
+              29.65,
+              36.13
+            ],
+            "date": "c. 1650–1320 BCE",
+            "description": "Late Bronze Age royal copper, tin, cobalt glass, and Canaanite resin cargo vessels.",
+            "sources": [
+              "https://doi.org/10.1111/j.1095-9270.1998.tb00803.x",
+              "https://doi.org/10.1126/sciadv.abq3766",
+              "https://doi.org/10.1007/s11457-026-09532-3"
+            ]
+          },
+          {
+            "id": "ship-pt-khufu",
+            "label": "Khufu Barque & Heracleion Baris",
+            "coordinates": [
+              31.13,
+              29.98
+            ],
+            "date": "c. 2550–450 BCE",
+            "description": "43 m Giza cedar solar ship and Herodotus' long-tenon Egyptian baris (Ship 17).",
+            "sources": [
+              "https://doi.org/10.1080/17480272.2024.2411548",
+              "https://doi.org/10.1111/1095-9270.12060"
+            ]
+          },
+          {
+            "id": "ship-pt-gawasis",
+            "label": "Wadi Gawasis Red Sea Caves",
+            "coordinates": [
+              33.94,
+              26.55
+            ],
+            "date": "c. 1950–1800 BCE",
+            "description": "Disassembled Middle Kingdom cedar ocean hull planks stored after Punt voyages.",
+            "sources": [
+              "https://doi.org/10.1111/j.1095-9270.2009.00229.x"
+            ]
+          },
+          {
+            "id": "ship-pt-esmeralda",
+            "label": "Esmeralda (1503 Oman)",
+            "coordinates": [
+              56.08,
+              17.5
+            ],
+            "date": "1503 CE",
+            "description": "Ship from Vasco da Gama's 2nd Armada carrying Europe's earliest surviving mariner's astrolabe.",
+            "sources": [
+              "https://doi.org/10.1017/s0570608423000054"
+            ]
+          },
+          {
+            "id": "ship-pt-godavaya",
+            "label": "Godavaya Wreck (Sri Lanka)",
+            "coordinates": [
+              81.05,
+              6.1
+            ],
+            "date": "c. 150 BCE–100 CE",
+            "description": "Earliest dated Indian Ocean shipwreck carrying raw glass, iron, and copper ingots.",
+            "sources": [
+              "https://doi.org/10.18520/cs/v117/i10/1664-1672"
+            ]
+          },
+          {
+            "id": "ship-pt-phanom-surin",
+            "label": "Phanom-Surin Sewn Wreck (Thailand)",
+            "coordinates": [
+              100.38,
+              13.54
+            ],
+            "date": "c. 750–800 CE",
+            "description": "Abbasid/Sasanian stitched-plank ship bearing Khuzestan bitumen torpedo jars in Thailand.",
+            "sources": [
+              "https://doi.org/10.1016/j.jas.2020.105111"
+            ]
+          },
+          {
+            "id": "ship-pt-belitung",
+            "label": "Belitung Tang–Abbasid Dhow",
+            "coordinates": [
+              107.61,
+              -2.75
+            ],
+            "date": "c. 826–830 CE",
+            "description": "Coconut-coir stitched Arabian/Indian dhow carrying 60,000 Tang Changsha ceramics and gold.",
+            "sources": [
+              "https://doi.org/10.1080/00438240122811",
+              "https://doi.org/10.18520/cs/v117/i10/1647-1653"
+            ]
+          },
+          {
+            "id": "ship-pt-nanhai1",
+            "label": "Nanhai No. 1 & Quanzhou Song Junks",
+            "coordinates": [
+              111.96,
+              21.48
+            ],
+            "date": "c. 1183–1277 CE",
+            "description": "Southern Song watertight-bulkhead merchantmen packed with >180,000 porcelains and spices.",
+            "sources": [
+              "https://doi.org/10.1057/s41280-026-00409-1",
+              "https://doi.org/10.1080/00393630.2025.2492000"
+            ]
+          },
+          {
+            "id": "ship-pt-takashima",
+            "label": "Takashima 1281 Mongol Armada & Sinan 1323",
+            "coordinates": [
+              129.75,
+              33.43
+            ],
+            "date": "1281 & 1323 CE",
+            "description": "Kublai Khan's typhoon-sunk Japanese invasion fleet and the Ningbo-to-Hakata celadon trader.",
+            "sources": [
+              "https://doi.org/10.1111/1095-9270.12033",
+              "https://doi.org/10.1016/j.ara.2020.100195"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "1. Four Global Traditions of Ancient Hull Engineering",
+          "paragraphs": [
+            {
+              "text": "Shipbuilding traditions evolved along distinct regional lines that are immediately readable from excavated wreck timbers. Across the Red Sea, the Mediterranean before 500 BCE, Bronze Age Britain, Iron Age Scandinavia, and the entire Indian Ocean through medieval times, shipwrights built hulls 'shell-first' by sewing curved planks together with vegetable cords—flax, halfa grass, twisted yew withies, lime bast, or coconut coir—before inserting light stiffening frames.",
+              "sources": [
+                "https://doi.org/10.1111/1095-9270.12337",
+                "https://doi.org/10.1111/j.1095-9270.2005.00041.x",
+                "https://doi.org/10.1080/00438240122811"
+              ]
+            },
+            {
+              "text": "By the 5th century BCE in the Mediterranean, edge-joined mortise-and-tenon oak-pegged planking supported massive grain, wine, and stone bulk carriers, whereas Northern Europe perfected overlapping iron-riveted clinker strakes (Nydam, Oseberg, Skuldelev) and flat-bottomed cog hulls (Bremen). Meanwhile, South and East China pioneered rigid watertight transverse bulkheads—visible in the Nanhai No. 1, Quanzhou, and Sinan junks—allowing compartmented survival even after hull puncture.",
+              "sources": [
+                "https://doi.org/10.4000/archaeonautica.3587",
+                "https://doi.org/10.1080/21662282.2016.1245885",
+                "https://doi.org/10.1080/00393630.2025.2492000"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "2. Nile, Red Sea & Bronze Age Mediterranean Cargo Wrecks",
+          "paragraphs": [
+            {
+              "text": "Pharaonic Egypt invented modular ocean logistics: at Wadi al-Jarf (c. 2550 BCE) and Wadi Gawasis (c. 1950–1800 BCE), disassembled Lebanese-cedar hulls marked for reassembly after Punt and Sinai voyages lie inside desert rock galleries alongside limestone anchors and coiled rigging. In the Aegean and southern Anatolia, Early and Late Bronze Age wrecks—Dokos (~2200 BCE), Kekova, Kumluca, Uluburun (~1320 BCE), Point Iria, and Cape Gelidonya (~1200 BCE)—track copper and Central Asian tin bullion powering palace metallurgy.",
+              "sources": [
+                "https://doi.org/10.1111/j.1095-9270.2009.00229.x",
+                "https://doi.org/10.1126/sciadv.abq3766",
+                "https://doi.org/10.1007/s11457-026-09532-3",
+                "https://doi.org/10.21550/sosbilder.1414674"
+              ]
+            },
+            {
+              "text": "Phoenician and Archaic Greek expansion added sewn-to-mortised freighters across the central and western Mediterranean (Mazarrón 1–2, Bajo de la Campana ivory cargo, Giglio Campese, and Marseille's Place Jules-Verne boats), bridging Iberian silver mines with Levantine workshops.",
+              "sources": [
+                "https://doi.org/10.1111/1095-9270.12337",
+                "https://doi.org/10.4000/archaeonautica.3587"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "3. Classical, Roman & Anoxic Black Sea Deep-Water Wrecks",
+          "paragraphs": [
+            {
+              "text": "Direct seabed evidence illuminates both Mediterranean commerce and ancient naval combat. The Kyrenia merchantman (c. 300 BCE) preserves Rhodes wine amphorae and almonds inside a lead-sheathed hull; off western Sicily, 25 inscribed cast-bronze rams mark the 241 BCE Battle of the Egadi Islands that ended the First Punic War. By the 1st century BCE, Roman amphora tankers like Madrague de Giens hauled 400 tonnes of Campanian wine while luxury ships like Mahdia and Antikythera ferried bronze sculpture and geared astronomical calculators across open crossings.",
+              "sources": [
+                "https://doi.org/10.4000/12lsp",
+                "https://doi.org/10.3389/fmars.2021.772499",
+                "https://doi.org/10.1080/10572414.2026.2679631",
+                "https://doi.org/10.1057/s41599-018-0210-9"
+              ]
+            },
+            {
+              "text": "Where oxygen vanishes—beneath two kilometers of Black Sea water (~400 BCE Greek merchantman) or rapid fluvial muds at Pisa–San Rossore and Istanbul's Yenikapı harbor—wood, hemp cordage, masts, and deck superstructures survive almost whole, documenting the momentous 1st-millennium shift to frame-first skeleton construction seen also at Yassıada and Ma'agan Mikhael B.",
+              "sources": [
+                "https://doi.org/10.1017/s0570608423000054",
+                "https://doi.org/10.1111/1095-9270.12331"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "4. Atlantic, North Sea & Viking-to-Tudor Shipbuilding",
+          "paragraphs": [
+            {
+              "text": "Northern Europe cultivated an independent Atlantic boatbuilding lineage millennia before Roman galleys arrived. Ferriby (c. 1930 BCE) and Dover (c. 1550 BCE) preserve ocean-going oak plank craft stitched with yew withies, followed by Denmark's ~350 BCE Hjortspring war canoe and 4th-century CE Nydam warship—where iron rivets and overlapping clinker strakes emerge. By the Viking Age, Oseberg (834 CE), Gokstad, and Roskilde Fjord's five Skuldelev ships showcase flexible longships built from Ireland to Norway, later complemented by flat-bottomed Romano-Celtic barges (Blackfriars, Zwammerdam), Hanseatic cogs (Bremen 1380), Newport (c. 1468), and Henry VIII's carvel-built warship Mary Rose (1545).",
+              "sources": [
+                "https://doi.org/10.1111/j.1095-9270.2005.00041.x",
+                "https://doi.org/10.1371/journal.pone.0336965",
+                "https://doi.org/10.4000/archaeonautica.2554",
+                "https://doi.org/10.4000/archaeonautica.2699",
+                "https://doi.org/10.1111/1095-9270.12053",
+                "https://doi.org/10.1111/1095-9270.12338"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "5. Indian Ocean Monsoon Dhows & East China Sea Junks",
+          "paragraphs": [
+            {
+              "text": "Across the Indian Ocean and South China Sea, ancient shipwrecks exploded nineteenth-century assumptions that Asian seas relied on disconnected short-hop relays. Godavaya off Sri Lanka (c. 150 BCE–100 CE) carries raw glass and metal ingots; Phanom-Surin in Thailand (c. 750–800 CE) and the Belitung wreck in Indonesia (c. 826 CE) prove that West Asian/Indian coconut-coir stitched dhows sailed all the way to Tang China carrying Khuzestan bitumen jars and 60,000 Changsha ceramics back to Basra.",
+              "sources": [
+                "https://doi.org/10.18520/cs/v117/i10/1664-1672",
+                "https://doi.org/10.1016/j.jas.2020.105111",
+                "https://doi.org/10.1080/00438240122811",
+                "https://doi.org/10.18520/cs/v117/i10/1647-1653"
+              ]
+            },
+            {
+              "text": "By the Song and Yuan dynasties, Chinese compartmented ocean junks—exemplified by Nanhai No. 1 (c. 1183 CE), Quanzhou Bay (c. 1277 CE), Kublai Khan's typhoon-sunk Takashima armada (1281 CE), and the Sinan merchantman bound from Ningbo to Japan with 28 tonnes of copper coins (1323 CE)—carried industrialized porcelain, iron, and spice volumes across East and Southeast Asia.",
+              "sources": [
+                "https://doi.org/10.1057/s41280-026-00409-1",
+                "https://doi.org/10.1080/00393630.2025.2492000",
+                "https://doi.org/10.1111/1095-9270.12033",
+                "https://doi.org/10.1016/j.ara.2020.100195"
+              ]
+            }
+          ],
+          "columns": [
+            "Region & Wreck",
+            "Sinking Date",
+            "Hull Architecture",
+            "Key Diagnostic Cargo"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Khufu Barque (Giza)",
+                "c. 2550 BCE",
+                "43.4 m disassembled lashed cedar",
+                "Royal solar/river transport architecture"
+              ],
+              "sources": [
+                "https://doi.org/10.1080/17480272.2024.2411548"
+              ]
+            },
+            {
+              "cells": [
+                "Ferriby & Dover (Britain)",
+                "c. 1930–1520 BCE",
+                "Oak bottom planks sewn with yew withies",
+                "Moss caulking; Channel bronze-era voyaging"
+              ],
+              "sources": [
+                "https://doi.org/10.1111/j.1095-9270.2006.00084.x"
+              ]
+            },
+            {
+              "cells": [
+                "Uluburun (SW Turkey)",
+                "c. 1320 BCE",
+                "Cedar shell-first mortise-and-tenon",
+                "10 t Cypriot copper, 1 t tin, cobalt glass, ebony"
+              ],
+              "sources": [
+                "https://doi.org/10.1111/j.1095-9270.1998.tb00803.x",
+                "https://doi.org/10.1126/sciadv.abq3766"
+              ]
+            },
+            {
+              "cells": [
+                "Antikythera (Greece)",
+                "c. 70–60 BCE",
+                "Mediterranean mortised freighter",
+                "Bronze/marble statues & astronomical computer"
+              ],
+              "sources": [
+                "https://doi.org/10.1080/10572414.2026.2679631",
+                "https://doi.org/10.1057/s41599-018-0210-9"
+              ]
+            },
+            {
+              "cells": [
+                "Phanom-Surin & Belitung (SE Asia)",
+                "c. 750–830 CE",
+                "West Asian/Indian coir-stitched hull",
+                "Bitumen torpedo jars & 60,000 Changsha bowls"
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.jas.2020.105111",
+                "https://doi.org/10.1080/00438240122811"
+              ]
+            },
+            {
+              "cells": [
+                "Skuldelev 1–6 & Bremen Cog",
+                "1040–1380 CE",
+                "Norse clinker vs. flat-bottomed cog",
+                "North Atlantic settlers, warships & Baltic grain"
+              ],
+              "sources": [
+                "https://doi.org/10.4000/archaeonautica.2554",
+                "https://doi.org/10.4000/archaeonautica.2699"
+              ]
+            },
+            {
+              "cells": [
+                "Nanhai I, Takashima & Sinan",
+                "1183–1323 CE",
+                "Chinese pine/camphor watertight bulkheads",
+                "180k porcelains, 1281 bombs, 28 t copper coins"
+              ],
+              "sources": [
+                "https://doi.org/10.1057/s41280-026-00409-1",
+                "https://doi.org/10.1111/1095-9270.12033",
+                "https://doi.org/10.1016/j.ara.2020.100195"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Pulak, C. (1998). The Uluburun shipwreck: an overview. IJNA.",
+          "url": "https://doi.org/10.1111/j.1095-9270.1998.tb00803.x"
+        },
+        {
+          "title": "Powell, W. G. et al. (2022). Tin from Uluburun shipwreck. Science Advances.",
+          "url": "https://doi.org/10.1126/sciadv.abq3766"
+        },
+        {
+          "title": "Öniz, H. & Öztosun, C. (2026). Early Bronze Age Shipwreck in Kekova Region of Antalya.",
+          "url": "https://doi.org/10.1007/s11457-026-09532-3"
+        },
+        {
+          "title": "Öniz, H. (2019). Kumluca Bronze Age ingot shipwreck west of Antalya.",
+          "url": "https://doi.org/10.1080/00310328.2019.1579467"
+        },
+        {
+          "title": "Günel, İ. (2024). Cape Gelidonya and Uluburun shipwrecks and Cyprus maritime exchange.",
+          "url": "https://doi.org/10.21550/sosbilder.1414674"
+        },
+        {
+          "title": "Pomey, P. (2019). Ancient Mediterranean Sewn-Boat Traditions. IJNA.",
+          "url": "https://doi.org/10.1111/1095-9270.12337"
+        },
+        {
+          "title": "Pomey, P. (2021). 50 years of maritime and nautical archaeology. Archaeonautica.",
+          "url": "https://doi.org/10.4000/archaeonautica.3587"
+        },
+        {
+          "title": "Demesticha, S. (2024). The Kyrenia Ship Final Excavation Report Review. BCHmc.",
+          "url": "https://doi.org/10.4000/12lsp"
+        },
+        {
+          "title": "Gravina, M. F. et al. (2021). First Punic War Bronze Naval Ram (Egadi Islands).",
+          "url": "https://doi.org/10.3389/fmars.2021.772499"
+        },
+        {
+          "title": "Ogloblin Ramírez, I. et al. (2026). Site Formation Processes of the Antikythera Shipwreck Site.",
+          "url": "https://doi.org/10.1080/10572414.2026.2679631"
+        },
+        {
+          "title": "Freeth, T. (2019). Eclipse prediction scheme in the Antikythera mechanism.",
+          "url": "https://doi.org/10.1057/s41599-018-0210-9"
+        },
+        {
+          "title": "Belov, A. (2014). Ship 17 of Thonis-Heracleion. IJNA.",
+          "url": "https://doi.org/10.1111/1095-9270.12060"
+        },
+        {
+          "title": "Ward, C. & Zazzaro, C. (2009). Pharaonic Seagoing Ships at Mersa/Wadi Gawasis, Egypt.",
+          "url": "https://doi.org/10.1111/j.1095-9270.2009.00229.x"
+        },
+        {
+          "title": "Bram, M. et al. (2024). Ancient Khufu-1 timber ship construction.",
+          "url": "https://doi.org/10.1080/17480272.2024.2411548"
+        },
+        {
+          "title": "Cohen, M. & Cvikel, D. (2018). Ma'agan Mikhael B Late Byzantine–Early Islamic shipwreck.",
+          "url": "https://doi.org/10.1111/1095-9270.12331"
+        },
+        {
+          "title": "Briggs, L. et al. (2023). Shipwreck archaeology in the past 10 years. Archaeological Reports.",
+          "url": "https://doi.org/10.1017/s0570608423000054"
+        },
+        {
+          "title": "Coates, J. (2005). The Bronze Age Ferriby Boats. IJNA.",
+          "url": "https://doi.org/10.1111/j.1095-9270.2005.00041.x"
+        },
+        {
+          "title": "Crumlin-Pedersen, O. (2006). The Dover Bronze Age Boat. IJNA.",
+          "url": "https://doi.org/10.1111/j.1095-9270.2006.00084.x"
+        },
+        {
+          "title": "Fauvelle, M. et al. (2025). New investigations of the Hjortspring boat. PLOS ONE.",
+          "url": "https://doi.org/10.1371/journal.pone.0336965"
+        },
+        {
+          "title": "Bonde, N. & Stylegar, F.-A. (2016). Sutton Hoo, Oseberg & ship burial dendrochronology.",
+          "url": "https://doi.org/10.1080/21662282.2016.1245885"
+        },
+        {
+          "title": "Dael, M. R. (2021). Skuldelev Viking ships & Roar Ege. Archaeonautica.",
+          "url": "https://doi.org/10.4000/archaeonautica.2554"
+        },
+        {
+          "title": "Tanner, P. (2021). The Bremen-Cog: reconstructed one more time. Archaeonautica.",
+          "url": "https://doi.org/10.4000/archaeonautica.2699"
+        },
+        {
+          "title": "Nayling, N. & Jones, T. (2013). The Newport Medieval Ship, Wales. IJNA.",
+          "url": "https://doi.org/10.1111/1095-9270.12053"
+        },
+        {
+          "title": "Sanders, D. (2019). The Cables and Cablets of the Mary Rose (1545). IJNA.",
+          "url": "https://doi.org/10.1111/1095-9270.12338"
+        },
+        {
+          "title": "Muthucumarana, R. (2019). Recently Discovered Shipwrecks in Sri Lankan Waters (Godavaya).",
+          "url": "https://doi.org/10.18520/cs/v117/i10/1664-1672"
+        },
+        {
+          "title": "Connan, J. & Priestman, S. (2020). Phanom-Surin 8th-century shipwreck in Thailand.",
+          "url": "https://doi.org/10.1016/j.jas.2020.105111"
+        },
+        {
+          "title": "Flecker, M. (2001). Belitung 9th-century Arab or Indian shipwreck in Indonesia.",
+          "url": "https://doi.org/10.1080/00438240122811"
+        },
+        {
+          "title": "Guy, J. S. (2019). Long Distance Arab Shipping in the 9th Century Indian Ocean.",
+          "url": "https://doi.org/10.18520/cs/v117/i10/1647-1653"
+        },
+        {
+          "title": "Autiero, S. & Hu, D. (2026). Jewels from the Nanhai no. 1 shipwreck and Indian Ocean trade.",
+          "url": "https://doi.org/10.1057/s41280-026-00409-1"
+        },
+        {
+          "title": "Zhao, J. et al. (2025). Quanzhou Song Shipwreck Structural Monitoring.",
+          "url": "https://doi.org/10.1080/00393630.2025.2492000"
+        },
+        {
+          "title": "Kimura, J. et al. (2013). Lost Kublai Khan Fleets at Takashima (1281). IJNA.",
+          "url": "https://doi.org/10.1111/1095-9270.12033"
+        },
+        {
+          "title": "Fan, J. (2020). Departure port & ceramic cargo of the Sinan shipwreck (1323 CE).",
+          "url": "https://doi.org/10.1016/j.ara.2020.100195"
+        },
+        {
+          "title": "Respess, A. (2024). Global Ships: Seafaring, Shipwrecks, and Boatbuilding in the Global Middle Ages.",
+          "url": "https://doi.org/10.1017/9781009343411"
+        }
+      ],
+      "relatedGuideIds": [
+        "world-mediterranean-trade",
+        "world-silk-roads",
+        "world-chinese-explorers",
+        "world-india-empires-cities-networks",
+        "world-arabia-incense-oases-empires",
+        "world-north-sentinel-island"
+      ]
     }
   ]
 }

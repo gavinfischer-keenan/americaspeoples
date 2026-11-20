@@ -464,9 +464,9 @@ export function mountWorldPlayer(
         type: "MultiPoint",
         coordinates: [
           [-24, 30],
-          [-24, 65],
-          [50, 65],
-          [50, 30],
+          [-24, 71],
+          [60, 71],
+          [60, 30],
         ],
       },
     );
