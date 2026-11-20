@@ -370,6 +370,11 @@ export function mountWorldPlayer(
         "beforeend",
         "<p>This chapter ends at 15,000 BCE (about 16,949 calendar years BP), not 15,000 BP. Archaeological traditions are not ethnic identities. Fossil occurrences do not by themselves establish habitation. Coverage remains uneven, especially in central and western Africa.</p>",
       );
+  } else if (scope === "africa" && !study) {
+    host.querySelector(".family-heading p:not(.world-kicker)")!.textContent =
+      "Prehistoric fossils, Green Sahara pastoralism, kingdoms of the Nile, Sahel, Forest, Swahili coast, Zimbabwe plateau and Madagascar through 1900 CE.";
+    host.querySelector("#family-era")!.innerHTML =
+      `<option value="">Choose a period</option><option value="${first}">Earliest mapped evidence</option><option value="-2800000">Early Homo and stone tools</option><option value="-350000">Middle Pleistocene diversity</option><option value="-70000">Later Middle Stone Age</option><option value="-12000">Terminal Pleistocene</option><option value="-6000">Green Sahara &amp; early herders</option><option value="-2500">Nile states, Kerma &amp; drying Sahara</option><option value="-500">Nok, Meroë, Yeha &amp; Jenné-jeno</option><option value="1000">Swahili coast, Sahel &amp; Limpopo</option><option value="1400">Great Zimbabwe, Ife, Mali &amp; Kongo</option><option value="${last}">1900 CE endpoint</option>`;
   }
 
   const related = (data.studies ?? []).filter(

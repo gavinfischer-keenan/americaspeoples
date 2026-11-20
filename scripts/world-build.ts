@@ -187,7 +187,8 @@ export function createWorldSummary(input: SummaryInput): WorldSummary {
   const coverage: Record<WorldRegion, string> = {
     americas:
       "Detailed Americas and Pacific archive; selected coverage through 1900.",
-    africa: "Expanded prehistoric site coverage through 15,000 BCE, plus broad later movements.",
+    africa:
+      "Prehistoric to 1900 CE coverage across North, West, Central, East and Southern Africa, the Sahara, the Nile and Madagascar.",
     europe:
       "Playable northern Europe history plus an early human-family foundation.",
     "asia-pacific":
