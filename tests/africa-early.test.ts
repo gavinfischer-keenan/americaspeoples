@@ -118,9 +118,9 @@ test('Europe and Asia-Pacific extend systematically to 1900 CE with zero sparse 
  }
 
  const africaAll=data.evidence.filter(e=>inWorldScope(e,'africa'));
- assert.equal(africaAll.length,377,'Africa reaches 377 evidence records after gap-fill and UNESCO supplement');
- assert.ok(africaAll.filter(e=>e.end>-15000).length>=220,'Africa post-15,000 BCE coverage exceeds 220 records');
- for(const needle of ['Wadi Kubbaniya','Afalou','Al-Khiday','Tadrart Acacus','Memphis','Thebes','Abu Simbel','Timgad','Kondoa','Twyfelfontein']){
+ assert.equal(africaAll.length,384,'Africa reaches 384 evidence records after gap-fill, UNESCO, China-Africa & Darfur/Chad additions');
+ assert.ok(africaAll.filter(e=>e.end>-15000).length>=229,'Africa post-15,000 BCE coverage reaches at least 229 records');
+ for(const needle of ['Wadi Kubbaniya','Afalou','Al-Khiday','Tadrart Acacus','Memphis','Thebes','Abu Simbel','Timgad','Kondoa','Twyfelfontein','Gazargamu','El Fasher']){
   assert.ok(africaAll.some(e=>e.title.includes(needle)),`Missing Africa UNESCO/sparse-gap site: ${needle}`);
  }
 
@@ -143,7 +143,8 @@ test('Europe and Asia-Pacific extend systematically to 1900 CE with zero sparse 
   'world-pyramids-memphis-thebes','world-timbuktu-gao-mali','world-lalibela-harar-ethiopia',
   'world-carthage-leptis-north-africa','world-gobekli-catalhoyuk-anatolia','world-uruk-babylon-nineveh',
   'world-mohenjo-daro-harappa-indus','world-persepolis-pasargadae-iran','world-petra-palmyra-levant',
-  'world-knossos-mycenae-athens','world-pompeii-rome-ostia','world-borobudur-bagan-se-asia'
+  'world-knossos-mycenae-athens','world-pompeii-rome-ostia','world-borobudur-bagan-se-asia',
+  'world-arabia-incense-oases-empires','world-india-empires-cities-networks'
  ];
  for(const id of newGuideIds){
   const g=guides.find(x=>x.id===id);
@@ -152,8 +153,17 @@ test('Europe and Asia-Pacific extend systematically to 1900 CE with zero sparse 
   assert.ok(g.sources.some(s=>s.url.includes('doi.org')),`Guide ${id} includes peer-reviewed DOI sources`);
   assert.ok(g.sources.some(s=>s.url.includes('whc.unesco.org')),`Guide ${id} includes official UNESCO WHC dossier`);
  }
- assert.equal(guides.length,85,'All 85 world guides validate cleanly');
+ const originGuides=guides.filter(x=>x.category==='origin-stories');
+ assert.equal(originGuides.length,7,'Master Origin Stories section contains 7 regional & global guides');
+ for(const id of ['world-origin-stories-australia','world-origin-stories-compendium','world-origin-stories-americas','world-origin-stories-south-america','world-origin-stories-africa','world-origin-stories-near-east-europe','world-origin-stories-asia-pacific']){
+  assert.ok(originGuides.some(x=>x.id===id),`Missing origin-stories guide: ${id}`);
+ }
+ for(const id of ['world-ibn-fadlan','world-chinese-explorers']){
+  assert.ok(guides.some(x=>x.id===id&&x.category==='subjects'),`Missing explorer subject guide: ${id}`);
+ }
+ assert.equal(guides.length,96,'All 96 world guides validate cleanly');
  for(const g of guides){
+  assert.ok(g.sections.length>=3,`Guide ${g.id} has at least 3 sections`);
   assert.ok(g.relatedGuideIds&&g.relatedGuideIds.length>=1,`Guide ${g.id} includes Continue exploring cross-links`);
  }
 });

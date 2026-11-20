@@ -8,7 +8,7 @@ const root=process.env.DIST_PATH||'dist';
 const [data,summary,guideIndex]=await Promise.all([
  path.join(root,'world-catalogue.json'),path.join(root,'world-summary.json'),'data/world-guide-index.json',
 ].map(async file=>JSON.parse(await readFile(file,'utf8'))));
-const studies=['genghis-khan','marco-polo','silk-roads','hannibal'].map(id=>{
+const studies=['genghis-khan','marco-polo','silk-roads','hannibal','ibn-fadlan','chinese-explorers'].map(id=>{
  const study=data.studies.find(s=>s.id===id);assert.ok(study,'Packaged study '+id);return study;
 });
 const fixture=await browserFixture({reducedMotion:'reduce'});

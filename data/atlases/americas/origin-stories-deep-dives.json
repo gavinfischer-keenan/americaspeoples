@@ -1,0 +1,541 @@
+{
+  "schemaVersion": 1,
+  "guides": [
+    {
+      "id": "world-origin-stories-americas",
+      "atlasIds": [
+        "americas"
+      ],
+      "category": "origin-stories",
+      "title": "Mesoamerican & North American Origin Stories: Aztec Five Suns, Maya Popol Vuh, Diné Emergence & Turtle Island",
+      "description": "Cosmologies of cosmic suns, maize-molded humans, subterranean Emergence worlds, Earth-Diver Turtle Island and Raven traditions across Mesoamerica and North America.",
+      "intro": "Here we step outside archaeological stratigraphy into living Indigenous scriptures and oral literature—exploring how Aztecs (Mexica/Nahua), K'iche' Maya, Diné (Navajo), Hopi, Haudenosaunee, Anishinaabe, Haida/Tlingit, and Inuit storytellers explained the creation of Earth, sacred order, and the human family.",
+      "scope": "Primary sacred narratives and ethnographic texts across Central Mexico, the Guatemalan Maya Highlands, the US Southwest, the Eastern Woodlands / Great Lakes, the Northwest Coast, and the Arctic.",
+      "sources": [
+        {
+          "id": "osam-lebeuf-2004",
+          "title": "Lebeuf (2004) · Dating and Cosmology of the Five Suns in Aztec Tradition (Cultura y Cielo)",
+          "url": "https://doi.org/10.46472/cc.01208.0231",
+          "access": "Indexed peer-reviewed journal record inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "osam-maffie-2019",
+          "title": "Maffie (2019) · The Nature of Mexica Ethics, Teotl & Cosmic Balance (Routledge / Aztecs)",
+          "url": "https://doi.org/10.4324/9780429435164-4",
+          "access": "Indexed scholarly chapter record inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "osam-milbrath-2019",
+          "title": "Milbrath (2019) · Cosmogony, Sacred Calendars and the Planets in Aztec Culture (Oxford Research Encyclopedia)",
+          "url": "https://doi.org/10.1093/acrefore/9780190647926.013.54",
+          "access": "Indexed peer-reviewed reference record inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "osam-tedlock-popol",
+          "title": "Christenson (2007/2020) · Popol Vuh: Sacred Book of the Quiché Maya People (Mesoweb Electronic Critical Edition)",
+          "url": "https://www.mesoweb.com/publications/Christenson/PopolVuh.pdf",
+          "access": "Complete parallel K'iche' Maya and English critical scholarly translation consulted 2026-11-20."
+        },
+        {
+          "id": "osam-leeming-2009",
+          "title": "Leeming (2009) · Creation Myths of the World: An Encyclopedia (Greenwood / Bloomsbury)",
+          "url": "https://doi.org/10.5040/9798400633393",
+          "access": "Indexed scholarly reference work inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "osam-schuetz-2022",
+          "title": "Schuetz-Miller (2022) · Tricksters, Creator Figures and Southwestern Emergence Narratives (Journal of the Southwest)",
+          "url": "https://doi.org/10.1353/jsw.2022.0002",
+          "access": "Indexed peer-reviewed journal record inspected via Consensus API. Access checked 2026-11-20."
+        }
+      ],
+      "map": {
+        "bounds": [
+          -168,
+          11,
+          -54,
+          72
+        ],
+        "scope": "Approximate cultural and textual homelands across Mesoamerica and North America representing major creation cosmologies.",
+        "points": [
+          {
+            "id": "aztec-tenochtitlan-teotihuacan",
+            "label": "Teotihuacan & Basin of Mexico (Aztec Five Suns)",
+            "coordinates": [
+              -99.13,
+              19.43
+            ],
+            "date": "Leyenda de los Soles / Codex Chimalpopoca",
+            "description": "Sacred hearth of the Fifth Sun (Nahui Ollin) and Quetzalcoatl's journey into Mictlan for humanity's ancestral bones.",
+            "sources": [
+              "https://doi.org/10.46472/cc.01208.0231",
+              "https://doi.org/10.1093/acrefore/9780190647926.013.54"
+            ]
+          },
+          {
+            "id": "maya-quiche-highlands",
+            "label": "Q'umarkaj Highlands (K'iche' Popol Vuh)",
+            "coordinates": [
+              -91.15,
+              15.03
+            ],
+            "date": "Popol Vuh (Chichicastenango MS)",
+            "description": "Successive creation trials of mud, carved wood, and true humans fashioned from yellow and white sacred maize dough.",
+            "sources": [
+              "https://www.mesoweb.com/publications/Christenson/PopolVuh.pdf"
+            ]
+          },
+          {
+            "id": "dine-four-corners",
+            "label": "Dinétah & Four Sacred Mountains (Diné / Hopi Emergence)",
+            "coordinates": [
+              -108.5,
+              36.2
+            ],
+            "date": "Diné Bahaneʼ & Hopi Sipapu",
+            "description": "Four-world vertical ascent through Niłch'i (Holy Air/Reed) into the Glittering World beneath Sisnaajiní, Tsoodził, Dook'o'oosłííd, and Dibé Nitsaa.",
+            "sources": [
+              "https://doi.org/10.1353/jsw.2022.0002",
+              "https://doi.org/10.5040/9798400633393"
+            ]
+          },
+          {
+            "id": "woodlands-turtle-island",
+            "label": "Great Lakes & Finger Lakes (Sky Woman & Turtle Island)",
+            "coordinates": [
+              -76.15,
+              43.05
+            ],
+            "date": "Haudenosaunee & Anishinaabe Oral Law",
+            "description": "Aataentsic / Sky Woman caught on geese wings above water until Muskrat dives for mud piled onto Turtle's shell.",
+            "sources": [
+              "https://doi.org/10.5040/9798400633393"
+            ]
+          },
+          {
+            "id": "haida-nw-coast",
+            "label": "Haida Gwaii & SE Alaska (Raven Traditions)",
+            "coordinates": [
+              -132.1,
+              53.2
+            ],
+            "date": "Haida & Tlingit Oral Cycles",
+            "description": "Raven discovering cramped human beings coaxed out from a giant white clamshell on Rose Spit and liberating daylight from the Chief's cedar boxes.",
+            "sources": [
+              "https://doi.org/10.1353/jsw.2022.0002",
+              "https://doi.org/10.5040/9798400633393"
+            ]
+          },
+          {
+            "id": "inuit-baffin-north",
+            "label": "Eastern Arctic (Sedna / Nuliajuk & Nunatsiaq)",
+            "coordinates": [
+              -68.5,
+              63.75
+            ],
+            "date": "Inuit Sea-Spirit Tradition",
+            "description": "Transformed girl Sedna at the ocean floor whose severed finger-joints became ringed seals, walrus, whales, and keepers of marine life.",
+            "sources": [
+              "https://doi.org/10.5040/9798400633393"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "1. The Aztec (Mexica/Nahua) Five Suns, Quetzalcoatl in Mictlan & Aztlán",
+          "paragraphs": [
+            {
+              "text": "Recorded in sixteenth-century Nahuatl manuscripts (*Leyenda de los Soles*, *Histoyre du Mechique*, *Florentine Codex*) and carved into the monumental basalt Sun Stone (*Piedra del Sol*), Mexica origin cosmology unfolds across five fragile cosmic ages. Out of dual supreme principle **Ometeotl** (*Ometecuhtli / Omecihuatl* in Omeyocan), four creator brothers—**Xipe Totec**, **Tezcatlipoca**, **Quetzalcoatl**, and **Huitzilopochtli**—tore primeval earth-monster **Cipactli** apart to form land and sky, cycling through four earlier doomed Suns: Earth/Jaguar (*4 Jaguar*), Wind/Monkeys (*4 Wind*), Rain/Turkeys (*4 Rain*), and Water/Fish (*4 Water*) before Chalchiuhtlicue's great flood washed away humanity.",
+              "sources": [
+                "https://doi.org/10.46472/cc.01208.0231",
+                "https://doi.org/10.4324/9780429435164-4"
+              ]
+            },
+            {
+              "text": "At the ruined sacred darkness of **Teotihuacan**, the gods gathered around a roaring hearth to create the **Fifth Sun (*Nahui Ollin* — Sun of Movement)**: proud rich **Tecuciztecatl** flinched four times at the flames, while humble scab-covered **Nanahuatzin** leaped boldly inside and rose radiant in the east—demanding blood from all deities to move across the heavens. Next, **Quetzalcoatl** braved **Mictlan** (the Underworld), bypassed **Mictlantecuhtli**'s jagged trials with worms boring his conch trumpet, gathered the bones of past ages (ground like maize flour in **Cihuacoatl**'s jade bowl and quickened with **Quetzalcoatl**'s own penitential blood), and transformed into an ant to fetch yellow maize kernels hidden inside **Tonacatepetl** (Sustenance Mountain), grounding Mexica historical migration from **Chicomoztoc** ('Seven Caves') and **Aztlan** into Lake Texcoco.",
+              "sources": [
+                "https://doi.org/10.1093/acrefore/9780190647926.013.54",
+                "https://doi.org/10.4324/9780429435164-4"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "2. The K'iche' Maya Popol Vuh: Mud People, Wood People & True Humans of Maize",
+          "paragraphs": [
+            {
+              "text": "Preserved by K'iche' nobles in alphabetic transcription during the 1550s (*Chichicastenango Manuscript*), the **Popol Vuh** opens inside silent green-blue cosmic waters where **Tz'aqol**, **B'itol**, **Tepew**, and feathered serpent **Q'uq'umatz** ('Heart of Sky and Heart of Earth') meditate aloud, uttering '*Earth!*' so mountain peaks push up through clearing mists. Wanting creatures capable of speaking their makers' names and reckoning sacred days, the deities tried three times: silent animals failed to speak beyond cries and were assigned forests; wet **earth/mud humans** sagged, dissolved in rain, and had no heads to turn; carved **Tz'ite' wood dolls** walked and multiplied but lacked hearts, memory, or gratitude, until black resin rains and their own angry cooking pots, grinding stones (*metates*), and dogs overthrew them (leaving spider monkeys as forest remnants).",
+              "sources": [
+                "https://www.mesoweb.com/publications/Christenson/PopolVuh.pdf"
+              ]
+            },
+            {
+              "text": "Only after the Hero Twins **Hunahpu** and **Xbalanque** defeated the lords of **Xibalba** in the underworld ballcourt and cleared the heavens did four animal scouts—Fox, Coyote, Parrot, and Crow—reveal fertile split mountain **Paxil and Kayala**. On the fourth attempt, grandmother deity **Xmukane** ground **yellow and white maize ears nine times**, washing her hands in spring water to knead broth for human strength and shaping the first four true ancestors (**B'alam Ki'tze'**, **B'alam Aq'ab'**, **Mahuk'utah**, and **Iq'i B'alam**) plus their four wives—beings so piercingly intelligent their vision penetrated sky and bedrock until the Creators breathed a gentle mist over their eyes to calibrate mortal foresight.",
+              "sources": [
+                "https://www.mesoweb.com/publications/Christenson/PopolVuh.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "3. Emergence Cosmologies of the Southwest: Diné Bahaneʼ & Hopi Sipapu",
+          "paragraphs": [
+            {
+              "text": "Unlike Genesis creation *ex nihilo*, Southwestern nations remember humanity and spirits ascending upward through layered subterranean worlds. In **Diné (Navajo) *Diné Bahaneʼ***, Insect-Beings and First Spirits traversed the mist-shrouded **Black First World (*Ni'hodilqil*)**, quarreled in the **Blue Second World (*Ni'hodootl'izh*)** of Bird-People, entered the sunlit fertile valleys of the **Yellow Third World (*Ni'haltsoh*)** where **First Man (*Áłtsé Hastiin*)** and **First Woman (*Áłtsé Asdzáá*)** emerged inside red/white corn stalks—before Coyote's theft of Water Monster (*Tééhooltsódii*)'s infants unleashed a subterranean flood driving everyone upward inside a giant hollow reed (**Łóókáá'**) out into the glittering **Fourth/Fifth White World**, stabilized by sacred mountains (*Sisnaajiní, Tsoodził, Dook'o'oosłííd, Dibé Nitsaa*) and renewed through **Changing Woman (*Asdzáá Nádleehé*)**, who created the founding Diné clans from her rubbed epidermis mixed with white and yellow corn.",
+              "sources": [
+                "https://doi.org/10.5040/9798400633393",
+                "https://doi.org/10.1353/jsw.2022.0002"
+              ]
+            },
+            {
+              "text": "In parallel **Hopi** teachings, Creator **Tawa** and **Spider Grandmother (*Kókyangwúti*)** molded clay figures beneath the Earth, guiding faithful groups through three prior imperfect worlds (corrupted by arrogance and division) up a great bamboo/reed ladder out the **Sipapu**—the sacred emergence opening near the Little Colorado River confluence—where guardian **Másaw** assigned clans migration spirals across four quarters before settling the Third, Second, and First Mesas.",
+              "sources": [
+                "https://doi.org/10.5040/9798400633393"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "4. Eastern Woodlands Turtle Island, Northwest Coast Raven & Inuit Sea Traditions",
+          "paragraphs": [
+            {
+              "text": "Across **Haudenosaunee (Iroquois)** and **Anishinaabe (Ojibwe)** Earth-Diver narratives, the primordial earth lay wholly submerged beneath waters populated by diving animals and birds while Sky-People lived above. In Haudenosaunee tradition, pregnant **Sky Woman (*Atahensik* / Mature Flower)** fell through the roots of the uprooted Celestial Tree; graceful water-birds cupped their wings to catch her and lowered her onto Giant **Turtle**'s carapace while Beaver, Loon, and Otter failed to reach ocean bottom—until tiny **Muskrat** gasped upward clutching a mud-clod in her paw, smeared and danced outward over the shell by Sky Woman into the continent still called **Turtle Island** (later balanced by her grandsons **Sapling** / Sky-Holder and **Flint**). Along Pacific Northwest fjords (**Haida** & **Tlingit**), restless trickster **Raven** lifted sunlight out from cedar nesting-boxes inside a wealthy elder's house and coaxed muffled, timid first human beings (*K'iid K'iyaas*) out from a tight white giant clamshell on **Rose Spit**, introducing clans across forested coastal inlets; high north in **Inuit** tradition, wronged young woman **Sedna / Nuliajuk** sank beneath sea-ice where her chopped fingers transformed into seals, walrus, and whales governing Arctic abundance through hunter reciprocity.",
+              "sources": [
+                "https://doi.org/10.5040/9798400633393",
+                "https://doi.org/10.1353/jsw.2022.0002"
+              ]
+            }
+          ],
+          "columns": [
+            "Culture / Nation",
+            "Key Sources & Titles",
+            "Cosmic Setting / Process",
+            "Origin of Humanity"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Aztec / Nahua",
+                "Leyenda de los Soles; Sun Stone; Florentine Codex",
+                "Four destroyed cosmic Suns -> Fifth Sun birthed at Teotihuacan hearth",
+                "Quetzalcoatl recovers past bones in Mictlan & revives them with blood + maize"
+              ],
+              "sources": [
+                "https://doi.org/10.46472/cc.01208.0231",
+                "https://doi.org/10.4324/9780429435164-4"
+              ]
+            },
+            {
+              "cells": [
+                "K'iche' Maya",
+                "Popol Vuh (Chichicastenango MS)",
+                "Ocean-sky word creation + three failed creature trials",
+                "Xmukane molds four thinking ancestors from yellow and white maize"
+              ],
+              "sources": [
+                "https://www.mesoweb.com/publications/Christenson/PopolVuh.pdf"
+              ]
+            },
+            {
+              "cells": [
+                "Diné (Navajo) & Hopi",
+                "Diné Bahaneʼ & Hopi Mesa Emergence Oral Law",
+                "Upward progression through Four Subterranean Worlds via giant Reed / Sipapu",
+                "Changing Woman shapes clans; Hopi guided out Sipapu by Spider Grandmother"
+              ],
+              "sources": [
+                "https://doi.org/10.1353/jsw.2022.0002",
+                "https://doi.org/10.5040/9798400633393"
+              ]
+            },
+            {
+              "cells": [
+                "Haudenosaunee & Anishinaabe",
+                "Sky Woman & Nanaboozho Earth-Diver Cycles",
+                "Endless water world -> Muskrat rescues mud onto Giant Turtle's back",
+                "Sky Woman's daughter & grandsons (Sapling/Flint) shape human landforms"
+              ],
+              "sources": [
+                "https://doi.org/10.5040/9798400633393"
+              ]
+            },
+            {
+              "cells": [
+                "Haida / Tlingit & Inuit",
+                "Raven Clamshell Cycle; Sedna / Nuliajuk",
+                "Raven steals sun/stars from cedar boxes; Sedna becomes Arctic ocean keeper",
+                "Haida first people coaxed from a white clamshell on Rose Spit"
+              ],
+              "sources": [
+                "https://doi.org/10.5040/9798400633393"
+              ]
+            }
+          ]
+        }
+      ],
+      "referenceMaps": [
+        {
+          "title": "Mesoweb · Electronic Popol Vuh Critical Edition",
+          "url": "https://www.mesoweb.com/publications/Christenson/PopolVuh.pdf",
+          "description": "Allen J. Christenson's open-access literary translation preserving parallel K'iche' Maya line structure."
+        }
+      ],
+      "relatedGuideIds": [
+        "world-origin-stories-south-america",
+        "world-origin-stories-compendium",
+        "world-origin-stories-australia"
+      ]
+    },
+    {
+      "id": "world-origin-stories-south-america",
+      "atlasIds": [
+        "americas"
+      ],
+      "category": "origin-stories",
+      "title": "Andean, Amazonian & Southern Cone Origin Stories: Viracocha at Lake Titicaca, Pacariqtambo, Huarochirí & the Anaconda Canoe",
+      "description": "Sacred emergence narratives of stone-sculpted nations at Tiwanaku, the Incas' three windows at Pacariqtambo, the Huarochirí Quechua manuscript, the Tukanoan Ancestral Anaconda, Guarani sacred speech (Ayvu Rapyta) and Mapuche flood peaks.",
+      "intro": "Across the Andes, upper Amazon tributaries, and southern beech forests, sacred literatures locate human beginnings not inside a solitary garden, but emerging from high mountain lakes (*qochas*), spring-caves (*paqarinas*), river-voyaging snake canoes, and primordial spoken words.",
+      "scope": "Colonial-recorded Indigenous and ongoing oral cosmologies across Lake Titicaca and Cusco, the central Peruvian highlands (Huarochirí), northwest Amazonia (Vaupés/Rio Negro), Paraguay/Guarani forests, and Mapuche Wallmapu.",
+      "sources": [
+        {
+          "id": "ossa-salomon-1991",
+          "title": "Salomon & Urioste (1991) · The Huarochirí Manuscript: A Testament of Ancient and Colonial Andean Religion (Univ. of Texas Press)",
+          "url": "https://utpress.utexas.edu/9780292730533/",
+          "access": "Scholarly Quechua–English edition consulted for Pariacaca, Cuniraya Viracocha, and highland *huaca* creation narratives."
+        },
+        {
+          "id": "ossa-zhao-2024",
+          "title": "Zhao (2024) · Comparative Creation Traditions of Latin America and East Asia (Language & Literature Studies)",
+          "url": "https://doi.org/10.23977/langl.2024.070506",
+          "access": "Indexed peer-reviewed journal record inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "ossa-leeming-2009",
+          "title": "Leeming (2009) · Creation Myths of the World: An Encyclopedia",
+          "url": "https://doi.org/10.5040/9798400633393",
+          "access": "Indexed scholarly reference record inspected via Consensus API. Access checked 2026-11-20."
+        }
+      ],
+      "map": {
+        "bounds": [
+          -83,
+          -44,
+          -50,
+          4
+        ],
+        "scope": "Symbolic and literary homelands across the Andes, Vaupés–Rio Negro, Guarani Atlantic Forest, and Mapuche lakes.",
+        "points": [
+          {
+            "id": "titicaca-tiwanaku",
+            "label": "Lake Titicaca & Tiwanaku (Viracocha)",
+            "coordinates": [
+              -68.67,
+              -16.55
+            ],
+            "date": "Pan-Andean Creation Tradition",
+            "description": "Viracocha rising from Lake Titicaca, sculpting nations of stone at Tiwanaku to emerge underground across regional *paqarinas*.",
+            "sources": [
+              "https://doi.org/10.23977/langl.2024.070506"
+            ]
+          },
+          {
+            "id": "pacariqtambo-cusco",
+            "label": "Pacariqtambo / Cusco (Tamputoqo Windows)",
+            "coordinates": [
+              -71.88,
+              -13.76
+            ],
+            "date": "Inca Dynastic Emergence",
+            "description": "Ayar siblings emerging through the central window Qhapaq T'oqo toward Huanacauri and Cusco Valley.",
+            "sources": [
+              "https://doi.org/10.5040/9798400633393"
+            ]
+          },
+          {
+            "id": "huarochiri-highlands",
+            "label": "Huarochirí & Mount Pariacaca (Lima Highlands)",
+            "coordinates": [
+              -76.23,
+              -12.14
+            ],
+            "date": "c. 1598–1608 Quechua MS",
+            "description": "Only surviving full Quechua-authored mythical epic recounting golden-egg storm hero Pariacaca and Chuquisuso irrigation.",
+            "sources": [
+              "https://utpress.utexas.edu/9780292730533/"
+            ]
+          },
+          {
+            "id": "vaupes-anaconda",
+            "label": "Vaupés & Upper Rio Negro (Tukanoan Anaconda Canoe)",
+            "coordinates": [
+              -69.1,
+              0.2
+            ],
+            "date": "Desana / Tukano Oral Cosmology",
+            "description": "Transformer Ye'pá / Ancestral Anaconda swimming from the Milky Way Milk-Lake upriver disembarking Amazonian clans.",
+            "sources": [
+              "https://doi.org/10.5040/9798400633393"
+            ]
+          },
+          {
+            "id": "guarani-mbya",
+            "label": "Paraná–Mbyá Forest (Guarani Ayvu Rapyta)",
+            "coordinates": [
+              -55.5,
+              -25.8
+            ],
+            "date": "Guarani Sacred Song Canon",
+            "description": "Ñamandú unfolding inside primal mist, creating sacred speech (*Ayvu*) before Earth, fire, and humankind.",
+            "sources": [
+              "https://doi.org/10.5040/9798400633393"
+            ]
+          },
+          {
+            "id": "wallmapu-mapuche",
+            "label": "Ngulumapu / Wallmapu (Mapuche Trentren & Caicai)",
+            "coordinates": [
+              -72.6,
+              -38.7
+            ],
+            "date": "Mapuche Epew Cosmology",
+            "description": "Twin giant serpents Caicai Vilu (Ocean) and Trentren Vilu (Mountains) raising coastal peaks above rising floods to preserve humanity.",
+            "sources": [
+              "https://doi.org/10.5040/9798400633393"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "1. Lake Titicaca, Viracocha & Pacariqtambo: Sculpted Nations & Underground Paqarinas",
+          "paragraphs": [
+            {
+              "text": "Sixteenth-century Andean chroniclers (Betanzos, Sarmiento de Gamboa, Garcilaso de la Vega, Cobo) recorded layered pre-Inca origin narratives centered around **Lake Titicaca** and the monumental ruins of **Tiwanaku**. In the cold unlit darkness of *Chamay Pacha*, creator **Qun Titi Wiraqocha (Viracocha)** first raised a rough stone race of giants whose disobedience caused him to blot them in floodwaters and stone. Returning onto the **Island of the Sun** inside Lake Titicaca, Viracocha summoned **Inti** (Sun), **Quilla** (Moon), and stars into the sky, walked to Tiwanaku, and sculpted in clay models painted with every regional dress, hairstyle, song, and language before commanding two assistants to call each distinct South American people out underground through their local *paqarina*—whether cave, lake, volcano ridge, or spring—while he himself departed northward teaching justice until striding west across the Pacific foam.",
+              "sources": [
+                "https://doi.org/10.23977/langl.2024.070506",
+                "https://doi.org/10.5040/9798400633393"
+              ]
+            },
+            {
+              "text": "Inside this plural landscape of regional *paqarinas*, the Inca royal lineage traced its specific origin south of Cusco at **Pacariqtambo ('Inn of Dawn')**. Through three carved cliff windows in Mount Tamputoqo, four Ayar brothers and four sisters stepped out—the central *Qhapaq T'oqo* ('Rich Window') issuing **Ayar Manco (Manco Cápac)** and **Mama Ocllo**, carrying a golden staff (*tupa yauri*) given by Father Sun to sound the earth until it sank effortlessly into deep black loam at Cusco Valley (**Qosqo**), while their brothers petrified into sacred stone guardian mountains (*huacas*) like **Huanacauri** watching over irrigated terraces.",
+              "sources": [
+                "https://doi.org/10.5040/9798400633393"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "2. The Huarochirí Manuscript, Amazonian Anaconda Canoe, Guarani Ayvu Rapyta & Mapuche Serpents",
+          "paragraphs": [
+            {
+              "text": "Compiled entirely in highland **Quechua** c. 1598–1608 CE by local recorders around Huarochirí east of Lima, the **Huarochirí Manuscript** stands uniquely independent of European Latin prose: it recounts how ancient *Yunca* coastal plains and jagged glaciers belonged to trickster-creator **Cuniraya Viracocha** (who shaped valley irrigation walls and coastal guano islands while disguised in rags) and lightning-and-rain deity **Pariacaca**, hatched from **five golden falcon eggs** atop **Mount Condorcoto**, washing away negligent proud villages in torrents while lovingly helping farmer-girl **Chuquisuso** build enduring mountain stone canals feeding corn fields.",
+              "sources": [
+                "https://utpress.utexas.edu/9780292730533/"
+              ]
+            },
+            {
+              "text": "East across the dense northwest Amazon basin (Vaupés–Rio Negro), **Tukanoan (Desana, Tukano, Barasana)** creation songs trace ancestors not along roads, but inside the luminescent living belly of the **Pamuri-mahsë (Transformation / Ancestral Anaconda Canoe)** steered by **Yebá Bëló** and **Omuhu'pë** swimming upstream from a distant **Lake of Milk** near the Amazon mouth—depositing ranked language clans (*sibs*) at rapids with coca, manioc tubers (*Manihot*), and Yuruparí flutes along distinct stretches of river-course. Farther south, **Mbyá Guarani** sacred chants (*Ayvu Rapyta*, recorded by León Cadogan) tell how **Ñamandú** unfolded himself inside nocturnal mists through a sunflower crown, creating **the Foundation of Human Language (*Ayvu*)** and love for humanity (*mborayhu*) *even before shaping Earth*; while down across temperate Chile and Argentina (**Wallmapu**), **Mapuche** oral history preserves **Trentren Vilu** (benevolent Earth-Peak Serpent) and **Caicai Vilu** (Fierce Sea-Serpent): as Caicai whipped ocean waves upward in rage, Trentren steadily uplifted coastal hills underneath fleeing humans wearing wooden bowls as sun/rain shields until peace returned, shaping southern Andean ridges and archipelago bays.",
+              "sources": [
+                "https://doi.org/10.5040/9798400633393",
+                "https://doi.org/10.23977/langl.2024.070506"
+              ]
+            }
+          ],
+          "columns": [
+            "Tradition / Culture",
+            "Anchor Site / Source",
+            "Core Creator Figures",
+            "Creation / Emergence Narrative"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Tiwanaku / Pan-Andean",
+                "Lake Titicaca & Island of the Sun",
+                "Viracocha",
+                "Giant cycle ended; clay painted nations sent beneath ground to emerge at local springs/caves (*paqarinas*)"
+              ],
+              "sources": [
+                "https://doi.org/10.23977/langl.2024.070506"
+              ]
+            },
+            {
+              "cells": [
+                "Inca Cusco",
+                "Pacariqtambo (Tamputoqo)",
+                "Manco Cápac, Mama Ocllo & Ayar Siblings",
+                "Exit through three hillside windows carrying golden staff until striking rich Cusco valley loam"
+              ],
+              "sources": [
+                "https://doi.org/10.5040/9798400633393"
+              ]
+            },
+            {
+              "cells": [
+                "Huarochirí Quechua",
+                "Mount Condorcoto / Pariacaca (1598 MS)",
+                "Cuniraya Viracocha & Pariacaca",
+                "Born from five falcon eggs; brings monsoon canal irrigation & sacred landscape *huacas*"
+              ],
+              "sources": [
+                "https://utpress.utexas.edu/9780292730533/"
+              ]
+            },
+            {
+              "cells": [
+                "Tukanoan Amazon & Guarani",
+                "Vaupés River / Paraná Mbyá",
+                "Ancestral Anaconda Canoe; Ñamandú (*Ayvu*)",
+                "Snake canoe navigates upstream disembarking clans; Ñamandú creates spoken *Ayvu* soul-word before Earth"
+              ],
+              "sources": [
+                "https://doi.org/10.5040/9798400633393"
+              ]
+            },
+            {
+              "cells": [
+                "Mapuche (Wallmapu)",
+                "Southern Andes & Chilean Coast",
+                "Trentren Vilu & Caicai Vilu",
+                "Sea serpent floods coast; mountain serpent lifts hills upward safeguarding survivors"
+              ],
+              "sources": [
+                "https://doi.org/10.5040/9798400633393"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "3. Oral Guardianship, Literary Transmission & Keeping Religious Meaning Distinct from Material Dates",
+          "paragraphs": [
+            {
+              "text": "Transmission matters when reading Andean, Amazonian & Southern Cone Origin Stories: Viracocha at Lake Titicaca, Pacariqtambo, Huarochirí & the Anaconda Canoe: temple inscriptions, early manuscripts compiled during cultural contact, and living oral recitations often carry poetic genealogies, ethical imperatives toward land and kin, and layered symbolic epochs that lose nuance if flattened into literal geological years.",
+              "sources": [
+                "https://utpress.utexas.edu/9780292730533/"
+              ]
+            },
+            {
+              "text": "By placing these sacred narratives inside the Master Section of Origin Stories alongside links to archaeological companions, readers can honor what communities teach about ultimate purpose and human relatedness while inspecting radiocarbon and fossil dates separately on the atlas.",
+              "sources": [
+                "https://doi.org/10.23977/langl.2024.070506"
+              ]
+            }
+          ]
+        }
+      ],
+      "referenceMaps": [
+        {
+          "title": "University of Texas Press · The Huarochirí Manuscript Edition",
+          "url": "https://utpress.utexas.edu/9780292730533/",
+          "description": "Complete English–Quechua scholarly publication of the central Peruvian highlands' surviving mythical corpus."
+        }
+      ],
+      "relatedGuideIds": [
+        "world-origin-stories-americas",
+        "world-origin-stories-compendium",
+        "world-andean-summit-children"
+      ]
+    }
+  ]
+}

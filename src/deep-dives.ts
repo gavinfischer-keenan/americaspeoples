@@ -9,6 +9,7 @@ export const diveCategories=[
  {id:'places',title:'Places',mark:'◈',description:'Look closely at settlements, buildings and the communities around them.'},
  {id:'languages',title:'Languages',mark:'≋',description:'Explore language relationships, movement and contact—with uncertainty in view.'},
  {id:'cultures',title:'Cultures',mark:'◎',description:'Follow peoples and cultural traditions across places and generations.'},
+ {id:'origin-stories',title:'Origin Stories',mark:'✦',description:'Where did we come from? Religious, sacred and Indigenous creation and emergence accounts from oral and written traditions worldwide — distinct from the factual physical map.'},
 ] as const;
 export type DiveCategory=typeof diveCategories[number]['id'];
 interface DiveLink {href:string;label:'Independent movie'|'Contextual movie'|'Read guide'}
@@ -29,6 +30,8 @@ const worldGuideMovies: Record<string, string> = {
  'world-marco-polo': '#study/marco-polo',
  'world-silk-roads': '#study/silk-roads',
  'world-hannibal': '#study/hannibal',
+ 'world-ibn-fadlan': '#study/ibn-fadlan',
+ 'world-chinese-explorers': '#study/chinese-explorers',
 };
 const availableDives:DeepDive[]=[
  ...worldGuides.map(g=>({id:g.id,title:g.title,description:g.description,category:g.category,links:[{href:g.href,label:'Read guide' as const},...(worldGuideMovies[g.id]?[{href:worldGuideMovies[g.id],label:'Independent movie' as const}]:[])]})),

@@ -1,0 +1,480 @@
+{
+  "schemaVersion": 1,
+  "guides": [
+    {
+      "id": "world-origin-stories-australia",
+      "atlasIds": ["asia-pacific"],
+      "category": "origin-stories",
+      "title": "Indigenous Australian Origin Stories: The Dreaming (Tjukurpa, Wangarr, Bugarrigarra, Nyitting & Lutruwita)",
+      "description": "Sacred creation, Songline and emergence accounts across Arnhem Land, Central & Western Deserts, Kimberley, Southeast Australia, Noongar Southwest, Tasmania (Lutruwita) and Torres Strait — documented from public Indigenous, ethnographic and literary collections.",
+      "intro": "This guide belongs to the cultural, sacred and literary record — answering how diverse Aboriginal and Torres Strait Islander nations understand where land, law, ancestors and human life came from, distinct from the archaeological map elsewhere in this atlas. Rather than a single uniform story, Australia holds hundreds of interconnected Creation systems known locally as Tjukurpa (Western Desert), Alcheringa / Altjira (Arrernte), Wangarr (Yolŋu Arnhem Land), Ungud / Wunan (Kimberley), Bugarrigarra (West Kimberley), Nyitting (Noongar Southwest), and Palawa/Zenadth Kes traditions.",
+      "scope": "Publicly documented creation narratives spanning northern Arnhem Land and Tiwi Islands, Central and Western Deserts, Kimberley and Pilbara, Murray–Darling and Victoria, Southwest Australia, Tasmania (Lutruwita), and the Torres Strait. Custodianship and restricted ceremonial tiers remain solely with Traditional Owners.",
+      "sources": [
+        {
+          "id": "aus-hamacher-2011",
+          "title": "Hamacher & Norris (2011) · Meteoritics and Cosmology among the Aboriginal Cultures of Central Australia (ArXiv / J. Astron. Hist. Herit.)",
+          "url": "https://doi.org/10.48550/arxiv.1103.0595",
+          "access": "Indexed peer-reviewed journal record and abstract inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "aus-leaman-2019",
+          "title": "Leaman & Hamacher (2019) · Baiame and the Emu Chase: Wiradjuri Dreaming Astronomy (Journal of Astronomical History and Heritage)",
+          "url": "https://doi.org/10.3724/sp.j.1440-2807.2019.02.03",
+          "access": "Indexed peer-reviewed journal record and abstract inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "aus-brumm-2017",
+          "title": "Brumm (2017) · The Alps, High Gods, and the Great Flood: Stone Axe Exchange and Cosmology in Aboriginal South-Eastern Australia",
+          "url": "https://doi.org/10.1080/03122417.2017.1351743",
+          "access": "Indexed peer-reviewed journal record and abstract inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "aus-glaskin-2021",
+          "title": "Glaskin (2021) · Extinction, Inscription and the Dreaming: Cultural Continuities Across Australia and Lutruwita (Anthropological Forum)",
+          "url": "https://doi.org/10.1080/00664677.2021.1937513",
+          "access": "Indexed peer-reviewed journal record and abstract inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "aus-clarke-2007",
+          "title": "Clarke (2007) · Indigenous Spirit and Ghost Folklore and Creator Landscapes of Southern Australia (Folklore)",
+          "url": "https://doi.org/10.1080/00155870701337346",
+          "access": "Indexed peer-reviewed journal record and abstract inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "aus-nma-songlines",
+          "title": "National Museum of Australia · Songlines: Tracking the Seven Sisters & Australian First Nations Creation Knowledge",
+          "url": "https://www.nma.gov.au/exhibitions/songlines",
+          "access": "Institutional museum exhibition documentation produced in partnership with Anangu, Martu and Ngaanyatjarra elders."
+        },
+        {
+          "id": "aus-aiatsis-map",
+          "title": "AIATSIS (Australian Institute of Aboriginal and Torres Strait Islander Studies) · Map of Indigenous Australia",
+          "url": "https://aiatsis.gov.au/explore/map-indigenous-australia",
+          "access": "Official national cultural-language reference portal consulted 2026-11-20."
+        },
+        {
+          "id": "aus-unesco-budjbim",
+          "title": "UNESCO World Heritage Centre · Budj Bim Cultural Landscape & Gunditjmara Ancestral Creator Tradition",
+          "url": "https://whc.unesco.org/en/list/1577/",
+          "access": "Official UNESCO World Heritage Centre inscription dossier consulted 2026-11-20."
+        }
+      ],
+      "map": {
+        "bounds": [110, -44.5, 155.5, -8.5],
+        "scope": "Approximate regional cultural-heritage hubs across mainland Australia, lutruwita/Tasmania, and Zenadth Kes (Torres Strait). Boundaries of nations and Dreaming tracks overlap and follow Indigenous Law rather than modern borders.",
+        "points": [
+          {
+            "id": "yolngu-yalangbara",
+            "label": "Yalangbara & Milingimbi (Arnhem Land)",
+            "coordinates": [136.89, -12.42],
+            "date": "Yolŋu Wangarr",
+            "description": "Coastal landing of the Djanggawul Sisters and inland waterhole of the Wawalag Sisters & Wititj Rainbow Python.",
+            "sources": ["https://aiatsis.gov.au/explore/map-indigenous-australia"]
+          },
+          {
+            "id": "tiwi-wurrumiyanga",
+            "label": "Bathurst & Melville Islands (Tiwi)",
+            "coordinates": [130.63, -11.76],
+            "date": "Tiwi Creation Time",
+            "description": "Mudungkala emerging in total darkness, carving tidal channels and founding Tiwi lands alongside Purukapali's law.",
+            "sources": ["https://aiatsis.gov.au/explore/map-indigenous-australia"]
+          },
+          {
+            "id": "kimberley-wandjina",
+            "label": "Wunambal–Worrorra Country (Kimberley)",
+            "coordinates": [125.73, -15.32],
+            "date": "Lalai / Ungud",
+            "description": "Wanjina rain beings and Ungud Rainbow Serpent creating wet-season caves, sandstone shelters, and spirit-child springs.",
+            "sources": ["https://aiatsis.gov.au/explore/map-indigenous-australia"]
+          },
+          {
+            "id": "central-arrernte-mparntwe",
+            "label": "Mparntwe / Tjoritja (Central Australia)",
+            "coordinates": [133.88, -23.7],
+            "date": "Alcheringa / Altjira",
+            "description": "Arrernte ancestral tracks: Numbakulla shaping Inapatua beings along primeval shores and caterpillar ancestors converging on Mparntwe.",
+            "sources": ["https://doi.org/10.48550/arxiv.1103.0595"]
+          },
+          {
+            "id": "uluru-anangu",
+            "label": "Uluru & APY Lands (Western Desert)",
+            "coordinates": [131.03, -25.34],
+            "date": "Tjukurpa",
+            "description": "Anangu sandstone narratives of Kuniya and Liru at Mutitjulu waterhole, Mala people, and Kungkarangkalpa Seven Sisters songline.",
+            "sources": ["https://www.nma.gov.au/exhibitions/songlines"]
+          },
+          {
+            "id": "noongar-derbarl",
+            "label": "Derbarl Yerrigan (Noongar Boodja)",
+            "coordinates": [115.86, -31.95],
+            "date": "Nyitting ('Cold Time')",
+            "description": "Creation of Swan/Avon rivers, lakes and granite valleys by the ancestral water-serpent Waugal/Waakal.",
+            "sources": ["https://aiatsis.gov.au/explore/map-indigenous-australia"]
+          },
+          {
+            "id": "ngarrindjeri-coorong",
+            "label": "Murray Mouth & Coorong (Ngarrindjeri)",
+            "coordinates": [138.88, -35.56],
+            "date": "Ngarrindjeri Creation",
+            "description": "Ngurunderi chasing Ponde the giant Murray Cod downriver, diving into the sea, and rising skyward into Waierri.",
+            "sources": ["https://doi.org/10.1080/00155870701337346"]
+          },
+          {
+            "id": "kulin-birrarung-budjbim",
+            "label": "Kulin Country & Budj Bim (Victoria)",
+            "coordinates": [144.96, -37.81],
+            "date": "Bunjil & Budj Bim",
+            "description": "Bunjil the Wedge-Tailed Eagle shaping human beings from bark and clay beside Pallyan's water, and volcanic ancestor Budj Bim.",
+            "sources": ["https://doi.org/10.1080/03122417.2017.1351743", "https://whc.unesco.org/en/list/1577/"]
+          },
+          {
+            "id": "wiradjuri-kamilaroi-nsw",
+            "label": "Barwon & Macquarie Plains (Kamilaroi / Wiradjuri)",
+            "coordinates": [146.86, -29.96],
+            "date": "Baiame & Daramulum",
+            "description": "Sky-creator Baiame shaping Brewarrina stone fish traps (Ngunnhu), mountain ridges, and Bora initiation law.",
+            "sources": ["https://doi.org/10.3724/sp.j.1440-2807.2019.02.03", "https://doi.org/10.1080/03122417.2017.1351743"]
+          },
+          {
+            "id": "lutruwita-louisa-bay",
+            "label": "Louisa Bay & Bruny Island (Lutruwita / Tasmania)",
+            "coordinates": [146.34, -43.52],
+            "date": "Palawa Creation",
+            "description": "Sky brothers Moinee and Droemerdeenne creating Parlevar (First Tasmanians) without knee joints before Droemerdeenne freed their limbs and rose to Canopus.",
+            "sources": ["https://doi.org/10.1080/00664677.2021.1937513"]
+          },
+          {
+            "id": "torres-strait-mer",
+            "label": "Mer & Badu (Zenadth Kes / Torres Strait)",
+            "coordinates": [144.05, -9.92],
+            "date": "Tagai & Malo-Bomai",
+            "description": "Constellation navigator Tagai, Malo-Bomai arrival laws across eight islands, and Gelam swimming northeast to shape Mer.",
+            "sources": ["https://aiatsis.gov.au/explore/map-indigenous-australia"]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "1. What 'The Dreaming' means: the Everywhen, Country & Songlines",
+          "paragraphs": [
+            {
+              "text": "Across Australia, 'The Dreaming' is an English approximation for complex Indigenous terms—including Tjukurpa (Anangu/Western Desert), Altjira or Alcheringa (Arrernte), Wangarr (Yolŋu), Ungud or Lalai (Ngarinyin/Worrorra), Bugarrigarra (Karajarri/Yawuru), and Nyitting (Noongar)—that describe not an unreal dream or a closed past chapter, but what anthropologist W. E. H. Stanner called the 'Everywhen': the foundational epoch in which Ancestral Beings emerged from subterranean earth, ocean horizons, or sky realms to travel, fight, sing, camp, give birth, and leave living Law inside every rock outcrop, spring, tree, and star cluster.",
+              "sources": ["https://aiatsis.gov.au/explore/map-indigenous-australia", "https://www.nma.gov.au/exhibitions/songlines"]
+            },
+            {
+              "text": "People in these traditions did not descend from distant foreign continents; rather, their spiritual essence, clan moieties, totems, and languages were deposited directly into particular stretches of Country by Creator Ancestors whose physical bodies transformed into landmarks, red ochre seams, freshwater billabongs, or constellations. Singing a Songline across thousands of kilometers recalls those exact creative footsteps—keeping human beings, landforms, and ancestors continuously linked.",
+              "sources": ["https://www.nma.gov.au/exhibitions/songlines", "https://doi.org/10.48550/arxiv.1103.0595"]
+            }
+          ]
+        },
+        {
+          "heading": "2. Northern Coasts & Top End: Djanggawul, Wawalag, Rainbow Serpent & Tiwi Mudungkala",
+          "paragraphs": [
+            {
+              "text": "In Yolŋu Wangarr accounts of northeastern Arnhem Land, two sacred Djanggawul (Djang'kawu) Sisters arrived from the spirit-island of Baralku beyond the eastern sunrise, paddling their bark canoe onto the white sands of Yalangbara at Port Bradshaw. Carrying sacred conical mats (nganmarra) and carved mawa digging sticks, they pierced the barren coastal dunes to bring up permanent freshwater springs—before giving birth to the first Yolŋu human clans across successive sacred camps and entrusting named land, songs, and languages to each generation.",
+              "sources": ["https://aiatsis.gov.au/explore/map-indigenous-australia"]
+            },
+            {
+              "text": "A companion Top End cycle follows the Wawalag (Wagilak) Sisters, who traveled north toward Arnhem coasts naming plants, animals, and clan law until pitching camp near the Mirarrmina waterhole inhabited by Wititj / Yurlunggur, the Giant Olive Python / Rainbow Serpent. Enraged when blood and taboo disturbance entered his deep spring, Yurlunggur coiled skyward into towering monsoon thunderheads, deluged the bush, and swallowed the sisters and children—regurgitating them in the rhythmic cycle of dry burning season and torrential wet monsoon that still structures ceremony across Arnhem Land.",
+              "sources": ["https://aiatsis.gov.au/explore/map-indigenous-australia"]
+            },
+            {
+              "text": "Further west across Kunwinjku (Gunwinggu) and Iwaidja Country, Creator Mother Yingarna / Warramurrungundji crossed the sea carrying woven dillybags stuffed with yams, digging sticks, and spirit-children (nganjuk/wird), planting distinct Aboriginal languages clan by clan while Ngalyod the Rainbow Serpent excavated deep sandstone gorges. Out on Bathurst and Melville Islands (Tiwi Islands), Creation began in unbroken blackness when blind elder woman Mudungkala crawled on knees out of dark mud, her trailing fluid cutting the Clarence and Apsley Straits as she bore three children (Wuriupranala the sun-woman, Murupiangkala, and Tipaklipa)—creating the sunlit islands before Purukapali's grief over his son Jinani brought death for the first time into Tiwi life.",
+              "sources": ["https://aiatsis.gov.au/explore/map-indigenous-australia"]
+            }
+          ]
+        },
+        {
+          "heading": "3. Central & Western Deserts: Numbakulla, Arrernte Inapatua, Seven Sisters & Uluru",
+          "paragraphs": [
+            {
+              "text": "Documented extensively across Arrernte (Central Australian) traditions, the world first stretched under shallow salt waters from which rugged MacDonnell ridge peaks (*Tjoritja*) jutted upward. Creator ancestor Numbakulla emerged with two sky companions and saw incomplete, huddled, silent bundles of half-formed beings (*Inapatua* / *Rela manerinja*) curled beside salt lagoons—their eyes sealed, mouths unopened, and limbs joined like uncarved stone. Descending with curved *tula* flint knives, the ancestors slit open eyelids and ears, separated individual fingers and toes, breathed fire, bestowed circum-rite names, and sent clans outward as fully formed Arrernte peoples along Totemic tracts (*altyerrenge*).",
+              "sources": ["https://doi.org/10.48550/arxiv.1103.0595", "https://aiatsis.gov.au/explore/map-indigenous-australia"]
+            },
+            {
+              "text": "Spanning more than 2,000 kilometers from the Pilbara and Martu salt lakes across Ngaanyatjarra, Pitjantjatjara, and Yankunytjatjara lands (highlighted by the National Museum of Australia's Anangu-led Songlines exhibition), the Kungkarangkalpa (Seven Sisters) fled north, east, and south from the relentless shape-shifting pursuer Wati Nyiru / Yula. Everywhere the sisters camped, dug soakages, danced, or concealed themselves inside sandstone caves—such as Cave Hill in APY Lands and Kumpupirntily (Lake Disappointment)—the desert received waterholes, edible berries, and rocky hills before the sisters hurled themselves into the night sky as the Pleiades star cluster, with Orion still trailing eternally behind.",
+              "sources": ["https://www.nma.gov.au/exhibitions/songlines"]
+            },
+            {
+              "text": "At Uluru itself, every cleft, stain, and cave encodes competing Anangu Tjukurpa ancestors: the peaceful Woma Python Woman **Kuniya**, whose eggs and digging stick fought the ruthless Poison-Snake warrior **Liru** at Mutitjulu Waterhole (staining black streaks down the southern rock face), balanced along Uluru's northern walls by **Mala** (Rufous Hare-Wallaby) ancestors holding ceremony until attacked by the vengeance-monster **Kurpany** sent because of broken ritual protocol, and **Lungkata** (Blue-Tongued Lizard Man), whose greed left blackened emu meat slabs jutting from rock overhangs.",
+              "sources": ["https://www.nma.gov.au/exhibitions/songlines"]
+            }
+          ]
+        },
+        {
+          "heading": "4. Kimberley, Pilbara & Southwest Noongar: Wanjina Clouds, Bugarrigarra & Waugal",
+          "paragraphs": [
+            {
+              "text": "In the northern Kimberley (Worrorra, Wunambal, and Ngarinyin Lalai Law), primordial freshwater snake **Ungud** partnered with cloud-and-rain **Wanjina** beings descending from sky storms. Having shaped rocky gorges, baobab trees, rivers, and wet-season cloudbursts—and imparted marriage moieties, stone-point law, and sharing ethics—the Wanjina walked into sandstone rock overhangs and dissolved their bodies into permanent painted white-ochre outlines with striking dark haloed eyes and deliberately zero mouths (for if a Wanjina ever spoke in anger, unceasing floods would swallow Earth). Under the shelter pools, Ungud stores unborn baby-spirits found by fathers in dreams.",
+              "sources": ["https://aiatsis.gov.au/explore/map-indigenous-australia"]
+            },
+            {
+              "text": "Southward along the Karajarri, Yawuru, and Pilbara *Bugarrigarra*, the twin brothers **Bagadjimbiri** rose from earth in the gray pre-dawn, calling all creatures by name—from kangaroo to echidna and wild plum—while their long hair formed stratus clouds and their bullroarer ceremonies traveled across coastal dunes. Along Australia's opposite southwest corner, **Noongar *Nyitting*** ('Ice-Cold Dreaming Time') teaches how the monumental hairy Rainbow Serpent **Waugal (Waakal)** crawled out of deep limestone caverns and tore winding river channels down the Darling Scarp—including *Derbarl Yerrigan* (the Swan River), Murray, and Blackwood rivers—leaving granite domes where it rested and giving Noongar elders the sacred charge to guard freshwater aquifers.",
+              "sources": ["https://aiatsis.gov.au/explore/map-indigenous-australia", "https://doi.org/10.1080/00155870701337346"]
+            }
+          ]
+        },
+        {
+          "heading": "5. Southeast Australia (Bunjil, Baiame, Ngurunderi & Budj Bim), Lutruwita (Tasmania) & Torres Strait",
+          "paragraphs": [
+            {
+              "text": "Across the Kulin nations of Victoria, Creator Spirit **Bunjil** (Wedge-Tailed Eagle) crafted the mountains and streams around Port Phillip before molding two human forms from dark clay mixed along creek banks while his water-spirit brother **Pallyan** churned riverbank mud until two women emerged. Breathing life into nostrils, mouths, and navels (*Karween* and *Kulin* first ancestors), Bunjil gave the people Kulin sharing Law, fire from **Kararkarook** and **Bimbeal**'s star-sticks, and ascended to **Altair** on a mighty whirlwind with **Waa** (Crow) and his families; west in Gunditjmara Country, ancestor **Budj Bim** turned himself into Mount Eccles volcanic cone whose teeth and eyebrows forged channels guiding abundant eels (*kooyang*).",
+              "sources": ["https://doi.org/10.1080/03122417.2017.1351743", "https://whc.unesco.org/en/list/1577/"]
+            },
+            {
+              "text": "Further north across Wiradjuri, Kamilaroi (Gamilaraay), and Murray–Darling basins, **Baiame** and his son **Daramulum** walked Earth creating stone fish traps at **Ngunnhu (Brewarrina)** and **Bora** initiation rings before ascending to the sky beside the Emu-in-the-Sky dark dust constellation; meanwhile along South Australia's Murray River and Coorong, **Ngarrindjeri** hero **Ngurunderi** pursued the colossal Murray Cod **Ponde** down a tiny creek whose frantic thrashing widened the whole Murray gorge and Lake Alexandrina—spearing Ponde at the Murray Mouth, cutting his flesh into all freshwater and sea fish species, and summoning tidal floods that cut off **Karta** (Kangaroo Island) before rising skyward into **Waierri**.",
+              "sources": ["https://doi.org/10.3724/sp.j.1440-2807.2019.02.03", "https://doi.org/10.1080/00155870701337346"]
+            },
+            {
+              "text": "On **Lutruwita (Tasmania)**, Nuenonne elder Woorraddy of Bruny Island narrated to 1830s chronicler George Augustus Robinson the striking Palawa creation of humans at **Louisa Bay / Cox Bight**: great sky-spirit **Moinee**, defeated in heaven by brother **Droemerdeenne**, crashed down onto southern Tasmania's rocky coast shaping valleys and hills. First molding human people (*Parlevar*) out of earth, Moinee inadvertently shaped them standing stiffly upright with kangaroo tails and no knee joints—making it painful to sit or rest—until **Droemerdeenne** heard their misery, descended, chipped off the rigid tails with sharp flint, smeared healing fat behind their legs to loosen human knees, and rose afterward into **Canopus** while **Moinee** hardened into towering coastal rock. Out across the coral sea in **Zenadth Kes (Torres Strait)**, **Tagai** guides sea calendars across a giant constellation canoe, **Gelam**'s transformed dugong body shaped volcanic soil on Mer, and **Malo–Bomai** swam east across eight island reefs to anchor island Law (*'Keep your hands off another man's garden'*).",
+              "sources": ["https://doi.org/10.1080/00664677.2021.1937513", "https://aiatsis.gov.au/explore/map-indigenous-australia"]
+            }
+          ],
+          "columns": ["Region & Nation(s)", "Creator Ancestor(s) / Term", "Central Creation Narrative", "Literary / Institutional Anchor"],
+          "rows": [
+            {
+              "cells": [
+                "NE Arnhem Land (Yolŋu)",
+                "Djanggawul Sisters, Wawalag Sisters & Wititj (Wangarr)",
+                "Sisters arrive by bark canoe from Baralku piercing freshwater wells & bearing clans; Python conjures wet/dry monsoon cycle.",
+                "AIATSIS & Yolŋu Yalangbara public archives"
+              ],
+              "sources": ["https://aiatsis.gov.au/explore/map-indigenous-australia"]
+            },
+            {
+              "cells": [
+                "Tiwi Islands (Bathurst & Melville)",
+                "Mudungkala & Purukapali",
+                "Blind creator woman crawls through total darkness carving tidal straits and birthing first ancestral Tiwi generations.",
+                "AIATSIS Tiwi Creation literature"
+              ],
+              "sources": ["https://aiatsis.gov.au/explore/map-indigenous-australia"]
+            },
+            {
+              "cells": [
+                "Central & Western Desert (Arrernte, Anangu, Martu)",
+                "Numbakulla (Alcheringa), Seven Sisters, Kuniya & Liru (Tjukurpa)",
+                "Ancestors liberate huddled Inapatua limbs with stone knives; Seven Sisters forge desert waterholes before becoming the Pleiades; Kuniya/Liru battle at Uluru.",
+                "National Museum of Australia Songlines & Hamacher (2011)"
+              ],
+              "sources": ["https://www.nma.gov.au/exhibitions/songlines", "https://doi.org/10.48550/arxiv.1103.0595"]
+            },
+            {
+              "cells": [
+                "Kimberley & SW Australia (Wunambal, Karajarri, Noongar)",
+                "Wanjina & Ungud; Bagadjimbiri; Waugal (Nyitting)",
+                "Mouthless rain spirits paint shelters & keep floods at bay; Waugal giant serpent carves Derbarl Yerrigan waterways.",
+                "AIATSIS & Clarke (2007)"
+              ],
+              "sources": ["https://aiatsis.gov.au/explore/map-indigenous-australia", "https://doi.org/10.1080/00155870701337346"]
+            },
+            {
+              "cells": [
+                "SE Mainland (Kulin, Gunditjmara, Wiradjuri, Ngarrindjeri)",
+                "Bunjil & Waa; Budj Bim; Baiame; Ngurunderi & Ponde",
+                "Eagle Bunjil molds people from clay & breath; Budj Bim forms eel-channel basalt; Baiame shapes fish traps; Ngurunderi cuts Murray River chasing giant cod Ponde.",
+                "Leaman & Hamacher (2019), Brumm (2017) & UNESCO Budj Bim"
+              ],
+              "sources": ["https://doi.org/10.3724/sp.j.1440-2807.2019.02.03", "https://doi.org/10.1080/03122417.2017.1351743", "https://whc.unesco.org/en/list/1577/"]
+            },
+            {
+              "cells": [
+                "Lutruwita / Tasmania & Torres Strait (Palawa / Zenadth Kes)",
+                "Moinee & Droemerdeenne (Parlevar); Tagai & Malo-Bomai",
+                "Droemerdeenne severs first people's tails & shapes knee joints at Louisa Bay before ascending to Canopus; Tagai & Malo-Bomai set maritime & garden laws.",
+                "Glaskin (2021) & AIATSIS"
+              ],
+              "sources": ["https://doi.org/10.1080/00664677.2021.1937513", "https://aiatsis.gov.au/explore/map-indigenous-australia"]
+            }
+          ]
+        }
+      ],
+      "referenceMaps": [
+        {
+          "title": "AIATSIS Map of Indigenous Australia",
+          "url": "https://aiatsis.gov.au/explore/map-indigenous-australia",
+          "description": "National reference representation showing general locations of Aboriginal and Torres Strait Islander language and social nations."
+        },
+        {
+          "title": "National Museum of Australia · Songlines Exhibition",
+          "url": "https://www.nma.gov.au/exhibitions/songlines",
+          "description": "Elder-led digital archive tracking the Seven Sisters Songline across 2,000+ km of Western and Central Australian desert."
+        }
+      ],
+      "relatedGuideIds": [
+        "world-origin-stories-compendium",
+        "world-origin-stories-asia-pacific",
+        "world-origin-stories-americas"
+      ]
+    },
+    {
+      "id": "world-origin-stories-asia-pacific",
+      "atlasIds": ["asia-pacific"],
+      "category": "origin-stories",
+      "title": "South Asian, East Asian & Pacific Origin Stories: Vedic Hymns, Pangu & Nüwa, Kojiki, Dangun & Polynesian Cosmogonies",
+      "description": "How South Asian, Chinese, Japanese, Korean and Oceanic sacred literatures explain cosmic emergence, primordial giants, clay-molded humans and sky-earth separation.",
+      "intro": "Across Asia and the vast islands of the Pacific, religious scriptures and oral genealogical chants frame origins not around a single linear event, but through cosmic eggs, golden embryos, divine sacrifice, clay-fashioning goddesses, imperial descent islands, and the wrenching separation of Sky and Earth.",
+      "scope": "Primary sacred and classical literary traditions spanning Vedic/Hindu, Buddhist, Jain, Chinese, Japanese, Korean, Māori, Hawaiian, and Samoan–Tongan cosmogonies.",
+      "sources": [
+        {
+          "id": "osap-witzel-2013",
+          "title": "Witzel (2013) · The Origins of the World's Mythologies (Oxford University Press)",
+          "url": "https://doi.org/10.1093/acprof:oso/9780195367461.001.0001",
+          "access": "Indexed peer-reviewed monograph record inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "osap-drake-2024",
+          "title": "Drake (2024) · The Māori and Ancient Near Eastern Pantheons & Polynesian Creation Cosmologies (Religions)",
+          "url": "https://doi.org/10.3390/rel15080984",
+          "access": "Indexed peer-reviewed journal record and abstract inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "osap-jiao-2024",
+          "title": "Jiao (2024) · Comparison of Chinese and Western Civilizations: Mainstream Creation Mythologies",
+          "url": "https://doi.org/10.54097/m28xsv31",
+          "access": "Indexed peer-reviewed journal record inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "osap-leeming-2009",
+          "title": "Leeming (2009) · Creation Myths of the World: An Encyclopedia",
+          "url": "https://doi.org/10.5040/9798400633393",
+          "access": "Indexed scholarly reference record inspected via Consensus API. Access checked 2026-11-20."
+        }
+      ],
+      "map": {
+        "bounds": [70, -45, 208, 46],
+        "scope": "Literary and oral cultural heartlands across India, China, Korea, Japan, Samoa, Aotearoa/New Zealand, and Hawai'i. Map pins locate textual/oral heritage regions rather than physical dates.",
+        "points": [
+          {
+            "id": "vedic-sapta-sindhu",
+            "label": "Upper Ganga & Sapta Sindhu (Vedic / Aggañña Traditions)",
+            "coordinates": [77.2, 28.6],
+            "date": "Rigveda c. 1500–1000 BCE",
+            "description": "Home of Rigvedic Nasadiya Sukta, Purusha Sukta, and early Buddhist Aggañña Sutta world-devolution discourses.",
+            "sources": ["https://doi.org/10.1093/acprof:oso/9780195367461.001.0001"]
+          },
+          {
+            "id": "china-pangu-nuwa",
+            "label": "Central Plains & Chu (Pangu & Nüwa)",
+            "coordinates": [113.65, 34.76],
+            "date": "Han–Three Kingdoms Literature",
+            "description": "Early Chinese motifs of Cosmic Giant Pangu splitting sky and earth and Goddess Nüwa kneading humans from yellow river clay.",
+            "sources": ["https://doi.org/10.54097/m28xsv31"]
+          },
+          {
+            "id": "korea-baekdu-dangun",
+            "label": "Paektu / Taebaek & Pyongyang (Dangun Founding)",
+            "coordinates": [125.75, 39.03],
+            "date": "Samguk Yusa (13th c. compilation)",
+            "description": "Hwanung descending to Mount Taebaek, bear-woman Ungnyeo transforming into humanity, and the birth of Dangun Wanggeom.",
+            "sources": ["https://doi.org/10.5040/9798400633393"]
+          },
+          {
+            "id": "japan-kashiwara-izumo",
+            "label": "Awaji & Izumo / Nara (Kojiki 712 CE)",
+            "coordinates": [135.8, 34.68],
+            "date": "Kojiki 712 CE / Nihon Shoki 720 CE",
+            "description": "Izanagi and Izanami stirring primeval brine from the Floating Bridge of Heaven with a jeweled spear.",
+            "sources": ["https://doi.org/10.1093/acprof:oso/9780195367461.001.0001"]
+          },
+          {
+            "id": "samoa-savaii-tagaloa",
+            "label": "Savai'i / Manu'a (Polynesian Tagaloa)",
+            "coordinates": [-171.8, -13.6],
+            "date": "Samoan & Tongan Oral Cosmogony",
+            "description": "Tagaloa-a-Lagi creating Manu'a rocks, creeping vines that split into worms becoming first human people.",
+            "sources": ["https://doi.org/10.3390/rel15080984"]
+          },
+          {
+            "id": "hawaii-kumulipo",
+            "label": "Hawai'i Island (Kumulipo Chant)",
+            "coordinates": [-155.5, 19.7],
+            "date": "Pre-contact Oral Genealogical Prayer",
+            "description": "2,102-line evolutionary chant rising from Pō (cosmic night) through coral polyps, sea stars, taro-elder brother Haloa, to Ao (daylight).",
+            "sources": ["https://doi.org/10.3390/rel15080984"]
+          },
+          {
+            "id": "aotearoa-te-kore",
+            "label": "Aotearoa / New Zealand (Māori Rangi & Papa)",
+            "coordinates": [176.25, -38.14],
+            "date": "Māori Whakapapa Tradition",
+            "description": "From Te Kore and Te Pō through Ranginui and Papatūānuku's separation by Tāne-mahuta and shaping of Hine-ahu-one at Kurawaka.",
+            "sources": ["https://doi.org/10.3390/rel15080984"]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "1. South Asian Cosmogonies: Rigvedic Wonder, Brahma's Cosmic Egg & the Aggañña Sutta",
+          "paragraphs": [
+            {
+              "text": "South Asian traditions begin not with a single orthodoxy, but with audacious philosophical questioning. Rigveda 10.129—the celebrated *Nāsadīya Sūkta* ('Hymn of Creation')—opens before existence or non-existence, when breath breathed windless by itself inside undifferentiated waters, ending by asking whether even the highest seer in heaven truly knows how creation arose. Alongside it, *Hiraṇyagarbha* imagines a primordial Golden Embryo floating on cosmic waters, the *Puruṣa Sūkta* (Rigveda 10.90) tells how cosmic sacrifice divided the thousand-headed Cosmic Person into sun, moon, wind, and the human social orders, and later *Purāṇas* weave Brahma emerging upon a lotus from sleeping Vishnu's navel to set cyclical *yugas* and *Manvantaras* turning around successive first sages (*Manu*).",
+              "sources": ["https://doi.org/10.1093/acprof:oso/9780195367461.001.0001", "https://doi.org/10.5040/9798400633393"]
+            },
+            {
+              "text": "Diverging sharply from creator-god theology, Jain cosmology holds the universe (*loka*) to be uncreated and eternal, turning endlessly like a six-spoked wheel between ascending (*utsarpini*) and descending (*avasarpini*) eras—while the early Buddhist *Aggañña Sutta* (Dīgha Nikāya 27) offers a famous playful parable in which luminous self-radiant mind-made beings drift down into a freshly coalesced earth-film; tasting savory earth crust out of curiosity and greed coarsens their bodies into physical flesh, dims cosmic light until sun and moon appear, introduces private rice fields, and leads villagers to elect the first 'Great Elect' (*Mahāsammata*) king to keep peace.",
+              "sources": ["https://doi.org/10.5040/9798400633393"]
+            }
+          ]
+        },
+        {
+          "heading": "2. East Asian Creations: Pangu & Nüwa (China), Hwanung & Dangun (Korea), Izanagi & Izanami (Japan)",
+          "paragraphs": [
+            {
+              "text": "Early Chinese cosmology blended philosophical *Daoist* emergence—where the nameless Dao generates One, Two (Yin and Yang), Three, and the Ten Thousand Things—with vivid mythological narratives recorded from Han and Three Kingdoms texts (including Xu Zheng's *Sanwu Liji* and earlier Han stone reliefs). Inside cosmic chaos shaped like a hen's egg (*Hundun*), horned giant **Pangu** grew for 18,000 years until his axe cracked Yang sky upward and Yin earth downward; pushing them apart daily for another 18,000 years, his dying body became wind, thunder, sun and moon (his eyes), five sacred mountains, rivers (veins), and soil. Afterward, half-serpent Goddess **Nüwa** walked the silent empty world and kneaded glowing yellow river-mud with her fingers—creating noble forms carefully one by one, then flicking droplets off a dipped reed-rope across the bank when her hands grew tired, peopling Earth before patching the broken sky-pillar with five-colored melted stones.",
+              "sources": ["https://doi.org/10.54097/m28xsv31", "https://doi.org/10.1093/acprof:oso/9780195367461.001.0001"]
+            },
+            {
+              "text": "Across the Korean Peninsula (recorded in Iryeon's 13th-century *Samguk Yusa*), Sky-lord Hwanin's son **Hwanung** descended to a sacred sandalwood tree atop Mount Taebaek bringing winds, rain, clouds, agriculture, and 3,000 followers to govern humankind. When a bear and a tiger prayed to become human, Hwanung set both a hundred-day cave fast on wormwood and twenty cloves of garlic; the patient bear emerged transformed after twenty-one days as **Ungnyeo** ('Bear-Woman'), wed Hwanung, and bore **Dangun Wanggeom**, traditional founder of Gojoseon. In Japan's *Kojiki* (712 CE) and *Nihon Shoki* (720 CE), successive uncoupled generations of sky deities (*Kotoamatsukami*) gave way to **Izanagi** and **Izanami** standing atop *Ama-no-ukihashi* (the Floating Bridge of Heaven), dipping the jeweled spear *Ame-no-nuboko* into oily brine so falling salt drops solidified into Onogoro Island, giving birth to the Japanese islands, fire, mountains, and solar goddess **Amaterasu**.",
+              "sources": ["https://doi.org/10.1093/acprof:oso/9780195367461.001.0001", "https://doi.org/10.5040/9798400633393"]
+            }
+          ]
+        },
+        {
+          "heading": "3. Pacific Cosmogonies: Te Kore, Rangi & Papa, the Hawaiian Kumulipo & Tagaloa's Ocean World",
+          "paragraphs": [
+            {
+              "text": "Across Polynesia, oral genealogies (*whakapapa* / *moʻokūʻauhau*) bridge cosmic darkness directly to living islands and ancestors. In Māori tradition across Aotearoa, existence uncoiled out of **Te Kore** (pure undifferentiated potential) and aeons of **Te Pō** (the Great Night) into **Ranginui** (Sky Father) and **Papatūānuku** (Earth Mother), locked in tight, cold, shadowy embrace around their trapped divine sons. Pushing upward upside-down with shoulders on Earth and feet planted against Heaven, **Tāne-mahuta** (forest god) braced and rent his parents apart so light (**Te Ao Mārama**) poured onto Earth—later shaping **Hine-ahu-one**, the 'Earth-formed Maid,' out of sacred red clay at **Kurawaka** and breathing *tihei mauri ora* (the sneeze of life) into her nostrils.",
+              "sources": ["https://doi.org/10.3390/rel15080984"]
+            },
+            {
+              "text": "North in Hawai'i, the monumental 2,102-line **Kumulipo** creation chant opens inside *Lipo* (unfathomable blackness) as coral polyps emerge alongside matching land plants, sea creatures, birds, mammals, and stars—descending to **Papa** and **Wākea** and their stillborn child **Hāloa-naka**, out of whose burial grew the first **kalo** (taro) plant sustaining the living elder-sibling covenant between Hawaiian humanity (**Hāloa**) and the land. In Samoa and Tonga, sky-creator **Tagaloa-a-Lagi** rested atop primal rock **Manu'atele**, cast vines over emergent volcanic reef rocks, and shaped worm-like creatures inside decaying vine-leaves into the first thinking, speaking women and men.",
+              "sources": ["https://doi.org/10.3390/rel15080984", "https://doi.org/10.5040/9798400633393"]
+            }
+          ],
+          "columns": ["Tradition / Region", "Foundational Text / Oral Canon", "Creation Process", "Human Origin Motif"],
+          "rows": [
+            {
+              "cells": ["Vedic & Puranic India", "Rigveda 10.90 & 10.129; Purāṇas", "Cosmic heat (*tapas*) / Puruṣa sacrifice / Hiranyagarbha golden egg", "Manu and humanity emerge within cyclical Brahma ages"],
+              "sources": ["https://doi.org/10.1093/acprof:oso/9780195367461.001.0001"]
+            },
+            {
+              "cells": ["China", "Sanwu Liji, Huainanzi, Taiping Yulan", "Pangu bursts cosmic egg Hundun; heaven rises, earth sinks", "Goddess Nüwa molds first humans by hand & flicked reed-cord drops of yellow clay"],
+              "sources": ["https://doi.org/10.54097/m28xsv31"]
+            },
+            {
+              "cells": ["Korea & Japan", "Samguk Yusa; Kojiki (712 CE)", "Hwanung descends to Mount Taebaek; Izanagi & Izanami churn ocean brine", "Bear-turned-woman Ungnyeo mothers Dangun; kami pairs populate eight islands"],
+              "sources": ["https://doi.org/10.1093/acprof:oso/9780195367461.001.0001"]
+            },
+            {
+              "cells": ["Māori, Hawaiian & Samoan Polynesia", "Whakapapa; Kumulipo; Samoan Solo o le Va", "Te Kore -> Te Pō -> Tāne parts Rangi & Papa; Kumulipo evolutionary dualities", "Tāne molds Hine-ahu-one at Kurawaka; Hawaiians share genealogy with taro-brother Hāloa"],
+              "sources": ["https://doi.org/10.3390/rel15080984"]
+            }
+          ]
+        }
+      ],
+      "referenceMaps": [
+        {
+          "title": "National Library of New Zealand · He Pūkaki Māori & Te Ara Creation Cosmology",
+          "url": "https://teara.govt.nz/en/maori-creation-traditions",
+          "description": "Public Māori whakapapa accounts of Te Kore, Te Pō, Ranginui, Papatūānuku, and Hine-ahu-one."
+        }
+      ],
+      "relatedGuideIds": [
+        "world-origin-stories-australia",
+        "world-origin-stories-compendium",
+        "world-south-asian-religions"
+      ]
+    }
+  ]
+}

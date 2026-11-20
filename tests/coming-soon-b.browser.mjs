@@ -61,7 +61,7 @@ try{
   await page.locator('.topic-toolbar a').filter({hasText:'Shared atlas'}).click();
   await page.locator('#story-select').waitFor({state:'attached'});
  }
- for(const category of ['subjects','places','languages','cultures']){
+ for(const category of ['subjects','places','languages','cultures','origin-stories']){
   await page.goto(base+'/#dives/'+category);await page.locator('.dive-card').first().waitFor();
   assert.equal(await page.locator('.dive-planned,.dive-queue').count(),0);
  }

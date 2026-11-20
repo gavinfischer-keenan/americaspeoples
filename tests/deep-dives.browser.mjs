@@ -13,8 +13,8 @@ try{
  await page.getByRole('button',{name:'Zoom in',exact:true}).click();
  const camera=await page.locator('#map-host .world').getAttribute('transform');
  await page.getByRole('link',{name:'Deep dives',exact:true}).click();
- await page.locator('.dive-category').first().waitFor();assert.equal(await page.locator('.dive-category').count(),4);
- for(const c of ['subjects','places','languages','cultures']){
+ await page.locator('.dive-category').first().waitFor();assert.equal(await page.locator('.dive-category').count(),5);
+ for(const c of ['subjects','places','languages','origin-stories','cultures']){
   await page.locator(`.dive-tabs a[href="#dives/${c}"]`).click();
   await page.locator(`.dive-tabs a[href="#dives/${c}"][aria-current="page"]`).waitFor();assert.ok(await page.locator('.dive-card:not(.dive-planned) a').count());
   assert.equal(await page.locator('.dive-planned,.dive-queue').count(),0);
@@ -44,7 +44,7 @@ try{
  await page.goto(base+'/#topics/languages');await page.locator('#topic-play').waitFor();
  assert.match(await page.locator('.topic-toolbar h2').innerText(),/Languages/);
  await page.goto(base+'/#sites');await page.locator('[data-dive="place-machu-picchu"]').waitFor();
- await page.goto(base+'/#dives/unknown');await page.locator('.dive-category').first().waitFor();assert.equal(await page.locator('.dive-category').count(),4);
+ await page.goto(base+'/#dives/unknown');await page.locator('.dive-category').first().waitFor();assert.equal(await page.locator('.dive-category').count(),5);
  for(const [width,height] of [[1440,960],[1024,768],[768,1024],[390,844]]){
   await page.setViewportSize({width,height});await page.goto(base+'/#dives');
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Deep dives overview fits '+width+'px');

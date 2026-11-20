@@ -1,0 +1,545 @@
+{
+  "schemaVersion": 1,
+  "guides": [
+    {
+      "id": "world-origin-stories-compendium",
+      "atlasIds": [
+        "africa",
+        "asia-pacific",
+        "europe",
+        "americas"
+      ],
+      "category": "origin-stories",
+      "title": "Where Did We Come From? Origin & Creation Stories Across World Cultures and Religions",
+      "description": "Master thematic gateway comparing how world religions, Indigenous oral traditions and ancient epics answer 'where did we come from?'—kept carefully distinct from the factual fossil and genomic atlas.",
+      "intro": "On the main interactive atlas, pins trace dated stones, fossils, potsherds, and genomes. In this Master Section of Origin Stories, we listen to a completely different register of human knowledge: what diverse peoples across every inhabited continent decided they came from—their sacred texts, creation songs, Emergence ladders, cosmic eggs, sky-earth separations, and pottery-clay ancestors.",
+      "scope": "Global comparative synthesis of religious and Indigenous creation traditions linking dedicated regional guides for Australia, Asia-Pacific, North & Middle America, South America, Africa, and the Near East & Europe.",
+      "sources": [
+        {
+          "id": "osc-basak-2026",
+          "title": "Başak & Koçak (2026) · Creative Thought and the Divine Word: Comparative Examination of Cosmic Creation (Religions)",
+          "url": "https://doi.org/10.3390/rel17020245",
+          "access": "Indexed peer-reviewed journal record and abstract inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "osc-witzel-2013",
+          "title": "Witzel (2013) · The Origins of the World's Mythologies (Oxford University Press)",
+          "url": "https://doi.org/10.1093/acprof:oso/9780195367461.001.0001",
+          "access": "Indexed peer-reviewed monograph record inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "osc-leeming-2009",
+          "title": "Leeming (2009) · Creation Myths of the World: An Encyclopedia (2 vols.)",
+          "url": "https://doi.org/10.5040/9798400633393",
+          "access": "Indexed scholarly encyclopedia record inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "osc-arutyunyan-2021",
+          "title": "Arutyunyan & Solovyeva (2021) · The Elements in the Cosmogonic Myths of the World Nations (HTS Teologiese Studies)",
+          "url": "https://doi.org/10.4102/hts.v77i4.6896",
+          "access": "Indexed peer-reviewed journal record inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "osc-vanrooyen-2020",
+          "title": "Van Rooyen (2020) · Cosmogonic or Creation Myths: Philosophical and Theological Interpretations (HTS)",
+          "url": "https://doi.org/10.4102/hts.v76i1.5853",
+          "access": "Indexed peer-reviewed journal record inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "osc-quirke-2007",
+          "title": "Quirke (2007) · Creation Stories in Ancient Egypt (Brill / Egyptian Archaeology)",
+          "url": "https://doi.org/10.1163/ej.9789004157651.i-424.11",
+          "access": "Indexed peer-reviewed chapter record inspected via Consensus API. Access checked 2026-11-20."
+        }
+      ],
+      "map": {
+        "bounds": [
+          -155,
+          -45,
+          178,
+          66
+        ],
+        "scope": "Symbolic homeland hubs linking the six regional Origin Stories companions worldwide. Map markers indicate living or historical cultural centers rather than origin dates.",
+        "points": [
+          {
+            "id": "comp-australia-uluru",
+            "label": "Australia (Dreaming / Tjukurpa / Wangarr)",
+            "coordinates": [
+              133.88,
+              -23.7
+            ],
+            "date": "Everywhen / Country Law",
+            "description": "Hundreds of Aboriginal and Torres Strait Islander creation tracks including Djanggawul, Seven Sisters, Bunjil, Baiame, Waugal, and Moinee.",
+            "sources": [
+              "https://doi.org/10.1093/acprof:oso/9780195367461.001.0001"
+            ]
+          },
+          {
+            "id": "comp-mesoamerica-mexico",
+            "label": "Mesoamerica & North America (Five Suns / Emergence)",
+            "coordinates": [
+              -99.13,
+              19.43
+            ],
+            "date": "Regional Sacred Texts & Oral Law",
+            "description": "Aztec Five Suns, K'iche' Maya Popol Vuh maize-humans, Diné Four Worlds Emergence, Turtle Island, and Pacific Raven.",
+            "sources": [
+              "https://doi.org/10.5040/9798400633393"
+            ]
+          },
+          {
+            "id": "comp-andes-titicaca",
+            "label": "Andes & Amazonia (Viracocha / Anaconda Canoe)",
+            "coordinates": [
+              -68.67,
+              -16.55
+            ],
+            "date": "Regional Sacred Traditions",
+            "description": "Viracocha sculpting nations around Titicaca, Pacariqtambo windows, Huarochirí, Anaconda Canoe, and Ayvu Rapyta.",
+            "sources": [
+              "https://doi.org/10.5040/9798400633393"
+            ]
+          },
+          {
+            "id": "comp-west-africa-ife",
+            "label": "Africa (Ilé-Ifẹ̀, Nile & Southern Africa)",
+            "coordinates": [
+              4.56,
+              7.48
+            ],
+            "date": "Oral & Temple Cosmogonies",
+            "description": "Yoruba Odùduwà chain-descent, Mande/Dogon traditions, Egyptian Atum/Ptah/Khnum, Zulu Uhlanga reeds, and San ǀKaggen.",
+            "sources": [
+              "https://doi.org/10.1163/ej.9789004157651.i-424.11"
+            ]
+          },
+          {
+            "id": "comp-near-east-europe",
+            "label": "Near East & Europe (Genesis, Qur'an, Hesiod, Eddas)",
+            "coordinates": [
+              35.23,
+              31.78
+            ],
+            "date": "Ancient & Scriptural Canon",
+            "description": "Atrahasis & Eridu clay-and-spirit, Jewish–Christian–Islamic creation of Adam and Hawwah, Zoroastrian Bundahishn, Greek Prometheus, and Norse Ask & Embla.",
+            "sources": [
+              "https://doi.org/10.3390/rel17020245",
+              "https://doi.org/10.4102/hts.v76i1.5853"
+            ]
+          },
+          {
+            "id": "comp-asia-pacific-china",
+            "label": "South & East Asia & Pacific (Rigveda, Pangu, Polynesia)",
+            "coordinates": [
+              113.65,
+              34.76
+            ],
+            "date": "Classical & Oceanian Canons",
+            "description": "Vedic Nāsadīya Sūkta, Pangu & Nüwa, Korean Dangun, Japanese Kojiki, Māori Te Kore/Tāne, and Hawaiian Kumulipo.",
+            "sources": [
+              "https://doi.org/10.1093/acprof:oso/9780195367461.001.0001",
+              "https://doi.org/10.4102/hts.v77i4.6896"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "1. Why this Master Section exists alongside the Factual Map",
+          "paragraphs": [
+            {
+              "text": "Every archaeological record on the main globe maps material traces—flaked cobbles, radiocarbon charcoal, pottery, inscriptions, and ancient genomes. Yet human history is never only stones and bones: across every continent, communities answered the existential question 'Where did we come from?' through poetry, sacred law, temple liturgy, and oral memory centuries or millennia before modern stratigraphy.",
+              "sources": [
+                "https://doi.org/10.4102/hts.v76i1.5853",
+                "https://doi.org/10.5040/9798400633393"
+              ]
+            },
+            {
+              "text": "Keeping these traditions in their own clearly labeled Master Section respects both disciplines: physical science tests physical timelines without pressing poetic symbolism into radiocarbon dates, while world religions and Indigenous epistemologies speak authentically on their own terms as profound statements about moral kinship, land stewardship, language, and human dignity.",
+              "sources": [
+                "https://doi.org/10.3390/rel17020245",
+                "https://doi.org/10.4102/hts.v77i4.6896"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "2. Six Recurrent Ways Humanity Told Its Beginning",
+          "paragraphs": [
+            {
+              "text": "Comparative historians of religion (including Witzel, Leeming, Eliade, and Long) observe six recurring narrative families globally—often blended vividly inside a single culture: (1) Creation by Sovereign Word or Thought *ex nihilo* (Memphite Ptah's heart-and-tongue, Genesis 1, Qur'anic *Kun fa-yakūn*, Guarani Ñamandú's pre-earth sacred language *Ayvu*); (2) Earth-Diver & Primeval Mound emergence from boundless water (Haudenosaunee Muskrat onto Turtle Island, Yoruba Odùduwà lowering sand onto primeval ocean from Ilé-Ifẹ̀'s golden chain, Heliopolitan Nun mound); (3) Sky-Earth Separation & World Parents pushed apart to admit light (Māori Tāne-mahuta separating Ranginui and Papatūānuku, Chinese Pangu cracking chaos egg Hundun, Egyptian Shu lifting Nut above Geb).",
+              "sources": [
+                "https://doi.org/10.3390/rel17020245",
+                "https://doi.org/10.1093/acprof:oso/9780195367461.001.0001",
+                "https://doi.org/10.4102/hts.v77i4.6896"
+              ]
+            },
+            {
+              "text": "Three further patterns shape human bodily origins: (4) Potter's Clay, Wood & Breath—fashioning humans lovingly from damp earth, red ochre, driftwood, or yellow maize (Mesopotamian Atrahasis/Enki & Ninmah, Abrahamic clay-and-spirit Adam, Egyptian Khnum's potter's wheel, Kulin Bunjil, Chinese Nüwa, K'iche' Maya Popol Vuh maize ancestors, Māori Hine-ahu-one at Kurawaka, Norse Ask & Embla); (5) Underground Emergence through layered cosmic rooms (Diné *Diné Bahaneʼ*, Hopi *Sipapu*, Zulu *Uhlanga* reed-bed, Andean *paqarinas*); and (6) Ancestral Songlines & Landscape Law across Indigenous Australia—where ancestral creators shaped country, laws, waterholes, and spirit-children simultaneously across an eternal Everywhen (*Tjukurpa*, *Wangarr*, *Nyitting*).",
+              "sources": [
+                "https://doi.org/10.5040/9798400633393",
+                "https://doi.org/10.1163/ej.9789004157651.i-424.11"
+              ]
+            }
+          ],
+          "columns": [
+            "Narrative Type",
+            "How Humanity Begins",
+            "Representative Traditions",
+            "Companion Guide Link"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Divine Word, Breath & Clay",
+                "Creator shapes earth/dust/clay and breathes intellect or spoken soul inside",
+                "Atrahasis, Genesis & Qur'an (Adam), Khnum, Nüwa, Bunjil, Prometheus",
+                "Near East & Europe / Africa / Australia"
+              ],
+              "sources": [
+                "https://doi.org/10.3390/rel17020245"
+              ]
+            },
+            {
+              "cells": [
+                "Dreaming Law & Songlines",
+                "Ancestral beings sing and shape landforms, species, waters & human Law simultaneously",
+                "Yolŋu Wangarr, Arrernte Alcheringa, Anangu Tjukurpa, Noongar Nyitting, Palawa Lutruwita",
+                "Indigenous Australian Origin Stories"
+              ],
+              "sources": [
+                "https://doi.org/10.5040/9798400633393"
+              ]
+            },
+            {
+              "cells": [
+                "Upward World Emergence",
+                "Clans climb through numbered subterranean realms or spring/cave apertures",
+                "Diné Four Worlds, Hopi Sipapu, Zulu Uhlanga reeds, Andean Paqarinas",
+                "Americas / South America / Africa"
+              ],
+              "sources": [
+                "https://doi.org/10.1093/acprof:oso/9780195367461.001.0001"
+              ]
+            },
+            {
+              "cells": [
+                "Earth-Diver & Ocean Mound",
+                "Messenger dives into boundless waters retrieving mud or lowers earth sand on golden chain",
+                "Haudenosaunee Turtle Island, Anishinaabe, Yoruba Ilé-Ifẹ̀, Heliopolis Nun",
+                "Americas / Africa"
+              ],
+              "sources": [
+                "https://doi.org/10.1163/ej.9789004157651.i-424.11"
+              ]
+            },
+            {
+              "cells": [
+                "Sky-Earth Separation & Maize",
+                "Offspring pry apart embraced cosmic parents or refine failed cycles to maize humanity",
+                "Māori Rangi & Papa, Pangu egg, Norse Ymir, Maya Popol Vuh, Aztec Five Suns",
+                "Asia-Pacific / Americas / Near East"
+              ],
+              "sources": [
+                "https://doi.org/10.1093/acprof:oso/9780195367461.001.0001"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "3. Oral Guardianship, Literary Transmission & Keeping Religious Meaning Distinct from Material Dates",
+          "paragraphs": [
+            {
+              "text": "Transmission matters when reading Where Did We Come From? Origin & Creation Stories Across World Cultures and Religions: temple inscriptions, early manuscripts compiled during cultural contact, and living oral recitations often carry poetic genealogies, ethical imperatives toward land and kin, and layered symbolic epochs that lose nuance if flattened into literal geological years.",
+              "sources": [
+                "https://doi.org/10.3390/rel17020245"
+              ]
+            },
+            {
+              "text": "By placing these sacred narratives inside the Master Section of Origin Stories alongside links to archaeological companions, readers can honor what communities teach about ultimate purpose and human relatedness while inspecting radiocarbon and fossil dates separately on the atlas.",
+              "sources": [
+                "https://doi.org/10.1093/acprof:oso/9780195367461.001.0001"
+              ]
+            }
+          ]
+        }
+      ],
+      "referenceMaps": [
+        {
+          "title": "AIATSIS & National Museum of Australia · Living Songlines & Creation Resources",
+          "url": "https://aiatsis.gov.au/explore/map-indigenous-australia",
+          "description": "Primary Australian cultural-custodian framework cited across our companion Australian Origin Stories guide."
+        }
+      ],
+      "relatedGuideIds": [
+        "world-origin-stories-australia",
+        "world-origin-stories-americas",
+        "world-origin-stories-south-america",
+        "world-origin-stories-africa",
+        "world-origin-stories-near-east-europe",
+        "world-origin-stories-asia-pacific",
+        "world-human-family"
+      ]
+    },
+    {
+      "id": "world-origin-stories-africa",
+      "atlasIds": [
+        "africa"
+      ],
+      "category": "origin-stories",
+      "title": "African Origin Stories: Ilé-Ifẹ̀, Mande & Dogon Cosmogonies, Ancient Egyptian Creation Centers, Unkulunkulu & ǀKaggen",
+      "description": "Creation narratives across Africa: Yoruba Odùduwà and Ọbàtálá at Ilé-Ifẹ̀, Mande Niger ordering, Dogon Amma and Nommo, Egyptian Heliopolis/Memphis/Khnum, Baganda Kintu, Kongo Kalûnga, Zulu Uhlanga reeds and San ǀKaggen.",
+      "intro": "Africa's religious and oral literature holds an astonishing range of creation visions—from Old Kingdom Egyptian pyramid hymns imagining Ptah conceiving the universe inside his heart and speaking it on his tongue, to Yoruba Ilé-Ifẹ̀'s primeval cockerel scratching sacred earth across boundless sea, Kongo's rotating cosmic river *Kalûnga*, and Southern African reed-beds.",
+      "scope": "Written temple cosmogonies of Ancient Egypt paired with major sub-Saharan West, Central, East, and Southern African origin traditions.",
+      "sources": [
+        {
+          "id": "osaf-quirke-2007",
+          "title": "Quirke (2007) · Creation Stories in Ancient Egypt (Brill)",
+          "url": "https://doi.org/10.1163/ej.9789004157651.i-424.11",
+          "access": "Indexed peer-reviewed chapter record inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "osaf-pires-2020",
+          "title": "Pires (2020) · Cosmogonical Conceptions in New Kingdom Egypt (Trabajos de Egiptología)",
+          "url": "https://doi.org/10.25145/j.tde.2020.11.16",
+          "access": "Indexed peer-reviewed journal record inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "osaf-bickel-1994",
+          "title": "Bickel (1994) · La cosmogonie égyptienne avant le Nouvel Empire (ORBIS / Fribourg)",
+          "url": "https://doi.org/10.5167/uzh-152534",
+          "access": "Indexed peer-reviewed monograph record inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "osaf-younis-2020",
+          "title": "Younis / Mutwa Context (2020) · African Mythologies and Southern African Creation Narratives (MISJ)",
+          "url": "https://doi.org/10.21608/misj.2020.44130.1006",
+          "access": "Indexed peer-reviewed journal record inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "osaf-leeming-2009",
+          "title": "Leeming (2009) · Creation Myths of the World: An Encyclopedia",
+          "url": "https://doi.org/10.5040/9798400633393",
+          "access": "Indexed scholarly reference record inspected via Consensus API. Access checked 2026-11-20."
+        }
+      ],
+      "map": {
+        "bounds": [
+          -16,
+          -35,
+          45,
+          34
+        ],
+        "scope": "Symbolic African temple and oral-tradition homelands reflected in surviving creation narratives.",
+        "points": [
+          {
+            "id": "egypt-heliopolis-memphis",
+            "label": "Heliopolis, Memphis & Elephantine (Egypt)",
+            "coordinates": [
+              31.3,
+              30.13
+            ],
+            "date": "Pyramid Texts to Shabaka Stone",
+            "description": "Four classic temple cosmogonies: Heliopolis (Atum-Ra), Memphis (Ptah's thought & speech), Hermopolis (Ogdoad), and Elephantine (Khnum's wheel).",
+            "sources": [
+              "https://doi.org/10.1163/ej.9789004157651.i-424.11",
+              "https://doi.org/10.5167/uzh-152534"
+            ]
+          },
+          {
+            "id": "mande-dogon-niger",
+            "label": "Kangaba & Bandiagara (Mande & Dogon)",
+            "coordinates": [
+              -3.6,
+              14.3
+            ],
+            "date": "Kouroukan Fouga & Dogon Oral Cycles",
+            "description": "Mande Faro ordering world speech and agriculture along the Upper Niger; Dogon Amma germinating cosmic seed and twin Nommo spirits.",
+            "sources": [
+              "https://doi.org/10.5040/9798400633393"
+            ]
+          },
+          {
+            "id": "yoruba-ile-ife",
+            "label": "Ilé-Ifẹ̀ (Yoruba Cradle of Life)",
+            "coordinates": [
+              4.56,
+              7.48
+            ],
+            "date": "Yoruba Itan Oral Literature",
+            "description": "Olódùmarè commissioning Ọbàtálá (who shapes human forms in clay) and Odùduwà lowering sand-filled snail shell & five-toed fowl from sky chain.",
+            "sources": [
+              "https://doi.org/10.5040/9798400633393"
+            ]
+          },
+          {
+            "id": "kongo-mbaza",
+            "label": "Mbanza Kongo / Lower Congo (Kalûnga)",
+            "coordinates": [
+              14.24,
+              -6.27
+            ],
+            "date": "BaKongo Cosmogram (Dikenga)",
+            "description": "Nzambi a Mpungu sparking cosmos into revolving Kalûnga ocean divided across living earth (*nsi*) and bright ancestral realm (*mpemba*).",
+            "sources": [
+              "https://doi.org/10.5040/9798400633393"
+            ]
+          },
+          {
+            "id": "baganda-lake-victoria",
+            "label": "Northern Lake Victoria (Baganda Kintu)",
+            "coordinates": [
+              32.58,
+              0.31
+            ],
+            "date": "Ganda Oral Chronicle",
+            "description": "First man Kintu proving his worth in heaven's sky tests, wedding Nambi, and bringing banana trees alongside brother Walumbe ('Death').",
+            "sources": [
+              "https://doi.org/10.5040/9798400633393"
+            ]
+          },
+          {
+            "id": "zulu-uhlanga-kzn",
+            "label": "Thukela Valley & Drakensberg (Zulu & San)",
+            "coordinates": [
+              29.4,
+              -29
+            ],
+            "date": "Nguni & ǀXam San Records",
+            "description": "Zulu creator-ancestor Unkulunkulu splitting outward from towering marsh reeds of Uhlanga; San ǀKaggen the Mantis dreaming eland and First Times.",
+            "sources": [
+              "https://doi.org/10.21608/misj.2020.44130.1006",
+              "https://doi.org/10.5040/9798400633393"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "1. Ancient Egyptian Cosmogonies: Atum, Ptah, the Ogdoad & Khnum's Potter's Wheel",
+          "paragraphs": [
+            {
+              "text": "Ancient Egyptian priests saw no contradiction in holding four poetic cosmologies across major temple cities because each illuminated a distinct facet of *Ma'at* rising out of the boundless dark primeval waters of **Nun**. At **Heliopolis (*Iunu*)**, **Atum** emerged atop the first silt sandbank (*Benben*), sneezing and spitting Shu (Air) and Tefnut (Moisture), whose children Geb (Earth) and Nut (Sky) birthed Osiris, Isis, Seth, and Nephthys (while sun god **Ra** later wept humanity—*remet*—straight out of divine tears—*remit*). At **Hermopolis**, eight paired frog-and-serpent deities (**Ogdoad** of Darkness, Eternity, Concealment, and Watery Abyss) generated a Cosmic Egg / Blue Lotus cradle of newborn Sun.",
+              "sources": [
+                "https://doi.org/10.1163/ej.9789004157651.i-424.11",
+                "https://doi.org/10.5167/uzh-152534"
+              ]
+            },
+            {
+              "text": "On the **Memphite Theology** carved onto the Shabaka Stone, **Ptah** precedes every other god by conceiving creation inside the **Heart** (*ib*, seat of thought) and bringing gods, cities, foods, and justice into existence solely through spoken **Tongue**—while up south at **Elephantine Cataract**, ram-headed **Khnum** sits physically at a rotating clay **potter's wheel**, molding every infant child's living body and invisible double spirit (*ka*) out of fertile Nile alluvium.",
+              "sources": [
+                "https://doi.org/10.1163/ej.9789004157651.i-424.11",
+                "https://doi.org/10.25145/j.tde.2020.11.16"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "2. West, Central, East & Southern African Traditions: Ilé-Ifẹ̀, Mande/Dogon, Baganda, Zulu & San",
+          "paragraphs": [
+            {
+              "text": "In **Yoruba** cosmology centered at **Ilé-Ifẹ̀**, supreme Sky Lord **Olódùmarè** first entrusted earth-sculpting *Orisha* **Ọbàtálá** with a golden chain, a snail shell full of sacred white sand, a five-toed hen, and a chameleon; when palm wine put Ọbàtálá to sleep beside a tree, hero **Odùduwà** descended the golden chain, poured the sand across dark swamp-water, watched the hen scratch dry earth across continents, and welcomed **Ọbàtálá**, who then molded diverse human bodies out of earth clay (giving even imperfect forms special sacred protection as children of Ọbàtálá) while Olódùmarè breathed *èmí* (living breath) inside every breast.",
+              "sources": [
+                "https://doi.org/10.5040/9798400633393"
+              ]
+            },
+            {
+              "text": "Along the Upper Niger (*Kangaba* Mande oral traditions recited at *Kouroukan Fouga*), Supreme creator **Mangala** split a primal twin-seed of **Faro** (ordered water spirit), **Pemba**, and **Musokoroni**, sending Faro across the Niger's floodplains with twenty-two lineages of first ancestors and millet/music law (paralleled in neighboring **Dogon** cosmology of **Amma** fashioning Earth from cosmic clay and bringing amphibious twins **Nommo** and eight primeval ancestors in an ark carrying tools, seeds, and drums). In East Africa's **Baganda** tradition, lone earth-dwellers **Kintu** and his single cow proved fearless under Sky-Lord **Gulu**'s trials—splitting granite rocks and eating mountains of millet—winning daughter **Nambi**, who carried staple plantain shoots earthward despite forgetting grain for her chicken, letting cruel brother **Walumbe ('Death')** follow humanity down.",
+              "sources": [
+                "https://doi.org/10.5040/9798400633393"
+              ]
+            },
+            {
+              "text": "In Central **Kongo** thought, **Nzambi a Mpungu** sparked the fiery **Kalûnga** barrier cycling spirits ceaselessly like a four-quadrant solar wheel (*Dikenga*) across ancestral ocean and earthly villages; while in Southern Africa, **Zulu (Nguni)** traditions recall ancient ancestor **Unkulunkulu** ('Great-Great-One') breaking human lineages, cattle, and fire straight out of towering primeval marshes of **Uhlanga** reeds (sending slow Chameleon with eternal life only for fast-footed Lizard to deliver mortality first)—and **ǀXam & Ju/'hoan San** narratives preserve **ǀKaggen (the Mantis)** dreaming the **Early Race**, shaping Eland from his cast-off leather shoe bathed in golden honey, and piercing night darkness with glowing ostrich-feather-like stars and sun.",
+              "sources": [
+                "https://doi.org/10.21608/misj.2020.44130.1006",
+                "https://doi.org/10.5040/9798400633393"
+              ]
+            }
+          ],
+          "columns": [
+            "Culture / Center",
+            "Creator(s) / Principle",
+            "Core Creation Event",
+            "Human / Moral Teaching"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Ancient Egypt (4 Centers)",
+                "Atum-Ra, Ptah, Ogdoad, Khnum",
+                "Mound in Nun; Memphite heart-word; Nile clay spun on Khnum's wheel",
+                "Humans (*remet*) born of divine tears & formed clay animated by *ka* & *Ma'at*"
+              ],
+              "sources": [
+                "https://doi.org/10.1163/ej.9789004157651.i-424.11"
+              ]
+            },
+            {
+              "cells": [
+                "Yoruba (Ilé-Ifẹ̀)",
+                "Olódùmarè, Ọbàtálá & Odùduwà",
+                "Chain lowered onto primordial ocean; five-toed fowl scratches earth",
+                "Ọbàtálá sculpts human diversity in clay; Olódùmarè gives life-breath *èmí*"
+              ],
+              "sources": [
+                "https://doi.org/10.5040/9798400633393"
+              ]
+            },
+            {
+              "cells": [
+                "Mande & Dogon",
+                "Mangala / Faro; Amma & Nommo",
+                "Twin-grain & ark descend with tools, water order & human speech",
+                "Human civilization anchored in cooperative agriculture & cosmic word"
+              ],
+              "sources": [
+                "https://doi.org/10.5040/9798400633393"
+              ]
+            },
+            {
+              "cells": [
+                "Baganda, Zulu & San",
+                "Kintu & Nambi; Unkulunkulu; ǀKaggen",
+                "Sky test & plantain descent; emergence from Uhlanga reeds; Mantis & Eland",
+                "Mortality & ecology taught through Chameleon/Lizard & Eland empathy"
+              ],
+              "sources": [
+                "https://doi.org/10.21608/misj.2020.44130.1006"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "3. Oral Guardianship, Literary Transmission & Keeping Religious Meaning Distinct from Material Dates",
+          "paragraphs": [
+            {
+              "text": "Transmission matters when reading African Origin Stories: Ilé-Ifẹ̀, Mande & Dogon Cosmogonies, Ancient Egyptian Creation Centers, Unkulunkulu & ǀKaggen: temple inscriptions, early manuscripts compiled during cultural contact, and living oral recitations often carry poetic genealogies, ethical imperatives toward land and kin, and layered symbolic epochs that lose nuance if flattened into literal geological years.",
+              "sources": [
+                "https://doi.org/10.1163/ej.9789004157651.i-424.11"
+              ]
+            },
+            {
+              "text": "By placing these sacred narratives inside the Master Section of Origin Stories alongside links to archaeological companions, readers can honor what communities teach about ultimate purpose and human relatedness while inspecting radiocarbon and fossil dates separately on the atlas.",
+              "sources": [
+                "https://doi.org/10.25145/j.tde.2020.11.16"
+              ]
+            }
+          ]
+        }
+      ],
+      "referenceMaps": [
+        {
+          "title": "Digital Bleek & Lloyd Archive · ǀXam and !Kun Creation Texts (Univ. of Cape Town)",
+          "url": "https://lloydbleekcollection.cs.uct.ac.za/",
+          "description": "19th-century notebooks preserving ǀKaggen and Early Race narratives in original Southern African languages."
+        }
+      ],
+      "relatedGuideIds": [
+        "world-origin-stories-compendium",
+        "world-origin-stories-near-east-europe",
+        "world-pyramids-memphis-thebes"
+      ]
+    }
+  ]
+}

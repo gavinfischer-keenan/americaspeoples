@@ -6,4 +6,5 @@
 
 /* Reading pages use a dark canvas; pale panels need their own text colours. */
 .deep-dive-index .dive-tabs a{color:#c0ded8}.deep-dive-index .dive-tabs a[aria-current=page]{color:#fff}.dive-count{color:#c0cec5}.deep-dive-index .dive-card{color:#173d46}.deep-dive-index .dive-card h3{color:inherit}.deep-dive-index .dive-planned{color:#e7ece0}.deep-dive-index .dive-planned .dive-status{color:#e4bc83}.deep-dive-index .dive-modes,.deep-dive-index .dive-modes h3{color:#173d46}
+@media(min-width:601px){.dive-category[href="#dives/origin-stories"]{grid-column:1/-1;background:linear-gradient(135deg,#f3ecdc 0%,#dfeadb 100%)}}
 .dive-card{position:relative}.dive-card .dive-actions a:first-child{position:static}.dive-card .dive-actions a:first-child::after{content:"";position:absolute;inset:0;border-radius:10px}.dive-card .dive-actions a:not(:first-child){position:relative;z-index:1}.dive-card:has(.dive-actions):hover{box-shadow:0 0 0 2px #6f9d91}.dive-card:focus-within{outline:3px solid #b47524;outline-offset:3px}

@@ -46,7 +46,8 @@ export function mapShell(o:MapShellOptions):string{
 }
 
 export function libraryHTML(count:number):string{return `<article class="library-page"><div class="eyebrow">THE RESEARCH BEHIND THE MAP</div><h2>Follow your curiosity.</h2><p class="lead">${count.toLocaleString()} records. Every claim has a context, a date, and a source to explore.</p><div class="library-grid">${[
- ['#dives','↗','Deep dives','Subjects, places, languages and cultures: movies, guides and what is coming next.'],
+ ['#dives','↗','Deep dives','Subjects, places, languages, cultures and Origin Stories: movies, guides and traditional accounts.'],
+ ['#dives/origin-stories','✦','Origin Stories · Where did we come from?','Indigenous, religious and sacred creation accounts from Australia, the Americas, Africa, Eurasia and the Pacific — told from the literature alongside the physical map.'],
  ['#evidence','01','Evidence index','Search the complete collection of places, movements and events.'],
  ['#dives/places','02','Places','Buildings, settlements and the communities around them.'],
  ['#context','03','Movement & context','Examine connections, language, and what the evidence can establish.'],

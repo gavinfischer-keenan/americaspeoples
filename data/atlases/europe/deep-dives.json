@@ -2691,6 +2691,376 @@
         "world-scotland-stones",
         "world-england"
       ]
+    },
+    {
+      "id": "world-ibn-fadlan",
+      "atlasIds": [
+        "europe",
+        "asia-pacific"
+      ],
+      "category": "subjects",
+      "title": "Ahmad ibn Fadlan: the 921–922 CE Volga Embassy (Reality vs. Eaters of the Dead)",
+      "description": "What really happened on the 4,000-km Abbasid diplomatic mission from Baghdad across Khwarazm and the steppes to Volga Bulgaria and Viking Rus merchants—and how Michael Crichton adapted it into fiction.",
+      "intro": "In 921 CE, the Abbasid court in Baghdad dispatched jurist and chronicler Ahmad ibn Fadlan on an extraordinary diplomatic embassy north across Iran, Samanid Bukhara, frozen Khwarazm, and nomadic Oghuz–Pecheneg–Bashkir steppes to reach the Volga Bulgar king Almish near modern Kazan. Eight centuries later, Michael Crichton used Ibn Fadlan as the narrator of Eaters of the Dead (1976; filmed as The 13th Warrior) by splicing the Arabic manuscript onto Beowulf.",
+      "scope": "Historical itinerary, ethnographic observations, Samanid–Volga silver archaeology, and point-by-point separation of the historical Mashhad Risala from Crichton’s literary invention (921–925 CE).",
+      "sources": [
+        {
+          "title": "Montgomery (2014/2017) · Mission to the Volga: Ahmad ibn Fadlan (Library of Arabic Literature, NYU Press)",
+          "url": "https://nyupress.org/9781479826698/mission-to-the-volga/"
+        },
+        {
+          "title": "Frye (2005) · Ibn Fadlan’s Journey to Russia: A Tenth-Century Traveler from Baghdad to the Volga River",
+          "url": "https://markuswiener.com/product/ibn-fadlans-journey-to-russia/"
+        },
+        {
+          "title": "Shepard & Treadwell, eds. (2023) · Muslims on the Volga in the Viking Age: In the Footsteps of Ibn Fadlan (I.B. Tauris)",
+          "url": "https://doi.org/10.5040/9780755618194"
+        },
+        {
+          "title": "Al Mahrouqi & Almazaidah (2026) · Cultural Strangeness in Ibn Fadlan’s Risala: Myth, Superstition, Wonder (Open Cultural Studies)",
+          "url": "https://doi.org/10.1515/culture-2025-0128"
+        },
+        {
+          "title": "Khuzin (2015) · On the Process of Sedentarization of Volga Bulgars (Journal of Sustainable Development)",
+          "url": "https://doi.org/10.5539/jsd.v8n7p68"
+        },
+        {
+          "title": "Saprykina & Chugaev (2023) · Chemical and Pb Isotope Composition in Dirhams from Podbolotyevo Cemetery",
+          "url": "https://doi.org/10.15688/nav.jvolsu.2023.2.8"
+        },
+        {
+          "title": "Jankowiak (2017) · What Does the Slave Trade in the Saqaliba Tell Us about Early Islamic Slavery? (IJMES)",
+          "url": "https://doi.org/10.1017/s0020743816001240"
+        },
+        {
+          "title": "Katona (2021) · Scandinavian/Rus’ Captives and Slave Soldiers: an Eastern Perspective (Viking)",
+          "url": "https://doi.org/10.5617/viking.9052"
+        },
+        {
+          "title": "UNESCO World Heritage Centre · Bolgar Historical and Archaeological Complex",
+          "url": "https://whc.unesco.org/en/list/981/"
+        },
+        {
+          "title": "Dobroruka (2020) · Ibn Fadlan and a By-passed Remark on an Imaginary Geographical Topos",
+          "url": "https://doi.org/10.5007/2175-7976.2020.e66883"
+        }
+      ],
+      "map": {
+        "bounds": [
+          40,
+          30,
+          68,
+          59
+        ],
+        "scope": "Key cities, river crossings, and steppe camps named in Ibn Fadlan’s Risala between Baghdad and the Volga–Kama confluence (921–922 CE). Coordinates for nomadic camps mark broad corridor anchors.",
+        "points": [
+          {
+            "id": "baghdad",
+            "label": "Baghdad (Departure 21 June 921)",
+            "coordinates": [
+              44.36,
+              33.31
+            ],
+            "date": "21 June 921 CE",
+            "description": "Caliph al-Muqtadir’s court dispatches Susan al-Rassi and Ibn Fadlan with gifts and letters.",
+            "sources": [
+              "https://nyupress.org/9781479826698/mission-to-the-volga/"
+            ]
+          },
+          {
+            "id": "rayy",
+            "label": "Hamadan & Rayy (Jibal)",
+            "coordinates": [
+              51.44,
+              35.59
+            ],
+            "date": "July–August 921 CE",
+            "description": "Rapid Zagros–Alborz trunk march pausing 11 days at Rayy.",
+            "sources": [
+              "https://nyupress.org/9781479826698/mission-to-the-volga/"
+            ]
+          },
+          {
+            "id": "nishapur",
+            "label": "Nishapur & Merv (Khorasan)",
+            "coordinates": [
+              58.8,
+              36.21
+            ],
+            "date": "Late Summer 921 CE",
+            "description": "Escort rendezvous under Samanid commander Hammuyah ibn Ali.",
+            "sources": [
+              "https://markuswiener.com/product/ibn-fadlans-journey-to-russia/"
+            ]
+          },
+          {
+            "id": "bukhara",
+            "label": "Bukhara (Samanid Court)",
+            "coordinates": [
+              64.42,
+              39.77
+            ],
+            "date": "Autumn 921 CE",
+            "description": "Audience with Emir Nasr II and al-Jayhani; Paykand 4,000-dinar fortress estates unpaid.",
+            "sources": [
+              "https://doi.org/10.5040/9780755618194"
+            ]
+          },
+          {
+            "id": "kath",
+            "label": "Kath (Khwarazm)",
+            "coordinates": [
+              60.75,
+              41.68
+            ],
+            "date": "Late Autumn 921 CE",
+            "description": "Oxus river passage and Khwarazmshah audience warning of frozen steppes.",
+            "sources": [
+              "https://nyupress.org/9781479826698/mission-to-the-volga/"
+            ]
+          },
+          {
+            "id": "gurganj",
+            "label": "Gurganj / Old Urgench (Winter Camp)",
+            "coordinates": [
+              59.15,
+              42.33
+            ],
+            "date": "Nov 921 – 3 Mar 922 CE",
+            "description": "Three-month freeze across Khwarazm where the jurists and teacher turned back.",
+            "sources": [
+              "https://doi.org/10.5040/9780755618194"
+            ]
+          },
+          {
+            "id": "ust-urt",
+            "label": "Ust-Urt Plateau (Oghuz Turks)",
+            "coordinates": [
+              56.5,
+              44.8
+            ],
+            "date": "March–April 922 CE",
+            "description": "Oghuz assembly under commander Etrek debating the envoys’ safe-conduct.",
+            "sources": [
+              "https://doi.org/10.5007/2175-7976.2020.e66883"
+            ]
+          },
+          {
+            "id": "yaik-urals",
+            "label": "Yaik / Ural & Bashkir Crossings",
+            "coordinates": [
+              54.2,
+              51.8
+            ],
+            "date": "April–May 922 CE",
+            "description": "Using camel-hide boats across Pecheneg and Bashkir swollen spring tributaries.",
+            "sources": [
+              "https://doi.org/10.5040/9780755618194"
+            ]
+          },
+          {
+            "id": "bolgar",
+            "label": "Three Lakes & Bolgar (Middle Volga)",
+            "coordinates": [
+              49.06,
+              54.98
+            ],
+            "date": "12 May 922 CE",
+            "description": "King Almish receives al-Muqtadir’s diploma amid white nights and auroras.",
+            "sources": [
+              "https://whc.unesco.org/en/list/981/",
+              "https://doi.org/10.5539/jsd.v8n7p68"
+            ]
+          },
+          {
+            "id": "rus-volga",
+            "label": "Rus’ Trading Landing (Volga River)",
+            "coordinates": [
+              47.2,
+              55.6
+            ],
+            "date": "Summer 922 CE",
+            "description": "Eyewitness ethnography of Varangian–Rus’ traders, swords, dirham torques & ship cremation.",
+            "sources": [
+              "https://doi.org/10.5617/viking.9052",
+              "https://doi.org/10.1017/s0020743816001240"
+            ]
+          },
+          {
+            "id": "atil",
+            "label": "Atil (Khazar Volga Delta)",
+            "coordinates": [
+              47.9,
+              46.6
+            ],
+            "date": "c. 922–925 CE",
+            "description": "Khazar Khaganate southern suzerainty taxing Volga Bulgaria one sable pelt per household.",
+            "sources": [
+              "https://nyupress.org/9781479826698/mission-to-the-volga/"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "1. Geopolitics of 921 CE: Why Baghdad sent an embassy north to the Volga",
+          "paragraphs": [
+            {
+              "text": "Far from being an aimless exile or walkabout (as Michael Crichton playfully framed the opening in his novel), Ahmad ibn Fadlan’s journey was an official Abbasid diplomatic mission prompted by Almish ibn Shilki, ruler (*Yiltawar*) of Volga Bulgaria. Seeking political independence, defense, and trade autonomy from the Jewish-ruled Khazar Khaganate downriver at Atil, Almish wrote to Caliph al-Muqtadir requesting Islamic scholars, builders for a fortress, and money.",
+              "sources": [
+                "https://nyupress.org/9781479826698/mission-to-the-volga/",
+                "https://doi.org/10.5040/9780755618194"
+              ]
+            },
+            {
+              "text": "Departing Baghdad on 21 June 921 CE (11 Safar 309 AH) under senior ambassador Susan al-Rassi with Tekin al-Turki and Baris al-Saqlabi, the delegation followed well-established trunk roads across Iran and into Samanid Transoxania—because Samanid silver mines in Panjhir and Shash already flooded Russian and Baltic hoards with dirhams exchanged for northern furs, amber, and slaves. Unfortunately, political turmoil blocked release of 4,000 dinars promised from estates at Paykand near Bukhara, setting up furious confrontations once the envoys finally reached the Volga.",
+              "sources": [
+                "https://doi.org/10.15688/nav.jvolsu.2023.2.8",
+                "https://doi.org/10.5040/9780755618194"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "2. Winter ordeal in Khwarazm & crossing Oghuz, Pecheneg, and Bashkir steppes",
+          "paragraphs": [
+            {
+              "text": "After sailing down the Amu Darya to Kath and wintering three bitterly cold months in Gurganj where frost cracked brass pitchers and froze the wide river 17 spans thick, all the professional Islamic jurists and the religious instructor turned back toward Baghdad. Ibn Fadlan—whose title as legal orator grew by default when the jurists bolted—pressed north on 3–4 March 922 CE across the Ust-Urt Plateau in blinding snowstorms, packing collapsible camel-hide river boats.",
+              "sources": [
+                "https://nyupress.org/9781479826698/mission-to-the-volga/",
+                "https://markuswiener.com/product/ibn-fadlans-journey-to-russia/"
+              ]
+            },
+            {
+              "text": "During the two-month steppe crossing, Ibn Fadlan produced precious eyewitness ethnography: among nomadic Oghuz Turks (*al-Ghuzziyya*) he noted leather felt dwellings, bridewealth in Khwarazmian coats, wooden memorial statues (*balbals*) set over warriors’ graves, and a nervous steppe council where commander Etrek’s lieutenants nearly sliced the envoys in half before diplomatic persuasion and peppered gifts opened their road across Pecheneg grazings and Bashkir forests.",
+              "sources": [
+                "https://doi.org/10.5007/2175-7976.2020.e66883",
+                "https://doi.org/10.5040/9780755618194"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "3. Arrival at Bolgar: White Nights, Auroras, Dirhams & the Rus’ Ship Funeral",
+          "paragraphs": [
+            {
+              "text": "On 12 May 922 CE (12 Muharram 310 AH), the surviving party reached King Almish at his spring Three Lakes camp near later Bolgar. Ibn Fadlan read Caliph al-Muqtadir’s letter aloud while Bulgar horsemen showered dirhams over their heads—though Almish grew furious when the 4,000 fortress dinars failed to arrive. Ibn Fadlan spent the summer marveling at subarctic white nights where twilight merged straight into dawn, eerie red auroral clouds fighting across the sky, giant eroded pleistocene bones, and Bolgar’s transition from nomadic camps into a permanent timber-and-stone hub backed by Samanid silver.",
+              "sources": [
+                "https://doi.org/10.5539/jsd.v8n7p68",
+                "https://whc.unesco.org/en/list/981/",
+                "https://doi.org/10.15688/nav.jvolsu.2023.2.8"
+              ]
+            },
+            {
+              "text": "Ibn Fadlan’s most famous chapters describe Scandinavian/Varangian Rus’ merchants arriving on longships down the Volga carrying marten pelts and enslaved *Saqaliba* youths. He admired their tall pine-tree stature, dark green-blue wood-ash tattoos from fingertips to neck, broad grooved Frankish swords, and wives wearing iron-silver neck rings (each torque representing 10,000 dirhams of trade profit)—yet winced at their shared communal washbowl, before watching step-by-step a ten-day noble chieftain ship cremation led by an elder woman ritualist called the “Angel of Death,” including music, intoxicants, sacrificed dogs, horses, weapons, and an enslaved volunteer girl laid beside her lord on his burning vessel.",
+              "sources": [
+                "https://doi.org/10.1017/s0020743816001240",
+                "https://doi.org/10.5617/viking.9052",
+                "https://doi.org/10.1515/culture-2025-0128"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "4. Separating Real 922 CE History from Michael Crichton’s Eaters of the Dead (1976)",
+          "paragraphs": [
+            {
+              "text": "When Michael Crichton wrote Eaters of the Dead (later adapted as the 1999 film The 13th Warrior), he took only the real historical setup—Baghdad court, steppe journey, Volga arrival, and first Rus’ descriptions—and openly joked in his own afterword that he grafted the rest onto Beowulf to see if readers noticed the literary seam. There are no Neanderthal “Wendol” mist-cannibals, no sea voyage west to Denmark/Norway with Buliwyf, and no thirteen-warrior monster caves in the actual tenth-century Arabic manuscript.",
+              "sources": [
+                "https://nyupress.org/9781479826698/mission-to-the-volga/",
+                "https://doi.org/10.1515/culture-2025-0128"
+              ]
+            },
+            {
+              "text": "Yet real history was even stranger and more impressive than fiction: the unique single full eyewitness version sat unnoticed for centuries until Bashkir historian and politician Zeki Velidi Togan identified the 13th-century Mashhad Manuscript in Mashhad, Iran in 1923—proving every major silver-coin trail across Eastern Europe and Scandinavia right back to Bukhara and Baghdad.",
+              "sources": [
+                "https://doi.org/10.5040/9780755618194",
+                "https://doi.org/10.15688/nav.jvolsu.2023.2.8"
+              ]
+            }
+          ],
+          "columns": [
+            "Element",
+            "Historical 921–922 CE Risala (Mashhad MS)",
+            "Eaters of the Dead / 13th Warrior (Fiction)"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Why Ibn Fadlan Left Baghdad",
+                "Official embassy secretary dispatched at King Almish’s request for Muslim scholars & Khazar defense funds",
+                "Exiled from court over a romantic intrigue and thrust upon northern foreigners"
+              ],
+              "sources": [
+                "https://nyupress.org/9781479826698/mission-to-the-volga/"
+              ]
+            },
+            {
+              "cells": [
+                "Final Destination",
+                "Volga–Kama Confluence (Three Lakes & Bolgar, Tatarstan) trading with Rus’ river boats",
+                "Seaborne viking hall in Scandinavia (\"Hrothgar’s land\") borrowed from Beowulf"
+              ],
+              "sources": [
+                "https://whc.unesco.org/en/list/981/",
+                "https://doi.org/10.5040/9780755618194"
+              ]
+            },
+            {
+              "cells": [
+                "The Viking / Rus’ Encounter",
+                "10-day commercial anchorage, tattoos, neck-torques & eyewitness 10-day chieftain ship funeral",
+                "Faithfully borrows Ibn Fadlan’s ship funeral & hygiene quotes, then adds a 13-man expedition"
+              ],
+              "sources": [
+                "https://doi.org/10.5617/viking.9052",
+                "https://doi.org/10.1515/culture-2025-0128"
+              ]
+            },
+            {
+              "cells": [
+                "Mist Monsters (\"Wendol\")",
+                "Completely absent; real dangers were steppe freezing, bandit extortion, and Khazar-Bulgar rivalries",
+                "Literary reimagining of Grendel & his Mother as surviving relict Neanderthals in northern mist caves"
+              ],
+              "sources": [
+                "https://doi.org/10.1515/culture-2025-0128",
+                "https://doi.org/10.5007/2175-7976.2020.e66883"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "5. Archaeological Evidence: Silver Dirhams & Early Bolgar",
+          "paragraphs": [
+            {
+              "text": "Excavations along the Middle Volga (Bolgar, Bilyar, Izmeri) and across Gotland, Birka, Staraya Ladoga, and Podbolotyevo confirm Ibn Fadlan’s economic picture down to isotope ratios: over 90% of silver in early 10th-century Viking-Age Eurasian hoards derives from Samanid dirhams mined in Tashkent/Central Asia and funneled northward along the exact Bolgar–Khwarazm river-and-caravan axis Ibn Fadlan walked in 921–922 CE.",
+              "sources": [
+                "https://doi.org/10.15688/nav.jvolsu.2023.2.8",
+                "https://doi.org/10.5539/jsd.v8n7p68"
+              ]
+            }
+          ]
+        }
+      ],
+      "referenceMaps": [
+        {
+          "title": "UNESCO WHC · Bolgar Historical & Archaeological Complex",
+          "url": "https://whc.unesco.org/en/list/981/",
+          "description": "Middle Volga capital site whose origins trace straight to Almish’s 10th-century Bulgar federation."
+        },
+        {
+          "title": "NYU Library of Arabic Literature · Mission to the Volga",
+          "url": "https://nyupress.org/9781479826698/mission-to-the-volga/",
+          "description": "James E. Montgomery’s authoritative edition of the Mashhad Manuscript text."
+        }
+      ],
+      "relatedGuideIds": [
+        "world-silk-roads",
+        "world-muslim-faith",
+        "world-arabia-incense-oases-empires",
+        "world-chinese-explorers"
+      ]
     }
   ]
 }

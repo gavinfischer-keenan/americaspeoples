@@ -1,0 +1,183 @@
+{
+  "schemaVersion": 1,
+  "guides": [
+    {
+      "id": "world-origin-stories-near-east-europe",
+      "atlasIds": ["europe", "asia-pacific", "africa"],
+      "category": "origin-stories",
+      "title": "Near Eastern, Abrahamic & European Origin Stories: Atrahasis, Genesis & Qur'anic Creation, Bundahishn, Hesiod & the Eddas",
+      "description": "Creation traditions from Sumerian–Babylonian cuneiform tablets, Jewish, Christian and Islamic scriptures (Genesis and Qur'an), Zoroastrian Bundahishn, Greek Hesiod/Prometheus and Norse Eddas.",
+      "intro": "Across the ancient Near East, Iranian plateau, and Mediterranean–Nordic Europe, foundational literary and scriptural traditions explore human origins through earth/clay fashioned by divine craft, moral breath infused into mortal bodies, primal cosmic order wrestled out of chaos, and world-renewal across generations.",
+      "scope": "Primary sacred and classical literary traditions across Sumer and Babylon, Judaism, Christianity, Islam, Zoroastrianism, Archaic Greece, and Medieval Scandinavia.",
+      "sources": [
+        {
+          "id": "osne-basak-2026",
+          "title": "Başak & Koçak (2026) · Creative Thought and the Divine Word: Comparative Examination of Cosmic Creation (Religions)",
+          "url": "https://doi.org/10.3390/rel17020245",
+          "access": "Indexed peer-reviewed journal record and abstract inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "osne-drake-2024",
+          "title": "Drake (2024) · Ancient Near Eastern Pantheons & Genesis 1 Creation Cosmologies (Religions)",
+          "url": "https://doi.org/10.3390/rel15080984",
+          "access": "Indexed peer-reviewed journal record inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "osne-lazcano-2020",
+          "title": "Lazcano Vázquez (2020) · Near Eastern and Greek Sources in Hesiod's Myth of the Ages",
+          "url": "https://doi.org/10.5209/cfcg.68476",
+          "access": "Indexed peer-reviewed journal record inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "osne-leeming-2009",
+          "title": "Leeming (2009) · Creation Myths of the World: An Encyclopedia",
+          "url": "https://doi.org/10.5040/9798400633393",
+          "access": "Indexed scholarly reference record inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "osne-vanrooyen-2020",
+          "title": "Van Rooyen (2020) · Cosmogonic or Creation Myths: Philosophical and Theological Interpretations (HTS)",
+          "url": "https://doi.org/10.4102/hts.v76i1.5853",
+          "access": "Indexed peer-reviewed journal record inspected via Consensus API. Access checked 2026-11-20."
+        },
+        {
+          "id": "osne-etcsl-eridu",
+          "title": "ETCSL (Oxford University) · Sumerian Creation / Eridu Genesis & Enki and Ninmah Literary Corpus",
+          "url": "https://etcsl.orinst.ox.ac.uk/",
+          "access": "Electronic Text Corpus of Sumerian Literature open scholarly translation portal consulted 2026-11-20."
+        }
+      ],
+      "map": {
+        "bounds": [-24, 18, 60, 66],
+        "scope": "Literary, liturgical, and historical composition centers across Mesopotamia, the Levant/Hijaz, Iran, Greece, and Iceland/Scandinavia.",
+        "points": [
+          {
+            "id": "mesopotamia-babylon-nippur",
+            "label": "Nippur & Babylon (Atrahasis / Enuma Elish)",
+            "coordinates": [44.42, 32.54],
+            "date": "2nd–1st mill. BCE Cuneiform",
+            "description": "Clay tablets preserving Enki & Ninmah, Atrahasis (clay kneaded with sacrificed god Ilawela's flesh & *ṭēmu* intellect), and Enuma Elish.",
+            "sources": ["https://etcsl.orinst.ox.ac.uk/"]
+          },
+          {
+            "id": "levant-jerusalem-sinai",
+            "label": "Jerusalem & Levant (Torah / Bible Genesis 1–2)",
+            "coordinates": [35.23, 31.78],
+            "date": "Hebrew Bible & Christian Canon",
+            "description": "Sovereign Creation by Word across six ordered days (Imago Dei) paired with *Adām* molded from fertile *adamah* dust-soil.",
+            "sources": ["https://doi.org/10.3390/rel15080984", "https://doi.org/10.3390/rel17020245"]
+          },
+          {
+            "id": "hijaz-mecca-medina",
+            "label": "Mecca & Medina (Qur'anic Creation)",
+            "coordinates": [39.83, 21.42],
+            "date": "Qur'an (7th c. CE)",
+            "description": "Humanity created from sounding clay (*ṣalṣāl*) and animated by divine *Rūḥ*, honored as earthly steward (*khalīfah*) before all angels.",
+            "sources": ["https://doi.org/10.3390/rel17020245"]
+          },
+          {
+            "id": "iran-persepolis-bundahishn",
+            "label": "Iranian Plateau / Fars (Zoroastrian Bundahishn)",
+            "coordinates": [52.89, 29.93],
+            "date": "Avestan & Middle Persian Canon",
+            "description": "Ahura Mazda's seven spiritual-to-material creations, mortal first prototype Gayōmard, and rhubarb-twin ancestors Mashya & Mashyana.",
+            "sources": ["https://doi.org/10.5040/9798400633393"]
+          },
+          {
+            "id": "greece-athens-boeotia",
+            "label": "Boeotia & Athens (Hesiod's Theogony / Works & Days)",
+            "coordinates": [23.72, 37.97],
+            "date": "c. 700 BCE Greek Epic",
+            "description": "Chaos -> Gaia/Uranus/Cronus -> Zeus; Five Ages (Gold through Iron), Deucalion's thrown stones, and Prometheus molding mortals from wet earth.",
+            "sources": ["https://doi.org/10.5209/cfcg.68476"]
+          },
+          {
+            "id": "iceland-reykholt-eddas",
+            "label": "Reykholt & Uppsala (Völuspá & Prose Edda)",
+            "coordinates": [-21.29, 64.66],
+            "date": "10th–13th c. CE Old Norse",
+            "description": "Ginnungagap fire-meets-ice chasm, Ymir fashioned into world, and Odin, Vili, and Vé carving Ask and Embla from coastal driftwood.",
+            "sources": ["https://doi.org/10.5040/9798400633393"]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "1. Mesopotamian Cuneiform Accounts: Eridu Genesis, Enki & Ninmah, Atrahasis & Enuma Elish",
+          "paragraphs": [
+            {
+              "text": "Excavated cuneiform libraries from Nippur, Sippar, Babylon, and Nineveh preserve the oldest written human origin narratives in Sumerian and Akkadian. In the *Song of the Hoe* and *Enki and Ninmah*, humanity sprouts out of dark earth broken open by Enlil's cosmic hoe (*al*) or is hand-shaped out of sweet subterranean **Abzu clay** by birth goddesses **Namma** and **Ninmah** while **Enki** designs diverse human forms and assigns every person—including elders and people with disabilities—meaningful social roles inside temple and city life.",
+              "sources": ["https://etcsl.orinst.ox.ac.uk/", "https://doi.org/10.5040/9798400633393"]
+            },
+            {
+              "text": "In the 17th-century BCE Old Babylonian epic **Atrahasis**, junior working gods rebelled against digging the Tigris–Euphrates canals for elder deities—prompting Enki and womb-goddess **Bēlet-ilī / Mami** to mix clay with the flesh, blood, and intellectual planning-spirit (*ṭēmu*) of slain rebel god **Wê-ila (Ilawela)**, creating seven human male and female pairs from fourteen pinched clay lumps to bear cosmic labor, later nearly wiped out by Enlil's Flood before hero **Atrahasis** survived in a pitched reed-boat. Later Babylonian **Enuma Elish** narrated **Marduk** splitting sea-dragon **Tiamat**'s corpse to vault heavens over earth and shaping humanity (*lullû*) from defeated **Qingu**'s blood.",
+              "sources": ["https://etcsl.orinst.ox.ac.uk/", "https://doi.org/10.3390/rel15080984"]
+            }
+          ]
+        },
+        {
+          "heading": "2. Abrahamic Traditions: Jewish, Christian & Islamic Creation (Genesis 1–2 & Qur'anic Creation of Adam)",
+          "paragraphs": [
+            {
+              "text": "Inside Jewish and Christian scripture, **Genesis 1** breaks radically with battling sky monsters: one transcendent Creator speaks light, firmament, dry land, stars, sea creatures, and animals effortlessly out of primordial chaos (*tohu wa-bohu*), crowning Day Six by creating **humanity—both male and female—in the Divine Image (*Imago Dei* / *Tzelem Elohim*)** as equal bearers of dignity and stewardship before resting on the Sabbath. Immediately beside it, **Genesis 2** weaves an earthy, intimate garden story: God stoops like a potter to shape *ʾādām* (human) from fertile red humus (*ʾădāmâ*), breathes life-breath (*nishmat chayyim*) into his nostrils, and builds **Eve (*Ḥawwāh*)** directly from Adam's own bone-and-side (*tsela*) as *ezer kenegdo*—an equal facing partner.",
+              "sources": ["https://doi.org/10.3390/rel15080984", "https://doi.org/10.3390/rel17020245"]
+            },
+            {
+              "text": "Across multiple **Qur'anic Surahs** (notably *al-Baqarah* 2:30–38, *al-Ḥijr* 15:26–33, *Ṣād* 38:71–76, and *al-Nisāʾ* 4:1), **Islam** teaches that **Allah** declared to the angels the appointment of humanity as moral trustee/vicegerent (**Khalīfah**) on Earth. Gathering diverse colors of dust and clay (*turāb*, malleable *ṭīn*, ringing fired pottery *ṣalṣāl*), God fashioned **Ādam** cleanly with divine hands, breathed His Spirit (**Rūḥ**) inside him, taught Ādam the comprehensive **Names of All Things** surpassing angelic knowledge, created his mate (**Ḥawwāʾ**) from a single shared soul (*nafs wāḥidah*), and commanded every angel to bow in honor before human dignity—with only proud jinn **Iblīs** refusing, defining Adam and Hawwa's descent from the Garden not as an inherited taint of original sin, but as the beginning of sincere repentance (*tawbah*), forgiveness, and Earthly moral choice.",
+              "sources": ["https://doi.org/10.3390/rel17020245", "https://doi.org/10.4102/hts.v76i1.5853"]
+            }
+          ]
+        },
+        {
+          "heading": "3. Zoroastrian Bundahishn, Archaic Greek (Hesiod & Prometheus) & Norse Eddas (Ask & Embla)",
+          "paragraphs": [
+            {
+              "text": "In the Zoroastrian Middle Persian **Bundahishn** ('Primal Creation'), **Ahura Mazda** constructed the world in seven luminous spiritual-and-material stages—stone sky, water, flat earth, single prototypical plant, Primordial White Ox (*Gāv ī Ēwdād*), radiant mortal ancestor **Gayōmard**, and pure fire—before dark antagonist **Angra Mainyu (Ahriman)** pierced through from below to stain existence with death. Out of Gayōmard's buried seed sprang a twin-stemmed green **rhubarb (*rīvās*) plant** after forty years, splitting into **Mashya and Mashyana**, the first mortal pair whose ethical alignment (*good thoughts, good words, good deeds*) aids Ahura Mazda in ultimately renewing Creation (*Frashokereti*).",
+              "sources": ["https://doi.org/10.5040/9798400633393"]
+            },
+            {
+              "text": "In Archaic Greece, **Hesiod** (*Theogony* & *Works and Days*, c. 700 BCE) opened from yawning **Chaos** yielding **Gaia (Earth)**, Tartarus, and Eros; Gaia bore starry Sky (**Uranus**), whose overthrow by **Cronus** and later **Zeus** ushered in **Five Ages of Mortals** (Golden people living effortlessly like gods, Silver, violent Bronze, noble Heroes at Thebes/Troy, and hard Iron), while later **Ovid** and Greek tragedians celebrated Titan **Prometheus** molding mortals from rainwater-moistened earth and stealing hidden fennel-stalk fire, complemented by flood survivors **Deucalion & Pyrrha** casting Gaia's 'bones' (stones) behind them. North across medieval Iceland and Scandinavia, Old Norse **Völuspá** and Snorri Sturluson's **Prose Edda** picture icy **Niflheim** and fiery **Muspelheim** clashing inside empty yawn **Ginnungagap**, melting frost giant **Ymir** and nourisher cow **Auðumbla**—whose bones Odin, Vili, and Vé built into mountains, skull into heavens, and blood into seas before discovering two lifeless sea-tossed **driftwood logs** (ash & elm / vine) along the shore and breathing soul, wit, warm blood, and speech into **Ask and Embla**.",
+              "sources": ["https://doi.org/10.5209/cfcg.68476", "https://doi.org/10.5040/9798400633393"]
+            }
+          ],
+          "columns": ["Tradition / Culture", "Foundational Source", "Universe Creation", "Human Beginning"],
+          "rows": [
+            {
+              "cells": ["Sumerian & Babylonian", "Enki & Ninmah; Atrahasis; Enuma Elish", "Cosmos ordered from sweet/salt waters (Abzu & Tiamat)", "Clay mixed with divine blood & *ṭēmu* intellect; shaped by Namma/Mami"],
+              "sources": ["https://etcsl.orinst.ox.ac.uk/"]
+            },
+            {
+              "cells": ["Judaism & Christianity", "Genesis 1–2 (Torah / Old Testament)", "Spoken into structured 6-day goodness & Imago Dei", "Adam molded from fertile soil (*adamah*) + divine breath; Eve from side"],
+              "sources": ["https://doi.org/10.3390/rel15080984"]
+            },
+            {
+              "cells": ["Islam", "Qur'an (Surahs 2, 4, 15, 38)", "Created by Allah's command (*Kun*) with balance & signs", "Ādam shaped from multi-earth sounding clay & Spirit; taught Names as Khalifa"],
+              "sources": ["https://doi.org/10.3390/rel17020245"]
+            },
+            {
+              "cells": ["Zoroastrian (Iran)", "Avesta & Bundahishn", "Ahura Mazda crafts 7 good creations against Angra Mainyu", "Mashya & Mashyana emerge intertwined from Gayōmard's rhubarb stem"],
+              "sources": ["https://doi.org/10.5040/9798400633393"]
+            },
+            {
+              "cells": ["Greek & Old Norse", "Hesiod, Ovid; Poetic/Prose Eddas", "Chaos -> Gaia/Sky -> Titans/Zeus; Ginnungagap ice-fire & Ymir", "Five Ages / Prometheus clay; Odin & brothers animate driftwood Ask & Embla"],
+              "sources": ["https://doi.org/10.5209/cfcg.68476"]
+            }
+          ]
+        }
+      ],
+      "referenceMaps": [
+        {
+          "title": "Oxford ETCSL · Electronic Text Corpus of Sumerian Literature",
+          "url": "https://etcsl.orinst.ox.ac.uk/",
+          "description": "University of Oxford open digital corpus of Sumerian creation hymns, Eridu texts, and Enki & Ninmah."
+        }
+      ],
+      "relatedGuideIds": [
+        "world-origin-stories-compendium",
+        "world-origin-stories-africa",
+        "world-muslim-faith",
+        "world-christian-traditions"
+      ]
+    }
+  ]
+}

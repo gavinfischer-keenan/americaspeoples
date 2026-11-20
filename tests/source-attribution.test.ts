@@ -102,7 +102,7 @@ test('reused world-guide images publish item-level creator and rights links', as
   const {collectSourceAttributions,loadAttributionInputs,sourceAttributionHTML}=await import('../scripts/source-attribution-build');
   const entries=collectSourceAttributions(await loadAttributionInputs());
   const manifest=JSON.parse(await readFile('data/world-guide-media.json','utf8')) as {assets: WorldGuideMedia[]};
-  assert.equal(manifest.assets.length,6);
+  assert.equal(manifest.assets.length,48);
   for (const image of manifest.assets) {
     const matches=entries.filter(entry=>entry.urls.includes(image.sourceUrl));
     assert.equal(matches.length,1,image.id);

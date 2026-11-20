@@ -1,6 +1,6 @@
 import type {AtlasId} from './atlas-catalog';
 export interface WorldGuide {
- id:string;atlasIds:AtlasId[];category:'places'|'subjects'|'cultures'|'languages';title:string;description:string;intro:string;scope:string;
+ id:string;atlasIds:AtlasId[];category:'places'|'subjects'|'cultures'|'languages'|'origin-stories';title:string;description:string;intro:string;scope:string;
  map:{bounds:[number,number,number,number];scope:string;points:{id:string;label:string;coordinates:[number,number];date:string;description:string;sources:string[]}[]};
  sections:{heading:string;paragraphs:{text:string;sources:string[]}[];columns?:string[];rows?:{cells:string[];sources:string[]}[]}[];
  sources:{title:string;url:string}[];relatedGuideIds?:string[];referenceMaps?:{title:string;url:string;description:string}[];voyageIds?:string[];
@@ -18,7 +18,7 @@ export function validateWorldGuides(input:unknown):WorldGuide[]{
   const g=raw as WorldGuide;
   if(!g||!idPattern.test(g.id)||ids.has(g.id))throw Error('Invalid or duplicate world guide ID');ids.add(g.id);
   const fail=(reason:string):never=>{throw Error(`${g.id}: ${reason}`);};
-  if(!['title','description','intro','scope'].every(k=>text(g[k as keyof WorldGuide]))||!['places','subjects','cultures','languages'].includes(g.category))fail('missing guide text');
+  if(!['title','description','intro','scope'].every(k=>text(g[k as keyof WorldGuide]))||!['places','subjects','cultures','languages','origin-stories'].includes(g.category))fail('missing guide text');
   if(!Array.isArray(g.atlasIds)||!g.atlasIds.length||new Set(g.atlasIds).size!==g.atlasIds.length||g.atlasIds.some(a=>!['americas','africa','europe','asia-pacific'].includes(a)))fail('invalid atlas membership');
   if(!Array.isArray(g.sources)||!g.sources.length||g.sources.some(s=>!text(s.title)||!safeURL(s.url)))fail('invalid sources');
   const sources=new Set(g.sources.map(s=>s.url));
