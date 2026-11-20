@@ -34,15 +34,22 @@ test('Africa inventory remains cited, pre-cutoff and distinct from invented popu
 test('Holocene Africa fills 15,000 BCE through 1900 CE across all regions and nine deep dives',async()=>{
  const {data}=await loadWorldShards();
  const africaHolocene=data.evidence.filter(e=>inWorldScope(e,'africa')&&e.end>AFRICA_EARLY_END);
- assert.ok(africaHolocene.length>=150,'Continental Holocene-to-1900 coverage added across all shards');
+ assert.ok(africaHolocene.length>=200,'Continental Holocene-to-1900 coverage added across all shards');
  const tenKTo1K=africaHolocene.filter(e=>e.end>=-9999&&e.start<=1000);
  assert.ok(tenKTo1K.length>=130,'Dense 10,000 BCE to 1000 CE Africa coverage added across all macro-regions');
+ const oneKTo1900=africaHolocene.filter(e=>e.end>=1000&&e.end<=1900);
+ assert.ok(oneKTo1900.length>=100,'Dense 1000 CE to 1900 CE Africa coverage from South Africa north to the Maghreb');
  for(const e of africaHolocene){
   assert.ok(e.start<=e.end && e.end<=1900,e.id+' 1900 CE cap');
   assert.ok(e.sourceIds.length>0 && e.dateBasis && e.limits,e.id+' provenance');
   assert.ok(e.taxonIds.includes('homo-sapiens'),e.id+' Holocene Homo sapiens taxon');
  }
- for(const needle of ['Takarkori','Gobero','Tassili','Garama','Kerma','Meroë','Jenné-jeno','Gajiganna','Great Zimbabwe','Aksum','Matara','Kilwa','Kongo','Madagascar','Mecca','Medina','Haua Fteah','Carthage','Dufuna','Upemba','Harlaa','Lothagam','Chibuene','Uluburun','Alexandria']){
+ for(const needle of [
+  'Takarkori','Gobero','Tassili','Garama','Kerma','Meroë','Jenné-jeno','Gajiganna','Great Zimbabwe','Aksum','Matara','Kilwa','Kongo','Madagascar','Mecca','Medina',
+  'Molokwane','uMgungundlovu','Table Bay','Danamombe','Nyanga','Ingombe Ilede','Ilha de Moçambique','Vohemar','Le Morne','Fort Jesus','Zanzibar','Thimlich Ohinga','Munsa','Harar Jugol','Tiya',
+  'Katanga Copperbelt','Kuba Kingdom','Middle Cuanza','Foumban','Sungbo’s Eredo','Banda Hills','Savi & Ouidah','Koutammakou','Timbuktu','Tomb of Askia','Sorotomo','Loropéni','Birni Gazargamo','Sukur',
+  'Chinguetti','Agadez','Ghadamès','Touat','Soba East','Sennar','Qasr Ibrim','Darfur','Suakin','Marrakesh','Rabat','Ait-Ben-Haddou','Tlemcen','Tunis'
+ ]){
   assert.ok(africaHolocene.some(e=>e.title.includes(needle)),`Missing key Africa/Mediterranean/Red Sea site: ${needle}`);
  }
  const europeMed=data.evidence.filter(e=>e.id.startsWith('med-')&&inWorldScope(e,'europe'));
@@ -71,4 +78,26 @@ test('Holocene Africa fills 15,000 BCE through 1900 CE across all regions and ni
  const chrGuide=guides.find(x=>x.id==='world-christian-traditions')!;
  const chrText=chrGuide.sections.map(s=>s.heading+' '+s.paragraphs.map(p=>p.text).join(' ')+' '+(s.rows||[]).map(r=>r.cells.join(' ')).join(' ')).join(' ');
  for(const branch of ['Church of the East','Oriental Orthodox','Eastern Orthodox','Roman Catholic','Protestant','Coptic','Tewahedo']) assert.ok(chrText.includes(branch),`Christian traditions guide covers ${branch}`);
+});
+
+test('Asia-Pacific and Europe cover earliest hominins through 10,000 BCE with consensus and institutional citations',async()=>{
+ const {data}=await loadWorldShards();
+ const asiaPre10k=data.evidence.filter(e=>inWorldScope(e,'asia-pacific')&&e.start<=-10000&&e.end<=-10000);
+ assert.ok(asiaPre10k.length>=60,'Asia-Pacific pre-10,000 BCE coverage includes Levant, Arabia, Siberia, South/East/SE Asia and Sahul');
+ for(const needle of ['ʿUbeidiya','Gesher Benot Yaʿaqov','Qesem','Tabun','Ohalo II','Shubayqa','Khall Amayshan','Jebel Faya','Qaleh Kurd','Shanidar','Teshik-Tash','Denisova','Mal’ta','Attirampakkam','Isampur','Hathnora','Bhimbetka','Jwalapuram','Kitulgala','Shangchen','Yunxian','Zhoukoudian','Hualongdong','Nwya Devu','Xianrendong','Jeongok-ri','Sangiran','Kalinga','Niah Great Cave','Leang Karampuang','Laili','Kosipe','Nawarla Gabarnmang','Warratyi','Lake Mungo','Buang Merabak','Kutikina']){
+  assert.ok(asiaPre10k.some(e=>e.title.includes(needle)),`Missing Asia-Pacific Pleistocene site: ${needle}`);
+ }
+ const asiaUrls=new Set(data.sources.filter(s=>asiaPre10k.some(e=>e.sourceIds.includes(s.id))).map(s=>s.url));
+ for(const host of ['doi.org','whc.unesco.org','humanorigins.si.edu']){
+  assert.ok([...asiaUrls].some(u=>u.includes(host)),`Asia pre-10k includes ${host}`);
+ }
+ const eurPre10k=data.evidence.filter(e=>inWorldScope(e,'europe')&&e.start<=-10000&&e.end<=-10000);
+ assert.ok(eurPre10k.length>=40,'Europe pre-10,000 BCE coverage spans Lower, Middle and Upper Paleolithic');
+ for(const needle of ['Barranco León','Sima del Elefante','Pirro Nord','Happisburgh','Caune de l’Arago','Boxgrove','Gruta da Aroeira','Schöningen','Apidima','Bruniquel','Krapina','Gorham’s','La Ferrassie','El Sidrón','Vindija','Spy','Grotte Mandrin','Ranis','Fumane','Kostenki','Swabian Jura','Chauvet','Dolní Věstonice','Willendorf','Sunghir','Arene Candide','Altamira','Côa Valley','Lascaux','Mezhyrich','Gönnersdorf','Villabruna','Bichon']){
+  assert.ok(eurPre10k.some(e=>e.title.includes(needle)),`Missing Europe Pleistocene site: ${needle}`);
+ }
+ const eurUrls=new Set(data.sources.filter(s=>eurPre10k.some(e=>e.sourceIds.includes(s.id))).map(s=>s.url));
+ for(const host of ['doi.org','whc.unesco.org','humanorigins.si.edu','archeologie.culture.gouv.fr']){
+  assert.ok([...eurUrls].some(u=>u.includes(host)),`Europe pre-10k includes ${host}`);
+ }
 });

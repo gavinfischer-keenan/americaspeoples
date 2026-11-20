@@ -188,11 +188,11 @@ export function createWorldSummary(input: SummaryInput): WorldSummary {
     americas:
       "Detailed Americas and Pacific archive; selected coverage through 1900.",
     africa:
-      "Prehistoric to 1900 CE coverage across North, West, Central, East and Southern Africa, the Sahara, the Nile and Madagascar.",
+      "Prehistoric to 1900 CE coverage across Southern, South-Central, East, Central, Horn, West, Saharan, Nile, North Africa and Indian Ocean islands.",
     europe:
-      "Playable northern Europe history plus an early human-family foundation.",
+      "Earliest hominin to 10,000 BCE Pleistocene foundations, Mediterranean trade and playable northern Europe history.",
     "asia-pacific":
-      "First human-family foundation, linked to existing Pacific detail.",
+      "Earliest hominin to 10,000 BCE across the Levant, Arabia, Caucasus, Siberia, South/East/SE Asia and Sahul, plus Silk Roads and Pacific detail.",
   };
   return {
     version: input.version,
