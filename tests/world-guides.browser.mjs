@@ -26,6 +26,8 @@ try{
   const evidence=world.evidence.filter(e=>e.regionIds.includes(atlas));
   assert.ok((await page.locator('.family-map-top').textContent()).includes(evidence.length+' evidence anchors'));
   for(const study of (world.studies||[]).filter(s=>s.regionIds.includes(atlas)))assert.equal(await page.locator('.family-study-links a[href="#study/'+study.id+'"]').count(),1);
+  const familyHrefs=await page.locator('#family-guide-list a').evaluateAll(links=>links.map(a=>a.getAttribute('href')));
+  for(const guide of index.filter(g=>g.atlasIds.includes(atlas)))assert.ok(familyHrefs.includes('sites/'+guide.id+'.html'),atlas+' missing guide '+guide.id);
   assert.equal(await page.locator('.timeline').isVisible(),false);
  }
  for(const id of ['world-lucy','world-human-family','world-hadrians-wall','world-stonehenge','world-orkney','world-tibet-dalai-lamas','world-angkor-wat','world-voyages-europe','world-picts','world-otzi','world-cold-preserved-people','world-andean-summit-children',...(world.studies||[]).map(s=>s.guideId)]){

@@ -9,6 +9,7 @@ import {
 import { esc } from "./dom";
 import { consensusResearch } from "./research-provenance";
 import { mountMapNavigation } from "./map-navigation";
+import { worldGuides } from "./world-guides";
 import {
   validateWorldData,
   africaEarlyData,
@@ -318,7 +319,7 @@ export function mountWorldPlayer(
           (w) => w.taxonIds.includes(t.id) && inWorldScope(w, scope),
         ),
     );
-  host.innerHTML = `<article class="family-page"><header class="family-heading"><div><p class="world-kicker">THE SPREAD OF PEOPLES · FIRST BROAD FRAMEWORK</p><h1>${esc(title)}</h1><p>Evidence anchors and broad connections. A foundation for the detailed histories still to come.</p></div><nav aria-label="Regional history"><a href="#world">World overview</a>${scope === "europe" ? '<a href="#atlas/europe">Northern Europe: detailed history</a>' : ""}<a href="sites/world-human-family.html">Family &amp; genetics guide</a></nav></header><div class="family-map-navigation"></div><div class="family-layout"><aside class="family-reader"><div class="family-filter"><label>Lineage<select id="family-taxon"><option value="all">All human-family branches</option>${taxa.map((t) => `<option value="${t.id}"${state.taxon === t.id ? " selected" : ""}>${esc(t.name)}</option>`).join("")}</select></label><label>Jump to a chapter<select id="family-era"><option value="">Choose a period</option><option value="${first}">Earliest mapped evidence</option><option value="-2800000">Early Homo</option><option value="-350000">Many human lineages</option><option value="-70000">Later dispersals</option><option value="-12000">After the Ice Age</option><option value="-7000">Farmers and population change</option><option value="1900">1900 endpoint</option></select></label></div><section id="family-happening-now" class="family-happening-now" aria-live="polite"></section><section id="family-detail" aria-live="polite"></section><details class="family-reading"><summary>How to read this draft</summary><p>Bright points mark evidence whose dating range contains the map year. Fainter points are earlier evidence, not a claim of continuing occupation. A dating range can express uncertainty rather than continuous activity.</p><p>Dashed connections represent broad dispersal models; pink dotted connections concern admixture. Their geometry is schematic and does not establish a surveyed route or an exact meeting place. Motion does not encode speed or population.</p><p>Last known evidence is not an extinction date. Genes, languages and material cultures do not map one-to-one.</p><p>Deep-time labels retain the source’s approximate ages. BP uses 1950 as its reference. Modern coastlines are a navigation aid, not reconstructed prehistoric shores.</p></details><h2 class="family-list-heading">Evidence in this view</h2><div id="family-evidence-list"></div></aside><div class="family-map-column"><div class="family-map-top"><span>${stats.records} evidence anchors · ${stats.references} references</span><div><button id="family-zoom-out" aria-label="Zoom out">−</button><button id="family-zoom-in" aria-label="Zoom in">+</button><button id="family-reset">Reset map</button></div></div><div class="family-map-stage"><svg id="family-map" viewBox="0 0 1000 620" role="group" aria-label="Human-family evidence map"></svg><div id="family-map-banner" class="family-map-banner" aria-live="polite"></div></div><div class="family-legend"><span><i class="family-dot"></i>Dated evidence</span><span><i class="family-dot earlier"></i>Earlier evidence</span><span>Dashed: dispersal model</span><span class="family-admixture">Dotted: admixture evidence</span></div><div id="family-wave-list"></div></div></div><footer class="family-timeline"><div><strong id="family-year"></strong><span id="family-date-note">Evidence changes are spaced for reading; long gaps are shortened.</span></div><div class="family-transport"><button id="family-back" aria-label="Previous evidence change">Previous</button><button id="family-play">Play</button><button id="family-next" aria-label="Next evidence change">Next</button></div><input id="family-slider" type="range" min="0" max="10000" step="1" aria-label="Human-family map year"><div class="family-time-ends"><span>${deepTimeLabel(first)}</span><span>1900 CE</span></div></footer></article>`;
+  host.innerHTML = `<article class="family-page"><header class="family-heading"><div><p class="world-kicker">THE SPREAD OF PEOPLES · FIRST BROAD FRAMEWORK</p><h1>${esc(title)}</h1><p>Evidence anchors and broad connections. A foundation for the detailed histories still to come.</p></div><nav aria-label="Regional history"><a href="#world">World overview</a>${scope === "europe" ? '<a href="#atlas/europe">Northern Europe: detailed history</a>' : ""}<a href="sites/world-human-family.html">Family &amp; genetics guide</a></nav></header><div class="family-map-navigation"></div><div class="family-layout"><aside class="family-reader"><div class="family-filter"><label>Lineage<select id="family-taxon"><option value="all">All human-family branches</option>${taxa.map((t) => `<option value="${t.id}"${state.taxon === t.id ? " selected" : ""}>${esc(t.name)}</option>`).join("")}</select></label><label>Jump to a chapter<select id="family-era"><option value="">Choose a period</option><option value="${first}">Earliest mapped evidence</option><option value="-2800000">Early Homo</option><option value="-350000">Many human lineages</option><option value="-70000">Later dispersals</option><option value="-12000">After the Ice Age</option><option value="-7000">Farmers and population change</option><option value="1900">1900 endpoint</option></select></label></div><section id="family-happening-now" class="family-happening-now" aria-live="polite"></section><section id="family-detail" aria-live="polite"></section><details class="family-reading"><summary>How to read this draft</summary><p>Bright points mark evidence whose dating range contains the map year. Fainter points are earlier evidence, not a claim of continuing occupation. A dating range can express uncertainty rather than continuous activity.</p><p>Dashed connections represent broad dispersal models; pink dotted connections concern admixture. Their geometry is schematic and does not establish a surveyed route or an exact meeting place. Motion does not encode speed or population.</p><p>Last known evidence is not an extinction date. Genes, languages and material cultures do not map one-to-one.</p><p>Deep-time labels retain the source’s approximate ages. BP uses 1950 as its reference. Modern coastlines are a navigation aid, not reconstructed prehistoric shores.</p></details><h2 class="family-list-heading">Evidence in this view</h2><div id="family-evidence-list"></div><details class="family-guides"><summary>Regional guides</summary><div id="family-guide-list"></div></details></aside><div class="family-map-column"><div class="family-map-top"><span>${stats.records} evidence anchors · ${stats.references} references</span><div><button id="family-zoom-out" aria-label="Zoom out">−</button><button id="family-zoom-in" aria-label="Zoom in">+</button><button id="family-reset">Reset map</button></div></div><div class="family-map-stage"><svg id="family-map" viewBox="0 0 1000 620" role="group" aria-label="Human-family evidence map"></svg><div id="family-map-banner" class="family-map-banner" aria-live="polite"></div></div><div class="family-legend"><span><i class="family-dot"></i>Dated evidence</span><span><i class="family-dot earlier"></i>Earlier evidence</span><span>Dashed: dispersal model</span><span class="family-admixture">Dotted: admixture evidence</span></div><div id="family-wave-list"></div></div></div><footer class="family-timeline"><div><strong id="family-year"></strong><span id="family-date-note">Evidence changes are spaced for reading; long gaps are shortened.</span></div><div class="family-transport"><button id="family-back" aria-label="Previous evidence change">Previous</button><button id="family-play">Play</button><button id="family-next" aria-label="Next evidence change">Next</button></div><input id="family-slider" type="range" min="0" max="10000" step="1" aria-label="Human-family map year"><div class="family-time-ends"><span>${deepTimeLabel(first)}</span><span>1900 CE</span></div></footer></article>`;
   if (study) {
     host.querySelector(".family-heading nav")!.innerHTML =
       `<a href="#world">World overview</a><a href="sites/${study.guideId}.html">Read the full deep dive</a>`;
@@ -328,6 +329,7 @@ export function mountWorldPlayer(
       deepTimeLabel(last);
     host.querySelector("#family-era")!.closest("label")!.remove();
     host.querySelector("#family-taxon")!.closest("label")!.remove();
+    host.querySelector(".family-guides")?.remove();
     host.querySelector(".family-heading .world-kicker")!.textContent =
       "THE SPREAD OF PEOPLES · DATED DEEP DIVE";
     host
@@ -390,6 +392,17 @@ export function mountWorldPlayer(
   const related = (data.studies ?? []).filter(
     (s) => scope === "world" || s.regionIds.includes(scope),
   );
+  if (!study) {
+    const scopeGuides = worldGuides
+      .filter((g) => scope === "world" || g.atlasIds.includes(scope))
+      .sort(
+        (a, b) =>
+          (b.atlasIds[0] === scope ? 1 : 0) - (a.atlasIds[0] === scope ? 1 : 0),
+      );
+    host.querySelector("#family-guide-list")!.innerHTML = scopeGuides
+      .map((g) => `<p><a href="${esc(g.href)}">${esc(g.title)} ↗</a></p>`)
+      .join("");
+  }
   if (!study && related.length)
     host
       .querySelector(".family-heading")!
@@ -435,9 +448,41 @@ export function mountWorldPlayer(
         type: "MultiPoint",
         coordinates: [
           [-20, -36],
-          [-20, 37],
-          [55, 37],
+          [-20, 46.5],
+          [55, 46.5],
           [55, -36],
+        ],
+      },
+    );
+  else if (scope === "europe" && !study)
+    projection.fitExtent(
+      [
+        [80, 40],
+        [920, 580],
+      ],
+      {
+        type: "MultiPoint",
+        coordinates: [
+          [-24, 30],
+          [-24, 65],
+          [50, 65],
+          [50, 30],
+        ],
+      },
+    );
+  else if (scope === "asia-pacific" && !study)
+    projection.fitExtent(
+      [
+        [65, 35],
+        [935, 585],
+      ],
+      {
+        type: "MultiPoint",
+        coordinates: [
+          [26, -44],
+          [26, 72],
+          [178, 72],
+          [178, -44],
         ],
       },
     );

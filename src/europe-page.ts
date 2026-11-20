@@ -138,7 +138,7 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
   if(point){pause();map.focusRegion([point.lon,point.lat],12,'world');}
  });
  el('.europe-atlas').addEventListener('click',function onClick(e){const button=(e.target as HTMLElement).closest<HTMLButtonElement>('[data-europe-record]');if(button){const r=all.find(r=>r.id===button.dataset.europeRecord);if(r){pause();state.selected=r.id;navigation.showFacts();map.focus(r);renderDetails();}}});
- el('#europe-guide-list').innerHTML=worldGuides.filter(g=>g.atlasIds.includes('europe')).map(g=>`<p><a href="${esc(g.href)}">${esc(g.title)} ↗</a></p>`).join('');
+ el('#europe-guide-list').innerHTML=worldGuides.filter(g=>g.atlasIds.includes('europe')).sort((a,b)=>(b.atlasIds[0]==='europe'?1:0)-(a.atlasIds[0]==='europe'?1:0)).map(g=>`<p><a href="${esc(g.href)}">${esc(g.title)} ↗</a></p>`).join('');
  function tick(now:number){
   if(disposed)return;
   const dt=Math.min(500,now-last);last=now;

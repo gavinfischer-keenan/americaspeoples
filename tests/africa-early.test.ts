@@ -152,4 +152,8 @@ test('Europe and Asia-Pacific extend systematically to 1900 CE with zero sparse 
   assert.ok(g.sources.some(s=>s.url.includes('doi.org')),`Guide ${id} includes peer-reviewed DOI sources`);
   assert.ok(g.sources.some(s=>s.url.includes('whc.unesco.org')),`Guide ${id} includes official UNESCO WHC dossier`);
  }
+ assert.equal(guides.length,85,'All 85 world guides validate cleanly');
+ for(const g of guides){
+  assert.ok(g.relatedGuideIds&&g.relatedGuideIds.length>=1,`Guide ${g.id} includes Continue exploring cross-links`);
+ }
 });

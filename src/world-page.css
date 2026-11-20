@@ -519,15 +519,21 @@
   margin-top: 5px;
   font-size: 11px;
 }
-.family-reading {
+.family-reading,
+.family-guides {
   font-size: 12px;
   margin: 24px 0;
   border-top: 1px solid #d8e2e3;
   padding-top: 14px;
 }
-.family-reading summary {
+.family-reading summary,
+.family-guides summary {
   cursor: pointer;
   font-weight: 650;
+}
+.family-guides p {
+  margin: 8px 0;
+  line-height: 1.45;
 }
 .family-reader .family-list-heading {
   font-size: 15px;
