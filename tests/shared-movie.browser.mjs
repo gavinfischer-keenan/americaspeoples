@@ -13,9 +13,8 @@ try{
  assert.equal(await page.locator('#story-select').inputValue(),'free');
  assert.equal(await page.getByLabel('Map region',{exact:true}).inputValue(),'americas');
  await page.getByRole('button',{name:'Pause',exact:true}).click();
- assert.ok(Number(await page.locator('#year-number').inputValue())>50000,'opening begins in the earliest evidence');
- const openingMap=await page.locator('#map-host').boundingBox(),early=await point('px-madjedbebe-onset').boundingBox();
- assert.ok(early&&early.x>=openingMap.x&&early.x<openingMap.x+openingMap.width,'early Australian evidence is inside the opening overview');
+ assert.ok(Number(await page.locator('#year-number').inputValue())>30000,'Americas opening begins in the earliest evidence');
+ const openingMap=await page.locator('#map-host').boundingBox();
  assert.ok(await page.locator('[data-terrain="earth"] image').count()>=1);
  await page.screenshot({path:'test-results/shared-history-opening.png'});
  await page.locator('#americas-jump').selectOption('1492');
@@ -71,6 +70,11 @@ try{
  await page.locator('#story-progress').press('End'); // The expanded early chapters now precede the Taos occupation record.
  await page.getByRole('button',{name:'Reset map view',exact:true}).click();
  assert.ok(await point('settlement-taos-habitation').count(),'story timeline retains other places on zoom-out');
+ await page.goto(origin+'/#atlas/pacific');await page.locator('#map-host .world').waitFor();
+ assert.equal(await page.getByLabel('Map region',{exact:true}).inputValue(),'pacific');
+ assert.ok(Number(await page.locator('#year-number').inputValue())>50000,'Pacific opening begins in earliest Sahul evidence');
+ const pacOpeningMap=await page.locator('#map-host').boundingBox(),early=await point('px-madjedbebe-onset').boundingBox();
+ assert.ok(early&&early.x>=pacOpeningMap.x&&early.x<pacOpeningMap.x+pacOpeningMap.width,'early Australian evidence is inside the Pacific opening overview');
  await mapSetting(page, () => page.getByLabel('Choose a story',{exact:true}).selectOption('hawaii-connections'));
  await page.locator('[data-scene="6"]').click();
  await page.locator('[data-terrain="hawaiian-islands"]').waitFor();
@@ -79,6 +83,10 @@ try{
  await page.screenshot({path:'test-results/shared-history-hawaii.png'});
  await mapSetting(page,()=>page.locator('#whole-movie').click());
  assert.equal(await page.locator('#story-select').inputValue(),'free');
+ assert.equal(await page.getByLabel('Map region',{exact:true}).inputValue(),'pacific');
+ await page.getByRole('button',{name:'Region: Pacific',exact:true}).click();
+ await page.getByRole('navigation',{name:'Choose a region',exact:true}).getByRole('link',{name:'Americas',exact:true}).click();
+ await page.getByRole('button',{name:'Region: Americas',exact:true}).waitFor();
  assert.equal(await page.getByLabel('Map region',{exact:true}).inputValue(),'americas');
  await page.screenshot({path:'test-results/shared-history-desktop.png'});
  await page.setViewportSize({width:390,height:844});

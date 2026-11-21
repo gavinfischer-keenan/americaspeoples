@@ -1,7 +1,7 @@
 import './map-navigation.css';
 
 export interface MapNavigationOptions {
- region?:'americas'|'africa'|'europe'|'asia-pacific';
+ region?:'americas'|'pacific'|'africa'|'europe'|'asia-pacific';
  settings?:HTMLElement[];
  facts:HTMLElement[];
  onFactsToggle?:(open:boolean)=>void;
@@ -11,7 +11,7 @@ export interface MapNavigationOptions {
 }
 export interface MapNavigation {showFacts():void;closeMenus():void;dispose():void}
 let sequence=0;
-const destinations=[['americas','Americas','#movie'],['africa','Africa','#atlas/africa'],['europe','Europe','#atlas/europe'],['asia-pacific','Asia','#atlas/asia-pacific']] as const;
+const destinations=[['americas','Americas','#movie'],['pacific','Pacific','#atlas/pacific'],['africa','Africa','#atlas/africa'],['europe','Europe','#atlas/europe'],['asia-pacific','Asia','#atlas/asia-pacific']] as const;
 
 /** Shared normal-flow navigation. Supplied settings retain their handlers/state. */
 export function mountMapNavigation(host:HTMLElement,options:MapNavigationOptions):MapNavigation {

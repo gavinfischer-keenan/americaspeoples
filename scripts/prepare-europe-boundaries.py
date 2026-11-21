@@ -103,7 +103,42 @@ nordic = box(3, 53.2, 34, 72)
 iceland = box(-25, 62.8, -12.8, 67.1)
 faroes = box(-8, 61, -6, 63)
 greenland_west = box(-53, 63.5, -49, 65.4)
+continental = box(-10.5, 34.5, 45.0, 70.0)
+continental_non_uk = continental.difference(britain.union(ireland))
 rows = []
+
+
+def add_continental(name, authority, start, end, raw_geom, srcs, references, note, kind="nation", clip=continental):
+    if start > end:
+        return
+    g0 = shape(raw_geom)
+    if not g0.is_valid:
+        g0 = make_valid(g0)
+    clipped = g0.intersection(clip)
+    display = []
+    for p in polygons(clipped):
+        if p.area < 0.04:
+            continue
+        simp = p.simplify(0.14, preserve_topology=True)
+        if not simp.is_valid:
+            simp = make_valid(simp)
+        for q in polygons(simp):
+            if q.area >= 0.04 and len(q.exterior.coords) >= 4:
+                display.append(orient(q, sign=-1))
+    if not display:
+        return
+    display.sort(key=lambda geom: geom.area, reverse=True)
+    g = display[0] if len(display) == 1 else MultiPolygon(display)
+    xy = display[0].representative_point()
+    def round3(v):
+        return [round3(x) for x in v] if isinstance(v, (list, tuple)) else round(v, 3)
+    coordinates = round3(mapping(g)["coordinates"])
+    citation = next(s["title"] + ". " + s["license"] for s in SOURCES if s["id"] == srcs[0])
+    rows.append(dict(name=name, authority=authority, start=start, end=end, kind=kind, detail="broad",
+                     geometry=dict(type=g.geom_type, coordinates=coordinates),
+                     labelPoint=[round(xy.x, 4), round(xy.y, 4)], sourceIds=srcs, sourceRows=references, citation=citation,
+                     precision="Historical continental outline clipped to Europe (10.5°W–45°E, 34.5°N–70°N) and simplified at 0.14° for spherical display.",
+                     note=note))
 
 
 def polygons(g):
@@ -276,6 +311,131 @@ assert len(provinces) == 8
 add("Grand Duchy of Finland · Russian Empire", "autonomous-administration", "1812-01-01", "1900-12-31",
     polygons(union_all(provinces)), ["ristat","finland"], references,
     "The autonomous grand duchy included Old Finland from 1812. The regional outline is generalized from its eight governorates in 1897. It includes Vyborg and excludes Petsamo. Small islands, including Åland, and local border adjustments within the century are unresolved in this mainland reconstruction.", "territory")
+
+# Continental and Mediterranean Europe (1 CE – 1815 CE from Cliopatria; 1816–1900 from CShapes-Europe).
+CONTINENTAL_CLIOPATRIA = [
+    ("Roman Empire", "Roman Empire · continental provinces", "imperial-territory", 1, 394, continental_non_uk, "Cliopatria outline of Roman imperial territory clipped to continental and Mediterranean Europe (Britain shown separately).", "territory"),
+    ("Western Roman Empire", "Western Roman Empire", "imperial-territory", 395, 475, continental_non_uk, "Western Roman imperial territory after the 395 CE division.", "territory"),
+    ("Eastern Roman Empire", "Eastern Roman / Byzantine Empire", "imperial-territory", 395, 632, continental, "Eastern Roman imperial territory clipped to the Aegean, Balkans, Italy and Anatolian Europe.", "territory"),
+    ("Byzantine Empire", "Byzantine Empire", "imperial-territory", 633, 1453, continental, "Byzantine imperial territory clipped to southeastern Europe and Anatolia.", "territory"),
+    ("Visigothic Kingdom", "Visigothic Kingdom", "kingdom", 426, 723, continental, "Visigothic royal outline in Iberia and southwestern Gaul.", "nation"),
+    ("Kingdom of the Franks", "Kingdom of the Franks", "kingdom", 462, 849, continental, "Merovingian and Carolingian Frankish realm before the 843/850 partition.", "nation"),
+    ("West Franks", "West Francia", "kingdom", 850, 989, continental, "Western Frankish kingdom prior to Capetian consolidation.", "nation"),
+    ("East Franks", "East Francia", "kingdom", 850, 910, continental, "Eastern Frankish kingdom before Ottonian imperial consolidation.", "nation"),
+    ("Emirate of Córdoba", "Emirate of Córdoba (Al-Andalus)", "crown-territory", 757, 935, continental, "Umayyad Emirate of Córdoba in the Iberian Peninsula.", "nation"),
+    ("Caliphate of Córdoba", "Caliphate of Córdoba (Al-Andalus)", "imperial-territory", 936, 1031, continental, "Caliphate of Córdoba peak territorial extent in Iberia.", "nation"),
+    ("First Bulgarian Empire", "First Bulgarian Empire", "kingdom", 682, 1017, continental, "First Bulgarian Empire in the eastern Balkans.", "nation"),
+    ("Kievan Rus'", "Kievan Rus’", "confederation", 882, 1240, continental, "East Slavic principalities centered on Kyiv and Novgorod before the Mongol campaigns.", "territory"),
+    ("Kingdom of France", "Kingdom of France", "kingdom", 990, 1791, continental, "French royal crown lands and expanding realm in western Europe through 1791.", "nation"),
+    ("French First Republic", "French First Republic", "state-union", 1792, 1795, continental, "First French Republic revolutionary European extent.", "state"),
+    ("French Directory", "French Directory", "state-union", 1796, 1799, continental, "French Directory European territory and annexed departments.", "state"),
+    ("French Consulate", "French Consulate", "state-union", 1800, 1804, continental, "French Consulate European extent.", "state"),
+    ("First French Empire", "First French Empire", "imperial-territory", 1805, 1814, continental, "First French Empire metropolitan and directly annexed European departments.", "territory"),
+    ("Bourbon Kingdom of France", "Bourbon Restoration · Kingdom of France", "kingdom", 1815, 1815, continental, "Post-Vienna Kingdom of France in 1815.", "nation"),
+    ("Kingdom of Castile", "Kingdom of Castile", "kingdom", 961, 1235, continental, "Kingdom of Castile prior to permanent union with León in 1230/1236.", "nation"),
+    ("Crown of Castile", "Crown of Castile", "shared-crown", 1236, 1515, continental, "Composite Castilian–Leonese monarchy in Iberia.", "nation"),
+    ("Kingdom of Aragon", "Kingdom of Aragon", "kingdom", 1015, 1168, continental, "Early Kingdom of Aragon in northeastern Iberia.", "nation"),
+    ("Crown of Aragon", "Crown of Aragon", "shared-crown", 1169, 1515, continental, "Composite Crown of Aragon across eastern Iberia and the western Mediterranean.", "nation"),
+    ("Emirate of Granada", "Nasrid Emirate of Granada", "kingdom", 1241, 1491, continental, "Nasrid Emirate of Granada prior to the 1492 capitulation.", "nation"),
+    ("Kingdom of Spain", "Kingdom of Spain · Iberian & European domains", "shared-crown", 1516, 1815, continental, "Composite Spanish monarchy European footprint; overseas territories excluded.", "nation"),
+    ("Kingdom of Portugal", "Kingdom of Portugal", "kingdom", 1147, 1815, continental, "Continental Kingdom of Portugal; Atlantic islands and overseas possessions excluded.", "nation"),
+    ("Holy Roman Empire", "Holy Roman Empire", "confederation", 962, 1648, continental, "Composite imperial framework in Central Europe prior to Westphalia.", "territory"),
+    ("Holy Roman Empire", "Holy Roman Empire · post-Westphalian", "confederation", 1649, 1806, continental, "Post-1648 imperial extent; individual territorial estates retained internal sovereignty.", "territory"),
+    ("Papal States", "Papal States", "crown-territory", 755, 1815, continental, "Temporal papal domains across central Italy.", "territory"),
+    ("Republic of Venice", "Republic of Venice", "autonomous-administration", 705, 1796, continental, "Venetian lagoon, Terraferma and Adriatic maritime possessions.", "territory"),
+    ("Republic of Genoa", "Republic of Genoa", "autonomous-administration", 1010, 1795, continental, "Genoese Ligurian and Corsican maritime republic.", "territory"),
+    ("Republic of Florence", "Republic & Duchy of Florence / Tuscany", "autonomous-administration", 1260, 1737, continental, "Florentine republic and early Tuscan Tuscan state.", "territory"),
+    ("Kingdom of Sicily", "Kingdom of Sicily", "kingdom", 1139, 1384, continental, "Norman, Hohenstaufen and Sicilian crown lands in southern Italy and Sicily.", "nation"),
+    ("Kingdom of Naples", "Kingdom of Naples", "kingdom", 1285, 1814, continental, "Peninsular southern Italian Kingdom of Naples.", "nation"),
+    ("House of Savoy", "Duchy of Savoy · Alpine & Piedmont", "crown-territory", 1564, 1720, continental, "Savoyard territories straddling the western Alps and Piedmont.", "territory"),
+    ("Kingdom of Sardinia", "Kingdom of Sardinia–Piedmont", "kingdom", 1721, 1815, continental, "Savoyard–Sardinian monarchy in Piedmont, Savoy and Sardinia.", "nation"),
+    ("Kingdom of Hungary", "Kingdom of Hungary", "kingdom", 1000, 1546, continental, "Medieval Kingdom of Hungary across the Carpathian Basin.", "nation"),
+    ("Kingdom of Bohemia", "Kingdom of Bohemia", "kingdom", 1202, 1528, continental, "Bohemian crown lands before Habsburg dynastic union.", "nation"),
+    ("Kingdom of Poland", "Kingdom of Poland", "kingdom", 962, 1449, continental, "Piast and early Jagiellonian Kingdom of Poland.", "nation"),
+    ("Grand Duchy of Lithuania", "Grand Duchy of Lithuania", "kingdom", 1220, 1449, continental, "Grand Duchy of Lithuania prior to the formal 1569 Commonwealth union.", "nation"),
+    ("Polish-Lithuanian Commonwealth", "Polish–Lithuanian Commonwealth", "shared-crown", 1572, 1793, continental, "Composite Polish–Lithuanian Commonwealth created by the Union of Lublin.", "nation"),
+    ("Habsburg Monarchy", "Habsburg Monarchy", "shared-crown", 1487, 1805, continental, "Central European hereditary, Bohemian and Hungarian lands under the Habsburg crown.", "nation"),
+    ("Austrian Empire", "Austrian Empire", "imperial-territory", 1806, 1815, continental, "Austrian Empire established following dissolution of the Holy Roman Empire.", "nation"),
+    ("Brandenburg-Prussia", "Brandenburg–Prussia", "crown-territory", 1619, 1720, continental, "Composite Hohenzollern realms of Brandenburg and Prussia.", "nation"),
+    ("Kingdom of Prussia", "Kingdom of Prussia", "kingdom", 1702, 1815, continental, "Prussian monarchy in Central Europe prior to the German Confederation.", "nation"),
+    ("Dutch Republic", "Dutch Republic (United Provinces)", "confederation", 1582, 1795, continental, "Federated provinces of the Northern Netherlands.", "state"),
+    ("Swiss Confederation", "Old Swiss Confederacy", "confederation", 1294, 1815, continental, "Federated Alpine cantons and allied districts.", "territory"),
+    ("Ottoman Empire", "Ottoman Empire · European provinces", "imperial-territory", 1305, 1815, continental, "Ottoman European & Anatolian core clipped to the atlas Europe extent.", "territory"),
+    ("Grand Principality of Moscow", "Grand Principality of Moscow", "kingdom", 1294, 1546, continental, "Muscovite principality within northeastern Rus’.", "nation"),
+    ("Tsardom of Russia", "Tsardom of Russia · European core", "imperial-territory", 1547, 1720, continental, "Russian Tsardom west of 45°E; Siberian expansion extends outside this view.", "nation"),
+    ("Russian Empire", "Russian Empire · European provinces", "imperial-territory", 1721, 1815, continental, "European part of the Russian Empire prior to 1816 CShapes coverage.", "territory"),
+]
+
+cli_by_name = {}
+for i, f in enumerate(cli):
+    p = f["properties"]
+    if p.get("Type") == "POLITY":
+        cli_by_name.setdefault(p["Name"], []).append((i, p["FromYear"], p["ToYear"], f["geometry"]))
+
+for src_name, label, auth, lo, hi, clip_box, note, kind in CONTINENTAL_CLIOPATRIA:
+    for i, a0, b0, geom in cli_by_name.get(src_name, []):
+        a, b = max(lo, a0), min(hi, b0)
+        if a <= b:
+            add_continental(label, auth, f"{a:04}-01-01", f"{b:04}-12-31", geom, ["cliopatria"],
+                            [f"Cliopatria {i}: {src_name}, {a0}–{b0}"], note, kind, clip_box)
+
+for i, feature in enumerate(eth):
+    p = feature["properties"]
+    src_name = p["Name"]
+    if p["From"] > 1900:
+        continue
+    a, b = max(1816, p["From"]), min(1900, p["To"])
+    if a > b:
+        continue
+    start, end = f"{a:04}-01-01", f"{b:04}-12-31"
+    refs = [f"CShapes-Europe {i}: {src_name}, {p['From']}–{p['To']}, holder {p['Holder']}"]
+    geom = feature["geometry"]
+    def add_c(label, auth, note, kind="state", c_start=start, c_end=end):
+        add_continental(label, auth, c_start, c_end, geom, ["cshapes"], refs, note, kind, continental_non_uk)
+    if src_name == "France":
+        add_c("France", "state-union", "French state outline across 19th-century constitutional changes; overseas colonies excluded.")
+    elif src_name == "Spain":
+        add_c("Kingdom of Spain", "kingdom", "Peninsular Spain and Balearic core from CShapes-Europe.")
+    elif src_name == "Portugal":
+        add_c("Kingdom of Portugal", "kingdom", "Continental Portugal from CShapes-Europe.")
+    elif src_name == "Piedmont":
+        add_c("Kingdom of Sardinia–Piedmont", "kingdom", "Savoyard–Piedmontese state before 1861 Italian unification.")
+    elif src_name == "Kingdom of Naples":
+        add_c("Kingdom of the Two Sicilies", "kingdom", "Southern Italian and Sicilian state prior to 1861 unification.")
+    elif src_name == "Papal States":
+        add_c("Papal States", "crown-territory", "Central Italian Papal territory prior to 1870 incorporation into Italy.", "territory")
+    elif src_name in ("Italy", "Italy/Sardinia"):
+        add_c("Kingdom of Italy", "kingdom", "Unified Kingdom of Italy following the Risorgimento.", "state")
+    elif src_name == "Germany":
+        for x0, x1, lbl, nm in ((a, min(b, 1870), "Kingdom of Prussia", "Prussian state prior to 1871 German unification."),
+                                (max(a, 1871), b, "German Empire", "German Empire following January 1871 unification.")):
+            if x0 <= x1:
+                add_c(lbl, "imperial-territory" if x0 >= 1871 else "kingdom", nm, "state", f"{x0:04}-01-01", f"{x1:04}-12-31")
+    elif src_name == "Germany (Prussia)":
+        add_c("German Empire", "imperial-territory", "German Empire metropolitan outline in CShapes-Europe.", "state")
+    elif src_name in ("Bavaria", "Saxony", "Württemberg", "Hanover"):
+        add_c(f"Kingdom of {src_name}", "kingdom", f"German state of {src_name} prior to the 1871 German Empire.")
+    elif src_name == "Austria-Hungary":
+        for x0, x1, lbl, nm in ((a, min(b, 1866), "Austrian Empire", "Habsburg Austrian Empire prior to the 1867 Compromise."),
+                                (max(a, 1867), b, "Austria-Hungary", "Dual Monarchy of Austria-Hungary after the 1867 Compromise.")):
+            if x0 <= x1:
+                add_c(lbl, "shared-crown" if x0 >= 1867 else "imperial-territory", nm, "state", f"{x0:04}-01-01", f"{x1:04}-12-31")
+    elif src_name == "Netherlands":
+        add_c("Kingdom of the Netherlands", "kingdom", "Metropolitan Netherlands from CShapes-Europe.")
+    elif src_name == "Belgium":
+        add_c("Kingdom of Belgium", "kingdom", "Independent Kingdom of Belgium following 1830–1831 secession.")
+    elif src_name == "Switzerland":
+        add_c("Swiss Confederation", "confederation", "Federal Swiss state in Central Europe.")
+    elif src_name == "Greece":
+        add_c("Kingdom of Greece", "kingdom", "Greek state following independence from 1829–1830.")
+    elif src_name in ("Ottoman Empire", "Turkey (Ottoman Empire)"):
+        add_c("Ottoman Empire · European provinces", "imperial-territory", "Ottoman territory clipped to European and Aegean provinces.", "territory")
+    elif src_name in ("Romania", "Rumania"):
+        add_c("Romania", "kingdom", "Romanian state following the 1878 Congress of Berlin.")
+    elif src_name in ("Serbia", "Bulgaria", "Montenegro"):
+        add_c(src_name, "kingdom", f"Balkan state of {src_name} after international recognition.")
+    elif src_name in ("Russia", "Russia (Soviet Union)"):
+        add_c("Russian Empire · European provinces", "imperial-territory", "European extent of the Russian Empire clipped to 45°E; Grand Duchy of Finland is also mapped separately.", "territory")
 
 # Mark externally supported constitutional dates where they fall inside atlas source intervals.
 for row in rows:

@@ -1,5 +1,5 @@
 import { geoArea } from "d3-geo";
-export type WorldRegion = "americas" | "africa" | "europe" | "asia-pacific";
+export type WorldRegion = "americas" | "pacific" | "africa" | "europe" | "asia-pacific";
 export type WorldScope = WorldRegion | "world";
 export interface WorldSource {
   id: string;
@@ -119,10 +119,17 @@ export const worldRegions: {
 }[] = [
   {
     id: "americas",
-    title: "Americas & Pacific",
-    center: [-92, 24],
+    title: "Americas",
+    center: [-92, 18],
     href: "#movie",
     color: "#FA742A",
+  },
+  {
+    id: "pacific",
+    title: "Australia & Pacific",
+    center: [162, -16],
+    href: "#atlas/pacific",
+    color: "#5CC8C0",
   },
   {
     id: "africa",
@@ -134,14 +141,14 @@ export const worldRegions: {
   {
     id: "europe",
     title: "Europe & Mediterranean",
-    center: [18, 53],
+    center: [14, 49],
     href: "#atlas/europe",
     color: "#97C798",
   },
   {
     id: "asia-pacific",
     title: "Asia",
-    center: [104, 30],
+    center: [92, 34],
     href: "#atlas/asia-pacific",
     color: "#DCEBDD",
   },
@@ -496,6 +503,7 @@ export function worldRoute(
     return `study:${hash.slice(7)}`;
   if (hash === "#origins/europe") return "europe";
   if (hash === "#origins/americas") return "americas";
+  if (hash === "#origins/pacific") return "pacific";
   if (hash === "#atlas/africa/early") return "africa-early";
   if (hash === "#atlas/africa") return "africa";
   if (hash === "#atlas/asia-pacific" || hash === "#atlas/asia") return "asia-pacific";

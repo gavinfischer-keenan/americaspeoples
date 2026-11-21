@@ -92,10 +92,10 @@ test('Asia-Pacific and Europe cover earliest hominins through 10,000 BCE with co
  for(const needle of ['ʿUbeidiya','Gesher Benot Yaʿaqov','Qesem','Tabun','Ohalo II','Shubayqa','Khall Amayshan','Jebel Faya','Qaleh Kurd','Shanidar']){
   assert.ok(africaPre10k.some(e=>e.title.includes(needle)),`Missing Middle East Pleistocene site in Africa & Middle East: ${needle}`);
  }
- const americasPre10k=data.evidence.filter(e=>inWorldScope(e,'americas')&&e.start<=-10000&&e.end<=-10000);
- assert.ok(americasPre10k.length>=10,'Americas & Pacific pre-10,000 BCE world coverage includes Sahul/Australia/PNG');
+ const pacificPre10k=data.evidence.filter(e=>inWorldScope(e,'pacific')&&e.start<=-10000&&e.end<=-10000);
+ assert.ok(pacificPre10k.length>=10,'Australia & Pacific pre-10,000 BCE world coverage includes Sahul/Australia/PNG');
  for(const needle of ['Kosipe','Nawarla Gabarnmang','Warratyi','Lake Mungo','Buang Merabak','Kutikina']){
-  assert.ok(americasPre10k.some(e=>e.title.includes(needle)),`Missing Sahul Pleistocene site in Americas & Pacific: ${needle}`);
+  assert.ok(pacificPre10k.some(e=>e.title.includes(needle)),`Missing Sahul Pleistocene site in Australia & Pacific: ${needle}`);
  }
  const asiaUrls=new Set(data.sources.filter(s=>asiaPre10k.some(e=>e.sourceIds.includes(s.id))).map(s=>s.url));
  for(const host of ['doi.org','whc.unesco.org','humanorigins.si.edu']){
@@ -118,7 +118,7 @@ test('Europe and Asia-Pacific extend systematically to 1900 CE with zero sparse 
  const eurAnatoliaAsho=data.evidence.filter(e=>e.id.startsWith('asho-')&&inWorldScope(e,'europe'));
  const asiaHolocene=data.evidence.filter(e=>e.id.startsWith('asho-')&&inWorldScope(e,'asia-pacific'));
  const africaMiddleEastAsho=data.evidence.filter(e=>e.id.startsWith('asho-')&&inWorldScope(e,'africa'));
- const americasPacificAsho=data.evidence.filter(e=>e.id.startsWith('asho-')&&inWorldScope(e,'americas'));
+ const pacificAsho=data.evidence.filter(e=>e.id.startsWith('asho-')&&inWorldScope(e,'pacific'));
  assert.equal(eurHolocene.length,37,'Holocene Europe covers 37 regional sites from Mesolithic Star Carr to 1900 CE');
  assert.equal(asiaHolocene.length,32,'Holocene Asia covers 32 Asian regional sites to 1900 CE');
  assert.ok(eurHolocene.some(e=>e.end===1900),'Europe extends cleanly to 1900 CE');
@@ -136,7 +136,7 @@ test('Europe and Asia-Pacific extend systematically to 1900 CE with zero sparse 
   assert.ok(africaMiddleEastAsho.some(e=>e.title.includes(needle)),`Missing Middle East Holocene site in Africa & Middle East: ${needle}`);
  }
  for(const needle of ['Kuk Swamp','Teouma','Nan Madol']){
-  assert.ok(americasPacificAsho.some(e=>e.title.includes(needle)),`Missing Pacific/PNG Holocene site in Americas & Pacific: ${needle}`);
+  assert.ok(pacificAsho.some(e=>e.title.includes(needle)),`Missing Pacific/PNG Holocene site in Australia & Pacific: ${needle}`);
  }
 
  const africaAll=data.evidence.filter(e=>inWorldScope(e,'africa'));

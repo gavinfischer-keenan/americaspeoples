@@ -28,7 +28,7 @@ export function validateRecord(value: unknown, complete = true): string[] {
   const r = value as EvidenceRecord;
   if (!object(r)) return ["Record must be an object."];
   const maxYear=recordEndYear(r.id);
-  const year=(x:unknown)=>Number.isSafeInteger(x)&&typeof x==='number'&&x>=-1_000_000&&x<=maxYear;
+  const year=(x:unknown)=>Number.isSafeInteger(x)&&typeof x==='number'&&x>=-1_600_000&&x<=maxYear;
   errors.push(...validateHistory(r));
   errors.push(...validatePopulation(r));
   errors.push(...validateLinguistics(r, complete));

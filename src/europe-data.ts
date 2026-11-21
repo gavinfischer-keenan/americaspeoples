@@ -34,7 +34,7 @@ export function validateEuropeData(input:unknown):EuropeData {
   const fail=(s:string):never=>{throw Error(`${e.id}: ${s}`);};
   if(!identifier(e.id)||ids.has(e.id)||!regions.has(e.regionId))fail('invalid identity or region');ids.add(e.id);
   if(!(e.category in europeCategories)||!['interval','occurrence'].includes(e.kind)||typeof e.approximate!=='boolean'||![e.title,e.place,e.summary,e.detail,e.uncertainty,e.dateLabel,e.dateMeaning].every(nonempty))fail('missing evidence text');
-  if(!Number.isSafeInteger(e.start)||!Number.isSafeInteger(e.end)||e.start < -1_000_000||e.start>e.end||e.end>END_YEAR)fail('invalid timeline dates');
+  if(!Number.isSafeInteger(e.start)||!Number.isSafeInteger(e.end)||e.start < -1_600_000||e.start>e.end||e.end>END_YEAR)fail('invalid timeline dates');
   if(!point(e.coordinates)||!cited(e.sourceIds))fail('invalid location or source links');
   if(e.guideId&&!/^world-[a-z0-9-]+$/.test(e.guideId))fail('invalid guide ID');
   if(e.destination&&!point(e.destination))fail('invalid destination');

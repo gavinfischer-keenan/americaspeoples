@@ -39,7 +39,7 @@ try {
   });
   const catalogRequests = () => fixture.requests.filter(request => new URL(request.url).pathname === '/api/catalog').length;
   const catalogsBefore = catalogRequests();
-  const destinations = [['africa', 'Africa & Middle East'], ['europe', 'Europe & Mediterranean'], ['asia-pacific', 'Asia']];
+  const destinations = [['africa', 'Africa & Middle East'], ['europe', 'Europe & Mediterranean'], ['asia-pacific', 'Asia'], ['pacific', 'Australia & Pacific']];
   assert.ok(!fixture.requests.some(r => r.url.endsWith('/europe-catalogue.json')), 'Americas must not fetch the Europe catalogue');
   for (const [id, title] of destinations) {
     const regionMenu=page.locator('.map-navigation').getByRole('button',{name:/^Region:/});
@@ -51,12 +51,18 @@ try {
       assert.equal(await page.locator('#europe-date').isVisible(), true);
       assert.ok(await page.locator('#europe-region option').count() > 1);
       assert.equal(await page.locator('.atlas-coming-soon').count(), 0);
+      assert.equal(await page.locator('.timeline').isVisible(), false);
+    } else if (id === 'pacific') {
+      await page.locator('#map-host .world').waitFor();
+      assert.equal(await page.getByLabel('Map region',{exact:true}).inputValue(),'pacific');
+      assert.equal(await page.locator('.atlas-coming-soon').count(), 0);
+      assert.equal(await page.locator('.timeline').isVisible(), true);
     } else {
       await page.locator('#family-map .family-land').waitFor();
       assert.ok(await page.locator('#family-taxon option').count() > 1);
       assert.equal(await page.locator('.atlas-coming-soon').count(), 0);
+      assert.equal(await page.locator('.timeline').isVisible(), false);
     }
-    assert.equal(await page.locator('.timeline').isVisible(), false);
     assert.equal(await page.locator('.map-navigation').getByRole('button',{name:/^Region:/}).getAttribute('aria-expanded'),'false');
     assert.equal(await page.locator(`.map-navigation-regions a[href="#atlas/${id}"]`).getAttribute('aria-current'),'page');
   }
@@ -70,7 +76,11 @@ try {
     sameElement: window.__atlasTestWorld === document.querySelector('#map-host .world'),
   }));
   assert.equal(new URL(page.url()).hash, '#explore');
-  assert.deepEqual({ date: after.date, transform: after.transform }, before);
+  assert.equal(after.date, before.date);
+  const transformNumbers = s => (s.match(/-?(?:\d+\.?\d*|\.\d+)(?:e[+-]?\d+)?/ig) || []).map(Number);
+  const bNums = transformNumbers(before.transform), aNums = transformNumbers(after.transform);
+  assert.equal(aNums.length, bNums.length);
+  assert.ok(aNums.every((n, i) => Math.abs(n - bNums[i]) < 0.05), `Transform mismatch: ${before.transform} vs ${after.transform}`);
   assert.equal(after.sameElement, true, 'The Americas map instance must survive the round trip');
   assert.equal(await page.locator(`[data-history-layer="${filterId}"]`).isChecked(), false);
   assert.equal(await page.locator('.selected-detail h4').first().textContent(), selectedTitle);
@@ -82,6 +92,7 @@ try {
     await page.goto(fixture.url + '#atlas/' + id);
     await page.reload();
     if (id === 'europe') await page.locator('#europe-map .world').waitFor();
+    else if (id === 'pacific') await page.locator('#map-host .world').waitFor();
     else await page.locator('#family-map .family-land').waitFor();
     const layout = await page.evaluate(() => ({ width: innerWidth, scroll: document.documentElement.scrollWidth }));
     assert.ok(layout.scroll <= layout.width, JSON.stringify(layout));

@@ -37,3 +37,17 @@ test('selection does not invent future evidence or continuous occupation after a
  assert.equal(europeSelection(records,1801,true).length,1);
  assert.deepEqual(europeDates(d.entries),[1800,1801,1900]);
 });
+test('Pan-European dataset validates continental and Mediterranean regions back to 1.42 Ma',async()=>{
+ const {readEuropeData}=await import('../scripts/europe-build');
+ const data=await readEuropeData();
+ const regionCounts=new Map<string,number>();
+ for(const entry of data.entries)regionCounts.set(entry.regionId,(regionCounts.get(entry.regionId)??0)+1);
+ for(const id of ['france','italy','spain']){
+  assert.ok((regionCounts.get(id)??0)>=15,`Expected at least 15 entries in ${id}, got ${regionCounts.get(id)??0}`);
+ }
+ for(const id of ['portugal','germany','low-countries','alpine','central-east','greece-balkans','eastern-europe']){
+  assert.ok((regionCounts.get(id)??0)>=5,`Expected populated entries in ${id}, got ${regionCounts.get(id)??0}`);
+ }
+ const earliest=Math.min(...data.entries.map(e=>e.start));
+ assert.ok(earliest<=-1_400_000,`Expected Deep Pleistocene European evidence <= -1,400,000, got ${earliest}`);
+});

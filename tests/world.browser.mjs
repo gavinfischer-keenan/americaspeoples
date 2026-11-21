@@ -13,7 +13,7 @@ const studies=['genghis-khan','marco-polo','silk-roads','hannibal','ibn-fadlan',
 });
 const fixture=await browserFixture({reducedMotion:'reduce'});
 const {page}=fixture;
-const regionRoutes={americas:'#movie',africa:'#atlas/africa',europe:'#atlas/europe','asia-pacific':'#atlas/asia-pacific'};
+const regionRoutes={americas:'#movie',pacific:'#atlas/pacific',africa:'#atlas/africa',europe:'#atlas/europe','asia-pacific':'#atlas/asia-pacific'};
 const yearLabel=year=>{
  if(1950-year>=1_000_000)return '~'+((1950-year)/1_000_000).toLocaleString('en-US',{maximumFractionDigits:2})+' million years ago';
  if(year<=-10000)return '~'+((1950-year)/1000).toLocaleString('en-US',{maximumFractionDigits:1})+' thousand years BP';
@@ -160,7 +160,7 @@ try{
   const toggle=page.getByRole('button',{name:'Region: '+regionName,exact:true});
   await toggle.click();
   for(const [id,href] of Object.entries(regionRoutes)){
-   const label={americas:'Americas',africa:'Africa',europe:'Europe','asia-pacific':'Asia'}[id];
+   const label={americas:'Americas',pacific:'Pacific',africa:'Africa',europe:'Europe','asia-pacific':'Asia'}[id];
    assert.equal(await page.locator('.map-navigation').getByRole('link',{name:label,exact:true}).getAttribute('href'),href);
   }
   await page.keyboard.press('Escape');

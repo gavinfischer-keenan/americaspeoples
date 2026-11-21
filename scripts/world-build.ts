@@ -13,6 +13,7 @@ import {
   type WorldSummary,
 } from "../src/world-model";
 import { renderWorldWebsite } from "../src/world-website";
+import { coordinateRegions } from "../src/region-partition";
 import { readEuropeData } from "./europe-build";
 import { readWorldGuides } from "./world-guide-data";
 
@@ -34,23 +35,6 @@ interface Observation {
   references: Reference[];
 }
 
-/** Navigation bins, deliberately overlapping in the Mediterranean; never historical borders. */
-function coordinateRegions([lon, lat]: [number, number]): WorldRegion[] {
-  const regions: WorldRegion[] = [];
-  if (
-    (lon >= -170 && lon < -25) ||
-    lon < -170 ||
-    (lon >= 110 && lat < -10) ||
-    (lon > 141 && lat < 20)
-  )
-    regions.push("americas");
-  if (lon >= -20 && lon <= 60 && lat >= -36 && lat <= 37.5)
-    regions.push("africa");
-  if (lon >= -25 && lon <= 60 && lat >= 35) regions.push("europe");
-  if (!regions.length || (lon > 56 && !((lon >= 110 && lat < -10) || (lon > 141 && lat < 20))))
-    regions.push("asia-pacific");
-  return regions;
-}
 const regionsFor = (coordinates: [number, number][]) => [
   ...new Set(coordinates.flatMap(coordinateRegions)),
 ];
@@ -193,13 +177,15 @@ export function createWorldSummary(input: SummaryInput): WorldSummary {
   const guideIds = new Set(input.guides.map((g) => g.id));
   const coverage: Record<WorldRegion, string> = {
     americas:
-      "Americas, Australia and Pacific archive; selected coverage from earliest occupation through 1900.",
+      "North, Central and South America, the Caribbean and Greenland; selected coverage from earliest occupation through 1900.",
+    pacific:
+      "Australia, New Guinea (Sahul), Aotearoa / New Zealand, Melanesia, Micronesia, Polynesia, Rapa Nui and Hawaiʻi through 1900.",
     africa:
       "Prehistoric to 1900 CE coverage across Southern, South-Central, East, Central, Horn, West, Saharan, Nile, North Africa and the Middle East.",
     europe:
-      "Earliest hominin to 1900 CE coverage spanning Pleistocene refugia, Mesolithic–Neolithic dispersals, Aegean palaces, Imperial Rome, Rus’ river corridors and industrial Britain.",
+      "Earliest hominin to 1900 CE coverage spanning Pleistocene refugia, Mesolithic–Neolithic dispersals, Classical Mediterranean, Continental kingdoms, Rus’ river corridors and industrial Britain.",
     "asia-pacific":
-      "Earliest hominin to 1900 CE coverage across Central Asia, the Indus & South Asia, East Asia, Korea/Japan, Steppes, and Southeast Asia.",
+      "Earliest hominin to 1900 CE coverage across Central Asia, the Indus & South Asia, East Asia, Korea/Japan, Steppes, and mainland & island Southeast Asia.",
   };
   return {
     version: input.version,
@@ -234,7 +220,7 @@ export function createWorldSummary(input: SummaryInput): WorldSummary {
       };
     }),
     method:
-      "Records are the union of canonical published archive evidence eligible through 1900 (including undated records), Europe evidence and human-family evidence. Europe canonicalRecordId aliases count once; schematic waves are counted separately. Unmapped archive records contribute to the global count, not a regional bin or earliest mapped date. Regions use approximate navigation bins from locations, destinations and route points: Americas & Pacific covers longitudes −170 to −25 plus Australia and Oceania (lon ≥ 110 south of −10° or lon > 141 south of 20°); Africa & Middle East covers longitude −20 to 60 and latitude −36 to 37.5; Europe & Mediterranean covers longitude −25 to 60 north of 35; Asia covers mainland and island Asia east of 56° (excluding Australia and Oceania). These are not historical borders. Human-family region IDs and guide atlas memberships are authoritative. Regional overlaps are deliberate; global totals are unions, not sums. References count cited evidence, wave and taxon sources plus guide bibliographies, deduplicated by normalized URL and explicit DOI aliases. Reference counts measure coverage, not votes for a theory. Earliest dates retain source labels and identify mapped evidence, not first arrival; unknown dates remain unknown.",
+      "Records are the union of canonical published archive evidence eligible through 1900 (including undated records), Europe evidence and human-family evidence. Europe canonicalRecordId aliases count once; schematic waves are counted separately. Unmapped archive records contribute to the global count, not a regional bin or earliest mapped date. Regions use approximate navigation bins from locations, destinations and route points: Americas covers the Americas, Caribbean and Greenland (longitudes −170 to −25, plus western Aleutians, excluding Oceania and Hawaiʻi); Australia & Pacific covers Australia (lon ≥ 110 south of −10°), New Guinea, Palau, Micronesia and Melanesia (lon ≥ 130 south of 28°N), Polynesia and Hawaiʻi (lon ≤ −135 south of 28°N), and Rapa Nui (lon ≤ −105 south of −10°); Africa & Middle East covers longitude −20 to 60 and latitude −36 to 37.5; Europe & Mediterranean covers longitude −25 to 60 north of 35; Asia covers mainland and island Asia east of 56° (excluding Australia, Pacific islands, and Hawaiʻi). These are not historical borders. Human-family region IDs and guide atlas memberships are authoritative. Regional overlaps are deliberate; global totals are unions, not sums. References count cited evidence, wave and taxon sources plus guide bibliographies, deduplicated by normalized URL and explicit DOI aliases. Reference counts measure coverage, not votes for a theory. Earliest dates retain source labels and identify mapped evidence, not first arrival; unknown dates remain unknown.",
     foundation: {
       evidence: input.world.evidence.filter(
         (e) =>

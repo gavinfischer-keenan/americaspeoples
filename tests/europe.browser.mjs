@@ -81,6 +81,14 @@ try{
  await layer('voyages',true);
  await page.locator('#europe-home').click();
  const bounds=page.locator('#europe-boundary-list');
+ await seek(100);
+ assert.ok((await bounds.textContent()).length > 10 && await page.locator('#europe-map .political-boundaries path').count() >= 1,'Roman Empire political borders render at 100 CE');
+ for(const regionId of ['france','italy','spain']){
+  await mapSetting(page,()=>page.locator('#europe-region').selectOption(regionId));
+  assert.ok(await page.locator('#europe-list [data-europe-record]').count() >= 4,regionId+' displays historical evidence at 100 CE');
+ }
+ await mapSetting(page,()=>page.locator('#europe-region').selectOption('all'));
+ await page.locator('#europe-home').click();
  await seek(1863);
  assert.match(await bounds.textContent(),/Danish monarchy · kingdom and duchies/);
  await seek(1864);

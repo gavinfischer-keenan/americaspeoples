@@ -19,7 +19,7 @@ export function validateWorldGuides(input:unknown):WorldGuide[]{
   if(!g||!idPattern.test(g.id)||ids.has(g.id))throw Error('Invalid or duplicate world guide ID');ids.add(g.id);
   const fail=(reason:string):never=>{throw Error(`${g.id}: ${reason}`);};
   if(!['title','description','intro','scope'].every(k=>text(g[k as keyof WorldGuide]))||!['places','subjects','cultures','languages','origin-stories'].includes(g.category))fail('missing guide text');
-  if(!Array.isArray(g.atlasIds)||!g.atlasIds.length||new Set(g.atlasIds).size!==g.atlasIds.length||g.atlasIds.some(a=>!['americas','africa','europe','asia-pacific'].includes(a)))fail('invalid atlas membership');
+  if(!Array.isArray(g.atlasIds)||!g.atlasIds.length||new Set(g.atlasIds).size!==g.atlasIds.length||g.atlasIds.some(a=>!['americas','pacific','africa','europe','asia-pacific'].includes(a)))fail('invalid atlas membership');
   if(!Array.isArray(g.sources)||!g.sources.length||g.sources.some(s=>!text(s.title)||!safeURL(s.url)))fail('invalid sources');
   const sources=new Set(g.sources.map(s=>s.url));
   const cited=(urls:unknown)=>Array.isArray(urls)&&urls.length>0&&urls.every(u=>sources.has(u));

@@ -2,13 +2,13 @@ import assert from 'node:assert/strict';
 import {existsSync} from 'node:fs';
 import {readFile} from 'node:fs/promises';
 import {build} from 'esbuild';
-import {geoOrthographic} from 'd3-geo';
+import {geoNaturalEarth1,geoOrthographic} from 'd3-geo';
 import {chromium} from 'playwright';
 
 // Exercise current source without writing build artifacts or relying on a server.
 const bundle=await build({entryPoints:['src/world-page.ts'],bundle:true,write:false,outdir:'test-results/world-pointer',format:'iife',globalName:'WorldPointer',loader:{'.geojson':'json'}});
 const land=JSON.parse(await readFile('data/land.geojson','utf8'));
-const regions=[['americas','Americas'],['africa','Africa'],['europe','Europe'],['asia-pacific','Asia']];
+const regions=[['americas','Americas'],['pacific','Australia & Pacific'],['africa','Africa'],['europe','Europe'],['asia-pacific','Asia']];
 const summary={
  version:'pointer-test',records:1,references:1,guides:0,
  regions:regions.map(([id,title])=>({id,title,records:1,references:1,guides:0,earliest:-100,earliestLabel:'Test evidence',coverage:'Pointer regression fixture'})),
@@ -53,6 +53,28 @@ try{
    assert.equal(await page.evaluate(()=>location.hash),'#pointer-'+region,`${name} land click at ${width}px opens ${region}`);
   }
  }
+ await page.setViewportSize({width:1440,height:900});
+ await page.getByRole('button',{name:'Show all regions',exact:true}).click();
+ assert.equal(await page.locator('#world-projection').getAttribute('aria-pressed'),'true');
+ const flat=geoNaturalEarth1().translate([500,300]).scale(172);
+ for(const [name,coordinates,region,requireLand] of [
+  ['Sydney',[151.2,-33.9],'pacific',true],
+  ['Honolulu',[-157.8,21.3],'pacific',false],
+  ['Beijing',[116.4,39.9],'asia-pacific',true],
+ ]){
+  const point=await page.evaluate(([x,y])=>{
+   const svg=document.querySelector('#world-globe');svg.scrollIntoView();
+   const p=new DOMPoint(x,y).matrixTransform(svg.getScreenCTM());
+   const hit=document.elementFromPoint(p.x,p.y);
+   return {x:p.x,y:p.y,land:Boolean(hit?.classList.contains('world-land')),blocked:Boolean(hit?.closest('.world-map-region'))};
+  },flat(coordinates));
+  assert.equal(point.blocked,false,`${name} flat click point is not covered by a region badge`);
+  if(requireLand)assert.equal(point.land,true,`${name} flat click targets land`);
+  await page.evaluate(()=>location.hash='#pointer-pending');
+  await page.mouse.click(point.x,point.y);
+  assert.equal(await page.evaluate(()=>location.hash),'#pointer-'+region,`Flat map click near ${name} opens ${region}`);
+ }
+ await page.getByRole('button',{name:'Show globe',exact:true}).click();
  await page.evaluate(({data,land})=>{
   window.disposePointer();
   window.disposePointer=WorldPointer.mountWorldPlayer(document.querySelector('#pointer-test'),data,land,'africa');

@@ -1,8 +1,9 @@
+import pacific from '../data/atlases/pacific/manifest.json';
 import africa from '../data/atlases/africa/manifest.json';
 import europe from '../data/atlases/europe/manifest.json';
 import asiaPacific from '../data/atlases/asia-pacific/manifest.json';
 
-export type PlannedAtlasId = 'africa' | 'europe' | 'asia-pacific';
+export type PlannedAtlasId = 'pacific' | 'africa' | 'europe' | 'asia-pacific';
 export type AtlasId = 'americas' | PlannedAtlasId;
 export interface PlannedAtlasManifest {
   schemaVersion: 1;
@@ -19,11 +20,12 @@ export interface PlannedAtlasManifest {
 export interface ActiveEuropeManifest extends Omit<PlannedAtlasManifest,'id'|'status'> {
   id:'europe';status:'available';
 }
-export interface ActiveFoundationManifest extends Omit<PlannedAtlasManifest,'id'|'status'> {id:'africa'|'asia-pacific';status:'available'}
+export interface ActiveFoundationManifest extends Omit<PlannedAtlasManifest,'id'|'status'> {id:'pacific'|'africa'|'asia-pacific';status:'available'}
 export type RegionalAtlasManifest=PlannedAtlasManifest|ActiveEuropeManifest|ActiveFoundationManifest;
 export function validateFoundationManifest(value:unknown):ActiveFoundationManifest {
  const m=value as ActiveFoundationManifest;
- if(!m||m.schemaVersion!==1||!['africa','asia-pacific'].includes(m.id)||m.status!=='available'||!m.title?.trim()||!Array.isArray(m.dataFiles)||!m.dataFiles.includes('world-catalogue.json'))throw Error('Invalid foundation atlas manifest');
+ const hasData=Array.isArray(m?.dataFiles)&&(m.dataFiles.includes('world-catalogue.json')||m.dataFiles.includes('dataset.json'));
+ if(!m||m.schemaVersion!==1||!['pacific','africa','asia-pacific'].includes(m.id)||m.status!=='available'||!m.title?.trim()||!hasData)throw Error('Invalid foundation atlas manifest');
  if(!Array.isArray(m.map?.center)||m.map.center.length!==2||!m.map.center.every(Number.isFinite))throw Error('Invalid foundation map configuration');
  return m;
 }
@@ -34,7 +36,7 @@ export function validateActiveEuropeManifest(value:unknown):ActiveEuropeManifest
   return m;
 }
 
-const plannedIds: readonly string[] = ['africa', 'europe', 'asia-pacific'];
+const plannedIds: readonly string[] = ['pacific', 'africa', 'europe', 'asia-pacific'];
 const contentLists = ['dataFiles', 'recordIds', 'storyIds', 'overlayFiles', 'sourceIds'] as const;
 
 /** Coming-soon manifests cannot activate any evidence or historical overlays. */
@@ -56,6 +58,7 @@ export function validatePlannedAtlasManifest(value: unknown): PlannedAtlasManife
 }
 
 const manifests: Record<PlannedAtlasId, RegionalAtlasManifest> = {
+  pacific: validateFoundationManifest(pacific),
   africa: validateFoundationManifest(africa),
   europe: validateActiveEuropeManifest(europe),
   'asia-pacific': validateFoundationManifest(asiaPacific),
@@ -67,7 +70,7 @@ export function loadAtlasManifest(id: PlannedAtlasId): RegionalAtlasManifest {
 }
 
 export const atlases: readonly { id: AtlasId; title: string; status: 'available' | 'coming-soon'; href: string }[] = [
-  { id: 'americas', title: 'Americas & Pacific', status: 'available', href: '#movie' },
+  { id: 'americas', title: 'Americas', status: 'available', href: '#movie' },
   ...Object.values(manifests).map(m => ({ id: m.id, title: m.title, status: m.status, href: `#atlas/${m.id}` })),
 ];
 

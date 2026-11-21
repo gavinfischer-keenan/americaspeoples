@@ -10,9 +10,7 @@ const page=await browser.newPage({viewport:{width:1440,height:960}}),errors=[];
 page.on('pageerror',e=>errors.push(e.message));
 const records=JSON.parse(await readFile('dist/dataset.json','utf8')).records;
 try{
- await page.goto(origin+'/#movie');await page.locator('#map-host .world').waitFor();
- await page.getByRole('button',{name:'Pause',exact:true}).click();
- assert.equal(await page.locator('#story-select').inputValue(),'free');
+ await page.goto(origin+'/#atlas/pacific');await page.locator('#map-host .world').waitFor();
  await mapSetting(page, () => page.locator('#story-select').selectOption('pacific-arrivals'));
  assert.match(await page.locator('#story-scene h2').innerText(),/Sea crossings/);
  assert.ok(await page.locator('#time-slider').isHidden(),'advanced timeline does not compete with the story');
@@ -25,6 +23,9 @@ try{
  await page.locator('#story-progress').press('End');assert.match(await page.locator('#story-progress-label').innerText(),/Journey complete/);
  await page.getByRole('button',{name:'Restart story',exact:true}).click();assert.equal(await page.locator('#story-progress').inputValue(),'0');
  await mapSetting(page,()=>page.getByRole('button',{name:'Focus view',exact:true}).click());assert.ok(await page.locator('#cinema-caption').isVisible());assert.match(await page.locator('#cinema-caption').innerText(),/Sea crossings/);await page.keyboard.press('Escape');
+ await page.getByRole('button',{name:'Region: Pacific',exact:true}).click();
+ await page.getByRole('navigation',{name:'Choose a region',exact:true}).getByRole('link',{name:'Americas',exact:true}).click();
+ await page.getByRole('button',{name:'Region: Americas',exact:true}).waitFor();
  await page.getByRole('link',{name:'Explore',exact:true}).click();await page.locator('.timeline').waitFor({state:'hidden'});assert.ok(await page.locator('.timeline').isHidden());
  await mapSetting(page, () => page.getByLabel('Explore a region',{exact:true}).selectOption('southwest'));
  await mapSetting(page, () => page.getByLabel('Search places and evidence',{exact:true}).fill('Cahokia'));

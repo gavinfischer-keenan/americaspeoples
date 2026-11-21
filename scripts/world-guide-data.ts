@@ -2,7 +2,7 @@ import {readdir,readFile,writeFile} from 'node:fs/promises';
 import {validateWorldGuides,type WorldGuideIndex} from '../src/world-guide-model';
 export async function readWorldGuides(){
  const guides=[];
- for(const atlas of ['americas','africa','europe','asia-pacific'])for(const file of (await readdir(`data/atlases/${atlas}`)).filter(f=>f.endsWith('deep-dives.json')).sort()){
+ for(const atlas of ['americas','pacific','africa','europe','asia-pacific'])for(const file of (await readdir(`data/atlases/${atlas}`)).filter(f=>f.endsWith('deep-dives.json')).sort()){
   const data=JSON.parse(await readFile(`data/atlases/${atlas}/${file}`,'utf8'));
   if(data.schemaVersion!==1)throw Error('Unknown world guide schema');
   guides.push(...data.guides);

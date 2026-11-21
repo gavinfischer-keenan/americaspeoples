@@ -11,7 +11,7 @@ import {copyWritingAssets,writingCollectionHTML,writingCollectionCSS} from './wr
 import {copyWorldGuideMedia,worldGuideMediaHTML,worldGuideMediaCSS} from './world-guide-media';
 
 type Terrain={id:string;bounds:number[];file:string;sha256:string;pixels:number[];sampleSpacingMeters:number;contourIntervalMeters:number};
-const atlasNames={americas:'Americas & Pacific',africa:'Africa & Middle East',europe:'Europe & Mediterranean','asia-pacific':'Asia'};
+const atlasNames={americas:'Americas',pacific:'Australia & Pacific',africa:'Africa & Middle East',europe:'Europe & Mediterranean','asia-pacific':'Asia'};
 const sourceLinks=(urls:string[],g:WorldGuide)=>`<span class="world-citations">${urls.map(u=>`<a href="${esc(u)}">[${g.sources.findIndex(s=>s.url===u)+1}]</a>`).join(' ')}</span>`;
 
 export function worldGuideHTML(g:WorldGuide,guides:WorldGuide[],land:GeoPermissibleObjects,terrain?:Terrain,voyagesHTML='',rivers?:GeoPermissibleObjects,writingHTML='',mediaHTML=''):string{

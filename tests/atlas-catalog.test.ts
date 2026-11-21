@@ -7,13 +7,15 @@ async function catalog() {
   return import('../src/atlas-catalog');
 }
 
-test('the four approved atlases keep Americas on its current route', async () => {
+test('the five approved atlases keep Americas on its current route and register Australia & Pacific', async () => {
   const { atlases } = await catalog();
-  assert.deepEqual(atlases.map(a => a.title), ['Americas & Pacific', 'Africa & Middle East', 'Europe & Mediterranean', 'Asia']);
+  assert.deepEqual(atlases.map(a => a.title), ['Americas', 'Australia & Pacific', 'Africa & Middle East', 'Europe & Mediterranean', 'Asia']);
   assert.equal(atlases[0].href, '#movie');
   assert.equal(atlases[0].status, 'available');
+  assert.equal(atlases.find(a=>a.id==='pacific')?.href, '#atlas/pacific');
+  assert.equal(atlases.find(a=>a.id==='pacific')?.status, 'available');
   assert.equal(atlases.find(a=>a.id==='europe')?.status,'available');
-  assert.ok(atlases.filter(a=>['africa','asia-pacific'].includes(a.id)).every(a=>a.status==='available'));
+  assert.ok(atlases.filter(a=>['pacific','africa','asia-pacific'].includes(a.id)).every(a=>a.status==='available'));
 });
 
 test('future routes resolve only their exact registered destination', async () => {
@@ -60,9 +62,11 @@ test('the atlas chooser links all destinations and identifies the selected atlas
   const { atlasNavigationHTML } = await import('../src/atlas-switcher');
   const html = atlasNavigationHTML('europe');
   assert.match(html, /href="#movie"/);
+  assert.match(html, /href="#atlas\/pacific"/);
   assert.match(html, /href="#atlas\/africa"/);
   assert.match(html, /href="#atlas\/europe" aria-current="page"/);
   assert.match(html, /href="#atlas\/asia-pacific"/);
+  assert.match(html, /Australia &amp; Pacific/);
   assert.match(html, /Africa &amp; Middle East/);
   assert.equal((html.match(/aria-current="page"/g) ?? []).length, 1);
 });
