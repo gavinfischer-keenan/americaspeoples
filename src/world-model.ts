@@ -119,31 +119,31 @@ export const worldRegions: {
 }[] = [
   {
     id: "americas",
-    title: "Americas",
+    title: "Americas & Pacific",
     center: [-92, 24],
     href: "#movie",
-    color: "#efa96e",
+    color: "#FA742A",
   },
   {
     id: "africa",
-    title: "Africa & human origins",
-    center: [20, 4],
+    title: "Africa & Middle East",
+    center: [24, 10],
     href: "#atlas/africa",
-    color: "#79d7bd",
+    color: "#72B273",
   },
   {
     id: "europe",
     title: "Europe & Mediterranean",
     center: [18, 53],
     href: "#atlas/europe",
-    color: "#c0adeb",
+    color: "#97C798",
   },
   {
     id: "asia-pacific",
-    title: "Asia & Pacific",
-    center: [115, 23],
+    title: "Asia",
+    center: [104, 30],
     href: "#atlas/asia-pacific",
-    color: "#82c7ed",
+    color: "#DCEBDD",
   },
 ];
 const nonempty = (v: unknown): v is string =>
@@ -498,7 +498,7 @@ export function worldRoute(
   if (hash === "#origins/americas") return "americas";
   if (hash === "#atlas/africa/early") return "africa-early";
   if (hash === "#atlas/africa") return "africa";
-  if (hash === "#atlas/asia-pacific") return "asia-pacific";
+  if (hash === "#atlas/asia-pacific" || hash === "#atlas/asia") return "asia-pacific";
   return null;
 }
 /** Astronomical year: 15,000 BCE is -14,999, approximately 16,949 calendar BP. */

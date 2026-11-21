@@ -18,7 +18,7 @@ try{
  assert.ok(early&&early.x>=openingMap.x&&early.x<openingMap.x+openingMap.width,'early Australian evidence is inside the opening overview');
  assert.ok(await page.locator('[data-terrain="earth"] image').count()>=1);
  await page.screenshot({path:'test-results/shared-history-opening.png'});
- await page.locator('[data-movie-year="1492"]').click();
+ await page.locator('#americas-jump').selectOption('1492');
  await page.getByRole('button',{name:'Play',exact:true}).click();
  await page.locator('[data-voyage="columbus-first-1492-1493"]').waitFor();
  await page.getByRole('button',{name:'Pause',exact:true}).click();

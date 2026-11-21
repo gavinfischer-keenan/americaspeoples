@@ -8,7 +8,7 @@ import {chromium} from 'playwright';
 // Exercise current source without writing build artifacts or relying on a server.
 const bundle=await build({entryPoints:['src/world-page.ts'],bundle:true,write:false,outdir:'test-results/world-pointer',format:'iife',globalName:'WorldPointer',loader:{'.geojson':'json'}});
 const land=JSON.parse(await readFile('data/land.geojson','utf8'));
-const regions=[['americas','Americas'],['africa','Africa'],['europe','Europe'],['asia-pacific','Asia & Pacific']];
+const regions=[['americas','Americas'],['africa','Africa'],['europe','Europe'],['asia-pacific','Asia']];
 const summary={
  version:'pointer-test',records:1,references:1,guides:0,
  regions:regions.map(([id,title])=>({id,title,records:1,references:1,guides:0,earliest:-100,earliestLabel:'Test evidence',coverage:'Pointer regression fixture'})),

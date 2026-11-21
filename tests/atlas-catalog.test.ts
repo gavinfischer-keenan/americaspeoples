@@ -9,7 +9,7 @@ async function catalog() {
 
 test('the four approved atlases keep Americas on its current route', async () => {
   const { atlases } = await catalog();
-  assert.deepEqual(atlases.map(a => a.title), ['Americas', 'Africa & human origins', 'Europe & Mediterranean', 'Asia & Pacific']);
+  assert.deepEqual(atlases.map(a => a.title), ['Americas & Pacific', 'Africa & Middle East', 'Europe & Mediterranean', 'Asia']);
   assert.equal(atlases[0].href, '#movie');
   assert.equal(atlases[0].status, 'available');
   assert.equal(atlases.find(a=>a.id==='europe')?.status,'available');
@@ -63,6 +63,6 @@ test('the atlas chooser links all destinations and identifies the selected atlas
   assert.match(html, /href="#atlas\/africa"/);
   assert.match(html, /href="#atlas\/europe" aria-current="page"/);
   assert.match(html, /href="#atlas\/asia-pacific"/);
-  assert.match(html, /Africa &amp; human origins/);
+  assert.match(html, /Africa &amp; Middle East/);
   assert.equal((html.match(/aria-current="page"/g) ?? []).length, 1);
 });

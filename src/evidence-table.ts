@@ -49,7 +49,7 @@ export class EvidenceTable {
     this.root.innerHTML = `<article class="table-page">
    <div class="page-heading"><div><div class="eyebrow">THE EVIDENCE INDEX</div><h2>Every row has a source.</h2>
    <p class="lead">Occupation, occurrences, movements, and events. Open a row for its full review.</p></div><a class="button primary" href="#new">+ Suggest new evidence</a></div>
-   <div class="table-filters"><input id="table-search" type="search" maxlength="200" aria-label="Search evidence" placeholder="Search places, cultures, claims…" value="${esc(s.search)}">
+   <div class="table-filters"><label>Search<input id="table-search" type="search" maxlength="200" aria-label="Search evidence" placeholder="Search places, cultures, claims…" value="${esc(s.search)}"></label>
    <label>Period<select id="period" aria-label="Table period"><option value="all">All records</option><option value="current">At selected year</option></select></label>
    <label>Type<select id="type-filter" aria-label="Record type filter">${["all", "wreck", "occupation", "occurrence", "movement", "event", ...Object.keys(OVERLAY_LABELS)].map((type) => `<option value="${type}">${esc(type==='wreck'?'Shipwrecks':OVERLAY_LABELS[type as keyof typeof OVERLAY_LABELS] ?? type)}</option>`).join("")}</select></label>
    <label>Sort<select id="sort" aria-label="Sort evidence"><option value="oldest">Earliest first</option><option value="newest">Latest first</option><option value="name">Name</option></select></label>

@@ -249,16 +249,27 @@ function stop() {
 }
 function syncTransport(){
   const guided=isGuidedStory();
+  const hasVoyage=Boolean(voyageId);
   document.body.classList.toggle('guided-story',guided);
   document.body.classList.toggle('local-date',atlasMode==='explore'&&explorePeriod==='current');
   $('#story-position').hidden=!guided;
-  $('.story-speed').hidden=!guided&&!voyageId;
+  $('.story-speed').hidden=!guided&&!hasVoyage;
   $('#previous-scene').hidden=!guided;
   $('#next-scene').hidden=!guided;
+  const jumpWrap=document.querySelector<HTMLElement>('.americas-jump-wrap');
+  if(jumpWrap)jumpWrap.hidden=guided||hasVoyage;
   $('#time-settings-toggle').textContent=guided?'Date & pace':'Date & speed';
-  $('#restart').setAttribute('aria-label',voyageId?'Restart expedition':guided?'Restart story':'Earliest evidence');
-  document.body.classList.toggle('whole-movie',atlasMode==='movie'&&!guided&&!voyageId);
+  $('#restart').setAttribute('aria-label',hasVoyage?'Restart expedition':guided?'Restart story':'Earliest evidence');
+  document.body.classList.toggle('whole-movie',atlasMode==='movie'&&!guided&&!hasVoyage);
   const selector=document.querySelector<HTMLSelectElement>('#story-select');if(selector)selector.value=storyId;
+  const chapters=document.querySelector<HTMLDetailsElement>('#story-chapter-section');
+  if(chapters)chapters.open=guided||hasVoyage;
+  const facts=document.getElementById('atlas-facts'),site=document.getElementById('site-panel'),storyPanel=document.getElementById('story-panel'),hint=document.getElementById('americas-hint');
+  if(facts&&site&&storyPanel){
+    if(guided||hasVoyage)site.before(storyPanel);
+    else facts.append(storyPanel);
+  }
+  if(hint)hint.hidden=selected.length>0||guided||hasVoyage;
   if(guided)updateStoryProgress();
 }
 function useFreeTimeline(){
@@ -324,7 +335,7 @@ function renderStory(){
   const description=$('#story-description'),host=$('#story-scene'),chapters=$('#story-chapters');
   if(storyId==='free'){
     description.textContent=voyageId?'Follow this journey in its contemporary world.':'Every history, one shared clock.';
-    host.innerHTML='<div class="scene-copy whole-intro"><span class="eyebrow">AMERICAS · ALL HISTORIES</span><h2>The world, together.</h2><p>Watch places grow, people move, and connections change at the same time. Every story and journey shares this world.</p><div class="movie-starts"><button data-movie-year="'+minYear+'">Earliest evidence</button><button data-movie-year="1000">1000 CE</button><button data-movie-year="1492">1492</button><button data-movie-year="1832">1832</button></div></div>';
+    host.innerHTML='<div class="scene-copy whole-intro"><span class="eyebrow">AMERICAS &amp; PACIFIC · TIMELINE</span><h2>All histories, one shared clock.</h2><p>Select a point or connection on the map, or browse the evidence list above.</p></div>';
     chapters.innerHTML='';renderConcurrentContext();return;
   }
   const story=currentStory(),scene=story.scenes[Math.max(0,storySceneIndex)];
@@ -358,6 +369,8 @@ function closeDetails(){
   selected=[];selectionCandidates=[];
   if(!mountedMap)return;
   $('#detail-panel').hidden=true;
+  const hint=document.getElementById('americas-hint');
+  if(hint)hint.hidden=isGuidedStory()||Boolean(voyageId);
   focusDrawer('detail-panel',false);
   $('.atlas-layout').classList.add('detail-panel-hidden');
   map.setHighlighted(isGuidedStory()?currentStory().scenes[Math.max(0,storySceneIndex)].recordIds:[]);
@@ -607,7 +620,10 @@ function mapPage() {
   $("#map-host").append(map.element);
   const layout=$('.atlas-layout');layout.classList.add('shared-map-layout');
   const facts=document.createElement('aside');facts.id='atlas-facts';facts.className='atlas-facts';facts.setAttribute('aria-label','Selected facts and visible evidence');
-  layout.prepend(facts);facts.append($('#detail-panel'),$('#story-panel'),$('#expeditions-now'),$('#site-panel'));$('#site-panel').hidden=false;
+  const hint=document.createElement('p');hint.id='americas-hint';hint.className='americas-hint';hint.textContent='Select a place or connection to read what happened, its dates, and the evidence.';
+  layout.prepend(facts);facts.append($('#detail-panel'),hint,$('#site-panel'),$('#expeditions-now'),$('#story-panel'));$('#site-panel').hidden=false;
+  const jump=document.querySelector<HTMLSelectElement>('#americas-jump');
+  if(jump)jump.onchange=()=>{if(!jump.value)return;setYear(Number(jump.value));jump.value='';};
   mapNavigation=mountMapNavigation($('#atlas-map-navigation'),{region:'americas',settings:[$('#story-picker-section'),$('.explore-intro'),$('#atlas-map-settings-controls'),$('#layer-options')],facts:[facts],settingsToggleId:'toggle-layers',factsToggleId:'toggle-details',onFactsToggle:open=>{layout.classList.toggle('map-facts-hidden',!open);if(open){document.body.classList.remove('focus-view');$('#focus-mode').setAttribute('aria-pressed','false');$('#focus-mode').textContent='Focus view';}}});
   $('.layers-panel').hidden=true;
   $('#whole-movie').setAttribute('data-map-menu-choice','');
@@ -798,7 +814,7 @@ function renderMapData() {
                 `<p><a href="#physical/${e.id}">${esc(e.title)} · ${esc(e.status)}</a></p>`,
             )
             .join("")
-        : '<p class="fine">No included catalog / ENSO events at this year. ENSO reconstruction covers1525–1934CE only; earlier ENSO evidence requires other sources.</p>';
+        : '<p class="fine">No included catalog / ENSO events at this year. ENSO reconstruction covers 1525–1934 CE only; earlier ENSO evidence requires other sources.</p>';
   $("#active-count").textContent =
     `${active.filter((r) => (r.overlay ? r.overlay.geometry : r.location)).length} mapped records at this time`;
   renderHistoricalContext();
@@ -818,6 +834,8 @@ function openDetails(){
   if(!mountedMap)return;
   const wasHidden=$('#detail-panel').hidden;
   $('#detail-panel').hidden=false;
+  const hint=document.getElementById('americas-hint');
+  if(hint)hint.hidden=true;
   $('.atlas-layout').classList.remove('detail-panel-hidden');
   mapNavigation?.showFacts();
   $('#atlas-facts').scrollTop=0;
@@ -1101,12 +1119,14 @@ async function route() {
     );
   document.body.classList.remove("movie-playing","focus-view");
   const mapRoute=["#map","#movie","#explore"].includes(hash);
+  const isWorldPlayer=worldDestination!==null&&worldDestination!=='world';
   document.body.classList.toggle('topic-page',hash.startsWith('#topic/'));
   document.body.classList.toggle('atlas-page',mapRoute);
-  document.body.classList.toggle('reading-page',!mapRoute);
+  document.body.classList.toggle('reading-page',!mapRoute&&plannedAtlas!=='europe'&&worldDestination===null);
   document.body.classList.toggle('atlas-preview-page',false);
   document.body.classList.toggle('europe-page',plannedAtlas==='europe');
   document.body.classList.toggle('world-route-page',worldDestination!==null);
+  document.body.classList.toggle('world-player-page',isWorldPlayer);
   document.body.classList.toggle('world-surface',worldDestination!==null);
   $(".timeline").hidden=!mapRoute;
   document.body.classList.remove('exploring');

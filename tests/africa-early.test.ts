@@ -53,9 +53,9 @@ test('Holocene Africa fills 15,000 BCE through 1900 CE across all regions and ni
   assert.ok(africaHolocene.some(e=>e.title.includes(needle)),`Missing key Africa/Mediterranean/Red Sea site: ${needle}`);
  }
  const europeMed=data.evidence.filter(e=>e.id.startsWith('med-')&&inWorldScope(e,'europe'));
- const asiaMed=data.evidence.filter(e=>e.id.startsWith('med-')&&inWorldScope(e,'asia-pacific'));
+ const africaMed=data.evidence.filter(e=>e.id.startsWith('med-')&&inWorldScope(e,'africa'));
  assert.ok(europeMed.length>=25,'Mediterranean trade feeds European sites and harbors');
- assert.ok(asiaMed.length>=12,'Mediterranean trade feeds Levant/Anatolia/Near Eastern sites');
+ assert.ok(africaMed.length>=12,'Mediterranean trade feeds North African & Levantine/Near Eastern sites');
  assert.ok(africaHolocene.some(e=>e.start>=-15000&&e.start<=-9999),'Terminal Pleistocene/Early Holocene anchors present');
  assert.ok(africaHolocene.some(e=>e.start>=500&&e.end<=1500),'Medieval African cities and kingdoms covered');
  assert.ok(africaHolocene.some(e=>e.end>=1700&&e.end<=1900),'Early modern through 1900 covered');
@@ -83,9 +83,19 @@ test('Holocene Africa fills 15,000 BCE through 1900 CE across all regions and ni
 test('Asia-Pacific and Europe cover earliest hominins through 10,000 BCE with consensus and institutional citations',async()=>{
  const {data}=await loadWorldShards();
  const asiaPre10k=data.evidence.filter(e=>inWorldScope(e,'asia-pacific')&&e.start<=-10000&&e.end<=-10000);
- assert.ok(asiaPre10k.length>=60,'Asia-Pacific pre-10,000 BCE coverage includes Levant, Arabia, Siberia, South/East/SE Asia and Sahul');
- for(const needle of ['ʿUbeidiya','Gesher Benot Yaʿaqov','Qesem','Tabun','Ohalo II','Shubayqa','Khall Amayshan','Jebel Faya','Qaleh Kurd','Shanidar','Teshik-Tash','Denisova','Mal’ta','Attirampakkam','Isampur','Hathnora','Bhimbetka','Jwalapuram','Kitulgala','Shangchen','Yunxian','Zhoukoudian','Hualongdong','Nwya Devu','Xianrendong','Jeongok-ri','Sangiran','Kalinga','Niah Great Cave','Leang Karampuang','Laili','Kosipe','Nawarla Gabarnmang','Warratyi','Lake Mungo','Buang Merabak','Kutikina']){
-  assert.ok(asiaPre10k.some(e=>e.title.includes(needle)),`Missing Asia-Pacific Pleistocene site: ${needle}`);
+ assert.ok(asiaPre10k.length>=50,'Asia pre-10,000 BCE coverage includes Siberia, Central, South, East and SE Asia');
+ for(const needle of ['Teshik-Tash','Denisova','Mal’ta','Attirampakkam','Isampur','Hathnora','Bhimbetka','Jwalapuram','Kitulgala','Shangchen','Yunxian','Zhoukoudian','Hualongdong','Nwya Devu','Xianrendong','Jeongok-ri','Sangiran','Kalinga','Niah Great Cave','Leang Karampuang','Laili']){
+  assert.ok(asiaPre10k.some(e=>e.title.includes(needle)),`Missing Asia Pleistocene site: ${needle}`);
+ }
+ const africaPre10k=data.evidence.filter(e=>inWorldScope(e,'africa')&&e.start<=-10000&&e.end<=-10000);
+ assert.ok(africaPre10k.length>=180,'Africa & Middle East pre-10,000 BCE coverage includes Africa, Levant, Arabia and Iran');
+ for(const needle of ['ʿUbeidiya','Gesher Benot Yaʿaqov','Qesem','Tabun','Ohalo II','Shubayqa','Khall Amayshan','Jebel Faya','Qaleh Kurd','Shanidar']){
+  assert.ok(africaPre10k.some(e=>e.title.includes(needle)),`Missing Middle East Pleistocene site in Africa & Middle East: ${needle}`);
+ }
+ const americasPre10k=data.evidence.filter(e=>inWorldScope(e,'americas')&&e.start<=-10000&&e.end<=-10000);
+ assert.ok(americasPre10k.length>=10,'Americas & Pacific pre-10,000 BCE world coverage includes Sahul/Australia/PNG');
+ for(const needle of ['Kosipe','Nawarla Gabarnmang','Warratyi','Lake Mungo','Buang Merabak','Kutikina']){
+  assert.ok(americasPre10k.some(e=>e.title.includes(needle)),`Missing Sahul Pleistocene site in Americas & Pacific: ${needle}`);
  }
  const asiaUrls=new Set(data.sources.filter(s=>asiaPre10k.some(e=>e.sourceIds.includes(s.id))).map(s=>s.url));
  for(const host of ['doi.org','whc.unesco.org','humanorigins.si.edu']){
@@ -105,20 +115,32 @@ test('Asia-Pacific and Europe cover earliest hominins through 10,000 BCE with co
 test('Europe and Asia-Pacific extend systematically to 1900 CE with zero sparse gaps and 21 flagship Deep Dives',async()=>{
  const {data}=await loadWorldShards();
  const eurHolocene=data.evidence.filter(e=>e.id.startsWith('euho-')&&inWorldScope(e,'europe'));
+ const eurAnatoliaAsho=data.evidence.filter(e=>e.id.startsWith('asho-')&&inWorldScope(e,'europe'));
  const asiaHolocene=data.evidence.filter(e=>e.id.startsWith('asho-')&&inWorldScope(e,'asia-pacific'));
+ const africaMiddleEastAsho=data.evidence.filter(e=>e.id.startsWith('asho-')&&inWorldScope(e,'africa'));
+ const americasPacificAsho=data.evidence.filter(e=>e.id.startsWith('asho-')&&inWorldScope(e,'americas'));
  assert.equal(eurHolocene.length,37,'Holocene Europe covers 37 regional sites from Mesolithic Star Carr to 1900 CE');
- assert.equal(asiaHolocene.length,48,'Holocene Asia-Pacific covers 48 regional sites from Göbekli Tepe to 1900 CE');
+ assert.equal(asiaHolocene.length,32,'Holocene Asia covers 32 Asian regional sites to 1900 CE');
  assert.ok(eurHolocene.some(e=>e.end===1900),'Europe extends cleanly to 1900 CE');
- assert.ok(asiaHolocene.some(e=>e.end===1900),'Asia-Pacific extends cleanly to 1900 CE');
+ assert.ok(asiaHolocene.some(e=>e.end===1900),'Asia extends cleanly to 1900 CE');
  for(const needle of ['Star Carr','Lepenski Vir','Linearbandkeramik','Malta','Carnac','Pile Dwellings','Trypillia','Brú na Bóinne','Knossos','Mycenae','Nebra','Heuneburg','Athens','Ostia','Ravenna','Córdoba','Novgorod','Amsterdam','Ironbridge']){
   assert.ok(eurHolocene.some(e=>e.title.includes(needle)),`Missing Holocene Europe site: ${needle}`);
  }
- for(const needle of ['Göbekli Tepe','Çatalhöyük','Uruk','Hattusha','Babylon','Pasargadae','Petra','Palmyra','Mehrgarh','Mohenjo-daro','Dholavira','Taxila','Ajanta','Chola','Hampi','Fatehpur Sikri','Shangshan','Liangzhu','Yinxu','Jingdezhen','Forbidden City','Sannai Maruyama','Kofun','Botai','Samarkand','Óc Eo','Srivijaya','Borobudur','Bagan','Kuk Swamp','Teouma','Nan Madol']){
-  assert.ok(asiaHolocene.some(e=>e.title.includes(needle)),`Missing Holocene Asia-Pacific site: ${needle}`);
+ for(const needle of ['Çatalhöyük','Hattusha']){
+  assert.ok(eurAnatoliaAsho.some(e=>e.title.includes(needle)),`Missing Anatolian site in Europe & Mediterranean: ${needle}`);
+ }
+ for(const needle of ['Mehrgarh','Mohenjo-daro','Dholavira','Taxila','Ajanta','Chola','Hampi','Fatehpur Sikri','Shangshan','Liangzhu','Yinxu','Jingdezhen','Forbidden City','Sannai Maruyama','Kofun','Botai','Samarkand','Óc Eo','Srivijaya','Borobudur','Bagan']){
+  assert.ok(asiaHolocene.some(e=>e.title.includes(needle)),`Missing Holocene Asia site: ${needle}`);
+ }
+ for(const needle of ['Göbekli Tepe','Uruk','Babylon','Pasargadae','Petra','Palmyra']){
+  assert.ok(africaMiddleEastAsho.some(e=>e.title.includes(needle)),`Missing Middle East Holocene site in Africa & Middle East: ${needle}`);
+ }
+ for(const needle of ['Kuk Swamp','Teouma','Nan Madol']){
+  assert.ok(americasPacificAsho.some(e=>e.title.includes(needle)),`Missing Pacific/PNG Holocene site in Americas & Pacific: ${needle}`);
  }
 
  const africaAll=data.evidence.filter(e=>inWorldScope(e,'africa'));
- assert.equal(africaAll.length,424,'Africa reaches 424 evidence records after gap-fill, UNESCO, China-Africa, shipwrecks, sparse-30, pre-30k & Roman additions');
+ assert.equal(africaAll.length,504,'Africa & Middle East reaches 504 evidence records after moving 80 Middle East records from Asia');
  assert.ok(africaAll.filter(e=>e.end>-15000).length>=229,'Africa post-15,000 BCE coverage reaches at least 229 records');
  for(const needle of ['Wadi Kubbaniya','Afalou','Al-Khiday','Tadrart Acacus','Memphis','Thebes','Abu Simbel','Timgad','Kondoa','Twyfelfontein','Gazargamu','El Fasher']){
   assert.ok(africaAll.some(e=>e.title.includes(needle)),`Missing Africa UNESCO/sparse-gap site: ${needle}`);
@@ -130,7 +152,7 @@ test('Europe and Asia-Pacific extend systematically to 1900 CE with zero sparse 
   [-1200,-801],[-800,-501],[-500,-201],[-200,0],[1,250],[251,500],[501,700],[701,900],
   [901,1100],[1101,1300],[1301,1520],[1521,1650],[1651,1780],[1781,1900]
  ];
- for(const [region,minAllowed] of [['africa',7],['europe',4],['asia-pacific',5]] as const){
+ for(const [region,minAllowed] of [['africa',7],['europe',4],['asia-pacific',3]] as const){
   const regEv=data.evidence.filter(e=>inWorldScope(e,region));
   for(const [a,b] of wins){
    const c=regEv.filter(e=>e.start<=b&&e.end>=a).length;

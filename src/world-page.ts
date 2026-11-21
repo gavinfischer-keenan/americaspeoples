@@ -1,6 +1,7 @@
 import {
   geoOrthographic,
   geoNaturalEarth1,
+  geoEquirectangular,
   geoPath,
   geoGraticule10,
   geoDistance,
@@ -10,6 +11,9 @@ import { esc } from "./dom";
 import { consensusResearch } from "./research-provenance";
 import { mountMapNavigation } from "./map-navigation";
 import { worldGuides } from "./world-guides";
+import { terrainHTML } from "./terrain";
+import { watchDetailedLand } from "./atlas-assets";
+import { parseYear } from "./time";
 import {
   validateWorldData,
   africaEarlyData,
@@ -54,7 +58,7 @@ export function worldHeader(activeHash = "#world") {
       ? "#atlas/africa"
       : activeHash === "#atlas/europe" || activeHash === "#origins/europe"
         ? "#atlas/europe"
-        : activeHash === "#atlas/asia-pacific"
+        : activeHash === "#atlas/asia-pacific" || activeHash === "#atlas/asia"
           ? "#atlas/asia-pacific"
           : activeHash === "#origins" || activeHash.startsWith("#study/")
             ? "#dives"
@@ -70,7 +74,7 @@ export function worldHeader(activeHash = "#world") {
     ["#movie", "Americas"],
     ["#atlas/africa", "Africa"],
     ["#atlas/europe", "Europe"],
-    ["#atlas/asia-pacific", "Asia & Pacific"],
+    ["#atlas/asia-pacific", "Asia"],
     ["#explore", "Explore"],
     ["#dives", "Deep dives"],
     ["#library", "Library"],
@@ -129,9 +133,8 @@ export function mountWorldHub(
       sampleSpan(-65, 82, 2, (lat) => [-25, lat]),
       sampleSpan(-65, 72, 2, (lat) => [-170, lat]),
       sampleSpan(-25, 60, 2, (lon) => [lon, 36]),
-      sampleSpan(36, 82, 2, (lat) => [60, lat]),
-      sampleSpan(-36, 36, 2, (lat) => [55, lat]),
-      sampleSpan(-25, 55, 2, (lon) => [lon, -36]),
+      sampleSpan(-36, 82, 2, (lat) => [60, lat]),
+      sampleSpan(-25, 60, 2, (lon) => [lon, -36]),
     ],
   } as const;
   const projection = (): GeoProjection =>
@@ -180,12 +183,14 @@ export function mountWorldHub(
             y = Math.max(48, Math.min(552, loc[1] + dy));
           const short =
             r.id === "asia-pacific"
-              ? "Asia & Pacific"
+              ? "Asia"
               : r.id === "africa"
-                ? "Africa"
+                ? "Africa & Middle East"
                 : r.id === "europe"
                   ? "Europe"
-                  : r.title;
+                  : r.id === "americas"
+                    ? "Americas & Pacific"
+                    : r.title;
           return `<a href="${esc(href(r.id))}" data-region="${r.id}" class="world-map-region" aria-label="${esc(r.title)}: ${stat.references} references, ${stat.records} events &amp; records, ${esc(stat.earliestLabel)}"><line x1="${loc[0]}" y1="${loc[1]}" x2="${x}" y2="${y}" stroke="${r.color}"/><circle cx="${loc[0]}" cy="${loc[1]}" r="6" fill="${r.color}"/><g transform="translate(${x},${y})"><rect x="-110" y="-31" width="220" height="70" rx="8"/><text text-anchor="middle" y="-9" fill="${r.color}" class="world-map-name">${short}</text><text text-anchor="middle" y="10">${number(stat.references)} refs · ${number(stat.records)} events</text><text text-anchor="middle" y="26" class="world-map-age">${esc(stat.earliest === null ? "Coverage in progress" : deepTimeLabel(stat.earliest))}</text></g></a>`;
         })
         .join("");
@@ -244,11 +249,14 @@ export function mountWorldHub(
     if (!q || !q.every(Number.isFinite)) return;
     const [lon, lat] = q;
     const id =
-      lon < -25 && lon > -170
+      (lon < -25 && lon > -170) ||
+      lon <= -170 ||
+      (lon >= 110 && lat < -10) ||
+      (lon > 141 && lat < 20)
         ? "americas"
         : lon >= -25 && lon < 60 && lat > 36
           ? "europe"
-          : lon >= -25 && lon <= 55 && lat >= -36 && lat <= 36
+          : lon >= -25 && lon <= 60 && lat >= -36 && lat <= 36
             ? "africa"
             : "asia-pacific";
     location.href = href(id);
@@ -289,11 +297,15 @@ export function mountWorldPlayer(
     last = earlyAfrica ? AFRICA_EARLY_END : (study?.end ?? 1900),
     title =
       (earlyAfrica
-        ? "Africa: earliest evidence to 15,000 BCE"
+        ? "Africa & Middle East: earliest evidence to 15,000 BCE"
         : study?.title) ??
       (scope === "world"
         ? "The branching human family"
-        : worldRegions.find((r) => r.id === scope)!.title);
+        : scope === "africa"
+          ? "Africa & Middle East"
+          : scope === "asia-pacific"
+            ? "Asia"
+            : worldRegions.find((r) => r.id === scope)!.title);
   const saveKey = earlyAfrica ? "africa-early" : (study?.id ?? scope),
     state = saved.get(saveKey) ?? {
       year: first,
@@ -305,8 +317,10 @@ export function mountWorldPlayer(
     };
   saved.set(saveKey, state);
   let playing = false,
+    rate = 1,
     timer: ReturnType<typeof setInterval> | undefined,
     disposed = false,
+    currentLand = land,
     drag: { x: number; y: number; sx: number; sy: number } | undefined,
     moved = false;
   const stats = worldRegionStats(data, scope),
@@ -319,26 +333,52 @@ export function mountWorldPlayer(
           (w) => w.taxonIds.includes(t.id) && inWorldScope(w, scope),
         ),
     );
-  host.innerHTML = `<article class="family-page"><header class="family-heading"><div><p class="world-kicker">THE SPREAD OF PEOPLES · FIRST BROAD FRAMEWORK</p><h1>${esc(title)}</h1><p>Evidence anchors and broad connections. A foundation for the detailed histories still to come.</p></div><nav aria-label="Regional history"><a href="#world">World overview</a>${scope === "europe" ? '<a href="#atlas/europe">Northern Europe: detailed history</a>' : ""}<a href="sites/world-human-family.html">Family &amp; genetics guide</a></nav></header><div class="family-map-navigation"></div><div class="family-layout"><aside class="family-reader"><div class="family-filter"><label>Lineage<select id="family-taxon"><option value="all">All human-family branches</option>${taxa.map((t) => `<option value="${t.id}"${state.taxon === t.id ? " selected" : ""}>${esc(t.name)}</option>`).join("")}</select></label><label>Jump to a chapter<select id="family-era"><option value="">Choose a period</option><option value="${first}">Earliest mapped evidence</option><option value="-2800000">Early Homo</option><option value="-350000">Many human lineages</option><option value="-70000">Later dispersals</option><option value="-12000">After the Ice Age</option><option value="-7000">Farmers and population change</option><option value="1900">1900 endpoint</option></select></label></div><section id="family-happening-now" class="family-happening-now" aria-live="polite"></section><section id="family-detail" aria-live="polite"></section><details class="family-reading"><summary>How to read this draft</summary><p>Bright points mark evidence whose dating range contains the map year. Fainter points are earlier evidence, not a claim of continuing occupation. A dating range can express uncertainty rather than continuous activity.</p><p>Dashed connections represent broad dispersal models; pink dotted connections concern admixture. Their geometry is schematic and does not establish a surveyed route or an exact meeting place. Motion does not encode speed or population.</p><p>Last known evidence is not an extinction date. Genes, languages and material cultures do not map one-to-one.</p><p>Deep-time labels retain the source’s approximate ages. BP uses 1950 as its reference. Modern coastlines are a navigation aid, not reconstructed prehistoric shores.</p></details><h2 class="family-list-heading">Evidence in this view</h2><div id="family-evidence-list"></div><details class="family-guides"><summary>Regional guides</summary><div id="family-guide-list"></div></details></aside><div class="family-map-column"><div class="family-map-top"><span>${stats.records} evidence anchors · ${stats.references} references</span><div><button id="family-zoom-out" aria-label="Zoom out">−</button><button id="family-zoom-in" aria-label="Zoom in">+</button><button id="family-reset">Reset map</button></div></div><div class="family-map-stage"><svg id="family-map" viewBox="0 0 1000 620" role="group" aria-label="Human-family evidence map"></svg><div id="family-map-banner" class="family-map-banner" aria-live="polite"></div></div><div class="family-legend"><span><i class="family-dot"></i>Dated evidence</span><span><i class="family-dot earlier"></i>Earlier evidence</span><span>Dashed: dispersal model</span><span class="family-admixture">Dotted: admixture evidence</span></div><div id="family-wave-list"></div></div></div><footer class="family-timeline"><div><strong id="family-year"></strong><span id="family-date-note">Evidence changes are spaced for reading; long gaps are shortened.</span></div><div class="family-transport"><button id="family-back" aria-label="Previous evidence change">Previous</button><button id="family-play">Play</button><button id="family-next" aria-label="Next evidence change">Next</button></div><input id="family-slider" type="range" min="0" max="10000" step="1" aria-label="Human-family map year"><div class="family-time-ends"><span>${deepTimeLabel(first)}</span><span>1900 CE</span></div></footer></article>`;
+  const scopeLead =
+    earlyAfrica
+      ? "Fossils, occupation phases, technologies and dispersal evidence across Africa and the Levant through 15,000 BCE."
+      : study
+        ? study.summary
+        : scope === "africa"
+          ? "Prehistoric hominins, Levant–Arabian corridors, Green Sahara pastoralism, kingdoms of the Nile, Sahel, Forest, Swahili coast and Great Zimbabwe through 1900 CE."
+          : scope === "asia-pacific"
+            ? "Pleistocene hominin dispersals, Indus, China, Central Asian steppes, Korea/Japan and Southeast Asia through 1900 CE."
+            : scope === "europe"
+              ? "Earliest Pleistocene hominin arrivals, Neanderthal–H. sapiens transitions, Mesolithic–Neolithic dispersals, Classical antiquity, Imperial Rome and early modern Europe through 1900 CE."
+              : "Evidence anchors and broad connections. A foundation across the branching human family.";
+  const kicker =
+    earlyAfrica
+      ? "AFRICA & MIDDLE EAST · TO 15,000 BCE"
+      : study
+        ? "DATED DEEP DIVE"
+        : scope === "africa"
+          ? "AFRICA & MIDDLE EAST"
+          : scope === "asia-pacific"
+            ? "ASIA"
+            : scope === "europe"
+              ? "EUROPE · EARLY PEOPLES"
+              : "THE BRANCHING HUMAN FAMILY";
+  const eraOptions = earlyAfrica
+    ? `<option value="">Choose a period…</option><option value="${first}">Earliest mapped evidence</option><option value="-2800000">Early Homo and stone tools</option><option value="-350000">Middle Pleistocene diversity</option><option value="-100000">Later Middle Stone Age</option><option value="-40000">Later Pleistocene occupations</option><option value="${last}">15,000 BCE endpoint</option>`
+    : scope === "africa"
+      ? `<option value="">Choose a period…</option><option value="${first}">Earliest mapped evidence</option><option value="-2800000">Early Homo &amp; Levant corridor</option><option value="-350000">Middle Pleistocene diversity</option><option value="-70000">Later MSA &amp; Sinai crossings</option><option value="-12000">Terminal Pleistocene &amp; Natufian</option><option value="-6000">Green Sahara, Uruk &amp; herders</option><option value="-2500">Nile states, Mesopotamia &amp; Kerma</option><option value="-500">Nok, Meroë, Sabaʾ &amp; Jenné-jeno</option><option value="1000">Abbasid Baghdad, Swahili coast &amp; Sahel</option><option value="1400">Great Zimbabwe, Ife, Mali &amp; Cairo</option><option value="1750">Oyo, Asante, Gondar, Oman &amp; Saudi</option><option value="${last}">1900 CE endpoint</option>`
+      : scope === "asia-pacific"
+        ? `<option value="">Choose a period…</option><option value="${first}">Earliest mapped evidence</option><option value="-1500000">Early Pleistocene Asia</option><option value="-300000">Archaic Homo &amp; Denisovans</option><option value="-50000">Late Pleistocene East &amp; South Asia</option><option value="-9500">Early Yangtze &amp; Yellow River farming</option><option value="-2500">Indus cities, Liangzhu &amp; Botai</option><option value="-500">Zhou, Maurya &amp; Xiongnu–Steppe</option><option value="200">Silk Roads, Han, Kushan &amp; Gupta</option><option value="900">Borobudur, Bagan, Angkor, Tang–Song &amp; Chola</option><option value="1600">Ming–Qing, Mughals &amp; Tokugawa</option><option value="${last}">1900 CE endpoint</option>`
+        : scope === "europe"
+          ? `<option value="">Choose a period…</option><option value="${first}">Earliest mapped evidence</option><option value="-1000000">Early &amp; Middle Pleistocene</option><option value="-150000">Neanderthal hunting &amp; hearths</option><option value="-40000">Upper Paleolithic art &amp; Aurignacian</option><option value="-15000">Magdalenian &amp; Star Carr Mesolithic</option><option value="-5500">Aegean, Cardial &amp; LBK farmers</option><option value="-2200">Megaliths, Steppe &amp; Minoan–Mycenaean</option><option value="-500">Classical Athens, Etruscans &amp; Celts</option><option value="100">Pompeii, Imperial Rome &amp; Danube Limes</option><option value="900">Ravenna, Al-Andalus, Novgorod &amp; Rus’</option><option value="1600">Florence, Venice, Seville &amp; Amsterdam</option><option value="${last}">1900 CE endpoint</option>`
+          : `<option value="">Choose a period…</option><option value="${first}">Earliest mapped evidence</option><option value="-2800000">Early Homo</option><option value="-350000">Many human lineages</option><option value="-70000">Later dispersals</option><option value="-12000">After the Ice Age</option><option value="-7000">Farmers and population change</option><option value="1900">1900 endpoint</option>`;
+
+  host.innerHTML = `<article class="family-page"><header class="family-heading"><div><p class="world-kicker">${kicker}</p><h1>${esc(title)}</h1></div><nav aria-label="Regional history"><a href="#world">World overview</a>${scope === "europe" ? '<a href="#atlas/europe">Northern Europe: detailed history</a>' : ""}<a href="#dives">Deep dives</a><a href="sites/world-human-family.html">Family &amp; genetics guide</a></nav></header><div class="family-map-navigation"></div><div class="family-layout"><aside class="family-reader" aria-label="Evidence and filters"><div class="family-filter"><label>Lineage<select id="family-taxon"><option value="all">All human-family branches</option>${taxa.map((t) => `<option value="${t.id}"${state.taxon === t.id ? " selected" : ""}>${esc(t.name)}</option>`).join("")}</select></label><label>Jump to a chapter<select id="family-era">${eraOptions}</select></label></div><p class="family-scope">${esc(scopeLead)}</p><details class="family-reading"><summary>How to read this map</summary><p>Bright points mark evidence whose dating range contains the map year. Fainter points are earlier evidence, not a claim of continuing occupation. A dating range can express uncertainty rather than continuous activity.</p><p>Dashed connections represent broad dispersal models; pink dotted connections concern admixture. Their geometry is schematic and does not establish a surveyed route or an exact meeting place.</p><p>Last known evidence is not an extinction date. Genes, languages and material cultures do not map one-to-one. Deep-time labels retain the source’s approximate ages. BP uses 1950 as its reference.</p></details><section id="family-detail" aria-live="polite"></section><details class="family-now-section" open><summary>What is here at this time</summary><section id="family-happening-now" class="family-happening-now" aria-live="polite"></section></details><label class="family-search-label">Find a site or evidence<input id="family-search" type="search" placeholder="Name, place or technology" value="${esc(state.query ?? "")}"><small>Search every date in this map. Selecting a result opens its dated evidence.</small></label><details class="family-evidence-group" open><summary class="family-list-heading">Evidence in this view</summary><div id="family-evidence-list"></div></details><details class="family-waves-group" open><summary>Connections &amp; territories at this date</summary><div id="family-wave-list"></div></details><details class="family-guides"><summary>Regional guides &amp; deep dives</summary><div id="family-guide-list"></div></details></aside><div class="family-map-column"><div class="family-map-stage"><svg id="family-map" viewBox="0 0 1000 620" role="group" aria-label="Human-family evidence map"></svg><div id="family-map-banner" class="family-map-banner" aria-live="polite"><span class="family-banner-meta">${stats.records} evidence anchors · ${stats.references} references</span><span class="family-banner-year"></span><span class="family-banner-text"></span></div><div class="family-map-controls"><button id="family-zoom-in" aria-label="Zoom in">+</button><button id="family-zoom-out" aria-label="Zoom out">−</button><button id="family-reset">Reset map</button></div><details class="map-key-disclosure family-map-key"><summary>Read the map</summary><div class="family-legend"><span><i class="family-dot"></i>Dated evidence</span><span><i class="family-dot earlier"></i>Earlier evidence</span><span>Dashed: dispersal model</span><span class="family-admixture">Dotted: admixture evidence</span><span>Shading: dated territorial reconstruction</span><span class="family-credit-line">Natural Earth II shaded relief · Modern coastlines for orientation</span></div></details></div></div></div><footer class="family-timeline"><div class="family-transport"><button id="family-play">Play</button><button id="family-back" aria-label="Previous evidence change">◀</button><button id="family-next" aria-label="Next evidence change">▶</button><label>Pace<select id="family-rate" aria-label="Playback pace"><option value="1">Steady</option><option value="2">2×</option><option value="4">4×</option></select></label>${study ? "" : `<label>Jump to<select id="family-jump" aria-label="Jump to period">${eraOptions}</select></label>`}</div><label class="family-slider-label">Map year <output id="family-year"></output><input id="family-slider" type="range" min="0" max="10000" step="1" aria-label="Human-family map year"><div class="family-time-ends"><span>${deepTimeLabel(first)}</span><span>${earlyAfrica ? "15,000 BCE" : study ? deepTimeLabel(last) : "1900 CE"}</span></div></label><form id="family-date-form"><label>Year<input id="family-date" inputmode="numeric" aria-label="Map year"></label><select id="family-era-input" aria-label="Map year era"><option>CE</option><option>BCE</option></select><button type="submit">Go</button><span id="family-date-error" role="status"></span></form><p class="family-playback-note" id="family-date-note">Evidence changes are spaced for reading; long gaps are shortened. Modern relief &amp; coastlines for orientation.</p></footer></article>`;
   if (study) {
     host.querySelector(".family-heading nav")!.innerHTML =
-      `<a href="#world">World overview</a><a href="sites/${study.guideId}.html">Read the full deep dive</a>`;
-    host.querySelector(".family-heading p:not(.world-kicker)")!.textContent =
-      study.summary;
-    host.querySelector(".family-time-ends span:last-child")!.textContent =
-      deepTimeLabel(last);
+      `<a href="#world">World overview</a><a href="#dives">Deep dives</a><a href="sites/${study.guideId}.html">Read the full deep dive</a>`;
     host.querySelector("#family-era")!.closest("label")!.remove();
     host.querySelector("#family-taxon")!.closest("label")!.remove();
     host.querySelector(".family-guides")?.remove();
-    host.querySelector(".family-heading .world-kicker")!.textContent =
-      "THE SPREAD OF PEOPLES · DATED DEEP DIVE";
     host
       .querySelector("#family-map")!
       .setAttribute("aria-label", study.title + " evidence map");
-    host.querySelector(".family-legend")!.innerHTML =
-      '<span><i class="family-dot"></i>Dated evidence</span><span><i class="family-dot earlier"></i>Earlier evidence</span><span>Dashed: schematic movement</span><span>Shading: dated territorial reconstruction</span>';
     host.querySelector(".family-reading")!.innerHTML =
-      "<summary>How to read this study</summary><p>Bright points fall within the selected date range. Fainter points are earlier evidence, not proof of continuing occupation. Dashed lines join selected places schematically; they are not surveyed paths or population estimates.</p><p>Territories represent dated, approximate reconstructions. Campaigns, short occupations, claims and durable control are distinct. Select each item for its sources and limitations. Settlement size appears only where a dated population estimate is available.</p><p>Textual testimony, material evidence and later reconstructions can differ. Modern coastlines help orientation; they are not historical boundaries.</p>";
+      "<summary>How to read this study</summary><p>Bright points fall within the selected date range. Fainter points are earlier evidence, not proof of continuing occupation. Dashed lines join selected places schematically; they are not surveyed paths or population estimates.</p><p>Territories represent dated, approximate reconstructions. Campaigns, short occupations, claims and durable control are distinct. Select each item for its sources and limitations. Settlement size appears only where a dated population estimate is available.</p><p>Textual testimony, material evidence and later reconstructions can differ. Modern relief and coastlines help orientation; they are not historical boundaries.</p>";
   }
 
   if (scope === "africa" && !study) {
@@ -347,51 +387,19 @@ export function mountWorldPlayer(
       .insertAdjacentHTML(
         "beforeend",
         earlyAfrica
-          ? '<a href="#atlas/africa">All Africa periods</a>'
-          : '<a href="#atlas/africa/early">Africa to 15,000 BCE</a>',
+          ? '<a href="#atlas/africa">All Africa &amp; Middle East periods</a>'
+          : '<a href="#atlas/africa/early">To 15,000 BCE</a>',
       );
   }
-  host
-    .querySelector(".family-list-heading")!
-    .insertAdjacentHTML(
-      "beforebegin",
-      `<label class="family-search-label">Find a site or evidence<input id="family-search" type="search" placeholder="Name, place or technology" value="${esc(state.query ?? "")}"><small>Search every date in this map. Selecting a result opens its dated evidence.</small></label>`,
-    );
   if (earlyAfrica) {
-    host.querySelector(".family-heading p:not(.world-kicker)")!.textContent =
-      "Fossils, occupation phases, technologies and dispersal evidence across Africa. Select a record for its dates, interpretation and sources.";
-    host.querySelector(".family-heading .world-kicker")!.textContent =
-      "THE SPREAD OF PEOPLES · AFRICA FILL-IN";
-    host.querySelector(".family-time-ends span:last-child")!.textContent =
-      "15,000 BCE";
-    host.querySelector("#family-era")!.innerHTML =
-      `<option value="">Choose a period</option><option value="${first}">Earliest mapped evidence</option><option value="-2800000">Early Homo and stone tools</option><option value="-350000">Middle Pleistocene diversity</option><option value="-100000">Later Middle Stone Age</option><option value="-40000">Later Pleistocene occupations</option><option value="${last}">15,000 BCE endpoint</option>`;
     host
       .querySelector(".family-reading")!
       .insertAdjacentHTML(
         "beforeend",
-        "<p>This chapter ends at 15,000 BCE (about 16,949 calendar years BP), not 15,000 BP. Archaeological traditions are not ethnic identities. Fossil occurrences do not by themselves establish habitation. Coverage remains uneven, especially in central and western Africa.</p>",
+        "<p>This chapter ends at 15,000 BCE (about 16,949 calendar years BP), not 15,000 BP. Archaeological traditions are not ethnic identities. Fossil occurrences do not by themselves establish habitation.</p>",
       );
-  } else if (scope === "africa" && !study) {
-    host.querySelector(".family-heading p:not(.world-kicker)")!.textContent =
-      "Prehistoric fossils, Green Sahara pastoralism, kingdoms of the Nile, Sahel, Forest, Swahili coast, Zimbabwe plateau and Madagascar through 1900 CE.";
-    host.querySelector("#family-era")!.innerHTML =
-      `<option value="">Choose a period</option><option value="${first}">Earliest mapped evidence</option><option value="-2800000">Early Homo and stone tools</option><option value="-350000">Middle Pleistocene diversity</option><option value="-70000">Later Middle Stone Age</option><option value="-12000">Terminal Pleistocene</option><option value="-6000">Green Sahara &amp; early herders</option><option value="-2500">Nile states, Kerma &amp; drying Sahara</option><option value="-500">Nok, Meroë, Yeha &amp; Jenné-jeno</option><option value="1000">Swahili coast, Sahel &amp; Limpopo</option><option value="1400">Great Zimbabwe, Ife, Mali &amp; Kongo</option><option value="1750">Oyo, Asante, Gondar, Funj &amp; Sotho-Tswana</option><option value="${last}">1900 CE endpoint</option>`;
-  } else if (scope === "asia-pacific" && !study) {
-    host.querySelector(".family-heading p:not(.world-kicker)")!.textContent =
-      "Pleistocene hominin dispersals, Fertile Crescent & Yangtze/Yellow River farming, Mesopotamia, Indus, China, Steppe, SE Asia and Pacific voyaging through 1900 CE.";
-    host.querySelector("#family-era")!.innerHTML =
-      `<option value="">Choose a period</option><option value="${first}">Earliest mapped evidence</option><option value="-1500000">Early Pleistocene dispersals</option><option value="-300000">Archaic Homo &amp; Denisovans</option><option value="-50000">Early H. sapiens &amp; Sahul crossings</option><option value="-9500">Göbekli Tepe &amp; Early Rice/Millet</option><option value="-5500">Ubaid, Çatalhöyük, Mehrgarh &amp; Yangshao</option><option value="-2500">Uruk, Indus cities, Liangzhu &amp; Botai</option><option value="-500">Achaemenid Persia, Zhou &amp; Taxila</option><option value="200">Silk Roads, Petra, Palmyra &amp; Óc Eo</option><option value="900">Borobudur, Bagan, Angkor, Tang–Song &amp; Chola</option><option value="1600">Ming–Qing, Mughals, Tokugawa &amp; Nan Madol</option><option value="${last}">1900 CE endpoint</option>`;
-  } else if (scope === "europe" && !study) {
-    host.querySelector(".family-heading p:not(.world-kicker)")!.textContent =
-      "Earliest Pleistocene hominin arrivals, Neanderthal–H. sapiens transitions, Mesolithic–Neolithic dispersals, Aegean palaces, Imperial Rome, Rus’ rivers and industrial Britain through 1900 CE.";
-    host.querySelector("#family-era")!.innerHTML =
-      `<option value="">Choose a period</option><option value="${first}">Earliest mapped evidence</option><option value="-1000000">Early &amp; Middle Pleistocene</option><option value="-150000">Neanderthal hunting &amp; hearths</option><option value="-40000">Upper Paleolithic art &amp; Aurignacian</option><option value="-15000">Magdalenian &amp; Star Carr Mesolithic</option><option value="-5500">Aegean, Cardial &amp; LBK farmers</option><option value="-2200">Megaliths, Steppe &amp; Minoan–Mycenaean</option><option value="-500">Classical Athens, Etruscans &amp; Celts</option><option value="100">Pompeii, Imperial Rome &amp; Danube Limes</option><option value="900">Ravenna, Al-Andalus, Novgorod &amp; Rus’</option><option value="1600">Florence, Venice, Seville &amp; Amsterdam</option><option value="${last}">1900 CE endpoint</option>`;
   }
 
-  const related = (data.studies ?? []).filter(
-    (s) => scope === "world" || s.regionIds.includes(scope),
-  );
   if (!study) {
     const scopeGuides = worldGuides
       .filter((g) => scope === "world" || g.atlasIds.includes(scope))
@@ -399,23 +407,19 @@ export function mountWorldPlayer(
         (a, b) =>
           (b.atlasIds[0] === scope ? 1 : 0) - (a.atlasIds[0] === scope ? 1 : 0),
       );
-    host.querySelector("#family-guide-list")!.innerHTML = scopeGuides
-      .map((g) => `<p><a href="${esc(g.href)}">${esc(g.title)} ↗</a></p>`)
-      .join("");
+    host.querySelector("#family-guide-list")!.innerHTML =
+      `<p><a href="#dives"><strong>Browse all Deep Dives →</strong></a></p>` +
+      scopeGuides
+        .map((g) => `<p><a href="${esc(g.href)}">${esc(g.title)} ↗</a></p>`)
+        .join("");
   }
-  if (!study && related.length)
-    host
-      .querySelector(".family-heading")!
-      .insertAdjacentHTML(
-        "afterend",
-        `<nav class="family-study-links" aria-label="Connected deep dives">${related.map((s) => `<a href="#study/${s.id}">${esc(s.title)}</a>`).join("")}</nav>`,
-      );
   const navigation = mountMapNavigation(
     host.querySelector<HTMLElement>(".family-map-navigation")!,
     {
       region: scope === "world" ? undefined : scope,
       settings: [
         host.querySelector<HTMLElement>(".family-filter")!,
+        host.querySelector<HTMLElement>(".family-scope")!,
         host.querySelector<HTMLElement>(".family-reading")!,
       ],
       facts: [host.querySelector<HTMLElement>(".family-reader")!],
@@ -429,36 +433,28 @@ export function mountWorldPlayer(
     detail = host.querySelector<HTMLElement>("#family-detail")!,
     list = host.querySelector<HTMLElement>("#family-evidence-list")!,
     slider = host.querySelector<HTMLInputElement>("#family-slider")!;
-  const center =
-    scope === "world"
-      ? [0, 0]
-      : worldRegions.find((r) => r.id === scope)!.center;
-  const projection = geoNaturalEarth1()
-    .rotate([-center[0], 0])
-    .center([0, center[1] * 0.55])
-    .translate([500, 310])
-    .scale(scope === "world" ? 178 : 245);
+  const projection = geoEquirectangular();
   if (scope === "africa" && !study)
     projection.fitExtent(
       [
-        [80, 35],
-        [920, 585],
+        [45, 35],
+        [955, 585],
       ],
       {
         type: "MultiPoint",
         coordinates: [
           [-20, -36],
           [-20, 46.5],
-          [55, 46.5],
-          [55, -36],
+          [61, 46.5],
+          [61, -36],
         ],
       },
     );
   else if (scope === "europe" && !study)
     projection.fitExtent(
       [
-        [80, 40],
-        [920, 580],
+        [55, 35],
+        [945, 585],
       ],
       {
         type: "MultiPoint",
@@ -473,24 +469,40 @@ export function mountWorldPlayer(
   else if (scope === "asia-pacific" && !study)
     projection.fitExtent(
       [
-        [65, 35],
-        [935, 585],
+        [45, 35],
+        [955, 585],
       ],
       {
         type: "MultiPoint",
         coordinates: [
-          [26, -44],
-          [26, 72],
+          [55, -10],
+          [55, 72],
+          [163, 72],
+          [163, -10],
+        ],
+      },
+    );
+  else if (scope === "world" && !study)
+    projection.fitExtent(
+      [
+        [35, 35],
+        [965, 585],
+      ],
+      {
+        type: "MultiPoint",
+        coordinates: [
+          [-176, -55],
+          [-176, 72],
           [178, 72],
-          [178, -44],
+          [178, -55],
         ],
       },
     );
   if (study)
     projection.fitExtent(
       [
-        [45, 45],
-        [955, 575],
+        [50, 45],
+        [950, 575],
       ],
       {
         type: "GeometryCollection",
@@ -506,6 +518,12 @@ export function mountWorldPlayer(
       },
     );
   const path = geoPath(projection);
+  const stopDetailedLand = watchDetailedLand((nextLand) => {
+    if (!disposed) {
+      currentLand = nextLand;
+      draw();
+    }
+  });
   function sourceHTML(ids: string[]) {
     return worldSources(data, ids)
       .map(
@@ -536,11 +554,13 @@ export function mountWorldPlayer(
   }
   function choose(id: string) {
     navigation.showFacts();
-    host.querySelector(".family-reader")!.scrollTop = 0;
     pause();
+    const chosen = [...data.evidence, ...data.waves, ...(data.territories ?? [])].find(
+      (e) => e.id === id,
+    );
     const selectedEvidence = data.evidence.find((e) => e.id === id);
-    if (selectedEvidence && selectedEvidence.start > state.year)
-      state.year = Math.max(first, Math.min(last, selectedEvidence.start));
+    if (chosen && chosen.start > state.year)
+      state.year = Math.max(first, Math.min(last, chosen.start));
     if (selectedEvidence) {
       const point = projection(selectedEvidence.coordinates);
       if (point && (point[0] * state.k + state.x < 25 || point[0] * state.k + state.x > 975 || point[1] * state.k + state.y < 25 || point[1] * state.k + state.y > 595)) {
@@ -549,12 +569,9 @@ export function mountWorldPlayer(
       }
     }
     state.selected = id;
-    details(
-      [...data.evidence, ...data.waves, ...(data.territories ?? [])].find(
-        (e) => e.id === id,
-      ),
-    );
+    details(chosen);
     draw();
+    host.querySelector(".family-reader")!.scrollTop = 0;
   }
   function draw() {
     if (disposed) return;
@@ -608,7 +625,7 @@ export function mountWorldPlayer(
       Math.round(timelinePosition(state.year, first, last, "log") * 10000),
     );
     slider.setAttribute("aria-valuetext", deepTimeLabel(state.year));
-    svg.innerHTML = `<defs><clipPath id="family-clip"><rect width="1000" height="620"/></clipPath></defs><g clip-path="url(#family-clip)"><g transform="translate(${state.x},${state.y}) scale(${state.k})"><path class="family-sea" d="${path({ type: "Sphere" })}"/><path class="family-grid" d="${path(geoGraticule10())}"/><path class="family-land" d="${path(land)}"/>${current.waves.map((w) => `<path data-world-item="${w.id}" tabindex="0" role="button" aria-label="${esc(w.title)}" class="family-wave ${w.kind} ${w.kind === "admixture" ? "admixture" : ""} ${playing ? "moving" : ""} ${state.selected === w.id ? "selected" : ""}" d="${path({ type: "LineString", coordinates: w.coordinates })}"><title>${esc(w.title)} · ${esc(w.dateLabel)}. Schematic connection.</title></path>`).join("")}${waveLabels}${current.evidence
+    svg.innerHTML = `<defs><clipPath id="family-land-clip"><path d="${path(currentLand)}"/></clipPath></defs><g transform="translate(${state.x},${state.y}) scale(${state.k})"><rect class="family-ocean-backdrop" x="-3000" y="-3000" width="7000" height="7000"/><path class="family-sea" d="${path({ type: "Sphere" })}"/><path class="family-grid" d="${path(geoGraticule10())}"/><path class="family-land" d="${path(currentLand)}"/><g class="terrain" clip-path="url(#family-land-clip)" aria-hidden="true">${terrainHTML(projection, state.k)}</g>${current.waves.map((w) => `<path data-world-item="${w.id}" tabindex="0" role="button" aria-label="${esc(w.title)}" class="family-wave ${w.kind} ${w.kind === "admixture" ? "admixture" : ""} ${playing ? "moving" : ""} ${state.selected === w.id ? "selected" : ""}" d="${path({ type: "LineString", coordinates: w.coordinates })}"><title>${esc(w.title)} · ${esc(w.dateLabel)}. Schematic connection.</title></path>`).join("")}${waveLabels}${current.evidence
       .map((e) => {
         const p = projection(e.coordinates);
         if (!p) return "";
@@ -618,7 +635,13 @@ export function mountWorldPlayer(
         const shortTitle = e.title.length > 34 ? e.title.slice(0, 33) + "…" : e.title;
         return `<g data-world-item="${e.id}" role="button" tabindex="0" aria-label="${esc(e.title)}; ${esc(e.dateLabel)}; ${e.phase === "earlier" ? "earlier evidence" : "dating window"}" class="family-point ${e.phase} ${isNew ? "newly-active" : ""} ${selected ? "selected" : ""}" transform="translate(${p[0]},${p[1]}) scale(${1 / state.k})"><circle class="family-hit" r="12"/><circle r="${selected ? 7 : isNew ? 6.5 : 5}"/><title>${esc(e.title)} · ${esc(e.dateLabel)}</title>${showLabel ? `<text class="${selected ? "selected-label" : "active-label"}" x="11" y="-10">${esc(selected ? e.title : shortTitle)}</text>` : ""}</g>`;
       })
-      .join("")}</g></g>`;
+      .join("")}</g>`;
+    const dateInput = host.querySelector<HTMLInputElement>("#family-date");
+    const eraInput = host.querySelector<HTMLSelectElement>("#family-era-input");
+    if (dateInput && eraInput) {
+      dateInput.value = String(state.year <= 0 ? 1 - state.year : state.year);
+      eraInput.value = state.year <= 0 ? "BCE" : "CE";
+    }
     const territories = worldTerritories(data, scope, state.taxon).filter(
       (t) => t.start <= state.year && state.year <= t.end,
     );
@@ -657,7 +680,10 @@ export function mountWorldPlayer(
         ...datedNow.slice(0, 2).map((e) => e.title),
         ...current.waves.slice(0, 1).map((w) => w.title),
       ];
-      bannerEl.innerHTML = `<span class="family-banner-year">${esc(deepTimeLabel(state.year))}</span><span class="family-banner-text">${esc(headlines.length ? headlines.join(" · ") : `${current.evidence.length} earlier anchor${current.evidence.length === 1 ? "" : "s"} in view`)}</span>`;
+      const yr = bannerEl.querySelector<HTMLElement>(".family-banner-year");
+      const txt = bannerEl.querySelector<HTMLElement>(".family-banner-text");
+      if (yr) yr.textContent = deepTimeLabel(state.year);
+      if (txt) txt.textContent = headlines.length ? headlines.join(" · ") : `${current.evidence.length} earlier anchor${current.evidence.length === 1 ? "" : "s"} in view`;
     }
     svg
       .querySelector(".family-land")!
@@ -802,8 +828,41 @@ export function mountWorldPlayer(
     playing = true;
     host.querySelector("#family-play")!.textContent = "Pause";
     draw();
-    timer = setInterval(() => step(1), 2200);
+    timer = setInterval(() => step(1), Math.max(450, Math.round(2200 / rate)));
   };
+  host.querySelector<HTMLSelectElement>("#family-rate")?.addEventListener("change", (e) => {
+    rate = Number((e.target as HTMLSelectElement).value) || 1;
+    if (playing && timer) {
+      clearInterval(timer);
+      timer = setInterval(() => step(1), Math.max(450, Math.round(2200 / rate)));
+    }
+  });
+  const jumpSelect = host.querySelector<HTMLSelectElement>("#family-jump");
+  if (jumpSelect)
+    jumpSelect.onchange = (e) => {
+      const value = (e.target as HTMLSelectElement).value;
+      if (value) {
+        pause();
+        setYear(Number(value));
+      }
+    };
+  host.querySelector<HTMLFormElement>("#family-date-form")?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const errorEl = host.querySelector<HTMLElement>("#family-date-error")!;
+    try {
+      const y = parseYear(
+        host.querySelector<HTMLInputElement>("#family-date")!.value,
+        host.querySelector<HTMLSelectElement>("#family-era-input")!.value,
+      );
+      if (y < first || y > last)
+        throw Error(`Choose a year from ${deepTimeLabel(first)} through ${deepTimeLabel(last)}.`);
+      errorEl.textContent = "";
+      pause();
+      setYear(y);
+    } catch (err) {
+      errorEl.textContent = (err as Error).message;
+    }
+  });
   host.querySelector<HTMLButtonElement>("#family-back")!.onclick = () => {
     pause();
     step(-1);
@@ -910,6 +969,7 @@ export function mountWorldPlayer(
   return () => {
     disposed = true;
     pause();
+    stopDetailedLand();
     navigation.dispose();
     host.removeEventListener("click", activate);
     host.removeEventListener("keydown", key);

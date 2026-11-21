@@ -156,11 +156,11 @@ try{
 
  for(const region of ['africa','asia-pacific']){
   await openPlayer(regionRoutes[region]);
-  const regionName=region==='africa'?'Africa':'Asia & Pacific';
+  const regionName=region==='africa'?'Africa':'Asia';
   const toggle=page.getByRole('button',{name:'Region: '+regionName,exact:true});
   await toggle.click();
   for(const [id,href] of Object.entries(regionRoutes)){
-   const label={americas:'Americas',africa:'Africa',europe:'Europe','asia-pacific':'Asia & Pacific'}[id];
+   const label={americas:'Americas',africa:'Africa',europe:'Europe','asia-pacific':'Asia'}[id];
    assert.equal(await page.locator('.map-navigation').getByRole('link',{name:label,exact:true}).getAttribute('href'),href);
   }
   await page.keyboard.press('Escape');
@@ -171,7 +171,7 @@ try{
  const earlyWaves=data.waves.filter(w=>w.regionIds.includes('africa')&&w.start<=earlyEnd);
  const earlyFirst=Math.min(...[...earlyEvidence,...earlyWaves].map(item=>item.start));
  await openPlayer('#atlas/africa/early');
- assert.equal(await page.locator('.family-heading h1').textContent(),'Africa: earliest evidence to 15,000 BCE');
+ assert.equal(await page.locator('.family-heading h1').textContent(),'Africa & Middle East: earliest evidence to 15,000 BCE');
  await endpoint(earlyFirst,earlyEnd,true);
  assert.equal(await page.locator('.family-time-ends span').last().textContent(),'15,000 BCE');
  assert.deepEqual(await page.locator('#family-map .family-point').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('data-world-item')).sort()),earlyEvidence.map(e=>e.id).sort());

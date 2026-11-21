@@ -25,7 +25,8 @@ if (!supported) {
     const destination=worldRoute(location.hash);
     try{
       if(destination){
-        document.body.classList.add('world-surface');
+        document.body.classList.add('world-surface','world-route-page');
+        document.body.classList.toggle('world-player-page',destination!=='world');
         const {worldHeader,mountWorldPage}=await import('./world-page');if(current!==generation)return;
         document.getElementById('app')!.innerHTML=worldHeader(location.hash||'#world')+'<main id="world-main"><p class="world-load" role="status">Opening the world atlas…</p></main>';
         const container=document.createElement('div');const cleanup=await mountWorldPage(container,destination,worldLand);
@@ -33,7 +34,8 @@ if (!supported) {
       }else{
         document.getElementById('app')!.innerHTML='<p class="world-load" role="status">Opening the regional atlas…</p>';
         await initializeDataset();if(current!==generation)return;
-        window.removeEventListener('hashchange',open);document.body.classList.remove('world-surface');
+        window.removeEventListener('hashchange',open);
+        document.body.classList.remove('world-surface','world-route-page','world-player-page');
         await import('./main');void initializePhysical();
       }
     }catch(error){if(current!==generation)return;startupMessage((error as Error).message+' Reload to try again. Your saved suggestions have not been changed.');}

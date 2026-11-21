@@ -24,8 +24,8 @@ try{
   assert.equal(await page.locator('.atlas-coming-soon').count(),0);
   assert.equal(await page.locator('#family-play').isVisible(),true);
   const evidence=world.evidence.filter(e=>e.regionIds.includes(atlas));
-  assert.ok((await page.locator('.family-map-top').textContent()).includes(evidence.length+' evidence anchors'));
-  for(const study of (world.studies||[]).filter(s=>s.regionIds.includes(atlas)))assert.equal(await page.locator('.family-study-links a[href="#study/'+study.id+'"]').count(),1);
+  assert.ok((await page.locator('#family-map-banner').textContent()).includes(evidence.length+' evidence anchors'));
+  assert.equal(await page.locator('.family-study-links').count(),0);
   const familyHrefs=await page.locator('#family-guide-list a').evaluateAll(links=>links.map(a=>a.getAttribute('href')));
   for(const guide of index.filter(g=>g.atlasIds.includes(atlas)))assert.ok(familyHrefs.includes('sites/'+guide.id+'.html'),atlas+' missing guide '+guide.id);
   assert.equal(await page.locator('.timeline').isVisible(),false);

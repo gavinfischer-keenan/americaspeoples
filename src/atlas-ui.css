@@ -106,3 +106,680 @@ body.movie-playing:not(.focus-view) .map-stage #cinema-caption small{display:non
 .map-canvas.density-playing .history-route.route-active[data-direction="forward"] .route-flow{animation-play-state:running}
 .change-caption{font:600 11px system-ui;fill:#fff7c2;stroke:#18323a;stroke-width:3.5;paint-order:stroke;pointer-events:none}
 .map-canvas.density-playing .dated-change :is(.community-glyph,.wreck-symbol,.wreck-eye),.map-canvas.density-playing .overlay-feature.dated-change>path{stroke:#fff2a2;stroke-width:2.8}
+
+/* === Electric Eel + Europe-parity UI Standardization === */
+:root {
+  --ee-polar: #f2f6f8;
+  --ee-obsidian: #10171a;
+  --ee-dolphin-100: #e3e8eb;
+  --ee-dolphin-200: #cfd6da;
+  --ee-dolphin-300: #b4bec4;
+  --ee-dolphin-400: #8e99a0;
+  --ee-dolphin-500: #525d64;
+  --ee-trace-tint: #dcebdd;
+  --ee-reticle: #97c798;
+  --ee-calibration: #72b273;
+  --ee-phosphor: #569e56;
+  --ee-oscilloscope: #3b783d;
+  --ee-cathode: #244d26;
+  --ee-cadmium-light: #fa742a;
+  --ee-cadmium: #d4501e;
+  --ee-cadmium-deep: #a63108;
+
+  --paper: #e3e8eb;
+  --paper-ink: #10171a;
+  --paper-muted: #525d64;
+  --teal: #244d26;
+  --accent: #569e56;
+  --water: #10171a;
+  --land: #2e4840;
+  --bg: #10171a;
+  --panel: #152024;
+  --panel2: #1b282e;
+  --line: #525d64;
+  --ink: #f2f6f8;
+  --muted: #b4bec4;
+}
+
+header.topbar {
+  background: #10171a;
+  border-bottom: 1px solid #525d64;
+  color: #f2f6f8;
+  min-height: 46px;
+  height: auto;
+  padding: 6px 18px;
+  gap: 12px 16px;
+}
+
+header.topbar .brand {
+  gap: 9px;
+  color: #f2f6f8;
+}
+
+header.topbar .brand-mark {
+  color: #72b273;
+  font-size: 16px;
+  line-height: 1;
+}
+
+header.topbar .brand h1 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #f2f6f8;
+  line-height: 1.15;
+}
+
+header.topbar .brand small {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: #b4bec4;
+}
+
+header.topbar nav[aria-label="Main navigation"] a {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #f2f6f8;
+  border: 1px solid transparent;
+  line-height: 1.2;
+}
+
+header.topbar nav[aria-label="Main navigation"] a:hover {
+  background: #dcebdd;
+  color: #10171a;
+}
+
+header.topbar nav[aria-label="Main navigation"] a.active {
+  background: #569e56;
+  color: #10171a;
+  font-weight: 700;
+}
+
+header.topbar .header-about {
+  color: #97c798;
+  font-weight: 600;
+}
+
+header.topbar .header-about:hover {
+  color: #f2f6f8;
+  text-decoration: underline;
+}
+
+header.topbar :focus-visible {
+  outline: 2px solid #fa742a;
+  outline-offset: 2px;
+}
+
+.americas-heading {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 8px 20px;
+  background: #f2f6f8;
+  border-bottom: 1px solid #8e99a0;
+  color: #10171a;
+  flex-shrink: 0;
+}
+
+.americas-heading > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.americas-heading .eyebrow {
+  font-size: 10px;
+  margin: 0;
+  color: #3b783d;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.americas-heading h1 {
+  font: 600 20px Georgia, serif;
+  margin: 2px 0 0;
+  color: #10171a;
+}
+
+.americas-heading a {
+  color: #244d26;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.americas-heading a:hover {
+  color: #3b783d;
+}
+
+.americas-heading :focus-visible {
+  outline: 3px solid #a63108;
+  outline-offset: 2px;
+}
+
+@media (min-width: 701px) {
+  body.atlas-page:not(.reading-page):not(.atlas-preview-page) {
+    overflow: hidden;
+  }
+
+  body.atlas-page:not(.reading-page):not(.atlas-preview-page) #app {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  body.atlas-page:not(.reading-page):not(.atlas-preview-page) .topbar {
+    flex-shrink: 0;
+  }
+
+  body.atlas-page:not(.reading-page):not(.atlas-preview-page) .shell {
+    flex: 1;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    max-width: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  body.atlas-page:not(.reading-page):not(.atlas-preview-page) #main {
+    flex: 1;
+    min-height: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  body.atlas-page:not(.reading-page):not(.atlas-preview-page) .atlas-layout {
+    flex: 1;
+    min-height: 0;
+    height: auto;
+  }
+
+  body.atlas-page:not(.reading-page):not(.atlas-preview-page) .atlas-layout .map-stage {
+    height: 100% !important;
+    min-height: 0 !important;
+  }
+
+  body.atlas-page:not(.reading-page):not(.atlas-preview-page) .timeline {
+    position: static;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    flex-shrink: 0;
+    height: auto;
+  }
+}
+
+body.reading-page,
+body.atlas-preview-page {
+  overflow: auto;
+}
+
+body.reading-page #app,
+body.atlas-preview-page #app {
+  height: auto;
+  overflow: visible;
+}
+
+.atlas-layout > .map-stage {
+  background: #10171a;
+}
+
+.americas-map-status {
+  position: absolute;
+  left: 14px;
+  top: 12px;
+  max-width: min(540px, calc(100% - 210px));
+  background: #10171ae8;
+  border: 1px solid #525d64;
+  border-radius: 6px;
+  padding: 8px 12px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.americas-map-status .map-topline {
+  position: static;
+  inset: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  padding: 0;
+  margin: 0;
+  min-height: 0;
+  background: transparent;
+  border: 0;
+  font-size: 12px;
+  color: #f2f6f8;
+}
+
+.americas-map-status #active-count {
+  font-weight: 700;
+  color: #f2f6f8;
+}
+
+.americas-map-status .map-topline > span:last-child {
+  display: inline;
+  font-size: 11px;
+  color: #b4bec4;
+}
+
+.americas-map-status #boundary-date-status {
+  position: static;
+  margin: 3px 0 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  font-size: 11px;
+  color: #97c798;
+}
+
+.atlas-layout .map-controls {
+  top: 12px;
+  right: 14px;
+  z-index: 4;
+}
+
+.atlas-layout .map-controls button,
+.atlas-layout .map-controls .map-scope select {
+  background: #10171ae8;
+  color: #f2f6f8;
+  border: 1px solid #8e99a0;
+  border-radius: 5px;
+}
+
+.atlas-layout .map-controls button:hover {
+  background: #244d26;
+  border-color: #72b273;
+}
+
+.map-key-disclosure {
+  left: 14px;
+  right: auto;
+  bottom: 10px;
+  background: #10171ae8;
+  border-color: #8e99a0;
+  color: #f2f6f8;
+}
+
+.atlas-layout .map-caption {
+  left: 155px;
+  right: 16px;
+  bottom: 12px;
+  color: #b4bec4;
+}
+
+.history-summary {
+  bottom: 52px;
+  left: 14px;
+  background: #10171ad8;
+  border-color: #525d64;
+  color: #f2f6f8;
+}
+
+body.movie-playing:not(.focus-view) .map-stage #cinema-caption {
+  top: 76px;
+  left: 14px;
+  background: #10171ae8;
+  border-color: #72b273;
+  color: #f2f6f8;
+}
+
+body.movie-playing:not(.focus-view) .map-stage #cinema-caption h3 {
+  color: #f2f6f8;
+}
+
+body.movie-playing:not(.focus-view) .map-stage #cinema-caption .eyebrow {
+  color: #97c798;
+}
+
+body.movie-playing:not(.focus-view) .map-stage #cinema-caption p {
+  color: #cfd6da;
+}
+
+.history-summary b {
+  color: #97c798;
+}
+
+.history-summary small {
+  color: #b4bec4;
+}
+
+.atlas-facts {
+  background: #e3e8eb;
+  color: #10171a;
+}
+
+.atlas-facts :focus-visible {
+  outline: 3px solid #a63108;
+  outline-offset: 2px;
+}
+
+.atlas-facts a {
+  color: #244d26;
+  font-weight: 600;
+}
+
+.americas-hint {
+  margin: 0;
+  padding: 10px 16px;
+  font-size: 12px;
+  color: #525d64;
+  background: #f2f6f8;
+  border-bottom: 1px solid #b4bec4;
+}
+
+.atlas-facts > .detail-panel {
+  background: #dcebdd;
+  border-bottom: 1px solid #72b273;
+}
+
+.atlas-facts > .detail-panel h3,
+.atlas-facts > .detail-panel h4 {
+  color: #10171a;
+}
+
+.atlas-facts > .detail-panel p,
+.atlas-facts > .detail-panel .fine {
+  color: #525d64;
+}
+
+.atlas-facts > .detail-panel .selection-status {
+  background: #f2f6f8;
+  color: #10171a;
+  border: 1px solid #72b273;
+}
+
+.atlas-facts #clear-selection,
+.atlas-facts #selection-actions button {
+  background: #f2f6f8;
+  color: #10171a;
+  border: 1px solid #8e99a0;
+  border-radius: 5px;
+}
+
+.atlas-facts #clear-selection:hover,
+.atlas-facts #selection-actions button:hover {
+  background: #97c798;
+  border-color: #244d26;
+}
+
+.atlas-facts #site-panel .visible-heading {
+  background: #e3e8eb;
+  color: #10171a;
+  border-bottom: 1px solid #b4bec4;
+}
+
+.atlas-facts #site-panel #visible-count {
+  background: #dcebdd;
+  color: #244d26;
+  border: 1px solid #72b273;
+}
+
+.atlas-facts .explore-intro {
+  background: #f2f6f8;
+  border-bottom: 1px solid #b4bec4;
+}
+
+.atlas-facts .explore-intro h2 {
+  color: #10171a;
+}
+
+.atlas-facts .explore-intro .eyebrow {
+  color: #3b783d;
+}
+
+.atlas-facts .explore-intro input,
+.atlas-facts .explore-intro select,
+.atlas-facts .story-intro select,
+.atlas-facts #whole-movie {
+  background: #f2f6f8;
+  color: #10171a;
+  border: 1px solid #8e99a0;
+  border-radius: 5px;
+}
+
+.atlas-facts #whole-movie {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 8px 10px;
+  font-size: 12px;
+  text-align: left;
+}
+
+.atlas-facts #whole-movie:hover {
+  background: #dcebdd;
+  border-color: #3b783d;
+}
+
+.atlas-facts .evidence-card {
+  background: #f2f6f8;
+  color: #10171a;
+  border: 1px solid #b4bec4;
+  border-radius: 5px;
+  margin: 6px 12px;
+  width: calc(100% - 24px);
+  padding: 10px 12px;
+}
+
+.atlas-facts .evidence-card:hover {
+  background: #dcebdd;
+  border-color: #3b783d;
+}
+
+.atlas-facts .evidence-card.is-selected {
+  background: #dcebdd;
+  border: 2px solid #10171a;
+  box-shadow: none;
+}
+
+.atlas-facts .evidence-card strong {
+  color: #10171a;
+}
+
+.atlas-facts .evidence-card span,
+.atlas-facts .evidence-card.historical-card strong:after {
+  color: #525d64;
+}
+
+.atlas-facts > .story-panel {
+  padding: 10px 16px 16px;
+  border-top: 1px solid #b4bec4;
+}
+
+.timeline {
+  background: #e3e8eb;
+  color: #10171a;
+  border-top: 1px solid #8e99a0;
+  padding: 9px 20px 10px;
+  min-height: 0;
+  box-shadow: none;
+}
+
+.timeline :focus-visible {
+  outline: 3px solid #a63108;
+  outline-offset: 2px;
+}
+
+.timeline .year-display .eyebrow,
+.timeline label,
+.timeline .range-labels,
+.timeline .time-ticks span,
+.timeline #time-settings .fine,
+.timeline #story-position {
+  color: #525d64;
+}
+
+.timeline .year-display strong {
+  color: #10171a;
+}
+
+.timeline .play-button {
+  background: #569e56;
+  color: #10171a;
+  border: 1px solid #244d26;
+  font-weight: 700;
+}
+
+.timeline .play-button:hover {
+  background: #72b273;
+}
+
+body.movie-playing .timeline .play-button {
+  background: #244d26;
+  color: #f2f6f8;
+}
+
+.timeline button:not(.play-button),
+.timeline select,
+.timeline input:not([type="range"]) {
+  background: #f2f6f8;
+  color: #10171a;
+  border: 1px solid #8e99a0;
+  min-height: 32px;
+  border-radius: 5px;
+}
+
+.timeline button:not(.play-button):hover {
+  background: #dcebdd;
+  border-color: #3b783d;
+}
+
+.americas-jump-wrap {
+  margin-left: 6px;
+}
+
+.timeline input[type="range"] {
+  accent-color: #3b783d;
+}
+
+.timeline #time-settings {
+  background: #e3e8eb;
+  border-color: #8e99a0;
+  color: #10171a;
+}
+
+.timeline #time-error {
+  color: #a63108;
+}
+
+body.reading-page {
+  background: #10171a;
+  color: #f2f6f8;
+  overflow: auto;
+}
+
+body.reading-page .timeline {
+  display: none;
+}
+
+.reading-page h2 {
+  color: #f2f6f8;
+}
+
+.reading-page .eyebrow {
+  color: #97c798;
+}
+
+.reading-page .lead,
+.reading-page .fine {
+  color: #b4bec4;
+}
+
+.reading-page a:not(.library-card):not(.button) {
+  color: #97c798;
+}
+
+.reading-page .button,
+a.button,
+button.primary {
+  background: #569e56;
+  color: #10171a;
+  border: 1px solid #244d26;
+  font-weight: 700;
+}
+
+.reading-page .button:hover,
+a.button:hover,
+button.primary:hover {
+  background: #72b273;
+  color: #10171a;
+  text-decoration: none;
+}
+
+.reading-page .guide-grid section {
+  background: #172227;
+  border-color: #525d64;
+}
+
+.library-card {
+  background: #172227;
+  border-color: #525d64;
+  color: #f2f6f8;
+}
+
+.library-card:hover {
+  background: #1e2e35;
+  border-color: #569e56;
+}
+
+.library-card > span {
+  color: #97c798;
+}
+
+.library-card h3 {
+  color: #f2f6f8;
+}
+
+.library-card p {
+  color: #cfd6da;
+}
+
+.reading-page :focus-visible {
+  outline: 2px solid #fa742a;
+  outline-offset: 2px;
+}
+
+@media (max-width: 700px) {
+  .americas-heading {
+    padding: 9px 12px;
+    gap: 10px;
+  }
+
+  .americas-heading h1 {
+    font-size: 17px;
+  }
+
+  .americas-heading a {
+    font-size: 11px;
+  }
+
+  .americas-map-status {
+    left: 10px;
+    top: 10px;
+    max-width: calc(100% - 135px);
+    padding: 6px 8px;
+  }
+
+  .americas-map-status .map-topline > span:last-child {
+    display: none;
+  }
+
+  .atlas-layout .map-controls {
+    top: 10px;
+    right: 10px;
+  }
+
+  .atlas-page .timeline {
+    position: static;
+    height: auto;
+    max-height: none;
+    padding: 10px 12px;
+  }
+}

@@ -39,7 +39,7 @@ try {
   });
   const catalogRequests = () => fixture.requests.filter(request => new URL(request.url).pathname === '/api/catalog').length;
   const catalogsBefore = catalogRequests();
-  const destinations = [['africa', 'Africa & human origins'], ['europe', 'Europe & Mediterranean'], ['asia-pacific', 'Asia & Pacific']];
+  const destinations = [['africa', 'Africa & Middle East'], ['europe', 'Europe & Mediterranean'], ['asia-pacific', 'Asia']];
   assert.ok(!fixture.requests.some(r => r.url.endsWith('/europe-catalogue.json')), 'Americas must not fetch the Europe catalogue');
   for (const [id, title] of destinations) {
     const regionMenu=page.locator('.map-navigation').getByRole('button',{name:/^Region:/});

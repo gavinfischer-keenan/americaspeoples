@@ -1267,3 +1267,828 @@
     font-size: 11px;
   }
 }
+
+/* === Electric Eel + Europe-parity UI Standardization === */
+body.world-surface,
+body.world-route-page {
+  background: #e3e8eb !important;
+  color: #10171a !important;
+  color-scheme: light;
+  overflow: auto;
+  font-family: system-ui, sans-serif;
+}
+
+body.world-surface #app {
+  min-height: 100dvh;
+}
+
+body.world-surface .shell,
+body.world-surface #main {
+  padding: 0;
+  margin: 0;
+  max-width: none;
+  width: 100%;
+}
+
+body.world-surface .world-hub h1,
+body.world-surface .world-hub h2,
+body.world-surface .world-hub h3 {
+  color: #10171a !important;
+  font-family: system-ui, sans-serif;
+}
+
+body.world-surface .world-intro h1 span {
+  color: #d4501e;
+}
+
+body.world-surface .world-kicker {
+  color: #3b783d !important;
+}
+
+body.world-surface .world-lede,
+body.world-surface .world-small,
+body.world-surface .world-map-instruction,
+body.world-surface .world-coverage-range,
+body.world-surface .world-coverage-stats span,
+body.world-surface .world-consensus,
+body.world-surface .world-region-card p,
+body.world-surface .world-region-card small,
+body.world-surface .world-stats span {
+  color: #525d64 !important;
+}
+
+body.world-surface .world-stats strong,
+body.world-surface .world-coverage-stats strong,
+body.world-surface .world-coverage-range strong,
+body.world-surface .world-consensus strong {
+  color: #10171a !important;
+}
+
+body.world-surface a {
+  color: #244d26;
+}
+
+body.world-surface a:hover {
+  color: #3b783d;
+}
+
+body.world-surface :focus-visible {
+  outline: 3px solid #a63108;
+  outline-offset: 2px;
+}
+
+body.world-surface .world-provenance,
+body.world-surface .world-region-card {
+  background: #f2f6f8;
+  border: 1px solid #8e99a0;
+  color: #10171a;
+}
+
+body.world-surface .world-region-card:hover {
+  background: #dcebdd;
+  border-color: #3b783d;
+}
+
+body.world-surface .world-region-action {
+  color: #244d26 !important;
+  font-weight: 700;
+}
+
+body.world-surface .world-view-controls button {
+  background: #f2f6f8;
+  color: #10171a;
+  border: 1px solid #8e99a0;
+  font-weight: 600;
+}
+
+body.world-surface .world-view-controls button:hover:not(:disabled) {
+  background: #dcebdd;
+  border-color: #3b783d;
+}
+
+body.world-surface .world-globe {
+  background: #10171a;
+  border: 1px solid #525d64;
+}
+
+body.world-surface .world-globe-ocean {
+  fill: #10171a;
+  stroke: #525d64;
+}
+
+body.world-surface .world-globe-land {
+  fill: #2e4840;
+  stroke: #8e99a0;
+}
+
+body.world-surface .world-region-divider {
+  stroke: #97c798;
+}
+
+body.world-surface .world-foundation-callout {
+  background: #10171a;
+  color: #f2f6f8;
+  border: 1px solid #525d64;
+}
+
+body.world-surface .world-foundation-callout h2 {
+  color: #f2f6f8 !important;
+}
+
+body.world-surface .world-foundation-callout p {
+  color: #cfd6da !important;
+}
+
+body.world-surface .world-foundation-callout a {
+  background: #569e56;
+  color: #10171a !important;
+  border: 1px solid #244d26;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+body.world-surface .world-foundation-callout a:hover {
+  background: #72b273;
+}
+
+/* Unified topbar matching header.topbar */
+body.world-surface .world-top {
+  max-width: none;
+  margin: 0;
+  background: #10171a;
+  border-bottom: 1px solid #525d64;
+  padding: 6px 18px;
+  min-height: 46px;
+  gap: 12px 16px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+body.world-surface .world-top .world-brand {
+  color: #f2f6f8 !important;
+  font-size: 14px;
+  font-weight: 700;
+  gap: 9px;
+}
+
+body.world-surface .world-top .world-brand small {
+  color: #b4bec4 !important;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+}
+
+body.world-surface .world-top .world-mark {
+  color: #72b273;
+  font-size: 16px;
+  line-height: 1;
+}
+
+body.world-surface .world-top nav {
+  gap: 4px;
+}
+
+body.world-surface .world-top nav a {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #f2f6f8;
+}
+
+body.world-surface .world-top nav a:hover {
+  background: #dcebdd;
+  color: #10171a;
+}
+
+body.world-surface .world-top nav a.active {
+  background: #569e56;
+  color: #10171a;
+  font-weight: 700;
+}
+
+body.world-surface .world-top .header-about {
+  margin-left: auto;
+  color: #97c798;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+body.world-surface .world-top .header-about:hover {
+  color: #f2f6f8;
+  text-decoration: underline;
+}
+
+body.world-surface .world-top :focus-visible {
+  outline: 2px solid #fa742a;
+  outline-offset: 2px;
+}
+
+@media (min-width: 701px) {
+  body.world-player-page {
+    overflow: hidden !important;
+  }
+
+  body.world-player-page #app {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  body.world-player-page .world-top,
+  body.world-player-page .topbar {
+    flex-shrink: 0;
+  }
+
+  body.world-player-page .shell {
+    flex: 1;
+    min-height: 0;
+    padding: 0 !important;
+    margin: 0;
+    max-width: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  body.world-player-page #world-main,
+  body.world-player-page #main {
+    flex: 1;
+    min-height: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  body.world-player-page #world-main > div,
+  body.world-player-page #main > div {
+    flex: 1;
+    min-height: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  body.world-player-page .family-page {
+    flex: 1;
+    min-height: 0;
+    height: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  body.world-player-page .family-layout {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 350px minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+    margin: 0;
+    gap: 0;
+    border: 0;
+    border-radius: 0;
+  }
+
+  body.world-player-page .family-layout.facts-hidden {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body.world-player-page .family-reader {
+    min-height: 0;
+    height: 100%;
+    max-height: none;
+    overflow: auto;
+    overscroll-behavior: contain;
+  }
+
+  body.world-player-page .family-map-column {
+    height: 100%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+  }
+
+  body.world-player-page .family-map-stage {
+    flex: 1;
+    min-height: 0;
+    height: 100%;
+  }
+
+  body.world-player-page #family-map {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    min-height: 0;
+    display: block;
+  }
+}
+
+.family-heading {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 8px 20px;
+  background: #f2f6f8;
+  border-bottom: 1px solid #8e99a0;
+  color: #10171a;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.family-heading > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.family-heading .world-kicker {
+  margin: 0;
+  font-size: 10px !important;
+  color: #3b783d !important;
+}
+
+.family-heading h1 {
+  font: 600 20px Georgia, serif !important;
+  margin: 2px 0 0;
+  color: #10171a !important;
+}
+
+.family-heading nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  max-width: none;
+}
+
+.family-heading nav a {
+  color: #244d26;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.family-heading nav a:hover {
+  color: #3b783d;
+  text-decoration: underline;
+}
+
+.family-map-navigation {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.family-reader {
+  background: #e3e8eb;
+  color: #10171a;
+  border-right: 1px solid #8e99a0;
+  padding: 14px 16px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.family-reader h2,
+.family-reader h3,
+.family-reader summary,
+.family-happening-head strong {
+  color: #10171a !important;
+}
+
+.family-scope,
+.family-filter label,
+.family-search-label small,
+.family-now-item span,
+.family-now-item small,
+.family-reader details p {
+  color: #525d64 !important;
+}
+
+.family-filter select,
+.family-search-label input {
+  background: #f2f6f8;
+  color: #10171a;
+  border: 1px solid #8e99a0;
+  border-radius: 5px;
+}
+
+#family-detail,
+#family-detail p,
+#family-detail a {
+  overflow-wrap: anywhere;
+}
+
+#family-detail.has-selection {
+  background: #dcebdd;
+  border: 1px solid #72b273;
+  border-left: 3px solid #3b783d;
+  border-radius: 6px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  color: #10171a;
+}
+
+.family-now-item,
+.family-evidence-btn,
+.family-wave-btn,
+.family-list button {
+  background: #f2f6f8;
+  color: #10171a;
+  border: 1px solid #b4bec4;
+  border-radius: 5px;
+}
+
+.family-now-item.is-new {
+  background: #dcebdd;
+  border-color: #3b783d;
+}
+
+.family-now-item:hover,
+.family-list button:hover {
+  background: #dcebdd;
+  border-color: #3b783d;
+}
+
+.family-list button.selected,
+.family-now-item.selected {
+  background: #dcebdd;
+  border: 2px solid #10171a;
+}
+
+.family-map-column,
+.family-map-stage {
+  background: #10171a;
+  position: relative;
+  min-height: 360px;
+}
+
+#family-map {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  display: block;
+}
+
+.family-ocean-backdrop,
+.family-sea {
+  fill: #10171a;
+}
+
+.family-grid {
+  stroke: #525d64;
+  stroke-opacity: 0.25;
+}
+
+.family-land {
+  fill: #2e4840;
+  stroke: #8e99a0;
+}
+
+#family-map .terrain {
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.family-point circle:not(.family-hit) {
+  fill: #97c798;
+  stroke: #10171a;
+}
+
+.family-point.earlier circle:not(.family-hit) {
+  fill: #525d64;
+  stroke: #8e99a0;
+}
+
+.family-point.newly-active circle:not(.family-hit),
+.family-point.selected circle:not(.family-hit) {
+  fill: #fa742a;
+  stroke: #f2f6f8;
+  stroke-width: 2.2;
+}
+
+.family-wave {
+  stroke: #72b273;
+}
+
+.family-wave.admixture {
+  stroke: #fa742a;
+}
+
+.family-wave.selected {
+  stroke: #fa742a !important;
+  stroke-width: 4.5 !important;
+}
+
+#family-map-banner {
+  top: 12px;
+  left: 14px;
+  right: auto;
+  max-width: min(500px, calc(100% - 210px));
+  background: #10171ae8;
+  border: 1px solid #525d64;
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: #f2f6f8;
+  z-index: 3;
+}
+
+.family-banner-meta {
+  font-size: 11px;
+  color: #b4bec4;
+}
+
+.family-banner-year {
+  color: #97c798;
+}
+
+.family-banner-text {
+  color: #f2f6f8;
+}
+
+.family-map-controls {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  display: flex;
+  gap: 6px;
+  z-index: 4;
+}
+
+.family-map-controls button {
+  background: #10171ae8;
+  color: #f2f6f8;
+  border: 1px solid #8e99a0;
+  border-radius: 5px;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.family-map-controls button:hover {
+  background: #244d26;
+  border-color: #72b273;
+}
+
+.family-map-key {
+  position: absolute;
+  left: 14px;
+  bottom: 10px;
+  right: auto;
+  z-index: 4;
+  max-width: min(360px, calc(100% - 28px));
+}
+
+.family-map-key > summary {
+  background: #10171ae8;
+  color: #f2f6f8;
+  border: 1px solid #8e99a0;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.family-map-key[open] .family-legend {
+  margin-top: 6px;
+  background: #10171af2;
+  border: 1px solid #8e99a0;
+  border-radius: 6px;
+  padding: 10px 12px;
+  color: #f2f6f8;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  font-size: 11px;
+}
+
+.family-timeline {
+  background: #e3e8eb;
+  border-top: 1px solid #8e99a0;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+  border-radius: 0;
+  color: #10171a;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 4px 18px;
+  align-items: center;
+  margin: 0;
+  padding: 8px 20px;
+  position: static;
+  box-shadow: none;
+  flex-shrink: 0;
+}
+
+.family-timeline form {
+  display: flex;
+  gap: 6px;
+  align-items: end;
+  flex-wrap: nowrap;
+}
+
+.family-timeline form label {
+  display: block;
+  width: auto;
+  margin: 0;
+}
+
+.family-timeline form input {
+  width: 85px !important;
+  display: block;
+  margin-top: 2px;
+}
+
+.family-timeline form select,
+.family-timeline form button {
+  width: auto;
+  flex-shrink: 0;
+}
+
+.family-transport {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: end;
+}
+
+.family-transport label,
+.family-slider-label,
+.family-timeline form label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #525d64;
+}
+
+.family-transport button:not(#family-play),
+.family-timeline select,
+.family-timeline input:not([type="range"]),
+.family-timeline form button {
+  background: #f2f6f8;
+  color: #10171a;
+  border: 1px solid #8e99a0;
+  border-radius: 5px;
+  padding: 5px 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.family-transport button:not(#family-play):hover,
+.family-timeline form button:hover {
+  background: #dcebdd;
+  border-color: #3b783d;
+}
+
+#family-play {
+  background: #569e56;
+  color: #10171a;
+  border: 1px solid #244d26;
+  border-radius: 5px;
+  padding: 6px 13px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+#family-play:hover {
+  background: #72b273;
+}
+
+.family-page.is-playing #family-play {
+  background: #244d26;
+  color: #f2f6f8;
+}
+
+#family-slider {
+  accent-color: #3b783d;
+}
+
+.family-slider-label output {
+  color: #10171a;
+  font-weight: 700;
+  font-size: 15px;
+  padding-left: 8px;
+}
+
+#family-date-error {
+  color: #a63108;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.family-playback-note {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 11px;
+  color: #525d64;
+}
+
+@media (max-width: 1100px) {
+  body.world-player-page .family-layout {
+    grid-template-columns: 300px minmax(0, 1fr);
+  }
+
+  .family-timeline {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .family-timeline form {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 700px) {
+  body.world-player-page {
+    overflow: auto !important;
+  }
+
+  body.world-player-page #app,
+  body.world-player-page .shell,
+  body.world-player-page #main,
+  body.world-player-page #main > div,
+  body.world-player-page #world-main,
+  body.world-player-page #world-main > div,
+  body.world-player-page .family-page {
+    height: auto;
+    overflow: visible;
+    padding: 0;
+  }
+
+  .family-heading {
+    display: block;
+    padding: 10px 12px;
+  }
+
+  .family-heading nav {
+    margin-top: 6px;
+  }
+
+  .family-heading h1 {
+    font-size: 18px !important;
+  }
+
+  .family-layout {
+    display: contents;
+  }
+
+  .family-map-column {
+    order: 1;
+    height: 44dvh;
+    min-height: 290px;
+  }
+
+  .family-map-stage,
+  #family-map {
+    height: 100%;
+    min-height: 290px;
+  }
+
+  #family-map-banner {
+    top: 8px;
+    left: 8px;
+    max-width: calc(100% - 135px);
+    padding: 6px 8px;
+  }
+
+  .family-map-controls {
+    top: 8px;
+    right: 8px;
+    gap: 4px;
+  }
+
+  .family-map-controls button {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+
+  .family-timeline {
+    order: 2;
+    position: static;
+    padding: 10px 12px;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .family-reader {
+    order: 3;
+    max-height: none;
+    overflow: visible;
+    border-right: 0;
+    border-top: 1px solid #8e99a0;
+    padding: 14px 12px;
+  }
+
+  .family-playback-note {
+    display: none;
+  }
+}

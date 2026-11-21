@@ -10,7 +10,7 @@ const page=await browser.newPage({viewport:{width:1440,height:960}}),errors=[];
 page.on('pageerror',e=>errors.push(e.message));
 const records=JSON.parse(await readFile('dist/dataset.json','utf8')).records;
 try{
- await page.goto(origin+'/#movie');await page.locator('#story-scene h2').waitFor();
+ await page.goto(origin+'/#movie');await page.locator('#map-host .world').waitFor();
  await page.getByRole('button',{name:'Pause',exact:true}).click();
  assert.equal(await page.locator('#story-select').inputValue(),'free');
  await mapSetting(page, () => page.locator('#story-select').selectOption('pacific-arrivals'));
@@ -47,7 +47,7 @@ try{
  await mapSetting(page, () => page.getByLabel('Search places and evidence',{exact:true}).fill('no-such-place-in-this-atlas'));assert.match(await page.locator('#visible-records').innerText(),/No matching records/);
  await mapSetting(page, () => page.getByLabel('Search places and evidence',{exact:true}).fill(''));
  await mapSetting(page, () => page.getByLabel('Explore period',{exact:true}).selectOption('current'));assert.ok(await page.locator('.timeline').isVisible());
- await page.getByRole('link',{name:'Library',exact:true}).click();await page.locator('.library-card').first().waitFor();assert.equal(await page.locator('.library-card').count(),8);assert.equal(await page.locator('.library-card[href="#dives"]').count(),1);assert.ok(await page.locator('.timeline').isHidden());
+ await page.getByRole('link',{name:'Library',exact:true}).click();await page.locator('.library-card').first().waitFor();assert.equal(await page.locator('.library-card').count(),9);assert.equal(await page.locator('.library-card[href="#dives"]').count(),1);assert.ok(await page.locator('.timeline').isHidden());
  await page.getByRole('link',{name:/Evidence index/}).click();await page.getByLabel('Search evidence',{exact:true}).waitFor();assert.ok(await page.locator('.timeline').isHidden());
  await page.goto(origin+'/#review/cahokia-urban');await page.locator('[data-action="locate"]').click();await page.locator('#selected-records h4').waitFor();
  assert.match(await page.locator('#selected-records').innerText(),/Cahokia/);assert.equal(await page.locator('#story-select').inputValue(),'free');assert.equal(await page.locator('#year-number').inputValue(),'1050');

@@ -67,7 +67,7 @@ export function loadAtlasManifest(id: PlannedAtlasId): RegionalAtlasManifest {
 }
 
 export const atlases: readonly { id: AtlasId; title: string; status: 'available' | 'coming-soon'; href: string }[] = [
-  { id: 'americas', title: 'Americas', status: 'available', href: '#movie' },
+  { id: 'americas', title: 'Americas & Pacific', status: 'available', href: '#movie' },
   ...Object.values(manifests).map(m => ({ id: m.id, title: m.title, status: m.status, href: `#atlas/${m.id}` })),
 ];
 

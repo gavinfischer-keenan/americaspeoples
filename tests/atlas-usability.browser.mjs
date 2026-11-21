@@ -10,9 +10,11 @@ const base=`http://127.0.0.1:${server.address().port}`, errors=[];
 page.on('pageerror',e=>errors.push(e.message));
 try{
  await page.goto(base+'/#movie');await page.getByRole('button',{name:'Pause',exact:true}).click();
- await page.locator('[data-movie-year="1000"]').click();
- const original=(await page.locator('#concurrent-context').boundingBox()).y;
+ await page.locator('#americas-jump').selectOption('1000');
+ assert.equal(await page.locator('#year-number').inputValue(),'1000');
  assert.equal(await page.locator('#story-picker-section').isVisible(),false,'story choices start inside closed map settings');
+ await mapSetting(page,()=>page.locator('#story-select').selectOption('four-corners'));
+ const original=(await page.locator('#concurrent-context').boundingBox()).y;
  await mapSetting(page,()=>page.locator('#story-picker-section > summary').click());
  await page.locator('#story-chapter-section > summary').click();
  const collapsed=(await page.locator('#concurrent-context').boundingBox()).y;

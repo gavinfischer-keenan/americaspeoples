@@ -1,42 +1,547 @@
-.europe-atlas{height:calc(100dvh - 82px);min-height:600px;display:flex;flex-direction:column;background:#f2efe4;color:#193f44}.europe-heading{display:flex;align-items:center;gap:24px;padding:12px 22px;border-bottom:1px solid #c6d1c6}.europe-heading>div{flex:1}.europe-heading h1{font:500 24px Georgia,serif;margin:4px 0}.europe-heading .eyebrow{font-size:10px;margin:0;color:#387478}.europe-heading a{color:#1d686d;font-size:13px}.europe-layout{display:grid;grid-template-columns:350px minmax(0,1fr);flex:1;min-height:0}.europe-reader{padding:18px;overflow:auto;overscroll-behavior:contain;border-right:1px solid #c6d1c6;font-size:13px;line-height:1.6}.europe-reader a{color:#006a77}.europe-reader summary{cursor:pointer;font-weight:700;color:#285c62;padding:12px 0}.europe-reader details{border-top:1px solid #bdcec4}.europe-reader details p{font-size:12px}.europe-scope{margin-top:0}.europe-filters{display:grid;gap:10px}.europe-filters label{font-size:12px}.europe-atlas input,.europe-atlas select,.europe-atlas button{background:#fffdf4;border:1px solid #91aeaa;border-radius:5px;color:#16494e;padding:8px;font:inherit}.europe-filters input,.europe-filters select{display:block;width:100%;margin-top:4px}.europe-layers label{display:block;margin:5px 0}.europe-layers input{width:auto}.europe-map-wrap{position:relative;min-width:0;background:#143945}.europe-map-wrap #europe-map,.europe-map-wrap .map-canvas{height:100%;width:100%}.europe-map-wrap svg{height:100%;width:100%}.europe-map-status{position:absolute;left:15px;top:14px;background:#143945e8;color:#f5e0ad;padding:8px 12px;border-radius:6px;max-width:calc(100% - 200px);pointer-events:none}.europe-map-status strong{display:block;font:600 22px Georgia,serif}.europe-map-status span{font-size:10px;color:#d1e0de}.europe-atlas .europe-home{position:absolute;right:16px;bottom:18px;background:#153c46;color:#f2deb0;font-size:12px}.europe-selected{margin:18px 0;padding:16px;background:#e4eadf;border:1px solid #b3c5ba;border-radius:8px}.europe-selected h2{font:600 21px Georgia,serif;line-height:1.25}.europe-selected .eyebrow{font-size:9px;line-height:1.7}.europe-method{border-left:2px solid #77958c;padding-left:10px;font-size:12px}.europe-selected table{width:100%;font-size:12px}.europe-selected td{vertical-align:top;padding:6px 3px}.europe-selected small{display:block}.europe-now button{display:block;width:100%;text-align:left;margin:8px 0;background:#e5ece1}.europe-now button strong,.europe-now button span{display:block}.europe-now button span{font-size:11px;margin-top:5px;line-height:1.5}.europe-territories article{border-bottom:1px solid #b2c6bd}.europe-territories h3{font-size:14px}.europe-timeline{padding:12px 20px;border-top:1px solid #afc4bc;display:grid;grid-template-columns:auto 1fr auto;gap:10px 20px;align-items:center}.europe-transport{display:flex;gap:5px;align-items:center}.europe-transport label{font-size:11px}.europe-transport select{display:block;padding:5px;max-width:160px}.europe-slider-label{font-size:11px}.europe-slider-label output{font-size:15px;font-weight:700;padding-left:15px}.europe-slider-label input{width:100%;padding:0;display:block;accent-color:#226e70}.europe-timeline form{display:flex;gap:5px;align-items:end;font-size:12px}.europe-timeline form input{width:85px;display:block}.europe-timeline form span{font-size:11px;max-width:180px}.europe-playback-note{grid-column:1/-1;font-size:10px;margin:0;color:#486d6d}.network-key{display:inline-block;width:23px;vertical-align:middle;border-top:3px dashed #bb893b}.network-key.road{border-color:#91c985}.network-key.rail{border-color:#83c7e2;border-top-style:double;border-top-width:5px}.europe-atlas .network-road .route-line{stroke:#b8e69e;stroke-dasharray:7 4}.europe-atlas .network-road .route-flow{stroke:#e8ffd9}.europe-atlas .network-rail .route-line{stroke:#9adbed;stroke-dasharray:3 3}.europe-atlas .network-rail .route-flow{stroke:#e5faff}.europe-hint{color:#4d7070}.europe-page{overflow:hidden}.europe-page main{padding:0;max-width:none;width:100%;margin:0}
-@media(max-width:1100px){.europe-layout{grid-template-columns:300px minmax(0,1fr)}.europe-timeline{grid-template-columns:1fr 1fr}.europe-timeline form{grid-column:1/-1}.europe-atlas{height:calc(100dvh - 82px)}}
-@media(max-width:700px){.europe-page{overflow:auto}.europe-atlas{height:auto;min-height:0}.europe-heading{padding:12px;gap:12px}.europe-heading h1{font-size:20px}.europe-heading>a{font-size:11px}.europe-layout{display:flex;flex-direction:column}.europe-map-wrap{order:-1;height:52dvh;min-height:320px}.europe-reader{max-height:55dvh;border-right:0;padding:14px}.europe-map-status{max-width:55%;left:10px;top:10px}.europe-map-status strong{font-size:18px}.europe-map-status span{display:none}.europe-timeline{padding:12px;grid-template-columns:1fr;position:sticky;bottom:0;background:#f2efe4;z-index:5}.europe-transport{flex-wrap:wrap}.europe-timeline form{grid-column:auto}.europe-timeline .europe-playback-note{display:none}.europe-timeline input,.europe-timeline select{font-size:16px}.europe-transport select{max-width:140px}.europe-transport button{min-height:40px}}
-
-.europe-atlas .political-boundaries path[class*="europe-authority-"]{stroke-dasharray:none}
-.europe-atlas .political-boundaries path.europe-reconstructed-territory{stroke-dasharray:3 2}
-.europe-atlas .political-boundaries path.europe-authority-shared-crown{stroke:#f4c875;stroke-dasharray:9 4}
-.europe-atlas .political-boundaries path.europe-authority-settlement-district{stroke:#a6e3d6;stroke-linecap:round;stroke-dasharray:1 4}
-.europe-atlas .historical-rails .network-road{stroke:#b8e69e;stroke-dasharray:7 4}
-.europe-atlas .historical-rails .network-rail{stroke:#9adbed;stroke-dasharray:3 3}
-.europe-layout{grid-template-rows:minmax(0,1fr)}
-.europe-layout.map-facts-hidden{grid-template-columns:minmax(0,1fr)}
-.europe-reader[hidden]{display:none!important}.europe-reader #europe-details .europe-selected{margin-top:0}.europe-atlas .map-navigation{flex-shrink:0}.europe-atlas .map-navigation-settings .europe-layers{margin:0}.europe-atlas .map-navigation-settings .europe-layers summary{padding:0 0 8px}.europe-atlas .map-navigation-settings .europe-scope{font-size:12px;flex-basis:100%;max-width:none;margin:0}
-.europe-map-wrap{min-height:0;overflow:hidden}
-.europe-map-wrap .map-canvas>svg{display:block}
-@media(max-width:700px){.europe-map-wrap{min-height:320px}}
-
-.europe-reader .europe-selected h2,.europe-reader h3{color:#173e43}
-.europe-reader .europe-selected .eyebrow{color:#665523}
-.europe-reader .fine,.europe-reader small,.europe-atlas .europe-hint{color:#415e61}
-.europe-map-wrap .map-controls select{background:#16363e;color:#e5efe8}
-@media(min-width:701px) and (max-width:1000px){
- body.europe-page #app{height:100dvh;display:flex;flex-direction:column}
- body.europe-page .topbar{flex-shrink:0}
- body.europe-page .shell{flex:1;min-height:0;padding:0 24px}
- body.europe-page #main{height:100%;min-height:0}
- body.europe-page .europe-atlas{height:100%;min-height:0}
+.europe-atlas {
+  flex: 1;
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: #E3E8EB;
+  color: #10171A;
+  font-family: system-ui, sans-serif;
 }
-@media(max-width:700px){
- .europe-layout{display:contents}
- .europe-map-wrap{order:1;height:43dvh;min-height:300px}
- .europe-timeline{position:static;order:2;gap:6px 12px}
- .europe-reader{order:3;max-height:none;overflow:visible}
- .europe-transport{gap:4px}
- .europe-transport label{display:flex;align-items:center;gap:4px}
- .europe-transport button,.europe-transport select{padding:6px}
- .europe-transport select{font-size:14px}
+.europe-heading {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 8px 20px;
+  background: #F2F6F8;
+  border-bottom: 1px solid #8E99A0;
+  flex-shrink: 0;
 }
-.europe-atlas.is-playing #europe-details:not(.has-selection){display:none}
-.europe-map-status span{display:block;font-size:11px;line-height:1.35;margin-top:2px}
-.europe-heading{padding:8px 18px}
-.europe-heading h1{font-size:20px;margin:2px 0}
+.europe-heading > div {
+  flex: 1;
+  min-width: 0;
+}
+.europe-heading h1 {
+  font: 600 20px Georgia, serif;
+  margin: 2px 0 0;
+  color: #10171A;
+}
+.europe-heading .eyebrow {
+  font-size: 10px;
+  margin: 0;
+  color: #3B783D;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.europe-heading a {
+  color: #244D26;
+  font-size: 13px;
+  font-weight: 600;
+}
+.europe-heading a:hover {
+  color: #3B783D;
+}
+.europe-atlas :focus-visible {
+  outline: 3px solid #A63108;
+  outline-offset: 2px;
+}
+.europe-layout {
+  display: grid;
+  grid-template-columns: 350px minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+  flex: 1;
+  min-height: 0;
+}
+.europe-layout.map-facts-hidden {
+  grid-template-columns: minmax(0, 1fr);
+}
+.europe-reader {
+  padding: 16px 18px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  border-right: 1px solid #8E99A0;
+  background: #E3E8EB;
+  color: #10171A;
+  font-size: 13px;
+  line-height: 1.55;
+}
+.europe-reader[hidden] {
+  display: none !important;
+}
+.europe-reader a {
+  color: #244D26;
+  font-weight: 600;
+}
+.europe-reader summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: #10171A;
+  padding: 10px 0;
+}
+.europe-reader details {
+  border-top: 1px solid #B4BEC4;
+}
+.europe-reader details p {
+  font-size: 12px;
+  color: #525D64;
+}
+.europe-filters {
+  display: grid;
+  gap: 10px;
+}
+.europe-filters label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #10171A;
+}
+.europe-atlas input,
+.europe-atlas select,
+.europe-atlas button {
+  background: #F2F6F8;
+  border: 1px solid #8E99A0;
+  border-radius: 5px;
+  color: #10171A;
+  padding: 7px 10px;
+  font: inherit;
+  min-height: 36px;
+}
+.europe-atlas button:hover {
+  background: #DCEBDD;
+  border-color: #3B783D;
+}
+.europe-filters input,
+.europe-filters select {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+}
+.europe-layers label {
+  display: block;
+  margin: 5px 0;
+  color: #10171A;
+}
+.europe-layers input {
+  width: auto;
+  min-height: auto;
+  accent-color: #3B783D;
+}
+.europe-map-wrap {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  background: #10171A;
+}
+.europe-map-wrap #europe-map,
+.europe-map-wrap .map-canvas {
+  height: 100%;
+  width: 100%;
+}
+.europe-map-wrap svg {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+.europe-map-wrap .map-canvas svg .water {
+  fill: #10171A;
+}
+.europe-map-wrap .map-controls select {
+  background: #10171AF0;
+  color: #F2F6F8;
+  border-color: #8E99A0;
+}
+.europe-map-wrap .map-controls button {
+  background: #10171AF0;
+  color: #F2F6F8;
+  border-color: #8E99A0;
+}
+.europe-map-wrap .map-controls button:hover {
+  background: #244D26;
+  border-color: #97C798;
+}
+.europe-map-status {
+  position: absolute;
+  left: 15px;
+  top: 14px;
+  background: #10171AE8;
+  border: 1px solid #525D64;
+  color: #F2F6F8;
+  padding: 8px 12px;
+  border-radius: 6px;
+  max-width: calc(100% - 210px);
+  pointer-events: none;
+}
+.europe-map-status strong {
+  display: block;
+  font: 600 22px Georgia, serif;
+  color: #97C798;
+}
+.europe-map-status span {
+  display: block;
+  font-size: 11px;
+  line-height: 1.35;
+  margin-top: 2px;
+  color: #CFD6DA;
+}
+.europe-atlas .europe-home {
+  position: absolute;
+  right: 16px;
+  bottom: 18px;
+  background: #10171AF0;
+  color: #F2F6F8;
+  border: 1px solid #8E99A0;
+  font-size: 12px;
+  font-weight: 600;
+}
+.europe-atlas .europe-home:hover {
+  background: #244D26;
+  border-color: #97C798;
+}
+.europe-selected {
+  margin: 0 0 14px;
+  padding: 14px 16px;
+  background: #DCEBDD;
+  border: 1px solid #72B273;
+  border-left: 3px solid #3B783D;
+  border-radius: 8px;
+  color: #10171A;
+}
+.europe-selected h2,
+.europe-reader h3 {
+  color: #10171A;
+}
+.europe-selected h2 {
+  font: 600 20px Georgia, serif;
+  line-height: 1.25;
+  margin: 4px 0 8px;
+}
+.europe-selected .eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #3B783D;
+}
+.europe-method {
+  border-left: 2px solid #569E56;
+  padding-left: 10px;
+  font-size: 12px;
+  color: #10171A;
+}
+.europe-selected table {
+  width: 100%;
+  font-size: 12px;
+  background: #F2F6F8;
+  border-collapse: collapse;
+}
+.europe-selected td,
+.europe-selected th {
+  vertical-align: top;
+  padding: 6px;
+  border: 1px solid #B4BEC4;
+}
+.europe-selected small,
+.europe-reader .fine,
+.europe-reader small,
+.europe-hint {
+  color: #525D64;
+}
+.europe-now button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin: 6px 0;
+  background: #F2F6F8;
+  border: 1px solid #B4BEC4;
+  color: #10171A;
+  padding: 9px 11px;
+}
+.europe-now button:hover {
+  background: #DCEBDD;
+  border-color: #3B783D;
+}
+.europe-now button strong,
+.europe-now button span {
+  display: block;
+}
+.europe-now button span {
+  font-size: 11px;
+  margin-top: 4px;
+  line-height: 1.45;
+  color: #525D64;
+}
+.europe-territories article {
+  border-bottom: 1px solid #B4BEC4;
+}
+.europe-territories h3 {
+  font-size: 14px;
+}
+.europe-timeline {
+  padding: 10px 20px;
+  background: #E3E8EB;
+  border-top: 1px solid #8E99A0;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 8px 20px;
+  align-items: center;
+  flex-shrink: 0;
+}
+.europe-transport {
+  display: flex;
+  gap: 6px;
+  align-items: end;
+}
+.europe-transport label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #525D64;
+}
+.europe-transport select {
+  display: block;
+  padding: 5px 8px;
+  max-width: 160px;
+  margin-top: 2px;
+}
+#europe-play {
+  background: #569E56;
+  border-color: #244D26;
+  color: #10171A;
+  font-weight: 700;
+}
+#europe-play:hover {
+  background: #72B273;
+}
+.europe-atlas.is-playing #europe-play {
+  background: #244D26;
+  color: #F2F6F8;
+}
+.europe-slider-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #525D64;
+}
+.europe-slider-label output {
+  font-size: 16px;
+  font-weight: 700;
+  color: #10171A;
+  padding-left: 12px;
+}
+.europe-slider-label input {
+  width: 100%;
+  padding: 0;
+  min-height: 20px;
+  display: block;
+  accent-color: #3B783D;
+}
+.europe-timeline form {
+  display: flex;
+  gap: 6px;
+  align-items: end;
+  font-size: 12px;
+}
+.europe-timeline form label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #525D64;
+}
+.europe-timeline form input {
+  width: 85px;
+  display: block;
+  margin-top: 2px;
+}
+.europe-timeline form span {
+  font-size: 11px;
+  max-width: 180px;
+  color: #A63108;
+}
+.europe-playback-note {
+  grid-column: 1 / -1;
+  font-size: 11px;
+  margin: 0;
+  color: #525D64;
+}
+.network-key {
+  display: inline-block;
+  width: 23px;
+  vertical-align: middle;
+  border-top: 3px dashed #D4501E;
+}
+.network-key.road {
+  border-color: #97C798;
+}
+.network-key.rail {
+  border-color: #72B273;
+  border-top-style: double;
+  border-top-width: 5px;
+}
+.europe-atlas .network-road .route-line {
+  stroke: #97C798;
+  stroke-dasharray: 7 4;
+}
+.europe-atlas .network-road .route-flow {
+  stroke: #DCEBDD;
+}
+.europe-atlas .network-rail .route-line {
+  stroke: #FA742A;
+  stroke-dasharray: 3 3;
+}
+.europe-atlas .network-rail .route-flow {
+  stroke: #F2F6F8;
+}
+.europe-atlas .political-boundaries path[class*="europe-authority-"] {
+  stroke-dasharray: none;
+}
+.europe-atlas .political-boundaries path.europe-reconstructed-territory {
+  stroke-dasharray: 3 2;
+}
+.europe-atlas .political-boundaries path.europe-authority-shared-crown {
+  stroke: #FA742A;
+  stroke-dasharray: 9 4;
+}
+.europe-atlas .political-boundaries path.europe-authority-settlement-district {
+  stroke: #97C798;
+  stroke-linecap: round;
+  stroke-dasharray: 1 4;
+}
+.europe-atlas .historical-rails .network-road {
+  stroke: #97C798;
+  stroke-dasharray: 7 4;
+}
+.europe-atlas .historical-rails .network-rail {
+  stroke: #FA742A;
+  stroke-dasharray: 3 3;
+}
+.europe-atlas .map-navigation {
+  flex-shrink: 0;
+}
+.europe-atlas .map-navigation-settings .europe-layers {
+  margin: 0;
+}
+.europe-atlas .map-navigation-settings .europe-layers summary {
+  padding: 0 0 8px;
+}
+.europe-atlas .map-navigation-settings .europe-scope {
+  font-size: 12px;
+  flex-basis: 100%;
+  max-width: none;
+  margin: 0;
+  color: #525D64;
+}
+.europe-atlas.is-playing #europe-details:not(.has-selection) {
+  display: none;
+}
+@media (min-width: 701px) {
+  body.europe-page {
+    overflow: hidden;
+  }
+  body.europe-page #app {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  body.europe-page .topbar {
+    flex-shrink: 0;
+  }
+  body.europe-page .shell {
+    flex: 1;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    max-width: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  body.europe-page #main {
+    flex: 1;
+    min-height: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 1100px) {
+  .europe-layout {
+    grid-template-columns: 300px minmax(0, 1fr);
+  }
+  .europe-timeline {
+    grid-template-columns: 1fr 1fr;
+  }
+  .europe-timeline form {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 700px) {
+  .europe-page {
+    overflow: auto;
+  }
+  .europe-atlas {
+    height: auto;
+    min-height: 0;
+  }
+  .europe-heading {
+    padding: 10px 12px;
+    gap: 12px;
+  }
+  .europe-heading h1 {
+    font-size: 18px;
+  }
+  .europe-heading > a {
+    font-size: 11px;
+  }
+  .europe-layout {
+    display: contents;
+  }
+  .europe-map-wrap {
+    order: 1;
+    height: 44dvh;
+    min-height: 300px;
+  }
+  .europe-timeline {
+    order: 2;
+    padding: 10px 12px;
+    grid-template-columns: 1fr;
+    position: static;
+  }
+  .europe-reader {
+    order: 3;
+    max-height: none;
+    overflow: visible;
+    border-right: 0;
+    border-top: 1px solid #8E99A0;
+    padding: 14px;
+  }
+  .europe-map-status {
+    max-width: 60%;
+    left: 10px;
+    top: 10px;
+  }
+  .europe-map-status strong {
+    font-size: 18px;
+  }
+  .europe-map-status span {
+    display: none;
+  }
+  .europe-transport {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .europe-timeline form {
+    grid-column: auto;
+  }
+  .europe-timeline .europe-playback-note {
+    display: none;
+  }
+  .europe-timeline input,
+  .europe-timeline select {
+    font-size: 16px;
+  }
+  .europe-transport select {
+    max-width: 140px;
+    font-size: 14px;
+  }
+  .europe-transport button {
+    min-height: 40px;
+  }
+}

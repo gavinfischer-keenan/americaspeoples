@@ -131,7 +131,7 @@ footer{margin-top:24px;padding:14px 0}
  .page-section-nav a{flex:0 0 auto!important;white-space:nowrap!important;padding:6px 9px!important;font-size:11.5px!important}
 }</style>`;
 
-const redirectStyle=`:root{color-scheme:light;background:#f1f5f5;color:#182f39;font:16px/1.55 system-ui,sans-serif}body{margin:0;padding:36px 20px}main{max-width:680px;margin:auto;background:#fff;border:1px solid #c9dce1;border-top:4px solid #087186;border-radius:8px;padding:24px}h1{margin:6px 0 10px;font-size:28px;color:#17243d}.eyebrow{font-size:11px;font-weight:750;letter-spacing:.14em;text-transform:uppercase;color:#087186}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.primary{display:inline-flex;align-items:center;padding:10px 16px;border-radius:6px;background:#087186;color:#fff;font-weight:650;text-decoration:none}.secondary{display:inline-flex;align-items:center;padding:9px 14px;border-radius:6px;border:1px solid #087186;color:#087186;font-weight:600;text-decoration:none}`;
+const redirectStyle=`:root{color-scheme:light;background:#E3E8EB;color:#10171A;font:16px/1.55 system-ui,sans-serif}body{margin:0;padding:36px 20px}main{max-width:680px;margin:auto;background:#F2F6F8;border:1px solid #B4BEC4;border-top:4px solid #3B783D;border-radius:8px;padding:24px}h1{margin:6px 0 10px;font-size:28px;color:#10171A}.eyebrow{font-size:11px;font-weight:750;letter-spacing:.14em;text-transform:uppercase;color:#3B783D}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.primary{display:inline-flex;align-items:center;padding:10px 16px;border-radius:6px;background:#569E56;color:#10171A;font-weight:700;text-decoration:none}.secondary{display:inline-flex;align-items:center;padding:9px 14px;border-radius:6px;border:1px solid #3B783D;color:#244D26;font-weight:600;text-decoration:none}`;
 
 function fallbackRegionCard(r:RegionSummary){
  const route=worldRegions.find(region=>region.id===r.id)!.href;
@@ -161,7 +161,7 @@ function renderLandingPage(summary:WorldSummary):string{
     operatingSystem:'Web browser; self-host bundle for Windows, macOS, Linux (Python + SQLite)',
     isAccessibleForFree:true,
     license:['https://polyformproject.org/licenses/noncommercial/1.0.0','https://creativecommons.org/licenses/by-nc-sa/4.0/'],
-    description:'An open-access interactive archaeological, genomic, linguistic, and historical atlas across four regional maps — Americas, Africa, Europe, and Asia & Pacific — with global deep dives. Ordinary maps end in 1900 CE; Hawaiʻi statehood continues through 1959.',
+    description:'An open-access interactive archaeological, genomic, linguistic, and historical atlas across four regional maps — Americas & Pacific, Africa & Middle East, Europe, and Asia — with global deep dives. Ordinary maps end in 1900 CE; Hawaiʻi statehood continues through 1959.',
     author:{'@type':'Organization',name:'TripoFisch',url:'https://tripofisch.com/'},
     codeRepository:'https://github.com/gavinfischer-keenan/americaspeoples',
    },
@@ -427,7 +427,7 @@ function renderLandingPage(summary:WorldSummary):string{
   <h2 id="section-connected-history">Connected history &amp; terrain</h2>
   <p>Across the four regional maps (${count(summary.records)} canonical records and ${count(summary.references)} unique references), trace deep-time dispersal, dated boundaries, voyages, terrain guides, and paired originals &amp; translations.</p>
   <p>Global and cross-regional studies — including The Human Family foundation, Silk Roads, Genghis Khan, Marco Polo, and Hannibal — live inside Deep Dives alongside site guides like Chaco Canyon.</p>
-  <p class="ap-card-links"><a href="${app}/#atlas/africa">Africa ↗</a> · <a href="${app}/#atlas/europe">Europe ↗</a> · <a href="${app}/#atlas/asia-pacific">Asia &amp; Pacific ↗</a> · <a href="${app}/#dives">Deep Dives ↗</a></p>
+  <p class="ap-card-links"><a href="${app}/#atlas/africa">Africa &amp; Middle East ↗</a> · <a href="${app}/#atlas/europe">Europe ↗</a> · <a href="${app}/#atlas/asia-pacific">Asia ↗</a> · <a href="${app}/#dives">Deep Dives ↗</a></p>
  </section>
 
  <section class="ap-feature-card tint">

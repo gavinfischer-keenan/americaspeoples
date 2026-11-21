@@ -33,7 +33,7 @@ export const physicalSources = [
     limits:
       "North American ice sheets only; reconstructed boundaries, not measured certainty. Does not reconstruct sea ice, shorelines or navigable open water. Outside dataset dates, no ice geometry is shown; that does not mean ice absence.",
     license:
-      "CC BY4.0. GIS snapshot downloaded2026-10-29; processing script and checksums retained.",
+      "CC BY 4.0. GIS snapshot downloaded 2026-10-29; processing script and checksums retained.",
   },
   {
     id: "gergis2009",
@@ -42,7 +42,7 @@ export const physicalSources = [
     url: "https://doi.org/10.1007/s10584-008-9476-z",
     data: "https://doi.org/10.25921/ebpz-a913",
     method:
-      "NOAA/WDS dataset noaa-recon-8408, Table9 annual classifications1525–2002CE; atlas subset1525–1934. Tree-ring, coral, ice-core and documentary proxies. Original proxy ratio, mean skill, quality-adjusted magnitude and class are retained per event.",
+      "NOAA/WDS dataset noaa-recon-8408, Table 9 annual classifications 1525–2002 CE; atlas subset 1525–1934. Tree-ring, coral, ice-core and documentary proxies. Original proxy ratio, mean skill, quality-adjusted magnitude and class are retained per event.",
     limits:
       "One reconstruction, not agreement among all reconstructions. Both ENSO phases can appear in one calendar year. Classes reflect this reconstruction, not modern ONI thresholds. Earlier years are not assessed by this dataset; no local drought or social impact is inferred.",
     license:

@@ -37,7 +37,7 @@ try{
  if(await page.getByRole('button',{name:'Pause',exact:true}).isVisible())await page.getByRole('button',{name:'Pause',exact:true}).click();
  await page.setViewportSize({width:1440,height:960});
  await mapSetting(page,()=>page.locator('#whole-movie').click());
- await page.locator('[data-movie-year="1000"]').click();
+ await page.locator('#americas-jump').selectOption('1000');
  const hawaii=page.locator('#map-host [data-overlay][aria-label*="Hawaiʻi: alternative Bayesian colonization estimates"]');
  const feature=await hawaii.boundingBox();assert.ok(feature);
  await page.mouse.move(feature.x+feature.width/2,feature.y+feature.height/2);
