@@ -427,7 +427,10 @@
         "world-roman-frontiers",
         "world-roman-cities",
         "world-roman-transformations",
-        "world-hadrians-wall"
+        "world-hadrians-wall",
+        "world-ancient-shipwrecks",
+        "world-mediterranean-trade",
+        "world-pompeii-rome-ostia"
       ],
       "map": {
         "bounds": [
@@ -713,6 +716,99 @@
               ]
             }
           ]
+        },
+        {
+          "heading": "Roman Censuses, Citizenship & Empire-Wide Demography (550 BCE–258 CE)",
+          "paragraphs": [
+            {
+              "text": "Few pre-industrial states counted their human population as relentlessly as Rome. Beginning with five-year Republican lustra (used to assign tax tiers and legionary centuries), Augustus publicized three exact Imperial citizen counts in the Res Gestae (28 BCE: 4,063,000; 8 BCE: 4,233,000; 14 CE: 4,937,000), rising to 5,984,072 registered citizens under Claudius in 47/48 CE. Provincial non-citizens were tracked separately via direct provincial registrations: Syria's Apamea stele (6 CE: 117,000 cives) and over 300 surviving Egyptian 14-year household census papyri listing names, exact ages, family ties, trades, and enslaved laborers.",
+              "sources": [
+                "https://doi.org/10.1177/097194580300600208",
+                "https://doi.org/10.1017/cbo9780511584053",
+                "https://doi.org/10.1080/01615440.2015.1071226",
+                "https://doi.org/10.1179/lev.2006.38.1.109"
+              ]
+            },
+            {
+              "text": "When Caracalla extended Roman citizenship to virtually every free resident across Europe, North Africa, and West Asia in 212 CE (Constitutio Antoniniana), the legal citizen body merged with an imperial population modern scholars estimate at roughly 50 to 70 million inhabitants, including an ~800,000–1,000,000 metropolis in Rome fed by Egyptian and African grain fleets.",
+              "sources": [
+                "https://doi.org/10.1093/pastj/gtv043",
+                "https://doi.org/10.1017/s0003598x00085859"
+              ]
+            }
+          ],
+          "columns": [
+            "Census / Register",
+            "Date",
+            "Recorded Count / Coverage",
+            "Historical Significance"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Res Gestae Divi Augusti (3 lustra)",
+                "28 BCE, 8 BCE, 14 CE",
+                "4,063,000 → 4,233,000 → 4,937,000 citizens",
+                "Exact Imperial epigraphic tallies fueling demographic debates (heads vs. adult males)"
+              ],
+              "sources": [
+                "https://doi.org/10.1177/097194580300600208"
+              ]
+            },
+            {
+              "cells": [
+                "Claudian Lustrum",
+                "47–48 CE",
+                "5,984,072 registered Roman citizens",
+                "Tracks provincial elite & veteran enfranchisement before Caracalla"
+              ],
+              "sources": [
+                "https://doi.org/10.1093/pastj/gtv043"
+              ]
+            },
+            {
+              "cells": [
+                "Apamea Syria Stele & Quirinius",
+                "6 CE",
+                "117,000 homines cives registered in Apamea",
+                "Rare provincial non-citizen urban tax & population headcount outside Egypt"
+              ],
+              "sources": [
+                "https://doi.org/10.1179/lev.2006.38.1.109"
+              ]
+            },
+            {
+              "cells": [
+                "Roman Egyptian 14-Year Papyri",
+                "19–258 CE",
+                "300+ original house-by-house declarations",
+                "Unmatched life-expectancy (~22–25 yr), household size & sex-ratio demographics"
+              ],
+              "sources": [
+                "https://doi.org/10.1017/cbo9780511584053",
+                "https://doi.org/10.1080/01615440.2015.1071226"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "The Imperial Road Network: 80,000+ km of Paved Trunk Highways",
+          "paragraphs": [
+            {
+              "text": "Beginning with the 312 BCE Via Appia ('Queen of Roads') and extending across Via Flaminia (220 BCE), Via Egnatia (146 BCE across the Balkans), Via Domitia & Via Augusta into Spain, Watling Street in Britain, and the 106–114 CE Via Traiana Nova down to the Red Sea, Rome built more than 80,000 km of graded, drained, milestone-marked paved highways supplemented by ~200,000+ km of secondary provincial feeder roads mapped by the Itiner-e 2025 project.",
+              "sources": [
+                "https://doi.org/10.1038/s41597-025-06140-z",
+                "https://doi.org/10.1038/s41467-026-75453-3"
+              ]
+            },
+            {
+              "text": "Equipped every 10–15 miles with Imperial courier relay stations (mutationes) and lodging inns (mansiones) under Augustus' cursus publicus, these roads allowed imperial dispatches to travel ~80–100 km/day while permanently anchoring the spatial urbanization footprint of medieval and modern Europe and the Mediterranean.",
+              "sources": [
+                "https://doi.org/10.1038/s41467-026-75453-3",
+                "https://doi.org/10.1515/jah-2024-0011"
+              ]
+            }
+          ]
         }
       ],
       "sources": [
@@ -843,6 +939,38 @@
         {
           "title": "English Heritage — history of Hadrian’s Wall",
           "url": "https://www.english-heritage.org.uk/visit/places/hadrians-wall/hadrians-wall-history-and-stories/history"
+        },
+        {
+          "title": "Pažout, A. et al. (2026). Network science reveals the structure and impact of the Roman road system. Nature Comm.",
+          "url": "https://doi.org/10.1038/s41467-026-75453-3"
+        },
+        {
+          "title": "Bagnall, R. S. & Frier, B. W. (1994). The Demography of Roman Egypt (Census Returns).",
+          "url": "https://doi.org/10.1017/cbo9780511584053"
+        },
+        {
+          "title": "Hin, S. C. (2015). New light on Roman census papyri through record linkage.",
+          "url": "https://doi.org/10.1080/01615440.2015.1071226"
+        },
+        {
+          "title": "Kennedy, D. L. (2006). Demography, the Population of Syria and the Census of Apamea (6 CE).",
+          "url": "https://doi.org/10.1179/lev.2006.38.1.109"
+        },
+        {
+          "title": "Lavan, M. (2016). Spread of Roman Citizenship, 14–212 CE (Constitutio Antoniniana).",
+          "url": "https://doi.org/10.1093/pastj/gtv043"
+        },
+        {
+          "title": "Jongman, W. M. (2003). Rome: The Political Economy of a World-Empire.",
+          "url": "https://doi.org/10.1177/097194580300600208"
+        },
+        {
+          "title": "Storey, G. R. (1997). The population of ancient Rome.",
+          "url": "https://doi.org/10.1017/s0003598x00085859"
+        },
+        {
+          "title": "Christopher, J. T. (2025). Roads to Empire: on roadbuilding traditions in ancient Rome and early China.",
+          "url": "https://doi.org/10.1515/jah-2024-0011"
         }
       ],
       "referenceMaps": [
@@ -1103,6 +1231,92 @@
               ]
             }
           ]
+        },
+        {
+          "heading": "Walls, Limes & Frontier Fortifications Across Three Continents",
+          "paragraphs": [
+            {
+              "text": "Beyond Britain's Hadrian's and Antonine Walls, Rome fortified thousands of kilometers of frontier across mainland Europe, North Africa, and the Syrian/Arabian desert: the 550-km Upper Germanic–Rhaetian Limes palisade and watchtower curtain linking Rhine to Danube, Carnuntum and Trajan's 20-pier Danube Bridge at Drobeta leading into Dacian fortifications, North Africa's 750-km Fossatum Africae customs ditch regulating Sahara pastoral migrations, and the Qasr Bshir quadriburgia along the Via Traiana Nova (Limes Arabicus).",
+              "sources": [
+                "https://doi.org/10.1017/s0068113x22000216",
+                "https://doi.org/10.1080/00665983.2023.2282823",
+                "https://doi.org/10.1515/9783110607741-009",
+                "https://doi.org/10.14795/j.v6i4.460"
+              ]
+            },
+            {
+              "text": "When 3rd–5th century Germanic, Sarmatian, and Hunnic invasions pierced linear frontiers, Emperors Aurelian (271–275 CE, 19-km brick Aurelian Walls of Rome) and Theodosius II (408–413 CE, triple land walls of Constantinople) shifted imperial security inward to monumental urban circuits that protected the Eastern capital through 1453 CE.",
+              "sources": [
+                "https://whc.unesco.org/en/list/356/",
+                "https://doi.org/10.1017/s0068113x22000216"
+              ]
+            }
+          ],
+          "columns": [
+            "Wall / Frontier System",
+            "Date",
+            "Region & Length",
+            "Strategic & Customs Role"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Servian & Aurelian Walls",
+                "378 BCE · 271–275 CE",
+                "Rome (11 km → 19 km circuits)",
+                "Urban Republican core defense replaced by massive late-imperial artillery circuit"
+              ],
+              "sources": [
+                "https://doi.org/10.1017/s0068113x22000216"
+              ]
+            },
+            {
+              "cells": [
+                "Hadrian's & Antonine Walls",
+                "122–410 CE · 142–165 CE",
+                "Britain / Scotland (117 km / 63 km)",
+                "Customs monitoring, patrol road & northern frontier garrison control"
+              ],
+              "sources": [
+                "https://doi.org/10.1017/s0068113x22000216",
+                "https://doi.org/10.1080/00665983.2023.2282823"
+              ]
+            },
+            {
+              "cells": [
+                "Upper Germanic–Rhaetian & Danube Limes",
+                "83–430 CE",
+                "Rhine to Black Sea (~550 km wall + 2,500 km river)",
+                "Interlocked timber/stone palisades, 900 towers & Carnuntum/Dacia legion camps"
+              ],
+              "sources": [
+                "https://doi.org/10.1017/s0068113x22000216",
+                "https://doi.org/10.14795/j.v6i4.460"
+              ]
+            },
+            {
+              "cells": [
+                "Fossatum Africae & Limes Arabicus",
+                "106–430 CE",
+                "Numidia (750 km segmented) & Jordan–Syria",
+                "Canalized seasonal transhumance & monitored trans-Saharan / Red Sea caravan gates"
+              ],
+              "sources": [
+                "https://doi.org/10.1515/9783110607741-009"
+              ]
+            },
+            {
+              "cells": [
+                "Theodosian Land Walls",
+                "408–1453 CE",
+                "Constantinople (5.7 km triple barrier)",
+                "Unequaled triple moat-and-tower defense protecting East Rome for a millennium"
+              ],
+              "sources": [
+                "https://whc.unesco.org/en/list/356/"
+              ]
+            }
+          ]
         }
       ],
       "sources": [
@@ -1177,6 +1391,26 @@
         {
           "title": "The Metropolitan Museum of Art — Roman bronze military diploma",
           "url": "https://www.metmuseum.org/art/collection/search/251376"
+        },
+        {
+          "title": "Reddé, M. (2022). Hadrian's Wall and its Continental Hinterland. Britannia.",
+          "url": "https://doi.org/10.1017/s0068113x22000216"
+        },
+        {
+          "title": "Graafstal, E. P. (2024). Building materials and the Antonine Wall.",
+          "url": "https://doi.org/10.1080/00665983.2023.2282823"
+        },
+        {
+          "title": "Weaverdyck, E. J. S. (2019). The Roman Empire frontiers across Africa, Arabia & Danube.",
+          "url": "https://doi.org/10.1515/9783110607741-009"
+        },
+        {
+          "title": "UNESCO WHC No. 356 — Historic Areas of Istanbul (Theodosian Land Walls).",
+          "url": "https://whc.unesco.org/en/list/356/"
+        },
+        {
+          "title": "Fodorean, F. G. (2019). Road Infrastructure and the Limes of Roman Dacia.",
+          "url": "https://doi.org/10.14795/j.v6i4.460"
         }
       ],
       "referenceMaps": [
@@ -1469,6 +1703,63 @@
               ]
             }
           ]
+        },
+        {
+          "heading": "Aqueducts, Hydraulic Gold Mining & Cosmopolitan Urban Mobility",
+          "paragraphs": [
+            {
+              "text": "High-density Roman urbanization depended completely on gravity hydraulic engineering and industrial metallurgy. Eleven aqueducts delivered ~1 million cubic meters of spring water daily into Imperial Rome; the 49-meter three-tiered Pont du Gard supplied Nîmes; Segovia and Lugdunum used granite arcades and inverted lead siphons; and across northwestern Spain at Las Médulas (~400 km of high canals) and Rio Tinto waterwheel mines, hydraulic engineers sluiced mountainsides for coinage gold and silver.",
+              "sources": [
+                "https://doi.org/10.1111/gwat.12958",
+                "https://doi.org/10.3390/w13010054",
+                "https://whc.unesco.org/en/list/803/"
+              ]
+            },
+            {
+              "text": "Ancient DNA sequencing from Imperial Rome (1st–3rd centuries CE) demonstrates that imperial road-and-port integration literally transformed city biology: residents traced deep genetic roots disproportionately across Greece, Anatolia, Syria, and Egypt alongside Mediterranean Europe—reflecting massive merchant, freedperson, and slave mobility flowing into Rome's Portus and Monte Testaccio commercial engine.",
+              "sources": [
+                "https://doi.org/10.1080/03014460.2021.1944313"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Aqueducts, Hydraulic Gold Mining & Cosmopolitan Urban Mobility",
+          "paragraphs": [
+            {
+              "text": "High-density Roman urbanization depended completely on gravity hydraulic engineering and industrial metallurgy. Eleven aqueducts delivered ~1 million cubic meters of spring water daily into Imperial Rome; the 49-meter three-tiered Pont du Gard supplied Nîmes; Segovia and Lugdunum used granite arcades and inverted lead siphons; and across northwestern Spain at Las Médulas (~400 km of high canals) and Rio Tinto waterwheel mines, hydraulic engineers sluiced mountainsides for coinage gold and silver.",
+              "sources": [
+                "https://doi.org/10.1111/gwat.12958",
+                "https://doi.org/10.3390/w13010054",
+                "https://whc.unesco.org/en/list/803/"
+              ]
+            },
+            {
+              "text": "Ancient DNA sequencing from Imperial Rome (1st–3rd centuries CE) demonstrates that imperial road-and-port integration literally transformed city biology: residents traced deep genetic roots disproportionately across Greece, Anatolia, Syria, and Egypt alongside Mediterranean Europe—reflecting massive merchant, freedperson, and slave mobility flowing into Rome's Portus and Monte Testaccio commercial engine.",
+              "sources": [
+                "https://doi.org/10.1080/03014460.2021.1944313"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Aqueducts, Hydraulic Gold Mining & Cosmopolitan Urban Mobility",
+          "paragraphs": [
+            {
+              "text": "High-density Roman urbanization depended completely on gravity hydraulic engineering and industrial metallurgy. Eleven aqueducts delivered ~1 million cubic meters of spring water daily into Imperial Rome; the 49-meter three-tiered Pont du Gard supplied Nîmes; Segovia and Lugdunum used granite arcades and inverted lead siphons; and across northwestern Spain at Las Médulas (~400 km of high canals) and Rio Tinto waterwheel mines, hydraulic engineers sluiced mountainsides for coinage gold and silver.",
+              "sources": [
+                "https://doi.org/10.1111/gwat.12958",
+                "https://doi.org/10.3390/w13010054",
+                "https://whc.unesco.org/en/list/803/"
+              ]
+            },
+            {
+              "text": "Ancient DNA sequencing from Imperial Rome (1st–3rd centuries CE) demonstrates that imperial road-and-port integration literally transformed city biology: residents traced deep genetic roots disproportionately across Greece, Anatolia, Syria, and Egypt alongside Mediterranean Europe—reflecting massive merchant, freedperson, and slave mobility flowing into Rome's Portus and Monte Testaccio commercial engine.",
+              "sources": [
+                "https://doi.org/10.1080/03014460.2021.1944313"
+              ]
+            }
+          ]
         }
       ],
       "sources": [
@@ -1563,6 +1854,22 @@
         {
           "title": "UNESCO Memory of the World — Constitutio Antoniniana",
           "url": "https://www.unesco.org/en/memory-world/constitutio-antoniniana"
+        },
+        {
+          "title": "Deming, D. (2019). The Aqueducts and Water Supply of Ancient Rome. Groundwater.",
+          "url": "https://doi.org/10.1111/gwat.12958"
+        },
+        {
+          "title": "Ortloff, C. R. (2020). Pont du Gard Aqueduct and Nemausus Water Distribution.",
+          "url": "https://doi.org/10.3390/w13010054"
+        },
+        {
+          "title": "UNESCO WHC No. 803 — Las Médulas Roman Hydraulic Gold Mines.",
+          "url": "https://whc.unesco.org/en/list/803/"
+        },
+        {
+          "title": "De Angelis, F. et al. (2021). Ancient genomes from Imperial Rome.",
+          "url": "https://doi.org/10.1080/03014460.2021.1944313"
         }
       ],
       "referenceMaps": [
@@ -1861,6 +2168,42 @@
               ]
             }
           ]
+        },
+        {
+          "heading": "Roman Continuity Through 1453 CE: From Justinian to the Theodosian Walls",
+          "paragraphs": [
+            {
+              "text": "While Rome's Western Imperial court dissolved in 476 CE into Italy, Gaul, Hispania, and Africa successor states, citizens of Constantinople never stopped calling themselves Romaioi ('Romans') and maintaining Via Egnatia, Via Militaris, and paved post relays. Surviving the 674–718 CE Arab sieges behind the triple Theodosian Land Walls, reorganizing provinces into defensive military Themes, and fostering the Macedonian and Palaiologan renaissances preserved classical Greek-and-Roman law (Corpus Juris Civilis) unbroken until Mehmed II's heavy artillery breached Constantinople on 29 May 1453.",
+              "sources": [
+                "https://doi.org/10.1353/jla.2025.a969352",
+                "https://whc.unesco.org/en/list/356/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Roman Continuity Through 1453 CE: From Justinian to the Theodosian Walls",
+          "paragraphs": [
+            {
+              "text": "While Rome's Western Imperial court dissolved in 476 CE into Italy, Gaul, Hispania, and Africa successor states, citizens of Constantinople never stopped calling themselves Romaioi ('Romans') and maintaining Via Egnatia, Via Militaris, and paved post relays. Surviving the 674–718 CE Arab sieges behind the triple Theodosian Land Walls, reorganizing provinces into defensive military Themes, and fostering the Macedonian and Palaiologan renaissances preserved classical Greek-and-Roman law (Corpus Juris Civilis) unbroken until Mehmed II's heavy artillery breached Constantinople on 29 May 1453.",
+              "sources": [
+                "https://doi.org/10.1353/jla.2025.a969352",
+                "https://whc.unesco.org/en/list/356/"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Roman Continuity Through 1453 CE: From Justinian to the Theodosian Walls",
+          "paragraphs": [
+            {
+              "text": "While Rome's Western Imperial court dissolved in 476 CE into Italy, Gaul, Hispania, and Africa successor states, citizens of Constantinople never stopped calling themselves Romaioi ('Romans') and maintaining Via Egnatia, Via Militaris, and paved post relays. Surviving the 674–718 CE Arab sieges behind the triple Theodosian Land Walls, reorganizing provinces into defensive military Themes, and fostering the Macedonian and Palaiologan renaissances preserved classical Greek-and-Roman law (Corpus Juris Civilis) unbroken until Mehmed II's heavy artillery breached Constantinople on 29 May 1453.",
+              "sources": [
+                "https://doi.org/10.1353/jla.2025.a969352",
+                "https://whc.unesco.org/en/list/356/"
+              ]
+            }
+          ]
         }
       ],
       "sources": [
@@ -1931,6 +2274,10 @@
         {
           "title": "Anthony Kaldellis — The New Roman Empire",
           "url": "https://academic.oup.com/book/46840"
+        },
+        {
+          "title": "Kruse, M. (2025). The Quality of East Roman Roads. Journal of Late Antiquity.",
+          "url": "https://doi.org/10.1353/jla.2025.a969352"
         }
       ],
       "referenceMaps": [
@@ -3658,12 +4005,1262 @@
         }
       ],
       "relatedGuideIds": [
+        "world-shipwreck-graveyards",
+        "world-endurance-and-vasa",
+        "world-superlative-shipwrecks",
         "world-mediterranean-trade",
         "world-silk-roads",
         "world-chinese-explorers",
         "world-india-empires-cities-networks",
         "world-arabia-incense-oases-empires",
         "world-north-sentinel-island"
+      ]
+    },
+    {
+      "id": "world-superlative-shipwrecks",
+      "atlasIds": [
+        "europe",
+        "africa",
+        "asia-pacific",
+        "americas"
+      ],
+      "category": "subjects",
+      "title": "Superlative Shipwrecks: The Oldest, the Deepest & the Only Examples of Their Kind",
+      "description": "Earth's extraordinary benchmark shipwrecks—from the oldest planked boats and Uluburun to the 6,895 m deep USS Samuel B. Roberts, Shackleton's Endurance, Sweden's raised Vasa, and one-of-a-kind archaeological time capsules.",
+      "intro": "Certain shipwrecks bend our understanding of human engineering, trade, warfare, and polar exploration because nothing else like them survived anywhere on land. Together, the oldest surviving hulls, the deepest wrecks on the abyssal ocean floor, and unique 'only known example' vessels reveal both the ambition that drove sailors across every ocean and the environmental quirks that preserved their ships.",
+      "scope": "Cross-era synthesis of record-holding maritime wrecks worldwide, explicitly connecting sinking events to migrations, commodity monopolies, warfare, and preservation science (deep/cold/anoxic/brackish).",
+      "map": {
+        "bounds": [
+          -130,
+          -70,
+          150,
+          62
+        ],
+        "scope": "Global distribution of record-holding oldest, deepest, and singular unique-artifact shipwrecks across ocean basins.",
+        "points": [
+          {
+            "id": "sup-pt-endurance",
+            "label": "Endurance (Weddell Sea, 3,008 m)",
+            "coordinates": [
+              -52.44,
+              -68.74
+            ],
+            "date": "Sank Nov 1915 · Found Mar 2022",
+            "description": "Ernest Shackleton's Imperial Trans-Antarctic barquentine crushed by multi-year Weddell Sea pack ice and preserved upright at 3,008 m depth.",
+            "sources": [
+              "https://doi.org/10.1017/s0954102020000103",
+              "https://doi.org/10.1017/s0032247425100090"
+            ]
+          },
+          {
+            "id": "sup-pt-titanic",
+            "label": "RMS Titanic (North Atlantic, 3,800 m)",
+            "coordinates": [
+              -49.95,
+              41.73
+            ],
+            "date": "15 April 1912 CE",
+            "description": "Deep-ocean passenger liner symbolizing peak European-to-North-American steerage emigration before striking a Grand Banks iceberg.",
+            "sources": [
+              "https://doi.org/10.1017/s0570608423000054"
+            ]
+          },
+          {
+            "id": "sup-pt-ferriby",
+            "label": "Ferriby & Dover Sewn Bronze Boats",
+            "coordinates": [
+              -0.51,
+              53.71
+            ],
+            "date": "c. 1930–1520 BCE",
+            "description": "Oldest known seagoing planked vessels in Atlantic Europe, stitched with twisted yew withies.",
+            "sources": [
+              "https://doi.org/10.1017/s0570608423000054"
+            ]
+          },
+          {
+            "id": "sup-pt-hjortspring",
+            "label": "Hjortspring War Canoe (Denmark)",
+            "coordinates": [
+              9.87,
+              54.99
+            ],
+            "date": "c. 350 BCE",
+            "description": "Only intact Pre-Roman Iron Age sewn-plank limewood warship sacrificed in a Baltic bog with 22-paddler weaponry.",
+            "sources": [
+              "https://doi.org/10.1371/journal.pone.0336965"
+            ]
+          },
+          {
+            "id": "sup-pt-marsala",
+            "label": "Egadi Rams & Marsala Punic Warship",
+            "coordinates": [
+              12.33,
+              37.98
+            ],
+            "date": "241–235 BCE",
+            "description": "Only archaeologically excavated Punic oared warship timbers and First Punic War bronze naval rams.",
+            "sources": [
+              "https://doi.org/10.3389/fmars.2021.772499"
+            ]
+          },
+          {
+            "id": "sup-pt-vasa",
+            "label": "Vasa Royal Galleon (Stockholm, raised 1961)",
+            "coordinates": [
+              18.09,
+              59.32
+            ],
+            "date": "10 August 1628 CE",
+            "description": "Only nearly intact 17th-century royal warship on Earth, preserved whole in shipworm-free brackish Baltic harbor mud.",
+            "sources": [
+              "https://doi.org/10.1111/j.1095-9270.2007.163_1.x"
+            ]
+          },
+          {
+            "id": "sup-pt-antikythera",
+            "label": "Antikythera Mechanism Wreck (Greece)",
+            "coordinates": [
+              23.31,
+              35.89
+            ],
+            "date": "c. 70–60 BCE",
+            "description": "Unique Hellenistic freighter bearing the only surviving ancient multi-geared astronomical computer.",
+            "sources": [
+              "https://doi.org/10.1057/s41599-018-0210-9"
+            ]
+          },
+          {
+            "id": "sup-pt-blacksea",
+            "label": "Black Sea MAP Deep Greek Ship (>2,000 m)",
+            "coordinates": [
+              28.15,
+              42.32
+            ],
+            "date": "c. 400 BCE",
+            "description": "Deepest known intact ancient wooden vessel, resting upright with mast and rudders in oxygen-free water.",
+            "sources": [
+              "https://doi.org/10.1017/s0570608423000054"
+            ]
+          },
+          {
+            "id": "sup-pt-uluburun",
+            "label": "Uluburun Royal Ingot Shipwreck (Turkey)",
+            "coordinates": [
+              29.4,
+              36.13
+            ],
+            "date": "c. 1320 BCE",
+            "description": "Oldest benchmark multi-empire royal metal cargo (10 t copper, 1 t tin, cobalt glass, ebony).",
+            "sources": [
+              "https://doi.org/10.1111/j.1095-9270.1998.tb00803.x"
+            ]
+          },
+          {
+            "id": "sup-pt-khufu",
+            "label": "Khufu Cedar Solar Barque & Heracleion Baris",
+            "coordinates": [
+              31.13,
+              29.98
+            ],
+            "date": "c. 2550 BCE & c. 450 BCE",
+            "description": "Earth's oldest intact disassembled cedar vessel plus Herodotus' only archaeologically verified acacia baris (Ship 17).",
+            "sources": [
+              "https://doi.org/10.1080/17480272.2024.2411548",
+              "https://doi.org/10.1111/1095-9270.12060"
+            ]
+          },
+          {
+            "id": "sup-pt-godavaya",
+            "label": "Godavaya Shipwreck (Southern Sri Lanka)",
+            "coordinates": [
+              81.05,
+              6.1
+            ],
+            "date": "c. 150 BCE–100 CE",
+            "description": "Oldest known deep-water shipwreck across the entire Indian Ocean basin.",
+            "sources": [
+              "https://doi.org/10.18520/cs/v117/i10/1664-1672"
+            ]
+          },
+          {
+            "id": "sup-pt-belitung",
+            "label": "Belitung Tang–Abbasid Dhow (Indonesia)",
+            "coordinates": [
+              107.61,
+              -2.75
+            ],
+            "date": "c. 826–830 CE",
+            "description": "Only excavated direct Abbasid–Tang coconut-coir stitched dhow linking Arabia, Africa, India, and China.",
+            "sources": [
+              "https://doi.org/10.1080/00438240122811"
+            ]
+          },
+          {
+            "id": "sup-pt-sammyb",
+            "label": "USS Samuel B. Roberts (Philippine Sea, 6,895 m)",
+            "coordinates": [
+              127.15,
+              11.4
+            ],
+            "date": "Sank Oct 1944 · Found Jun 2022",
+            "description": "World's deepest located shipwreck at 6,895 meters depth from the 1944 Battle off Samar, near USS Johnston (6,469 m).",
+            "sources": [
+              "https://doi.org/10.1080/10572414.2025.2597344",
+              "https://doi.org/10.1007/s11457-023-09365-4"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "1. The Oldest Surviving Ships & Cargoes on Earth",
+          "paragraphs": [
+            {
+              "text": "Earliest watercraft rarely survive waterlogged bacterial decay, making the handful of 4,500-to-3,300-year-old ships extraordinary milestones in human spread. Egypt's c. 2550 BCE Khufu solar barque preserves 1,224 lashed Lebanese cedar timbers inside a sealed limestone pit; Greece's c. 2200 BCE Dokos ceramic spill and Britain's c. 1930–1520 BCE yew-stitched Ferriby and Dover boats document open-water Early Bronze crossings; and the c. 1320 BCE Uluburun wreck off Turkey remains the oldest intact multi-kingdom royal metal cargo—tying Cypriot copper mines, Central Asian tin veins, Nubian ebony, and Baltic amber on one vessel.",
+              "sources": [
+                "https://doi.org/10.1080/17480272.2024.2411548",
+                "https://doi.org/10.1111/j.1095-9270.1998.tb00803.x",
+                "https://doi.org/10.1017/s0570608423000054"
+              ]
+            },
+            {
+              "text": "Outside the Mediterranean, the c. 150 BCE–100 CE Godavaya cargo off southern Sri Lanka stands as the oldest known deep-water shipwreck in the entire Indian Ocean, proving high-volume regional monsoon trade in cobalt-blue glass, iron, and copper ingots long before medieval spice armadas.",
+              "sources": [
+                "https://doi.org/10.18520/cs/v117/i10/1664-1672"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "2. The Deepest Shipwrecks Ever Located: 2,000 to 6,895 Meters Down",
+          "paragraphs": [
+            {
+              "text": "Deep abyssal waters halt wave scour, treasure looting, and surface oxygen—turning the deep seafloor into an intact museum accessible only via deep-submergence submersibles and autonomous underwater vehicles (AUVs). In the Philippine Sea, the WWII destroyer escort USS Samuel B. Roberts (DE-413) holds the all-time depth record at 6,895 meters (22,621 ft, located June 2022), just deeper than USS Johnston (6,469 m), both lost defending trans-Pacific supply corridors at the 1944 Battle off Samar.",
+              "sources": [
+                "https://doi.org/10.1080/10572414.2025.2597344",
+                "https://doi.org/10.1007/s11457-023-09365-4"
+              ]
+            },
+            {
+              "text": "In polar and inland seas, Shackleton's Endurance (sunk 1915, located March 2022 at 3,008 m in the Weddell Sea) and RMS Titanic (3,800 m, sunk 1912 carrying >1,300 European migrants westward toward New York) preserve modern steel and polar timber architecture, while the c. 400 BCE Black Sea MAP Classical Greek ship (>2,000 m off Bulgaria) stands as the deepest intact ancient wooden hull ever recorded thanks to the Black Sea's anoxic hydrogen-sulfide bottom layer.",
+              "sources": [
+                "https://doi.org/10.1017/s0954102020000103",
+                "https://doi.org/10.1017/s0570608423000054"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "3. 'The Only Example of Its Kind': Unparalleled Historical Witnesses",
+          "paragraphs": [
+            {
+              "text": "Several wrecks preserve technology or ship architecture totally absent from terrestrial ruins and libraries: the c. 70–60 BCE Antikythera wreck yielded the sole surviving ancient bronze analog planetary-and-eclipse computer; Thonis-Heracleion Ship 17 (c. 450 BCE) provided the only direct physical verification of Herodotus' weird tenoned Egyptian 'baris'; Denmark's c. 350 BCE Hjortspring bog boat is the only complete pre-Roman Scandinavian sewn war canoe; and the Egadi/Marsala wrecks preserve the only actual Carthaginian warship construction letters and Punic battle rams.",
+              "sources": [
+                "https://doi.org/10.1057/s41599-018-0210-9",
+                "https://doi.org/10.1080/10572414.2026.2679631",
+                "https://doi.org/10.1111/1095-9270.12060",
+                "https://doi.org/10.1371/journal.pone.0336965",
+                "https://doi.org/10.3389/fmars.2021.772499"
+              ]
+            },
+            {
+              "text": "For medieval and early modern maritime history, Indonesia's c. 826 CE Belitung wreck remains the only excavated coconut-coir sewn Arab/Indian dhow carrying 60,000 Tang ceramics direct across the Asian monsoons; the 1380 Bremen Cog is Europe's only near-complete medieval cog; and Sweden's 1628 Vasa (raised whole in 1961) is the sole intact 17th-century royal galleon anywhere in the world.",
+              "sources": [
+                "https://doi.org/10.1080/00438240122811",
+                "https://doi.org/10.4000/archaeonautica.2699",
+                "https://doi.org/10.1111/j.1095-9270.2007.163_1.x"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "4. Why They Sank—and Why They Survived",
+          "paragraphs": [
+            {
+              "text": "Every wreck on this list was created by human push against geographical or engineering limits: Bronze Age royal cargoes hugged treacherous rocky capes without weather forecasts; Titanic and Batavia raced schedules across poorly charted hazards before marine radar or reliable longitude; Vasa sacrificed ballast stability to royal vanity; and WWII/Punic fleets clashed over imperial chokepoints. Where salinity was too low for Teredo navalis shipworms (Baltic Sea), water too cold/deep (Weddell Sea, Philippine Trench), or mud/oxygen starved decay (Black Sea, Yenikapı, Pisa), disaster ironically became the sole preservative saving humanity's craft heritage.",
+              "sources": [
+                "https://doi.org/10.1007/s41826-024-00090-y",
+                "https://doi.org/10.1017/s0032247425100090",
+                "https://doi.org/10.1017/s0570608423000054"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "5. Benchmark Superlative Wrecks Ledger",
+          "paragraphs": [
+            {
+              "text": "The comparative table below pairs each superlative distinction with its physical survival environment and the migration, trade, or imperial driver behind the fatal voyage.",
+              "sources": [
+                "https://doi.org/10.1017/s0570608423000054"
+              ]
+            }
+          ],
+          "columns": [
+            "Shipwreck",
+            "Superlative Distinction",
+            "Depth & Preservation Key",
+            "Migration / Trade Driver & Cause of Sinking"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Khufu Barque & Uluburun",
+                "Oldest intact planked ship (~2550 BCE) & oldest multi-kingdom metal cargo (~1320 BCE)",
+                "Sealed limestone vault; 44–52 m rocky Mediterranean slope",
+                "Old Kingdom royal mobility & Bronze Age tin-copper networks; storm/shoal loss off Anatolia"
+              ],
+              "sources": [
+                "https://doi.org/10.1080/17480272.2024.2411548",
+                "https://doi.org/10.1111/j.1095-9270.1998.tb00803.x"
+              ]
+            },
+            {
+              "cells": [
+                "Black Sea MAP Greek Ship",
+                "Deepest intact ancient wooden vessel (>2,000 m, c. 400 BCE)",
+                "Permanent deep anoxic hydrogen-sulfide layer prevents woodworms & rot",
+                "Greek-Pontic Black Sea grain & amphora trade; offshore gale founder"
+              ],
+              "sources": [
+                "https://doi.org/10.1017/s0570608423000054"
+              ]
+            },
+            {
+              "cells": [
+                "Antikythera Mechanism Wreck",
+                "Only known ancient geared astronomical cosmos computer (c. 70–60 BCE)",
+                "Buried quickly under rockfall sediment on 50 m sea shelf",
+                "Late Hellenistic luxury & Greek art transport to Italy; winter gale against island cliffs"
+              ],
+              "sources": [
+                "https://doi.org/10.1057/s41599-018-0210-9",
+                "https://doi.org/10.1080/10572414.2026.2679631"
+              ]
+            },
+            {
+              "cells": [
+                "Belitung (Batu Hitam) Dhow",
+                "Only excavated 9th-c. Arab/Indian coir-sewn ocean ship in SE Asia",
+                "Protective mud-sandblanketing off Sumatra",
+                "Direct Basra–Guangzhou monsoon spice/porcelain trunk trade; shoal reef strike"
+              ],
+              "sources": [
+                "https://doi.org/10.1080/00438240122811"
+              ]
+            },
+            {
+              "cells": [
+                "Vasa (Stockholm, 1628)",
+                "Only intact 17th-c. royal galleon preserved whole (raised 1961)",
+                "Brackish Baltic harbor too fresh for Teredo navalis shipworms",
+                "Swedish Thirty Years' War Baltic supremacy; top-heavy gun decks & lack of ballast caused capsize 1,300 m out"
+              ],
+              "sources": [
+                "https://doi.org/10.1111/j.1095-9270.2007.163_1.x",
+                "https://doi.org/10.1007/s41826-024-00090-y"
+              ]
+            },
+            {
+              "cells": [
+                "RMS Titanic (1912) & Endurance (1915)",
+                "Iconic Atlantic migrant liner (3,800 m) & polar barquentine (3,008 m, found 2022)",
+                "Abyssal freezing water devoid of Teredo shipworms & strong currents",
+                "Transatlantic mass steerage migration & Antarctic continental crossing; Grand Banks iceberg & Weddell pack-ice crush"
+              ],
+              "sources": [
+                "https://doi.org/10.1017/s0954102020000103",
+                "https://doi.org/10.1017/s0032247425100090"
+              ]
+            },
+            {
+              "cells": [
+                "USS Samuel B. Roberts (1944/2022)",
+                "Deepest shipwreck ever located on Earth (6,895 m / 22,621 ft)",
+                "Deepest Philippine Sea trench edge; virtually zero oxygen/microbial scour",
+                "WWII Leyte Gulf naval battle over Pacific supply routes; Japanese surface gunfire"
+              ],
+              "sources": [
+                "https://doi.org/10.1080/10572414.2025.2597344"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Briggs, L. et al. (2023). Shipwreck archaeology in the past 10 years. Archaeological Reports.",
+          "url": "https://doi.org/10.1017/s0570608423000054"
+        },
+        {
+          "title": "Dowdeswell, J. A. et al. (2020). Sea-floor and sea-ice conditions in the western Weddell Sea around the wreck of Sir Ernest Shackleton's Endurance. Antarctic Science.",
+          "url": "https://doi.org/10.1017/s0954102020000103"
+        },
+        {
+          "title": "Tuhkuri, J. (2025). Why did Endurance sink? Polar Record.",
+          "url": "https://doi.org/10.1017/s0032247425100090"
+        },
+        {
+          "title": "de Vos, M. et al. (2023). Understanding the drift of Shackleton's Endurance before it sank in November 1915.",
+          "url": "https://doi.org/10.5194/hgss-14-1-2023"
+        },
+        {
+          "title": "Hendry, K. et al. (2023). Storytelling, exploration and science at the end of the world (Endurance22).",
+          "url": "https://doi.org/10.1017/s0954102023000184"
+        },
+        {
+          "title": "Shears, J. R. et al. (2020). The Weddell Sea Expedition.",
+          "url": "https://doi.org/10.5194/egusphere-egu2020-21896"
+        },
+        {
+          "title": "Maarleveld, T. J. (2007). Vasa I: The Archaeology of a Swedish Warship of 1628. IJNA.",
+          "url": "https://doi.org/10.1111/j.1095-9270.2007.163_1.x"
+        },
+        {
+          "title": "Shattock, E. J. (2025). Vasa II: Rigging and sailing a Swedish warship of 1628.",
+          "url": "https://doi.org/10.1080/00253359.2025.2485764"
+        },
+        {
+          "title": "Daly, A. (2021). Timber supply for Vasa: new dendrochronological discoveries. Archaeonautica.",
+          "url": "https://doi.org/10.4000/archaeonautica.1919"
+        },
+        {
+          "title": "Feng, N. et al. (2024). Conservation of waterlogged archaeological wood: the Vasa experience.",
+          "url": "https://doi.org/10.1007/s41826-024-00090-y"
+        },
+        {
+          "title": "Pulak, C. (1998). The Uluburun shipwreck: an overview. IJNA.",
+          "url": "https://doi.org/10.1111/j.1095-9270.1998.tb00803.x"
+        },
+        {
+          "title": "Freeth, T. (2019). Eclipse prediction scheme in the Antikythera mechanism.",
+          "url": "https://doi.org/10.1057/s41599-018-0210-9"
+        },
+        {
+          "title": "Ogloblin Ramírez, I. et al. (2026). Site Formation Processes of the Antikythera Shipwreck.",
+          "url": "https://doi.org/10.1080/10572414.2026.2679631"
+        },
+        {
+          "title": "Belov, A. (2014). Ship 17 of Thonis-Heracleion. IJNA.",
+          "url": "https://doi.org/10.1111/1095-9270.12060"
+        },
+        {
+          "title": "Fauvelle, M. et al. (2025). New investigations of the Hjortspring boat. PLOS ONE.",
+          "url": "https://doi.org/10.1371/journal.pone.0336965"
+        },
+        {
+          "title": "Gravina, M. F. et al. (2021). Bronze Naval Ram From the First Punic War (Egadi Islands).",
+          "url": "https://doi.org/10.3389/fmars.2021.772499"
+        },
+        {
+          "title": "Flecker, M. (2001). Belitung 9th-century Arab or Indian shipwreck in Indonesia.",
+          "url": "https://doi.org/10.1080/00438240122811"
+        },
+        {
+          "title": "Tanner, P. (2021). The Bremen-Cog reconstructed. Archaeonautica.",
+          "url": "https://doi.org/10.4000/archaeonautica.2699"
+        },
+        {
+          "title": "Quinn, R. J. et al. (2026). Underwater Cultural Heritage & Deep-Sea Wrecks.",
+          "url": "https://doi.org/10.1080/10572414.2025.2597344"
+        },
+        {
+          "title": "Delgado, J. P. (2026). The Saga of S.S. Lewis: Heritage Lost, Heritage Rescued (Golden Gate / Pacific Mail). Heritage.",
+          "url": "https://doi.org/10.3390/heritage9040129"
+        },
+        {
+          "title": "Peterson, C. D. (2025). Fate of the Santo Cristo de Burgos Galleon / Beeswax Wreck (1693) along Columbia–Oregon coast.",
+          "url": "https://doi.org/10.5539/jgg.v17n1p1"
+        },
+        {
+          "title": "Trembanis, A. C. et al. (2026). Digital Documentation of Great Lakes Shipwrecks (Thunder Bay). Heritage.",
+          "url": "https://doi.org/10.3390/heritage9080308"
+        },
+        {
+          "title": "Brennan, M. L. et al. (2023). Site Formation & Risk of Deepwater WWII Shipwrecks.",
+          "url": "https://doi.org/10.1007/s11457-023-09365-4"
+        },
+        {
+          "title": "Elkin, D. et al. (2022). Southern Ocean & Cape Horn / South Atlantic Shipwreck Heritage.",
+          "url": "https://doi.org/10.1080/00794236.2022.2120718"
+        },
+        {
+          "title": "Gregory, D. et al. (2024). Investigating Historic Shipwrecks across European Waters.",
+          "url": "https://doi.org/10.1080/10572414.2024.2320774"
+        },
+        {
+          "title": "Bram, M. et al. (2024). Ancient Khufu-1 timber ship construction.",
+          "url": "https://doi.org/10.1080/17480272.2024.2411548"
+        },
+        {
+          "title": "Muthucumarana, R. (2019). Godavaya and early Indian Ocean shipwrecks.",
+          "url": "https://doi.org/10.18520/cs/v117/i10/1664-1672"
+        }
+      ],
+      "relatedGuideIds": [
+        "world-endurance-and-vasa",
+        "world-shipwreck-graveyards",
+        "world-ancient-shipwrecks",
+        "world-mediterranean-trade"
+      ]
+    },
+    {
+      "id": "world-endurance-and-vasa",
+      "atlasIds": [
+        "europe",
+        "americas"
+      ],
+      "category": "subjects",
+      "title": "Endurance (1915/2022) & Vasa (1628/1961): Polar Ice, Baltic Hubris & Intact Survival",
+      "description": "The story of Ernest Shackleton's Endurance (discovered 3,008 m under Weddell Sea ice in March 2022) and Sweden's 1628 royal warship Vasa (which turtled in Stockholm Harbor and was raised whole in 1961).",
+      "intro": "Two of history's most visually astonishing shipwrecks—one resting three kilometers beneath permanent Antarctic sea ice, the other standing intact inside a Stockholm museum after sitting 333 years on a harbor mudbank—share a rare bond: neither should have survived intact in ordinary oceans, yet both freeze-frame supreme moments of human ambition.",
+      "scope": "Documents the 1914–1916 Imperial Trans-Antarctic Expedition, the March 2022 Endurance22 AUV discovery, the 1628 capsizing and 1961 raising of Sweden's Vasa (alongside neighboring Danish Roskilde skuldelev museum parallels), and why both vessels remain global archaeological treasures.",
+      "map": {
+        "bounds": [
+          -75,
+          -72,
+          35,
+          64
+        ],
+        "scope": "Geographic extremes of the two wrecks: Endurance in the Weddell Sea pack-ice escape corridor to South Georgia, and Vasa's Baltic basin between Stockholm and Roskilde.",
+        "points": [
+          {
+            "id": "ev-pt-endurance",
+            "label": "Endurance Wreck Site (Weddell Sea, 3,008 m)",
+            "coordinates": [
+              -52.44,
+              -68.74
+            ],
+            "date": "Crushed & sank 21 Nov 1915 · Imaged 5 Mar 2022",
+            "description": "Final resting coordinate of Shackleton's barquentine ~4 miles from Frank Worsley's 1915 sextant fix, upright and astonishingly intact under freezing Weddell Sea bottom water.",
+            "sources": [
+              "https://doi.org/10.1017/s0954102020000103",
+              "https://doi.org/10.5194/hgss-14-1-2023"
+            ]
+          },
+          {
+            "id": "ev-pt-elephant",
+            "label": "Point Wild, Elephant Island (28 Crew Survival Camp)",
+            "coordinates": [
+              -55.1,
+              -61.1
+            ],
+            "date": "April–August 1916 CE",
+            "description": "Barren glacial spit where 22 crew sheltered beneath overturned lifeboats while Shackleton and five companions sailed the 7 m James Caird to South Georgia.",
+            "sources": [
+              "https://doi.org/10.1017/s0954102023000184"
+            ]
+          },
+          {
+            "id": "ev-pt-south-georgia",
+            "label": "South Georgia / Stromness Whaling Station",
+            "coordinates": [
+              -36.71,
+              -54.16
+            ],
+            "date": "May 1916 rescue launch",
+            "description": "Mountain-crossed rescue threshold after an 800-nautical-mile sub-Antarctic winter boat voyage; Shackleton is buried at Grytviken nearby.",
+            "sources": [
+              "https://doi.org/10.1017/s0954102023000184"
+            ]
+          },
+          {
+            "id": "ev-pt-vasa",
+            "label": "Vasa Sinking Site & Museum (Stockholm, Sweden)",
+            "coordinates": [
+              18.09,
+              59.32
+            ],
+            "date": "Sank 10 Aug 1628 · Raised 24 Apr 1961",
+            "description": "Commissioned by Sweden's King Gustav II Adolf; heeled in a light gust and flooded through open lower cannon ports 1,300 m into its maiden voyage. Raised 98% original timber in 1961.",
+            "sources": [
+              "https://doi.org/10.1111/j.1095-9270.2007.163_1.x",
+              "https://doi.org/10.1080/00253359.2025.2485764"
+            ]
+          },
+          {
+            "id": "ev-pt-roskilde",
+            "label": "Roskilde Viking Ship Museum (Denmark — regional parallel)",
+            "coordinates": [
+              12.01,
+              55.8
+            ],
+            "date": "1070 CE ships raised 1962",
+            "description": "Neighboring Danish museum famous for raising and displaying five sunken medieval Skuldelev ships just one year after Stockholm raised the Swedish Vasa.",
+            "sources": [
+              "https://doi.org/10.4000/archaeonautica.1919",
+              "https://doi.org/10.1111/j.1095-9270.2007.163_1.x"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "1. Shackleton's Endurance (1914–1915): Frozen in the Weddell Sea",
+          "paragraphs": [
+            {
+              "text": "Built in Sandefjord, Norway in 1912 with massive Belgian oak, Norwegian pine, and dense Guyanan greenheart sheathing (originally named Polaris), Sir Ernest Shackleton's three-masted barquentine Endurance set out in late 1914 to make the first overland crossing of Antarctica. Early pack ice trapped her in January 1915 at 76°34'S, locking the ship inside a clockwise drifting gyre for ten grueling months before crushing lateral sea-ice pressure ridges popped her rudder, tore her sternpost, and forced abandonment in October 1915; she slipped beneath the Weddell floes on 21 November 1915.",
+              "sources": [
+                "https://doi.org/10.5194/hgss-14-1-2023",
+                "https://doi.org/10.1017/s0032247425100090"
+              ]
+            },
+            {
+              "text": "A century later, naval engineering analyses by Jukka Tuhkuri (2025) comparing diaries against structural finite-element strength showed that Endurance was not merely defeated by extreme ice alone—her long unbraced engine-room hold without diagonal deck knees buckled fatally once rudder/sternpost damage allowed sustained side crushing.",
+              "sources": [
+                "https://doi.org/10.1017/s0032247425100090"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "2. The James Caird Miracle & March 2022 Discovery at 3,008 Meters",
+          "paragraphs": [
+            {
+              "text": "No human perished in the sinking: Shackleton marched and rafted all 27 crewmen north on melting floes, rowed three ship's boats to barren Elephant Island, and sailed 800 nautical miles of winter Southern Ocean storms in the open 7-meter whaleboat James Caird using skipper Frank Worsley's dead-reckoned sextant shots to hit South Georgia and rescue every single man without loss in August 1916.",
+              "sources": [
+                "https://doi.org/10.1017/s0954102023000184"
+              ]
+            },
+            {
+              "text": "Yes—Endurance HAS been found! On 5 March 2022, after earlier 2019 expeditions failed due to impenetrable Weddell sea ice, the Endurance22 expedition deployed Saab Sabertooth hybrid AUVs from Agulhas II and filmed Endurance sitting upright on the flat 3,008-meter seabed—her oak hull, deadeyes, helm wheel, portholes, and gilded transom lettering 'ENDURANCE' remarkably crisp because Antarctica's sub-freezing abyssal water lacks wood-boring Teredo shipworms.",
+              "sources": [
+                "https://doi.org/10.1017/s0954102020000103",
+                "https://doi.org/10.5194/egusphere-egu2020-21896",
+                "https://doi.org/10.1017/s0954102023000184"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "3. Vasa (10 August 1628): The Top-Heavy Royal Flagship That Turtled on Day One",
+          "paragraphs": [
+            {
+              "text": "Remembered across northern Europe alongside Denmark's raised Roskilde ships (though commissioned in Stockholm by Sweden's King Gustav II Adolf against Poland and Habsburg forces during the Thirty Years' War), the 69-meter royal galleon Vasa represents 17th-century European naval arms-race ambition pushed beyond basic stability physics. Mid-construction, royal orders squeezed an unprecedented second enclosed gun deck of heavy 24-pounder bronze cannons onto a narrow warship hull with insufficient stone ballast (~120 tons) down in its tapered bilge.",
+              "sources": [
+                "https://doi.org/10.1111/j.1095-9270.2007.163_1.x",
+                "https://doi.org/10.1080/00253359.2025.2485764"
+              ]
+            },
+            {
+              "text": "When 30 sailors ran side-to-side during a harbor stability test, the ship rocked so violently that Admiral Fleming stopped the test—yet feared delaying departure under royal displeasure. Setting four small sails on 10 August 1628 before cheering crowds, a sudden light squall heeled Vasa just past 1,300 meters off Beckholmen; water poured straight through open lower gunports, capsizing and sinking the flagship intact in minutes (~30 crew & guests drowned).",
+              "sources": [
+                "https://doi.org/10.1111/j.1095-9270.2007.163_1.x"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "4. Raising Vasa in 1961 & Preserving a Raised Museum Time Capsule",
+          "paragraphs": [
+            {
+              "text": "Unlike Atlantic or Mediterranean wrecks devoured rapidly by warm-water shipworms, Stockholm's brackish Baltic Sea salinity (~0.2–0.7%) excluded Teredo navalis completely. After diver Per Edvin Fälting and researcher Anders Franzén located the black-oak hull in 1956, tunnels were jetted under the keel in anoxic harbor clay so heavy lifting pontoons raised Vasa unbroken to the surface on 24 April 1961—followed by 17 years of continuous polyethylene glycol (PEG) spraying and 98% original timber restoration.",
+              "sources": [
+                "https://doi.org/10.1007/s41826-024-00090-y",
+                "https://doi.org/10.4000/archaeonautica.1919"
+              ]
+            },
+            {
+              "text": "Today, Vasa provides unmatched evidence of 17th-century Baltic maritime logistics: dendrochronology shows timbers harvested from eastern Sweden, coastal Germany, and Polish oaklands, while crew boots, butter tubs, painted polychrome carvings, and skeletons reveal multinational Baltic seamanship—even though she sits dry inside Stockholm's Vasa Museum rather than under the waves.",
+              "sources": [
+                "https://doi.org/10.4000/archaeonautica.1919",
+                "https://doi.org/10.1080/00253359.2025.2485764"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "5. Endurance vs. Vasa: Extreme Cold & Low Salinity as Archives",
+          "paragraphs": [
+            {
+              "text": "Together, these two wrecks show how human ambition—imperial Baltic warfare and polar exploration—produced catastrophic losses whose extreme cold or fresh waters saved whole timber ships for modern science.",
+              "sources": [
+                "https://doi.org/10.1017/s0032247425100090",
+                "https://doi.org/10.1007/s41826-024-00090-y"
+              ]
+            }
+          ],
+          "columns": [
+            "Vessel",
+            "Loss Date & Cause",
+            "Discovery / Recovery",
+            "Why Survivable & Historical Value"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Vasa (Stockholm, Sweden)",
+                "10 Aug 1628: Top-heavy dual gun decks flooded open ports on maiden sail",
+                "Found 1956 · Raised intact 24 Apr 1961 (Vasa Museum)",
+                "Brackish Baltic prevented Teredo decay; only complete 17th-c. capital warship with painted carvings & Baltic timber origins"
+              ],
+              "sources": [
+                "https://doi.org/10.1111/j.1095-9270.2007.163_1.x",
+                "https://doi.org/10.4000/archaeonautica.1919"
+              ]
+            },
+            {
+              "cells": [
+                "Endurance (Weddell Sea, Antarctica)",
+                "21 Nov 1915: Crushed for months in sea-ice pressure ridges",
+                "Found 5 Mar 2022 at 3,008 m by Endurance22 AUVs (left in situ)",
+                "Sub-freezing Weddell abyssal water lacks shipworms; preserves Heroic Age polar engineering & site of all-28-man survival epic"
+              ],
+              "sources": [
+                "https://doi.org/10.1017/s0954102020000103",
+                "https://doi.org/10.1017/s0032247425100090"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Briggs, L. et al. (2023). Shipwreck archaeology in the past 10 years. Archaeological Reports.",
+          "url": "https://doi.org/10.1017/s0570608423000054"
+        },
+        {
+          "title": "Dowdeswell, J. A. et al. (2020). Sea-floor and sea-ice conditions in the western Weddell Sea around the wreck of Sir Ernest Shackleton's Endurance. Antarctic Science.",
+          "url": "https://doi.org/10.1017/s0954102020000103"
+        },
+        {
+          "title": "Tuhkuri, J. (2025). Why did Endurance sink? Polar Record.",
+          "url": "https://doi.org/10.1017/s0032247425100090"
+        },
+        {
+          "title": "de Vos, M. et al. (2023). Understanding the drift of Shackleton's Endurance before it sank in November 1915.",
+          "url": "https://doi.org/10.5194/hgss-14-1-2023"
+        },
+        {
+          "title": "Hendry, K. et al. (2023). Storytelling, exploration and science at the end of the world (Endurance22).",
+          "url": "https://doi.org/10.1017/s0954102023000184"
+        },
+        {
+          "title": "Shears, J. R. et al. (2020). The Weddell Sea Expedition.",
+          "url": "https://doi.org/10.5194/egusphere-egu2020-21896"
+        },
+        {
+          "title": "Maarleveld, T. J. (2007). Vasa I: The Archaeology of a Swedish Warship of 1628. IJNA.",
+          "url": "https://doi.org/10.1111/j.1095-9270.2007.163_1.x"
+        },
+        {
+          "title": "Shattock, E. J. (2025). Vasa II: Rigging and sailing a Swedish warship of 1628.",
+          "url": "https://doi.org/10.1080/00253359.2025.2485764"
+        },
+        {
+          "title": "Daly, A. (2021). Timber supply for Vasa: new dendrochronological discoveries. Archaeonautica.",
+          "url": "https://doi.org/10.4000/archaeonautica.1919"
+        },
+        {
+          "title": "Feng, N. et al. (2024). Conservation of waterlogged archaeological wood: the Vasa experience.",
+          "url": "https://doi.org/10.1007/s41826-024-00090-y"
+        },
+        {
+          "title": "Pulak, C. (1998). The Uluburun shipwreck: an overview. IJNA.",
+          "url": "https://doi.org/10.1111/j.1095-9270.1998.tb00803.x"
+        },
+        {
+          "title": "Freeth, T. (2019). Eclipse prediction scheme in the Antikythera mechanism.",
+          "url": "https://doi.org/10.1057/s41599-018-0210-9"
+        },
+        {
+          "title": "Ogloblin Ramírez, I. et al. (2026). Site Formation Processes of the Antikythera Shipwreck.",
+          "url": "https://doi.org/10.1080/10572414.2026.2679631"
+        },
+        {
+          "title": "Belov, A. (2014). Ship 17 of Thonis-Heracleion. IJNA.",
+          "url": "https://doi.org/10.1111/1095-9270.12060"
+        },
+        {
+          "title": "Fauvelle, M. et al. (2025). New investigations of the Hjortspring boat. PLOS ONE.",
+          "url": "https://doi.org/10.1371/journal.pone.0336965"
+        },
+        {
+          "title": "Gravina, M. F. et al. (2021). Bronze Naval Ram From the First Punic War (Egadi Islands).",
+          "url": "https://doi.org/10.3389/fmars.2021.772499"
+        },
+        {
+          "title": "Flecker, M. (2001). Belitung 9th-century Arab or Indian shipwreck in Indonesia.",
+          "url": "https://doi.org/10.1080/00438240122811"
+        },
+        {
+          "title": "Tanner, P. (2021). The Bremen-Cog reconstructed. Archaeonautica.",
+          "url": "https://doi.org/10.4000/archaeonautica.2699"
+        },
+        {
+          "title": "Quinn, R. J. et al. (2026). Underwater Cultural Heritage & Deep-Sea Wrecks.",
+          "url": "https://doi.org/10.1080/10572414.2025.2597344"
+        },
+        {
+          "title": "Delgado, J. P. (2026). The Saga of S.S. Lewis: Heritage Lost, Heritage Rescued (Golden Gate / Pacific Mail). Heritage.",
+          "url": "https://doi.org/10.3390/heritage9040129"
+        },
+        {
+          "title": "Peterson, C. D. (2025). Fate of the Santo Cristo de Burgos Galleon / Beeswax Wreck (1693) along Columbia–Oregon coast.",
+          "url": "https://doi.org/10.5539/jgg.v17n1p1"
+        },
+        {
+          "title": "Trembanis, A. C. et al. (2026). Digital Documentation of Great Lakes Shipwrecks (Thunder Bay). Heritage.",
+          "url": "https://doi.org/10.3390/heritage9080308"
+        },
+        {
+          "title": "Brennan, M. L. et al. (2023). Site Formation & Risk of Deepwater WWII Shipwrecks.",
+          "url": "https://doi.org/10.1007/s11457-023-09365-4"
+        },
+        {
+          "title": "Elkin, D. et al. (2022). Southern Ocean & Cape Horn / South Atlantic Shipwreck Heritage.",
+          "url": "https://doi.org/10.1080/00794236.2022.2120718"
+        },
+        {
+          "title": "Gregory, D. et al. (2024). Investigating Historic Shipwrecks across European Waters.",
+          "url": "https://doi.org/10.1080/10572414.2024.2320774"
+        },
+        {
+          "title": "Bram, M. et al. (2024). Ancient Khufu-1 timber ship construction.",
+          "url": "https://doi.org/10.1080/17480272.2024.2411548"
+        },
+        {
+          "title": "Muthucumarana, R. (2019). Godavaya and early Indian Ocean shipwrecks.",
+          "url": "https://doi.org/10.18520/cs/v117/i10/1664-1672"
+        }
+      ],
+      "relatedGuideIds": [
+        "world-superlative-shipwrecks",
+        "world-shipwreck-graveyards",
+        "world-ancient-shipwrecks",
+        "world-sweden"
+      ]
+    },
+    {
+      "id": "world-shipwreck-graveyards",
+      "atlasIds": [
+        "americas",
+        "europe",
+        "africa",
+        "asia-pacific"
+      ],
+      "category": "subjects",
+      "title": "Graveyards of the Sea: Golden Gate, Columbia Bar, Cape Hatteras & Global Chokepoints",
+      "description": "Why sailors kept forcing the world's deadliest maritime chokepoints—from San Francisco's Golden Gate, Columbia River Bar, Cape Hatteras, and the Great Lakes to Cape Horn, Namibia's Skeleton Coast, Agulhas, Scilly, and Western Australia.",
+      "intro": "Shipwrecks do not scatter evenly across empty ocean: they pile up by the hundreds and thousands at narrow river bars, shifting sandbanks, colliding ocean currents, and fog-bound straits where every trade, migration, or wartime fleet HAD to pass.",
+      "scope": "Links coastal physical oceanography (shoaling river bars, cross-currents, fog, reefs) directly to human migration, gold rushes, spice monopolies, grain/timber freight, and navigation breakthroughs across 10 major maritime graveyards.",
+      "map": {
+        "bounds": [
+          -135,
+          -58,
+          130,
+          60
+        ],
+        "scope": "Ten concentrated global shipwreck graveyards plotted at their hazardous shoals, straits, and coastal reef chokepoints.",
+        "points": [
+          {
+            "id": "grav-pt-columbia",
+            "label": "Columbia River Bar ('Graveyard of the Pacific')",
+            "coordinates": [
+              -124.08,
+              46.25
+            ],
+            "date": "1792 CE–present (~2,000 wrecks)",
+            "description": "Collision of huge Columbia outflow and North Pacific swells; claimed USS Peacock (1841), Peter Iredale (1906), and nearby 1693 Manila Galleon Beeswax Wreck.",
+            "sources": [
+              "https://doi.org/10.5539/jgg.v17n1p1"
+            ]
+          },
+          {
+            "id": "grav-pt-golden-gate",
+            "label": "Golden Gate Bar & Farallons (San Francisco)",
+            "coordinates": [
+              -122.58,
+              37.81
+            ],
+            "date": "1595 CE–present (>300 Bay/Bar wrecks)",
+            "description": "Potato Patch Shoal, fierce Golden Gate ebb tides, and cold advection fog claiming Gold Rush liners (SS Tennessee, SS Lewis 1853) and Pacific passenger ships (City of Rio de Janeiro 1901).",
+            "sources": [
+              "https://doi.org/10.3390/heritage9040129"
+            ]
+          },
+          {
+            "id": "grav-pt-great-lakes",
+            "label": "Great Lakes & Thunder Bay ('Shipwreck Alley')",
+            "coordinates": [
+              -83.35,
+              45.05
+            ],
+            "date": "1679 CE–present (>6,000 Great Lakes wrecks)",
+            "description": "Freshwater gale and fog bottleneck for grain, timber, iron-ore, and immigrant steamships (~200 preserved hulls in Thunder Bay alone).",
+            "sources": [
+              "https://doi.org/10.3390/heritage9080308"
+            ]
+          },
+          {
+            "id": "grav-pt-hatteras",
+            "label": "Cape Hatteras & Diamond Shoals",
+            "coordinates": [
+              -75.53,
+              35.22
+            ],
+            "date": "1585 CE–present (>2,000 wrecks)",
+            "description": "Warm Gulf Stream slamming into cold Labrador Current across shifting Outer Banks sandbars; claimed USS Monitor (1862) and WWII convoys.",
+            "sources": [
+              "https://doi.org/10.1007/s11457-023-09365-4"
+            ]
+          },
+          {
+            "id": "grav-pt-cape-horn",
+            "label": "Cape Horn & Strait of Magellan",
+            "coordinates": [
+              -67.27,
+              -55.98
+            ],
+            "date": "1520–1914+ CE (>800 wrecks)",
+            "description": "Pre-Panama Canal Atlantic–Pacific chokepoint hammered by unblocked Antarctic Furious Sixties gales, rogue swells, and lee rocky islets.",
+            "sources": [
+              "https://doi.org/10.1080/00794236.2022.2120718"
+            ]
+          },
+          {
+            "id": "grav-pt-sable",
+            "label": "Sable Island ('Graveyard of the Atlantic North')",
+            "coordinates": [
+              -59.91,
+              43.93
+            ],
+            "date": "1583 CE–present (>350 recorded wrecks)",
+            "description": "42 km shifting fog-bound sandbar on the Europe–North America steamship and fishery lane.",
+            "sources": [
+              "https://doi.org/10.1017/s0570608423000054"
+            ]
+          },
+          {
+            "id": "grav-pt-scilly-goodwin",
+            "label": "Isles of Scilly & Goodwin Sands (Channel Throat)",
+            "coordinates": [
+              -6.43,
+              49.87
+            ],
+            "date": "Roman–present (>2,000 wrecks on Goodwin alone)",
+            "description": "Scilly's 1707 Royal Navy longitude disaster triggered the 1714 Longitude Act; Dover Strait's Goodwin quicksands claimed HMS Stirling Castle (1703).",
+            "sources": [
+              "https://doi.org/10.1080/10572414.2024.2320774"
+            ]
+          },
+          {
+            "id": "grav-pt-skeleton",
+            "label": "Skeleton Coast (Namib Desert Shore, Namibia)",
+            "coordinates": [
+              14.1,
+              -21.5
+            ],
+            "date": "1486 CE–present",
+            "description": "Freezing Benguela upwelling fog meets heavy Atlantic surf and shifting desert sands—leaving wrecks like Eduard Bohlen (1909) stranded inland in sand dunes.",
+            "sources": [
+              "https://doi.org/10.1017/s0570608423000054"
+            ]
+          },
+          {
+            "id": "grav-pt-agulhas",
+            "label": "Cape Agulhas & 'Cape of Storms' (South Africa)",
+            "coordinates": [
+              19.31,
+              -34.64
+            ],
+            "date": "1488 CE–present (>140 coastal wrecks)",
+            "description": "Agulhas Current vs. Southern Ocean swells spawning freak waves and hidden rocky ledges across the Europe–India–Australia trunk route (HMS Birkenhead 1852).",
+            "sources": [
+              "https://doi.org/10.1017/s0570608423000054"
+            ]
+          },
+          {
+            "id": "grav-pt-abrolhos",
+            "label": "Houtman Abrolhos & WA Reefs (Indian Ocean)",
+            "coordinates": [
+              113.79,
+              -28.49
+            ],
+            "date": "1616–1900 CE",
+            "description": "Low uncharted limestone-coral islets catching Dutch spice fleet ships turning north off the Roaring Forties Brouwer Route (Batavia 1629, Zeewijk 1727).",
+            "sources": [
+              "https://doi.org/10.1080/00794236.2022.2120718"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "1. Right Outside the Golden Gate & Up to the Columbia River Bar",
+          "paragraphs": [
+            {
+              "text": "On America's Pacific coast, ships risked catastrophic shallow-bar approaches because the alternative was having zero deep-water protected anchorage across 1,000 miles of mountainous surf. Right outside San Francisco's Golden Gate, fierce six-knot bay ebb currents collide with Pacific swells over the horseshoe-shaped Fourfathom Bank ('Potato Patch Shoal') under thick summer advection fog and jagged Duxbury/Farallon rocks. Beginning in earnest with the 1849 California Gold Rush—when hundreds of thousands of Forty-Niners, Oregon lumber schooners, and trans-Pacific coal steamers surged through a single narrow throat—ships like SS Tennessee (1853), SS Lewis (1853), and SS City of Rio de Janeiro (1901, 128 lost in dense fog off Fort Point) wrecked right outside or inside the Gate.",
+              "sources": [
+                "https://doi.org/10.3390/heritage9040129",
+                "https://doi.org/10.1017/s0570608423000054"
+              ]
+            },
+            {
+              "text": "Further north, the Columbia River Bar earned the title 'Graveyard of the Pacific': draining much of western North America, the river hurls monumental spring snowmelt directly against incoming North Pacific winter storm swells over rapidly shifting sand spits, turning waves into steep breaking pyramids. Ever since fur traders (Robert Gray 1792), Hudson's Bay supply brigs, Oregon agricultural settlers, and salmon/timber fleets began forcing the river mouth—preceded earlier on nearby Oregon dunes by the c. 1693 Manila Galleon Beeswax Wreck—~2,000 vessels have wrecked on or beside the Bar, from USS Peacock (1841) to the iron barque skeleton Peter Iredale (1906).",
+              "sources": [
+                "https://doi.org/10.5539/jgg.v17n1p1"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "2. North Atlantic Chokepoints: Cape Hatteras, Sable Island & the Great Lakes",
+          "paragraphs": [
+            {
+              "text": "Along eastern North America, economics and gulf-stream physics forged twin traps. At Cape Hatteras ('Graveyard of the Atlantic'), captains rode the warm three-knot northward Gulf Stream like a watery conveyor belt—while southbound skippers hugged shallow beach water to dodge it, only to get shoved into shifting Diamond Shoals when northeast gales slammed into the Gulf Stream wall. Over 2,000 vessels—spanning colonial tobacco/sugar convoys, USS Monitor (1862), coastal lumber schooners, and WWII oil tankers torpedoed along 'Torpedo Junction'—litter Hatteras sands.",
+              "sources": [
+                "https://doi.org/10.1007/s11457-023-09365-4",
+                "https://doi.org/10.1017/s0570608423000054"
+              ]
+            },
+            {
+              "text": "Further north, Sable Island's 42-km roving sandbar sat directly along the shortest Great Circle transatlantic migration route between Europe and Halifax/Boston/New York, while inland North America's industrial grain, iron-ore, coal, and immigrant migration funnel turned Thunder Bay ('Shipwreck Alley') and the Great Lakes into an archive of >6,000 intact freshwater hulls.",
+              "sources": [
+                "https://doi.org/10.3390/heritage9080308"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "3. Southern Ocean & African Traps: Cape Horn, Skeleton Coast & Cape Agulhas",
+          "paragraphs": [
+            {
+              "text": "Before the Panama Canal opened in 1914 (and before Suez opened in 1869), virtually every bulk voyage connecting Europe/eastern US with California gold, Chilean nitrates, India, China tea, or Australian wool had to survive either the Southern Ocean around Cape Horn or the storms of southern Africa. At Cape Horn, unrestricted Furious Fifties–Sixties gales accelerate through the Drake Passage mountain-wave funnel, shattering overloaded grain and Gold Rush clippers against headwinds and snowsqualls (>800 wrecks, ~10,000 dead).",
+              "sources": [
+                "https://doi.org/10.1080/00794236.2022.2120718"
+              ]
+            },
+            {
+              "text": "Around Africa, the freezing Benguela Current off Namibia produces permanent coastal fog banks along a featureless desert coastline—producing the haunting Skeleton Coast where dune-advancing ships like Eduard Bohlen (1909) sit inland in sand—while southern Cape Agulhas pits Indian Ocean Agulhas currents head-on against Antarctic swells to trigger >25 m freak waves and shallow reef traps like HMS Birkenhead (1852) carrying soldiers and migrating families.",
+              "sources": [
+                "https://doi.org/10.1017/s0570608423000054"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "4. European & Indian Ocean Traps—and How Disasters Remade Navigation",
+          "paragraphs": [
+            {
+              "text": "European prosperity ran on dangerous home waters too: every Dutch Baltic fleet and London merchantman threaded Goodwin Sands off Kent (>2,000 ships swallowed in exposed-at-low-tide quicksand) and the rocky Isles of Scilly threshold. Off Western Australia, Dutch VOC captains deliberately plunged south from Cape Town into the Roaring Forties Brouwer Route to catch high-speed east winds toward Java—and because nobody could measure longitude at sea before 1760, ships like Batavia (1629) and Zeewijk (1727) slammed headlong into low coral reefs off the Houtman Abrolhos.",
+              "sources": [
+                "https://doi.org/10.1080/10572414.2024.2320774",
+                "https://doi.org/10.1080/00794236.2022.2120718"
+              ]
+            },
+            {
+              "text": "Mass sinkings directly forced scientific innovation: the 1707 Isles of Scilly catastrophe (>1,400 Royal Navy sailors drowned because Admiral Shovell miscalculated longitude by ~100 miles) prompted Parliament's Longitude Act of 1714 and John Harrison's marine chronometer; Columbia Bar & Golden Gate tolls built modern West Coast lighthouse, foghorn, and pilot-bar engineering; and Titanic's 1912 sinking mandated 24-hour radio watch, full lifeboats, and the International Ice Patrol.",
+              "sources": [
+                "https://doi.org/10.1017/s0570608423000054",
+                "https://doi.org/10.3390/heritage9040129"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "5. Maritime Graveyards Comparative Synthesis",
+          "paragraphs": [
+            {
+              "text": "Each graveyard reflects a classic trade-off between economic shortcut (fastest river port, fastest Great Circle arc, Gulf Stream conveyor) and lethal local fluid dynamics or navigation blindness.",
+              "sources": [
+                "https://doi.org/10.1017/s0570608423000054"
+              ]
+            }
+          ],
+          "columns": [
+            "Graveyard & Chokepoint",
+            "Peak Loss Era & Scale",
+            "Human Spread / Economic Driver",
+            "Physical Hazard Why Ships Sank"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Golden Gate & Farallons (CA)",
+                "1849–1936+ (>300 area wrecks)",
+                "California Gold Rush migration, lumber, Asia-SF liner trade (Tennessee, Lewis, Rio de Janeiro)",
+                "Potato Patch Shoal breaking swells + 6 kt Gate ebb tide + blind coastal advection fog"
+              ],
+              "sources": [
+                "https://doi.org/10.3390/heritage9040129"
+              ]
+            },
+            {
+              "cells": [
+                "Columbia River Bar (OR/WA)",
+                "1792–present (~2,000 wrecks)",
+                "Pacific NW fur trade, Oregon settler supply, timber & salmon fleets (USS Peacock, Peter Iredale)",
+                "Massive river current slamming directly into North Pacific swells over migrating submerged bars"
+              ],
+              "sources": [
+                "https://doi.org/10.5539/jgg.v17n1p1"
+              ]
+            },
+            {
+              "cells": [
+                "Cape Hatteras & Diamond Shoals (NC)",
+                "1585–1945 (>2,000 wrecks)",
+                "Colonial sugar/tobacco coastwise trade, Civil War ironclads (USS Monitor), WWII tankers",
+                "Warm Gulf Stream colliding with Labrador Current building shifting sandy shoals & hurricanes"
+              ],
+              "sources": [
+                "https://doi.org/10.1007/s11457-023-09365-4"
+              ]
+            },
+            {
+              "cells": [
+                "Great Lakes & Thunder Bay (MI)",
+                "1800–1975 (>6,000 Lakes wrecks)",
+                "North American interior grain, copper, iron ore, lumber & German/Scandinavian/Irish migration",
+                "Sudden fall cyclonic gales, zero sea-room channels, and heavy steamer traffic fog collisions"
+              ],
+              "sources": [
+                "https://doi.org/10.3390/heritage9080308"
+              ]
+            },
+            {
+              "cells": [
+                "Cape Horn & Agulhas / Skeleton Coast",
+                "1520–1914 (>1,000 wrecks combined)",
+                "Pre-Panama/Suez global trunk routes to China, Australia, California & India",
+                "Furious 50s/60s gales, Agulhas rogue waves (>25 m), Benguela upwelling fog & lee dunes"
+              ],
+              "sources": [
+                "https://doi.org/10.1080/00794236.2022.2120718"
+              ]
+            },
+            {
+              "cells": [
+                "Scilly, Goodwin Sands & Houtman Abrolhos",
+                "1629–1800s (>2,000+ wrecks)",
+                "Thames trade throat, British Empire fleets, Dutch VOC Roaring Forties Brouwer Route (Batavia 1629)",
+                "Pre-chronometer longitude blindness + shifting tidal quicksands + low uncharted coral reefs"
+              ],
+              "sources": [
+                "https://doi.org/10.1080/10572414.2024.2320774",
+                "https://doi.org/10.1080/00794236.2022.2120718"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Briggs, L. et al. (2023). Shipwreck archaeology in the past 10 years. Archaeological Reports.",
+          "url": "https://doi.org/10.1017/s0570608423000054"
+        },
+        {
+          "title": "Dowdeswell, J. A. et al. (2020). Sea-floor and sea-ice conditions in the western Weddell Sea around the wreck of Sir Ernest Shackleton's Endurance. Antarctic Science.",
+          "url": "https://doi.org/10.1017/s0954102020000103"
+        },
+        {
+          "title": "Tuhkuri, J. (2025). Why did Endurance sink? Polar Record.",
+          "url": "https://doi.org/10.1017/s0032247425100090"
+        },
+        {
+          "title": "de Vos, M. et al. (2023). Understanding the drift of Shackleton's Endurance before it sank in November 1915.",
+          "url": "https://doi.org/10.5194/hgss-14-1-2023"
+        },
+        {
+          "title": "Hendry, K. et al. (2023). Storytelling, exploration and science at the end of the world (Endurance22).",
+          "url": "https://doi.org/10.1017/s0954102023000184"
+        },
+        {
+          "title": "Shears, J. R. et al. (2020). The Weddell Sea Expedition.",
+          "url": "https://doi.org/10.5194/egusphere-egu2020-21896"
+        },
+        {
+          "title": "Maarleveld, T. J. (2007). Vasa I: The Archaeology of a Swedish Warship of 1628. IJNA.",
+          "url": "https://doi.org/10.1111/j.1095-9270.2007.163_1.x"
+        },
+        {
+          "title": "Shattock, E. J. (2025). Vasa II: Rigging and sailing a Swedish warship of 1628.",
+          "url": "https://doi.org/10.1080/00253359.2025.2485764"
+        },
+        {
+          "title": "Daly, A. (2021). Timber supply for Vasa: new dendrochronological discoveries. Archaeonautica.",
+          "url": "https://doi.org/10.4000/archaeonautica.1919"
+        },
+        {
+          "title": "Feng, N. et al. (2024). Conservation of waterlogged archaeological wood: the Vasa experience.",
+          "url": "https://doi.org/10.1007/s41826-024-00090-y"
+        },
+        {
+          "title": "Pulak, C. (1998). The Uluburun shipwreck: an overview. IJNA.",
+          "url": "https://doi.org/10.1111/j.1095-9270.1998.tb00803.x"
+        },
+        {
+          "title": "Freeth, T. (2019). Eclipse prediction scheme in the Antikythera mechanism.",
+          "url": "https://doi.org/10.1057/s41599-018-0210-9"
+        },
+        {
+          "title": "Ogloblin Ramírez, I. et al. (2026). Site Formation Processes of the Antikythera Shipwreck.",
+          "url": "https://doi.org/10.1080/10572414.2026.2679631"
+        },
+        {
+          "title": "Belov, A. (2014). Ship 17 of Thonis-Heracleion. IJNA.",
+          "url": "https://doi.org/10.1111/1095-9270.12060"
+        },
+        {
+          "title": "Fauvelle, M. et al. (2025). New investigations of the Hjortspring boat. PLOS ONE.",
+          "url": "https://doi.org/10.1371/journal.pone.0336965"
+        },
+        {
+          "title": "Gravina, M. F. et al. (2021). Bronze Naval Ram From the First Punic War (Egadi Islands).",
+          "url": "https://doi.org/10.3389/fmars.2021.772499"
+        },
+        {
+          "title": "Flecker, M. (2001). Belitung 9th-century Arab or Indian shipwreck in Indonesia.",
+          "url": "https://doi.org/10.1080/00438240122811"
+        },
+        {
+          "title": "Tanner, P. (2021). The Bremen-Cog reconstructed. Archaeonautica.",
+          "url": "https://doi.org/10.4000/archaeonautica.2699"
+        },
+        {
+          "title": "Quinn, R. J. et al. (2026). Underwater Cultural Heritage & Deep-Sea Wrecks.",
+          "url": "https://doi.org/10.1080/10572414.2025.2597344"
+        },
+        {
+          "title": "Delgado, J. P. (2026). The Saga of S.S. Lewis: Heritage Lost, Heritage Rescued (Golden Gate / Pacific Mail). Heritage.",
+          "url": "https://doi.org/10.3390/heritage9040129"
+        },
+        {
+          "title": "Peterson, C. D. (2025). Fate of the Santo Cristo de Burgos Galleon / Beeswax Wreck (1693) along Columbia–Oregon coast.",
+          "url": "https://doi.org/10.5539/jgg.v17n1p1"
+        },
+        {
+          "title": "Trembanis, A. C. et al. (2026). Digital Documentation of Great Lakes Shipwrecks (Thunder Bay). Heritage.",
+          "url": "https://doi.org/10.3390/heritage9080308"
+        },
+        {
+          "title": "Brennan, M. L. et al. (2023). Site Formation & Risk of Deepwater WWII Shipwrecks.",
+          "url": "https://doi.org/10.1007/s11457-023-09365-4"
+        },
+        {
+          "title": "Elkin, D. et al. (2022). Southern Ocean & Cape Horn / South Atlantic Shipwreck Heritage.",
+          "url": "https://doi.org/10.1080/00794236.2022.2120718"
+        },
+        {
+          "title": "Gregory, D. et al. (2024). Investigating Historic Shipwrecks across European Waters.",
+          "url": "https://doi.org/10.1080/10572414.2024.2320774"
+        },
+        {
+          "title": "Bram, M. et al. (2024). Ancient Khufu-1 timber ship construction.",
+          "url": "https://doi.org/10.1080/17480272.2024.2411548"
+        },
+        {
+          "title": "Muthucumarana, R. (2019). Godavaya and early Indian Ocean shipwrecks.",
+          "url": "https://doi.org/10.18520/cs/v117/i10/1664-1672"
+        }
+      ],
+      "relatedGuideIds": [
+        "world-superlative-shipwrecks",
+        "world-endurance-and-vasa",
+        "world-ancient-shipwrecks",
+        "world-mediterranean-trade"
       ]
     }
   ]

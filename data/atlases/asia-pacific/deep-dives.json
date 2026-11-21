@@ -2802,6 +2802,1102 @@
         "world-borobudur-bagan-se-asia",
         "world-human-family"
       ]
+    },
+    {
+      "id": "world-history-of-blue-and-dyes",
+      "atlasIds": [
+        "africa",
+        "europe",
+        "asia-pacific",
+        "americas"
+      ],
+      "category": "subjects",
+      "title": "The Quest for Blue & Ancient Dyes: Pigments, Snails, Bugs, Poison & Global Trade",
+      "description": "How humanity's obsession with rare blues, royal purples, and bright crimsons—from lapis lazuli in Badakhshan, Egyptian Blue, Han Blue, and Maya Blue to Phoenician sea snails, Oaxaca cochineal, poisonous arsenic greens, and 1856 Mauveine—drove trade, espionage, conquest, and modern chemistry.",
+      "intro": "Nature makes abundant red-ochre and charcoal earth tones—and almost zero durable blue minerals or animal pigments. That chemical scarcity turned the human chase for color (and especially stable blue) into one of the strangest engines of long-distance exploration, monopolies, smuggling, and reckless toxicology in history.",
+      "scope": "Traces pigment synthesis, animal/botanical dye extraction, global trade caravans, colonial espionage, and lethal toxic colors from Upper Paleolithic ochres and Bronze Age lapis lazuli to 1856 synthetic organic aniline dyes.",
+      "map": {
+        "bounds": [
+          -105,
+          -25,
+          125,
+          58
+        ],
+        "scope": "Global provenance sources for the rarest historic pigments and dyes: Afghan lapis lazuli, Yucatán palygorskite, Oaxaca cochineal, Phoenician Murex vats, Han China barium blue, Brazilwood, and European chemical synthesis labs.",
+        "points": [
+          {
+            "id": "dye-pt-oaxaca",
+            "label": "Oaxaca Highlands (Mixtec/Zapotec Cochineal)",
+            "coordinates": [
+              -96.72,
+              17.07
+            ],
+            "date": "Pre-Columbian–19th c. CE",
+            "description": "Domesticated Dactylopius coccus scale insects harvested on Opuntia cactus pads produced brilliant carminic scarlet guarded under Spanish imperial monopoly and French botanical espionage.",
+            "sources": [
+              "https://doi.org/10.1007/978-981-10-4053-5_12",
+              "https://doi.org/10.1002/col.22828"
+            ]
+          },
+          {
+            "id": "dye-pt-yucatan",
+            "label": "Sacalum, Yucatán (Maya Blue Mine)",
+            "coordinates": [
+              -89.58,
+              20.5
+            ],
+            "date": "Classic–Colonial Maya",
+            "description": "Source of fibrous palygorskite clay cooked with fermented Indigofera leaves to synthesize indestructible nanoscale Maya Blue.",
+            "sources": [
+              "https://doi.org/10.1017/s0956536125000082",
+              "https://doi.org/10.1186/s40494-019-0345-z"
+            ]
+          },
+          {
+            "id": "dye-pt-huancavelica",
+            "label": "Huancavelica Cinnabar Mines (Peru)",
+            "coordinates": [
+              -74.97,
+              -12.78
+            ],
+            "date": "Chavín/Inca–Colonial",
+            "description": "High-altitude Andean mercury sulfide (cinnabar) deposits extracted for vermilion prestige paint and later colonial silver amalgamation with devastating miner mortality.",
+            "sources": [
+              "https://doi.org/10.3390/min8050201"
+            ]
+          },
+          {
+            "id": "dye-pt-brazilwood",
+            "label": "Pernambuco Atlantic Forest (Brazilwood / Pau-Brasil)",
+            "coordinates": [
+              -35,
+              -8
+            ],
+            "date": "1500–1700 CE",
+            "description": "Red dyewood Paubrasilia echinata harvested across coastal forests to replace costly Asian sappanwood—giving the nation of Brazil its very name.",
+            "sources": [
+              "https://doi.org/10.3390/colorants1030019"
+            ]
+          },
+          {
+            "id": "dye-pt-almaden",
+            "label": "Almadén Cinnabar District (Spain)",
+            "coordinates": [
+              -4.83,
+              38.77
+            ],
+            "date": "Roman antiquity–19th c.",
+            "description": "Earth's largest mercury-sulfide vermilion deposit; Pliny noted Rome sealed mines with Roman prisoner labor and leather masks due to deadly neurotoxicity.",
+            "sources": [
+              "https://doi.org/10.3390/min8050201"
+            ]
+          },
+          {
+            "id": "dye-pt-london",
+            "label": "London / Greenford Green (1856 Perkin Mauveine)",
+            "coordinates": [
+              -0.33,
+              51.54
+            ],
+            "date": "1856 CE",
+            "description": "Site where 18-year-old William Henry Perkin oxidized coal-tar aniline chasing malaria quinine and instead synthesized mauveine—launching modern synthetic chemistry.",
+            "sources": [
+              "https://doi.org/10.1038/s41598-017-07239-z",
+              "https://doi.org/10.1039/d5an00258c"
+            ]
+          },
+          {
+            "id": "dye-pt-venice",
+            "label": "Venice Ultramarine Refinement Hub",
+            "coordinates": [
+              12.33,
+              45.44
+            ],
+            "date": "1300–1600 CE",
+            "description": "Levantine import port where crushed Badakhshan lazurite was washed with wax and lye into Renaissance blue ultramarine costlier than pure gold.",
+            "sources": [
+              "https://doi.org/10.1007/s40828-025-00204-8"
+            ]
+          },
+          {
+            "id": "dye-pt-amarna",
+            "label": "Amarna / Memphis (Egyptian Blue Workshops)",
+            "coordinates": [
+              30.9,
+              27.64
+            ],
+            "date": "c. 2600–1350 BCE",
+            "description": "Pharaonic high-temperature crucible workshops fusing Nile silica sand, natron flux, lime, and malachite copper ore into humanity's first synthetic pigment.",
+            "sources": [
+              "https://doi.org/10.1038/s40494-025-01699-7",
+              "https://doi.org/10.1007/s12210-023-01153-5"
+            ]
+          },
+          {
+            "id": "dye-pt-shiqmona",
+            "label": "Tel Shiqmona & Tyre (Phoenician Murex Vats)",
+            "coordinates": [
+              34.95,
+              32.82
+            ],
+            "date": "c. 1100–600 BCE",
+            "description": "Crushed tens-of-thousands of Bolinus brandaris sea-snail glands extracted to manufacture colorfast Royal Tyrian Purple and tekhelet woolens.",
+            "sources": [
+              "https://doi.org/10.1371/journal.pone.0321082",
+              "https://doi.org/10.1371/journal.pone.0245897"
+            ]
+          },
+          {
+            "id": "dye-pt-badakhshan",
+            "label": "Sar-i Sang Lapis Lazuli Mines (Badakhshan, Afghanistan)",
+            "coordinates": [
+              70.79,
+              36.21
+            ],
+            "date": "c. 4500 BCE–present",
+            "description": "High Hindu Kush lazurite quarries supplying Ur royal tombs, Egyptian pharaohs, and European Renaissance frescoes via 5,000-km overland corridors.",
+            "sources": [
+              "https://doi.org/10.1007/s40828-025-00204-8",
+              "https://doi.org/10.3390/min8050201"
+            ]
+          },
+          {
+            "id": "dye-pt-bengal",
+            "label": "Bengal Indigofera Belt (Eastern India)",
+            "coordinates": [
+              88.36,
+              23.4
+            ],
+            "date": "Antiquity–1859 Indigo Revolt",
+            "description": "High-yield tropical Indigofera tinctoria fermentation center supplying Old and New World dyeing vats—and provoking coerced colonial peasant rebellions.",
+            "sources": [
+              "https://doi.org/10.3390/min8050201"
+            ]
+          },
+          {
+            "id": "dye-pt-xian",
+            "label": "Xi'an / Qin-Han Barium Silicate Kilns (China)",
+            "coordinates": [
+              109.25,
+              34.38
+            ],
+            "date": "c. 500 BCE–220 CE",
+            "description": "Early Chinese ceramicists synthesized unique Han Blue (BaCuSi4O10) and Han Purple using lead fluxes on Terracotta Warriors and painted jades.",
+            "sources": [
+              "https://doi.org/10.1186/s40494-019-0340-4",
+              "https://doi.org/10.1007/s12210-023-01153-5"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "1. Why Blue Was Rare: Badakhshan Lapis Lazuli to Renaissance Ultramarine",
+          "paragraphs": [
+            {
+              "text": "For thousands of years, blue had almost no reliable mineral pigment near populated river valleys: azurite slowly weathers green and cobalt stays invisible unless glass-fired at >1,100°C. One mountain valley on Earth solved the puzzle—Sar-i Sang in Badakhshan (northeastern Afghanistan), where miners climbed above 3,000 meters to chisel cobalt-rich lazurite marble that crossed Silk Road trails 5,000 kilometers west to decorate Predynastic Egypt, Ur's Royal Cemetery, Tutankhamun's gold mask, and medieval Europe.",
+              "sources": [
+                "https://doi.org/10.1007/s40828-025-00204-8",
+                "https://doi.org/10.3390/min8050201"
+              ]
+            },
+            {
+              "text": "Medieval Venetians named the imported pigment oltremare ('beyond the sea'). Separating pure blue lazurite crystals from dull gray calcite by kneading powdered rock with wax dough in alkaline lye demanded weeks of skill, yielding tiny drops worth far more per ounce than 24-karat gold—so patrons legally rationed ultramarine in painted contracts specifically for sacred sky and robes.",
+              "sources": [
+                "https://doi.org/10.1007/s40828-025-00204-8"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "2. Humanity's First Synthetic Blues: Egyptian Blue, Han Blue & Maya Blue",
+          "paragraphs": [
+            {
+              "text": "Rather than accept geological scarcity, three independent ancient civilizations invented chemistry to synthesize brand-new blue pigments. Around 2600 BCE, Fourth Dynasty Egyptian glassmakers fused desert quartz sand, copper bronze filings, limestone, and Wadi Natrun soda at ~850–950°C to manufacture calcium copper silicate (CaCuSi4O10, Egyptian Blue)—humanity's oldest artificial pigment, traded across Minoan Crete, Nineveh, Pompeii walls, and Roman Gaul.",
+              "sources": [
+                "https://doi.org/10.1038/s40494-025-01699-7",
+                "https://doi.org/10.1007/s12210-023-01153-5"
+              ]
+            },
+            {
+              "text": "Independently in Warring States and Qin-Han China, alchemists replaced calcium with heavy barium carbonate and lead-salt fluxes to cook Han Blue (BaCuSi4O10) and Han Purple (BaCuSi2O6, famous on the Terracotta Army and modern quantum materials studies!). Meanwhile in Mesoamerica, Classic Maya chemists heated fermented Indigofera dye together with fibrous palygorskite clay mined at Sacalum (Yucatán), locking organic indigo inside microscopic silicate clay tunnels to create Maya Blue—immune to acid, alkali, sunlight, and centuries of tropical monsoon rain.",
+              "sources": [
+                "https://doi.org/10.1186/s40494-019-0340-4",
+                "https://doi.org/10.1017/s0956536125000082",
+                "https://doi.org/10.1186/s40494-019-0345-z"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "3. Snails, Crushed Scale Insects & Colonial Monopolies: Purple, Cochineal & Indigo",
+          "paragraphs": [
+            {
+              "text": "Color literally redrew imperial borders and maritime routes. Along Bronze and Iron Age Levantine shores at Tel Shiqmona and Tyre, Phoenician workshops crushed tens of thousands of Bolinus brandaris sea snails to extract microscopic hypobranchial gland secretions—requiring ~10,000 mollusks for a single gram of non-fading Royal Tyrian Purple (6,6'-dibromoindigo), turning rotting coastal shell heaps into imperial currency and monopoly law.",
+              "sources": [
+                "https://doi.org/10.1371/journal.pone.0321082",
+                "https://doi.org/10.1371/journal.pone.0245897",
+                "https://doi.org/10.3390/su11133595"
+              ]
+            },
+            {
+              "text": "After 1519, Spain discovered Mixtec/Zapotec agricultural dye breeding in Oaxaca: dried female Dactylopius coccus scale insects farmed on prickly-pear cactus yielded ten times more intense scarlet than Old World kermes insects. Cochineal instantly became Mexico's #2 export after silver (paying for Redcoats and Cardinal robes), fiercely guarded until French naturalist Nicolas-Joseph Thiéry de Menonville smuggled live prickly-pear pads and bugs out of Veracruz under disguise in 1777. Similarly, tropical Indian Indigofera drove colonial plantation coercion culminating in Bengal's 1859 Indigo Revolt—just as Portugal named an entire South American nation after red pau-brasil dyewood.",
+              "sources": [
+                "https://doi.org/10.1007/978-981-10-4053-5_12",
+                "https://doi.org/10.1002/col.22828",
+                "https://doi.org/10.3390/colorants1030019"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "4. The Deadly & Bizarre Things Humans Did for Color",
+          "paragraphs": [
+            {
+              "text": "Pursuing vibrant or fashionable color repeatedly crossed into madness and mass poisoning. From the 16th through early 20th centuries, European colormen looted Egyptian tombs and literally ground desiccated human mummies (alongside bitumen resins) into an oily warm pigment sold as 'Mummy Brown'—favored by Pre-Raphaelite painters until supplies of ancient human remains horrified artists into halting production around 1900.",
+              "sources": [
+                "https://doi.org/10.3390/colorants1030019"
+              ]
+            },
+            {
+              "text": "Far deadlier were metallic poisons: Roman slaves suffered excruciating mercury lung rot quarrying red cinnabar at Almadén and colonial Peru's 'Mountain of Death' at Huancavelica; Renaissance ladies smeared poisonous white lead carbonate paste across their faces; and in the 1770s–1880s, Carl Wilhelm Scheele's vivid copper arsenite ('Scheele's Green' and 'Paris Green') saturated Victorian ballgowns, artificial flowers, children's candies, and damp bedroom wallpapers—slowly off-gassing lethal arsine gas onto sleeping families.",
+              "sources": [
+                "https://doi.org/10.1080/00393630.2025.2465954",
+                "https://doi.org/10.3390/min8050201"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "5. Accidental Chemistry: Prussian Blue (1706) & Perkin's 1856 Mauveine",
+          "paragraphs": [
+            {
+              "text": "Ironically, chemistry solved color scarcity by accident. Around 1706 in Berlin, color maker Diesbach used potash contaminated with boiled cattle blood oil to precipitate cochineal—unexpectedly crystallizing Prussian Blue, Europe's first cheap modern synthetic blue used in Hokusai's Great Wave and architectural blueprints. In 1824–1828, France's Jean-Baptiste Guimet won a 6,000-franc prize for synthesizing cheap chemical ultramarine from clay, soda, charcoal, and sulfur—ending Badakhshan's 6,000-year monopoly overnight.",
+              "sources": [
+                "https://doi.org/10.36348/sjls.2026.v11i10.002",
+                "https://doi.org/10.1007/s40828-025-00204-8"
+              ]
+            },
+            {
+              "text": "The final revolution struck during Easter break 1856 when 18-year-old London student William Henry Perkin tried to cook synthetic antimalarial quinine from coal-tar waste, producing black sludge that washed out bright violet—Mauveine, humanity's first commercial aniline synthetic dye, which immediately ignited modern industrial organic chemistry, aspirin, and pharmaceuticals.",
+              "sources": [
+                "https://doi.org/10.1038/s41598-017-07239-z",
+                "https://doi.org/10.1039/d5an00258c"
+              ]
+            }
+          ],
+          "columns": [
+            "Color & Pigment",
+            "Origin & Date",
+            "Raw Material / Synthesis",
+            "Global Spread & Human Cost"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Egyptian & Han Blue",
+                "c. 2600 BCE (Egypt) · c. 500 BCE (China)",
+                "Copper/lime silicate vs. barium/lead silicate fused at ~900°C",
+                "First synthetic pigments in human history; fueled Eurasian kiln glasswork"
+              ],
+              "sources": [
+                "https://doi.org/10.1038/s40494-025-01699-7",
+                "https://doi.org/10.1186/s40494-019-0340-4"
+              ]
+            },
+            {
+              "cells": [
+                "Ultramarine (Lapis Lazuli)",
+                "c. 4500 BCE–1828 CE (Badakhshan)",
+                "Lazurite stone mined at >3,000 m, refined by wax-kneading",
+                "5,000-km Silk Road/Mediterranean luxury route; more expensive than gold until 1828 synth"
+              ],
+              "sources": [
+                "https://doi.org/10.1007/s40828-025-00204-8"
+              ]
+            },
+            {
+              "cells": [
+                "Tyrian Purple",
+                "c. 1100 BCE–Late Antiquity (Levant)",
+                "Glands of ~10,000 Bolinus/Murex sea snails per gram of dye",
+                "Phoenician & Mediterranean imperial textile symbol; toxic rotting coastal vats"
+              ],
+              "sources": [
+                "https://doi.org/10.1371/journal.pone.0321082"
+              ]
+            },
+            {
+              "cells": [
+                "Maya Blue & Cochineal",
+                "Classic Maya & Mixtec Oaxaca",
+                "Indigo cooked into palygorskite clay; farmed Dactylopius scale insects",
+                "Acid-proof rainforest paint & top Spanish Atlantic dye cargo; French 1777 espionage"
+              ],
+              "sources": [
+                "https://doi.org/10.1017/s0956536125000082",
+                "https://doi.org/10.1007/978-981-10-4053-5_12"
+              ]
+            },
+            {
+              "cells": [
+                "Mummy Brown & Scheele's Green",
+                "16th–19th c. Europe",
+                "Ground ancient Egyptian mummies; copper arsenite (arsenic green)",
+                "Grave-robbing commodification & mass home arsenic wallpaper poisoning"
+              ],
+              "sources": [
+                "https://doi.org/10.1080/00393630.2025.2465954",
+                "https://doi.org/10.3390/colorants1030019"
+              ]
+            },
+            {
+              "cells": [
+                "Prussian Blue & Mauveine",
+                "c. 1706 Berlin · 1856 London",
+                "Accidental blood-potash iron salt; coal-tar aniline oxidation",
+                "Collapsed ancient natural monopolies & birthed synthetic chemistry/pharmaceuticals"
+              ],
+              "sources": [
+                "https://doi.org/10.36348/sjls.2026.v11i10.002",
+                "https://doi.org/10.1038/s41598-017-07239-z"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Fabbrizzi, L. (2025). Painting conditioned by chemistry: Egyptian and ultramarine blue pigments. ChemTexts.",
+          "url": "https://doi.org/10.1007/s40828-025-00204-8"
+        },
+        {
+          "title": "Siddall, R. (2018). Mineral Pigments in Archaeology: Availability and Global Exchange. Minerals.",
+          "url": "https://doi.org/10.3390/min8050201"
+        },
+        {
+          "title": "McCloy, J. S. et al. (2025). Assessment of process variability in synthesized and ancient Egyptian blue. Heritage Science.",
+          "url": "https://doi.org/10.1038/s40494-025-01699-7"
+        },
+        {
+          "title": "Nicola, M. et al. (2023). Egyptian blue, Chinese blue, and related two-dimensional silicates from antiquity.",
+          "url": "https://doi.org/10.1007/s12210-023-01153-5"
+        },
+        {
+          "title": "Zhang, Z. et al. (2019). Man-made blue and purple barium copper silicate pigments (Han blue/purple). Heritage Science.",
+          "url": "https://doi.org/10.1186/s40494-019-0340-4"
+        },
+        {
+          "title": "Arnold, D. E. (2025). Palygorskite from Sacalum, Yucatán in Maya Blue. Ancient Mesoamerica.",
+          "url": "https://doi.org/10.1017/s0956536125000082"
+        },
+        {
+          "title": "Grazia, C. et al. (2020). Shades of blue: non-invasive spectroscopy of Maya blue pigments. Heritage Science.",
+          "url": "https://doi.org/10.1186/s40494-019-0345-z"
+        },
+        {
+          "title": "Shalvi, G. et al. (2025). Tel Shiqmona during the Iron Age: an ancient Mediterranean purple dye factory. PLOS ONE.",
+          "url": "https://doi.org/10.1371/journal.pone.0321082"
+        },
+        {
+          "title": "Sukenik, N. et al. (2021). Early evidence of royal purple dyed textile from Timna Valley. PLOS ONE.",
+          "url": "https://doi.org/10.1371/journal.pone.0245897"
+        },
+        {
+          "title": "Karapanagiotis, I. (2019). Archaeological Chemistry of Shellfish Purple. Sustainability.",
+          "url": "https://doi.org/10.3390/su11133595"
+        },
+        {
+          "title": "Marichal, C. (2017). Mexican Cochineal, Local Technologies and the Rise of Global Trade (16th–19th c.).",
+          "url": "https://doi.org/10.1007/978-981-10-4053-5_12"
+        },
+        {
+          "title": "Cruz Mojica, K. et al. (2022). Extraction and identification of Mexican cochineal (Dactylopius coccus).",
+          "url": "https://doi.org/10.1002/col.22828"
+        },
+        {
+          "title": "Greening, T. (2025). Hazardous Hues: Arsenic Present in Historic Architecture & Pigments. Studies in Conservation.",
+          "url": "https://doi.org/10.1080/00393630.2025.2465954"
+        },
+        {
+          "title": "Orna, M. V. (2022). The Modernity of Ancient Pigments: A Historical Approach. Colorants.",
+          "url": "https://doi.org/10.3390/colorants1030019"
+        },
+        {
+          "title": "Rizvi, S. T. (2026). Prussian Blue: From Accidental Pigment to Diagnostic Standard.",
+          "url": "https://doi.org/10.36348/sjls.2026.v11i10.002"
+        },
+        {
+          "title": "Cova, T. F. G. G. et al. (2017). Reconstructing Perkin and Caro's historical synthesis of mauveine. Scientific Reports.",
+          "url": "https://doi.org/10.1038/s41598-017-07239-z"
+        },
+        {
+          "title": "Pinto, C. M. et al. (2025). Chemical archaeology with historical museum samples of mauveine. Analyst.",
+          "url": "https://doi.org/10.1039/d5an00258c"
+        }
+      ],
+      "relatedGuideIds": [
+        "world-silk-roads",
+        "world-chinese-ceramics",
+        "world-mesopotamian-writing",
+        "world-ancient-shipwrecks"
+      ]
+    },
+    {
+      "id": "world-chinese-ceramics",
+      "atlasIds": [
+        "asia-pacific",
+        "europe",
+        "africa"
+      ],
+      "category": "subjects",
+      "title": "Chinese Ceramics & Porcelain: 20,000 Years from Xianrendong Clay to Global Blue-and-White",
+      "description": "How Chinese potters invented the world's oldest fired clay pots (~18,000 BCE), glazed high-temperature stoneware, true white translucent kaolin porcelain (Xing/Jingdezhen), and Silk Road cobalt blue-and-white export empires.",
+      "intro": "More than fifteen millennia before metal smelting, hunter-gatherers in South China fired clay vessels to extract marrow and cook wild grasses. Millennia of kiln airflow mastery later turned low-fired pottery into rock-hard celadons and translucent white 'porcelain'—China's premier global industrial export whose chemistry transformed dining, global silver trade, and European industry.",
+      "scope": "Follows kiln pyrotechnology from ~20,000 BP Xianrendong Cave and Shang high-fired proto-porcelain through Tang Changsha/Sancai exports, Song Longquan celadon, Yuan Jingdezhen Persian-cobalt blue-and-white, and 18th-century European reverse-engineering at Meissen.",
+      "map": {
+        "bounds": [
+          5,
+          -8,
+          130,
+          54
+        ],
+        "scope": "Key kiln capitals, cobalt mineral sources, shipwreck distribution points, and European porcelain imitation hubs linking East Asia to Iraq and Saxony.",
+        "points": [
+          {
+            "id": "cer-pt-xianrendong",
+            "label": "Xianrendong Cave (Jiangxi) & Yuchanyan (Hunan)",
+            "coordinates": [
+              117.22,
+              28.73
+            ],
+            "date": "c. 18,000–16,000 BCE",
+            "description": "Earth's oldest securely dated pottery vessels (~20,000 cal BP at Xianrendong), thick scorched quartz-tempered cooking pots made during peak Glacial Maximum foraging.",
+            "sources": [
+              "https://doi.org/10.1126/science.1218643",
+              "https://doi.org/10.1073/pnas.0900539106"
+            ]
+          },
+          {
+            "id": "cer-pt-banpo-xian",
+            "label": "Banpo Yangshao & Qin Terracotta Kilns (Xi'an)",
+            "coordinates": [
+              109.05,
+              34.27
+            ],
+            "date": "c. 5000–210 BCE",
+            "description": "Painted Yangshao spirals followed by Qin Shihuang's modular life-sized terracotta army factories firing ~8,000 soldiers in reducing atmospheres.",
+            "sources": [
+              "https://doi.org/10.1371/journal.pone.0139970"
+            ]
+          },
+          {
+            "id": "cer-pt-shangyu-yue",
+            "label": "Shangyu & Yue Kilns (Zhejiang Proto-Porcelain)",
+            "coordinates": [
+              120.87,
+              29.99
+            ],
+            "date": "c. 1500 BCE–1000 CE",
+            "description": "Birthplace of high-fired ash-glazed proto-porcelain (Shang Dynasty ~1200°C dragon kilns) and celadon exported to Fustat, Nishapur, and Samarra.",
+            "sources": [
+              "https://doi.org/10.1371/journal.pone.0139970"
+            ]
+          },
+          {
+            "id": "cer-pt-xing",
+            "label": "Xing Kilns (Neiqiu, Hebei — First White Porcelain)",
+            "coordinates": [
+              114.51,
+              37.28
+            ],
+            "date": "Late 6th–9th c. CE",
+            "description": "Northern low-iron alumina kilns achieving vitrified, translucent snow-white porcelain ('like silver and snow') by c. 580 CE.",
+            "sources": [
+              "https://doi.org/10.1111/arcm.12840"
+            ]
+          },
+          {
+            "id": "cer-pt-gongyi",
+            "label": "Gongyi Imperial Kilns (Henan — Tang Sancai & Cobalt)",
+            "coordinates": [
+              113,
+              34.76
+            ],
+            "date": "7th–9th c. CE",
+            "description": "Major Tang Dynasty lead-glazed Sancai and early Persian-cobalt-dotted white-ware production hub.",
+            "sources": [
+              "https://doi.org/10.1111/arcm.12448"
+            ]
+          },
+          {
+            "id": "cer-pt-changsha",
+            "label": "Changsha Kilns (Tongguan, Hunan)",
+            "coordinates": [
+              112.82,
+              28.43
+            ],
+            "date": "8th–9th c. CE",
+            "description": "Pioneering mass-produced underglaze polychrome stoneware shipped downriver—comprising 57,500+ bowls aboard the Belitung dhow bound for Basra.",
+            "sources": [
+              "https://doi.org/10.1080/00438240122811"
+            ]
+          },
+          {
+            "id": "cer-pt-longquan",
+            "label": "Longquan Jade-Green Celadon Kilns (Zhejiang)",
+            "coordinates": [
+              119.13,
+              28.07
+            ],
+            "date": "10th–15th c. CE",
+            "description": "Iron-reduced olive-and-kinuta blue-green celadons prized from Japan (Sinan wreck) to Topkapi Palace and Kilwa Kisiwani.",
+            "sources": [
+              "https://doi.org/10.1007/s12520-020-01138-7"
+            ]
+          },
+          {
+            "id": "cer-pt-jingdezhen",
+            "label": "Jingdezhen Porcelain Capital (Jiangxi)",
+            "coordinates": [
+              117.18,
+              29.29
+            ],
+            "date": "1004 CE–present",
+            "description": "Pre-eminent world porcelain city combining Gaoling ('kaolin') clay and petuntse china-stone to fire thin translucent Qingbai and Yuan/Ming cobalt blue-and-white porcelain.",
+            "sources": [
+              "https://doi.org/10.1111/arcm.12539",
+              "https://doi.org/10.1080/20548923.2016.1272310",
+              "https://doi.org/10.3390/ma19112254"
+            ]
+          },
+          {
+            "id": "cer-pt-kashan",
+            "label": "Kashan Cobalt Mines (Central Iran)",
+            "coordinates": [
+              51.44,
+              33.98
+            ],
+            "date": "9th–15th c. CE",
+            "description": "Qamsar/Kashan cobalt ore ('Muhammadan blue' / Su-ma-li-qing) exported thousands of miles east across Silk Roads to paint Yuan Jingdezhen blue-and-white wares.",
+            "sources": [
+              "https://doi.org/10.1080/20548923.2016.1272310",
+              "https://doi.org/10.3390/ma19112254"
+            ]
+          },
+          {
+            "id": "cer-pt-meissen",
+            "label": "Meissen Manufactory (Saxony, Germany)",
+            "coordinates": [
+              13.47,
+              51.16
+            ],
+            "date": "1708–1710 CE",
+            "description": "Site of Europe's first successful true kaolin hard-paste porcelain synthesis by Böttger and Tschirnhaus, finally breaking East Asia's 1,100-year technical monopoly.",
+            "sources": [
+              "https://doi.org/10.1007/s12520-020-01138-7"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "1. Earliest Clay Pots on Earth (~20,000 BP) & Dragon Kiln Breakthroughs",
+          "paragraphs": [
+            {
+              "text": "Pottery did not await sedentary farming in China: hunter-gatherers in limestone Xianrendong Cave (Jiangxi, ~20,000–19,000 cal BP) and Yuchanyan Cave (Hunan, ~18,000 cal BP) fired coarse, coil-built pots over open bonfires during the brutal Last Glacial Maximum to extract bone marrow grease and soften wild seeds. Five millennia later, Yangshao villagers decorated fine red bowls, while Shang Bronze Age engineers invented hillside 'dragon kilns' (longyao) drafting winds uphill past 1,200°C—creating high-fired calcium-ash-glazed proto-porcelain 1,500 years before other continents.",
+              "sources": [
+                "https://doi.org/10.1126/science.1218643",
+                "https://doi.org/10.1073/pnas.0900539106",
+                "https://doi.org/10.1371/journal.pone.0139970"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "2. Pure White Translucent Porcelain: The Sui–Tang Kiln Revolution",
+          "paragraphs": [
+            {
+              "text": "In western definition, 'true porcelain' requires sintering above ~1,280–1,350°C into a zero-porosity, resonant, white, translucent glassy-mullite matrix. Excavations at the Xing kilns (Hebei) confirm Chinese artisans crossed this chemical threshold by the late 6th century CE (Sui Dynasty), substituting pure high-alumina, nearly iron-free kaolinitic clays baked in sealed fireclay 'saggars' to prevent ash contamination—earning Tang poetry's praise for cups 'like white silver and bright snow' exported by 9th-century Arab dhows (Belitung) all the way to Abbasid Samarra.",
+              "sources": [
+                "https://doi.org/10.1111/arcm.12840",
+                "https://doi.org/10.1111/arcm.12448",
+                "https://doi.org/10.1080/00438240122811"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "3. Jingdezhen, Kaolin-Petuntse Binary Formula & Persian Cobalt 'Blue-and-White'",
+          "paragraphs": [
+            {
+              "text": "Under Song and Yuan emperors, production centralized at Jingdezhen (literally named for Emperor Zhenzong's Jingde era, 1004–1007 CE), where potters perfected blending plastic Kaolin clay (from nearby Gaoling, 'High Ridge') with fusible Petuntse china-stone into extraordinarily thin translucent vessels. In the early 14th century, cosmopolitan Yuan exchange paired Jingdezhen's white-clay mastery with imported low-manganese, iron-rich cobalt oxide mined in Kashan (Iran, called Su-ma-li-qing / Smalt blue) painted directly under clear glaze—birthing the single most globally imitated consumer design in human history: Blue-and-White Porcelain.",
+              "sources": [
+                "https://doi.org/10.1111/arcm.12539",
+                "https://doi.org/10.1080/20548923.2016.1272310",
+                "https://doi.org/10.3390/ma19112254"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "4. Global Silver Drain, Shipwrecks & Europe's 200-Year Chase for the Secret",
+          "paragraphs": [
+            {
+              "text": "Because European and Ottoman kilns could not exceed ~1,100°C without melting their earthen clays, Chinese Longquan celadons and Jingdezhen porcelains commanded imperial prestige worldwide—moving via Song/Yuan merchant junks (Nanhai No. 1, Quanzhou, Sinan), Ming carrack holds, and Manila–Acapulco Spanish galleons—draining vast quantities of Japanese and Peruvian Potosí silver into China. Portuguese Jesuits (such as François Xavier d'Entrecolles' 1712/1722 letters) sent detailed industrial spying dispatches back to Europe right as Dresden/Meissen chemists Tschirnhaus and Böttger independently solved Saxony's kaolin recipe in 1708.",
+              "sources": [
+                "https://doi.org/10.1007/s12520-020-01138-7",
+                "https://doi.org/10.1080/20548923.2016.1272310"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "5. Milestones in Chinese Ceramic Chemistry",
+          "paragraphs": [
+            {
+              "text": "From open Glacial fires to >1,300°C dual-mineral kaolin kilns, Chinese ceramic innovation bridged continents via Silk Road cobalt imports and oceanic porcelain exports.",
+              "sources": [
+                "https://doi.org/10.1126/science.1218643",
+                "https://doi.org/10.1111/arcm.12840",
+                "https://doi.org/10.1080/20548923.2016.1272310"
+              ]
+            }
+          ],
+          "columns": [
+            "Kiln / Site",
+            "Date & Firing Temp",
+            "Mineral Innovation",
+            "Global Significance"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Xianrendong & Yuchanyan Caves",
+                "c. 18,000–16,000 BCE (~700°C)",
+                "Coarse quartz-tempered open-fired vessels",
+                "Oldest reliably dated pottery vessels on Earth during Ice Age"
+              ],
+              "sources": [
+                "https://doi.org/10.1126/science.1218643",
+                "https://doi.org/10.1073/pnas.0900539106"
+              ]
+            },
+            {
+              "cells": [
+                "Shang–Zhou Yue Dragon Kilns",
+                "c. 1500 BCE–1000 CE (~1,200°C)",
+                "Wood-ash high-temperature celadon glaze on stoneware",
+                "Earliest durable vitrified glazed proto-porcelain worldwide"
+              ],
+              "sources": [
+                "https://doi.org/10.1371/journal.pone.0139970"
+              ]
+            },
+            {
+              "cells": [
+                "Xing & Gongyi Kilns (Hebei/Henan)",
+                "c. 580–900 CE (~1,280–1,350°C)",
+                "Iron-free kaolin white translucent porcelain + saggar firing",
+                "World's first true white porcelain; shipped to Iraq on Tang dhows"
+              ],
+              "sources": [
+                "https://doi.org/10.1111/arcm.12840",
+                "https://doi.org/10.1111/arcm.12448"
+              ]
+            },
+            {
+              "cells": [
+                "Jingdezhen Yuan Blue-and-White",
+                "1300s CE–present (~1,320°C)",
+                "Kaolin + Petuntse body + Iranian Kashan cobalt underglaze",
+                "Silk Road mineral fusion that dominated Eurasian, Ottoman, & European luxury markets until 1708+"
+              ],
+              "sources": [
+                "https://doi.org/10.1080/20548923.2016.1272310",
+                "https://doi.org/10.3390/ma19112254"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wu, X. et al. (2012). Early Pottery at 20,000 Years Ago in Xianrendong Cave, China. Science.",
+          "url": "https://doi.org/10.1126/science.1218643"
+        },
+        {
+          "title": "Boaretto, E. et al. (2009). Radiocarbon dating at Yuchanyan Cave ~18,000 cal BP early pottery. PNAS.",
+          "url": "https://doi.org/10.1073/pnas.0900539106"
+        },
+        {
+          "title": "Li, Y. et al. (2015). Earliest Chinese Proto-Porcelain Excavated from Kiln Sites. PLOS ONE.",
+          "url": "https://doi.org/10.1371/journal.pone.0139970"
+        },
+        {
+          "title": "Spataro, M. et al. (2018). Pottery technology in the Tang dynasty (Gongyi Kilns). Archaeometry.",
+          "url": "https://doi.org/10.1111/arcm.12448"
+        },
+        {
+          "title": "Zong, R. et al. (2022). Origin of Chinese early white porcelain in the late sixth century (Xing kiln). Archaeometry.",
+          "url": "https://doi.org/10.1111/arcm.12840"
+        },
+        {
+          "title": "Wu, J. et al. (2020). Early development of Jingdezhen ceramic glazes. Archaeometry.",
+          "url": "https://doi.org/10.1111/arcm.12539"
+        },
+        {
+          "title": "Li, W. et al. (2016). A Landmark in the History of Chinese Ceramics: Invention of Blue-and-White Porcelain.",
+          "url": "https://doi.org/10.1080/20548923.2016.1272310"
+        },
+        {
+          "title": "Sun, J. et al. (2026). Cobalt pigment coloration in Yuan Dynasty Jingdezhen Porcelain. Materials.",
+          "url": "https://doi.org/10.3390/ma19112254"
+        },
+        {
+          "title": "Henderson, J. et al. (2020). Isotopic investigations of Chinese ceramics and global trade. Archaeological & Anthropological Sciences.",
+          "url": "https://doi.org/10.1007/s12520-020-01138-7"
+        },
+        {
+          "title": "Flecker, M. (2001). Ninth-century AD Belitung shipwreck & 60,000 Changsha ceramics. World Archaeology.",
+          "url": "https://doi.org/10.1080/00438240122811"
+        }
+      ],
+      "relatedGuideIds": [
+        "world-history-of-blue-and-dyes",
+        "world-chinese-gunpowder-explosives",
+        "world-chinese-explorers",
+        "world-ancient-shipwrecks",
+        "world-silk-roads"
+      ]
+    },
+    {
+      "id": "world-chinese-gunpowder-explosives",
+      "atlasIds": [
+        "asia-pacific",
+        "europe",
+        "africa"
+      ],
+      "category": "subjects",
+      "title": "Chinese Gunpowder & Explosives: From Tang Daoist Elixirs to Global Artillery",
+      "description": "How Daoist immortality alchemists chasing elixirs in 9th-century China stumbled upon saltpeter-sulfur-charcoal black powder—launching Song fire arrows, iron thunder-crash bombs, 1280s metal guns, Mongol Eurasian transmission, and the modern world.",
+      "intro": "No single invention altered human warfare, state formation, and colonial expansion faster than black powder—and uniquely, its inventors were not armories seeking weapons, but 9th-century Tang Daoist alchemists warning students not to scorch off their eyebrows while brewing immortality elixirs.",
+      "scope": "Traces gunpowder chemistry from 850 CE Tang alchemical warnings and 1044 CE Wujing Zongyao saltpeter formulas through Song-Jin-Mongol iron bombs, early metal hand cannons (1288–1332 CE), Guizhou saltpeter cave extraction, and westward transmission across Eurasia.",
+      "map": {
+        "bounds": [
+          -8,
+          12,
+          132,
+          54
+        ],
+        "scope": "Origin caves, Song arsenals, archaeological bomb and cannon finds, and Mongol-to-European diffusion milestones from Sichuan and Manchuria to Baghdad and Florence.",
+        "points": [
+          {
+            "id": "gp-pt-changan",
+            "label": "Chang'an / Sichuan (c. 850 CE Tang Elixir Warning)",
+            "coordinates": [
+              108.93,
+              34.34
+            ],
+            "date": "c. 850 CE",
+            "description": "Zhenyuan Miaodao Yaolue records Taoist alchemists igniting mixtures of saltpeter, sulfur, and dried honeylocust charcoal that burned hands, faces, and whole labs.",
+            "sources": [
+              "https://doi.org/10.1007/978-981-15-7844-1_11"
+            ]
+          },
+          {
+            "id": "gp-pt-kaifeng",
+            "label": "Kaifeng Northern Song Arsenal (1044 Wujing Zongyao)",
+            "coordinates": [
+              114.3,
+              34.79
+            ],
+            "date": "1044 CE",
+            "description": "Zeng Gongliang's military encyclopedia publishes the first surviving chemical black-powder formulas on Earth (~50% potassium nitrate saltpeter) for incendiary arrows and poison-smoke bombs.",
+            "sources": [
+              "https://doi.org/10.1007/978-981-15-7844-1_11",
+              "https://doi.org/10.1163/22127453-12341337"
+            ]
+          },
+          {
+            "id": "gp-pt-dean",
+            "label": "De'an / Xiangyang Song Sieges (1132 Fire Lance)",
+            "coordinates": [
+              113.69,
+              31.26
+            ],
+            "date": "1132 CE",
+            "description": "First attested battlefield use of bamboo-tube 'fire lances' (huoqiang) spraying flame, porcelain shards, and pellets—direct ancestor of all barrels and guns.",
+            "sources": [
+              "https://doi.org/10.1080/00182370.2026.2706320",
+              "https://doi.org/10.1163/22127453-12341337"
+            ]
+          },
+          {
+            "id": "gp-pt-chongqing",
+            "label": "Chongqing / Diaoyu Fortress (Southern Song Huolei Bombs)",
+            "coordinates": [
+              106.55,
+              29.56
+            ],
+            "date": "1230s–1270s CE",
+            "description": "Archaeologically excavated cast-iron spherical fragmentation bombs (huolei / zhentianlei) deployed fiercely against invading Mongol siege engines.",
+            "sources": [
+              "https://doi.org/10.3724/sp.j.1461.2019.03044"
+            ]
+          },
+          {
+            "id": "gp-pt-guizhou",
+            "label": "Guizhou–Sichuan Karst Saltpeter Caves",
+            "coordinates": [
+              106.63,
+              26.64
+            ],
+            "date": "Song–Qing Dynasties",
+            "description": "Industrial cave nitratries where bat guano and soil nitrogen were leached, boiled with plant ash, and crystallized into pure potassium nitrate (KNO3).",
+            "sources": [
+              "https://doi.org/10.1080/03090728.2025.2592455"
+            ]
+          },
+          {
+            "id": "gp-pt-takashima",
+            "label": "Takashima 1281 Underwater Tetsuhau Bombs",
+            "coordinates": [
+              129.75,
+              33.43
+            ],
+            "date": "August 1281 CE",
+            "description": "Hollow cast-iron ceramic-and-iron explosive shells recovered from Kublai Khan's typhoon-sunk Japanese invasion fleet—physical proof of 13th-century maritime gunpowder shells.",
+            "sources": [
+              "https://doi.org/10.1111/1095-9270.12033"
+            ]
+          },
+          {
+            "id": "gp-pt-acheng",
+            "label": "Acheng, Heilongjiang (c. 1288–1290 Bronze Hand Cannon)",
+            "coordinates": [
+              126.97,
+              45.54
+            ],
+            "date": "c. 1288 CE",
+            "description": "World's oldest known archaeological metal firearm barrel—heavy 3.5 kg bronze hand cannon used by Yuan forces suppressing Nayan's northeastern rebellion (followed by 1298 Xanadu gun).",
+            "sources": [
+              "https://doi.org/10.1163/22127453-12341337",
+              "https://doi.org/10.1017/s1356186313000369"
+            ]
+          },
+          {
+            "id": "gp-pt-baghdad",
+            "label": "Baghdad & Levant Mongol–Mamluk Frontier",
+            "coordinates": [
+              44.36,
+              33.31
+            ],
+            "date": "1258–1280 CE",
+            "description": "Chinese siege technicians attached to Hülegü Khan's Mongol armies introduced rockets ('Chinese arrows'), naphtha pots, and saltpeter science into Ilkhanid Persia and Mamluk Arabic treatises.",
+            "sources": [
+              "https://doi.org/10.22378/2313-6197.2023-11-4.728-741",
+              "https://doi.org/10.1017/s1356186313000369"
+            ]
+          },
+          {
+            "id": "gp-pt-florence",
+            "label": "Florence, Italy (1326 Earliest Dated European Cannon Record)",
+            "coordinates": [
+              11.25,
+              43.77
+            ],
+            "date": "1326 CE",
+            "description": "First secure documentary Western European commission for metal cannons (canones de mettallo) & Walter de Milemete vase-shaped dart-cannon manuscript in England.",
+            "sources": [
+              "https://doi.org/10.1017/s1356186313000369",
+              "https://doi.org/10.1080/03068374.2016.1225950"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "1. Seeking Immortality, Finding Fire: Saltpeter Alchemy in Tang China",
+          "paragraphs": [
+            {
+              "text": "Around 850 CE, the Daoist compendium Zhenyuan Miaodao Yaolue issued a blunt laboratory safety warning: mixing sulfur, realgar, and saltpeter (potassium nitrate, xiaoshi, prized medicinally as a white crystal solvent) with honeyed carbon bursts violently into flame—burning beards, hands, and houses down. Far from accidental in a vacuum, Chinese alchemists possessed millennia of empirical mastery isolating pure potassium nitrate from damp limestone soils and Guizhou/Sichuan caves rich in nitrogenous guano.",
+              "sources": [
+                "https://doi.org/10.1007/978-981-15-7844-1_11",
+                "https://doi.org/10.1080/03090728.2025.2592455"
+              ]
+            },
+            {
+              "text": "Within two generations, military engineers during the late Tang and Song dynasties weaponized 'fire medicine' (huoyao). By 1044 CE, Northern Song official Zeng Gongliang published three genuine black-powder recipes in the Wujing Zongyao—starting around ~50% saltpeter by weight for incendiary 'fire arrows', flamethrower fuses, and soft-cased smoke grenades that gradually enriched toward modern ~75% nitrate explosive balance as Song wars intensified.",
+              "sources": [
+                "https://doi.org/10.1007/978-981-15-7844-1_11",
+                "https://doi.org/10.1163/22127453-12341337"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "2. Fire Lances, Cast-Iron Thunder Bombs & 1280s Bronze Guns",
+          "paragraphs": [
+            {
+              "text": "Between 1132 and 1288 CE, China invented every foundational firearm archetype in rapid war-driven succession. During the 1132 siege of De'an, defenders lashed bamboo tubes packed with gunpowder and shrapnel onto spears—creating the fire lance (huoqiang), humanity's first projectile-and-flame barrel weapon. By 1221–1279, Jurchen-Jin and Southern Song arsenals cast thick spherical iron fragmentation shells ('thunder-crash bombs' / huolei excavated at Chongqing and recovered off Takashima from Kublai Khan's 1281 fleet) whose high-nitrate powder shattered cast iron into lethal shrapnel.",
+              "sources": [
+                "https://doi.org/10.1080/00182370.2026.2706320",
+                "https://doi.org/10.3724/sp.j.1461.2019.03044",
+                "https://doi.org/10.1111/1095-9270.12033"
+              ]
+            },
+            {
+              "text": "Finally, replacing fragile bamboo with heavy cast bronze transformed the fire lance into a true metal gun firing tight solid shot: the 1288 CE Heilongjiang hand cannon (~3.5 kg), the 1298 Xanadu inscribed bronze gun, and the 1332 Beijing bronze gun precede every verified metal cannon in Europe by four decades.",
+              "sources": [
+                "https://doi.org/10.1163/22127453-12341337",
+                "https://doi.org/10.1017/s1356186313000369"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "3. Pax Mongolica & Eurasian Transmission Westward",
+          "paragraphs": [
+            {
+              "text": "Rather than keeping gunpowder secret, Mongol empires accelerated its global spread. Employing conquered Jin, Song, and Muslim siege engineers during campaigns into Europe (Mohi/Liegnitz 1241), Iraq (Baghdad 1258), Syria, and Japan (1274, 1281), the Mongols carried 'Chinese fire' rockets, saltpeter ('Chinese snow' in Arabic, 'Chinese salt' in Persian), and bronze gunsmiths straight across Eurasia. By 1267 Roger Bacon described firecrackers in England, Hasan al-Rammah compiled Arabic saltpeter purification by c. 1280, and by 1326 Florence and England cast their first bronze cannons.",
+              "sources": [
+                "https://doi.org/10.1017/s1356186313000369",
+                "https://doi.org/10.22378/2313-6197.2023-11-4.728-741",
+                "https://doi.org/10.1080/03068374.2016.1225950"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "4. Mining Guizhou Caves & Ming Volley Tactics vs. the Western Divergence",
+          "paragraphs": [
+            {
+              "text": "Sustaining gunpowder armies required industrial chemical mining: across Yunnan, Sichuan, and Guizhou karst caves, Ming and Qing state workers refined millions of kilograms of cave potassium nitrate alongside Shanxi sulfur, enabling sophisticated 14th–17th century Ming five-row volley musketry doctrines and multi-stage fire rockets (Huolongjing). Only when fragmented post-1450 Europe fought uninterrupted high-casualty siege wars—evolving corned powder, cast-iron broadsides, and flintlock standardization during China's calmer 1683–1839 High Qing interval—did European artillery overtake Chinese ordnance before the 1839–1842 Opium War.",
+              "sources": [
+                "https://doi.org/10.1080/03090728.2025.2592455",
+                "https://doi.org/10.1353/jwh.2023.a902024",
+                "https://doi.org/10.1080/03068374.2016.1225950"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "5. Gunpowder & Explosives Developmental Timeline",
+          "paragraphs": [
+            {
+              "text": "Each chemical and metallurgical step shows continuous interaction between Tang elixir alchemy, Song wartime engineering, cave nitrate extraction, and Eurasian Mongol transfer.",
+              "sources": [
+                "https://doi.org/10.1007/978-981-15-7844-1_11",
+                "https://doi.org/10.1080/03068374.2016.1225950"
+              ]
+            }
+          ],
+          "columns": [
+            "Stage & Date",
+            "Site / Text Evidence",
+            "Technological Leap",
+            "Global / Migration Impact"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Daoist Elixir Warning (c. 850 CE)",
+                "Zhenyuan Miaodao Yaolue",
+                "First recorded black-powder flash combustion",
+                "Saltpeter + sulfur + carbon alchemy recognized as explosive"
+              ],
+              "sources": [
+                "https://doi.org/10.1007/978-981-15-7844-1_11"
+              ]
+            },
+            {
+              "cells": [
+                "Written Formulas (1044 CE)",
+                "Kaifeng — Wujing Zongyao",
+                "~50% saltpeter formulas for fire arrows & smoke bombs",
+                "Earliest surviving chemical explosive blueprints on Earth"
+              ],
+              "sources": [
+                "https://doi.org/10.1007/978-981-15-7844-1_11"
+              ]
+            },
+            {
+              "cells": [
+                "Fire Lance & Iron Bombs (1132–1281 CE)",
+                "De'an, Chongqing huolei, Takashima 1281 tetsuhau",
+                "Directed shrapnel barrels & true brisant cast-iron bombs",
+                "Shattered medieval stone siege walls across East Asia & Mongol seas"
+              ],
+              "sources": [
+                "https://doi.org/10.3724/sp.j.1461.2019.03044",
+                "https://doi.org/10.1111/1095-9270.12033"
+              ]
+            },
+            {
+              "cells": [
+                "Earliest Metal Cannons (1288–1326 CE)",
+                "Acheng (1288), Xanadu (1298) → Baghdad/Florence (1326)",
+                "True cast-bronze guns + Eurasian Mongol-to-European diffusion",
+                "Launched global gunpowder empires, fortified towns & oceanic galleon expansion"
+              ],
+              "sources": [
+                "https://doi.org/10.1163/22127453-12341337",
+                "https://doi.org/10.1017/s1356186313000369"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Cheng, Z. X. (2021). Gunpowder and Firearms in Ancient China. Science & Technology in Chinese History.",
+          "url": "https://doi.org/10.1007/978-981-15-7844-1_11"
+        },
+        {
+          "title": "Yuan, D. et al. (2019). Spherical Iron Bombs (Huolei) of the Southern Song Dynasty unearthed in Chongqing.",
+          "url": "https://doi.org/10.3724/sp.j.1461.2019.03044"
+        },
+        {
+          "title": "Xu, J. (2025). Saltpetre Cave Sites and Saltpetre Production Technology in Ming-Qing South China.",
+          "url": "https://doi.org/10.1080/03090728.2025.2592455"
+        },
+        {
+          "title": "Sinvany, B. A. K. (2019). Notes on the Invention of the First Gun in Song China. J. Chinese Military History.",
+          "url": "https://doi.org/10.1163/22127453-12341337"
+        },
+        {
+          "title": "Noordam, B. (2023). Chinese Volley Fire and Metanarratives of World History. Journal of World History.",
+          "url": "https://doi.org/10.1353/jwh.2023.a902024"
+        },
+        {
+          "title": "Haw, S. G. (2013). The Mongol Empire – the first 'gunpowder empire'? JRAS.",
+          "url": "https://doi.org/10.1017/s1356186313000369"
+        },
+        {
+          "title": "Oğuz, A. Y. (2023). Gunpowder Weapons Used by Hülegü in the Middle East Campaign. Golden Horde Review.",
+          "url": "https://doi.org/10.22378/2313-6197.2023-11-4.728-741"
+        },
+        {
+          "title": "Chen, L. (2026). From city walls to fire lances in the development of early Chinese firearms.",
+          "url": "https://doi.org/10.1080/00182370.2026.2706320"
+        },
+        {
+          "title": "Kimura, J. et al. (2013). Lost Kublai Khan Fleets at Takashima (1281 tetsuhau iron bombs). IJNA.",
+          "url": "https://doi.org/10.1111/1095-9270.12033"
+        },
+        {
+          "title": "Blishen, A. O. (2016) on Tonio Andrade, The Gunpowder Age: China, Military Innovation, and the Rise of the West.",
+          "url": "https://doi.org/10.1080/03068374.2016.1225950"
+        }
+      ],
+      "relatedGuideIds": [
+        "world-chinese-ceramics",
+        "world-chinese-explorers",
+        "world-genghis-khan",
+        "world-ancient-shipwrecks",
+        "world-silk-roads"
+      ]
     }
   ]
 }

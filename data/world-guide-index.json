@@ -909,7 +909,10 @@
         "world-roman-frontiers",
         "world-roman-cities",
         "world-roman-transformations",
-        "world-hadrians-wall"
+        "world-hadrians-wall",
+        "world-ancient-shipwrecks",
+        "world-mediterranean-trade",
+        "world-pompeii-rome-ostia"
       ]
     },
     {
@@ -1024,12 +1027,70 @@
       "description": "How ancient and medieval shipwrecks across the Mediterranean, Nile, Red Sea, North Atlantic, Indian Ocean, and East China Sea preserve exact sinking dates, hull engineering, and lost cargoes.",
       "href": "sites/world-ancient-shipwrecks.html",
       "relatedGuideIds": [
+        "world-shipwreck-graveyards",
+        "world-endurance-and-vasa",
+        "world-superlative-shipwrecks",
         "world-mediterranean-trade",
         "world-silk-roads",
         "world-chinese-explorers",
         "world-india-empires-cities-networks",
         "world-arabia-incense-oases-empires",
         "world-north-sentinel-island"
+      ]
+    },
+    {
+      "id": "world-superlative-shipwrecks",
+      "atlasIds": [
+        "europe",
+        "africa",
+        "asia-pacific",
+        "americas"
+      ],
+      "category": "subjects",
+      "title": "Superlative Shipwrecks: The Oldest, the Deepest & the Only Examples of Their Kind",
+      "description": "Earth's extraordinary benchmark shipwrecks—from the oldest planked boats and Uluburun to the 6,895 m deep USS Samuel B. Roberts, Shackleton's Endurance, Sweden's raised Vasa, and one-of-a-kind archaeological time capsules.",
+      "href": "sites/world-superlative-shipwrecks.html",
+      "relatedGuideIds": [
+        "world-endurance-and-vasa",
+        "world-shipwreck-graveyards",
+        "world-ancient-shipwrecks",
+        "world-mediterranean-trade"
+      ]
+    },
+    {
+      "id": "world-endurance-and-vasa",
+      "atlasIds": [
+        "europe",
+        "americas"
+      ],
+      "category": "subjects",
+      "title": "Endurance (1915/2022) & Vasa (1628/1961): Polar Ice, Baltic Hubris & Intact Survival",
+      "description": "The story of Ernest Shackleton's Endurance (discovered 3,008 m under Weddell Sea ice in March 2022) and Sweden's 1628 royal warship Vasa (which turtled in Stockholm Harbor and was raised whole in 1961).",
+      "href": "sites/world-endurance-and-vasa.html",
+      "relatedGuideIds": [
+        "world-superlative-shipwrecks",
+        "world-shipwreck-graveyards",
+        "world-ancient-shipwrecks",
+        "world-sweden"
+      ]
+    },
+    {
+      "id": "world-shipwreck-graveyards",
+      "atlasIds": [
+        "americas",
+        "europe",
+        "africa",
+        "asia-pacific"
+      ],
+      "category": "subjects",
+      "title": "Graveyards of the Sea: Golden Gate, Columbia Bar, Cape Hatteras & Global Chokepoints",
+      "description": "Why sailors kept forcing the world's deadliest maritime chokepoints—from San Francisco's Golden Gate, Columbia River Bar, Cape Hatteras, and the Great Lakes to Cape Horn, Namibia's Skeleton Coast, Agulhas, Scilly, and Western Australia.",
+      "href": "sites/world-shipwreck-graveyards.html",
+      "relatedGuideIds": [
+        "world-superlative-shipwrecks",
+        "world-endurance-and-vasa",
+        "world-ancient-shipwrecks",
+        "world-mediterranean-trade"
       ]
     },
     {
@@ -1516,6 +1577,63 @@
         "world-ancient-shipwrecks",
         "world-borobudur-bagan-se-asia",
         "world-human-family"
+      ]
+    },
+    {
+      "id": "world-history-of-blue-and-dyes",
+      "atlasIds": [
+        "africa",
+        "europe",
+        "asia-pacific",
+        "americas"
+      ],
+      "category": "subjects",
+      "title": "The Quest for Blue & Ancient Dyes: Pigments, Snails, Bugs, Poison & Global Trade",
+      "description": "How humanity's obsession with rare blues, royal purples, and bright crimsons—from lapis lazuli in Badakhshan, Egyptian Blue, Han Blue, and Maya Blue to Phoenician sea snails, Oaxaca cochineal, poisonous arsenic greens, and 1856 Mauveine—drove trade, espionage, conquest, and modern chemistry.",
+      "href": "sites/world-history-of-blue-and-dyes.html",
+      "relatedGuideIds": [
+        "world-silk-roads",
+        "world-chinese-ceramics",
+        "world-mesopotamian-writing",
+        "world-ancient-shipwrecks"
+      ]
+    },
+    {
+      "id": "world-chinese-ceramics",
+      "atlasIds": [
+        "asia-pacific",
+        "europe",
+        "africa"
+      ],
+      "category": "subjects",
+      "title": "Chinese Ceramics & Porcelain: 20,000 Years from Xianrendong Clay to Global Blue-and-White",
+      "description": "How Chinese potters invented the world's oldest fired clay pots (~18,000 BCE), glazed high-temperature stoneware, true white translucent kaolin porcelain (Xing/Jingdezhen), and Silk Road cobalt blue-and-white export empires.",
+      "href": "sites/world-chinese-ceramics.html",
+      "relatedGuideIds": [
+        "world-history-of-blue-and-dyes",
+        "world-chinese-gunpowder-explosives",
+        "world-chinese-explorers",
+        "world-ancient-shipwrecks",
+        "world-silk-roads"
+      ]
+    },
+    {
+      "id": "world-chinese-gunpowder-explosives",
+      "atlasIds": [
+        "asia-pacific",
+        "europe",
+        "africa"
+      ],
+      "category": "subjects",
+      "title": "Chinese Gunpowder & Explosives: From Tang Daoist Elixirs to Global Artillery",
+      "description": "How Daoist immortality alchemists chasing elixirs in 9th-century China stumbled upon saltpeter-sulfur-charcoal black powder—launching Song fire arrows, iron thunder-crash bombs, 1280s metal guns, Mongol Eurasian transmission, and the modern world.",
+      "href": "sites/world-chinese-gunpowder-explosives.html",
+      "relatedGuideIds": [
+        "world-chinese-ceramics",
+        "world-chinese-explorers",
+        "world-genghis-khan",
+        "world-ancient-shipwrecks",
+        "world-silk-roads"
       ]
     },
     {

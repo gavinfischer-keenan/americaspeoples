@@ -118,7 +118,7 @@ test('Europe and Asia-Pacific extend systematically to 1900 CE with zero sparse 
  }
 
  const africaAll=data.evidence.filter(e=>inWorldScope(e,'africa'));
- assert.equal(africaAll.length,419,'Africa reaches 419 evidence records after gap-fill, UNESCO, China-Africa, shipwrecks, sparse-30 & pre-30k additions');
+ assert.equal(africaAll.length,424,'Africa reaches 424 evidence records after gap-fill, UNESCO, China-Africa, shipwrecks, sparse-30, pre-30k & Roman additions');
  assert.ok(africaAll.filter(e=>e.end>-15000).length>=229,'Africa post-15,000 BCE coverage reaches at least 229 records');
  for(const needle of ['Wadi Kubbaniya','Afalou','Al-Khiday','Tadrart Acacus','Memphis','Thebes','Abu Simbel','Timgad','Kondoa','Twyfelfontein','Gazargamu','El Fasher']){
   assert.ok(africaAll.some(e=>e.title.includes(needle)),`Missing Africa UNESCO/sparse-gap site: ${needle}`);
@@ -158,7 +158,7 @@ test('Europe and Asia-Pacific extend systematically to 1900 CE with zero sparse 
  for(const id of ['world-origin-stories-australia','world-origin-stories-compendium','world-origin-stories-americas','world-origin-stories-south-america','world-origin-stories-africa','world-origin-stories-near-east-europe','world-origin-stories-asia-pacific']){
   assert.ok(originGuides.some(x=>x.id===id),`Missing origin-stories guide: ${id}`);
  }
- for(const id of ['world-ibn-fadlan','world-chinese-explorers','world-ancient-shipwrecks']){
+ for(const id of ['world-ibn-fadlan','world-chinese-explorers','world-ancient-shipwrecks','world-superlative-shipwrecks','world-endurance-and-vasa','world-shipwreck-graveyards','world-history-of-blue-and-dyes','world-chinese-ceramics','world-chinese-gunpowder-explosives']){
   assert.ok(guides.some(x=>x.id===id&&x.category==='subjects'),`Missing subject guide: ${id}`);
  }
  const sentinelGuide=guides.find(x=>x.id==='world-north-sentinel-island'&&x.category==='cultures');
@@ -167,15 +167,21 @@ test('Europe and Asia-Pacific extend systematically to 1900 CE with zero sparse 
  const medGuide=guides.find(x=>x.id==='world-mediterranean-trade')!;
  assert.ok(medGuide.relatedGuideIds?.includes('world-ancient-shipwrecks'),'Mediterranean trade links ancient shipwrecks guide');
  assert.ok(medGuide.sections.some(s=>s.heading.includes('Shipwrecks of Antiquity')),'Mediterranean trade expands Shipwrecks of Antiquity');
+ const romGuide=guides.find(x=>x.id==='world-roman-empire')!;
+ assert.ok(romGuide.sections.some(s=>s.heading.includes('Roman Censuses'))&&romGuide.sections.some(s=>s.heading.includes('Imperial Road Network')),'Roman Empire guide covers censuses and road network');
  const shipStudy=data.studies?.find(s=>s.id==='ancient-shipwrecks');
- assert.ok(shipStudy&&shipStudy.evidenceIds.length>=40,'Playable ancient-shipwrecks study includes >= 40 dated shipwrecks');
+ assert.ok(shipStudy&&shipStudy.evidenceIds.length>=50,'Playable ancient-shipwrecks study includes >= 50 dated shipwrecks including Vasa & graveyards');
+ assert.ok(data.evidence.some(e=>e.id==='wreck-vasa-1628'&&e.guideId==='world-endurance-and-vasa'),'Raised Vasa 1628 anchored in world-catalogue');
+ const romStudy=data.studies?.find(s=>s.id==='roman-empire');
+ assert.ok(romStudy&&romStudy.evidenceIds.length>=35&&romStudy.waveIds.length>=12&&romStudy.territoryIds.length>=5,'Playable roman-empire study covers 753 BCE-1453 CE with roads, walls & territories');
+ assert.ok(data.evidence.some(e=>e.id==='rom-augustus-res-gestae-census'&&e.population?.length===4),'Roman citizen census milestones attached to study');
  assert.ok(data.evidence.some(e=>e.id==='ind-north-sentinel-andaman'&&e.guideId==='world-north-sentinel-island'),'North Sentinel evidence anchor linked to Deep Dive');
  const pre30k=data.evidence.filter(e=>e.start<=-29999);
  assert.ok(pre30k.length>=290,`Global pre-30,000 BCE coverage reaches ${pre30k.length} >= 290 sites`);
  for(const needle of ['Korolevo','Penghu 1','Nesher Ramla','Swartkrans','Boodie Cave','Carpenter','Figueira Brava','Tolbor-16','Wolo Sege']){
   assert.ok(pre30k.some(e=>e.title.includes(needle)),`Missing key pre-30,000 BCE site: ${needle}`);
  }
- assert.equal(guides.length,98,'All 98 world guides validate cleanly');
+ assert.equal(guides.length,104,'All 104 world guides validate cleanly');
  for(const g of guides){
   assert.ok(g.sections.length>=3,`Guide ${g.id} has at least 3 sections`);
   assert.ok(g.relatedGuideIds&&g.relatedGuideIds.length>=1,`Guide ${g.id} includes Continue exploring cross-links`);
