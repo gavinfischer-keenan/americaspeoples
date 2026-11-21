@@ -49,7 +49,8 @@ test('all published guide connections resolve and early activity comprises ten s
  const guides=await readWorldGuides();
  for(const id of ['world-lucy','world-human-family','world-lascaux','world-terracotta-army','world-angkor-wat','world-taj-mahal','world-congo-river','world-roman-empire','world-hadrians-wall','world-stonehenge'])assert.ok(guides.some(g=>g.id===id),id);
  const early=guides.find(g=>g.id==='world-earliest-activity')!;
- assert.equal(early.relatedGuideIds?.filter(id=>!['world-human-family','world-lucy'].includes(id)).length,10);
+ assert.equal(early.relatedGuideIds?.filter(id=>!['world-human-family','world-lucy','world-australopithecus-fossils','world-pre-1ma-world'].includes(id)).length,10);
+ assert.ok(early.relatedGuideIds?.includes('world-pre-1ma-world')&&early.relatedGuideIds?.includes('world-australopithecus-fossils'));
  for(const g of guides){const m=worldMapLayout(g);assert.ok(m.height>=599&&m.height<=1201,g.id);}
 });
 test('regional voyage connections retain canonical dates and reject reordered or stale anchors',()=>{

@@ -33,11 +33,16 @@ try{
  const salvador=records.find(r=>r.id==='visit-beagle-1831-1836-3'),point=`[data-point="${salvador.location.lon},${salvador.location.lat}"]`;
  await seek('1832-02-27T12:00:00Z');assert.doesNotMatch((await page.locator(point).count())?await page.locator(point).getAttribute('aria-label'):'',/Beagle/);
  await seek('1832-02-28T12:00:00Z');assert.match(await page.locator(point).getAttribute('aria-label'),/Beagle/);
+ await page.getByRole('button',{name:'Region: Americas',exact:true}).click();
+ await page.getByRole('navigation',{name:'Choose a region',exact:true}).getByRole('link',{name:'Pacific',exact:true}).click();
+ await page.getByRole('button',{name:'Region: Pacific',exact:true}).waitFor();
  await mapSetting(page, () => page.getByLabel('Choose a story',{exact:true}).selectOption('pacific-arrivals'));assert.ok(await page.locator('#voyage-controls').isHidden());
  await page.getByRole('button',{name: 'Map settings',exact:true}).click();
  await year(1844);assert.ok(!(await boundaryNames()).includes('Florida Territory'),'Pacific scene viewport excludes Florida');
  await page.getByRole('button',{name:'Close layers',exact:true}).click();
- await mapSetting(page, () => page.getByLabel('Map region',{exact:true}).selectOption('americas'));
+ await page.getByRole('button',{name:'Region: Pacific',exact:true}).click();
+ await page.getByRole('navigation',{name:'Choose a region',exact:true}).getByRole('link',{name:'Americas',exact:true}).click();
+ await page.getByRole('button',{name:'Region: Americas',exact:true}).waitFor();
  await page.getByRole('button',{name:'Reset map view',exact:true}).click();
  await page.getByRole('button',{name: 'Map settings',exact:true}).click();
  await year(1844);await page.getByText('Boundaries in this view & sources',{exact:true}).click();assert.ok((await boundaryNames()).includes('Florida Territory'));

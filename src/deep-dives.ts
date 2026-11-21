@@ -34,6 +34,9 @@ const worldGuideMovies: Record<string, string> = {
  'world-chinese-explorers': '#study/chinese-explorers',
  'world-ancient-shipwrecks': '#study/ancient-shipwrecks',
  'world-roman-empire': '#study/roman-empire',
+ 'world-pre-1ma-world': '#study/pre-1ma-world',
+ 'world-australopithecus-fossils': '#study/australopithecus',
+ 'world-neanderthal-fossils': '#study/neanderthals',
 };
 const availableDives:DeepDive[]=[
  ...worldGuides.map(g=>({id:g.id,title:g.title,description:g.description,category:g.category,links:[{href:g.href,label:'Read guide' as const},...(worldGuideMovies[g.id]?[{href:worldGuideMovies[g.id],label:'Independent movie' as const}]:[])]})),

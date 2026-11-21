@@ -224,13 +224,21 @@ export function createWorldSummary(input: SummaryInput): WorldSummary {
     foundation: {
       evidence: input.world.evidence.filter(
         (e) =>
-          !(input.world.studies ?? []).some((s) =>
-            s.evidenceIds.includes(e.id),
+          !(input.world.studies ?? []).some(
+            (s) =>
+              !["pre-1ma-world", "australopithecus", "neanderthals"].includes(
+                s.id,
+              ) && s.evidenceIds.includes(e.id),
           ),
       ).length,
       waves: input.world.waves.filter(
         (w) =>
-          !(input.world.studies ?? []).some((s) => s.waveIds.includes(w.id)),
+          !(input.world.studies ?? []).some(
+            (s) =>
+              !["pre-1ma-world", "australopithecus", "neanderthals"].includes(
+                s.id,
+              ) && s.waveIds.includes(w.id),
+          ),
       ).length,
       taxa: input.world.taxa.filter(t => !t.id.endsWith("-unassigned")).length,
     },

@@ -8,9 +8,10 @@ const root=process.env.DIST_PATH||'dist';
 const [data,summary,guideIndex]=await Promise.all([
  path.join(root,'world-catalogue.json'),path.join(root,'world-summary.json'),'data/world-guide-index.json',
 ].map(async file=>JSON.parse(await readFile(file,'utf8'))));
-const studies=['genghis-khan','marco-polo','silk-roads','hannibal','ibn-fadlan','chinese-explorers','ancient-shipwrecks','roman-empire'].map(id=>{
+const studies=['genghis-khan','marco-polo','silk-roads','hannibal','ibn-fadlan','chinese-explorers','ancient-shipwrecks','roman-empire','australopithecus','pre-1ma-world','neanderthals'].map(id=>{
  const study=data.studies.find(s=>s.id===id);assert.ok(study,'Packaged study '+id);return study;
 });
+const multiTaxonStudies=new Set(['australopithecus','pre-1ma-world','neanderthals']);
 const fixture=await browserFixture({reducedMotion:'reduce'});
 const {page}=fixture;
 const regionRoutes={americas:'#movie',pacific:'#atlas/pacific',africa:'#atlas/africa',europe:'#atlas/europe','asia-pacific':'#atlas/asia-pacific'};
@@ -198,7 +199,8 @@ try{
   assert.equal(await page.locator('.family-heading h1').textContent(),study.title);
   const guide=page.getByRole('link',{name:'Read the full deep dive',exact:true});
   assert.equal(await guide.getAttribute('href'),'sites/'+study.guideId+'.html');
-  assert.equal(await page.locator('#family-taxon').count(),0,'Study does not expose irrelevant lineage filtering');
+  if(multiTaxonStudies.has(study.id))assert.ok((await page.locator('#family-taxon option').count())>2,study.id+' exposes lineage filter');
+  else assert.equal(await page.locator('#family-taxon').count(),0,'Study does not expose irrelevant lineage filtering');
   await seekChange(Math.max(firstRecord.start,study.start),d,study.start,study.end);
   await inspectRecord(firstRecord);
   await checkBoundary(d,study.start,study.end);

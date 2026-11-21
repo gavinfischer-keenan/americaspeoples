@@ -48,13 +48,15 @@ try {
     await page.locator(`.map-navigation-regions a[href="#atlas/${id}"]`).click();
     if (id === 'europe') {
       await page.locator('#europe-map .world').waitFor();
+      assert.equal(await page.locator('#europe-map .map-scope').count(), 0);
       assert.equal(await page.locator('#europe-date').isVisible(), true);
       assert.ok(await page.locator('#europe-region option').count() > 1);
       assert.equal(await page.locator('.atlas-coming-soon').count(), 0);
       assert.equal(await page.locator('.timeline').isVisible(), false);
     } else if (id === 'pacific') {
       await page.locator('#map-host .world').waitFor();
-      assert.equal(await page.getByLabel('Map region',{exact:true}).inputValue(),'pacific');
+      assert.equal(await page.locator('.map-scope').count(), 0);
+      assert.equal(await page.locator('#map-host .map-canvas').getAttribute('data-scope'), 'pacific');
       assert.equal(await page.locator('.atlas-coming-soon').count(), 0);
       assert.equal(await page.locator('.timeline').isVisible(), true);
     } else {
@@ -69,7 +71,7 @@ try {
   assert.equal(catalogRequests(), catalogsBefore, 'Switching regional atlases must not fetch the Americas catalogue twice');
 
   await page.locator('nav[aria-label="Main navigation"] a[href="#explore"]').click();
-  await page.waitForSelector('#map-host .world');
+  await page.waitForSelector('body.exploring #map-host .world');
   const after = await page.evaluate(() => ({
     date: document.querySelector('#current-year').textContent,
     transform: document.querySelector('#map-host .world').getAttribute('transform'),

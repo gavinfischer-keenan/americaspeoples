@@ -154,7 +154,10 @@ for(const [from,to] of [
  ["data/colonial-ai-registry.json","colonial-ai-registry.json"],
  ["docs/colonial-ai-registry.html","docs/colonial-ai-registry.html"],
  ["data/hazard-events.json","hazard-events.json"],
+ ["data/paleoclimate-series.json","paleoclimate-series.json"],
+ ["data/global-ice-sheets.json","global-ice-sheets.json"],
  ["data/physical-sources/fetch-manifest.json","physical-source-manifest.json"],
+ ["data/physical-sources/paleoclimate-manifest.json","paleoclimate-manifest.json"],
 ]){await copyFile(from,`dist/${to}`);names.push(to);}
 await mkdir("dist/templates", { recursive: true });
 await mkdir("dist/docs/research/northern-europe", { recursive: true });

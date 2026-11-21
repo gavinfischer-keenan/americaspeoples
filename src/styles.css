@@ -1546,7 +1546,8 @@ dd:last-child {
 /* Physical context is separate from archaeological markers and temporal support. */
 .context-list{padding:12px;border-top:1px solid #71828a}.context-list h3{font-size:14px}.context-choice{border-left:3px dashed #aebbc2}.context-choice span{color:#c1ccd0;font-size:11px}
 .undated-context circle{fill:#aebbc2;fill-opacity:.13;stroke:#bdc7cc;stroke-dasharray:3 3;vector-effect:non-scaling-stroke}.undated-context text{fill:#d9e1e4;font-weight:bold;paint-order:stroke;stroke:#122730;stroke-width:2px}
-.ice-context path{fill:#c9eafa;fill-opacity:.5;stroke:#e5f7ff;stroke-width:1;vector-effect:non-scaling-stroke}
+.ice-context path,.global-ice-context path{fill:#c9eafa;fill-opacity:.48;stroke:#e5f7ff;stroke-width:1;vector-effect:non-scaling-stroke}
+.global-ice-context path{fill-opacity:.42;stroke-dasharray:4 2}
 .ice-context-label{position:absolute;left:14px;top:64px;max-width:min(440px,calc(100% - 28px));padding:4px 7px;border-radius:4px;background:#102630e8;color:#d9f2ff;font-size:10px;line-height:1.4;pointer-events:none}
 .ice-context-label[hidden]{display:none}
 @media(max-width:480px){.ice-context-label{top:76px;font-size:9px}}

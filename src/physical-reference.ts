@@ -115,6 +115,138 @@ export const physicalSources = [
       "Different regions can experience drought or increased rainfall. A reconstructed ENSO year alone cannot identify where drought occurred or prove that voyaging, trade or settlement collapsed.",
     license: "Paraphrased NOAA guidance; accessed2026-10-29.",
   },
+  {
+    id: "miller2020",
+    title: "Cenozoic Sea-Level & Benthic δ¹⁸O Spline",
+    authors: "Miller, K.G. et al. (2020), Science Advances 6(20):eaaz1346",
+    url: "https://doi.org/10.1126/sciadv.aaz1346",
+    data: "https://www.ncei.noaa.gov/pub/data/paleo/contributions_by_author/miller2020/miller2020rsl-sm-noaa.txt",
+    method:
+      "Smoothed Cenozoic global mean sea-level curve (7 Ma–980 ka subset) combining deep-sea benthic foraminifera δ¹⁸O with Mg/Ca deep-ocean temperature separation and Pacific/Atlantic margin backstripping.",
+    limits:
+      "Smoothed spline resolves tectonic-to-orbital trends (~20 kyr spacing before 980 ka) and carries ±10–15 m global sea-level uncertainty.",
+    license: "NOAA NCEI paleoclimate archive; retrieved 2026-11-21.",
+  },
+  {
+    id: "lr04",
+    title: "LR04 Global Pliocene–Pleistocene Benthic δ¹⁸O Stack",
+    authors: "Lisiecki, L.E. and Raymo, M.E. (2005), Paleoceanography 20:PA1003",
+    url: "https://doi.org/10.1029/2004PA001071",
+    data: "https://www.ncei.noaa.gov/pub/data/paleo/contributions_by_author/lisiecki2005/lisiecki2005-d18o-stack-noaa.txt",
+    method:
+      "57 globally distributed deep-sea sediment cores aligned by benthic foraminifera calcite δ¹⁸O from 5.32 Ma to present (mean δ¹⁸O and stacked standard error retained).",
+    limits:
+      "Benthic δ¹⁸O blends continental ice volume and deep-water temperature; plotted inverted so warmer / lower-ice intervals appear upward.",
+    license: "NOAA NCEI archive; retrieved 2026-11-21.",
+  },
+  {
+    id: "epica2007",
+    title: "EPICA Dome C 800-kyr Antarctic Deuterium Temperature",
+    authors: "Jouzel, J. et al. (2007), Science 317:793–796",
+    url: "https://doi.org/10.1126/science.1141038",
+    data: "https://www.ncei.noaa.gov/pub/data/paleo/icecore/antarctica/epica_domec/edc3deuttemp2007.txt",
+    method:
+      "Hydrogen isotope (δD) profile along the 3,260 m EPICA Dome C Antarctic ice core on the EDC3 chronology (801 ka through 1900 CE, °C relative to last-millennium mean).",
+    limits:
+      "Reflects Antarctic Plateau condensation temperatures; polar amplification means global mean glacial–interglacial swings were smaller (~5–6 °C global vs ~9–12 °C Dome C).",
+    license: "NOAA NCEI / EPICA Community; retrieved 2026-11-21.",
+  },
+  {
+    id: "spratt2016",
+    title: "800-kyr Global Mean Sea Level Stack (PC1 Long)",
+    authors: "Spratt, R.M. and Lisiecki, L.E. (2016), Climate of the Past 12:1079–1097",
+    url: "https://doi.org/10.5194/cp-12-1079-2016",
+    data: "https://www.ncei.noaa.gov/pub/data/paleo/paleocean/by_contributor/spratt2016/spratt2016-noaa.txt",
+    method:
+      "Principal-component synthesis of multiple independent sea-level reconstructions across 798–0 ka with 95% confidence bounds (err_lo to err_up) and 1-kyr downsampling.",
+    limits:
+      "Global eustatic mean; local relative sea levels along glaciated margins and far-field coasts diverged by meters due to glacial isostatic adjustment.",
+    license: "CC BY / NOAA NCEI archive; retrieved 2026-11-21.",
+  },
+  {
+    id: "bereiter2015",
+    title: "Antarctic Ice-Core 800-kyr Revised CO₂ Composite",
+    authors: "Bereiter, B. et al. (2015), Geophysical Research Letters 42:542–549",
+    url: "https://doi.org/10.1002/2014GL061957",
+    data: "https://www.ncei.noaa.gov/pub/data/paleo/icecore/antarctica/antarctica2015co2composite.txt",
+    method:
+      "Composite direct air-bubble CO₂ concentration measurements from EPICA Dome C, Vostok, Taylor Dome, Siple Dome, and Law Dome on AICC2012 gas ages through 1900 CE.",
+    limits:
+      "Firn-air enclosure smooths multi-decadal peaks slightly in low-accumulation East Antarctic cores; series capped at 1900 CE to match atlas scope.",
+    license: "NOAA NCEI archive; retrieved 2026-11-21.",
+  },
+  {
+    id: "loulergue2008",
+    title: "EPICA Dome C 800-kyr Atmospheric Methane (CH₄)",
+    authors: "Loulergue, L. et al. (2008), Nature 453:383–386",
+    url: "https://doi.org/10.1038/nature06950",
+    data: "https://www.ncei.noaa.gov/pub/data/paleo/icecore/antarctica/epica_domec/edc-ch4-2008-noaa.txt",
+    method:
+      "2,100+ trapped-air methane measurements from EDC99 tracking tropical wetland & monsoon productivity alongside glacial cycles over 800–0 ka BP.",
+    limits:
+      "Requires gas-age vs ice-age synchronization across abrupt Dansgaard–Oeschger shifts.",
+    license: "NOAA NCEI archive; retrieved 2026-11-21.",
+  },
+  {
+    id: "ngrip2004",
+    title: "NGRIP Greenland Ice Core δ¹⁸O (GICC05 60-kyr)",
+    authors: "NGRIP Members (2004), Nature 431:147–151",
+    url: "https://doi.org/10.1038/nature02805",
+    data: "https://www.ncei.noaa.gov/pub/data/paleo/icecore/greenland/summit/ngrip/gicc05-60ka-20yr.txt",
+    method:
+      "Layer-counted GICC05 20-year Greenland δ¹⁸O chronology from 60 ka b2k through 1900 CE (year = 2000 − age_b2k), resolving abrupt Dansgaard–Oeschger & Younger Dryas swings.",
+    limits:
+      "Greenland temperature signal is strongly amplified around North Atlantic sea-ice retreats compared to global or tropical averages.",
+    license: "NOAA NCEI / Centre for Ice and Climate; retrieved 2026-11-21.",
+  },
+  {
+    id: "kaufman2020",
+    title: "Temp12k Multi-Method Holocene Global Temperature",
+    authors: "Kaufman, D. et al. (2020), Scientific Data 7:201",
+    url: "https://doi.org/10.1038/s41597-020-0530-7",
+    data: "https://www.ncei.noaa.gov/pub/data/paleo/reconstructions/kaufman2020/temp12k_allmethods_percentiles.csv",
+    method:
+      "Global mean surface temperature median with 5th–95th percentile ensemble envelope across five statistical methods using 1,319 Holocene marine & terrestrial proxy records (12 ka to 1900 CE).",
+    limits:
+      "Proxy weighting between Northern Hemisphere land and global oceans produces a debated mid-Holocene warmth peak relative to climate models.",
+    license: "CC BY 4.0 / NOAA NCEI; retrieved 2026-11-21.",
+  },
+  {
+    id: "pages2k2019",
+    title: "PAGES 2k Common Era Global Mean Temperature Ensemble",
+    authors: "PAGES 2k Consortium / Neukom et al. (2019), Nature Geoscience 12:643–649",
+    url: "https://doi.org/10.1038/s41561-019-0400-0",
+    data: "https://www.ncei.noaa.gov/pub/data/paleo/pages2k/neukom2019temp/recons/Full_ensemble_median_and_95pct_range.txt",
+    method:
+      "7-method multiproxy global surface temperature ensemble across 1–1900 CE combining tree rings, corals, ice cores, speleothems, lake varves & documents (5-year averages plus major volcanic years).",
+    limits:
+      "Proxy density increases sharply toward 1500–1900 CE; earlier centuries carry wider 95% confidence bounds.",
+    license: "CC BY 4.0 / NOAA NCEI; retrieved 2026-11-21.",
+  },
+  {
+    id: "batchelor2019",
+    title: "Quaternary Northern Hemisphere Ice Sheets (~3.59 Ma–30 ka)",
+    authors: "Batchelor, C.L. et al. (2019), Nature Communications 10:3713",
+    url: "https://doi.org/10.1038/s41467-019-11601-2",
+    data: "https://osf.io/7jen3/",
+    method:
+      "Best-estimate Northern Hemisphere ice-sheet reconstructions across 15 pre-LGM Marine Isotope Stages and late Pliocene–Pleistocene chrons, reprojected from North Pole LAEA to WGS84 and simplified for web rendering.",
+    limits:
+      "Best-estimate hypotheses combine empirical moraine limits with ice-sheet modeling; pre-MIS 6 margins remain uncertain across several basins.",
+    license: "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); retrieved 2026-11-21.",
+  },
+  {
+    id: "dated1",
+    title: "DATED-1 Eurasian Ice Sheet Time-Slices (40–10 ka)",
+    authors: "Hughes, A.L.C. et al. (2016), Boreas 45(1):1–45",
+    url: "https://doi.org/10.1111/bor.12142",
+    data: "https://doi.org/10.1594/PANGAEA.848117",
+    method:
+      "Most-credible (mc) time-slice outlines of British-Irish, Scandinavian, and Svalbard-Barents-Kara ice sheets from 25–10 ka cal BP, paired with NADI-1 OPTIMAL North American margins.",
+    limits:
+      "Submarine shelf grounding lines rely on sparse offshore cores and seismic stratigraphy.",
+    license: "CC BY 3.0; retrieved 2026-11-21.",
+  },
 ];
 export const oceanPaths: {
   name: string;

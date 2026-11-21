@@ -376,6 +376,12 @@ NOAA JetStream / Ocean Service guidance for modern major-current and trade-wind 
 
 All data retrieved2026-10-29. Acquisition parameters, hashes, source coverage and limitations are retained in the physical source manifest and in-app source reviews. Scientific dataset facts and paraphrased explanations are distinguished from copyrighted publications.
 
+## Continuous paleoclimate & Quaternary ice-sheet reconstructions (retrieved 2026-11-21)
+
+- **NOAA/WDS Paleoclimatology archives** (public data downloads retained with hashes in `data/physical-sources/paleoclimate-manifest.json` and series compiled in `data/paleoclimate-series.json` capped through 1900 CE): Miller et al. (2020) `https://doi.org/10.1126/sciadv.aaz1346`; Lisiecki & Raymo (2005 LR04) `https://doi.org/10.1029/2004PA001071`; Jouzel et al. (2007 EPICA Dome C) `https://doi.org/10.1126/science.1141038`; Loulergue et al. (2008 CH₄) `https://doi.org/10.1038/nature06950`; Bereiter et al. (2015 CO₂) `https://doi.org/10.1002/2014GL061957`; NGRIP Members (2004) `https://doi.org/10.1038/nature02805`; Spratt & Lisiecki (2016) `https://doi.org/10.5194/cp-12-1079-2016`; Kaufman et al. (2020 Temp12k, CC BY 4.0) `https://doi.org/10.1038/s41597-020-0530-7`; PAGES 2k Consortium / Neukom et al. (2019, CC BY 4.0) `https://doi.org/10.1038/s41561-019-0400-0`.
+- **Batchelor et al. (2019)**, *The configuration of Northern Hemisphere ice sheets through the Quaternary*, Nature Communications 10:3713 (`https://doi.org/10.1038/s41467-019-11601-2`; OSF `https://osf.io/7jen3/`, **CC BY 4.0**): best-estimate shapefiles reprojected from North Pole Lambert Azimuthal Equal-Area to WGS84, simplified via Douglas-Peucker and D3 spherical-area normalized into `data/global-ice-sheets.json`.
+- **Hughes et al. (2016)**, *The last Eurasian ice sheets — a chronological database and time-slice reconstruction, DATED-1*, Boreas 45(1):1–45 (`https://doi.org/10.1111/bor.12142`; PANGAEA `https://doi.org/10.1594/PANGAEA.848117`, **CC BY 3.0**): most-credible (`mc`) 25–10 ka Eurasian margins extracted from WGS84 KML, simplified and paired with NADI-1 OPTIMAL North American margins.
+
 
 ## Round8 research provenance(v0.3.8)
 

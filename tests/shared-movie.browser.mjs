@@ -11,7 +11,8 @@ const point=id=>page.locator(`#map-host [data-member-ids*='"${id}"']`).first();
 try{
  await page.goto(origin+'/#movie');await page.getByRole('button',{name:'Pause',exact:true}).waitFor();
  assert.equal(await page.locator('#story-select').inputValue(),'free');
- assert.equal(await page.getByLabel('Map region',{exact:true}).inputValue(),'americas');
+ assert.equal(await page.locator('.map-scope').count(),0,'Upper-right Map region control removed');
+ assert.equal(await page.locator('#map-host .map-canvas').getAttribute('data-scope'),'americas');
  await page.getByRole('button',{name:'Pause',exact:true}).click();
  assert.ok(Number(await page.locator('#year-number').inputValue())>30000,'Americas opening begins in the earliest evidence');
  const openingMap=await page.locator('#map-host').boundingBox();
@@ -71,7 +72,8 @@ try{
  await page.getByRole('button',{name:'Reset map view',exact:true}).click();
  assert.ok(await point('settlement-taos-habitation').count(),'story timeline retains other places on zoom-out');
  await page.goto(origin+'/#atlas/pacific');await page.locator('#map-host .world').waitFor();
- assert.equal(await page.getByLabel('Map region',{exact:true}).inputValue(),'pacific');
+ assert.equal(await page.locator('.map-scope').count(),0,'Pacific upper-right Map region control removed');
+ assert.equal(await page.locator('#map-host .map-canvas').getAttribute('data-scope'),'pacific');
  assert.ok(Number(await page.locator('#year-number').inputValue())>50000,'Pacific opening begins in earliest Sahul evidence');
  const pacOpeningMap=await page.locator('#map-host').boundingBox(),early=await point('px-madjedbebe-onset').boundingBox();
  assert.ok(early&&early.x>=pacOpeningMap.x&&early.x<pacOpeningMap.x+pacOpeningMap.width,'early Australian evidence is inside the Pacific opening overview');
@@ -83,11 +85,11 @@ try{
  await page.screenshot({path:'test-results/shared-history-hawaii.png'});
  await mapSetting(page,()=>page.locator('#whole-movie').click());
  assert.equal(await page.locator('#story-select').inputValue(),'free');
- assert.equal(await page.getByLabel('Map region',{exact:true}).inputValue(),'pacific');
+ assert.equal(await page.locator('#map-host .map-canvas').getAttribute('data-scope'),'pacific');
  await page.getByRole('button',{name:'Region: Pacific',exact:true}).click();
  await page.getByRole('navigation',{name:'Choose a region',exact:true}).getByRole('link',{name:'Americas',exact:true}).click();
  await page.getByRole('button',{name:'Region: Americas',exact:true}).waitFor();
- assert.equal(await page.getByLabel('Map region',{exact:true}).inputValue(),'americas');
+ assert.equal(await page.locator('#map-host .map-canvas').getAttribute('data-scope'),'americas');
  await page.screenshot({path:'test-results/shared-history-desktop.png'});
  await page.setViewportSize({width:390,height:844});
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));

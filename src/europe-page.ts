@@ -13,6 +13,7 @@ import type {PoliticalBoundary,BoundarySource} from './boundaries';
 import {boundariesAt} from './boundaries';
 import {dateValue,voyageDate,type Voyage} from './voyages';
 import {displayedVoyageStops,sampleMapVoyage,MOVIE_END_DATE} from './shared-movie';
+import {loadGlobalIce,currentGlobalIce,globalIceAtYear} from './global-ice';
 import './europe-page.css';
 
 interface EuropePayload {evidence:EuropeData;boundaries:PoliticalBoundary[];boundarySources:BoundarySource[];voyages:Voyage[];voyageSources:{id:string;title:string;url:string}[]}
@@ -25,7 +26,7 @@ export function loadEurope():Promise<EuropePayload>{
   return payload;
  })().catch(error=>{loading=undefined;throw error;});
 }
-interface SavedEurope {year:number;clock:number;region:string;category:string;query:string;past:boolean;warfare:boolean;interpolate:boolean;borders:boolean;trade:boolean;road:boolean;rail:boolean;voyages:boolean;camera?:MapCamera;selected:string}
+interface SavedEurope {year:number;clock:number;region:string;category:string;query:string;past:boolean;warfare:boolean;interpolate:boolean;borders:boolean;trade:boolean;road:boolean;rail:boolean;voyages:boolean;ice:boolean;camera?:MapCamera;selected:string}
 let saved:SavedEurope|undefined;
 const checked=(v:boolean)=>v?' checked':'';
 
@@ -33,7 +34,7 @@ const checked=(v:boolean)=>v?' checked':'';
 export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,returnHref='#movie'):()=>void {
  const data=payload.evidence,all=normalizeEurope(data),entries=new Map(data.entries.map(e=>[e.id,e]));
  const first=Math.min(...data.entries.map(e=>e.start));
- const state=saved??{year:first,clock:first,region:'all',category:'all',query:'',past:true,warfare:true,interpolate:true,borders:true,trade:true,road:true,rail:true,voyages:true,selected:''};saved=state;
+ const state=saved??{year:first,clock:first,region:'all',category:'all',query:'',past:true,warfare:true,interpolate:true,borders:true,trade:true,road:true,rail:true,voyages:true,ice:true,selected:''};saved=state;
  let disposed=false,playing=false,frame=0,last=0,elapsed=0,rate=1,filtered:EvidenceRecord[]=[],dates:number[]=[],drawing=false,segmentStart=state.clock,segmentTarget:number|undefined,lastPaint=0;
  host.innerHTML=`<section class="europe-atlas" aria-label="Europe history movie">
   <header class="europe-heading"><div><p class="eyebrow">EUROPE &amp; MEDITERRANEAN</p><h1>Places, kingdoms and connections</h1></div><a href="#origins/europe">Earlier human family &amp; dispersals</a></header><div id="europe-navigation"></div>
@@ -43,9 +44,9 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
    <label>Show<select id="europe-category"><option value="all">All kinds of evidence</option>${Object.entries(europeCategories).map(([id,title])=>`<option value="${id}">${title}</option>`).join('')}</select></label>
    <label>Find a place or connection<input id="europe-search" type="search" placeholder="Paris, Rome, Madrid, Bergen, railway…" value="${esc(state.query)}"></label></div>
    <details class="europe-layers"><summary>Map layers &amp; how to read them</summary>
-   ${(['past','borders','trade','road','rail','interpolate','warfare','voyages'] as const).map(id=>`<label><input type="checkbox" data-europe-layer="${id}"${checked(state[id])}> ${{past:'Earlier places',borders:'Dated political territories',trade:'Trade connections',road:'Roads',rail:'Railways',interpolate:'Interpolate comparable town populations',warfare:'Raids, battles & warfare',voyages:'Voyages & migrations'}[id]}</label>`).join('')}
+   ${(['past','borders','trade','road','rail','interpolate','warfare','voyages','ice'] as const).map(id=>`<label><input type="checkbox" data-europe-layer="${id}"${checked(state[id])}> ${{past:'Earlier places',borders:'Dated political territories',trade:'Trade connections',road:'Roads',rail:'Railways',interpolate:'Interpolate comparable town populations',warfare:'Raids, battles & warfare',voyages:'Voyages & migrations',ice:'Quaternary & deglacial ice sheets'}[id]}</label>`).join('')}
    <p>Territories follow their cited dates. Dotted or dashed outlines mark approximate extent or claims; shared crowns do not imply uniform control.</p><p><span class="network-key trade"></span> Trade · <span class="network-key road"></span> Road · <span class="network-key rail"></span> Rail. Connections are schematic unless the source specifies a mapped trace. Opening dates alone do not prove continuous service.</p><p>Town dots use a logarithmic size scale for dated resident estimates where available. Hatched dots mean population unknown. Comparable census series may interpolate between observations when enabled. Interpolation is labeled; counts are never extrapolated.</p><p>Subdued earlier places are historical context, not evidence of continuing occupation. Regional filters use modern geographic names.</p></details>
-   <section id="europe-details" aria-label="Selected place"></section>
+   <div class="europe-density-slot"></div><section id="europe-details" aria-label="Selected place"></section>
    <details class="europe-now" open><summary>What is here at this time</summary><p id="europe-date-note"></p><div id="europe-list"></div></details>
    <details><summary>Connected expeditions</summary><div id="europe-voyages"></div></details>
    <details><summary>Roads and rails recorded by this date</summary><div id="europe-built-networks"></div></details><details class="europe-territories"><summary>Territories at this date &amp; sources</summary><div id="europe-boundary-list"></div></details>
@@ -56,9 +57,11 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
   <form id="europe-date-form"><label>Year<input id="europe-date" inputmode="numeric" aria-label="Europe year"></label><select id="europe-era-input" aria-label="Europe year era"><option>CE</option><option>BCE</option></select><button>Go</button><span id="europe-date-error" role="status"></span></form>
   <p class="europe-playback-note">Playback visits supported date changes. Deep-time spacing is compressed; uncertain ranges are not continuous occupation.</p></footer></section>`;
  const el=<T extends HTMLElement=HTMLElement>(selector:string)=>host.querySelector<T>(selector)!;
- const navigation=mountMapNavigation(el('#europe-navigation'),{region:'europe',settings:[el('.europe-filters'),el('.europe-layers'),el('.europe-scope')],facts:[el('.europe-reader')],onFactsToggle:open=>el('.europe-layout').classList.toggle('map-facts-hidden',!open)});
+ const navigation=mountMapNavigation(el('#europe-navigation'),{region:'europe',settings:[el('.europe-filters'),el('.europe-layers'),el('.europe-density-slot'),el('.europe-scope')],facts:[el('.europe-reader')],onFactsToggle:open=>el('.europe-layout').classList.toggle('map-facts-hidden',!open)});
  const map=new MapView(land as any,(rows:DisplayRecord[])=>{pause();const r=rows[0];if(r){state.selected=r.id;navigation.showFacts();renderDetails();map.setHighlighted(rows.map(r=>r.id));}},()=>{if(!disposed&&!drawing)renderList();});
  el('#europe-map').append(map.element);map.populationScale='log';map.namedRouteEndpoints=true;
+ el('.europe-density-slot').append(map.densityOptions);
+ map.onResetView=()=>{map.focusRegion([10,50],2.75,'world');renderList();};
  map.element.querySelector('svg')?.setAttribute('aria-label','Europe history map. Use the evidence list for keyboard access.');
  map.context.boundaries=payload.boundaries;
  map.context.voyages=(payload.voyages??[]).map(v=>({...v,scope:'global'}));
@@ -107,7 +110,8 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
   if(disposed)return;drawing=true;
   map.context.rails=builtNetworks().filter(r=>r.time.end!<state.year).map(r=>({id:'europe-built-'+r.id,name:r.title,start:r.time.start!,geometry:r.overlay!.geometry,sourceId:r.sources[0].id,precision:r.overlay!.precision,note:'Recorded infrastructure; continued service and survival are not established.',networkKind:entries.get(r.id)!.networkKind as 'road'|'rail'}));map.context.options.rails=state.road||state.rail;
   map.context.options.boundaries=state.borders;map.context.options.voyages=state.voyages;map.context.options.voyageDate=state.clock;
-  map.update(europeSelection(filtered,state.year,state.past).map(r=>europePopulationView(r,entries.get(r.id)!,state.year,state.interpolate)),state.year,[],{ice:false,iceScenario:'optimal',currents:false,winds:false,hidden:new Set(climateKinds),uncertain:false});
+  const globalIce=state.ice?globalIceAtYear(currentGlobalIce(),state.year,'europe'):null;
+  map.update(europeSelection(filtered,state.year,state.past).map(r=>europePopulationView(r,entries.get(r.id)!,state.year,state.interpolate)),state.year,[],{ice:false,iceScenario:'optimal',currents:false,winds:false,hidden:new Set(climateKinds),uncertain:false,globalIce:globalIce&&globalIce.geometry?{geometry:globalIce.geometry,label:globalIce.label}:null});
   el('.europe-atlas').classList.toggle('is-playing',playing);
   el('#europe-year').textContent=formatYear(state.year);el('#europe-map-date').textContent=state.clock>0&&state.clock!==state.year?voyageDate(state.clock):formatYear(state.year);
   const activeHere=currentEntries();
@@ -128,7 +132,7 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
  el('#europe-region').addEventListener('change',e=>{pause();state.region=(e.target as HTMLSelectElement).value;refilter();if(state.region==='all')map.focusRegion([10,50],2.75,'world');else{const points=filtered.filter(r=>!r.overlay);if(points.length)map.focusRecords(points);}render();});
  el('#europe-category').addEventListener('change',e=>{pause();state.category=(e.target as HTMLSelectElement).value;refilter();render();});
  el('#europe-search').addEventListener('input',e=>{pause();state.query=(e.target as HTMLInputElement).value;refilter();render();});
- host.querySelectorAll<HTMLInputElement>('[data-europe-layer]').forEach(input=>input.addEventListener('change',()=>{state[input.dataset.europeLayer as 'past'|'borders'|'trade'|'road'|'rail'|'interpolate'|'warfare'|'voyages']=input.checked;refilter();render();}));
+ host.querySelectorAll<HTMLInputElement>('[data-europe-layer]').forEach(input=>input.addEventListener('change',()=>{state[input.dataset.europeLayer as 'past'|'borders'|'trade'|'road'|'rail'|'interpolate'|'warfare'|'voyages'|'ice']=input.checked;refilter();render();}));
  el('#europe-home').addEventListener('click',()=>{map.focusRegion([10,50],2.75,'world');renderList();});
  el('#europe-details').addEventListener('click',e=>{
   const button=(e.target as Element).closest<HTMLButtonElement>('[data-europe-route-focus]');
@@ -160,5 +164,6 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
  }
  const visibility=()=>{if(document.hidden)pause();};document.addEventListener('visibilitychange',visibility);
  refilter();map.setInteraction({mode:'movie',playing:false,onPause:pause});render();frame=requestAnimationFrame(tick);
+ void loadGlobalIce().then(archive=>{if(archive&&!disposed)render();});
  return ()=>{state.camera=map.camera();disposed=true;playing=false;cancelAnimationFrame(frame);stopLand();navigation.dispose();document.removeEventListener('visibilitychange',visibility);map.clearHover();map.dispose();};
 }

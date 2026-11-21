@@ -126,6 +126,19 @@
   min-height: auto;
   accent-color: #3B783D;
 }
+.europe-layers .map-density-options {
+  margin-top: 8px;
+  padding: 6px 8px;
+  background: #E3E8EB;
+  border: 1px solid #8E99A0;
+  color: #10171A;
+  font-size: 12px;
+}
+.europe-layers .map-density-options label {
+  display: grid;
+  gap: 4px;
+  font-weight: 600;
+}
 .europe-map-wrap {
   position: relative;
   min-width: 0;
@@ -146,15 +159,29 @@
 .europe-map-wrap .map-canvas svg .water {
   fill: #10171A;
 }
-.europe-map-wrap .map-controls select {
-  background: #10171AF0;
-  color: #F2F6F8;
-  border-color: #8E99A0;
+.europe-map-wrap .map-controls {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  left: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  z-index: 4;
 }
 .europe-map-wrap .map-controls button {
   background: #10171AF0;
   color: #F2F6F8;
   border-color: #8E99A0;
+  width: auto;
+  height: auto;
+  min-width: 34px;
+  min-height: 34px;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
 }
 .europe-map-wrap .map-controls button:hover {
   background: #244D26;
@@ -229,6 +256,9 @@
   color: #10171A;
 }
 .europe-selected table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
   width: 100%;
   font-size: 12px;
   background: #F2F6F8;
@@ -479,6 +509,8 @@
   .europe-atlas {
     height: auto;
     min-height: 0;
+    max-width: 100%;
+    overflow-x: clip;
   }
   .europe-heading {
     padding: 10px 12px;
@@ -503,19 +535,35 @@
     padding: 10px 12px;
     grid-template-columns: 1fr;
     position: static;
+    max-width: 100%;
+    overflow-x: hidden;
   }
   .europe-reader {
     order: 3;
     max-height: none;
-    overflow: visible;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: visible;
     border-right: 0;
     border-top: 1px solid #8E99A0;
     padding: 14px;
   }
   .europe-map-status {
-    max-width: 60%;
+    max-width: calc(100% - 175px);
     left: 10px;
     top: 10px;
+  }
+  .europe-map-wrap .map-controls {
+    top: 10px;
+    right: 10px;
+    left: auto;
+    gap: 5px;
+  }
+  .europe-map-wrap .map-controls button {
+    min-width: 30px;
+    min-height: 30px;
+    padding: 5px 8px;
+    font-size: 12px;
   }
   .europe-map-status strong {
     font-size: 18px;

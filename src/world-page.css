@@ -1993,6 +1993,31 @@ body.world-surface .world-top :focus-visible {
   color: #525d64;
 }
 
+.family-ice-layer path {
+  fill: #c9eafa;
+  fill-opacity: 0.44;
+  stroke: #e5f7ff;
+  stroke-width: 0.9;
+  vector-effect: non-scaling-stroke;
+  pointer-events: none;
+}
+
+.family-ice-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #10171a;
+  cursor: pointer;
+}
+
+.family-ice-toggle input {
+  accent-color: #3b783d;
+  width: auto;
+  min-height: auto;
+}
+
 @media (max-width: 1100px) {
   body.world-player-page .family-layout {
     grid-template-columns: 300px minmax(0, 1fr);

@@ -140,7 +140,7 @@ test('Europe and Asia-Pacific extend systematically to 1900 CE with zero sparse 
  }
 
  const africaAll=data.evidence.filter(e=>inWorldScope(e,'africa'));
- assert.equal(africaAll.length,504,'Africa & Middle East reaches 504 evidence records after moving 80 Middle East records from Asia');
+ assert.equal(africaAll.length,571,'Africa & Middle East reaches 571 evidence records including Australopithecus, pre-1 Ma, and Levantine Neanderthal sites');
  assert.ok(africaAll.filter(e=>e.end>-15000).length>=229,'Africa post-15,000 BCE coverage reaches at least 229 records');
  for(const needle of ['Wadi Kubbaniya','Afalou','Al-Khiday','Tadrart Acacus','Memphis','Thebes','Abu Simbel','Timgad','Kondoa','Twyfelfontein','Gazargamu','El Fasher']){
   assert.ok(africaAll.some(e=>e.title.includes(needle)),`Missing Africa UNESCO/sparse-gap site: ${needle}`);
@@ -203,9 +203,28 @@ test('Europe and Asia-Pacific extend systematically to 1900 CE with zero sparse 
  for(const needle of ['Korolevo','Penghu 1','Nesher Ramla','Swartkrans','Boodie Cave','Carpenter','Figueira Brava','Tolbor-16','Wolo Sege']){
   assert.ok(pre30k.some(e=>e.title.includes(needle)),`Missing key pre-30,000 BCE site: ${needle}`);
  }
- assert.equal(guides.length,104,'All 104 world guides validate cleanly');
+ assert.equal(guides.length,107,'All 107 world guides validate cleanly');
  for(const g of guides){
   assert.ok(g.sections.length>=3,`Guide ${g.id} has at least 3 sections`);
   assert.ok(g.relatedGuideIds&&g.relatedGuideIds.length>=1,`Guide ${g.id} includes Continue exploring cross-links`);
  }
+ const ausStudy=data.studies?.find(s=>s.id==='australopithecus');
+ assert.ok(ausStudy&&ausStudy.evidenceIds.length>=39,'Australopithecus study maps >= 39 fossil horizons');
+ const pre1maStudy=data.studies?.find(s=>s.id==='pre-1ma-world');
+ assert.ok(pre1maStudy&&pre1maStudy.evidenceIds.length>=164,'Pre-1 Ma study maps >= 164 global localities');
+ const neaStudy=data.studies?.find(s=>s.id==='neanderthals');
+ assert.ok(neaStudy&&neaStudy.evidenceIds.length>=121,'Neanderthal study maps >= 121 Eurasian localities');
+ for(const gid of ['world-australopithecus-fossils','world-pre-1ma-world','world-neanderthal-fossils']){
+  const g=guides.find(x=>x.id===gid);
+  assert.ok(g,`Missing fossil deep dive ${gid}`);
+  assert.ok(g.sources.some(s=>s.url.includes('doi.org')),`Fossil guide ${gid} cites peer-reviewed DOIs`);
+ }
+ const paleo=JSON.parse(await readFile('data/paleoclimate-series.json','utf8'));
+ assert.equal(paleo.maxYear,1900,'Paleoclimate series capped cleanly at 1900 CE');
+ for(const key of ['miller2020','lr04','epicaTemp','sprattSeaLevel','bereiterCo2','epicaCh4','ngripD18o','temp12k','pages2k']){
+  assert.ok(Array.isArray(paleo[key])&&paleo[key].length>=100,`Paleoclimate ${key} populated`);
+  assert.ok(paleo[key].every((pt:{year:number})=>pt.year<=1900),`Paleoclimate ${key} stays <= 1900 CE`);
+ }
+ const globalIce=JSON.parse(await readFile('data/global-ice-sheets.json','utf8'));
+ assert.ok(Array.isArray(globalIce.slices)&&globalIce.slices.length>=30,'Continuous Quaternary to 1900 CE ice-sheet archive populated');
 });

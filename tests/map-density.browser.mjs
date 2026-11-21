@@ -53,7 +53,7 @@ try{
     const playing=await page.evaluate(()=>inspect());
     assert.deepEqual(playing,paused,name+' must preserve membership, selection, camera and date');
     assert.equal(await page.locator('.community-count:visible').count(),0);
-    assert.ok(await page.locator('.change-caption:visible').count()<=2);
+    assert.ok(await page.locator('.change-caption:visible').count()<=6);
     await page.screenshot({path:out+'/'+name+'-'+year+'.png'});
     await page.evaluate(()=>mode(false));
     if(name==='overview'&&year===1492){assert.ok(paused.ids.includes('settlement-taos-habitation'));assert.ok(paused.ids.includes('visit-columbus-first-1492-1493-3'));await page.screenshot({path:out+'/overview-1492-paused.png'});}

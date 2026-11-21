@@ -16,19 +16,22 @@ import { esc, $ } from "./dom";
 import { disputeLevel } from "./disputes";
 import {placeGroups,placeKey} from "./map-place-groups";
 import { boundsInViewport } from "./map-filters";
-import { historyState, historyOpacity, historyLabel } from './history';
+import {historyState, historyOpacity, historyLabel } from './history';
 import {iceSnapshot,iceFrameLabel,eventsAt,oceanPaths,isUncertainHazard} from './physical';
+import type { IceGeometry } from './ice-geometry';
 import {MapTooltip,tooltipForRecords,tooltipForPlaces,tooltipForHazard,type MapTooltipContent,type MapMode} from './map-tooltip';
 import { AtlasContext } from './atlas-context';
 export interface MapInteraction {mode:MapMode;playing:boolean;onPause:()=>void}
-export interface PhysicalOptions {ice:boolean; iceScenario:string; currents:boolean; winds:boolean; hidden:ReadonlySet<string>; uncertain:boolean}
+export interface PhysicalOptions {ice:boolean; iceScenario:string; currents:boolean; winds:boolean; hidden:ReadonlySet<string>; uncertain:boolean; globalIce?:{geometry:IceGeometry;label:string}|null}
 export interface MapCamera {scope:MapScope;center:MapPoint;pixelScale:number;rotation:[number,number,number]}
 const compactPlaceName=(name:string)=>name.length<=40?name:name.slice(0,39).trimEnd()+'…';
 export class MapView {
   populationScale:'bands'|'log'='bands';
   namedRouteEndpoints=false;
+  onResetView?:()=>void;
   readonly context=new AtlasContext();
   readonly element = document.createElement("div");
+  readonly densityOptions: HTMLDetailsElement;
   private densityPreference:'compact'|'standard'|'detailed'='standard';
   private terrainKey="";
   private scope: MapScope = "americas";
@@ -64,8 +67,9 @@ export class MapView {
     private onViewportChange: () => void = () => {},
   ) {
     this.element.className = "map-canvas";
+    this.element.dataset.scope = this.scope;
     const path = geoPath(this.projection);
-    this.element.innerHTML = `<svg viewBox="0 0 1000 800" role="img" aria-label="Map of the Americas and Pacific. Use the visible records list for keyboard access to evidence." tabindex="0"><defs><pattern id="population-unknown" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V5" stroke="#fff" stroke-width="1.8" opacity=".8"/></pattern><radialGradient id="reach-fade"><stop offset="0%" stop-color="white" stop-opacity=".35"/><stop offset="40%" stop-color="white" stop-opacity=".22"/><stop offset="100%" stop-color="white" stop-opacity="0"/></radialGradient><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#e5c78c"/></marker></defs><g class="world"><path class="graticule" d="${path(geoGraticule10())}"/><path class="land" d="${path(land)}"/><clipPath id="terrain-land-clip"><path class="terrain-land-mask" d="${path(land)}"/></clipPath><g class="terrain" clip-path="url(#terrain-land-clip)" aria-hidden="true"></g><g class="map-labels">${this.labels()}</g><g class="features"></g></g></svg><div class="map-controls"><label class="map-scope">Map region<select aria-label="Map region"><option value="pacific">Australia &amp; Pacific</option><option value="americas">Americas focus</option><option value="atlantic">Atlantic connections</option><option value="world">Whole world</option></select></label><details class="map-density-options"><summary>Map detail</summary><label>Place grouping<select aria-label="Place grouping"><option value="compact">Compact</option><option value="standard" selected>Standard</option><option value="detailed">Detailed</option></select></label></details><button data-zoom="in" aria-label="Zoom in">+</button><button data-zoom="out" aria-label="Zoom out">−</button><button data-zoom="reset" aria-label="Reset map view">⌖</button></div><div class="map-caption">Modern relief & coastlines · Not a reconstruction for this date<br>Natural Earth + USGS 3DEP · Public domain<br>Place references: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors · ODbL</a></div>`;
+    this.element.innerHTML = `<svg viewBox="0 0 1000 800" role="img" aria-label="Map of the Americas and Pacific. Use the visible records list for keyboard access to evidence." tabindex="0"><defs><pattern id="population-unknown" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V5" stroke="#fff" stroke-width="1.8" opacity=".8"/></pattern><radialGradient id="reach-fade"><stop offset="0%" stop-color="white" stop-opacity=".35"/><stop offset="40%" stop-color="white" stop-opacity=".22"/><stop offset="100%" stop-color="white" stop-opacity="0"/></radialGradient><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#e5c78c"/></marker></defs><g class="world"><path class="graticule" d="${path(geoGraticule10())}"/><path class="land" d="${path(land)}"/><clipPath id="terrain-land-clip"><path class="terrain-land-mask" d="${path(land)}"/></clipPath><g class="terrain" clip-path="url(#terrain-land-clip)" aria-hidden="true"></g><g class="map-labels">${this.labels()}</g><g class="features"></g></g></svg><div class="map-controls"><details class="map-density-options"><summary>Map detail</summary><label>Place grouping<select aria-label="Place grouping"><option value="compact">Compact</option><option value="standard" selected>Standard</option><option value="detailed">Detailed</option></select></label></details><button data-zoom="in" aria-label="Zoom in">+</button><button data-zoom="out" aria-label="Zoom out">−</button><button data-zoom="reset" aria-label="Reset map view">Reset map</button></div><div class="map-caption">Modern relief & coastlines · Not a reconstruction for this date<br>Natural Earth + USGS 3DEP · Public domain<br>Place references: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors · ODbL</a></div>`;
     const svg = $<SVGSVGElement>("svg", this.element);
     $('defs',this.element).insertAdjacentHTML('beforeend',[['migration','#ffba64'],['exchange','#62e4e9'],['forced','#ff85c5']].map(([kind,color])=>`<marker id="corridor-${kind}" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="3.4" markerHeight="3.4" orient="auto-start-reverse"><path d="M1,1L11,6L1,11L3,6Z" fill="${color}" stroke="#132934" stroke-width="1.1" stroke-linejoin="round"/></marker>`).join(''));
     svg.setAttribute('role','group');
@@ -102,10 +106,8 @@ export class MapView {
     // Body-mounted tooltips must not outlive a map page or a viewport change.
     const life=new MutationObserver(()=>{if(!this.element.isConnected){this.hideTooltip();life.disconnect();}});
     life.observe(document.body,{childList:true,subtree:true});
-    $(".map-scope select", this.element).addEventListener("change", (e) => {
-      this.setScope((e.target as HTMLSelectElement).value as MapScope);
-    });
-    this.element.querySelector('.map-density-options select')!.addEventListener('change',event=>{
+    this.densityOptions = this.element.querySelector('.map-density-options') as HTMLDetailsElement;
+    this.densityOptions.querySelector('select')!.addEventListener('change',event=>{
       this.densityPreference=(event.target as HTMLSelectElement).value as typeof this.densityPreference;
       this.draw();
     });
@@ -189,7 +191,8 @@ export class MapView {
       );
       if (target?.dataset.zoom) {
         if (target.dataset.zoom === "reset") {
-          this.resetView();
+          if (this.onResetView) this.onResetView();
+          else this.resetView();
         } else this.zoom(target.dataset.zoom === "in" ? 1.35 : 1 / 1.35);
       } else if (!moved&&svg.contains(e.target as Node)) {
         if(target?.hasAttribute('data-density-group')||target?.hasAttribute('data-route-endpoint')){this.activateFeature(target);return;}
@@ -251,6 +254,7 @@ export class MapView {
     this.resetView(redraw);
   }
   private rebuildProjection(rotation?:[number,number,number],extra:DisplayRecord[]=[]){
+    this.element.dataset.scope = this.scope;
     this.projection=mapProjection(this.scope,this.width,this.height);
     if(rotation)this.projection.rotate(rotation);
     this.terrainKey="";
@@ -263,7 +267,6 @@ export class MapView {
     $(".terrain-land-mask",this.element).setAttribute("d",path(this.land)??"");
     $(".graticule", this.element).setAttribute("d", path(geoGraticule10()) ?? "");
     $(".map-labels", this.element).innerHTML = this.labels();
-    ($(".map-scope select", this.element) as HTMLSelectElement).value = this.scope;
   }
   private resetView(redraw=true){
     this.scale=1;this.tx=this.ty=0;
@@ -520,6 +523,8 @@ export class MapView {
     if(!iceLabel){iceLabel=document.createElement('div');iceLabel.className='ice-context-label';this.element.append(iceLabel);}
     iceLabel.hidden=!ice;iceLabel.textContent=ice?iceFrameLabel(ice):'';
     if(ice){const key=`${this.scope}-${ice.key}`;if(!this.icePaths.has(key)){this.icePaths.set(key,path(ice.geometry as any)??'');if(this.icePaths.size>24)this.icePaths.delete(this.icePaths.keys().next().value!);}background+=`<g class="ice-context"><desc>${esc(iceFrameLabel(ice))}. See Climate sources for interpolation method.</desc><path d="${this.icePaths.get(key)}"/></g>`;}
+    const gIce=this.physical.globalIce;
+    if(gIce){const gPath=path(gIce.geometry as any)??'';if(gPath)background+=`<g class="global-ice-context"><desc>${esc(gIce.label)}</desc><path d="${gPath}"/></g>`;}
     for(const flow of oceanPaths){
       if(flow.kind==='wind'?!this.physical.winds:!this.physical.currents)continue;
       // Reference flows never change with the selected year, only projection.

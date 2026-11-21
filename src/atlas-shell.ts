@@ -58,7 +58,7 @@ export function libraryHTML(count:number):string{return `<article class="library
  ['#evidence','03','Evidence index','Search the complete collection of places, movements and events.'],
  ['#dives/places','04','Places','Buildings, settlements and the communities around them.'],
  ['#context','05','Movement & context','Examine connections, language, and what the evidence can establish.'],
- ['#physical','06','The changing environment','Ice, ocean reference patterns, and natural-event sources.'],
+ ['#physical','06','The changing environment','Temperature, sea level, CO₂ & continuous ice (7 Ma–1900 CE), proxy methods, and 8,896 hazards.'],
  ['#proposals','07','Contribute evidence','Draft a suggestion, import research, or share a source-linked collection.'],
  ['sites/sources-attributions.html','08','Sources, attributions & licenses','Where our evidence, text, pictures and maps come from, and the rights that apply to each.'],
  ['#about','09','About this atlas','How to read the map, evidence limits, and noncommercial source downloads.'],

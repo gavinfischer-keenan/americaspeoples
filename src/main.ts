@@ -55,6 +55,7 @@ import { MapPanels } from "./map-panels";
 import { EvidenceTable, type EvidenceTableState } from "./evidence-table";
 import { mountPhysicalPage } from "./physical-page";
 import { aboutPageHTML } from "./about-page";
+import { loadGlobalIce, currentGlobalIce, globalIceAtYear } from "./global-ice";
 import {
   climateKinds,
   climateCategory,
@@ -296,7 +297,7 @@ function useFreeTimeline(){
   if(mountedMap){renderStory();syncTransport();}
 }
 function focusActiveAtlasOverview() {
-  if (activeAtlasRegion === "pacific") map.overview("pacific");
+  if (activeAtlasRegion === "pacific") map.focusRegion([-178, -14], 1.62, "pacific");
   else map.focusRegion([-88, 12], 1.35, "americas");
 }
 function syncJumpMenu() {
@@ -674,6 +675,11 @@ function mapPage() {
     $("#layer-options").insertAdjacentHTML("afterbegin", '<p class="fine">Explore combines research evidence across periods. Dated physical snapshots and event symbols belong to Movie; <a href="#physical">browse the full natural-event catalog</a>.</p>');
   }
   $("#map-host").append(map.element);
+  $('#layer-options .layer-disclosure').append(map.densityOptions);
+  map.onResetView = () => {
+    if (atlasMode === 'movie' && activeAtlasRegion === 'pacific') focusActiveAtlasOverview();
+    else map.overview('americas');
+  };
   const layout=$('.atlas-layout');layout.classList.add('shared-map-layout');
   const facts=document.createElement('aside');facts.id='atlas-facts';facts.className='atlas-facts';facts.setAttribute('aria-label','Selected facts and visible evidence');
   const hint=document.createElement('p');hint.id='americas-hint';hint.className='americas-hint';hint.textContent='Select a place or connection to read what happened, its dates, and the evidence.';
@@ -835,6 +841,17 @@ function renderMapData() {
   selected = retainCurrentSelection(selected, currentVisible, atlasMode);
   document.body.classList.toggle("movie-playing", atlasMode === "movie" && playing);
   map.setInteraction({mode: atlasMode, playing, onPause: stop});
+  const globalIce =
+    atlasMode === "movie" && showIce && year < 1950 - 25000
+      ? (() => {
+          const frame = globalIceAtYear(
+            currentGlobalIce(),
+            year,
+            activeAtlasRegion === "pacific" ? "global" : "americas",
+          );
+          return frame && frame.geometry ? { geometry: frame.geometry, label: frame.label } : null;
+        })()
+      : null;
   map.update(
     currentVisible,
     year,
@@ -846,6 +863,7 @@ function renderMapData() {
       winds: atlasMode === "explore" && showWinds,
       hidden: atlasMode === "movie" ? currentClimateHidden() : new Set(climateKinds),
       uncertain: showUncertainHazards,
+      globalIce,
     },
   );
   const ice = showIce ? iceSnapshot(year, iceScenario) : null;
@@ -855,9 +873,11 @@ function renderMapData() {
       ? iceLoadState() === "error"
         ? "Ice snapshot could not load; retrying automatically. Missing geometry is not ice absence."
         : "Loading the dated ice snapshot from the atlas server."
-      : showIce
-        ? "No NADI-1 snapshot for this year (coverage 25,000–1,000 cal BP). This does not mean ice absence."
-        : "Ice boundaries hidden.";
+      : globalIce
+        ? `${globalIce.label} (reconstructed Pleistocene extent prior to 25 ka NADI-1).`
+        : showIce
+          ? "No NADI-1 snapshot for this year (coverage 25,000–1,000 cal BP). This does not mean ice absence."
+          : "Ice boundaries hidden.";
   const hazards = atlasMode === "movie" ? eventsAt(year, currentClimateHidden(), showUncertainHazards) : [];
   $("#hazard-status").innerHTML =
     physicalState !== "ready"
@@ -1350,5 +1370,8 @@ void loadAtlasAssets(()=>{
   if(mountedMap)renderMapData();
   if(openingPlayback&&atlasAssets.ready&&mountedMap&&atlasMode==='movie'&&storyId==='free'&&!voyageId){openingPlayback=false;focusActiveAtlasOverview();framedRegion=activeAtlasRegion;if(!playing)$('#play').click();}
 },value=>map.setDetailedLand(value),voyagesReady);
+void loadGlobalIce().then((archive) => {
+  if (archive && mountedMap) renderMapData();
+});
 route();
 requestAnimationFrame(tick);

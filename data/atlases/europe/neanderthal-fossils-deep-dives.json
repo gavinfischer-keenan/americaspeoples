@@ -1,0 +1,2306 @@
+{
+  "schemaVersion": 1,
+  "guides": [
+    {
+      "id": "world-neanderthal-fossils",
+      "atlasIds": [
+        "europe",
+        "africa",
+        "asia-pacific"
+      ],
+      "category": "subjects",
+      "title": "Homo neanderthalensis: Every Mapped Fossil & aDNA Locality Across Eurasia",
+      "description": "Comprehensive Eurasian atlas of 121 confirmed Neanderthal skeletal, dental, and ancient-DNA localities from Portugal, Gibraltar, Wales, and submerged Doggerland across Europe, Crimea, Caucasus, Levant, and Zagros to Uzbekistan and Altai Siberia (~430–37 ka).",
+      "intro": "For roughly 400,000 years, Neanderthals (Homo neanderthalensis) inhabited an immense Eurasian belt stretching nearly 7,000 km from Atlantic Portugal and Wales to Siberia's Altai Mountains, and south to Gibraltar, Sicily/Calabria, Crete-adjacent Mani, Shukbah in Palestine, and the Iranian Zagros. Here we catalogue 121 major and regional confirmed skeletal, dental, and genetic localities across 11 provinces—separating verified human remains from purely lithic Mousterian scatter sites.",
+      "scope": "All 121 mapped confirmed Neanderthal fossil and ancient-DNA localities across Western Europe, Central/Eastern Europe, Balkans, Crimea, Caucasus, Anatolia, Levant, Zagros, Central Asia, and Altai Siberia (~430–37 ka).",
+      "map": {
+        "bounds": [
+          -11.0,
+          30.0,
+          88.0,
+          56.0
+        ],
+        "scope": "Eurasian fossil range from Portugal (-9.2°W) and Wales (-3.4°W) across continental Europe, Levant, and Zagros to Chagyrskaya and Okladnikov (+84.0°E) in Altai Siberia.",
+        "points": [
+          {
+            "id": "portugal-gibraltar",
+            "label": "Portugal (Oliveira/Figueira) & Gibraltar (Forbes'/Devil's)",
+            "coordinates": [
+              -7.5,
+              37.8
+            ],
+            "date": "106–40 ka",
+            "description": "Atlantic shell-gathering sites and historic 1848 Forbes' Quarry / Devil's Tower aDNA skulls.",
+            "sources": [
+              "https://doi.org/10.1002/ajpa.20669",
+              "https://doi.org/10.1073/pnas.1903994116"
+            ]
+          },
+          {
+            "id": "cantabria-sima",
+            "label": "El Sidrón, Lezetxiki, Castillo & Sima de los Huesos, N. Spain",
+            "coordinates": [
+              -4.1,
+              42.9
+            ],
+            "date": "430–42 ka",
+            "description": "430 ka early Neanderthal aDNA at Sima de los Huesos plus ~49 ka 13-person kinship burial/cannibalism group at El Sidrón.",
+            "sources": [
+              "https://doi.org/10.1002/ar.25190",
+              "https://doi.org/10.1002/ajpa.24694"
+            ]
+          },
+          {
+            "id": "se-iberia-catalonia",
+            "label": "Sima de las Palomas, Cova Negra, Simanya & Gegant, E./S. Spain",
+            "coordinates": [
+              -0.2,
+              39.2
+            ],
+            "date": "273–40 ka",
+            "description": "Articulated Palomas burials, Bolomor hearths, Zafarraya, and Catalan coastal fossils.",
+            "sources": [
+              "https://doi.org/10.1073/pnas.0811213106",
+              "https://doi.org/10.3389/feart.2023.1230707",
+              "https://doi.org/10.1016/j.quascirev.2021.107141"
+            ]
+          },
+          {
+            "id": "dordogne-charente",
+            "label": "La Chapelle, Ferrassie, Moustier, Saint-Césaire & Quina, SW France",
+            "coordinates": [
+              0.8,
+              45.2
+            ],
+            "date": "185–40 ka",
+            "description": "Heartland of Mousterian burials, Châtelperronian 'Pierrette', La Chaise, Regourdou, and Les Pradelles.",
+            "sources": [
+              "https://doi.org/10.1073/pnas.1316780110",
+              "https://doi.org/10.1038/s41598-020-77611-z",
+              "https://doi.org/10.1016/j.jhevol.2018.11.003"
+            ]
+          },
+          {
+            "id": "rhone-provence",
+            "label": "Grotte Mandrin ('Thorin'), Moula-Guercy, Payre & Lazaret, SE France",
+            "coordinates": [
+              5.2,
+              44.5
+            ],
+            "date": "250–42 ka",
+            "description": "Deeply isolated 'Thorin' lineage at Mandrin (~45 ka) alongside 120 ka Moula-Guercy cannibalism and Lazaret coastal camps.",
+            "sources": [
+              "https://doi.org/10.1016/j.jhevol.2024.103599",
+              "https://doi.org/10.1002/ajpa.24256"
+            ]
+          },
+          {
+            "id": "britain-jersey",
+            "label": "Pontnewydd (Wales), Swanscombe (Kent) & La Cotte (Jersey)",
+            "coordinates": [
+              -2.2,
+              51.0
+            ],
+            "date": "400–48 ka",
+            "description": "Earliest 400–225 ka British archaic/early Neanderthals and late <48 ka Channel Island fossils.",
+            "sources": [
+              "https://doi.org/10.1016/j.jhevol.2020.102939"
+            ]
+          },
+          {
+            "id": "benelux-north-sea",
+            "label": "Engis, Spy, Goyet, Scladina (Belgium) & Doggerland 'Krijn'",
+            "coordinates": [
+              4.6,
+              50.8
+            ],
+            "date": "127–40 ka",
+            "description": "1829 Engis 2 first ever discovery, Spy & Goyet ~44–40 ka turnovers/cannibalism, and North Sea seabed Krijn.",
+            "sources": [
+              "https://doi.org/10.1073/pnas.2022466118",
+              "https://doi.org/10.1038/srep29005",
+              "https://doi.org/10.1016/j.jhevol.2009.09.001"
+            ]
+          },
+          {
+            "id": "germany-nw",
+            "label": "Feldhofer (1856 Type), Biache, Tourville & Salzgitter",
+            "coordinates": [
+              7.5,
+              51.1
+            ],
+            "date": "230–40 ka",
+            "description": "Neander Valley 1856 holotype, early 200 ka Biache/Tourville, and 52°N Salzgitter tundra site.",
+            "sources": [
+              "https://doi.org/10.1073/pnas.192464099",
+              "https://doi.org/10.1002/jqs.3499"
+            ]
+          },
+          {
+            "id": "germany-sw-swiss",
+            "label": "Steinheim, Ehringsdorf, Hohlenstein-Stadel & Cotencher",
+            "coordinates": [
+              10.0,
+              48.8
+            ],
+            "date": "300–45 ka",
+            "description": "MIS 9–5e proto/early Neanderthals, 124 ka Hohlenstein divergent mtDNA, and Alpine Jura Cotencher.",
+            "sources": [
+              "https://doi.org/10.1038/ncomms16046",
+              "https://doi.org/10.3390/sym13091611"
+            ]
+          },
+          {
+            "id": "italy-north",
+            "label": "Fumane, Mezzena, Saccopastore & Guattari, Italy",
+            "coordinates": [
+              12.1,
+              43.2
+            ],
+            "date": "250–42 ka",
+            "description": "~250 ka Saccopastore skulls, Fumane raptor-feather camps, and Monte Circeo caves.",
+            "sources": [
+              "https://doi.org/10.1016/j.quascirev.2015.10.027",
+              "https://doi.org/10.1371/journal.pone.0254848"
+            ]
+          },
+          {
+            "id": "italy-south",
+            "label": "Altamura Man, Cavallo & Archi, Southern Italy",
+            "coordinates": [
+              16.6,
+              40.2
+            ],
+            "date": "172–42 ka",
+            "description": "172–130 ka calcified complete Altamura skeleton, Cavallo Mousterian teeth, and Calabria Archi.",
+            "sources": [
+              "https://doi.org/10.1038/s42003-023-04644-1",
+              "https://doi.org/10.1038/nature10617"
+            ]
+          },
+          {
+            "id": "central-eu-poland",
+            "label": "Kůlna, Šipka, Šaľa, Stajnia, Ciemna & Subalyuk",
+            "coordinates": [
+              19.4,
+              49.5
+            ],
+            "date": "120–38 ka",
+            "description": "Moravian classic jaws, Slovak Gánovce endocast, Polish >100 ka Carpathian mitogenomes, and ~40 ka Subalyuk.",
+            "sources": [
+              "https://doi.org/10.1016/j.cub.2026.03.069",
+              "https://doi.org/10.1127/anthranz/2023/1716"
+            ]
+          },
+          {
+            "id": "croatia-balkans",
+            "label": "Krapina, Vindija, Pešturina, Oase & Mani Greece",
+            "coordinates": [
+              18.5,
+              43.5
+            ],
+            "date": "400–37 ka",
+            "description": ">800 Krapina fossils (eagle-claw jewelry), Vindija reference genome, Mani refugia (Apidima/Kalamakia/Lakonis), and Oase 1 admixture.",
+            "sources": [
+              "https://doi.org/10.1371/journal.pone.0119802",
+              "https://doi.org/10.1073/pnas.1709235114",
+              "https://doi.org/10.1007/s10963-023-09179-1"
+            ]
+          },
+          {
+            "id": "crimea",
+            "label": "Kiik-Koba, Zaskalnaya & Starosele 2025, Crimea",
+            "coordinates": [
+              34.4,
+              44.9
+            ],
+            "date": "100–40 ka",
+            "description": "Infant & male burials, grooved raven bone, and Starosele 2025 PNAS genome tying Crimea to Altai Siberia.",
+            "sources": [
+              "https://doi.org/10.1073/pnas.2518974122",
+              "https://doi.org/10.1371/journal.pone.0173435"
+            ]
+          },
+          {
+            "id": "caucasus-turkey",
+            "label": "Mezmaiskaya, Ortvale, Sakajia & Karain, Caucasus/Anatolia",
+            "coordinates": [
+              40.5,
+              43.0
+            ],
+            "date": "200–40 ka",
+            "description": "Neanderthal baby genomes (~70–43 ka) at Mezmaiskaya, Georgian Southern Caucasus caves, and Taurus Karain.",
+            "sources": [
+              "https://doi.org/10.1038/s41598-022-16164-9",
+              "https://doi.org/10.1371/journal.pone.0284093"
+            ]
+          },
+          {
+            "id": "levant",
+            "label": "Tabun, Kebara, Amud, Ein Qashish, Shukbah & Dederiyeh",
+            "coordinates": [
+              35.4,
+              33.2
+            ],
+            "date": "170–48 ka",
+            "description": "Kebara hyoid, Amud 1 tall skeleton, open-air Ein Qashish, southernmost Shukbah, and Syrian Dederiyeh child graves.",
+            "sources": [
+              "https://doi.org/10.1086/204112",
+              "https://doi.org/10.1038/s41598-017-03025-z",
+              "https://doi.org/10.1038/s41598-021-82257-6"
+            ]
+          },
+          {
+            "id": "zagros",
+            "label": "Shanidar (Z & 1–10), Bisitun, Wezmeh, Bawa Yawan & Qaleh Kurd",
+            "coordinates": [
+              46.5,
+              35.2
+            ],
+            "date": "450–41 ka",
+            "description": "High Zagros burials incl. Shanidar Z (2020/2025) and Iranian in-situ late Mousterian Bawa Yawan.",
+            "sources": [
+              "https://doi.org/10.15184/aqy.2019.207",
+              "https://doi.org/10.1371/journal.pone.0253708"
+            ]
+          },
+          {
+            "id": "central-asia",
+            "label": "Teshik-Tash, Obi-Rakhmat & Anghilak, Uzbekistan",
+            "coordinates": [
+              67.8,
+              39.6
+            ],
+            "date": "90–40 ka",
+            "description": "1938 child burial with European-clade mtDNA (Teshik-Tash) and mosaic Tian Shan foothills juvenile (Obi-Rakhmat).",
+            "sources": [
+              "https://doi.org/10.1038/nature06193",
+              "https://doi.org/10.1016/j.jhevol.2007.12.007"
+            ]
+          },
+          {
+            "id": "altai-siberia",
+            "label": "Denisova (5 & 11), Chagyrskaya & Okladnikov, Altai Siberia",
+            "coordinates": [
+              84.0,
+              51.5
+            ],
+            "date": "120–40 ka",
+            "description": "Two eastward dispersal waves reaching easternmost Eurasia: 120 ka Denisova 5, F1 hybrid 'Denny', and 13-person Chagyrskaya kin group.",
+            "sources": [
+              "https://doi.org/10.1073/pnas.1918047117",
+              "https://doi.org/10.1073/pnas.2534576123"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "Emergence & Accretion: Sima de los Huesos to MIS 5e (430–120 ka)",
+          "paragraphs": [
+            {
+              "text": "Neanderthal nuclear DNA divergence from Denisovans dates deep into the Middle Pleistocene (>430 ka): Sima de los Huesos in northern Spain already carries early Neanderthal nuclear DNA and derived mandibles by 430 ka, accompanied by transitional European fossils at Swanscombe (~400 ka), Steinheim (~300–250 ka), Saccopastore (~250 ka MIS 7), Pontnewydd (~225 ka), Biache-Saint-Vaast and Tourville-la-Rivière (~200 ka), Ehringsdorf (~230 ka), and early Southwest Asian teeth at Qaleh Kurd (Iran) and Tabun.",
+              "sources": [
+                "https://doi.org/10.1002/ar.25190",
+                "https://doi.org/10.1016/j.quascirev.2015.10.027",
+                "https://doi.org/10.1007/s12520-022-01680-6",
+                "https://doi.org/10.1007/s41982-024-00180-4"
+              ]
+            },
+            {
+              "text": "By ~172–115 ka, calcified skeletons like Altamura Man (Apulia, Italy), >800 Krapina bones (Croatia, preserving white-tailed eagle talons crafted into ornaments), Scladina (Belgium, 127 ka), Hohlenstein-Stadel (Germany, 124 ka carrying an ancient ~270 ka introgressed African mtDNA lineage), Baume Moula-Guercy (~120 ka), and Stajnia (~116 ka north of the Carpathians) prove classic Neanderthals thrived across temperate interglacial Europe and simultaneously reached Denisova Cave (~120 ka Denisova 5) in Altai Siberia.",
+              "sources": [
+                "https://doi.org/10.1038/s42003-023-04644-1",
+                "https://doi.org/10.1371/journal.pone.0119802",
+                "https://doi.org/10.1126/sciadv.aaw5873",
+                "https://doi.org/10.1038/ncomms16046",
+                "https://doi.org/10.1016/j.cub.2026.03.069"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Classic & Eastern Dispersals: Iberia & Doggerland to Crimea, Levant, Zagros & Altai (100–45 ka)",
+          "paragraphs": [
+            {
+              "text": "During MIS 5–3 glacial cycles, Neanderthals adapted across extraordinarily diverse habitats: coastal marine foraging along Portugal (Figueira Brava, Oliveira), Gibraltar, Italy (Guattari, Cavallo, Archi), and submerged Doggerland plains ('Krijn' dredged from the North Sea floor); alpine Jura caves (Cotencher); tundra hunting at 52°N Salzgitter; intentional pit burials across SW France (La Chapelle-aux-Saints, La Ferrassie, Le Moustier, Regourdou), Syria (Dederiyeh infants), Iraq (Shanidar 1–10 & Shanidar Z), Mount Carmel/Galilee (Kebara hyoid, Amud 1), open-air 'Ein Qashish, and southernmost Shukbah in Palestine.",
+              "sources": [
+                "https://doi.org/10.1016/j.jhevol.2009.09.001",
+                "https://doi.org/10.1073/pnas.1316780110",
+                "https://doi.org/10.1086/204112",
+                "https://doi.org/10.1038/s41598-017-03025-z",
+                "https://doi.org/10.1038/s41598-021-82257-6",
+                "https://doi.org/10.15184/aqy.2019.207"
+              ]
+            },
+            {
+              "text": "Across Eastern Europe and Asia, two profound discoveries link geographically vast regions: (1) Pigott et al. (2025 PNAS) extracted an unexpected ~46 ka Neanderthal femur mitogenome from Starosele in Crimea closely matching Micoquian groups >3,000 km away at Chagyrskaya and Okladnikov in Siberia, confirming a rapid ~65–50 ka steppe migration alongside Teshik-Tash (Uzbekistan) and North Caucasus Mezmaiskaya; and (2) genetic evidence at Denisova 11 ('Denny', an F1 Neanderthal–Denisovan daughter) documents inter-lineage encounters at Eurasian crossroads.",
+              "sources": [
+                "https://doi.org/10.1073/pnas.2518974122",
+                "https://doi.org/10.1073/pnas.1918047117",
+                "https://doi.org/10.1038/nature06193",
+                "https://doi.org/10.1073/pnas.2534576123"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Demographic Isolation, Overlap & Disappearance (~45–38 ka) — Scope Note on Minor Fragments",
+          "paragraphs": [
+            {
+              "text": "High-resolution hydroxyproline radiocarbon dating (Spy/Engis/Goyet ~44–40.6 ka, Vindija ~44–42 ka, Subalyuk ~40 ka, Sima de las Palomas ~43–40 ka, Bawa Yawan ~43–41 ka) combined with 2024 genomic sequencing of 'Thorin' from Grotte Mandrin (50,000 years isolated from contemporary late French groups!) reveals that final European Neanderthal populations splintered into tiny, genetically isolated pockets prior to ~40–39 ka, even as arriving Homo sapiens incorporated ~2% Neanderthal ancestry (captured directly in ~40 ka Peștera cu Oase 1 in Romania).",
+              "sources": [
+                "https://doi.org/10.1073/pnas.2022466118",
+                "https://doi.org/10.1016/j.jhevol.2024.103599",
+                "https://doi.org/10.1038/nature13621",
+                "https://doi.org/10.1073/pnas.2520565123"
+              ]
+            },
+            {
+              "text": "Transparency on scope: This atlas maps every major and regionally diagnostic confirmed Neanderthal skeletal, dental, and aDNA locality (121 named sites). Hundreds of additional tiny single-tooth museum fragments without firm stratigraphic dates (mostly within already mapped Dordogne/Charente/Belgian/Italian river valleys) and >1,000 purely stone-tool Mousterian sites lacking human bones are intentionally kept distinct from confirmed fossil sites.",
+              "sources": [
+                "https://doi.org/10.1038/nature13621",
+                "https://doi.org/10.1073/pnas.1521269113"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Complete Eurasian Catalogue: All 121 Mapped Confirmed Neanderthal Localities",
+          "paragraphs": [
+            {
+              "text": "Chronological listing of all 121 confirmed fossil and ancient-DNA localities visualized interactively inside #study/neanderthals.",
+              "sources": [
+                "https://doi.org/10.1073/pnas.2520565123",
+                "https://doi.org/10.1038/nature13621"
+              ]
+            }
+          ],
+          "columns": [
+            "Locality & Country",
+            "Age & Dating Method",
+            "Key Fossils / Context",
+            "Limits & Debates"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Qaleh Kurd Cave (Qazvin, Iranian Central Plateau)",
+                "c. 450,000–150,000 years ago (Middle Pleistocene) (Electron spin resonance and uranium-series dating on horse teeth associated with an archaic Homo deciduous canine on the Iranian Plateau.)",
+                "Establishes the oldest securely dated stratified hominin fossil and Mousterian-like hunted equid assemblage on the Iranian Central Plateau east of the Zagros.",
+                "A single deciduous tooth leaves fine species resolution between H. heidelbergensis and early Neanderthals open."
+              ],
+              "sources": [
+                "https://doi.org/10.1007/s41982-024-00180-4"
+              ]
+            },
+            {
+              "cells": [
+                "Sima de los Huesos",
+                "About 430 ka (Rounded geological age of the fossil assemblage; DNA gives affinity rather than a direct date. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.)",
+                "Nuclear DNA places the Sima hominins on the Neanderthal side of the Neanderthal–Denisovan division.",
+                "Their mitochondrial affinity differs; one maternal lineage cannot stand in for the population history. Coordinates mark an approximate public locality, not a surveyed fossil position."
+              ],
+              "sources": [
+                "https://www.nature.com/articles/nature17405"
+              ]
+            },
+            {
+              "cells": [
+                "Barnfield Pit, Swanscombe (Kent, England)",
+                "c. 400 thousand years ago (MIS 11 Hoxnian) (Biostratigraphy, amino-acid racemization, and Hoxnian interglacial Thames terrace correlation.)",
+                "Three refitting parietal and occipital skull bones of a young woman discovered between 1935 and 1955 showing early incipient Neanderthal occipital traits amid pointed Acheulean handaxes above…",
+                "Facial skeleton absent; phylogenetic placement debates stem Neanderthal vs. broader H. heidelbergensis."
+              ],
+              "sources": [
+                "https://doi.org/10.1111/1467-9655.70142",
+                "https://doi.org/10.1016/j.jhevol.2022.103279"
+              ]
+            },
+            {
+              "cells": [
+                "Pešturina & Velika/Mala Balanica (Jelašnica Gorge, Serbia)",
+                "~400–45 thousand years ago (TL, ESR & Lindal (2020) / Radović (2025 AJPA))",
+                "Mala Balanica (~400 ka BH-1 mandible lacking derived Neanderthal traits) and Velika Balanica (~300 ka) contrast with late Pleistocene Pešturina's true Neanderthal molar and bone bearing…",
+                "Deeply fractured Balkan karst sequence spans Middle Pleistocene isolation vs Late Pleistocene Neanderthal gene flow."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.quaint.2020.02.019",
+                "https://doi.org/10.1002/ajpa.70133",
+                "https://doi.org/10.1007/s10963-023-09179-1"
+              ]
+            },
+            {
+              "cells": [
+                "Tabun Cave & Nahal Meʾarot (Mount Carmel)",
+                "c. 350,000–45,000 years ago (Post-IR IRSL (pIRIR290), ESR and TL chronologies spanning 25 metres of Lower Acheulean, Acheulo-Yabrudian and Levantine Mousterian stratigraphy.)",
+                "Provides the benchmark Levantine chronological column from Upper Acheulean handaxes through Tabun C1 Neanderthal-affiliated skeletal remains and bird/ungulate Mousterian subsistence.",
+                "Diagenetic uranium uptake and historical Garrod-era trench mixing complicate fine sub-layer correlation for older finds."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.quageo.2024.101611",
+                "https://doi.org/10.1007/s12520-025-02197-4",
+                "https://whc.unesco.org/en/list/1395/"
+              ]
+            },
+            {
+              "cells": [
+                "Cova del Bolomor (Tavernes de la Valldigna, Valencia, Spain)",
+                "~350–100 thousand years ago (TL, OSL, ESR/U-series across 17 stratigraphic levels)",
+                "Isolated parietals, teeth, and fibula spanning MIS 9 to MIS 5e alongside Europe's clearest early hearths and tortoise/small-game processing.",
+                "Small fragmentary hominin fossils span multiple interglacial cycles."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.crpv.2009.12.003",
+                "https://doi.org/10.1016/j.quascirev.2014.08.011"
+              ]
+            },
+            {
+              "cells": [
+                "Steinheim an der Murr (Baden-Württemberg, Germany)",
+                "~320–240 thousand years ago (Holsteinian/MIS 9–7 terrace stratigraphy & Buzi et al. (2021) retrodeformation)",
+                "Remarkably complete crushed adult cranium (Steinheim 1, 1933) exhibiting incipient Neanderthal lambdoid/supraorbital traits alongside more globular midface anatomy—pivotal anchor for the…",
+                "Post-depositional compression deformed left side of face prior to digital retrodeformation."
+              ],
+              "sources": [
+                "https://doi.org/10.3390/sym13091611",
+                "https://doi.org/10.1073/pnas.1521269113"
+              ]
+            },
+            {
+              "cells": [
+                "Cova Negra (Xàtiva, Valencia, Spain)",
+                "c. 273–146 thousand years ago (OSL, ESR, and micro-CT paleopathology of CN-42170 temporal labyrinth inside Iberian Mousterian levels.)",
+                "Multilayered Iberian Neanderthal cave preserving rare inner-ear Down syndrome labyrinth anatomy in an ~6-year-old child who survived well beyond infancy thanks to compassionate collective…",
+                "Sparse absolute C14 dates in deep strata rely on combined ESR/OSL sediment series."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.jhevol.2022.103279",
+                "https://doi.org/10.1016/j.quascirev.2023.108379"
+              ]
+            },
+            {
+              "cells": [
+                "Saccopastore 1 & 2 (Aniene River, Rome, Italy)",
+                "~255–220 thousand years ago (Revised MIS 7 40Ar/39Ar fluvial terrace dating (Marra et al. 2015 QSR))",
+                "Two exceptionally preserved crania (1929 female Saccopastore 1, 1935 male Saccopastore 2) recovered in Roman gravel quarries; 2015 revision pushed them back from MIS 5e to ~250 ka MIS 7,…",
+                "Modern urban Rome now overlies the original Aniene gravel pit."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.quascirev.2015.10.027"
+              ]
+            },
+            {
+              "cells": [
+                "Payre (Rompon, Ardèche, France)",
+                "~250–125 thousand years ago (ESR, U-series & Hardy/Moncel (2011, 2020))",
+                "Collapsed limestone terrace shelter yielding human teeth and Payre 15 mandible alongside early Levallois/discoid cores with fish scales, avian bones, and starchy plants.",
+                "Early Middle Paleolithic transition specimens."
+              ],
+              "sources": [
+                "https://doi.org/10.1371/journal.pone.0023768"
+              ]
+            },
+            {
+              "cells": [
+                "Pontnewydd Cave (Denbighshire, North Wales)",
+                "c. 225 thousand years ago (MIS 7) (TL on burned flint, U-series on flowstone, and fauna bracketing volcanic tuff-pebble Levallois tools and taurodont teeth.)",
+                "Northernmost MIS 7 European Neanderthal site yielding ~19 taurodont dental & jaw specimens from at least five individuals who shaped volcanic-rock handaxes and Levallois points.",
+                "Debris-flow mudslides washed remains deep inside the karst gallery."
+              ],
+              "sources": [
+                "https://doi.org/10.1002/jqs.2811",
+                "https://doi.org/10.1016/j.quascirev.2023.108379"
+              ]
+            },
+            {
+              "cells": [
+                "La Cotte de St Brelade (Jersey, Channel Islands)",
+                "~240–48 thousand years ago (OSL, TL & Compton et al. (2021) JHE dental morphology)",
+                "Dramatic granite sea-ravine ambush site preserving mammoth/woolly-rhino stampede cliffs (~240–130 ka) and 13 permanent teeth (1910/1911) recently re-analyzed in 2021 as <48 ka late…",
+                "Pre-war 1910–11 trenching separated teeth slightly from later mammoth bonebed levels."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.jhevol.2020.102939"
+              ]
+            },
+            {
+              "cells": [
+                "La Niche at Montmaurin (Haute-Garonne, France)",
+                "~240–120 thousand years ago (U-series, biostratigraphy & Vialet et al. (2018) PLOS ONE)",
+                "Complete adult mandible (Montmaurin-La Niche, MIS 7 ~200–240 ka) with archaic-to-Neanderthal mosaic symphysis and incipient retromolar space bridging Middle Pleistocene lineages into…",
+                "Vertical chimney breccia lacked direct radiometric ash."
+              ],
+              "sources": [
+                "https://doi.org/10.1371/journal.pone.0189714"
+              ]
+            },
+            {
+              "cells": [
+                "Biache-Saint-Vaast (Pas-de-Calais, Northern France)",
+                "~230–180 thousand years ago (TL, ESR & Martín-Francés et al. (2022))",
+                "Two partial skulls (BSV 1 young female, BSV 2 older individual) excavated cleanly from alluvial silt with Levallois points showing unmistakable Neanderthal occipital bunning and inner-ear…",
+                "Partial crania without mandibles."
+              ],
+              "sources": [
+                "https://doi.org/10.1007/s12520-022-01680-6"
+              ]
+            },
+            {
+              "cells": [
+                "Ehringsdorf & Taubach (Weimar, Thuringia, Germany)",
+                "~230–120 thousand years ago (U-series Lower Travertine ~230 ka (Blackwell & Schwarcz 1986) / MIS 5e Taubach)",
+                "Adult parietal/mandibles/crania from Ehringsdorf (~230 ka MIS 7 interglacial travertine) showing mixed archaic/derived Neanderthal anatomy plus cut/burnt trauma, paired with MIS 5e ~125 ka…",
+                "Commercial travertine quarrying disturbed exact micro-provenance between lower and upper travertines."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/0033-5894(86)90058-X"
+              ]
+            },
+            {
+              "cells": [
+                "Tourville-la-Rivière (Seine-Maritime, Normandy, France)",
+                "~220–185 thousand years ago (ESR & U-series fluvial terrace dating (~226–183 ka, Faivre et al. 2014))",
+                "Left humerus, ulna, and radius of a young adult (~200 ka MIS 7) beside butchered horse/aurochs carcasses in Seine meander gravels, bearing healed repetitive spear-throwing microtrauma.",
+                "Isolated left forelimb without cranium."
+              ],
+              "sources": [
+                "https://doi.org/10.1371/journal.pone.0104111"
+              ]
+            },
+            {
+              "cells": [
+                "Apidima Cave (Mani Peninsula, Greece)",
+                "c. 210,000–160,000 years ago (Uranium-series dating and virtual 3D morphometric reconstruction of breccia-embedded Apidima 1 (~210 ka) and Apidima 2 (~170 ka) posterior crania.)",
+                "Raises the landmark hypothesis that an early out-of-Africa Homo sapiens dispersal reached southern Greece by ~210,000 years ago before subsequent replacement by late Middle Pleistocene…",
+                "No stone tools accompany the sea-cliff breccia pocket, and some specialists caution that post-mortem distortion in Apidima 1 merits conservative species interpretation."
+              ],
+              "sources": [
+                "https://doi.org/10.1038/s41586-019-1376-z"
+              ]
+            },
+            {
+              "cells": [
+                "Reilingen (Upper Rhine Valley, Baden-Württemberg, Germany)",
+                "~200–130 thousand years ago (Rhine alluvial terrace morphology (Buzi et al. 2021))",
+                "Adult occipital, parietals, and right temporal recovered along Upper Rhine gravels displaying classic Neanderthal suprainiac fossa and incipient lambdoid flattening.",
+                "Dredged terrace deposit."
+              ],
+              "sources": [
+                "https://doi.org/10.3390/sym13091611"
+              ]
+            },
+            {
+              "cells": [
+                "Sakajia, Djruchula, Bronze & Bondi Caves (Georgia) & Azokh (Armenia/Caucasus)",
+                "~200–40 thousand years ago (TL, ESR & Pleurdeau/Tushabramishvili (2012 JHE))",
+                "Dense Georgian Southern Caucasus cluster: Sakajia maxilla/teeth, Djruchula early elongated-blade Mousterian molar (~140–200 ka), Bronze Cave child tooth, Bondi Cave tooth/obsidian, and Lesser…",
+                "Small dental collections spanning broad Middle-to-Upper Pleistocene phases."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.jhevol.2011.11.001",
+                "https://doi.org/10.1016/j.jhevol.2020.102908"
+              ]
+            },
+            {
+              "cells": [
+                "Bau de l'Aubesier (Vaucluse, Provence, France)",
+                "~190–100 thousand years ago (TL burnt-flint dating (~190–140 ka) & Lebel/Trinkaus (2001 PNAS))",
+                "Twelve human teeth and the famous Aubesier 11 adult mandible preserving extreme antemortem tooth loss and alveolar resorption proving compassionate caregiving for disabled elders nearly 200…",
+                "Mandibular fragments derived from complex Mont Ventoux rockfall deposits."
+              ],
+              "sources": [
+                "https://doi.org/10.1073/pnas.181353998"
+              ]
+            },
+            {
+              "cells": [
+                "Grotte du Lazaret (Nice, Maritime Alps, France)",
+                "~190–130 thousand years ago (ESR/U-series & marine-terrace stratigraphy)",
+                "Over 25 late MIS 6 early Neanderthal cranial fragments, parietals, and teeth found within organized seaweed-bedding habitation floors facing glacial Mediterranean shores.",
+                "Pre-Eemian early Neanderthal features complement Suard and Ehringsdorf."
+              ],
+              "sources": [
+                "https://doi.org/10.1073/pnas.2520565123"
+              ]
+            },
+            {
+              "cells": [
+                "La Chaise-de-Vouthon (Suard & Bourgeois-Delaunay, Charente, France)",
+                "~185–110 thousand years ago (U-series speleothems (MIS 6 Abri Suard / MIS 5e Bourgeois-Delaunay) & Zanolli 2020)",
+                "Dual adjoining caves preserving 50+ pre-Würm early Neanderthal remains: Suard (MIS 6 ~185–128 ka parietal/teeth) and Bourgeois-Delaunay (MIS 5e ~128–110 ka BD 1 mandible, cranial vault, femur).",
+                "Early vs classic Neanderthal mosaic anatomy tracks MIS 6 to MIS 5e transitions."
+              ],
+              "sources": [
+                "https://doi.org/10.4000/paleo.5919",
+                "https://doi.org/10.1016/j.crpv.2012.07.001"
+              ]
+            },
+            {
+              "cells": [
+                "Altamura Man / Grotta di Lamalunga (Apulia, Italy)",
+                "~172–130 thousand years ago (U-Th calcite coralloid dating & Profico et al. (2023 Commun. Biol.))",
+                "The most complete early Neanderthal skeleton known globally, still fused by sparkling calcite 'cave popcorn' deep in an underground karst shaft at Altamura; 2015 extraction yielded oldest…",
+                "Encrusted in situ under protected UNESCO-style karst rules; only small scapula fragment physically sampled."
+              ],
+              "sources": [
+                "https://doi.org/10.1038/s42003-023-04644-1"
+              ]
+            },
+            {
+              "cells": [
+                "Ochtendung & Sarstedt / Warendorf (Germany)",
+                "~160–45 thousand years ago (Eifel volcano caldera & NW German gravel pit cranial finds)",
+                "Crater-basin skullcap at Ochtendung (East Eifel) alongside Sarstedt and Warendorf cranial vaults anchoring western German plains between Feldhofer and Bavaria.",
+                "Quarry/gravel-pit recovery contexts."
+              ],
+              "sources": [
+                "https://doi.org/10.3390/sym13091611",
+                "https://doi.org/10.1016/j.quascirev.2014.08.011"
+              ]
+            },
+            {
+              "cells": [
+                "Combe-Grenal (Domme, Dordogne, France)",
+                "~150–45 thousand years ago (TL, ESR & François Bordes master sequence (Levels 1–65))",
+                "Over 65 stratified Mousterian horizons preserving classic Neanderthal teeth, mandibular fragments, and cutmarked bone documenting climate-driven shifts between Quina, Ferrassie, and…",
+                "Sparse hominin bone count relative to vast lithic/faunal recovery."
+              ],
+              "sources": [
+                "https://doi.org/10.1038/nature13621",
+                "https://doi.org/10.1016/j.quascirev.2014.08.011"
+              ]
+            },
+            {
+              "cells": [
+                "Fontéchevade (Montbron, Charente, France)",
+                "~150–40 thousand years ago (Chase et al. (2009) ESR/OSL & radiocarbon revision)",
+                "Historically misinterpreted in 1947 as evidence of an ancient 'pre-sapiens' vault without browridges (Fontéchevade II); modern micro-CT/redating confirmed classic Neanderthal affinities…",
+                "Mixed cave-roof breccias complicated 1947 age assignment."
+              ],
+              "sources": [
+                "https://doi.org/10.1073/pnas.2520565123",
+                "https://doi.org/10.1016/j.quascirev.2014.08.011"
+              ]
+            },
+            {
+              "cells": [
+                "Krapina (Hušnjakovo Rock Shelter, Croatia)",
+                "c. 135,000–120,000 years ago (MIS 5e) (ESR and U-series dating of sandstone shelter deposits yielding >800 remains of dozens of Neanderthals and polished/cutmarks on white-tailed eagle talons.)",
+                "Forms Europe’s largest single-site Neanderthal skeletal sample (~130 ka), exhibiting healing injuries, stone-tool cutmarks and curated white-tailed sea eagle talons interpreted as personal…",
+                "1899–1905 Gorjanović-Kramberger stratigraphic records predate modern micro-taphonomic provenance mapping."
+              ],
+              "sources": [
+                "https://doi.org/10.1038/nature26151",
+                "https://humanorigins.si.edu/evidence/human-fossils/species/homo-neanderthalensis"
+              ]
+            },
+            {
+              "cells": [
+                "Baume Moula-Guercy (Soyons, Ardèche, France)",
+                "~130–105 thousand years ago (TL, paleosol MIS 5e & Richards et al. (2021–2024) cranial/mandibular studies)",
+                "Minimum 6 individuals (>120 bones of adults, adolescents, children) defleshed, disarticulated, and marrow-cracked in Layer XV during Last Interglacial temperate woodland maxima.",
+                "Endocannibalism vs dietary stress during rapid woodland biome change remains debated."
+              ],
+              "sources": [
+                "https://doi.org/10.1002/ajpa.24256"
+              ]
+            },
+            {
+              "cells": [
+                "Denisova Cave East Chamber (Altai, Siberia)",
+                "~130–90 thousand years ago (OSL, U-Th & Prüfer/Massilani (2014–2026) high-coverage nuclear genome)",
+                "Adult female pedal phalanx (Denisova 5, East Chamber Layer 11.4, ~120 ka) delivering the foundational high-coverage 'Altai Neanderthal' nuclear genome revealing high inbreeding (half-sibling…",
+                "Co-occupied the same cave system intermittently with Denisovans across ~200 kyr."
+              ],
+              "sources": [
+                "https://doi.org/10.1073/pnas.1918047117",
+                "https://doi.org/10.1073/pnas.2534576123"
+              ]
+            },
+            {
+              "cells": [
+                "Hohlenstein-Stadel (Lone Valley, Swabian Jura, Germany)",
+                "~130–115 thousand years ago (Posth et al. (2017 Nature Comm.) molecular clock & Peyrégne (2019))",
+                "Isolated 124 ka right femoral shaft ('HST') carrying an extraordinarily divergent mitochondrial haplotype splitting ~270 ka from other Neanderthals—implying an early African gene flow into…",
+                "Only a carnivore-gnawed femur shaft preserved in basal Mousterian layer."
+              ],
+              "sources": [
+                "https://doi.org/10.1038/ncomms16046",
+                "https://doi.org/10.1126/sciadv.aaw5873"
+              ]
+            },
+            {
+              "cells": [
+                "Lezetxiki Cave (Arrasate, Gipuzkoa, Spain)",
+                "~130–45 thousand years ago (U-series, ESR & 2023 AJPA micro-CT dental reassessment (López-Onaindia))",
+                "Adult female humerus (1964) and molar/premolar teeth along the Atlantic Cantabrian corridor showing strong classic Neanderthal internal enamel morphology.",
+                "Complex breccia stratigraphy separated humerus (~MIS 6/5) from upper Mousterian teeth."
+              ],
+              "sources": [
+                "https://doi.org/10.1002/ajpa.24694",
+                "https://doi.org/10.1073/pnas.1521269113"
+              ]
+            },
+            {
+              "cells": [
+                "Scladina Cave (Sclayn, Andenne, Belgium)",
+                "~130–120 thousand years ago (Gamma spectrometry, TL & Peyrégne et al. (2019 Sci. Adv.) nuclear genome)",
+                "Right mandible, maxilla, and 16 teeth of an 8-year-old child (~127 ka Unit 4A) providing the oldest Belgian nuclear genome, linking early Western European Neanderthals to later 40 ka…",
+                "Disarticulated juvenile jaw fragments in flowstone/alluvial clay."
+              ],
+              "sources": [
+                "https://doi.org/10.1126/sciadv.aaw5873",
+                "https://doi.org/10.1073/pnas.2022466118"
+              ]
+            },
+            {
+              "cells": [
+                "Barakaevskaya & Matuzka / Monasheskaya Caves (North Caucasus, Russia)",
+                "~120–45 thousand years ago (Doronicheva et al. (2023 PLOS ONE) & Liubin Caucasus excavations)",
+                "Child mandible (Barakaevskaya), isolated molars (Monasheskaya, Matuzka) spanning Kuban highland Micoquian & Zagros-like facies across the northern slope of the Greater Caucasus.",
+                "Fragmentary isolated child mandibles/teeth."
+              ],
+              "sources": [
+                "https://doi.org/10.1371/journal.pone.0284093",
+                "https://doi.org/10.1086/515805"
+              ]
+            },
+            {
+              "cells": [
+                "Ciemna Cave (Ojców National Park, Poland)",
+                "~120–100 thousand years ago (OSL & Willman et al. (2019 J. Paleol. Archaeol.))",
+                "Neanderthal deciduous molar and two child manual phalanges bearing acid digestion pitting (probably passed through a giant bird's digestive tract—one of Europe's rarest taphonomic findings!).",
+                "Isolated pediatric elements in MIS 5c–5a loessy sediments."
+              ],
+              "sources": [
+                "https://doi.org/10.1007/s41982-019-00026-4",
+                "https://doi.org/10.1016/j.cub.2026.03.069"
+              ]
+            },
+            {
+              "cells": [
+                "Gánovce (Poprad) & Šaľa (Slovakia)",
+                "~120–70 thousand years ago (U-series MIS 5e travertine & Eisová et al. (2019) paleoneurology)",
+                "Natural calcite mineral endocast preserving cortical convolutions inside MIS 5e–5d travertine at Gánovce (~105 ka) plus Šaľa 1 & 2 frontals/parietal dredged from Váh River gravels in western…",
+                "Travertine cast preserves external brain/meningeal anatomy without intact cranial bone table."
+              ],
+              "sources": [
+                "https://doi.org/10.4436/JASS.97005"
+              ]
+            },
+            {
+              "cells": [
+                "Karain Cave E (Antalya, SW Turkey)",
+                "~120–60 thousand years ago (ESR, U-series & Mediterranean Anatolia excavations)",
+                "Multi-chamber Taurus foothills karst site preserving Neanderthal teeth and postcranial shafts inside thick Zagros/Levantine-style Mousterian travertines bridging the Levant and Balkans.",
+                "Older early excavations partially mixed transitional upper boundaries."
+              ],
+              "sources": [
+                "https://doi.org/10.1371/journal.pone.0281978",
+                "https://doi.org/10.1016/j.jhevol.2003.09.004"
+              ]
+            },
+            {
+              "cells": [
+                "Stajnia Cave (Kraków-Częstochowa Upland, Poland)",
+                "~120–45 thousand years ago (U-series, aDNA molecular clock & Picin et al. (2020 Sci. Rep.; 2026 Curr. Biol.))",
+                "Three Neanderthal molars including S5000 (~116–82 ka) yielding the oldest central/eastern European Neanderthal mtDNA genome and showing multi-individual maternal turnover linking Poland with…",
+                "Isolated teeth excavated with Micoquian bifacial knives in periglacial cave silt."
+              ],
+              "sources": [
+                "https://doi.org/10.1038/s41598-020-71504-x",
+                "https://doi.org/10.1016/j.cub.2026.03.069"
+              ]
+            },
+            {
+              "cells": [
+                "Gruta da Figueira Brava (Setúbal, Portugal)",
+                "c. 106–86 thousand years ago (MIS 5c–5b) (U-series and OSL dating on coastal karst cave chambers rich in charred brown-crab claws, pine nuts, and limpets.)",
+                "Conclusive Atlantic coastal evidence proving Last Interglacial Neanderthals systematically harvested roasted brown crabs, mussels, limpets, seals, seabirds, and roasted stone-pine…",
+                "Post-glacial sea-level rise flooded lower outer coastal caves across the same Arrábida cliff."
+              ],
+              "sources": [
+                "https://doi.org/10.3389/fearc.2023.1097815",
+                "https://doi.org/10.3389/fearc.2025.1564495"
+              ]
+            },
+            {
+              "cells": [
+                "Gorham’s & Vanguard Caves (Gibraltar)",
+                "c. 100,000–30,000 years ago (OSL/radiocarbon chronologies of Mousterian coastal middens (monk seal, dolphin, Limpet shells), raptor-feather cutmarks and bedrock geometric hatchings.)",
+                "Sea-level coastal caves at the Strait of Gibraltar show Neanderthals harvesting coastal marine resources, capturing corvid/raptor wing feathers, distilling birch/rockrose tar in small hearths…",
+                "Late persistence debates (<32 ka) remain sensitive to subtle radiocarbon contamination filtering."
+              ],
+              "sources": [
+                "https://doi.org/10.1038/s41559-023-01987-0",
+                "https://whc.unesco.org/en/list/1500/"
+              ]
+            },
+            {
+              "cells": [
+                "Gruta da Oliveira (Almonda Karst, Portugal)",
+                "~100–45 thousand years ago (U-series, TL, OSL & radiocarbon stratigraphy)",
+                "Phalanges, metacarpals, cranial fragments, and teeth (Oliveira 1–10) from structured hearths in Zilhão's Almonda karst sequence near Torres Novas.",
+                "Fragmentary postcranial/dental elements span Mousterian Layers 8–22."
+              ],
+              "sources": [
+                "https://doi.org/10.1002/ajpa.20669",
+                "https://doi.org/10.1002/ajpa.22091",
+                "https://doi.org/10.1016/j.quascirev.2021.107098"
+              ]
+            },
+            {
+              "cells": [
+                "Kalamakia & Lakonis Caves (Mani Peninsula, Greece)",
+                "~100–40 thousand years ago (ESR, U-series, OSL & Panagopoulou (2002) / Harvati (2013))",
+                "Fourteen Neanderthal teeth and cranial fragments from Kalamakia (~100–40 ka) plus a strontium-isotope mobile ~44–40 ka Neanderthal molar from Lakonis I, proving southern Greece served as a…",
+                "Submerged lower coastal karst shelves conceal additional Pleistocene shore camps."
+              ],
+              "sources": [
+                "https://doi.org/10.1179/jfa.2004.29.3-4.323",
+                "https://doi.org/10.1007/s10963-023-09179-1"
+              ]
+            },
+            {
+              "cells": [
+                "Pinilla del Valle / Calvero de la Higuera (Madrid, Spain)",
+                "~95–42 thousand years ago (TL, OSL & U-series across Camino, Buena Pinta & Navalmaíllo caves)",
+                "Neanderthal molars (Camino & Buena Pinta caves) plus Des-Cubierta child burial-linked symbolic horned skulls accumulation in Guadarrama highlands.",
+                "Carnivore modification mixed some hyena-den assemblages at Camino."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.palaeo.2013.01.025",
+                "https://doi.org/10.1016/j.quascirev.2021.106795"
+              ]
+            },
+            {
+              "cells": [
+                "Denisova 11",
+                "About 90 ka; molecular estimate (Approximate genetic age used in the 2018 study; direct radiocarbon established only older than 50 ka. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.)",
+                "A female’s nuclear genome identifies a Neanderthal mother and Denisovan father.",
+                "The rounded molecular age is model dependent; a fossil location does not establish where her parents met or whether she had descendants. Coordinates mark an approximate public locality, not a surveyed fossil position."
+              ],
+              "sources": [
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC6130845/"
+              ]
+            },
+            {
+              "cells": [
+                "Obi-Rakhmat Grotto (Paltau Valley, Tashkent, Uzbekistan)",
+                "~90–60 thousand years ago (U-series, ESR & Glantz et al. (2008 JHE) / Krivoshapkin (2010))",
+                "Over 150 cranial fragments and six maxillary teeth (OR-1, ~9–12-year-old child) pairing classic Neanderthal huge dentition with atypically thin, high/globular parietal vaults along the Tian…",
+                "No nuclear DNA extracted yet from OR-1 to distinguish archaic drift from introgression."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.jhevol.2007.12.007",
+                "https://doi.org/10.1017/s0033822200045586"
+              ]
+            },
+            {
+              "cells": [
+                "Archi (Calabria) & Grotta di Santa Croce (Bisceglie, Apulia, Italy)",
+                "~80–40 thousand years ago (Histology & southern Italian Neanderthal catalogue (Sci. Rep. 2021))",
+                "Archi 1 child mandible (~45 ka near Strait of Messina) and Santa Croce adult femur (Apulia) documenting Neanderthals at the southernmost toe of mainland Italy.",
+                "Dispersed southern coastal caves."
+              ],
+              "sources": [
+                "https://doi.org/10.1038/s41598-020-80148-w"
+              ]
+            },
+            {
+              "cells": [
+                "Cueva de Valdegoba (Huérmeces, Burgos, Spain)",
+                "~80–60 thousand years ago (ESR & biochronological chamois-hunting assemblage)",
+                "Juvenile/adult Neanderthal maxilla fragment (VB 1) and postcrania in specialized northern Meseta alpine canyon hunting station.",
+                "Limited radiometric collagen preserved in deeper layers."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.quascirev.2021.106795",
+                "https://doi.org/10.4436/jass.10021"
+              ]
+            },
+            {
+              "cells": [
+                "Cueva de la Carihuela (Piñar, Granada, Spain)",
+                "~80–42 thousand years ago (TL, pollen & radiocarbon stratigraphy across Units VIII–V)",
+                "High-elevation Granada cave preserving juvenile frontal, adult parietals, and teeth across deep Mousterian sequences.",
+                "Historical multi-phase excavations cause ongoing revision of uppermost Unit IV transition dates."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.quascirev.2021.107098"
+              ]
+            },
+            {
+              "cells": [
+                "Forbes' Quarry (Gibraltar)",
+                "~80–45 thousand years ago (Morphology, breccia context & Bokelmann et al. (2019) endogenous aDNA)",
+                "Discovered in 1848 eight years before Feldhofer (recognized later), Gibraltar 1 is the first adult Neanderthal skull ever found; 2019 PNAS genome sequencing confirmed maternal female identity…",
+                "Uncertain exact 19th-century breccia horizon without direct radiocarbon collagen."
+              ],
+              "sources": [
+                "https://doi.org/10.1073/pnas.1903994116",
+                "https://humanorigins.si.edu/evidence/human-fossils/species/homo-neanderthalensis"
+              ]
+            },
+            {
+              "cells": [
+                "Gruta Nova da Columbeira (Bombarral, Portugal)",
+                "~80–40 thousand years ago (ESR & U-series of Mousterian breccias)",
+                "Human molar and Mousterian levels from the Portuguese Estremadura karst near the Atlantic coast.",
+                "Early excavation stratigraphy; radiocarbon limits historically debated."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.quascirev.2021.107098"
+              ]
+            },
+            {
+              "cells": [
+                "Rozhok I (Azov Coast) & Sukhaya Mechetka (Volga, Russia)",
+                "~80–45 thousand years ago (Eemian/Early Valdai terrace & Volga loess stratigraphy)",
+                "Northern Black Sea / Azov permanent molar (Rozhok I, Micoquian Level IV) and nearby Volga open-air mammoth/bison camp Sukhaya Mechetka anchoring the Russian Plain corridor east toward…",
+                "Sukhaya Mechetka preserves hearths & Micoquian bifaces rather than intact bones; Rozhok contributes direct dental fossil evidence."
+              ],
+              "sources": [
+                "https://doi.org/10.1073/pnas.2518974122",
+                "https://doi.org/10.1073/pnas.1918047117"
+              ]
+            },
+            {
+              "cells": [
+                "Grotta Guattari & Monte Circeo (Latium, Italy)",
+                "c. 75–50 thousand years ago (ESR, U-series, and landslide-sealing geomorphology yielding 10+ Neanderthal individuals across Pontinian Mousterian.)",
+                "Celebrated landslide-sealed coastal cave where the Guattari 1 cranium and 2021 newly excavated Neanderthal remains reveal hyena-den scavenging beside Pontinian flint-pebble coastal industries.",
+                "Early 1939 theories of 'ritual skull cannibalism' were overturned in favor of hyena den accumulation."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.jhevol.2022.103279",
+                "https://doi.org/10.1016/j.quascirev.2023.108379"
+              ]
+            },
+            {
+              "cells": [
+                "Grotta dei Santi (Monte Argentario, Tuscany) & Caverna delle Fate (Liguria, Italy)",
+                "~75–42 thousand years ago (Italian Tyrrhenian Mousterian dental & juvenile mandible records)",
+                "Coastal Tuscan/Ligurian caves yielding Caverna delle Fate juvenile/adult jaws and teeth (~75–60 ka) plus Monte Argentario Mousterian foraging levels along exposed glacial Tyrrhenian shelves.",
+                "Regional cave-by-cave dental records."
+              ],
+              "sources": [
+                "https://doi.org/10.1038/s41598-020-80148-w"
+              ]
+            },
+            {
+              "cells": [
+                "Regourdou (Montignac-sur-Vézère, Dordogne, France)",
+                "~75–65 thousand years ago (MIS 4/5a biostratigraphy & Pablos/Gómez-Olivencia (2013–2019))",
+                "Partial adult skeleton (Regourdou 1 mandible, arms, axial spine, feet) intentionally placed beneath a limestone slab cairn next to a stone-lined chamber holding brown bear bones—adjacent to…",
+                "Whether bear pit and Neanderthal burial were strictly ritual-linked remains debated."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.jhevol.2018.11.003"
+              ]
+            },
+            {
+              "cells": [
+                "Shanidar Cave (Bradost Mountain, Iraqi Kurdistan)",
+                "~75–45 thousand years ago (OSL, 14C & Pomeroy et al. (2020 Antiquity; 2025) renewed excavations)",
+                "Ten classic skeletons (1953–60 Ralph Solecki: 'Nandy' Shanidar 1 blind/amputee elder cared for years, Shanidar 3 rib spear wound, Shanidar 4 'flower burial' cluster) joined by 2018–2025…",
+                "Renewed sedimentology tests insect/burrowing vs intentional wildflower placement for Shanidar 4 pollen."
+              ],
+              "sources": [
+                "https://doi.org/10.15184/aqy.2019.207",
+                "https://doi.org/10.4000/13pt3"
+              ]
+            },
+            {
+              "cells": [
+                "Abric Romaní (Capellades, Catalonia, Spain)",
+                "c. 70–40 thousand years ago (Continuous U-series/14C calibrated travertine-tufa sequence preserving rare pseudomorph casts of wooden spears, trays & hearths.)",
+                "Tufa-sealed shelter preserving spatial hearths, pine-wood pseudomorph tools, a worked bone spear point, sleeping-bed zones, and rapid mobile logistic hunting camps across MIS 4–3.",
+                "Organic wood survived solely as mineral-replaced calcite pseudomorph negatives rather than cellular timber."
+              ],
+              "sources": [
+                "https://doi.org/10.1038/s41598-024-67817-w",
+                "https://doi.org/10.1126/sciadv.aeh2287"
+              ]
+            },
+            {
+              "cells": [
+                "'Ein Qashish (Qishon Valley, Galilee, Israel)",
+                "~70–60 thousand years ago (OSL fluvial dating (Been et al. 2017 Sci. Rep.; Ekshtain 2019 PLOS ONE))",
+                "Lower limb bones (EQH2 femur/tibia/patella) and adult molar (EQH1) discovered in open-air floodplain mudstones (~70–60 ka), dismantling the myth that Levantine Neanderthals only used caves.",
+                "Fluvial floodplain exposure preserves postcrania without cranium."
+              ],
+              "sources": [
+                "https://doi.org/10.1038/s41598-017-03025-z",
+                "https://doi.org/10.1371/journal.pone.0215668"
+              ]
+            },
+            {
+              "cells": [
+                "Bisitun Cave (Kermanshah, Western Iran)",
+                "~70–45 thousand years ago (Trinkaus & Biglari (2006 Paléorient))",
+                "Cranial incisor and proximal right radius shaft (Carleton Coon 1949), re-established in 2006 as the first morphologically confirmed Neanderthal skeletal remains inside Iran along the High…",
+                "1949 trench excavation lacks fine modern radiometric age control."
+              ],
+              "sources": [
+                "https://doi.org/10.3406/paleo.2006.5192",
+                "https://doi.org/10.1371/journal.pone.0281978"
+              ]
+            },
+            {
+              "cells": [
+                "Dederiyeh Cave (Afrin Valley, NW Syria)",
+                "~70–50 thousand years ago (ESR & Levantine Mousterian stratigraphy (Akazawa et al. 1993))",
+                "Two remarkably complete (~2-year-old) infant Neanderthal skeletons excavated in deliberate burial pits (Dederiyeh 1 extended on its back with a limestone slab beneath its head and a flint…",
+                "Northern Levantine karst bridge between Israel/Lebanon and Caucasus/Zagros."
+              ],
+              "sources": [
+                "https://doi.org/10.1537/ase.101.361"
+              ]
+            },
+            {
+              "cells": [
+                "El Castillo Cave Level 18/20 (Puente Viesgo, Spain)",
+                "~70–45 thousand years ago (ESR, U-series & Garralda et al. (2023) morphometrics)",
+                "Beneath Aurignacian and famous red-disk art walls, basal Mousterian layers at El Castillo yielded three Neanderthal juvenile/adult fossils examined by Garralda et al. (2023).",
+                "1910s Obermaier excavation recovery without modern spatial coordinates."
+              ],
+              "sources": [
+                "https://doi.org/10.4436/jass.10021"
+              ]
+            },
+            {
+              "cells": [
+                "Mezmaiskaya Cave (Krasnodar, North Caucasus, Russia)",
+                "~70–42 thousand years ago (ESR, Pinhasi et al. (2011 PNAS) & Andreeva et al. (2022 Sci. Rep.))",
+                "Exquisitely preserved Layer 3 neonate burial (~70–60 ka Mezmaiskaya 1) and Layer 2 infant (~45–43 ka Mezmaiskaya 2), yielding foundational Caucasus nuclear/mtDNA genomes linking North…",
+                "Early ~29 ka claim refuted by 2011 ultrafiltered 14C (~40–43 ka extinction)."
+              ],
+              "sources": [
+                "https://doi.org/10.1086/515805",
+                "https://doi.org/10.1073/pnas.1018938108",
+                "https://doi.org/10.1038/s41598-022-16164-9"
+              ]
+            },
+            {
+              "cells": [
+                "Roc de Marsal (Campagne-du-Bugue, Dordogne, France)",
+                "~70–50 thousand years ago (TL & OSL (~65–50 ka) & Sandgathe et al. (2011) reassessment)",
+                "Exceptionally complete 2–4-year-old Neanderthal child skeleton discovered in 1961 within an asymmetric karst depression; 2011 reassessment questioned deliberate grave-digging vs natural pit…",
+                "Highlights thin line between intentional pit interment and rapid sediment covering."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.jhevol.2011.04.003"
+              ]
+            },
+            {
+              "cells": [
+                "Shukbah Cave (Wadi en-Natuf, West Bank/Palestine)",
+                "~70–48 thousand years ago (Dorothy Garrod 1928 find & Blinkhorn/Zanolli (2021 Sci. Rep.))",
+                "Micro-CT restudy by Blinkhorn & Zanolli (2021) verified Garrod's large Shukbah D molar (~7–12 yr child) as diagnostic Neanderthal paired with 'Nubian Levallois' stone points—extending…",
+                "1928 breccia pit context lacks direct modern radiometric sample."
+              ],
+              "sources": [
+                "https://doi.org/10.1038/s41598-021-82257-6"
+              ]
+            },
+            {
+              "cells": [
+                "Teshik-Tash Grotto (Baisun Range, Uzbekistan)",
+                "~70–50 thousand years ago (Krause et al. (2007 Nature) mtDNA & Central Asian Mousterian context)",
+                "Excavated in 1938: ~9-year-old child cranium and skeleton buried amid five ringed pairs of Siberian mountain-goat (ibex) horns; 2007 mtDNA confirmed Teshik-Tash belongs closely to European…",
+                "Modern direct collagen date remains elusive; ring of horns debated between ritual burial and cave-wall taphonomy."
+              ],
+              "sources": [
+                "https://doi.org/10.1038/nature06193",
+                "https://doi.org/10.1371/journal.pone.0281978"
+              ]
+            },
+            {
+              "cells": [
+                "Wezmeh Cave (Islamabad-e Gharb, Kermanshah, Iran)",
+                "~70–40 thousand years ago (Micro-CT enamel morphometrics & U-series (Zanolli et al. 2019 JHE))",
+                "Unerupted maxillary right fourth premolar (Wezmeh 1) definitively verified by 3D enamel-dentine junction imaging (2019) as a 6–10-year-old Zagros Neanderthal child—earlier misattributed to H.…",
+                "Hyena-accumulated carnivore den context."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.jhevol.2019.102643"
+              ]
+            },
+            {
+              "cells": [
+                "Zeeland Ridges / North Sea ('Krijn', Doggerland, Netherlands)",
+                "~70–45 thousand years ago (Morphology & stable nitrogen/carbon isotopes (Hublin et al. 2009 JHE))",
+                "Supraorbital frontal fragment of a young adult male nicknamed 'Krijn', dredged from the North Sea floor ~15 km off Zeeland—preserving a benign intradiploic epidermoid cyst above his right…",
+                "Dredged offshore Doggerland sediment without direct collagen 14C date."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.jhevol.2009.09.001"
+              ]
+            },
+            {
+              "cells": [
+                "Amud Cave (Wadi Amud, Galilee, Israel)",
+                "~68–53 thousand years ago (TL burnt-flint & ESR (Valladas et al. 1999 JAS))",
+                "Amud 1 adult male burial (~1.78 m tall with largest known hominin cranial capacity ~1,740 cc!) plus Amud 7 10-month-old infant burial accompanied by a red-deer maxilla grave offering.",
+                "Short, intense late Mousterian occupation dated cleanly ~55–68 ka."
+              ],
+              "sources": [
+                "https://doi.org/10.1006/jasc.1998.0334"
+              ]
+            },
+            {
+              "cells": [
+                "Banyoles Travertine Quarry (Girona, Spain)",
+                "~65–45 thousand years ago (ESR & U-series travertine block dating (Grün 2006 / Keeling 2023))",
+                "Virtually complete mandible recovered in 1887; 2023 JHE morphological reassessment shows unexpected lack of several derived Neanderthal chin/retromolar hallmarks despite U-series MIS 4–3 age.",
+                "Quarry find lacks stone-tool association and sparks mosaic/Sapiens-introgression debate."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.jhevol.2022.103291"
+              ]
+            },
+            {
+              "cells": [
+                "Chez-Pinaud Jonzac (Charente-Maritime, France)",
+                "~65–40 thousand years ago (TL, ESR & Rendu et al. (2023) Frontiers bioarchaeology)",
+                "Isolated Neanderthal teeth and postcrania embedded within monumental seasonal reindeer-slaughter bonebeds and Quina scraper workshops.",
+                "Sparse hominin fossils amid dense faunal accumulations."
+              ],
+              "sources": [
+                "https://doi.org/10.3389/fevo.2022.1085699"
+              ]
+            },
+            {
+              "cells": [
+                "Châteauneuf-sur-Charente & Petit-Puymoyen (Charente, France)",
+                "~65–45 thousand years ago (Classic Charente Mousterian child skull & mandible fossils)",
+                "Châteauneuf-sur-Charente (2-year-old Neanderthal child) and Petit-Puymoyen jaw/teeth bridging Quina and Fontéchevade along the Charente karst corridor.",
+                "Historical early 20th-century excavations."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.quascirev.2014.08.011",
+                "https://humanorigins.si.edu/evidence/human-fossils/species/homo-neanderthalensis"
+              ]
+            },
+            {
+              "cells": [
+                "Cova Simanya (Sant Llorenç del Munt, Catalonia, Spain)",
+                "~65–49 thousand years ago (Morales et al. (2023) Frontiers bioarchaeology & stratigraphy)",
+                "Fifty-four newly recognized Neanderthal skeletal and dental elements from at least three individuals (adult, adolescent, child) excavated in NE Iberia.",
+                "Historical 1978 excavation recovery limited direct bone collagen 14C preservation."
+              ],
+              "sources": [
+                "https://doi.org/10.3389/feart.2023.1230707"
+              ]
+            },
+            {
+              "cells": [
+                "Grotta del Cavallo (Nardò, Apulia, Italy)",
+                "~65–45 thousand years ago (14C & tephra Campanian Ignimbrite (Benazzi et al. 2011 Nature))",
+                "Lower Mousterian Layer F yielded true Neanderthal deciduous molars directly beneath Layer E Uluzzian teeth proven in 2011 to belong to >43 ka early Homo sapiens—anchoring Italy's replacement…",
+                "Earlier decades misattributed overlying Uluzzian teeth to Neanderthals until 2011 micro-CT."
+              ],
+              "sources": [
+                "https://doi.org/10.1038/nature10617"
+              ]
+            },
+            {
+              "cells": [
+                "Grotte de Cotencher & Saint-Brais (Jura Mountains, Switzerland)",
+                "~65–45 thousand years ago (Alpine karst Mousterian biostratigraphy & maxilla/incisor finds)",
+                "Highest confirmed Alpine cave Neanderthal maxilla (Cotencher, Neuchâtel) and St-Brais II incisor showing Neanderthal cold-season foraging across Jura passes.",
+                "Sparse isolated elements near glaciated Alpine ice margins."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.quascirev.2014.08.011"
+              ]
+            },
+            {
+              "cells": [
+                "Kiik-Koba Grotto (Crimea)",
+                "~65–40 thousand years ago (AMS 14C & Crimean Micoquian stratigraphy)",
+                "Discovered 1924: deeply dug burial pit holding the lower limbs, hands, and teeth of an adult male (Kiik-Koba 1, showing unusually massive muscular attachments and hyperostosis) alongside a…",
+                "Early excavation separated skull from postcrania before modern documentation."
+              ],
+              "sources": [
+                "https://doi.org/10.1073/pnas.2518974122",
+                "https://doi.org/10.1038/nature13621"
+              ]
+            },
+            {
+              "cells": [
+                "La Quina (Gardes-le-Pontaroux, Charente, France)",
+                "~65–43 thousand years ago (TL, ESR & Henri-Martin / Jelinek-Debénath excavations)",
+                "Classic Quina Mousterian type locality yielding H5 complete adult female skeleton/cranium, H18 remarkably intact 8-year-old child cranium, and bone retouchers.",
+                "1908–1920s collections span Quina and Denticulate levels across ~20 kyr."
+              ],
+              "sources": [
+                "https://doi.org/10.1038/nature13621",
+                "https://humanorigins.si.edu/evidence/human-fossils/species/homo-neanderthalensis"
+              ]
+            },
+            {
+              "cells": [
+                "Kebara Cave (Mount Carmel, Israel)",
+                "~64–48 thousand years ago (TL & ESR (Bar-Yosef, Vandermeersch et al. 1992 Curr. Anthropol.))",
+                "Iconic KMH2 adult male burial preserving complete ribcage, spine, pelvis, mandible, and the FIRST Neanderthal hyoid bone (matching modern speech-tract anatomy!), missing only the cranium…",
+                "Intentional skull retrieval vs post-burial disturbance discussed alongside KMH1 infant."
+              ],
+              "sources": [
+                "https://doi.org/10.1086/204112",
+                "https://doi.org/10.1016/j.jhevol.2003.09.004"
+              ]
+            },
+            {
+              "cells": [
+                "Les Pradelles (Marillac-le-Franc, Charente, France)",
+                "~62–50 thousand years ago (TL, OSL & Mussini et al. (2011) C. R. Palevol)",
+                "High-altitude/karst chimney Quina reindeer butchery factory containing >100 cut-marked and intentionally fractured Neanderthal bones & bone retouchers evidencing nutritional cannibalism.",
+                "Skeletal fragments commingled with heavily processed reindeer carcasses."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.crpv.2011.02.007"
+              ]
+            },
+            {
+              "cells": [
+                "Anghilak Cave (Kashkadarya, Zarafshan Range, Uzbekistan)",
+                "~60–40 thousand years ago (AMS 14C & Glantz et al. (2008 JHE / Antiquity))",
+                "Isolated large fifth metatarsal (AH-1) demonstrating robust Neanderthal-like forefoot mechanics in southern Uzbekistan between Teshik-Tash and Samarkand.",
+                "Single isolated foot bone inside multi-horizon cave."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.jhevol.2007.12.007"
+              ]
+            },
+            {
+              "cells": [
+                "Angles-sur-l'Anglin & Rochelot (Vienne/Charente, France)",
+                "~60–42 thousand years ago (Biochronology & late Mousterian stratigraphy)",
+                "Neanderthal teeth and cranial fragments from northern Aquitaine / Loire threshold corridors linking Dordogne and Paris Basin.",
+                "Small isolated samples in museum archives."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.quascirev.2014.08.011"
+              ]
+            },
+            {
+              "cells": [
+                "Cova del Gegant (Sitges, Barcelona, Spain)",
+                "~60–49 thousand years ago (U-series, OSL & Bayesian 14C age model (Daura et al. 2021))",
+                "Coastal Catalan sea cave preserving Gegant-1 mandible, humeri, and teeth bracketed between ~60 and ~49 ka along the Mediterranean coastal corridor.",
+                "Waves periodically flooded outer cave galleries during sea-level highstands."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.quascirev.2021.107141"
+              ]
+            },
+            {
+              "cells": [
+                "Cova del Salt & Cova Negra Hinterland / Alicante (Spain)",
+                "~60–44 thousand years ago (TL, OSL & micro-stratigraphic Mousterian dates)",
+                "El Salt (Alcoy) preserves six late Neanderthal adult teeth (Lezetxiki/Salt series) alongside lipid-preserved plant-rich Neanderthal coprolites and hearths.",
+                "Dental wear limits population size estimation to small family groups."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.quascirev.2021.107098",
+                "https://doi.org/10.1073/pnas.1521269113"
+              ]
+            },
+            {
+              "cells": [
+                "Devil's Tower Rockshelter (Gibraltar 2)",
+                "~60–42 thousand years ago (Garrod 1926 Mousterian travertine & 2019 PNAS genomic confirmation)",
+                "Five-year-old Neanderthal child cranium/mandible (Gibraltar 2) excavated by Dorothy Garrod alongside Mousterian hearths and marine shells, sequenced genetically alongside Forbes' Quarry in 2019.",
+                "Radiocarbon on travertine matrix carries broad uncertainty."
+              ],
+              "sources": [
+                "https://doi.org/10.1073/pnas.1903994116",
+                "https://doi.org/10.1016/j.quascirev.2021.107098"
+              ]
+            },
+            {
+              "cells": [
+                "Grotta Breuil & Grotta del Fossellone (Monte Circeo, Latium, Italy)",
+                "~60–42 thousand years ago (ESR & Late Pontinian Mousterian sequences (Rubini & Zaio 2026))",
+                "Neanderthal cranial parietal (Breuil 1) and child mandible/molars (Fossellone 3) supplementing neighboring Grotta Guattari along Italy's Pontinian coastline.",
+                "Tiny shell-pebble Pontinian Mousterian industries reflect raw-material constraints."
+              ],
+              "sources": [
+                "https://doi.org/10.3390/genes17020132"
+              ]
+            },
+            {
+              "cells": [
+                "Grotte du Portel-Ouest (Ariège), Crouzade (Aude) & Vergisson (France)",
+                "~60–40 thousand years ago (Mousterian teeth & maxillae across Pyrenean/Burgundian corridors)",
+                "Complementary late Mousterian Neanderthal teeth and child mandibles at Portel-Ouest, La Crouzade, and Vergisson showing dense regional continuity prior to ~40 ka.",
+                "Small dental collections spanning multi-site French regional inventories."
+              ],
+              "sources": [
+                "https://doi.org/10.1038/nature13621",
+                "https://doi.org/10.1016/j.quascirev.2014.08.011"
+              ]
+            },
+            {
+              "cells": [
+                "Karabi Tamchin & Kabazi II (Crimean Mountains)",
+                "~60–40 thousand years ago (Crimean highlands Mousterian sequence)",
+                "High-plateau (730 m) Crimean hunting station yielding isolated Neanderthal molars inside Micoquian reindeer/wild-ass seasonal camps.",
+                "Minimal skeletal material; complements Ak-Kaya and Bakhchisarai sites."
+              ],
+              "sources": [
+                "https://doi.org/10.1073/pnas.2518974122"
+              ]
+            },
+            {
+              "cells": [
+                "La Chapelle-aux-Saints (Corrèze, France)",
+                "~60–47 thousand years ago (ESR tooth dating & Rendu et al. (2014) PNAS taphonomic re-excavation)",
+                "Iconic 1908 virtually complete skeleton of an elderly arthritic, nearly toothless adult male Neanderthal ('Old Man') deliberately placed inside an excavated rectangular pit with unmodified…",
+                "Pathologies early skewed popular reconstructions toward an incorrect stooped stereotype; 2014 re-excavation vindicated intentional burial."
+              ],
+              "sources": [
+                "https://doi.org/10.1073/pnas.1316780110",
+                "https://humanorigins.si.edu/evidence/human-fossils/species/homo-neanderthalensis"
+              ]
+            },
+            {
+              "cells": [
+                "Riparo Mezzena & Riparo Tagliente (Verona, Italy)",
+                "~60–40 thousand years ago (Condemi/Caramelli (2013 PLOS ONE) & Longo (2012 Quat. Int.))",
+                "Mezzena adult mandible & cranial fragments (once debated for late interbreeding chin morphology, though recent collagen/14C shows complex chronology) alongside Tagliente Mousterian teeth and…",
+                "2013–2016 redating debates historical interbreeding interpretations on Mezzena jaw."
+              ],
+              "sources": [
+                "https://doi.org/10.1371/journal.pone.0059781",
+                "https://doi.org/10.1016/j.quaint.2012.01.011"
+              ]
+            },
+            {
+              "cells": [
+                "Salzgitter-Lebenstedt (Lower Saxony, Germany)",
+                "~60–48 thousand years ago (AMS 14C & Hublin et al. (2023 JQS) ZooMS/chronology)",
+                "Open-air Micoquian tundra ambush station yielding occipital/parietal skull fragments (1952), hundreds of barbed-point/bone tools, and mass reindeer slaughter near northern ice margins (~52°N).",
+                "Cold wetland slump mixed two late MIS 4–3 levels."
+              ],
+              "sources": [
+                "https://doi.org/10.1002/jqs.3499"
+              ]
+            },
+            {
+              "cells": [
+                "Zaskalnaya V & VI (Ak-Kaya Cliff, Belogorsk, Crimea)",
+                "~60–40 thousand years ago (AMS 14C & Majkić et al. (2017 PLOS ONE))",
+                "Six Micoquian burials/individuals across Zaskalnaya VI (incl. triple child pit & mandibles) beside a raven radius notched with seven purposefully equidistant geometric grooves (Majkić 2017).",
+                "Upper Layer II–III dates span the ~45–40 ka Crimean late refugium boundary."
+              ],
+              "sources": [
+                "https://doi.org/10.1371/journal.pone.0173435",
+                "https://doi.org/10.1073/pnas.2518974122"
+              ]
+            },
+            {
+              "cells": [
+                "Šipka Cave & Švédův stůl / Ochoz (Moravia, Czechia)",
+                "~60–42 thousand years ago (Late Middle Paleolithic Moravian bioarchaeology (Jöris 2022))",
+                "Šipka child mandible (1880—another critical 19th-century Neanderthal proof beside Spy!) and adult Ochoz / Švédův stůl mandible from Moravian river corridors linking Danube and Oder valleys.",
+                "Historic 1880/1905 excavations lost micro-stratigraphic radiocarbon context."
+              ],
+              "sources": [
+                "https://doi.org/10.1007/s41982-022-00126-8"
+              ]
+            },
+            {
+              "cells": [
+                "Chagyrskaya",
+                "Deposits about 59–49 ka (Published dating range for cave deposits associated with the Neanderthal assemblage. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.)",
+                "Fossils, DNA and distinctive tools support connections between this Altai population and western Eurasian Neanderthals.",
+                "Similarity supports a dispersal model but does not reconstruct every stop along a route. Coordinates mark an approximate public locality, not a surveyed fossil position."
+              ],
+              "sources": [
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC7022189/"
+              ]
+            },
+            {
+              "cells": [
+                "La Ferrassie (Savignac-de-Miremont, Dordogne, France)",
+                "~58–40 thousand years ago (OSL & ultrafiltration 14C (LF1–LF8 ~54–41 ka, Balzeau 2020; Gómez-Olivencia 2018))",
+                "Premier Neanderthal family cemetery: 8 individuals (two adults, six children/neonates, incl. LF1 complete adult male skeleton & LF8 child buried at ~41.7 ka) revealing sexual dimorphism,…",
+                "Early 1909–1921 trenching lacked fine sediment geochemistry until Balzeau's 2010–2020 re-excavations."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.jhevol.2017.12.004",
+                "https://doi.org/10.1038/s41598-020-77611-z"
+              ]
+            },
+            {
+              "cells": [
+                "Le Moustier Rockshelter (Peyzac-le-Moustier, France)",
+                "~56–40 thousand years ago (TL & OSL (~56 ka Lower Shelter / ~41 ka LM1))",
+                "Nameplate site of the Mousterian culture preserving Le Moustier 1 (adolescent male skeleton, 1908) and Le Moustier 2 (neonate skeleton rediscovered in museum boxes in 1996).",
+                "WWII bombing in Berlin severely damaged Le Moustier 1 cranium; postcrania remain preserved."
+              ],
+              "sources": [
+                "https://doi.org/10.1038/nature13621",
+                "https://humanorigins.si.edu/evidence/human-fossils/species/homo-neanderthalensis"
+              ]
+            },
+            {
+              "cells": [
+                "Axlor & Arrillor Caves (Basque Country, Spain)",
+                "~55–42 thousand years ago (Ultrafiltration 14C & micro-CT dental morphology)",
+                "Deciduous/permanent Neanderthal teeth associated with Quina and Levallois flake sequences bridging Cantabria and Aquitaine.",
+                "Isolated shed or juvenile teeth only."
+              ],
+              "sources": [
+                "https://doi.org/10.1002/ajpa.24694",
+                "https://doi.org/10.4436/jass.10021"
+              ]
+            },
+            {
+              "cells": [
+                "Boquete de Zafarraya (Alcaucín, Málaga, Spain)",
+                "~55–42 thousand years ago (Revised ultrafiltered 14C (Wood 2013) & U-series/ESR (Kehl 2013))",
+                "Classic adult mandible (Zafarraya 2) and femora showing strong Neanderthal traits and cutmarks; 2013 redating revised disputed ~32 ka claims back older than ~46 ka cal BP.",
+                "Early conventional 14C dates (<35 ka) turned out to reflect unremoved modern consolidant contamination."
+              ],
+              "sources": [
+                "https://doi.org/10.1073/pnas.1207656110",
+                "https://doi.org/10.1016/j.quageo.2012.11.006"
+              ]
+            },
+            {
+              "cells": [
+                "Geula Cave (Haifa, Mount Carmel, Israel)",
+                "~55–42 thousand years ago (Late Mousterian Carmel biochronology)",
+                "Ulnar/humeral/cranial fragments in final Carmel Mousterian layers beside Tabun and Kebara.",
+                "Minimal isolated bone fragments."
+              ],
+              "sources": [
+                "https://doi.org/10.1086/204112"
+              ]
+            },
+            {
+              "cells": [
+                "Grotta di Fumane (Lessini Mountains, Verona, Italy)",
+                "~55–42 thousand years ago (AMS 14C ultrafiltration & Richards/Peresani (2013, 2021))",
+                "Neanderthal deciduous teeth beneath earliest Uluzzian, famous for cut-marked Alpine vulture/eagle wing feathers, ochered marine shell, and strontium-isotope mobility across northern Italy.",
+                "Isolated shed deciduous teeth only."
+              ],
+              "sources": [
+                "https://doi.org/10.1371/journal.pone.0068572",
+                "https://doi.org/10.1371/journal.pone.0254848",
+                "https://doi.org/10.1038/nature13621"
+              ]
+            },
+            {
+              "cells": [
+                "Grotte de l'Hortus (Valflaunès, Hérault, France)",
+                "~55–40 thousand years ago (Würm II cold-phase fauna & Williams et al. (2019))",
+                "Remains of ~20–36 Neanderthals (adults and children) deposited alongside mountain-ibex hunting camps near Pic Saint-Loup.",
+                "Cold-steppe open karst stratigraphy; some researchers argue episodic cannibalism."
+              ],
+              "sources": [
+                "https://doi.org/10.26720/anthro.19.03.05.1"
+              ]
+            },
+            {
+              "cells": [
+                "Grottes de l'Hyène & du Bison at Arcy-sur-Cure (Yonne, France)",
+                "~55–42 thousand years ago (Leroi-Gourhan Mousterian & early Châtelperronian levels below Grotte du Renne)",
+                "Directly adjoining Grotte du Renne along the Cure River cliffs, Grotte de l'Hyène and Grotte du Bison yielded classic Mousterian Neanderthal mandibles and teeth preceding the final ~42 ka…",
+                "Legacy Cure-bank stratigraphy."
+              ],
+              "sources": [
+                "https://doi.org/10.1038/nature13621",
+                "https://doi.org/10.1016/j.quascirev.2014.08.011"
+              ]
+            },
+            {
+              "cells": [
+                "Gruta de Salemas (Loures, Lisbon, Portugal)",
+                "~55–40 thousand years ago (Stratified Mousterian lithic context)",
+                "Diagnostic deciduous/premolar dental evidence from coastal Lisbon karst caves documenting westernmost Eurasian Neanderthals.",
+                "Small single-site dental record from mid-20th-century excavations."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.quascirev.2021.107098"
+              ]
+            },
+            {
+              "cells": [
+                "Kůlna Cave (Moravian Karst, Sloup, Czechia)",
+                "~55–45 thousand years ago (ESR, 14C & Central European Micoquian sequence (Jöris & Neruda 2022))",
+                "Right maxilla with teeth (Kůlna 1), parietal, and teeth stratified inside rich Micoquian (Keilmesser) Layer 7a inside Moravia's monumental karst tunnel.",
+                "Direct aDNA recovery has remained limited compared to Polish/Croatian sites."
+              ],
+              "sources": [
+                "https://doi.org/10.1007/s41982-022-00126-8",
+                "https://doi.org/10.1038/nature13621"
+              ]
+            },
+            {
+              "cells": [
+                "Ohaba Ponor / Bordul Mare (Hunedoara, Romania)",
+                "~55–40 thousand years ago (Carpathian Mousterian stratigraphy (Dogandžić 2023))",
+                "Diagnostic manual/pedal phalanges from Carpathian Transylvania just north of Peștera cu Oase, anchoring Neanderthal presence inside Romania prior to Oase 1 admixture.",
+                "Small sample without direct collagen radiocarbon dating."
+              ],
+              "sources": [
+                "https://doi.org/10.1007/s10963-023-09179-1"
+              ]
+            },
+            {
+              "cells": [
+                "Ortvale Klde (Imereti, Western Georgia)",
+                "~55–42 thousand years ago (Cullen et al. (2021 JHE) tephra/AMS & Doronicheva 2023)",
+                "Adult/child Neanderthal teeth from Layer 5 in the Southern Caucasus Rioni-Kvirila karst, sharply separated culturally from North Caucasus Micoquians until Upper Paleolithic turnover.",
+                "Single-basin teeth plus rich Levallois-Mousterian obsidian transport."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.jhevol.2020.102908",
+                "https://doi.org/10.1371/journal.pone.0284093"
+              ]
+            },
+            {
+              "cells": [
+                "Sima de las Palomas del Cabezo Gordo (Murcia, SE Spain)",
+                "~55–40 thousand years ago (OSL, U-series & radiocarbon (~43–40 ka, Walker et al. 2008–2011; Zilhão 2017))",
+                "One of the largest late Neanderthal skeletal samples anywhere (>100 craniodental & postcranial specimens of ~9 individuals, including Palomas 92/96–97 flexed burials sealed under stones).",
+                "Heavy karst cementation requires micro-preparation; fine dating boundary sits around ~43–40 ka."
+              ],
+              "sources": [
+                "https://doi.org/10.1073/pnas.0811213106",
+                "https://doi.org/10.1016/j.quaint.2011.03.034",
+                "https://doi.org/10.1016/j.heliyon.2017.e00435"
+              ]
+            },
+            {
+              "cells": [
+                "Trou de La Naulette (Dinant, Belgium) & Fonds-de-Forêt / Trou Walou",
+                "~55–40 thousand years ago (1866 mandible discovery & Devièse (2021) Belgian synthesis)",
+                "Excavated in 1866 along the Lesse River, La Naulette's chinless mandible gave critical early anatomical proof of Neanderthal antiquity, alongside Fonds-de-Forêt's ~44 ka femur and…",
+                "Fragmentary postcranial/dental items from classic 19th-century Belgian digs."
+              ],
+              "sources": [
+                "https://doi.org/10.1073/pnas.2022466118",
+                "https://doi.org/10.1002/ajpa.20954"
+              ]
+            },
+            {
+              "cells": [
+                "El Sidrón Cave (Borines, Asturias, Spain)",
+                "~52–46 thousand years ago (ESR, OSL & amino-acid racemization (~49 ka))",
+                "More than 2,500 exquisitely preserved bones of 13 related Neanderthals (3 men, 3 adolescent boys, 4 women, 3 infants) revealing patrilocal kin groups, chamomile/poplar dental calculus…",
+                "Secondary karst collapse flushed the group rapidly into Gallery III."
+              ],
+              "sources": [
+                "https://doi.org/10.1038/nature13621",
+                "https://doi.org/10.1073/pnas.2520565123"
+              ]
+            },
+            {
+              "cells": [
+                "Grotte Mandrin (Malataverne, Rhône Valley, France)",
+                "~52–42 thousand years ago (Bayesian 14C, OSL & Slimak/Fuchs/Sikora (2022–2024))",
+                "Partial cranium, maxilla, and 31 teeth of adult male 'Thorin' stratified above the ephemeral ~54 ka H. sapiens Neronian excursion; 2024 Cell Genomics DNA revealed a deeply divergent…",
+                "Single genome revolutionizes extinction models by proving fractured small local populations lacked inter-group gene flow."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.jhevol.2024.103599",
+                "https://doi.org/10.1126/sciadv.abj9496"
+              ]
+            },
+            {
+              "cells": [
+                "Sesselfelsgrotte & Klausennische (Altmühl Valley, Bavaria, Germany)",
+                "~52–40 thousand years ago (Bavarian Micoquian stratigraphy & radiocarbon dating)",
+                "Fetal/neonatal/adult Neanderthal teeth and postcrania in Bavaria's upper Danube corridor linking Swabia/Rhineland and Moravian Kůlna/Šipka Micoquian sites.",
+                "Fetal bone preservation limits craniometric scoring."
+              ],
+              "sources": [
+                "https://doi.org/10.1007/s41982-022-00126-8"
+              ]
+            },
+            {
+              "cells": [
+                "Pech de l'Azé I (Carsac-Aillac, France)",
+                "~51–41 thousand years ago (ESR, U-series & Jacobs et al. (2016) single-grain OSL)",
+                "Well-preserved ~2-year-old Neanderthal child skull and mandible from Layer 4 Mousterian of Acheulean Tradition (MTA Type B), directly anchored by ESR and OSL.",
+                "Lacks associated postcrania; adjacent Pech IV records rich fire/manganese pigment use."
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.jhevol.2006.11.006",
+                "https://doi.org/10.1073/pnas.1521269113"
+              ]
+            },
+            {
+              "cells": [
+                "Okladnikov Cave (Sibiryachikha, Altai, Siberia)",
+                "~50–40 thousand years ago (Krause et al. (2007 Nature) mtDNA, Kolobova (2020) & Skov/Massilani (2022–2026))",
+                "Humeri, juvenile femur, and teeth associated with Sibiryachikha/Micoquian tools representing the EASTERNMOST confirmed Neanderthal skeletal fossils known on Earth (~51.7°N, 84°E)—genetically…",
+                "Subadult fragmentary limbs alongside fauna; sits ~100 km northwest of Denisova Cave."
+              ],
+              "sources": [
+                "https://doi.org/10.1038/nature06193",
+                "https://doi.org/10.1073/pnas.1918047117",
+                "https://doi.org/10.1073/pnas.2534576123"
+              ]
+            },
+            {
+              "cells": [
+                "Vindija Cave (Croatia)",
+                "c. 48,000–40,000 years ago (Hydroxyproline single-amino-acid AMS redating and 30x high-coverage nuclear genome assembly of specimen Vindija 33.19.)",
+                "Supplied the highest-precision genetic portrait of late European Neanderthals immediately prior to disappearance, clarifying shared ancestry (~50–45 ka) with the Neanderthals who admixed with…",
+                "Cryoturbation inside karst G3/G1 boundaries mixes late Mousterian and early Upper Paleolithic split-base points unless bones are directly dated."
+              ],
+              "sources": [
+                "https://doi.org/10.1038/nature26151",
+                "https://doi.org/10.1073/pnas.2520565123"
+              ]
+            },
+            {
+              "cells": [
+                "Starosele (Bakhchisarai, Crimea)",
+                "~48–40 thousand years ago (Pigott et al. (2025 PNAS) ZooMS, direct 14C & mitogenome)",
+                "ZooMS peptide screening of unrecognized bone splinters uncovered a new ~46–45 ka late Neanderthal femoral shaft ('Starosele 3') whose mitochondrial genome falls close to…",
+                "Distinguishes authentic ~45 ka Neanderthal femur from a historically intrusive Holocene child burial at Starosele."
+              ],
+              "sources": [
+                "https://doi.org/10.1073/pnas.2518974122"
+              ]
+            },
+            {
+              "cells": [
+                "Grotte du Renne at Arcy-sur-Cure (Yonne, France)",
+                "c. 45.5–40.5 thousand years ago (High-precision collagen ultrafiltration AMS dates (Hublin 2012) paired with 2023 identification of modern-human neonate ilium.)",
+                "Most celebrated European transition debate site: pierced fox-canine pendants, ring-grooved ivory pins, and bone awls in Level X, yielding both Neanderthal temporal bones/proteomes and a newly…",
+                "Contested whether pendants reflect independent Neanderthal symbolism, acculturation, or fine-scale Aurignacian mixing."
+              ],
+              "sources": [
+                "https://doi.org/10.1073/pnas.1212924109",
+                "https://doi.org/10.1038/s41598-023-39767-2",
+                "https://doi.org/10.1371/journal.pone.0277444"
+              ]
+            },
+            {
+              "cells": [
+                "Engis Cave ('Engis 2', Awirs, Liège, Belgium)",
+                "~46–40 thousand years ago (Schmerling (1833) / Devièse et al. (2021 PNAS) CSRA ~44–40.6 ka)",
+                "Excavated by Philippe-Charles Schmerling in 1829—nearly 30 years BEFORE Feldhofer! Engis 2 (~4–6-year-old Neanderthal child cranium) sat unrecognized alongside Pleistocene rhino bones until…",
+                "Historically commingled with Neolithic Engis 1 burial until careful fluorine/14C work separated them."
+              ],
+              "sources": [
+                "https://doi.org/10.1073/pnas.2022466118"
+              ]
+            },
+            {
+              "cells": [
+                "Roccia San Sebastiano (Mondragone, Campania, Italy)",
+                "~46–42 thousand years ago (Oxilia et al. (2022 AJPA) & ultrafiltration 14C)",
+                "Direct evidence that late Neanderthal occupation and deciduous molar morphology persisted immediately prior to Campania's Upper Paleolithic technological transition.",
+                "Single-cave dental assemblage."
+              ],
+              "sources": [
+                "https://doi.org/10.1002/ajpa.24593"
+              ]
+            },
+            {
+              "cells": [
+                "Bawa Yawan Rockshelter (Nawdarwan Valley, Kermanshah, Iran)",
+                "~45–41 thousand years ago (Direct TL/OSL & Bayesian 14C (Heydari-Guran 2021 PLOS ONE; 2024))",
+                "Left lower deciduous canine sealed in situ inside Zagros Mousterian levels dated ~43.6–41.5 ka cal BP just beneath early Baradostian/Upper Paleolithic layers—first stratified in situ Iranian…",
+                "Single pediatric canine directly below UP transition."
+              ],
+              "sources": [
+                "https://doi.org/10.1371/journal.pone.0253708",
+                "https://doi.org/10.1371/journal.pone.0281978"
+              ]
+            },
+            {
+              "cells": [
+                "Goyet Troisième Caverne (Gesves, Namur, Belgium)",
+                "~45–40 thousand years ago (Direct collagen 14C & Rougier et al. (2016) Sci. Rep.)",
+                "Largest northern European late Neanderthal fossil cluster (~99 specimens from >=5 individuals), extensively cut-marked, fractured for marrow, and fashioned into four retouchers (bone tools…",
+                "Ex-situ 1868 Dupont excavation boxes reassembled via ancient DNA & direct AMS 14C."
+              ],
+              "sources": [
+                "https://doi.org/10.1038/srep29005",
+                "https://doi.org/10.1073/pnas.2022466118"
+              ]
+            },
+            {
+              "cells": [
+                "Kleine Feldhofer Grotte (Neander Valley, Düsseldorf, Germany)",
+                "~45–39.5 thousand years ago (AMS 14C & Schmitz et al. (2002 PNAS) 1997 cave-dump re-excavation)",
+                "The August 1856 quarry discovery ('Neanderthal 1', holotype of Homo neanderthalensis, named by William King 1864). Schmitz & Thissen (1997) dramatically relocated the destroyed cave's dumped…",
+                "Quarrying destroyed the original limestone cliff in 1856; all context stems from sediment screening & direct 14C/aDNA."
+              ],
+              "sources": [
+                "https://doi.org/10.1073/pnas.192464099",
+                "https://doi.org/10.1038/nature13621"
+              ]
+            },
+            {
+              "cells": [
+                "La Roche à Pierrot (Saint-Césaire, Charente-Maritime, France)",
+                "~44–39 thousand years ago (TL & ultrafiltration direct collagen 14C (42–40 ka cal BP))",
+                "Crushed partial adult skeleton ('Pierrette') excavated in 1979 from Châtelperronian levels, demonstrating Neanderthals persisted alongside or immediately after the arrival of Aurignacian…",
+                "Minor stratigraphic mixing debate between underlying Denticulate Mousterian and Châtelperronian units."
+              ],
+              "sources": [
+                "https://doi.org/10.1038/nature13621",
+                "https://doi.org/10.1016/j.quascirev.2014.08.011"
+              ]
+            },
+            {
+              "cells": [
+                "Spy Cave (Betch aux Rotches, Namur, Belgium)",
+                "~44–40.5 thousand years ago (Devièse et al. (2021 PNAS) hydroxyproline single-amino-acid 14C)",
+                "Discovered in 1886, Spy I and Spy II proved scientifically that Neanderthals were truly fossil Pleistocene humans buried with cold-steppe fauna and Mousterian tools; 2021 compound-specific…",
+                "Earlier bulk collagen 14C gave falsely young ~36 ka ages due to bovine museum glue contamination."
+              ],
+              "sources": [
+                "https://doi.org/10.1073/pnas.2022466118",
+                "https://doi.org/10.1002/ajpa.20954"
+              ]
+            },
+            {
+              "cells": [
+                "Peștera cu Oase",
+                "Oase 1: about 42–37 ka (Published calibrated radiocarbon range for the fossil; generations inferred independently from DNA segment lengths. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.)",
+                "Long Neanderthal-derived DNA segments indicate a Neanderthal ancestor about four to six generations earlier.",
+                "This individual’s approximately 6–9% estimate is not a population average; the analysis did not find substantial contribution to later sampled Europeans. Coordinates mark an approximate public locality, not a surveyed fossil position."
+              ],
+              "sources": [
+                "https://www.nature.com/articles/nature14558"
+              ]
+            },
+            {
+              "cells": [
+                "Subalyuk Cave (Bükk Mountains, Northern Hungary)",
+                "~42–38 thousand years ago (Direct ultrafiltered 14C dating (Mester et al. 2023))",
+                "Adult female sacrum/teeth and ~3-year-old child cranium/mandible (Subalyuk 1 & 2); 2023 direct radiocarbon dating confirms Subalyuk among the very youngest Neanderthals in the Carpathian…",
+                "Original 1932 excavation limited spatial plotting between late Mousterian sublayers."
+              ],
+              "sources": [
+                "https://doi.org/10.1127/anthranz/2023/1716",
+                "https://doi.org/10.1038/nature13621"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Meyer et al. · Nuclear DNA sequences from Sima de los Huesos (Nature, 2016)",
+          "url": "https://www.nature.com/articles/nature17405"
+        },
+        {
+          "title": "Bird, E. E. et al. (2026). The Swanscombe fossil at 90: phylogeny, taxonomy, and place in human origins.",
+          "url": "https://doi.org/10.1111/1467-9655.70142"
+        },
+        {
+          "title": "Harvati, K. & Reyes-Centeno, H. (2022). Evolution of Homo in the Middle and Late Pleistocene. JHE.",
+          "url": "https://doi.org/10.1016/j.jhevol.2022.103279"
+        },
+        {
+          "title": "Vahdati Nasab, H., Bérillon, G. et al. (2024). Qaleh Kurd Cave (Iran): Middle Pleistocene hominin tooth & hunting camp. J. Paleol. Archaeol.",
+          "url": "https://doi.org/10.1007/s41982-024-00180-4"
+        },
+        {
+          "title": "Richard et al. (2024) · Chronology of the late Lower and Middle Palaeolithic at Tabun Cave (Mount Carmel, Israel) with insights into diagenesis and dose rate variation using post-IR IRSL (pIRIR290) dating and infrared spectroscopy (Quaternary Geochronology)",
+          "url": "https://doi.org/10.1016/j.quageo.2024.101611"
+        },
+        {
+          "title": "Amos et al. (2025) · Birds from the oven: the Middle Palaeolithic avifauna of Tabun Cave, Mount Carmel, Israel (Archaeological and Anthropological Sciences)",
+          "url": "https://doi.org/10.1007/s12520-025-02197-4"
+        },
+        {
+          "title": "UNESCO World Heritage Centre — Sites of Human Evolution at Mount Carmel: The Nahal Me’arot / Wadi el-Mughara Caves (1395)",
+          "url": "https://whc.unesco.org/en/list/1395/"
+        },
+        {
+          "title": "Grün, R. & Stringer, C. (2023). Direct dating of human fossils and the ever-changing story of human evolution. QSR.",
+          "url": "https://doi.org/10.1016/j.quascirev.2023.108379"
+        },
+        {
+          "title": "Compton, T. et al. (2015). Middle Pleistocene hominin teeth from Pontnewydd Cave, Wales. JQS.",
+          "url": "https://doi.org/10.1002/jqs.2811"
+        },
+        {
+          "title": "Harvati et al. (2019) · Apidima Cave fossils provide earliest evidence of Homo sapiens in Eurasia (Nature)",
+          "url": "https://doi.org/10.1038/s41586-019-1376-z"
+        },
+        {
+          "title": "Hajdinjak et al. (2018) · Reconstructing the genetic history of late Neanderthals (Nature)",
+          "url": "https://doi.org/10.1038/nature26151"
+        },
+        {
+          "title": "Smithsonian Human Origins Program · Homo neanderthalensis specimen archive.",
+          "url": "https://humanorigins.si.edu/evidence/human-fossils/species/homo-neanderthalensis"
+        },
+        {
+          "title": "Nabais, M., Zilhão, J. et al. (2023). Exploitation of crabs by Last Interglacial Iberian Neanderthals at Gruta da Figueira Brava.",
+          "url": "https://doi.org/10.3389/fearc.2023.1097815"
+        },
+        {
+          "title": "Blasco, R. et al. (2025). Ungulates and carnivores from MIS-5 Neanderthal Gruta da Figueira Brava, Portugal.",
+          "url": "https://doi.org/10.3389/fearc.2025.1564495"
+        },
+        {
+          "title": "Villalba‐Mouco et al. (2023) · A 23,000-year-old southern Iberian individual links human groups that lived in Western Europe before and after the Last Glacial Maximum (Nature Ecology & Evolution)",
+          "url": "https://doi.org/10.1038/s41559-023-01987-0"
+        },
+        {
+          "title": "UNESCO World Heritage Centre — Gorham’s Cave Complex (1500)",
+          "url": "https://whc.unesco.org/en/list/1500/"
+        },
+        {
+          "title": "Mateo-Lomba, P. et al. (2024). Neanderthal bone spear point and occupation at Abric Romaní. Scientific Reports.",
+          "url": "https://doi.org/10.1038/s41598-024-67817-w"
+        },
+        {
+          "title": "Saladié, P. et al. (2026). Neanderthal woodworking at Abric Romaní. Science Advances.",
+          "url": "https://doi.org/10.1126/sciadv.aeh2287"
+        },
+        {
+          "title": "Slon et al. · Offspring of a Neanderthal mother and Denisovan father (Nature, 2018)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6130845/"
+        },
+        {
+          "title": "Kolobova et al. · Two separate dispersals of Neanderthals into southern Siberia (PNAS, 2020)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7022189/"
+        },
+        {
+          "title": "Fotiadou, C. M., Pedersen, J., Rougier, H. et al. (2026). Archaeogenetic insights into the demographic history of Late Neanderthals. PNAS.",
+          "url": "https://doi.org/10.1073/pnas.2520565123"
+        },
+        {
+          "title": "Hublin, J.-J. et al. (2012). Radiocarbon dates from the Grotte du Renne and Saint-Césaire. PNAS.",
+          "url": "https://doi.org/10.1073/pnas.1212924109"
+        },
+        {
+          "title": "Gicqueau, A. et al. (2023). Anatomically modern human neonate in the Châtelperronian at Grotte du Renne. Scientific Reports.",
+          "url": "https://doi.org/10.1038/s41598-023-39767-2"
+        },
+        {
+          "title": "Slimak, L. et al. (2023). The three waves: first Upper Paleolithic in Western Eurasia (Arcy, Mladeč, Kents Cavern). PLOS ONE.",
+          "url": "https://doi.org/10.1371/journal.pone.0277444"
+        },
+        {
+          "title": "Fu et al. · An early modern human from Romania with a recent Neanderthal ancestor (Nature, 2015)",
+          "url": "https://www.nature.com/articles/nature14558"
+        },
+        {
+          "title": "Trinkaus, E., Maki, J. & Zilhão, J. (2007). Middle Paleolithic human remains from the Gruta da Oliveira (Torres Novas), Portugal. AJPA 134: 263–273.",
+          "url": "https://doi.org/10.1002/ajpa.20669"
+        },
+        {
+          "title": "Willman, J. C., Maki, J., Bayle, P., Trinkaus, E. & Zilhão, J. (2012). Middle Paleolithic human remains from Gruta da Oliveira (Layers 17, 18, 22). AJPA.",
+          "url": "https://doi.org/10.1002/ajpa.22091"
+        },
+        {
+          "title": "Zilhão, J. (2021). The late persistence of the Middle Palaeolithic and Neandertals in Iberia. Quat. Sci. Rev. 270: 107098.",
+          "url": "https://doi.org/10.1016/j.quascirev.2021.107098"
+        },
+        {
+          "title": "Bokelmann, L. et al. (2019). A genetic analysis of the Gibraltar Neanderthals (Forbes' Quarry & Devil's Tower). PNAS 116: 15610–15615.",
+          "url": "https://doi.org/10.1073/pnas.1903994116"
+        },
+        {
+          "title": "Blasco, R., Fernández-Peris, J. & Rosell, J. (2010). Several strategies, same purpose: Bolomor Cave (Valencia) MIS 9–5e Neanderthal foraging. C. R. Palevol.",
+          "url": "https://doi.org/10.1016/j.crpv.2009.12.003"
+        },
+        {
+          "title": "Hublin, J.-J. (2014). The modern human colonization of western Eurasia: when and where? QSR.",
+          "url": "https://doi.org/10.1016/j.quascirev.2014.08.011"
+        },
+        {
+          "title": "Arsuaga, J. L., Baquedano, E. et al. (2013). Last Interglacial assemblages and Neanderthal occupations at Pinilla del Valle (Madrid). Palaeogeogr. Palaeoclimatol.",
+          "url": "https://doi.org/10.1016/j.palaeo.2013.01.025"
+        },
+        {
+          "title": "Navazo-Ruiz, M. et al. (2021). Late Neanderthal subsistence and crystal collecting at Prado Vargas (Burgos, Spain). Quat. Sci. Rev.",
+          "url": "https://doi.org/10.1016/j.quascirev.2021.106795"
+        },
+        {
+          "title": "Keeling, B. A., Quam, R. M., Maroto, J. et al. (2023). Reassessment of the Banyoles mandible (Girona, Spain). JHE 174: 103291.",
+          "url": "https://doi.org/10.1016/j.jhevol.2022.103291"
+        },
+        {
+          "title": "Daura, J., Sanz, M. et al. (2021). Chronological framework and site formation history for Cova del Gegant (Barcelona). Quat. Sci. Rev. 270: 107141.",
+          "url": "https://doi.org/10.1016/j.quascirev.2021.107141"
+        },
+        {
+          "title": "Morales, J. I., Cebrià, A. et al. (2023). A new assemblage of late Neanderthal remains from Cova Simanya (NE Iberia). Front. Earth Sci.",
+          "url": "https://doi.org/10.3389/feart.2023.1230707"
+        },
+        {
+          "title": "Roebroeks, W. & Soressi, M. (2016). Neandertals revised. PNAS 113: 6372–6379.",
+          "url": "https://doi.org/10.1073/pnas.1521269113"
+        },
+        {
+          "title": "Walker, M. J., Gibert, J. et al. (2008). Late Neandertals in Southeastern Iberia: Sima de las Palomas del Cabezo Gordo, Murcia, Spain. PNAS 105: 20631–20636.",
+          "url": "https://doi.org/10.1073/pnas.0811213106"
+        },
+        {
+          "title": "Walker, M. J. et al. (2011). The excavation of buried articulated Neanderthal skeletons at Sima de las Palomas (Murcia, SE Spain). Quat. Int.",
+          "url": "https://doi.org/10.1016/j.quaint.2011.03.034"
+        },
+        {
+          "title": "Zilhão, J., Anesin, D. et al. (2017). Precise dating of the Middle-to-Upper Paleolithic transition in Murcia (Cueva Antón / Sima de las Palomas). Heliyon 3: e00435.",
+          "url": "https://doi.org/10.1016/j.heliyon.2017.e00435"
+        },
+        {
+          "title": "Wood, R. E., Barroso-Ruíz, C. et al. (2013). Radiocarbon dating casts doubt on the late chronology of southern Iberia (Zafarraya). PNAS 110: 2781–2786.",
+          "url": "https://doi.org/10.1073/pnas.1207656110"
+        },
+        {
+          "title": "Kehl, M. et al. (2013/2016). Chronology and stratigraphy of Zafarraya & Sima de las Palomas de Teba, Southern Spain. Quat. Geochronol. / Quat. Res.",
+          "url": "https://doi.org/10.1016/j.quageo.2012.11.006"
+        },
+        {
+          "title": "López-Onaindia, D., Lozano, M. et al. (2023). Neanderthal teeth from Lezetxiki (Arrasate, Basque Country): New insights and reassessment. AJPA.",
+          "url": "https://doi.org/10.1002/ajpa.24694"
+        },
+        {
+          "title": "Garralda, M. D. et al. (2023). Mousterian human fossils from El Castillo cave (Cantabria, Spain). J. Anthropol. Sci. 100.",
+          "url": "https://doi.org/10.4436/jass.10021"
+        },
+        {
+          "title": "Higham, T., Douka, K. et al. (2014). The timing and spatiotemporal patterning of Neanderthal disappearance. Nature 512: 306–309.",
+          "url": "https://doi.org/10.1038/nature13621"
+        },
+        {
+          "title": "Rendu, W. et al. (2014). Evidence supporting an intentional Neandertal burial at La Chapelle-aux-Saints. PNAS 111: 81–86.",
+          "url": "https://doi.org/10.1073/pnas.1316780110"
+        },
+        {
+          "title": "Gómez-Olivencia, A., Balzeau, A. et al. (2018). La Ferrassie 1: New perspectives on a classic Neandertal skeleton. JHE 117: 13–32.",
+          "url": "https://doi.org/10.1016/j.jhevol.2017.12.004"
+        },
+        {
+          "title": "Balzeau, A., Turq, A., Talamo, S. et al. (2020). Pluridisciplinary evidence for burial for the La Ferrassie 8 Neandertal child. Sci. Rep. 10: 21230.",
+          "url": "https://doi.org/10.1038/s41598-020-77611-z"
+        },
+        {
+          "title": "Pablos, A., Gómez-Olivencia, A., Maureille, B. et al. (2019). Neandertal foot remains from Regourdou 1 (Dordogne, France). JHE 128: 17–44.",
+          "url": "https://doi.org/10.1016/j.jhevol.2018.11.003"
+        },
+        {
+          "title": "Sandgathe, D. M., Dibble, H. L., Goldberg, P. & McPherron, S. P. (2011). The Roc de Marsal Neandertal child: reassessment of burial status. JHE 61: 243–253.",
+          "url": "https://doi.org/10.1016/j.jhevol.2011.04.003"
+        },
+        {
+          "title": "Soressi, M. et al. (2007). The Pech-de-l'Azé I Neandertal child: ESR, uranium-series, and AMS 14C dating of its MTA type B context. JHE 52: 455–466.",
+          "url": "https://doi.org/10.1016/j.jhevol.2006.11.006"
+        },
+        {
+          "title": "Mussini, C. et al. (2011). The Les Pradelles (Marillac-le-Franc) Neanderthal occipital and human modification traces. C. R. Palevol.",
+          "url": "https://doi.org/10.1016/j.crpv.2011.02.007"
+        },
+        {
+          "title": "Rendu, W. et al. (2023). Neanderthal subsistence and fossils at Chez-Pinaud Jonzac (Charente-Maritime, France). Front. Ecol. Evol.",
+          "url": "https://doi.org/10.3389/fevo.2022.1085699"
+        },
+        {
+          "title": "Zanolli, C. et al. (2020). The Neanderthal mandible BD 1 from La Chaise-de-Vouthon Abri Bourgeois-Delaunay (MIS 5e). Paléo 30(2).",
+          "url": "https://doi.org/10.4000/paleo.5919"
+        },
+        {
+          "title": "Puymerail, L., Condemi, S. et al. (2012). Neanderthal femoral diaphysis from La Chaise-de-Vouthon (Charente, France). C. R. Palevol.",
+          "url": "https://doi.org/10.1016/j.crpv.2012.07.001"
+        },
+        {
+          "title": "Vialet, A. et al. (2018). A reassessment of the Montmaurin-La Niche mandible (Haute-Garonne, France). PLOS ONE 13: e0189714.",
+          "url": "https://doi.org/10.1371/journal.pone.0189714"
+        },
+        {
+          "title": "Faivre, J.-P., Maureille, B. et al. (2014). Middle Pleistocene Human Remains from Tourville-la-Rivière (Normandy, France, ~200 ka). PLOS ONE 9: e104111.",
+          "url": "https://doi.org/10.1371/journal.pone.0104111"
+        },
+        {
+          "title": "Martín-Francés, L. et al. (2022). Middle Pleistocene hominin teeth from Biache-Saint-Vaast, France (~200 ka). Archaeol. Anthropol. Sci.",
+          "url": "https://doi.org/10.1007/s12520-022-01680-6"
+        },
+        {
+          "title": "Fuchs, J. et al. (2024). The dentition of a new adult Neanderthal individual ('Thorin') from Grotte Mandrin, France. JHE 196: 103599.",
+          "url": "https://doi.org/10.1016/j.jhevol.2024.103599"
+        },
+        {
+          "title": "Slimak, L., Zanolli, C., Higham, T. et al. (2022). Modern human incursion into Neanderthal territories 54,000 years ago at Mandrin, France. Sci. Adv.",
+          "url": "https://doi.org/10.1126/sciadv.abj9496"
+        },
+        {
+          "title": "Richards, G. D., Guipert, G. et al. (2021). Neanderthal cranial remains from Baume Moula-Guercy (Soyons, Ardèche, France). AJPA.",
+          "url": "https://doi.org/10.1002/ajpa.24256"
+        },
+        {
+          "title": "Hardy, B. L. & Moncel, M.-H. (2011). Neanderthal use of fish, mammals, birds, starchy plants and wood 125–250 ka at Payre (Ardèche). PLOS ONE 6: e23768.",
+          "url": "https://doi.org/10.1371/journal.pone.0023768"
+        },
+        {
+          "title": "Lebel, S., Trinkaus, E. et al. (2001). Comparative morphology and paleobiology of Middle Pleistocene human remains from Bau de l'Aubesier (Vaucluse). PNAS.",
+          "url": "https://doi.org/10.1073/pnas.181353998"
+        },
+        {
+          "title": "Williams, F. L. et al. (2019). Neandertal mandibular molars from Hortus Cave (Hérault, France). Anthropologie 57: 1–14.",
+          "url": "https://doi.org/10.26720/anthro.19.03.05.1"
+        },
+        {
+          "title": "Compton, T., Skinner, M. M. et al. (2021). Morphology of the Late Pleistocene hominin remains from La Cotte de St Brelade, Jersey. JHE 152: 102939.",
+          "url": "https://doi.org/10.1016/j.jhevol.2020.102939"
+        },
+        {
+          "title": "Hublin, J.-J. et al. (2009). Out of the North Sea: The Zeeland Ridges Neandertal ('Krijn'). JHE 57: 777–785.",
+          "url": "https://doi.org/10.1016/j.jhevol.2009.09.001"
+        },
+        {
+          "title": "Devièse, T., Abrams, G. et al. (2021). Reevaluating the timing of Neanderthal disappearance in Northwest Europe (Spy, Engis, Fonds-de-Forêt). PNAS.",
+          "url": "https://doi.org/10.1073/pnas.2022466118"
+        },
+        {
+          "title": "Semal, P., Rougier, H. et al. (2009). New data on the late Neandertals: Direct dating of the Belgian Spy fossils. AJPA 138: 421–428.",
+          "url": "https://doi.org/10.1002/ajpa.20954"
+        },
+        {
+          "title": "Rougier, H., Crevecoeur, I. et al. (2016). Neandertal cannibalism and Neandertal bones used as tools at Goyet (Belgium). Sci. Rep. 6: 29005.",
+          "url": "https://doi.org/10.1038/srep29005"
+        },
+        {
+          "title": "Peyrégne, S., Slon, V. et al. (2019). Nuclear DNA from two early Neandertals (Scladina ~120 ka & Hohlenstein-Stadel ~124 ka) reveals genetic continuity. Sci. Adv.",
+          "url": "https://doi.org/10.1126/sciadv.aaw5873"
+        },
+        {
+          "title": "Schmitz, R. W. et al. (2002). The Neandertal type site revisited: Interdisciplinary investigations of Kleine Feldhofer Grotte. PNAS 99: 13342–13347.",
+          "url": "https://doi.org/10.1073/pnas.192464099"
+        },
+        {
+          "title": "Buzi, C., Profico, A., Harvati, K. et al. (2021). Retrodeformation of the Steinheim Cranium: Insights into the Evolution of Neanderthals. Symmetry 13: 1611.",
+          "url": "https://doi.org/10.3390/sym13091611"
+        },
+        {
+          "title": "Blackwell, B. & Schwarcz, H. P. (1986). U-series analyses of the Lower Travertine at Ehringsdorf, DDR (~230 ka). Quaternary Research 25: 215–222.",
+          "url": "https://doi.org/10.1016/0033-5894(86)90058-X"
+        },
+        {
+          "title": "Posth, C. et al. (2017). Deeply divergent archaic mitochondrial genome from Hohlenstein-Stadel (~124 ka femur). Nature Comm. 8: 16046.",
+          "url": "https://doi.org/10.1038/ncomms16046"
+        },
+        {
+          "title": "Hublin, J.-J. et al. (2023). Salzgitter-Lebenstedt chronology and Neanderthal subsistence via ZooMS & radiocarbon. J. Quat. Sci.",
+          "url": "https://doi.org/10.1002/jqs.3499"
+        },
+        {
+          "title": "Jöris, O. & Neruda, P. (2022). Late Middle Palaeolithic of Central Europe (Kůlna, Šipka, Ochoz, Šaľa). J. Paleol. Archaeol. 5.",
+          "url": "https://doi.org/10.1007/s41982-022-00126-8"
+        },
+        {
+          "title": "Profico, A. et al. (2023). Virtual excavation and analysis of the early Neanderthal cranium from Altamura (Italy). Commun. Biol. 6: 316.",
+          "url": "https://doi.org/10.1038/s42003-023-04644-1"
+        },
+        {
+          "title": "Marra, F. et al. (2015). A new age within MIS 7 (~250 ka) for Homo neanderthalensis of Saccopastore, Rome. QSR 129: 260–274.",
+          "url": "https://doi.org/10.1016/j.quascirev.2015.10.027"
+        },
+        {
+          "title": "Rubini, M. & Zaio, P. (2026). Hominin Variability and Evolutionary Relationships at Guattari Cave (Monte Circeo, Italy). Genes 17: 132.",
+          "url": "https://doi.org/10.3390/genes17020132"
+        },
+        {
+          "title": "Peresani, M. et al. (2013). An ochered fossil marine shell from the Mousterian of Fumane Cave, Italy. PLOS ONE 8: e68572.",
+          "url": "https://doi.org/10.1371/journal.pone.0068572"
+        },
+        {
+          "title": "Richards, M. P., Peresani, M. et al. (2021). Strontium isotope evidence for Neanderthal mobility at Fumane Cave (Italy). PLOS ONE 16: e0254848.",
+          "url": "https://doi.org/10.1371/journal.pone.0254848"
+        },
+        {
+          "title": "Condemi, S., Caramelli, D. et al. (2013). Possible interbreeding in late Italian Neanderthals? Riparo Mezzena mandible (Verona). PLOS ONE 8: e59781.",
+          "url": "https://doi.org/10.1371/journal.pone.0059781"
+        },
+        {
+          "title": "Longo, L., Caramelli, D., Condemi, S. et al. (2012). Middle to Upper Paleolithic in Monti Lessini / Veneto (Tagliente, Mezzena). Quat. Int.",
+          "url": "https://doi.org/10.1016/j.quaint.2012.01.011"
+        },
+        {
+          "title": "Benazzi, S. et al. (2011). Early dispersal of modern humans above Mousterian Neanderthal layers at Grotta del Cavallo, Apulia. Nature 479: 525–528.",
+          "url": "https://doi.org/10.1038/nature10617"
+        },
+        {
+          "title": "Oxilia, G. et al. (2022). Direct evidence that late Neanderthal occupation precedes a technological shift at Roccia San Sebastiano (Campania). AJPA.",
+          "url": "https://doi.org/10.1002/ajpa.24593"
+        },
+        {
+          "title": "Limmer, L. S. / Mahoney, P. et al. (2021). Dental histology and comparative analysis incorporating southern Italian Neanderthals (Archi/Guattari). Sci. Rep.",
+          "url": "https://doi.org/10.1038/s41598-020-80148-w"
+        },
+        {
+          "title": "Eisová, S., Bruner, E. et al. (2019). The Neanderthal endocast from Gánovce (Poprad, Slovak Republic). J. Anthropol. Sci. 97.",
+          "url": "https://doi.org/10.4436/JASS.97005"
+        },
+        {
+          "title": "Picin, A., Hajdinjak, M. et al. (2020). New perspectives on Neanderthal dispersal and turnover from Stajnia Cave (Poland). Sci. Rep. 10: 14778.",
+          "url": "https://doi.org/10.1038/s41598-020-71504-x"
+        },
+        {
+          "title": "Picin, A., Hajdinjak, M. et al. (2026). First multi-individual Neanderthal mitogenomes from north of the Carpathians (Stajnia & Poland). Current Biology.",
+          "url": "https://doi.org/10.1016/j.cub.2026.03.069"
+        },
+        {
+          "title": "Willman, J. C. et al. (2019). Paleobiology and Taphonomy of a Middle Paleolithic Neandertal Tooth and Phalanges from Ciemna Cave, Poland. J. Paleol. Archaeol.",
+          "url": "https://doi.org/10.1007/s41982-019-00026-4"
+        },
+        {
+          "title": "Mester, Z., Coqueugniot, H. et al. (2023). First direct dating of the Late Neanderthal remains from Subalyuk Cave in Northern Hungary (~40 ka). Anthropol. Anz.",
+          "url": "https://doi.org/10.1127/anthranz/2023/1716"
+        },
+        {
+          "title": "Lindal, J., Radović, P., Mihailović, D. & Roksandic, M. (2020). Postcranial hominin remains from Pešturina Cave (Serbia). Quat. Int. 542: 9–14.",
+          "url": "https://doi.org/10.1016/j.quaint.2020.02.019"
+        },
+        {
+          "title": "Radović, P., Lindal, J., Roksandic, M. et al. (2025). New Middle Pleistocene Hominin Dental Remains From Velika Balanica, Serbia. AJPA.",
+          "url": "https://doi.org/10.1002/ajpa.70133"
+        },
+        {
+          "title": "Dogandžić, T. (2023). The Middle Paleolithic of the Balkans: Human Biogeography (Kalamakia, Lakonis, Pešturina, Ohaba Ponor). J. World Prehist.",
+          "url": "https://doi.org/10.1007/s10963-023-09179-1"
+        },
+        {
+          "title": "Panagopoulou, E., Karkanas, P., Harvati, K. et al. (2002/2004). Late Pleistocene archaeological and fossil Neanderthal evidence from Lakonis Cave, Greece. JFA.",
+          "url": "https://doi.org/10.1179/jfa.2004.29.3-4.323"
+        },
+        {
+          "title": "Pigott, E. M., Douka, K., Higham, T. et al. (2025). A new late Neanderthal from Starosele (Crimea) reveals long-distance connections across Eurasia. PNAS.",
+          "url": "https://doi.org/10.1073/pnas.2518974122"
+        },
+        {
+          "title": "Majkić, A. et al. (2017). A decorated raven bone from the Zaskalnaya VI (Kolosovskaya) Neanderthal site, Crimea. PLOS ONE 12: e0173435.",
+          "url": "https://doi.org/10.1371/journal.pone.0173435"
+        },
+        {
+          "title": "Kolobova, K. A., Roberts, R. G. et al. (2020). Archaeological evidence for two separate dispersals of Neanderthals into southern Siberia. PNAS 117: 2879–2885.",
+          "url": "https://doi.org/10.1073/pnas.1918047117"
+        },
+        {
+          "title": "Golovanova, L. V., Hoffecker, J. F. et al. (1999). Mezmaiskaya Cave: A Neanderthal Occupation in the Northern Caucasus. Current Anthropology.",
+          "url": "https://doi.org/10.1086/515805"
+        },
+        {
+          "title": "Pinhasi, R., Higham, T., Golovanova, L. V. et al. (2011). Revised age of late Neanderthal occupation and end of MP in Northern Caucasus. PNAS.",
+          "url": "https://doi.org/10.1073/pnas.1018938108"
+        },
+        {
+          "title": "Andreeva, T. V., Manakhov, A. D. et al. (2022). Genomic analysis of a novel Neanderthal from Mezmaiskaya Cave. Sci. Rep.",
+          "url": "https://doi.org/10.1038/s41598-022-16164-9"
+        },
+        {
+          "title": "Doronicheva, E. V., Golovanova, L. V. et al. (2023). Two culture-diverse Neanderthal populations in the North Caucasus and contacts between them. PLOS ONE.",
+          "url": "https://doi.org/10.1371/journal.pone.0284093"
+        },
+        {
+          "title": "Cullen, V. L., Smith, V. C. et al. (2021). Revised AMS and tephra chronology for Ortvale Klde, Georgia. JHE 150: 102908.",
+          "url": "https://doi.org/10.1016/j.jhevol.2020.102908"
+        },
+        {
+          "title": "Tushabramishvili, N., Pleurdeau, D., Moncel, M.-H. et al. (2012). Human remains from Bondi Cave & Georgian Caucasus Mousterian sequence. JHE 62: 179–185.",
+          "url": "https://doi.org/10.1016/j.jhevol.2011.11.001"
+        },
+        {
+          "title": "Ghasidian, E. et al. (2023). Modelling Neanderthals' dispersal routes from Caucasus towards east (Zagros–Central Asia–Altai). PLOS ONE.",
+          "url": "https://doi.org/10.1371/journal.pone.0281978"
+        },
+        {
+          "title": "Mercier, N. & Valladas, H. (2003). Reassessment of TL age estimates of burnt flints from Tabun Cave, Israel. JHE 45: 401–409.",
+          "url": "https://doi.org/10.1016/j.jhevol.2003.09.004"
+        },
+        {
+          "title": "Bar-Yosef, O., Vandermeersch, B. et al. (1992). Excavations in Kebara Cave, Mt. Carmel (KMH2 skeleton & hyoid). Current Anthropology 33: 497–550.",
+          "url": "https://doi.org/10.1086/204112"
+        },
+        {
+          "title": "Valladas, H. et al. (1999). TL Dates for the Neanderthal Site of the Amud Cave, Israel (~65–55 ka). J. Archaeol. Sci. 26: 259–268.",
+          "url": "https://doi.org/10.1006/jasc.1998.0334"
+        },
+        {
+          "title": "Been, E., Hovers, E. et al. (2017). The first Neanderthal remains from an open-air Middle Palaeolithic site in the Levant ('Ein Qashish). Sci. Rep. 7: 2958.",
+          "url": "https://doi.org/10.1038/s41598-017-03025-z"
+        },
+        {
+          "title": "Ekshtain, R., Been, E., Hovers, E. et al. (2019). Persistent Neanderthal occupation of the open-air site of 'Ein Qashish, Israel. PLOS ONE 14: e0215668.",
+          "url": "https://doi.org/10.1371/journal.pone.0215668"
+        },
+        {
+          "title": "Blinkhorn, J., Zanolli, C. et al. (2021). Nubian Levallois technology associated with southernmost Neanderthals (Shukbah Cave, Palestine). Sci. Rep.",
+          "url": "https://doi.org/10.1038/s41598-021-82257-6"
+        },
+        {
+          "title": "Akazawa, T. et al. (1993). The Neanderthal Remains from Dederiyeh Cave, Syria (Dederiyeh 1 & 2 infant burials). Anthropol. Sci. 101: 361–387.",
+          "url": "https://doi.org/10.1537/ase.101.361"
+        },
+        {
+          "title": "Pomeroy, E., Hunt, C. O., Barker, G. et al. (2020). New Neanderthal remains associated with the 'flower burial' at Shanidar Cave (Shanidar Z). Antiquity.",
+          "url": "https://doi.org/10.15184/aqy.2019.207"
+        },
+        {
+          "title": "Pomeroy, E. et al. (2025). Excavating the archives: new perspectives on the Shanidar Cave Neanderthals.",
+          "url": "https://doi.org/10.4000/13pt3"
+        },
+        {
+          "title": "Trinkaus, E. & Biglari, F. (2006). Middle Paleolithic Human Remains from Bisitun Cave, Iran. Paléorient 32(2): 105–111.",
+          "url": "https://doi.org/10.3406/paleo.2006.5192"
+        },
+        {
+          "title": "Zanolli, C., Biglari, F. et al. (2019). A Neanderthal from the Central Western Zagros, Iran: Wezmeh 1 maxillary premolar. JHE 135: 102643.",
+          "url": "https://doi.org/10.1016/j.jhevol.2019.102643"
+        },
+        {
+          "title": "Heydari-Guran, S., Benazzi, S., Talamo, S. et al. (2021). Discovery of an in situ Neanderthal remain in Bawa Yawan Rockshelter, Zagros, Iran. PLOS ONE.",
+          "url": "https://doi.org/10.1371/journal.pone.0253708"
+        },
+        {
+          "title": "Krause, J., Orlando, L. et al. (2007). Neanderthals in central Asia and Siberia (Teshik-Tash & Okladnikov mtDNA). Nature 449: 902–904.",
+          "url": "https://doi.org/10.1038/nature06193"
+        },
+        {
+          "title": "Glantz, M., Viola, B. et al. (2008). New hominin remains from Uzbekistan (Obi-Rakhmat & Anghilak Cave). JHE 55: 223–237.",
+          "url": "https://doi.org/10.1016/j.jhevol.2007.12.007"
+        },
+        {
+          "title": "Krivoshapkin, A. I., Kuzmin, Y. V. & Jull, A. J. T. (2010). Chronology of the Obi-Rakhmat Grotto (Uzbekistan). Radiocarbon 52.",
+          "url": "https://doi.org/10.1017/s0033822200045586"
+        },
+        {
+          "title": "Massilani, D., Peyrégne, S. et al. (2026). High-coverage Neandertal genome from the Altai Mountains reveals population structure. PNAS.",
+          "url": "https://doi.org/10.1073/pnas.2534576123"
+        },
+        {
+          "title": "Quam, R., Martínez, I., Arsuaga, J. L. et al. (2023). The Neandertal nature of the Atapuerca Sima de los Huesos mandibles. Anat. Rec.",
+          "url": "https://doi.org/10.1002/ar.25190"
+        },
+        {
+          "title": "Radovčić, D. et al. (2015). Evidence for Neandertal Jewelry: Modified White-Tailed Eagle Claws at Krapina. PLOS ONE 10: e0119802.",
+          "url": "https://doi.org/10.1371/journal.pone.0119802"
+        },
+        {
+          "title": "Walker, M. J. et al. (2020). Cueva Negra del Estrecho del Río Quípar: A dated late early / Middle Pleistocene Palaeolithic site in SE Spain. J. Paleol. Archaeol.",
+          "url": "https://doi.org/10.1007/s41982-020-00062-5"
+        },
+        {
+          "title": "Devièse, T., Karavanić, I. et al. (2017). Direct dating of Neanderthal remains from Vindija Cave (~44–42 ka). PNAS 114: 10606–10611.",
+          "url": "https://doi.org/10.1073/pnas.1709235114"
+        }
+      ],
+      "relatedGuideIds": [
+        "world-human-family",
+        "world-pre-1ma-world",
+        "world-australopithecus-fossils"
+      ]
+    }
+  ]
+}
