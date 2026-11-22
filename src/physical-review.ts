@@ -26,7 +26,7 @@ export function physicalHTML(id?: string): string {
         <div>
           <p class="eyebrow">THE CHANGING ENVIRONMENT · 7 MA TO 1900 CE</p>
           <h2>Climate, Sea Level, Ice Sheets &amp; Proxy Science</h2>
-          <p class="physical-hero-sub">Environmental change shapes coastlines, corridors, and risks without determining human choices. Coincidence with archaeological transitions never establishes single-factor causation.</p>
+          <p class="physical-hero-sub">Compare global temperature, sea level, CO₂, continuous Pleistocene ice sheets, and 8,896 natural hazard records from 7 Ma to 1900 CE.</p>
         </div>
         <nav class="physical-hero-nav" aria-label="Environment page navigation">
           <a href="#map">← Map</a>

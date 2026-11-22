@@ -217,6 +217,7 @@
     {
       "id": "world-human-family",
       "atlasIds": [
+        "americas",
         "pacific",
         "africa",
         "europe",
@@ -226,7 +227,7 @@
       "title": "The branching human family",
       "description": "From late Miocene candidates to Homo sapiens, Neanderthals and Denisovans, with the places where the earliest evidence was found.",
       "intro": "The oldest possible members of the human lineage are millions of years older than Lucy. Later, Australopithecus and Paranthropus overlapped with early Homo, and several populations of Homo shared parts of Eurasia. Fossils document this diversity. DNA from later groups also shows where branches met again.",
-      "scope": "A selected fossil and molecular record from Africa and Eurasia, updated through November 2026. Early occurrence ages and first modern discoveries describe different events. For small fossil samples, named localities are grouped into regional map markers where appropriate.",
+      "scope": "A selected fossil and molecular record from Africa and Eurasia, updated through November 2026.",
       "map": {
         "bounds": [
           -13,
@@ -236,6 +237,20 @@
         ],
         "scope": "Approximate research regions and public site areas. Each marker can represent several localities. The tables name the fossil sites and qualify their ages and identifications.",
         "points": [
+          {
+            "id": "graecopithecus",
+            "label": "Pyrgos Vassilissis (Athens) & Azmaka",
+            "coordinates": [
+              23.72,
+              38.05
+            ],
+            "date": "About 7.24–7.18 Ma",
+            "description": "Mandible and upper premolar of Graecopithecus freybergi, the oldest contested hominin candidate on this map.",
+            "sources": [
+              "https://doi.org/10.1371/journal.pone.0177127",
+              "https://doi.org/10.1371/journal.pone.0177347"
+            ]
+          },
           {
             "id": "toros-menalla",
             "label": "Toros-Menalla, Chad",
@@ -798,6 +813,18 @@
             "Evidence and limits"
           ],
           "rows": [
+            {
+              "cells": [
+                "Graecopithecus freybergi",
+                "Pyrgos Vassilissis (Greece) & Azmaka (Bulgaria)",
+                "About 7.24–7.18 Ma",
+                "Mandible and upper fourth premolar showing fused root canals interpreted by Fuss et al. (2017) as hominin-like; whether it is an earliest hominin or a late Miocene Eurasian ape remains actively debated."
+              ],
+              "sources": [
+                "https://doi.org/10.1371/journal.pone.0177127",
+                "https://doi.org/10.1371/journal.pone.0177347"
+              ]
+            },
             {
               "cells": [
                 "Sahelanthropus tchadensis",
@@ -1827,6 +1854,14 @@
         "world-neanderthal-fossils"
       ],
       "sources": [
+        {
+          "url": "https://doi.org/10.1371/journal.pone.0177127",
+          "title": "Fuss et al. · Potential hominin affinities of Graecopithecus (PLOS ONE, 2017)"
+        },
+        {
+          "url": "https://doi.org/10.1371/journal.pone.0177347",
+          "title": "Böhme et al. · Messinian age and savannah environment of Graecopithecus (PLOS ONE, 2017)"
+        },
         {
           "title": "Brunet et al. · Sahelanthropus at three Toros-Menalla localities (Nature, 2005)",
           "url": "https://www.nature.com/articles/nature03392"

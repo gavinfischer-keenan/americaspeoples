@@ -80,7 +80,8 @@ async function includeDirectory(dir: string) {
       // must not silently turn them back into redistributable research reports.
       if((dir==='docs/intake'&&item.name.endsWith('.txt'))||dir==='sites/reports'){
         const text=await readFile(`${dir}/${item.name}`,'utf8');
-        if(text.length>7500||!(/retained privately|not included in this public distribution|redistribution permission/i.test(text)))throw Error(`Uncleared research report cannot be packaged: ${dir}/${item.name}`);
+        // Standardized Electric Eel topbar shell adds ~7 KB around each 1.5 KB notice stub.
+        if(text.length>12000||!(/retained privately|not included in this public distribution|redistribution permission/i.test(text)))throw Error(`Uncleared research report cannot be packaged: ${dir}/${item.name}`);
       }
       await copyFile(`${dir}/${item.name}`, `dist/${dir}/${item.name}`);
       names.push(`${dir}/${item.name}`);

@@ -19,7 +19,7 @@ export async function checkWritingCollection(fixture){
  const fonts=await page.evaluate(async()=>{await document.fonts.load('24px AtlasCuneiform','𒀀');await document.fonts.load('24px AtlasCoptic','ⲁ');return document.fonts.check('24px AtlasCuneiform','𒀀')&&document.fonts.check('24px AtlasCoptic','ⲁ');});
  assert.equal(fonts,true);
  assert.equal(await page.locator('.original-text:not([lang])').count(),0);
- assert.equal(await page.locator('nav[aria-label="Atlas homes"] a[href="../#map"]').count(),1);
+ assert.equal(await page.locator('nav[aria-label="Main navigation"] a[href="../#movie"]').count(),1);
  for(const id of ['maya-centers','maya-culture','monte-alban','inca-civilization'])assert.equal(await page.locator(`nav[aria-label="Americas reading context"] a[href="${id}.html"]`).count(),1);
  for(const width of [1440,390,320]){
   await page.setViewportSize({width,height:900});

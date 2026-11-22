@@ -67,5 +67,5 @@ export function movieContextHTML(
   }
   const card = (r: DisplayRecord) =>
     `<a href="${recordHref(r)}"><small>${esc(region(r))} · ${historyState(r, year) === "active" ? "Evidence at this time" : "Earlier place / recorded history"}</small><strong>${esc(r.title)}</strong></a>`;
-  return `<div class="context-kicker"><span class="eyebrow">${near ? "AROUND THE JOURNEY & ELSEWHERE" : "AT THE SAME TIME"}</span><span>${esc(formatYear(year))}</span></div><p class="context-explainer">One date across the whole map. Zoom out to see other regions.</p><div class="concurrent-records">${chosen.map(card).join("") || "<p>No dated records in the enabled collection at this point. Missing evidence is not absence of people.</p>"}</div><p class="fine">A selection to read, not a complete history. Earlier places remain labeled separately from current evidence.</p>`;
+  return `<div class="context-kicker"><span class="eyebrow">${near ? "AROUND THE JOURNEY & ELSEWHERE" : "AT THE SAME TIME"}</span><span>${esc(formatYear(year))}</span></div><p class="context-explainer">Contemporary places across the map. Zoom out to see other regions.</p><div class="concurrent-records">${chosen.map(card).join("") || "<p>No dated records fall on this date in the active view.</p>"}</div>`;
 }

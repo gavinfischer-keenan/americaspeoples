@@ -1481,6 +1481,92 @@ body.world-surface .world-top .header-about:hover {
   text-decoration: underline;
 }
 
+body.world-surface .world-top .header-about.active {
+  background: #569e56;
+  color: #10171a;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.family-milestone {
+  display: inline-block;
+  margin: 0 0 8px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: #DCEBDD;
+  border: 1px solid #569E56;
+  color: #244D26;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.family-date-line {
+  margin: 4px 0 10px;
+  font-size: 14px;
+  color: #10171A;
+}
+
+.family-taxon-cards {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.family-taxon-card {
+  background: #F2F6F8;
+  border: 1px solid #B4BEC4;
+  border-left: 3px solid #569E56;
+  border-radius: 8px;
+  padding: 9px 12px;
+  display: grid;
+  gap: 2px;
+}
+
+.family-taxon-card strong {
+  font-size: 13px;
+  color: #10171A;
+}
+
+.family-taxon-card span {
+  font-size: 12px;
+  color: #244D26;
+  font-weight: 600;
+}
+
+.family-taxon-card small {
+  font-size: 11.5px;
+  color: #525D64;
+  line-height: 1.45;
+}
+
+.family-start-oldest {
+  margin-top: 10px;
+  padding: 9px 14px;
+  border-radius: 8px;
+  background: #569E56;
+  border: 1px solid #3B783D;
+  color: #10171A;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+}
+
+.family-start-oldest:hover {
+  background: #72B273;
+}
+
+.family-guide-cta a {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: 700;
+  color: #244D26;
+}
+
 body.world-surface .world-top :focus-visible {
   outline: 2px solid #fa742a;
   outline-offset: 2px;

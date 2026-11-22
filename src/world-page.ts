@@ -68,15 +68,19 @@ export function worldHeader(activeHash = "#world") {
           ? "#atlas/europe"
           : activeHash === "#atlas/asia-pacific" || activeHash === "#atlas/asia"
             ? "#atlas/asia-pacific"
-            : activeHash === "#origins" || activeHash.startsWith("#study/")
+            : activeHash === "#origins" || activeHash.startsWith("#study/") || activeHash === "#dives" || activeHash.startsWith("#dives/")
               ? "#dives"
-              : activeHash === "#explore"
-                ? "#explore"
-                : activeHash === "#movie" || activeHash === "#map"
-                  ? "#movie"
-                  : activeHash === "#library"
-                    ? "#library"
-                    : "#world";
+              : activeHash === "#physical" || activeHash.startsWith("#physical/")
+                ? "#physical"
+                : activeHash === "#explore"
+                  ? "#explore"
+                  : activeHash === "#movie" || activeHash === "#map"
+                    ? "#movie"
+                    : activeHash === "#library"
+                      ? "#library"
+                      : activeHash === "#about"
+                        ? "#about"
+                        : "#world";
   const items = [
     ["#world", "World"],
     ["#movie", "Americas"],
@@ -86,9 +90,10 @@ export function worldHeader(activeHash = "#world") {
     ["#atlas/asia-pacific", "Asia"],
     ["#explore", "Explore"],
     ["#dives", "Deep dives"],
+    ["#physical", "Climate"],
     ["#library", "Library"],
   ] as const;
-  return `<header class="world-top"><a class="world-brand" href="#world"><span class="world-mark" aria-hidden="true">◈</span><span>The Spread of Peoples<small>ALASKA BLACKFISH</small></span></a><nav aria-label="Main navigation">${items.map(([href, label]) => `<a href="${href}"${href === active ? ' class="active"' : ""}>${label}</a>`).join("")}</nav><a class="header-about" href="#about" aria-label="About this atlas">About the atlas ↗</a></header>`;
+  return `<header class="world-top"><a class="world-brand" href="#world"><span class="world-mark" aria-hidden="true">◈</span><span>The Spread of Peoples<small>ALASKA BLACKFISH</small></span></a><nav aria-label="Main navigation">${items.map(([href, label]) => `<a href="${href}"${href === active ? ' class="active"' : ""}>${label}</a>`).join("")}</nav><a class="header-about${active === "#about" ? " active" : ""}" href="#about" aria-label="About this atlas">About ↗</a></header>`;
 }
 const number = (n: number) => n.toLocaleString("en-US");
 function svgPoint(svg: SVGSVGElement, x: number, y: number): [number, number] | undefined {
@@ -363,6 +368,9 @@ export function mountWorldPlayer(
     drag: { x: number; y: number; sx: number; sy: number } | undefined,
     moved = false;
   const stats = worldRegionStats(data, scope),
+    earliestEvidence = data.evidence
+      .filter((e) => inWorldScope(e, scope))
+      .sort((a, b) => a.start - b.start)[0],
     taxa = data.taxa.filter(
       (t) =>
         data.evidence.some(
@@ -412,10 +420,10 @@ export function mountWorldPlayer(
             ? `<option value="">Choose a period…</option><option value="${first}">Earliest mapped evidence</option><option value="-1000000">Early &amp; Middle Pleistocene</option><option value="-150000">Neanderthal hunting &amp; hearths</option><option value="-40000">Upper Paleolithic art &amp; Aurignacian</option><option value="-15000">Magdalenian &amp; Star Carr Mesolithic</option><option value="-5500">Aegean, Cardial &amp; LBK farmers</option><option value="-2200">Megaliths, Steppe &amp; Minoan–Mycenaean</option><option value="-500">Classical Athens, Etruscans &amp; Celts</option><option value="100">Pompeii, Imperial Rome &amp; Danube Limes</option><option value="900">Ravenna, Al-Andalus, Novgorod &amp; Rus’</option><option value="1600">Florence, Venice, Seville &amp; Amsterdam</option><option value="${last}">1900 CE endpoint</option>`
             : `<option value="">Choose a period…</option><option value="${first}">Earliest mapped evidence</option><option value="-2800000">Early Homo</option><option value="-350000">Many human lineages</option><option value="-70000">Later dispersals</option><option value="-12000">After the Ice Age</option><option value="-7000">Farmers and population change</option><option value="1900">1900 endpoint</option>`;
 
-  host.innerHTML = `<article class="family-page"><header class="family-heading"><div><p class="world-kicker">${kicker}</p><h1>${esc(title)}</h1></div><nav aria-label="Regional history"><a href="#world">World overview</a>${scope === "europe" ? '<a href="#atlas/europe">Europe: detailed history</a>' : scope === "pacific" ? '<a href="#atlas/pacific">Australia &amp; Pacific: full interactive map</a>' : ""}<a href="#dives">Deep dives</a><a href="sites/world-human-family.html">Family &amp; genetics guide</a></nav></header><div class="family-map-navigation"></div><div class="family-layout"><aside class="family-reader" aria-label="Evidence and filters"><div class="family-filter"><label>Lineage<select id="family-taxon"><option value="all">All human-family branches</option>${taxa.map((t) => `<option value="${t.id}"${state.taxon === t.id ? " selected" : ""}>${esc(t.name)}</option>`).join("")}</select></label><label>Jump to a chapter<select id="family-era">${eraOptions}</select></label><label class="family-ice-toggle"><input type="checkbox" id="family-ice"${state.ice !== false ? " checked" : ""}> Quaternary ice sheets (reconstructed)</label></div><p class="family-scope">${esc(scopeLead)}</p><details class="family-reading"><summary>How to read this map</summary><p>Bright points mark evidence whose dating range contains the map year. Fainter points are earlier evidence, not a claim of continuing occupation. A dating range can express uncertainty rather than continuous activity.</p><p>Dashed connections represent broad dispersal models; pink dotted connections concern admixture. Their geometry is schematic and does not establish a surveyed route or an exact meeting place.</p><p>Last known evidence is not an extinction date. Genes, languages and material cultures do not map one-to-one. Deep-time labels retain the source’s approximate ages. BP uses 1950 as its reference.</p></details><section id="family-detail" aria-live="polite"></section><details class="family-now-section" open><summary>What is here at this time</summary><section id="family-happening-now" class="family-happening-now" aria-live="polite"></section></details><label class="family-search-label">Find a site or evidence<input id="family-search" type="search" placeholder="Name, place or technology" value="${esc(state.query ?? "")}"><small>Search every date in this map. Selecting a result opens its dated evidence.</small></label><details class="family-evidence-group" open><summary class="family-list-heading">Evidence in this view</summary><div id="family-evidence-list"></div></details><details class="family-waves-group" open><summary>Connections &amp; territories at this date</summary><div id="family-wave-list"></div></details><details class="family-guides"><summary>Regional guides &amp; deep dives</summary><div id="family-guide-list"></div></details></aside><div class="family-map-column"><div class="family-map-stage"><svg id="family-map" viewBox="0 0 1000 620" role="group" aria-label="Human-family evidence map"></svg><div id="family-map-banner" class="family-map-banner" aria-live="polite"><span class="family-banner-meta">${stats.records} evidence anchors · ${stats.references} references</span><span class="family-banner-year"></span><span class="family-banner-text"></span></div><div class="family-map-controls"><button id="family-zoom-in" aria-label="Zoom in">+</button><button id="family-zoom-out" aria-label="Zoom out">−</button><button id="family-reset">Reset map</button></div><details class="map-key-disclosure family-map-key"><summary>Read the map</summary><div class="family-legend"><span><i class="family-dot"></i>Dated evidence</span><span><i class="family-dot earlier"></i>Earlier evidence</span><span>Dashed: dispersal model</span><span class="family-admixture">Dotted: admixture evidence</span><span>Shading: dated territorial reconstruction</span><span class="family-credit-line">Natural Earth II shaded relief · Modern coastlines for orientation</span></div></details></div></div></div><footer class="family-timeline"><div class="family-transport"><button id="family-play">Play</button><button id="family-back" aria-label="Previous evidence change">◀</button><button id="family-next" aria-label="Next evidence change">▶</button><label>Pace<select id="family-rate" aria-label="Playback pace"><option value="1">Steady</option><option value="2">2×</option><option value="4">4×</option></select></label>${study ? "" : `<label>Jump to<select id="family-jump" aria-label="Jump to period">${eraOptions}</select></label>`}</div><label class="family-slider-label">Map year <output id="family-year"></output><input id="family-slider" type="range" min="0" max="10000" step="1" aria-label="Human-family map year"><div class="family-time-ends"><span>${deepTimeLabel(first)}</span><span>${earlyAfrica ? "15,000 BCE" : study ? deepTimeLabel(last) : "1900 CE"}</span></div></label><form id="family-date-form"><label>Year<input id="family-date" inputmode="numeric" aria-label="Map year"></label><select id="family-era-input" aria-label="Map year era"><option>CE</option><option>BCE</option></select><button type="submit">Go</button><span id="family-date-error" role="status"></span></form><p class="family-playback-note" id="family-date-note">Evidence changes are spaced for reading; long gaps are shortened. Modern relief &amp; coastlines for orientation.</p></footer></article>`;
+  host.innerHTML = `<article class="family-page"><header class="family-heading"><div><p class="world-kicker">${kicker}</p><h1>${esc(title)}</h1></div><nav class="subhead-links" aria-label="Regional history">${scope === "europe" ? '<a href="#atlas/europe">Europe: detailed history</a>' : scope === "pacific" ? '<a href="#atlas/pacific">Australia &amp; Pacific: full interactive map</a>' : ""}<a href="sites/world-human-family.html">Branching human family guide ↗</a></nav></header><div class="family-map-navigation"></div><div class="family-layout"><aside class="family-reader" aria-label="Evidence and filters"><div class="family-filter"><label>Lineage<select id="family-taxon"><option value="all">All human-family branches</option>${taxa.map((t) => `<option value="${t.id}"${state.taxon === t.id ? " selected" : ""}>${esc(t.name)}</option>`).join("")}</select></label><label>Jump to a chapter<select id="family-era">${eraOptions}</select></label><label class="family-ice-toggle"><input type="checkbox" id="family-ice"${state.ice !== false ? " checked" : ""}> Quaternary ice sheets (reconstructed)</label></div><p class="family-scope">${esc(scopeLead)}</p><details class="family-reading"><summary>How to read this map</summary><p>Bright points mark evidence whose dating range contains the map year. Fainter points are earlier finds shown in context. Dashed lines show schematic dispersal models; pink dotted lines show admixture evidence.</p></details><section id="family-detail" aria-live="polite"></section><details class="family-now-section" open><summary>What is here at this time</summary><section id="family-happening-now" class="family-happening-now" aria-live="polite"></section></details><label class="family-search-label">Find a site or evidence<input id="family-search" type="search" placeholder="Name, place or technology" value="${esc(state.query ?? "")}"><small>Search every date in this map. Selecting a result opens its dated evidence.</small></label><details class="family-evidence-group" open><summary class="family-list-heading">Evidence in this view</summary><div id="family-evidence-list"></div></details><details class="family-waves-group" open><summary>Connections &amp; territories at this date</summary><div id="family-wave-list"></div></details><details class="family-guides"><summary>Regional guides &amp; deep dives</summary><div id="family-guide-list"></div></details></aside><div class="family-map-column"><div class="family-map-stage"><svg id="family-map" viewBox="0 0 1000 620" role="group" aria-label="Human-family evidence map"></svg><div id="family-map-banner" class="family-map-banner" aria-live="polite"><span class="family-banner-meta">${stats.records} evidence anchors · ${stats.references} references</span><span class="family-banner-year"></span><span class="family-banner-text"></span></div><div class="family-map-controls"><button id="family-zoom-in" aria-label="Zoom in">+</button><button id="family-zoom-out" aria-label="Zoom out">−</button><button id="family-reset">Reset map</button></div><details class="map-key-disclosure family-map-key"><summary>Read the map</summary><div class="family-legend"><span><i class="family-dot"></i>Dated evidence</span><span><i class="family-dot earlier"></i>Earlier evidence</span><span>Dashed: dispersal model</span><span class="family-admixture">Dotted: admixture evidence</span><span>Shading: dated territorial reconstruction</span><span class="family-credit-line">Natural Earth II shaded relief · Modern coastlines</span></div></details></div></div></div><footer class="family-timeline"><div class="family-transport"><button id="family-play">Play</button><button id="family-back" aria-label="Previous evidence change">◀</button><button id="family-next" aria-label="Next evidence change">▶</button><label>Pace<select id="family-rate" aria-label="Playback pace"><option value="1">Steady</option><option value="2">2×</option><option value="4">4×</option></select></label>${study ? "" : `<label>Jump to<select id="family-jump" aria-label="Jump to period">${eraOptions}</select></label>`}</div><label class="family-slider-label">Map year <output id="family-year"></output><input id="family-slider" type="range" min="0" max="10000" step="1" aria-label="Human-family map year"><div class="family-time-ends"><span>${deepTimeLabel(first)}</span><span>${earlyAfrica ? "15,000 BCE" : study ? deepTimeLabel(last) : "1900 CE"}</span></div></label><form id="family-date-form"><label>Year<input id="family-date" inputmode="numeric" aria-label="Map year"></label><select id="family-era-input" aria-label="Map year era"><option>CE</option><option>BCE</option></select><button type="submit">Go</button><span id="family-date-error" role="status"></span></form><p class="family-playback-note" id="family-date-note">Click any point on the map or drag the timeline to inspect dated finds.</p></footer></article>`;
   if (study) {
     host.querySelector(".family-heading nav")!.innerHTML =
-      `<a href="#world">World overview</a><a href="#dives">Deep dives</a><a href="sites/${study.guideId}.html">Read the full deep dive</a>`;
+      `<a href="#dives">More deep dives</a><a href="sites/${study.guideId}.html">Read the full deep dive ↗</a>`;
     host.querySelector("#family-era")!.closest("label")!.remove();
     if (taxa.length <= 1) {
       host.querySelector("#family-taxon")!.closest("label")!.remove();
@@ -455,10 +463,12 @@ export function mountWorldPlayer(
           (b.atlasIds[0] === scope ? 1 : 0) - (a.atlasIds[0] === scope ? 1 : 0),
       );
     host.querySelector("#family-guide-list")!.innerHTML =
-      `<p><a href="#dives"><strong>Browse all Deep Dives →</strong></a></p>` +
+      `<p><a href="sites/world-human-family.html"><strong>The branching human family ↗</strong></a> · <a href="#origins">Interactive map</a></p>` +
       scopeGuides
+        .filter((g) => g.id !== "world-human-family")
         .map((g) => `<p><a href="${esc(g.href)}">${esc(g.title)} ↗</a></p>`)
-        .join("");
+        .join("") +
+      `<p><a href="#dives"><strong>Browse all Deep Dives →</strong></a></p>`;
   }
   const navigation = mountMapNavigation(
     host.querySelector<HTMLElement>(".family-map-navigation")!,
@@ -587,32 +597,53 @@ export function mountWorldPlayer(
       draw();
     }
   });
+  function sourceDomain(url: string) {
+    try {
+      return new URL(url).hostname.replace(/^www\./, "");
+    } catch {
+      return "Source";
+    }
+  }
   function sourceHTML(ids: string[]) {
     return worldSources(data, ids)
       .map(
         (s) =>
-          `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)}</a><small>${esc(s.access)}${s.locator ? " · " + esc(s.locator) : ""}</small></li>`,
+          `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)}</a><small>${esc(sourceDomain(s.url))}${s.locator ? " · " + esc(s.locator) : ""}</small></li>`,
       )
       .join("");
   }
   function details(item?: WorldEvidence | WorldWave | WorldTerritory) {
     detail.classList.toggle("has-selection", Boolean(item));
     if (item && "geometry" in item) {
-      detail.innerHTML = `<p class="world-kicker">${esc(item.meaning.replaceAll("-", " "))}</p><h2>${esc(item.title)}</h2><strong>${deepTimeLabel(item.start)}–${deepTimeLabel(item.end)}</strong><p>${esc(item.limits)}</p><ul class="family-sources">${sourceHTML(item.sourceIds)}</ul>`;
+      detail.innerHTML = `<p class="world-kicker">${esc(item.meaning.replaceAll("-", " "))}</p><h2>${esc(item.title)}</h2><strong>${deepTimeLabel(item.start)}–${deepTimeLabel(item.end)}</strong><details class="method-disclosure"><summary>Dating &amp; evidence notes</summary><p class="family-limits">${esc(item.limits)}</p></details><ul class="family-sources">${sourceHTML(item.sourceIds)}</ul>`;
       return;
     }
     if (!item) {
       const t = data.taxa.find((t) => t.id === state.taxon);
       detail.innerHTML = t
         ? `<p class="world-kicker">${esc(t.status.replaceAll("-", " "))}</p><h2>${esc(t.name)}</h2><p>${esc(t.meaning)}</p><p>${esc(t.note)}</p><ul class="family-sources">${sourceHTML(t.sourceIds)}</ul>`
-        : `<p class="world-kicker">${study ? "A DATED HISTORY" : "A BRANCHING STORY"}</p><h2>Read the evidence</h2><p>Select a point, connection or territory to see its dates, interpretation and sources.</p><p>${study ? "Places, movements and territorial reconstructions have separate sources and limits. An earlier point does not establish continuing occupation." : "Different human lineages overlapped in time. Some relationships are well supported; others remain unresolved."}</p>`;
+        : `<p class="world-kicker">${study ? "DATED DEEP DIVE" : "FOUNDATION &amp; CONTEXT"}</p><h2>${stats.records} dated finds &amp; landmarks</h2><p>${esc(scopeLead)}</p><p>Select any point or connection on the map to read what was found, which hominin lineage it represents, and its primary publications.</p>${earliestEvidence ? `<button type="button" class="family-start-oldest" data-world-item="${esc(earliestEvidence.id)}">Start at the oldest site: ${esc(earliestEvidence.title)}</button>` : ""}`;
       return;
     }
-    detail.innerHTML = `<p class="world-kicker">${esc(item.kind.replaceAll("-", " "))}</p><h2>${esc(item.title)}</h2><strong>${esc(item.dateLabel)}</strong><p>${esc(item.summary)}</p><p class="family-limits">${esc(item.limits)}</p>${"dateBasis" in item ? `<p class="world-small">${esc(item.dateBasis)}</p>` : ""}<p class="world-small">${item.taxonIds.map((id) => esc(data.taxa.find((t) => t.id === id)!.name)).join(" · ")}</p><h3>Evidence and sources</h3><ul class="family-sources">${sourceHTML(item.sourceIds)}</ul>${"guideId" in item && item.guideId ? `<a href="sites/${esc(item.guideId)}.html">Read the deeper study</a>` : ""}`;
+    const isOldest =
+      Boolean(earliestEvidence && item.id === earliestEvidence.id) ||
+      (!("geometry" in item) &&
+        !Array.isArray((item as WorldWave).coordinates[0]) &&
+        item.start === first);
+    const taxonCards = item.taxonIds
+      .map((id) => data.taxa.find((t) => t.id === id))
+      .filter((t): t is NonNullable<typeof t> => Boolean(t))
+      .map(
+        (t) =>
+          `<div class="family-taxon-card"><strong>${esc(t.name)}</strong><span>${esc(t.meaning)}</span><small>${esc(t.note)}</small></div>`,
+      )
+      .join("");
+    const sourceList = worldSources(data, item.sourceIds);
+    detail.innerHTML = `${isOldest ? '<p class="family-milestone">Oldest site in this map</p>' : ""}<p class="world-kicker">${esc(item.kind.replaceAll("-", " "))}</p><h2>${esc(item.title)}</h2><p class="family-date-line"><strong>${esc(item.dateLabel)}</strong></p><p>${esc(item.summary)}</p>${taxonCards ? `<div class="family-taxon-cards">${taxonCards}</div>` : ""}<h3>Evidence &amp; sources</h3><ul class="family-sources">${sourceHTML(item.sourceIds)}</ul>${"guideId" in item && item.guideId ? `<p class="family-guide-cta"><a href="sites/${esc(item.guideId)}.html">Read the deeper study ↗</a></p>` : ""}<details class="method-disclosure"><summary>Dating &amp; evidence notes</summary><p class="family-limits">${esc(item.limits)}</p>${"dateBasis" in item ? `<p class="world-small">${esc(item.dateBasis)}</p>` : ""}${sourceList.length ? `<p class="world-small">${sourceList.map((s) => `${esc(s.title)}: ${esc(s.access)}`).join(" · ")}</p>` : ""}</details>`;
     if ("population" in item && item.population?.length)
       detail.insertAdjacentHTML(
         "beforeend",
-        `<h3>Dated resident estimates</h3>${item.population.map((p) => `<p><strong>${deepTimeLabel(p.year)}: ${number(p.min)}${p.max !== p.min ? "–" + number(p.max) : ""}</strong><br>${esc(p.note)} (${esc(p.basis)}).</p><ul class="family-sources">${sourceHTML(p.sourceIds)}</ul>`).join("")}<p class="world-small">Dot size changes only at these observed dates. No population is extrapolated.</p>`,
+        `<h3>Dated resident estimates</h3>${item.population.map((p) => `<p><strong>${deepTimeLabel(p.year)}: ${number(p.min)}${p.max !== p.min ? "–" + number(p.max) : ""}</strong><br>${esc(p.note)} (${esc(p.basis)}).</p><ul class="family-sources">${sourceHTML(p.sourceIds)}</ul>`).join("")}<p class="world-small">Sizes reflect dated site estimates only.</p>`,
       );
   }
   function choose(id: string) {
@@ -747,7 +778,7 @@ export function mountWorldPlayer(
         `<div class="family-happening-head"><span class="world-kicker">HAPPENING AT THIS TIME</span><strong>${esc(deepTimeLabel(state.year))}</strong></div>` +
         (itemsHTML || wavesHTML || terrHTML
           ? `<div class="family-happening-list">${itemsHTML}${wavesHTML}${terrHTML}</div>`
-          : `<p class="world-small">No dated anchor starts or sits active in this window (${current.evidence.length} earlier anchor${current.evidence.length === 1 ? "" : "s"} shown in context).</p>`);
+          : `<p class="world-small">No finds fall directly on this date (${current.evidence.length} earlier landmark${current.evidence.length === 1 ? "" : "s"} shown on the map).</p>`);
     }
     const bannerEl = host.querySelector<HTMLElement>("#family-map-banner");
     if (bannerEl) {
@@ -830,16 +861,16 @@ export function mountWorldPlayer(
         .join("") ||
       (query
         ? '<p class="world-small">No matching evidence in this map and lineage selection.</p>'
-        : '<p class="world-small">No mapped evidence for this selection at this stage. This is a coverage gap.</p>');
+        : '<p class="world-small">No mapped evidence for this selection at this stage.</p>');
     host.querySelector("#family-wave-list")!.innerHTML = current.waves.length
       ? `<h2>Connections in this period</h2>${current.waves.map((w) => `<button data-world-item="${w.id}"><strong>${esc(w.title)}</strong><span>${esc(w.dateLabel)} · schematic ${w.kind === "admixture" ? "admixture connection" : w.kind === "dispersal" ? "dispersal model" : w.kind.replaceAll("-", " ") + " connection"}</span></button>`).join("")}`
-      : "<p>No included connection is active at this date. Earlier routes are not kept moving.</p>";
+      : '<p class="world-small">No modeled connection falls on this date.</p>';
     if (territories.length)
       host
         .querySelector("#family-wave-list")!
         .insertAdjacentHTML(
           "beforeend",
-          `<h2>Territories at this date</h2>${territories.map((t) => `<button data-world-item="${t.id}"><strong>${esc(t.title)}</strong><span>${esc(t.meaning.replaceAll("-", " "))} · select for sources and limits</span></button>`).join("")}`,
+          `<h2>Territories at this date</h2>${territories.map((t) => `<button data-world-item="${t.id}"><strong>${esc(t.title)}</strong><span>${esc(t.meaning.replaceAll("-", " "))}</span></button>`).join("")}`,
         );
     if (focusedItem)
       host

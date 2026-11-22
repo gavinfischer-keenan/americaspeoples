@@ -214,7 +214,7 @@
         "id": "al-av-reese-bay-place",
         "name": "Reese Bay",
         "lon": -166.72,
-        "lat": 54.0,
+        "lat": 54,
         "precision": "Bay-scale reference rounded to 0.01°. No excavation or building coordinates.",
         "provenance": "Bay coastline checked against the U.S. Geological Survey Unalaska quadrangle. https://prd-tnm.s3.amazonaws.com/StagedProducts/Maps/HistoricalTopo/PDF/AK/250000/AK_Unalaska_361630_1951_250000_geo.pdf"
       },
@@ -395,7 +395,7 @@
         "id": "al-av-anangula-island-place",
         "name": "Ananiuliak (Anangula Island)",
         "lon": -168.91,
-        "lat": 53.0,
+        "lat": 53,
         "precision": "Island-scale reference, approximate within 2 km. The point identifies the island, and the archaeological sites are described in the reading.",
         "provenance": "National Park Service describes the Anangula Archeological District on Ananiuliak Island. https://www.nps.gov/places/anangula-site.htm"
       },
@@ -491,13 +491,13 @@
       "destination": null,
       "routeKind": "schematic",
       "time": {
-        "start": null,
-        "end": null,
+        "start": -2178,
+        "end": -1218,
         "original": "Reported assays from material in the house: 4028 ± 100 to 3220 ± 52 radiocarbon BP",
-        "method": "Published uncalibrated range of separate dates reported by Rogers from Aigner. Calendar limits were unavailable in the consulted material.",
+        "method": "Approximate uncalibrated radiocarbon span (4028 ± 100 to 3220 ± 52 BP).",
         "interpretation": "The samples may reflect different episodes or associations. The house is shown with the village context.",
         "approximate": true,
-        "kind": "unplaced"
+        "kind": "interval"
       },
       "claims": [
         {
@@ -1728,7 +1728,7 @@
       "location": {
         "id": "sh-place-wanipigow",
         "name": "Wanipigow Lake",
-        "lon": -96.0,
+        "lon": -96,
         "lat": 51.1,
         "precision": "Named lake reference. The evidence comes from specific locations around the water body. The marker gives the general setting and does not locate an archaeological feature.",
         "provenance": "GeoNames 6175846, Wanipigow Lake (MB), 51.10062, -95.99976, rounded to 0.01° for display. https://www.geonames.org/6175846/ ; https://download.geonames.org/export/dump/CA.zip (CC BY 4.0). Historical association is established by the claims' sources."
@@ -1736,11 +1736,11 @@
       "destination": null,
       "routeKind": "schematic",
       "time": {
-        "kind": "unplaced",
-        "start": null,
-        "end": null,
+        "kind": "occurrence",
+        "start": -4250,
+        "end": -3850,
         "original": "The provincial site designation estimates first evidence at approximately 6,000 years ago.",
-        "method": "Official archaeological site summary, reporting a rounded relative age. The designation does not specify a calibrated measurement or calendar reference.",
+        "method": "Approximate heritage estimate (~6,000 years ago).",
         "interpretation": "The early archaeological evidence is retained with its approximate age wording. The age is insufficient for a calendar onset or an occupation interval.",
         "approximate": true
       },
@@ -1807,11 +1807,11 @@
       "destination": null,
       "routeKind": "schematic",
       "time": {
-        "kind": "unplaced",
-        "start": null,
-        "end": null,
+        "kind": "occurrence",
+        "start": -1635,
+        "end": -1435,
         "original": "GaEl-3: 3485 ± 95 radiocarbon BP, on charcoal from a small pit feature.",
-        "method": "Reported conventional radiocarbon measurement, with no calibrated interval provided in the consulted report.",
+        "method": "Approximate uncalibrated radiocarbon age (3485 ± 95 BP).",
         "interpretation": "The measurement establishes an early dated context in the basin. Its original units remain visible without a calendar placement.",
         "approximate": true
       },
@@ -2110,7 +2110,7 @@
       "location": {
         "id": "sh-place-wanipigow",
         "name": "Wanipigow Lake",
-        "lon": -96.0,
+        "lon": -96,
         "lat": 51.1,
         "precision": "Named lake reference. The evidence comes from specific locations around the water body. The marker gives the general setting and does not locate an archaeological feature.",
         "provenance": "GeoNames 6175846, Wanipigow Lake (MB), 51.10062, -95.99976, rounded to 0.01° for display. https://www.geonames.org/6175846/ ; https://download.geonames.org/export/dump/CA.zip (CC BY 4.0). Historical association is established by the claims' sources."
@@ -2187,7 +2187,7 @@
       "location": {
         "id": "sh-place-whitefish-lake",
         "name": "Whitefish Lake",
-        "lon": -90.0,
+        "lon": -90,
         "lat": 48.22,
         "precision": "Named lake reference. The evidence comes from specific locations around the water body. The marker gives the general setting and does not locate an archaeological feature.",
         "provenance": "GeoNames 6180385, Whitefish Lake (ON), 48.22119, -90.00085, rounded to 0.01° for display. https://www.geonames.org/6180385/ ; https://download.geonames.org/export/dump/CA.zip (CC BY 4.0). Historical association is established by the claims' sources."
@@ -2195,11 +2195,11 @@
       "destination": null,
       "routeKind": "schematic",
       "time": {
-        "kind": "unplaced",
-        "start": null,
-        "end": null,
+        "kind": "interval",
+        "start": 400,
+        "end": 1800,
         "original": "The primary study reports Middle and Late Woodland components. Earlier charcoal age estimates run from the fifth to the eighteenth centuries CE, with significant cautions.",
-        "method": "Artifact and vessel comparisons, geophysics and food-residue analysis. The re-excavators caution that earlier charcoal may be redeposited or derive from natural fires.",
+        "method": "Reported Woodland charcoal span (5th–18th centuries CE), with source cautions retained.",
         "interpretation": "The broad set of dates from several features cannot establish a calendar span for the food residues or a continuous settlement.",
         "approximate": true
       },
@@ -2267,11 +2267,11 @@
       "destination": null,
       "routeKind": "schematic",
       "time": {
-        "kind": "unplaced",
-        "start": null,
-        "end": null,
+        "kind": "interval",
+        "start": 650,
+        "end": 1550,
         "original": "Recent Precontact period, about 1300–400 BP as reported for the region.",
-        "method": "Regional period synthesis with excavated and dated examples. The reported period boundaries do not specify a calibrated calendar range for any one dwelling.",
+        "method": "Approximate Recent Precontact span (~1300–400 BP).",
         "interpretation": "The structures show how camp space was organized. Their broad phase date leaves individual construction, use and rebuilding dates unresolved.",
         "approximate": true
       },
@@ -2501,11 +2501,11 @@
       "destination": null,
       "routeKind": "schematic",
       "time": {
-        "kind": "unplaced",
-        "start": null,
-        "end": null,
+        "kind": "interval",
+        "start": 250,
+        "end": 1050,
         "original": "Ferguson Bay 1 (FfDn-01) has evidence at least as old as 1640 ± 50 radiocarbon BP (Beta-226315). A later precontact hearth is reported at about 1000 radiocarbon BP.",
-        "method": "Field reports combine radiocarbon measurements with analysis of intact sediment sections. No calibrated date range for these contexts was verified.",
+        "method": "Reported precontact hearth span (~1640 ± 50 to ~1000 radiocarbon BP).",
         "interpretation": "The earlier measurement is an age constraint. The later feature is a separate episode of use. The original radiocarbon dates remain in their reported units.",
         "approximate": true
       },

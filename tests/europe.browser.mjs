@@ -34,7 +34,7 @@ async function choose(entry){
  assert.equal(await page.locator('#europe-details h2').textContent(),entry.title);
 }
 try{
- await open('#explore');
+ await open('#movie');
  assert.ok(!fixture.requests.some(r=>r.url.endsWith('/europe-catalogue.json')));
  await open('#atlas/europe');
  const res=await page.request.get(fixture.url+'europe-catalogue.json');

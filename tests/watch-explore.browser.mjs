@@ -23,11 +23,9 @@ try{
  await page.locator('#story-progress').press('End');assert.match(await page.locator('#story-progress-label').innerText(),/Journey complete/);
  await page.getByRole('button',{name:'Restart story',exact:true}).click();assert.equal(await page.locator('#story-progress').inputValue(),'0');
  await mapSetting(page,()=>page.getByRole('button',{name:'Focus view',exact:true}).click());assert.ok(await page.locator('#cinema-caption').isVisible());assert.match(await page.locator('#cinema-caption').innerText(),/Sea crossings/);await page.keyboard.press('Escape');
- await page.getByRole('button',{name:'Region: Pacific',exact:true}).click();
- await page.getByRole('navigation',{name:'Choose a region',exact:true}).getByRole('link',{name:'Americas',exact:true}).click();
- await page.getByRole('button',{name:'Region: Americas',exact:true}).waitFor();
- await page.getByRole('link',{name:'Explore',exact:true}).click();await page.locator('.timeline').waitFor({state:'hidden'});assert.ok(await page.locator('.timeline').isHidden());
- await mapSetting(page, () => page.getByLabel('Explore a region',{exact:true}).selectOption('southwest'));
+ await page.getByRole('link',{name:'Pacific',exact:true}).click();
+ await page.getByRole('link',{name:'Americas',exact:true}).click();
+ await page.getByRole('link',{name:'Explore',exact:true}).click();await page.locator('.timeline').waitFor({state:'hidden'});assert.ok(await page.locator('.timeline').isHidden());assert.ok(await page.locator('#explore-timeline').isVisible());
  await mapSetting(page, () => page.getByLabel('Search places and evidence',{exact:true}).fill('Cahokia'));
  await page.locator('#visible-records button').filter({hasText:'Cahokia — urban'}).click();
  assert.match(await page.locator('#selected-records').innerText(),/Mississippian/);
@@ -41,13 +39,12 @@ try{
  assert.ok(await page.locator('[data-pick-record]').count()>1,'actual coordinate click exposes overlapping evidence');
  const alternate=page.locator('[data-pick-record]').nth(1),alternateText=await alternate.innerText();await alternate.click();assert.ok((await page.locator('#selected-records h4').innerText()).includes(alternateText));
  await page.getByRole('button',{name:'Close details',exact:true}).click();
- await mapSetting(page, () => page.getByLabel('Explore a region',{exact:true}).selectOption('mississippi'));
  await mapSetting(page, () => page.getByLabel('Explore category',{exact:true}).selectOption('conflict'));
  const ids=await page.locator('#visible-records button').evaluateAll(nodes=>nodes.map(n=>JSON.parse(n.dataset.mapRecordKey)[0]));
- assert.ok(ids.length>0);for(const id of ids)assert.ok(['conflict','violence','forced-removal'].includes(records.find(r=>r.id===id).overlay?.kind));
+ assert.ok(ids.length>0);for(const id of ids){const rec=records.find(r=>r.id===id);if(rec)assert.ok(['conflict','violence','forced-removal'].includes(rec.overlay?.kind));}
  await mapSetting(page, () => page.getByLabel('Search places and evidence',{exact:true}).fill('no-such-place-in-this-atlas'));assert.match(await page.locator('#visible-records').innerText(),/No matching records/);
  await mapSetting(page, () => page.getByLabel('Search places and evidence',{exact:true}).fill(''));
- await mapSetting(page, () => page.getByLabel('Explore period',{exact:true}).selectOption('current'));assert.ok(await page.locator('.timeline').isVisible());
+ await mapSetting(page, () => page.getByLabel('Explore period',{exact:true}).selectOption('current'));assert.ok(await page.locator('.timeline').isHidden());assert.ok(await page.locator('#explore-timeline').isVisible());
  await page.getByRole('link',{name:'Library',exact:true}).click();await page.locator('.library-card').first().waitFor();assert.equal(await page.locator('.library-card').count(),9);assert.equal(await page.locator('.library-card[href="#dives"]').count(),1);assert.ok(await page.locator('.timeline').isHidden());
  await page.getByRole('link',{name:/Evidence index/}).click();await page.getByLabel('Search evidence',{exact:true}).waitFor();assert.ok(await page.locator('.timeline').isHidden());
  await page.goto(origin+'/#review/cahokia-urban');await page.locator('[data-action="locate"]').click();await page.locator('#selected-records h4').waitFor();

@@ -276,15 +276,38 @@
       "url": "https://doi.org/10.1016/j.cell.2019.02.035",
       "access": "Indexed full-text passages consulted 2026-11-18; direct page access may require a browser challenge",
       "locator": "Introgression-time estimates and model assumptions in Figure 4 / STAR Methods; author manuscript https://research-information.bris.ac.uk/files/186876515/Mismatch_MS_STARMethods.pdf"
+    },
+    {
+      "id": "family-graecopithecus-fuss",
+      "title": "Fuss et al. · Potential hominin affinities of Graecopithecus from the Late Miocene of Europe (PLOS ONE, 2017)",
+      "url": "https://doi.org/10.1371/journal.pone.0177127",
+      "access": "Open-access peer-reviewed article (PLOS ONE, 2017)"
+    },
+    {
+      "id": "family-graecopithecus-bohme",
+      "title": "Böhme et al. · Messinian age and savannah environment of the possible hominin Graecopithecus from Europe (PLOS ONE, 2017)",
+      "url": "https://doi.org/10.1371/journal.pone.0177347",
+      "access": "Open-access peer-reviewed article (PLOS ONE, 2017)"
     }
   ],
   "taxa": [
     {
+      "id": "graecopithecus-freybergi",
+      "name": "Graecopithecus freybergi",
+      "status": "uncertain",
+      "meaning": "Contested Late Miocene hominin candidate (~7.24–7.18 Ma) known from a lower mandible found near Athens (Pyrgos Vassilissis) and an upper premolar from Azmaka, Bulgaria.",
+      "note": "Micro-CT scans reveal partially fused fourth-premolar roots matching early hominins rather than great apes, though its placement before the human–chimp split remains actively debated.",
+      "sourceIds": [
+        "family-graecopithecus-fuss",
+        "family-graecopithecus-bohme"
+      ]
+    },
+    {
       "id": "sahelanthropus-tchadensis",
       "name": "Sahelanthropus tchadensis",
-      "meaning": "A late Miocene candidate near the origin of hominins.",
+      "meaning": "Late Miocene primate from northern Chad (~7.0 Ma) represented by the nearly complete Toumaï cranium (TM 266), jaw fragments, isolated teeth, and a disputed femur and ulna.",
       "status": "uncertain",
-      "note": "Its place near the human–chimpanzee split remains debated; age alone cannot establish direct ancestry.",
+      "note": "A relatively flat face, small canine crown, and anteriorly positioned foramen magnum led its discoverers to classify it as the oldest African hominin candidate, though limb-bone studies continue to debate how habitually bipedal it was.",
       "sourceIds": [
         "family-chad-dating"
       ]
@@ -292,9 +315,9 @@
     {
       "id": "orrorin-tugenensis",
       "name": "Orrorin tugenensis",
-      "meaning": "Early hominin candidate represented by teeth and limb bones.",
+      "meaning": "Late Miocene Kenyan hominin candidate (~6.2–5.8 Ma) known from 20+ fragments including three femora, thick-enameled molars, and a curved thumb bone.",
       "status": "uncertain",
-      "note": "Femoral anatomy suggests bipedality; its relationship to later lineages remains unresolved.",
+      "note": "Micro-CT scans of the BAR 1002′00 femur show a long femoral neck and cortical bone thickening consistent with upright walking alongside arboreal climbing.",
       "sourceIds": [
         "family-orrorin"
       ]
@@ -302,9 +325,9 @@
     {
       "id": "ardipithecus-kadabba",
       "name": "Ardipithecus kadabba",
-      "meaning": "An early Ethiopian hominin identified mainly from fragmentary remains.",
+      "meaning": "Late Miocene–Early Pliocene Ethiopian species (~5.8–5.2 Ma) represented by jaws, teeth, arm bones, a collarbone, and a foot toe bone from the Middle Awash.",
       "status": "uncertain",
-      "note": "A proposed relationship to Ar. ramidus is not a demonstrated ancestor–descendant chain.",
+      "note": "Honing canine roots look more ancestral than Ar. ramidus, while a 5.2 Ma toe phalanx carries a dorsal canting angle linked to bipedal toe-off.",
       "sourceIds": [
         "family-kadabba"
       ]
@@ -312,9 +335,9 @@
     {
       "id": "ardipithecus-ramidus",
       "name": "Ardipithecus ramidus",
-      "meaning": "A hominin combining climbing and bipedal traits.",
+      "meaning": "Pliocene hominin (~4.4 Ma) best known from \"Ardi\" (ARA-VP-6/500), a 125-specimen partial female skeleton excavated at Aramis, Ethiopia.",
       "status": "proposed-ancestor",
-      "note": "Ancestral relationships with Australopithecus are hypotheses; Ardi is an individual, not a species origin date.",
+      "note": "Combined a grasping opposable big toe for tree climbing with an upper pelvis rebuilt for upright walking, challenging models that expected a chimpanzee-like ancestor.",
       "sourceIds": [
         "family-ramidus"
       ]
@@ -322,9 +345,9 @@
     {
       "id": "australopithecus-anamensis",
       "name": "Australopithecus anamensis",
-      "meaning": "An early species of Australopithecus.",
+      "meaning": "Earliest well-sampled Australopithecus (~4.2–3.8 Ma) from Kenya and Ethiopia, defined by jaws, isolated teeth, a tibia from Kanapoi, and the 3.8 Ma MRD cranium.",
       "status": "proposed-ancestor",
-      "note": "Often linked to A. afarensis; fossil ages and similarities do not identify a particular direct ancestor.",
+      "note": "Shows U-shaped tooth rows like Ardipithecus alongside an expanded knee/ankle joint evolved for committed bipedal weight-bearing.",
       "sourceIds": [
         "family-anamensis"
       ]
@@ -332,9 +355,9 @@
     {
       "id": "australopithecus-afarensis",
       "name": "Australopithecus afarensis",
-      "meaning": "The East African species including Lucy and Selam.",
+      "meaning": "Long-lived East African Australopithecus (~3.9–2.9 Ma) represented by hundreds of fossils including Lucy (AL 288-1), Selam (Dikika), and the Laetoli footprint trails.",
       "status": "proposed-ancestor",
-      "note": "A candidate near later hominin ancestry; contemporary diversity leaves its precise relationships open.",
+      "note": "Walked habitually upright on arched feet while keeping curved fingers and upward-oriented shoulder joints useful for climbing.",
       "sourceIds": [
         "family-afarensis",
         "family-lucy"
@@ -343,9 +366,9 @@
     {
       "id": "australopithecus-bahrelghazali",
       "name": "Australopithecus bahrelghazali",
-      "meaning": "A name for a small Pliocene hominin sample from Chad.",
+      "meaning": "Middle Pliocene central African hominin (~3.6 Ma) represented by a partial lower jaw and seven teeth (\"Abel\") from Koro Toro in Chad.",
       "status": "uncertain",
-      "note": "Its separation from other australopith species is debated; a western occurrence is not a migration route.",
+      "note": "Demonstrates that Pliocene hominins lived across Chad’s humid lake basins ~2,500 km west of the East African Rift.",
       "sourceIds": [
         "family-chad-dating"
       ]
@@ -353,9 +376,9 @@
     {
       "id": "kenyanthropus-platyops",
       "name": "Kenyanthropus platyops",
-      "meaning": "A proposed flat-faced hominin from West Turkana.",
+      "meaning": "Middle Pliocene Kenyan hominin (~3.5 Ma) named from the KNM-WT 40000 cranium and maxilla fragments from Lomekwi, West Turkana.",
       "status": "uncertain",
-      "note": "Distortion of the principal cranium complicates taxonomic interpretation.",
+      "note": "Has an unusually flat lower face and small molars for 3.5 Ma, though matrix-filled cracks complicate how different it truly is from Au. afarensis.",
       "sourceIds": [
         "family-kenyanthropus"
       ]
@@ -363,9 +386,9 @@
     {
       "id": "australopithecus-deyiremeda",
       "name": "Australopithecus deyiremeda",
-      "meaning": "A proposed australopith contemporary of A. afarensis.",
+      "meaning": "Middle Pliocene Ethiopian hominin (~3.5–3.3 Ma) from Woranso-Mille, known from upper and lower jaws and an attributed climbing foot (BRT-VP-2/73).",
       "status": "related-lineage",
-      "note": "Jaws, teeth and an attributed foot broaden known diversity without proving ancestry of Homo.",
+      "note": "Proves multiple distinct hominin lineages with different diets and locomotor styles lived side by side in the Afar basin.",
       "sourceIds": [
         "family-deyiremeda",
         "family-deyiremeda-foot"
@@ -374,9 +397,9 @@
     {
       "id": "australopithecus-africanus",
       "name": "Australopithecus africanus",
-      "meaning": "A southern African australopith species.",
+      "meaning": "Southern African gracile australopith (~3.4–2.1 Ma) known from Taung Child, Mrs. Ples (Sts 5), Little Foot (StW 573), and hundreds of dolomite cave specimens.",
       "status": "proposed-ancestor",
-      "note": "Its connection to Homo and the ages and assignments of some cave fossils remain debated.",
+      "note": "Mixed human-like pelvic and spinal balance with ape-like limb proportions; cosmogenic burial dates at Sterkfontein have pushed Member 4 earlier toward ~3.4 Ma.",
       "sourceIds": [
         "family-africanus",
         "family-sterkfontein"
@@ -385,9 +408,9 @@
     {
       "id": "australopithecus-garhi",
       "name": "Australopithecus garhi",
-      "meaning": "An australopith named from Bouri cranial remains.",
+      "meaning": "Late Pliocene Ethiopian australopith (~2.5 Ma) known from a fragmentary cranium (BOU-VP-12/130) at Bouri with huge premolars and molars.",
       "status": "uncertain",
-      "note": "Nearby limb and butchered-animal remains do not securely identify its behavior or descendants.",
+      "note": "Found near some of the earliest butchered mammal bones in the Middle Awash, though associating the bones with a single species remains open.",
       "sourceIds": [
         "family-garhi"
       ]
@@ -395,9 +418,9 @@
     {
       "id": "australopithecus-sediba",
       "name": "Australopithecus sediba",
-      "meaning": "A Malapa hominin with a mosaic of australopith and Homo-like features.",
+      "meaning": "Early Pleistocene South African species (~1.98 Ma) known from exceptionally complete partial skeletons of an adult female and juvenile male at Malapa.",
       "status": "proposed-ancestor",
-      "note": "A proposed connection to Homo does not make the known Malapa individuals ancestors of older Homo fossils.",
+      "note": "Blends a small brain (~420 cc) and long climbing arms with a precision-grip hand and a reorganized pelvis and heel.",
       "sourceIds": [
         "family-sediba",
         "family-ledi"
@@ -406,9 +429,9 @@
     {
       "id": "paranthropus-unassigned",
       "name": "Paranthropus, species unresolved",
-      "meaning": "Robust-chewing hominins identified to genus only.",
+      "meaning": "Earliest robust-jawed Paranthropus fossils (~2.9 Ma) identified from distinctive thick-enameled molars excavated alongside Oldowan stone tools at Nyayanga, Kenya.",
       "status": "uncertain",
-      "note": "A genus-level tooth identification cannot be assigned automatically to a named species.",
+      "note": "Pushes the geographic and temporal range of Paranthropus back nearly 3 Ma in an archaeological hippopotamus-butchery landscape.",
       "sourceIds": [
         "family-nyayanga"
       ]
@@ -416,9 +439,9 @@
     {
       "id": "paranthropus-aethiopicus",
       "name": "Paranthropus aethiopicus",
-      "meaning": "An early robust-chewing lineage in eastern Africa.",
+      "meaning": "Early robust australopith (~2.7–2.3 Ma) anchored by the \"Black Skull\" (KNM-WT 17000) from West Turkana and lower jaws from Omo Shungura.",
       "status": "related-lineage",
-      "note": "Its relationships with other Paranthropus species are reconstructed from fragmentary morphology.",
+      "note": "Shows a massive sagittal crest, projecting face, and heavily buttressed palate built for processing tough or fibrous foods.",
       "sourceIds": [
         "family-aethiopicus"
       ]
@@ -426,9 +449,9 @@
     {
       "id": "paranthropus-boisei",
       "name": "Paranthropus boisei",
-      "meaning": "An eastern African lineage with specialized chewing anatomy.",
+      "meaning": "Hyper-robust East African hominin (~2.3–1.3 Ma) known from OH 5 (\"Zinj\") at Olduvai and dozens of skulls and mandibles around Turkana and Konso.",
       "status": "related-lineage",
-      "note": "It overlapped with Homo; archaeological association does not identify every toolmaker.",
+      "note": "Enormous flat molars and carbon-isotope signals indicate heavy reliance on C4 grasses, sedges, or tough wetland plants.",
       "sourceIds": [
         "family-boisei"
       ]
@@ -436,9 +459,9 @@
     {
       "id": "paranthropus-robustus",
       "name": "Paranthropus robustus",
-      "meaning": "A southern African robust-chewing lineage.",
+      "meaning": "Southern African robust hominin (~2.0–1.0 Ma) represented by rich cave collections from Swartkrans, Kromdraai, and Drimolen.",
       "status": "related-lineage",
-      "note": "The word robust describes chewing anatomy, not a demonstrated evolutionary stage toward us.",
+      "note": "Coexisted in Gauteng karst valleys with early Homo erectus while specializing in hard or tough plant and insect foods.",
       "sourceIds": [
         "family-robustus",
         "family-drimolen"
@@ -447,9 +470,9 @@
     {
       "id": "early-homo",
       "name": "Early Homo, species unresolved",
-      "meaning": "Fossils assigned to Homo without a secure species identification.",
+      "meaning": "Earliest fossils attributed to the genus Homo (~2.8–2.3 Ma), led by the LD 350-1 half-mandible from Ledi-Geraru, Ethiopia.",
       "status": "uncertain",
-      "note": "This is a catalogue grouping, not another named species or an ancestor asserted for all later Homo.",
+      "note": "Shows slimmed premolars and emerging Homo chin/jaw proportions roughly 400,000 years older than previously recognized Homo specimens.",
       "sourceIds": [
         "family-ledi"
       ]
@@ -457,9 +480,9 @@
     {
       "id": "homo-habilis",
       "name": "Homo habilis",
-      "meaning": "A named early Homo species anchored by Olduvai material.",
+      "meaning": "Small-bodied Early Pleistocene Homo (~2.4–1.6 Ma) named from Olduvai Gorge (OH 7) with ~510–660 cc braincases and precision-capable hand bones.",
       "status": "uncertain",
-      "note": "Its fossil membership and relationships to erectus and rudolfensis remain debated.",
+      "note": "Coexisted alongside Homo erectus and Paranthropus boisei in East Africa during the Oldowan stone-tool era.",
       "sourceIds": [
         "family-habilis"
       ]
@@ -467,9 +490,9 @@
     {
       "id": "homo-rudolfensis",
       "name": "Homo rudolfensis",
-      "meaning": "An early Homo name associated with KNM-ER 1470.",
+      "meaning": "Larger-brained Early Pleistocene Homo (~2.0–1.8 Ma) anchored by cranium KNM-ER 1470 (~750 cc) and flat-faced Uraha/Koobi Fora jaws.",
       "status": "uncertain",
-      "note": "Species boundaries and the association of isolated jaws with cranial fossils remain uncertain.",
+      "note": "Broader palate and larger cheek teeth suggest at least two distinct early Homo lineages lived simultaneously around Lake Turkana.",
       "sourceIds": [
         "family-rudolfensis"
       ]
@@ -477,9 +500,9 @@
     {
       "id": "homo-erectus",
       "name": "Homo erectus, broadly defined",
-      "meaning": "A widespread early Homo grouping in Africa and Eurasia.",
+      "meaning": "Long-lived, widespread hominin (~2.04 Ma–108 ka) that evolved near-modern limb proportions, larger brains (600–1,250 cc), and expanded out of Africa into Eurasia and maritime Southeast Asia.",
       "status": "proposed-ancestor",
-      "note": "African material is sometimes called H. ergaster and Dmanisi material H. georgicus; this broad label does not settle those classifications.",
+      "note": "Encompasses African (~1.9–1.5 Ma Turkana Boy / Drimolen), Caucasian (Dmanisi), East Asian (Zhoukoudian), and late Javanese (Ngandong) populations.",
       "sourceIds": [
         "family-erectus",
         "family-dmanisi"
@@ -488,9 +511,9 @@
     {
       "id": "homo-antecessor",
       "name": "Homo antecessor",
-      "meaning": "Early Pleistocene Homo from Gran Dolina.",
+      "meaning": "Early Pleistocene European hominin (~950–770 ka) from Gran Dolina (Atapuerca, Spain), preserving a surprisingly modern midface alongside ancestral brow and jaw traits.",
       "status": "related-lineage",
-      "note": "Enamel proteins support a close sister relationship to later Homo ancestry, not a proven direct ancestor.",
+      "note": "2020 ancient enamel proteins place it on a close sister branch near the last common ancestor of Neanderthals, Denisovans, and H. sapiens.",
       "sourceIds": [
         "family-antecessor"
       ]
@@ -498,9 +521,9 @@
     {
       "id": "homo-heidelbergensis",
       "name": "Homo heidelbergensis",
-      "meaning": "A name anchored by the Mauer mandible.",
+      "meaning": "Middle Pleistocene Eurasian and African group (~650–250 ka) anchored by the 609 ka Mauer jaw from Germany.",
       "status": "uncertain",
-      "note": "Narrow and broad definitions group different Middle Pleistocene fossils; no single accepted lineage connects them all.",
+      "note": "Features robust supraorbital brow ridges and brains around 1,200 cc; researchers debate whether European and African specimens belong to one species or separate diverging lineages.",
       "sourceIds": [
         "family-mauer",
         "family-middle-homo"
@@ -509,9 +532,9 @@
     {
       "id": "homo-neanderthalensis",
       "name": "Homo neanderthalensis / Neanderthal lineage",
-      "meaning": "A western Eurasian lineage also documented in the Altai.",
+      "meaning": "Cold-adapted western Eurasian hominin lineage (~430–40 ka) with large brains (~1,450 cc), barrel chests, complex Levallois stone tools, ochre/ornaments, and burial practices.",
       "status": "related-lineage",
-      "note": "Some early lineage members predate classic Neanderthal anatomy. Parts of their ancestry survive in living humans.",
+      "note": "Nuclear DNA traces their split from ancestors of living humans back >500 ka and documents multiple episodes of interbreeding with H. sapiens (~50–40 ka) and Denisovans.",
       "sourceIds": [
         "family-sima",
         "family-neanderthals",
@@ -521,9 +544,9 @@
     {
       "id": "denisovans",
       "name": "Denisovans",
-      "meaning": "A molecularly identified, internally diverse Asian hominin lineage.",
+      "meaning": "Widespread Middle–Late Pleistocene Asian hominin lineage (~200–30 ka) discovered via DNA at Denisova Cave (Altai) and identified across Tibet (Xiahe), Northeast China (Harbin), Yunnan, Laos, and Taiwan.",
       "status": "related-lineage",
-      "note": "Genetic lineage and proposed fossil species names do not map neatly one to one. Present-day inherited DNA does not locate each ancient encounter.",
+      "note": "Interbred repeatedly with ancestors of modern Oceanian, Southeast Asian, and East Asian peoples, contributing immunity and high-altitude EPAS1 gene variants.",
       "sourceIds": [
         "family-denisovan-genome",
         "family-harbin",
@@ -533,9 +556,9 @@
     {
       "id": "homo-naledi",
       "name": "Homo naledi",
-      "meaning": "A small-brained Homo lineage known from the Rising Star cave system.",
+      "meaning": "Small-brained South African hominin (~335–236 ka) represented by 1,500+ fossils of at least 15 individuals from the deep Rising Star cave system.",
       "status": "related-lineage",
-      "note": "Its Middle Pleistocene survival and anatomical mosaic do not establish direct ancestry or a genetic contribution to living people.",
+      "note": "Combined a ~465–560 cc brain and curved climbing fingers with modern-looking feet and wrist anatomy during the same era H. sapiens emerged elsewhere in Africa.",
       "sourceIds": [
         "family-naledi"
       ]
@@ -543,9 +566,9 @@
     {
       "id": "homo-floresiensis",
       "name": "Homo floresiensis",
-      "meaning": "A small-bodied Homo lineage named at Liang Bua on Flores.",
+      "meaning": "Small-bodied (~1.06 m tall, ~380 cc brain) endemic hominin from Flores, Indonesia (~100–60 ka at Liang Bua, with ~700 ka ancestral fossils at Mata Menge).",
       "status": "related-lineage",
-      "note": "Mata Menge fossils suggest a much older related island population; ancestry, arrival route and ultimate disappearance remain incompletely resolved.",
+      "note": "Likely evolved insular dwarfism after early hominins crossed ocean barriers into Wallacea before 1 million years ago.",
       "sourceIds": [
         "family-liang-bua",
         "family-mata-menge"
@@ -554,9 +577,9 @@
     {
       "id": "homo-luzonensis",
       "name": "Homo luzonensis",
-      "meaning": "A named hominin from Callao Cave on Luzon.",
+      "meaning": "Small-bodied hominin from Callao Cave on Luzon, Philippines (~67–50 ka), known from premolars, molars, and hand/foot phalanges.",
       "status": "related-lineage",
-      "note": "Its relationships to other island and mainland hominins are unresolved; morphology alone cannot demonstrate admixture.",
+      "note": "Demonstrates that oceanic crossing beyond Wallace’s Line produced another independent island hominin lineage.",
       "sourceIds": [
         "family-luzon"
       ]
@@ -564,9 +587,9 @@
     {
       "id": "homo-sapiens",
       "name": "Homo sapiens",
-      "meaning": "The only hominin species living today.",
+      "meaning": "Anatomically modern humans, emerging across structured African populations by at least ~315 ka (Jebel Irhoud) and expanding globally across Eurasia, Sahul, Oceania, and the Americas.",
       "status": "living-lineage",
-      "note": "Early African fossils and later genetic evidence describe structured populations with some archaic admixture, not an isolated ladder of progress.",
+      "note": "Paleogenomics shows populations braided together through structured African origins and limited archaic admixture with Neanderthals and Denisovans.",
       "sourceIds": [
         "family-sapiens",
         "family-neanderthal-admixture"
@@ -574,6 +597,32 @@
     }
   ],
   "evidence": [
+    {
+      "id": "family-graecopithecus",
+      "title": "Pyrgos Vassilissis & Azmaka: Graecopithecus",
+      "taxonIds": [
+        "graecopithecus-freybergi"
+      ],
+      "regionIds": [
+        "europe"
+      ],
+      "kind": "fossil",
+      "start": -7238050,
+      "end": -7173050,
+      "dateLabel": "About 7.24–7.18 Ma",
+      "dateBasis": "Magnetostratigraphy, U-Pb ash correlation, and Sahara dust geochemistry of Late Miocene savannah sediments (7.24–7.18 Ma).",
+      "coordinates": [
+        23.72,
+        38.05
+      ],
+      "summary": "At ~7.24–7.18 Ma, a lower mandible with teeth from Pyrgos Vassilissis near Athens (Greece) and an upper fourth premolar from Azmaka (Bulgaria) represent the oldest contested hominin candidate on this map—roughly 200,000 years older than Chad’s Sahelanthropus. CT scans revealed partially fused premolar roots typical of hominins, sparking active debate over eastern Mediterranean pre-split apes vs earliest hominins.",
+      "limits": "Whether fused premolar roots place Graecopithecus on the hominin branch or among late Miocene Eurasian apes remains actively debated; no limb bones or crania are yet known.",
+      "sourceIds": [
+        "family-graecopithecus-fuss",
+        "family-graecopithecus-bohme"
+      ],
+      "guideId": "world-pre-1ma-world"
+    },
     {
       "id": "family-toros-menalla",
       "title": "Toros-Menalla: Sahelanthropus",
@@ -587,12 +636,12 @@
       "start": -6998050,
       "end": -6998050,
       "dateLabel": "About 7 Ma",
-      "dateBasis": "Approximate geological age from cosmogenic sediment dating and fossil context. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "Cosmogenic nuclide (10Be/9Be) sediment dating and biochronology of Toros-Menalla sandstones (~7.2–6.8 Ma).",
       "coordinates": [
         17.49,
         16.25
       ],
-      "summary": "Chadian cranial and dental fossils extend early hominin research beyond eastern and southern Africa.",
+      "summary": "At Toros-Menalla in northern Chad’s Djurab Desert (~2,500 km west of the East African Rift), researchers recovered \"Toumaï\" (TM 266-01-060-1), a nearly complete cranium with a ~360 cc braincase, flat face, and forward-shifted foramen magnum, plus jaws, teeth, and limb bones. At ~7.0 Ma it is the oldest widely accepted African hominin candidate—second on this map only to the debated European Graecopithecus jaw at ~7.2 Ma.",
       "limits": "A rounded occurrence anchor, not the date of the human–chimpanzee split or proof of direct ancestry. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-chad-dating"
@@ -612,12 +661,12 @@
       "start": -6198050,
       "end": -5798050,
       "dateLabel": "About 6.2–5.8 Ma",
-      "dateBasis": "Published geological age range of the regional fossil sample. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "40Ar/39Ar volcanic tuff dating and palaeomagnetism of the Lukeino Formation (6.2–5.8 Ma).",
       "coordinates": [
         35.85,
         0.64
       ],
-      "summary": "Lukeino Formation teeth and limb bones include femora interpreted as showing bipedal loading.",
+      "summary": "Over twenty Late Miocene fossil fragments from the Lukeino Formation in Kenya’s Tugen Hills—including three partial femora, thick-enameled molars, and a thumb phalanx—define Orrorin tugenensis. Femoral neck CT imaging reveals bone distributions tuned for upright walking alongside tree climbing.",
       "limits": "Grouped regional localities; fossils do not demonstrate continuous occupation throughout the interval. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-orrorin"
@@ -637,12 +686,12 @@
       "start": -5798050,
       "end": -5198050,
       "dateLabel": "About 5.8–5.2 Ma",
-      "dateBasis": "Range covers several dated fossil occurrences, not a single occupation. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "40Ar/39Ar volcanic ash dating across Adu-Asa Formation localities (5.8–5.2 Ma).",
       "coordinates": [
         40.36,
         10.49
       ],
-      "summary": "Teeth and fragmentary bones, including a younger attributed toe bone, document an early hominin form.",
+      "summary": "Excavations across five Middle Awash localities in Ethiopia recovered lower jaws, isolated teeth, arm bones, a clavicle, and a 5.2 Ma foot phalanx of Ardipithecus kadabba. While its canines retain partial honing traits, the toe bone shows upright push-off geometry.",
       "limits": "The toe and older fossils are separated in locality and age; the grouping is not a single skeleton. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-kadabba"
@@ -662,12 +711,12 @@
       "start": -4398050,
       "end": -4398050,
       "dateLabel": "About 4.4 Ma",
-      "dateBasis": "Rounded age of the Aramis fossil-bearing deposits. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "40Ar/39Ar dating of bounding volcanic tuffs at Aramis, Ethiopia (~4.4 Ma).",
       "coordinates": [
         40.42,
         10.5
       ],
-      "summary": "Ardi preserves a combination of climbing-related anatomy and features relevant to upright movement.",
+      "summary": "Aramis yielded \"Ardi\" (ARA-VP-6/500), an extraordinary 45%-complete female skeleton representing at least 36 Ardipithecus ramidus individuals. She walked upright with a reformed upper pelvis while retaining a grasping, opposable big toe for woodland canopy climbing.",
       "limits": "Reconstruction of crushed bones and interpretation of locomotion carry uncertainty. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-ramidus"
@@ -687,12 +736,12 @@
       "start": -4198050,
       "end": -4098050,
       "dateLabel": "About 4.2–4.1 Ma",
-      "dateBasis": "Approximate age of the Kanapoi fossil-bearing sequence. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "40Ar/39Ar dating of volcanic ash layers bracketed between ~4.2 and 4.1 Ma.",
       "coordinates": [
         35.83,
         2.23
       ],
-      "summary": "Teeth, jaws and a tibia document an early Australopithecus population with bipedal adaptations.",
+      "summary": "Alluvial deposits at Kanapoi near Lake Turkana preserve the type mandible, thick-enameled teeth, and an expanded, shock-absorbing tibia of Australopithecus anamensis—capturing the earliest unambiguous evidence of committed habitual bipedalism in Australopithecus.",
       "limits": "This locality is one observation within the species range, not its demonstrated birthplace. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-anamensis"
@@ -712,12 +761,12 @@
       "start": -3658050,
       "end": -3658050,
       "dateLabel": "About 3.66 Ma",
-      "dateBasis": "Rounded geological age of the footprint-bearing volcanic deposits. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "40Ar/39Ar dating of Footprint Tuff 7 in the Laetolil Beds (~3.66 Ma).",
       "coordinates": [
         35.18,
         -3.23
       ],
-      "summary": "Footprint trails preserve walking behavior and are commonly attributed to A. afarensis.",
+      "summary": "At Laetoli, Tanzania, three individuals walked across damp volcanic ash ~3.66 million years ago, leaving a 27-metre trail of arched feet, adducted big toes, and heel-strike-to-toe-off strides closely matching Australopithecus afarensis.",
       "limits": "The principal trackmaker attribution is inferred from anatomy and nearby fossils; footprints are not DNA or a named individual. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-afarensis"
@@ -737,12 +786,12 @@
       "start": -3848050,
       "end": -3308050,
       "dateLabel": "3.58 ± 0.27 Ma",
-      "dateBasis": "Quoted cosmogenic age and uncertainty for KT12 sediments. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "Cosmogenic 10Be/9Be burial dating of KT12 sandstones in northern Chad (3.58 ± 0.27 Ma).",
       "coordinates": [
         18.88,
         16
       ],
-      "summary": "The Abel jaw and associated material broaden the known Pliocene hominin distribution west of the Rift.",
+      "summary": "The \"Abel\" front lower jaw (KT 12/H1) and seven associated teeth from Koro Toro prove early australopiths ranged all the way across north-central Africa’s mega-lake basins—2,500 km west of East Africa.",
       "limits": "The interval expresses published sediment-date uncertainty, not the species lifespan; taxonomy remains debated. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-chad-dating"
@@ -762,12 +811,12 @@
       "start": -3498050,
       "end": -3498050,
       "dateLabel": "About 3.5 Ma",
-      "dateBasis": "Rounded fossil-context age; distinct from archaeological tool horizons. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "40Ar/39Ar dating of overlying and underlying volcanic tuffs at Lomekwi (~3.5 Ma).",
       "coordinates": [
         35.86,
         3.93
       ],
-      "summary": "A distorted cranium and other remains underpin a proposed hominin with a relatively flat face.",
+      "summary": "West of Lake Turkana, the KNM-WT 40000 cranium, maxillae, and teeth reveal a surprisingly flat lower face and small molars contemporary with early Au. afarensis, showing multiple Middle Pliocene hominin face plans.",
       "limits": "The evidence does not identify who made the separately documented Lomekwi stone tools. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-kenyanthropus"
@@ -787,12 +836,12 @@
       "start": -3498050,
       "end": -3298050,
       "dateLabel": "About 3.5–3.3 Ma",
-      "dateBasis": "Fossil-bearing horizons bracketed by geological dating; rounded range. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "40Ar/39Ar tephra dating and paleomagnetic correlation in the Woranso-Mille area (3.5–3.3 Ma).",
       "coordinates": [
         40.54,
         11.47
       ],
-      "summary": "Jaws and teeth support a distinct proposed australopith; a 2025 study also attributes the Burtele foot to this species.",
+      "summary": "Upper and lower jaws at Woranso-Mille define Australopithecus deyiremeda living alongside Lucy’s species, while the associated 3.4 Ma Burtele foot still retains a grasping big toe—proving two distinct styles of bipedalism coexisted in the Afar.",
       "limits": "The regional sample does not identify direct ancestry of Homo or a single continuous population. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-deyiremeda",
@@ -813,12 +862,12 @@
       "start": -3298050,
       "end": -3298050,
       "dateLabel": "About 3.3 Ma",
-      "dateBasis": "Rounded geological age of the juvenile skeleton’s horizon. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "40Ar/39Ar dating of the Sidi Hakoma Tuff in the Afar Basin (~3.3 Ma).",
       "coordinates": [
         40.62,
         11.08
       ],
-      "summary": "A juvenile skeleton preserves additional anatomy of Lucy’s species.",
+      "summary": "Across the Awash River from Hadar, sandstone encased \"Selam\" (DIK-1-1), a nearly complete three-year-old Au. afarensis girl preserving the delicate hyoid bone, gorilla-like upward shoulder blades for climbing, and a modern human-like foot.",
       "limits": "One juvenile does not represent all variation in the species. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-afarensis"
@@ -838,12 +887,12 @@
       "start": -3178050,
       "end": -3178050,
       "dateLabel": "About 3.18 Ma",
-      "dateBasis": "Rounded age of the Kada Hadar Member fossil horizon. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "40Ar/39Ar dating of the Kada Hadar Tuff just above AL 288-1 (~3.18 Ma).",
       "coordinates": [
         40.61,
         11.15
       ],
-      "summary": "Lucy’s partial adult skeleton preserves pelvis and limb anatomy of a biped that also retained climbing-related traits.",
+      "summary": "Discovered in 1974 in Ethiopia’s Afar triangle, \"Lucy\" (AL 288-1) preserves 40% of an adult female Australopithecus afarensis skeleton (~1.05 m tall), uniting a wide bipedal pelvis and angled knee with long arms and curved fingers.",
       "limits": "The 1974 discovery date is separate from the fossil age; Lucy is not established as a direct ancestor. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-lucy",
@@ -864,12 +913,12 @@
       "start": -3498050,
       "end": -2098050,
       "dateLabel": "Member 4: competing estimates near 3.4–3.5 Ma or 2.6–2.1 Ma",
-      "dateBasis": "Explicit display envelope spanning older cosmogenic and younger chronology interpretations for Member 4; no consensus point date. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "Cosmogenic 26Al/10Be nuclide burial dating vs U-Pb flowstone chronologies for Member 4.",
       "coordinates": [
         27.73,
         -26.02
       ],
-      "summary": "Rich southern African cave assemblages preserve australopith diversity. Cosmogenic dates place Member 4 substantially earlier than some previous chronologies.",
+      "summary": "Sterkfontein Cave outside Johannesburg holds the world’s largest single-site concentration of Australopithecus africanus (including \"Mrs. Ples\", Sts 5). Cosmogenic burial dates (~3.4–3.7 Ma) place Member 4 far older than flowstone estimates (~2.6–2.1 Ma), making its age a centerpiece debate.",
       "limits": "The plotted envelope combines competing age interpretations, not a statistical confidence interval or continuous occupation; some fossil assignments also differ. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-sterkfontein",
@@ -890,12 +939,12 @@
       "start": -3030050,
       "end": -2579050,
       "dateLabel": "3.032–2.581 Ma; commonly summarized near 2.9 Ma",
-      "dateBasis": "Published bracket for the fossil and archaeological sequence; approximate locality cluster. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "Magnetostratigraphy, biochronology, and ESR tooth dating of Homa Peninsula sediments (3.03–2.58 Ma).",
       "coordinates": [
         34.45,
         -0.4
       ],
-      "summary": "Large molars assigned to Paranthropus occur in an archaeological landscape with stone tools and butchered animals.",
+      "summary": "Excavations on Kenya’s Homa Peninsula uncovered 330 Oldowan stone artifacts alongside hippopotamus butchery bones and two large molars of Paranthropus (~2.9 Ma)—nearly doubling both the known antiquity of Paranthropus and the geographic spread of early Oldowan tools.",
       "limits": "The teeth do not establish that Paranthropus made the tools or identify a named species. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-nyayanga"
@@ -915,12 +964,12 @@
       "start": -2798050,
       "end": -2748050,
       "dateLabel": "About 2.80–2.75 Ma",
-      "dateBasis": "Published stratigraphic age bracket for the mandible. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "40Ar/39Ar dating of the Gurumaha Tuff underlying LD 350-1 (2.80–2.75 Ma).",
       "coordinates": [
         40.86,
         11.36
       ],
-      "summary": "A partial mandible combines more ancestral jaw traits with dental features supporting assignment to Homo.",
+      "summary": "A left lower jawbone (LD 350-1) with five teeth from Ledi-Geraru, Ethiopia, represents the oldest known fossil assigned to genus Homo—blending an ancestral receding chin with slender, derived Homo molar and premolar crowns.",
       "limits": "Genus-level identification does not make it H. habilis or establish the origin date of Homo. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-ledi"
@@ -940,12 +989,12 @@
       "start": -2498050,
       "end": -2498050,
       "dateLabel": "About 2.5 Ma",
-      "dateBasis": "Rounded published fossil age. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "40Ar/39Ar volcanic tuff correlation in the Nachukui Formation (~2.5 Ma).",
       "coordinates": [
         35.87,
         3.9
       ],
-      "summary": "KNM-WT 17000 preserves pronounced chewing adaptations in an early Paranthropus form.",
+      "summary": "Manganese-stained dark basalt-colored bone gave KNM-WT 17000 the nickname \"Black Skull\"—a ~2.5 Ma Paranthropus aethiopicus cranium with a towering sagittal crest, flared cheekbones, and small ~410 cc braincase.",
       "limits": "Relationships to other robust-chewing species remain reconstructed rather than genetically demonstrated. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-aethiopicus"
@@ -965,12 +1014,12 @@
       "start": -2498050,
       "end": -2498050,
       "dateLabel": "About 2.5 Ma",
-      "dateBasis": "Rounded age of the fossil-bearing Hata Member. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "40Ar/39Ar dating of the Hata Member volcanic sediments (~2.5 Ma).",
       "coordinates": [
         40.53,
         10.27
       ],
-      "summary": "A small cranial sample from the Hata Member defines A. garhi.",
+      "summary": "A partial cranium with enormous cheek teeth and protruding face from the Bouri Peninsula defines Australopithecus garhi (~2.5 Ma), recovered near some of the earliest known cut-marked antelope and equid bones.",
       "limits": "Nearby cut-marked animal bones and limb remains cannot be assigned automatically to the named cranium. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-garhi"
@@ -991,12 +1040,12 @@
       "start": -2038050,
       "end": -1948050,
       "dateLabel": "About 2.04–1.95 Ma",
-      "dateBasis": "U-Pb flowstone dates, US-ESR tooth dates and palaeomagnetic stratigraphy constrain deposition. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "U-Pb speleothem flowstone dating, US-ESR tooth dating, and paleomagnetism (2.04–1.95 Ma).",
       "coordinates": [
         27.74,
         -25.91
       ],
-      "summary": "DNH 134 has erectus affinities; DNH 152 represents P. robustus in the same quarry sequence.",
+      "summary": "At Drimolen Main Quarry in South Africa, researchers found the earliest confirmed Homo erectus cranium (DNH 134, a ~2–3 year-old child) in the same 2.04–1.95 Ma sediments as a nearly complete Paranthropus robustus skull (DNH 152)—catching three hominin genera overlapping in one valley.",
       "limits": "A juvenile skullcap carries taxonomic uncertainty; contemporaneity in a deposit is not evidence of interbreeding. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-drimolen"
@@ -1016,12 +1065,12 @@
       "start": -1978050,
       "end": -1975050,
       "dateLabel": "About 1.980–1.977 Ma",
-      "dateBasis": "Published narrow geological bracket for the Malapa assemblage. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "U-Pb flowstone and paleomagnetic reversal dating (1.980–1.977 Ma).",
       "coordinates": [
         27.8,
         -25.89
       ],
-      "summary": "Partial skeletons reveal a mosaic of anatomical traits in a late australopith population.",
+      "summary": "Two remarkably articulated partial skeletons (MH1 & MH2) from a pitfall trap at Malapa reveal Australopithecus sediba (~1.98 Ma): an australopith-sized brain (~420 cc) atop a modern-looking precision-grip hand, slender waist, and apelike heel.",
       "limits": "Homo-like features do not prove these individuals gave rise to Homo; known Homo material is older. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-sediba",
@@ -1042,12 +1091,12 @@
       "start": -1898050,
       "end": -1898050,
       "dateLabel": "About 1.9 Ma",
-      "dateBasis": "Rounded fossil age published by the Smithsonian. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "40Ar/39Ar dating of the KBS Tuff sequence at Koobi Fora (~1.9 Ma).",
       "coordinates": [
         36.21,
         3.96
       ],
-      "summary": "A relatively large-brained early Homo cranium anchors discussion of H. rudolfensis.",
+      "summary": "Cranium KNM-ER 1470 from East Turkana (~1.9 Ma) features a ~750 cc braincase and broad, flat upper face that anchored the naming of Homo rudolfensis as a distinct coexisting lineage beside H. habilis.",
       "limits": "The species distinction from H. habilis is debated; isolated jaws cannot be matched with certainty. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-rudolfensis"
@@ -1067,12 +1116,12 @@
       "start": -1798050,
       "end": -1798050,
       "dateLabel": "About 1.8 Ma",
-      "dateBasis": "Rounded age of the type-area material, not the full species range. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "40Ar/39Ar dating of Olduvai Bed I volcanic tuffs (~1.8 Ma).",
       "coordinates": [
         35.35,
         -2.99
       ],
-      "summary": "OH 7 and associated research at Olduvai helped define Homo habilis.",
+      "summary": "Jaw, cranial parietal bones, and curved-yet-precise hand bones (OH 7) discovered by Louis and Mary Leakey at Olduvai Gorge defined Homo habilis (\"handy man\"), marking an early increase in brain size (~640 cc) tied to Oldowan toolmaking.",
       "limits": "Species membership of other early Homo fragments and the identity of particular toolmakers remain open. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-habilis"
@@ -1092,12 +1141,12 @@
       "start": -1798050,
       "end": -1798050,
       "dateLabel": "About 1.8 Ma",
-      "dateBasis": "Rounded age of the OH 5 fossil horizon. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "40Ar/39Ar dating of Olduvai Bed I tuff beneath the FLK Zinj living floor (~1.8 Ma).",
       "coordinates": [
         35.35,
         -2.99
       ],
-      "summary": "The OH 5 cranium preserves the distinctive chewing apparatus of P. boisei.",
+      "summary": "The nearly intact cranium OH 5 (\"Dear Boy\", originally Zinjanthropus) preserves extreme dish-faced cheekbones and massive nutcracker molars nearly four times the area of modern human molars.",
       "limits": "Its occurrence alongside archaeological material is not proof that this species manufactured each tool. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-boisei"
@@ -1119,12 +1168,12 @@
       "start": -1778050,
       "end": -1758050,
       "dateLabel": "Main fossils about 1.78–1.76 Ma",
-      "dateBasis": "Approximate fossil-bearing stratum B interval; older tools at 1.85–1.78 Ma are a different observation. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "40Ar/39Ar basalt & ash dating plus paleomagnetism at Dmanisi Stratum B (1.78–1.76 Ma).",
       "coordinates": [
         44.35,
         41.34
       ],
-      "summary": "Multiple crania and other remains document early Homo outside Africa; archaeological occupations at the locality began earlier.",
+      "summary": "Beneath a medieval ruined town in Georgia, excavators uncovered five early Homo skulls (Skull 5 with a tiny ~546 cc brain alongside larger ~730 cc individuals), postcranial skeletons, and Oldowan cores—the richest snapshot of early hominins expanding out of Africa, with deeper stone tools back to ~1.85 Ma.",
       "limits": "The grouping includes fossils also called H. georgicus. It does not establish the first Eurasian arrival or a migration route. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-dmanisi",
@@ -1145,12 +1194,12 @@
       "start": -947050,
       "end": -770050,
       "dateLabel": "Tooth ATD6-92: about 949–772 ka",
-      "dateBasis": "Published ESR/U-series and contextual age bracket for the sampled tooth. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "Combined ESR/U-series tooth dating and paleomagnetic stratigraphy (949–772 ka).",
       "coordinates": [
         -3.54,
         42.35
       ],
-      "summary": "Enamel proteins place this Gran Dolina hominin close to the common ancestry of later Homo lineages.",
+      "summary": "Excavations in Aurora Stratum TD6 at Atapuerca, Spain, yielded 160+ human bones showing defleshing cut marks and a surprisingly modern flat midface (Homo antecessor); 2020 ancient enamel proteomes place them on a sister branch near the root of H. sapiens and Neanderthals.",
       "limits": "Limited informative protein sites do not reconstruct a full genome or prove direct ancestry. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-antecessor"
@@ -1170,12 +1219,12 @@
       "start": -698050,
       "end": -698050,
       "dateLabel": "About 700 ka",
-      "dateBasis": "Rounded age of the fossil-bearing deposit. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "40Ar/39Ar and fission-track zircon dating of fluvial volcanic beds on Flores (~700 ka).",
       "coordinates": [
         121.08,
         -8.7
       ],
-      "summary": "Small teeth, jaws and an adult humerus suggest a much older history for the Flores island lineage.",
+      "summary": "Teeth, a partial lower jaw, and an adult humerus narrower than a child’s from Mata Menge in central Flores show that small-bodied \"hobbit\" ancestors had already evolved miniature stature on the island by ~700,000 years ago.",
       "limits": "Assignment here indicates proposed affinity to H. floresiensis; it does not prove a complete ancestor–descendant series. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-mata-menge"
@@ -1195,12 +1244,12 @@
       "start": -647050,
       "end": -567050,
       "dateLabel": "609 ± 40 ka",
-      "dateBasis": "Combined ESR/U-series on mammal teeth and infrared radiofluorescence on sediments; quoted uncertainty. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "Combined ESR/U-series dating of fauna and infrared radiofluorescence on Elsenz sands (609 ± 40 ka).",
       "coordinates": [
         8.8,
         49.34
       ],
-      "summary": "The Mauer jaw anchors a widely used but inconsistently delimited species name.",
+      "summary": "Found in 1907 in a sandpit near Heidelberg, Germany, the heavy chinless Mauer lower jawbone with moderate teeth anchored the name Homo heidelbergensis—long used for Middle Pleistocene hominins bridging early Homo and Neanderthals/H. sapiens.",
       "limits": "The age interval dates the find layer; it does not unite all Middle Pleistocene African and European fossils into one species. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-mauer",
@@ -1221,12 +1270,12 @@
       "start": -428050,
       "end": -428050,
       "dateLabel": "About 430 ka",
-      "dateBasis": "Rounded geological age of the fossil assemblage; DNA gives affinity rather than a direct date. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "Luminescence, ESR, and U-series dating of the Pit of Bones breccia (~430 ka).",
       "coordinates": [
         -3.55,
         42.35
       ],
-      "summary": "Nuclear DNA places the Sima hominins on the Neanderthal side of the Neanderthal–Denisovan division.",
+      "summary": "Deep inside a vertical shaft at Atapuerca, Spain, lie >6,700 bones from at least 28 individuals. The oldest hominin nuclear DNA ever recovered (~430 ka) proves these early Middle Pleistocene Europeans were already genetically on the Neanderthal branch.",
       "limits": "Their mitochondrial affinity differs; one maternal lineage cannot stand in for the population history. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-sima"
@@ -1246,12 +1295,12 @@
       "start": -333050,
       "end": -234050,
       "dateLabel": "About 335–236 ka",
-      "dateBasis": "Combined tooth US-ESR and overlying flowstone chronology; published depositional bracket. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "US-ESR tooth dating, paleomagnetism, and U-Th flowstone ages (335–236 ka).",
       "coordinates": [
         27.72,
         -25.93
       ],
-      "summary": "A distinctive small-brained hominin survived in southern Africa during the broad period of early H. sapiens.",
+      "summary": "Over 1,500 bones representing 15+ individuals of Homo naledi in South Africa’s narrow Dinaledi Chamber pair a ~465–560 cc brain and curved climbing fingers with modern-proportioned feet—surprisingly surviving alongside emerging H. sapiens as late as ~236 ka.",
       "limits": "These dates concern the Dinaledi assemblage, not every chamber or the lineage’s origin or extinction. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-naledi"
@@ -1271,12 +1320,12 @@
       "start": -198050,
       "end": -198050,
       "dateLabel": "Early fossils about 200 ka",
-      "dateBasis": "Rounded early fossil age in the cave chronology; sediment ages and fossil ages are distinct. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "Optical luminescence (OSL), U-series, and 14C stratigraphy at Denisova Cave (~200 ka fossils; older sedaDNA).",
       "coordinates": [
         84.68,
         51.4
       ],
-      "summary": "DNA identifies early Denisovan fossils in the Altai; the cave also preserves older DNA-bearing sediment.",
+      "summary": "In Siberia’s Altai Mountains, a tiny pinky bone (Denisova 3) yielded the genome defining Denisovans as a sister lineage to Neanderthals; older cave layers push Denisovan occupation and ancient sediment DNA back past 200 ka.",
       "limits": "The marker summarizes an early fossil occurrence, not the molecular divergence date or continuous residence. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-denisova-chronology"
@@ -1296,12 +1345,12 @@
       "start": -158050,
       "end": -158050,
       "dateLabel": "At least about 160 ka",
-      "dateBasis": "U-series dates adhering carbonate, giving a minimum fossil age; timeline plots that boundary. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "U-series dating of carbonate crust adhering to the mandible (minimum ~160 ka).",
       "coordinates": [
         102.57,
         35.46
       ],
-      "summary": "Ancient proteins identify a Denisovan-related mandible on the Tibetan Plateau.",
+      "summary": "Found by a monk in Baishiya Karst Cave at 3,280 m on the Tibetan Plateau, the heavy, chinless Xiahe half-mandible yielded ancient collagen proteins pinning it to Denisovans—revealing a massive cold- and altitude-adapted Asian population.",
       "limits": "160 ka is a minimum-age anchor; the fossil may be older. It is not an exact occupation date or a complete genome. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-xiahe"
@@ -1321,12 +1370,12 @@
       "start": -144050,
       "end": -144050,
       "dateLabel": "Older than about 146 ka",
-      "dateBasis": "Published minimum fossil age; molecular analysis identifies affinity rather than directly dating the cranium. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "U-series and REE geochemical minimum age of river sediments (>146 ka).",
       "coordinates": [
         126.63,
         45.76
       ],
-      "summary": "Mitochondrial DNA from dental calculus links the Harbin cranium to early Denisovan maternal lineages.",
+      "summary": "Hidden in a well in Northeast China in 1933, the pristine Harbin cranium (\"Dragon Man\", ~1,420 cc brain, broad face, huge molars) yielded Denisovan mitochondrial DNA and proteins in 2025 from dental calculus and petrous bone, linking East Asian archaic skulls directly to Denisovans.",
       "limits": "The plotted date is a minimum boundary and the city-area provenance is approximate. A mitochondrial sequence is not a nuclear genome. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-harbin"
@@ -1346,12 +1395,12 @@
       "start": -115050,
       "end": -106050,
       "dateLabel": "Modelled bone-bed age 117–108 ka",
-      "dateBasis": "Bayesian model combines multiple dating methods and contextual animal remains, not direct hominin radiocarbon ages. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "Bayesian U-series, ESR, Ar-Ar, and luminescence modeling of Solo River terrace bone bed (117–108 ka).",
       "coordinates": [
         111.42,
         -7.37
       ],
-      "summary": "A dated Solo River bone bed contains a late occurrence of H. erectus.",
+      "summary": "Twelve fossil skullcaps and two tibiae washed into a Solo River terrace at Ngandong on Java preserve the youngest securely dated population of Homo erectus anywhere in the world—living as late as ~108–117 ka.",
       "limits": "A youngest known sample is not the extinction date; the bone bed accumulated in flood conditions. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-ngandong"
@@ -1371,12 +1420,12 @@
       "start": -98050,
       "end": -58050,
       "dateLabel": "Skeletal remains about 100–60 ka",
-      "dateBasis": "2016 revised fossil and sediment chronology; distinguish fossil range from approximately 190–50 ka attributed tools. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "Revised U-series, luminescence, and Ar-Ar stratigraphy for skeletal deposits (~100–60 ka).",
       "coordinates": [
         120.44,
         -8.53
       ],
-      "summary": "The named Flores species is represented by small-bodied skeletal remains in revised cave stratigraphy.",
+      "summary": "Excavations inside Liang Bua limestone cave on Flores uncovered \"LB1\", a 1.06-metre adult female skeleton (~380 cc brain, large flat feet, archaic wrists) establishing Homo floresiensis, with island skeletal remains spanning ~100–60 ka and stone tools extending to ~50 ka.",
       "limits": "The older claim of survival to about 12 ka was revised; younger associated tools do not determine when the species disappeared. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-liang-bua"
@@ -1397,12 +1446,12 @@
       "start": -88050,
       "end": -88050,
       "dateLabel": "About 90 ka; molecular estimate",
-      "dateBasis": "Approximate genetic age used in the 2018 study; direct radiocarbon established only older than 50 ka. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "Molecular clock age (~90 ka) and radiocarbon boundary (>50 ka) on the Denisova 11 bone fragment.",
       "coordinates": [
         84.68,
         51.4
       ],
-      "summary": "A female’s nuclear genome identifies a Neanderthal mother and Denisovan father.",
+      "summary": "A single 2.5 cm bone shard (\"Denny\") from an adolescent girl at Denisova Cave yielded a complete genome proving direct interbreeding: her mother was a Neanderthal related to Croatian populations and her father was a Denisovan carrying older Neanderthal ancestry.",
       "limits": "The rounded molecular age is model dependent; a fossil location does not establish where her parents met or whether she had descendants. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-denisova-child"
@@ -1422,12 +1471,12 @@
       "start": -65050,
       "end": -48050,
       "dateLabel": "About 67 ka and at least 50 ka",
-      "dateBasis": "U-series estimates on individual fossils, summarized as a display envelope; not all are exact ages. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "U-series direct dating of metatarsal & teeth at Callao Cave (~67 ka and >=50 ka).",
       "coordinates": [
         121.82,
         17.71
       ],
-      "summary": "Teeth and fragmentary limb bones identify a distinctive hominin on Luzon.",
+      "summary": "Seven teeth, two hand bones, three foot bones, and a femur shaft from at least three individuals in Callao Cave on Luzon, Philippines, define Homo luzonensis—a tiny, curved-fingered island species separated from the Asian mainland by deep ocean channels.",
       "limits": "Dates apply to sampled remains, some as minimum ages; the envelope is not an extinction interval or a demonstrated continuous occupation. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-luzon"
@@ -1447,12 +1496,12 @@
       "start": -57050,
       "end": -47050,
       "dateLabel": "Deposits about 59–49 ka",
-      "dateBasis": "Published dating range for cave deposits associated with the Neanderthal assemblage. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "Optical luminescence (OSL) and AMS radiocarbon dating of Siberian cave strata (59–49 ka).",
       "coordinates": [
         83.16,
         51.44
       ],
-      "summary": "Fossils, DNA and distinctive tools support connections between this Altai population and western Eurasian Neanderthals.",
+      "summary": "Nuclear DNA from 13 closely related Neanderthals at Chagyrskaya Cave captures a small western Eurasian family band—carrying Micoquian bifacial stone tools—that migrated >3,000 km eastward into the Altai Mountains.",
       "limits": "Similarity supports a dispersal model but does not reconstruct every stop along a route. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-chagyrskaya"
@@ -1472,12 +1521,12 @@
       "start": -46050,
       "end": -30050,
       "dateLabel": "Layer 3 about 48–32 ka",
-      "dateBasis": "Published layer age from the site chronology; proteins provide lineage identification. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "OSL luminescence and radiocarbon stratigraphy of Layer 3 at Baishiya Karst Cave (48–32 ka).",
       "coordinates": [
         102.57,
         35.46
       ],
-      "summary": "Proteins from the Xiahe 2 rib document a later Denisovan occurrence at the same Tibetan cave.",
+      "summary": "Ancient collagen peptides extracted from a fragmented rib (Xiahe 2) alongside butchered bharal sheep, yak, and hyena bones prove Denisovans survived above 3,200 m on the Tibetan Plateau as recently as ~48–32 ka, well into the era of H. sapiens expansion.",
       "limits": "The layer age is a depositional bracket; it does not supply a last-survivor date for all Denisovans. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-xiahe-rib"
@@ -1498,12 +1547,12 @@
       "start": -40050,
       "end": -35050,
       "dateLabel": "Oase 1: about 42–37 ka",
-      "dateBasis": "Published calibrated radiocarbon range for the fossil; generations inferred independently from DNA segment lengths. Internal years use 1950 minus the quoted age in years for display; rounded geological ages are not exact calendar dates.",
+      "dateBasis": "Ultrafiltered bone collagen 14C AMS dating (42–37 ka cal BP) and genetic tract-length clock.",
       "coordinates": [
         21.84,
         45.02
       ],
-      "summary": "Long Neanderthal-derived DNA segments indicate a Neanderthal ancestor about four to six generations earlier.",
+      "summary": "A robust modern human lower jaw (Oase 1) from a bear cave in Romania preserves ~6–9% Neanderthal DNA in unusually long unbroken chromosome segments—proving a great-great-grandparent (just 4–6 generations back) was a full Neanderthal.",
       "limits": "This individual’s approximately 6–9% estimate is not a population average; the analysis did not find substantial contribution to later sampled Europeans. Coordinates mark an approximate public locality, not a surveyed fossil position.",
       "sourceIds": [
         "family-oase"
@@ -1546,7 +1595,7 @@
         ]
       ],
       "summary": "African and Caucasus fossil records require an early history of dispersal. Dmanisi supplies a firm Eurasian observation, with tools older than the main fossils.",
-      "limits": "The display window is a broad context, not the measured duration of one migration; neither exact origin nor direction of every population movement is established. Schematic geometry marks broad areas only, never a surveyed track or proven meeting location. Internal years use 1950 minus the stated age.",
+      "limits": "The display window is a broad context, not the measured duration of one migration; neither exact origin nor direction of every population movement is established. Schematic geometry marks broad areas only, never a surveyed track or proven meeting location.",
       "sourceIds": [
         "family-dmanisi",
         "family-drimolen"
@@ -1585,7 +1634,7 @@
         ]
       ],
       "summary": "Tool comparisons and genetic affinities support an eastern European source for the later Chagyrskaya population.",
-      "limits": "Dates describe the destination deposits, not the departure or travel duration; the intermediate line is an inferred geographic connection. Schematic geometry marks broad areas only, never a surveyed track or proven meeting location. Internal years use 1950 minus the stated age.",
+      "limits": "Dates describe the destination deposits, not the departure or travel duration; the intermediate line is an inferred geographic connection. Schematic geometry marks broad areas only, never a surveyed track or proven meeting location.",
       "sourceIds": [
         "family-chagyrskaya"
       ]
@@ -1619,7 +1668,7 @@
         ]
       ],
       "summary": "Denisova 11 directly demonstrates a first-generation child with parents from the two lineages.",
-      "limits": "The marker uses the study’s rounded molecular age; it illustrates contact, not parental migration. It does not locate conception. Schematic geometry marks broad areas only, never a surveyed track or proven meeting location. Internal years use 1950 minus the stated age.",
+      "limits": "The marker uses the study’s rounded molecular age; it illustrates contact, not parental migration. It does not locate conception. Schematic geometry marks broad areas only, never a surveyed track or proven meeting location.",
       "sourceIds": [
         "family-denisova-child"
       ]
@@ -1654,7 +1703,7 @@
         ]
       ],
       "summary": "A 2024 analysis attributes most shared Neanderthal ancestry in its sampled humans to an extended period of gene flow; other early individuals also record additional contacts.",
-      "limits": "This is a genetic model interval, not a dated route. The broad western Eurasian illustration does not identify an exact contact zone. Schematic geometry marks broad areas only, never a surveyed track or proven meeting location. Internal years use 1950 minus the stated age.",
+      "limits": "This is a genetic model interval, not a dated route. The broad western Eurasian illustration does not identify an exact contact zone. Schematic geometry marks broad areas only, never a surveyed track or proven meeting location.",
       "sourceIds": [
         "family-neanderthal-admixture"
       ]
@@ -1689,7 +1738,7 @@
         ]
       ],
       "summary": "Genomes from Island Southeast Asia and New Guinea support contributions from more than one differentiated Denisovan population.",
-      "limits": "Playback connects two model point estimates, not a measured duration or one contact event. The study reports 95% ranges of 31.9–60.7 and 14.4–50.4 ka under one recombination model; other assumptions change the estimates. Schematic geometry marks broad inferred areas, never a surveyed track or proven meeting location. Internal years use 1950 minus the stated age.",
+      "limits": "Playback connects two model point estimates, not a measured duration or one contact event. The study reports 95% ranges of 31.9–60.7 and 14.4–50.4 ka under one recombination model; other assumptions change the estimates. Schematic geometry marks broad inferred areas, never a surveyed track or proven meeting location.",
       "sourceIds": [
         "family-papuan-admixture"
       ]

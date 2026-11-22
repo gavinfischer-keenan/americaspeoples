@@ -1,6 +1,7 @@
 import type {MapRecord, Place} from './model';
 import {esc} from './dom';
 import {timeLabel} from './time';
+import {deepTimeLabel} from './world-model';
 import {contextDateMeaning} from './date-context';
 
 /** Older imports contain audit notes in the summary field. Never make those
@@ -37,7 +38,11 @@ export function readerLocation(r:MapRecord):string{
   const name=placeName(r.location);
   return regional&&!/^near\b/i.test(name)?'Near '+name:name;
  }
- return r.overlay?.geometry?'The area or route shown on the map; a more specific place is not recorded.':'The place has not yet been located on this map.';
+ if(r.overlay?.geometry){
+  const prefix=r.title.split(/\s*[—–:]\s*/)[0]?.trim();
+  return prefix&&prefix.length>2&&prefix.length<48?`${prefix} (mapped area)`:'Mapped area or route.';
+ }
+ return 'The place has not yet been located on this map.';
 }
 export function readerDateMeaning(r:MapRecord):string{
  if(r.time.kind==='unplaced')return 'The date has not been established.';
@@ -48,6 +53,18 @@ export function readerDateMeaning(r:MapRecord):string{
 
 /** The main panel answers what, where and when; specialist qualifications remain
  * one click away, alongside the original dating description and geographic limits. */
+export function readerTimeDisplay(r:MapRecord):string{
+ if(r.time.kind!=='unplaced'&&r.time.start!==null&&r.time.start<=-1000000){
+  return `${deepTimeLabel(r.time.start)}${r.time.end!==null&&r.time.end!==r.time.start?' – '+deepTimeLabel(r.time.end):''}`;
+ }
+ return timeLabel(r.time);
+}
+
+/** The main panel answers what, where and when; specialist qualifications remain
+ * one click away, alongside the original dating description and geographic limits. */
 export function readerDetailHTML(r:MapRecord):string{
- return `<section class="reader-evidence"><h5>What this shows</h5><p class="reader-finding">${esc(readerSummary(r))}</p><dl class="record-precision"><dt>Where</dt><dd>${esc(readerLocation(r))}</dd><dt>When</dt><dd>${esc(timeLabel(r.time))}<span class="reader-date-meaning">${esc(readerDateMeaning(r))}</span></dd></dl><details class="reader-methods"><summary>Evidence and uncertainty</summary><p><strong>What is uncertain:</strong> ${esc(r.review.limitations)}</p><p><strong>Dating evidence:</strong> ${esc(r.time.original)} ${esc(r.time.method)}</p><p>${esc(r.time.interpretation)}</p><p><strong>Map accuracy:</strong> ${esc(r.location?.precision??r.overlay?.precision??'A location has not been established.')}</p>${r.destination?`<p><strong>Destination accuracy:</strong> ${esc(r.destination.precision)}</p>`:''}</details></section>`;
+ const facts=readerFacts(r).filter(f=>!/typological coexistence|dedicated radiocarbon|source audit|\bmodeled\b|\bmodelled\b/i.test(f.text));
+ const ctx=readerContext(r);
+ const ctxHTML=ctx&&!/source audit|\bmodeled\b|\bmodelled\b/i.test(ctx)?`<p class="reader-context">${esc(ctx)}</p>`:'';
+ return `<section class="reader-evidence"><h5>What this shows</h5><p class="reader-finding">${esc(readerSummary(r))}</p>${ctxHTML}${facts.length?`<ul class="reader-facts">${facts.map(f=>`<li>${esc(f.text)}</li>`).join('')}</ul>`:''}<dl class="record-precision"><dt>Where</dt><dd>${esc(readerLocation(r))}</dd><dt>When</dt><dd>${esc(readerTimeDisplay(r))}<span class="reader-date-meaning">${esc(readerDateMeaning(r))}</span></dd></dl><details class="reader-methods"><summary>Evidence and uncertainty</summary><p><strong>What is uncertain:</strong> ${esc(r.review.limitations)}</p><p><strong>Dating evidence:</strong> ${esc(r.time.original)} ${esc(r.time.method)}</p><p>${esc(r.time.interpretation)}</p><p><strong>Map accuracy:</strong> ${esc(r.location?.precision??r.overlay?.precision??'A location has not been established.')}</p>${r.destination?`<p><strong>Destination accuracy:</strong> ${esc(r.destination.precision)}</p>`:''}</details></section>`;
 }

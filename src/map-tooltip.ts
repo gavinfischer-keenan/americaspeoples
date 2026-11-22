@@ -75,7 +75,7 @@ export function tooltipForHazard(event: HazardEvent): MapTooltipContent {
   return {
     title: event.title,
     summary: event.limitations,
-    dates: `${event.start === event.end ? formatYear(event.start) : formatYear(event.start) + " – " + formatYear(event.end)}. ${event.status}. Catalog event; proximity does not establish a settlement impact.`,
+    dates: `${event.start === event.end ? formatYear(event.start) : formatYear(event.start) + " – " + formatYear(event.end)}. ${event.status}.`,
   };
 }
 

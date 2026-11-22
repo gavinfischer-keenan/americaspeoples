@@ -1,7 +1,7 @@
 // Release gate: node scripts/browser-atlases.mjs (uses dist and the real release API).
 // Before an integrated build, ATLAS_BROWSER_SOURCE=1 bundles only the frontend in memory.
 import assert from 'node:assert/strict';
-import { browserFixture } from './browser-fixture.mjs';
+import { browserFixture, showMapEvidence } from './browser-fixture.mjs';
 
 const fixture = await browserFixture();
 const { page, context } = fixture;
@@ -15,21 +15,23 @@ try {
     }
   }
 
-  // Start in Explore to avoid the first-visit movie autoplay, then set a date via the UI.
-  await page.goto(fixture.url + '#explore');
+  // Start in Americas Movie so Explore lazy catalogues aren't fetched yet; pause autoplay and set 1860.
+  await page.goto(fixture.url + '#movie');
   await page.waitForSelector('#map-host .world');
-  await page.locator('nav[aria-label="Main navigation"] a[href="#movie"]').click();
+  const playBtn = page.locator('#play');
+  if ((await playBtn.textContent())?.includes('Pause')) await playBtn.click();
   await page.locator('#time-settings-toggle').click();
   await page.locator('#year-number').fill('1860');
   await page.locator('#era').selectOption('CE');
   await page.locator('#year-form button').click();
-  await page.locator('nav[aria-label="Main navigation"] a[href="#explore"]').click();
+  await page.locator('#time-settings-toggle').click();
   await page.locator('#toggle-layers').click();
   const filter = page.locator('[data-history-layer]').first();
   const filterId = await filter.getAttribute('data-history-layer');
   await filter.uncheck();
   assert.equal(await page.locator('#toggle-layers').getAttribute('aria-expanded'),'false');
   await page.getByRole('button', { name: 'Zoom in', exact: true }).click();
+  await showMapEvidence(page);
   await page.locator('.site-choice').first().click();
   await page.waitForSelector('.selected-detail h4', { state: 'attached' });
   const selectedTitle = await page.locator('.selected-detail h4').first().textContent();
@@ -42,10 +44,7 @@ try {
   const destinations = [['africa', 'Africa & Middle East'], ['europe', 'Europe & Mediterranean'], ['asia-pacific', 'Asia'], ['pacific', 'Australia & Pacific']];
   assert.ok(!fixture.requests.some(r => r.url.endsWith('/europe-catalogue.json')), 'Americas must not fetch the Europe catalogue');
   for (const [id, title] of destinations) {
-    const regionMenu=page.locator('.map-navigation').getByRole('button',{name:/^Region:/});
-    await regionMenu.focus();
-    await page.keyboard.press('Enter');
-    await page.locator(`.map-navigation-regions a[href="#atlas/${id}"]`).click();
+    await page.locator(`header.topbar nav[aria-label="Main navigation"] a[href="#atlas/${id}"], header.world-top nav[aria-label="Main navigation"] a[href="#atlas/${id}"]`).click();
     if (id === 'europe') {
       await page.locator('#europe-map .world').waitFor();
       assert.equal(await page.locator('#europe-map .map-scope').count(), 0);
@@ -65,26 +64,33 @@ try {
       assert.equal(await page.locator('.atlas-coming-soon').count(), 0);
       assert.equal(await page.locator('.timeline').isVisible(), false);
     }
-    assert.equal(await page.locator('.map-navigation').getByRole('button',{name:/^Region:/}).getAttribute('aria-expanded'),'false');
-    assert.equal(await page.locator(`.map-navigation-regions a[href="#atlas/${id}"]`).getAttribute('aria-current'),'page');
+    const navClass = await page.locator(`header.topbar nav[aria-label="Main navigation"] a[href="#atlas/${id}"], header.world-top nav[aria-label="Main navigation"] a[href="#atlas/${id}"]`).getAttribute('class');
+    assert.ok((navClass || '').includes('active'), `${id} topbar link marked active`);
   }
   assert.equal(catalogRequests(), catalogsBefore, 'Switching regional atlases must not fetch the Americas catalogue twice');
 
   await page.locator('nav[aria-label="Main navigation"] a[href="#explore"]').click();
   await page.waitForSelector('body.exploring #map-host .world');
+  assert.equal(await page.locator('#explore-timeline').isVisible(), true, 'Global Explore shows dual-slider timeline');
+  assert.equal(await page.locator('.timeline').isVisible(), false, 'Global Explore hides single-year movie timeline');
   const after = await page.evaluate(() => ({
-    date: document.querySelector('#current-year').textContent,
-    transform: document.querySelector('#map-host .world').getAttribute('transform'),
     sameElement: window.__atlasTestWorld === document.querySelector('#map-host .world'),
   }));
   assert.equal(new URL(page.url()).hash, '#explore');
-  assert.equal(after.date, before.date);
-  const transformNumbers = s => (s.match(/-?(?:\d+\.?\d*|\.\d+)(?:e[+-]?\d+)?/ig) || []).map(Number);
-  const bNums = transformNumbers(before.transform), aNums = transformNumbers(after.transform);
-  assert.equal(aNums.length, bNums.length);
-  assert.ok(aNums.every((n, i) => Math.abs(n - bNums[i]) < 0.05), `Transform mismatch: ${before.transform} vs ${after.transform}`);
-  assert.equal(after.sameElement, true, 'The Americas map instance must survive the round trip');
+  assert.equal(after.sameElement, true, 'The shared map instance must survive the round trip');
   assert.equal(await page.locator(`[data-history-layer="${filterId}"]`).isChecked(), false);
+
+  await page.locator('nav[aria-label="Main navigation"] a[href="#movie"]').click();
+  await page.waitForSelector('#map-host .world');
+  const back = await page.evaluate(() => ({
+    date: document.querySelector('#current-year').textContent,
+    transform: document.querySelector('#map-host .world').getAttribute('transform'),
+  }));
+  assert.equal(back.date, before.date);
+  const transformNumbers = s => (s.match(/-?(?:\d+\.?\d*|\.\d+)(?:e[+-]?\d+)?/ig) || []).map(Number);
+  const bNums = transformNumbers(before.transform), aNums = transformNumbers(back.transform);
+  assert.equal(aNums.length, bNums.length);
+  assert.ok(aNums.every((n, i) => Math.abs(n - bNums[i]) < 0.05), `Transform mismatch: ${before.transform} vs ${back.transform}`);
   assert.equal(await page.locator('.selected-detail h4').first().textContent(), selectedTitle);
 
   // Check direct destinations, reloads, and the navigation geometry on narrow screens.
@@ -98,8 +104,7 @@ try {
     else await page.locator('#family-map .family-land').waitFor();
     const layout = await page.evaluate(() => ({ width: innerWidth, scroll: document.documentElement.scrollWidth }));
     assert.ok(layout.scroll <= layout.width, JSON.stringify(layout));
-    await page.locator('.map-navigation').getByRole('button',{name:/^Region:/}).click();
-    await page.locator('.map-navigation-regions a[href="#movie"]').click();
+    await page.locator('header.topbar nav a[href="#movie"], header.world-top nav a[href="#movie"]').first().click();
     await page.waitForSelector('#map-host .world');
     assert.equal(new URL(page.url()).hash, '#movie');
   }

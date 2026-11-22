@@ -157,14 +157,11 @@ try{
 
  for(const region of ['africa','asia-pacific']){
   await openPlayer(regionRoutes[region]);
-  const regionName=region==='africa'?'Africa':'Asia';
-  const toggle=page.getByRole('button',{name:'Region: '+regionName,exact:true});
-  await toggle.click();
   for(const [id,href] of Object.entries(regionRoutes)){
    const label={americas:'Americas',pacific:'Pacific',africa:'Africa',europe:'Europe','asia-pacific':'Asia'}[id];
-   assert.equal(await page.locator('.map-navigation').getByRole('link',{name:label,exact:true}).getAttribute('href'),href);
+   assert.equal(await page.locator('.world-top nav[aria-label="Main navigation"]').getByRole('link',{name:label,exact:true}).getAttribute('href'),href);
   }
-  await page.keyboard.press('Escape');
+  assert.ok(await page.locator('#family-guide-list a[href="sites/world-human-family.html"]').count()>0,'Branching human family guide pinned in regional guides');
  }
 
  const earlyEnd=-14999;
@@ -186,7 +183,7 @@ try{
  assert.match(await page.locator('#family-evidence-list [data-world-item="'+future.id+'"] span').textContent(),/jump to evidence/);
  await inspectRecord(future);
  assert.equal(await page.locator('#family-year').textContent(),yearLabel(future.start),'Choosing a future result moves the clock to its evidence date');
- await page.locator('.family-heading a[href="#world"]').click();await page.locator('#world-globe .world-land').waitFor();
+ await page.locator('.world-top nav a[href="#world"]').click();await page.locator('#world-globe .world-land').waitFor();
  await page.goBack();await page.locator('#family-map .family-land').waitFor();
  assert.equal(new URL(page.url()).hash,'#atlas/africa/early');
  assert.equal(await page.locator('#family-search').inputValue(),'Kalambo','Search survives a route round trip');
@@ -197,7 +194,7 @@ try{
   await openPlayer('#study/'+study.id);
   const d=playerData(study),firstRecord=[...d.evidence].sort((a,b)=>a.start-b.start)[0];
   assert.equal(await page.locator('.family-heading h1').textContent(),study.title);
-  const guide=page.getByRole('link',{name:'Read the full deep dive',exact:true});
+  const guide=page.getByRole('link',{name:/Read the full deep dive/});
   assert.equal(await guide.getAttribute('href'),'sites/'+study.guideId+'.html');
   if(multiTaxonStudies.has(study.id))assert.ok((await page.locator('#family-taxon option').count())>2,study.id+' exposes lineage filter');
   else assert.equal(await page.locator('#family-taxon').count(),0,'Study does not expose irrelevant lineage filtering');

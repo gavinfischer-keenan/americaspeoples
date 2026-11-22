@@ -33,7 +33,7 @@ try{
  assert.match(await history.innerText(),/public ceremony/);
  assert.equal(await page.locator('.review-technical').getAttribute('open'),null);
  await page.screenshot({path:'test-results/reader-mani-tablet.png',fullPage:true});
- await page.goto(base+'/#movie');
+ await page.goto(base+'/#atlas/pacific');
  if(await page.getByRole('button',{name:'Pause',exact:true}).isVisible())await page.getByRole('button',{name:'Pause',exact:true}).click();
  await page.setViewportSize({width:1440,height:960});
  await mapSetting(page,()=>page.locator('#whole-movie').click());

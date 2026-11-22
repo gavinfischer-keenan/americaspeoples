@@ -1,7 +1,8 @@
-import {readerDetailHTML} from './reader-evidence';
+import {readerDetailHTML,readerTimeDisplay} from './reader-evidence';
+import {exploreSourceMeta} from './explore-world';
 import type { DisplayRecord } from "./model";
 import { $, esc } from "./dom";
-import { isDisputed, timeLabel } from "./time";
+import { isDisputed } from "./time";
 import { disputeLabel, disputeLevel } from "./disputes";
 import { isModeledRecord } from "./map-filters";
 import { populationAt } from "./population";
@@ -17,6 +18,7 @@ export interface MapPanelState {
   active: readonly DisplayRecord[];
   year: number;
   exploring?: boolean;
+  rangeLabel?: string;
   interactionLocked?: boolean;
   searching?:boolean;
   categoryLabel?:string;
@@ -71,7 +73,7 @@ export class MapPanels {
     );
     this.count("#visible-count", String(visible.length));
     this.count("#context-count", String(context.length));
-    this.count("#active-count", state.searching?`${visible.length} search results across the atlas`:exploring?`${visible.length} records in view · all periods`:`${visible.length} ${state.guided?'story ':''}record${visible.length===1?'':'s'} in view · ${visible.filter(r=>historyState(r,year)==='active').length} current`);
+    this.count("#active-count", state.searching?`${visible.length} search results across the atlas`:exploring?`${visible.length} records in view · ${state.rangeLabel??'all periods'}`:`${visible.length} ${state.guided?'story ':''}record${visible.length===1?'':'s'} in view · ${visible.filter(r=>historyState(r,year)==='active').length} current`);
     this.reconcile(
       this.visibleHost,
       this.visibleButtons,
@@ -80,7 +82,7 @@ export class MapPanels {
       false, year, exploring,
     );
     const empty=this.visibleHost.querySelector('.empty');
-    if(empty)empty.textContent=state.searching?'No matching records. Try a place name or a broader search.':state.categoryLabel&&state.categoryLabel!=='Everything'?`No ${state.categoryLabel.toLowerCase()} records in this view and period. Try another region or show everything. This is a collection gap, not evidence of historical absence.`:'No included records in this view. Zoom out, choose a region, or change the date and layers.';
+    if(empty)empty.textContent=state.searching?'No matching records. Try a place name or a broader search.':state.categoryLabel&&state.categoryLabel!=='Everything'?`No ${state.categoryLabel.toLowerCase()} records in this view and period. Zoom out or adjust filters.`:'No records in this view and period. Zoom out or widen the date window.';
     this.reconcile(
       this.contextHost,
       this.contextButtons,
@@ -122,7 +124,14 @@ export class MapPanels {
           .map((r) => {
             const included = exploring || activeKeys.has(recordKey(r));
             const inView = visibleKeys.has(recordKey(r));
-            return `<article class="selected-detail"><h4>${esc(r.title)}</h4><p class="fine">${esc(r.culture.kind==='unknown'?'Community not identified':r.culture.name)} · ${esc(timeLabel(r.time))}</p>${!exploring && historyLabel(r,year) ? `<p class="selection-status">${esc(historyLabel(r,year))}</p>` : !included ? '<p class="selection-status">Not active evidence at the current year / filters.</p>' : !inView ? '<p class="selection-status">Outside the current map view.</p>' : ""}${readerDetailHTML(r)}${r.population?.length && (exploring || historyState(r,year)==='active') ? `<p class="fine">${exploring ? r.population.map(p=>`${p.min.toLocaleString()}–${p.max.toLocaleString()} residents · ${formatYear(p.start)}–${formatYear(p.end)}`).map(esc).join("<br>") : esc(populationAt([r], year).label)}</p>` : ""}${isDisputed(r)?'<p class="fine">Some interpretations are debated. Open Evidence and uncertainty for the qualifications.</p>':''}<a class="button" href="${recordHref(r)}">Full review &amp; sources ↗</a>${guideLink(r.id)}</article>`;
+            const meta = exploreSourceMeta(r);
+            const sourcesHTML = meta?.sources.length
+              ? `<h5>Sources</h5><ul class="explore-sources">${meta.sources.map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)} ↗</a></li>`).join("")}</ul>`
+              : "";
+            const actionsHTML = meta
+              ? `<a class="button" href="${esc(meta.regionHref)}">Open in regional map ↗</a>${meta.guideId ? `<a class="site-guide-link" href="sites/${esc(meta.guideId)}.html">◈ Read full study guide ↗</a>` : ""}`
+              : `<a class="button" href="${recordHref(r)}">Full review &amp; sources ↗</a>${guideLink(r.id)}`;
+            return `<article class="selected-detail"><h4>${esc(r.title)}</h4><p class="fine">${esc(r.culture.kind==='unknown'?'Community not identified':r.culture.name)} · ${esc(readerTimeDisplay(r))}</p>${!exploring && historyLabel(r,year) ? `<p class="selection-status">${esc(historyLabel(r,year))}</p>` : !included ? '<p class="selection-status">Outside the active timeline year / filters.</p>' : !inView ? '<p class="selection-status">Outside the current map view.</p>' : ""}${readerDetailHTML(r)}${r.population?.length && (exploring || historyState(r,year)==='active') ? `<p class="fine">${exploring ? r.population.map(p=>`${p.min.toLocaleString()}–${p.max.toLocaleString()} residents · ${formatYear(p.start)}–${formatYear(p.end)}`).map(esc).join("<br>") : esc(populationAt([r], year).label)}</p>` : ""}${sourcesHTML}${actionsHTML}</article>`;
           })
           .join("")
       : interactionLocked ? '<p class="empty">Movie playing. Hover for a summary; click the map to pause, then select a record.</p>' : '<p class="empty">Select a site from the list or a marker on the map to see its evidence, dates, and sources here.</p>';
@@ -209,7 +218,7 @@ export class MapPanels {
         entry.content = content;
         button.innerHTML = context
           ? `<div><strong>${esc(r.title)}</strong><span>${esc(r.time.original)}</span></div>`
-          : `<i style="background:${r.culture.color}"></i><div><strong>${esc(r.title)}${isDisputed(r) ? `<span class="asterisk dispute-${disputeLevel(r)}" title="${esc(disputeLabel(r))}"> *</span>` : ""}</strong><span>${esc(r.culture.name)} · ${esc(timeLabel(r.time))}${guideForRecord(r.id) ? " · ◈ Site guide available" : ""}${isModeledRecord(r) ? " · Modeled / schematic" : ""}</span></div>`;
+          : `<i style="background:${r.culture.color}"></i><div><strong>${esc(r.title)}${isDisputed(r) ? `<span class="asterisk dispute-${disputeLevel(r)}" title="${esc(disputeLabel(r))}"> *</span>` : ""}</strong><span>${esc(r.culture.name)} · ${esc(readerTimeDisplay(r))}${guideForRecord(r.id) ? " · ◈ Site guide available" : ""}${isModeledRecord(r) ? " · Modeled / schematic" : ""}</span></div>`;
       }
       const past=!context&&!exploring&&historyState(r,year)!=="active";
       button.classList.toggle("historical-card",past);
