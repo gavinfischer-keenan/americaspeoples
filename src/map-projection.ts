@@ -1,5 +1,35 @@
-import { geoEquirectangular } from "d3-geo";
+import { geoDistance, geoEquirectangular, geoOrthographic, type GeoProjection } from "d3-geo";
 export type MapScope = "americas" | "pacific" | "atlantic" | "world";
+export const DEFAULT_GLOBE_ROTATION: [number, number, number] = [-15, -22, 0];
+export function globeProjection(
+  width = 1000,
+  height = 800,
+  rotation: [number, number, number] = DEFAULT_GLOBE_ROTATION,
+) {
+  const radius = Math.max(120, Math.min(width, height) * 0.44);
+  return geoOrthographic()
+    .clipAngle(90)
+    .precision(0.5)
+    .rotate(rotation)
+    .scale(radius)
+    .translate([width / 2, height / 2]);
+}
+
+/** d3-geo point calls ignore clipAngle(); enforce spherical clipping for pins. */
+export function projectPoint(
+  projection: GeoProjection,
+  point: readonly [number, number],
+): [number, number] | null {
+  const clip = projection.clipAngle?.();
+  if (clip != null && Number.isFinite(clip) && clip > 0) {
+    const [rx, ry] = projection.rotate();
+    const maxRad = (clip * Math.PI) / 180;
+    if (geoDistance([point[0], point[1]], [-rx, -ry]) > maxRad + 1e-6) {
+      return null;
+    }
+  }
+  return projection([point[0], point[1]]);
+}
 /** Pacific overview fits 95E–330E and 60S–80N in both wide and tall viewports.
  * Mainland departure regions and southern Australia must not be lost to aspect ratio. */
 export function mapProjection(scope: MapScope = "pacific", width=1000, height=800) {

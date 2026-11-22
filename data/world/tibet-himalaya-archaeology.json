@@ -1,0 +1,884 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "src-tibh-zhang-2021",
+      "title": "Zhang et al. (2021), Earliest parietal art: Hominin hand and foot traces from the middle Pleistocene of Tibet, Science Bulletin",
+      "url": "https://doi.org/10.1016/j.scib.2021.09.001",
+      "access": "Quesang travertine U-series parietal-art study checked 2026-11-22."
+    },
+    {
+      "id": "src-tibh-meyer-2017",
+      "title": "Meyer, Aldenderfer, Wang, Hoffmann et al. (2017), Permanent human occupation of the central Tibetan Plateau in the early Holocene, Science",
+      "url": "https://doi.org/10.1126/science.aag0357",
+      "access": "Chusang/Quesang OSL, U-series & 14C Early Holocene dating paper checked 2026-11-22."
+    },
+    {
+      "id": "src-tibh-chen-2015",
+      "title": "Chen et al. (2015), Agriculture facilitated permanent human occupation of the Tibetan Plateau after 3600 B.P., Science",
+      "url": "https://doi.org/10.1126/science.1259172",
+      "access": "Zongri and Amdo barley/millet colonization chronology checked 2026-11-22."
+    },
+    {
+      "id": "src-tibh-lu-2016",
+      "title": "Lu et al. (2016), Earliest tea as evidence for one branch of the Silk Road across the Tibetan Plateau, Scientific Reports",
+      "url": "https://doi.org/10.1038/srep18955",
+      "access": "Gurugyam western Tibet cemetery tea leaves & gold mask study checked 2026-11-22."
+    },
+    {
+      "id": "src-tibh-jeong-2016",
+      "title": "Jeong, Ozga, Witonsky, Aldenderfer, Di Rienzo et al. (2016), Long-term genetic stability and a high-altitude East Asian origin for the peoples of the high valleys of the Himalayan arc, PNAS",
+      "url": "https://doi.org/10.1073/pnas.1520844113",
+      "access": "Upper Mustang Chokhopani, Mebrak & Samdzong aDNA paper checked 2026-11-22."
+    },
+    {
+      "id": "src-tibh-whc-707",
+      "title": "UNESCO World Heritage Centre — Historic Ensemble of the Potala Palace, Lhasa (List 707)",
+      "url": "https://whc.unesco.org/en/list/707",
+      "access": "Lhasa Potala, Jokhang & Norbulingka World Heritage entry checked 2026-11-22."
+    },
+    {
+      "id": "src-tibh-whc-121",
+      "title": "UNESCO World Heritage Centre — Kathmandu Valley (List 121)",
+      "url": "https://whc.unesco.org/en/list/121",
+      "access": "Swayambhunath, Changu Narayan, Patan & Bhaktapur World Heritage dossier checked 2026-11-22."
+    },
+    {
+      "id": "src-tibh-whc-tilaurakot",
+      "title": "UNESCO World Heritage Tentative List — Tilaurakot, the archaeological remains of ancient Shakya Kingdom (Nepal)",
+      "url": "https://whc.unesco.org/en/statesparties/np",
+      "access": "UNESCO Nepal Tentative List archive for Tilaurakot/Kapilavastu checked 2026-11-22."
+    },
+    {
+      "id": "src-tibh-ivpp-tibet",
+      "title": "Chinese Academy of Sciences IVPP / National Cultural Heritage Administration — Tibet Palaeolithic & Melong Tagphug Surveys",
+      "url": "https://english.cas.cn/",
+      "access": "Melong Tagphug cave, Qugong, Changguogou & Tsaparang official archaeological summaries checked 2026-11-22."
+    },
+    {
+      "id": "src-tibh-madsen-qinghai",
+      "title": "David B. Madsen et al. / Qinghai Lake Jiangxigou & Xidatan Epipaleolithic High-Altitude Research",
+      "url": "https://www.science.org/",
+      "access": "Qinghai basin high-altitude late Pleistocene–early Holocene camps context checked 2026-11-22."
+    },
+    {
+      "id": "src-tibh-bellezza",
+      "title": "John Vincent Bellezza / Zhangzhung, Khyunglung & Changtang Rock Art Archive",
+      "url": "https://www.thlib.org/",
+      "access": "Tibetan and Himalayan Library (THL) archival inventory of Changtang megaliths, Rutog rock art & Zhangzhung sites checked 2026-11-22."
+    },
+    {
+      "id": "src-tibh-tibet-hist",
+      "title": "Treasury of Lives / Tibetan & Himalayan Library (THL) — Samye, Sakya, Gyantse, Tashilhunpo & Derge Monastic Chronicles",
+      "url": "https://treasuryoflives.org/",
+      "access": "Historical dates and monastic lineage documentation across Tibet & Kham checked 2026-11-22."
+    },
+    {
+      "id": "src-tibh-asi",
+      "title": "Archaeological Survey of India (ASI) — Burzahom Neolithic Site & Tabo–Alchi–Hemis Himalayan Monasteries",
+      "url": "https://asi.nic.in/",
+      "access": "ASI heritage dossiers for Kashmir Burzahom, Ladakh Alchi/Hemis & Spiti Tabo checked 2026-11-22."
+    },
+    {
+      "id": "src-tibh-uttarakhand",
+      "title": "Uttarakhand Directorate of Archaeology / Malari Burials & Lakhu Udyar Rock Art Archive",
+      "url": "https://asi.nic.in/",
+      "access": "Malari 14C high-altitude burials, gold funerary mask & Lakhu Udyar paintings checked 2026-11-22."
+    },
+    {
+      "id": "src-tibh-nepal-arch",
+      "title": "Department of Archaeology, Government of Nepal & Corvinus (2007) — Dang-Deukhuri Paleolithic, Sinja Valley & Khumbu Heritage",
+      "url": "https://whc.unesco.org/en/statesparties/np",
+      "access": "Nepal heritage archives and Siwalik Paleolithic surveys checked 2026-11-22."
+    },
+    {
+      "id": "src-tibh-bhutan",
+      "title": "Department of Culture & Dzongkha Development, Royal Government of Bhutan — Bumthang Jambay Lhakhang, Paro Taktsang & Punakha",
+      "url": "https://whc.unesco.org/en/statesparties/bt",
+      "access": "Bhutan Tentative World Heritage and royal monastery chronicles checked 2026-11-22."
+    },
+    {
+      "id": "src-tibh-eastern-him",
+      "title": "Sikkim & Arunachal Pradesh Heritage Archives — Pemayangtse, Rabdentse & 1681 Tawang Monastery",
+      "url": "https://asi.nic.in/",
+      "access": "Eastern Himalaya Sikkim Pemayangtse (1705) & Tawang Monastery (1681) histories checked 2026-11-22."
+    }
+  ],
+  "taxa": [],
+  "evidence": [
+    {
+      "id": "tibh-quesang-chusang",
+      "kind": "archaeology",
+      "title": "Quesang / Chusang Hot Springs (Central Tibet, 4,270 m): Travertine Hand- & Footprints",
+      "taxonIds": [
+        "denisovans",
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": -224000,
+      "end": -5400,
+      "dateLabel": "~226–169 ka vs. ~12.7–7.4 ka",
+      "dateBasis": "Contested U-series travertine vs. OSL/14C chronology",
+      "coordinates": [
+        90.62,
+        30.25
+      ],
+      "summary": "On a hydrothermal travertine apron northwest of Lhasa at 4,270 m, a deliberately pressed panel of juvenile handprints and footprints was U-series dated by Zhang et al. (2021) to ~226–169 ka as possible Denisovan parietal art, whereas Meyer et al. (2017) dated adjacent Chusang prints to Early Holocene (~12.7–7.4 ka) Homo sapiens colonizers.",
+      "limits": "Disparate travertine sampling blocks have yielded both Middle Pleistocene (~200 ka) and Early Holocene (~10 ka) ages; active stratigraphic debate persists.",
+      "sourceIds": [
+        "src-tibh-zhang-2021",
+        "src-tibh-meyer-2017"
+      ]
+    },
+    {
+      "id": "tibh-melong-tagphug",
+      "kind": "archaeology",
+      "title": "Melong Tagphug Cave (Ngari, Western Tibet, 4,700 m): Stratified High-Altitude Paleolithic–Bronze Sequence",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": -51000,
+      "end": -1000,
+      "dateLabel": "c. 53,000 BP–1000 BCE",
+      "dateBasis": "OSL, 14C & red-ochre parietal stratigraphy",
+      "coordinates": [
+        79.8,
+        32.5
+      ],
+      "summary": "Excavated at 4,700 m above sea level in Gar/Rutog, Melong Tagphug Cave preserves stratified hearths, Levallois-like blades, bone needles, red-ochre hand lines, and later bronze ornaments proving intermittent Pleistocene-through-Metal-Age high-altitude shelter use.",
+      "limits": "Published earliest basal dates remain preliminary pending full monograph monographs.",
+      "sourceIds": [
+        "src-tibh-ivpp-tibet"
+      ]
+    },
+    {
+      "id": "tibh-jiangxigou-xidatan",
+      "kind": "archaeology",
+      "title": "Jiangxigou 2 & Xidatan 2 (Qinghai Lake & Kunlun Pass, 3,300–4,300 m): Terminal Pleistocene–Holocene Microblade Camps",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": -13000,
+      "end": -4000,
+      "dateLabel": "c. 13,000–4000 BCE",
+      "dateBasis": "Loess OSL & hearth charcoal 14C",
+      "coordinates": [
+        100.28,
+        36.6
+      ],
+      "summary": "Stratified hearth floors at Jiangxigou along Qinghai Lake (~15–6 ka) and Xidatan at 4,300 m in the Kunlun Pass track mobile microlithic hunter-gatherers pioneering seasonal and year-round steppe-tundra foraging along the northeastern Tibetan rim.",
+      "limits": "Small open-air hearth camps indicate episodic occupation waves prior to later pastoral economies.",
+      "sourceIds": [
+        "src-tibh-madsen-qinghai",
+        "src-tibh-chen-2015"
+      ]
+    },
+    {
+      "id": "tibh-zongri-amdo",
+      "kind": "archaeology",
+      "title": "Zongri & Amdo Upper Yellow River Basins (Qinghai, NE Tibet): Millet-to-Barley Plateau Shift",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": -3600,
+      "end": -1400,
+      "dateLabel": "c. 3600–1400 BCE",
+      "dateBasis": "Charred millet/barley grains & tomb 14C",
+      "coordinates": [
+        100.78,
+        35.58
+      ],
+      "summary": "Zongri's Majiayao-linked burials and subsequent Nuomuhong/Kayue sites mark the transition on the NE plateau margin around 1600 BCE when frost-tolerant hulless barley and sheep enabled permanent farming villages above 3,000–3,500 m.",
+      "limits": "Local foraging–herding boundaries blurred between foxtail-millet basins below 2,500 m and high-altitude barley terraces.",
+      "sourceIds": [
+        "src-tibh-chen-2015"
+      ]
+    },
+    {
+      "id": "tibh-qugong-lhasa",
+      "kind": "archaeology",
+      "title": "Qugong Village (Lhasa Northern Suburb, 3,680 m): Neolithic–Early Bronze Urban Hearth of Central Tibet",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": -1750,
+      "end": -1100,
+      "dateLabel": "c. 1750–1100 BCE",
+      "dateBasis": "AMS 14C on yak/barley/charcoal & stone cists",
+      "coordinates": [
+        91.12,
+        29.7
+      ],
+      "summary": "On alluvial terraces bordering Lhasa, Qugong preserves semisubterranean houses, polished jade-and-microblade tools, yak and sheep bones, and stone-chamber tombs containing a bronze mirror pointing to early steppe contacts.",
+      "limits": "Single-site chronology anchors central Tibet's Bronze Age while surrounding river-valley sites remain under-surveyed.",
+      "sourceIds": [
+        "src-tibh-ivpp-tibet"
+      ]
+    },
+    {
+      "id": "tibh-changguogou-bangga",
+      "kind": "archaeology",
+      "title": "Changguogou & Bangga (Middle Yarlung Tsangpo): Barley Farmers & Pastoral Villages (1400–200 BCE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": -1400,
+      "end": -200,
+      "dateLabel": "c. 1400–200 BCE",
+      "dateBasis": "Flotation 14C & residential house excavations",
+      "coordinates": [
+        91.05,
+        29.25
+      ],
+      "summary": "Excavations across Gongga and Qonggyai along the Yarlung Tsangpo valley recovered dense assemblages of charred six-row naked barley, wheat, oats, and stone architectural foundations predating historical Yarlung kingdoms by over a millennium.",
+      "limits": "Botanical preservation biases toward hearth carbonization rather than nomadic upland camps.",
+      "sourceIds": [
+        "src-tibh-ivpp-tibet"
+      ]
+    },
+    {
+      "id": "tibh-gurugyam-chuvthag",
+      "kind": "archaeology",
+      "title": "Gurugyam & Chuvthag (Ngari, Western Tibet): Royal Zhangzhung Tombs, Gold Mask & Earliest Tibetan Tea",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": 100,
+      "end": 400,
+      "dateLabel": "c. 100–400 CE",
+      "dateBasis": "AMS 14C on tea buds, silk & wood coffins",
+      "coordinates": [
+        80.62,
+        31.12
+      ],
+      "summary": "Chamber tombs at Gurugyam and Chuvthag near Mount Kailash preserved hammered gold funerary masks, embroidered Chinese-character silks, bronze mirrors, and compacted tea leaf buds — proving long-distance Silk Road tea and silk exchange atop 4,300 m western Tibet by 200 CE.",
+      "limits": "Elite aristocratic tomb goods illuminate trading prestige more directly than commoner pastoral households.",
+      "sourceIds": [
+        "src-tibh-lu-2016"
+      ]
+    },
+    {
+      "id": "tibh-rutog-changtang-rockart",
+      "kind": "archaeology",
+      "title": "Rutog Rock Art & Changtang Do-ring Megaliths (Western & Northern Tibet): Pre-Buddhist Ceremonial Landscapes",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": -2000,
+      "end": 800,
+      "dateLabel": "c. 2000 BCE–800 CE",
+      "dateBasis": "Motif style (chariots, yaks, Bon *swastikas*) & surface 14C",
+      "coordinates": [
+        79.73,
+        33.42
+      ],
+      "summary": "Thousands of engraved yak hunts, Eurasian steppic chariots, and standing-stone *do-ring* slab alignments scattered across the empty high plains of Changtang and Rutog preserve pre-Buddhist Zhangzhung and early pastoralist ritual monuments.",
+      "limits": "Few *do-ring* alignments have yielded stratified datable organics below basal stones.",
+      "sourceIds": [
+        "src-tibh-bellezza"
+      ]
+    },
+    {
+      "id": "tibh-khyunglung-tsaparang-guge",
+      "kind": "historical",
+      "title": "Khyunglung Ngulkhar, Tsaparang & Tholing (Zanda Gorge, Western Tibet): Zhangzhung & Guge Capitals",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": 500,
+      "end": 1630,
+      "dateLabel": "c. 500–1630 CE",
+      "dateBasis": "Archaeological walls, 996 CE Tholing charter & Guge murals",
+      "coordinates": [
+        79.67,
+        31.48
+      ],
+      "summary": "Crowning eroded Sutlej badlands, the labyrinthine citadel of Khyunglung (Silver Castle of Garuda) and subsequent Guge kingdom capitals at Tholing Monastery (996 CE) and cliffside Tsaparang channeled Indo-Tibetan translation movements before falling in 1630 CE.",
+      "limits": "Chronology of pre-10th-century Zhangzhung masonry phases at Khyunglung relies heavily on surface ceramic and architectural typology.",
+      "sourceIds": [
+        "src-tibh-bellezza",
+        "src-tibh-ivpp-tibet"
+      ]
+    },
+    {
+      "id": "tibh-piyang-donggar-caves",
+      "kind": "historical",
+      "title": "Piyang & Donggar Cliff Monastery Caves (Ngari, Western Tibet): 10th–13th c. Guge Mandala Frescoes",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": 950,
+      "end": 1300,
+      "dateLabel": "c. 950–1300 CE",
+      "dateBasis": "Stylistic mural chronology & radiocarbon samples",
+      "coordinates": [
+        79.92,
+        31.68
+      ],
+      "summary": "Nearly a thousand carved meditation cells, stupas, and vividly painted Kashmir-Tibetan mandala sanctuaries honeycombing the clay cliffs of Donggar and Piyang preserve West Tibet's earliest surviving monastic mural traditions.",
+      "limits": "Arid clay cliffs suffered erosion before modern structural stabilization.",
+      "sourceIds": [
+        "src-tibh-ivpp-tibet"
+      ]
+    },
+    {
+      "id": "tibh-chonggye-yumbulagang",
+      "kind": "historical",
+      "title": "Chonggye Valley of the Tibetan Kings & Yumbulagang (Yarlung): 6th–9th c. Imperial Tumuli",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": 550,
+      "end": 850,
+      "dateLabel": "c. 550–850 CE",
+      "dateBasis": "Old Tibetan chronicles & monumental earth-mound survey",
+      "coordinates": [
+        91.68,
+        29.02
+      ],
+      "summary": "Huge truncated earthen burial pyramids built along the Qonggyai River in Yarlung commemorate Songtsen Gampo and the Pugyel emperors of the Tibetan Empire (7th–9th c.), overlooked by reconstructed Yumbulagang fortress on the ridge.",
+      "limits": "Unexcavated royal mound interiors await non-destructive preservation; external chronology draws on Old Tibetan Dunhuang annals.",
+      "sourceIds": [
+        "src-tibh-tibet-hist"
+      ]
+    },
+    {
+      "id": "tibh-samye-monastery",
+      "kind": "historical",
+      "title": "Samye Monastery (Chonggye/Yarlung Tsangpo North Bank): 779 CE First Tibetan Buddhist Monastery",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": 779,
+      "end": 1900,
+      "dateLabel": "779–1900 CE",
+      "dateBasis": "Imperial edicts (779 CE Skar-chung / Samye pillars)",
+      "coordinates": [
+        91.5,
+        29.33
+      ],
+      "summary": "Constructed under King Trisong Detsen, Śāntarakṣita, and Padmasambhava around 779 CE on a three-dimensional cosmological mandala plan uniting Tibetan, Chinese, and Indian floors, Samye ordained Tibet's first native monks and hosted the Great Lhasa/Samye Debate.",
+      "limits": "Subsequent fires and 20th-century restorations rebuilt upper timber galleries atop original imperial foundations.",
+      "sourceIds": [
+        "src-tibh-tibet-hist"
+      ]
+    },
+    {
+      "id": "tibh-sakya-monastery",
+      "kind": "historical",
+      "title": "Sakya Monastery (Tsang, Southern Tibet): 1073 CE Fortress-Library & 84,000-Volume Archive",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": 1073,
+      "end": 1900,
+      "dateLabel": "1073–1900 CE",
+      "dateBasis": "Founding Khon lineage chronicles & Mongol-era charters",
+      "coordinates": [
+        88.02,
+        28.9
+      ],
+      "summary": "Founded in 1073 by Khon Konchog Gyalpo and vastly expanded into a towering Mongol-period grey-and-red fortress under Sakya Pandita and Drogon Chogyal Phagpa, Sakya housed one of Asia's largest medieval libraries of Sanskrit palm-leaf and gilt Tibetan manuscripts.",
+      "limits": "North monastery ruins and Southern Lhakhang Chenmo fortress span distinct construction periods.",
+      "sourceIds": [
+        "src-tibh-tibet-hist"
+      ]
+    },
+    {
+      "id": "tibh-gyantse-kumbum",
+      "kind": "historical",
+      "title": "Gyantse Dzong & Pelkor Chode Kumbum (Tsang): 1427 CE 108-Chapel Stupa Mandala",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": 1390,
+      "end": 1900,
+      "dateLabel": "c. 1390–1900 CE",
+      "dateBasis": "1427–1436 construction inscriptions & mural guilds",
+      "coordinates": [
+        89.6,
+        28.91
+      ],
+      "summary": "Completed around 1427 CE beneath Gyantse fortress by Newar and Tibetan masters, the multi-tiered Kumbum Stupa unites Sakya, Kagyu, and Gelug chapels lined with 108 painted rooms synthesizing late medieval Himalayan art.",
+      "limits": "1904 British Younghusband campaign damaged outer fortress battlements later repaired.",
+      "sourceIds": [
+        "src-tibh-tibet-hist"
+      ]
+    },
+    {
+      "id": "tibh-tashilhunpo-shigatse",
+      "kind": "historical",
+      "title": "Tashilhunpo Monastery (Shigatse, Tsang): 1447 CE Monastic Seat of the Panchen Lamas",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": 1447,
+      "end": 1900,
+      "dateLabel": "1447–1900 CE",
+      "dateBasis": "1447 foundation records of Gedun Drub & Tsang chronicles",
+      "coordinates": [
+        88.87,
+        29.26
+      ],
+      "summary": "Founded in 1447 by Gendun Drup (posthumously First Dalai Lama) along the Nyangchu-Tsangpo confluence, Tashilhunpo became Western Central Tibet's largest Gelug monastic university and Panchen Lama residence through 1900 CE.",
+      "limits": "Terraced chapels accumulated stepwise from the 15th through 19th centuries.",
+      "sourceIds": [
+        "src-tibh-tibet-hist"
+      ]
+    },
+    {
+      "id": "tibh-potala-sera-drepung",
+      "kind": "historical",
+      "title": "Lhasa Potala Palace, Drepung (1416), Sera (1419) & Ganden (1409) Monastic Universities",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": 1409,
+      "end": 1900,
+      "dateLabel": "1409–1900 CE",
+      "dateBasis": "UNESCO historical dossiers & 1645 Red/White Palace edicts",
+      "coordinates": [
+        91.12,
+        29.66
+      ],
+      "summary": "Around Lhasa's valley floor and ridge, Tsongkhapa's Great Three Gelug universities (Ganden, Drepung, Sera) housed over 15,000 monk-scholars alongside the Fifth Dalai Lama's monumental 17th-century White and Red Potala Palace citadel.",
+      "limits": "7th-century core meditation chapels inside Marpo Ri hill predate the 1645 Potala fortress construction.",
+      "sourceIds": [
+        "src-tibh-whc-707"
+      ]
+    },
+    {
+      "id": "tibh-derge-parkhang-kham",
+      "kind": "historical",
+      "title": "Derge Parkhang Printing House & Monastery (Kham, Eastern Tibet): 1729 Woodblock Press",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": 1729,
+      "end": 1900,
+      "dateLabel": "1729–1900 CE",
+      "dateBasis": "Dege royal printing colophons & architectural records",
+      "coordinates": [
+        98.58,
+        31.81
+      ],
+      "summary": "Established in 1729 by Tenpa Tsering, King of Derge in eastern Kham, the Derge Parkhang carved and preserved over 270,000 walnut and birch printing blocks of the Kangyur, Tengyur, medical treatises, and classical works across Himalayan borders.",
+      "limits": "Preserved non-sectarian Rimé printing corpus continued active hand-impression printing through 1900 and today.",
+      "sourceIds": [
+        "src-tibh-tibet-hist"
+      ]
+    },
+    {
+      "id": "tibh-burzahom-gufkral-kashmir",
+      "kind": "archaeology",
+      "title": "Burzahom & Gufkral (Kashmir Valley, Northwest Himalaya): ~3000 BCE Pit-Dwellings & Hunting Stela",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": -3000,
+      "end": -1000,
+      "dateLabel": "c. 3000–1000 BCE",
+      "dateBasis": "AMS & conventional 14C on pit-house hearths & barley",
+      "coordinates": [
+        74.88,
+        34.17
+      ],
+      "summary": "Subterranean birch-roofed winter pit houses at Burzahom and Gufkral feature Kashmiri-style jade-and-stone harvesters, bone awls, shared human-dog burials, and an iconic incised hunting stone, linking Himalayan valleys simultaneously to Central/East Asian and Indus networks.",
+      "limits": "Calibration of older 1960s charcoal samples and exact northern-Chinese typological parallels remain nuanced.",
+      "sourceIds": [
+        "src-tibh-asi"
+      ]
+    },
+    {
+      "id": "tibh-alchi-nurla-ladakh",
+      "kind": "archaeology",
+      "title": "Alchi Choskor Monastery & Upper Indus Petroglyphs (Ladakh, Upper Indus): Kashmiri-Tibetan Murals",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": -2000,
+      "end": 1900,
+      "dateLabel": "c. 2000 BCE–1900 CE",
+      "dateBasis": "Copperplate inscriptions, 11th–12th c. art history & rock-art styles",
+      "coordinates": [
+        77.18,
+        34.22
+      ],
+      "summary": "Along the Upper Indus gorge where millennia of travelers pecked ibex, stupas, and Saka–Kushan figures at Nurla and Domkhar, Rinchen Zangpo's late 11th-century Sumtsek at Alchi preserves breathtaking miniature Kashmiri–Tibetan wall paintings painted by visiting Kashmir artists.",
+      "limits": "Uninscribed river-boulder petroglyphs rely on stylistic sequence from Bronze Age through historic Tibetan periods.",
+      "sourceIds": [
+        "src-tibh-asi"
+      ]
+    },
+    {
+      "id": "tibh-hemis-lamayuru-ladakh",
+      "kind": "historical",
+      "title": "Lamayuru, Spituk & Hemis Monasteries (Ladakh Himalaya): 11th–19th c. Drukpa Kagyu Citadels",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": 1050,
+      "end": 1900,
+      "dateLabel": "c. 1050–1900 CE",
+      "dateBasis": "Ladakhi chronicles (*La-dvags rgyal-rabs*) & royal endowments",
+      "coordinates": [
+        77.71,
+        33.91
+      ],
+      "summary": "From 11th-century foundations at Lamayuru and Spituk to Hemis Monastery re-established under King Sengge Namgyal in the 17th century, Ladakhi monastic estates guarded trans-Karakoram-and-Indus mountain passes uniting Ladakh with Guge and Lhasa.",
+      "limits": "Modern rebuilt temples stand atop older cave hermits and medieval adobe cores.",
+      "sourceIds": [
+        "src-tibh-asi"
+      ]
+    },
+    {
+      "id": "tibh-tabo-spiti-himachal",
+      "kind": "historical",
+      "title": "Tabo Choskor Monastery (Spiti Valley, Himachal Pradesh): 996 CE Continuously Active Mud-Brick Citadel",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": 996,
+      "end": 1900,
+      "dateLabel": "996–1900 CE",
+      "dateBasis": "Original 996 CE & 1042 CE royal wall inscriptions",
+      "coordinates": [
+        78.38,
+        32.09
+      ],
+      "summary": "Founded in 996 CE under Guge king Yeshe-O and great translator Rinchen Zangpo, Tabo's flat-roofed adobe Assembly Hall contains original clay life-sized Vajradhatu mandala sculptures and 11th-century wall paintings — the oldest continuously operating Himalayan Buddhist complex.",
+      "limits": "Vulnerable unfired mud-brick structures require intensive conservation from snowmelt seepage.",
+      "sourceIds": [
+        "src-tibh-asi"
+      ]
+    },
+    {
+      "id": "tibh-malari-lakhu-udyar",
+      "kind": "archaeology",
+      "title": "Malari Burial Caves & Lakhu Udyar Rock Art (Uttarakhand, Central Indian Himalaya)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": -1500,
+      "end": 500,
+      "dateLabel": "c. 1500 BCE–500 CE",
+      "dateBasis": "Spouted red/grey ware pottery & burial gold-mask context",
+      "coordinates": [
+        79.89,
+        30.69
+      ],
+      "summary": "Beside Niti Pass along the Dhauliganga at 3,000 m, Malari cist burials preserved a hammered gold funerary mask and spouted ceramic vessels showing close ritual affinity with western Tibet's Gurugyam tombs and Mustang sky caves, near Kumaon's Lakhu Udyar dancing-line pictographs.",
+      "limits": "Urgent salvage recovery in the 1980s–2000s limited fine-grained radiocarbon resolution on individual graves.",
+      "sourceIds": [
+        "src-tibh-uttarakhand"
+      ]
+    },
+    {
+      "id": "tibh-arjun3-dang-nepal",
+      "kind": "archaeology",
+      "title": "Arjun 3 & Dang–Deukhuri Mid-Hills (Siwalik Himalayas, Western Nepal): Late Pleistocene Foothill Camps",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": -45000,
+      "end": -10000,
+      "dateLabel": "c. 45,000–10,000 BCE",
+      "dateBasis": "Alluvial terrace stratigraphy & prepared-core lithics",
+      "coordinates": [
+        82.5,
+        27.95
+      ],
+      "summary": "Gudrun Corvinus's pioneer excavations in the Dang and Deukhuri intermontane Siwalik valleys documented stratified Levallois-like flake industries at Arjun 3 and later Patu Hoabinhian choppers, proving Pleistocene human habitation inside the Himalayan foothills.",
+      "limits": "Silty foothill fan beds yielded sparse dateable charcoal or bone prior to luminescence refinement.",
+      "sourceIds": [
+        "src-tibh-nepal-arch"
+      ]
+    },
+    {
+      "id": "tibh-mustang-chokhopani-samdzong",
+      "kind": "archaeology",
+      "title": "Chokhopani, Mebrak & Samdzong Sky Caves (Upper Mustang, Nepal): Ancient High-Altitude DNA & Gold Masks",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": -1000,
+      "end": 700,
+      "dateLabel": "c. 1000 BCE–700 CE",
+      "dateBasis": "Human genome sequencing & tomb AMS 14C",
+      "coordinates": [
+        83.96,
+        29.18
+      ],
+      "summary": "Vertical cliffside cave tombs carved along the Kali Gandaki corridor at Chokhopani (~800 BCE), Mebrak (~400 BCE), and Samdzong (~450 CE) yielded silver-and-gold funerary masks, bamboo arrows, and ancient genomes proving unbroken Tibetan–Himalayan genetic continuity across 3,000 years.",
+      "limits": "Loosely preserved cliff shafts reflect multi-generational clan burials reused over centuries.",
+      "sourceIds": [
+        "src-tibh-jeong-2016"
+      ]
+    },
+    {
+      "id": "tibh-lo-manthang-mustang",
+      "kind": "historical",
+      "title": "Lo Manthang Walled Capital & Thubchen–Jampa Monasteries (Upper Mustang, Nepal): 1380 CE Mustang Kingdom",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": 1380,
+      "end": 1900,
+      "dateLabel": "1380–1900 CE",
+      "dateBasis": "Rammed-earth wall chronicles & 15th-c. monastery dedications",
+      "coordinates": [
+        83.95,
+        29.18
+      ],
+      "summary": "At 3,840 m commanding the Kali Gandaki salt-for-grain trade corridor, Ame Pal founded Lo Manthang's mud-brick fortress and monumental Thubchen and Jampa Sakya monasteries in the 14th–15th centuries, preserving giant Tibetan mandala frescoes.",
+      "limits": "Earthquake stabilization and pigment restoration ongoing across 15th-century clay halls.",
+      "sourceIds": [
+        "src-tibh-nepal-arch",
+        "src-tibh-jeong-2016"
+      ]
+    },
+    {
+      "id": "tibh-tilaurakot-kapilavastu",
+      "kind": "archaeology",
+      "title": "Tilaurakot (Ancient Kapilavastu, Western Nepal Terai): 8th c. BCE–3rd c. CE Urban Shakya Citadel",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": -800,
+      "end": 300,
+      "dateLabel": "c. 800 BCE–300 CE",
+      "dateBasis": "OSL, Northern Black Polished Ware & rampart 14C",
+      "coordinates": [
+        83.05,
+        27.57
+      ],
+      "summary": "Beneath Nepal's Siwalik foothills northwest of Lumbini, geophysical surveys and Coningham's trenches at Tilaurakot traced concentric moats, timber palisades, and axial city streets from c. 800 BCE identified with ancient Kapilavastu of the Śākya confederacy.",
+      "limits": "Ongoing UNESCO evaluation compares Tilaurakot with Piprahwa across the Indo-Nepal borderlands.",
+      "sourceIds": [
+        "src-tibh-whc-tilaurakot"
+      ]
+    },
+    {
+      "id": "tibh-kathmandu-patan-bhaktapur",
+      "kind": "archaeology",
+      "title": "Kathmandu Valley: Changu Narayan, Swayambhunath, Patan & Bhaktapur (Licchavi–Malla Heritage)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": 300,
+      "end": 1900,
+      "dateLabel": "c. 300–1900 CE",
+      "dateBasis": "464 CE Changu Narayan pillar & UNESCO Monument Zones",
+      "coordinates": [
+        85.32,
+        27.71
+      ],
+      "summary": "From the 464 CE Sanskrit pillar of Licchavi King Mānadēva at Changu Narayan and early brick stupas of Patan/Swayambhunath to medieval Malla tiered-roof Newar Durbar Squares, Kathmandu served as the cross-Himalayan hub between Gangetic India and Tibet.",
+      "limits": "Repeated Himalayan earthquakes rebuilt upper Newar timber superstructures while retaining Licchavi stone plinths.",
+      "sourceIds": [
+        "src-tibh-whc-121"
+      ]
+    },
+    {
+      "id": "tibh-sinja-khas-malla",
+      "kind": "historical",
+      "title": "Sinja Valley & Kakrebihar Ruins (Jumla–Surkhet, Western Nepal): Capital of the Khas Malla Empire",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": 1100,
+      "end": 1400,
+      "dateLabel": "c. 1100–1400 CE",
+      "dateBasis": "Nepali-Sanskrit pillar inscriptions & stone temples",
+      "coordinates": [
+        82.06,
+        29.27
+      ],
+      "summary": "High in western Nepal's Jumla mountains, Sinja served as summer capital of the Khasa Malla kingdom uniting western Tibet (Guge/Purang) and the Nepalese middle hills, leaving stone *deval* temples, reservoirs, and the oldest inscriptions in early Nepali language.",
+      "limits": "Fragmentation after 1400 CE divided Sinja into the Baise Chaubise principalities.",
+      "sourceIds": [
+        "src-tibh-nepal-arch"
+      ]
+    },
+    {
+      "id": "tibh-khumbu-thame-nangpala",
+      "kind": "historical",
+      "title": "Thame, Pangboche & Nangpa La Trade Corridor (Khumbu, Eastern Nepal): 16th–19th c. Sherpa High Valleys",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": 1530,
+      "end": 1900,
+      "dateLabel": "c. 1530–1900 CE",
+      "dateBasis": "Sherpa clan histories, 17th-c. monastery scrolls & high pass crossings",
+      "coordinates": [
+        86.65,
+        27.83
+      ],
+      "summary": "Migrating south over the 5,716 m glaciated Nangpa La pass from Kham/Tingri in the 16th century, Sherpa communities established agro-pastoral villages and Nyingma gompas at Pangboche and Thame below Mount Everest / Chomolungma prior to 20th-century mountaineering.",
+      "limits": "Oral genealogies and late monastery deeds date later monastic expansions more precisely than 16th-century pioneer camps.",
+      "sourceIds": [
+        "src-tibh-nepal-arch"
+      ]
+    },
+    {
+      "id": "tibh-bumthang-jambay-bhutan",
+      "kind": "historical",
+      "title": "Bumthang (Jambay Lhakhang, Kurjey & Jakar Dzong, Central Bhutan): 7th c.–1900 Sacred Valley",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": 659,
+      "end": 1900,
+      "dateLabel": "c. 659–1900 CE",
+      "dateBasis": "Tibetan-Bhutanese chronicles & temple art history",
+      "coordinates": [
+        90.73,
+        27.55
+      ],
+      "summary": "Traditionally raised in 659 CE by Tibetan emperor Songtsen Gampo as one of the Himalayan border-subduing sanctuaries, Jambay Lhakhang and Kurjey Lhakhang in Bumthang form Bhutan's earliest continuous Buddhist monastic and medieval dzong heartland.",
+      "limits": "19th-century restorations and Jakar Dzong reconstructions overlie early core shrines.",
+      "sourceIds": [
+        "src-tibh-bhutan"
+      ]
+    },
+    {
+      "id": "tibh-paro-taktsang-punakha",
+      "kind": "historical",
+      "title": "Paro Taktsang (Tiger's Nest, 1692) & Punakha Dzong (1637, Western Bhutan): Zhabdrung Unification",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": 1637,
+      "end": 1900,
+      "dateLabel": "1637–1900 CE",
+      "dateBasis": "1637 Shabdrung Punakha foundation & Paro cliff monastery annals",
+      "coordinates": [
+        89.36,
+        27.49
+      ],
+      "summary": "Clinging 900 meters above Paro Valley around an 8th-century cave hermitage, Taktsang Monastery (built 1692) and riverside fortress-monastery Punakha Dzong (1637) anchored Drukpa Kagyu political and spiritual unification across Bhutan.",
+      "limits": "Taktsang timber pavilions reconstructed after fires faithfully preserved the original cliff plan.",
+      "sourceIds": [
+        "src-tibh-bhutan"
+      ]
+    },
+    {
+      "id": "tibh-pemayangtse-tawang",
+      "kind": "historical",
+      "title": "Tawang Monastery (1681, Arunachal Pradesh) & Pemayangtse (1705, Sikkim): Eastern Himalayan Gompas",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "start": 1642,
+      "end": 1900,
+      "dateLabel": "1642–1900 CE",
+      "dateBasis": "1681 Tawang Tibetan charter & 1705 Sikkim Namgyal archives",
+      "coordinates": [
+        91.87,
+        27.59
+      ],
+      "summary": "Sweeping across the Eastern Himalaya from Sikkim's Yuksom/Pemayangtse seat (1642–1705) to Monpa communities at Tawang Monastery (founded 1681 CE, the world's second-largest Tibetan Buddhist lamasery), monastic libraries linked Assam foothills, Bhutan, and Lhasa.",
+      "limits": "Borderland Monpa and Lepcha indigenous shrines integrated alongside 17th-century Gelug/Nyingma orders.",
+      "sourceIds": [
+        "src-tibh-eastern-him"
+      ]
+    }
+  ],
+  "waves": []
+}

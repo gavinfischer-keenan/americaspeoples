@@ -395,10 +395,17 @@ body.atlas-preview-page #app {
   right: 14px;
   left: auto;
   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  z-index: 4;
+}
+
+.atlas-layout .map-controls-row {
+  display: flex;
   flex-direction: row;
   align-items: center;
   gap: 6px;
-  z-index: 4;
 }
 
 .atlas-layout .map-controls button {
@@ -420,6 +427,48 @@ body.atlas-preview-page #app {
 .atlas-layout .map-controls button:hover {
   background: #244d26;
   border-color: #72b273;
+}
+
+.atlas-layout .map-controls .globe-toggle-btn[hidden] {
+  display: none;
+}
+
+.atlas-layout .map-controls .globe-toggle-btn {
+  padding: 6px 11px;
+  font-size: 12.5px;
+  font-weight: 700;
+  border-color: #72b273;
+  box-shadow: 0 3px 12px #061b2655;
+}
+
+.atlas-layout .map-controls .globe-toggle-btn.is-active,
+.atlas-layout .map-controls .globe-toggle-btn.is-active:hover {
+  background: #569e56;
+  color: #10171a;
+  border-color: #3b783d;
+}
+
+.map-canvas[data-projection="globe"] > svg {
+  background: radial-gradient(circle at 50% 45%, #11222b 0%, #091318 100%);
+}
+
+.map-canvas .globe-sphere {
+  fill: url(#explore-globe-sea);
+  stroke: #638897;
+  stroke-width: 1.25px;
+  vector-effect: non-scaling-stroke;
+}
+
+.map-canvas[data-projection="globe"] .land {
+  fill: #3e5b53;
+  stroke: #8db0a6;
+  stroke-width: 0.75px;
+  vector-effect: non-scaling-stroke;
+}
+
+.map-canvas[data-projection="globe"] .graticule {
+  stroke: #95b8c7;
+  stroke-opacity: 0.22;
 }
 
 #layer-options .map-density-options {
@@ -881,6 +930,13 @@ button.primary:hover {
     top: 10px;
     right: 10px;
     left: auto;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+  }
+
+  .atlas-layout .map-controls-row {
+    display: flex;
     flex-direction: row;
     align-items: center;
     gap: 5px;
@@ -893,6 +949,11 @@ button.primary:hover {
     min-height: 30px;
     padding: 5px 8px;
     font-size: 12px;
+  }
+
+  .atlas-layout .map-controls .globe-toggle-btn {
+    font-size: 11.5px;
+    padding: 5px 9px;
   }
 
   .atlas-page .timeline,

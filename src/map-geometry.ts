@@ -1,5 +1,6 @@
 import { geoCircle, geoPath, geoStream, type GeoProjection } from "d3-geo";
 import type { DisplayRecord } from "./model";
+import { projectPoint } from "./map-projection";
 
 type Point = [number, number];
 type Bounds = [Point, Point];
@@ -67,12 +68,12 @@ export class MapGeometry {
         : g?.type === "LineString"
           ? g.coordinates[0]
           : location;
-    const contextPoint = anchor ? this.projection(anchor) : null;
+    const contextPoint = anchor ? projectPoint(this.projection, anchor) : null;
     const point =
       g?.type === "Point"
         ? contextPoint
         : !r.overlay && location
-          ? this.projection(location)
+          ? projectPoint(this.projection, location)
           : null;
     const geometry =
       g ??
@@ -94,13 +95,15 @@ export class MapGeometry {
       geoStream(shape as any,this.projection.stream({point(x,y){line.push([x,y]);},lineStart(){line=[];},lineEnd(){if(line.length)lines.push(line);},polygonStart(){},polygonEnd(){},sphere(){}}));
       return lines;
     };
-    const bounds = circle
+    const rawBounds = circle
       ? path.bounds(circle)
       : geometry
         ? path.bounds(geometry as any)
         : point && !r.overlay
           ? ([point, point] as Bounds)
           : null;
+    const bounds: Bounds | null =
+      rawBounds && rawBounds.flat().every(Number.isFinite) ? rawBounds : null;
     if(bounds&&!circle&&r.overlay&&['population-history','regional-evidence','environment','language'].includes(r.overlay.kind)){
       const padding=g?.type==='Point'?35:30;
       bounds[0]=[bounds[0][0]-padding,bounds[0][1]-padding];

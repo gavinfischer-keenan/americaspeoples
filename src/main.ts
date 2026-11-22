@@ -238,6 +238,7 @@ const map = new MapView(
   },
   () => {renderVisible();renderBoundaryCatalog();},
 );
+map.onProjectionChange = () => syncMapDate();
 let mountedMap = false;
 let mapNavigation:MapNavigation|undefined;
 const exploreDateLabel = (y: number) =>
@@ -1087,7 +1088,7 @@ function renderVisible() {
 }
 function syncMapDate(){
   const clock=voyageId?voyageClock:movieClock;
-  const value=atlasMode==='explore'&&explorePeriod==='all'?'All regions · Drag to pan · Scroll to zoom':atlasMode==='movie'&&!isGuidedStory()&&clock>=1?`Shared date: ${voyageDate(clock)} · Zoom for local detail`:'One date, all regions · Drag to travel · Scroll to look closer';
+  const value=atlasMode==='explore'&&explorePeriod==='all'?(map.isGlobe()?'Globe view · Drag to spin · Scroll to zoom':'All regions · Drag to pan · Scroll to zoom'):atlasMode==='movie'&&!isGuidedStory()&&clock>=1?`Shared date: ${voyageDate(clock)} · Zoom for local detail`:'One date, all regions · Drag to travel · Scroll to look closer';
   const el=document.querySelector('#map-instruction');if(el&&el.textContent!==value)el.textContent=value;
 }
 function physicalPage(id?: string) {
@@ -1442,7 +1443,7 @@ async function route() {
       if(atlasMode==='explore'){
         syncExploreTimelineUI(currentVisible.length);
         void ensureExploreCatalogs();
-        if(hashParams&&(hashParams.has('q')||hashParams.has('category')))mapNavigation?.showFacts();
+        if(hashParams&&(hashParams.has('q')||hashParams.has('category')))(mapNavigation as MapNavigation|undefined)?.showFacts();
       }
       if(topicOriginCamera){map.restoreCamera(topicOriginCamera);topicOriginCamera=undefined;}
       else if(pendingLocation){const record=pendingLocation;pendingLocation=null;map.focus(record);}

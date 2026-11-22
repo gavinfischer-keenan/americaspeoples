@@ -1,6 +1,6 @@
 # Where the map has gaps
 
-The current map contains **11,199 shared observations** and 73 focused topic observations. The audit does **not** find that blank regions were empty of people. It shows where this collection needs more dated local history.
+The current map contains **11,235 shared observations** and 73 focused topic observations. The audit does **not** find that blank regions were empty of people. It shows where this collection needs more dated local history.
 
 The preceding v0.24.0 campaign added **53 shared map records** about lower Central America, Brazil's Atlantic coast and the Solomon Islands–Vanuatu region, including three linked route views of local finds. See [the histories and source decisions](three-regional-gaps.html).
 
@@ -29,8 +29,8 @@ The immutable baseline is **v0.23.1: 2,531 total and 2,458 shared records**, bef
 
 | Region | −50000…−10001 | −10000…−3001 | −3000…−1 | 0…999 | 1000…1491 | 1492…1699 | 1700…1799 | 1800…1934 | Undated now |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| Alaska / western Arctic | 13 → 14 | 15 → 16 | 15 → 19 | 4 → 7 | 8 → 12 | 3 → 7 | 11 → 47 | 31 → 45 | 4 |
-| Canadian Arctic / Greenland | 0 | 0 | 3 → 6 | 2 → 8 | 7 → 18 | 4 → 33 | 4 → 17 | 12 → 71 | 0 |
+| Alaska / western Arctic | 13 → 14 | 15 → 16 | 15 → 19 | 4 → 7 | 8 → 14 | 3 → 9 | 11 → 49 | 31 → 47 | 4 |
+| Canadian Arctic / Greenland | 0 | 0 | 3 → 17 | 2 → 22 | 7 → 46 | 4 → 52 | 4 → 33 | 12 → 87 | 0 |
 | Pacific Northwest | 3 | 0 → 4 | 2 → 9 | 5 → 11 | 2 → 10 | 0 → 8 | 4 → 68 | 6 → 28 | 7 |
 | California / Southwest | 6 → 9 | 14 → 22 | 20 → 47 | 48 → 88 | 146 → 190 | 21 → 54 | 36 → 69 | 31 → 66 | 17 |
 | Great Plains | 6 → 8 | 1 → 9 | 2 → 14 | 43 → 63 | 140 → 160 | 15 → 34 | 7 → 20 | 68 → 82 | 11 |

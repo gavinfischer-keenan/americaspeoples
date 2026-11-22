@@ -1,6 +1,6 @@
 import {changeCaption,densityGroups,placeChange,type DensityAnchor} from './map-density';
 import {terrainHTML,intersectsView,type ViewBounds} from './terrain';
-import { mapProjection, type MapScope } from "./map-projection";
+import { mapProjection, globeProjection, projectPoint, DEFAULT_GLOBE_ROTATION, type MapScope } from "./map-projection";
 import { geoPath, geoGraticule10 } from "d3-geo";
 import { MapGeometry } from "./map-geometry";
 import {pickCandidates,type HitCandidate,type MapPoint} from './map-picking';
@@ -23,18 +23,22 @@ import {MapTooltip,tooltipForRecords,tooltipForPlaces,tooltipForHazard,type MapT
 import { AtlasContext } from './atlas-context';
 export interface MapInteraction {mode:MapMode;playing:boolean;onPause:()=>void}
 export interface PhysicalOptions {ice:boolean; iceScenario:string; currents:boolean; winds:boolean; hidden:ReadonlySet<string>; uncertain:boolean; globalIce?:{geometry:IceGeometry;label:string}|null}
-export interface MapCamera {scope:MapScope;center:MapPoint;pixelScale:number;rotation:[number,number,number]}
+export interface MapCamera {scope:MapScope;center:MapPoint;pixelScale:number;rotation:[number,number,number];globe?:boolean}
 const compactPlaceName=(name:string)=>name.length<=40?name:name.slice(0,39).trimEnd()+'…';
 export class MapView {
   populationScale:'bands'|'log'='bands';
   namedRouteEndpoints=false;
   onResetView?:()=>void;
+  onProjectionChange?:(globe:boolean)=>void;
   readonly context=new AtlasContext();
   readonly element = document.createElement("div");
   readonly densityOptions: HTMLDetailsElement;
   private densityPreference:'compact'|'standard'|'detailed'='standard';
   private terrainKey="";
   private scope: MapScope = "americas";
+  private globe = false;
+  private globeRotation: [number, number, number] = [...DEFAULT_GLOBE_ROTATION];
+  private globeDragFrame: number | null = null;
   private width=1000;
   private height=800;
   private hasViewport=false;
@@ -68,8 +72,9 @@ export class MapView {
   ) {
     this.element.className = "map-canvas";
     this.element.dataset.scope = this.scope;
+    this.element.dataset.projection = "flat";
     const path = geoPath(this.projection);
-    this.element.innerHTML = `<svg viewBox="0 0 1000 800" role="img" aria-label="Interactive world and regional evidence map. Use the visible records list for keyboard access to evidence." tabindex="0"><defs><pattern id="population-unknown" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V5" stroke="#fff" stroke-width="1.8" opacity=".8"/></pattern><radialGradient id="reach-fade"><stop offset="0%" stop-color="white" stop-opacity=".35"/><stop offset="40%" stop-color="white" stop-opacity=".22"/><stop offset="100%" stop-color="white" stop-opacity="0"/></radialGradient><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#e5c78c"/></marker></defs><g class="world"><path class="graticule" d="${path(geoGraticule10())}"/><path class="land" d="${path(land)}"/><clipPath id="terrain-land-clip"><path class="terrain-land-mask" d="${path(land)}"/></clipPath><g class="terrain" clip-path="url(#terrain-land-clip)" aria-hidden="true"></g><g class="map-labels">${this.labels()}</g><g class="features"></g></g></svg><div class="map-controls"><details class="map-density-options"><summary>Map detail</summary><label>Place grouping<select aria-label="Place grouping"><option value="compact">Compact</option><option value="standard" selected>Standard</option><option value="detailed">Detailed</option></select></label></details><button data-zoom="in" aria-label="Zoom in">+</button><button data-zoom="out" aria-label="Zoom out">−</button><button data-zoom="reset" aria-label="Reset map view">Reset map</button></div><div class="map-caption">Modern coastlines · Natural Earth + USGS 3DEP · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap · ODbL</a></div>`;
+    this.element.innerHTML = `<svg viewBox="0 0 1000 800" role="img" aria-label="Interactive world and regional evidence map. Use the visible records list for keyboard access to evidence." tabindex="0"><defs><radialGradient id="explore-globe-sea"><stop offset="0%" stop-color="#1c4659"/><stop offset="100%" stop-color="#0b2636"/></radialGradient><pattern id="population-unknown" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V5" stroke="#fff" stroke-width="1.8" opacity=".8"/></pattern><radialGradient id="reach-fade"><stop offset="0%" stop-color="white" stop-opacity=".35"/><stop offset="40%" stop-color="white" stop-opacity=".22"/><stop offset="100%" stop-color="white" stop-opacity="0"/></radialGradient><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#e5c78c"/></marker></defs><g class="world"><path class="globe-sphere" d=""/><path class="graticule" d="${path(geoGraticule10())}"/><path class="land" d="${path(land)}"/><clipPath id="terrain-land-clip"><path class="terrain-land-mask" d="${path(land)}"/></clipPath><g class="terrain" clip-path="url(#terrain-land-clip)" aria-hidden="true"></g><g class="map-labels">${this.labels()}</g><g class="features"></g></g></svg><div class="map-controls"><details class="map-density-options"><summary>Map detail</summary><label>Place grouping<select aria-label="Place grouping"><option value="compact">Compact</option><option value="standard" selected>Standard</option><option value="detailed">Detailed</option></select></label></details><div class="map-controls-row"><button data-zoom="in" aria-label="Zoom in">+</button><button data-zoom="out" aria-label="Zoom out">−</button><button data-zoom="reset" aria-label="Reset map view">Reset map</button></div><button type="button" class="globe-toggle-btn" data-projection-toggle aria-pressed="false" hidden>Show as globe</button></div><div class="map-caption">Modern coastlines · Natural Earth + USGS 3DEP · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap · ODbL</a></div>`;
     const svg = $<SVGSVGElement>("svg", this.element);
     $('defs',this.element).insertAdjacentHTML('beforeend',[['migration','#ffba64'],['exchange','#62e4e9'],['forced','#ff85c5']].map(([kind,color])=>`<marker id="corridor-${kind}" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="3.4" markerHeight="3.4" orient="auto-start-reverse"><path d="M1,1L11,6L1,11L3,6Z" fill="${color}" stroke="#132934" stroke-width="1.1" stroke-linejoin="round"/></marker>`).join(''));
     svg.setAttribute('role','group');
@@ -111,7 +116,7 @@ export class MapView {
       this.densityPreference=(event.target as HTMLSelectElement).value as typeof this.densityPreference;
       this.draw();
     });
-    let drag: { x: number; y: number; tx: number; ty: number } | null = null;
+    let drag: { x: number; y: number; tx: number; ty: number; rot: [number, number, number] } | null = null;
     const pointers=new Map<number,MapPoint>();
     let pinch:{distance:number;scale:number;world:MapPoint}|null=null;
     let moved = false;
@@ -120,7 +125,7 @@ export class MapView {
       this.hideTooltip();
       const point=this.clientPoint(e.clientX,e.clientY);
       pointers.set(e.pointerId,point);
-      if(pointers.size===1){moved=false;drag={x:point[0],y:point[1],tx:this.tx,ty:this.ty};}
+      if(pointers.size===1){moved=false;drag={x:point[0],y:point[1],tx:this.tx,ty:this.ty,rot:[...this.globeRotation]};}
       else if(pointers.size===2){
         const [a,b]=[...pointers.values()],mid:MapPoint=[(a[0]+b[0])/2,(a[1]+b[1])/2];
         pinch={distance:Math.hypot(a[0]-b[0],a[1]-b[1]),scale:this.scale,world:[(mid[0]-this.tx)/this.scale,(mid[1]-this.ty)/this.scale]};
@@ -134,7 +139,8 @@ export class MapView {
       if(pinch&&pointers.size===2){
         const [a,b]=[...pointers.values()],mid:MapPoint=[(a[0]+b[0])/2,(a[1]+b[1])/2];
         this.scale=clampZoom(pinch.scale*Math.hypot(a[0]-b[0],a[1]-b[1])/Math.max(1,pinch.distance));
-        this.tx=mid[0]-pinch.world[0]*this.scale;this.ty=mid[1]-pinch.world[1]*this.scale;
+        if(this.globe){this.tx=this.width/2*(1-this.scale);this.ty=this.height/2*(1-this.scale);}
+        else{this.tx=mid[0]-pinch.world[0]*this.scale;this.ty=mid[1]-pinch.world[1]*this.scale;}
         this.transform();this.draw();return;
       }
       if(!drag)return;
@@ -144,11 +150,39 @@ export class MapView {
       if (!moved) return;
       if (!svg.hasPointerCapture(e.pointerId))
         svg.setPointerCapture(e.pointerId);
+      if (this.globe) {
+        const degPerPx = 0.34 / Math.max(1, this.scale);
+        this.globeRotation = [
+          drag.rot[0] + dx * degPerPx,
+          Math.max(-85, Math.min(85, drag.rot[1] - dy * degPerPx)),
+          0,
+        ];
+        if (this.globeDragFrame === null) {
+          this.globeDragFrame = requestAnimationFrame(() => {
+            this.globeDragFrame = null;
+            if (!this.element.isConnected || !this.globe) return;
+            this.rebuildProjection(this.globeRotation);
+            this.draw();
+            this.onViewportChange();
+          });
+        }
+        return;
+      }
       this.tx = drag.tx + dx;
       this.ty = drag.ty + dy;
       this.transform();
     });
-    const endPointer=(e:PointerEvent)=>{pointers.delete(e.pointerId);drag=null;pinch=null;};
+    const endPointer=(e:PointerEvent)=>{
+      const wasDragging=this.globe&&drag&&moved;
+      pointers.delete(e.pointerId);drag=null;pinch=null;
+      if(wasDragging&&this.globeDragFrame!==null){
+        cancelAnimationFrame(this.globeDragFrame);
+        this.globeDragFrame=null;
+        this.rebuildProjection(this.globeRotation);
+        this.draw();
+        this.onViewportChange();
+      }
+    };
     svg.addEventListener("pointerup",endPointer);
     svg.addEventListener("pointercancel",endPointer);
     this.resizeObserver=new ResizeObserver(() => {
@@ -170,6 +204,25 @@ export class MapView {
         const feature=(e.target as Element).closest<SVGElement>('[data-point],[data-overlay],[data-context]');
         if(feature){e.preventDefault();if(this.interaction?.mode==='movie'&&this.interaction.playing){this.interaction.onPause();return;}this.activateFeature(feature);return;}
       }
+      if (this.globe) {
+        const step = 12 / Math.max(1, this.scale);
+        if (e.key === "ArrowLeft") this.globeRotation[0] += step;
+        else if (e.key === "ArrowRight") this.globeRotation[0] -= step;
+        else if (e.key === "ArrowUp") this.globeRotation[1] = Math.max(-85, this.globeRotation[1] - step);
+        else if (e.key === "ArrowDown") this.globeRotation[1] = Math.min(85, this.globeRotation[1] + step);
+        else if (e.key === "+") {
+          this.zoom(1.25);
+          return;
+        } else if (e.key === "-") {
+          this.zoom(0.8);
+          return;
+        } else return;
+        e.preventDefault();
+        this.rebuildProjection(this.globeRotation);
+        this.draw();
+        this.onViewportChange();
+        return;
+      }
       const d = 35;
       if (e.key === "ArrowLeft") this.tx += d;
       else if (e.key === "ArrowRight") this.tx -= d;
@@ -187,9 +240,12 @@ export class MapView {
     });
     this.element.addEventListener("click", (e) => {
       const target = (e.target as Element).closest<HTMLElement>(
-        "[data-zoom],[data-point],[data-overlay],[data-context]",
+        "[data-projection-toggle],[data-zoom],[data-point],[data-overlay],[data-context]",
       );
-      if (target?.dataset.zoom) {
+      if (target?.hasAttribute("data-projection-toggle")) {
+        e.preventDefault();
+        this.setGlobe(!this.globe);
+      } else if (target?.dataset.zoom) {
         if (target.dataset.zoom === "reset") {
           if (this.onResetView) this.onResetView();
           else this.resetView();
@@ -201,9 +257,40 @@ export class MapView {
       }
     });
   }
+  isGlobe(): boolean {
+    return this.globe;
+  }
+  private syncProjectionButton(): void {
+    const btn = this.element.querySelector<HTMLButtonElement>("[data-projection-toggle]");
+    if (!btn) return;
+    btn.hidden = this.interaction?.mode !== "explore";
+    btn.textContent = this.globe ? "Show flat map" : "Show as globe";
+    btn.setAttribute("aria-pressed", String(this.globe));
+    btn.classList.toggle("is-active", this.globe);
+  }
+  setGlobe(enabled: boolean, redraw = true): void {
+    const next = Boolean(enabled) && this.interaction?.mode === "explore";
+    if (next === this.globe) {
+      this.syncProjectionButton();
+      return;
+    }
+    this.globe = next;
+    this.element.dataset.projection = next ? "globe" : "flat";
+    if (next) this.globeRotation = [...DEFAULT_GLOBE_ROTATION];
+    this.syncProjectionButton();
+    this.scale = 1;
+    this.tx = 0;
+    this.ty = 0;
+    this.rebuildProjection();
+    this.transform();
+    if (redraw) this.draw();
+    this.onProjectionChange?.(this.globe);
+  }
   setInteraction(interaction:MapInteraction):void{
     const changed=this.interaction?.mode!==interaction.mode||this.interaction?.playing!==interaction.playing;
     this.interaction=interaction;
+    if(interaction.mode!=='explore'&&this.globe)this.setGlobe(false,false);
+    this.syncProjectionButton();
     if(changed)this.draw();
   }
   private hideTooltip(){this.hovered=null;this.tooltip.hide();}
@@ -212,16 +299,21 @@ export class MapView {
   camera():MapCamera{
     const [x,y]=this.projection.translate(), k=this.projection.scale();
     // Normalized projected center also works when a user pans outside the globe.
-    return {scope:this.scope,center:[((this.width/2-this.tx)/this.scale-x)/k,((this.height/2-this.ty)/this.scale-y)/k],pixelScale:k*this.scale,rotation:this.projection.rotate()};
+    return {scope:this.scope,center:[((this.width/2-this.tx)/this.scale-x)/k,((this.height/2-this.ty)/this.scale-y)/k],pixelScale:k*this.scale,rotation:this.projection.rotate(),globe:this.globe};
   }
   restoreCamera(camera:MapCamera):void{
-    this.resize(false);this.scope=camera.scope;this.rebuildProjection(camera.rotation);
+    this.resize(false);this.scope=camera.scope;
+    this.globe=Boolean(camera.globe)&&this.interaction?.mode==='explore';
+    if(this.globe)this.globeRotation=[camera.rotation[0],Math.max(-85,Math.min(85,camera.rotation[1])),0];
+    this.syncProjectionButton();
+    this.rebuildProjection(camera.rotation);
     this.scale=clampZoom(camera.pixelScale/this.projection.scale());
     const [x,y]=this.projection.translate(),k=this.projection.scale();
     this.tx=this.width/2-(x+camera.center[0]*k)*this.scale;this.ty=this.height/2-(y+camera.center[1]*k)*this.scale;
     this.transform();this.draw();
+    this.onProjectionChange?.(this.globe);
   }
-  dispose():void{this.clearHover();this.resizeObserver.disconnect();if(this.viewportFrame!==null)cancelAnimationFrame(this.viewportFrame);this.element.remove();}
+  dispose():void{this.clearHover();this.resizeObserver.disconnect();if(this.viewportFrame!==null)cancelAnimationFrame(this.viewportFrame);if(this.globeDragFrame!==null)cancelAnimationFrame(this.globeDragFrame);this.element.remove();}
   setDetailedLand(land:any):void{this.land=land;$('.land',this.element).setAttribute('d',geoPath(this.projection)(land)??'');$('.terrain-land-mask',this.element).setAttribute('d',geoPath(this.projection)(land)??'');}
   refreshContext():void{
     let group=this.element.querySelector<SVGGElement>('.historical-context');
@@ -245,7 +337,10 @@ export class MapView {
   }
   private labels() {
     if(this.scale>4||this.records.some(r=>this.highlighted.has(r.id)&&(r.history?.kind==='migration'||r.history?.kind==='exchange')))return '';
-    return [['NORTH AMERICA',-105,50],['SOUTH AMERICA',-62,-20],['EUROPE',15,53],['AFRICA',20,8],['ATLANTIC',-35,12],['PACIFIC',-140,-5],['ISLAND ASIA',130,5],['AUSTRALIA',134,-25]].map(([name,lon,lat])=>{const p=this.projection([Number(lon),Number(lat)]);return p?`<text x="${p[0]}" y="${p[1]}" style="font-size:${10/this.scale}px">${name}</text>`:'';}).join('');
+    return [['NORTH AMERICA',-105,50],['SOUTH AMERICA',-62,-20],['EUROPE',15,53],['AFRICA',20,8],['ATLANTIC',-35,12],['PACIFIC',-140,-5],['ISLAND ASIA',130,5],['AUSTRALIA',134,-25]].map(([name,lon,lat])=>{
+      const p=projectPoint(this.projection,[Number(lon),Number(lat)]);
+      return p?`<text x="${p[0]}" y="${p[1]}" style="font-size:${10/this.scale}px">${name}</text>`:'';
+    }).join('');
   }
   overview(scope:MapScope="americas"){this.scope=scope;if(this.element.isConnected)this.resize(false);this.resetView();}
   setScope(scope: MapScope, redraw = true) {
@@ -255,20 +350,30 @@ export class MapView {
   }
   private rebuildProjection(rotation?:[number,number,number],extra:DisplayRecord[]=[]){
     this.element.dataset.scope = this.scope;
-    this.projection=mapProjection(this.scope,this.width,this.height);
-    if(rotation)this.projection.rotate(rotation);
-    this.terrainKey="";
+    this.element.dataset.projection = this.globe ? "globe" : "flat";
+    if (this.globe) {
+      if (rotation) {
+        this.globeRotation = [rotation[0], Math.max(-85, Math.min(85, rotation[1])), 0];
+      }
+      this.projection = globeProjection(this.width, this.height, this.globeRotation);
+    } else {
+      this.projection = mapProjection(this.scope, this.width, this.height);
+      if (rotation) this.projection.rotate(rotation);
+    }
+    this.terrainKey="__dirty__";
     this.geometry.setProjection(this.projection);
     this.flowPaths.clear();
     this.icePaths.clear();
     this.geometry.update([...this.records, ...this.contextRecords,...extra]);
     const path = geoPath(this.projection);
+    $(".globe-sphere", this.element).setAttribute("d", this.globe ? (path({ type: "Sphere" }) ?? "") : "");
     $(".land", this.element).setAttribute("d", path(this.land) ?? "");
     $(".terrain-land-mask",this.element).setAttribute("d",path(this.land)??"");
     $(".graticule", this.element).setAttribute("d", path(geoGraticule10()) ?? "");
     $(".map-labels", this.element).innerHTML = this.labels();
   }
   private resetView(redraw=true){
+    if(this.globe)this.globeRotation=[...DEFAULT_GLOBE_ROTATION];
     this.scale=1;this.tx=this.ty=0;
     this.rebuildProjection();
     this.transform();
@@ -279,15 +384,19 @@ export class MapView {
     const width=Math.max(1,Math.round(box.width)),height=Math.max(1,Math.round(box.height));
     if(box.width<1||box.height<1)return;
     if(width===this.width&&height===this.height){this.hasViewport=true;if(redraw){this.draw();this.notifyViewportChange();}return;}
-    const center=this.projection.invert!([(this.width/2-this.tx)/this.scale,(this.height/2-this.ty)/this.scale]);
+    const center=this.globe?null:this.projection.invert!([(this.width/2-this.tx)/this.scale,(this.height/2-this.ty)/this.scale]);
     const pixelScale=this.projection.scale()*this.scale,rotation=this.projection.rotate();
     this.width=width;this.height=height;
     $('svg',this.element).setAttribute('viewBox',`0 0 ${width} ${height}`);
     this.rebuildProjection(rotation);
     if(this.hasViewport)this.scale=clampZoom(pixelScale/this.projection.scale());
     this.hasViewport=true;
-    const p=center?this.projection(center):null;
-    if(p){this.tx=width/2-p[0]*this.scale;this.ty=height/2-p[1]*this.scale;}
+    if(this.globe){
+      this.tx=width/2*(1-this.scale);this.ty=height/2*(1-this.scale);
+    }else{
+      const p=center?this.projection(center):null;
+      if(p){this.tx=width/2-p[0]*this.scale;this.ty=height/2-p[1]*this.scale;}
+    }
     this.transform();if(redraw)this.draw();
   }
   private clientPoint(x:number,y:number):MapPoint{
@@ -299,9 +408,10 @@ export class MapView {
     const old = this.scale;
     this.scale = clampZoom(this.scale * factor);
     if (this.scale === old) return;
+    const pivot: MapPoint = this.globe ? [this.width / 2, this.height / 2] : anchor;
     const ratio = this.scale / old;
-    this.tx = anchor[0] - (anchor[0] - this.tx) * ratio;
-    this.ty = anchor[1] - (anchor[1] - this.ty) * ratio;
+    this.tx = pivot[0] - (pivot[0] - this.tx) * ratio;
+    this.ty = pivot[1] - (pivot[1] - this.ty) * ratio;
     this.transform();
     this.draw();
   }
@@ -355,7 +465,7 @@ export class MapView {
     return this.recordsInView(this.records);
   }
   containsCoordinate(point:MapPoint):boolean{
-    const p=this.projection(point);return !!p&&boundsInViewport([p,p],this.scale,this.tx,this.ty,this.width,this.height);
+    const p=projectPoint(this.projection,point);return !!p&&boundsInViewport([p,p],this.scale,this.tx,this.ty,this.width,this.height);
   }
   visibleBoundaries(){
     if(!this.context.options.boundaries)return [];
@@ -366,7 +476,7 @@ export class MapView {
     if(this.scale<80)return [];
     return records.filter(r=>{
       if(!r.location||r.time.start===null||!(r.type==='occupation'||r.history?.kind==='habitation'||r.history?.kind==='settlement'||r.history?.kind==='attestation'||['conflict','violence','forced-removal'].includes(r.overlay?.kind??'')))return false;
-      const p=this.projection([r.location.lon,r.location.lat]);return p&&boundsInViewport([p,p],this.scale,this.tx,this.ty,this.width,this.height);
+      const p=projectPoint(this.projection,[r.location.lon,r.location.lat]);return p&&boundsInViewport([p,p],this.scale,this.tx,this.ty,this.width,this.height);
     });
   }
   private viewBounds(padding=48):ViewBounds{return [[(-this.tx-padding)/this.scale,(-this.ty-padding)/this.scale],[(this.width-this.tx+padding)/this.scale,(this.height-this.ty+padding)/this.scale]];}
@@ -408,12 +518,20 @@ export class MapView {
       return g?.type==='Point'?[g.coordinates]:g?.type==='LineString'?g.coordinates:[r.location,r.destination].flatMap(p=>p?[[p.lon,p.lat] as MapPoint]:[]);
     });
     if(!points.length)return;
-    const center=geographicCenter(points);this.rebuildProjection([-center[0],0,0],records);
+    const center=geographicCenter(points);
+    if(this.globe){
+      this.globeRotation=[-center[0],Math.max(-85,Math.min(85,-center[1])),0];
+      this.rebuildProjection(this.globeRotation,records);
+    }else{
+      this.rebuildProjection([-center[0],0,0],records);
+    }
     const boxes=records.map(r=>this.geometry.get(r).bounds).filter((b):b is [MapPoint,MapPoint]=>!!b&&b.flat().every(Number.isFinite));
     if(!boxes.length)return;
     const bounds:[MapPoint,MapPoint]=[[Math.min(...boxes.map(b=>b[0][0])),Math.min(...boxes.map(b=>b[0][1]))],[Math.max(...boxes.map(b=>b[1][0])),Math.max(...boxes.map(b=>b[1][1]))]];
     const fit=fitMapBounds(bounds,this.width,this.height,Math.min(64,this.width*.12,this.height*.15),this.projection.scale()*Math.PI/180*.035);
-    this.scale=fit.scale;this.tx=fit.tx;this.ty=fit.ty;
+    this.scale=fit.scale;
+    if(this.globe){this.tx=this.width/2*(1-this.scale);this.ty=this.height/2*(1-this.scale);}
+    else{this.tx=fit.tx;this.ty=fit.ty;}
     this.highlighted=new Set(records.map(r=>r.id));this.transform();this.draw();
   }
   setHighlighted(ids:string[]):void{this.highlighted=new Set(ids);this.draw();}
@@ -463,7 +581,7 @@ export class MapView {
       const output=this.highlighted.has(record.id)?selected:unselected;
       for(const role of ['origin','destination'] as const){
         const place=role==='origin'?record.location:record.destination;
-        const point=this.projection([place.lon,place.lat]);
+        const point=projectPoint(this.projection,[place.lon,place.lat]);
         if(!point||!intersectsView([point,point],viewport))continue;
         const right=point[0]*this.scale+this.tx>this.width/2;
         output.push(`<g class="named-route-endpoint" data-overlay="${index}" data-route-endpoint="${role}" data-endpoint-record="${esc(record.id)}" transform="translate(${point[0]},${point[1]}) scale(${symbolScale})" style="cursor:pointer">
@@ -492,7 +610,7 @@ export class MapView {
     const offsets=new Map<DisplayRecord,MapPoint>();
     for(const {rows,coordinates} of groups.values()){
       if(rows.length<2)continue;
-      const a=this.projection(coordinates[0]),b=this.projection(coordinates[coordinates.length-1]);if(!a||!b)continue;
+      const a=projectPoint(this.projection,coordinates[0]),b=projectPoint(this.projection,coordinates[coordinates.length-1]);if(!a||!b)continue;
       const dx=b[0]-a[0],dy=b[1]-a[1],length=Math.hypot(dx,dy);if(length<.001)continue;
       rows.sort((a,b)=>a.id.localeCompare(b.id)||(a.proposalKey??'').localeCompare(b.proposalKey??''));
       rows.forEach((r,i)=>{const offset=(i/(rows.length-1)-.5)*10*symbolScale;offsets.set(r,[-dy/length*offset,dx/length*offset]);});
@@ -504,7 +622,7 @@ export class MapView {
     // Schematic regional rings can be millions of pixels around at local zoom.
     // Keep their context, but avoid rasterizing hundreds of thousands of dashes.
     this.element.classList.toggle('local-detail',this.scale>=80);
-    const viewport=this.viewBounds(),terrain=terrainHTML(this.projection,this.scale,viewport);
+    const viewport=this.viewBounds(),terrain=this.globe?"":terrainHTML(this.projection,this.scale,viewport);
     if(this.terrainKey!==terrain){$(".terrain",this.element).innerHTML=terrain;this.terrainKey=terrain;}
     const focusedElement=document.activeElement instanceof SVGElement&&this.element.contains(document.activeElement)?document.activeElement:null;
     const focused=focusedElement?.dataset.mapTip;
@@ -540,7 +658,7 @@ export class MapView {
     let physicalMarkers='';
     const hazards=eventsAt(this.year,this.physical.hidden,this.physical.uncertain);
     for(const event of hazards){
-      const p=this.projection(event.coordinates as [number,number]);if(!p||!intersectsView([p,p],viewport))continue;
+      const p=projectPoint(this.projection,event.coordinates as [number,number]);if(!p||!intersectsView([p,p],viewport))continue;
       const symbol=event.kind==='volcano'?'▲':event.kind==='tsunami'?'≋':event.kind==='earthquake'?'ϟ':event.kind==='el-nino'?'E':'L';
       const earthquake=event.kind==='earthquake';
       physicalMarkers+=`<a data-hazard="${esc(event.id)}" href="#physical/${event.id}" class="hazard-marker hazard-${event.kind} ${isUncertainHazard(event)?'hazard-uncertain':''}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><title>${esc(event.title)} — ${esc(event.status)}; open catalog details</title><circle r="11"${earthquake?' style="fill:#30233c;stroke:#ffe36b"':''}/><text text-anchor="middle" dy=".35em"${earthquake?' style="fill:#fff0a6;font-size:18px"':''}>${symbol}</text></a>`;
@@ -565,7 +683,7 @@ export class MapView {
     const journeyStops=new Set(journey?.stops.map(stop=>stop.recordId));
     const band=2**(Math.round(2*Math.log2(this.scale))/2)*this.viewportFit();
     for(const [key,rows] of this.places){
-      const p=this.projection(key.split(',').map(Number) as MapPoint);
+      const p=projectPoint(this.projection,key.split(',').map(Number) as MapPoint);
       if(!p||!intersectsView([p,p],viewport))continue;
       const states=rows.map(row=>historyState(row,this.year));
       const onlyWrecks=rows.every(row=>row.history?.kind==='wreck');
@@ -583,7 +701,7 @@ export class MapView {
       groups.set(group.key,rows);
       const anchorRow=this.places.get(group.anchor.key)![0];
       const name=compactPlaceName((anchorRow.location?.name??anchorRow.title).split(/ [—–] /)[0]);
-      const p=this.projection(group.anchor.key.split(',').map(Number) as MapPoint)!;
+      const p=projectPoint(this.projection,group.anchor.key.split(',').map(Number) as MapPoint)!;
       const hasHabitation=rows.some(row=>historyState(row,this.year)==='active'&&row.history?.kind==='habitation'&&!placeChange(row.history,this.year));
       const wrecks=rows.every(row=>row.history?.kind==='wreck');
       const glyph=wrecks?'M0,-7V7 M-7,2Q0,13 7,2 M-3,-4H3 M-7,2V6 M7,2V6':(hasHabitation&&this.interaction?.mode!=='explore')?'M-9,5V-2l4-4 4,4V5ZM0,5V-4l4-4 5,5V5Z':'M-8,1l4-4 4,4-4,4ZM0,-2l4-4 4,4-4,4Z';
@@ -614,7 +732,7 @@ export class MapView {
             [g.coordinates[0],g.coordinates[g.coordinates.length-1]].forEach((coordinate,i)=>{
               const key=names[i]+'|'+coordinate.join(',');
               if(labeledEndpoints.has(key))return;
-              const p=this.projection(coordinate);if(!p)return;
+              const p=projectPoint(this.projection,coordinate);if(!p)return;
               labeledEndpoints.add(key);
               const right=p[0]*this.scale+this.tx>this.width/2;
               endpointLabels+=`<g class="route-endpoint-label" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})" pointer-events="none"><circle r="3.5" fill="#fff2c5" stroke="#183847" stroke-width="1.5"/><text x="${right?-9:9}" y="${i===0?-10:19}" text-anchor="${right?'end':'start'}" style="font-size:12px;font-weight:600;fill:#fff8de;stroke:#183847;stroke-width:4px;stroke-linejoin:round;paint-order:stroke;letter-spacing:0">${esc(names[i])}</text></g>`;
@@ -625,7 +743,7 @@ export class MapView {
       }
       if(r.history?.kind==='wreck'||r.history?.kind==='settlement'){
         if(!r.location)continue;
-        const p=this.projection([r.location.lon,r.location.lat]);if(!p)continue;
+        const p=projectPoint(this.projection,[r.location.lon,r.location.lat]);if(!p)continue;
         const shared=colocated??[r];
         if(shared[0]!==r)continue;
         const wreck=r.history.kind==='wreck';
@@ -644,8 +762,8 @@ export class MapView {
         // Arrows are explicit editorial metadata; coordinate order alone does not establish travel.
         let directionSymbol = "";
         if (o.direction && g.type === "LineString") {
-          const a = this.projection(g.coordinates[0]);
-          const b = this.projection(g.coordinates[g.coordinates.length - 1]);
+          const a = projectPoint(this.projection, g.coordinates[0]);
+          const b = projectPoint(this.projection, g.coordinates[g.coordinates.length - 1]);
           if (a && b) {
             const angle = Math.atan2(b[1] - a[1], b[0] - a[0]) * 180 / Math.PI;
             const multi = o.direction === "multidirectional";
@@ -665,12 +783,12 @@ export class MapView {
         ) {
           const d =
             g.type === "LineString" ? this.geometry.get(r).path : null;
-          const p = g.type === "Point" ? this.projection(g.coordinates) : null;
+          const p = g.type === "Point" ? projectPoint(this.projection, g.coordinates) : null;
           overlays += `<g data-overlay="${index}" class="regional-cloud cloud-${o.kind}" style="opacity:${opacity}"><title>${title} — illustrative extent; not a site, precise route or probability boundary</title>${d ? `<path class="cloud-glow" d="${d}"/><path class="cloud-core" d="${d}"/><path class="cloud-hit" d="${d}"/>` : p ? `<circle class="cloud-glow" cx="${p[0]}" cy="${p[1]}" r="35"/><circle class="cloud-hit" cx="${p[0]}" cy="${p[1]}" r="35"/>` : ""}${directionSymbol}</g>`;
           continue;
         }
         if (g.type === "Point") {
-          const p = this.projection(g.coordinates);
+          const p = projectPoint(this.projection, g.coordinates);
           if (p)
             overlays += `<g data-overlay="${index}" class="${cls}" style="opacity:${opacity}" transform="translate(${p[0]},${p[1]}) scale(${symbolScale})"><title>${title}</title><circle class="overlay-hit" r="14"/><path d="${o.kind === "conflict" ? "M-7,-7 L7,7 M7,-7 L-7,7" : o.kind === "violence" ? "M-8,-8 H8 V8 H-8 Z M-6,-6 L6,6 M6,-6 L-6,6" : o.kind === "epidemic" ? "M0,-8 A8,8 0 1,1 0,8 A8,8 0 1,1 0,-8 M0,-12 V-9 M0,9 V12 M-12,0 H-9 M9,0 H12" : o.kind === "forced-removal" ? "M-8,-8 H8 V8 H-8 Z" : "M0,-9 L9,0 L0,9 L-9,0 Z"}"/>${colocated&&colocated.length>1?`<text class="site-count" x="11" y="-10">${colocated.length}</text>`:""}</g>`;
         } else {
@@ -693,8 +811,8 @@ export class MapView {
       for(const item of colocated??[r])if(!group.includes(item))group.push(item);
       groups.set(key,group);
       if (r.type === "movement" && r.destination) {
-        const a = this.projection([r.location.lon, r.location.lat]),
-          b = this.projection([r.destination.lon, r.destination.lat]);
+        const a = projectPoint(this.projection, [r.location.lon, r.location.lat]),
+          b = projectPoint(this.projection, [r.destination.lon, r.destination.lat]);
         if (a && b)
           arrows += `<g data-overlay="${index}" class="history-route route-migration legacy-route"><title>${esc(r.title)} — ${esc(r.routeKind)} connection</title><path class="route-halo" d="${this.geometry.get(r).path}"/><path class="route-line movement ${r.proposalKey ? "proposal-path" : ""}" d="${this.geometry.get(r).path}" marker-end="url(#corridor-migration)"/></g>`;
       }
@@ -703,7 +821,7 @@ export class MapView {
     for (const [key, rows] of groups) {
       if(key.startsWith("cell:")||key.startsWith("wreck:cell:"))continue;
       const r = rows[0],
-        p = this.projection([r.location!.lon, r.location!.lat]);
+        p = projectPoint(this.projection, [r.location!.lon, r.location!.lat]);
       if (!p) continue;
       const possible = rows.every(
         (x) => this.uncertainty(x),
