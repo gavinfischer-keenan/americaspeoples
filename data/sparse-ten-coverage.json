@@ -1,8 +1,8 @@
 {
   "version": "0.32.0",
   "baselineVersion": "0.25.0",
-  "recordCount": 11201,
-  "sharedRecordCount": 11128,
+  "recordCount": 11272,
+  "sharedRecordCount": 11199,
   "newRecordCount": 68,
   "method": "The same ten geographic bins are compared with locality IDs frozen at v0.25.0. Modern state outlines clip the named US bins; they are audit boundaries, not ancient territories. Distinct locality IDs count once across multiple phases. Public island-scale references remain island-scale. Dates measure available evidence, not the number of people or continuously occupied towns. Blank periods are collection gaps unless a source establishes a departure.",
   "regions": [
@@ -264,12 +264,14 @@
       ],
       "beforeLocalityIds": [],
       "afterLocalityIds": [
+        "r6-te-bakoa-place",
         "st-ki-binoinano-abemama-place",
         "st-ki-buota-north-tarawa-place",
         "st-ki-butaritari-trading-town-place",
         "st-ki-koinawa-abaiang-place"
       ],
       "recordIds": [
+        "r6-te-bakoa",
         "st-ki-binoinano-catholic-mission",
         "st-ki-binoinano-court",
         "st-ki-buota-taro-pits",
@@ -385,11 +387,15 @@
           "period": "1,000–1BCE",
           "start": -998,
           "end": 0,
-          "localRecordIds": [],
+          "localRecordIds": [
+            "r6-te-bakoa"
+          ],
           "contextRecordIds": [],
-          "localityIds": [],
-          "localityCount": 0,
-          "localRecordCount": 0,
+          "localityIds": [
+            "r6-te-bakoa-place"
+          ],
+          "localityCount": 1,
+          "localRecordCount": 1,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -402,14 +408,16 @@
           "start": 1,
           "end": 500,
           "localRecordIds": [
-            "st-ki-buota-taro-pits"
+            "st-ki-buota-taro-pits",
+            "r6-te-bakoa"
           ],
           "contextRecordIds": [],
           "localityIds": [
+            "r6-te-bakoa-place",
             "st-ki-buota-north-tarawa-place"
           ],
-          "localityCount": 1,
-          "localRecordCount": 1,
+          "localityCount": 2,
+          "localRecordCount": 2,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -1337,11 +1345,13 @@
       ],
       "afterLocalityIds": [
         "anzick",
+        "nara-place-pictograph-cave-mt",
         "st-us-place-bergstrom-bison-kills",
         "st-us-place-fort-belknap-reservation",
         "st-us-place-fort-benton-trade"
       ],
       "recordIds": [
+        "nara-pictograph-cave-mt",
         "r10v-montana-anzick-cranium",
         "st-us-bergstrom-bison-kills",
         "st-us-fort-belknap-reservation",
@@ -1459,11 +1469,15 @@
           "period": "1,000–1BCE",
           "start": -998,
           "end": 0,
-          "localRecordIds": [],
+          "localRecordIds": [
+            "nara-pictograph-cave-mt"
+          ],
           "contextRecordIds": [],
-          "localityIds": [],
-          "localityCount": 0,
-          "localRecordCount": 0,
+          "localityIds": [
+            "nara-place-pictograph-cave-mt"
+          ],
+          "localityCount": 1,
+          "localRecordCount": 1,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -1476,14 +1490,16 @@
           "start": 1,
           "end": 500,
           "localRecordIds": [
-            "st-us-bergstrom-bison-kills"
+            "st-us-bergstrom-bison-kills",
+            "nara-pictograph-cave-mt"
           ],
           "contextRecordIds": [],
           "localityIds": [
+            "nara-place-pictograph-cave-mt",
             "st-us-place-bergstrom-bison-kills"
           ],
-          "localityCount": 1,
-          "localRecordCount": 1,
+          "localityCount": 2,
+          "localRecordCount": 2,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -1496,14 +1512,16 @@
           "start": 501,
           "end": 1000,
           "localRecordIds": [
-            "st-us-bergstrom-bison-kills"
+            "st-us-bergstrom-bison-kills",
+            "nara-pictograph-cave-mt"
           ],
           "contextRecordIds": [],
           "localityIds": [
+            "nara-place-pictograph-cave-mt",
             "st-us-place-bergstrom-bison-kills"
           ],
-          "localityCount": 1,
-          "localRecordCount": 1,
+          "localityCount": 2,
+          "localRecordCount": 2,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -1515,11 +1533,15 @@
           "period": "1001–1500CE",
           "start": 1001,
           "end": 1500,
-          "localRecordIds": [],
+          "localRecordIds": [
+            "nara-pictograph-cave-mt"
+          ],
           "contextRecordIds": [],
-          "localityIds": [],
-          "localityCount": 0,
-          "localRecordCount": 0,
+          "localityIds": [
+            "nara-place-pictograph-cave-mt"
+          ],
+          "localityCount": 1,
+          "localRecordCount": 1,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -1531,11 +1553,15 @@
           "period": "1501–1700CE",
           "start": 1501,
           "end": 1700,
-          "localRecordIds": [],
+          "localRecordIds": [
+            "nara-pictograph-cave-mt"
+          ],
           "contextRecordIds": [],
-          "localityIds": [],
-          "localityCount": 0,
-          "localRecordCount": 0,
+          "localityIds": [
+            "nara-place-pictograph-cave-mt"
+          ],
+          "localityCount": 1,
+          "localRecordCount": 1,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -1549,17 +1575,19 @@
           "end": 1934,
           "localRecordIds": [
             "st-us-fort-benton-trade",
-            "st-us-fort-belknap-reservation"
+            "st-us-fort-belknap-reservation",
+            "nara-pictograph-cave-mt"
           ],
           "contextRecordIds": [
             "st-us-little-bighorn-battlefield"
           ],
           "localityIds": [
+            "nara-place-pictograph-cave-mt",
             "st-us-place-fort-belknap-reservation",
             "st-us-place-fort-benton-trade"
           ],
-          "localityCount": 2,
-          "localRecordCount": 2,
+          "localityCount": 3,
+          "localRecordCount": 3,
           "contextRecordCount": 1,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -1849,6 +1877,10 @@
         "pueblo-grande-de-nevada"
       ],
       "afterLocalityIds": [
+        "nara-place-gold-butte-whitney-pockets",
+        "nara-place-pahranagat-mount-irish",
+        "nara-place-sloan-canyon-nv",
+        "nara-place-valley-of-fire-atlatl-rock",
         "pueblo-grande-de-nevada",
         "st-us-place-corn-creek-springs",
         "st-us-place-las-vegas-big-springs",
@@ -1857,6 +1889,10 @@
         "st-us-place-mount-irish-archaeological-district"
       ],
       "recordIds": [
+        "nara-gold-butte-whitney-pockets",
+        "nara-pahranagat-mount-irish",
+        "nara-sloan-canyon-nv",
+        "nara-valley-of-fire-atlatl-rock",
         "r9v-nevada-pueblo-grande",
         "st-us-changes-to-moapa-reservation",
         "st-us-corn-creek-springs",
@@ -1960,11 +1996,21 @@
           "period": "3,000–1,000BCE",
           "start": -2998,
           "end": -999,
-          "localRecordIds": [],
+          "localRecordIds": [
+            "nara-valley-of-fire-atlatl-rock",
+            "nara-sloan-canyon-nv",
+            "nara-pahranagat-mount-irish",
+            "nara-gold-butte-whitney-pockets"
+          ],
           "contextRecordIds": [],
-          "localityIds": [],
-          "localityCount": 0,
-          "localRecordCount": 0,
+          "localityIds": [
+            "nara-place-gold-butte-whitney-pockets",
+            "nara-place-pahranagat-mount-irish",
+            "nara-place-sloan-canyon-nv",
+            "nara-place-valley-of-fire-atlatl-rock"
+          ],
+          "localityCount": 4,
+          "localRecordCount": 4,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -1977,14 +2023,22 @@
           "start": -998,
           "end": 0,
           "localRecordIds": [
-            "st-us-corn-creek-springs"
+            "st-us-corn-creek-springs",
+            "nara-valley-of-fire-atlatl-rock",
+            "nara-sloan-canyon-nv",
+            "nara-pahranagat-mount-irish",
+            "nara-gold-butte-whitney-pockets"
           ],
           "contextRecordIds": [],
           "localityIds": [
+            "nara-place-gold-butte-whitney-pockets",
+            "nara-place-pahranagat-mount-irish",
+            "nara-place-sloan-canyon-nv",
+            "nara-place-valley-of-fire-atlatl-rock",
             "st-us-place-corn-creek-springs"
           ],
-          "localityCount": 1,
-          "localRecordCount": 1,
+          "localityCount": 5,
+          "localRecordCount": 5,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -1998,15 +2052,23 @@
           "end": 500,
           "localRecordIds": [
             "st-us-mount-irish-archaeological-district",
-            "st-us-corn-creek-springs"
+            "st-us-corn-creek-springs",
+            "nara-valley-of-fire-atlatl-rock",
+            "nara-sloan-canyon-nv",
+            "nara-pahranagat-mount-irish",
+            "nara-gold-butte-whitney-pockets"
           ],
           "contextRecordIds": [],
           "localityIds": [
+            "nara-place-gold-butte-whitney-pockets",
+            "nara-place-pahranagat-mount-irish",
+            "nara-place-sloan-canyon-nv",
+            "nara-place-valley-of-fire-atlatl-rock",
             "st-us-place-corn-creek-springs",
             "st-us-place-mount-irish-archaeological-district"
           ],
-          "localityCount": 2,
-          "localRecordCount": 2,
+          "localityCount": 6,
+          "localRecordCount": 6,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -2021,16 +2083,24 @@
           "localRecordIds": [
             "st-us-mount-irish-archaeological-district",
             "st-us-las-vegas-big-springs",
-            "st-us-corn-creek-springs"
+            "st-us-corn-creek-springs",
+            "nara-valley-of-fire-atlatl-rock",
+            "nara-sloan-canyon-nv",
+            "nara-pahranagat-mount-irish",
+            "nara-gold-butte-whitney-pockets"
           ],
           "contextRecordIds": [],
           "localityIds": [
+            "nara-place-gold-butte-whitney-pockets",
+            "nara-place-pahranagat-mount-irish",
+            "nara-place-sloan-canyon-nv",
+            "nara-place-valley-of-fire-atlatl-rock",
             "st-us-place-corn-creek-springs",
             "st-us-place-las-vegas-big-springs",
             "st-us-place-mount-irish-archaeological-district"
           ],
-          "localityCount": 3,
-          "localRecordCount": 3,
+          "localityCount": 7,
+          "localRecordCount": 7,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -2045,16 +2115,24 @@
           "localRecordIds": [
             "st-us-mount-irish-archaeological-district",
             "st-us-corn-creek-springs",
-            "r9v-nevada-pueblo-grande"
+            "r9v-nevada-pueblo-grande",
+            "nara-valley-of-fire-atlatl-rock",
+            "nara-sloan-canyon-nv",
+            "nara-pahranagat-mount-irish",
+            "nara-gold-butte-whitney-pockets"
           ],
           "contextRecordIds": [],
           "localityIds": [
+            "nara-place-gold-butte-whitney-pockets",
+            "nara-place-pahranagat-mount-irish",
+            "nara-place-sloan-canyon-nv",
+            "nara-place-valley-of-fire-atlatl-rock",
             "pueblo-grande-de-nevada",
             "st-us-place-corn-creek-springs",
             "st-us-place-mount-irish-archaeological-district"
           ],
-          "localityCount": 3,
-          "localRecordCount": 3,
+          "localityCount": 7,
+          "localRecordCount": 7,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -2066,11 +2144,17 @@
           "period": "1501–1700CE",
           "start": 1501,
           "end": 1700,
-          "localRecordIds": [],
+          "localRecordIds": [
+            "nara-sloan-canyon-nv",
+            "nara-gold-butte-whitney-pockets"
+          ],
           "contextRecordIds": [],
-          "localityIds": [],
-          "localityCount": 0,
-          "localRecordCount": 0,
+          "localityIds": [
+            "nara-place-gold-butte-whitney-pockets",
+            "nara-place-sloan-canyon-nv"
+          ],
+          "localityCount": 2,
+          "localRecordCount": 2,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -2086,15 +2170,19 @@
             "st-us-moapa-river-reservation",
             "st-us-las-vegas-paiute-colony",
             "st-us-changes-to-moapa-reservation",
-            "st-us-las-vegas-paiute-colony-school"
+            "st-us-las-vegas-paiute-colony-school",
+            "nara-sloan-canyon-nv",
+            "nara-gold-butte-whitney-pockets"
           ],
           "contextRecordIds": [],
           "localityIds": [
+            "nara-place-gold-butte-whitney-pockets",
+            "nara-place-sloan-canyon-nv",
             "st-us-place-las-vegas-paiute-colony",
             "st-us-place-moapa-river-reservation"
           ],
-          "localityCount": 2,
-          "localRecordCount": 4,
+          "localityCount": 4,
+          "localRecordCount": 6,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -2118,12 +2206,14 @@
       "afterLocalityIds": [
         "hell-gap",
         "laprele",
+        "nara-place-whoopup-canyon-wy",
         "st-us-place-fort-laramie-treaty-grounds-1868",
         "st-us-place-fort-phil-kearny-bozeman",
         "st-us-place-powars-ii-hematite-quarry",
         "st-us-place-vore-buffalo-jump"
       ],
       "recordIds": [
+        "nara-whoopup-canyon-wy",
         "r10v-wyoming-laprele",
         "st-us-fort-laramie-treaty-grounds-1868",
         "st-us-fort-phil-kearny-bozeman",
@@ -2222,14 +2312,16 @@
           "start": -5998,
           "end": -2999,
           "localRecordIds": [
-            "st-us-hell-gap-dated-locality-1"
+            "st-us-hell-gap-dated-locality-1",
+            "nara-whoopup-canyon-wy"
           ],
           "contextRecordIds": [],
           "localityIds": [
-            "hell-gap"
+            "hell-gap",
+            "nara-place-whoopup-canyon-wy"
           ],
-          "localityCount": 1,
-          "localRecordCount": 1,
+          "localityCount": 2,
+          "localRecordCount": 2,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -2241,11 +2333,15 @@
           "period": "3,000–1,000BCE",
           "start": -2998,
           "end": -999,
-          "localRecordIds": [],
+          "localRecordIds": [
+            "nara-whoopup-canyon-wy"
+          ],
           "contextRecordIds": [],
-          "localityIds": [],
-          "localityCount": 0,
-          "localRecordCount": 0,
+          "localityIds": [
+            "nara-place-whoopup-canyon-wy"
+          ],
+          "localityCount": 1,
+          "localRecordCount": 1,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -2257,11 +2353,15 @@
           "period": "1,000–1BCE",
           "start": -998,
           "end": 0,
-          "localRecordIds": [],
+          "localRecordIds": [
+            "nara-whoopup-canyon-wy"
+          ],
           "contextRecordIds": [],
-          "localityIds": [],
-          "localityCount": 0,
-          "localRecordCount": 0,
+          "localityIds": [
+            "nara-place-whoopup-canyon-wy"
+          ],
+          "localityCount": 1,
+          "localRecordCount": 1,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -2273,11 +2373,15 @@
           "period": "1–500CE",
           "start": 1,
           "end": 500,
-          "localRecordIds": [],
+          "localRecordIds": [
+            "nara-whoopup-canyon-wy"
+          ],
           "contextRecordIds": [],
-          "localityIds": [],
-          "localityCount": 0,
-          "localRecordCount": 0,
+          "localityIds": [
+            "nara-place-whoopup-canyon-wy"
+          ],
+          "localityCount": 1,
+          "localRecordCount": 1,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -2290,14 +2394,16 @@
           "start": 501,
           "end": 1000,
           "localRecordIds": [
-            "st-us-hell-gap-dated-locality-1"
+            "st-us-hell-gap-dated-locality-1",
+            "nara-whoopup-canyon-wy"
           ],
           "contextRecordIds": [],
           "localityIds": [
-            "hell-gap"
+            "hell-gap",
+            "nara-place-whoopup-canyon-wy"
           ],
-          "localityCount": 1,
-          "localRecordCount": 1,
+          "localityCount": 2,
+          "localRecordCount": 2,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -2311,15 +2417,17 @@
           "end": 1500,
           "localRecordIds": [
             "st-us-hell-gap-dated-locality-1",
-            "st-us-vore-buffalo-jump"
+            "st-us-vore-buffalo-jump",
+            "nara-whoopup-canyon-wy"
           ],
           "contextRecordIds": [],
           "localityIds": [
             "hell-gap",
+            "nara-place-whoopup-canyon-wy",
             "st-us-place-vore-buffalo-jump"
           ],
-          "localityCount": 2,
-          "localRecordCount": 2,
+          "localityCount": 3,
+          "localRecordCount": 3,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -2332,14 +2440,16 @@
           "start": 1501,
           "end": 1700,
           "localRecordIds": [
-            "st-us-vore-buffalo-jump"
+            "st-us-vore-buffalo-jump",
+            "nara-whoopup-canyon-wy"
           ],
           "contextRecordIds": [],
           "localityIds": [
+            "nara-place-whoopup-canyon-wy",
             "st-us-place-vore-buffalo-jump"
           ],
-          "localityCount": 1,
-          "localRecordCount": 1,
+          "localityCount": 2,
+          "localRecordCount": 2,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -2386,12 +2496,16 @@
       ],
       "afterLocalityIds": [
         "colby",
+        "nara-place-dinwoody-torrey-valley",
+        "nara-place-legend-rock-wy",
         "st-us-place-fishing-bridge-camps",
         "st-us-place-fort-bridger-1868-treaty",
         "st-us-place-high-rise-village",
         "st-us-place-wind-river-reservation-agency"
       ],
       "recordIds": [
+        "nara-dinwoody-torrey-valley",
+        "nara-legend-rock-wy",
         "r10v-wyoming-colby",
         "st-us-fishing-bridge-camps",
         "st-us-fort-bridger-1868-treaty",
@@ -2480,14 +2594,16 @@
           "start": -5998,
           "end": -2999,
           "localRecordIds": [
-            "st-us-fishing-bridge-camps"
+            "st-us-fishing-bridge-camps",
+            "nara-legend-rock-wy"
           ],
           "contextRecordIds": [],
           "localityIds": [
+            "nara-place-legend-rock-wy",
             "st-us-place-fishing-bridge-camps"
           ],
-          "localityCount": 1,
-          "localRecordCount": 1,
+          "localityCount": 2,
+          "localRecordCount": 2,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -2499,11 +2615,17 @@
           "period": "3,000–1,000BCE",
           "start": -2998,
           "end": -999,
-          "localRecordIds": [],
+          "localRecordIds": [
+            "nara-legend-rock-wy",
+            "nara-dinwoody-torrey-valley"
+          ],
           "contextRecordIds": [],
-          "localityIds": [],
-          "localityCount": 0,
-          "localRecordCount": 0,
+          "localityIds": [
+            "nara-place-dinwoody-torrey-valley",
+            "nara-place-legend-rock-wy"
+          ],
+          "localityCount": 2,
+          "localRecordCount": 2,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -2515,11 +2637,17 @@
           "period": "1,000–1BCE",
           "start": -998,
           "end": 0,
-          "localRecordIds": [],
+          "localRecordIds": [
+            "nara-legend-rock-wy",
+            "nara-dinwoody-torrey-valley"
+          ],
           "contextRecordIds": [],
-          "localityIds": [],
-          "localityCount": 0,
-          "localRecordCount": 0,
+          "localityIds": [
+            "nara-place-dinwoody-torrey-valley",
+            "nara-place-legend-rock-wy"
+          ],
+          "localityCount": 2,
+          "localRecordCount": 2,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -2532,14 +2660,18 @@
           "start": 1,
           "end": 500,
           "localRecordIds": [
-            "st-us-high-rise-village"
+            "st-us-high-rise-village",
+            "nara-legend-rock-wy",
+            "nara-dinwoody-torrey-valley"
           ],
           "contextRecordIds": [],
           "localityIds": [
+            "nara-place-dinwoody-torrey-valley",
+            "nara-place-legend-rock-wy",
             "st-us-place-high-rise-village"
           ],
-          "localityCount": 1,
-          "localRecordCount": 1,
+          "localityCount": 3,
+          "localRecordCount": 3,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -2552,14 +2684,18 @@
           "start": 501,
           "end": 1000,
           "localRecordIds": [
-            "st-us-high-rise-village"
+            "st-us-high-rise-village",
+            "nara-legend-rock-wy",
+            "nara-dinwoody-torrey-valley"
           ],
           "contextRecordIds": [],
           "localityIds": [
+            "nara-place-dinwoody-torrey-valley",
+            "nara-place-legend-rock-wy",
             "st-us-place-high-rise-village"
           ],
-          "localityCount": 1,
-          "localRecordCount": 1,
+          "localityCount": 3,
+          "localRecordCount": 3,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -2572,14 +2708,18 @@
           "start": 1001,
           "end": 1500,
           "localRecordIds": [
-            "st-us-high-rise-village"
+            "st-us-high-rise-village",
+            "nara-legend-rock-wy",
+            "nara-dinwoody-torrey-valley"
           ],
           "contextRecordIds": [],
           "localityIds": [
+            "nara-place-dinwoody-torrey-valley",
+            "nara-place-legend-rock-wy",
             "st-us-place-high-rise-village"
           ],
-          "localityCount": 1,
-          "localRecordCount": 1,
+          "localityCount": 3,
+          "localRecordCount": 3,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -2591,11 +2731,17 @@
           "period": "1501–1700CE",
           "start": 1501,
           "end": 1700,
-          "localRecordIds": [],
+          "localRecordIds": [
+            "nara-legend-rock-wy",
+            "nara-dinwoody-torrey-valley"
+          ],
           "contextRecordIds": [],
-          "localityIds": [],
-          "localityCount": 0,
-          "localRecordCount": 0,
+          "localityIds": [
+            "nara-place-dinwoody-torrey-valley",
+            "nara-place-legend-rock-wy"
+          ],
+          "localityCount": 2,
+          "localRecordCount": 2,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,
@@ -2610,15 +2756,19 @@
           "localRecordIds": [
             "st-us-fort-bridger-1868-treaty",
             "st-us-wind-river-reservation-agency",
-            "st-us-wind-river-northern-arapaho-arrive"
+            "st-us-wind-river-northern-arapaho-arrive",
+            "nara-legend-rock-wy",
+            "nara-dinwoody-torrey-valley"
           ],
           "contextRecordIds": [],
           "localityIds": [
+            "nara-place-dinwoody-torrey-valley",
+            "nara-place-legend-rock-wy",
             "st-us-place-fort-bridger-1868-treaty",
             "st-us-place-wind-river-reservation-agency"
           ],
-          "localityCount": 2,
-          "localRecordCount": 3,
+          "localityCount": 4,
+          "localRecordCount": 5,
           "contextRecordCount": 0,
           "populationKnownRecordIds": [],
           "populationKnownLocalityCount": 0,

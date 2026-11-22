@@ -1343,7 +1343,10 @@ function mountDiveFilters() {
 }
 async function route() {
   const generation = ++routeGeneration;
-  const hash = location.hash || "#world";
+  const rawHash = location.hash || "#world";
+  const qIdx = rawHash.indexOf("?");
+  const hash = qIdx >= 0 ? rawHash.slice(0, qIdx) : rawHash;
+  const hashParams = qIdx >= 0 ? new URLSearchParams(rawHash.slice(qIdx + 1)) : null;
   if (reverting) {
     reverting = false;
     return;
@@ -1417,6 +1420,12 @@ async function route() {
       const regionChanged=nextMode==='movie'&&targetRegion!==activeAtlasRegion;
       const targetKey:'americas'|'pacific'|'explore'=nextMode==='explore'?'explore':targetRegion;
       if(nextMode!==atlasMode||regionChanged){placeQuery='';placeCategory='all';}
+      if(nextMode==='explore'&&hashParams){
+        const qParam=hashParams.get('q');
+        const catParam=hashParams.get('category') as ExploreCategory|null;
+        if(qParam!==null)placeQuery=qParam;
+        if(catParam&&catParam in exploreCategories)placeCategory=catParam;
+      }
       if(nextMode==='explore'&&atlasMode!=='explore'){explorePeriod='all';}
       atlasMode = nextMode;
       if(regionChanged){
@@ -1433,6 +1442,7 @@ async function route() {
       if(atlasMode==='explore'){
         syncExploreTimelineUI(currentVisible.length);
         void ensureExploreCatalogs();
+        if(hashParams&&(hashParams.has('q')||hashParams.has('category')))mapNavigation?.showFacts();
       }
       if(topicOriginCamera){map.restoreCamera(topicOriginCamera);topicOriginCamera=undefined;}
       else if(pendingLocation){const record=pendingLocation;pendingLocation=null;map.focus(record);}

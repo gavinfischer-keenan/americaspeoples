@@ -1,0 +1,883 @@
+{
+  "schemaVersion": 1,
+  "guides": [
+    {
+      "id": "world-rock-art-in-toto",
+      "atlasIds": [
+        "americas",
+        "pacific",
+        "africa",
+        "europe",
+        "asia-pacific"
+      ],
+      "category": "subjects",
+      "title": "Marks on Stone: Global Wall & Rock Art in Toto",
+      "description": "Comparative illustrated archive across every inhabited continent—from monumental Paleolithic caves like Lascaux and Sulawesi to desert rock overhangs in Nevada, the Sahara, Australia and Patagonia.",
+      "intro": "Before cities or alphabets, human communities painted mineral pigments inside limestone caverns, pecked desert-varnished boulders beside waterholes, scraped colossal earth figures into alluvial terraces, and sheltered modest stories beneath wind-carved rock overhangs. Brought together in toto, these visual records reveal shared human creativity shaped by radically different environments.",
+      "scope": "Spans >51,000 years globally using direct radiocarbon, OSL luminescence, U-series carbonate crusts, and living Indigenous knowledge. All rock-art ages remain approximate minimum or bracketed windows.",
+      "map": {
+        "bounds": [
+          -160,
+          -52,
+          155,
+          66
+        ],
+        "scope": "Global projection (Web Mercator reference). Numbers pinpoint 20 landmark rock-art complexes profiled in the Specimen Archive below.",
+        "points": [
+          {
+            "id": "toto-sulawesi",
+            "label": "Maros-Pangkep Caves (Sulawesi)",
+            "coordinates": [
+              119.62,
+              -4.98
+            ],
+            "date": "c. 49,200–38,000 BCE",
+            "description": "World's oldest U-series dated figurative cave art and hand stencils.",
+            "sources": [
+              "https://doi.org/10.1038/s41586-024-07541-7"
+            ]
+          },
+          {
+            "id": "toto-blombos",
+            "label": "Blombos Cave (South Africa)",
+            "coordinates": [
+              21.22,
+              -34.41
+            ],
+            "date": "c. 75,000 BCE",
+            "description": "Middle Stone Age ~73 ka cross-hatched ochre slab and pigment kits.",
+            "sources": [
+              "https://whc.unesco.org/en/list/985/"
+            ]
+          },
+          {
+            "id": "toto-chauvet",
+            "label": "Chauvet-Pont-d'Arc (France)",
+            "coordinates": [
+              4.41,
+              44.38
+            ],
+            "date": "c. 35,000–28,000 BCE",
+            "description": "Charcoal lion and horse panels in Aurignacian deep chambers.",
+            "sources": [
+              "https://whc.unesco.org/en/list/85/"
+            ]
+          },
+          {
+            "id": "toto-lascaux",
+            "label": "Lascaux & Vézère Caves (France)",
+            "coordinates": [
+              1.17,
+              45.05
+            ],
+            "date": "c. 17,000–15,000 BCE",
+            "description": "Monumental Magdalenian polychrome bulls and horses.",
+            "sources": [
+              "https://whc.unesco.org/en/list/85/"
+            ]
+          },
+          {
+            "id": "toto-coa",
+            "label": "Côa Valley (Portugal)",
+            "coordinates": [
+              -7.11,
+              41.03
+            ],
+            "date": "c. 24,000–10,000 BCE",
+            "description": "Thousands of sunlit open-air schist river engravings.",
+            "sources": [
+              "https://whc.unesco.org/en/list/85/"
+            ]
+          },
+          {
+            "id": "toto-qurta",
+            "label": "Qurta (Upper Egypt)",
+            "coordinates": [
+              32.95,
+              24.47
+            ],
+            "date": "c. 15,000+ BCE",
+            "description": "OSL-dated Pleistocene naturalistic Nile cattle carvings.",
+            "sources": [
+              "https://doi.org/10.1017/S0003598X00061998"
+            ]
+          },
+          {
+            "id": "toto-winnemucca",
+            "label": "Winnemucca & Grimes Point (Nevada)",
+            "coordinates": [
+              -119.35,
+              40.07
+            ],
+            "date": "c. 12,850–8550 BCE",
+            "description": "Carbonate-bracketed tufa petroglyphs—North America's oldest dated rock art.",
+            "sources": [
+              "https://doi.org/10.1016/j.jas.2013.06.022"
+            ]
+          },
+          {
+            "id": "toto-toquima",
+            "label": "Toquima & Valley of Fire Overhangs (Nevada)",
+            "coordinates": [
+              -116.79,
+              39.17
+            ],
+            "date": "c. 2000 BCE – 1850 CE",
+            "description": "Intimate mountain tuff and Aztec sandstone overhangs of Newe & Nuwuvi communities.",
+            "sources": [
+              "https://doi.org/10.1016/j.jas.2013.06.022"
+            ]
+          },
+          {
+            "id": "toto-murujuga",
+            "label": "Murujuga & Kimberley (NW Australia)",
+            "coordinates": [
+              116.78,
+              -20.57
+            ],
+            "date": "c. 38,000 BCE – Present",
+            "description": "Million-panel ironstone gabbro ridge and Kimberley Wandjina galleries.",
+            "sources": [
+              "https://doi.org/10.1038/s41586-024-07541-7"
+            ]
+          },
+          {
+            "id": "toto-kakadu",
+            "label": "Kakadu / Arnhem Land (Australia)",
+            "coordinates": [
+              132.95,
+              -12.42
+            ],
+            "date": "c. 18,000 BCE – Present",
+            "description": "X-ray style paintings and Creation shelters at Anbangbang & Ubirr.",
+            "sources": [
+              "https://doi.org/10.1038/s41586-024-07541-7"
+            ]
+          },
+          {
+            "id": "toto-gobustan",
+            "label": "Gobustan (Azerbaijan)",
+            "coordinates": [
+              49.38,
+              40.1
+            ],
+            "date": "c. 12,000–100 BCE",
+            "description": "Reed boats, bulls and dancers on collapsed Caspian boulders.",
+            "sources": [
+              "https://whc.unesco.org/en/list/85/"
+            ]
+          },
+          {
+            "id": "toto-tassili",
+            "label": "Tassili & Tadrart Acacus (Sahara)",
+            "coordinates": [
+              9.45,
+              24.55
+            ],
+            "date": "c. 9000–1500 BCE",
+            "description": "Round Head murals and Green Sahara cattle herdsmen.",
+            "sources": [
+              "https://whc.unesco.org/en/list/179/"
+            ]
+          },
+          {
+            "id": "toto-dabous",
+            "label": "Dabous Giraffes (Niger)",
+            "coordinates": [
+              7.58,
+              18.02
+            ],
+            "date": "c. 6500–4000 BCE",
+            "description": "Life-size >5-meter carved giraffes across humid Saharan sandstone.",
+            "sources": [
+              "https://whc.unesco.org/en/list/179/"
+            ]
+          },
+          {
+            "id": "toto-camel-site",
+            "label": "Camel Site (Al-Jawf, Saudi Arabia)",
+            "coordinates": [
+              39.96,
+              29.88
+            ],
+            "date": "c. 5600–5200 BCE",
+            "description": "OSL-dated life-sized Neolithic dromedary sandstone reliefs.",
+            "sources": [
+              "https://doi.org/10.1016/j.jasrep.2021.103165"
+            ]
+          },
+          {
+            "id": "toto-drakensberg",
+            "label": "Maloti-Drakensberg (South Africa)",
+            "coordinates": [
+              29.63,
+              -29.36
+            ],
+            "date": "c. 2000 BCE – 1850 CE",
+            "description": "San polychrome shaded eland and healing-dance cliff overhangs.",
+            "sources": [
+              "https://whc.unesco.org/en/list/985/"
+            ]
+          },
+          {
+            "id": "toto-bhimbetka",
+            "label": "Bhimbetka (India)",
+            "coordinates": [
+              77.61,
+              22.94
+            ],
+            "date": "c. 10,000 BCE – 1000 CE",
+            "description": "Dense quartzite ridge shelters documenting hunter and pastoralist life.",
+            "sources": [
+              "https://doi.org/10.1038/s41586-024-07541-7"
+            ]
+          },
+          {
+            "id": "toto-horseshoe",
+            "label": "Horseshoe & Nine Mile Canyons (Utah)",
+            "coordinates": [
+              -110.21,
+              38.45
+            ],
+            "date": "c. 1000 BCE – 1400 CE",
+            "description": "Barrier Canyon spectral anthropomorphs and Fremont hunting scenes.",
+            "sources": [
+              "https://doi.org/10.1073/pnas.1405402111"
+            ]
+          },
+          {
+            "id": "toto-lower-pecos",
+            "label": "White Shaman / Lower Pecos (Texas)",
+            "coordinates": [
+              -101.55,
+              29.7
+            ],
+            "date": "c. 3700 BCE – 900 CE",
+            "description": "4,000-year direct AMS-dated polychrome canyon cosmovision murals.",
+            "sources": [
+              "https://doi.org/10.1126/sciadv.adx7205"
+            ]
+          },
+          {
+            "id": "toto-baja",
+            "label": "Sierra de San Francisco (Baja)",
+            "coordinates": [
+              -113.09,
+              27.55
+            ],
+            "date": "c. 5500 BCE – 1500 CE",
+            "description": "Monumental UNESCO Great Mural red-and-black canyon overhangs.",
+            "sources": [
+              "https://whc.unesco.org/en/list/714/"
+            ]
+          },
+          {
+            "id": "toto-cueva-manos",
+            "label": "Cueva de las Manos (Patagonia)",
+            "coordinates": [
+              -70.66,
+              -47.15
+            ],
+            "date": "c. 7300 BCE – 700 CE",
+            "description": "Over 800 polychrome negative handprints along a deep Patagonian gorge.",
+            "sources": [
+              "https://whc.unesco.org/en/list/936/"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "Two Extremes on Stone: Deep Dark Caves vs. Sunlit Desert Overhangs",
+          "paragraphs": [
+            {
+              "text": "Deep limestone cathedral caves like Lascaux and Chauvet in France—or the pitch-black Mississippi and Tennessee passages of Picture Cave and Mud Glyph Cave—demanded stone lamps or rivercane torches, ochre palettes and collective ritual isolation far underground. Yet across most of human history and geography, the dominant studio was far more intimate: shallow rock overhangs, sun-warmed granite shelves, or basalt boulders beside desert springs in Nevada, California, Nubia, the Sahara, Central India and Patagonia.",
+              "sources": [
+                "https://whc.unesco.org/en/list/85/",
+                "https://doi.org/10.1126/sciadv.adx7205"
+              ]
+            },
+            {
+              "text": "In Nevada alone, small volcanic tuff alcoves like Toquima Cave, coastal Lake Lahontan tufa ledges at Winnemucca Lake, and wind-scooped Aztec sandstone niches in Valley of Fire or Sloan Canyon preserve fragile geometric rings, rakes, bighorn sheep and handprints made within steps of open-air family campfires and pinyon trails. Placing Lascaux and Toquima Cave side by side in toto reveals that monumentality never measured cultural depth: small desert overhangs sustained continuous visual traditions every bit as durable as subterranean European sanctuaries.",
+              "sources": [
+                "https://doi.org/10.1016/j.jas.2013.06.022",
+                "https://www.nps.gov/lasc/index.htm"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "How Rock Art Is Dated (and Why Dates Remain Approximate)",
+          "paragraphs": [
+            {
+              "text": "Carved lines on stone and mineral-iron red ochres contain no organic carbon of their own, so archaeologists combine multiple indirect and direct clocks: uranium-series dating of mineral calcite skins grown over paint in Sulawesi (~51.2 ka); optically stimulated luminescence (OSL) of windblown sand burying petroglyphs at Qurta (>15 ka) and rockfall below Utah's Great Gallery (~1–1100 CE); plasma-chemical oxidation AMS dating of plant/fat binders in Lower Pecos paint (~3700 BCE–900 CE); radiocarbon on Lake Lahontan carbonate crusts sealing Winnemucca Lake incisions (~14.8–10.5 cal ka); and direct AMS charcoal dating inside Chauvet and Missouri's Picture Cave.",
+              "sources": [
+                "https://doi.org/10.1038/s41586-024-07541-7",
+                "https://doi.org/10.1016/j.jas.2013.06.022",
+                "https://doi.org/10.1017/S0003598X00061998",
+                "https://doi.org/10.1126/sciadv.adx7205",
+                "https://doi.org/10.1073/pnas.1405402111"
+              ]
+            }
+          ],
+          "columns": [
+            "Region & Site",
+            "Medium & Setting",
+            "Dating Evidence",
+            "Approximate Window"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Sulawesi (Leang Karampuang / Pettakere)",
+                "Natural ochre stencils & scene in karst cave",
+                "Uranium-series speleothem calcite",
+                "c. 49,200–38,000 BCE"
+              ],
+              "sources": [
+                "https://doi.org/10.1038/s41586-024-07541-7"
+              ]
+            },
+            {
+              "cells": [
+                "France (Chauvet & Lascaux)",
+                "Charcoal & polychrome deep karst caverns",
+                "Direct AMS charcoal + Magdalenian layers",
+                "c. 35,000–15,000 BCE"
+              ],
+              "sources": [
+                "https://whc.unesco.org/en/list/85/"
+              ]
+            },
+            {
+              "cells": [
+                "Upper Egypt (Qurta)",
+                "Hammered naturalistic aurochs on cliffs",
+                "OSL luminescence of covering silt",
+                "c. 15,000+ BCE (min.)"
+              ],
+              "sources": [
+                "https://doi.org/10.1017/S0003598X00061998"
+              ]
+            },
+            {
+              "cells": [
+                "Nevada (Winnemucca Lake)",
+                "Deep incised geometric tufa panels",
+                "U-series & C14 carbonate tufa layers",
+                "c. 12,850–8550 BCE"
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.jas.2013.06.022"
+              ]
+            },
+            {
+              "cells": [
+                "Saudi Arabia (Camel Site)",
+                "Life-size sandstone high reliefs",
+                "Portable OSL & bedrock erosion index",
+                "c. 5600–5200 BCE"
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.jasrep.2021.103165"
+              ]
+            },
+            {
+              "cells": [
+                "Texas (White Shaman / Lower Pecos)",
+                "Polychrome limestone shelter murals",
+                "57 direct plasma-oxidation AMS dates",
+                "c. 3700 BCE – 900 CE"
+              ],
+              "sources": [
+                "https://doi.org/10.1126/sciadv.adx7205"
+              ]
+            },
+            {
+              "cells": [
+                "Utah (Great Gallery, Horseshoe)",
+                "Barrier Canyon spectral overhangs",
+                "Alluvial & rockfall OSL dating",
+                "c. 1 – 1100 CE"
+              ],
+              "sources": [
+                "https://doi.org/10.1073/pnas.1405402111"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Stewardship, Fragility, and Living Traditions",
+          "paragraphs": [
+            {
+              "text": "Rock walls remain sacred archives for descendant Indigenous communities worldwide—among Bininj/Mungguy, Ngarinyin, San, Chewa, Niitsítapi, Anishinaabe, Hopi, Pueblo, Paiute, Shoshone and Chumash stewards. Touching pigments, chalking engravings, or building unmonitored fires permanently destroys microscopic binders needed both for cultural preservation and scientific dating.",
+              "sources": [
+                "https://whc.unesco.org/en/list/985/",
+                "https://www.nps.gov/lasc/index.htm"
+              ]
+            }
+          ]
+        }
+      ],
+      "relatedGuideIds": [
+        "world-north-america-rock-art",
+        "world-africa-middle-east-art-habitations",
+        "world-lascaux",
+        "world-gobekli-catalhoyuk-anatolia",
+        "world-everyday-writing"
+      ],
+      "sources": [
+        {
+          "url": "https://doi.org/10.1038/s41586-024-07541-7",
+          "title": "Oktaviana et al. (2024) · Narrative cave art in Indonesia by 51,200 years ago (Nature)"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.jas.2013.06.022",
+          "title": "Benson et al. (2013) · Dating North America's oldest petroglyphs, Winnemucca Lake, Nevada (JAS)"
+        },
+        {
+          "url": "https://doi.org/10.1017/S0003598X00061998",
+          "title": "Huyge et al. (2011) · OSL dating of Late Pleistocene rock art at Qurta, Egypt (Antiquity)"
+        },
+        {
+          "url": "https://doi.org/10.1126/sciadv.adx7205",
+          "title": "Steelman, Boyd & Dering (2025) · 4,000 years of Pecos River style mural chronology (Science Advances)"
+        },
+        {
+          "url": "https://doi.org/10.1073/pnas.1405402111",
+          "title": "Pederson et al. (2014) · Age of Barrier Canyon-style rock art at Great Gallery, Utah (PNAS)"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.jasrep.2021.103165",
+          "title": "Guagnin et al. (2021) · Life-sized Neolithic camel reliefs at the Camel Site, Arabia (JAS: Reports)"
+        },
+        {
+          "url": "https://whc.unesco.org/en/list/85/",
+          "title": "UNESCO World Heritage #85 · Prehistoric Sites and Decorated Caves of the Vézère Valley (Lascaux)"
+        },
+        {
+          "url": "https://whc.unesco.org/en/list/985/",
+          "title": "UNESCO World Heritage #985bis · Maloti-Drakensberg Park (San Rock Art)"
+        },
+        {
+          "url": "https://whc.unesco.org/en/list/714/",
+          "title": "UNESCO World Heritage #714 · Rock Paintings of the Sierra de San Francisco (Baja California)"
+        },
+        {
+          "url": "https://whc.unesco.org/en/list/936/",
+          "title": "UNESCO World Heritage #936 · Cueva de las Manos, Río Pinturas (Patagonia)"
+        },
+        {
+          "url": "https://whc.unesco.org/en/list/179/",
+          "title": "UNESCO World Heritage #179 · Tassili n'Ajjer Saharan Rock Art"
+        },
+        {
+          "url": "https://www.nps.gov/lasc/index.htm",
+          "title": "National Park Service & Federal Heritage Preservation — Great Basin, Colorado Plateau & Southwest Rock Art"
+        }
+      ]
+    },
+    {
+      "id": "world-north-america-rock-art",
+      "atlasIds": [
+        "americas"
+      ],
+      "category": "subjects",
+      "title": "Pictographs, Petroglyphs & Painted Caves of North America",
+      "description": "Continental survey linking >70 North American rock-art complexes—from Winnemucca Lake and Nevada desert overhangs to Lower Pecos murals, Canadian Shield cliffs and Eastern dark-zone caves—to their Indigenous cultures.",
+      "intro": "Across every physiographic zone of North America, Indigenous peoples left dense visual histories etched into volcanic basalt, painted beneath high sandstone alcoves, modeled into deep pitch-black cave mud, and scraped into desert gravels. Far from anonymous scratches, these sites connect directly to Numic, Puebloan, Fremont, Cochimí, Olmec, Maya, Niitsítapi, Anishinaabe, Cherokee, Makah, Tlingit and Mississippian traditions.",
+      "scope": "Catalogs 71 map-pinned sites across 8 regions using approximate archaeological intervals (Benson et al., Steelman et al., Pederson et al., Diaz-Granados et al., Simek et al., NPS, BLM and UNESCO dossiers).",
+      "map": {
+        "bounds": [
+          -160,
+          14,
+          -58,
+          63
+        ],
+        "scope": "North American Web Mercator reference map linking 22 representative sites from Alaska and Baja California to Nevada overhangs and Alabama dark-zone caves.",
+        "points": [
+          {
+            "id": "na-winnemucca",
+            "label": "Winnemucca Lake (NV)",
+            "coordinates": [
+              -119.35,
+              40.07
+            ],
+            "date": "c. 12,850–8550 BCE",
+            "description": "Oldest carbonate-dated rock art in North America.",
+            "sources": [
+              "https://doi.org/10.1016/j.jas.2013.06.022"
+            ]
+          },
+          {
+            "id": "na-grimes",
+            "label": "Grimes Point (NV)",
+            "coordinates": [
+              -118.64,
+              39.4
+            ],
+            "date": "c. 6000 BCE–1400 CE",
+            "description": "Lahontan shoreline basalt boulders & Hidden Cave corridor.",
+            "sources": [
+              "https://www.blm.gov/visit/grimes-point-archaeological-area"
+            ]
+          },
+          {
+            "id": "na-toquima",
+            "label": "Toquima Cave (NV)",
+            "coordinates": [
+              -116.79,
+              39.17
+            ],
+            "date": "c. 1500 BCE–1850 CE",
+            "description": "High-desert volcanic overhang polychrome pictographs.",
+            "sources": [
+              "https://www.blm.gov/visit/grimes-point-archaeological-area"
+            ]
+          },
+          {
+            "id": "na-vof",
+            "label": "Valley of Fire & Sloan (NV)",
+            "coordinates": [
+              -114.54,
+              36.44
+            ],
+            "date": "c. 2500 BCE–1850 CE",
+            "description": "Aztec sandstone & basalt canyon overhangs near Vegas Basin.",
+            "sources": [
+              "https://www.blm.gov/visit/grimes-point-archaeological-area"
+            ]
+          },
+          {
+            "id": "na-coso",
+            "label": "Coso Range (CA)",
+            "coordinates": [
+              -117.64,
+              35.91
+            ],
+            "date": "c. 3500 BCE–1700 CE",
+            "description": ">100,000 bighorn sheep & shaman petroglyphs.",
+            "sources": [
+              "https://doi.org/10.1016/j.jas.2009.08.010"
+            ]
+          },
+          {
+            "id": "na-chumash",
+            "label": "Chumash Painted Cave (CA)",
+            "coordinates": [
+              -119.79,
+              34.5
+            ],
+            "date": "c. 1000–1800 CE",
+            "description": "Polychrome sandstone grotto cosmic mandalas.",
+            "sources": [
+              "https://www.blm.gov/visit/grimes-point-archaeological-area"
+            ]
+          },
+          {
+            "id": "na-blythe",
+            "label": "Blythe Intaglios (CA)",
+            "coordinates": [
+              -114.53,
+              33.8
+            ],
+            "date": "c. 1000 BCE–1850 CE",
+            "description": "Giant Lower Colorado gravel-scraped earth geoglyphs.",
+            "sources": [
+              "https://www.blm.gov/visit/grimes-point-archaeological-area"
+            ]
+          },
+          {
+            "id": "na-horseshoe",
+            "label": "Horseshoe Canyon Great Gallery (UT)",
+            "coordinates": [
+              -110.21,
+              38.45
+            ],
+            "date": "c. 1000 BCE–1100 CE",
+            "description": "Spectral Barrier Canyon figures under smooth sandstone cliffs.",
+            "sources": [
+              "https://doi.org/10.1073/pnas.1405402111"
+            ]
+          },
+          {
+            "id": "na-ninemile",
+            "label": "Nine Mile & Newspaper Rock (UT)",
+            "coordinates": [
+              -110.27,
+              39.77
+            ],
+            "date": "c. 100 BCE–1850 CE",
+            "description": "Fremont granary-wall hunting scenes & Bears Ears palimpsests.",
+            "sources": [
+              "https://doi.org/10.1073/pnas.1405402111"
+            ]
+          },
+          {
+            "id": "na-chelly",
+            "label": "Canyon de Chelly (AZ)",
+            "coordinates": [
+              -109.47,
+              36.14
+            ],
+            "date": "c. 500 BCE–1860 CE",
+            "description": "Basketmaker, Pueblo & Diné cliff alcove paintings.",
+            "sources": [
+              "https://doi.org/10.1073/pnas.1405402111"
+            ]
+          },
+          {
+            "id": "na-petr",
+            "label": "Petroglyph NM & Three Rivers (NM)",
+            "coordinates": [
+              -106.71,
+              35.14
+            ],
+            "date": "c. 900–1680 CE",
+            "description": ">45,000 Rio Grande & Jornada Mogollon volcanic basalt glyphs.",
+            "sources": [
+              "https://www.blm.gov/visit/grimes-point-archaeological-area"
+            ]
+          },
+          {
+            "id": "na-whiteshaman",
+            "label": "White Shaman & Seminole (TX)",
+            "coordinates": [
+              -101.55,
+              29.7
+            ],
+            "date": "c. 3700 BCE–900 CE",
+            "description": "Direct AMS-dated 4,000-year Lower Pecos polychrome murals.",
+            "sources": [
+              "https://doi.org/10.1126/sciadv.adx7205"
+            ]
+          },
+          {
+            "id": "na-wos",
+            "label": "Writing-on-Stone / Áísínai'pi (AB)",
+            "coordinates": [
+              -111.63,
+              49.08
+            ],
+            "date": "c. 1000 BCE–1880 CE",
+            "description": "UNESCO Blackfoot sacred Milk River sandstone hoodoos.",
+            "sources": [
+              "https://whc.unesco.org/en/list/1597/"
+            ]
+          },
+          {
+            "id": "na-jeffers",
+            "label": "Jeffers Petroglyphs (MN)",
+            "coordinates": [
+              -95.05,
+              44.07
+            ],
+            "date": "c. 5000 BCE–1750 CE",
+            "description": ">5,000 carvings on glacially smoothed Sioux quartzite.",
+            "sources": [
+              "https://whc.unesco.org/en/list/1597/"
+            ]
+          },
+          {
+            "id": "na-wrangell",
+            "label": "Petroglyph Beach & Tuxedni (AK)",
+            "coordinates": [
+              -132.39,
+              56.48
+            ],
+            "date": "c. 1000 BCE–1850 CE",
+            "description": "Tlingit tidal crest boulders & Alutiiq-Dena'ina fjords.",
+            "sources": [
+              "https://whc.unesco.org/en/list/1597/"
+            ]
+          },
+          {
+            "id": "na-sierra-baja",
+            "label": "Sierra de San Francisco (BCS)",
+            "coordinates": [
+              -113.09,
+              27.55
+            ],
+            "date": "c. 5500 BCE–1500 CE",
+            "description": "UNESCO Great Mural giant bicolored canyon paintings.",
+            "sources": [
+              "https://doi.org/10.69978/rar.v39i2.253",
+              "https://whc.unesco.org/en/list/714/"
+            ]
+          },
+          {
+            "id": "na-oxtotitlan",
+            "label": "Oxtotitlán & Juxtlahuaca Caves (MX)",
+            "coordinates": [
+              -99.18,
+              17.64
+            ],
+            "date": "c. 900–500 BCE",
+            "description": "Oldest Mesoamerican Olmec polychrome cave murals.",
+            "sources": [
+              "https://archive.org/details/olmecpaintingsof0000grov"
+            ]
+          },
+          {
+            "id": "na-agawa",
+            "label": "Agawa Rock & Peterborough (ON)",
+            "coordinates": [
+              -84.62,
+              47.37
+            ],
+            "date": "c. 900–1850 CE",
+            "description": "Anishinaabe Superior red ochre cliffs & marble carvings.",
+            "sources": [
+              "https://whc.unesco.org/en/list/1597/"
+            ]
+          },
+          {
+            "id": "na-picture-cave",
+            "label": "Picture Cave (MO)",
+            "coordinates": [
+              -91.22,
+              38.79
+            ],
+            "date": "c. 950–1050 CE",
+            "description": "AMS charcoal-dated Cahokia-era dark-zone paintings.",
+            "sources": [
+              "https://doi.org/10.2307/2694246"
+            ]
+          },
+          {
+            "id": "na-19th-cave",
+            "label": "19th Unnamed & Mud Glyph Caves (AL/TN)",
+            "coordinates": [
+              -86.1,
+              34.65
+            ],
+            "date": "c. 600–1350 CE",
+            "description": "Woodland–Mississippian deep karst clay glyphs revealed via 3D photogrammetry.",
+            "sources": [
+              "https://doi.org/10.15184/aqy.2022.24"
+            ]
+          },
+          {
+            "id": "na-judaculla",
+            "label": "Judaculla Rock (NC)",
+            "coordinates": [
+              -83.14,
+              35.3
+            ],
+            "date": "c. 1000 BCE–1700 CE",
+            "description": "Cherokee sacred carvings across an Archaic soapstone quarry boulder.",
+            "sources": [
+              "https://doi.org/10.15184/aqy.2022.24"
+            ]
+          },
+          {
+            "id": "na-taino",
+            "label": "Cueva del Indio & Caguana (PR)",
+            "coordinates": [
+              -66.62,
+              18.49
+            ],
+            "date": "c. 600–1500 CE",
+            "description": "Taíno coastal karst sea-cave and ceremonial batey carvings.",
+            "sources": [
+              "https://whc.unesco.org/en/list/714/"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "Nevada Overhangs & Great Basin Horizons",
+          "paragraphs": [
+            {
+              "text": "Starting along receding Lake Lahontan shorelines at Winnemucca Lake (~14,800–10,500 cal BP) and continuing through Grimes Point, Toquima Cave, Lagomarsino Canyon, Hickison Summit, Pahranagat Valley, Sloan Canyon, Valley of Fire and Gold Butte, Great Basin artists used intimate volcanic tuff overhangs, basalt talus ridges and Aztec sandstone seams overlooking scarce mountain springs.",
+              "sources": [
+                "https://doi.org/10.1016/j.jas.2013.06.022",
+                "https://www.blm.gov/visit/grimes-point-archaeological-area",
+                "https://doi.org/10.1016/j.jas.2009.08.010"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Regional Styles from Baja Caverns to Dark-Zone Caves",
+          "paragraphs": [
+            {
+              "text": "Farther east and south, artists shifted media dramatically with geology: glowing polychrome hematite, gypsum and black mineral paint across Chumash, Lower Pecos and Baja California canyon overhangs; monumental earth-scraped intaglios along Lower Colorado desert terraces; red iron-oxide Mishipeshu cliffs painted from canoes across the Canadian Shield; and deep underground Mississippian clay drawings lit solely by burning rivercane torches in Tennessee, Missouri and Alabama karst.",
+              "sources": [
+                "https://doi.org/10.1126/sciadv.adx7205",
+                "https://doi.org/10.69978/rar.v39i2.253",
+                "https://doi.org/10.2307/2694246",
+                "https://doi.org/10.15184/aqy.2022.24"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Cultural Attributions Across North America",
+          "paragraphs": [
+            {
+              "text": "In the main #explore map (filterable under 'Rock art & visual records'), all 71 newly added North American rock-art entries carry explicit attribution to their documented Indigenous makers and heritage traditions while honestly retaining approximate intervals.",
+              "sources": [
+                "https://whc.unesco.org/en/list/1597/",
+                "https://archive.org/details/olmecpaintingsof0000grov"
+              ]
+            }
+          ]
+        }
+      ],
+      "relatedGuideIds": [
+        "world-rock-art-in-toto",
+        "world-africa-middle-east-art-habitations",
+        "world-origin-stories-americas",
+        "world-everyday-writing"
+      ],
+      "sources": [
+        {
+          "url": "https://doi.org/10.1016/j.jas.2013.06.022",
+          "title": "Benson et al. (2013) · Winnemucca Lake Subbasin Petroglyphs, Nevada (JAS 40:4466)"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.jas.2009.08.010",
+          "title": "Garfinkel et al. (2010) · Bighorn Hunting and Rock Art in the Coso Range (JAS 37:42)"
+        },
+        {
+          "url": "https://doi.org/10.1073/pnas.1405402111",
+          "title": "Pederson et al. (2014) · OSL Dating of Horseshoe Canyon Great Gallery (PNAS)"
+        },
+        {
+          "url": "https://doi.org/10.1126/sciadv.adx7205",
+          "title": "Steelman, Boyd & Dering (2025) · Direct AMS Chronology of Lower Pecos Cosmovision Murals (Science Advances)"
+        },
+        {
+          "url": "https://doi.org/10.69978/rar.v39i2.253",
+          "title": "Watchman, Gutiérrez & Hernández Llosas (2022) · Baja Gran Mural Radiocarbon Dating (Rock Art Research)"
+        },
+        {
+          "url": "https://doi.org/10.2307/2694246",
+          "title": "Diaz-Granados et al. (2001) · AMS Charcoal Dates for Picture Cave, Missouri (American Antiquity)"
+        },
+        {
+          "url": "https://doi.org/10.15184/aqy.2022.24",
+          "title": "Simek, Alvarez & Cressler (2022) · 3D Photogrammetry of Dark-Zone Mud Glyphs in 19th Unnamed Cave (Antiquity)"
+        },
+        {
+          "url": "https://whc.unesco.org/en/list/1597/",
+          "title": "UNESCO WHC #1597 · Writing-on-Stone / Áísínai'pi (Niitsítapi / Blackfoot)"
+        },
+        {
+          "url": "https://whc.unesco.org/en/list/714/",
+          "title": "UNESCO WHC #714 · Sierra de San Francisco Great Murals"
+        },
+        {
+          "url": "https://www.blm.gov/visit/grimes-point-archaeological-area",
+          "title": "BLM Nevada · Grimes Point, Toquima Cave, Sloan Canyon & Valley of Fire Overhangs"
+        },
+        {
+          "url": "https://archive.org/details/olmecpaintingsof0000grov",
+          "title": "David C. Grove (1970) · The Olmec Paintings of Oxtotitlan Cave, Guerrero (Dumbarton Oaks)"
+        }
+      ]
+    }
+  ]
+}

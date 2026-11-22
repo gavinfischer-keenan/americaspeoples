@@ -13,15 +13,15 @@ The same ten geographic bins are compared with locality IDs frozen at v0.25.0. M
 | Area | Dated localities before | Dated localities now |
 |---|---:|---:|
 | Idaho — southern / central | 0 | 4 |
-| Kiribati — Gilbert Islands | 0 | 4 |
+| Kiribati — Gilbert Islands | 0 | 5 |
 | Kiribati — Line Islands | 0 | 8 |
 | Kiribati — Phoenix Islands | 0 | 9 |
 | Louisiana — western coastal plain | 0 | 7 |
-| Montana — central / eastern plains | 1 | 4 |
+| Montana — central / eastern plains | 1 | 5 |
 | Nevada — central / eastern basins | 1 | 5 |
-| Nevada — southern desert | 1 | 6 |
-| Wyoming — eastern plains | 1 | 6 |
-| Wyoming — western mountains | 1 | 5 |
+| Nevada — southern desert | 1 | 10 |
+| Wyoming — eastern plains | 1 | 7 |
+| Wyoming — western mountains | 1 | 7 |
 
 ## People between the dates
 

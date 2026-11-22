@@ -140,10 +140,13 @@ test('Europe and Asia-Pacific extend systematically to 1900 CE with zero sparse 
  }
 
  const africaAll=data.evidence.filter(e=>inWorldScope(e,'africa'));
- assert.equal(africaAll.length,571,'Africa & Middle East reaches 571 evidence records including Australopithecus, pre-1 Ma, and Levantine Neanderthal sites');
- assert.ok(africaAll.filter(e=>e.end>-15000).length>=229,'Africa post-15,000 BCE coverage reaches at least 229 records');
- for(const needle of ['Wadi Kubbaniya','Afalou','Al-Khiday','Tadrart Acacus','Memphis','Thebes','Abu Simbel','Timgad','Kondoa','Twyfelfontein','Gazargamu','El Fasher']){
-  assert.ok(africaAll.some(e=>e.title.includes(needle)),`Missing Africa UNESCO/sparse-gap site: ${needle}`);
+ assert.equal(africaAll.length,636,'Africa & Middle East reaches 636 evidence records including early art & early habitations through 100 BCE');
+ assert.ok(africaAll.filter(e=>e.end>-15000).length>=294,'Africa post-15,000 BCE coverage reaches at least 294 records');
+ for(const needle of ['Wadi Kubbaniya','Afalou','Al-Khiday','Tadrart Acacus','Memphis','Thebes','Abu Simbel','Timgad','Kondoa','Twyfelfontein','Gazargamu','El Fasher','Qurta','Dabous Giraffes','Camel Site','Chongoni','Game Pass','Ain Mallaha','Ain Ghazal','Ebla','Mari','Dhar Oualata','Taruga','Qalʿat al-Bahrain']){
+  assert.ok(africaAll.some(e=>e.title.includes(needle)),`Missing Africa/Middle East site: ${needle}`);
+ }
+ for(const hab of data.evidence.filter(e=>e.id.startsWith('amea-hab-'))){
+  assert.ok(hab.end<=-100,`Early habitation ${hab.id} ends at or before 100 BCE (${hab.end})`);
  }
 
  const wins=[
@@ -203,7 +206,7 @@ test('Europe and Asia-Pacific extend systematically to 1900 CE with zero sparse 
  for(const needle of ['Korolevo','Penghu 1','Nesher Ramla','Swartkrans','Boodie Cave','Carpenter','Figueira Brava','Tolbor-16','Wolo Sege']){
   assert.ok(pre30k.some(e=>e.title.includes(needle)),`Missing key pre-30,000 BCE site: ${needle}`);
  }
- assert.equal(guides.length,107,'All 107 world guides validate cleanly');
+ assert.equal(guides.length,110,'All 110 world guides validate cleanly');
  for(const g of guides){
   assert.ok(g.sections.length>=3,`Guide ${g.id} has at least 3 sections`);
   assert.ok(g.relatedGuideIds&&g.relatedGuideIds.length>=1,`Guide ${g.id} includes Continue exploring cross-links`);

@@ -49,6 +49,7 @@ import cities from '../data/city-expansion-records.json';
 import conflicts from '../data/conflict-expansion-records.json';
 import northern from '../data/northern-expansion-records.json';
 import topicEvidence from '../data/topic-evidence-records.json';
+import northAmericaRockArt from '../data/north-america-rock-art-expansion-records.json';
 import { version as appVersion } from "../package.json";
 import type { Dataset, EvidenceRecord } from "./model";
 import { validateDataset } from "./validation";
@@ -97,6 +98,6 @@ export const dataset = publishedDataset(
     ...atlantic.records,
     ...localPlaces.records,
     ...hawaiiLocal.records, ...sharedContext.records,
-    ...remainingContext.records, ...remainingEvidence.records, ...worldGap.records, ...australasiaArchaeology.records, ...sovereigntyTopics.records, ...sovereigntyContext.records, ...communityTopics.records, ...communityContext.records, ...pacificTopics.records, ...pacificTopicContext.records, ...cities.records, ...conflicts.records, ...northern.records, ...topicEvidence.records,
+    ...remainingContext.records, ...remainingEvidence.records, ...worldGap.records, ...australasiaArchaeology.records, ...sovereigntyTopics.records, ...sovereigntyContext.records, ...communityTopics.records, ...communityContext.records, ...pacificTopics.records, ...pacificTopicContext.records, ...cities.records, ...conflicts.records, ...northern.records, ...topicEvidence.records, ...northAmericaRockArt.records,
   ] as EvidenceRecord[],
 );

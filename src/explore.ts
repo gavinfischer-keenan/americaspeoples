@@ -1,7 +1,7 @@
 import type { DisplayRecord } from './model';
 import type { MapScope } from './map-projection';
-export type ExploreCategory='all'|'places'|'connections'|'conflict'|'research'|'wrecks';
-export const exploreCategories:Record<ExploreCategory,string>={all:'Everything',places:'Places',connections:'Connections',conflict:'Conflict & violence',research:'Regional research',wrecks:'Shipwrecks'};
+export type ExploreCategory='all'|'rock-art'|'places'|'connections'|'conflict'|'research'|'wrecks';
+export const exploreCategories:Record<ExploreCategory,string>={all:'Everything','rock-art':'Rock art & visual records',places:'Places',connections:'Connections',conflict:'Conflict & violence',research:'Regional research',wrecks:'Shipwrecks'};
 export const regions:{id:string;name:string;center:[number,number];zoom:number;scope:MapScope}[]=[
  {id:'world',name:'Whole world',center:[15,18],zoom:1,scope:'world'},
  {id:'africa',name:'Africa & Levant',center:[22,5],zoom:2.2,scope:'world'},
@@ -22,10 +22,12 @@ export const regions:{id:string;name:string;center:[number,number];zoom:number;s
  {id:'andes',name:'Andes',center:[-73,-14],zoom:4,scope:'americas'},
  {id:'atlantic',name:'Atlantic ports',center:[-45,25],zoom:1.4,scope:'atlantic'},
 ];
+const ROCK_ART_RE=/\b(rock[\s-]?art|pictographs?|petroglyphs?|cave[\s-]?(?:art|paintings?|murals?)|mud[\s-]?glyphs?|geoglyphs?|intaglios?|painted[\s-]?(?:cave|shelter|rock|bluff|murals?)|ochre[\s-]?(?:engraving|workshop)|hand[\s-]?stencils?|rock[\s-]?(?:engravings?|paintings?)|lascaux|chauvet|altamira|blombos|apollo 11|bhimbetka|tassili|acacus|twyfelfontein|kondoa|laas geel|cueva de las manos|serra da capivara|chiribiquete|maros-pangkep|murujuga|tanum|gobustan|dabous|qurta|camel site|chongoni|drakensberg.*(?:art|paint|murals)|winnemucca lake)\b/i;
 export function exploreCategory(r:DisplayRecord):Exclude<ExploreCategory,'all'>{
  if(r.history?.kind==='wreck')return 'wrecks';
  if(['conflict','violence','forced-removal'].includes(r.overlay?.kind??''))return 'conflict';
  if(r.history?.kind==='migration'||r.history?.kind==='exchange'||r.type==='movement'||r.overlay?.kind==='trade')return 'connections';
+ if(r.id.startsWith('nara-')||r.id.startsWith('world:amea-art-')||ROCK_ART_RE.test(`${r.title} ${r.review.summary}`))return 'rock-art';
  if(r.overlay)return 'research';
  return 'places';
 }

@@ -165,7 +165,7 @@ export async function loadAttributionInputs(): Promise<AttributionInputs> {
       if (item.isDirectory()) { await walk(file); continue; }
       // Raw event pages are represented by their fetch manifest and cited records.
       if (!item.name.endsWith('.json') || (directory === 'data/physical-sources' && !/manifest|import/.test(item.name)) || ['site-guide-content.json','guide-enrichment.json','shipwreck-catalog-details.json'].includes(item.name) || directory === 'data/guide-media') continue;
-      if (file === 'data/world-guide-media.json' || (directory === 'data/atlases/europe' && (item.name.endsWith('-evidence.json') || item.name === 'boundaries.json'))) continue;
+      if (file === 'data/world-guide-media.json' || file === 'data/rock-art-gallery.json' || (directory === 'data/atlases/europe' && (item.name.endsWith('-evidence.json') || item.name === 'boundaries.json'))) continue;
       const reused = /(?:boundary-sources|terrain\/sources|guide-maps\/manifest|physical-sources\/fetch-manifest|rail-network\.json)/.test(file);
       const data = JSON.parse(await readFile(file,'utf8'));
       const license = file === 'data/guide-terrain/sources.json' ? 'Mixed elevation-source terms; preserve Mapzen/Tilezen and upstream credits in the linked attribution document.' : file === 'data/rail-network.json' ? data.provenance.license : undefined;
