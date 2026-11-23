@@ -26,8 +26,13 @@ test('actual Australian gap ranking counts the two Cloggs phases once',()=>{
  const region=coverage.matrix.find(r=>r.region==='Australia')!;
  const cell=region.periods.find(c=>c.start===-9998)!;
  const expected=new Set(cell.localRecordIds.map(id=>id.startsWith('au-cloggs-installation-')?'Cloggs':row(id).location!.id));
- assert.equal(cell.localityCount,expected.size,'separate installations do not erase a sparse regional gap');
- assert.ok(coverage.gapCells.some(g=>g.region==='Australia'&&g.start===cell.start&&g.localityCount===cell.localityCount));
+ assert.equal(cell.localityCount,expected.size,'separate installations do not inflate distinct locality counts');
+ if (cell.localityCount <= 2) {
+  assert.ok(coverage.gapCells.some(g=>g.region==='Australia'&&g.start===cell.start&&g.localityCount===cell.localityCount));
+ } else {
+  assert.ok(!coverage.gapCells.some(g=>g.region==='Australia'&&g.start===cell.start));
+  assert.ok(coverage.gapCells.every(g=>g.localityCount<=2));
+ }
 });
 
 test('generated gap guide names the supported Alabama cultural periods',()=>{

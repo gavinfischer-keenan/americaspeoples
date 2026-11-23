@@ -205,6 +205,60 @@
   color: #525D64;
   font-weight: 600;
 }
+.dive-region-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 22px;
+}
+.dive-region-jump button {
+  padding: 7px 13px;
+  border-radius: 999px;
+  border: 1px solid #8E99A0;
+  background: #F2F6F8;
+  color: #10171A;
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.dive-region-jump button:hover {
+  background: #DCEBDD;
+  border-color: #3B783D;
+}
+.dive-region-jump button:focus-visible {
+  outline: 3px solid #A63108;
+  outline-offset: 2px;
+}
+.dive-region-jump button span {
+  color: #244D26;
+  font-weight: 700;
+}
+.dive-region-group {
+  margin: 26px 0 34px;
+}
+.dive-region-group-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 16px;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #B4BEC4;
+}
+.dive-region-group-head h3 {
+  margin: 0;
+  font: 22px/1.2 Georgia, serif;
+  color: #10171A;
+}
+.dive-group-count {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #244D26;
+}
 .dive-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

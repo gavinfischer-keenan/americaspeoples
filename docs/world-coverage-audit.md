@@ -1,6 +1,6 @@
 # Where the map has gaps
 
-The current map contains **11,235 shared observations** and 73 focused topic observations. The audit does **not** find that blank regions were empty of people. It shows where this collection needs more dated local history.
+The current map contains **11,291 shared observations** and 73 focused topic observations. The audit does **not** find that blank regions were empty of people. It shows where this collection needs more dated local history.
 
 The preceding v0.24.0 campaign added **53 shared map records** about lower Central America, Brazil's Atlantic coast and the Solomon Islands–Vanuatu region, including three linked route views of local finds. See [the histories and source decisions](three-regional-gaps.html).
 
@@ -18,7 +18,7 @@ The v0.27.0 review selects **15 further regional gaps**, adds **70 shared eviden
 
 These are editorial priorities among many serious gaps. Rectangles overlap and sometimes include neighboring islands; individual places still need geographic checks. Counts measure collected evidence, not population or survey completeness.
 
-**Eastern Brazil now:** the detailed row contains 12 distinct dated localities in 501–1000 CE and 27 in 1001–1500 CE, compared with zero in both bins before the latest pass. Earlier Sernambetiba deposits remain dated before 501 CE. Southern coastal sites still do not substitute for evidence in the eastern rectangle.
+**Eastern Brazil now:** the detailed row contains 21 distinct dated localities in 501–1000 CE and 36 in 1001–1500 CE, compared with zero in both bins before the latest pass. Earlier Sernambetiba deposits remain dated before 501 CE. Southern coastal sites still do not substitute for evidence in the eastern rectangle.
 
 
 ## What the numbers measure
@@ -41,12 +41,12 @@ The immutable baseline is **v0.23.1: 2,531 total and 2,458 shared records**, bef
 | Caribbean | 0 | 7 → 10 | 10 → 16 | 20 → 31 | 20 → 33 | 53 → 86 | 21 → 27 | 31 → 62 | 15 |
 | Northern South America | 2 | 6 → 10 | 7 → 13 | 17 → 31 | 11 → 22 | 20 → 36 | 21 → 23 | 22 → 32 | 12 |
 | Andes | 4 → 7 | 5 → 12 | 29 → 34 | 33 → 41 | 52 → 56 | 40 → 46 | 8 | 19 → 22 | 29 |
-| Amazon interior | 2 → 5 | 8 → 12 | 3 → 4 | 12 → 18 | 28 → 34 | 23 → 28 | 18 | 11 → 12 | 22 |
-| Brazil Atlantic | 0 | 0 → 5 | 2 → 12 | 1 → 21 | 1 → 29 | 12 → 23 | 6 → 7 | 15 → 25 | 2 |
+| Amazon interior | 2 → 6 | 8 → 18 | 3 → 11 | 12 → 25 | 28 → 41 | 23 → 35 | 18 → 24 | 11 → 18 | 22 |
+| Brazil Atlantic | 0 → 4 | 0 → 23 | 2 → 27 | 1 → 34 | 1 → 41 | 12 → 35 | 6 → 13 | 15 → 31 | 2 |
 | Southern Cone | 10 → 12 | 15 → 24 | 2 → 8 | 2 → 6 | 7 → 11 | 17 → 26 | 15 → 23 | 19 → 146 | 7 |
-| Australia | 9 | 6 | 3 → 5 | 3 → 5 | 7 → 10 | 5 → 11 | 5 → 10 | 59 → 205 | 0 |
+| Australia | 9 → 25 | 6 → 31 | 3 → 32 | 3 → 28 | 7 → 33 | 5 → 34 | 5 → 33 | 59 → 228 | 0 |
 | Aotearoa New Zealand | 0 | 0 | 0 | 0 | 4 → 5 | 4 → 5 | 3 → 4 | 9 → 23 | 0 |
-| New Guinea / Island Melanesia | 4 → 5 | 4 | 16 → 28 | 4 → 12 | 8 → 19 | 8 → 14 | 6 → 10 | 12 → 20 | 0 |
+| New Guinea / Island Melanesia | 4 → 6 | 4 → 7 | 16 → 31 | 4 → 15 | 8 → 22 | 8 → 17 | 6 → 13 | 12 → 23 | 0 |
 | Central/Eastern Polynesia | 0 | 0 | 5 | 4 → 6 | 25 → 37 | 6 → 10 | 7 → 10 | 7 → 22 | 1 |
 | Hawaii | 0 | 0 | 0 | 2 | 10 | 3 | 14 → 19 | 21 → 22 | 4 |
 

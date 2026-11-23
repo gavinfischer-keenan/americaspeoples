@@ -218,7 +218,7 @@ export class MapPanels {
         entry.content = content;
         button.innerHTML = context
           ? `<div><strong>${esc(r.title)}</strong><span>${esc(r.time.original)}</span></div>`
-          : `<i style="background:${r.culture.color}"></i><div><strong>${esc(r.title)}${isDisputed(r) ? `<span class="asterisk dispute-${disputeLevel(r)}" title="${esc(disputeLabel(r))}"> *</span>` : ""}</strong><span>${esc(r.culture.name)} · ${esc(readerTimeDisplay(r))}${guideForRecord(r.id) ? " · ◈ Site guide available" : ""}${isModeledRecord(r) ? " · Modeled / schematic" : ""}</span></div>`;
+          : `<i style="background:${r.culture.color}"></i><div><strong>${esc(r.title)}${isDisputed(r) ? `<span class="asterisk dispute-${disputeLevel(r)}" title="${esc(disputeLabel(r))}"> *</span>` : ""}</strong><span>${esc(r.culture.name)} · ${esc(readerTimeDisplay(r))}${guideForRecord(r.id) ? " · ◈ Site guide available" : ""}${isModeledRecord(r) ? " · Regional model" : ""}</span></div>`;
       }
       const past=!context&&!exploring&&historyState(r,year)!=="active";
       button.classList.toggle("historical-card",past);

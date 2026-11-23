@@ -5,7 +5,7 @@ export const exploreCategories:Record<ExploreCategory,string>={all:'Everything',
 export const regions:{id:string;name:string;center:[number,number];zoom:number;scope:MapScope}[]=[
  {id:'world',name:'Whole world',center:[15,18],zoom:1,scope:'world'},
  {id:'africa',name:'Africa & Levant',center:[22,5],zoom:2.2,scope:'world'},
- {id:'europe',name:'Europe & Mediterranean',center:[12,48],zoom:3.2,scope:'world'},
+ {id:'europe',name:'Europe & Mediterranean',center:[14,52],zoom:4.8,scope:'world'},
  {id:'asia-region',name:'Asia',center:[95,28],zoom:2.2,scope:'world'},
  {id:'pacific',name:'Pacific Ocean',center:[-155,-12],zoom:1.35,scope:'pacific'},
  {id:'asia',name:'Mainland & Island Southeast Asia',center:[118,8],zoom:3,scope:'pacific'},

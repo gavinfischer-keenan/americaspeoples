@@ -16,6 +16,9 @@ import {displayedVoyageStops,sampleMapVoyage,MOVIE_END_DATE} from './shared-movi
 import {loadGlobalIce,currentGlobalIce,globalIceAtYear} from './global-ice';
 import './europe-page.css';
 
+const EUROPE_HOME_CENTER: [number, number] = [14, 52];
+const EUROPE_HOME_ZOOM = 4.8;
+
 interface EuropePayload {evidence:EuropeData;boundaries:PoliticalBoundary[];boundarySources:BoundarySource[];voyages:Voyage[];voyageSources:{id:string;title:string;url:string}[]}
 let loading:Promise<EuropePayload>|undefined;
 export function loadEurope():Promise<EuropePayload>{
@@ -39,19 +42,19 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
  host.innerHTML=`<section class="europe-atlas" aria-label="Europe history movie">
   <header class="europe-heading"><div><p class="eyebrow">EUROPE &amp; MEDITERRANEAN</p><h1>Places, kingdoms and connections</h1></div><nav class="subhead-links" aria-label="Related views"><a href="#origins/europe">Earlier human family &amp; dispersals</a><a href="sites/world-human-family.html">Branching human family guide ↗</a></nav></header><div id="europe-navigation"></div>
   <div class="europe-layout"><aside class="europe-reader" aria-label="Europe evidence and layers">
-   <p class="europe-scope">From the earliest Pleistocene sites to 1900 CE across continental, Mediterranean, British, Nordic and Arctic Europe. Selected sourced evidence, with gaps still to fill.</p>
+   <p class="europe-scope">From the earliest Pleistocene sites to 1900 CE across continental, Mediterranean, British, Nordic, and Arctic Europe.</p>
    <div class="europe-filters"><label>Region<select id="europe-region"><option value="all">All European regions</option>${data.regions.map(r=>`<option value="${esc(r.id)}">${esc(r.title)}</option>`).join('')}</select></label>
    <label>Show<select id="europe-category"><option value="all">All kinds of evidence</option>${Object.entries(europeCategories).map(([id,title])=>`<option value="${id}">${title}</option>`).join('')}</select></label>
    <label>Find a place or connection<input id="europe-search" type="search" placeholder="Paris, Rome, Madrid, Bergen, railway…" value="${esc(state.query)}"></label></div>
-   <details class="europe-layers"><summary>Map layers &amp; how to read them</summary>
+   <details class="europe-layers"><summary>Map layers &amp; symbols</summary>
    ${(['past','borders','trade','road','rail','interpolate','warfare','voyages','ice'] as const).map(id=>`<label><input type="checkbox" data-europe-layer="${id}"${checked(state[id])}> ${{past:'Earlier places',borders:'Dated political territories',trade:'Trade connections',road:'Roads',rail:'Railways',interpolate:'Interpolate comparable town populations',warfare:'Raids, battles & warfare',voyages:'Voyages & migrations',ice:'Quaternary & deglacial ice sheets'}[id]}</label>`).join('')}
-   <p>Territories follow their cited dates. Dotted or dashed outlines mark approximate extent or claims; shared crowns do not imply uniform control.</p><p><span class="network-key trade"></span> Trade · <span class="network-key road"></span> Road · <span class="network-key rail"></span> Rail. Connections are schematic unless the source specifies a mapped trace. Opening dates alone do not prove continuous service.</p><p>Town dots use a logarithmic size scale for dated resident estimates where available. Hatched dots mean population unknown. Comparable census series may interpolate between observations when enabled. Interpolation is labeled; counts are never extrapolated.</p><p>Subdued earlier places are historical context, not evidence of continuing occupation. Regional filters use modern geographic names.</p></details>
+   <p>Solid outlines show documented territories and dashed outlines mark approximate extent. Color key: <span class="network-key trade"></span> Trade · <span class="network-key road"></span> Road · <span class="network-key rail"></span> Rail. Town dot size uses a logarithmic population scale when dated estimates exist (hatched = unknown); dimmed markers indicate earlier sites.</p></details>
    <div class="europe-density-slot"></div><section id="europe-details" aria-label="Selected place"></section>
    <details class="europe-now" open><summary>What is here at this time</summary><p id="europe-date-note"></p><div id="europe-list"></div></details>
    <details><summary>Connected expeditions</summary><div id="europe-voyages"></div></details>
    <details><summary>Roads and rails recorded by this date</summary><div id="europe-built-networks"></div></details><details class="europe-territories"><summary>Territories at this date &amp; sources</summary><div id="europe-boundary-list"></div></details>
    <details><summary>Regional guides</summary><div id="europe-guide-list"></div></details>
-  </aside><div class="europe-map-wrap"><div id="europe-map"></div><div class="europe-map-status"><strong id="europe-map-date"></strong><span id="europe-map-headline">Modern coastlines for orientation</span></div><button id="europe-home" class="europe-home">Europe view</button></div></div>
+  </aside><div class="europe-map-wrap"><div id="europe-map"></div><div class="europe-map-status"><strong id="europe-map-date"></strong><span id="europe-map-headline">Choose an era or click any site</span></div><button id="europe-home" class="europe-home">Europe view</button></div></div>
   <footer class="europe-timeline"><div class="europe-transport"><button id="europe-play">Play history</button><button id="europe-previous" aria-label="Previous dated change">◀</button><button id="europe-next" aria-label="Next dated change">▶</button><label>Pace<select id="europe-rate"><option value="1">Steady</option><option value="2">2×</option><option value="4">4×</option></select></label><label>Jump to<select id="europe-era"><option value="">Choose a period…</option>${[[first,'Earliest evidence'],[-45000,'Upper Paleolithic art'],[-6000,'Early farmers & megaliths'],[-500,'Classical Mediterranean & Celts'],[100,'Roman Empire'],[800,'Carolingians & Viking age'],[1250,'Medieval kingdoms & trade'],[1500,'Renaissance & Atlantic age'],[1789,'Revolutions & industry'],[1850,'Railway age'],[1900,'1900']].filter(([y])=>Number(y)>=first).map(([y,t])=>`<option value="${y}">${t}</option>`).join('')}</select></label></div>
   <label class="europe-slider-label">Map year <output id="europe-year"></output><input id="europe-slider" type="range" min="0" max="1000000" step="1" aria-label="Europe map year"></label>
   <form id="europe-date-form"><label>Year<input id="europe-date" inputmode="numeric" aria-label="Europe year"></label><select id="europe-era-input" aria-label="Europe year era"><option>CE</option><option>BCE</option></select><button>Go</button><span id="europe-date-error" role="status"></span></form>
@@ -61,13 +64,13 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
  const map=new MapView(land as any,(rows:DisplayRecord[])=>{pause();const r=rows[0];if(r){state.selected=r.id;navigation.showFacts();renderDetails();map.setHighlighted(rows.map(r=>r.id));}},()=>{if(!disposed&&!drawing)renderList();});
  el('#europe-map').append(map.element);map.populationScale='log';map.namedRouteEndpoints=true;
  el('.europe-density-slot').append(map.densityOptions);
- map.onResetView=()=>{map.focusRegion([10,50],2.75,'world');renderList();};
+ map.onResetView=()=>{map.focusRegion(EUROPE_HOME_CENTER,EUROPE_HOME_ZOOM,'world');renderList();};
  map.element.querySelector('svg')?.setAttribute('aria-label','Europe history map. Use the evidence list for keyboard access.');
  map.context.boundaries=payload.boundaries;
  map.context.voyages=(payload.voyages??[]).map(v=>({...v,scope:'global'}));
  map.context.options={boundaries:state.borders,rails:false,voyages:state.voyages,voyageId:'',voyageDate:null};
  const stopLand=watchDetailedLand(detail=>map.setDetailedLand(detail));
- if(state.camera)map.restoreCamera(state.camera);else map.focusRegion([10,50],2.75,'world');
+ if(state.camera)map.restoreCamera(state.camera);else map.focusRegion(EUROPE_HOME_CENTER,EUROPE_HOME_ZOOM,'world');
  el<HTMLSelectElement>('#europe-region').value=state.region;el<HTMLSelectElement>('#europe-category').value=state.category;
  function pause(){playing=false;elapsed=0;segmentTarget=undefined;el('.europe-atlas').classList.remove('is-playing');el('#europe-play').textContent='Play history';map.setInteraction({mode:'movie',playing:false,onPause:pause});}
  function refilter(){
@@ -116,7 +119,7 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
   el('#europe-year').textContent=formatYear(state.year);el('#europe-map-date').textContent=state.clock>0&&state.clock!==state.year?voyageDate(state.clock):formatYear(state.year);
   const activeHere=currentEntries();
   const headlines=[...activeHere].sort((a,b)=>(entries.get(a.id)!.start===state.year?0:1)-(entries.get(b.id)!.start===state.year?0:1)).slice(0,2).map(r=>r.title);
-  el('#europe-map-headline').textContent=headlines.length?headlines.join(' · '):'Modern coastlines for orientation';
+  el('#europe-map-headline').textContent=headlines.length?headlines.join(' · '):(activeHere.length?`${activeHere.length} sites in this era`:'Drag the timeline to explore another era');
   el<HTMLInputElement>('#europe-slider').value=String(Math.round(timelinePosition(state.year,first,END_YEAR,'log')*1_000_000));el('#europe-slider').setAttribute('aria-valuetext',formatYear(state.year));
   el<HTMLInputElement>('#europe-date').value=String(state.year<=0?1-state.year:state.year);el<HTMLSelectElement>('#europe-era-input').value=state.year<=0?'BCE':'CE';
   map.setHighlighted(state.selected?[state.selected]:[]);renderDetails();renderList();drawing=false;
@@ -129,11 +132,11 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
  el('#europe-era').addEventListener('change',e=>{const value=(e.target as HTMLSelectElement).value;if(value){pause();seek(Number(value));}});
  el('#europe-slider').addEventListener('input',e=>{pause();seek(timelineYear(Number((e.target as HTMLInputElement).value)/1_000_000,first,END_YEAR,'log'));});
  el('#europe-date-form').addEventListener('submit',e=>{e.preventDefault();try{const y=parseYear(el<HTMLInputElement>('#europe-date').value,el<HTMLSelectElement>('#europe-era-input').value);if(y<first||y>END_YEAR)throw Error(`Choose a year from ${formatYear(first)} through 1900 CE.`);el('#europe-date-error').textContent='';pause();seek(y);}catch(error){el('#europe-date-error').textContent=(error as Error).message;}});
- el('#europe-region').addEventListener('change',e=>{pause();state.region=(e.target as HTMLSelectElement).value;refilter();if(state.region==='all')map.focusRegion([10,50],2.75,'world');else{const points=filtered.filter(r=>!r.overlay);if(points.length)map.focusRecords(points);}render();});
+ el('#europe-region').addEventListener('change',e=>{pause();state.region=(e.target as HTMLSelectElement).value;refilter();if(state.region==='all')map.focusRegion(EUROPE_HOME_CENTER,EUROPE_HOME_ZOOM,'world');else{const points=filtered.filter(r=>!r.overlay);if(points.length)map.focusRecords(points);}render();});
  el('#europe-category').addEventListener('change',e=>{pause();state.category=(e.target as HTMLSelectElement).value;refilter();render();});
  el('#europe-search').addEventListener('input',e=>{pause();state.query=(e.target as HTMLInputElement).value;refilter();render();});
  host.querySelectorAll<HTMLInputElement>('[data-europe-layer]').forEach(input=>input.addEventListener('change',()=>{state[input.dataset.europeLayer as 'past'|'borders'|'trade'|'road'|'rail'|'interpolate'|'warfare'|'voyages'|'ice']=input.checked;refilter();render();}));
- el('#europe-home').addEventListener('click',()=>{map.focusRegion([10,50],2.75,'world');renderList();});
+ el('#europe-home').addEventListener('click',()=>{map.focusRegion(EUROPE_HOME_CENTER,EUROPE_HOME_ZOOM,'world');renderList();});
  el('#europe-details').addEventListener('click',e=>{
   const button=(e.target as Element).closest<HTMLButtonElement>('[data-europe-route-focus]');
   if(!button)return;

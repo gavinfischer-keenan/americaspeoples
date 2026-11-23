@@ -2,7 +2,7 @@ import {MAX_WORKBOOK_BYTES} from './bulk-schema';
 import {sharedContextHTML} from './topic-context';
 import { recordsForView, retainCurrentSelection, canSelect, type AtlasMode } from "./atlas-view";
 import { effectiveClimateHidden } from "./physical-rules";
-import {deepDiveIndexHTML,deepDives,diveCardHTML} from './deep-dives';
+import {deepDiveIndexHTML,deepDives,diveGroupedHTML} from './deep-dives';
 import './deep-dives.css';
 import "./styles.css";
 import "./atlas-ui.css";
@@ -1330,9 +1330,23 @@ function mountDiveFilters() {
     resultsHost.innerHTML =
       `<p class="dive-count">${matches.length} matching deep dive${matches.length === 1 ? "" : "s"}</p>` +
       (matches.length
-        ? `<div class="dive-grid">${matches.map(diveCardHTML).join("")}</div>`
+        ? diveGroupedHTML(matches, selectedRegion !== "all" ? "category" : "region")
         : '<p class="fine">No deep dives match this filter. Try clearing your search or selecting All regions.</p>');
+    wireJumpButtons();
   };
+  const wireJumpButtons = () => {
+    for (const btn of main.querySelectorAll<HTMLButtonElement>("[data-dive-jump]")) {
+      btn.onclick = () => {
+        const targetId = btn.dataset.diveJump;
+        if (!targetId) return;
+        const container = resultsHost.hidden ? defaultListing : resultsHost;
+        container
+          .querySelector<HTMLElement>(`.dive-region-group[data-dive-group="${targetId}"]`)
+          ?.scrollIntoView({ behavior: "smooth", block: "start" });
+      };
+    }
+  };
+  wireJumpButtons();
   searchInput.addEventListener("input", update);
   for (const chip of chips) {
     chip.addEventListener("click", () => {
