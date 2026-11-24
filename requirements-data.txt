@@ -1,0 +1,16 @@
+# Python packages for the data-preparation scripts in scripts/*.py
+# (boundary, terrain, rail, shipwreck and paleoclimate preparation).
+#
+# The server (server/*.py) and `npm run build` / `npm run test:api` use only the
+# Python standard library and do not need anything from this file.
+#
+# These are lower bounds, not tested exact pins: the versions used to produce
+# the committed data were not recorded. When you next regenerate data, replace
+# them with the exact versions from `pip freeze`.
+shapely>=2.0
+pyshp>=2.3
+numpy>=1.26
+Pillow>=10.0
+scipy>=1.11
+pyproj>=3.6
+requests>=2.31

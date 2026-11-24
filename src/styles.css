@@ -1,3 +1,4 @@
+@import "./tokens.css";
 :root {
   color-scheme: dark;
   --bg: #101d24;
@@ -245,10 +246,11 @@ pre {
   font-size: 38px;
   color: var(--accent);
 }
-.brand h1 {
-  font-family: Georgia, serif;
+.brand .brand-title {
+  display: block;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.15;
   margin: 0;
 }
@@ -734,7 +736,7 @@ main:focus {
 }
 .table-filters label {
   font-size: 11px;
-  color: #cfd6da;
+  color: var(--slate-200);
   display: grid;
   gap: 4px;
 }
@@ -749,9 +751,9 @@ main:focus {
 .table-filters select,
 .table-filters input[type='search'] {
   font-size: 12px;
-  background: #f2f6f8;
-  color: #10171a;
-  border: 1px solid #8e99a0;
+  background: var(--mist);
+  color: var(--night);
+  border: 1px solid var(--slate-400);
   border-radius: 4px;
   padding: 6px 8px;
 }
@@ -762,22 +764,22 @@ main:focus {
   align-items: end;
   margin: 14px 0;
   padding: 14px 0;
-  border-block: 1px solid #525d64;
+  border-block: 1px solid var(--slate-600);
 }
 .hazard-filters label {
   display: flex;
   flex-direction: column;
   gap: 4px;
   font-size: 11px;
-  color: #cfd6da;
+  color: var(--slate-200);
   min-width: 210px;
 }
 .hazard-filters input,
 .hazard-filters select {
   font-size: 12px;
-  background: #f2f6f8;
-  color: #10171a;
-  border: 1px solid #8e99a0;
+  background: var(--mist);
+  color: var(--night);
+  border: 1px solid var(--slate-400);
   border-radius: 4px;
   padding: 6px 8px;
 }
@@ -1115,7 +1117,7 @@ dd:last-child {
   .brand {
     width: 100%;
   }
-  .brand h1 {
+  .brand .brand-title {
     font-size: 22px;
   }
   .brand-mark {
@@ -1670,38 +1672,38 @@ body.exploring .shell{padding-bottom:0}body.exploring .atlas-layout{height:calc(
 /* Atlas destinations share navigation; future regions have a separate empty map. */
 .topbar .atlas-switcher{position:relative;flex:0 0 auto;margin-left:auto}
 @media(min-width:761px) and (max-width:1000px){header.topbar{height:auto;min-height:46px;flex-wrap:wrap;padding:8px 16px;gap:6px 14px}header.topbar .brand{min-width:0;flex:1 1 auto}header.topbar>nav[aria-label="Main navigation"]{order:2;flex:1 0 100%;height:auto;flex-wrap:wrap;gap:4px;margin:0}.topbar>.header-about{display:none}}
-.atlas-switcher>summary{list-style:none;cursor:pointer;color:#f2f6f8;border:1px solid #525d64;border-radius:5px;padding:5px 11px;font-size:12px;font-weight:700;white-space:nowrap;background:#172227}
+.atlas-switcher>summary{list-style:none;cursor:pointer;color:var(--mist);border:1px solid var(--slate-600);border-radius:5px;padding:5px 11px;font-size:12px;font-weight:700;white-space:nowrap;background:#172227}
 .atlas-switcher>summary::-webkit-details-marker{display:none}
-.atlas-switcher>summary span{margin-left:8px;color:#97c798}
-.atlas-switcher>summary:hover,.atlas-switcher[open]>summary{background:#dcebdd;color:#10171a;border-color:#72b273}
-.atlas-switcher>summary:hover span,.atlas-switcher[open]>summary span{color:#244d26}
-.atlas-switcher>summary:focus-visible{outline:2px solid #fa742a;outline-offset:2px}
-.topbar .atlas-destinations{position:absolute;right:0;top:calc(100% + 8px);display:flex;flex-direction:column;align-items:stretch;width:300px;max-width:calc(100vw - 28px);height:auto;margin:0;padding:8px;gap:4px;background:#10171a;border:1px solid #8e99a0;border-radius:8px;box-shadow:0 14px 35px #000a;z-index:100}
-.topbar .atlas-destinations a{display:flex;flex-direction:column;align-items:flex-start;gap:2px;white-space:normal;border:0;padding:10px 12px;border-radius:6px;color:#f2f6f8;font-size:13px;line-height:1.35;text-decoration:none}
-.topbar .atlas-destinations a:hover{background:#dcebdd;color:#10171a}
-.topbar .atlas-destinations a:hover small{color:#3b783d}
-.topbar .atlas-destinations a small{color:#b4bec4;font-size:11px}
-.topbar .atlas-destinations a[aria-current="page"]{background:#569e56;color:#10171a;font-weight:700}
-.topbar .atlas-destinations a[aria-current="page"] small{color:#10171a}
+.atlas-switcher>summary span{margin-left:8px;color:var(--forest-300)}
+.atlas-switcher>summary:hover,.atlas-switcher[open]>summary{background:var(--forest-100);color:var(--night);border-color:var(--forest-400)}
+.atlas-switcher>summary:hover span,.atlas-switcher[open]>summary span{color:var(--forest-800)}
+.atlas-switcher>summary:focus-visible{outline:2px solid var(--ember-500);outline-offset:2px}
+.topbar .atlas-destinations{position:absolute;right:0;top:calc(100% + 8px);display:flex;flex-direction:column;align-items:stretch;width:300px;max-width:calc(100vw - 28px);height:auto;margin:0;padding:8px;gap:4px;background:var(--night);border:1px solid var(--slate-400);border-radius:8px;box-shadow:0 14px 35px #000a;z-index:100}
+.topbar .atlas-destinations a{display:flex;flex-direction:column;align-items:flex-start;gap:2px;white-space:normal;border:0;padding:10px 12px;border-radius:6px;color:var(--mist);font-size:13px;line-height:1.35;text-decoration:none}
+.topbar .atlas-destinations a:hover{background:var(--forest-100);color:var(--night)}
+.topbar .atlas-destinations a:hover small{color:var(--forest-600)}
+.topbar .atlas-destinations a small{color:var(--slate-300);font-size:11px}
+.topbar .atlas-destinations a[aria-current="page"]{background:var(--forest-500);color:var(--night);font-weight:700}
+.topbar .atlas-destinations a[aria-current="page"] small{color:var(--night)}
 @media(max-width:380px){.topbar nav[aria-label="Main navigation"] a{font-size:10.5px!important;padding:4px 6px!important}}
 body.atlas-preview-page .shell{padding:0 24px 32px}
 .atlas-preview{max-width:1250px;margin:0 auto;padding:35px 0 0}
 .atlas-preview-heading{display:flex;align-items:center;justify-content:space-between;gap:25px;margin-bottom:22px}
-.atlas-preview-heading .eyebrow{margin:0 0 8px;color:#97c798;letter-spacing:2px}
-.atlas-preview-heading h2{font-family:Georgia,serif;font-size:clamp(28px,3vw,42px);font-weight:400;line-height:1.15;margin:0;color:#f2f6f8}
-.atlas-preview-heading .back-link{margin:0;white-space:nowrap;font-size:13px;color:#97c798}
+.atlas-preview-heading .eyebrow{margin:0 0 8px;color:var(--forest-300);letter-spacing:2px}
+.atlas-preview-heading h2{font-family:Georgia,serif;font-size:clamp(28px,3vw,42px);font-weight:400;line-height:1.15;margin:0;color:var(--mist)}
+.atlas-preview-heading .back-link{margin:0;white-space:nowrap;font-size:13px;color:var(--forest-300)}
 .atlas-preview-figure{margin:0}
-.atlas-preview-map{position:relative;overflow:hidden;border:1px solid #525d64;border-radius:12px;background:#10171a}
+.atlas-preview-map{position:relative;overflow:hidden;border:1px solid var(--slate-600);border-radius:12px;background:var(--night)}
 .atlas-preview-map svg{display:block;width:100%;height:auto;max-height:70vh}
-.atlas-preview-ocean{fill:#10171a;stroke:#525d64;stroke-width:1}
-.atlas-preview-land{fill:#2e4840;stroke:#8e99a0;stroke-width:.6;vector-effect:non-scaling-stroke}
-.atlas-coming-soon{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);display:block;text-align:center;padding:20px 12px;font-size:clamp(32px,7.5vw,92px);font-weight:900;line-height:1;letter-spacing:.045em;color:#fa742a;background:#10171acc;text-shadow:0 3px 15px #0008}
-.atlas-preview-figure figcaption{padding-top:12px;font-size:11px;color:#b4bec4}
+.atlas-preview-ocean{fill:var(--night);stroke:var(--slate-600);stroke-width:1}
+.atlas-preview-land{fill:#2e4840;stroke:var(--slate-400);stroke-width:.6;vector-effect:non-scaling-stroke}
+.atlas-coming-soon{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);display:block;text-align:center;padding:20px 12px;font-size:clamp(32px,7.5vw,92px);font-weight:900;line-height:1;letter-spacing:.045em;color:var(--ember-500);background:#10171acc;text-shadow:0 3px 15px #0008}
+.atlas-preview-figure figcaption{padding-top:12px;font-size:11px;color:var(--slate-300)}
 @media(max-width:1100px){header.topbar{gap:18px}.topbar .atlas-switcher>summary{padding:8px 10px}.topbar nav[aria-label="Main navigation"] a{padding:9px 11px}}
 @media(max-width:760px){
   header.topbar{height:auto;min-height:54px;flex-wrap:wrap;gap:6px 10px;padding:8px 12px;align-content:flex-start}
   .topbar .brand{width:auto;flex:0 1 auto}
-  header.topbar .brand h1{display:block;font-size:clamp(14px,4vw,18px)}
+  header.topbar .brand .brand-title{display:block;font-size:clamp(14px,4vw,18px)}
   .topbar nav[aria-label="Main navigation"]{order:3;width:100%;height:auto;flex:1 0 100%;flex-wrap:wrap;overflow:visible;margin:0;justify-content:flex-start;gap:3px 4px}
   .topbar nav[aria-label="Main navigation"] a{font-size:11px;padding:5px 7px}
   .topbar .atlas-switcher{margin-left:auto}

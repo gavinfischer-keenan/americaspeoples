@@ -1,6 +1,8 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
+import { mergeWorldShards } from "../scripts/world-build";
+import { readEuropeData } from "../scripts/europe-build";
 import { worldGuides, relatedWorldGuidesFor } from "../src/world-guides";
 import { exploreRecords } from "../src/explore";
 import { adaptWorldDataForExplore, adaptEuropeDataForExplore } from "../src/explore-world";
@@ -10,9 +12,19 @@ import type { WorldData } from "../src/world-model";
 import type { EuropeData } from "../src/europe-data";
 import { dataset } from "../src/published-data";
 
-test("all World Deep Dives are reachable from map pins or related guide links", () => {
-  const world = JSON.parse(readFileSync("dist/world-catalogue.json", "utf8")) as WorldData;
-  const europe = JSON.parse(readFileSync("dist/europe-catalogue.json", "utf8")) as { evidence: EuropeData };
+// Assemble catalogues from source data with the build's own merge functions,
+// so these checks do not depend on a prior `npm run build` (dist/ is not in git).
+const worldCatalogue = (): WorldData =>
+  mergeWorldShards(
+    readdirSync("data/world")
+      .filter((n) => n.endsWith(".json"))
+      .sort()
+      .map((n) => JSON.parse(readFileSync(`data/world/${n}`, "utf8"))),
+  );
+
+test("all World Deep Dives are reachable from map pins or related guide links", async () => {
+  const world = worldCatalogue();
+  const europe: { evidence: EuropeData } = { evidence: await readEuropeData() };
 
   const linkedIds = new Set<string>();
   for (const e of world.evidence) if (e.guideId) linkedIds.add(e.guideId);
@@ -32,9 +44,9 @@ test("all World Deep Dives are reachable from map pins or related guide links", 
   assert.deepEqual(unlinked, [], `Unlinked world guides remain: ${unlinked.join(", ")}`);
 });
 
-test("Explore deduplicates canonicalRecordId Europe duplicates and verified World equivalents", () => {
-  const world = JSON.parse(readFileSync("dist/world-catalogue.json", "utf8")) as WorldData;
-  const europe = JSON.parse(readFileSync("dist/europe-catalogue.json", "utf8")) as { evidence: EuropeData };
+test("Explore deduplicates canonicalRecordId Europe duplicates and verified World equivalents", async () => {
+  const world = worldCatalogue();
+  const europe: { evidence: EuropeData } = { evidence: await readEuropeData() };
   const existing = new Set(dataset.records.map((r) => r.id));
 
   const worldAdapted = adaptWorldDataForExplore(world, existing);
@@ -92,12 +104,12 @@ test("every paleoclimate milestone has Explore and related atlas links", () => {
 });
 
 test("static guide pages cross-link to Explore and Climate in page body", () => {
-  const worldHtml = readFileSync("dist/sites/world-stonehenge.html", "utf8");
+  const worldHtml = readFileSync("sites/world-stonehenge.html", "utf8");
   assert.match(worldHtml, /class="atlas-crosslinks"/);
   assert.match(worldHtml, /#explore\?/);
   assert.match(worldHtml, /#physical/);
 
-  const siteHtml = readFileSync("dist/sites/chaco.html", "utf8");
+  const siteHtml = readFileSync("sites/chaco.html", "utf8");
   assert.match(siteHtml, /class="atlas-crosslinks"/);
   assert.match(siteHtml, /#explore\?/);
   assert.match(siteHtml, /#physical/);

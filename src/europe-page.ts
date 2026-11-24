@@ -15,6 +15,7 @@ import {dateValue,voyageDate,type Voyage} from './voyages';
 import {displayedVoyageStops,sampleMapVoyage,MOVIE_END_DATE} from './shared-movie';
 import {loadGlobalIce,currentGlobalIce,globalIceAtYear} from './global-ice';
 import './europe-page.css';
+import {PlaybackController} from './playback-controller';
 
 const EUROPE_HOME_CENTER: [number, number] = [14, 52];
 const EUROPE_HOME_ZOOM = 4.8;
@@ -38,7 +39,7 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
  const data=payload.evidence,all=normalizeEurope(data),entries=new Map(data.entries.map(e=>[e.id,e]));
  const first=Math.min(...data.entries.map(e=>e.start));
  const state=saved??{year:first,clock:first,region:'all',category:'all',query:'',past:true,warfare:true,interpolate:true,borders:true,trade:true,road:true,rail:true,voyages:true,ice:true,selected:''};saved=state;
- let disposed=false,playing=false,frame=0,last=0,elapsed=0,rate=1,filtered:EvidenceRecord[]=[],dates:number[]=[],drawing=false,segmentStart=state.clock,segmentTarget:number|undefined,lastPaint=0;
+ let disposed=false,elapsed=0,filtered:EvidenceRecord[]=[],dates:number[]=[],drawing=false,segmentStart=state.clock,segmentTarget:number|undefined,lastPaint=0;
  host.innerHTML=`<section class="europe-atlas" aria-label="Europe history movie">
   <header class="europe-heading"><div><p class="eyebrow">EUROPE &amp; MEDITERRANEAN</p><h1>Places, kingdoms and connections</h1></div><nav class="subhead-links" aria-label="Related views"><a href="#origins/europe">Earlier human family &amp; dispersals</a><a href="sites/world-human-family.html">Branching human family guide ↗</a></nav></header><div id="europe-navigation"></div>
   <div class="europe-layout"><aside class="europe-reader" aria-label="Europe evidence and layers">
@@ -55,7 +56,7 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
    <details><summary>Roads and rails recorded by this date</summary><div id="europe-built-networks"></div></details><details class="europe-territories"><summary>Territories at this date &amp; sources</summary><div id="europe-boundary-list"></div></details>
    <details><summary>Regional guides</summary><div id="europe-guide-list"></div></details>
   </aside><div class="europe-map-wrap"><div id="europe-map"></div><div class="europe-map-status"><strong id="europe-map-date"></strong><span id="europe-map-headline">Choose an era or click any site</span></div><button id="europe-home" class="europe-home">Europe view</button></div></div>
-  <footer class="europe-timeline"><div class="europe-transport"><button id="europe-play">Play history</button><button id="europe-previous" aria-label="Previous dated change">◀</button><button id="europe-next" aria-label="Next dated change">▶</button><label>Pace<select id="europe-rate"><option value="1">Steady</option><option value="2">2×</option><option value="4">4×</option></select></label><label>Jump to<select id="europe-era"><option value="">Choose a period…</option>${[[first,'Earliest evidence'],[-45000,'Upper Paleolithic art'],[-6000,'Early farmers & megaliths'],[-500,'Classical Mediterranean & Celts'],[100,'Roman Empire'],[800,'Carolingians & Viking age'],[1250,'Medieval kingdoms & trade'],[1500,'Renaissance & Atlantic age'],[1789,'Revolutions & industry'],[1850,'Railway age'],[1900,'1900']].filter(([y])=>Number(y)>=first).map(([y,t])=>`<option value="${y}">${t}</option>`).join('')}</select></label></div>
+  <footer class="europe-timeline"><div class="europe-transport"><button id="europe-play" aria-label="Play history">▶ Play</button><button id="europe-previous" aria-label="Previous dated change">◀</button><button id="europe-next" aria-label="Next dated change">▶</button><label>Pace<select id="europe-rate"><option value="1">Steady</option><option value="2">2×</option><option value="4">4×</option></select></label><label>Jump to<select id="europe-era"><option value="">Choose a period…</option>${[[first,'Earliest evidence'],[-45000,'Upper Paleolithic art'],[-6000,'Early farmers & megaliths'],[-500,'Classical Mediterranean & Celts'],[100,'Roman Empire'],[800,'Carolingians & Viking age'],[1250,'Medieval kingdoms & trade'],[1500,'Renaissance & Atlantic age'],[1789,'Revolutions & industry'],[1850,'Railway age'],[1900,'1900']].filter(([y])=>Number(y)>=first).map(([y,t])=>`<option value="${y}">${t}</option>`).join('')}</select></label></div>
   <label class="europe-slider-label">Map year <output id="europe-year"></output><input id="europe-slider" type="range" min="0" max="1000000" step="1" aria-label="Europe map year"></label>
   <form id="europe-date-form"><label>Year<input id="europe-date" inputmode="numeric" aria-label="Europe year"></label><select id="europe-era-input" aria-label="Europe year era"><option>CE</option><option>BCE</option></select><button>Go</button><span id="europe-date-error" role="status"></span></form>
   <p class="europe-playback-note">Playback steps through dated changes. Click any point or drag the slider to explore.</p></footer></section>`;
@@ -72,7 +73,25 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
  const stopLand=watchDetailedLand(detail=>map.setDetailedLand(detail));
  if(state.camera)map.restoreCamera(state.camera);else map.focusRegion(EUROPE_HOME_CENTER,EUROPE_HOME_ZOOM,'world');
  el<HTMLSelectElement>('#europe-region').value=state.region;el<HTMLSelectElement>('#europe-category').value=state.category;
- function pause(){playing=false;elapsed=0;segmentTarget=undefined;el('.europe-atlas').classList.remove('is-playing');el('#europe-play').textContent='Play history';map.setInteraction({mode:'movie',playing:false,onPause:pause});}
+ // Each segment holds 1.5 s on the current date, then eases to the next dated change over 2 s.
+ const playback=new PlaybackController({
+  button:el('#europe-play'),labels:{play:'Play history',pause:'Pause history'},container:el('.europe-atlas'),maxFrameMs:500,
+  beforePlay:()=>{navigation.closeMenus();if(state.clock>=(dates.at(-1)??END_YEAR))seek(dates[0]??first,false);elapsed=0;segmentStart=state.clock;segmentTarget=undefined;},
+  onAdvance:(step,now)=>{
+   if(segmentTarget===undefined){segmentStart=state.clock;segmentTarget=dates.find(y=>y>state.clock);if(segmentTarget===undefined){pause();return;}}
+   elapsed+=step;
+   if(elapsed>=3500){seek(segmentTarget,false);elapsed=0;segmentTarget=undefined;if(state.clock>=(dates.at(-1)??END_YEAR))pause();}
+   else if(elapsed>1500&&now-lastPaint>100){
+    const ratio=(elapsed-1500)/2000;
+    const nextClock=segmentStart+(segmentTarget-segmentStart)*ratio;
+    if(Math.floor(nextClock)!==state.year)seek(nextClock,false);
+    else{state.clock=nextClock;map.context.options.voyageDate=state.clock;map.refreshVoyage();}
+    lastPaint=now;
+   }
+  },
+  onChange:playing=>map.setInteraction({mode:'movie',playing,onPause:pause}),
+ });
+ function pause(){playback.pause();elapsed=0;segmentTarget=undefined;map.setInteraction({mode:'movie',playing:false,onPause:pause});}
  function refilter(){
   filtered=all.filter(r=>{const e=entries.get(r.id)!;return (state.region==='all'||e.regionId===state.region)&&(state.category==='all'||e.category===state.category)&&(!state.query||`${e.title} ${e.place} ${e.summary} ${e.detail}`.toLocaleLowerCase().includes(state.query.toLocaleLowerCase()))&&(!e.networkKind||state[e.networkKind])&&(state.warfare||e.category!=='conflict')&&(state.voyages||e.category!=='voyage'||!!e.networkKind);});
   dates=europeDates(filtered.map(r=>entries.get(r.id)!));
@@ -100,7 +119,7 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
  function renderList(){
   const visible=new Set(map.visibleRecords().map(r=>r.id));
   const current=currentEntries().filter(r=>visible.has(r.id));
-  el('#europe-date-note').textContent=current.length?`${formatYear(state.year)} · ${current.length} places and connections with dated evidence in view.`:`${formatYear(state.year)} · No included evidence at this date in this view. Drag the slider to another era.`;
+  el('#europe-date-note').textContent=current.length?`${formatYear(state.year)} · ${current.length} ${current.length===1?'place or connection':'places and connections'} with dated evidence in view.`:`${formatYear(state.year)} · No included evidence at this date in this view. Drag the slider to another era.`;
   el('#europe-list').innerHTML=current.slice(0,60).map(r=>`<button data-europe-record="${esc(r.id)}"><strong>${esc(r.title)}</strong><span>${esc(entries.get(r.id)!.summary)}</span></button>`).join('');
   if(current.length>60)el('#europe-list').insertAdjacentHTML('beforeend','<p>Zoom or filter to narrow the remaining places.</p>');
   const voyages=state.voyages?map.context.voyages.filter(v=>state.clock>=dateValue(v.stops[0].arrival)&&state.clock<=Math.min(MOVIE_END_DATE,dateValue(v.stops.at(-1)!.departure))):[];
@@ -115,7 +134,6 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
   map.context.options.boundaries=state.borders;map.context.options.voyages=state.voyages;map.context.options.voyageDate=state.clock;
   const globalIce=state.ice?globalIceAtYear(currentGlobalIce(),state.year,'europe'):null;
   map.update(europeSelection(filtered,state.year,state.past).map(r=>europePopulationView(r,entries.get(r.id)!,state.year,state.interpolate)),state.year,[],{ice:false,iceScenario:'optimal',currents:false,winds:false,hidden:new Set(climateKinds),uncertain:false,globalIce:globalIce&&globalIce.geometry?{geometry:globalIce.geometry,label:globalIce.label}:null});
-  el('.europe-atlas').classList.toggle('is-playing',playing);
   el('#europe-year').textContent=formatYear(state.year);el('#europe-map-date').textContent=state.clock>0&&state.clock!==state.year?voyageDate(state.clock):formatYear(state.year);
   const activeHere=currentEntries();
   const headlines=[...activeHere].sort((a,b)=>(entries.get(a.id)!.start===state.year?0:1)-(entries.get(b.id)!.start===state.year?0:1)).slice(0,2).map(r=>r.title);
@@ -126,9 +144,9 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
  }
  function seek(year:number,select=true){state.clock=Math.max(first,Math.min(MOVIE_END_DATE,year));state.year=Math.floor(state.clock);if(select){const e=filtered.find(r=>r.time.start===state.year)??currentEntries()[0];state.selected=e?.id??'';}render();}
  function step(direction:number){pause();const target=direction>0?dates.find(y=>y>state.clock):[...dates].reverse().find(y=>y<state.clock);if(target!==undefined)seek(target);}
- el('#europe-play').addEventListener('click',()=>{if(playing){pause();return;}navigation.closeMenus();if(state.clock>=(dates.at(-1)??END_YEAR))seek(dates[0]??first,false);playing=true;elapsed=0;segmentStart=state.clock;segmentTarget=undefined;el('.europe-atlas').classList.add('is-playing');el('#europe-play').textContent='Pause';map.setInteraction({mode:'movie',playing:true,onPause:pause});});
+ el('#europe-play').addEventListener('click',()=>{if(playback.playing)pause();else playback.play();});
  el('#europe-previous').addEventListener('click',()=>step(-1));el('#europe-next').addEventListener('click',()=>step(1));
- el('#europe-rate').addEventListener('change',e=>{rate=Number((e.target as HTMLSelectElement).value);});
+ el('#europe-rate').addEventListener('change',e=>{playback.rate=Number((e.target as HTMLSelectElement).value);});
  el('#europe-era').addEventListener('change',e=>{const value=(e.target as HTMLSelectElement).value;if(value){pause();seek(Number(value));}});
  el('#europe-slider').addEventListener('input',e=>{pause();seek(timelineYear(Number((e.target as HTMLInputElement).value)/1_000_000,first,END_YEAR,'log'));});
  el('#europe-date-form').addEventListener('submit',e=>{e.preventDefault();try{const y=parseYear(el<HTMLInputElement>('#europe-date').value,el<HTMLSelectElement>('#europe-era-input').value);if(y<first||y>END_YEAR)throw Error(`Choose a year from ${formatYear(first)} through 1900 CE.`);el('#europe-date-error').textContent='';pause();seek(y);}catch(error){el('#europe-date-error').textContent=(error as Error).message;}});
@@ -146,26 +164,6 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
  });
  el('.europe-atlas').addEventListener('click',function onClick(e){const button=(e.target as HTMLElement).closest<HTMLButtonElement>('[data-europe-record]');if(button){const r=all.find(r=>r.id===button.dataset.europeRecord);if(r){pause();state.selected=r.id;navigation.showFacts();map.focus(r);renderDetails();}}});
  el('#europe-guide-list').innerHTML=`<p><a href="sites/world-human-family.html"><strong>The branching human family ↗</strong></a> · <a href="#origins">Interactive map</a></p>`+worldGuides.filter(g=>g.atlasIds.includes('europe')&&g.id!=='world-human-family').map(g=>`<p><a href="${esc(g.href)}">${esc(g.title)} ↗</a></p>`).join('');
- function tick(now:number){
-  if(disposed)return;
-  const dt=Math.min(500,now-last);last=now;
-  if(playing){
-   if(segmentTarget===undefined){segmentStart=state.clock;segmentTarget=dates.find(y=>y>state.clock);if(segmentTarget===undefined)pause();}
-   if(segmentTarget!==undefined){
-    elapsed+=dt*rate;
-    if(elapsed>=3500){seek(segmentTarget,false);elapsed=0;segmentTarget=undefined;if(state.clock>=(dates.at(-1)??END_YEAR))pause();}
-    else if(elapsed>1500&&now-lastPaint>100){
-     const ratio=(elapsed-1500)/2000;
-     const nextClock=segmentStart+(segmentTarget-segmentStart)*ratio;
-     if(Math.floor(nextClock)!==state.year)seek(nextClock,false);
-     else{state.clock=nextClock;map.context.options.voyageDate=state.clock;map.refreshVoyage();}
-     lastPaint=now;
-    }
-   }
-  }
-  frame=requestAnimationFrame(tick);
- }
- const visibility=()=>{if(document.hidden)pause();};document.addEventListener('visibilitychange',visibility);
  const deepTarget=initialSite?entries.get(initialSite):undefined;
  if(deepTarget){
   state.region='all';state.category='all';state.query='';
@@ -180,7 +178,7 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
   const targetRec=filtered.find(r=>r.id===deepTarget.id);
   if(targetRec)map.focus(targetRec);
  } else refilter();
- map.setInteraction({mode:'movie',playing:false,onPause:pause});render();frame=requestAnimationFrame(tick);
+ map.setInteraction({mode:'movie',playing:false,onPause:pause});render();
  void loadGlobalIce().then(archive=>{if(archive&&!disposed)render();});
- return ()=>{state.camera=map.camera();disposed=true;playing=false;cancelAnimationFrame(frame);stopLand();navigation.dispose();document.removeEventListener('visibilitychange',visibility);map.clearHover();map.dispose();};
+ return ()=>{state.camera=map.camera();disposed=true;playback.dispose();stopLand();navigation.dispose();map.clearHover();map.dispose();};
 }

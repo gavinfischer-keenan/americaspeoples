@@ -97,7 +97,6 @@ export const deepDives:DeepDive[]=[
 function card(d:DeepDive):string{
  return `<article class="dive-card${d.links.length?'':' dive-planned'}" data-dive="${esc(d.id)}"><span class="dive-status">${d.links.length?'Available now':'Coming soon'}</span><h3>${esc(d.title)}</h3><p>${esc(d.description)}</p>${d.expansion?`<p class="dive-expansion">Guide available · ${esc(d.expansion)}</p>`:''}${d.links.length?`<div class="dive-actions">${d.links.map(l=>`<a href="${esc(l.href)}">${l.label} <span aria-hidden="true">↗</span></a>`).join('')}</div>`:''}</article>`;
 }
-export function diveCardHTML(d:DeepDive):string{return card(d);}
 function countText(entries:DeepDive[]):string{
  const queued=entries.filter(d=>!d.links.length).length;
  return `${entries.filter(d=>d.links.length).length} available${queued?` · ${queued} coming soon`:''}`;
@@ -166,4 +165,56 @@ export function deepDiveIndexHTML(category?:string,returnHref='#movie'):string{
  const foundations=`<section class="dive-foundations" aria-label="Foundations: start anywhere"><div class="dive-foundations-head"><span class="eyebrow">FOUNDATIONS · START ANYWHERE</span><p>Reach these foundational guides and global origin studies from any region of the atlas.</p></div><div class="dive-foundations-grid"><article class="dive-foundation-card"><span class="dive-status">Human origins</span><h3>The branching human family</h3><p>Fossil hominin finds from ~7.24 million years ago onward, ancient DNA, and global dispersals across Africa and Eurasia.</p><div class="dive-actions"><a href="sites/world-human-family.html">Read guide ↗</a><a href="#origins">Interactive map ↗</a></div></article><article class="dive-foundation-card"><span class="dive-status">Deep time</span><h3>Human ancestors before 1 Ma</h3><p>Graecopithecus, Toumaï, Australopithecus, Paranthropus, Dmanisi, and the earliest Homo erectus sites.</p><div class="dive-actions"><a href="#study/pre-1ma-world">Play dated study ↗</a><a href="sites/world-pre-1ma-world.html">Read guide ↗</a></div></article><article class="dive-foundation-card"><span class="dive-status">In toto archive</span><h3>Marks on Stone: Wall &amp; Rock Art</h3><p>Illustrated global specimen archive from Lascaux caves to Nevada desert overhangs, plus North America and Africa &amp; Middle East art and settlements.</p><div class="dive-actions"><a href="sites/world-rock-art-in-toto.html">Global gallery ↗</a><a href="sites/world-north-america-rock-art.html">North America ↗</a><a href="sites/world-africa-middle-east-art-habitations.html">Africa &amp; Middle East ↗</a></div></article><article class="dive-foundation-card"><span class="dive-status">Sacred traditions</span><h3>Origin Stories worldwide</h3><p>Indigenous, oral, and written creation and emergence traditions from every major region.</p><div class="dive-actions"><a href="#dives/origin-stories">Browse traditions →</a></div></article></div></section>`;
  const regionFilter=`<div class="dive-filter-bar"><input id="dive-search" type="search" placeholder="Search all deep dives, places, peoples or eras…" aria-label="Search deep dives"><div class="dive-region-chips" role="group" aria-label="Filter deep dives by region"><button type="button" data-dive-region="all" aria-pressed="true">All regions</button><button type="button" data-dive-region="americas" aria-pressed="false">Americas</button><button type="button" data-dive-region="pacific" aria-pressed="false">Pacific</button><button type="button" data-dive-region="africa" aria-pressed="false">Africa</button><button type="button" data-dive-region="europe" aria-pressed="false">Europe</button><button type="button" data-dive-region="asia-pacific" aria-pressed="false">Asia</button></div></div><div id="dive-search-results" class="dive-search-results" hidden></div>`;
  return `<article class="library-page deep-dive-index"><div class="dive-heading"><div><span class="eyebrow">DEEP DIVES · STORIES &amp; ILLUSTRATED GUIDES</span><h2>${selected?esc(selected.title):'Choose your way in.'}</h2><p class="lead">${selected?esc(selected.description):'Illustrated essays, interactive movies, languages, and cultures. Looking for reference tables, citations, or climate data? Visit the Library.'}</p></div><div class="dive-heading-links"><a class="dive-return" href="#library">Library &amp; Reference ↗</a><a class="dive-return" href="${esc(returnHref)}">↔ Return to map</a></div></div><nav class="dive-tabs" aria-label="Deep-dive categories"><a href="#dives" ${!selected?'aria-current="page"':''}>All lists</a>${diveCategories.map(c=>`<a href="#dives/${c.id}" ${selected?.id===c.id?'aria-current="page"':''}>${c.title}</a>`).join('')}</nav>${foundations}${regionFilter}<div class="dive-listing-default">${listing}</div><aside class="dive-modes"><h3>How Deep Dives work</h3><p><strong>Contextual movies</strong> focus the shared atlas on one story while contemporary sites remain visible on the globe.</p><p><strong>Independent movies</strong> isolate a single theme on its own dedicated timeline.</p><p><strong>Illustrated guides</strong> combine terrain maps, dated finds, primary sources, and open scholarly questions.</p></aside></article>`;
+}
+/** Region chips and search on the Deep Dives index page. */
+export function mountDiveFilters(main: HTMLElement): void {
+  let selectedRegion = "all";
+  const searchInput = main.querySelector<HTMLInputElement>("#dive-search");
+  const chips = [...main.querySelectorAll<HTMLButtonElement>("[data-dive-region]")];
+  const resultsHost = main.querySelector<HTMLElement>("#dive-search-results");
+  const defaultListing = main.querySelector<HTMLElement>(".dive-listing-default");
+  if (!searchInput || !resultsHost || !defaultListing) return;
+  const update = () => {
+    const q = searchInput.value.trim().toLowerCase();
+    const words = q ? q.split(/\s+/) : [];
+    const activeFilter = Boolean(q || selectedRegion !== "all");
+    defaultListing.hidden = activeFilter;
+    resultsHost.hidden = !activeFilter;
+    if (!activeFilter) {
+      resultsHost.innerHTML = "";
+      return;
+    }
+    const matches = deepDives.filter((d) => {
+      if (selectedRegion !== "all" && !d.atlasIds.includes(selectedRegion)) return false;
+      const hay = `${d.title} ${d.description} ${d.category} ${d.atlasIds.join(" ")}`.toLowerCase();
+      return words.every((w) => hay.includes(w));
+    });
+    resultsHost.innerHTML =
+      `<p class="dive-count">${matches.length} matching deep dive${matches.length === 1 ? "" : "s"}</p>` +
+      (matches.length
+        ? diveGroupedHTML(matches, selectedRegion !== "all" ? "category" : "region")
+        : '<p class="fine">No deep dives match this filter. Try clearing your search or selecting All regions.</p>');
+    wireJumpButtons();
+  };
+  const wireJumpButtons = () => {
+    for (const btn of main.querySelectorAll<HTMLButtonElement>("[data-dive-jump]")) {
+      btn.onclick = () => {
+        const targetId = btn.dataset.diveJump;
+        if (!targetId) return;
+        const container = resultsHost.hidden ? defaultListing : resultsHost;
+        container
+          .querySelector<HTMLElement>(`.dive-region-group[data-dive-group="${targetId}"]`)
+          ?.scrollIntoView({ behavior: "smooth", block: "start" });
+      };
+    }
+  };
+  wireJumpButtons();
+  searchInput.addEventListener("input", update);
+  for (const chip of chips) {
+    chip.addEventListener("click", () => {
+      selectedRegion = chip.dataset.diveRegion || "all";
+      chips.forEach((c) => c.setAttribute("aria-pressed", String(c === chip)));
+      update();
+    });
+  }
 }

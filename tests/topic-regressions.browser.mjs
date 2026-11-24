@@ -38,7 +38,9 @@ try{
   await p.goto(base+'/#topic/boats');await p.locator('#topic-play').waitFor();
   assert.ok(await p.locator('.topic-context a[href="#context/px-madjedbebe-onset"]').count(),'reused record has a shared action');
   await p.locator('.topic-context a[href="#context/px-madjedbebe-onset"]').click();await p.locator('.topic-return').waitFor();
-  await p.locator('[data-action="locate"]').click();await p.locator('#map-host .world').waitFor();assert.equal(p.url().split('#')[1],'movie');
+  await p.locator('[data-action="locate"]').click();await p.locator('#map-host .world').waitFor();
+  // Australian records open the Australia & Pacific atlas, which shares the movie clock.
+  assert.equal(p.url().split('#')[1],'atlas/pacific');
   assert.equal(await p.locator('#year-number').inputValue(),'68751');assert.equal(await p.locator('#era').inputValue(),'BCE');
  });
  await check('Completed related histories and old planned bookmarks open playable movies',async p=>{

@@ -33,6 +33,11 @@ class AtlasServer(ThreadingHTTPServer):
         self.database=Path(db).resolve(strict=True)
         self.webroot=Path(root).resolve(strict=True)
         self.slots=threading.BoundedSemaphore(8)
+        # The release database is immutable, so the full export is built at most
+        # once per process and then served from memory. Without this, every
+        # anonymous /api/export request re-parsed every record (~50 MB of JSON).
+        self.export_lock=threading.Lock()
+        self.export_body=None
         with closing(self.connect()) as con:
             self.manifest=json.loads(con.execute("SELECT value FROM metadata WHERE key='manifest'").fetchone()[0])
         super().__init__(address,AtlasHandler)
@@ -76,7 +81,8 @@ class AtlasHandler(SimpleHTTPRequestHandler):
     do_PUT=do_DELETE=do_PATCH=do_OPTIONS=do_POST
     def do_HEAD(self):self.do_GET()
     def send_json(self,value,status=200):
-        body=compact(value).encode('utf8')
+        self.send_body(compact(value).encode('utf8'),status)
+    def send_body(self,body,status=200):
         self.send_response(status)
         self.send_header('Content-Type','application/json; charset=utf-8')
         self.send_header('Content-Length',str(len(body)))
@@ -102,13 +108,18 @@ class AtlasHandler(SimpleHTTPRequestHandler):
         except (ValueError,TypeError,OverflowError):self.send_json({'error':'Invalid query parameters'},400)
         except (BrokenPipeError,ConnectionResetError):pass
         except sqlite3.Error:self.send_json({'error':'Atlas database unavailable'},503)
+    def cached_export(self,con):
+        server=self.server
+        with server.export_lock:
+            if server.export_body is None:
+                data={k:v for k,v in server.manifest.items() if k not in ('apiVersion','recordCount','hazardCount','iceIndex')}
+                data['records']=[json.loads(r[0]) for r in con.execute('SELECT full FROM records ORDER BY n')]
+                server.export_body=compact(data).encode('utf8')
+            return server.export_body
     def api(self,con,path,params):
         if path=='/api/health':return self.send_json({'status':'ok','version':self.server.manifest['version'],'records':self.server.manifest['recordCount']})
         if path=='/api/manifest':return self.send_json(self.server.manifest)
-        if path=='/api/export':
-            data={k:v for k,v in self.server.manifest.items() if k not in ('apiVersion','recordCount','hazardCount','iceIndex')}
-            data['records']=[json.loads(r[0]) for r in con.execute('SELECT full FROM records ORDER BY n')]
-            return self.send_json(data)
+        if path=='/api/export':return self.send_body(self.cached_export(con))
         if path in ('/api/catalog','/api/records','/api/search','/api/hazards/index'):
             return self.query(con,path,params)
         match=re.fullmatch(r'/api/(records|hazards)/([A-Za-z0-9._-]{1,150})',path)

@@ -128,3 +128,19 @@ export async function showMapEvidence(page) {
   if (!(await page.locator("#site-panel").isVisible()))
     await mapSetting(page, () => page.locator("#toggle-sites").click());
 }
+
+/** Switch regional atlas through the top navigation (the region menu inside
+ *  the map toolbar was replaced by these links). */
+export function topNav(page, name) {
+  return page.getByRole('navigation', { name: 'Main navigation', exact: true }).getByRole('link', { name, exact: true });
+}
+
+/** Wait until the shared Americas/Pacific map has switched to a region. */
+export async function waitForMapScope(page, scope) {
+  await page.waitForFunction(value => document.querySelector('#map-host .map-canvas')?.dataset.scope === value, scope);
+}
+
+/** Wait until the router has switched to a route (e.g. '#atlas/pacific'). */
+export async function waitForRoute(page, hash) {
+  await page.waitForFunction(value => location.hash === value, hash);
+}

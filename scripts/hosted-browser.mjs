@@ -1,4 +1,5 @@
 import {mapSetting} from './browser-fixture.mjs';
+import { isAmericasRecord } from "../src/region-partition.ts";
 import fsSnapshot from "node:fs";
 const snapshot=JSON.parse(fsSnapshot.readFileSync("dist/evidence-appendix.json","utf8"));
 const expectedRecords=snapshot.records.length;
@@ -68,9 +69,11 @@ try {
   await page
     .getByLabel("Import suggestions")
     .setInputFiles("templates/americas-peoples-researched-import.xlsx");
+  // Parsing and validating the full 11,370-record workbook takes ~25-30 s in a
+  // headless browser; the default 30 s budget is too tight to be reliable.
   await page
     .getByRole("heading", { name: "Review import", exact: true })
-    .waitFor();
+    .waitFor({ timeout: 120000 });
   await page
     .getByRole("button", { name: "Add to local collection", exact: true })
     .click();
@@ -122,7 +125,8 @@ try {
   const represented = new Set(await page.locator("#map-host [data-member-ids]")
     .evaluateAll(features => features.flatMap(feature => JSON.parse(feature.dataset.memberIds))));
   for (const kind of ["forced-removal", "violence"]) {
-    const overlays = snapshot.records.filter(({ record }) => record.overlay?.kind === kind);
+    // The Americas atlas is under test; Pacific records open in the Australia & Pacific atlas.
+    const overlays = snapshot.records.filter(({ record }) => record.overlay?.kind === kind && isAmericasRecord(record));
     const expected = overlays.filter(activeAt1864Start).map(({ record }) => record.id).sort();
     const actual = overlays.filter(({ record }) => represented.has(record.id)).map(({ record }) => record.id).sort();
     assert.deepEqual(actual, expected, `${kind} overlay records represented on January 1, 1864`);
@@ -163,8 +167,11 @@ try {
     requests.every((r) => r.url.startsWith(origin + "/") && r.method === "GET"),
   );
   assert.ok(requests.some(r=>r.url.includes('/api/records/ai-colony-16')));
-  const geographicAssets=new Set(['world-summary.json','historical-boundaries.json','colonial-boundaries.json','national-boundaries.json','early-national-boundaries.json','reservation-boundaries.json','boundary-sources.json','expanded-boundary-sources.json','early-national-boundary-sources.json','reservation-boundary-sources.json','rail-network.json','voyages.json','expedition-activity.json','land-detailed.geojson'].map(name=>'/'+name));
-  assert.ok(requests.filter(r=>r.type==='fetch').every(r=>new URL(r.url).pathname.startsWith('/api/')||geographicAssets.has(new URL(r.url).pathname)));
+  // Same-origin static data the atlas loads directly: boundaries and sources, the
+  // continuous ice-sheet layer, and the World/Europe catalogues that Explore merges.
+  const geographicAssets=new Set(['global-ice-sheets.json','world-catalogue.json','europe-catalogue.json','world-summary.json','historical-boundaries.json','colonial-boundaries.json','national-boundaries.json','early-national-boundaries.json','reservation-boundaries.json','boundary-sources.json','expanded-boundary-sources.json','early-national-boundary-sources.json','reservation-boundary-sources.json','rail-network.json','voyages.json','expedition-activity.json','land-detailed.geojson'].map(name=>'/'+name));
+  const unexpectedFetches=requests.filter(r=>r.type==='fetch').map(r=>new URL(r.url).pathname).filter(path=>!path.startsWith('/api/')&&!geographicAssets.has(path));
+  assert.deepEqual([...new Set(unexpectedFetches)],[],'browser fetches only the API and declared static data assets');
   assert.deepEqual(errors, []);
   assert.deepEqual(violations, []);
   const unsupported = await browser.newContext();

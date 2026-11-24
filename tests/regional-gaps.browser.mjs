@@ -24,6 +24,8 @@ try {
     const marker=record.history?.kind==='settlement'
       ? page.locator(`[data-record-id="${id}"]`)
       : page.locator(`[data-point="${record.location.lon},${record.location.lat}"]`);
+    // The details panel can render a frame before the map redraws the marker.
+    await marker.first().waitFor({state:'visible'});
     const box=await marker.boundingBox(), map=await page.locator('#map-host').boundingBox();
     assert.ok(box&&box.x+box.width>map.x&&box.x<map.x+map.width&&box.y+box.height>map.y&&box.y<map.y+map.height,id+' visible on shared map');
     await page.screenshot({path:`test-results/${id}.png`});

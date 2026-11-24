@@ -35,7 +35,9 @@ try {
  await page.locator('[data-point]').first().dispatchEvent('pointerover',{clientX:700,clientY:330});await page.getByRole('tooltip').waitFor();assert.ok((await page.getByRole('tooltip').innerText()).length>80);
  await page.locator('.map-canvas > svg').first().click({position:{x:60,y:80},force:true});assert.equal(await page.getByRole('button',{name:'Play',exact:true}).count(),1);assert.equal(await page.locator('#selected-records article').count(),0);
  await page.getByRole('link',{name:'Explore',exact:true}).click();await page.locator('.timeline').waitFor({state:'hidden'});assert.ok(await page.locator('.timeline').isHidden());
- await page.locator('[data-context]').first().waitFor();const exploration=await ids();assert.ok(exploration.some(id=>{const t=byId.get(id).time;return t.end<1200||t.start>1200;}));
+ await page.locator('[data-context]').first().waitFor();const exploration=await ids();
+ // Explore also lists World and Europe catalogue records (world:/europe: ids) that are not in dataset.json; check the canonical ones.
+ const canonical=exploration.filter(id=>byId.has(id));assert.ok(canonical.length>0);assert.ok(canonical.some(id=>{const t=byId.get(id).time;return t.end<1200||t.start>1200;}));
  await page.locator('#context-records button').first().click();assert.match(await page.locator('#selected-records').innerText(),/The date has not been established/);
  await page.getByRole('button',{name:'Close details',exact:true}).click();
  const before=await page.locator('#visible-count').innerText();await page.getByRole('button',{name:'Zoom in',exact:true}).click();await page.getByRole('button',{name:'Zoom in',exact:true}).click();await page.getByRole('button',{name:'Zoom in',exact:true}).click();await page.waitForFunction(previous=>document.querySelector('#visible-count').textContent!==previous,before);

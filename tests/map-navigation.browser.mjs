@@ -15,7 +15,7 @@ try{
   document.querySelector('#filter select').addEventListener('change',()=>window.closedBeforeFilter=closed());
   document.querySelector('[data-map-menu-choice]').addEventListener('click',()=>window.closedBeforeFocus=closed());
  });
- const settings=page.getByRole('button',{name:'Map settings',exact:true}),facts=page.getByRole('button',{name:'Facts',exact:true}),regions=page.getByRole('button',{name:'Region: Europe',exact:true});
+ const settings=page.getByRole('button',{name:'Map settings',exact:true}),facts=page.getByRole('button',{name:'Facts',exact:true});
  assert.equal(await page.locator('#filter').isVisible(),false);
  await settings.click();await page.locator('#filter select').selectOption('B');
  assert.equal(await settings.getAttribute('aria-expanded'),'false','choosing a filter retracts settings');
@@ -27,11 +27,9 @@ try{
  assert.equal(await settings.evaluate(el=>el===document.activeElement),true,'button choice returns focus to settings');
  assert.equal(await page.evaluate(()=>window.closedBeforeFocus),true,'camera actions measure the map after settings retract');
  await facts.click();assert.equal(await page.locator('#facts').isVisible(),false);
- await regions.click();assert.equal(await page.getByRole('link',{name:'Africa',exact:true}).isVisible(),true);
  await page.evaluate(()=>window.navigationMount.showFacts());
- assert.equal(await page.locator('#facts').isVisible(),true);assert.equal(await regions.getAttribute('aria-expanded'),'false');
- await regions.click();await page.getByRole('link',{name:'Africa',exact:true}).click();
- assert.equal(await regions.getAttribute('aria-expanded'),'false','region selection retracts menu');
+ assert.equal(await page.locator('#facts').isVisible(),true);
+ // Region switching moved from a map-toolbar menu to the top navigation (see browser-fixture topNav).
  await settings.click();
  const menu=await page.locator('.map-navigation-settings').boundingBox(),factsBox=await page.locator('#facts').boundingBox();
  assert.ok(menu.y+menu.height<=factsBox.y,'settings stays in document flow ahead of facts');

@@ -43,7 +43,7 @@ const batches=[
 fs.mkdirSync('docs/intake',{recursive:true});
 const manifest=[];
 for(const [id,name,title] of batches){
- const input=`C:/Users/gavin/.codex/attachments/${id}/Pasted text.txt`;
+ const input=`${process.env.INTAKE_ATTACHMENTS_DIR??"work/attachments"}/${id}/Pasted text.txt`;
  const bytes=fs.readFileSync(input),filename=`2026-10-28-${name}.txt`;
  fs.writeFileSync('docs/intake/'+filename,bytes);
  manifest.push({title,filename,received:'2026-10-28',sha256:createHash('sha256').update(bytes).digest('hex'),scope:'Author-supplied Consensus export. Secondary synthesis and research intake, not peer-reviewed primary research or proof of every automated summary.'});

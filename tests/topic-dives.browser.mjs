@@ -40,7 +40,11 @@ try{
  assert.equal(await page.locator('#year-number').inputValue(),year,'topic time does not change global year');
  assert.equal(await page.locator('#voyage-select').inputValue(),'beagle-1831-1836');
  assert.equal(await page.locator('#voyage-position').innerText(),voyage,'fractional expedition date retained');
- assert.equal(await world(),camera,'global camera restored');
+ // Compare the restored transform numerically: a round trip through the saved
+ // camera can differ in the last floating-point digits.
+ const restoredText=await world(),numbers=s=>s.match(/-?\d+(?:\.\d+)?(?:e-?\d+)?/g).map(Number),restored=numbers(restoredText),saved=numbers(camera);
+ assert.equal(restored.length,saved.length,'global camera restored');
+ restored.forEach((v,i)=>assert.ok(Math.abs(v-saved[i])<1e-6,`global camera restored: ${restoredText} vs ${camera}`));
  await page.getByRole('link',{name:'Explore',exact:true}).click();
  await mapSetting(page, () => page.locator('#place-search').fill('Taos'));
  const exploreCamera=await world();
