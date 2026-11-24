@@ -69,12 +69,12 @@ test("adapts global world and Europe catalogues for Explore without ID collision
 
   const meta = exploreSourceMeta(toumai);
   assert.ok(meta, "Explore source metadata exists for adapted world records");
-  assert.equal(meta.regionHref, "#atlas/africa");
+  assert.equal(meta.regionHref, "#atlas/africa?site=family-toros-menalla");
   assert.ok(meta.sources.length > 0);
 
   const euMeta = exploreSourceMeta(europeRecords[0]);
   assert.ok(euMeta);
-  assert.equal(euMeta.regionHref, "#atlas/europe");
+  assert.equal(euMeta.regionHref, "#atlas/europe?site=eu-knossos");
   assert.ok(euMeta.sources.length > 0);
 });
 

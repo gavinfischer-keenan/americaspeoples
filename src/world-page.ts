@@ -10,7 +10,7 @@ import {
 import { esc } from "./dom";
 import { consensusResearch } from "./research-provenance";
 import { mountMapNavigation } from "./map-navigation";
-import { worldGuides } from "./world-guides";
+import { worldGuides, relatedWorldGuideLinksHTML } from "./world-guides";
 import { terrainHTML } from "./terrain";
 import { watchDetailedLand } from "./atlas-assets";
 import { parseYear } from "./time";
@@ -334,6 +334,7 @@ export function mountWorldPlayer(
   scope: WorldScope,
   study?: WorldStudy,
   earlyAfrica = false,
+  initialSite?: string,
 ): () => void {
   const first = study?.start ?? Math.min(...worldDates(data, scope)),
     last = earlyAfrica ? AFRICA_EARLY_END : (study?.end ?? 1900),
@@ -639,7 +640,9 @@ export function mountWorldPlayer(
       )
       .join("");
     const sourceList = worldSources(data, item.sourceIds);
-    detail.innerHTML = `${isOldest ? '<p class="family-milestone">Oldest site in this map</p>' : ""}<p class="world-kicker">${esc(item.kind.replaceAll("-", " "))}</p><h2>${esc(item.title)}</h2><p class="family-date-line"><strong>${esc(item.dateLabel)}</strong></p><p>${esc(item.summary)}</p>${taxonCards ? `<div class="family-taxon-cards">${taxonCards}</div>` : ""}<h3>Evidence &amp; sources</h3><ul class="family-sources">${sourceHTML(item.sourceIds)}</ul>${"guideId" in item && item.guideId ? `<p class="family-guide-cta"><a href="sites/${esc(item.guideId)}.html">Read the deeper study ↗</a></p>` : ""}<details class="method-disclosure"><summary>Dating &amp; evidence notes</summary><p class="family-limits">${esc(item.limits)}</p>${"dateBasis" in item ? `<p class="world-small">${esc(item.dateBasis)}</p>` : ""}${sourceList.length ? `<p class="world-small">${sourceList.map((s) => `${esc(s.title)}: ${esc(s.access)}`).join(" · ")}</p>` : ""}</details>`;
+    const primaryGuideId = "guideId" in item ? item.guideId : undefined;
+    const relatedGuidesHTML = relatedWorldGuideLinksHTML(item.id, primaryGuideId);
+    detail.innerHTML = `${isOldest ? '<p class="family-milestone">Oldest site in this map</p>' : ""}<p class="world-kicker">${esc(item.kind.replaceAll("-", " "))}</p><h2>${esc(item.title)}</h2><p class="family-date-line"><strong>${esc(item.dateLabel)}</strong></p><p>${esc(item.summary)}</p>${taxonCards ? `<div class="family-taxon-cards">${taxonCards}</div>` : ""}<h3>Evidence &amp; sources</h3><ul class="family-sources">${sourceHTML(item.sourceIds)}</ul>${primaryGuideId ? `<p class="family-guide-cta"><a href="sites/${esc(primaryGuideId)}.html">Read the deeper study ↗</a></p>` : ""}${relatedGuidesHTML}<details class="method-disclosure"><summary>Dating &amp; evidence notes</summary><p class="family-limits">${esc(item.limits)}</p>${"dateBasis" in item ? `<p class="world-small">${esc(item.dateBasis)}</p>` : ""}${sourceList.length ? `<p class="world-small">${sourceList.map((s) => `${esc(s.title)}: ${esc(s.access)}`).join(" · ")}</p>` : ""}</details>`;
     if ("population" in item && item.population?.length)
       detail.insertAdjacentHTML(
         "beforeend",
@@ -1088,12 +1091,23 @@ export function mountWorldPlayer(
   svg.onpointercancel = () => {
     drag = undefined;
   };
-  details(
-    [...data.evidence, ...data.waves, ...(data.territories ?? [])].find(
-      (e) => e.id === state.selected,
-    ),
-  );
-  draw();
+  const deepTarget = initialSite
+    ? [...data.evidence, ...data.waves, ...(data.territories ?? [])].find((e) => e.id === initialSite)
+    : undefined;
+  if (deepTarget) {
+    state.taxon = "all";
+    const taxonSelect = host.querySelector<HTMLSelectElement>("#family-taxon");
+    if (taxonSelect) taxonSelect.value = "all";
+    state.year = Math.max(first, Math.min(last, deepTarget.start));
+    choose(deepTarget.id);
+  } else {
+    details(
+      [...data.evidence, ...data.waves, ...(data.territories ?? [])].find(
+        (e) => e.id === state.selected,
+      ),
+    );
+    draw();
+  }
   return () => {
     disposed = true;
     pause();
@@ -1114,6 +1128,7 @@ export async function mountWorldPage(
   host: HTMLElement,
   route: string,
   land: any,
+  initialSite?: string,
 ): Promise<() => void> {
   if (route === "world")
     return mountWorldHub(host, await json("world-summary.json"), land);
@@ -1126,6 +1141,7 @@ export async function mountWorldPage(
       "africa",
       undefined,
       true,
+      initialSite,
     );
   if (route.startsWith("study:")) {
     const study = data.studies?.find((s) => s.id === route.slice(6));
@@ -1141,12 +1157,15 @@ export async function mountWorldPage(
         study.territoryIds.includes(t.id),
       ),
     };
-    return mountWorldPlayer(host, selected, land, "world", study);
+    return mountWorldPlayer(host, selected, land, "world", study, false, initialSite);
   }
   return mountWorldPlayer(
     host,
     data,
     land,
     route === "origins" ? "world" : (route as WorldScope),
+    undefined,
+    false,
+    initialSite,
   );
 }

@@ -6,7 +6,7 @@ import {END_YEAR,formatYear,parseYear} from './time';
 import {timelinePosition,timelineYear} from './timeline';
 import {esc} from './dom';
 import {historyState} from './history';
-import {worldGuides} from './world-guides';
+import {worldGuides, relatedWorldGuideLinksHTML} from './world-guides';
 import {climateKinds} from './physical';
 import type {EvidenceRecord,DisplayRecord} from './model';
 import type {PoliticalBoundary,BoundarySource} from './boundaries';
@@ -34,7 +34,7 @@ let saved:SavedEurope|undefined;
 const checked=(v:boolean)=>v?' checked':'';
 
 /** Its own clock, selection and lifecycle; never writes Americas state. */
-export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,returnHref='#movie'):()=>void {
+export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,returnHref='#movie',initialSite?:string):()=>void {
  const data=payload.evidence,all=normalizeEurope(data),entries=new Map(data.entries.map(e=>[e.id,e]));
  const first=Math.min(...data.entries.map(e=>e.start));
  const state=saved??{year:first,clock:first,region:'all',category:'all',query:'',past:true,warfare:true,interpolate:true,borders:true,trade:true,road:true,rail:true,voyages:true,ice:true,selected:''};saved=state;
@@ -95,7 +95,7 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
        return current?`<button type="button" data-europe-route-focus="${role}">${label}</button>`:`<span>${label}</span>`;
       }).join(' ')+'</p>'
     : '';
-  el('#europe-details').innerHTML=`<article class="europe-selected"><p class="eyebrow">${esc(e.place)} · ${current?'AT THIS SOURCE DATE':state.year<e.start?'LATER EVIDENCE':'EARLIER EVIDENCE'}</p><h2>${esc(e.title)}</h2>${endpoints}<p class="europe-date-line"><strong>${esc(e.dateLabel)}</strong></p><p>${esc(e.summary)}</p><p>${esc(e.detail)}</p>${e.warfare?`<p><strong>${esc(e.warfare.kind)}</strong> · ${e.warfare.participants.map(esc).join(' / ')}</p><p>${esc(e.warfare.outcome)}</p>`:''}${e.population?.length?`<table><caption>Dated resident observations</caption><thead><tr><th>Date</th><th>Residents</th></tr></thead><tbody>${e.population.map(p=>`<tr><td>${formatYear(p.year)}</td><td>${p.min.toLocaleString()}${p.max!==p.min?'–'+p.max.toLocaleString():''}<small>${esc(p.basis)} · ${esc(p.note)}</small></td></tr>`).join('')}</tbody></table>`:''}<h3>Sources</h3><ul class="europe-sources">${[...new Set([...e.sourceIds,...(e.population??[]).flatMap(p=>p.sourceIds)])].map(id=>{const s=data.sources.find(s=>s.id===id)!;return `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)} ↗</a><small>${esc(s.authors)}${s.year?' · '+s.year:''}</small></li>`;}).join('')}</ul>${e.guideId?`<p class="family-guide-cta"><a href="sites/${esc(e.guideId)}.html">Read the illustrated deep dive ↗</a></p>`:''}<details class="method-disclosure"><summary>Dating &amp; evidence notes</summary><p>${esc(e.dateMeaning)}</p>${e.networkKind?`<p class="europe-method">${esc(e.networkKind.toUpperCase())} · Schematic connection; the line does not establish an exact traveled path.</p>`:''}${e.population?.length?`<p class="fine">${e.populationInterpolation&&state.interpolate?'Dot size between these observations is explicitly interpolated for '+esc(e.populationInterpolation.scope)+'.':'Dot sizes reflect dated resident observations only.'}</p>`:''}<p class="europe-method">${esc(e.uncertainty)}</p></details></article>`;
+  el('#europe-details').innerHTML=`<article class="europe-selected"><p class="eyebrow">${esc(e.place)} · ${current?'AT THIS SOURCE DATE':state.year<e.start?'LATER EVIDENCE':'EARLIER EVIDENCE'}</p><h2>${esc(e.title)}</h2>${endpoints}<p class="europe-date-line"><strong>${esc(e.dateLabel)}</strong></p><p>${esc(e.summary)}</p><p>${esc(e.detail)}</p>${e.warfare?`<p><strong>${esc(e.warfare.kind)}</strong> · ${e.warfare.participants.map(esc).join(' / ')}</p><p>${esc(e.warfare.outcome)}</p>`:''}${e.population?.length?`<table><caption>Dated resident observations</caption><thead><tr><th>Date</th><th>Residents</th></tr></thead><tbody>${e.population.map(p=>`<tr><td>${formatYear(p.year)}</td><td>${p.min.toLocaleString()}${p.max!==p.min?'–'+p.max.toLocaleString():''}<small>${esc(p.basis)} · ${esc(p.note)}</small></td></tr>`).join('')}</tbody></table>`:''}<h3>Sources</h3><ul class="europe-sources">${[...new Set([...e.sourceIds,...(e.population??[]).flatMap(p=>p.sourceIds)])].map(id=>{const s=data.sources.find(s=>s.id===id)!;return `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)} ↗</a><small>${esc(s.authors)}${s.year?' · '+s.year:''}</small></li>`;}).join('')}</ul>${e.guideId?`<p class="family-guide-cta"><a href="sites/${esc(e.guideId)}.html">Read the illustrated deep dive ↗</a></p>`:''}${relatedWorldGuideLinksHTML(e.id,e.guideId)}<details class="method-disclosure"><summary>Dating &amp; evidence notes</summary><p>${esc(e.dateMeaning)}</p>${e.networkKind?`<p class="europe-method">${esc(e.networkKind.toUpperCase())} · Schematic connection; the line does not establish an exact traveled path.</p>`:''}${e.population?.length?`<p class="fine">${e.populationInterpolation&&state.interpolate?'Dot size between these observations is explicitly interpolated for '+esc(e.populationInterpolation.scope)+'.':'Dot sizes reflect dated resident observations only.'}</p>`:''}<p class="europe-method">${esc(e.uncertainty)}</p></details></article>`;
  }
  function renderList(){
   const visible=new Set(map.visibleRecords().map(r=>r.id));
@@ -166,7 +166,21 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
   frame=requestAnimationFrame(tick);
  }
  const visibility=()=>{if(document.hidden)pause();};document.addEventListener('visibilitychange',visibility);
- refilter();map.setInteraction({mode:'movie',playing:false,onPause:pause});render();frame=requestAnimationFrame(tick);
+ const deepTarget=initialSite?entries.get(initialSite):undefined;
+ if(deepTarget){
+  state.region='all';state.category='all';state.query='';
+  el<HTMLSelectElement>('#europe-region').value='all';
+  el<HTMLSelectElement>('#europe-category').value='all';
+  el<HTMLInputElement>('#europe-search').value='';
+  refilter();
+  state.clock=Math.max(first,Math.min(MOVIE_END_DATE,deepTarget.start));
+  state.year=Math.floor(state.clock);
+  state.selected=deepTarget.id;
+  navigation.showFacts();
+  const targetRec=filtered.find(r=>r.id===deepTarget.id);
+  if(targetRec)map.focus(targetRec);
+ } else refilter();
+ map.setInteraction({mode:'movie',playing:false,onPause:pause});render();frame=requestAnimationFrame(tick);
  void loadGlobalIce().then(archive=>{if(archive&&!disposed)render();});
  return ()=>{state.camera=map.camera();disposed=true;playing=false;cancelAnimationFrame(frame);stopLand();navigation.dispose();document.removeEventListener('visibilitychange',visibility);map.clearHover();map.dispose();};
 }

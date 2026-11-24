@@ -32,9 +32,10 @@ export function exploreCategory(r:DisplayRecord):Exclude<ExploreCategory,'all'>{
  return 'places';
 }
 const normalize=(s:string)=>s.normalize('NFKD').replace(/[\u0300-\u036f'’ʻʼ]/g,'').toLocaleLowerCase();
-export function exploreRecords(all:readonly DisplayRecord[],visible:readonly DisplayRecord[],filter:{query:string;category:ExploreCategory}):DisplayRecord[]{
+export function exploreRecords(all:readonly DisplayRecord[],visible:readonly DisplayRecord[],filter:{query:string;category:ExploreCategory;hideWrecks?:boolean}):DisplayRecord[]{
  const query=normalize(filter.query.trim()),words=query.split(/\s+/);
  return (query?all:visible).filter(r=>{
+  if(filter.hideWrecks&&filter.category!=='wrecks'&&exploreCategory(r)==='wrecks')return false;
   if(filter.category!=='all'&&exploreCategory(r)!==filter.category)return false;
   const text=query?normalize([r.title,r.location?.name,r.culture.name,r.review.summary].join(' ')):'';
   return !query||words.every(w=>text.includes(w));

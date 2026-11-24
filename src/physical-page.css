@@ -375,6 +375,45 @@
   color: #525D64;
 }
 
+.paleo-ms-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.paleo-ms-explore,
+.paleo-ms-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 5px 11px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.paleo-ms-explore {
+  background: #569E56;
+  border: 1px solid #244D26;
+  color: #10171A;
+}
+
+.paleo-ms-explore:hover {
+  background: #72B273;
+}
+
+.paleo-ms-link {
+  background: #DCEBDD;
+  border: 1px solid #72B273;
+  color: #244D26;
+}
+
+.paleo-ms-link:hover {
+  background: #CFD6DA;
+}
+
 /* Continuous Ice Explorer */
 .ice-explorer {
   background: #F2F6F8;

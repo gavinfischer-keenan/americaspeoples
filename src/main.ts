@@ -32,7 +32,7 @@ import { stories } from "./stories";
 import { isAmericasRecord, isPacificRecord, pacificStoryIds, storiesForAtlasRegion } from "./region-partition";
 import { sampleStory, sceneStartMs, storyDurationMs, storyElapsedAtYear } from "./story-player";
 import { exploreRecords, exploreCategory, exploreCategories, type ExploreCategory } from "./explore";
-import { adaptWorldDataForExplore, adaptEuropeDataForExplore, filterByDateRange } from "./explore-world";
+import { adaptWorldDataForExplore, adaptEuropeDataForExplore, exploreSourceMeta, filterByDateRange } from "./explore-world";
 import { version as appVersion } from "../package.json";
 import { dataset, fullRecord, completeDataset } from "./client-data";
 import land from "../data/land.geojson";
@@ -126,6 +126,8 @@ let currentContext: DisplayRecord[] = [];
 const EXPLORE_FULL_MIN = -7238050;
 let exploreRangeMin = EXPLORE_FULL_MIN;
 let exploreRangeMax = END_YEAR;
+let exploreRangeFromUrl = false;
+let hideExploreWrecks = false;
 let exploreExtraRecords: DisplayRecord[] = [];
 let exploreCatalogsPromise: Promise<void> | null = null;
 let storyId='free', storyElapsed=0, storySceneIndex=-1, storyRate=1;
@@ -265,9 +267,22 @@ function ensureExploreCatalogs() {
       }
       exploreExtraRecords = extra;
       if (mountedMap && atlasMode === "explore") renderMapData();
+      if (tableController) tableController.refresh();
+      const libCount = document.querySelector<HTMLElement>("#library-record-count");
+      if (libCount) libCount.textContent = (dataset.records.length + extra.length).toLocaleString();
     },
   );
   return exploreCatalogsPromise;
+}
+function syncExploreWrecksUI() {
+  const active = hideExploreWrecks && placeCategory !== "wrecks";
+  const btn = document.querySelector<HTMLButtonElement>("#explore-hide-wrecks-btn");
+  if (btn) {
+    btn.setAttribute("aria-pressed", String(active));
+    btn.textContent = active ? "Shipwrecks hidden" : "Hide shipwrecks";
+  }
+  const chk = document.querySelector<HTMLInputElement>("#explore-hide-wrecks");
+  if (chk) chk.checked = active;
 }
 function syncExploreTimelineUI(visibleCount?: number) {
   const minInput = document.querySelector<HTMLInputElement>("#explore-range-min");
@@ -354,6 +369,16 @@ function syncExploreTimelineUI(visibleCount?: number) {
       syncExploreTimelineUI();
       if (mountedMap && atlasMode === "explore") renderMapData();
     });
+  });
+  document.querySelector<HTMLButtonElement>("#explore-hide-wrecks-btn")?.addEventListener("click", () => {
+    hideExploreWrecks = !hideExploreWrecks;
+    if (hideExploreWrecks && placeCategory === "wrecks") {
+      placeCategory = "all";
+      const catSel = document.querySelector<HTMLSelectElement>("#explore-category");
+      if (catSel) catSel.value = "all";
+    }
+    syncExploreWrecksUI();
+    if (mountedMap && atlasMode === "explore") renderMapData();
   });
 })();
 main.addEventListener("click", event => {
@@ -567,8 +592,10 @@ function mountAtlasControls(){
   $<HTMLInputElement>('#place-search').value=placeQuery;
   $<HTMLSelectElement>('#explore-category').value=placeCategory;
   $<HTMLSelectElement>('#explore-period').value=explorePeriod;
+  syncExploreWrecksUI();
   $('#place-search').addEventListener('input',e=>{placeQuery=(e.target as HTMLInputElement).value;renderVisible();});
-  $('#explore-category').addEventListener('change',e=>{placeCategory=(e.target as HTMLSelectElement).value as ExploreCategory;renderMapData();});
+  $('#explore-category').addEventListener('change',e=>{placeCategory=(e.target as HTMLSelectElement).value as ExploreCategory;if(placeCategory==='wrecks')hideExploreWrecks=false;syncExploreWrecksUI();renderMapData();});
+  $('#explore-hide-wrecks').addEventListener('change',e=>{hideExploreWrecks=(e.target as HTMLInputElement).checked;if(hideExploreWrecks&&placeCategory==='wrecks'){placeCategory='all';$<HTMLSelectElement>('#explore-category').value='all';}syncExploreWrecksUI();renderMapData();});
   $('#explore-period').addEventListener('change',e=>{explorePeriod=(e.target as HTMLSelectElement).value as 'all'|'current';$('.timeline').hidden=atlasMode==='explore';syncTransport();syncExploreTimelineUI();renderMapData();});
   $('#focus-mode').addEventListener('click',()=>{const focus=document.body.classList.toggle('focus-view');$('#focus-mode').setAttribute('aria-pressed',String(focus));$('#focus-mode').textContent=focus?'Exit focus':'Focus view';if(focus){if($('#toggle-details').getAttribute('aria-expanded')==='true')$('#toggle-details').click();}else mapNavigation?.showFacts();});
   $('#close-layers').addEventListener('click',()=>$('#toggle-layers').click());
@@ -959,6 +986,7 @@ function renderMapData() {
   requestIce(atlasMode === "movie" && showIce ? year : -1000000, iceScenario);
   let candidates=mapRows();
   if(atlasMode==='movie'||explorePeriod==='current')candidates=availableVoyageRecords(candidates,atlasAssets.voyages,voyageId?voyageClock:movieClock);
+  if(atlasMode==='explore'&&hideExploreWrecks&&placeCategory!=='wrecks')candidates=candidates.filter(r=>exploreCategory(r)!=='wrecks');
   if(atlasMode==='explore'&&placeCategory!=='all')candidates=candidates.filter(r=>exploreCategory(r)===placeCategory);
   if (atlasMode === "explore" && explorePeriod === "all") {
     const rangeView = filterByDateRange(
@@ -1023,7 +1051,7 @@ function renderMapData() {
   const hazards = atlasMode === "movie" ? eventsAt(year, currentClimateHidden(), showUncertainHazards) : [];
   $("#hazard-status").innerHTML =
     physicalState !== "ready"
-      ? `<p role="status">${physicalState === "error" ? "Climate catalog unavailable." : "Loading climate catalog..."}</p>${physicalState === "error" ? "<button data-retry-physical>Retry climate catalog</button>" : ""}`
+      ? `<p role="status">${physicalState === "error" ? "Climate catalog could not load." : "Loading climate catalog..."}</p>${physicalState === "error" ? "<button data-retry-physical>Retry climate catalog</button>" : ""}`
       : hazards.length
         ? `<p>${hazards.length} documented events this year:</p>` +
           hazards
@@ -1069,9 +1097,10 @@ function renderVisible() {
       ? `at ${formatYear(year)}`
       : `${exploreDateLabel(exploreRangeMin)} – ${exploreDateLabel(exploreRangeMax)}`
     : undefined;
+  const hideWrecksActive = atlasMode === 'explore' && hideExploreWrecks && placeCategory !== 'wrecks';
   panels.update({
-    visible: exploreRecords(currentVisible,map.visibleRecords(),{query:placeQuery,category:placeCategory}),
-    context: exploreRecords(showUndated&&atlasMode==='explore'&&explorePeriod==='all'?currentContext:[],map.visibleContextRecords(),{query:placeQuery,category:placeCategory}),
+    visible: exploreRecords(currentVisible,map.visibleRecords(),{query:placeQuery,category:placeCategory,hideWrecks:hideWrecksActive}),
+    context: exploreRecords(showUndated&&atlasMode==='explore'&&explorePeriod==='all'?currentContext:[],map.visibleContextRecords(),{query:placeQuery,category:placeCategory,hideWrecks:hideWrecksActive}),
     selected: selected.slice(0,1),
     active: currentActive,
     year,
@@ -1096,13 +1125,16 @@ function physicalPage(id?: string) {
 }
 function tablePage() {
   tableController = new EvidenceTable(main, tableState, {
-    rows,
+    rows: () => [...rows(), ...exploreExtraRecords],
     year: () => year,
     preview: () => preview,
     setPreview: (value) => {
       preview = value;
     },
     hiddenCultureCount: () => hiddenCultures.size,
+  });
+  void ensureExploreCatalogs().then(() => {
+    if (location.hash === "#evidence" && tableController) tableController.refresh();
   });
 }
 function renderTableBody() {
@@ -1150,9 +1182,11 @@ function reviewPage(r: FullDisplayRecord, p?: Proposal, index?: number, shared=f
         "Evidence row shared for discussion; no changes proposed.";
     exportProposals([share]);
   });
+  const meta=exploreSourceMeta(r);
   const locate=$<HTMLButtonElement>('[data-action="locate"]',main);
-  if(!withinTimeline){locate.disabled=true;locate.textContent='Archive record — after the 1900 map limit';locate.title='The original dated evidence remains available here. Ordinary map playback ends in 1900.';}
+  if(!meta&&!withinTimeline){locate.disabled=true;locate.textContent='Archive record — after the 1900 map limit';locate.title='The original dated evidence remains available here. Ordinary map playback ends in 1900.';}
   locate.addEventListener("click", () => {
+    if(meta){location.hash=meta.regionHref;return;}
     if(!withinTimeline)return;
     if(sourceTopic){pendingTopicLocation=r;location.hash='#topic/'+sourceTopic.id;return;}
     storyId='free';storySceneIndex=-1;placeQuery='';placeCategory='all';explorePeriod='all';
@@ -1424,9 +1458,10 @@ async function route() {
   $("#explore-timeline").hidden=hash!=="#explore";
   document.body.classList.remove('exploring');
   try {
+    const siteParam=hashParams?.get('site')??undefined;
     if(worldDestination){
       main.innerHTML='<p class="world-load" role="status">Opening the world atlas…</p>';
-      const container=document.createElement('div');const cleanup=await mountWorldPage(container,worldDestination,land);
+      const container=document.createElement('div');const cleanup=await mountWorldPage(container,worldDestination,land,siteParam);
       if(generation!==routeGeneration){cleanup();return;}main.replaceChildren(container);disposeTopic=cleanup;
     }
     else if (["#map", "#movie", "#explore", "#atlas/pacific"].includes(hash)) {
@@ -1435,11 +1470,41 @@ async function route() {
       const regionChanged=nextMode==='movie'&&targetRegion!==activeAtlasRegion;
       const targetKey:'americas'|'pacific'|'explore'=nextMode==='explore'?'explore':targetRegion;
       if(nextMode!==atlasMode||regionChanged){placeQuery='';placeCategory='all';}
-      if(nextMode==='explore'&&hashParams){
-        const qParam=hashParams.get('q');
-        const catParam=hashParams.get('category') as ExploreCategory|null;
-        if(qParam!==null)placeQuery=qParam;
-        if(catParam&&catParam in exploreCategories)placeCategory=catParam;
+      if(nextMode==='explore'){
+        if(hashParams){
+          const qParam=hashParams.get('q');
+          const catParam=hashParams.get('category') as ExploreCategory|null;
+          const fromParam=hashParams.get('from');
+          const toParam=hashParams.get('to');
+          const wrecksParam=hashParams.get('wrecks');
+          if(qParam!==null)placeQuery=qParam;
+          if(catParam&&catParam in exploreCategories)placeCategory=catParam;
+          if(fromParam!==null||toParam!==null){
+            const rawFrom=fromParam!==null?Number(fromParam):EXPLORE_FULL_MIN;
+            const rawTo=toParam!==null?Number(toParam):END_YEAR;
+            const clamp=(n:number)=>Math.round(Math.max(EXPLORE_FULL_MIN,Math.min(END_YEAR,n)));
+            const f=Number.isFinite(rawFrom)?clamp(rawFrom):EXPLORE_FULL_MIN;
+            const t=Number.isFinite(rawTo)?clamp(rawTo):END_YEAR;
+            exploreRangeMin=Math.min(f,t);
+            exploreRangeMax=Math.max(f,t);
+            exploreRangeFromUrl=true;
+          }else if(exploreRangeFromUrl){
+            exploreRangeMin=EXPLORE_FULL_MIN;
+            exploreRangeMax=END_YEAR;
+            exploreRangeFromUrl=false;
+          }
+          if(wrecksParam!==null){
+            hideExploreWrecks=wrecksParam==='0'||wrecksParam==='false';
+            exploreRangeFromUrl=true;
+          }else if(exploreRangeFromUrl&&fromParam===null&&toParam===null){
+            hideExploreWrecks=false;
+          }
+        }else if(exploreRangeFromUrl){
+          exploreRangeMin=EXPLORE_FULL_MIN;
+          exploreRangeMax=END_YEAR;
+          hideExploreWrecks=false;
+          exploreRangeFromUrl=false;
+        }
       }
       if(nextMode==='explore'&&atlasMode!=='explore'){explorePeriod='all';}
       atlasMode = nextMode;
@@ -1454,13 +1519,23 @@ async function route() {
       $(".timeline").hidden = !mapRoute || atlasMode === "explore";
       $("#explore-timeline").hidden = atlasMode !== "explore";
       mapPage();
+      if(nextMode==='movie'&&siteParam){
+        const rec=dataset.records.find(r=>r.id===siteParam);
+        if(rec){
+          storyId='free';storySceneIndex=-1;
+          if(rec.time.start!==null)setRecordYear(rec);
+          pendingLocation=rec;selected=[rec];
+          syncTransport();
+        }
+      }
       if(atlasMode==='explore'){
+        syncExploreWrecksUI();
         syncExploreTimelineUI(currentVisible.length);
         void ensureExploreCatalogs();
-        if(hashParams&&(hashParams.has('q')||hashParams.has('category')))(mapNavigation as MapNavigation|undefined)?.showFacts();
+        if(hashParams&&(hashParams.has('q')||hashParams.has('category')||hashParams.has('from')||hashParams.has('to')||hashParams.has('wrecks')))(mapNavigation as MapNavigation|undefined)?.showFacts();
       }
       if(topicOriginCamera){map.restoreCamera(topicOriginCamera);topicOriginCamera=undefined;}
-      else if(pendingLocation){const record=pendingLocation;pendingLocation=null;map.focus(record);}
+      else if(pendingLocation){const record=pendingLocation;pendingLocation=null;map.focus(record);if(mountedMap){openDetails();renderSelectionChoices();renderVisible();}}
       else if(atlasMode==='explore'){
         if(savedRegionCameras.explore)map.restoreCamera(savedRegionCameras.explore);
         else map.overview('world');
@@ -1473,7 +1548,7 @@ async function route() {
     else if(plannedAtlas==='europe'){
       main.innerHTML='<p class="review-page" role="status">Opening Europe’s places and connections…</p>';
       const europe=await loadEurope();if(generation!==routeGeneration)return;
-      disposeTopic=mountEurope(main,europe,land,lastAtlasRoute);
+      disposeTopic=mountEurope(main,europe,land,lastAtlasRoute,siteParam);
     }
     else if (plannedAtlas) {
       const manifest=loadAtlasManifest(plannedAtlas);
@@ -1518,7 +1593,10 @@ async function route() {
       const topic=topics.find(t=>t.id===hash.slice(7));if(!topic)throw new Error('Topic not found.');
       disposeTopic=mountTopicPage(main,topic,dataset.records,land,topicOriginRoute,pendingTopicLocation);pendingTopicLocation=undefined;
     }
-    else if (hash === "#library") main.innerHTML = libraryHTML(dataset.records.length);
+    else if (hash === "#library") {
+      main.innerHTML = libraryHTML(dataset.records.length + exploreExtraRecords.length);
+      void ensureExploreCatalogs();
+    }
     else if (hash === "#evidence") tablePage();
     else if (hash === "#context") main.innerHTML = contextHTML(rows());
     else if (hash === "#proposals") proposalsPage();
@@ -1538,8 +1616,18 @@ async function route() {
     else if (evidenceRoute) {
       main.innerHTML =
         '<article class="review-page"><p role="status">Loading the full source-linked record…</p></article>';
-      const r = await fullRecord(decodeURIComponent(hash.slice(hash.startsWith('#context/')?9:8)));
-      if (generation !== routeGeneration) return;
+      const targetId = decodeURIComponent(hash.slice(hash.startsWith('#context/')?9:8));
+      let r: FullDisplayRecord;
+      if (targetId.startsWith('world:') || targetId.startsWith('europe:')) {
+        await ensureExploreCatalogs();
+        if (generation !== routeGeneration) return;
+        const found = exploreExtraRecords.find((x) => x.id === targetId);
+        if (!found) throw new Error('Evidence record not found.');
+        r = found as FullDisplayRecord;
+      } else {
+        r = await fullRecord(targetId);
+        if (generation !== routeGeneration) return;
+      }
       reviewPage(r,undefined,undefined,hash.startsWith('#context/')&&!topicOnlyIds.has(r.id));
     } else if (hash.startsWith("#proposal/")) {
       const i = Number(hash.slice(10)),

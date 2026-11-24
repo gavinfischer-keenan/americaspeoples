@@ -8,6 +8,7 @@ import { isModeledRecord } from "./map-filters";
 import { populationAt } from "./population";
 import { recordHref } from "./review";
 import { guideForRecord, guideLink } from "./site-guides";
+import { relatedWorldGuideLinksHTML } from "./world-guides";
 import { formatYear } from "./time";
 import { historyLabel, historyState } from "./history";
 
@@ -128,9 +129,10 @@ export class MapPanels {
             const sourcesHTML = meta?.sources.length
               ? `<h5>Sources</h5><ul class="explore-sources">${meta.sources.map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)} ↗</a></li>`).join("")}</ul>`
               : "";
+            const relatedHTML = relatedWorldGuideLinksHTML(r.id, meta?.guideId);
             const actionsHTML = meta
-              ? `<a class="button" href="${esc(meta.regionHref)}">Open in regional map ↗</a>${meta.guideId ? `<a class="site-guide-link" href="sites/${esc(meta.guideId)}.html">◈ Read full study guide ↗</a>` : ""}`
-              : `<a class="button" href="${recordHref(r)}">Full review &amp; sources ↗</a>${guideLink(r.id)}`;
+              ? `<a class="button" href="${esc(meta.regionHref)}">Open in regional map ↗</a>${meta.guideId ? `<a class="site-guide-link" href="sites/${esc(meta.guideId)}.html">◈ Read full study guide ↗</a>` : ""}${relatedHTML}`
+              : `<a class="button" href="${recordHref(r)}">Full review &amp; sources ↗</a>${guideLink(r.id)}${relatedHTML}`;
             return `<article class="selected-detail"><h4>${esc(r.title)}</h4><p class="fine">${esc(r.culture.kind==='unknown'?'Community not identified':r.culture.name)} · ${esc(readerTimeDisplay(r))}</p>${!exploring && historyLabel(r,year) ? `<p class="selection-status">${esc(historyLabel(r,year))}</p>` : !included ? '<p class="selection-status">Outside the active timeline year / filters.</p>' : !inView ? '<p class="selection-status">Outside the current map view.</p>' : ""}${readerDetailHTML(r)}${r.population?.length && (exploring || historyState(r,year)==='active') ? `<p class="fine">${exploring ? r.population.map(p=>`${p.min.toLocaleString()}–${p.max.toLocaleString()} residents · ${formatYear(p.start)}–${formatYear(p.end)}`).map(esc).join("<br>") : esc(populationAt([r], year).label)}</p>` : ""}${sourcesHTML}${actionsHTML}</article>`;
           })
           .join("")

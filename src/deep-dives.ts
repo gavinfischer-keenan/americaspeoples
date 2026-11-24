@@ -59,7 +59,6 @@ const storyCategory:Record<string,DiveCategory>={
 };
 const expansionPlaces=new Set(['chaco','hovenweep','mesa-verde','canyons-of-the-ancients','machu-picchu','cahokia']);
 const combinedStories=new Set(siteGuides.map(g=>g.storyId).filter(Boolean));
-const planned=(id:string,title:string,description:string,category:DiveCategory,atlasIds:string[]=['americas']):DeepDive=>({id,title,description,category,atlasIds,links:[]});
 const worldGuideMovies: Record<string, string> = {
  'world-human-family': '#origins',
  'world-genghis-khan': '#study/genghis-khan',
@@ -74,7 +73,7 @@ const worldGuideMovies: Record<string, string> = {
  'world-australopithecus-fossils': '#study/australopithecus',
  'world-neanderthal-fossils': '#study/neanderthals',
 };
-const availableDives:DeepDive[]=[
+export const deepDives:DeepDive[]=[
  ...worldGuides.map(g=>({id:g.id,title:g.title,description:g.description,category:g.category,atlasIds:g.id==='world-human-family'?ALL_REGIONS:g.atlasIds,links:[{href:g.href,label:'Read guide' as const},...(worldGuideMovies[g.id]?[{href:worldGuideMovies[g.id],label:'Independent movie' as const}]:[])]})),
  ...topics.map(t=>{
   const linkedGuides=siteGuides.filter(g=>g.topicId===t.id);
@@ -91,38 +90,6 @@ const availableDives:DeepDive[]=[
   return {id:'story-'+s.id,title:s.title,description:s.description,category:storyCategory[s.id],atlasIds:atlasIdsForStoryScenes(s.id,s.scenes),links:[{href:'#story/'+s.id,label:'Contextual movie' as const}]};
  }),
 ];
-const plannedDives:DeepDive[]=[
- planned('australian-wool','Australia: convicts, stations and wool ships','Transportation, town and station growth, Aboriginal dispossession and resistance, and the ships connecting wool ports to Britain.','subjects',['pacific']),
- planned('australian-mining','Australia: mines, towns and export ports','Extraction, labour, growing towns and infrastructure, linked to Indigenous land and water dispossession. Through 1934.','subjects',['pacific']),
- ...[
-  ['chavin','Chavín de Huántar','Architecture, ritual spaces and connections across the Andes.',['americas']],
-  ['tiwanaku','Tiwanaku','Buildings, farming landscapes and regional connections.',['americas']],
-  ['chan-chan','Chan Chan','Compounds, water systems and the communities of Chimor.',['americas']],
-  ['teotihuacan','Teotihuacan','Neighbourhoods, apartment compounds and the changing city.',['americas']],
-  ['monte-alban','Monte Albán','Construction, valley settlements and political change.',['americas']],
-  ['calakmul','Calakmul','Urban landscapes and connections with other Maya centres.',['americas']],
-  ['copan','Copán','Buildings, inscriptions and communities in the valley.',['americas']],
-  ['paquime','Paquimé','Multistorey dwellings, water systems and exchange.',['americas']],
-  ['poverty-point','Poverty Point','Earthworks, habitation and long-distance materials.',['americas']],
-  ['hopewell','Hopewell earthworks','Individual complexes, construction and connections.',['americas']],
-  ['san-agustin','San Agustín','Settlements, monuments and their local chronologies.',['americas']],
-  ['tierradentro','Tierradentro','Tombs, settlement and the limits of current evidence.',['americas']],
-  ['casarabe','Casarabe: Cotoca and Landívar','Individual centres, engineered landscapes and connections.',['americas']],
-  ['nan-madol','Nan Madol','A dedicated study beyond the existing Pacific complexes guide.',['pacific']],
-  ['budj-bim','Budj Bim','Gunditjmara Country, settlement and engineered waterways.',['pacific']],
- ].map(([id,title,description,atlasIds])=>planned(id as string,title as string,description as string,'places',atlasIds as string[])),
- planned('austronesian-languages','Austronesian languages across the islands','A dedicated study of proposed family branches, contact and the limits of mapping language movement.','languages',['pacific']),
- planned('andean-languages','Quechuan and Aymaran histories','Language relationships, regional spread and contact; political boundaries are not language boundaries.','languages',['americas']),
- planned('iroquoian-languages','Iroquoian languages','Distinct communities, related languages and changing distributions.','languages',['americas']),
- planned('maya-languages','Maya languages','Branches, inscriptions and living languages, with separate kinds of evidence.','languages',['americas']),
- planned('wari','Wari histories','Provincial centres, networks and regional change.','cultures',['americas']),
- planned('moche','Moche communities','Local histories, architecture and exchange along the north coast of Peru.','cultures',['americas']),
- planned('lapita','Lapita communities and successors','Pottery, voyaging and later island histories, without equating an archaeological label with one people.','cultures',['pacific']),
- planned('gunditjmara','Gunditjmara histories','A community history connected to the proposed Budj Bim place study.','cultures',['pacific']),
-];
-
-const availableStudyIds=new Set([...topics.map(t=>t.id),...siteGuides.map(g=>g.id)]);
-export const deepDives:DeepDive[]=[...availableDives,...plannedDives.filter(d=>!availableStudyIds.has(d.id))];
 
 function card(d:DeepDive):string{
  return `<article class="dive-card${d.links.length?'':' dive-planned'}" data-dive="${esc(d.id)}"><span class="dive-status">${d.links.length?'Available now':'Coming soon'}</span><h3>${esc(d.title)}</h3><p>${esc(d.description)}</p>${d.expansion?`<p class="dive-expansion">Guide available · ${esc(d.expansion)}</p>`:''}${d.links.length?`<div class="dive-actions">${d.links.map(l=>`<a href="${esc(l.href)}">${l.label} <span aria-hidden="true">↗</span></a>`).join('')}</div>`:''}</article>`;

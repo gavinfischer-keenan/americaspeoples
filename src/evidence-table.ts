@@ -22,6 +22,9 @@ interface Inputs {
 /** Table owns search lifecycle and bounded DOM, not the authoritative records.
  * Route disposal aborts work; every input supersedes the previous search, and
  * stale responses cannot rewrite a newer query or a different page. */
+const normalizeSearch = (s: string) =>
+  s.normalize("NFKD").replace(/[\u0300-\u036f'’ʻʼ]/g, "").toLocaleLowerCase();
+
 export class EvidenceTable {
   private timer: ReturnType<typeof setTimeout> | undefined;
   private request: AbortController | undefined;
@@ -124,6 +127,22 @@ export class EvidenceTable {
           controller.signal.aborted
         )
           return;
+        // Fallback cleanly on static builds without /api/search while still surfacing network errors cleanly
+        if (/failed \(404\)/i.test((error as Error).message)) {
+          const words = normalizeSearch(this.state.search.trim()).split(/\s+/).filter(Boolean);
+          this.ids = new Set(
+            this.inputs.rows()
+              .filter((r) => !r.proposalKey && !r.id.startsWith("world:") && !r.id.startsWith("europe:"))
+              .filter((r) => {
+                const text = normalizeSearch(`${r.title} ${r.location?.name ?? ""} ${r.culture.name} ${r.review.summary} ${r.claims.map((c) => c.text).join(" ")}`);
+                return words.every((w) => text.includes(w));
+              })
+              .map((r) => r.id),
+          );
+          this.loading = false;
+          this.refresh();
+          return;
+        }
         this.loading = false;
         $("#table-caption", this.root).textContent = (error as Error).message;
       }
@@ -134,14 +153,20 @@ export class EvidenceTable {
   refresh() {
     if (this.disposed || this.loading) return;
     const { state: s } = this;
+    const query = normalizeSearch(s.search.trim());
+    const words = query ? query.split(/\s+/) : [];
     let rows = this.inputs.rows().filter((r) => {
       if (s.type==='wreck' ? r.history?.kind!=='wreck' : s.type !== "all" && (r.overlay?.kind ?? r.type) !== s.type)
         return false;
-      if (!s.search.trim()) return true;
-      if (!r.proposalKey) return !!this.ids?.has(r.id);
-      return `${r.title} ${r.location?.name ?? ""} ${r.culture.name} ${r.claims.map((c) => c.text).join(" ")}`
-        .toLowerCase()
-        .includes(s.search.toLowerCase());
+      if (!words.length) return true;
+      const clientIndexed = Boolean(
+        r.proposalKey || r.id.startsWith("world:") || r.id.startsWith("europe:"),
+      );
+      if (!clientIndexed) return !!this.ids?.has(r.id);
+      const text = normalizeSearch(
+        `${r.title} ${r.location?.name ?? ""} ${r.culture.name} ${r.review.summary} ${r.claims.map((c) => c.text).join(" ")}`,
+      );
+      return words.every((w) => text.includes(w));
     });
     if (s.period === "current") rows = activeRecords(rows, this.inputs.year());
     rows.sort((a, b) =>
@@ -156,7 +181,7 @@ export class EvidenceTable {
     const start = this.page * this.pageSize,
       page = rows.slice(start, start + this.pageSize);
     $("#table-caption", this.root).textContent =
-      `${rows.length} records · ${s.period === "all" ? "All dates" : formatYear(this.inputs.year())} · Showing ${rows.length ? start + 1 : 0}–${start + page.length}${this.inputs.hiddenCultureCount() ? " · Some cultures hidden" : ""}${this.inputs.preview() ? " · Complete proposals included" : ""}`;
+      `${rows.length.toLocaleString()} records · ${s.period === "all" ? "All dates" : formatYear(this.inputs.year())} · Showing ${rows.length ? start + 1 : 0}–${start + page.length}${this.inputs.hiddenCultureCount() ? " · Some cultures hidden" : ""}${this.inputs.preview() ? " · Complete proposals included" : ""}`;
     $("tbody", this.root).innerHTML =
       page
         .map(

@@ -8,6 +8,7 @@ import {
   type GlobalIceSlice,
 } from "./global-ice";
 import type { IceGeometry } from "./ice-geometry";
+import { milestoneAtlasLinks } from "./physical-links";
 import land from "../data/land.geojson";
 
 export interface MillerPoint {
@@ -97,6 +98,7 @@ export interface PaleoclimateSeries {
   landbridges: LandbridgeThreshold[];
 }
 
+export { milestoneAtlasLinks, type MilestoneAtlasLinks } from "./physical-links";
 export type EpochId = "deep" | "ice-ages" | "holocene" | "common-era";
 
 let seriesPromise: Promise<PaleoclimateSeries | null> | undefined;
@@ -593,6 +595,10 @@ export function mountPaleoEpochDashboard(
       selectedMilestoneId = epMilestones[0]?.id ?? "";
     }
     const selMs = epMilestones.find((m) => m.id === selectedMilestoneId);
+    const selLinks = selMs ? milestoneAtlasLinks(selMs.id) : undefined;
+    const msActionsHTML = selLinks
+      ? `<div class="paleo-ms-actions"><a class="paleo-ms-explore" href="${esc(selLinks.exploreHref)}">View human sites in ${esc(selLinks.exploreLabel)} on Explore ↗</a>${selLinks.related.map((r) => `<a class="paleo-ms-link" href="${esc(r.href)}">${esc(r.label)} ↗</a>`).join("")}</div>`
+      : "";
 
     const panelsHTML = panels
       .map((p, idx) => {
@@ -707,7 +713,7 @@ export function mountPaleoEpochDashboard(
       <div class="paleo-panels">${panelsHTML}</div>
       <div class="paleo-milestones">
         <div class="paleo-ms-bar"><span>Key Turning Points:</span>${milestoneChips}</div>
-        ${selMs ? `<div class="paleo-ms-card"><strong>${esc(selMs.label)}</strong><p>${esc(selMs.summary)}</p><p><em>Human context:</em> ${esc(selMs.humanContext)}</p><p class="paleo-ms-caution"><strong>Limits:</strong> ${esc(selMs.caution)} · <a href="${esc(selMs.doi)}" target="_blank" rel="noopener noreferrer">Source DOI ↗</a></p></div>` : ""}
+        ${selMs ? `<div class="paleo-ms-card"><strong>${esc(selMs.label)}</strong><p>${esc(selMs.summary)}</p><p><em>Human context:</em> ${esc(selMs.humanContext)}</p><p class="paleo-ms-caution"><strong>Limits:</strong> ${esc(selMs.caution)} · <a href="${esc(selMs.doi)}" target="_blank" rel="noopener noreferrer">Source DOI ↗</a></p>${msActionsHTML}</div>` : ""}
       </div>`;
 
     host.querySelectorAll<HTMLButtonElement>("[data-epoch]").forEach((btn) =>

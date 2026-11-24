@@ -1137,6 +1137,30 @@ button.primary:hover {
   font-weight: 700;
 }
 
+.explore-presets button.explore-wrecks-btn[aria-pressed="true"] {
+  background: #FA742A;
+  border-color: #A63108;
+  color: #10171A;
+}
+
+.explore-wrecks-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  font-size: 11px;
+  color: #244D26;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.explore-wrecks-check input {
+  width: auto;
+  min-height: 16px;
+  margin: 0;
+  accent-color: #3B783D;
+}
+
 .explore-presets button:focus-visible {
   outline: 3px solid #A63108;
   outline-offset: 2px;
