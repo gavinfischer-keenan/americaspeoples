@@ -1,6 +1,6 @@
 # Current source verification
 
-Version **0.32.0** adds a world-first entrance, regional paths and a separately loaded human-family catalogue. Ordinary regional history remains capped at 1900; Hawaiʻi statehood retains its existing 1959 exception. The Americas archive remains 11,201 evidence records.
+Version **0.33.0** is a maintenance release: no evidence changed, and the complete 66-phase `npm run verify:release` gate passes, including all browser phases (see CHANGELOG.md). Its content baseline is 0.32.0, which adds a world-first entrance, regional paths and a separately loaded human-family catalogue. Ordinary regional history remains capped at 1900; Hawaiʻi statehood retains its existing 1959 exception. The Americas archive remains 11,201 evidence records.
 
 The world catalogue contains 264 evidence observations, 267 source entries, 40 schematic dated connections and 13 territorial versions. The human-family framework includes named and unresolved hominin branches. Archaeological traditions do not become ethnic identities, inferred connections remain schematic, and unknown population sizes remain unknown. The four new dated studies cover Genghis Khan, Marco Polo, Silk Roads and Hannibal; their source-linked guides are authored atlas material, not reproduced provider reports.
 

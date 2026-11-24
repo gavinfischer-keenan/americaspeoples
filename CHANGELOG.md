@@ -2,6 +2,16 @@
 
 Release notes, newest first. These paragraphs were moved here from the README, where they had accumulated release by release; their counts describe the catalogue at the time of each release, not necessarily today. Detailed per-release verification is in [docs/release-verification-history.md](docs/release-verification-history.md).
 
+## 0.33.0 — November 24, 2026
+
+A maintenance and quality release from a full code and UI review. No evidence records were added or changed; the catalogue remains 11,370 records.
+
+- **Data safety:** saved suggestions that a newer version cannot read are kept under a backup key instead of being overwritten, and saves from other tabs are adopted. Personal file paths were removed from published intake data.
+- **Fixes:** routes beneath crowded place markers can be selected again; topic movies no longer grow without bound on portrait tablets; the timeline fits 304-pixel phones; plural labels read correctly; imported overlays cannot inject markup into the map.
+- **Consistency:** every timeline player uses one playback engine and the same Play/Pause controls; the colour palette is defined once; all guide pages share one stylesheet; the site title uses one font.
+- **Reproducible builds:** the paleoclimate download cache is committed and verified by checksum, so a build from a fresh checkout reproduces the published source credits. The release check (`npm run verify:release`, 66 phases) passes end to end, and CI runs on every pull request.
+- **Structure:** story and topic content moved from code into subject-named JSON under `data/stories/` and `data/topics/`; one-off intake scripts are archived.
+
 ## 0.32.0 and earlier
 
 
