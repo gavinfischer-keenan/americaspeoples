@@ -10,7 +10,7 @@ import type { WorldData } from "../src/world-model";
 import type { EuropeData } from "../src/europe-data";
 import { dataset } from "../src/published-data";
 
-test("all 110 World Deep Dives are reachable from map pins or related guide links", () => {
+test("all World Deep Dives are reachable from map pins or related guide links", () => {
   const world = JSON.parse(readFileSync("dist/world-catalogue.json", "utf8")) as WorldData;
   const europe = JSON.parse(readFileSync("dist/europe-catalogue.json", "utf8")) as { evidence: EuropeData };
 

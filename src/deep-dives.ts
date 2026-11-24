@@ -72,6 +72,9 @@ const worldGuideMovies: Record<string, string> = {
  'world-pre-1ma-world': '#study/pre-1ma-world',
  'world-australopithecus-fossils': '#study/australopithecus',
  'world-neanderthal-fossils': '#study/neanderthals',
+ 'world-ibn-battuta': '#study/ibn-battuta',
+ 'world-indian-ocean-monsoon': '#study/indian-ocean-monsoon',
+ 'world-bantu-dispersal': '#study/bantu-dispersal',
 };
 export const deepDives:DeepDive[]=[
  ...worldGuides.map(g=>({id:g.id,title:g.title,description:g.description,category:g.category,atlasIds:g.id==='world-human-family'?ALL_REGIONS:g.atlasIds,links:[{href:g.href,label:'Read guide' as const},...(worldGuideMovies[g.id]?[{href:worldGuideMovies[g.id],label:'Independent movie' as const}]:[])]})),

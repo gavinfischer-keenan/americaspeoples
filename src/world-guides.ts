@@ -23,6 +23,18 @@ const RELATED_WORLD_GUIDES:Readonly<Record<string,readonly string[]>>={
  'world-everyday-writing':['rom-vindolanda-tablets','amea-hab-tell-el-farkha-elephantine'],
  'world-cold-preserved-people':['eu-it-otzi-iceman','nordic-dk-tollund','family-denisova-early','family-xiahe-mandible'],
  'world-borobudur-bagan-se-asia':['seat-angkor-wat-thom','seat-sambor-prei-kuk'],
+ 'world-niger-congo-bantu-languages':['aio-ban-shum-laka-cameroon','aio-ban-urewe-great-lakes','afhe-great-zimbabwe'],
+ 'world-afroasiatic-semitic-languages':['afhe-aksum-stelae','hafn-fustat-cairo','arab-damascus-umayyad'],
+ 'world-indo-european-languages':['ind-delhi-sultanate-qutb','rts-pak-taxila-sirkap-jaulian','eu-ee-novgorod-ladoga'],
+ 'world-sino-tibetan-languages':['asho-han-tang-changan-maritime','asho-ming-qing-beijing-grand-canal','em16-lhasa-potala-ganden'],
+ 'world-austronesian-languages':['rts-mad-dembeni-comoros-crops','em16-melaka-straits-entrepot','asho-nan-madol-polynesia-1900'],
+ 'world-dravidian-austroasiatic-languages':['asho-hampi-vijayanagara','rts-ind-pattan-adichanallur-keeladi','seat-angkor-wat-thom'],
+ 'world-swahili-coast-world':['afhe-kilwa-kisiwani','em16-lamu-old-town','em16-zanzibar-stone-town'],
+ 'world-west-african-sahel-empires':['hafw-timbuktu-sankore-mosques','hafw-gao-tomb-of-askia-songhai','rts-mag-kumbi-saleh-ghana'],
+ 'world-ethiopian-highland-tradition':['afhe-aksum-stelae','em16-gondar-fasil-ghebbi','rts-horn-konso-terraces-ethiopia'],
+ 'world-steppe-pastoralists-eurasia':['asho-samarkand-bukhara-timurid','em16-bakhchisaray-crimean-steppe','em16-nerchinsk-kiakhta-frontier'],
+ 'world-south-asian-classical-traditions':['rts-ind-pataliputra-nalanda-bihar','rts-ind-ajanta-ellora-deccan','asho-mughal-agra-fatehpur-delhi'],
+ 'world-east-asian-literate-traditions':['em16-kyoto-imperial-craft-city','em16-suwon-hwaseong-joseon','em16-suzhou-yangzi-silk'],
 };
 export function relatedWorldGuidesFor(recordId:string,excludeGuideId?:string):WorldGuideIndex[]{
  const cleanId=recordId.replace(/^(?:world|europe):/,'');

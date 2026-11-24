@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "guides": [
+    {
+      "id": "world-indo-european-languages",
+      "atlasIds": [
+        "europe",
+        "asia-pacific"
+      ],
+      "category": "languages",
+      "title": "Indo-European Languages: Steppes, Anatolia & the Hybrid Origin Debate",
+      "description": "How Sanskrit, Greek, Latin, Celtic, Slavic, Iranian, Germanic, and Hittite branched across Eurasia—and what 2023 linguistics and archaeogenomics reveal.",
+      "intro": "Stretching from Icelandic sagas and Welsh poetry to Persian ghazals and Sanskrit grammar before 1500 CE, the Indo-European family shares unmistakable regular cognates for kinship, wheels, yokes, and counting. Explaining how it spread bridges Bronze Age Yamnaya horse pastoralists with older Fertile Crescent farmers.",
+      "scope": "Reviews classical historical linguistics, cuneiform Hittite tablets, ancient Steppe genomes, and Heggarty et al. (2023) hybrid phylogenetic dates.",
+      "map": {
+        "bounds": [
+          -18,
+          6,
+          98,
+          64
+        ],
+        "scope": "Across Atlantic Celtic/Germanic, Anatolian Hattusha, Aegean, Russian-Ukrainian steppe, Tarim Tocharian, and Gandharan–Gangetic South Asia.",
+        "points": [
+          {
+            "id": "g-lie-steppe",
+            "label": "Pontic–Caspian Steppe (Yamnaya Corridor)",
+            "coordinates": [
+              44.5,
+              48.7
+            ],
+            "date": "c. 3300–2500 BCE",
+            "description": "Major steppe pastoralist expansion contributing Bronze Age ancestry across Europe and Central Asia.",
+            "sources": [
+              "https://doi.org/10.1126/science.abg0818"
+            ]
+          },
+          {
+            "id": "g-lie-anatolia",
+            "label": "Hattusha / Central Anatolia (Hittite)",
+            "coordinates": [
+              34.61,
+              40.02
+            ],
+            "date": "From c. 1650 BCE",
+            "description": "Earliest attested Indo-European cuneiform archives revealing archaic laryngeal-era features.",
+            "sources": [
+              "https://doi.org/10.1126/science.abg0818"
+            ]
+          },
+          {
+            "id": "g-lie-taxila",
+            "label": "Taxila & Gandhara (Indo-Aryan / Prakrit)",
+            "coordinates": [
+              72.83,
+              33.75
+            ],
+            "date": "1500 BCE–500 CE",
+            "description": "Kharosthi and Brahmi Sanskrit–Prakrit inscriptions anchoring eastern Indo-Iranian branches.",
+            "sources": [
+              "https://doi.org/10.1080/00438243.2025.2604285",
+              "https://doi.org/10.1126/science.abg0818"
+            ]
+          },
+          {
+            "id": "g-lie-novgorod",
+            "label": "Novgorod & Baltic–Slavic Crossroads",
+            "coordinates": [
+              31.27,
+              58.52
+            ],
+            "date": "Historical",
+            "description": "Medieval birch-bark vernacular Slavic letters alongside Baltic archaic morphology.",
+            "sources": [
+              "https://doi.org/10.1073/pnas.2122084119"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "Anatolian, Steppe, and 2023 Hybrid Phylogenies",
+          "paragraphs": [
+            {
+              "text": "For decades scholars debated whether Indo-European spread outward from early Anatolian farmers (~8000 BP) or Bronze Age Yamnaya steppe herders (~5000 BP). Dense ancient DNA sampling proved both demographic pulses occurred sequentially across western Eurasia.",
+              "sources": [
+                "https://doi.org/10.1126/science.abg0818",
+                "https://doi.org/10.1073/pnas.2122084119"
+              ]
+            },
+            {
+              "text": "Heggarty et al. (2023) in Science proposed a hybrid synthesis from densely sampled core vocabulary trees (~8,100 BP root south of the Caucasus with later secondary steppe amplification into Europe and Central-South Asia), sparking lively integration with Steppe chariot and Tocharian Tarim archaeology.",
+              "sources": [
+                "https://doi.org/10.1126/science.abg0818"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Written monuments from Mycenaean Linear B to Vedic hymns",
+          "paragraphs": [
+            {
+              "text": "Comparing Hittite cuneiform archives (c. 1650 BCE), Mycenaean Greek Linear B clay accounts (c. 1400 BCE), oral-transmitted Rigvedic Sanskrit, and Avestan hymns anchored the comparative method that established regular phonological laws across Eurasian branches.",
+              "sources": [
+                "https://doi.org/10.1126/science.abg0818"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Maritime Latin–Romance, Slavic, and Indo-Iranian branches",
+          "paragraphs": [
+            {
+              "text": "Along Eurasia’s eastern and western extremes, Latin diversified into Mediterranean Romance languages while Middle Iranian (Sogdian, Persian), Indo-Aryan Prakrits, and Tocharian manuscripts along the Taklamakan rim documented Indo-European vitality deep across Inner and South Asia.",
+              "sources": [
+                "https://doi.org/10.1073/pnas.2122084119",
+                "https://doi.org/10.1080/00438243.2025.2604285"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Heggarty et al. (2023) · Language trees support a hybrid model for Indo-European (Science)",
+          "url": "https://doi.org/10.1126/science.abg0818"
+        },
+        {
+          "title": "Barbieri et al. (2022) · Global human genetic and linguistic histories (PNAS)",
+          "url": "https://doi.org/10.1073/pnas.2122084119"
+        },
+        {
+          "title": "Deurbanization & Sisupalgarh Early Historic South Asia (World Arch., 2025)",
+          "url": "https://doi.org/10.1080/00438243.2025.2604285"
+        }
+      ],
+      "relatedGuideIds": [
+        "world-steppe-pastoralists-eurasia",
+        "world-south-asian-classical-traditions"
+      ]
+    }
+  ]
+}

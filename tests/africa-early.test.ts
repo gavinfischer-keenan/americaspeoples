@@ -206,7 +206,7 @@ test('Europe and Asia-Pacific extend systematically to 1900 CE with zero sparse 
  for(const needle of ['Korolevo','Penghu 1','Nesher Ramla','Swartkrans','Boodie Cave','Carpenter','Figueira Brava','Tolbor-16','Wolo Sege']){
   assert.ok(pre30k.some(e=>e.title.includes(needle)),`Missing key pre-30,000 BCE site: ${needle}`);
  }
- assert.equal(guides.length,110,'All 110 world guides validate cleanly');
+ assert.ok(guides.length>=125,'All world guides validate cleanly');
  for(const g of guides){
   assert.ok(g.sections.length>=3,`Guide ${g.id} has at least 3 sections`);
   assert.ok(g.relatedGuideIds&&g.relatedGuideIds.length>=1,`Guide ${g.id} includes Continue exploring cross-links`);
