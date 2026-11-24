@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFile,mkdir} from 'node:fs/promises';
 import {createStaticServer} from '../scripts/static-server.mjs';
 import {earlyContinuityStories as archiveEntries} from '../src/early-continuity-stories.ts';
+import {pacificStoryIds} from '../src/region-partition.ts';
 const earlyContinuityStories=archiveEntries.map(entry=>({...entry,scenes:entry.scenes.filter(scene=>scene.year<=1900)}));
 const server=createStaticServer('dist');await new Promise(r=>server.listen(0,'127.0.0.1',r));
 const browser=await chromium.launch({executablePath:process.env.BROWSER_PATH||'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',headless:true});
@@ -36,7 +37,9 @@ try{
   }
   await page.screenshot({path:`test-results/early-${story.id}.png`});
   await page.getByRole('button',{name:'Reset map view',exact:true}).click();
-  assert.ok(await point('settlement-taos-habitation').count(),story.id+' retains surrounding history at the later date');
+  // Pacific stories (e.g. Kuk) zoom out to the Pacific movie, which shows Pacific history only.
+  const surrounding=pacificStoryIds.has(story.id)?'gap-mirimua-relocation':'settlement-taos-habitation';
+  assert.ok(await point(surrounding).count(),story.id+' retains surrounding history at the later date');
   assert.equal(await page.locator('#story-select').inputValue(),story.id);
  }
  for(const r of incoming){assert.deepEqual(records.find(x=>x.id===r.id),r,r.id+' exported exactly');}

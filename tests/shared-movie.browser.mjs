@@ -86,9 +86,8 @@ try{
  await mapSetting(page,()=>page.locator('#whole-movie').click());
  assert.equal(await page.locator('#story-select').inputValue(),'free');
  assert.equal(await page.locator('#map-host .map-canvas').getAttribute('data-scope'),'pacific');
- await page.getByRole('button',{name:'Region: Pacific',exact:true}).click();
- await page.getByRole('navigation',{name:'Choose a region',exact:true}).getByRole('link',{name:'Americas',exact:true}).click();
- await page.getByRole('button',{name:'Region: Americas',exact:true}).waitFor();
+ await page.locator('header.topbar nav[aria-label="Main navigation"] a[href="#movie"]').click();
+ await page.locator('#map-host .map-canvas[data-scope="americas"]').waitFor();
  assert.equal(await page.locator('#map-host .map-canvas').getAttribute('data-scope'),'americas');
  await page.screenshot({path:'test-results/shared-history-desktop.png'});
  await page.setViewportSize({width:390,height:844});

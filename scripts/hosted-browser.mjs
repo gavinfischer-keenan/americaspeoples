@@ -7,6 +7,9 @@ import { chromium } from "playwright";
 import assert from "node:assert/strict";
 import { readFile, mkdir, writeFile } from "node:fs/promises";
 import { createStaticServer } from "./static-server.mjs";
+// The Americas movie partitions out Pacific records (src/region-partition.ts).
+import { tsImport } from "tsx/esm/api";
+const { isAmericasRecord } = await tsImport("../src/region-partition.ts", import.meta.url);
 
 const server = createStaticServer(process.env.DIST_PATH || "dist");
 await new Promise((resolve) => server.listen(0, "127.0.0.1", resolve));
@@ -68,23 +71,20 @@ try {
   await page
     .getByLabel("Import suggestions")
     .setInputFiles("templates/americas-peoples-researched-import.xlsx");
-  await page
-    .getByRole("heading", { name: "Review import", exact: true })
-    .waitFor();
-  await page
-    .getByRole("button", { name: "Add to local collection", exact: true })
-    .click();
-  await page
-    .getByRole("heading", { name: "Your suggestions", exact: true })
-    .waitFor();
+  // Scope large-batch checks to known controls, as research-browser.mjs does: a
+  // document-wide role query walks all ~11k cards before finding the heading.
+  await page.locator("#confirm-import").waitFor();
+  assert.equal(await page.locator(".proposals-page > h2").textContent(), "Review import");
+  await page.locator("#confirm-import").click();
+  await page.locator("#import-file").waitFor();
+  assert.equal(await page.locator(".proposals-page h2").first().textContent(), "Your suggestions");
   assert.equal(await page.locator("[data-proposal-card]").count(), expectedRecords + saved.proposals.length);
   const savedAfter = await page.evaluate(() =>
     localStorage.getItem("americas-peoples-proposals-v1"),
   );
   await page.reload();
-  await page
-    .getByRole("heading", { name: "Your suggestions", exact: true })
-    .waitFor();
+  await page.locator("#import-file").waitFor();
+  assert.equal(await page.locator(".proposals-page h2").first().textContent(), "Your suggestions");
   assert.equal(await page.locator("[data-proposal-card]").count(), expectedRecords + saved.proposals.length);
   assert.equal(
     await page.evaluate(() =>
@@ -118,12 +118,13 @@ try {
   await page.getByLabel("Era", { exact: true }).selectOption("CE");
   await page.getByRole("button", { name: "Go to year", exact: true }).click();
   // Manual year entry starts that year. Exact-day events must not appear early.
+  // This is the Americas movie, so Pacific overlays (e.g. Rangiaowhia, Aotearoa) are out of scope.
   const activeAt1864Start=({record:r})=>r.overlay?.geometry&&r.time.start<=1864&&r.time.end>=1864&&(!(r.time.eventDate??r.history?.eventDate)||(r.time.eventDate??r.history?.eventDate)<='1864-01-01');
   const represented = new Set(await page.locator("#map-host [data-member-ids]")
     .evaluateAll(features => features.flatMap(feature => JSON.parse(feature.dataset.memberIds))));
   for (const kind of ["forced-removal", "violence"]) {
     const overlays = snapshot.records.filter(({ record }) => record.overlay?.kind === kind);
-    const expected = overlays.filter(activeAt1864Start).map(({ record }) => record.id).sort();
+    const expected = overlays.filter(activeAt1864Start).filter(({ record }) => isAmericasRecord(record)).map(({ record }) => record.id).sort();
     const actual = overlays.filter(({ record }) => represented.has(record.id)).map(({ record }) => record.id).sort();
     assert.deepEqual(actual, expected, `${kind} overlay records represented on January 1, 1864`);
   }
@@ -163,8 +164,12 @@ try {
     requests.every((r) => r.url.startsWith(origin + "/") && r.method === "GET"),
   );
   assert.ok(requests.some(r=>r.url.includes('/api/records/ai-colony-16')));
-  const geographicAssets=new Set(['world-summary.json','historical-boundaries.json','colonial-boundaries.json','national-boundaries.json','early-national-boundaries.json','reservation-boundaries.json','boundary-sources.json','expanded-boundary-sources.json','early-national-boundary-sources.json','reservation-boundary-sources.json','rail-network.json','voyages.json','expedition-activity.json','land-detailed.geojson'].map(name=>'/'+name));
-  assert.ok(requests.filter(r=>r.type==='fetch').every(r=>new URL(r.url).pathname.startsWith('/api/')||geographicAssets.has(new URL(r.url).pathname)));
+  const geographicAssets=new Set(['world-summary.json','historical-boundaries.json','colonial-boundaries.json','national-boundaries.json','early-national-boundaries.json','reservation-boundaries.json','boundary-sources.json','expanded-boundary-sources.json','early-national-boundary-sources.json','reservation-boundary-sources.json','rail-network.json','voyages.json','expedition-activity.json','land-detailed.geojson',
+    // Static same-origin assets the API does not serve: continuous ice sheets and the
+    // regional catalogues that global Explore and the Library count load lazily.
+    'global-ice-sheets.json','world-catalogue.json','europe-catalogue.json'].map(name=>'/'+name));
+  const unexpectedFetches=requests.filter(r=>r.type==='fetch').map(r=>new URL(r.url).pathname).filter(path=>!path.startsWith('/api/')&&!geographicAssets.has(path));
+  assert.deepEqual([...new Set(unexpectedFetches)],[],'hosted pages fetch only the API and geographic assets');
   assert.deepEqual(errors, []);
   assert.deepEqual(violations, []);
   const unsupported = await browser.newContext();

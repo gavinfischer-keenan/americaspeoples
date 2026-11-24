@@ -6,14 +6,19 @@ import {
   localPackage,
   previewSuggestions,
 } from "./browser-fixture.mjs";
+import { tsImport } from "tsx/esm/api";
+const { isAmericasRecord } = await tsImport("../src/region-partition.ts", import.meta.url);
 const fixture = await browserFixture();
 const { browser, page, dataset, url } = fixture;
 const expectedRecords = dataset.records.length;
 const expectedOverlays = dataset.records.filter((r) => r.overlay).length;
+// The map checks below run on the Americas movie, which partitions out Pacific
+// records (e.g. Rangiaowhia, Aotearoa); count only what that map can show.
 const overlayCount = (kind, year) =>
   dataset.records.filter(
     (r) =>
       r.overlay?.kind === kind &&
+      isAmericasRecord(r) &&
       r.overlay.geometry &&
       r.time.start <= year &&
       r.time.end >= year &&

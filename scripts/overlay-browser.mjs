@@ -22,7 +22,7 @@ const layerOptions = async () => {
   if (await page.locator("#time-settings").isVisible()) await page.locator("#time-settings-toggle").click();
   await showLayers(page);
   if (!(await page.locator(".layer-disclosure").evaluate(el => el.open)))
-    await page.locator(".layer-disclosure summary").click();
+    await page.locator(".layer-disclosure > summary").click();
 };
 const synthetic = () =>
   page.locator('[data-member-ids*="test-trade-overlay"],[data-member-ids*="historical-overlay-"]');
@@ -128,9 +128,12 @@ try {
     assert.equal(await synthetic().count(), n);
   }
   await page.locator("#time-settings-toggle").click();
+  // Clicking a place-density cluster deliberately zooms into that cluster, so click
+  // the route where no cluster sits on top (the midpoint can fall under one as the
+  // dataset grows). Ordinary overlaps still go through the chooser below.
   const routePoint=await synthetic().locator('path.overlay-line-hit').evaluate(path=>{
-    const point=path.getPointAtLength(path.getTotalLength()/2),screen=new DOMPoint(point.x,point.y).matrixTransform(path.getScreenCTM());
-    return {x:screen.x,y:screen.y};
+    const length=path.getTotalLength(),points=[.5,.4,.6,.3,.7,.2,.8].map(f=>{const point=path.getPointAtLength(length*f);const screen=new DOMPoint(point.x,point.y).matrixTransform(path.getScreenCTM());return {x:screen.x,y:screen.y};});
+    return points.find(({x,y})=>!document.elementFromPoint(x,y)?.closest('[data-density-group]'))??points[0];
   });
   await page.mouse.click(routePoint.x,routePoint.y);
   // Place-first picking may expose a nearby town before a route in an overview.

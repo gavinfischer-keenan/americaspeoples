@@ -98,7 +98,9 @@ try{
   const after=await markerPosition();
   assert.ok(Math.abs(after.x-before.x-25)<1,`Horizontal drag follows the pointer at ${width}px`);
   assert.ok(Math.abs(after.y-before.y+20)<1,`Vertical drag follows the pointer at ${width}px`);
-  assert.equal(await page.locator('#family-detail h2').textContent(),'Read the evidence','Dragging does not select evidence');
+  // The unselected panel shows the overview heading (renamed in a059bc9).
+  assert.equal(await page.locator('#family-detail h2').textContent(),'1 dated finds & landmarks','Dragging does not select evidence');
+  assert.equal(await page.locator('#family-detail').evaluate(element=>element.classList.contains('has-selection')),false,'Dragging leaves no selection');
   await page.locator('#family-reset').click();await map.scrollIntoViewIfNeeded();
   const point=await markerPosition(),transform=await map.locator('g[transform]').first().getAttribute('transform');
   await page.mouse.move(point.x,point.y);await page.mouse.down();

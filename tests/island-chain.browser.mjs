@@ -48,7 +48,9 @@ try{
  await page.goto(base+'/#library');
  await page.locator('a[href="sites/sources-attributions.html"]').click();
  await page.getByLabel('Search sources, creators, licenses or places').fill('David Weekly');
- await page.waitForFunction(()=>document.getElementById('source-count').textContent.startsWith('1 of '));
+ // The register is one ~20 MB page (~28k source rows); its deferred search script runs only
+ // after the whole document parses, which alone can take ~15 s in headless Chromium.
+ await page.waitForFunction(()=>document.getElementById('source-count').textContent.startsWith('1 of '),null,{timeout:60000});
  assert.match(await page.locator('[data-source-row]:visible').innerText(),/CC BY 2.0/);
  assert.deepEqual(errors,[]);
  console.log('PASS: 41 contextual island chapters, 12 rai chapters, seven guide links, shared evidence and searchable source credits.');

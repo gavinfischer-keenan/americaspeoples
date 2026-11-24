@@ -22,7 +22,8 @@ try{
   await p.goto(base+'/#topic/dogs');await p.locator('[data-topic-scene]').last().click();
   const context=p.locator('.topic-context a[href="#context/context-hawaii-provisioning-1779"]');
   assert.equal(await context.count(),1);await context.click();await p.locator('[data-action="locate"]').click();
-  await p.locator('#map-host .world').waitFor();assert.equal(p.url().split('#')[1],'movie');assert.equal(await p.locator('#year-number').inputValue(),'1779');
+  // Hawaiʻi belongs to the Pacific regional movie.
+  await p.locator('#map-host .world').waitFor();assert.equal(p.url().split('#')[1],'atlas/pacific');assert.equal(await p.locator('#year-number').inputValue(),'1779');
  });
  assert.deepEqual(failures,[]);
 }finally{await browser.close();await new Promise(r=>server.close(r));}

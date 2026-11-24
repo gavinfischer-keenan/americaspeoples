@@ -8,6 +8,9 @@ const page=await browser.newPage({viewport:{width:1440,height:960}}),errors=[];
 page.on('pageerror',e=>errors.push(e.message));
 const base=`http://127.0.0.1:${server.address().port}`;
 const world=()=>page.locator('#map-host .world').getAttribute('transform');
+// Restoring a saved camera recomputes the transform from its centre and scale, so
+// the last floating-point digits can differ; compare numbers, not strings.
+const sameCamera=(actual,expected,message)=>{const nums=t=>(t.match(/-?[\d.]+(?:e-?\d+)?/g)||[]).map(Number);const a=nums(actual),e=nums(expected);assert.equal(a.length,e.length,message);a.forEach((v,i)=>assert.ok(Math.abs(v-e[i])<1e-6,`${message}: ${actual} vs ${expected}`));};
 try{
  await page.goto(base+'/#movie');await page.getByRole('button',{name:'Pause',exact:true}).click();
  await mapSetting(page, () => page.getByLabel('Follow an expedition',{exact:true}).selectOption('beagle-1831-1836'));
@@ -40,7 +43,7 @@ try{
  assert.equal(await page.locator('#year-number').inputValue(),year,'topic time does not change global year');
  assert.equal(await page.locator('#voyage-select').inputValue(),'beagle-1831-1836');
  assert.equal(await page.locator('#voyage-position').innerText(),voyage,'fractional expedition date retained');
- assert.equal(await world(),camera,'global camera restored');
+ sameCamera(await world(),camera,'global camera restored');
  await page.getByRole('link',{name:'Explore',exact:true}).click();
  await mapSetting(page, () => page.locator('#place-search').fill('Taos'));
  const exploreCamera=await world();
@@ -49,7 +52,7 @@ try{
  await page.locator('#topic-next').click();assert.match(await page.locator('#topic-year').innerText(),/1,519/);
  await page.locator('.topic-toolbar a').filter({hasText:'Shared atlas'}).click();
  assert.equal(page.url().split('#')[1],'explore');assert.equal(await page.locator('#place-search').inputValue(),'Taos');
- assert.equal(await world(),exploreCamera);
+ sameCamera(await world(),exploreCamera,'explore camera restored');
  for(const id of ['sweet-potatoes','boats','dogs','horses','maize','trade','languages']){
   await page.goto(base+'/#topic/'+id);await page.locator('#topic-map .world').waitFor();
   const buttons=page.locator('[data-topic-scene]');
