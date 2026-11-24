@@ -159,6 +159,8 @@ function buildPackage(
     refs.set(id, source);
   });
   const claims = new Map<string, Claim>();
+  // Claims grouped by record in sheet order, so each Evidence row avoids a full scan.
+  const claimsByRecord = new Map<string, Claim[]>();
   tables.Claims.forEach((r, i) => {
     const id = str(r, "record_id"),
       claimId = str(r, "claim_id"),
@@ -171,13 +173,17 @@ function buildPackage(
         i + 2,
         "Missing or duplicate claim_id within this record.",
       );
-    claims.set(key, {
+    const claim: Claim = {
       id: claimId,
       text: str(r, "claim"),
       status: str(r, "scholarly_status") as Claim["status"],
       explanation: str(r, "status_explanation"),
       support: [],
-    });
+    };
+    claims.set(key, claim);
+    const group = claimsByRecord.get(id);
+    if (group) group.push(claim);
+    else claimsByRecord.set(id, [claim]);
   });
   const usedReferences = new Set<string>(),
     supportKeys = new Set<string>();
@@ -220,13 +226,21 @@ function buildPackage(
         "Reference is unused. Link it from ClaimSources, including as context when appropriate, or remove it.",
       );
   });
+  // First match wins, as with records.find(); built once rather than per row.
+  const recordsById = new Map<string, EvidenceRecord>();
+  const culturesById = new Map<string, EvidenceRecord["culture"]>();
+  for (const record of records) {
+    if (!recordsById.has(record.id)) recordsById.set(record.id, record);
+    if (!culturesById.has(record.culture.id))
+      culturesById.set(record.culture.id, record.culture);
+  }
   const proposals: Proposal[] = tables.Evidence.map((r, i) => {
     const row = i + 2,
       id = str(r, "record_id"),
       operation = str(r, "operation") || "new";
     if (!["new", "correction"].includes(operation))
       fail("Evidence", row, "operation must be new or correction.");
-    const base = records.find((x) => x.id === id);
+    const base = recordsById.get(id);
     const baseRevision = number(r, "base_revision", "Evidence", row);
     if (operation === "correction") {
       if (!base)
@@ -261,10 +275,8 @@ function buildPackage(
         "All year and era cells must be blank for an unplaced record.",
       );
     const cultureId = str(r, "culture_id") || "unknown",
-      known = records.find((x) => x.culture.id === cultureId)?.culture;
-    const associated = [...claims.entries()]
-      .filter(([key]) => key.startsWith(id + "|"))
-      .map(([, value]) => value);
+      known = culturesById.get(cultureId);
+    const associated = claimsByRecord.get(id) ?? [];
     const sourceIds = new Set(
       associated.flatMap((c) => c.support.map((x) => x.sourceId)),
     );

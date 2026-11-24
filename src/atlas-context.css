@@ -9,11 +9,14 @@
 .voyage-tracks>path.selected-voyage{stroke:#ffda7d;stroke-width:2.5}.selected-traveler circle{stroke:#ffe398;stroke-width:3}
 .focus-view.whole-movie #cinema-caption{display:block;position:absolute;left:18px;bottom:104px;padding:12px 16px;background:#f2eee4ed;color:#264647;border-radius:10px;max-width:330px;pointer-events:none}.focus-view.whole-movie #cinema-caption h3{font-size:22px}.focus-view.whole-movie #cinema-caption p{font-size:11px;margin:0}
 @media(max-width:700px){.story-intro>.whole-movie-button{flex:0 0 100%;margin:0;min-height:26px;font-size:10px}.concurrent-context{padding:12px 16px}.whole-intro h2{font-size:22px}.context-date-status{font-size:9px!important;top:38px!important;max-width:calc(100% - 170px)!important}.focus-view.whole-movie #cinema-caption{display:none}}
-.political-boundaries path{fill:none;stroke:#e4bd88;stroke-width:1.3;stroke-dasharray:2 4;vector-effect:non-scaling-stroke;opacity:.8}
-.political-boundaries .boundary-reservation{stroke:#f5a5c6;stroke-dasharray:1 3}
+/* Non-scaling dashes are laid out in screen pixels, so a continent-wide boundary at
+   deep zoom becomes millions of dashes and stalls rasterization for seconds.
+   --map-dash-scale (set by WorldMap) lengthens dashes beyond 32x zoom instead. */
+.political-boundaries path{fill:none;stroke:#e4bd88;stroke-width:1.3;stroke-dasharray:calc(2px * var(--map-dash-scale, 1)) calc(4px * var(--map-dash-scale, 1));vector-effect:non-scaling-stroke;opacity:.8}
+.political-boundaries .boundary-reservation{stroke:#f5a5c6;stroke-dasharray:calc(1px * var(--map-dash-scale, 1)) calc(3px * var(--map-dash-scale, 1))}
 .boundary-label{fill:#eed5ac;text-anchor:middle;paint-order:stroke;stroke:#13282e;stroke-width:3px;stroke-linejoin:round;vector-effect:non-scaling-stroke;font-weight:600}
 .historical-rails path{fill:none;stroke:#abc5bd;stroke-width:1;vector-effect:non-scaling-stroke;opacity:.65}
-.voyage-tracks>path{fill:none;stroke:#f5e9b5;stroke-width:1.5;stroke-dasharray:5 5;vector-effect:non-scaling-stroke}
+.voyage-tracks>path{fill:none;stroke:#f5e9b5;stroke-width:1.5;stroke-dasharray:calc(5px * var(--map-dash-scale, 1)) calc(5px * var(--map-dash-scale, 1));vector-effect:non-scaling-stroke}
 .voyage-stop{fill:#f5e9b5;stroke:#142a30;stroke-width:1;vector-effect:non-scaling-stroke}
 .voyage-traveler circle{fill:#173b43;stroke:#fff0b9;stroke-width:1.5}
 .voyage-traveler text{font-size:19px;fill:#fff0b9}

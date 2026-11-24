@@ -101,7 +101,7 @@ body.movie-playing:not(.focus-view) .map-stage #cinema-caption small{display:non
 .map-canvas .voyage-tracks>path.voyage-casing{stroke:#162b35;stroke-width:5;stroke-dasharray:none;pointer-events:none}
 .map-canvas .voyage-tracks>path[data-voyage-track]{stroke:#ffbd6f;stroke-width:2.8}
 .map-canvas.density-playing .voyage-tracks>path.voyage-casing{stroke-width:9}
-.map-canvas.density-playing .voyage-tracks>path[data-voyage-track]{stroke-width:5;stroke-dasharray:9 4}
+.map-canvas.density-playing .voyage-tracks>path[data-voyage-track]{stroke-width:5;stroke-dasharray:calc(9px * var(--map-dash-scale, 1)) calc(4px * var(--map-dash-scale, 1))}
 .local-ending-symbol{fill:none;stroke:#f5b383;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0px 1px 1px #112833);pointer-events:none}
 .ending-possible{stroke-dasharray:3 1.5}
 .map-canvas.density-playing .history-route.route-active[data-direction="forward"] .route-flow{animation-play-state:running}

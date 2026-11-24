@@ -431,6 +431,9 @@ export class MapView {
       "transform",
       `translate(${this.tx},${this.ty}) scale(${this.scale})`,
     );
+    // Bound the number of screen-space dashes on long non-scaling strokes (see atlas-context.css).
+    const dashScale=String(Math.max(1,this.scale/32));
+    if(this.element.style.getPropertyValue('--map-dash-scale')!==dashScale)this.element.style.setProperty('--map-dash-scale',dashScale);
     this.notifyViewportChange();
   }
   /** Pointer events may outpace paint; notify panels once with the final view. */
