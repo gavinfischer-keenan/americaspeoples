@@ -52,7 +52,7 @@ const phases = [
   [
     "Hosted privacy, CSP and full snapshot",
     node,
-    ["scripts/hosted-browser.mjs"],
+    ["--import", "tsx", "scripts/hosted-browser.mjs"],
   ],
   ["Extracted self-host package", null, ["scripts/selfhost-smoke.py"]],
   [
@@ -68,7 +68,7 @@ const phases = [
   [
     "Complete researched workbook and reviews",
     node,
-    ["scripts/research-browser.mjs"],
+    ["--import", "tsx", "scripts/research-browser.mjs"],
   ],
   [
     "Overlay selection, filters and persistence",

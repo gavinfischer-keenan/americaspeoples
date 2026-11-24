@@ -1,4 +1,4 @@
-import {mapSetting} from '../scripts/browser-fixture.mjs';
+import {mapSetting,topNav,waitForMapScope} from '../scripts/browser-fixture.mjs';
 import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
 import { createStaticServer } from '../scripts/static-server.mjs';
@@ -86,9 +86,8 @@ try{
  await mapSetting(page,()=>page.locator('#whole-movie').click());
  assert.equal(await page.locator('#story-select').inputValue(),'free');
  assert.equal(await page.locator('#map-host .map-canvas').getAttribute('data-scope'),'pacific');
- await page.getByRole('button',{name:'Region: Pacific',exact:true}).click();
- await page.getByRole('navigation',{name:'Choose a region',exact:true}).getByRole('link',{name:'Americas',exact:true}).click();
- await page.getByRole('button',{name:'Region: Americas',exact:true}).waitFor();
+ await topNav(page,'Americas').click();
+ await waitForMapScope(page,'americas');
  assert.equal(await page.locator('#map-host .map-canvas').getAttribute('data-scope'),'americas');
  await page.screenshot({path:'test-results/shared-history-desktop.png'});
  await page.setViewportSize({width:390,height:844});

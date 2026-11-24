@@ -47,6 +47,8 @@ try{
  await page.screenshot({path:'test-results/yap-guide-tablet.png'});
  await page.goto(base+'/#library');
  await page.locator('a[href="sites/sources-attributions.html"]').click();
+ // The register is a ~21 MB page; its search script runs once the page has loaded.
+ await page.waitForURL(/sources-attributions\.html/,{waitUntil:'commit'});await page.waitForLoadState('load',{timeout:120000});
  await page.getByLabel('Search sources, creators, licenses or places').fill('David Weekly');
  await page.waitForFunction(()=>document.getElementById('source-count').textContent.startsWith('1 of '));
  assert.match(await page.locator('[data-source-row]:visible').innerText(),/CC BY 2.0/);

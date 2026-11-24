@@ -253,7 +253,11 @@ export class MapView {
           else this.resetView();
         } else this.zoom(target.dataset.zoom === "in" ? 1.35 : 1 / 1.35);
       } else if (!moved&&svg.contains(e.target as Node)) {
-        if(target?.hasAttribute('data-density-group')||target?.hasAttribute('data-route-endpoint')){this.activateFeature(target);return;}
+        if(target?.hasAttribute('data-density-group')||target?.hasAttribute('data-route-endpoint')){
+          // A crowded marker must not make a route or area passing beneath it unselectable.
+          const connections=e.detail===0?[]:this.pick(this.clientPoint(e.clientX,e.clientY),(e as PointerEvent).pointerType==='touch').filter(r=>!!r.overlay);
+          this.activateFeature(target,connections);return;
+        }
         const rows=e.detail===0&&target?this.featureRows(target):this.pick(this.clientPoint(e.clientX,e.clientY),(e as PointerEvent).pointerType==='touch');
         if(rows.length){e.preventDefault();this.selectRows(rows);}
       }
@@ -548,12 +552,16 @@ export class MapView {
     if(element.dataset.point!==undefined)return this.drawnPoints.get(element.dataset.point)??[];
     return [];
   }
-  private activateFeature(feature:Element){
-    const rows=this.featureRows(feature);
+  /** `alsoHere` adds connections under the pointer that a crowded place marker
+   *  would otherwise hide: they join the overlap chooser after the place's own
+   *  records, but do not change how the camera frames the place. */
+  private activateFeature(feature:Element,alsoHere:readonly DisplayRecord[]=[]){
+    const rows=this.featureRows(feature),ids=new Set(rows.map(r=>r.id));
+    const offered=[...rows,...alsoHere.filter(r=>!ids.has(r.id))];
     if(feature.hasAttribute('data-density-group')&&this.scale<2048){
       this.focusRecords(rows);
-      this.onSelect(rows);
-    }else this.selectRows(rows);
+      this.onSelect(offered);
+    }else this.selectRows(offered);
   }
   private selectRows(rows:DisplayRecord[]){
     if(!rows.length)return;

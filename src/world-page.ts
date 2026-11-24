@@ -622,7 +622,7 @@ export function mountWorldPlayer(
       const t = data.taxa.find((t) => t.id === state.taxon);
       detail.innerHTML = t
         ? `<p class="world-kicker">${esc(t.status.replaceAll("-", " "))}</p><h2>${esc(t.name)}</h2><p>${esc(t.meaning)}</p><p>${esc(t.note)}</p><ul class="family-sources">${sourceHTML(t.sourceIds)}</ul>`
-        : `<p class="world-kicker">${study ? "DATED DEEP DIVE" : "FOUNDATION &amp; CONTEXT"}</p><h2>${stats.records} dated finds &amp; landmarks</h2><p>${esc(scopeLead)}</p><p>Select any point or connection on the map to read what was found, which hominin lineage it represents, and its primary publications.</p>${earliestEvidence ? `<button type="button" class="family-start-oldest" data-world-item="${esc(earliestEvidence.id)}">Start at the oldest site: ${esc(earliestEvidence.title)}</button>` : ""}`;
+        : `<p class="world-kicker">${study ? "DATED DEEP DIVE" : "FOUNDATION &amp; CONTEXT"}</p><h2>${stats.records.toLocaleString("en-US")} dated ${stats.records === 1 ? "find or landmark" : "finds &amp; landmarks"}</h2><p>${esc(scopeLead)}</p><p>Select any point or connection on the map to read what was found, which hominin lineage it represents, and its primary publications.</p>${earliestEvidence ? `<button type="button" class="family-start-oldest" data-world-item="${esc(earliestEvidence.id)}">Start at the oldest site: ${esc(earliestEvidence.title)}</button>` : ""}`;
       return;
     }
     const isOldest =

@@ -32,7 +32,9 @@ try{
   const marker=r.history?.kind==='settlement'?page.locator(`[data-record-id="${id}"]`):page.locator(`[data-point="${r.location.lon},${r.location.lat}"]`);
   const box=await marker.boundingBox(), map=await page.locator('#map-host').boundingBox();
   assert.ok(box&&box.x+box.width>map.x&&box.x<map.x+map.width&&box.y+box.height>map.y&&box.y<map.y+map.height,id+' visible');
-  await page.screenshot({path:`test-results/${id}.png`});
+  // Diagnostic artifact only. The first capture decodes the large terrain raster, which
+  // can take ~20 s in a GPU-less headless browser; don't fail evidence checks on it.
+  await page.screenshot({path:`test-results/${id}.png`,timeout:60000});
  }
  const archived=records.find(r=>r.id==='interior-galibi-1925');assert.equal(archived.time.start,1925);
  await page.goto(origin+'/#review/'+archived.id);

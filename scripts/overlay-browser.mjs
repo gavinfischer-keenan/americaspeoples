@@ -22,7 +22,7 @@ const layerOptions = async () => {
   if (await page.locator("#time-settings").isVisible()) await page.locator("#time-settings-toggle").click();
   await showLayers(page);
   if (!(await page.locator(".layer-disclosure").evaluate(el => el.open)))
-    await page.locator(".layer-disclosure summary").click();
+    await page.locator(".layer-disclosure > summary").click();
 };
 const synthetic = () =>
   page.locator('[data-member-ids*="test-trade-overlay"],[data-member-ids*="historical-overlay-"]');

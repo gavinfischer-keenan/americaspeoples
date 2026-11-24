@@ -11,7 +11,6 @@ page.setDefaultTimeout(10000);page.on('pageerror',e=>errors.push(e.message));
 const origin=`http://127.0.0.1:${server.address().port}`;
 const records=JSON.parse(await readFile('dist/dataset.json','utf8')).records;
 const incoming=JSON.parse(await readFile('data/early-continuity-expansion-records.json','utf8')).records;
-const point=id=>page.locator(`#map-host [data-member-ids*='${JSON.stringify(id)}']`);
 try{
  await mkdir('test-results',{recursive:true});
  for(const story of earlyContinuityStories){
@@ -36,7 +35,12 @@ try{
   }
   await page.screenshot({path:`test-results/early-${story.id}.png`});
   await page.getByRole('button',{name:'Reset map view',exact:true}).click();
-  assert.ok(await point('settlement-taos-habitation').count(),story.id+' retains surrounding history at the later date');
+  // Surrounding history: after reset, the map still draws places that are not part
+  // of this story. (A fixed anchor such as Taos is off-screen in the Pacific atlas,
+  // where Kuk now opens.)
+  const storyIds=new Set(story.scenes.flatMap(scene=>scene.recordIds));
+  const surrounding=await page.locator('#map-host [data-member-ids]').evaluateAll((nodes,own)=>{const m=document.querySelector('#map-host').getBoundingClientRect();return nodes.filter(n=>{const b=n.getBoundingClientRect();return b.width>0&&b.right>m.left&&b.left<m.right&&b.bottom>m.top&&b.top<m.bottom&&JSON.parse(n.dataset.memberIds||'[]').some(id=>!own.includes(id));}).length;},[...storyIds]);
+  assert.ok(surrounding>0,story.id+' retains surrounding history at the later date');
   assert.equal(await page.locator('#story-select').inputValue(),story.id);
  }
  for(const r of incoming){assert.deepEqual(records.find(x=>x.id===r.id),r,r.id+' exported exactly');}

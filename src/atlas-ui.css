@@ -741,6 +741,13 @@ body.movie-playing .timeline .play-button {
 
 .americas-jump-wrap {
   margin-left: 6px;
+  /* Let the period menu shrink on very narrow phones instead of overflowing. */
+  min-width: 0;
+  max-width: 100%;
+}
+.americas-jump-wrap select {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .timeline input[type="range"] {

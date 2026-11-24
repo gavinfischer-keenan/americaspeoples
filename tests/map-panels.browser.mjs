@@ -1,3 +1,4 @@
+import {topNav,waitForMapScope} from '../scripts/browser-fixture.mjs';
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {mkdir} from 'node:fs/promises';
@@ -35,7 +36,7 @@ try{
  const zoomedIds=await choices.allTextContents();await page.locator('.map-canvas > svg').focus();for(let i=0;i<16;i++)await page.keyboard.press('ArrowLeft');
  await page.waitForFunction(before=>JSON.stringify([...document.querySelectorAll('[data-visible-index]')].map(n=>n.textContent))!==JSON.stringify(before),zoomedIds);
  await page.getByRole('button',{name:'Reset map view',exact:true}).click();await page.waitForFunction(n=>document.querySelectorAll('[data-visible-index]').length===n,initial);
- await openSettings();await page.locator('.layer-disclosure summary').click();await page.getByLabel('Show modeled evidence',{exact:true}).uncheck();
+ await openSettings();await page.locator('.layer-disclosure > summary').click();await page.getByLabel('Show modeled evidence',{exact:true}).uncheck();
  assert.equal(await settings().getAttribute('aria-expanded'),'false','layer selection retracts settings');
  assert.ok(!(await page.locator('#visible-records').innerText()).includes('Modeled'));
  for(const width of [1440,1100,768,390]){
@@ -45,15 +46,15 @@ try{
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'no horizontal overflow at '+width);
  }
  await page.screenshot({path:'test-results/map-panels-mobile.png',fullPage:true});
- await page.setViewportSize({width:1440,height:1000});await page.getByRole('button',{name:'Region: Americas',exact:true}).click();await page.getByRole('navigation',{name:'Choose a region',exact:true}).getByRole('link',{name:'Pacific',exact:true}).click();
- await page.getByRole('button',{name:'Region: Pacific',exact:true}).waitFor();
- await page.getByRole('button',{name:'Region: Pacific',exact:true}).click();await page.getByRole('navigation',{name:'Choose a region',exact:true}).getByRole('link',{name:'Europe',exact:true}).click();
+ await page.setViewportSize({width:1440,height:1000});await topNav(page,'Pacific').click();
+ await waitForMapScope(page,'pacific');
+ await topNav(page,'Europe').click();
  await page.locator('#europe-map').waitFor();assert.equal(await settings().getAttribute('aria-expanded'),'false');assert.equal(await page.locator('.europe-filters').isVisible(),false);
  await openSettings();await page.locator('#europe-category').selectOption('habitation');assert.equal(await settings().getAttribute('aria-expanded'),'false');
  await facts().click();assert.equal(await page.locator('.europe-reader').isVisible(),false);await facts().click();
  await page.locator('#europe-era').selectOption('1850');
  await page.screenshot({path:'test-results/europe-shared-navigation.png',fullPage:true});
- await page.getByRole('button',{name:'Region: Europe',exact:true}).click();await page.getByRole('navigation',{name:'Choose a region',exact:true}).getByRole('link',{name:'Americas',exact:true}).click();await page.locator('#map-host').waitFor();
+ await topNav(page,'Americas').click();await page.locator('#map-host').waitFor();
  assert.equal((await page.locator('#current-year').innerText()).replaceAll(',',''),'1000 CE','regional navigation preserves the Americas date');
  assert.deepEqual(errors,[]);console.log('PASS: Americas and Europe shared navigation, side facts, selection, zoom/pan, filters, responsive flow and preserved date.');
 }finally{await browser.close();await new Promise(r=>server.close(r));}
