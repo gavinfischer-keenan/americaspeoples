@@ -38,7 +38,9 @@
  .topic-toolbar>div{flex:1 0 100%}
  .topic-toolbar label{min-width:0;flex:1}
  .topic-toolbar select{width:170px;flex:1}
- .topic-page #app{height:100dvh;display:flex;flex-direction:column}
+ /* Topic pages also carry body.reading-page, whose #app{height:auto} would
+    otherwise win and leave the map's height unbounded (it then grows forever). */
+ body.topic-page #app,body.topic-page.reading-page #app{height:100dvh;display:flex;flex-direction:column}
  .topic-page .topbar{flex-shrink:0}
  .topic-page .shell{flex:1;min-height:0}
  .topic-page #main{height:100%;min-height:0}
