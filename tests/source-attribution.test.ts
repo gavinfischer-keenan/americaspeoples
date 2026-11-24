@@ -102,7 +102,7 @@ test('reused world-guide images publish item-level creator and rights links', as
   const {collectSourceAttributions,loadAttributionInputs,sourceAttributionHTML}=await import('../scripts/source-attribution-build');
   const entries=collectSourceAttributions(await loadAttributionInputs());
   const manifest=JSON.parse(await readFile('data/world-guide-media.json','utf8')) as {assets: WorldGuideMedia[]};
-  assert.equal(manifest.assets.length,122);
+  assert.equal(manifest.assets.length,182);
   for (const image of manifest.assets) {
     const matches=entries.filter(entry=>entry.urls.includes(image.sourceUrl));
     assert.equal(matches.length,1,image.id);
@@ -117,6 +117,6 @@ test('reused world-guide images publish item-level creator and rights links', as
     const html=sourceAttributionHTML([entry],'','');
     assert.ok(html.includes(`href="${image.licenseUrl}"`));
     assert.ok(html.includes(`href="${image.sourceUrl.replaceAll('&','&amp;')}"`));
-    assert.ok(html.includes(image.credit));
+    assert.ok(html.includes(image.credit.replaceAll('&','&amp;').replaceAll("'",'&#39;')));
   }
 });
