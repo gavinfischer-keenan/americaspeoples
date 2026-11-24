@@ -30,7 +30,9 @@ try{
   assert.equal(await page.locator('#year-number').inputValue(),String(r.time.start));
   assert.ok((await page.locator('#selected-records').innerText()).includes(r.title));
   const marker=r.history?.kind==='settlement'?page.locator(`[data-record-id="${id}"]`):page.locator(`[data-point="${r.location.lon},${r.location.lat}"]`);
-  const box=await marker.boundingBox(), map=await page.locator('#map-host').boundingBox();
+  // The details panel can render a frame before the map redraws the marker.
+    await marker.first().waitFor({state:'visible'});
+    const box=await marker.boundingBox(), map=await page.locator('#map-host').boundingBox();
   assert.ok(box&&box.x+box.width>map.x&&box.x<map.x+map.width&&box.y+box.height>map.y&&box.y<map.y+map.height,id+' visible');
   // Diagnostic artifact only. The first capture decodes the large terrain raster, which
   // can take ~20 s in a GPU-less headless browser; don't fail evidence checks on it.
