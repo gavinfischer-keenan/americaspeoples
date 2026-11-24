@@ -53,6 +53,7 @@ import northAmericaRockArt from '../data/north-america-rock-art-expansion-record
 import baffinHighArctic from '../data/baffin-high-arctic-expansion-records.json';
 import interiorBrazil from '../data/interior-brazil-expansion-records.json';
 import interiorAustralia from '../data/interior-australia-expansion-records.json';
+import westernAmazonEarly from '../data/western-amazon-early-records.json';
 import { version as appVersion } from "../package.json";
 import type { Dataset, EvidenceRecord } from "./model";
 import { validateDataset } from "./validation";
@@ -101,6 +102,6 @@ export const dataset = publishedDataset(
     ...atlantic.records,
     ...localPlaces.records,
     ...hawaiiLocal.records, ...sharedContext.records,
-    ...remainingContext.records, ...remainingEvidence.records, ...worldGap.records, ...australasiaArchaeology.records, ...sovereigntyTopics.records, ...sovereigntyContext.records, ...communityTopics.records, ...communityContext.records, ...pacificTopics.records, ...pacificTopicContext.records, ...cities.records, ...conflicts.records, ...northern.records, ...topicEvidence.records, ...northAmericaRockArt.records, ...baffinHighArctic.records, ...interiorBrazil.records, ...interiorAustralia.records,
+    ...remainingContext.records, ...remainingEvidence.records, ...worldGap.records, ...australasiaArchaeology.records, ...sovereigntyTopics.records, ...sovereigntyContext.records, ...communityTopics.records, ...communityContext.records, ...pacificTopics.records, ...pacificTopicContext.records, ...cities.records, ...conflicts.records, ...northern.records, ...topicEvidence.records, ...northAmericaRockArt.records, ...baffinHighArctic.records, ...interiorBrazil.records, ...interiorAustralia.records, ...westernAmazonEarly.records,
   ] as EvidenceRecord[],
 );

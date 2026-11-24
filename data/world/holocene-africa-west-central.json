@@ -648,6 +648,12 @@
       "title": "UNESCO World Heritage Centre — Sukur Cultural Landscape (938)",
       "url": "https://whc.unesco.org/en/list/938/",
       "access": "Official UNESCO World Heritage property dossier. Checked 2026-11-20."
+    },
+    {
+      "id": "pop-hafw-chandler-modelski",
+      "title": "Reba, Reitsma & Seto (2016) · Spatializing 6,000 years of global urbanization from 3700 BC to AD 2000 (Scientific Data; digitizing Chandler 1987 & Modelski 2003)",
+      "url": "https://doi.org/10.1038/sdata.2016.34",
+      "access": "Open-access Scientific Data compilation checked via Consensus API (DOI 10.1038/sdata.2016.34). Preserves historical city population ranges and methodological uncertainty."
     }
   ],
   "taxa": [],
@@ -1875,7 +1881,29 @@
         "s2n2-sahel-urban-2017",
         "s2n-tr-whc-119"
       ],
-      "guideId": "world-timbuktu-gao-mali"
+      "guideId": "world-timbuktu-gao-mali",
+      "population": [
+        {
+          "year": 1550,
+          "min": 25000,
+          "max": 50000,
+          "basis": "estimate",
+          "note": "Songhai Askia-period trans-Saharan trade and manuscript-quarter estimate (seasonal scholarly flux excluded from lower bound)",
+          "sourceIds": [
+            "pop-hafw-chandler-modelski"
+          ]
+        },
+        {
+          "year": 1828,
+          "min": 10000,
+          "max": 12000,
+          "basis": "estimate",
+          "note": "Early 19th-century Niger Bend commercial town estimate",
+          "sourceIds": [
+            "pop-hafw-chandler-modelski"
+          ]
+        }
+      ]
     },
     {
       "id": "hafw-gao-tomb-of-askia-songhai",
@@ -1901,6 +1929,28 @@
         "s2n2-gao-palace-2012",
         "s2n2-songhai-oxford-2020",
         "s2n-tr-whc-1139"
+      ],
+      "population": [
+        {
+          "year": 1500,
+          "min": 50000,
+          "max": 70000,
+          "basis": "estimate",
+          "note": "Songhai capital and Gao-Saney riverine settlement complex estimate",
+          "sourceIds": [
+            "pop-hafw-chandler-modelski"
+          ]
+        },
+        {
+          "year": 1550,
+          "min": 50000,
+          "max": 75000,
+          "basis": "estimate",
+          "note": "Mid-16th-century Songhai imperial center estimate",
+          "sourceIds": [
+            "pop-hafw-chandler-modelski"
+          ]
+        }
       ]
     },
     {

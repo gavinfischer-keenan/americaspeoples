@@ -972,6 +972,24 @@
       "title": "UNESCO World Heritage Centre — Twyfelfontein or /Ui-//aes (1255)",
       "url": "https://whc.unesco.org/en/list/1255/",
       "access": "Official UNESCO World Heritage property dossier. Checked 2026-11-20."
+    },
+    {
+      "id": "pop-afhe-chandler-modelski",
+      "title": "Reba, Reitsma & Seto (2016) · Spatializing 6,000 years of global urbanization from 3700 BC to AD 2000 (Scientific Data; digitizing Chandler 1987 & Modelski 2003)",
+      "url": "https://doi.org/10.1038/sdata.2016.34",
+      "access": "Open-access Scientific Data compilation checked via Consensus API (DOI 10.1038/sdata.2016.34). Preserves historical city population ranges and methodological uncertainty."
+    },
+    {
+      "id": "pop-afhe-bieta-aksum-2025",
+      "title": "Fattovich et al. (2025) · Excavations on Bieta Giyorgis Hill, Aksum and Evidence for the Origins and Development of the Aksumite Kingdom (Journal of Field Archaeology)",
+      "url": "https://doi.org/10.1080/00934690.2024.2430088",
+      "access": "Indexed peer-reviewed journal record checked via Consensus API (DOI 10.1080/00934690.2024.2430088)."
+    },
+    {
+      "id": "pop-afhe-chirikure-zimbabwe-2017",
+      "title": "Chirikure et al. (2017) · What was the population of Great Zimbabwe (CE 1000–1800)? (PLOS ONE)",
+      "url": "https://doi.org/10.1371/journal.pone.0178335",
+      "access": "Open-access PLOS ONE paper checked via Consensus API (DOI 10.1371/journal.pone.0178335)."
     }
   ],
   "taxa": [],
@@ -1210,6 +1228,30 @@
         "tr-zamani-aksum",
         "tr-met-aksum",
         "tr-pleiades-aksum"
+      ],
+      "population": [
+        {
+          "year": 300,
+          "min": 10000,
+          "max": 20000,
+          "basis": "estimate",
+          "note": "Early Aksumite ceremonial and residential core estimate from Bieta Giyorgis and stelae-field surveys",
+          "sourceIds": [
+            "pop-afhe-bieta-aksum-2025",
+            "pop-afhe-chandler-modelski"
+          ]
+        },
+        {
+          "year": 500,
+          "min": 20000,
+          "max": 35000,
+          "basis": "estimate",
+          "note": "Sixth-century Red Sea kingdom capital peak urban catchment estimate",
+          "sourceIds": [
+            "pop-afhe-bieta-aksum-2025",
+            "pop-afhe-chandler-modelski"
+          ]
+        }
       ]
     },
     {
@@ -1395,6 +1437,28 @@
         "tr-whc-kilwa",
         "tr-zamani-kilwa",
         "tr-met-kilwa"
+      ],
+      "population": [
+        {
+          "year": 1331,
+          "min": 10000,
+          "max": 20000,
+          "basis": "estimate",
+          "note": "Mahdali gold-trade florescence recorded during Ibn Battuta’s visit and Swahili town surveys",
+          "sourceIds": [
+            "pop-afhe-chandler-modelski"
+          ]
+        },
+        {
+          "year": 1500,
+          "min": 10000,
+          "max": 15000,
+          "basis": "estimate",
+          "note": "Late pre-Portuguese coral-stone harbor city estimate",
+          "sourceIds": [
+            "pop-afhe-chandler-modelski"
+          ]
+        }
       ]
     },
     {
@@ -1532,6 +1596,28 @@
         "tr-whc-gz",
         "tr-zamani-gz",
         "tr-met-gz"
+      ],
+      "population": [
+        {
+          "year": 1350,
+          "min": 10000,
+          "max": 18000,
+          "basis": "estimate",
+          "note": "Peak dhaka-walled settlement compound estimate spanning Chirikure architectural house counts and Huffman catchment models",
+          "sourceIds": [
+            "pop-afhe-chirikure-zimbabwe-2017"
+          ]
+        },
+        {
+          "year": 1400,
+          "min": 10000,
+          "max": 18000,
+          "basis": "estimate",
+          "note": "Late plateau monumental phase estimate prior to Torwa/Mutapa shift",
+          "sourceIds": [
+            "pop-afhe-chirikure-zimbabwe-2017"
+          ]
+        }
       ]
     },
     {

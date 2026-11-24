@@ -140,7 +140,7 @@ test('Europe and Asia-Pacific extend systematically to 1900 CE with zero sparse 
  }
 
  const africaAll=data.evidence.filter(e=>inWorldScope(e,'africa'));
- assert.equal(africaAll.length,672,'Africa & Middle East reaches 672 evidence records including Central Africa pre-100 CE expansion and early art/habitations');
+ assert.ok(africaAll.length>=752,'Africa & Middle East reaches at least 752 evidence records including Central Africa, early modern and thin-spot expansions');
  assert.ok(africaAll.filter(e=>e.end>-15000).length>=320,'Africa post-15,000 BCE coverage reaches at least 320 records');
  for(const needle of ['Wadi Kubbaniya','Afalou','Al-Khiday','Tadrart Acacus','Memphis','Thebes','Abu Simbel','Timgad','Kondoa','Twyfelfontein','Gazargamu','El Fasher','Qurta','Dabous Giraffes','Camel Site','Chongoni','Game Pass','Ain Mallaha','Ain Ghazal','Ebla','Mari','Dhar Oualata','Taruga','Qalʿat al-Bahrain','Ishango','Matupi','Ngovo','Oboui','Tchissanga','Nkang','Corisco','Lokabulo','Dungo']){
   assert.ok(africaAll.some(e=>e.title.includes(needle)),`Missing Africa/Middle East site: ${needle}`);

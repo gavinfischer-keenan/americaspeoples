@@ -258,6 +258,12 @@
       "title": "UNESCO World Heritage Centre — Historic Cairo (89)",
       "url": "https://whc.unesco.org/en/list/89/",
       "access": "Public UNESCO World Heritage dossier. Checked 2026-11-20."
+    },
+    {
+      "id": "pop-med-chandler-modelski",
+      "title": "Reba, Reitsma & Seto (2016) · Spatializing 6,000 years of global urbanization from 3700 BC to AD 2000 (Scientific Data; digitizing Chandler 1987 & Modelski 2003)",
+      "url": "https://doi.org/10.1038/sdata.2016.34",
+      "access": "Open-access Scientific Data compilation checked via Consensus API (DOI 10.1038/sdata.2016.34). Preserves historical city population ranges and methodological uncertainty."
     }
   ],
   "taxa": [],
@@ -668,6 +674,28 @@
         "med-roman-seas-2020",
         "med-amphora-trends-2025",
         "tr-pleiades-alexandria"
+      ],
+      "population": [
+        {
+          "year": -99,
+          "min": 300000,
+          "max": 500000,
+          "basis": "estimate",
+          "note": "Late Ptolemaic Alexandria scholarly range (accounting for Diodorus’s free-citizen count plus unenumerated households)",
+          "sourceIds": [
+            "pop-med-chandler-modelski"
+          ]
+        },
+        {
+          "year": 100,
+          "min": 400000,
+          "max": 600000,
+          "basis": "estimate",
+          "note": "Early Roman Imperial Alexandria Mediterranean grain-port peak estimate",
+          "sourceIds": [
+            "pop-med-chandler-modelski"
+          ]
+        }
       ]
     },
     {

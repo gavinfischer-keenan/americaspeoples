@@ -1020,6 +1020,12 @@
       "title": "UNESCO World Heritage Centre — Archaeological Site of Cyrene (19)",
       "url": "https://whc.unesco.org/en/list/19/",
       "access": "Official UNESCO World Heritage property dossier. Checked 2026-11-20."
+    },
+    {
+      "id": "pop-hafn-chandler-modelski",
+      "title": "Reba, Reitsma & Seto (2016) · Spatializing 6,000 years of global urbanization from 3700 BC to AD 2000 (Scientific Data; digitizing Chandler 1987 & Modelski 2003)",
+      "url": "https://doi.org/10.1038/sdata.2016.34",
+      "access": "Open-access Scientific Data compilation checked via Consensus API (DOI 10.1038/sdata.2016.34). Preserves historical city population ranges and methodological uncertainty."
     }
   ],
   "taxa": [],
@@ -1665,6 +1671,48 @@
       "sourceIds": [
         "afhn-fustat-2024",
         "afhn-maghreb-cities"
+      ],
+      "population": [
+        {
+          "year": 1000,
+          "min": 135000,
+          "max": 200000,
+          "basis": "estimate",
+          "note": "Fatimid al-Qāhira and Fusṭāṭ combined urban estimate",
+          "sourceIds": [
+            "pop-hafn-chandler-modelski"
+          ]
+        },
+        {
+          "year": 1300,
+          "min": 350000,
+          "max": 450000,
+          "basis": "estimate",
+          "note": "Bahri Mamluk metropolitan peak prior to 1348 plague",
+          "sourceIds": [
+            "pop-hafn-chandler-modelski"
+          ]
+        },
+        {
+          "year": 1500,
+          "min": 250000,
+          "max": 400000,
+          "basis": "estimate",
+          "note": "Late Mamluk Cairo urban core estimate",
+          "sourceIds": [
+            "pop-hafn-chandler-modelski"
+          ]
+        },
+        {
+          "year": 1800,
+          "min": 200000,
+          "max": 263000,
+          "basis": "estimate",
+          "note": "Late Ottoman Cairo urban estimate ahead of 19th-century censuses",
+          "sourceIds": [
+            "pop-hafn-chandler-modelski"
+          ]
+        }
       ]
     },
     {
@@ -1690,6 +1738,38 @@
       "sourceIds": [
         "afhn-volubilis-2022",
         "afhn-maghreb-cities"
+      ],
+      "population": [
+        {
+          "year": 1200,
+          "min": 150000,
+          "max": 250000,
+          "basis": "estimate",
+          "note": "Almohad-era artisanal and Qarawiyyin urban estimate",
+          "sourceIds": [
+            "pop-hafn-chandler-modelski"
+          ]
+        },
+        {
+          "year": 1350,
+          "min": 125000,
+          "max": 175000,
+          "basis": "estimate",
+          "note": "Marinid Fes el-Jdid and Old Medina combined estimate",
+          "sourceIds": [
+            "pop-hafn-chandler-modelski"
+          ]
+        },
+        {
+          "year": 1800,
+          "min": 80000,
+          "max": 100000,
+          "basis": "estimate",
+          "note": "Alawid imperial city and craft center estimate",
+          "sourceIds": [
+            "pop-hafn-chandler-modelski"
+          ]
+        }
       ]
     },
     {

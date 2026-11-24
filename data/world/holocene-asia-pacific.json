@@ -714,6 +714,12 @@
       "title": "UNESCO World Heritage Centre — Frozen Tombs of the Altai Mountains",
       "url": "https://whc.unesco.org/document/100814",
       "access": "Official UNESCO World Heritage report. Checked 2026-11-20."
+    },
+    {
+      "id": "pop-asho-chandler-modelski",
+      "title": "Reba, Reitsma & Seto (2016) · Spatializing 6,000 years of global urbanization from 3700 BC to AD 2000 (Scientific Data; digitizing Chandler 1987 & Modelski 2003)",
+      "url": "https://doi.org/10.1038/sdata.2016.34",
+      "access": "Open-access Scientific Data compilation checked via Consensus API (DOI 10.1038/sdata.2016.34). Preserves historical city population ranges and methodological uncertainty."
     }
   ],
   "taxa": [],
@@ -1283,6 +1289,18 @@
         "asho-hampi-2022",
         "asho-hampi-digital-2017",
         "asho-tr-whc-241"
+      ],
+      "population": [
+        {
+          "year": 1500,
+          "min": 400000,
+          "max": 500000,
+          "basis": "estimate",
+          "note": "Vijayanagara metropolitan zone and irrigated suburbs peak estimate (Modelski/Chandler)",
+          "sourceIds": [
+            "pop-asho-chandler-modelski"
+          ]
+        }
       ]
     },
     {
@@ -1310,6 +1328,28 @@
         "asho-tr-whc-255",
         "asho-tr-met-mughal",
         "asho-india-temples-unesco-2024"
+      ],
+      "population": [
+        {
+          "year": 1600,
+          "min": 400000,
+          "max": 500000,
+          "basis": "estimate",
+          "note": "Late Akbar-era Agra imperial capital estimate",
+          "sourceIds": [
+            "pop-asho-chandler-modelski"
+          ]
+        },
+        {
+          "year": 1700,
+          "min": 400000,
+          "max": 600000,
+          "basis": "estimate",
+          "note": "Shahjahanabad (Old Delhi) and Agra court-capital range",
+          "sourceIds": [
+            "pop-asho-chandler-modelski"
+          ]
+        }
       ]
     },
     {
@@ -1515,6 +1555,38 @@
       "sourceIds": [
         "asho-arab-china-maritime-2025",
         "asho-tr-whc-1442"
+      ],
+      "population": [
+        {
+          "year": 2,
+          "min": 246000,
+          "max": 250000,
+          "basis": "census",
+          "note": "Western Han Pingdi-era municipal/intra-mural household register figure for Chang’an (Hanshu Geography, 2 CE)",
+          "sourceIds": [
+            "pop-asho-chandler-modelski"
+          ]
+        },
+        {
+          "year": 742,
+          "min": 800000,
+          "max": 1000000,
+          "basis": "estimate",
+          "note": "High Tang Tianbao-era Chang’an metropolitan & Silk Road terminus estimate",
+          "sourceIds": [
+            "pop-asho-chandler-modelski"
+          ]
+        },
+        {
+          "year": 1100,
+          "min": 140000,
+          "max": 200000,
+          "basis": "estimate",
+          "note": "Northern Song maritime prefecture hub estimate at Guangzhou (Canton)",
+          "sourceIds": [
+            "pop-asho-chandler-modelski"
+          ]
+        }
       ]
     },
     {
@@ -1567,6 +1639,48 @@
       "sourceIds": [
         "asho-ming-palace-tiles-2022",
         "asho-tr-whc-439"
+      ],
+      "population": [
+        {
+          "year": 1500,
+          "min": 650000,
+          "max": 700000,
+          "basis": "estimate",
+          "note": "Mid-Ming Beijing capital and Grand Canal grain-terminus estimate",
+          "sourceIds": [
+            "pop-asho-chandler-modelski"
+          ]
+        },
+        {
+          "year": 1700,
+          "min": 650000,
+          "max": 900000,
+          "basis": "estimate",
+          "note": "Early Qing Inner Banner and Outer City aggregate estimate",
+          "sourceIds": [
+            "pop-asho-chandler-modelski"
+          ]
+        },
+        {
+          "year": 1800,
+          "min": 1000000,
+          "max": 1100000,
+          "basis": "estimate",
+          "note": "High Qing Beijing metropolitan peak estimate (Chandler/Modelski)",
+          "sourceIds": [
+            "pop-asho-chandler-modelski"
+          ]
+        },
+        {
+          "year": 1900,
+          "min": 700000,
+          "max": 950000,
+          "basis": "estimate",
+          "note": "Late Qing municipal Beijing range (1900 CE timeline cap)",
+          "sourceIds": [
+            "pop-asho-chandler-modelski"
+          ]
+        }
       ]
     },
     {
@@ -1645,6 +1759,38 @@
       "sourceIds": [
         "asho-medieval-towns-jp-eu-2020",
         "asho-tr-whc-738"
+      ],
+      "population": [
+        {
+          "year": 1721,
+          "min": 1000000,
+          "max": 1100000,
+          "basis": "estimate",
+          "note": "Tokugawa town-magistrate commoner census (~501,000 chōnin) combined with estimated samurai and temple households in Edo",
+          "sourceIds": [
+            "pop-asho-chandler-modelski"
+          ]
+        },
+        {
+          "year": 1800,
+          "min": 1000000,
+          "max": 1100000,
+          "basis": "estimate",
+          "note": "Late Tokugawa Edo metropolitan population range",
+          "sourceIds": [
+            "pop-asho-chandler-modelski"
+          ]
+        },
+        {
+          "year": 1900,
+          "min": 1450000,
+          "max": 1500000,
+          "basis": "estimate",
+          "note": "Meiji Tokyo municipal growth at 1900 CE timeline cap",
+          "sourceIds": [
+            "pop-asho-chandler-modelski"
+          ]
+        }
       ]
     },
     {
@@ -1751,6 +1897,38 @@
         "asho-tr-whc-603",
         "asho-tr-whc-602",
         "asho-tr-whc-1442"
+      ],
+      "population": [
+        {
+          "year": 950,
+          "min": 200000,
+          "max": 300000,
+          "basis": "estimate",
+          "note": "Samanid-era Bukhara and Afrasiyab/Samarkand Transoxiana urban core estimate",
+          "sourceIds": [
+            "pop-asho-chandler-modelski"
+          ]
+        },
+        {
+          "year": 1405,
+          "min": 100000,
+          "max": 150000,
+          "basis": "estimate",
+          "note": "Timurid Samarkand artisan and court capital estimate",
+          "sourceIds": [
+            "pop-asho-chandler-modelski"
+          ]
+        },
+        {
+          "year": 1800,
+          "min": 70000,
+          "max": 100000,
+          "basis": "estimate",
+          "note": "Manghit Emirate Bukhara oasis urban estimate",
+          "sourceIds": [
+            "pop-asho-chandler-modelski"
+          ]
+        }
       ]
     },
     {

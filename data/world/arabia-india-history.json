@@ -228,6 +228,12 @@
       "title": "UNESCO World Heritage Centre · Moidams — the Mound-Burial System of the Ahom Dynasty (Charaideo)",
       "url": "https://whc.unesco.org/en/list/1711/",
       "access": "Official UNESCO World Heritage Centre inscription dossier consulted 2026-11-20."
+    },
+    {
+      "id": "pop-ai-chandler-modelski",
+      "title": "Reba, Reitsma & Seto (2016) · Spatializing 6,000 years of global urbanization from 3700 BC to AD 2000 (Scientific Data; digitizing Chandler 1987 & Modelski 2003)",
+      "url": "https://doi.org/10.1038/sdata.2016.34",
+      "access": "Open-access Scientific Data compilation checked via Consensus API (DOI 10.1038/sdata.2016.34). Preserves historical city population ranges and methodological uncertainty."
     }
   ],
   "taxa": [],
@@ -564,7 +570,39 @@
         36.31,
         33.51
       ],
-      "guideId": "world-arabia-incense-oases-empires"
+      "guideId": "world-arabia-incense-oases-empires",
+      "population": [
+        {
+          "year": 700,
+          "min": 60000,
+          "max": 100000,
+          "basis": "estimate",
+          "note": "Umayyad Damascus metropolitan estimate in historical urbanization syntheses (Chandler/Modelski)",
+          "sourceIds": [
+            "pop-ai-chandler-modelski"
+          ]
+        },
+        {
+          "year": 1500,
+          "min": 50000,
+          "max": 60000,
+          "basis": "estimate",
+          "note": "Late Mamluk commercial city range before Ottoman incorporation",
+          "sourceIds": [
+            "pop-ai-chandler-modelski"
+          ]
+        },
+        {
+          "year": 1800,
+          "min": 80000,
+          "max": 100000,
+          "basis": "estimate",
+          "note": "Ottoman Syria provincial center & Hajj caravan depot estimate",
+          "sourceIds": [
+            "pop-ai-chandler-modelski"
+          ]
+        }
+      ]
     },
     {
       "id": "arab-jerusalem-al-quds",
@@ -615,7 +653,49 @@
         44.36,
         33.31
       ],
-      "guideId": "world-arabia-incense-oases-empires"
+      "guideId": "world-arabia-incense-oases-empires",
+      "population": [
+        {
+          "year": 800,
+          "min": 700000,
+          "max": 1000000,
+          "basis": "estimate",
+          "note": "Early Abbasid Madīnat al-Salām urban agglomeration peak estimate",
+          "sourceIds": [
+            "pop-ai-chandler-modelski"
+          ]
+        },
+        {
+          "year": 900,
+          "min": 900000,
+          "max": 1100000,
+          "basis": "estimate",
+          "note": "Mature Abbasid metropolitan estimate in Chandler/Modelski syntheses",
+          "sourceIds": [
+            "pop-ai-chandler-modelski"
+          ]
+        },
+        {
+          "year": 1500,
+          "min": 50000,
+          "max": 75000,
+          "basis": "estimate",
+          "note": "Post-1258 siege & Timurid-era reduced river city estimate",
+          "sourceIds": [
+            "pop-ai-chandler-modelski"
+          ]
+        },
+        {
+          "year": 1850,
+          "min": 60000,
+          "max": 80000,
+          "basis": "estimate",
+          "note": "Late Ottoman Vilayet commercial hub estimate",
+          "sourceIds": [
+            "pop-ai-chandler-modelski"
+          ]
+        }
+      ]
     },
     {
       "id": "arab-al-ahsa-qarmatian-uyunid",
@@ -1132,7 +1212,39 @@
         77.19,
         28.52
       ],
-      "guideId": "world-india-empires-cities-networks"
+      "guideId": "world-india-empires-cities-networks",
+      "population": [
+        {
+          "year": 1300,
+          "min": 100000,
+          "max": 200000,
+          "basis": "estimate",
+          "note": "Khalji-era Siri and Mehrauli urban cluster estimate",
+          "sourceIds": [
+            "pop-ai-chandler-modelski"
+          ]
+        },
+        {
+          "year": 1350,
+          "min": 300000,
+          "max": 400000,
+          "basis": "estimate",
+          "note": "Mid-14th-century Tughluq Delhi imperial complex estimate",
+          "sourceIds": [
+            "pop-ai-chandler-modelski"
+          ]
+        },
+        {
+          "year": 1500,
+          "min": 80000,
+          "max": 120000,
+          "basis": "estimate",
+          "note": "Lodi-era Delhi urban core estimate prior to Mughal rebuilding",
+          "sourceIds": [
+            "pop-ai-chandler-modelski"
+          ]
+        }
+      ]
     },
     {
       "id": "ind-gaur-pandua-sonargaon-bengal",

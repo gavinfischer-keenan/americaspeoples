@@ -1,6 +1,6 @@
 # Where the map has gaps
 
-The current map contains **11,291 shared observations** and 73 focused topic observations. The audit does **not** find that blank regions were empty of people. It shows where this collection needs more dated local history.
+The current map contains **11,297 shared observations** and 73 focused topic observations. The audit does **not** find that blank regions were empty of people. It shows where this collection needs more dated local history.
 
 The preceding v0.24.0 campaign added **53 shared map records** about lower Central America, Brazil's Atlantic coast and the Solomon Islands–Vanuatu region, including three linked route views of local finds. See [the histories and source decisions](three-regional-gaps.html).
 
@@ -39,9 +39,9 @@ The immutable baseline is **v0.23.1: 2,531 total and 2,458 shared records**, bef
 | Mexico | 9 → 10 | 25 → 31 | 28 → 41 | 63 → 80 | 45 → 55 | 32 → 60 | 22 → 46 | 33 → 39 | 13 |
 | Central America | 0 | 12 → 14 | 16 → 25 | 39 → 62 | 22 → 38 | 15 → 23 | 11 → 12 | 12 → 14 | 9 |
 | Caribbean | 0 | 7 → 10 | 10 → 16 | 20 → 31 | 20 → 33 | 53 → 86 | 21 → 27 | 31 → 62 | 15 |
-| Northern South America | 2 | 6 → 10 | 7 → 13 | 17 → 31 | 11 → 22 | 20 → 36 | 21 → 23 | 22 → 32 | 12 |
-| Andes | 4 → 7 | 5 → 12 | 29 → 34 | 33 → 41 | 52 → 56 | 40 → 46 | 8 | 19 → 22 | 29 |
-| Amazon interior | 2 → 6 | 8 → 18 | 3 → 11 | 12 → 25 | 28 → 41 | 23 → 35 | 18 → 24 | 11 → 18 | 22 |
+| Northern South America | 2 → 3 | 6 → 11 | 7 → 14 | 17 → 31 | 11 → 22 | 20 → 36 | 21 → 23 | 22 → 32 | 12 |
+| Andes | 4 → 7 | 5 → 13 | 29 → 36 | 33 → 42 | 52 → 56 | 40 → 46 | 8 | 19 → 22 | 29 |
+| Amazon interior | 2 → 7 | 8 → 21 | 3 → 13 | 12 → 26 | 28 → 41 | 23 → 35 | 18 → 24 | 11 → 18 | 22 |
 | Brazil Atlantic | 0 → 4 | 0 → 23 | 2 → 27 | 1 → 34 | 1 → 41 | 12 → 35 | 6 → 13 | 15 → 31 | 2 |
 | Southern Cone | 10 → 12 | 15 → 24 | 2 → 8 | 2 → 6 | 7 → 11 | 17 → 26 | 15 → 23 | 19 → 146 | 7 |
 | Australia | 9 → 25 | 6 → 31 | 3 → 32 | 3 → 28 | 7 → 33 | 5 → 34 | 5 → 33 | 59 → 228 | 0 |

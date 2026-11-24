@@ -1,0 +1,477 @@
+{
+  "reviewedAt": "2026-11-23",
+  "coverage": "Six pre-0 CE Western Amazonia and upper Andean–Amazonian foothill records spanning Late Pleistocene rock shelters, early shellmound ceramics, cacao domestication, earthen forest islands, geometric enclosures, and cliff art.",
+  "records": [
+    {
+      "id": "wama-pedra-pintada-monte-alegre",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Caverna da Pedra Pintada (Monte Alegre, Lower Amazon) — Terminal Pleistocene tropical-forest foragers",
+      "culture": {
+        "id": "wama-cult-amazon-early",
+        "name": "Early Amazonian Tropical-Forest Foragers & Horticulturalists",
+        "kind": "culture",
+        "color": "#2E8B57"
+      },
+      "location": {
+        "id": "wama-place-pedra-pintada",
+        "name": "Monte Alegre / Caverna da Pedra Pintada, Pará, Brazil",
+        "lon": -54.17,
+        "lat": -1.98,
+        "precision": "Published excavation coordinate (±2 km).",
+        "provenance": "Roosevelt et al. (1996) Science 272:373–384."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": -11200,
+        "end": -8000,
+        "approximate": true,
+        "original": "c. 11,200–8000 BCE (~13.2–10 ka cal BP)",
+        "method": "AMS radiocarbon and OSL/TL dating of stratified hearth, botanical, and bifacial lithic levels.",
+        "interpretation": "Documents Terminal Pleistocene specialized palm-fruit, fish, and shellfish foraging contemporary with North American Paleoindian traditions."
+      },
+      "sources": [
+        {
+          "id": "wama-src-roosevelt-1996",
+          "authors": "Anna C. Roosevelt; M. Lima da Costa; C. Lopes Machado; M. Michab; N. Mercier; H. Valladas; et al.",
+          "title": "Paleoindian Cave Dwellers in the Amazon: The Peopling of the Americas",
+          "venue": "Science 272(5260):373–384",
+          "year": 1996,
+          "url": "https://doi.org/10.1126/science.272.5260.373",
+          "doi": "10.1126/science.272.5260.373",
+          "referenceType": "journal-article",
+          "access": "Journal DOI checked via Consensus API 2026-11-23."
+        },
+        {
+          "id": "wama-src-alves-carajas-2023",
+          "authors": "A. L. Alves et al.",
+          "title": "(Re)visitando a Amazônia: Serra dos Carajás e Monte Alegre, estado do Pará",
+          "venue": "Cadernos do LEPAARQ 20(39)",
+          "year": 2023,
+          "url": "https://doi.org/10.15210/lepaarq.v20i39.5175",
+          "doi": "10.15210/lepaarq.v20i39.5175",
+          "referenceType": "journal-article",
+          "access": "Journal DOI checked via Consensus API 2026-11-23."
+        }
+      ],
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Stratified Triangular-stemmed lithics, ochre pigment droplets, carbonized palm seeds, and painted sandstone walls record tropical-forest occupation by ~11,200–8000 BCE.",
+          "status": "well-supported",
+          "explanation": "Re-dated botanical, lithic, and sediment samples independently confirm Late Pleistocene–Early Holocene tropical foraging prior to savanna-only dispersal models.",
+          "support": [
+            {
+              "sourceId": "wama-src-roosevelt-1996",
+              "locator": "Science 272:373–384",
+              "stance": "supports",
+              "note": "Primary stratigraphic excavation and multi-method chronology at Pedra Pintada."
+            },
+            {
+              "sourceId": "wama-src-alves-carajas-2023",
+              "locator": "LEPAARQ 20(39)",
+              "stance": "supports",
+              "note": "Regional comparative reassessment of Monte Alegre and Carajás sequences."
+            }
+          ]
+        }
+      ],
+      "review": {
+        "summary": "Caverna da Pedra Pintada preserves stratified Terminal Pleistocene hearths, carbonized Brazil-nut and palm fruits, bifacial points, and painted panels demonstrating early tropical-rainforest adaptation.",
+        "limitations": "Individual painted motifs above floor deposits remain mostly relative-dated via spalls and ochre associations.",
+        "discussion": "Terminal Pleistocene Amazonian foraging alongside Clovis-age North American traditions.",
+        "provenance": "Western Amazon early coverage expansion (#35, November 2026).",
+        "reviewedAt": "2026-11-23",
+        "history": ["Added sourced record for Caverna da Pedra Pintada, Monte Alegre."],
+        "relatedIds": []
+      },
+      "history": { "kind": "attestation", "claimId": "evidence" }
+    },
+    {
+      "id": "wama-taperinha-early-pottery",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Taperinha Shellmound (Santarém, Pará) — Early Holocene pottery in riverine Amazonia",
+      "culture": {
+        "id": "wama-cult-amazon-early",
+        "name": "Early Amazonian Tropical-Forest Foragers & Horticulturalists",
+        "kind": "culture",
+        "color": "#2E8B57"
+      },
+      "location": {
+        "id": "wama-place-taperinha",
+        "name": "Taperinha, Santarém, Lower Amazon, Brazil",
+        "lon": -54.30,
+        "lat": -2.53,
+        "precision": "Published shellmound coordinate (±3 km).",
+        "provenance": "Iriarte et al. (2020) Quaternary Science Reviews 248:106582."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": -6000,
+        "end": -4000,
+        "approximate": true,
+        "original": "c. 6000–4000 BCE (~8.0–6.0 ka cal BP)",
+        "method": "Thermoluminescence on sand-tempered sherds and radiocarbon dates on freshwater shell.",
+        "interpretation": "Documents some of the earliest known ceramic vessels in the Americas in freshwater sambaqui river-terrace economies."
+      },
+      "sources": [
+        {
+          "id": "wama-src-iriarte-2020",
+          "authors": "José Iriarte; Sarah Elliott; S. Yoshi Maezumi; Daiana Alves; Regina Gonda; Mark Robinson; et al.",
+          "title": "The origins of Amazonian landscapes: Plant cultivation, domestication and the spread of food production in tropical South America",
+          "venue": "Quaternary Science Reviews 248:106582",
+          "year": 2020,
+          "url": "https://doi.org/10.1016/j.quascirev.2020.106582",
+          "doi": "10.1016/j.quascirev.2020.106582",
+          "referenceType": "journal-article",
+          "access": "Journal DOI checked via Consensus API 2026-11-23."
+        }
+      ],
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Freshwater shellmounds at Taperinha yield incised sand- and shell-tempered ceramic bowl fragments dated between c. 6000 and 4000 BCE.",
+          "status": "well-supported",
+          "explanation": "Syntheses of Early Holocene Amazonian food production corroborate Taperinha's early ceramic sequence alongside incipient cultivation.",
+          "support": [
+            {
+              "sourceId": "wama-src-iriarte-2020",
+              "locator": "QSR 248:106582",
+              "stance": "supports",
+              "note": "Regional chronological synthesis placing Taperinha in early Amazonian fisher-horticultural sequences."
+            }
+          ]
+        }
+      ],
+      "review": {
+        "summary": "Taperinha preserves thick freshwater mussel middens with low-fired, occasionally incised bowls that predate coastal Andean Formative pottery by millennia.",
+        "limitations": "Reservoir corrections on freshwater shell require cross-checking against charcoal and TL assays.",
+        "discussion": "Independent lowland ceramic invention linked to sedentary floodplain resource harvesting.",
+        "provenance": "Western Amazon early coverage expansion (#35, November 2026).",
+        "reviewedAt": "2026-11-23",
+        "history": ["Added sourced record for Taperinha shellmound."],
+        "relatedIds": []
+      },
+      "history": { "kind": "attestation", "claimId": "evidence" }
+    },
+    {
+      "id": "wama-serrania-la-lindosa-colombia",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Serranía de la Lindosa (Guaviare, Colombian Amazon) — Terminal Pleistocene cliff paintings & hearth floors",
+      "culture": {
+        "id": "wama-cult-nw-amazon-rockart",
+        "name": "Northwestern Amazonian Sandstone Shelter Traditions",
+        "kind": "culture",
+        "color": "#B55239"
+      },
+      "location": {
+        "id": "wama-place-la-lindosa",
+        "name": "Cerro Azul / Serranía de la Lindosa, Guaviare, Colombia",
+        "lon": -72.87,
+        "lat": 2.53,
+        "precision": "Published cliff-shelter complex coordinates (±3 km).",
+        "provenance": "Morcote-Ríos / Iriarte et al. (2024) Quaternary Science Reviews 328:108522."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": -10500,
+        "end": -500,
+        "approximate": true,
+        "original": "c. 10,500–500 BCE (~12.5–2.5 ka cal BP)",
+        "method": "AMS radiocarbon dates on carbonized seeds and ochre-associated hearth strata beneath painted tepui panels.",
+        "interpretation": "Links early northwestern Amazonian colonization across Guaviare forest-savanna margins to monumental ochre rock-art galleries."
+      },
+      "sources": [
+        {
+          "id": "wama-src-lindosa-2024",
+          "authors": "Francisco Javier Aceituno; Gaspar Morcote-Ríos; José Iriarte; Mark Robinson; et al.",
+          "title": "The peopling of Amazonia: Chrono-stratigraphic evidence from Serranía La Lindosa, Colombian Amazon",
+          "venue": "Quaternary Science Reviews 328:108522",
+          "year": 2024,
+          "url": "https://doi.org/10.1016/j.quascirev.2024.108522",
+          "doi": "10.1016/j.quascirev.2024.108522",
+          "referenceType": "journal-article",
+          "access": "Journal DOI checked via Consensus API 2026-11-23."
+        },
+        {
+          "id": "wama-src-lindosa-fauna-2022",
+          "authors": "José Iriarte et al.",
+          "title": "Ice Age megafauna rock art in the Colombian Amazon?",
+          "venue": "Philosophical Transactions of the Royal Society B 377:20200496",
+          "year": 2022,
+          "url": "https://doi.org/10.1098/rstb.2020.0496",
+          "doi": "10.1098/rstb.2020.0496",
+          "referenceType": "journal-article",
+          "access": "Journal DOI checked via Consensus API 2026-11-23."
+        }
+      ],
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Excavated shelters beneath Cerro Azul and Nuevo Tolima walls contain ochre pellets, faunal remains, and palm nuts dated from ~10,500 BCE onward.",
+          "status": "well-supported",
+          "explanation": "Basal hearth ages around 12.5 ka cal BP are well replicated; specific taxonomic identifications of putative extinct megafauna motifs remain actively debated.",
+          "support": [
+            {
+              "sourceId": "wama-src-lindosa-2024",
+              "locator": "QSR 328:108522",
+              "stance": "supports",
+              "note": "Chrono-stratigraphic excavation across Serranía La Lindosa rock shelters."
+            },
+            {
+              "sourceId": "wama-src-lindosa-fauna-2022",
+              "locator": "Phil. Trans. R. Soc. B 377",
+              "stance": "supports",
+              "note": "Evaluates zoological interpretations of painted motifs."
+            }
+          ]
+        }
+      ],
+      "review": {
+        "summary": "Serranía de la Lindosa spans kilometers of sandstone overhangs decorated with thousands of hematite pictographs above stratified Late Pleistocene and Holocene occupation floors.",
+        "limitations": "Individual pictographs are mostly indirectly dated through floor ochre nodules and overlapping paint stratigraphy.",
+        "discussion": "Connects Andean-Amazonian piedmont settlement corridors in southern Colombia.",
+        "provenance": "Western Amazon early coverage expansion (#35, November 2026).",
+        "reviewedAt": "2026-11-23",
+        "history": ["Added sourced record for Serranía de la Lindosa, Guaviare."],
+        "relatedIds": []
+      },
+      "history": { "kind": "attestation", "claimId": "evidence" }
+    },
+    {
+      "id": "wama-llanos-moxos-forest-islands",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Llanos de Moxos Forest Islands (Beni, Bolivia) — Early Holocene cassava, squash & wetland domestication",
+      "culture": {
+        "id": "wama-cult-sw-amazon-earthworks",
+        "name": "Southwestern Amazonian Forest-Island & Earthwork Builders",
+        "kind": "culture",
+        "color": "#3C7A68"
+      },
+      "location": {
+        "id": "wama-place-moxos-islands",
+        "name": "Isla del Tesoro & San Francisco Forest Islands, Beni, Bolivia",
+        "lon": -65.25,
+        "lat": -14.85,
+        "precision": "Regional centroid across cored Isla del Tesoro and neighboring forest islands (±15 km).",
+        "provenance": "Lombardo et al. (2020) Nature 581:190–193."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": -8400,
+        "end": -2000,
+        "approximate": true,
+        "original": "c. 8400–2000 BCE (~10.4–4.0 ka cal BP)",
+        "method": "AMS radiocarbon and phytolith analyses across anthropogenic shell-and-earth mounds.",
+        "interpretation": "Identifies southwestern Amazonia as an independent Early Holocene center of manioc and squash cultivation inside human-created woodland mounds."
+      },
+      "sources": [
+        {
+          "id": "wama-src-lombardo-2020",
+          "authors": "Umberto Lombardo; José Iriarte; Lautaro Hilbert; Javier Ruiz-Pérez; José M. Capriles; Heinz Veit",
+          "title": "Early Holocene crop cultivation and landscape modification in Amazonia",
+          "venue": "Nature 581:190–193",
+          "year": 2020,
+          "url": "https://doi.org/10.1038/s41586-020-2162-7",
+          "doi": "10.1038/s41586-020-2162-7",
+          "referenceType": "journal-article",
+          "access": "Journal DOI checked via Consensus API 2026-11-23."
+        }
+      ],
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Microbotanical phytoliths from over sixty artificial savanna mounds demonstrate manioc (c. 8350 BCE) and squash (c. 8250 BCE) cultivation followed by mid-Holocene maize.",
+          "status": "well-supported",
+          "explanation": "Geomorphological coring and AMS dating across multiple mounds confirm anthropogenic soil formation and plant domestication.",
+          "support": [
+            {
+              "sourceId": "wama-src-lombardo-2020",
+              "locator": "Nature 581:190–193",
+              "stance": "supports",
+              "note": "Multi-mound phytolith and radiocarbon chronology in Beni."
+            }
+          ]
+        }
+      ],
+      "review": {
+        "summary": "Repeatedly occupied shell and kitchen-midden islands raised seasonally inundated Beni savannas above flood level, creating fertile wooded habitat patches for domesticated crops.",
+        "limitations": "Individual islands aggregate millennia of seasonal accumulation; later Casarabe monumental canals date mainly after 500 CE.",
+        "discussion": "Establishes lowland Bolivia as a primary center of early Holocene plant domestication.",
+        "provenance": "Western Amazon early coverage expansion (#35, November 2026).",
+        "reviewedAt": "2026-11-23",
+        "history": ["Added sourced record for Llanos de Moxos early forest islands."],
+        "relatedIds": []
+      },
+      "history": { "kind": "attestation", "claimId": "evidence" }
+    },
+    {
+      "id": "wama-acre-geoglyphs-sw-amazon",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Acre Geometric Earthworks (Upper Purus–Abunã, Brazil) — Pre-Common Era ditched ceremonial enclosures",
+      "culture": {
+        "id": "wama-cult-sw-amazon-earthworks",
+        "name": "Southwestern Amazonian Forest-Island & Earthwork Builders",
+        "kind": "culture",
+        "color": "#3C7A68"
+      },
+      "location": {
+        "id": "wama-place-acre-geoglyphs",
+        "name": "Fazenda Colorada / Jaco Sá Geoglyphs, Acre, Brazil",
+        "lon": -67.55,
+        "lat": -9.97,
+        "precision": "Published enclosure cluster coordinates (±5 km).",
+        "provenance": "Watling et al. (2017) PNAS 114:1868–1873; Saunaluoma / Ranzi."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": -1000,
+        "end": 950,
+        "approximate": true,
+        "original": "c. 1000 BCE–950 CE (early charcoal clearing & ditch construction pre-0 CE)",
+        "method": "AMS radiocarbon dating on embankment soils and charcoal/phytolith paleoecology columns.",
+        "interpretation": "Demonstrates large-scale geometric ditch-and-bank ceremonial architecture within managed bamboo-palm forests before the Common Era."
+      },
+      "sources": [
+        {
+          "id": "wama-src-watling-2017",
+          "authors": "Jennifer Watling; José Iriarte; Francis E. Mayle; Denise Schaan; Luiz C. R. Pessenda; Neil J. Loader; et al.",
+          "title": "Impact of pre-Columbian “geoglyph” builders on Amazonian forests",
+          "venue": "PNAS 114(8):1868–1873",
+          "year": 2017,
+          "url": "https://doi.org/10.1073/pnas.1614359114",
+          "doi": "10.1073/pnas.1614359114",
+          "referenceType": "journal-article",
+          "access": "Open-access PNAS DOI checked via Consensus API 2026-11-23."
+        },
+        {
+          "id": "wama-src-acre-2024",
+          "authors": "S. Saunaluoma et al.",
+          "title": "Geography of ancient geometric earthworks and their builders in southwestern Amazonia",
+          "venue": "Acta Amazonica 54",
+          "year": 2024,
+          "url": "https://doi.org/10.1590/1809-4392202203511",
+          "doi": "10.1590/1809-4392202203511",
+          "referenceType": "journal-article",
+          "access": "Journal DOI checked via Consensus API 2026-11-23."
+        }
+      ],
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Hundreds of square, circular, and concentric ditched enclosures excavated in Acre date from the first millennium BCE and transformed palm-rich forest composition rather than clearing vast savannas.",
+          "status": "well-supported",
+          "explanation": "Soil phytoliths, charcoal, and embankment stratigraphy combine to establish managed agroforestry around monumental ditches.",
+          "support": [
+            {
+              "sourceId": "wama-src-watling-2017",
+              "locator": "PNAS 114:1868–1873",
+              "stance": "supports",
+              "note": "Paleoecological forest-management evidence around Acre geometric enclosures."
+            },
+            {
+              "sourceId": "wama-src-acre-2024",
+              "locator": "Acta Amazonica 54",
+              "stance": "supports",
+              "note": "Spatial synthesis of southwestern Amazonian earthwork distributions."
+            }
+          ]
+        }
+      ],
+      "review": {
+        "summary": "Geometrically precise earthen ditches up to several hundred meters across functioned primarily as periodic ceremonial gathering places embedded in enriched palm forests.",
+        "limitations": "Individual enclosures span varying construction episodes from c. 1000 BCE into late pre-Columbian centuries.",
+        "discussion": "Refutes notions of pre-Columbian western Amazonia as untouched wilderness.",
+        "provenance": "Western Amazon early coverage expansion (#35, November 2026).",
+        "reviewedAt": "2026-11-23",
+        "history": ["Added sourced record for Acre geometric earthworks."],
+        "relatedIds": []
+      },
+      "history": { "kind": "attestation", "claimId": "evidence" }
+    },
+    {
+      "id": "wama-santa-ana-la-florida-cacao",
+      "revision": 1,
+      "type": "occupation",
+      "title": "Santa Ana–La Florida (Mayo-Chinchipe, Zamora-Chinchipe, Ecuador) — Early Theobroma cacao domestication",
+      "culture": {
+        "id": "wama-cult-mayo-chinchipe",
+        "name": "Mayo-Chinchipe–Marañón Formative Tradition",
+        "kind": "culture",
+        "color": "#8C4A32"
+      },
+      "location": {
+        "id": "wama-place-santa-ana-la-florida",
+        "name": "Palanda / Santa Ana–La Florida, Zamora-Chinchipe, Ecuador",
+        "lon": -79.13,
+        "lat": -4.64,
+        "precision": "Published excavation site coordinate (±2 km).",
+        "provenance": "Zarrillo et al. (2018) Nature Ecology & Evolution 2:1879–1888."
+      },
+      "destination": null,
+      "routeKind": "schematic",
+      "time": {
+        "kind": "interval",
+        "start": -3500,
+        "end": -1000,
+        "approximate": true,
+        "original": "c. 3500–1000 BCE (~5.5–3.0 ka cal BP)",
+        "method": "Ancient DNA, theobromine chemistry, and starch-grain residue inside stirrup-spout vessels and stone mortars.",
+        "interpretation": "Provides the earliest secure archaeological evidence of domesticated cacao use on the upper Amazonian slope, alongside Pacific Strombus shell trade."
+      },
+      "sources": [
+        {
+          "id": "wama-src-zarrillo-2018",
+          "authors": "Sonia Zarrillo; Nilesh Gaikwad; Claire Lanaud; Terry Powis; Christopher Viot; Isabelle Lesur; et al.",
+          "title": "The use and domestication of Theobroma cacao during the mid-Holocene in the upper Amazon",
+          "venue": "Nature Ecology & Evolution 2:1879–1888",
+          "year": 2018,
+          "url": "https://doi.org/10.1038/s41559-018-0697-x",
+          "doi": "10.1038/s41559-018-0697-x",
+          "referenceType": "journal-article",
+          "access": "Journal DOI checked via Consensus API 2026-11-23."
+        }
+      ],
+      "claims": [
+        {
+          "id": "evidence",
+          "text": "Ceramic bottles and stone bowls from spiral temple platforms at Santa Ana–La Florida preserve theobromine, cacao DNA, and starch dated back to c. 3500–3300 BCE.",
+          "status": "well-supported",
+          "explanation": "Independent starch, chemical biomarker, and ancient genomic verification confirm Upper Amazonian cacao domestication 1,500+ years before Mesoamerican attestations.",
+          "support": [
+            {
+              "sourceId": "wama-src-zarrillo-2018",
+              "locator": "Nat. Ecol. Evol. 2:1879–1888",
+              "stance": "supports",
+              "note": "Primary multi-proxy biomarker and ancient DNA proof from Palanda vessels."
+            }
+          ]
+        }
+      ],
+      "review": {
+        "summary": "High-rainfall Andean-Amazonian foothill center featuring sunken circular hearths, fine lapidary turquoise/sodalite offerings, Pacific Spondylus shells, and early cacao beverages.",
+        "limitations": "Demonstrates trans-Andean exchange networks earlier than standard highland-only Formative models.",
+        "discussion": "Identifies the Upper Amazon as the cradle of domesticated Theobroma cacao.",
+        "provenance": "Western Amazon early coverage expansion (#35, November 2026).",
+        "reviewedAt": "2026-11-23",
+        "history": ["Added sourced record for Santa Ana–La Florida (Mayo-Chinchipe)."],
+        "relatedIds": []
+      },
+      "history": { "kind": "attestation", "claimId": "evidence" }
+    }
+  ]
+}

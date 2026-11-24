@@ -1,0 +1,2368 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "em16-src-chandler",
+      "title": "Reba, Reitsma & Seto (2016) · Spatializing 6,000 years of global urbanization from 3700 BC to AD 2000 (Scientific Data; Chandler & Modelski)",
+      "url": "https://doi.org/10.1038/sdata.2016.34",
+      "access": "Open-access Scientific Data compilation checked via Consensus API."
+    },
+    {
+      "id": "em16-src-schmitt-hawaii",
+      "title": "Schmitt (1968) · Demographic Statistics of Hawaii, 1778–1965 (University of Hawaii Press)",
+      "url": "https://doi.org/10.1515/9780824885175",
+      "access": "Monograph DOI record checked via Consensus API."
+    },
+    {
+      "id": "em16-src-swanson-hawaii",
+      "title": "Swanson (2020) · The Number of Native Hawaiians and Part-Hawaiians in Hawaiʻi, 1778 to 1900 (Springer)",
+      "url": "https://doi.org/10.1007/978-3-030-57069-9_17",
+      "access": "Chapter DOI record checked via Consensus API."
+    },
+    {
+      "id": "em16-src-abs-australia",
+      "title": "Australian Bureau of Statistics · Historical Population Statistics (1788–1900 NSW Censuses)",
+      "url": "https://www.abs.gov.au/statistics/people/population/historical-population",
+      "access": "Official Australian Bureau of Statistics historical series."
+    },
+    {
+      "id": "em16-src-dejima-2025",
+      "title": "The Dutch in Japan: A Colonial Analysis of Early Artistic Exchanges (Nagasaki–Dejima, 2025)",
+      "url": "https://doi.org/10.5220/0014664000004995",
+      "access": "Peer-reviewed study checked via Consensus API."
+    },
+    {
+      "id": "em16-src-swahili-arch",
+      "title": "Swahili Coast Cosmopolitan Maritime Architecture (2025)",
+      "url": "https://doi.org/10.61275/isvsej-2025-12-01-06",
+      "access": "Peer-reviewed study checked via Consensus API."
+    },
+    {
+      "id": "em16-src-west-africa",
+      "title": "Archaeology of West Africa ca. 800 BCE to 1500+ CE (History Compass)",
+      "url": "https://doi.org/10.1111/hic3.12316",
+      "access": "Peer-reviewed synthesis checked via Consensus API."
+    },
+    {
+      "id": "em16-src-whc-istanbul",
+      "title": "UNESCO World Heritage Centre · Historic Areas of Istanbul (List 356)",
+      "url": "https://whc.unesco.org/en/list/356",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-isfahan",
+      "title": "UNESCO World Heritage Centre · Meidan Emam, Esfahan (List 115)",
+      "url": "https://whc.unesco.org/en/list/115",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-gondar",
+      "title": "UNESCO World Heritage Centre · Fasil Ghebbi, Gondar Region (List 19)",
+      "url": "https://whc.unesco.org/en/list/19",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-harar",
+      "title": "UNESCO World Heritage Centre · Harar Jugol, Fortified Historic Town (List 1189)",
+      "url": "https://whc.unesco.org/en/list/1189",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-lamu",
+      "title": "UNESCO World Heritage Centre · Lamu Old Town (List 1055)",
+      "url": "https://whc.unesco.org/en/list/1055",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-zanzibar",
+      "title": "UNESCO World Heritage Centre · Stone Town of Zanzibar (List 173)",
+      "url": "https://whc.unesco.org/en/list/173",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-mbanza",
+      "title": "UNESCO World Heritage Centre · Mbanza Kongo, Former Kingdom of Kongo Capital (List 1511)",
+      "url": "https://whc.unesco.org/en/list/1511",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-kasubi",
+      "title": "UNESCO World Heritage Centre · Tombs of Buganda Kings at Kasubi (List 1022)",
+      "url": "https://whc.unesco.org/en/list/1022",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-ambohimanga",
+      "title": "UNESCO World Heritage Centre · Royal Hill of Ambohimanga (List 950)",
+      "url": "https://whc.unesco.org/en/list/950",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-asante",
+      "title": "UNESCO World Heritage Centre · Asante Traditional Buildings, Kumasi (List 35)",
+      "url": "https://whc.unesco.org/en/list/35",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-abomey",
+      "title": "UNESCO World Heritage Centre · Royal Palaces of Abomey (List 323)",
+      "url": "https://whc.unesco.org/en/list/323",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-elmina",
+      "title": "UNESCO World Heritage Centre · Forts and Castles, Ghana (List 34)",
+      "url": "https://whc.unesco.org/en/list/34",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-goree",
+      "title": "UNESCO World Heritage Centre · Island of Gorée, Senegal (List 26)",
+      "url": "https://whc.unesco.org/en/list/26",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-robben",
+      "title": "UNESCO World Heritage Centre · Robben Island & Table Bay Complex (List 916)",
+      "url": "https://whc.unesco.org/en/list/916",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-meknes",
+      "title": "UNESCO World Heritage Centre · Historic City of Meknes (List 793)",
+      "url": "https://whc.unesco.org/en/list/793",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-marrakesh",
+      "title": "UNESCO World Heritage Centre · Medina of Marrakesh (List 331)",
+      "url": "https://whc.unesco.org/en/list/331",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-cairo",
+      "title": "UNESCO World Heritage Centre · Historic Cairo (List 89)",
+      "url": "https://whc.unesco.org/en/list/89",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-diriyah",
+      "title": "UNESCO World Heritage Centre · At-Turaif District in ad-Diriyah (List 1329)",
+      "url": "https://whc.unesco.org/en/list/1329",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-aflaj",
+      "title": "UNESCO World Heritage Centre · Aflaj Irrigation Systems of Oman (List 1207)",
+      "url": "https://whc.unesco.org/en/list/1207",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-baku",
+      "title": "UNESCO World Heritage Centre · Walled City of Baku (List 958)",
+      "url": "https://whc.unesco.org/en/list/958",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-lahore",
+      "title": "UNESCO World Heritage Centre · Fort and Shalamar Gardens in Lahore (List 171)",
+      "url": "https://whc.unesco.org/en/list/171",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-taj",
+      "title": "UNESCO World Heritage Centre · Agra Fort & Taj Mahal (List 252)",
+      "url": "https://whc.unesco.org/en/list/252",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-goa",
+      "title": "UNESCO World Heritage Centre · Churches and Convents of Goa (List 234)",
+      "url": "https://whc.unesco.org/en/list/234",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-jaipur",
+      "title": "UNESCO World Heritage Centre · The Jantar Mantar, Jaipur (List 1338)",
+      "url": "https://whc.unesco.org/en/list/1338",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-lhasa",
+      "title": "UNESCO World Heritage Centre · Historic Ensemble of the Potala Palace, Lhasa (List 707)",
+      "url": "https://whc.unesco.org/en/list/707",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-macau",
+      "title": "UNESCO World Heritage Centre · Historic Centre of Macao (List 1110)",
+      "url": "https://whc.unesco.org/en/list/1110",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-kyoto",
+      "title": "UNESCO World Heritage Centre · Historic Monuments of Ancient Kyoto (List 688)",
+      "url": "https://whc.unesco.org/en/list/688",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-himeji",
+      "title": "UNESCO World Heritage Centre · Himeji-jo (List 661)",
+      "url": "https://whc.unesco.org/en/list/661",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-nikko",
+      "title": "UNESCO World Heritage Centre · Shrines and Temples of Nikko (List 913)",
+      "url": "https://whc.unesco.org/en/list/913",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-hue",
+      "title": "UNESCO World Heritage Centre · Complex of Hué Monuments (List 678)",
+      "url": "https://whc.unesco.org/en/list/678",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-ayutthaya",
+      "title": "UNESCO World Heritage Centre · Historic City of Ayutthaya (List 576)",
+      "url": "https://whc.unesco.org/en/list/576",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-luangprabang",
+      "title": "UNESCO World Heritage Centre · Town of Luang Prabang (List 479)",
+      "url": "https://whc.unesco.org/en/list/479",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-melaka",
+      "title": "UNESCO World Heritage Centre · Melaka and George Town (List 1223)",
+      "url": "https://whc.unesco.org/en/list/1223",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-vigan",
+      "title": "UNESCO World Heritage Centre · Historic City of Vigan (List 502)",
+      "url": "https://whc.unesco.org/en/list/502",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-sydney",
+      "title": "UNESCO World Heritage Centre · Australian Convict Sites (List 1306)",
+      "url": "https://whc.unesco.org/en/list/1306",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-grandcanal",
+      "title": "UNESCO World Heritage Centre · The Grand Canal (List 1443)",
+      "url": "https://whc.unesco.org/en/list/1443",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-chengde",
+      "title": "UNESCO World Heritage Centre · Mountain Resort and its Outlying Temples, Chengde (List 703)",
+      "url": "https://whc.unesco.org/en/list/703",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-fujian",
+      "title": "UNESCO World Heritage Centre · Fujian Tulou (List 1113)",
+      "url": "https://whc.unesco.org/en/list/1113",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-suzhou",
+      "title": "UNESCO World Heritage Centre · Classical Gardens of Suzhou (List 813)",
+      "url": "https://whc.unesco.org/en/list/813",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-ryukyu",
+      "title": "UNESCO World Heritage Centre · Gusuku Sites and Related Properties of the Kingdom of Ryukyu (List 972)",
+      "url": "https://whc.unesco.org/en/list/972",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-seoul-hwaseong",
+      "title": "UNESCO World Heritage Centre · Hwaseong Fortress, Suwon (List 817)",
+      "url": "https://whc.unesco.org/en/list/817",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-tunisia",
+      "title": "UNESCO World Heritage Centre · Medina of Tunis (List 36)",
+      "url": "https://whc.unesco.org/en/list/36",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-algiers",
+      "title": "UNESCO World Heritage Centre · Kasbah of Algiers (List 565)",
+      "url": "https://whc.unesco.org/en/list/565",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-chinguetti",
+      "title": "UNESCO World Heritage Centre · Ancient Ksour of Ouadane, Chinguetti, Tichitt and Oualata (List 750)",
+      "url": "https://whc.unesco.org/en/list/750",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-zulu-natal",
+      "title": "The amakhanda settlement system of the Zulu kingdom (Azania, 2025)",
+      "url": "https://doi.org/10.1080/0067270x.2025.2479337",
+      "access": "Peer-reviewed Southern African archaeology study checked via Consensus API."
+    },
+    {
+      "id": "em16-src-whc-persian-garden",
+      "title": "UNESCO World Heritage Centre · The Persian Garden (List 1372)",
+      "url": "https://whc.unesco.org/en/list/1372",
+      "access": "UNESCO dossier checked 2026-11-23."
+    },
+    {
+      "id": "em16-src-whc-singapore-malacca",
+      "title": "Journal of Southeast Asian Studies · Archipelago Polity Archives",
+      "url": "https://doi.org/10.1017/s0022463400017136",
+      "access": "Peer-reviewed Southeast Asian history journal record."
+    }
+  ],
+  "taxa": [],
+  "evidence": [
+    {
+      "id": "em16-constantinople-istanbul",
+      "title": "Kostantiniyye / Istanbul Imperial Metropolis (1501–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "europe",
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1501,
+      "end": 1900,
+      "dateLabel": "1501–1900 CE",
+      "dateBasis": "Ottoman imperial tahrir surveys & 1885 Ottoman municipal census",
+      "coordinates": [
+        28.98,
+        41.01
+      ],
+      "summary": "Ottoman imperial capital rebuilt around the Süleymaniye kulliye, Topkapi workshops, Mediterranean naval yards, and late imperial ministries into the 1885 census.",
+      "limits": "Earlier totals draw on household tax surveys and provisioning records across intra-mural, Galata, and Üsküdar districts.",
+      "sourceIds": [
+        "em16-src-whc-istanbul",
+        "em16-src-chandler"
+      ],
+      "population": [
+        {
+          "year": 1550,
+          "min": 400000,
+          "max": 600000,
+          "basis": "estimate",
+          "note": "Süleymaniye-era Ottoman metropolis including Galata (Chandler/Modelski)",
+          "sourceIds": [
+            "em16-src-chandler"
+          ]
+        },
+        {
+          "year": 1700,
+          "min": 650000,
+          "max": 750000,
+          "basis": "estimate",
+          "note": "Early 18th-century Ottoman capital estimate",
+          "sourceIds": [
+            "em16-src-chandler"
+          ]
+        },
+        {
+          "year": 1885,
+          "min": 850000,
+          "max": 875000,
+          "basis": "census",
+          "note": "1885 Ottoman municipal census of Istanbul urban districts",
+          "sourceIds": [
+            "em16-src-chandler"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "em16-safavid-isfahan",
+      "title": "Safavid Isfahan & Naqsh-e Jahan Imperial Square (1598–1736 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1598,
+      "end": 1736,
+      "dateLabel": "1598–1736 CE",
+      "dateBasis": "Safavid royal chronicles & New Julfa Armenian merchant records",
+      "coordinates": [
+        51.68,
+        32.66
+      ],
+      "summary": "Shah Abbas I transformed Isfahan into the Safavid silk capital uniting the royal bazaar, Masjid-e Shah, and resettled New Julfa Armenian merchant quarter across the Zayandeh River.",
+      "limits": "Metropolitan numbers contract steeply after the 1722 siege and subsequent Afghan-Afshar wars.",
+      "sourceIds": [
+        "em16-src-whc-isfahan",
+        "em16-src-chandler"
+      ],
+      "population": [
+        {
+          "year": 1650,
+          "min": 350000,
+          "max": 600000,
+          "basis": "estimate",
+          "note": "Mid-17th-century Safavid capital and New Julfa peak estimate (Chandler/Modelski)",
+          "sourceIds": [
+            "em16-src-chandler",
+            "em16-src-whc-isfahan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "em16-hangzhou-grand-canal",
+      "title": "Hangzhou & Jiangnan Grand Canal Terminus (1501–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1501,
+      "end": 1900,
+      "dateLabel": "1501–1900 CE",
+      "dateBasis": "Ming–Qing prefectural gazetteers & Grand Canal tribute ledgers",
+      "coordinates": [
+        120.15,
+        30.25
+      ],
+      "summary": "Southern terminus of the Grand Canal linking Jiangnan silk workshops, woodblock printing houses, and Qiantang salt revenues into late imperial China’s coastal economy.",
+      "limits": "Urban population was disrupted sharply during the 1860s Taiping conflicts prior to late-century recovery.",
+      "sourceIds": [
+        "em16-src-whc-grandcanal",
+        "em16-src-chandler"
+      ],
+      "population": [
+        {
+          "year": 1600,
+          "min": 300000,
+          "max": 450000,
+          "basis": "estimate",
+          "note": "Late Ming Jiangnan commercial and silk metropolis estimate",
+          "sourceIds": [
+            "em16-src-chandler"
+          ]
+        },
+        {
+          "year": 1800,
+          "min": 450000,
+          "max": 650000,
+          "basis": "estimate",
+          "note": "High Qing Hangzhou prefectural urban estimate",
+          "sourceIds": [
+            "em16-src-chandler"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "em16-kyoto-imperial-craft-city",
+      "title": "Kyoto Imperial & Nishijin Silk-Weaving Metropolis (1501–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1501,
+      "end": 1900,
+      "dateLabel": "1501–1900 CE",
+      "dateBasis": "Tokugawa machi household registers & Meiji prefectural counts",
+      "coordinates": [
+        135.76,
+        35.01
+      ],
+      "summary": "Imperial court seat rebuilt under Nobunaga, Hideyoshi, and the Tokugawa bakufu as Japan’s center for fine silk weaving, lacquer, tea culture, and publishing.",
+      "limits": "Demographic peak preceded the 1869 Meiji court move to Tokyo.",
+      "sourceIds": [
+        "em16-src-whc-kyoto",
+        "em16-src-chandler"
+      ],
+      "population": [
+        {
+          "year": 1650,
+          "min": 350000,
+          "max": 450000,
+          "basis": "estimate",
+          "note": "Early Tokugawa Kyoto urban register and court estimate",
+          "sourceIds": [
+            "em16-src-chandler"
+          ]
+        },
+        {
+          "year": 1800,
+          "min": 350000,
+          "max": 400000,
+          "basis": "estimate",
+          "note": "Late Tokugawa Kyoto commoner and craft quarter estimate",
+          "sourceIds": [
+            "em16-src-chandler"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "em16-osaka-tenka-no-daidokoro",
+      "title": "Osaka (Naniwa): Tokugawa Rice Exchange & Merchant Port (1583–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1583,
+      "end": 1900,
+      "dateLabel": "1583–1900 CE",
+      "dateBasis": "Dōjima rice exchange records & Osaka machi census rolls",
+      "coordinates": [
+        135.5,
+        34.69
+      ],
+      "summary": "Shogunal commercial hub (\"Kitchen of the Realm\") linking Kitamaebune coastal grain ships, warehouse domains, Dojima futures trading, and Osaka textile mills.",
+      "limits": "Castle-town garrison precincts were enumerated separately from chōnin merchant wards.",
+      "sourceIds": [
+        "em16-src-chandler",
+        "em16-src-whc-himeji"
+      ],
+      "population": [
+        {
+          "year": 1750,
+          "min": 350000,
+          "max": 420000,
+          "basis": "estimate",
+          "note": "Mid-18th-century Tokugawa Osaka commercial ward peak estimate",
+          "sourceIds": [
+            "em16-src-chandler"
+          ]
+        },
+        {
+          "year": 1898,
+          "min": 800000,
+          "max": 825000,
+          "basis": "census",
+          "note": "Meiji Osaka industrial municipal census expansion (1898 register)",
+          "sourceIds": [
+            "em16-src-chandler"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "em16-honolulu-kingdom-port",
+      "title": "Honolulu (Kou Harbor) & Hawaiian Kingdom Capital (1809–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "pacific"
+      ],
+      "kind": "historical",
+      "start": 1809,
+      "end": 1900,
+      "dateLabel": "1809–1900 CE",
+      "dateBasis": "Missionary & Hawaiian Kingdom constitutional censuses (1831–1896) and 1900 Census",
+      "coordinates": [
+        -157.86,
+        21.31
+      ],
+      "summary": "Natural deep-water reef harbor developed into Kamehameha I’s royal residence, printing seat, diplomatic port, and capital of the Kingdom of Hawaiʻi through 1900.",
+      "limits": "Early 19th-century estimates reflect severe introduced epidemic losses documented across island censuses.",
+      "sourceIds": [
+        "em16-src-schmitt-hawaii",
+        "em16-src-swanson-hawaii"
+      ],
+      "population": [
+        {
+          "year": 1831,
+          "min": 5500,
+          "max": 6500,
+          "basis": "census",
+          "note": "First missionary-Kingdom census estimate for Honolulu urban settlement (1831–1832)",
+          "sourceIds": [
+            "em16-src-schmitt-hawaii"
+          ]
+        },
+        {
+          "year": 1890,
+          "min": 22000,
+          "max": 23500,
+          "basis": "census",
+          "note": "1890 Hawaiian Kingdom official census for Honolulu town (22,907)",
+          "sourceIds": [
+            "em16-src-schmitt-hawaii",
+            "em16-src-swanson-hawaii"
+          ]
+        },
+        {
+          "year": 1900,
+          "min": 39000,
+          "max": 40000,
+          "basis": "census",
+          "note": "1900 Honolulu census count (39,306)",
+          "sourceIds": [
+            "em16-src-schmitt-hawaii"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "em16-sydney-port-jackson",
+      "title": "Warrane / Sydney & Port Jackson Colonial Port (1788–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "pacific"
+      ],
+      "kind": "historical",
+      "start": 1788,
+      "end": 1900,
+      "dateLabel": "1788–1900 CE",
+      "dateBasis": "NSW 1828 Muster/Census & Australian colonial decennial censuses to 1891",
+      "coordinates": [
+        151.21,
+        -33.87
+      ],
+      "summary": "Eora (Gadigal) coastal country where the 1788 penal landing grew into New South Wales’s administrative capital, wool-export port, and rail-suburban city.",
+      "limits": "Early colonial counts excluded dispersed Aboriginal nations across Sydney Basin and hinterland districts.",
+      "sourceIds": [
+        "em16-src-abs-australia",
+        "em16-src-whc-sydney",
+        "em16-src-chandler"
+      ],
+      "population": [
+        {
+          "year": 1828,
+          "min": 10500,
+          "max": 11500,
+          "basis": "census",
+          "note": "1828 New South Wales first full colonial census for Sydney Town (~10,815 enumerated)",
+          "sourceIds": [
+            "em16-src-abs-australia"
+          ]
+        },
+        {
+          "year": 1851,
+          "min": 53000,
+          "max": 55000,
+          "basis": "census",
+          "note": "1851 NSW census for Sydney municipality and inner suburbs",
+          "sourceIds": [
+            "em16-src-abs-australia",
+            "em16-src-chandler"
+          ]
+        },
+        {
+          "year": 1891,
+          "min": 380000,
+          "max": 390000,
+          "basis": "census",
+          "note": "1891 New South Wales colonial census for Greater Sydney (~383,283)",
+          "sourceIds": [
+            "em16-src-abs-australia",
+            "em16-src-chandler"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "em16-gondar-fasil-ghebbi",
+      "title": "Gondar Imperial Capital & Fasil Ghebbi (Ethiopia, 1636–1855 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1636,
+      "end": 1855,
+      "dateLabel": "1636–1855 CE",
+      "dateBasis": "Solomonic royal chronicles & basalt castle stone-mortar fabric",
+      "coordinates": [
+        37.47,
+        12.61
+      ],
+      "summary": "Permanent Solomonic capital founded by Emperor Fasilides north of Lake Tana, integrating multi-towered palaces, churches, illuminated scriptoria, and trade guilds.",
+      "limits": "Royal authority decentralized during the Zemene Mesafint era after 1769 prior to Téwodros II.",
+      "sourceIds": [
+        "em16-src-whc-gondar"
+      ]
+    },
+    {
+      "id": "em16-harar-jugol-walled",
+      "title": "Harar Jugol Walled Emirate & Islamic Scholarship Hub (1520–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1520,
+      "end": 1900,
+      "dateLabel": "1520–1900 CE",
+      "dateBasis": "Adal–Harari chronicles, five fortified gates & mosque inscriptions",
+      "coordinates": [
+        42.14,
+        9.31
+      ],
+      "summary": "Sixteenth-century walled commercial city linking Ethiopian highland coffee, ivory, and Red Sea Zeyla caravans through 82 mosques and distinctive courtyard dwellings.",
+      "limits": "Archaeological stratigraphy in densely inhabited core remains mostly conserved beneath standing neighborhoods.",
+      "sourceIds": [
+        "em16-src-whc-harar"
+      ]
+    },
+    {
+      "id": "em16-adwa-tigray-sovereignty",
+      "title": "Adwa Highland Basin & Solomonic–Modern Ethiopian Frontier (1880–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1880,
+      "end": 1900,
+      "dateLabel": "1880–1900 CE",
+      "dateBasis": "Ethiopian royal state archives & treaty historiography (Treaty of Wuchale / 1896 Adwa)",
+      "coordinates": [
+        38.9,
+        14.17
+      ],
+      "summary": "Highland trade junction in Tigray where Menelik II’s mobilized national army defeated Italian colonial forces in March 1896, securing Ethiopian sovereignty across the 1900 horizon.",
+      "limits": "Represents documented state sovereignty campaign and caravan crossroads rather than single-building excavations.",
+      "sourceIds": [
+        "em16-src-whc-gondar"
+      ]
+    },
+    {
+      "id": "em16-lamu-old-town",
+      "title": "Lamu Old Town (Kenya): Omani–Swahili Coral-Stone Port (1501–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1501,
+      "end": 1900,
+      "dateLabel": "1501–1900 CE",
+      "dateBasis": "Patriarchal stone-house dendrochronology, poetry manuscripts & coral-rag masonry",
+      "coordinates": [
+        40.9,
+        -2.27
+      ],
+      "summary": "Unbroken coral-rag limestone Swahili port and Kiswahili literary center maintaining dhow monsoon commerce between East Africa, Hadhramaut, and western India.",
+      "limits": "Continuous occupation limits deep trench exposures beneath historic street grid.",
+      "sourceIds": [
+        "em16-src-whc-lamu",
+        "em16-src-swahili-arch"
+      ]
+    },
+    {
+      "id": "em16-zanzibar-stone-town",
+      "title": "Zanzibar Stone Town & Busaidi Indian Ocean Sultanate (1698–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1698,
+      "end": 1900,
+      "dateLabel": "1698–1900 CE",
+      "dateBasis": "Omani Sultanate customs ledgers, coral mansions & treaty records",
+      "coordinates": [
+        39.19,
+        -6.16
+      ],
+      "summary": "Commercial capital moved by Seyyid Said from Muscat in 1840, structuring clove plantation exports, Indian banyan finance, ivory caravans, and later abolition treaties.",
+      "limits": "Maritime entrepôt prosperity relied heavily on coerced caravan and plantation labor until late-19th-century abolition.",
+      "sourceIds": [
+        "em16-src-whc-zanzibar",
+        "em16-src-swahili-arch"
+      ]
+    },
+    {
+      "id": "em16-mbanza-kongo-san-salvador",
+      "title": "Mbanza Kongo Imperial Capital & Kulumbimbi (Angola, 1501–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1501,
+      "end": 1900,
+      "dateLabel": "1501–1900 CE",
+      "dateBasis": "Kongo royal correspondence, cathedral masonry & archaeological survey",
+      "coordinates": [
+        14.25,
+        -6.27
+      ],
+      "summary": "Highland capital of the Kingdom of Kongo under Afonso I and successors, uniting provincial taxation, rafia cloth exchange, literate Christian royal bureaucracy, and diplomacy.",
+      "limits": "Portuguese-Kongo wars and mid-17th-century civil conflict fragmented royal centralization after 1665.",
+      "sourceIds": [
+        "em16-src-whc-mbanza"
+      ]
+    },
+    {
+      "id": "em16-kasubi-buganda-kingdom",
+      "title": "Mengo & Kasubi: Buganda Lacustrine State Architecture (1700–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1700,
+      "end": 1900,
+      "dateLabel": "1700–1900 CE",
+      "dateBasis": "Royal barkcloth-and-reed architecture & Lake Victoria canoe fleet records",
+      "coordinates": [
+        32.55,
+        0.33
+      ],
+      "summary": "Northwestern Lake Victoria kingdom centralized around Kabaka courts, reed-thatched royal tombs (Muzibu-Azaala-Mpanga), iron-barkcloth tribute roads, and naval fleets.",
+      "limits": "Organic timber-and-reed architecture requires periodic traditional rethatching and reconstruction.",
+      "sourceIds": [
+        "em16-src-whc-kasubi"
+      ]
+    },
+    {
+      "id": "em16-ambohimanga-merina",
+      "title": "Ambohimanga & Merina Unification of Highland Madagascar (1787–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1787,
+      "end": 1900,
+      "dateLabel": "1787–1900 CE",
+      "dateBasis": "Merina oral-historiographic corpus, stone gates & terraced rice engineering",
+      "coordinates": [
+        47.56,
+        -18.76
+      ],
+      "summary": "Sacred hill capital from which Andrianampoinimerina and Radama I unified the central Malagasy plateau through Betsimitatatra wet-rice irrigation and stone fortifications.",
+      "limits": "Peripheral coastal sakalava and southern polities retained varied autonomy across the 19th century.",
+      "sourceIds": [
+        "em16-src-whc-ambohimanga"
+      ]
+    },
+    {
+      "id": "em16-asante-kumasi",
+      "title": "Kumasi & the Asante Confederacy Golden Stool State (1701–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1701,
+      "end": 1900,
+      "dateLabel": "1701–1900 CE",
+      "dateBasis": "Asante court goldweight metallurgy, adobe shrine relief & Great Roads network",
+      "coordinates": [
+        -1.62,
+        6.69
+      ],
+      "summary": "Forest state confederated by Osei Tutu and Okomfo Anokye from 1701, controlling Brong-Akyem goldfields, northern kola caravans, and stamped courtyard shrines around Kumasi.",
+      "limits": "Royal palace structures at Kumasi were burned during Anglo-Asante wars in 1874 and 1896, leaving outlier shrines at Ejisu-Besease.",
+      "sourceIds": [
+        "em16-src-whc-asante",
+        "em16-src-west-africa"
+      ]
+    },
+    {
+      "id": "em16-oyo-ile-empire",
+      "title": "Old Oyo (Oyo-Ile) Cavalry Empire & Savanna–Forest Corridor (1600–1836 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "archaeology",
+      "start": 1600,
+      "end": 1836,
+      "dateLabel": "1600–1836 CE",
+      "dateBasis": "Earthwork wall surveys, terracotta-paved palace courtyards & radiocarbon dates",
+      "coordinates": [
+        4.33,
+        8.99
+      ],
+      "summary": "Tsetse-margin Yoruba cavalry power projecting authority from the savanna across Oyo-Ile earthworks toward Egbado and Atlantic coastal ports.",
+      "limits": "Northern internal conflicts and Fulani jihad raids forced abandonment of Old Oyo south to New Oyo around 1836.",
+      "sourceIds": [
+        "em16-src-west-africa"
+      ]
+    },
+    {
+      "id": "em16-abomey-dahomey",
+      "title": "Abomey Royal Palaces & Kingdom of Dahomey (1625–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1625,
+      "end": 1900,
+      "dateLabel": "1625–1900 CE",
+      "dateBasis": "Polychrome bas-relief palace walls, earthen fosses & royal regalia archives",
+      "coordinates": [
+        1.99,
+        7.19
+      ],
+      "summary": "Centralized Fon monarchy governing plateau agriculture, female Mino palace corps, Whydah coastal customs, and 19th-century palm-oil diplomacy from walled compounds.",
+      "limits": "Later 19th-century walls reflect French conquest fires of 1892 and twentieth-century museum conservation.",
+      "sourceIds": [
+        "em16-src-whc-abomey"
+      ]
+    },
+    {
+      "id": "em16-benin-edo-early-modern",
+      "title": "Benin City (Edo) Earthworks & Early Modern Brass Guilds (1501–1897 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "archaeology",
+      "start": 1501,
+      "end": 1897,
+      "dateLabel": "1501–1897 CE",
+      "dateBasis": "Iya moats, Igun Eronmwon lost-wax brass corpus & European factory accounts",
+      "coordinates": [
+        5.62,
+        6.34
+      ],
+      "summary": "Oba court metropolis ringed by monumental earthen Iya ramparts, producing royal commemorative brass plaques and hosting regulated pepper, ivory, and cloth trade to 1897.",
+      "limits": "Chronology of specific cast plaques depends partly on stylistic cross-correlation after 1897 dispersal.",
+      "sourceIds": [
+        "em16-src-west-africa"
+      ]
+    },
+    {
+      "id": "em16-bornu-ngazargamu-kukawa",
+      "title": "Kanem–Bornu Capitals: Birni Ngazargamu & Kukawa (1501–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "archaeology",
+      "start": 1501,
+      "end": 1900,
+      "dateLabel": "1501–1900 CE",
+      "dateBasis": "Fired-brick palace ruins west of Lake Chad & Diwan/Girgam chronicles",
+      "coordinates": [
+        12.27,
+        13
+      ],
+      "summary": "Saifawa empire under Idris Alooma using Ottoman firearms, cavalry highways, and brick capitals across the Komadugu Yobe basin to control central Saharan salt-and-horse trade.",
+      "limits": "Rabih az-Zubayr’s invasion in 1893 destroyed Kukawa shortly before colonial partition.",
+      "sourceIds": [
+        "em16-src-west-africa"
+      ]
+    },
+    {
+      "id": "em16-sokoto-kano-caliphate",
+      "title": "Sokoto Caliphate & Kano Dyed-Indigo Cloth Walls (1804–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1804,
+      "end": 1900,
+      "dateLabel": "1804–1900 CE",
+      "dateBasis": "Fulani Arabic scholarship archives, Kano mud-wall circuit & indigo dye-pits",
+      "coordinates": [
+        8.52,
+        12
+      ],
+      "summary": "Confederated Hausaland Islamic state led by Usman dan Fodio uniting Kano textile artisans, trans-Saharan leatherworkers, and savanna agricultural estates across 19th-century northern Nigeria.",
+      "limits": "Urban wall circumferences span multiple medieval-through-19th-century rebuilding phases.",
+      "sourceIds": [
+        "em16-src-west-africa"
+      ]
+    },
+    {
+      "id": "em16-elmina-cape-coast-ghana",
+      "title": "Elmina (São Jorge da Mina) & Gold Coast Stone Forts (1501–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1501,
+      "end": 1900,
+      "dateLabel": "1501–1900 CE",
+      "dateBasis": "Portuguese, Dutch WIC & British customs forts along Fante-Akan coast",
+      "coordinates": [
+        -1.35,
+        5.08
+      ],
+      "summary": "String of coastal stone trade castles documenting shifting Akan gold exports, Atlantic slave-trade forts, Fante brokers, and Dutch/British coastal rivalry.",
+      "limits": "Architectural fabric emphasizes European-garrisoned castles more than inland African town quarters.",
+      "sourceIds": [
+        "em16-src-whc-elmina"
+      ]
+    },
+    {
+      "id": "em16-goree-saint-louis-senegal",
+      "title": "Gorée Island & Senegambia Atlantic Crossroads (1501–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1501,
+      "end": 1900,
+      "dateLabel": "1501–1900 CE",
+      "dateBasis": "Signare coral-limestone townhouses, naval charts & trade records",
+      "coordinates": [
+        -17.4,
+        14.67
+      ],
+      "summary": "Volcanic island anchorage off Cape Verde serving as a fortified Atlantic waypoint for gum arabic, hides, French West African commerce, and the Middle Passage memory.",
+      "limits": "Archaeological deposits combine European military masonry with African domestic precincts.",
+      "sourceIds": [
+        "em16-src-whc-goree"
+      ]
+    },
+    {
+      "id": "em16-cape-town-voc-khoekhoe",
+      "title": "Table Bay / Cape Town (//Hui !Gaeb): Khoekhoe–VOC Port (1652–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1652,
+      "end": 1900,
+      "dateLabel": "1652–1900 CE",
+      "dateBasis": "VOC Dagregister, Robben Island stone quarries & Cape archival censuses",
+      "coordinates": [
+        18.42,
+        -33.92
+      ],
+      "summary": "Dutch East India Company refreshment station planted in Goringhaicona and Peninsular Khoekhoe grazing territory, linking enslaved Asian/East African craftspeople, wine farms, and British Atlantic commerce.",
+      "limits": "Frontier dispossession progressed rapidly northward and eastward beyond Cape Peninsula surveys.",
+      "sourceIds": [
+        "em16-src-whc-robben"
+      ]
+    },
+    {
+      "id": "em16-zulu-umgungundlovu-ulundi",
+      "title": "KwaZulu State: Bulawayo, uMgungundlovu & Ulundi (1816–1887 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1816,
+      "end": 1887,
+      "dateLabel": "1816–1887 CE",
+      "dateBasis": "Excavated amakhanda cattle-byre rings, ironworking slag & Natal archives",
+      "coordinates": [
+        31.42,
+        -28.32
+      ],
+      "summary": "Centralized Nguni kingdom forged under Shaka through age-regiment amakhanda capitals, short-spear tactics, cattle-exchange hierarchy, and 1879 Anglo-Zulu resistance.",
+      "limits": "Thatch-and-wattle kraal settlements preserve principally floor clay, ash pits, and stone foundations.",
+      "sourceIds": [
+        "em16-src-zulu-natal"
+      ]
+    },
+    {
+      "id": "em16-cairo-ott-modern",
+      "title": "Cairo Citadel, Bulaq Press & Nile Delta Modernizing Hub (1517–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1517,
+      "end": 1900,
+      "dateLabel": "1517–1900 CE",
+      "dateBasis": "Ottoman court registers, Bulaq printing press & 19th-c. canal engineering",
+      "coordinates": [
+        31.26,
+        30.03
+      ],
+      "summary": "Imperial provincial metropolis connecting Arabian Sea Mocha coffee guilds, Waqf Madrasa endowment complexes, 1820s industrial cotton canals, and early Arabic printing.",
+      "limits": "Distinct from medieval Fusṭāṭ layers represented in foundational Nile urban series.",
+      "sourceIds": [
+        "em16-src-whc-cairo"
+      ]
+    },
+    {
+      "id": "em16-tunis-medina-ottoman",
+      "title": "Tunis Medina, Hafsid–Ottoman Corsairs & Husainid Beylik (1534–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1534,
+      "end": 1900,
+      "dateLabel": "1534–1900 CE",
+      "dateBasis": "Zaytuna mosque waqfs, Husainid palaces & Mediterranean consulate treaties",
+      "coordinates": [
+        10.17,
+        36.8
+      ],
+      "summary": "Autonomous Ottoman regency and Husainid Beylik weaving olive oil, fez-cap workshops, Sahara-Sahel leather imports, and 1857/1861 constitutional reforms around historic Medina souks.",
+      "limits": "Eighteenth-century rural tribal taxation varied significantly outside Sahel coastal plains.",
+      "sourceIds": [
+        "em16-src-whc-tunisia"
+      ]
+    },
+    {
+      "id": "em16-algiers-kasbah-dey",
+      "title": "Algiers Kasbah & Ottoman Mediterranean Regency (1516–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1516,
+      "end": 1900,
+      "dateLabel": "1516–1900 CE",
+      "dateBasis": "Barbarossa-era naval harbor bastions, Dey palaces & urban citadel terraces",
+      "coordinates": [
+        3.06,
+        36.79
+      ],
+      "summary": "Stepped whitewashed hillside citadel guarding central Maghrebi maritime trade, Andalusian artisanal quarters, and corsair naval treaties prior to 1830 French conquest.",
+      "limits": "Coastal bombardment and nineteenth-century colonial boulevard cuts reshaped the lower marine district.",
+      "sourceIds": [
+        "em16-src-whc-algiers"
+      ]
+    },
+    {
+      "id": "em16-meknes-ismaili",
+      "title": "Meknes Imperial City of Sultan Moulay Ismail (1672–1727 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1672,
+      "end": 1727,
+      "dateLabel": "1672–1727 CE",
+      "dateBasis": "Alawid monumental rammed-earth Heri es-Souani granaries & Bab Mansour gate",
+      "coordinates": [
+        -5.55,
+        33.89
+      ],
+      "summary": "Massive imperial palace city of rammed earth and green-glazed ceramic tile built as the Alawid state hub organizing Morocco’s central army and Saharan caravan tributes.",
+      "limits": "Many imperial pavilions suffered severe damage during the 1755 Lisbon earthquake.",
+      "sourceIds": [
+        "em16-src-whc-meknes"
+      ]
+    },
+    {
+      "id": "em16-marrakesh-saadian",
+      "title": "Marrakesh: Saadian Badi Palace, Sugar & Timbuktu Expedition (1554–1800 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1554,
+      "end": 1800,
+      "dateLabel": "1554–1800 CE",
+      "dateBasis": "Saadian marble tombs, Sus sugar-mill ruins & 1591 trans-Saharan chronicles",
+      "coordinates": [
+        -7.99,
+        31.63
+      ],
+      "summary": "Saadian capital powered by Sus valley cane sugar exports to Europe and Ahmad al-Mansur’s 1591 Songhai campaign establishing trans-Saharan salt-and-gold links.",
+      "limits": "Monumental Badi Palace marble was partly dismantled in the late 17th century under Alawid patronage.",
+      "sourceIds": [
+        "em16-src-whc-marrakesh"
+      ]
+    },
+    {
+      "id": "em16-chinguetti-oualata-books",
+      "title": "Chinguetti, Ouadane & Oualata Desert Manuscript Oasis Libraries (1501–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1501,
+      "end": 1900,
+      "dateLabel": "1501–1900 CE",
+      "dateBasis": "Stone desert-town libraries containing thousands of early modern Arabic manuscripts",
+      "coordinates": [
+        -12.36,
+        20.46
+      ],
+      "summary": "Saharan stone caravanserai towns preserving family manuscript collections of astronomy, Maliki jurisprudence, medicine, and salt-caravan contracts across four centuries.",
+      "limits": "Windblown sand encroachment obscures abandoned outer neighborhoods around ancient well fields.",
+      "sourceIds": [
+        "em16-src-whc-chinguetti"
+      ]
+    },
+    {
+      "id": "em16-diriyah-turaif-najd",
+      "title": "At-Turaif in ad-Diriyah: Najdi Oasis Town & First Saudi State (1744–1818 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1744,
+      "end": 1818,
+      "dateLabel": "1744–1818 CE",
+      "dateBasis": "Mud-brick Najdi citadel architecture along Wadi Hanifa & Ottoman chronicles",
+      "coordinates": [
+        46.58,
+        24.73
+      ],
+      "summary": "Walled adobe capital above Wadi Hanifa palm groves rising from 1744 into a peninsula-wide confederation before Ibrahim Pasha’s 1818 siege.",
+      "limits": "Adobe superstructures suffered heavily in the 1818 bombardment and nineteenth-century abandonment.",
+      "sourceIds": [
+        "em16-src-whc-diriyah"
+      ]
+    },
+    {
+      "id": "em16-oman-nizwa-muscat-aflaj",
+      "title": "Yaruba–Busaidi Oman: Nizwa, Bahla & Indian Ocean Maritime Empire (1650–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1650,
+      "end": 1900,
+      "dateLabel": "1650–1900 CE",
+      "dateBasis": "Aflaj hydraulic charters, Yaruba circular bastions & Muscat treaty archives",
+      "coordinates": [
+        57.53,
+        22.93
+      ],
+      "summary": "Combined aflaj gravity-canal oasis agriculture in interior Oman with ocean-going baghlah fleets projecting Omani rule from Muscat to Mombasa and Zanzibar after 1650.",
+      "limits": "Interior Imamate towns and coastal Sultanate capitals operated in shifting political balance.",
+      "sourceIds": [
+        "em16-src-whc-aflaj"
+      ]
+    },
+    {
+      "id": "em16-kashan-fin-gardens",
+      "title": "Kashan Fin Garden & Qajar Hydraulic Oasis Estates (1590–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1590,
+      "end": 1900,
+      "dateLabel": "1590–1900 CE",
+      "dateBasis": "Qanat spring inscriptions, Safavid pool geometry & Qajar pavilion frescoes",
+      "coordinates": [
+        51.37,
+        33.95
+      ],
+      "summary": "Iranian desert garden watered continuously by Sulaymaniyah qanat springs through Safavid velvet-weaving prosperity and nineteenth-century Qajar constitutional crises.",
+      "limits": "Site represents elite hydraulic estate planning rather than provincial agrarian demography.",
+      "sourceIds": [
+        "em16-src-whc-persian-garden"
+      ]
+    },
+    {
+      "id": "em16-baku-shirvanshah-safavid",
+      "title": "Baku Caspian Entrepôt, Shirvanshah Palace & Caravan Networks (1501–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific",
+        "europe"
+      ],
+      "kind": "historical",
+      "start": 1501,
+      "end": 1900,
+      "dateLabel": "1501–1900 CE",
+      "dateBasis": "Limestone Inner City caravanserais, Shirvan stone relief & silk custom records",
+      "coordinates": [
+        49.84,
+        40.37
+      ],
+      "summary": "Fortified Caspian Sea harbor exchanging Shirvan raw silk, naphtha oil, and Iranian cotton between Safavid, Ottoman, and Astrakhan Volga merchants before 19th-century oil boom.",
+      "limits": "Seventeenth- and nineteenth-century fortifications overlay medieval walled layouts.",
+      "sourceIds": [
+        "em16-src-whc-baku"
+      ]
+    },
+    {
+      "id": "em16-samarkand-bukhara-khanates",
+      "title": "Bukhara, Khiva & Kokand Shaybanid–Manghit Oasis Khanates (1501–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1501,
+      "end": 1900,
+      "dateLabel": "1501–1900 CE",
+      "dateBasis": "Shaybanid madrasa tilework, Bukhara Jewish & Indian merchant deeds & waqf rolls",
+      "coordinates": [
+        64.42,
+        39.77
+      ],
+      "summary": "Caravan-guild city-states sustaining overland Astrakhan–Kashgar horse, tea, and silk exchanges long after Cape sea routes opened.",
+      "limits": "Chronicles often concentrate on Bukhara and Samarkand mosques over pastoral steppe hinterlands.",
+      "sourceIds": [
+        "em16-src-chandler"
+      ]
+    },
+    {
+      "id": "em16-mughal-shahjahanabad-taj",
+      "title": "Agra & Shahjahanabad (Old Delhi): High Mughal Architecture & Revenue Empire (1556–1857 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1556,
+      "end": 1857,
+      "dateLabel": "1556–1857 CE",
+      "dateBasis": "Ain-i-Akbari revenue cadastres, marble pietradura & Yamuna riverfront plans",
+      "coordinates": [
+        77.24,
+        28.66
+      ],
+      "summary": "Agra and Shah Jahan’s planned Yamuna capital integrated zabt land-revenue surveys, monsoon water-chutes, Persian-Sanskrit translations, and global silver rupee minting.",
+      "limits": "Imperial treasury and palace grandeur coexisted with sharp regional famine vulnerabilities in 1630–1632 and 1783.",
+      "sourceIds": [
+        "em16-src-whc-taj",
+        "em16-src-chandler"
+      ]
+    },
+    {
+      "id": "em16-lahore-mughal-sikh",
+      "title": "Lahore Walled City, Shalimar Gardens & Sikh Confederacy Capital (1584–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1584,
+      "end": 1900,
+      "dateLabel": "1584–1900 CE",
+      "dateBasis": "Imperial Akbar–Shah Jahan brickwork, Ranjit Singh court archives & urban plan",
+      "coordinates": [
+        74.31,
+        31.59
+      ],
+      "summary": "Punjab crossroads serving successively as Akbar’s northern court, Ranjit Singh’s centralized Khalsa empire capital (1799–1849), and nineteenth-century canal-colony administrative center.",
+      "limits": "Eighteenth-century conflicts damaged several outer Ravi gardens prior to Sikh restorations.",
+      "sourceIds": [
+        "em16-src-whc-lahore"
+      ]
+    },
+    {
+      "id": "em16-goa-indian-ocean-carreira",
+      "title": "Old Goa (Velha Goa) & Maritime Indian Ocean Crossroads (1510–1843 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1510,
+      "end": 1843,
+      "dateLabel": "1510–1843 CE",
+      "dateBasis": "Mandovi estuary cartaz port registers & Basilic masonry complexes",
+      "coordinates": [
+        73.91,
+        15.5
+      ],
+      "summary": "Arabian Sea entrepôt connecting Malabar pepper, Konkani shipyards, Jesuit printing presses, and Deccan horse imports prior to seventeenth-century Dutch blockades and Panjim shift.",
+      "limits": "Ecclesiastical ruins dominate above poorly preserved artisanal suburbs.",
+      "sourceIds": [
+        "em16-src-whc-goa"
+      ]
+    },
+    {
+      "id": "em16-jaipur-amber-astronomical",
+      "title": "Amber & Planned City of Sawai Jaipur / Jantar Mantar (1592–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1592,
+      "end": 1900,
+      "dateLabel": "1592–1900 CE",
+      "dateBasis": "Sawāi Jai Singh Sanskrit–Arabic zij tables, 1727 urban grid & masonry instruments",
+      "coordinates": [
+        75.82,
+        26.92
+      ],
+      "summary": "Kachwaha Rajput fortress and 1727 gridded pink-sandstone capital hosting the monumental stone Jantar Mantar astronomical observatory synthesizing Sanskrit, Arabic, and European star tables.",
+      "limits": "Grid design covers walled royal wards rather than surrounding Aravalli villages.",
+      "sourceIds": [
+        "em16-src-whc-jaipur"
+      ]
+    },
+    {
+      "id": "em16-pune-raigad-maratha",
+      "title": "Pune & Sahyadri Maratha Hill–Sea Fort Network (1646–1818 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1646,
+      "end": 1818,
+      "dateLabel": "1646–1818 CE",
+      "dateBasis": "Chhatrapati Shivaji coronation records, Peshwa Modi script daftar & Sindhudurg",
+      "coordinates": [
+        73.44,
+        18.23
+      ],
+      "summary": "Western Ghats mountain and island forts linking Maratha cavalry logistics and Angre naval defense from Raigad and Pune across much of eighteenth-century South Asia.",
+      "limits": "Peshwa paper archives reflect literate Brahmin chancelleries more completely than rural peasant holdings.",
+      "sourceIds": [
+        "em16-src-whc-goa",
+        "em16-src-chandler"
+      ]
+    },
+    {
+      "id": "em16-bengal-murshidabad-calcutta",
+      "title": "Murshidabad–Dhaka–Calcutta Muslin Textiles & Colonial Transition (1576–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1576,
+      "end": 1900,
+      "dateLabel": "1576–1900 CE",
+      "dateBasis": "Bengal Subah cotton customs ledgers, VOC/EIC factory rolls & decennial censuses",
+      "coordinates": [
+        88.36,
+        22.57
+      ],
+      "summary": "Hooghly–Ganges–Brahmaputra delta corridor shifting from Dhaka fine muslin looms and Murshidabad banking houses into an industrialized nineteenth-century colonial port metropolis.",
+      "limits": "Delta urbanization numbers fluctuate between river-port relocation and nineteenth-century census consolidation.",
+      "sourceIds": [
+        "em16-src-chandler"
+      ]
+    },
+    {
+      "id": "em16-lhasa-potala-ganden",
+      "title": "Lhasa: Potala Palace, Jokhang & Ganden Phodrang (1642–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1642,
+      "end": 1900,
+      "dateLabel": "1642–1900 CE",
+      "dateBasis": "Fifth Dalai Lama monastic chronicles, Red Palace murals & plateau treaties",
+      "coordinates": [
+        91.12,
+        29.66
+      ],
+      "summary": "Tibetan political-monastic complex elevated by the Fifth Dalai Lama in 1642, coordinating monastery tax estates, woodblock Tibetan canon printing, and Qing frontier ambans.",
+      "limits": "High-altitude rural nomad herds remained sparsely recorded in monastic town listings.",
+      "sourceIds": [
+        "em16-src-whc-lhasa"
+      ]
+    },
+    {
+      "id": "em16-macau-canton-trade",
+      "title": "Macau & Canton Thirteen-Factory Silver–Porcelain Exchange (1557–1842 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1557,
+      "end": 1842,
+      "dateLabel": "1557–1842 CE",
+      "dateBasis": "Ming–Qing Hoppo customs customs rolls, Japanese Iwami/Potosí silver records",
+      "coordinates": [
+        113.54,
+        22.19
+      ],
+      "summary": "Pearl River estuary hinge funnelling New World and Japanese silver ingots into Jingdezhen porcelain, Zhejiang silk, and Fujian tea before the Opium War treaty system.",
+      "limits": "Customs figures record official licensed cargoes while undercounting coastal junk smuggling.",
+      "sourceIds": [
+        "em16-src-whc-macau"
+      ]
+    },
+    {
+      "id": "em16-suzhou-yangzi-silk",
+      "title": "Suzhou Gardens, Cotton Looms & Jiangnan Silver Economy (1501–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1501,
+      "end": 1900,
+      "dateLabel": "1501–1900 CE",
+      "dateBasis": "Ming–Qing lineage land deeds, cotton merchant guild stelae & canal maps",
+      "coordinates": [
+        120.62,
+        31.3
+      ],
+      "summary": "Canalled Jiangnan manufacturing capital whose specialized silk, cotton, and printing markets integrated single-whip silver taxation and scholar-literati garden estates.",
+      "limits": "Urban gardens reflect elite gentry patronage rather than tenant-weaver households.",
+      "sourceIds": [
+        "em16-src-whc-suzhou",
+        "em16-src-chandler"
+      ]
+    },
+    {
+      "id": "em16-fujian-tulou-hakka",
+      "title": "Fujian Tulou & Southern Maritime Diaspora Communities (1501–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1501,
+      "end": 1900,
+      "dateLabel": "1501–1900 CE",
+      "dateBasis": "Genealogical zupu books, rammed-earth timber ring beams & lineage charters",
+      "coordinates": [
+        117.01,
+        24.66
+      ],
+      "summary": "Monumental multi-story rammed-earth circular clan dwellings across southwestern Fujian valleys integrating tea terraces, lineage defense, and Hokkien/Hakka maritime networks.",
+      "limits": "Individual tulou beam dates span sixteenth-century foundation through twentieth-century repairs.",
+      "sourceIds": [
+        "em16-src-whc-fujian"
+      ]
+    },
+    {
+      "id": "em16-chengde-qing-frontier",
+      "title": "Chengde Mountain Resort & Multi-Ethnic Qing Steppe Diplomacy (1703–1860 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1703,
+      "end": 1860,
+      "dateLabel": "1703–1860 CE",
+      "dateBasis": "Manchu–Mongol–Tibetan stone stelae, Putuo Zongcheng temples & court archives",
+      "coordinates": [
+        117.93,
+        40.99
+      ],
+      "summary": "Kangxi and Qianlong summer capital north of the Great Wall built with Tibetan and Mongol lamaist temple architecture to host Khalkha, Zunghar, and Torghut audiences.",
+      "limits": "Site fell into royal disuse following mid-19th-century geopolitical crises.",
+      "sourceIds": [
+        "em16-src-whc-chengde"
+      ]
+    },
+    {
+      "id": "em16-shuri-ryukyu-maritime",
+      "title": "Shuri Castle & Maritime Kingdom of Ryukyu (1501–1879 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1501,
+      "end": 1879,
+      "dateLabel": "1501–1879 CE",
+      "dateBasis": "Rekidai Hōan diplomatic archives, Naha port stone causeways & Ryukyu lacquer",
+      "coordinates": [
+        127.72,
+        26.22
+      ],
+      "summary": "Okinawan maritime kingdom balancing tributary embassies to Beijing, commerce across Siam and Java, and post-1609 Satsuma subordination until Meiji 1879 annexation.",
+      "limits": "Original Shuri wooden halls were largely destroyed in 1945 and reconstructed over stone foundations.",
+      "sourceIds": [
+        "em16-src-whc-ryukyu"
+      ]
+    },
+    {
+      "id": "em16-nagasaki-dejima-rangaku",
+      "title": "Nagasaki–Dejima & Edo-Period Global Botanical/Scientific Exchange (1641–1859 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1641,
+      "end": 1859,
+      "dateLabel": "1641–1859 CE",
+      "dateBasis": "VOC Nagasaki factory Daghregister journals & Japanese Rangaku translations",
+      "coordinates": [
+        129.87,
+        32.74
+      ],
+      "summary": "Artificial fan-shaped harbor islet regulating Edo Japan’s Dutch and Qing merchant enclaves, silver/copper exports, medical anatomy texts, and astronomical instrument imports.",
+      "limits": "Dejima represented a tightly policed trade window alongside separate Tsushima–Korea and Satsuma–Ryukyu corridors.",
+      "sourceIds": [
+        "em16-src-dejima-2025"
+      ]
+    },
+    {
+      "id": "em16-himeji-edo-castle-towns",
+      "title": "Himeji-jo & Tokugawa Castle-Town Urbanization (1601–1871 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1601,
+      "end": 1871,
+      "dateLabel": "1601–1871 CE",
+      "dateBasis": "Plaster-walled tenshu joinery, sankin-kōtai stipends & domainal castle surveys",
+      "coordinates": [
+        134.69,
+        34.84
+      ],
+      "summary": "Flagship white-plaster multi-keep castle anchoring the Tokugawa daimyo road-and-market urban system under sankin-kōtai alternate attendance.",
+      "limits": "Defense architecture highlights samurai-domain mobilization rather than rural farm villages.",
+      "sourceIds": [
+        "em16-src-whc-himeji"
+      ]
+    },
+    {
+      "id": "em16-nikko-toshogu-memory",
+      "title": "Nikkō Tōshō-gū & Tokugawa State Ritual Network (1617–1868 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1617,
+      "end": 1868,
+      "dateLabel": "1617–1868 CE",
+      "dateBasis": "Cedar-avenue pilgrimage roads, lacquer-gold carvings & shogunal itineraries",
+      "coordinates": [
+        139.6,
+        36.76
+      ],
+      "summary": "Mausoleum complex enshrining Tokugawa Ieyasu as state protector, visited by Korean and Ryukyuan diplomatic processions along the cedar-lined Nikkō Kaidō.",
+      "limits": "Reflects state ritual authority and artisanal guilds under the Tokugawa pax.",
+      "sourceIds": [
+        "em16-src-whc-nikko"
+      ]
+    },
+    {
+      "id": "em16-suwon-hwaseong-joseon",
+      "title": "Suwon Hwaseong Fortress & Late Joseon Silhak Engineering (1794–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1794,
+      "end": 1900,
+      "dateLabel": "1794–1900 CE",
+      "dateBasis": "Hwaseong Seongyeok Uigwe construction blueprint manual & granite bastions",
+      "coordinates": [
+        127.01,
+        37.28
+      ],
+      "summary": "King Jeongjo’s 1794–1796 walled administrative city south of Seoul combining Korean stone walls with Jeong Yak-yong pulley-cranes and wage-paid artisan labor.",
+      "limits": "Original late-18th-century documentation survives in exceptional detail via Uigwe manuals.",
+      "sourceIds": [
+        "em16-src-whc-seoul-hwaseong"
+      ]
+    },
+    {
+      "id": "em16-hue-nguyen-citadel",
+      "title": "Hué Imperial Citadel & Nguyễn Dynasty Vietnam (1802–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1802,
+      "end": 1900,
+      "dateLabel": "1802–1900 CE",
+      "dateBasis": "Châu Bản Nguyễn imperial vermilion records & Perfume River citadel walls",
+      "coordinates": [
+        107.58,
+        16.47
+      ],
+      "summary": "Capital unified by Emperor Gia Long in 1802 across northern and southern Vietnam, linking Confucian state exams, Vauban-influenced moat walls, and royal tombs.",
+      "limits": "Late-19th-century French protectorate treaties sharply reduced imperial autonomy outside ritual administration.",
+      "sourceIds": [
+        "em16-src-whc-hue"
+      ]
+    },
+    {
+      "id": "em16-ayutthaya-early-modern",
+      "title": "Ayutthaya Cosmopolitan Siam Trade Entrepôt (1501–1767 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1501,
+      "end": 1767,
+      "dateLabel": "1501–1767 CE",
+      "dateBasis": "Chao Phraya brick prangs, foreign quarter excavations & Royal Chronicles",
+      "coordinates": [
+        100.56,
+        14.35
+      ],
+      "summary": "Island river metropolis integrating Siamese royal monasteries, Persian/Chinese/Japanese/Portuguese merchant villages, deer-hide and sappanwood exports until the 1767 sack.",
+      "limits": "High water table and modern urbanization limit full preservation of wooden residential suburbs.",
+      "sourceIds": [
+        "em16-src-whc-ayutthaya",
+        "em16-src-chandler"
+      ],
+      "population": [
+        {
+          "year": 1650,
+          "min": 150000,
+          "max": 250000,
+          "basis": "estimate",
+          "note": "Early modern Siamese capital including Chao Phraya foreign quarters (Chandler/Reid estimates)",
+          "sourceIds": [
+            "em16-src-chandler",
+            "em16-src-whc-ayutthaya"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "em16-luang-prabang-lan-xang",
+      "title": "Luang Prabang & Lan Xang Upper Mekong Buddhist Court (1501–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1501,
+      "end": 1900,
+      "dateLabel": "1501–1900 CE",
+      "dateBasis": "Wat Xieng Thong mosaic stupas & Mekong riverine monastery charters",
+      "coordinates": [
+        102.14,
+        19.89
+      ],
+      "summary": "Confluence Buddhist seat founded earlier as Xiang Dong Xiang Thong that anchored eighteenth-century Lao royal patronage and upland-river forest-product trade.",
+      "limits": "Political partitioning of Lan Xang after 1707 divided Luang Prabang, Vientiane, and Champasak courts.",
+      "sourceIds": [
+        "em16-src-whc-luangprabang"
+      ]
+    },
+    {
+      "id": "em16-melaka-straits-entrepot",
+      "title": "Melaka, Aceh & Straits Monsoon Crossroads (1501–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1501,
+      "end": 1900,
+      "dateLabel": "1501–1900 CE",
+      "dateBasis": "Malacca Malay–Portuguese–Dutch–Peranakan strata & Straits custom books",
+      "coordinates": [
+        102.25,
+        2.19
+      ],
+      "summary": "Strategic narrow-straits port transitioning from Malay Sultanate law codes through Portuguese and Dutch VOC fortresses to multi-ethnic Peranakan Baba–Nyonya and British Straits Settlements.",
+      "limits": "Early sultanate wooden waterfront remains mostly buried beneath reclaimed fort layers.",
+      "sourceIds": [
+        "em16-src-whc-melaka"
+      ]
+    },
+    {
+      "id": "em16-vigan-manila-galleon",
+      "title": "Vigan & Ilocos–Manila Maritime Chinese–Philippine Town (1572–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1572,
+      "end": 1900,
+      "dateLabel": "1572–1900 CE",
+      "dateBasis": "Bahay na bato coral-lime mansions, kiln pottery & Iloko–Mestizo guilds",
+      "coordinates": [
+        120.39,
+        17.57
+      ],
+      "summary": "Northern Luzon coastal trading grid merging Ilocano carpenters, Fujian Sangley merchants, and Pacific galleon networks in seismic lime-plaster townhouses.",
+      "limits": "Urban grid highlights merchant family blocks rather than upland Igorot gold-trading trails.",
+      "sourceIds": [
+        "em16-src-whc-vigan"
+      ]
+    },
+    {
+      "id": "em16-yogyakarta-mataram-java",
+      "title": "Mataram–Yogyakarta Court City & Javanese Batik/Agrarian Culture (1586–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1586,
+      "end": 1900,
+      "dateLabel": "1586–1900 CE",
+      "dateBasis": "Javanese babad chronicles, Kraton water-castles & VOC-era agrarian registers",
+      "coordinates": [
+        110.36,
+        -7.8
+      ],
+      "summary": "Central Javanese kraton political order emerging from Sultan Agung’s Mataram through the 1755 Giyanti partition into royal Yogyakarta and Surakarta court centers.",
+      "limits": "Central Javanese focus leaves northern Pasisir port Sultanates such as Banten and Makassar partially underrepresented here.",
+      "sourceIds": [
+        "em16-src-whc-singapore-malacca",
+        "em16-src-chandler"
+      ]
+    },
+    {
+      "id": "em16-fez-badia-qarawiyyin",
+      "title": "Saadian–Alawid Fez Craft Guilds & Copper-Leather Quarter (1550–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1550,
+      "end": 1900,
+      "dateLabel": "1550–1900 CE",
+      "dateBasis": "Guild hisba regulations & Fez el-Jdid cannon works",
+      "coordinates": [
+        -4.97,
+        34.06
+      ],
+      "summary": "Moroccan artisanal and theological hub sustaining brassworking, Chaouara leather tanneries, and Andalusian-descended scholarly lineages into late-19th-century reforms.",
+      "limits": "Supplemented by separate Fes Medina urban chronology.",
+      "sourceIds": [
+        "em16-src-whc-meknes"
+      ]
+    },
+    {
+      "id": "em16-tripoli-garamantian-fezzan",
+      "title": "Murzuq & Ottoman Fezzan Caravan Sultanate (1551–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1551,
+      "end": 1900,
+      "dateLabel": "1551–1900 CE",
+      "dateBasis": "Awlad Muhammad dynasty fortresses & Tripoli Saharan caravan diaries",
+      "coordinates": [
+        13.91,
+        25.91
+      ],
+      "summary": "Oasis transit capital in southwestern Libya linking Tripoli Mediterranean ports directly with Bornu around Lake Chad across the central Sahara.",
+      "limits": "Surface mudbrick remains reflect frequent late Ottoman restorations.",
+      "sourceIds": [
+        "em16-src-west-africa"
+      ]
+    },
+    {
+      "id": "em16-segou-bamana-niger",
+      "title": "Ségou & the Bamana Middle Niger Cavalry State (1712–1861 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1712,
+      "end": 1861,
+      "dateLabel": "1712–1861 CE",
+      "dateBasis": "Coulibaly & Diarra royal oral epics, tondjon fortresses & mud-mosque towns",
+      "coordinates": [
+        -6.26,
+        13.44
+      ],
+      "summary": "Non-Islamic Bamana state centered along the Middle Niger organized around age-set warrior cohorts (tondjon), riverboat fisheries, and cotton-strip currency prior to El Hadj Umar Tall’s 1861 conquest.",
+      "limits": "Oral epic chronologies cross-checked against nineteenth-century traveler journals.",
+      "sourceIds": [
+        "em16-src-west-africa"
+      ]
+    },
+    {
+      "id": "em16-djenne-songhai-toucouleur",
+      "title": "Djenné Inland Delta Mosques & Fulani/Toucouleur Caliphates (1501–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1501,
+      "end": 1900,
+      "dateLabel": "1501–1900 CE",
+      "dateBasis": "Sudano-Sahelian masons guild architecture & Hamdallahi chronicles",
+      "coordinates": [
+        -4.55,
+        13.91
+      ],
+      "summary": "Niger Inland Delta market town linking Dogon plateau ironwork, Masina pastoralists, Songhai river fleets, and nineteenth-century Hamdallahi islamic reform.",
+      "limits": "Periodic seasonal floodplains reshape mud structures every decade.",
+      "sourceIds": [
+        "em16-src-west-africa"
+      ]
+    },
+    {
+      "id": "em16-kuba-kingdom-kasai",
+      "title": "Nsheng (Kuba Kingdom) Wood Carving & Raffia Cloth Federation (1625–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1625,
+      "end": 1900,
+      "dateLabel": "1625–1900 CE",
+      "dateBasis": "Shyaam royal oral genealogy (solar eclipse anchor) & Kasai court collections",
+      "coordinates": [
+        21.35,
+        -4.45
+      ],
+      "summary": "Sankuru–Kasai central African forest-savanna kingdom unified around Shyaam a-Mbul a-Ngoong, famous for New World maize/cassava adoption, cut-pile Kasai velvet raffia, and royal ndop sculptures.",
+      "limits": "Early colonial rubber extraction and border violence severely disrupted Kuba villages around 1900.",
+      "sourceIds": [
+        "em16-src-whc-mbanza"
+      ]
+    },
+    {
+      "id": "em16-luba-lunda-upemba-late",
+      "title": "Lunda–Mwata Yamvo Copper & Salt State in Katanga–Kasai (1600–1890 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1600,
+      "end": 1890,
+      "dateLabel": "1600–1890 CE",
+      "dateBasis": "Mwant Yav court titles, copper croisette ingots & Angola caravan accounts",
+      "coordinates": [
+        23.22,
+        -8.35
+      ],
+      "summary": "Savanna woodland empire organizing tributary lukano bracelet investiture from eastern Angola toward Lake Tanganyika, exporting Katanga copper crosses and ivory.",
+      "limits": "Chronology blends genealogy with documented Atlantic and coastal exchange dates.",
+      "sourceIds": [
+        "em16-src-whc-mbanza"
+      ]
+    },
+    {
+      "id": "em16-maputo-delagoa-gaza",
+      "title": "Delagoa Bay & Gaza Nguni Trade Networks (Mozambique, 1545–1895 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1545,
+      "end": 1895,
+      "dateLabel": "1545–1895 CE",
+      "dateBasis": "Inhambane–Sofala customs archives & Gaza Manhlagazi capital records",
+      "coordinates": [
+        32.57,
+        -25.97
+      ],
+      "summary": "Southeastern African coastal bay exchanging inland Shona gold, hippopotamus ivory, and cattle for Indian glass beads before Soshangane’s 1820s Gaza state consolidation.",
+      "limits": "Focuses on major bay and court nodes rather than scattered upland homesteads.",
+      "sourceIds": [
+        "em16-src-zulu-natal"
+      ]
+    },
+    {
+      "id": "em16-bakhchisaray-crimean-steppe",
+      "title": "Bakhchisarai Khan’s Palace & Pontic Steppe Trade (1532–1783 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "europe",
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1532,
+      "end": 1783,
+      "dateLabel": "1532–1783 CE",
+      "dateBasis": "Crimean Khanate diplomatic defters, Ottoman stone port Kefe & Khan Saray",
+      "coordinates": [
+        33.88,
+        44.75
+      ],
+      "summary": "Tatar-Ottoman steppe court bridging Nogai steppe pastures, Black Sea maritime custom houses, and Eastern European diplomacy until 1783 Russian annexation.",
+      "limits": "Nineteenth-century imperial rebuilds altered several courtyard annexes.",
+      "sourceIds": [
+        "em16-src-whc-istanbul"
+      ]
+    },
+    {
+      "id": "em16-aleppo-silk-caravanserai",
+      "title": "Ottoman Aleppo Khans & Levantine Overland Silk Exchange (1516–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1516,
+      "end": 1900,
+      "dateLabel": "1516–1900 CE",
+      "dateBasis": "Shar’iyya court inventories, Khan al-Gumruk architecture & Levant merchant accounts",
+      "coordinates": [
+        37.16,
+        36.2
+      ],
+      "summary": "Northern Syrian stone bazaar metropolis linking Persian raw silk caravans, Iraqi soap/spice routes, and Iskenderun Mediterranean galleys.",
+      "limits": "Declined proportionally after 17th-century Persian wars and 1869 Suez Canal opening.",
+      "sourceIds": [
+        "em16-src-whc-istanbul"
+      ]
+    },
+    {
+      "id": "em16-baghdad-basra-pashalik",
+      "title": "Mamluk–Ottoman Baghdad & Basra Shatt al-Arab Maritime Trade (1534–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "africa"
+      ],
+      "kind": "historical",
+      "start": 1534,
+      "end": 1900,
+      "dateLabel": "1534–1900 CE",
+      "dateBasis": "Ottoman Pashalik salname yearbooks, Basra date-trade & Gulf shipping lists",
+      "coordinates": [
+        47.82,
+        30.51
+      ],
+      "summary": "Twin Tigris–Euphrates commercial hubs exporting Iraqi dates and Arabian horses down the Persian Gulf while receiving Indian cotton textiles.",
+      "limits": "Severe plague outbreaks (e.g. 1831) caused sharp short-term population contractions.",
+      "sourceIds": [
+        "em16-src-whc-istanbul"
+      ]
+    },
+    {
+      "id": "em16-surat-cambay-ahmedabad",
+      "title": "Surat Mughal Port & Gujarati Maritime Banking Guilds (1573–1850 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1573,
+      "end": 1850,
+      "dateLabel": "1573–1850 CE",
+      "dateBasis": "Mughal Bandar-i Mubarak port customs books & European factory diaries",
+      "coordinates": [
+        72.83,
+        21.19
+      ],
+      "summary": "Premier Mughal Arabian Sea port connecting Gujarati indigo and calico weavers, Bohra/Parsi shipwrights, hundi credit bills, and Red Sea Hajj fleets prior to Bombay’s rise.",
+      "limits": "Siltation of the Tapti estuary shifted oceanic traffic southward during the 18th century.",
+      "sourceIds": [
+        "em16-src-whc-taj"
+      ]
+    },
+    {
+      "id": "em16-pondicherry-coromandel-calico",
+      "title": "Coromandel Calico Coast: Masulipatnam, Madras & Pondicherry (1600–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1600,
+      "end": 1900,
+      "dateLabel": "1600–1900 CE",
+      "dateBasis": "Chintz mordant-dyed textile guilds & EIC/Compagnie des Indes port ledgers",
+      "coordinates": [
+        80.27,
+        13.08
+      ],
+      "summary": "Southeastern Indian textile littoral exporting mordant-painted cottons to Southeast Asia, West Africa, and Europe throughout the 17th–18th centuries.",
+      "limits": "Deindustrialization pressures during the 19th century transformed weaving districts significantly.",
+      "sourceIds": [
+        "em16-src-whc-goa"
+      ]
+    },
+    {
+      "id": "em16-golconda-hyderabad-nizam",
+      "title": "Golconda Fort & Hyderabad Qutb Shahi–Asaf Jahi State (1518–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1518,
+      "end": 1900,
+      "dateLabel": "1518–1900 CE",
+      "dateBasis": "Charminar masonry, Deccan diamond mine chronicles & Nizam court records",
+      "coordinates": [
+        78.47,
+        17.36
+      ],
+      "summary": "Deccan plateau kingdom linking Krishna Valley alluvial diamond fields, Telugu/Dakhni poetry, Persianate architecture, and Masulipatnam export corridors.",
+      "limits": "Focused on urban Charminar–Golconda corridor rather than interior Gond and Telangana agrarian belts.",
+      "sourceIds": [
+        "em16-src-whc-taj"
+      ]
+    },
+    {
+      "id": "em16-singapore-johor-straits",
+      "title": "Johor–Riau Sultanate & 1819 Singapore Free Port Nexus (1528–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1528,
+      "end": 1900,
+      "dateLabel": "1528–1900 CE",
+      "dateBasis": "Sejarah Melayu court recensions & Straits Settlements decennial trade censuses",
+      "coordinates": [
+        103.85,
+        1.29
+      ],
+      "summary": "Successor Malay–Bugis Riau-Johor maritime polity later joined by 1819 free-port transshipment bridging Chinese gambier/pepper planters, Bugis prahus, and South Asian merchants.",
+      "limits": "Urban port records capture maritime commerce more fully than Orang Laut sea-nomad settlements.",
+      "sourceIds": [
+        "em16-src-whc-melaka"
+      ]
+    },
+    {
+      "id": "em16-manila-parian-galleon",
+      "title": "Manila Intramuros–Parián & Acapulco Silver Galleon Hinge (1571–1815 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific",
+        "pacific"
+      ],
+      "kind": "historical",
+      "start": 1571,
+      "end": 1815,
+      "dateLabel": "1571–1815 CE",
+      "dateBasis": "Almojarifazgo port registers & Parián Chinese artisan market excavations",
+      "coordinates": [
+        120.97,
+        14.59
+      ],
+      "summary": "First continuous trans-Pacific trade terminus exchanging Mexican-Andean silver pesos directly for Zhangzhou Fujian silk, ivory carving, and Southeast Asian spices.",
+      "limits": "Official galleon manifests record crown cargoes while omitting private coastal junk exchanges.",
+      "sourceIds": [
+        "em16-src-whc-vigan"
+      ]
+    },
+    {
+      "id": "em16-kandy-sinhala-kingdom",
+      "title": "Kingdom of Kandy (Sri Lanka): Highland Sanctuary & Cinnamon Frontiers (1505–1815 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1505,
+      "end": 1815,
+      "dateLabel": "1505–1815 CE",
+      "dateBasis": "Temple of the Tooth timber-pillared halls & Kandyan diplomatic conventions",
+      "coordinates": [
+        80.64,
+        7.29
+      ],
+      "summary": "Mountainous Sinhala Buddhist kingdom holding the central Sri Lankan highlands against three centuries of Portuguese, Dutch, and early British expeditions until 1815.",
+      "limits": "Monastic charters detail land tenure across wet-zone valleys better than northern dry-zone villages.",
+      "sourceIds": [
+        "em16-src-chandler"
+      ]
+    },
+    {
+      "id": "em16-nerchinsk-kiakhta-frontier",
+      "title": "Kiakhta & Maimaicheng Sino-Russian Tea & Fur Caravan Border (1727–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1727,
+      "end": 1900,
+      "dateLabel": "1727–1900 CE",
+      "dateBasis": "1727 Treaty of Kiakhta customs diaries & Shanxi merchant caravan account books",
+      "coordinates": [
+        106.45,
+        50.35
+      ],
+      "summary": "Twin Russian-Qing border depot north of Lake Baikal/Selenga funneling Shanxi brick tea, Chinese cotton textiles, and Siberian squirrel/sable pelts overland for 150 years.",
+      "limits": "Customs ledgers capture official caravan trade prior to Trans-Siberian railway rerouting.",
+      "sourceIds": [
+        "em16-src-whc-chengde"
+      ]
+    },
+    {
+      "id": "em16-urumqi-tarim-qing-frontier",
+      "title": "Kashgar, Yarkand & Altishahr Oasis Guilds under Qing Rule (1759–1900 CE)",
+      "taxonIds": [
+        "homo-sapiens"
+      ],
+      "regionIds": [
+        "asia-pacific"
+      ],
+      "kind": "historical",
+      "start": 1759,
+      "end": 1900,
+      "dateLabel": "1759–1900 CE",
+      "dateBasis": "Khoja-era waqf deeds, Beg administrative registers & Tarim jade-tea custom posts",
+      "coordinates": [
+        75.99,
+        39.47
+      ],
+      "summary": "Tarim Basin oasis towns governed through local Uyghur Beg officials under Qing frontier garrison administration, mediating Fergana cotton, Khotan nephrite jade, and Tibetan tea commerce.",
+      "limits": "Oases were periodically shaken by 19th-century Khoja rebellions and Yaqub Beg’s Emirate (1865–1877).",
+      "sourceIds": [
+        "em16-src-whc-chengde"
+      ]
+    }
+  ],
+  "waves": []
+}

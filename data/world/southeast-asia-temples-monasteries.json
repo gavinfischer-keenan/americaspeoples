@@ -78,6 +78,18 @@
       "title": "Vietnam Institute of Archaeology & UNESCO States Party — Po Nagar, Dong Duong (Champa) & Yen Tu / Van Mieu",
       "url": "https://whc.unesco.org/en/statesparties/vn",
       "access": "Champa Po Nagar–Dong Duong monastery and Ly-Tran Yen Tu / Temple of Literature records checked 2026-11-22."
+    },
+    {
+      "id": "pop-seat-klassen-angkor-2021",
+      "title": "Klassen et al. (2021) · Diachronic modeling of the population within the medieval Greater Angkor Region settlement complex (Science Advances)",
+      "url": "https://doi.org/10.1126/sciadv.abf8441",
+      "access": "Open-access Science Advances modeling study checked via Consensus API (DOI 10.1126/sciadv.abf8441)."
+    },
+    {
+      "id": "pop-seat-evans-lidar-2013",
+      "title": "Evans et al. (2013) · Uncovering archaeological landscapes at Angkor using lidar (PNAS)",
+      "url": "https://doi.org/10.1073/pnas.1306539110",
+      "access": "Peer-reviewed PNAS Angkor LiDAR settlement-network study checked via Consensus API (DOI 10.1073/pnas.1306539110)."
     }
   ],
   "taxa": [],
@@ -105,6 +117,19 @@
       "sourceIds": [
         "src-seat-whc-668",
         "src-seat-evans-2013"
+      ],
+      "population": [
+        {
+          "year": 1200,
+          "min": 500000,
+          "max": 900000,
+          "basis": "estimate",
+          "note": "Jayavarman VII Greater Angkor low-density agro-urban complex modeled from LiDAR embankments and radiocarbon dates",
+          "sourceIds": [
+            "pop-seat-klassen-angkor-2021",
+            "pop-seat-evans-lidar-2013"
+          ]
+        }
       ]
     },
     {
