@@ -11,6 +11,7 @@ A maintenance and quality release from a full code and UI review. No evidence re
 - **Consistency:** every timeline player uses one playback engine and the same Play/Pause controls; the colour palette is defined once; all guide pages share one stylesheet; the site title uses one font.
 - **Reproducible builds:** the paleoclimate download cache is committed and verified by checksum, so a build from a fresh checkout reproduces the published source credits. The release check (`npm run verify:release`, 66 phases) passes end to end, and CI runs on every pull request.
 - **Structure:** story and topic content moved from code into subject-named JSON under `data/stories/` and `data/topics/`; one-off intake scripts are archived.
+- **Performance:** bounded screen-space stroke dashes beyond 32× zoom (`--map-dash-scale`) prevent deep-zoom raster stalls on political boundaries and voyage tracks, and bulk import indexes records, cultures, and claims once instead of rescanning per row.
 
 ## 0.32.0 and earlier
 
