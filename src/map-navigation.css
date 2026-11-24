@@ -1,8 +1,9 @@
+@import "./tokens.css";
 .map-navigation {
   flex: 0 0 auto;
-  background: #E3E8EB;
-  color: #10171A;
-  border-bottom: 1px solid #8E99A0;
+  background: var(--slate-100);
+  color: var(--night);
+  border-bottom: 1px solid var(--slate-400);
   font: 13px/1.5 system-ui, sans-serif;
   min-width: 0;
 }
@@ -23,10 +24,10 @@
   justify-content: center;
   min-height: 36px;
   padding: 6px 12px;
-  border: 1px solid #8E99A0;
+  border: 1px solid var(--slate-400);
   border-radius: 5px;
-  background: #F2F6F8;
-  color: #10171A;
+  background: var(--mist);
+  color: var(--night);
   font: inherit;
   font-weight: 600;
   text-decoration: none;
@@ -34,13 +35,13 @@
 }
 .map-navigation .map-navigation-strip > a:hover,
 .map-navigation .map-navigation-strip > button:hover {
-  background: #DCEBDD;
-  border-color: #3B783D;
+  background: var(--forest-100);
+  border-color: var(--forest-600);
 }
 .map-navigation .map-navigation-strip > [aria-expanded="true"] {
-  background: #569E56;
-  border: 2px solid #10171A;
-  color: #10171A;
+  background: var(--forest-500);
+  border: 2px solid var(--night);
+  color: var(--night);
   font-weight: 700;
 }
 .map-navigation .map-navigation-strip > :last-child {
@@ -53,22 +54,22 @@
   padding: 8px 18px 14px;
 }
 .map-navigation-regions a {
-  color: #10171A;
-  background: #F2F6F8;
+  color: var(--night);
+  background: var(--mist);
   padding: 7px 12px;
   border-radius: 5px;
   text-decoration: none;
-  border: 1px solid #8E99A0;
+  border: 1px solid var(--slate-400);
   font-weight: 600;
 }
 .map-navigation-regions a:hover {
-  background: #DCEBDD;
-  border-color: #3B783D;
+  background: var(--forest-100);
+  border-color: var(--forest-600);
 }
 .map-navigation-regions a[aria-current="page"] {
-  background: #569E56;
-  border: 2px solid #10171A;
-  color: #10171A;
+  background: var(--forest-500);
+  border: 2px solid var(--night);
+  color: var(--night);
   font-weight: 700;
 }
 .map-navigation-settings {
@@ -77,8 +78,8 @@
   gap: 18px;
   flex-wrap: wrap;
   padding: 16px 18px;
-  background: #DCEBDD;
-  border-top: 1px solid #72B273;
+  background: var(--forest-100);
+  border-top: 1px solid var(--forest-400);
   max-height: 35dvh;
   overflow: auto;
   overscroll-behavior: contain;
@@ -89,45 +90,45 @@
   max-width: 550px;
 }
 .map-navigation-settings label {
-  color: #10171A;
+  color: var(--night);
   font-weight: 600;
 }
 .map-navigation-settings input,
 .map-navigation-settings select,
 .map-navigation-settings button {
-  background: #F2F6F8;
-  color: #10171A;
-  border: 1px solid #8E99A0;
+  background: var(--mist);
+  color: var(--night);
+  border: 1px solid var(--slate-400);
   border-radius: 5px;
   padding: 7px 10px;
   font: inherit;
   max-width: 100%;
 }
 .map-navigation-settings button:hover {
-  background: #97C798;
-  border-color: #244D26;
+  background: var(--forest-300);
+  border-color: var(--forest-800);
 }
 .map-navigation-settings a {
-  color: #244D26;
+  color: var(--forest-800);
   font-weight: 600;
 }
 .map-navigation-settings p,
 .map-navigation-settings .fine,
 .map-navigation-settings small {
-  color: #525D64;
+  color: var(--slate-600);
 }
 .map-navigation-settings h2,
 .map-navigation-settings h3,
 .map-navigation-settings h4 {
-  color: #10171A;
+  color: var(--night);
 }
 .map-navigation-settings summary {
   cursor: pointer;
-  color: #10171A;
+  color: var(--night);
   font-weight: 700;
 }
 .map-navigation :focus-visible {
-  outline: 3px solid #A63108;
+  outline: 3px solid var(--rust-700);
   outline-offset: 2px;
 }
 /* Americas uses the same facts column as the other maps, with no floating drawer. */
@@ -145,9 +146,9 @@ body.exploring .atlas-layout.shared-map-layout.map-facts-hidden {
   min-width: 0;
   overflow: auto;
   overscroll-behavior: contain;
-  background: #E3E8EB;
-  color: #10171A;
-  border-right: 1px solid #8E99A0;
+  background: var(--slate-100);
+  color: var(--night);
+  border-right: 1px solid var(--slate-400);
 }
 .shared-map-layout > .map-stage {
   grid-column: 2;
@@ -169,21 +170,21 @@ body.exploring .atlas-layout.shared-map-layout.map-facts-hidden {
   border: 0;
   box-shadow: none;
   border-radius: 0;
-  color: #10171A;
+  color: var(--night);
 }
 .atlas-facts > .detail-panel {
-  background: #DCEBDD;
-  border-bottom: 1px solid #72B273;
+  background: var(--forest-100);
+  border-bottom: 1px solid var(--forest-400);
 }
 .atlas-facts > .detail-panel .visible-heading {
   position: static;
   background: transparent;
-  color: #10171A;
-  border-bottom-color: #72B273;
+  color: var(--night);
+  border-bottom-color: var(--forest-400);
 }
 .atlas-facts .selected-detail h4,
 .atlas-facts .selected-detail h3 {
-  color: #10171A;
+  color: var(--night);
 }
 .atlas-facts > .site-panel {
   order: initial;
@@ -217,7 +218,7 @@ body.exploring .atlas-layout.shared-map-layout.map-facts-hidden {
 }
 .shared-map-layout .atlas-facts .story-footnote {
   display: block;
-  color: #525D64;
+  color: var(--slate-600);
 }
 .atlas-facts > .expeditions-now {
   position: static;
@@ -226,9 +227,9 @@ body.exploring .atlas-layout.shared-map-layout.map-facts-hidden {
   max-height: none;
   margin: 12px;
   box-shadow: none;
-  background: #F2F6F8;
-  border: 1px solid #8E99A0;
-  color: #10171A;
+  background: var(--mist);
+  border: 1px solid var(--slate-400);
+  color: var(--night);
 }
 body.movie-playing .story-panel .whole-intro {
   padding: 12px 18px 8px;
@@ -282,7 +283,7 @@ body.movie-playing .story-panel .whole-intro h2 {
     max-height: none;
     width: 100%;
     border-right: 0;
-    border-top: 1px solid #8E99A0;
+    border-top: 1px solid var(--slate-400);
   }
   .shared-map-layout.map-facts-hidden > .map-stage {
     flex: 1 !important;

@@ -1,11 +1,12 @@
+@import "./tokens.css";
 .europe-atlas {
   flex: 1;
   height: 100%;
   min-height: 0;
   display: flex;
   flex-direction: column;
-  background: #E3E8EB;
-  color: #10171A;
+  background: var(--slate-100);
+  color: var(--night);
   font-family: system-ui, sans-serif;
 }
 .europe-heading {
@@ -13,8 +14,8 @@
   align-items: center;
   gap: 24px;
   padding: 8px 20px;
-  background: #F2F6F8;
-  border-bottom: 1px solid #8E99A0;
+  background: var(--mist);
+  border-bottom: 1px solid var(--slate-400);
   flex-shrink: 0;
 }
 .europe-heading > div {
@@ -24,26 +25,26 @@
 .europe-heading h1 {
   font: 600 20px Georgia, serif;
   margin: 2px 0 0;
-  color: #10171A;
+  color: var(--night);
 }
 .europe-heading .eyebrow {
   font-size: 10px;
   margin: 0;
-  color: #3B783D;
+  color: var(--forest-600);
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 .europe-heading a {
-  color: #244D26;
+  color: var(--forest-800);
   font-size: 13px;
   font-weight: 600;
 }
 .europe-heading a:hover {
-  color: #3B783D;
+  color: var(--forest-600);
 }
 .europe-atlas :focus-visible {
-  outline: 3px solid #A63108;
+  outline: 3px solid var(--rust-700);
   outline-offset: 2px;
 }
 .europe-layout {
@@ -60,9 +61,9 @@
   padding: 16px 18px;
   overflow: auto;
   overscroll-behavior: contain;
-  border-right: 1px solid #8E99A0;
-  background: #E3E8EB;
-  color: #10171A;
+  border-right: 1px solid var(--slate-400);
+  background: var(--slate-100);
+  color: var(--night);
   font-size: 13px;
   line-height: 1.55;
 }
@@ -70,21 +71,21 @@
   display: none !important;
 }
 .europe-reader a {
-  color: #244D26;
+  color: var(--forest-800);
   font-weight: 600;
 }
 .europe-reader summary {
   cursor: pointer;
   font-weight: 700;
-  color: #10171A;
+  color: var(--night);
   padding: 10px 0;
 }
 .europe-reader details {
-  border-top: 1px solid #B4BEC4;
+  border-top: 1px solid var(--slate-300);
 }
 .europe-reader details p {
   font-size: 12px;
-  color: #525D64;
+  color: var(--slate-600);
 }
 .europe-filters {
   display: grid;
@@ -93,22 +94,22 @@
 .europe-filters label {
   font-size: 12px;
   font-weight: 600;
-  color: #10171A;
+  color: var(--night);
 }
 .europe-atlas input,
 .europe-atlas select,
 .europe-atlas button {
-  background: #F2F6F8;
-  border: 1px solid #8E99A0;
+  background: var(--mist);
+  border: 1px solid var(--slate-400);
   border-radius: 5px;
-  color: #10171A;
+  color: var(--night);
   padding: 7px 10px;
   font: inherit;
   min-height: 36px;
 }
 .europe-atlas button:hover {
-  background: #DCEBDD;
-  border-color: #3B783D;
+  background: var(--forest-100);
+  border-color: var(--forest-600);
 }
 .europe-filters input,
 .europe-filters select {
@@ -119,19 +120,19 @@
 .europe-layers label {
   display: block;
   margin: 5px 0;
-  color: #10171A;
+  color: var(--night);
 }
 .europe-layers input {
   width: auto;
   min-height: auto;
-  accent-color: #3B783D;
+  accent-color: var(--forest-600);
 }
 .europe-layers .map-density-options {
   margin-top: 8px;
   padding: 6px 8px;
-  background: #E3E8EB;
-  border: 1px solid #8E99A0;
-  color: #10171A;
+  background: var(--slate-100);
+  border: 1px solid var(--slate-400);
+  color: var(--night);
   font-size: 12px;
 }
 .europe-layers .map-density-options label {
@@ -144,7 +145,7 @@
   min-width: 0;
   min-height: 0;
   overflow: hidden;
-  background: #10171A;
+  background: var(--night);
 }
 .europe-map-wrap #europe-map,
 .europe-map-wrap .map-canvas {
@@ -157,7 +158,7 @@
   display: block;
 }
 .europe-map-wrap .map-canvas svg .water {
-  fill: #10171A;
+  fill: var(--night);
 }
 .europe-map-wrap .map-controls {
   position: absolute;
@@ -172,8 +173,8 @@
 }
 .europe-map-wrap .map-controls button {
   background: #10171AF0;
-  color: #F2F6F8;
-  border-color: #8E99A0;
+  color: var(--mist);
+  border-color: var(--slate-400);
   width: auto;
   height: auto;
   min-width: 34px;
@@ -184,16 +185,16 @@
   white-space: nowrap;
 }
 .europe-map-wrap .map-controls button:hover {
-  background: #244D26;
-  border-color: #97C798;
+  background: var(--forest-800);
+  border-color: var(--forest-300);
 }
 .europe-map-status {
   position: absolute;
   left: 15px;
   top: 14px;
   background: #10171AE8;
-  border: 1px solid #525D64;
-  color: #F2F6F8;
+  border: 1px solid var(--slate-600);
+  color: var(--mist);
   padding: 8px 12px;
   border-radius: 6px;
   max-width: calc(100% - 210px);
@@ -202,41 +203,41 @@
 .europe-map-status strong {
   display: block;
   font: 600 22px Georgia, serif;
-  color: #97C798;
+  color: var(--forest-300);
 }
 .europe-map-status span {
   display: block;
   font-size: 11px;
   line-height: 1.35;
   margin-top: 2px;
-  color: #CFD6DA;
+  color: var(--slate-200);
 }
 .europe-atlas .europe-home {
   position: absolute;
   right: 16px;
   bottom: 18px;
   background: #10171AF0;
-  color: #F2F6F8;
-  border: 1px solid #8E99A0;
+  color: var(--mist);
+  border: 1px solid var(--slate-400);
   font-size: 12px;
   font-weight: 600;
 }
 .europe-atlas .europe-home:hover {
-  background: #244D26;
-  border-color: #97C798;
+  background: var(--forest-800);
+  border-color: var(--forest-300);
 }
 .europe-selected {
   margin: 0 0 14px;
   padding: 14px 16px;
-  background: #DCEBDD;
-  border: 1px solid #72B273;
-  border-left: 3px solid #3B783D;
+  background: var(--forest-100);
+  border: 1px solid var(--forest-400);
+  border-left: 3px solid var(--forest-600);
   border-radius: 8px;
-  color: #10171A;
+  color: var(--night);
 }
 .europe-selected h2,
 .europe-reader h3 {
-  color: #10171A;
+  color: var(--night);
 }
 .europe-selected h2 {
   font: 600 20px Georgia, serif;
@@ -247,13 +248,13 @@
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.1em;
-  color: #3B783D;
+  color: var(--forest-600);
 }
 .europe-method {
-  border-left: 2px solid #569E56;
+  border-left: 2px solid var(--forest-500);
   padding-left: 10px;
   font-size: 12px;
-  color: #10171A;
+  color: var(--night);
 }
 .europe-selected table {
   display: block;
@@ -261,34 +262,34 @@
   max-width: 100%;
   width: 100%;
   font-size: 12px;
-  background: #F2F6F8;
+  background: var(--mist);
   border-collapse: collapse;
 }
 .europe-selected td,
 .europe-selected th {
   vertical-align: top;
   padding: 6px;
-  border: 1px solid #B4BEC4;
+  border: 1px solid var(--slate-300);
 }
 .europe-selected small,
 .europe-reader .fine,
 .europe-reader small,
 .europe-hint {
-  color: #525D64;
+  color: var(--slate-600);
 }
 .europe-now button {
   display: block;
   width: 100%;
   text-align: left;
   margin: 6px 0;
-  background: #F2F6F8;
-  border: 1px solid #B4BEC4;
-  color: #10171A;
+  background: var(--mist);
+  border: 1px solid var(--slate-300);
+  color: var(--night);
   padding: 9px 11px;
 }
 .europe-now button:hover {
-  background: #DCEBDD;
-  border-color: #3B783D;
+  background: var(--forest-100);
+  border-color: var(--forest-600);
 }
 .europe-now button strong,
 .europe-now button span {
@@ -298,18 +299,18 @@
   font-size: 11px;
   margin-top: 4px;
   line-height: 1.45;
-  color: #525D64;
+  color: var(--slate-600);
 }
 .europe-territories article {
-  border-bottom: 1px solid #B4BEC4;
+  border-bottom: 1px solid var(--slate-300);
 }
 .europe-territories h3 {
   font-size: 14px;
 }
 .europe-timeline {
   padding: 10px 20px;
-  background: #E3E8EB;
-  border-top: 1px solid #8E99A0;
+  background: var(--slate-100);
+  border-top: 1px solid var(--slate-400);
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 8px 20px;
@@ -324,7 +325,7 @@
 .europe-transport label {
   font-size: 11px;
   font-weight: 600;
-  color: #525D64;
+  color: var(--slate-600);
 }
 .europe-transport select {
   display: block;
@@ -333,27 +334,27 @@
   margin-top: 2px;
 }
 #europe-play {
-  background: #569E56;
-  border-color: #244D26;
-  color: #10171A;
+  background: var(--forest-500);
+  border-color: var(--forest-800);
+  color: var(--night);
   font-weight: 700;
 }
 #europe-play:hover {
-  background: #72B273;
+  background: var(--forest-400);
 }
 .europe-atlas.is-playing #europe-play {
-  background: #244D26;
-  color: #F2F6F8;
+  background: var(--forest-800);
+  color: var(--mist);
 }
 .europe-slider-label {
   font-size: 11px;
   font-weight: 600;
-  color: #525D64;
+  color: var(--slate-600);
 }
 .europe-slider-label output {
   font-size: 16px;
   font-weight: 700;
-  color: #10171A;
+  color: var(--night);
   padding-left: 12px;
 }
 .europe-slider-label input {
@@ -361,7 +362,7 @@
   padding: 0;
   min-height: 20px;
   display: block;
-  accent-color: #3B783D;
+  accent-color: var(--forest-600);
 }
 .europe-timeline form {
   display: flex;
@@ -372,7 +373,7 @@
 .europe-timeline form label {
   font-size: 11px;
   font-weight: 600;
-  color: #525D64;
+  color: var(--slate-600);
 }
 .europe-timeline form input {
   width: 85px;
@@ -382,13 +383,13 @@
 .europe-timeline form span {
   font-size: 11px;
   max-width: 180px;
-  color: #A63108;
+  color: var(--rust-700);
 }
 .europe-playback-note {
   grid-column: 1 / -1;
   font-size: 11px;
   margin: 0;
-  color: #525D64;
+  color: var(--slate-600);
 }
 .network-key {
   display: inline-block;
@@ -397,26 +398,26 @@
   border-top: 3px dashed #D4501E;
 }
 .network-key.road {
-  border-color: #97C798;
+  border-color: var(--forest-300);
 }
 .network-key.rail {
-  border-color: #72B273;
+  border-color: var(--forest-400);
   border-top-style: double;
   border-top-width: 5px;
 }
 .europe-atlas .network-road .route-line {
-  stroke: #97C798;
+  stroke: var(--forest-300);
   stroke-dasharray: 7 4;
 }
 .europe-atlas .network-road .route-flow {
-  stroke: #DCEBDD;
+  stroke: var(--forest-100);
 }
 .europe-atlas .network-rail .route-line {
-  stroke: #FA742A;
+  stroke: var(--ember-500);
   stroke-dasharray: 3 3;
 }
 .europe-atlas .network-rail .route-flow {
-  stroke: #F2F6F8;
+  stroke: var(--mist);
 }
 .europe-atlas .political-boundaries path[class*="europe-authority-"] {
   stroke-dasharray: none;
@@ -425,20 +426,20 @@
   stroke-dasharray: 3 2;
 }
 .europe-atlas .political-boundaries path.europe-authority-shared-crown {
-  stroke: #FA742A;
+  stroke: var(--ember-500);
   stroke-dasharray: 9 4;
 }
 .europe-atlas .political-boundaries path.europe-authority-settlement-district {
-  stroke: #97C798;
+  stroke: var(--forest-300);
   stroke-linecap: round;
   stroke-dasharray: 1 4;
 }
 .europe-atlas .historical-rails .network-road {
-  stroke: #97C798;
+  stroke: var(--forest-300);
   stroke-dasharray: 7 4;
 }
 .europe-atlas .historical-rails .network-rail {
-  stroke: #FA742A;
+  stroke: var(--ember-500);
   stroke-dasharray: 3 3;
 }
 .europe-atlas .map-navigation {
@@ -455,7 +456,7 @@
   flex-basis: 100%;
   max-width: none;
   margin: 0;
-  color: #525D64;
+  color: var(--slate-600);
 }
 .europe-atlas.is-playing #europe-details:not(.has-selection) {
   display: none;
@@ -545,7 +546,7 @@
     overflow-x: hidden;
     overflow-y: visible;
     border-right: 0;
-    border-top: 1px solid #8E99A0;
+    border-top: 1px solid var(--slate-400);
     padding: 14px;
   }
   .europe-map-status {

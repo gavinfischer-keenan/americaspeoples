@@ -1,0 +1,20 @@
+/* Shared "Electric Eel" palette. Every stylesheet that uses these imports this
+   file; esbuild includes it once per bundle. Use these instead of new hex
+   literals so the atlas, Europe, world and climate pages stay consistent. */
+:root {
+  --night: #10171a;      /* top bar, dark panels, primary text on light */
+  --mist: #f2f6f8;       /* light surfaces, text on dark */
+  --slate-600: #525d64;  /* secondary text, dark borders */
+  --slate-400: #8e99a0;  /* muted text and icons */
+  --slate-300: #b4bec4;  /* borders */
+  --slate-200: #cfd6da;  /* subtle borders */
+  --slate-100: #e3e8eb;  /* subtle fills */
+  --forest-800: #244d26; /* links, strong green text */
+  --forest-600: #3b783d; /* green accents and rules */
+  --forest-500: #569e56; /* primary buttons, active nav */
+  --forest-400: #72b273; /* hover, highlights on dark */
+  --forest-300: #97c798; /* soft green accents */
+  --forest-100: #dcebdd; /* green tints */
+  --rust-700: #a63108;   /* focus rings, dates, warnings */
+  --ember-500: #fa742a;  /* map highlights */
+}
