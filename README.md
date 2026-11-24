@@ -2,7 +2,7 @@
 
 A free, noncommercial educational atlas. Redistribution, teaching, corrections, and contributions are encouraged. Original software: **PolyForm Noncommercial 1.0.0**. Original educational content and copyrightable curated data: **CC BY-NC-SA 4.0**, with third-party terms preserved. See [LICENSE.md](LICENSE.md), [reuse details](docs/reuse-and-contributing.md), and [CONTRIBUTING.md](CONTRIBUTING.md). This is source-available software with noncommercial permissions.
 
-Version 0.32.0. The atlas opens with a world overview at https://americaspeoples.11mosswood.us/ and regional entrances under https://tripofisch.com/spread-of-peoples/.
+Version 0.33.0. The atlas opens with a world overview at https://americaspeoples.11mosswood.us/ and regional entrances under https://tripofisch.com/spread-of-peoples/.
 
 ## What it is
 
