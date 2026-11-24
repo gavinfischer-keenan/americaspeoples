@@ -191,13 +191,32 @@ const mapRows = () => {
   );
 };
 const storeKey = "americas-peoples-proposals-v1";
+const unreadableBackupKey = `${storeKey}-unreadable-backup`;
+let unreadableCollectionKept = false;
 try {
-  const saved = localStorage.getItem(storeKey);
-  if (saved) proposals = parsePackage(decodeLocalCollection(saved)).proposals;
   localStorage.setItem("ap-storage-check", "1");
   localStorage.removeItem("ap-storage-check");
 } catch {
   storageAvailable = false;
+}
+if (storageAvailable) {
+  try {
+    const saved = localStorage.getItem(storeKey);
+    if (saved) proposals = parsePackage(decodeLocalCollection(saved)).proposals;
+  } catch {
+    // A collection that no longer validates (for example after a release
+    // tightens record rules) must never be silently overwritten by the next
+    // save. Keep the original bytes under a separate key before anything else
+    // writes to storeKey.
+    try {
+      const saved = localStorage.getItem(storeKey);
+      if (saved && !localStorage.getItem(unreadableBackupKey))
+        localStorage.setItem(unreadableBackupKey, saved);
+      unreadableCollectionKept = true;
+    } catch {
+      storageAvailable = false;
+    }
+  }
 }
 const cultures = () =>
   recordView.cultures(proposals, preview, proposalsRevision);
@@ -1233,7 +1252,7 @@ function bindDeferredComparisons(container: Element, items: readonly Proposal[])
   }, true);
 }
 function proposalsPage() {
-  main.innerHTML = `<article class="proposals-page"><div class="page-heading"><div><div class="eyebrow">A LOCAL RESEARCH WORKSPACE</div><h2>Your suggestions</h2><p class="lead">Add evidence. Propose a correction. Share the supporting research.</p></div><a class="button primary" href="#new">+ Suggest new evidence</a></div><p id="storage-status" class="notice">${storageAvailable ? "Browser storage is available as a convenience. Download your suggestions for a portable backup." : "Browser storage is unavailable. Download your suggestions before closing this page."}</p><div class="actions"><button id="export-selected">Send to others</button><button id="select-all">Select all</button><label class="button file-button">Import suggestions<input type="file" id="import-file" aria-label="Import suggestions" accept=".json,.xlsx,application/json,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"></label></div><p class="muted">Sharing downloads a file; nothing is uploaded or emailed. Imported suggestions remain unreviewed. Complete suggestions can be previewed on the map.</p><div class="actions"><a href="docs/bulk-import-guide.html">Bulk import guide</a><a href="templates/americas-peoples-import.xlsx" download>Download spreadsheet template</a><a href="templates/americas-peoples-researched-import.xlsx" download>Download researched batch</a></div><p class="muted">Bulk entry: use the XLSX template for records, claims, references and source mappings. Excel, LibreOffice, or a downloaded Google Sheets workbook can be used.</p><div id="import-error" role="alert"></div><div class="proposal-list">${proposals.length ? proposals.map((p, i) => `<section class="proposal-card" data-proposal-card data-proposal-index="${i}"><label class="check"><input type="checkbox" data-share="${i}" aria-label="Select proposal ${i + 1}"><span class="tag proposal-tag">${esc(p.state)} · ${esc(p.kind)} · v${p.version}</span></label><h3>${esc(p.record.title || "Untitled draft")}</h3><p>${esc(p.rationale || "No rationale yet.")}</p><div class="actions"><a href="#proposal/${i}">Detailed review</a><a href="#edit/${i}">Edit suggestion</a></div>${comparisonHTML(p, true)}</section>`).join("") : '<div class="empty large"><h3>A place for the next finding.</h3><p>Start a new evidence row or open a reviewed record and choose Suggest correction.</p></div>'}</div></article>`;
+  main.innerHTML = `<article class="proposals-page"><div class="page-heading"><div><div class="eyebrow">A LOCAL RESEARCH WORKSPACE</div><h2>Your suggestions</h2><p class="lead">Add evidence. Propose a correction. Share the supporting research.</p></div><a class="button primary" href="#new">+ Suggest new evidence</a></div><p id="storage-status" class="notice">${storageAvailable ? "Browser storage is available as a convenience. Download your suggestions for a portable backup." : "Browser storage is unavailable. Download your suggestions before closing this page."}${unreadableCollectionKept ? " An earlier saved collection could not be read by this version; it has been kept unchanged in browser storage and was not overwritten." : ""}</p><div class="actions"><button id="export-selected">Send to others</button><button id="select-all">Select all</button><label class="button file-button">Import suggestions<input type="file" id="import-file" aria-label="Import suggestions" accept=".json,.xlsx,application/json,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"></label></div><p class="muted">Sharing downloads a file; nothing is uploaded or emailed. Imported suggestions remain unreviewed. Complete suggestions can be previewed on the map.</p><div class="actions"><a href="docs/bulk-import-guide.html">Bulk import guide</a><a href="templates/americas-peoples-import.xlsx" download>Download spreadsheet template</a><a href="templates/americas-peoples-researched-import.xlsx" download>Download researched batch</a></div><p class="muted">Bulk entry: use the XLSX template for records, claims, references and source mappings. Excel, LibreOffice, or a downloaded Google Sheets workbook can be used.</p><div id="import-error" role="alert"></div><div class="proposal-list">${proposals.length ? proposals.map((p, i) => `<section class="proposal-card" data-proposal-card data-proposal-index="${i}"><label class="check"><input type="checkbox" data-share="${i}" aria-label="Select proposal ${i + 1}"><span class="tag proposal-tag">${esc(p.state)} · ${esc(p.kind)} · v${p.version}</span></label><h3>${esc(p.record.title || "Untitled draft")}</h3><p>${esc(p.rationale || "No rationale yet.")}</p><div class="actions"><a href="#proposal/${i}">Detailed review</a><a href="#edit/${i}">Edit suggestion</a></div>${comparisonHTML(p, true)}</section>`).join("") : '<div class="empty large"><h3>A place for the next finding.</h3><p>Start a new evidence row or open a reviewed record and choose Suggest correction.</p></div>'}</div></article>`;
   bindDeferredComparisons(main.querySelector('.proposals-page')!, proposals);
   $("#export-selected").addEventListener("click", () =>
     exportProposals(
@@ -1678,6 +1697,21 @@ async function route() {
   window.scrollTo(0, 0);
 }
 window.addEventListener("hashchange", route);
+// Another tab saved suggestions: adopt its collection so this tab's next save
+// does not silently discard that work. Pages that list or edit proposals are
+// re-rendered; an in-progress editor keeps its form until the next navigation.
+window.addEventListener("storage", (event) => {
+  if (event.key !== storeKey || event.newValue == null) return;
+  try {
+    proposals = parsePackage(decodeLocalCollection(event.newValue)).proposals;
+    proposalsRevision++;
+    const count = document.querySelector("#proposal-count");
+    if (count) count.textContent = String(proposals.length);
+    if (/^#(proposals|proposal\/)/.test(location.hash)) void route();
+  } catch {
+    /* Ignore an unreadable collection written by another version. */
+  }
+});
 bounds(true);
 setYear(year,false);
 const voyagesReady=loadVoyageCatalogue();

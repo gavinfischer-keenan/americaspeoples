@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdir, readFile } from 'node:fs/promises';
 import { createStaticServer } from '../scripts/static-server.mjs';
 
-const SCREENSHOT_DIR = process.env.SCREENSHOT_DIR || 'C:/Users/Gavin/.gemini/antigravity/brain/775d7051-a4e4-49d6-8a9d-cafd6058e954/scratch';
+const SCREENSHOT_DIR = process.env.SCREENSHOT_DIR || 'test-results/explore-globe';
 await mkdir(SCREENSHOT_DIR, { recursive: true });
 
 const server = createStaticServer(process.env.DIST_PATH || 'dist');

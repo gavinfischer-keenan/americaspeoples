@@ -6,6 +6,8 @@ import { MapGeometry } from "./map-geometry";
 import {pickCandidates,type HitCandidate,type MapPoint} from './map-picking';
 import {clampZoom,fitMapBounds,geographicCenter} from './map-viewport';
 import { boundariesAt } from './boundaries';
+/** Class fragments are whitelisted: overlay data can arrive from imported suggestion files. */
+const networkClass=(kind:unknown)=>kind==='road'||kind==='rail'?kind:'trade';
 import {routeEndpointLabels,routeDirectionLabels} from './map-route-labels';
 import { guideForRecord } from "./site-guides";
 import { populationAt } from "./population";
@@ -721,7 +723,7 @@ export class MapView {
           const start=direction==='reverse'||direction==='both',end=direction==='forward'||direction==='both';
           const marker='url(#corridor-'+r.history.kind+')';
           const lane=lanes.get(r);
-          arrows+=`<g data-overlay="${index}" data-history-route="${esc(r.id)}" data-direction="${direction??'unknown'}" class="history-route route-${r.history.kind} network-${r.overlay?.networkKind??'trade'} ${active?'route-active':''}" ${lane?`transform="translate(${lane[0]},${lane[1]})"`:''} style="opacity:${this.opacity(r)}"><title>${esc(r.title)} — ${esc(historyLabel(r,this.year))}${lane?' — Separate display lane; source endpoints unchanged':''}</title><path class="route-halo" d="${d}"/><path class="route-line" d="${d}" ${end?`marker-end="${marker}"`:''} ${start?`marker-start="${marker}"`:''}/><path class="route-flow" d="${d}"/><path class="overlay-line-hit" d="${d}" style="stroke-width:${16/this.scale}px"/></g>`;
+          arrows+=`<g data-overlay="${index}" data-history-route="${esc(r.id)}" data-direction="${direction??'unknown'}" class="history-route route-${r.history.kind} network-${networkClass(r.overlay?.networkKind)} ${active?'route-active':''}" ${lane?`transform="translate(${lane[0]},${lane[1]})"`:''} style="opacity:${this.opacity(r)}"><title>${esc(r.title)} — ${esc(historyLabel(r,this.year))}${lane?' — Separate display lane; source endpoints unchanged':''}</title><path class="route-halo" d="${d}"/><path class="route-line" d="${d}" ${end?`marker-end="${marker}"`:''} ${start?`marker-start="${marker}"`:''}/><path class="route-flow" d="${d}"/><path class="overlay-line-hit" d="${d}" style="stroke-width:${16/this.scale}px"/></g>`;
           const directionLabel=routeDirectionLabels[r.id];
           if(lane&&directionLabel&&this.highlighted.has(r.id)){
             const line=this.geometry.get(r).lines.reduce((longest,line)=>line.length>longest.length?line:longest,[] as MapPoint[]),mid=line[Math.floor(line.length/2)];
@@ -754,7 +756,7 @@ export class MapView {
         const o = r.overlay,
           g = o.geometry;
         if (!g) continue;
-        const cls = `overlay-feature overlay-${o.kind} network-${o.networkKind??'trade'} ${o.basis === "schematic" ? "overlay-schematic" : ""} ${this.uncertainty(r) ? "overlay-uncertain" : ""}`;
+        const cls = `overlay-feature overlay-${o.kind} network-${networkClass(o.networkKind)} ${o.basis === "schematic" ? "overlay-schematic" : ""} ${this.uncertainty(r) ? "overlay-uncertain" : ""}`;
         const title = esc(
           `${r.title} — ${OVERLAY_LABELS[o.kind]}, ${o.basis}${r.linguistics ? " — " + r.linguistics.languages.map(x => x.name).join(" / ") + " — " + (r.linguistics.relationship?.kind ?? "affiliation") : ""}${isDisputed(r) ? " *" : ""}`,
         );

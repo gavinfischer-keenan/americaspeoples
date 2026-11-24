@@ -100,7 +100,7 @@ export function mountEurope(host:HTMLElement,payload:EuropePayload,land:unknown,
  function renderList(){
   const visible=new Set(map.visibleRecords().map(r=>r.id));
   const current=currentEntries().filter(r=>visible.has(r.id));
-  el('#europe-date-note').textContent=current.length?`${formatYear(state.year)} · ${current.length} places and connections with dated evidence in view.`:`${formatYear(state.year)} · No included evidence at this date in this view. Drag the slider to another era.`;
+  el('#europe-date-note').textContent=current.length?`${formatYear(state.year)} · ${current.length} ${current.length===1?'place or connection':'places and connections'} with dated evidence in view.`:`${formatYear(state.year)} · No included evidence at this date in this view. Drag the slider to another era.`;
   el('#europe-list').innerHTML=current.slice(0,60).map(r=>`<button data-europe-record="${esc(r.id)}"><strong>${esc(r.title)}</strong><span>${esc(entries.get(r.id)!.summary)}</span></button>`).join('');
   if(current.length>60)el('#europe-list').insertAdjacentHTML('beforeend','<p>Zoom or filter to narrow the remaining places.</p>');
   const voyages=state.voyages?map.context.voyages.filter(v=>state.clock>=dateValue(v.stops[0].arrival)&&state.clock<=Math.min(MOVIE_END_DATE,dateValue(v.stops.at(-1)!.departure))):[];

@@ -245,10 +245,11 @@ pre {
   font-size: 38px;
   color: var(--accent);
 }
-.brand h1 {
-  font-family: Georgia, serif;
+.brand .brand-title {
+  display: block;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.15;
   margin: 0;
 }
@@ -1115,7 +1116,7 @@ dd:last-child {
   .brand {
     width: 100%;
   }
-  .brand h1 {
+  .brand .brand-title {
     font-size: 22px;
   }
   .brand-mark {
@@ -1701,7 +1702,7 @@ body.atlas-preview-page .shell{padding:0 24px 32px}
 @media(max-width:760px){
   header.topbar{height:auto;min-height:54px;flex-wrap:wrap;gap:6px 10px;padding:8px 12px;align-content:flex-start}
   .topbar .brand{width:auto;flex:0 1 auto}
-  header.topbar .brand h1{display:block;font-size:clamp(14px,4vw,18px)}
+  header.topbar .brand .brand-title{display:block;font-size:clamp(14px,4vw,18px)}
   .topbar nav[aria-label="Main navigation"]{order:3;width:100%;height:auto;flex:1 0 100%;flex-wrap:wrap;overflow:visible;margin:0;justify-content:flex-start;gap:3px 4px}
   .topbar nav[aria-label="Main navigation"] a{font-size:11px;padding:5px 7px}
   .topbar .atlas-switcher{margin-left:auto}
