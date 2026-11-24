@@ -209,10 +209,10 @@ try{
   await page.getByRole('button',{name:'Next evidence change',exact:true}).click();
   assert.equal(await page.locator('#family-year').textContent(),previous);
   await page.locator('#family-play').click();
-  await page.waitForFunction(()=>document.querySelector('#family-play')?.textContent==='Pause');
+  await page.waitForFunction(()=>document.querySelector('#family-play')?.textContent==='Ⅱ Pause');
   await page.waitForFunction(wanted=>document.querySelector('#family-year')?.textContent!==wanted,yearLabel(study.start));
   await page.locator('#family-play').click();
-  assert.equal(await page.locator('#family-play').textContent(),'Play');
+  assert.equal(await page.locator('#family-play').textContent(),'▶ Play');
   await guide.click();await page.locator('h1').waitFor();
   const entry=guideIndex.guides.find(g=>g.id===study.guideId);assert.ok(entry);
   assert.equal(await page.locator('h1').textContent(),entry.title);

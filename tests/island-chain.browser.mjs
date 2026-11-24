@@ -2,8 +2,8 @@ import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {readFile,mkdir} from 'node:fs/promises';
 import {createStaticServer} from '../scripts/static-server.mjs';
-import {islandChainStories} from '../src/island-chain-stories.ts';
-import {yapMicronesiaStories,yapMicronesiaTopics} from '../src/yap-micronesia-dives.ts';
+import {islandSoutheastAsiaStories as islandChainStories,micronesiaStories as yapMicronesiaStories,raiStoneMoneyTopics} from '../src/story-content.ts';
+const yapMicronesiaTopics=raiStoneMoneyTopics.topics;
 const server=createStaticServer('dist');await new Promise(r=>server.listen(0,'127.0.0.1',r));
 const browser=await chromium.launch({executablePath:process.env.BROWSER_PATH||'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',headless:true});
 const page=await browser.newPage({viewport:{width:1440,height:960}}),errors=[];
@@ -47,10 +47,10 @@ try{
  await page.screenshot({path:'test-results/yap-guide-tablet.png'});
  await page.goto(base+'/#library');
  await page.locator('a[href="sites/sources-attributions.html"]').click();
+ // The register is a ~21 MB page; its search script runs once the page has loaded.
+ await page.waitForURL(/sources-attributions\.html/,{waitUntil:'commit'});await page.waitForLoadState('load',{timeout:120000});
  await page.getByLabel('Search sources, creators, licenses or places').fill('David Weekly');
- // The register is one ~20 MB page (~28k source rows); its deferred search script runs only
- // after the whole document parses, which alone can take ~15 s in headless Chromium.
- await page.waitForFunction(()=>document.getElementById('source-count').textContent.startsWith('1 of '),null,{timeout:60000});
+ await page.waitForFunction(()=>document.getElementById('source-count').textContent.startsWith('1 of '));
  assert.match(await page.locator('[data-source-row]:visible').innerText(),/CC BY 2.0/);
  assert.deepEqual(errors,[]);
  console.log('PASS: 41 contextual island chapters, 12 rai chapters, seven guide links, shared evidence and searchable source credits.');

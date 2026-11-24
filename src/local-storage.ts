@@ -1,4 +1,4 @@
-import {gzipSync,gunzipSync,strToU8,strFromU8} from 'fflate';
+import {gzipSync,Gunzip,strToU8,strFromU8} from 'fflate';
 import {MAX_PACKAGE_BYTES} from './proposals';
 
 const prefix='ap-gzip-v1:';
@@ -20,8 +20,16 @@ export function decodeLocalCollection(stored:string):string{
  const binary=atob(stored.slice(prefix.length));
  const bytes=Uint8Array.from(binary,c=>c.charCodeAt(0));
  if(bytes.length<18)throw new Error('Invalid compressed collection.');
- // Bound inflation independently of the untrusted GZIP size trailer.
- const raw=gunzipSync(bytes,{out:new Uint8Array(MAX_PACKAGE_BYTES+1)});
- if(raw.length>MAX_PACKAGE_BYTES)throw new Error('Expanded collection exceeds limit.');
+ // Bound inflation independently of the untrusted GZIP size trailer, without
+ // preallocating the full limit: stream into chunks and stop past the cap.
+ const chunks:Uint8Array[]=[];let total=0;
+ const inflater=new Gunzip(chunk=>{
+  total+=chunk.length;
+  if(total>MAX_PACKAGE_BYTES)throw new Error('Expanded collection exceeds limit.');
+  chunks.push(chunk);
+ });
+ inflater.push(bytes,true);
+ const raw=new Uint8Array(total);let offset=0;
+ for(const chunk of chunks){raw.set(chunk,offset);offset+=chunk.length;}
  return strFromU8(raw);
 }

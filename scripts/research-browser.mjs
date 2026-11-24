@@ -1,4 +1,5 @@
 import {mapSetting,showMapEvidence} from './browser-fixture.mjs';
+import { isAmericasRecord } from "../src/region-partition.ts";
 import assert from "node:assert/strict";
 import { mkdir } from "node:fs/promises";
 import {
@@ -6,19 +7,17 @@ import {
   localPackage,
   previewSuggestions,
 } from "./browser-fixture.mjs";
-import { tsImport } from "tsx/esm/api";
-const { isAmericasRecord } = await tsImport("../src/region-partition.ts", import.meta.url);
 const fixture = await browserFixture();
 const { browser, page, dataset, url } = fixture;
 const expectedRecords = dataset.records.length;
 const expectedOverlays = dataset.records.filter((r) => r.overlay).length;
-// The map checks below run on the Americas movie, which partitions out Pacific
-// records (e.g. Rangiaowhia, Aotearoa); count only what that map can show.
+// The map under test is the Americas atlas; Pacific records (e.g. Rangiaowhia,
+// Aotearoa 1864) open in the separate Australia & Pacific atlas.
 const overlayCount = (kind, year) =>
   dataset.records.filter(
     (r) =>
-      r.overlay?.kind === kind &&
       isAmericasRecord(r) &&
+      r.overlay?.kind === kind &&
       r.overlay.geometry &&
       r.time.start <= year &&
       r.time.end >= year &&
@@ -28,7 +27,7 @@ const overlayCount = (kind, year) =>
 // Co-located original/correction records now share a marker. Count selectable
 // identities rather than requiring a duplicate SVG symbol for each source row.
 const renderedOverlayCount = async kind => {
-  const ids=dataset.records.filter(r=>r.overlay?.kind===kind).map(r=>r.id);
+  const ids=dataset.records.filter(r=>isAmericasRecord(r)&&r.overlay?.kind===kind).map(r=>r.id);
   return page.locator('[data-map-tip]').evaluateAll((features,ids)=>{
     const identities=new Set();
     for(const feature of features){
@@ -57,7 +56,8 @@ try {
   await page.locator('#import-file').setInputFiles("templates/americas-peoples-researched-import.xlsx");
   // Scope large-batch checks to known controls. A document-wide role query walks
   // every card and its collapsed comparisons before finding this heading.
-  await page.locator('#confirm-import').waitFor();
+  // The full 11,370-record workbook takes ~25-30 s to parse in a headless browser.
+  await page.locator('#confirm-import').waitFor({ timeout: 120000 });
   assert.equal(await page.locator('.proposals-page > h2').textContent(), 'Review import');
   console.log(`Imported ${expectedRecords} records for review in ${Math.round(performance.now() - importStarted)} ms`);
   assert.equal(await page.locator('[data-incoming-index]').count(), expectedRecords);
@@ -195,7 +195,8 @@ try {
   await page.getByRole("link", { name: "Library", exact: true }).click();
   await page.locator('.library-card[href="#proposals"]').click();
   await page.locator('#import-file').setInputFiles("templates/americas-peoples-researched-import.xlsx");
-  await page.locator('#confirm-import').waitFor();
+  // The full 11,370-record workbook takes ~25-30 s to parse in a headless browser.
+  await page.locator('#confirm-import').waitFor({ timeout: 120000 });
   assert.equal(await page.locator('.proposals-page > h2').textContent(), 'Review import');
   assert.deepEqual(await page.locator('.proposal-card > .tag').allTextContents(), Array(expectedRecords).fill('duplicate'));
   await page.locator('#confirm-import').click();

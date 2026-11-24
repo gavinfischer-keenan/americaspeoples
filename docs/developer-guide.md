@@ -27,3 +27,13 @@ Benchmarks are diagnostic, not pass/fail wall-clock assertions: run `npm run ben
 Historical integration scripts are editorial one-offs, not normal build steps. Several depend on private intake archives outside the repository and mutate published JSON. Read their docstrings and source assumptions before running them. The normal release builder does not rerun those scripts or publish private report copies. New information needs source access, chronology, geography, ambiguity and attribution review; repeated generated summaries are not independent corroboration.
 
 For production installation, resource limits, API routes and rollback, use [DEPLOYMENT.md](../DEPLOYMENT.md). This guide explains code responsibilities; it does not duplicate the operational runbook.
+
+## Reproducible builds
+
+`npm run build` must produce the same committed outputs (`sites/sources-attributions.*`, the researched XLSX template) on any checkout. Everything it reads is in git:
+
+- The paleoclimate download cache, `data/physical-sources/paleo/`, is committed. `python3 scripts/restore-paleo-cache.py --verify` checks every file against the SHA-256 and size in `data/physical-sources/paleoclimate-manifest.json`; without `--verify` it re-downloads anything missing or damaged. The attribution build fails if the cache is absent rather than publishing a smaller credits file.
+- The XLSX template is only rewritten when a sheet actually changes, so a build does not churn it.
+- `data/intake/` remains private working material and is not read by the build or tests.
+
+After a build, `git status` should show no changes unless data or code changed. CI (`.github/workflows/ci.yml`) runs typecheck, unit tests, dataset validation, the build and the API tests.

@@ -1,3 +1,4 @@
+import {topNav,waitForMapScope} from '../scripts/browser-fixture.mjs';
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {mkdir} from 'node:fs/promises';
@@ -45,15 +46,15 @@ try{
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'no horizontal overflow at '+width);
  }
  await page.screenshot({path:'test-results/map-panels-mobile.png',fullPage:true});
- await page.setViewportSize({width:1440,height:1000});await page.locator('header.topbar nav[aria-label="Main navigation"] a[href="#atlas/pacific"], header.world-top nav[aria-label="Main navigation"] a[href="#atlas/pacific"]').click();
- await page.locator('header.topbar nav[aria-label="Main navigation"] a.active[href="#atlas/pacific"]').waitFor();
- await page.locator('header.topbar nav[aria-label="Main navigation"] a[href="#atlas/europe"], header.world-top nav[aria-label="Main navigation"] a[href="#atlas/europe"]').click();
+ await page.setViewportSize({width:1440,height:1000});await topNav(page,'Pacific').click();
+ await waitForMapScope(page,'pacific');
+ await topNav(page,'Europe').click();
  await page.locator('#europe-map').waitFor();assert.equal(await settings().getAttribute('aria-expanded'),'false');assert.equal(await page.locator('.europe-filters').isVisible(),false);
  await openSettings();await page.locator('#europe-category').selectOption('habitation');assert.equal(await settings().getAttribute('aria-expanded'),'false');
  await facts().click();assert.equal(await page.locator('.europe-reader').isVisible(),false);await facts().click();
  await page.locator('#europe-era').selectOption('1850');
  await page.screenshot({path:'test-results/europe-shared-navigation.png',fullPage:true});
- await page.locator('header.topbar nav[aria-label="Main navigation"] a[href="#movie"], header.world-top nav[aria-label="Main navigation"] a[href="#movie"]').click();await page.locator('#map-host').waitFor();
+ await topNav(page,'Americas').click();await page.locator('#map-host').waitFor();
  assert.equal((await page.locator('#current-year').innerText()).replaceAll(',',''),'1000 CE','regional navigation preserves the Americas date');
  assert.deepEqual(errors,[]);console.log('PASS: Americas and Europe shared navigation, side facts, selection, zoom/pan, filters, responsive flow and preserved date.');
 }finally{await browser.close();await new Promise(r=>server.close(r));}

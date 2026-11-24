@@ -6,6 +6,8 @@ import { MapGeometry } from "./map-geometry";
 import {pickCandidates,type HitCandidate,type MapPoint} from './map-picking';
 import {clampZoom,fitMapBounds,geographicCenter} from './map-viewport';
 import { boundariesAt } from './boundaries';
+/** Class fragments are whitelisted: overlay data can arrive from imported suggestion files. */
+const networkClass=(kind:unknown)=>kind==='road'||kind==='rail'?kind:'trade';
 import {routeEndpointLabels,routeDirectionLabels} from './map-route-labels';
 import { guideForRecord } from "./site-guides";
 import { populationAt } from "./population";
@@ -251,7 +253,11 @@ export class MapView {
           else this.resetView();
         } else this.zoom(target.dataset.zoom === "in" ? 1.35 : 1 / 1.35);
       } else if (!moved&&svg.contains(e.target as Node)) {
-        if(target?.hasAttribute('data-density-group')||target?.hasAttribute('data-route-endpoint')){this.activateFeature(target);return;}
+        if(target?.hasAttribute('data-density-group')||target?.hasAttribute('data-route-endpoint')){
+          // A crowded marker must not make a route or area passing beneath it unselectable.
+          const connections=e.detail===0?[]:this.pick(this.clientPoint(e.clientX,e.clientY),(e as PointerEvent).pointerType==='touch').filter(r=>!!r.overlay);
+          this.activateFeature(target,connections);return;
+        }
         const rows=e.detail===0&&target?this.featureRows(target):this.pick(this.clientPoint(e.clientX,e.clientY),(e as PointerEvent).pointerType==='touch');
         if(rows.length){e.preventDefault();this.selectRows(rows);}
       }
@@ -549,12 +555,16 @@ export class MapView {
     if(element.dataset.point!==undefined)return this.drawnPoints.get(element.dataset.point)??[];
     return [];
   }
-  private activateFeature(feature:Element){
-    const rows=this.featureRows(feature);
+  /** `alsoHere` adds connections under the pointer that a crowded place marker
+   *  would otherwise hide: they join the overlap chooser after the place's own
+   *  records, but do not change how the camera frames the place. */
+  private activateFeature(feature:Element,alsoHere:readonly DisplayRecord[]=[]){
+    const rows=this.featureRows(feature),ids=new Set(rows.map(r=>r.id));
+    const offered=[...rows,...alsoHere.filter(r=>!ids.has(r.id))];
     if(feature.hasAttribute('data-density-group')&&this.scale<2048){
       this.focusRecords(rows);
-      this.onSelect(rows);
-    }else this.selectRows(rows);
+      this.onSelect(offered);
+    }else this.selectRows(offered);
   }
   private selectRows(rows:DisplayRecord[]){
     if(!rows.length)return;
@@ -724,7 +734,7 @@ export class MapView {
           const start=direction==='reverse'||direction==='both',end=direction==='forward'||direction==='both';
           const marker='url(#corridor-'+r.history.kind+')';
           const lane=lanes.get(r);
-          arrows+=`<g data-overlay="${index}" data-history-route="${esc(r.id)}" data-direction="${direction??'unknown'}" class="history-route route-${r.history.kind} network-${r.overlay?.networkKind??'trade'} ${active?'route-active':''}" ${lane?`transform="translate(${lane[0]},${lane[1]})"`:''} style="opacity:${this.opacity(r)}"><title>${esc(r.title)} — ${esc(historyLabel(r,this.year))}${lane?' — Separate display lane; source endpoints unchanged':''}</title><path class="route-halo" d="${d}"/><path class="route-line" d="${d}" ${end?`marker-end="${marker}"`:''} ${start?`marker-start="${marker}"`:''}/><path class="route-flow" d="${d}"/><path class="overlay-line-hit" d="${d}" style="stroke-width:${16/this.scale}px"/></g>`;
+          arrows+=`<g data-overlay="${index}" data-history-route="${esc(r.id)}" data-direction="${direction??'unknown'}" class="history-route route-${r.history.kind} network-${networkClass(r.overlay?.networkKind)} ${active?'route-active':''}" ${lane?`transform="translate(${lane[0]},${lane[1]})"`:''} style="opacity:${this.opacity(r)}"><title>${esc(r.title)} — ${esc(historyLabel(r,this.year))}${lane?' — Separate display lane; source endpoints unchanged':''}</title><path class="route-halo" d="${d}"/><path class="route-line" d="${d}" ${end?`marker-end="${marker}"`:''} ${start?`marker-start="${marker}"`:''}/><path class="route-flow" d="${d}"/><path class="overlay-line-hit" d="${d}" style="stroke-width:${16/this.scale}px"/></g>`;
           const directionLabel=routeDirectionLabels[r.id];
           if(lane&&directionLabel&&this.highlighted.has(r.id)){
             const line=this.geometry.get(r).lines.reduce((longest,line)=>line.length>longest.length?line:longest,[] as MapPoint[]),mid=line[Math.floor(line.length/2)];
@@ -757,7 +767,7 @@ export class MapView {
         const o = r.overlay,
           g = o.geometry;
         if (!g) continue;
-        const cls = `overlay-feature overlay-${o.kind} network-${o.networkKind??'trade'} ${o.basis === "schematic" ? "overlay-schematic" : ""} ${this.uncertainty(r) ? "overlay-uncertain" : ""}`;
+        const cls = `overlay-feature overlay-${o.kind} network-${networkClass(o.networkKind)} ${o.basis === "schematic" ? "overlay-schematic" : ""} ${this.uncertainty(r) ? "overlay-uncertain" : ""}`;
         const title = esc(
           `${r.title} — ${OVERLAY_LABELS[o.kind]}, ${o.basis}${r.linguistics ? " — " + r.linguistics.languages.map(x => x.name).join(" / ") + " — " + (r.linguistics.relationship?.kind ?? "affiliation") : ""}${isDisputed(r) ? " *" : ""}`,
         );

@@ -1,3 +1,4 @@
+@import "./tokens.css";
 .deep-dive-index {
   max-width: 1280px;
   margin: auto;
@@ -10,7 +11,7 @@
 }
 .dive-heading .lead {
   max-width: 780px;
-  color: #525D64;
+  color: var(--slate-600);
 }
 .dive-heading-links {
   display: flex;
@@ -21,48 +22,48 @@
 .dive-return {
   white-space: nowrap;
   font-size: 13px;
-  color: #244D26;
-  background: #F2F6F8;
-  border: 1px solid #B4BEC4;
+  color: var(--forest-800);
+  background: var(--mist);
+  border: 1px solid var(--slate-300);
   border-radius: 7px;
   padding: 7px 12px;
   font-weight: 700;
   text-decoration: none;
 }
 .dive-return:hover {
-  background: #DCEBDD;
-  border-color: #3B783D;
+  background: var(--forest-100);
+  border-color: var(--forest-600);
 }
 .dive-tabs {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
   margin: 22px 0 20px;
-  border-bottom: 1px solid #B4BEC4;
+  border-bottom: 1px solid var(--slate-300);
   padding-bottom: 14px;
 }
 .dive-tabs a {
   padding: 9px 16px;
   border-radius: 7px;
-  border: 1px solid #B4BEC4;
-  background: #F2F6F8;
-  color: #10171A;
+  border: 1px solid var(--slate-300);
+  background: var(--mist);
+  color: var(--night);
   text-decoration: none;
   font-weight: 600;
 }
 .dive-tabs a:hover {
-  border-color: #3B783D;
-  background: #DCEBDD;
+  border-color: var(--forest-600);
+  background: var(--forest-100);
 }
 .dive-tabs a[aria-current="page"] {
-  background: #569E56;
-  border-color: #3B783D;
-  color: #10171A;
+  background: var(--forest-500);
+  border-color: var(--forest-600);
+  color: var(--night);
   font-weight: 700;
 }
 .dive-foundations {
-  background: #DCEBDD;
-  border: 1px solid #72B273;
+  background: var(--forest-100);
+  border: 1px solid var(--forest-400);
   border-radius: 12px;
   padding: 18px 22px;
   margin-bottom: 18px;
@@ -78,7 +79,7 @@
 .dive-foundations-head p {
   margin: 0;
   font-size: 13px;
-  color: #244D26;
+  color: var(--forest-800);
 }
 .dive-foundations-grid {
   display: grid;
@@ -86,8 +87,8 @@
   gap: 14px;
 }
 .dive-foundation-card {
-  background: #F2F6F8;
-  border: 1px solid #B4BEC4;
+  background: var(--mist);
+  border: 1px solid var(--slate-300);
   border-radius: 10px;
   padding: 16px 18px;
   display: flex;
@@ -97,12 +98,12 @@
 .dive-foundation-card h3 {
   font: 20px/1.22 Georgia, serif;
   margin: 8px 0 6px;
-  color: #10171A;
+  color: var(--night);
 }
 .dive-foundation-card p {
   font-size: 13px;
   line-height: 1.55;
-  color: #525D64;
+  color: var(--slate-600);
   margin: 0;
 }
 .dive-foundation-card .dive-actions a {
@@ -121,13 +122,13 @@
   padding: 10px 14px;
   font: inherit;
   font-size: 14px;
-  color: #10171A;
-  background: #F2F6F8;
-  border: 1px solid #8E99A0;
+  color: var(--night);
+  background: var(--mist);
+  border: 1px solid var(--slate-400);
   border-radius: 8px;
 }
 #dive-search:focus {
-  outline: 3px solid #A63108;
+  outline: 3px solid var(--rust-700);
   outline-offset: 2px;
 }
 .dive-region-chips {
@@ -138,25 +139,25 @@
 .dive-region-chips button {
   padding: 7px 12px;
   border-radius: 999px;
-  border: 1px solid #8E99A0;
-  background: #F2F6F8;
-  color: #10171A;
+  border: 1px solid var(--slate-400);
+  background: var(--mist);
+  color: var(--night);
   font-size: 12.5px;
   font-weight: 600;
   cursor: pointer;
 }
 .dive-region-chips button:hover {
-  background: #DCEBDD;
-  border-color: #3B783D;
+  background: var(--forest-100);
+  border-color: var(--forest-600);
 }
 .dive-region-chips button[aria-pressed="true"] {
-  background: #569E56;
-  border-color: #3B783D;
-  color: #10171A;
+  background: var(--forest-500);
+  border-color: var(--forest-600);
+  color: var(--night);
   font-weight: 700;
 }
 .dive-region-chips button:focus-visible {
-  outline: 3px solid #A63108;
+  outline: 3px solid var(--rust-700);
   outline-offset: 2px;
 }
 .dive-search-results {
@@ -169,16 +170,16 @@
 }
 .dive-category {
   display: block;
-  border: 1px solid #B4BEC4;
+  border: 1px solid var(--slate-300);
   border-radius: 12px;
   padding: 28px 32px;
-  background: #F2F6F8;
-  color: #10171A;
+  background: var(--mist);
+  color: var(--night);
   text-decoration: none;
 }
 .dive-category:hover {
-  background: #DCEBDD;
-  border-color: #3B783D;
+  background: var(--forest-100);
+  border-color: var(--forest-600);
 }
 .dive-mark {
   font-size: 30px;
@@ -187,22 +188,22 @@
 .dive-category h3 {
   font: 34px/1.15 Georgia, serif;
   margin: 14px 0 10px;
-  color: #10171A;
+  color: var(--night);
 }
 .dive-category p {
   max-width: 440px;
   line-height: 1.65;
-  color: #525D64;
+  color: var(--slate-600);
 }
 .dive-category small {
   display: block;
   margin-top: 22px;
   font-weight: 700;
-  color: #244D26;
+  color: var(--forest-800);
 }
 .dive-count {
   font-size: 13px;
-  color: #525D64;
+  color: var(--slate-600);
   font-weight: 600;
 }
 .dive-region-jump {
@@ -214,24 +215,24 @@
 .dive-region-jump button {
   padding: 7px 13px;
   border-radius: 999px;
-  border: 1px solid #8E99A0;
-  background: #F2F6F8;
-  color: #10171A;
+  border: 1px solid var(--slate-400);
+  background: var(--mist);
+  color: var(--night);
   font: inherit;
   font-size: 12.5px;
   font-weight: 600;
   cursor: pointer;
 }
 .dive-region-jump button:hover {
-  background: #DCEBDD;
-  border-color: #3B783D;
+  background: var(--forest-100);
+  border-color: var(--forest-600);
 }
 .dive-region-jump button:focus-visible {
-  outline: 3px solid #A63108;
+  outline: 3px solid var(--rust-700);
   outline-offset: 2px;
 }
 .dive-region-jump button span {
-  color: #244D26;
+  color: var(--forest-800);
   font-weight: 700;
 }
 .dive-region-group {
@@ -245,19 +246,19 @@
   gap: 8px 16px;
   margin-bottom: 14px;
   padding-bottom: 8px;
-  border-bottom: 2px solid #B4BEC4;
+  border-bottom: 2px solid var(--slate-300);
 }
 .dive-region-group-head h3 {
   margin: 0;
   font: 22px/1.2 Georgia, serif;
-  color: #10171A;
+  color: var(--night);
 }
 .dive-group-count {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #244D26;
+  color: var(--forest-800);
 }
 .dive-grid {
   display: grid;
@@ -267,10 +268,10 @@
 .dive-card {
   position: relative;
   padding: 24px;
-  border: 1px solid #8E99A0;
+  border: 1px solid var(--slate-400);
   border-radius: 10px;
-  background: #F2F6F8;
-  color: #10171A;
+  background: var(--mist);
+  color: var(--night);
   display: flex;
   flex-direction: column;
   min-width: 0;
@@ -279,18 +280,18 @@
   font-size: 10px;
   letter-spacing: 0.13em;
   text-transform: uppercase;
-  color: #3B783D;
+  color: var(--forest-600);
   font-weight: 700;
 }
 .dive-card h3 {
   font: 24px/1.22 Georgia, serif;
   margin: 14px 0 10px;
-  color: #10171A;
+  color: var(--night);
 }
 .dive-card p {
   font-size: 13px;
   line-height: 1.65;
-  color: #525D64;
+  color: var(--slate-600);
 }
 .dive-actions {
   display: flex;
@@ -301,17 +302,17 @@
 }
 .dive-actions a {
   padding: 8px 12px;
-  border: 1px solid #3B783D;
+  border: 1px solid var(--forest-600);
   border-radius: 6px;
   text-decoration: none;
-  color: #244D26;
-  background: #DCEBDD;
+  color: var(--forest-800);
+  background: var(--forest-100);
   font-size: 12px;
   font-weight: 700;
 }
 .dive-actions a:hover {
-  background: #97C798;
-  color: #10171A;
+  background: var(--forest-300);
+  color: var(--night);
 }
 .dive-card .dive-actions a:first-child {
   position: static;
@@ -327,75 +328,75 @@
   z-index: 1;
 }
 .dive-card:has(.dive-actions):hover {
-  background: #DCEBDD;
-  box-shadow: 0 0 0 2px #3B783D;
+  background: var(--forest-100);
+  box-shadow: 0 0 0 2px var(--forest-600);
 }
 .dive-card:focus-within {
-  outline: 3px solid #FA742A;
+  outline: 3px solid var(--ember-500);
   outline-offset: 3px;
 }
 .dive-expansion {
-  color: #525D64;
+  color: var(--slate-600);
   font-size: 11px !important;
 }
 .dive-queue {
-  border-top: 1px solid #B4BEC4;
+  border-top: 1px solid var(--slate-300);
   margin-top: 38px;
   padding-top: 20px;
 }
 .dive-queue > h3,
 .dive-modes > h3 {
   font: 24px Georgia, serif;
-  color: #10171A;
+  color: var(--night);
 }
 .dive-queue > p {
   font-size: 13px;
   max-width: 800px;
   line-height: 1.6;
-  color: #525D64;
+  color: var(--slate-600);
 }
 .dive-planned {
   background: #EAEFF1;
   border-style: dashed;
-  border-color: #8E99A0;
-  color: #10171A;
+  border-color: var(--slate-400);
+  color: var(--night);
 }
 .dive-planned h3 {
-  color: #10171A;
+  color: var(--night);
 }
 .dive-planned p {
-  color: #525D64;
+  color: var(--slate-600);
 }
 .dive-planned .dive-status {
-  color: #A63108;
+  color: var(--rust-700);
 }
 .dive-modes {
   margin-top: 35px;
   padding: 20px 28px;
-  background: #F2F6F8;
-  color: #10171A;
-  border: 1px solid #B4BEC4;
+  background: var(--mist);
+  color: var(--night);
+  border: 1px solid var(--slate-300);
   border-left: 4px solid #D4501E;
   border-radius: 6px;
 }
 .dive-modes h3 {
-  color: #10171A;
+  color: var(--night);
 }
 .dive-modes p {
   font-size: 13px;
   line-height: 1.7;
   max-width: 980px;
-  color: #525D64;
+  color: var(--slate-600);
 }
 .dive-category:focus-visible,
 .dive-tabs a:focus-visible,
 .dive-actions a:focus-visible {
-  outline: 3px solid #A63108;
+  outline: 3px solid var(--rust-700);
   outline-offset: 3px;
 }
 .dive-region {
   grid-column: 1 / -1;
-  border: 1px solid #72B273;
+  border: 1px solid var(--forest-400);
   border-radius: 12px;
   overflow: hidden;
   background: #E8EFF1;
@@ -403,24 +404,24 @@
 .dive-region > .dive-card {
   border: 0;
   border-radius: 0;
-  background: #DCEBDD;
+  background: var(--forest-100);
 }
 .dive-region-children {
   padding: 20px;
 }
 .dive-region-children > h4 {
   margin: 0 0 18px;
-  color: #244D26;
+  color: var(--forest-800);
   font-size: 14px;
 }
 .dive-region-children .dive-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .dive-region .dive-region {
-  background: #E3E8EB;
+  background: var(--slate-100);
 }
 .region-story-links {
-  border-top: 1px solid #B4BEC4;
+  border-top: 1px solid var(--slate-300);
   padding-top: 14px;
   margin-top: 18px;
 }
@@ -431,7 +432,7 @@
   display: block;
   padding: 5px 0;
   font-size: 12px;
-  color: #244D26;
+  color: var(--forest-800);
 }
 .region-story-links summary {
   font-size: 12px;
@@ -440,8 +441,8 @@
 @media (min-width: 601px) {
   .dive-category[href="#dives/origin-stories"] {
     grid-column: 1 / -1;
-    background: #DCEBDD;
-    border-color: #3B783D;
+    background: var(--forest-100);
+    border-color: var(--forest-600);
   }
 }
 @media (max-width: 1050px) {

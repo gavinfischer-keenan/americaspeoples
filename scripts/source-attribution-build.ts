@@ -173,8 +173,12 @@ export async function loadAttributionInputs(): Promise<AttributionInputs> {
     }
   };
   await walk('data');
+  // The paleoclimate download cache is committed so attributions are reproducible
+  // on any checkout; refuse to build a silently smaller credits file without it.
+  if (!manifests.some(m => m.file.startsWith('data/physical-sources/paleo/')))
+    throw Error('Missing data/physical-sources/paleo/: attribution output would omit paleoclimate source listings. Restore it with scripts/restore-paleo-cache.py.');
   manifests.push({file:'src/physical-reference.ts',data:physicalSources.map(source => ({...source,referenceOnly:['nadi1','gergis2009','ocean','enso-mechanism'].includes(source.id)})),reused:true});
-  for (const file of ['THIRD_PARTY.md','LICENSE.md','README.md','DEPLOYMENT.md']) manifests.push({file,data:await readFile(file,'utf8'),reused:false});
+  for (const file of ['THIRD_PARTY.md','LICENSE.md','README.md','CHANGELOG.md','DEPLOYMENT.md']) manifests.push({file,data:await readFile(file,'utf8'),reused:false});
   const materials = [{url:'https://www.geonames.org/export/',title:'GeoNames gazetteer country extracts',authors:'GeoNames',license:'CC BY 4.0',licenseUrl:'https://creativecommons.org/licenses/by/4.0/',note:'Selected modern reference coordinates from public country dumps, rounded for public display; feature IDs and source URLs remain in the relevant records. Historical claims are independently sourced. GeoNames data retains CC BY 4.0; the atlas’s noncommercial restriction does not replace it.'}];
   const world=await readWorldGuides();
   return {records:[...dataset.records,...normalizeEurope(europe)],pages:[...pages.pages,...world.map(g=>({id:g.id,sources:g.sources}))],enrichment,media,manifests,materials,writing:await readWritingExamples(),europeSources:europe.sources,europeBoundaries,worldMedia};

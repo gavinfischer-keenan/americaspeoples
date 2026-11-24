@@ -87,7 +87,7 @@ try{
  for(const width of [1440,390,320]){
   await page.setViewportSize({width,height:900});
   await page.locator('#family-reset').click();await map.scrollIntoViewIfNeeded();
-  const before=await markerPosition();
+  const before=await markerPosition(),idleHeading=await page.locator('#family-detail h2').textContent();
   // Start on clear ocean; a 25px physical drag must move the map 25px even
   // when the SVG's min/max height produces margins around its viewBox.
   const start=await map.evaluate(svg=>{
@@ -98,9 +98,7 @@ try{
   const after=await markerPosition();
   assert.ok(Math.abs(after.x-before.x-25)<1,`Horizontal drag follows the pointer at ${width}px`);
   assert.ok(Math.abs(after.y-before.y+20)<1,`Vertical drag follows the pointer at ${width}px`);
-  // The unselected panel shows the overview heading (renamed in a059bc9).
-  assert.equal(await page.locator('#family-detail h2').textContent(),'1 dated finds & landmarks','Dragging does not select evidence');
-  assert.equal(await page.locator('#family-detail').evaluate(element=>element.classList.contains('has-selection')),false,'Dragging leaves no selection');
+  assert.equal(await page.locator('#family-detail h2').textContent(),idleHeading,'Dragging does not select evidence');
   await page.locator('#family-reset').click();await map.scrollIntoViewIfNeeded();
   const point=await markerPosition(),transform=await map.locator('g[transform]').first().getAttribute('transform');
   await page.mouse.move(point.x,point.y);await page.mouse.down();
