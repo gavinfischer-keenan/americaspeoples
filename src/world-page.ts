@@ -42,6 +42,7 @@ import {
 } from "./world-model";
 import { isPacificPoint } from "./region-partition";
 import { timelinePosition, timelineYear } from "./timeline";
+import { PlaybackController } from "./playback-controller";
 import "./world-page.css";
 
 async function json(url: string) {
@@ -361,10 +362,8 @@ export function mountWorldPlayer(
     };
   if (state.ice === undefined) state.ice = true;
   saved.set(saveKey, state);
-  let playing = false,
-    rate = 1,
-    timer: ReturnType<typeof setInterval> | undefined,
-    disposed = false,
+  let disposed = false,
+    playing = false,
     currentLand = land,
     drag: { x: number; y: number; sx: number; sy: number } | undefined,
     moved = false;
@@ -421,7 +420,7 @@ export function mountWorldPlayer(
             ? `<option value="">Choose a period…</option><option value="${first}">Earliest mapped evidence</option><option value="-1000000">Early &amp; Middle Pleistocene</option><option value="-150000">Neanderthal hunting &amp; hearths</option><option value="-40000">Upper Paleolithic art &amp; Aurignacian</option><option value="-15000">Magdalenian &amp; Star Carr Mesolithic</option><option value="-5500">Aegean, Cardial &amp; LBK farmers</option><option value="-2200">Megaliths, Steppe &amp; Minoan–Mycenaean</option><option value="-500">Classical Athens, Etruscans &amp; Celts</option><option value="100">Pompeii, Imperial Rome &amp; Danube Limes</option><option value="900">Ravenna, Al-Andalus, Novgorod &amp; Rus’</option><option value="1600">Florence, Venice, Seville &amp; Amsterdam</option><option value="${last}">1900 CE endpoint</option>`
             : `<option value="">Choose a period…</option><option value="${first}">Earliest mapped evidence</option><option value="-2800000">Early Homo</option><option value="-350000">Many human lineages</option><option value="-70000">Later dispersals</option><option value="-12000">After the Ice Age</option><option value="-7000">Farmers and population change</option><option value="1900">1900 endpoint</option>`;
 
-  host.innerHTML = `<article class="family-page"><header class="family-heading"><div><p class="world-kicker">${kicker}</p><h1>${esc(title)}</h1></div><nav class="subhead-links" aria-label="Regional history">${scope === "europe" ? '<a href="#atlas/europe">Europe: detailed history</a>' : scope === "pacific" ? '<a href="#atlas/pacific">Australia &amp; Pacific: full interactive map</a>' : ""}<a href="sites/world-human-family.html">Branching human family guide ↗</a></nav></header><div class="family-map-navigation"></div><div class="family-layout"><aside class="family-reader" aria-label="Evidence and filters"><div class="family-filter"><label>Lineage<select id="family-taxon"><option value="all">All human-family branches</option>${taxa.map((t) => `<option value="${t.id}"${state.taxon === t.id ? " selected" : ""}>${esc(t.name)}</option>`).join("")}</select></label><label>Jump to a chapter<select id="family-era">${eraOptions}</select></label><label class="family-ice-toggle"><input type="checkbox" id="family-ice"${state.ice !== false ? " checked" : ""}> Quaternary ice sheets (reconstructed)</label></div><p class="family-scope">${esc(scopeLead)}</p><details class="family-reading"><summary>How to read this map</summary><p>Bright points mark evidence whose dating range contains the map year. Fainter points are earlier finds shown in context. Dashed lines show schematic dispersal models; pink dotted lines show admixture evidence.</p></details><section id="family-detail" aria-live="polite"></section><details class="family-now-section" open><summary>What is here at this time</summary><section id="family-happening-now" class="family-happening-now" aria-live="polite"></section></details><label class="family-search-label">Find a site or evidence<input id="family-search" type="search" placeholder="Name, place or technology" value="${esc(state.query ?? "")}"><small>Search every date in this map. Selecting a result opens its dated evidence.</small></label><details class="family-evidence-group" open><summary class="family-list-heading">Evidence in this view</summary><div id="family-evidence-list"></div></details><details class="family-waves-group" open><summary>Connections &amp; territories at this date</summary><div id="family-wave-list"></div></details><details class="family-guides"><summary>Regional guides &amp; deep dives</summary><div id="family-guide-list"></div></details></aside><div class="family-map-column"><div class="family-map-stage"><svg id="family-map" viewBox="0 0 1000 620" role="group" aria-label="Human-family evidence map"></svg><div id="family-map-banner" class="family-map-banner" aria-live="polite"><span class="family-banner-meta">${stats.records} evidence anchors · ${stats.references} references</span><span class="family-banner-year"></span><span class="family-banner-text"></span></div><div class="family-map-controls"><button id="family-zoom-in" aria-label="Zoom in">+</button><button id="family-zoom-out" aria-label="Zoom out">−</button><button id="family-reset">Reset map</button></div><details class="map-key-disclosure family-map-key"><summary>Read the map</summary><div class="family-legend"><span><i class="family-dot"></i>Dated evidence</span><span><i class="family-dot earlier"></i>Earlier evidence</span><span>Dashed: dispersal model</span><span class="family-admixture">Dotted: admixture evidence</span><span>Shading: dated territorial reconstruction</span><span class="family-credit-line">Shaded relief: Natural Earth II</span></div></details></div></div></div><footer class="family-timeline"><div class="family-transport"><button id="family-play">Play</button><button id="family-back" aria-label="Previous evidence change">◀</button><button id="family-next" aria-label="Next evidence change">▶</button><label>Pace<select id="family-rate" aria-label="Playback pace"><option value="1">Steady</option><option value="2">2×</option><option value="4">4×</option></select></label>${study ? "" : `<label>Jump to<select id="family-jump" aria-label="Jump to period">${eraOptions}</select></label>`}</div><label class="family-slider-label">Map year <output id="family-year"></output><input id="family-slider" type="range" min="0" max="10000" step="1" aria-label="Human-family map year"><div class="family-time-ends"><span>${deepTimeLabel(first)}</span><span>${earlyAfrica ? "15,000 BCE" : study ? deepTimeLabel(last) : "1900 CE"}</span></div></label><form id="family-date-form"><label>Year<input id="family-date" inputmode="numeric" aria-label="Map year"></label><select id="family-era-input" aria-label="Map year era"><option>CE</option><option>BCE</option></select><button type="submit">Go</button><span id="family-date-error" role="status"></span></form><p class="family-playback-note" id="family-date-note">Click any point on the map or drag the timeline to inspect dated finds.</p></footer></article>`;
+  host.innerHTML = `<article class="family-page"><header class="family-heading"><div><p class="world-kicker">${kicker}</p><h1>${esc(title)}</h1></div><nav class="subhead-links" aria-label="Regional history">${scope === "europe" ? '<a href="#atlas/europe">Europe: detailed history</a>' : scope === "pacific" ? '<a href="#atlas/pacific">Australia &amp; Pacific: full interactive map</a>' : ""}<a href="sites/world-human-family.html">Branching human family guide ↗</a></nav></header><div class="family-map-navigation"></div><div class="family-layout"><aside class="family-reader" aria-label="Evidence and filters"><div class="family-filter"><label>Lineage<select id="family-taxon"><option value="all">All human-family branches</option>${taxa.map((t) => `<option value="${t.id}"${state.taxon === t.id ? " selected" : ""}>${esc(t.name)}</option>`).join("")}</select></label><label>Jump to a chapter<select id="family-era">${eraOptions}</select></label><label class="family-ice-toggle"><input type="checkbox" id="family-ice"${state.ice !== false ? " checked" : ""}> Quaternary ice sheets (reconstructed)</label></div><p class="family-scope">${esc(scopeLead)}</p><details class="family-reading"><summary>How to read this map</summary><p>Bright points mark evidence whose dating range contains the map year. Fainter points are earlier finds shown in context. Dashed lines show schematic dispersal models; pink dotted lines show admixture evidence.</p></details><section id="family-detail" aria-live="polite"></section><details class="family-now-section" open><summary>What is here at this time</summary><section id="family-happening-now" class="family-happening-now" aria-live="polite"></section></details><label class="family-search-label">Find a site or evidence<input id="family-search" type="search" placeholder="Name, place or technology" value="${esc(state.query ?? "")}"><small>Search every date in this map. Selecting a result opens its dated evidence.</small></label><details class="family-evidence-group" open><summary class="family-list-heading">Evidence in this view</summary><div id="family-evidence-list"></div></details><details class="family-waves-group" open><summary>Connections &amp; territories at this date</summary><div id="family-wave-list"></div></details><details class="family-guides"><summary>Regional guides &amp; deep dives</summary><div id="family-guide-list"></div></details></aside><div class="family-map-column"><div class="family-map-stage"><svg id="family-map" viewBox="0 0 1000 620" role="group" aria-label="Human-family evidence map"></svg><div id="family-map-banner" class="family-map-banner" aria-live="polite"><span class="family-banner-meta">${stats.records} evidence anchors · ${stats.references} references</span><span class="family-banner-year"></span><span class="family-banner-text"></span></div><div class="family-map-controls"><button id="family-zoom-in" aria-label="Zoom in">+</button><button id="family-zoom-out" aria-label="Zoom out">−</button><button id="family-reset">Reset map</button></div><details class="map-key-disclosure family-map-key"><summary>Read the map</summary><div class="family-legend"><span><i class="family-dot"></i>Dated evidence</span><span><i class="family-dot earlier"></i>Earlier evidence</span><span>Dashed: dispersal model</span><span class="family-admixture">Dotted: admixture evidence</span><span>Shading: dated territorial reconstruction</span><span class="family-credit-line">Shaded relief: Natural Earth II</span></div></details></div></div></div><footer class="family-timeline"><div class="family-transport"><button id="family-play" aria-label="Play">▶ Play</button><button id="family-back" aria-label="Previous evidence change">◀</button><button id="family-next" aria-label="Next evidence change">▶</button><label>Pace<select id="family-rate" aria-label="Playback pace"><option value="1">Steady</option><option value="2">2×</option><option value="4">4×</option></select></label>${study ? "" : `<label>Jump to<select id="family-jump" aria-label="Jump to period">${eraOptions}</select></label>`}</div><label class="family-slider-label">Map year <output id="family-year"></output><input id="family-slider" type="range" min="0" max="10000" step="1" aria-label="Human-family map year"><div class="family-time-ends"><span>${deepTimeLabel(first)}</span><span>${earlyAfrica ? "15,000 BCE" : study ? deepTimeLabel(last) : "1900 CE"}</span></div></label><form id="family-date-form"><label>Year<input id="family-date" inputmode="numeric" aria-label="Map year"></label><select id="family-era-input" aria-label="Map year era"><option>CE</option><option>BCE</option></select><button type="submit">Go</button><span id="family-date-error" role="status"></span></form><p class="family-playback-note" id="family-date-note">Click any point on the map or drag the timeline to inspect dated finds.</p></footer></article>`;
   if (study) {
     host.querySelector(".family-heading nav")!.innerHTML =
       `<a href="#dives">More deep dives</a><a href="sites/${study.guideId}.html">Read the full deep dive ↗</a>`;
@@ -672,7 +671,7 @@ export function mountWorldPlayer(
   }
   function draw() {
     if (disposed) return;
-    host.querySelector(".family-page")?.classList.toggle("is-playing", playing);
+
     const focusedItem = (document.activeElement as HTMLElement | null)?.dataset
       ?.worldItem;
     const current = worldAtYear(data, state.year, scope, state.taxon);
@@ -885,12 +884,31 @@ export function mountWorldPlayer(
     pause();
     draw();
   };
+  // One dated change per beat: 2.2 s at normal pace, never faster than 450 ms
+  // of wall time. Steps arrive already multiplied by the pace (playback.rate).
+  let beat = 0;
+  const playback = new PlaybackController({
+    button: host.querySelector<HTMLElement>("#family-play")!,
+    container: host.querySelector(".family-page"),
+    beforePlay: () => {
+      navigation.closeMenus();
+      if (state.year >= last) setYear(first);
+      beat = 0;
+    },
+    onAdvance: (stepMs) => {
+      beat += stepMs;
+      if (beat >= Math.max(450 * playback.rate, 2200)) {
+        beat = 0;
+        step(1);
+      }
+    },
+    onChange: (now) => {
+      playing = now;
+      draw();
+    },
+  });
   function pause() {
-    playing = false;
-    if (timer) clearInterval(timer);
-    timer = undefined;
-    host.querySelector("#family-play")!.textContent = "Play";
-    host.querySelector(".family-page")?.classList.remove("is-playing");
+    playback.pause();
   }
   function setYear(y: number) {
     state.year = Math.max(first, Math.min(last, y));
@@ -928,25 +946,9 @@ export function mountWorldPlayer(
     }
     setYear(next);
   }
-  host.querySelector<HTMLButtonElement>("#family-play")!.onclick = () => {
-    if (playing) {
-      pause();
-      draw();
-      return;
-    }
-    navigation.closeMenus();
-    if (state.year >= last) setYear(first);
-    playing = true;
-    host.querySelector("#family-play")!.textContent = "Pause";
-    draw();
-    timer = setInterval(() => step(1), Math.max(450, Math.round(2200 / rate)));
-  };
+  host.querySelector<HTMLButtonElement>("#family-play")!.onclick = () => playback.toggle();
   host.querySelector<HTMLSelectElement>("#family-rate")?.addEventListener("change", (e) => {
-    rate = Number((e.target as HTMLSelectElement).value) || 1;
-    if (playing && timer) {
-      clearInterval(timer);
-      timer = setInterval(() => step(1), Math.max(450, Math.round(2200 / rate)));
-    }
+    playback.rate = Number((e.target as HTMLSelectElement).value) || 1;
   });
   const jumpSelect = host.querySelector<HTMLSelectElement>("#family-jump");
   if (jumpSelect)
@@ -1110,7 +1112,7 @@ export function mountWorldPlayer(
   }
   return () => {
     disposed = true;
-    pause();
+    playback.dispose();
     stopDetailedLand();
     navigation.dispose();
     host.removeEventListener("click", activate);

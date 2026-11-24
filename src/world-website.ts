@@ -7,8 +7,6 @@ const app='https://americaspeoples.11mosswood.us';
 const count=(value:number)=>value.toLocaleString('en-US');
 
 // Retained from the v0.31.0 Americas introduction and displayed on the main entry page.
-export const consensusAcknowledgement=`<section class="provenance-consensus" aria-label="Consensus research"><a href="https://consensus.app/" target="_blank" rel="noopener">Consensus ↗</a> · <strong>${consensusResearch.deepRuns}+</strong> Deep research runs · <strong>${consensusResearch.citedPaperMatches}</strong> cited papers. <a href="${app}/sites/sources-attributions.html#consensus-discovery">Research credits</a></section>`;
-
 const pageStyles=`<style>header,main,footer{width:min(1440px,calc(100% - 40px));margin:auto}
 @media(min-width:701px) and (max-width:1740px){
  body:has(.layer-nav)>header,body:has(.layer-nav)>main,body:has(.layer-nav)>footer{

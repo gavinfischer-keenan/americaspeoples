@@ -104,10 +104,6 @@ export type EpochId = "deep" | "ice-ages" | "holocene" | "common-era";
 let seriesPromise: Promise<PaleoclimateSeries | null> | undefined;
 let cachedSeries: PaleoclimateSeries | null = null;
 
-export function currentPaleoclimateSeries(): PaleoclimateSeries | null {
-  return cachedSeries;
-}
-
 export function loadPaleoclimateSeries(): Promise<PaleoclimateSeries | null> {
   if (cachedSeries) return Promise.resolve(cachedSeries);
   return (seriesPromise ??= fetch("paleoclimate-series.json")

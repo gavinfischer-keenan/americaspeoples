@@ -1,9 +1,9 @@
-import {MAX_WORKBOOK_BYTES} from './bulk-schema';
 import {sharedContextHTML} from './topic-context';
 import { recordsForView, retainCurrentSelection, canSelect, type AtlasMode } from "./atlas-view";
 import { effectiveClimateHidden } from "./physical-rules";
-import {deepDiveIndexHTML,deepDives,diveGroupedHTML} from './deep-dives';
+import {deepDiveIndexHTML,mountDiveFilters} from './deep-dives';
 import './deep-dives.css';
+import { PlaybackController } from "./playback-controller";
 import "./styles.css";
 import "./atlas-ui.css";
 import './atlas-context.css';
@@ -34,13 +34,12 @@ import { sampleStory, sceneStartMs, storyDurationMs, storyElapsedAtYear } from "
 import { exploreRecords, exploreCategory, exploreCategories, type ExploreCategory } from "./explore";
 import { adaptWorldDataForExplore, adaptEuropeDataForExplore, exploreSourceMeta, filterByDateRange } from "./explore-world";
 import { version as appVersion } from "../package.json";
-import { dataset, fullRecord, completeDataset } from "./client-data";
+import { dataset, fullRecord } from "./client-data";
 import land from "../data/land.geojson";
 import type {
   DisplayRecord,
   FullDisplayRecord,
   Proposal,
-  SharePackage,
 } from "./model";
 import {
   formatYear,
@@ -74,21 +73,14 @@ import {
   iceLoadState,
 } from "./physical";
 import { filterMapRecords } from "./map-filters";
-import { esc, $, downloadJSON } from "./dom";
-import { reviewHTML, recordHref, comparisonHTML } from "./review";
+import { esc, $ } from "./dom";
+import { reviewHTML, recordHref } from "./review";
 import { mountEditor, newProposal } from "./editor";
-import {
-  makePackage,
-  parsePackage,
-  inspectImport,
-  mergeImport,
-  MAX_PACKAGE_BYTES,
-  validateCollection,
-} from "./proposals";
+import { validateCollection } from "./proposals";
 import { RecordView } from "./record-view";
 import { PlaybackIndex } from "./playback-index";
-import { importWorkbook } from "./xlsx-import";
-import { encodeLocalCollection, decodeLocalCollection } from "./local-storage";
+import { suggestions, loadSuggestions, saveSuggestions, watchOtherTabs } from "./suggestions-store";
+import { suggestionPages } from "./pages/suggestions";
 import { contextHTML } from "./context";
 
 const timelineRecords = dataset.records.filter(r=>!topicOnlyIds.has(r.id)&&recordInTimeline(r));
@@ -110,10 +102,6 @@ let timelineScale: TimelineScale = "log";
 let rangeStart = minYearFor(),
   rangeEnd = END_YEAR;
 const SLIDER_STEPS = 1000000;
-let proposals: Proposal[] = [],
-  pending: SharePackage | null = null,
-  storageAvailable = true;
-let proposalsRevision = 0;
 const recordView = new RecordView(dataset.records);
 let preview = false,
   legendSearch = "";
@@ -190,38 +178,11 @@ const mapRows = () => {
     (r) => !hiddenClimate.has(climateCategory(r) ?? "") && (!r.history || !hiddenHistory.has(r.history.kind)),
   );
 };
-const storeKey = "americas-peoples-proposals-v1";
-const unreadableBackupKey = `${storeKey}-unreadable-backup`;
-let unreadableCollectionKept = false;
-try {
-  localStorage.setItem("ap-storage-check", "1");
-  localStorage.removeItem("ap-storage-check");
-} catch {
-  storageAvailable = false;
-}
-if (storageAvailable) {
-  try {
-    const saved = localStorage.getItem(storeKey);
-    if (saved) proposals = parsePackage(decodeLocalCollection(saved)).proposals;
-  } catch {
-    // A collection that no longer validates (for example after a release
-    // tightens record rules) must never be silently overwritten by the next
-    // save. Keep the original bytes under a separate key before anything else
-    // writes to storeKey.
-    try {
-      const saved = localStorage.getItem(storeKey);
-      if (saved && !localStorage.getItem(unreadableBackupKey))
-        localStorage.setItem(unreadableBackupKey, saved);
-      unreadableCollectionKept = true;
-    } catch {
-      storageAvailable = false;
-    }
-  }
-}
+loadSuggestions();
 const cultures = () =>
-  recordView.cultures(proposals, preview, proposalsRevision);
+  recordView.cultures(suggestions.proposals, preview, suggestions.revision);
 const rows = () =>
-  recordView.get(proposals, preview, hiddenCultures, proposalsRevision);
+  recordView.get(suggestions.proposals, preview, hiddenCultures, suggestions.revision);
 let playbackKey = "";
 let playback: PlaybackIndex;
 function playbackIndex() {
@@ -229,7 +190,7 @@ function playbackIndex() {
     atlasMode,
     activeAtlasRegion,
     storyId,
-    proposalsRevision,
+    suggestions.revision,
     preview,
     showModeled,
     showUncertainHazards,
@@ -250,8 +211,9 @@ function playbackIndex() {
   return playback;
 }
 const app = $("#app");
-app.innerHTML = appShell(proposals.length, END_YEAR);
+app.innerHTML = appShell(suggestions.proposals.length, END_YEAR);
 const main = $("#main");
+const { proposalsPage, importPage, exportProposals } = suggestionPages({ main, announce: (m) => announce(m), save: () => saveLocal() });
 const map = new MapView(
   land,
   (items) => {
@@ -411,23 +373,24 @@ function announce(message: string) {
   setTimeout(() => $("#toast").classList.remove("show"), 4500);
 }
 function saveLocal() {
-  proposalsRevision++;
-  try {
-    const text = JSON.stringify(makePackage(proposals));
-    parsePackage(text);
-    localStorage.setItem(storeKey, encodeLocalCollection(text));
-  } catch {
-    storageAvailable = false;
+  if (!saveSuggestions())
     announce(
       "Browser storage unavailable or collection too large. Download selected suggestions to keep them.",
     );
-  }
-  $("#proposal-count").textContent = String(proposals.length);
+  $("#proposal-count").textContent = String(suggestions.proposals.length);
 }
+// Shared play/pause state, labels and hidden-tab pause. The movie keeps its own
+// always-on frame loop (tick) because voyages, guided stories and the shared
+// movie clock each advance at their own rate and the map date syncs while paused.
+const transport = new PlaybackController({
+  button: $("#play"),
+  externalFrames: true,
+  // A hidden tab pauses the transport directly; finish the movie's own stop.
+  onChange: (now) => { if (!now && playing) stop(); },
+});
 function stop() {
   playing = false;
-  $("#play").textContent = "▶ Play";
-  $("#play").setAttribute("aria-label", "Play");
+  transport.pause();
   if (mountedMap) {
     map.setInteraction({ mode: atlasMode, playing: false, onPause: stop });
     document.body.classList.remove("movie-playing");
@@ -733,12 +696,11 @@ $("#play").addEventListener("click", () => {
   else if (!voyage && !isGuidedStory() && movieClock >= MOVIE_END_DATE) setYear(minYearFor());
   mapNavigation?.closeMenus();
   playing = true;
+  transport.play();
   selected = [];
   renderMapData();
   holdUntil = 0;
   lastTick = performance.now();
-  $("#play").textContent = "Ⅱ Pause";
-  $("#play").setAttribute("aria-label", "Pause");
   if(isGuidedStory())updateStoryProgress();
 });
 $("#restart").addEventListener("click", () => {const v=selectedVoyage();if(v){stop();voyageClock=scopedVoyageDate(v,0);setYear(Math.floor(voyageClock),false);syncVoyage();}else if(isGuidedStory())seekScene(0);else setYear(minYearFor());});
@@ -1223,117 +1185,6 @@ function reviewPage(r: FullDisplayRecord, p?: Proposal, index?: number, shared=f
   });
 }
 let editorPending: Proposal | null = null;
-function exportProposals(list: Proposal[]) {
-  try {
-    if (!list.length) {
-      announce("Select at least one suggestion to share.");
-      return;
-    }
-    const pack = makePackage(list);
-    parsePackage(JSON.stringify(pack));
-    downloadJSON("americas-peoples-suggestions.json", pack);
-    announce(
-      "File downloaded. Send it using your preferred email or file-sharing service.",
-    );
-  } catch (error) {
-    announce((error as Error).message);
-  }
-}
-function bindDeferredComparisons(container: Element, items: readonly Proposal[]) {
-  container.addEventListener('toggle', event => {
-    const details = event.target;
-    if (!(details instanceof HTMLDetailsElement) || !details.open || !details.hasAttribute('data-comparison-pending')) return;
-    const index = Number(details.closest<HTMLElement>('[data-proposal-index]')!.dataset.proposalIndex);
-    const template = document.createElement('template');
-    template.innerHTML = comparisonHTML(items[index]);
-    // Keep the user's summary and focus; add the same body as an individual review.
-    details.append(...Array.from(template.content.firstElementChild!.childNodes).slice(1));
-    details.removeAttribute('data-comparison-pending');
-  }, true);
-}
-function proposalsPage() {
-  main.innerHTML = `<article class="proposals-page"><div class="page-heading"><div><div class="eyebrow">A LOCAL RESEARCH WORKSPACE</div><h2>Your suggestions</h2><p class="lead">Add evidence. Propose a correction. Share the supporting research.</p></div><a class="button primary" href="#new">+ Suggest new evidence</a></div><p id="storage-status" class="notice">${storageAvailable ? "Browser storage is available as a convenience. Download your suggestions for a portable backup." : "Browser storage is unavailable. Download your suggestions before closing this page."}${unreadableCollectionKept ? " An earlier saved collection could not be read by this version; it has been kept unchanged in browser storage and was not overwritten." : ""}</p><div class="actions"><button id="export-selected">Send to others</button><button id="select-all">Select all</button><label class="button file-button">Import suggestions<input type="file" id="import-file" aria-label="Import suggestions" accept=".json,.xlsx,application/json,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"></label></div><p class="muted">Sharing downloads a file; nothing is uploaded or emailed. Imported suggestions remain unreviewed. Complete suggestions can be previewed on the map.</p><div class="actions"><a href="docs/bulk-import-guide.html">Bulk import guide</a><a href="templates/americas-peoples-import.xlsx" download>Download spreadsheet template</a><a href="templates/americas-peoples-researched-import.xlsx" download>Download researched batch</a></div><p class="muted">Bulk entry: use the XLSX template for records, claims, references and source mappings. Excel, LibreOffice, or a downloaded Google Sheets workbook can be used.</p><div id="import-error" role="alert"></div><div class="proposal-list">${proposals.length ? proposals.map((p, i) => `<section class="proposal-card" data-proposal-card data-proposal-index="${i}"><label class="check"><input type="checkbox" data-share="${i}" aria-label="Select proposal ${i + 1}"><span class="tag proposal-tag">${esc(p.state)} · ${esc(p.kind)} · v${p.version}</span></label><h3>${esc(p.record.title || "Untitled draft")}</h3><p>${esc(p.rationale || "No rationale yet.")}</p><div class="actions"><a href="#proposal/${i}">Detailed review</a><a href="#edit/${i}">Edit suggestion</a></div>${comparisonHTML(p, true)}</section>`).join("") : '<div class="empty large"><h3>A place for the next finding.</h3><p>Start a new evidence row or open a reviewed record and choose Suggest correction.</p></div>'}</div></article>`;
-  bindDeferredComparisons(main.querySelector('.proposals-page')!, proposals);
-  $("#export-selected").addEventListener("click", () =>
-    exportProposals(
-      [...main.querySelectorAll<HTMLInputElement>("[data-share]:checked")].map(
-        (el) => proposals[Number(el.dataset.share)],
-      ),
-    ),
-  );
-  $("#select-all").addEventListener("click", () =>
-    main
-      .querySelectorAll<HTMLInputElement>("[data-share]")
-      .forEach((el) => (el.checked = true)),
-  );
-  $<HTMLInputElement>("#import-file").addEventListener("change", async (e) => {
-    const control = e.target as HTMLInputElement;
-    const file = control.files?.[0];
-    if (!file) return;
-    control.disabled = true;
-    $("#import-error").textContent = "Reading and validating the file…";
-    try {
-      const full = await completeDataset();
-      if (file.name.toLowerCase().endsWith(".xlsx")) {
-        if (file.size > MAX_WORKBOOK_BYTES)
-          throw new Error(`Workbook exceeds the ${MAX_WORKBOOK_BYTES / 1_000_000} MB file limit.`);
-        pending = await importWorkbook(await file.arrayBuffer(), full.records);
-      } else if (file.name.toLowerCase().endsWith(".json")) {
-        if (file.size > MAX_PACKAGE_BYTES)
-          throw new Error(`Package exceeds the ${MAX_PACKAGE_BYTES / 1_000_000} MB limit.`);
-        pending = parsePackage(await file.text());
-      } else
-        throw new Error(
-          "Choose a .xlsx template workbook or a native .json proposal file.",
-        );
-      location.hash = "#import";
-    } catch (error) {
-      $("#import-error").textContent = (error as Error).message;
-    } finally {
-      control.disabled = false;
-      control.value = "";
-    }
-  });
-}
-async function importPage() {
-  if (!pending) {
-    location.hash = "#proposals";
-    return;
-  }
-  const requested = pending;
-  const full = await completeDataset();
-  if (location.hash !== "#import" || pending !== requested) return;
-  const report = inspectImport(pending.proposals, proposals, full.records);
-  main.innerHTML = `<article class="proposals-page"><a href="#proposals" class="back-link">← Your suggestions</a><h2>Review import</h2><p class="lead">${report.length} suggestions. Nothing has been added yet.</p><p>Duplicate copies are skipped. Conflicting copies are retained separately for your review. No bundled evidence will change.</p>${report.map((item, index) => `<section class="proposal-card" data-proposal-index="${index}"><span class="tag">${item.status}</span><h3>${esc(item.proposal.record.title || "Untitled draft")}</h3><p>${esc(item.reason)}</p><p>${esc(item.proposal.rationale)}</p>${comparisonHTML(item.proposal, true)}<details data-incoming-index="${index}"><summary>Full incoming record and sources</summary><pre></pre></details></section>`).join("")}<div class="actions"><button id="confirm-import" class="primary">Add to local collection</button><a href="#proposals">Cancel</a></div></article>`;
-  bindDeferredComparisons(main.querySelector('.proposals-page')!, report.map(item => item.proposal));
-  // Keep the full batch reviewable without eagerly creating every source JSON block.
-  // Capture toggle on this page only: the report and handler leave with its DOM.
-  main.querySelector('.proposals-page')!.addEventListener('toggle', event => {
-    const details = event.target;
-    if (!(details instanceof HTMLDetailsElement) || !details.open || details.dataset.incomingIndex === undefined || details.dataset.loaded) return;
-    const item = report[Number(details.dataset.incomingIndex)];
-    details.querySelector('pre')!.textContent = JSON.stringify(item.proposal.record, null, 2);
-    details.dataset.loaded = 'true';
-  }, true);
-  $("#confirm-import").addEventListener("click", () => {
-    try {
-      const next = mergeImport(pending!.proposals, proposals);
-      proposals = next;
-      pending = null;
-      saveLocal();
-      location.hash = "#proposals";
-    } catch (error) {
-      let message = main.querySelector<HTMLElement>("#import-confirm-error");
-      if (!message) {
-        message = document.createElement("p");
-        message.id = "import-confirm-error";
-        message.setAttribute("role", "alert");
-        main.append(message);
-      }
-      message.textContent = (error as Error).message;
-    }
-  });
-}
 function aboutPage() {
   main.innerHTML = aboutPageHTML(dataset, appVersion);
 }
@@ -1358,57 +1209,6 @@ const savedRegionCameras: Partial<Record<'americas' | 'pacific' | 'explore', Map
 const savedRegionSelection: Partial<Record<'americas' | 'pacific' | 'explore', DisplayRecord[]>> = {};
 let reviewTopic:string|undefined;
 let pendingTopicLocation:DisplayRecord|undefined;
-function mountDiveFilters() {
-  let selectedRegion = "all";
-  const searchInput = main.querySelector<HTMLInputElement>("#dive-search");
-  const chips = [...main.querySelectorAll<HTMLButtonElement>("[data-dive-region]")];
-  const resultsHost = main.querySelector<HTMLElement>("#dive-search-results");
-  const defaultListing = main.querySelector<HTMLElement>(".dive-listing-default");
-  if (!searchInput || !resultsHost || !defaultListing) return;
-  const update = () => {
-    const q = searchInput.value.trim().toLowerCase();
-    const words = q ? q.split(/\s+/) : [];
-    const activeFilter = Boolean(q || selectedRegion !== "all");
-    defaultListing.hidden = activeFilter;
-    resultsHost.hidden = !activeFilter;
-    if (!activeFilter) {
-      resultsHost.innerHTML = "";
-      return;
-    }
-    const matches = deepDives.filter((d) => {
-      if (selectedRegion !== "all" && !d.atlasIds.includes(selectedRegion)) return false;
-      const hay = `${d.title} ${d.description} ${d.category} ${d.atlasIds.join(" ")}`.toLowerCase();
-      return words.every((w) => hay.includes(w));
-    });
-    resultsHost.innerHTML =
-      `<p class="dive-count">${matches.length} matching deep dive${matches.length === 1 ? "" : "s"}</p>` +
-      (matches.length
-        ? diveGroupedHTML(matches, selectedRegion !== "all" ? "category" : "region")
-        : '<p class="fine">No deep dives match this filter. Try clearing your search or selecting All regions.</p>');
-    wireJumpButtons();
-  };
-  const wireJumpButtons = () => {
-    for (const btn of main.querySelectorAll<HTMLButtonElement>("[data-dive-jump]")) {
-      btn.onclick = () => {
-        const targetId = btn.dataset.diveJump;
-        if (!targetId) return;
-        const container = resultsHost.hidden ? defaultListing : resultsHost;
-        container
-          .querySelector<HTMLElement>(`.dive-region-group[data-dive-group="${targetId}"]`)
-          ?.scrollIntoView({ behavior: "smooth", block: "start" });
-      };
-    }
-  };
-  wireJumpButtons();
-  searchInput.addEventListener("input", update);
-  for (const chip of chips) {
-    chip.addEventListener("click", () => {
-      selectedRegion = chip.dataset.diveRegion || "all";
-      chips.forEach((c) => c.setAttribute("aria-pressed", String(c === chip)));
-      update();
-    });
-  }
-}
 async function route() {
   const generation = ++routeGeneration;
   const rawHash = location.hash || "#world";
@@ -1590,7 +1390,7 @@ async function route() {
     }
     else if(hash==='#dives'||hash.startsWith('#dives/')){
       main.innerHTML=deepDiveIndexHTML(hash.slice(7),topicOriginRoute);
-      mountDiveFilters();
+      mountDiveFilters(main);
     }
     else if(hash.startsWith('#story/')){
       const requested=decodeURIComponent(hash.slice(7));
@@ -1622,7 +1422,7 @@ async function route() {
     else if (hash === "#about") aboutPage();
     else if (hash === "#sites") {
       main.innerHTML = deepDiveIndexHTML('places',topicOriginRoute);
-      mountDiveFilters();
+      mountDiveFilters(main);
     }
     else if (hash === "#physical" || hash.startsWith("#physical/")) {
       const id = hash.slice(10);
@@ -1650,7 +1450,7 @@ async function route() {
       reviewPage(r,undefined,undefined,hash.startsWith('#context/')&&!topicOnlyIds.has(r.id));
     } else if (hash.startsWith("#proposal/")) {
       const i = Number(hash.slice(10)),
-        p = proposals[i];
+        p = suggestions.proposals[i];
       if (!p) throw new Error("Suggestion not found.");
       reviewPage({ ...p.record, proposalKey: String(i) }, p, i);
     } else if (
@@ -1663,7 +1463,7 @@ async function route() {
         : undefined;
       const p =
         index !== undefined
-          ? proposals[index]
+          ? suggestions.proposals[index]
           : hash === "#compose"
             ? editorPending
             : newProposal();
@@ -1673,13 +1473,13 @@ async function route() {
         p,
         (saved) => {
           try {
-            const next = proposals.slice();
+            const next = suggestions.proposals.slice();
             if (index !== undefined) {
               saved.version = p.version + 1;
               next[index] = saved;
             } else next.push(saved);
             validateCollection(next);
-            proposals = next;
+            suggestions.proposals = next;
             dirty = false;
             saveLocal();
             location.hash = "#proposals";
@@ -1698,19 +1498,12 @@ async function route() {
 }
 window.addEventListener("hashchange", route);
 // Another tab saved suggestions: adopt its collection so this tab's next save
-// does not silently discard that work. Pages that list or edit proposals are
-// re-rendered; an in-progress editor keeps its form until the next navigation.
-window.addEventListener("storage", (event) => {
-  if (event.key !== storeKey || event.newValue == null) return;
-  try {
-    proposals = parsePackage(decodeLocalCollection(event.newValue)).proposals;
-    proposalsRevision++;
-    const count = document.querySelector("#proposal-count");
-    if (count) count.textContent = String(proposals.length);
-    if (/^#(proposals|proposal\/)/.test(location.hash)) void route();
-  } catch {
-    /* Ignore an unreadable collection written by another version. */
-  }
+// does not discard that work. Pages listing proposals re-render; an in-progress
+// editor keeps its form until the next navigation.
+watchOtherTabs(() => {
+  const count = document.querySelector("#proposal-count");
+  if (count) count.textContent = String(suggestions.proposals.length);
+  if (/^#(proposals|proposal\/)/.test(location.hash)) void route();
 });
 bounds(true);
 setYear(year,false);
