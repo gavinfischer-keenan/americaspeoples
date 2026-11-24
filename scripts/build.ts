@@ -164,6 +164,7 @@ await mkdir("dist/templates", { recursive: true });
 await mkdir("dist/docs/research/northern-europe", { recursive: true });
 for (const name of [
   "README.md",
+  "CHANGELOG.md",
   "LICENSE.md",
   "CONTRIBUTING.md",
   "docs/reuse-and-contributing.md",

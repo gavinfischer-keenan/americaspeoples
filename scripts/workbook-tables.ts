@@ -1,4 +1,4 @@
-import { writeFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 import {unzipSync,zipSync} from 'fflate';
 import { dataset } from "../src/published-data";
 import { version as appVersion } from '../package.json';
@@ -149,7 +149,17 @@ for(const [name,rows] of Object.entries(tables)) XLSX.utils.book_append_sheet(wo
 // Share repeated source/review strings before compressing the XML, keeping the
 // full evidence workbook within both existing expanded and compressed limits.
 const workbookBytes=XLSX.write(workbook,{type:"buffer",bookType:"xlsx",compression:true,bookSST:true});
-await writeFile("templates/americas-peoples-researched-import.xlsx", zipSync(unzipSync(workbookBytes),{level:9}));
+// Zip entries carry write timestamps, so rewriting an unchanged workbook churns a
+// ~5 MB binary in git on every build. Keep the existing file when every sheet
+// part is byte-identical.
+const workbookPath="templates/americas-peoples-researched-import.xlsx";
+const parts=unzipSync(workbookBytes);
+const sameParts=(a:Record<string,Uint8Array>,b:Record<string,Uint8Array>)=>{
+  const names=Object.keys(a);
+  return names.length===Object.keys(b).length&&names.every(n=>b[n]&&b[n].length===a[n].length&&b[n].every((v,i)=>v===a[n][i]));
+};
+const existing=await readFile(workbookPath).then(bytes=>unzipSync(bytes),()=>null);
+if(!existing||!sameParts(parts,existing))await writeFile(workbookPath, zipSync(parts,{level:9}));
 console.log(
   Object.fromEntries(Object.entries(tables).map(([k, v]) => [k, v.length - 1])),
 );
