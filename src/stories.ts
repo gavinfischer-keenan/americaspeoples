@@ -5,11 +5,7 @@ import regionalCoverage from '../data/coverage-15-stories.json';
 import northAtlanticStories from '../data/north-atlantic-stories.json';
 import {shieldAleutianLocalStories} from './shield-aleutian-local-stories';
 import {canadaAleutianStories} from './canada-aleutian-stories';
-import {islandChainStories} from './island-chain-stories';
-import {yapMicronesiaStories} from './yap-micronesia-dives';
-import {sixGuideStories} from './six-guide-stories';
-import {comingSoonBStories} from './coming-soon-b-stories';
-import {comingSoonAStories} from './coming-soon-a-stories';
+import {ancestralPuebloAndMajorSiteStories,andesAndMesoamericaCityStories,earthworksAmazoniaAndOceaniaStories,islandSoutheastAsiaStories,micronesiaStories} from './story-content';
 import {earlyContinuityStories} from './early-continuity-stories';
 import type { MapScope } from "./map-projection";
 import { expansionStories } from './expansion-stories';
@@ -45,8 +41,8 @@ const sourceStories: Story[] = [
  ...threeRegionalGapStories,
  ...shieldAleutianLocalStories,
  ...canadaAleutianStories,
- ...islandChainStories,
- ...yapMicronesiaStories,
+ ...islandSoutheastAsiaStories,
+ ...micronesiaStories,
   {
     id: "pacific-arrivals",
     title: "Across the Pacific",
@@ -287,9 +283,9 @@ const sourceStories: Story[] = [
       },
     ],
   },
-  ...sixGuideStories,
+  ...ancestralPuebloAndMajorSiteStories,
   ...expansionStories,
-  ...earlyContinuityStories, ...comingSoonAStories, ...comingSoonBStories,
+  ...earlyContinuityStories, ...andesAndMesoamericaCityStories, ...earthworksAmazoniaAndOceaniaStories,
   northernStory,
 ];
 

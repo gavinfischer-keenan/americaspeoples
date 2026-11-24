@@ -1,4 +1,4 @@
-import {comingSoonBStories} from '../src/coming-soon-b-stories';
+import {earthworksAmazoniaAndOceaniaStories as comingSoonBStories} from '../src/story-content';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {dataset} from '../src/published-data';

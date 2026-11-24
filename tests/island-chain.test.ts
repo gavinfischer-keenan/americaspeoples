@@ -1,4 +1,5 @@
-import {yapMicronesiaTopics} from '../src/yap-micronesia-dives';
+import {raiStoneMoneyTopics} from '../src/story-content';
+const yapMicronesiaTopics=raiStoneMoneyTopics.topics;
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {dataset} from '../src/published-data';
