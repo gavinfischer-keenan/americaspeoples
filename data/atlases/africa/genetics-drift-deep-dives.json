@@ -1,0 +1,752 @@
+{
+  "schemaVersion": 1,
+  "guides": [
+    {
+      "schemaVersion": 1,
+      "id": "world-global-genetic-drift-divergence",
+      "atlasIds": [
+        "americas",
+        "pacific",
+        "africa",
+        "europe",
+        "asia-pacific"
+      ],
+      "category": "subjects",
+      "title": "Global Genetic Drift, Bottlenecks & Continental Divergence: Africa, Australia, Europe & Americas",
+      "description": "Why Out-of-Africa founder bottlenecks, ~45,000 years of Sahul isolation, Europe's 3-wave farm-steppe synthesis, and the Beringian Standstill made continents diverge sharply—and what remained shared.",
+      "intro": "Modern human populations hold remarkably uniform shared biology (~99.9%), yet successive serial bottlenecks, millennia of geographic isolation, and prehistoric mass migrations carved distinctive continental genomic signatures.",
+      "scope": "Serial founder effect, Khoe-San & rainforest African peak diversity, Sahul Australia internal desert drift, European WHG–Anatolian–Yamnaya mergers, Beringian Standstill, and Amazonian Population Y.",
+      "map": {
+        "bounds": [
+          -168,
+          -55,
+          172,
+          72
+        ],
+        "scope": "Global genetic sampling localities and founder-effect bottlenecks across five inhabited continents.",
+        "points": [
+          {
+            "id": "east-africa-origin",
+            "label": "East African Diversity Hub",
+            "coordinates": [
+              36.82,
+              -1.29
+            ],
+            "date": "~195–60 ka",
+            "description": "Baseline peak human heterozygosity prior to the Out-of-Africa serial founder exit.",
+            "sources": [
+              "https://doi.org/10.1073/pnas.0507611102",
+              "https://doi.org/10.1073/pnas.0903341106",
+              "https://doi.org/10.1007/s12045-019-0830-4"
+            ]
+          },
+          {
+            "id": "kalahari-khoesan",
+            "label": "Southern African Khoe-San",
+            "coordinates": [
+              21.5,
+              -23.5
+            ],
+            "date": "~250 ka–present",
+            "description": "Deepest living *Homo sapiens* split and highest population differentiation inside Africa.",
+            "sources": [
+              "https://doi.org/10.1126/science.aay5012",
+              "https://doi.org/10.1038/nature18964",
+              "https://doi.org/10.64898/2026.04.17.719197"
+            ]
+          },
+          {
+            "id": "sea-diversification",
+            "label": "SE Asian Early Y-Radiation",
+            "coordinates": [
+              102.25,
+              2.19
+            ],
+            "date": "~65–45 ka",
+            "description": "Asian branching center sending lineages south into Sahul, northwest into Europe, and northeast toward Beringia.",
+            "sources": [
+              "https://doi.org/10.1007/s00439-020-02204-9",
+              "https://doi.org/10.1186/s13323-015-0030-2",
+              "https://doi.org/10.1093/molbev/msw293"
+            ]
+          },
+          {
+            "id": "sahul-arnhem",
+            "label": "Arnhem Land & Top End (Sahul)",
+            "coordinates": [
+              132.95,
+              -12.5
+            ],
+            "date": "~58–50 ka–present",
+            "description": "Deep non-African split isolated across Australia–New Guinea for ~45,000 years.",
+            "sources": [
+              "https://doi.org/10.1038/nature18299",
+              "https://doi.org/10.1126/science.1211177",
+              "https://doi.org/10.1126/sciadv.ady9493"
+            ]
+          },
+          {
+            "id": "australian-desert",
+            "label": "Australian Western & Central Deserts",
+            "coordinates": [
+              134.0,
+              -24.0
+            ],
+            "date": "50 ka–present",
+            "description": "Arid-interior geographic drift creating sharper genomic divergence inside Australia than between distant Eurasian nations.",
+            "sources": [
+              "https://doi.org/10.1038/s41586-023-06831-w",
+              "https://doi.org/10.1038/nature21416"
+            ]
+          },
+          {
+            "id": "europe-steppe-merge",
+            "label": "European WHG–Anatolian–Yamnaya Triangle",
+            "coordinates": [
+              25.0,
+              46.0
+            ],
+            "date": "~14–4 ka",
+            "description": "Three divergent source groups repeatedly fused into today's stratified European genome.",
+            "sources": [
+              "https://doi.org/10.1038/s41586-023-06865-0",
+              "https://doi.org/10.1016/j.cell.2022.04.008",
+              "https://doi.org/10.1038/s41586-025-09189-3"
+            ]
+          },
+          {
+            "id": "beringia-standstill",
+            "label": "Beringian Standstill & Upward Sun",
+            "coordinates": [
+              -165.0,
+              64.5
+            ],
+            "date": "~23–11.5 ka",
+            "description": "East Asian + ANE fusion followed by glacial isolation trimming New World heterozygosity to Earth's minimum.",
+            "sources": [
+              "https://doi.org/10.1038/nature25173",
+              "https://doi.org/10.1371/journal.pone.0000829",
+              "https://doi.org/10.1016/j.cub.2018.11.029",
+              "https://doi.org/10.1038/s41598-022-08212-1"
+            ]
+          },
+          {
+            "id": "amazonia-popy",
+            "label": "Amazonia & Lagoa Santa (Population Y)",
+            "coordinates": [
+              -61.2,
+              -11.15
+            ],
+            "date": "~13 ka–present",
+            "description": "Rapid hemispheric founder drift plus subtle ~1–2% Australo-Melanesian affinity.",
+            "sources": [
+              "https://doi.org/10.1073/pnas.2025739118",
+              "https://doi.org/10.1038/nature14895",
+              "https://doi.org/10.1126/science.aav2621",
+              "https://doi.org/10.1126/science.adk5081"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "Serial founder bottlenecks and global heterozygosity decay",
+          "paragraphs": [
+            {
+              "text": "Genetic drift operates strongest in small isolated groups: whenever a small band budded eastward out of Africa and later across continents, neutral genetic diversity dropped roughly 0.008–0.015 per thousand kilometers traveled—making sub-Saharan Africans Earth's most diverse humans and South Americans Earth's most bottlenecked.",
+              "sources": [
+                "https://doi.org/10.1073/pnas.0507611102",
+                "https://doi.org/10.1073/pnas.0903341106",
+                "https://doi.org/10.1007/s12045-019-0830-4",
+                "https://doi.org/10.1126/science.aay5012"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Sahul isolation: why Australia diverged so sharply from Eurasia and the Americas",
+          "paragraphs": [
+            {
+              "text": "Descendants of an early non-African wave crossed Wallacea into Sahul ~58–50 ka, separated from East Eurasians tens of millennia before Europe's Holocene migrations or Beringia's Last Glacial Maximum standstill. Across ~45,000 years of minimal outside contact, central deserts drove steep internal drift between Southwest, Northeast, and Tiwi Aboriginal communities.",
+              "sources": [
+                "https://doi.org/10.1038/nature18299",
+                "https://doi.org/10.1126/science.1211177",
+                "https://doi.org/10.1126/sciadv.ady9493",
+                "https://doi.org/10.1038/s41586-023-06831-w",
+                "https://doi.org/10.1038/nature21416"
+              ]
+            },
+            {
+              "text": "Meanwhile, neighboring Papuan highland valleys accumulated extreme valley-to-valley genetic differentiation exceeding major continental regions, amplified by ~4–6% archaic Denisovan DNA largely absent from Europe.",
+              "sources": [
+                "https://doi.org/10.1038/s41586-021-03236-5",
+                "https://doi.org/10.1093/molbev/msab238",
+                "https://doi.org/10.1007/s00439-026-02869-8",
+                "https://doi.org/10.1016/j.cell.2019.02.035"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Europe's three-wave genomic assembly vs. America's Beringian bottleneck",
+          "paragraphs": [
+            {
+              "text": "Unlike Australia's deep uninterrupted regional continuity, ancient DNA from 1,600+ western Eurasians proves Europe was genetically remade twice: Anatolian farmers (~7000–4000 BCE) replaced most Mesolithic hunter-gatherers, followed by Pontic–Caspian Yamnaya steppe herders (~3000 BCE) introducing Ancient North Eurasian ancestry.",
+              "sources": [
+                "https://doi.org/10.1038/s41586-023-06865-0",
+                "https://doi.org/10.1016/j.cell.2022.04.008",
+                "https://doi.org/10.1038/s41586-025-09189-3"
+              ]
+            },
+            {
+              "text": "In the Americas, ~30–40% of that same Ancient North Eurasian (Mal'ta) gene pool had fused much earlier (~24–20 ka) with an East Asian lineage before undergoing an intense thousands-of-years Beringian Standstill (~23–15 ka), then exploding southward to Patagonia within two millennia.",
+              "sources": [
+                "https://doi.org/10.1126/science.aab3884",
+                "https://doi.org/10.1038/nature25173",
+                "https://doi.org/10.1126/science.aav2621",
+                "https://doi.org/10.1016/j.cub.2018.11.029",
+                "https://doi.org/10.1038/s41586-026-10406-w"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Structured ancestry and Population Y in South America",
+          "paragraphs": [
+            {
+              "text": "Even within South America's post-glacial radiation, high-resolution sequencing reveals ~1–2% excess Australo-Melanesian (*Population Y*) affinity in Amazonian Suruí, Karitiana, and ancient Lagoa Santa burials—likely inherited from deeply structured Asian/Beringian ancestral sub-lineages prior to hemispheric settlement.",
+              "sources": [
+                "https://doi.org/10.1038/nature14895",
+                "https://doi.org/10.1073/pnas.2025739118",
+                "https://doi.org/10.1126/science.adk5081",
+                "https://doi.org/10.1093/molbev/msz066"
+              ]
+            }
+          ],
+          "columns": [
+            "Region / Population",
+            "Primary Drift & Admixture Signal",
+            "Genetic Diversity Level",
+            "Diagnostic Papers"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Sub-Saharan Africa",
+                "Deep >250 ka Khoe-San/rainforest splits + ghost archaic contact",
+                "Highest globally (~100% baseline)",
+                "Bergström 2020; Durvasula 2020"
+              ],
+              "sources": [
+                "https://doi.org/10.1126/science.aay5012",
+                "https://doi.org/10.1126/sciadv.aax5097"
+              ]
+            },
+            {
+              "cells": [
+                "Aboriginal Australia & PNG",
+                "~58–50 ka split, ~45 ka continental isolation + desert/valley drift",
+                "Moderate-low with deep private alleles",
+                "Malaspinas 2016; Silcocks 2023"
+              ],
+              "sources": [
+                "https://doi.org/10.1038/nature18299",
+                "https://doi.org/10.1038/s41586-023-06831-w"
+              ]
+            },
+            {
+              "cells": [
+                "Europe",
+                "Three-wave merger: WHG + Anatolian Farmers + Yamnaya Steppe",
+                "Moderate (repeatedly homogenized)",
+                "Allentoft 2024; Marchi 2022"
+              ],
+              "sources": [
+                "https://doi.org/10.1038/s41586-023-06865-0",
+                "https://doi.org/10.1016/j.cell.2022.04.008"
+              ]
+            },
+            {
+              "cells": [
+                "Indigenous Americas",
+                "East Asian + ~35% ANE merger + Beringian Standstill bottleneck",
+                "Lowest heterozygosity globally (highest Fst drift)",
+                "Moreno-Mayar 2018; Castro e Silva 2026"
+              ],
+              "sources": [
+                "https://doi.org/10.1038/nature25173",
+                "https://doi.org/10.1038/s41586-026-10406-w"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Sohini Ramachandran, Omkar Deshpande, Charles C. Roseman, Noah A. Rosenberg, Marcus W. Feldman, Luigi Luca Cavalli-Sforza (2005): Support from the relationship of genetic and geographic distance in human populations for a serial founder effect originating in Africa — Proceedings of the National Academy of Sciences",
+          "url": "https://doi.org/10.1073/pnas.0507611102"
+        },
+        {
+          "title": "Anna‐Sapfo Malaspinas, Michael Westaway, Craig Muller, Vítor C. Sousa, Óscar Lao, Isabel Alves, Anders Bergström, Georgios I. Athanasiadis, Jade Yu Cheng, Jacob E. Crawford, Tim H. Heupink, Enrico Macholdt, Stephan Peischl, Simon Rasmussen, Stephan Schiffels, Sankar Subramanian, Joanne L. Wright, Anders Albrechtsen, Chiara Barbieri, Isabelle Dupanloup, Anders Eriksson, Ashot Margaryan, Ida Moltke, Irina Pugach, Thorfinn Sand Korneliussen, Ivan P. Levkivskyi, J. Víctor Moreno-Mayar, Shengyu Ni, Fernando Racimo, Martin Sikora, Yali Xue, Farhang F. Aghakhanian, Nicolas Brucato, Søren Brunak, Paula F. Campos, Warren Clark, Sturla Ellingvåg, Gudju Gudju Fourmile, Pascale Gerbault, Darren Injie, George Koki, Matthew Leavesley, Betty Logan, Aubrey Lynch, Elizabeth A. Matisoo-Smith, Peter J. McAllister, Alexander J. Mentzer, Mait Metspalu, Andrea Bamberg Migliano, Les Murgha, Maude Elvira Phipps, William S. Pomat, Doc Reynolds, François‐Xavier Ricaut, Peter Siba, Mark Thomas, Thomas E. Wales, Colleen Ma’run Wall, Stephen Oppenheimer, Chris Tyler‐Smith, Richard Michael Durbin, Joe Dortch, Andrea Manica, Mikkel Heide Schierup, Robert Foley, Marta Mìrazón Lahr, Claire Bowern, Jeffrey D. Wall, Thomas Mailund, Mark Stoneking, Rasmus Nielsen, Manjinder S. Sandhu, Laurent Excoffier, David Martin Lambert, Eske Willerslev (2016): A genomic history of Aboriginal Australia — Nature",
+          "url": "https://doi.org/10.1038/nature18299"
+        },
+        {
+          "title": "Morten E. Allentoft, Martin Sikora, Alba Refoyo-Martínez, Evan K. Irving-Pease, Anders Fischer, William Barrie, Andrés Ingason, Jesper T. Stenderup, Karl-Göran Sjögren, Alice Pearson, Bárbara Sousa da Mota, Bettina Schulz Paulsson, Alma S. Halgren, Ruairidh Macleod, Marie Louise Schjellerup Jørkov, Fabrice Demeter, Lasse Sørensen, Poul Otto Nielsen, Rasmus Amund Henriksen, Tharsika Vimala, Hugh McColl, Ashot Margaryan, Melissa A. Ilardo, Andrew H. Vaughn, Morten Fischer Mortensen, Anne Birgitte Nielsen, Mikkel Ulfeldt Hede, Niels Nørkjær Johannsen, Peter Rasmussen, Lasse Vinner, Gabriel Renaud, Aaron J. Stern, Theis Zetner Trolle Jensen, Gabriele Scorrano, Hannes Schroeder, Per Lysdahl, Abigail Daisy Ramsøe, Andrey Mikhailovich Skorobogatov, Andrew Joseph Schork, Anders Rosengren, Anthony Ruter, Alan K. Outram, Aleksey A. Timoshenko, Alexandra Buzhilova, Alfredo Coppa, Alisa Vladimirovna Zubova, Ana María Silva, Anders Johannes Hansen, Громов Андрей Викторович, Логвин Андрей Викторович, Anne Birgitte Gotfredsen, Bjarne Henning Nielsen, Borja González-Rabanal, Carles Lalueza‐Fox, Catriona J. McKenzie, Charleen Gaunitz, Concepción Blasco, Corina Liesau von Lettow‐Vorbeck, Cristina Martínez‐Labarga, Dmitry V. Pozdnyakov, David Cuenca-Solana, David Lordkipanidze, Dmitri En’shin, Domingo C. Salazar‐García, T. Douglas Price, Dušan Borić, Elena Leonidovna Kostyleva, Elizaveta V. Veselovskaya, Emma R. Usmanova, Enrico Cappellini, Erik Brinch Petersen, Esben Kannegaard, Francesca Radina, Fulya Eylem Yediay, Henri Duday, Igor Gutiérrez-Zugasti, I. Merts, Inna D. Potekhina, Irinа Shevnina, Isin Altinkaya, Jean Guilaine, Jesper Hansen, J. Emili Aura Tortosa, Joào Zilhão, Jorge Vega, Kristoffer Buck Pedersen, Krzysztof Tunia, Lei Zhao, Liudmila N. Mylnikova, Lars Larsson, Laure Metz, Levon Yepiskoposyan, Lisbeth Pedersen, Lucia Sarti, Ludovic Orlando, Ludovic Slimak, Lutz Klassen, Malou Blank, Manuel R. González Morales, Mara Silvestrini, Maria Vretemark, Нестерова Марина Сергеевна, Marina P. Rykun, Mario Federico Rolfo, Marzena Szmyt, Marcin M. Przybyła, Mauro Calattini, Mikhail Sablin, Miluše Dobisíková, Morten Meldgaard, Morten Johansen, Natalia Berezina, Nick Card, N. A. Saveliev, Пошехонова Ольга Евгеньевна, Olga Rickards, Olga Vladimirovna Lozovskaya, Olivér Gábor, Otto Christian Uldum, Paola Aurino, Pavel Andreevich Kosintsev, Patrice Courtaud, Patricia Ríos Mendoza, Peder Mortensen, Per Lotz, Per Persson, Pernille Bangsgaard, Peter de Barros Damgaard, Peter Vang Petersen, María Pilar Prieto Martínez, Piotr Włodarczak, Roman Viktorovich Smolyaninov, Rikke Maring, Roberto Menduiña, Ruben Badalyan, Rune Iversen, Ruslan Turin, Sergey Vladimirovich Vasilyev, Sidsel Wåhlin, Svetlana Borutskaya, Скочина Светлана Николаевна, Søren A. Sørensen, Søren H. Andersen, Thomas Jørgensen, Yuri Borisovich Serikov, В. И. Молодин, Václav Smrčka, Виктор Карлович Мерц, Vivek Appadurai, Vyacheslav G. Moiseyev, Yvonne Magnusson, Kurt Henrik Kjær, Niels Lynnerup, Daniel John Lawson, Peter H. Sudmant, Simon Rasmussen, Thorfinn Sand Korneliussen, Richard Michael Durbin, Rasmus Nielsen, Olivier Delaneau, Thomas Mears Werge, Fernando Racimo, Kristian Kristiansen, Eske Willerslev (2024): Population genomics of post-glacial western Eurasia — Nature",
+          "url": "https://doi.org/10.1038/s41586-023-06865-0"
+        },
+        {
+          "title": "J. Víctor Moreno-Mayar, Ben A. Potter, Lasse Vinner, Matthias Steinrücken, Simon Rasmussen, Jonathan Terhorst, Jack Kamm, Anders Albrechtsen, Anna‐Sapfo Malaspinas, Martin Sikora, Joshua D. Reuther, Joel D. Irish, Ripan Singh Malhi, Ludovic Orlando, Yun S. Song, Rasmus Nielsen, David J. Meltzer, Eske Willerslev (2018): Terminal Pleistocene Alaskan genome reveals first founding population of Native Americans — Nature",
+          "url": "https://doi.org/10.1038/nature25173"
+        },
+        {
+          "title": "Michael DeGiorgio, Mattias Jakobsson, Noah A. Rosenberg (2009): Explaining worldwide patterns of human genetic variation using a coalescent-based serial founder model of migration outward from Africa — Proceedings of the National Academy of Sciences",
+          "url": "https://doi.org/10.1073/pnas.0903341106"
+        },
+        {
+          "title": "Brenna M. Henn, Luigi Luca Cavalli-Sforza, Marcus W. Feldman (2019): The great human expansion — Resonance",
+          "url": "https://doi.org/10.1007/s12045-019-0830-4"
+        },
+        {
+          "title": "Anders Bergström, Shane McCarthy, Ruoyun Hui, Mohamed A. Almarri, Qasim Ayub, Petr Danecek, Yuan Chen, Sabine Felkel, Pille Hallast, Jack Kamm, Hélène Blanché, Jean‐François Deleuze, Howard M. Cann, Swapan Mallick, David Reich, Manjinder S. Sandhu, Pontus Skoglund, Aylwyn Scally, Yali Xue, Richard Michael Durbin, Chris Tyler‐Smith (2020): Insights into human genetic variation and population history from 929 diverse genomes — Science",
+          "url": "https://doi.org/10.1126/science.aay5012"
+        },
+        {
+          "title": "Swapan Mallick, Heng Li, Mark Lipson, Iain Mathieson, Melissa Gymrek, Fernando Racimo, Mengyao Zhao, Niru Chennagiri, Susanne Nordenfelt, Arti Tandon, Pontus Skoglund, Iosif Lazaridis, Sriram Sankararaman, Qiaomei Fu, Nadin Rohland, Gabriel Renaud, Yaniv Erlich, Thomas Willems, Carla Gallo, Jeffrey P. Spence, Yun S. Song, Giovanni Poletti, François Balloux, George L. van Driem, Peter de Knijff, Irene Gallego Romero, Aashish R. Jha, Doron M. Behar, Cláudio M. Bravi, Cristian Capelli, Tor Audun Hervig, Andrés Moreno‐Estrada, Olga L. Posukh, Elena Vladimirovna Balanovska, Oleg Balanovsky, Sena Karachanak-Yankova, Hovhannes Sahakyan, Draga Ivanova Toncheva, Levon Yepiskoposyan, Chris Tyler‐Smith, Yali Xue, Muhammad Syafiq Abdullah, Andrés Ruiz‐Linares, Cynthia M. Beall, Anna Di Rienzo, Choongwon Jeong, Elena B. Starikovskaya, Ene Metspalu, Jüri Parik, Richard Villems, Brenna M. Henn, Uğur Hodoğlugil, Robert W. Mahley, Antti Sajantila, George Stamatoyannopoulos, Joseph T. S. Wee, Rita Igorevna Khusainova, Э. К. Хуснутдинова, Sergey Litvinov, George Ayodo, David Comas, Michael F. Hammer, Toomas Kivisild, William Klitz, Cheryl Ann Winkler, Damian Labuda, Michael J. Bamshad, Lynn B. Jorde, Sarah A. Tishkoff, W. Scott Watkins, Mait Metspalu, Stanislav Dryomov, R. I. Sukernik, Lalji Singh, Kumarasamy Thangaraj, Svante Pääbo, Janet F. Kelso, Nick J. Patterson, David Reich (2016): The Simons Genome Diversity Project: 300 genomes from 142 diverse populations — Nature",
+          "url": "https://doi.org/10.1038/nature18964"
+        },
+        {
+          "title": "Hrushikesh Loya, Anjali Gupta Hinch, Pier Francesco Palamara, Leo Speidel, Simon Myers (2026): Genome-wide genealogies reveal deep admixtures forming modern humans — bioRxiv",
+          "url": "https://doi.org/10.64898/2026.04.17.719197"
+        },
+        {
+          "title": "Pille Hallast, Anastasiya Agdzhoyan, Oleg Pavlovich Balanovsky, Yali Xue, Chris Tyler‐Smith (2020): A Southeast Asian origin for present-day non-African human Y chromosomes — Human Genetics",
+          "url": "https://doi.org/10.1007/s00439-020-02204-9"
+        },
+        {
+          "title": "Francesca Tassi, Silvia Ghirotto, Massimo Mezzavilla, Sibelle Torres Vilaça, Lisa De Santi, Guido Barbujani (2015): Early modern human dispersal from Africa: genomic evidence for multiple waves of migration — Investigative Genetics",
+          "url": "https://doi.org/10.1186/s13323-015-0030-2"
+        },
+        {
+          "title": "Mark Lipson, David Reich (2017): A working model of the deep relationships of diverse modern human genetic lineages outside of Africa — Molecular Biology and Evolution",
+          "url": "https://doi.org/10.1093/molbev/msw293"
+        },
+        {
+          "title": "Morten Rasmussen, Xiaosen Guo, Yong Wang, Kirk E. Lohmueller, Simon Rasmussen, Anders Albrechtsen, Line Skotte, Stinus Lindgreen, Mait Metspalu, Thibaut Jombart, Toomas Kivisild, Weiwei Zhai, Anders Eriksson, Andrea Manica, Ludovic Orlando, Francisco M. De La Vega, Silvana R. Tridico, Ene Metspalu, Kasper Rene Nielsen, María C. Ávila‐Arcos, J. Víctor Moreno-Mayar, Craig Muller, Joe Dortch, Marcus Thomas P. Gilbert, Ole Lund, Agata Wesolowska, Monika Karmin, Lucy A. Weinert, Bo Wang, Jun Li, Shuaishuai Tai, Fei Xiao, Tsunehiko Hanihara, George L. van Driem, Aashish R. Jha, François‐Xavier Ricaut, Peter de Knijff, Andrea Bamberg Migliano, Irene Gallego Romero, Karsten Kristiansen, David Martin Lambert, Søren Brunak, Peter Forster, Bernd Brinkmann, Olaf Nehlich, Michael Bunce, Michael P. Richards, Ramneek Gupta, Carlos D. Bustamante, Anders Krogh, Robert Foley, Marta Mìrazón Lahr, François Balloux, Thomas Sicheritz‐Pontén, Richard Villems, Rasmus Nielsen, Jun Wang, Eske Willerslev (2011): An Aboriginal Australian Genome Reveals Separate Human Dispersals into Asia — Science",
+          "url": "https://doi.org/10.1126/science.1211177"
+        },
+        {
+          "title": "Francesca Gandini, Mafalda Almeida, M. George B. Foody, Nano Nagle, Anders Bergström, Anna Olivieri, Simão Rodrigues, Alessandro Fichera, Gonzalo Oteo‐García, Antonio Torroni, Alessandro Achilli, William S. Pomat, Zafarina Zainuddin, Ken Khong Eng, Tarek M. Shoeib, Teresa Rito, David Bulbeck, Sue O’Connor, Jarosław Bryk, Maria Pala, Michael J. Grant, Ceiridwen J. Edwards, Stephen Oppenheimer, Robert J. Mitchell, Pedro A. Soares, Helen Farr, Martin B Richards (2025): Genomic evidence supports the “long chronology” for the peopling of Sahul — Science Advances",
+          "url": "https://doi.org/10.1126/sciadv.ady9493"
+        },
+        {
+          "title": "Matthew Silcocks, Ashley Farlow, Azure Hermes, Georgia Tsambos, Hardip R. Patel, Sharon Huebner, Gareth S Baynam, Misty Rayna Jenkins, Damjan Vukcevic, Simon Easteal, Stephen Leslie, Ashley Farlow, Azure Hermes, Hardip R. Patel, Sharon Huebner, Gareth S Baynam, Misty Rayna Jenkins, Simon Easteal, Stephen Leslie (2023): Indigenous Australian genomes show deep structure and rich novel variation — Nature",
+          "url": "https://doi.org/10.1038/s41586-023-06831-w"
+        },
+        {
+          "title": "Raymond Tobler, Adam B. Rohrlach, Julien Soubrier, Pere Rosselló Bover, Bastien Llamas, Jonathan Tuke, Nigel Geoffrey Bean, Ali Abdullah-Highfold, Shane Agius, Amy O’Donoghue, Isabel O’Loughlin, Peter Sutton, Fran Zilio, Keryn Walshe, Alan N. Williams, CHRIS S. M. TURNEY, Matthew Williams, Stephen M. Richards, Robert J. Mitchell, Emma Kowal, John R. Stephen, Lesley Williams, Wolfgang Haak, Alan Cooper (2017): Aboriginal mitogenomes reveal 50,000 years of regionalism in Australia — Nature",
+          "url": "https://doi.org/10.1038/nature21416"
+        },
+        {
+          "title": "Nina Marchi, Laura Winkelbach, Ilektra Schulz, Maxime Brami, Zuzana Hofmanová, Jens Blöcher, Carlos S. Reyna-Blanco, Yoan Diekmann, Alexandre H. Thiéry, Adamandia Kapopoulou, Vivian Link, Valérie Piuz, Susanne Kreutzer, Sylwia Marta Figarska, Elissavet Ganiatsou, Albert Pukaj, Travis J. Struck, Ryan N. Gutenkunst, Necmi Karul, Fokke A. Gerritsen, Joachim Pechtl, Joris Peters, Andrea Zeeb‐Lanz, Eva Lenneis, Maria Teschler‐Nicola, Sevasti Triantaphyllou, Sofija Stefanović, Christina Papageorgopoulou, Daniel Wegmann, Joachim Bürger, Laurent Excoffier (2022): The genomic origins of the world’s first farmers — Cell",
+          "url": "https://doi.org/10.1016/j.cell.2022.04.008"
+        },
+        {
+          "title": "Tian Chen Zeng, Leonid A. Vyazov, Alexander M. Kim, Pavel Flegontov, Kendra A. Sirak, Robert Maier, Iosif Lazaridis, Ali Akbari, Michael David Frachetti, Alexey A. Tishkin, Natalya E. Ryabogina, Sergey A. Agapov, Danila S. Agapov, Anatoliy N. Alekseev, Gennady Gavrilovich Boeskorov, Anatoly P. Derevianko, Viktor Mikhailovich Dyakonov, Dmitry N. Enshin, Alexey V. Fribus, Frolov Ya., С.П. Грушин, Alexander A. Khokhlov, Kirill Yu. Kiryushin, Yurii F. Kiryushin, Egor Petrovich Kitov, Pavel Andreevich Kosintsev, И. В. Ковтун, Nikolai P. Makarov, В. В. Морозов, Егор Николаевич Николаев, Marina P. Rykun, Tatyana M. Savenkova, М. В. Щелчкова, Владимир Николаевич Широков, Скочина Светлана Николаевна, Ольга Сергеевна Шерстобитова, Sergey Mikhailovich Slepchenko, Константин Николаевич Солодовников, Elena N. Solovyova, А. Д. Степанов, А.А. Тимощенко, Вдовин Александр Сергеевич, А.В. Выборнов, Elena Vladimirovna Balanovska, Stanislav Dryomov, Garrett Hellenthal, Kenneth K. Kídd, Johannes Krause, Elena B. Starikovskaya, R. I. Sukernik, Tatiana V. Tatarinova, Mark Thomas, Maxat K. Zhabagin, Kimberly A. Callan, Olivia Cheronet, Daniel Fernandes, Denise Keating, Francesca Candilio, Lora Iliev, Aisling Kearns, Kadir Toykan Özdoğan, Matthew Mah, Adam Micco, Megan Michel, Íñigo Olalde, Fatma Zalzala, Swapan Mallick, Nadin Rohland, Ron Pinhasi, Vagheesh M. Narasimhan, David Reich (2025): Ancient DNA reveals the prehistory of the Uralic and Yeniseian peoples — Nature",
+          "url": "https://doi.org/10.1038/s41586-025-09189-3"
+        },
+        {
+          "title": "Erika Tamm, Toomas Kivisild, Maere Reidla, Mait Metspalu, David Glenn Smith, Connie J. Mulligan, Cláudio M. Bravi, Olga Rickards, Cristina Martínez‐Labarga, Э. К. Хуснутдинова, Сардана Аркадьевна Федорова, Maria V. Golubenko, В. А. Степанов, Marina A. Gubina, Sergey I. Zhadanov, Ludmila P. Osipova, Larisa Damba, Mikhail Ivanovich Voevoda, José Edgardo Dipierri, Richard Villems, Ripan Singh Malhi (2007): Beringian Standstill and Spread of Native American Founders — PLoS ONE",
+          "url": "https://doi.org/10.1371/journal.pone.0000829"
+        },
+        {
+          "title": "Thomaz Pinotti, Anders Bergström, Maria Geppert, Matt Bawn, Dominique Ohasi, Wentao Shi, Daniela R. Lacerda, Arne Solli, Jakob Norstedt, Kate Reed, Kim Dawtry, Fabricio González‐Andrade, César Paz‐y‐Miño, Susana Revollo, Cinthia Cuellar, Marilza S. Jota, José Enemir dos Santos, Qasim Ayub, Toomas Kivisild, José R. Sandoval, Ricardo Fujita, Yali Xue, Lutz Roewer, Fabrício Rodrigues dos Santos, Chris Tyler‐Smith (2018): Y Chromosome Sequences Reveal a Short Beringian Standstill, Rapid Expansion, and early Population structure of Native American Founders — Current Biology",
+          "url": "https://doi.org/10.1016/j.cub.2018.11.029"
+        },
+        {
+          "title": "Sara D Niedbalski, Jeffrey C. Long (2022): Novel alleles gained during the Beringian isolation period — Scientific Reports",
+          "url": "https://doi.org/10.1038/s41598-022-08212-1"
+        },
+        {
+          "title": "Marcos Araújo Castro e Silva, Tiago Ferraz, María Cátira Bortolini, David Comas, Tábita Hünemeier (2021): Deep genetic affinity between coastal Pacific and Amazonian natives evidenced by Australasian ancestry — Proceedings of the National Academy of Sciences",
+          "url": "https://doi.org/10.1073/pnas.2025739118"
+        },
+        {
+          "title": "Pontus Skoglund, Swapan Mallick, María Cátira Bortolini, Niru Chennagiri, Tábita Hünemeier, Maria Luiza Petzl‐Erler, Francisco M. Salzano, Nick J. Patterson, David Reich (2015): Genetic evidence for two founding populations of the Americas — Nature",
+          "url": "https://doi.org/10.1038/nature14895"
+        },
+        {
+          "title": "J. Víctor Moreno-Mayar, Lasse Vinner, Peter de Barros Damgaard, Constanza de la Fuente Castro, Jeffrey Chan, Jeffrey P. Spence, Morten E. Allentoft, Tharsika Vimala, Fernando Racimo, Thomaz Pinotti, Simon Rasmussen, Ashot Margaryan, Miren Iraeta-Orbegozo, Dorothea Mylopotamitaki, Matthew J. Wooller, Clément P. Bataille, Lorena Becerra‐Valdivia, David Chivall, Daniel J. Comeskey, Thibaut Devièse, Donald K. Grayson, Len George, Harold Harry, Verner Alexandersen, Charlotte Primeau, Jon M. Erlandson, Cláudia Rodrigues-Carvalho, Silvia Reis, Murilo Bastos, Jerome S. Cybulski, Carlos Vullo, Flavia Morello, Miguel G. Vilar, Spencer Wells, Kristian Murphy Gregersen, Kasper Lykke Hansen, Niels Lynnerup, Marta Mìrazón Lahr, Kurt Henrik Kjær, André Menezes Strauss, Marta P. Alfonso‐Durruty, Antonio Salas, Hannes Schroeder, Thomas Higham, Ripan Singh Malhi, Jeffrey T. Rasic, Luiz Antônio Cruz Souza, Fabrício Rodrigues dos Santos, Anna‐Sapfo Malaspinas, Martin Sikora, Rasmus Nielsen, Yun S. Song, David J. Meltzer, Eske Willerslev (2018): Early human dispersals within the Americas — Science",
+          "url": "https://doi.org/10.1126/science.aav2621"
+        },
+        {
+          "title": "Elena S. Gusareva, Amit Gourav Ghosh, Владимир Николаевич Харьков, Seik‐Soon Khor, А. А. Зарубин, Nikita Moshkov, Namrata Kalsi, Aakrosh Ratan, Cassie E. Heinle, Niall P. Cooke, Cláudio M. Bravi, M. V. Smolnikova, Sergey Yu Tereshchenko, Э. В. Каспаров, I. Yu. Khitrinskaya, Andrey V. Marusin, Magomed O. Razhabov, Maria V. Golubenko, M. G. Swarovskaya, Nikita Aleksandrovich Kolesnikov, Ksenia V. Vagaitseva, Еремина Елена Робертовна, Aitalina Sukhomyasova, Olga Vladimirovna Shtygasheva, Deepa Panicker, Poh Nee Ang, Choou Fook Lee, Yanqing Koh, See Ting Leong, Changsook Park, Sachin R. Lohar, Zhei Hwee Yap, Soo Guek Ng, Justine Dacanay, Daniela I. Drautz‐Moses, Nurul Adilah Binte Ramli, Katsushi Tokunaga, Ian McGonigle, Inaho Danjoh, Andrés Moreno‐Estrada, Atsushi Tajima, Hideyuki Tanabe, Yukio Nakamura, Shigeki Nakagome, Tatiana V. Tatarinova, Vadim A. Stepanov, Stephan Christoph Schuster, Hie Lim Kim (2025): From North Asia to South America: Tracing the longest human migration through genomic sequencing — Science",
+          "url": "https://doi.org/10.1126/science.adk5081"
+        },
+        {
+          "title": "Jérémy Choin, Javier Mendoza‐Revilla, Lara R. Arauna, Sebastián Cuadros-Espinoza, Olivier Cassar, Maximilian Larena, Albert Min‐Shan Ko, Christine Harmant, Romain Laurent, Paul Verdu, Guillaume Laval, Anne Boland, Robert Olaso, Jean‐François Deleuze, Frédérique Valentin, Ying‐Chin Ko, Mattias Jakobsson, Antoine Gessain, Laurent Excoffier, Mark Stoneking, Étienne Patin, Lluís Quintana‐Murci (2021): Genomic insights into population history and biological adaptation in Oceania — Nature",
+          "url": "https://doi.org/10.1038/s41586-021-03236-5"
+        },
+        {
+          "title": "Nicolas Brucato, Mathilde André, Roxanne Tsang, Lauri Saag, Jason Kariwiga, Kylie Sesuki, Teppsy Beni, William S. Pomat, John Muke, Vincent Meyer, Anne Boland, Jean‐François Deleuze, Herawati Sudoyo, Mayukh Mondal, Luca Pagani, Irene Gallego Romero, Mait Metspalu, Murray P. Cox, Matthew Leavesley, François‐Xavier Ricaut (2021): Papua New Guinean Genomes Reveal the Complex Settlement of North Sahul — Molecular Biology and Evolution",
+          "url": "https://doi.org/10.1093/molbev/msab238"
+        },
+        {
+          "title": "Mariko Isshiki, Augustinus Soemantri, Ryutaro Ohtsuka, Minato Nakazawa, Takafumi Ishida, Jun Ohashi (2026): Geographic barrier contributed to the diversity of maternal and paternal lineages in New Guinea Island — Human Genetics",
+          "url": "https://doi.org/10.1007/s00439-026-02869-8"
+        },
+        {
+          "title": "Guy S. Jacobs, Georgi Hudjashov, Lauri Saag, Pradiptajati Kusuma, Chelzie Crenna Darusallam, Daniel John Lawson, Mayukh Mondal, Luca Pagani, François‐Xavier Ricaut, Mark Stoneking, Mait Metspalu, Herawati Sudoyo, John Stephen Lansing, Murray P. Cox (2019): Multiple Deeply Divergent Denisovan Ancestries in Papuans — Cell",
+          "url": "https://doi.org/10.1016/j.cell.2019.02.035"
+        },
+        {
+          "title": "Maanasa Raghavan, Matthias Steinrücken, Kelley Harris, Stephan Schiffels, Simon Rasmussen, Michael DeGiorgio, Anders Albrechtsen, Cristina E. Valdiosera, María C. Ávila‐Arcos, Anna‐Sapfo Malaspinas, Anders Eriksson, Ida Moltke, Mait Metspalu, Julian R. Homburger, Jeff Wall, Omar E. Cornejo, J. Víctor Moreno-Mayar, Thorfinn Sand Korneliussen, Tracey L. Pierre, Morten Rasmussen, Paula F. Campos, Peter de Barros Damgaard, Morten E. Allentoft, John Lindo, Ene Metspalu, Ricardo Varela, Josefina Mansilla Lory, Celeste Henrickson, Andaine Seguin‐Orlando, Helena Malmström, Thomas Stafford, Suyash Shringarpure, Andrés Moreno‐Estrada, Monika Karmin, Kristiina Tambets, Anders Bergström, Yali Xue, Vera M. Warmuth, A. D. Friend, Joy S. Singarayer, Paul J. Valdes, François Balloux, Ilán Leboreiro, José Luis Vera, Héctor Rangel‐Villalobos, Davide Pettener, Donata Luiselli, Loren G. Davis, Évelyne Heyer, Christoph P. E. Zollikofer, Marcia S. Ponce de León, Colin I. Smith, Vaughan Grimes, Kelly-Anne Pike, Michael Deal, Benjamin T. Fuller, Bernardo Tomás Arriaza, Vivien G. Standen, Maria Francisca Luz, François‐Xavier Ricaut, Niède Guidon, Ludmila P. Osipova, Mikhail I. Voevoda, Olga L. Posukh, Oleg Balanovsky, M. B. Lavryashina, Ю. В. Богунов, Э. К. Хуснутдинова, Marina A. Gubina, Elena Vladimirovna Balanovska, Сардана Аркадьевна Федорова, Sergey Litvinov, B. А. Malyarchuk, Miroslava V Derenko, M. J. Mosher, David Archer, Jerome S. Cybulski, Barbara Petzelt, Joycelynn Mitchell, Rosita Worl, Paul J. Norman, Peter Parham, Brian M. Kemp, Toomas Kivisild, Chris Tyler‐Smith, Manjinder S. Sandhu, Michael Crawford, Richard Villems, David Glenn Smith, Michael R. Waters, Ted Goebel, John R. Johnson, Ripan Singh Malhi, Mattias Jakobsson, David J. Meltzer, Andrea Manica, Richard Michael Durbin, Carlos D. Bustamante, Yun S. Song, Rasmus Nielsen, Eske Willerslev (2015): Genomic evidence for the Pleistocene and recent population history of Native Americans — Science",
+          "url": "https://doi.org/10.1126/science.aab3884"
+        },
+        {
+          "title": "Marcos Araújo Castro e Silva, Kelly Nunes, MA Ribeiro, Hemanoel Passarelli‐Araujo, Renan Barbosa Lemes, Lilian Kimura, Eliene Rodrigues Putira Sacuena, Carlos Eduardo G. Amorim, María Cátira Bortolini, José Geraldo Mill, João Farias Guerreiro, Chiara Barbieri, Diana Iraíz Hernández-Zaragoza, Antonia Walter, Trija Nag Chowdhury, Daniela Macías-Herrera, Julio Lara‐Riegos, Oana del Castillo Chávez, Camilo Zurita, Ana M. Tito-Álvarez, Emilia Vásquez-Domínguez, María Ermila Moo-Mezeta, Julio César Torres‐Romero, Abraham Aguilar-Campos, Ricardo Serrano-Osuna, María Laura Parolín, Cláudio M. Bravi, Virgínia Ramallo, Graciela Bailliet, Susana Revollo, José R. Sandoval, Ricardo Fujita, Rodrigo Barquera, Fabrício R. Santos, David Comas, Tábita Hünemeier (2026): The evolutionary history and unique genetic diversity of Indigenous Americans — Nature",
+          "url": "https://doi.org/10.1038/s41586-026-10406-w"
+        },
+        {
+          "title": "Guido Alberto Gnecchi‐Ruscone, Stefania Sarno, Sara De Fanti, Laura Gianvincenzo, Cristina Giuliani, Alessio Boattini, Eugenio Bortolini, Tullia Di Corcia, Cesar Sanchez Mellado, Taylor Jesus Dàvila Francia, Davide Gentilini, Anna Maria Di Blasio, Patrizia Di Cosimo, Elisabetta Cilli, Antonio González‐Martín, Claudio Franceschi, Zelda Alice Franceschi, Olga Rickards, Marco Sazzini, Donata Luiselli, Davide Pettener (2019): Dissecting the Pre-Columbian Genomic Ancestry of Native Americans along the Andes–Amazonia Divide — Molecular Biology and Evolution",
+          "url": "https://doi.org/10.1093/molbev/msz066"
+        },
+        {
+          "title": "Arun Durvasula, Sriram Sankararaman (2020): Recovering signals of ghost archaic introgression in African populations — Science Advances",
+          "url": "https://doi.org/10.1126/sciadv.aax5097"
+        }
+      ],
+      "relatedGuideIds": [
+        "world-human-family",
+        "world-archaic-interbreeding-introgression",
+        "world-pleistocene-australia",
+        "world-russia-siberia-paleolithic-steppe"
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "world-archaic-interbreeding-introgression",
+      "atlasIds": [
+        "americas",
+        "pacific",
+        "africa",
+        "europe",
+        "asia-pacific"
+      ],
+      "category": "subjects",
+      "title": "Archaic Interbreeding Worldwide: Neanderthals, Denisovans, Ghost Lineages & Adaptive DNA",
+      "description": "Mapping every continent's inherited archaic DNA—from West African ghost hominins and European–Asian Neanderthal contacts to dual Sahul/Philippine Denisovan pulses, Tibetan EPAS1, and American MUC19.",
+      "intro": "Far from strict reproductive isolation, *Homo sapiens* hybridized repeatedly with archaic sister lineages as we spread across Eurasia, Africa, and Sahul margins—retaining key archaic immune, altitude, and metabolic alleles under natural selection.",
+      "scope": "Neanderthal–Sapiens pulses (~55–40 ka), Basal Eurasian dilution, Back-to-Africa Neanderthal retention, dual/triple Denisovan lineages across Tibet/Philippines/PNG/Australia, West African ghost hominins, and *EPAS1*/*MUC19* adaptive introgression.",
+      "map": {
+        "bounds": [
+          -120,
+          -45,
+          165,
+          65
+        ],
+        "scope": "Continental archaic admixture zones and sequenced adaptive introgression peaks.",
+        "points": [
+          {
+            "id": "west-africa-ghost",
+            "label": "West African Archaic Ghost Locus",
+            "coordinates": [
+              3.9,
+              7.4
+            ],
+            "date": ">500 ka split; ~124–40 ka flow",
+            "description": "2–19% deeply diverged archaic hominin ancestry detected statistically inside Yoruba, Mende & Esan genomes.",
+            "sources": [
+              "https://doi.org/10.1126/sciadv.aax5097",
+              "https://doi.org/10.64898/2026.04.17.719197"
+            ]
+          },
+          {
+            "id": "levant-zagros-mix",
+            "label": "SW Asia Core Neanderthal–Sapiens Zone",
+            "coordinates": [
+              47.0,
+              34.0
+            ],
+            "date": "~50–45 ka",
+            "description": "Primary West Asian mixing hub plus Basal Eurasian branch diluting European Neanderthal percentage.",
+            "sources": [
+              "https://doi.org/10.1371/journal.pgen.1007641",
+              "https://doi.org/10.1038/s41467-021-26503-5",
+              "https://doi.org/10.1016/j.cell.2022.04.008"
+            ]
+          },
+          {
+            "id": "bacho-zlaty",
+            "label": "Zlatý kůň & Bacho Kiro (Europe)",
+            "coordinates": [
+              14.07,
+              49.91
+            ],
+            "date": "~47–45 ka",
+            "description": "Early *H. sapiens* fossils showing Neanderthal ancestors just 6–8 generations back.",
+            "sources": [
+              "https://doi.org/10.1371/journal.pgen.1007641",
+              "https://doi.org/10.1073/pnas.1904824116"
+            ]
+          },
+          {
+            "id": "denisova-altai",
+            "label": "Denisova Cave (Altai, Siberia)",
+            "coordinates": [
+              84.68,
+              51.4
+            ],
+            "date": "~200–45 ka",
+            "description": "Home to sequenced high-coverage Denisovan and Neanderthal genomes plus 'Denny' F1 hybrid.",
+            "sources": [
+              "https://doi.org/10.1016/j.cell.2019.02.035",
+              "https://doi.org/10.1016/j.gde.2024.102280"
+            ]
+          },
+          {
+            "id": "tibet-epas1",
+            "label": "Tibetan Plateau EPAS1 Sweep",
+            "coordinates": [
+              91.13,
+              29.65
+            ],
+            "date": "~45 ka flow; <12 ka sweep",
+            "description": "Denisovan hypoxia-tolerance haplotype carried at ~80% frequency by Himalayan highlanders.",
+            "sources": [
+              "https://doi.org/10.1038/nature13408",
+              "https://doi.org/10.1073/pnas.2020803118"
+            ]
+          },
+          {
+            "id": "luzon-ayta",
+            "label": "Ayta Magbukon (Luzon, Philippines)",
+            "coordinates": [
+              120.43,
+              14.65
+            ],
+            "date": "~45 ka–present",
+            "description": "Populations retaining the highest estimated relative proportion of Denisovan ancestry worldwide.",
+            "sources": [
+              "https://doi.org/10.1016/j.cell.2019.02.035",
+              "https://doi.org/10.1073/pnas.1904824116"
+            ]
+          },
+          {
+            "id": "png-sahul-denisovan",
+            "label": "PNG Highlands & Sahul Australia",
+            "coordinates": [
+              144.3,
+              -5.85
+            ],
+            "date": "~55–30 ka",
+            "description": "4–6% archaic Denisovan DNA from two distinct Denisovan groups plus immune regulatory remodeling.",
+            "sources": [
+              "https://doi.org/10.1126/science.aad9416",
+              "https://doi.org/10.1038/s41586-021-03236-5",
+              "https://doi.org/10.1371/journal.pgen.1012067"
+            ]
+          },
+          {
+            "id": "americas-muc19",
+            "label": "Americas Archaic MUC19 & Immune Tracts",
+            "coordinates": [
+              -99.13,
+              19.43
+            ],
+            "date": "~15 ka–present",
+            "description": "Denisovan-via-Neanderthal *MUC19* variants positively selected in Indigenous American genomes.",
+            "sources": [
+              "https://doi.org/10.1016/j.gde.2024.102280",
+              "https://doi.org/10.1126/science.aef8874"
+            ]
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "Multiple Neanderthal pulses, Basal Eurasian dilution and Back-to-Africa segments",
+          "paragraphs": [
+            {
+              "text": "Phased archaic haplotypes show the bulk of global non-African Neanderthal DNA (~1.8–2.4%) entered in a major Southwest Asian pulse ~50–45 ka, accompanied by local secondary Eurasian contacts like Bacho Kiro and East Asia.",
+              "sources": [
+                "https://doi.org/10.1038/s41467-021-26503-5",
+                "https://doi.org/10.1073/pnas.1904824116",
+                "https://doi.org/10.1186/s13059-025-03859-1"
+              ]
+            },
+            {
+              "text": "Crucially, modern sub-Saharan Africans are no longer considered zero-Neanderthal outgroups: later Holocene Eurasian back-migration carried ~0.3–1.5% Neanderthal tracks across East and West Africa, while 'Basal Eurasian' farmers diluted European percentages slightly below East Asian levels.",
+              "sources": [
+                "https://doi.org/10.1038/s41467-021-26503-5",
+                "https://doi.org/10.1126/science.aef8874"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Multiple Denisovan populations from Siberia to Wallacea and Sahul",
+          "paragraphs": [
+            {
+              "text": "Comparing archaic segments across Tibet, Luzon (Ayta Magbukon), Papua New Guinea, and Australia uncovers at least two—possibly three—deeply diverged Denisovan lineages separated from Siberian Denisovans by hundreds of thousands of years.",
+              "sources": [
+                "https://doi.org/10.1016/j.cell.2019.02.035",
+                "https://doi.org/10.1126/science.aad9416",
+                "https://doi.org/10.1038/s41586-021-03236-5",
+                "https://doi.org/10.1073/pnas.1904824116"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Sub-Saharan Africa's 'ghost' hominin introgression",
+          "paragraphs": [
+            {
+              "text": "Tropical humidity prevents ancient DNA preservation in sub-Saharan Pleistocene fossils, yet site-frequency spectrum and ARG models in West and Central African genomes reveal 2–19% ancestry from a deeply diverged 'ghost' *Homo* lineage that split well before Neanderthals and modern humans.",
+              "sources": [
+                "https://doi.org/10.1126/sciadv.aax5097",
+                "https://doi.org/10.64898/2026.04.17.719197",
+                "https://doi.org/10.1002/ajpa.23951"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Archaic deserts vs. adaptive survival toolkits (EPAS1, MUC19, HLA)",
+          "paragraphs": [
+            {
+              "text": "Purifying selection stripped deleterious archaic DNA out of brain-expression and X-chromosome 'deserts', while positive selection preserved ready-adapted archaic variants for cold skin keratin, *HLA*/*TLR* viral immunity, Tibet's Denisovan *EPAS1* hypoxia gene, and Indigenous American *MUC19*.",
+              "sources": [
+                "https://doi.org/10.1038/nature13408",
+                "https://doi.org/10.1073/pnas.2020803118",
+                "https://doi.org/10.1016/j.gde.2024.102280",
+                "https://doi.org/10.7554/elife.89815.3",
+                "https://doi.org/10.1371/journal.pgen.1012067"
+              ]
+            }
+          ],
+          "columns": [
+            "Archaic Donor",
+            "Modern Geographic Peak",
+            "Beneficial Introgressed Genes / Pathways",
+            "Key Insight"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Neanderthals (~1.8–2.4% non-Africa; ~0.3–1.5% Africa)",
+                "Global (highest in East Asia & Americas)",
+                "*HLA*, *TLR1-6-10*, *OAS1*, lipid metabolism, keratin",
+                "Not confined to Europe; persists globally via back-migration & East Asian pulses"
+              ],
+              "sources": [
+                "https://doi.org/10.1038/s41467-021-26503-5",
+                "https://doi.org/10.7554/elife.89815.3"
+              ]
+            },
+            {
+              "cells": [
+                "Denisovans (up to ~4–6% Sahul/Luzon; traces across Asia/Americas)",
+                "New Guinea, Australia, Philippines Ayta; selected loci in Tibet & Americas",
+                "Tibetan *EPAS1* (hypoxia), Papuan immune regulators, American *MUC19*",
+                "Derived from 2–3 distinct Denisovan populations far beyond Altai Cave"
+              ],
+              "sources": [
+                "https://doi.org/10.1016/j.cell.2019.02.035",
+                "https://doi.org/10.1073/pnas.2020803118",
+                "https://doi.org/10.1016/j.gde.2024.102280"
+              ]
+            },
+            {
+              "cells": [
+                "African Archaic 'Ghost' Hominin (2–19%)",
+                "West & Central Africa (Yoruba, Mende, Esan)",
+                "Deep African structural polymorphisms",
+                "Proves parallel archaic hybridization happened inside Africa too"
+              ],
+              "sources": [
+                "https://doi.org/10.1126/sciadv.aax5097",
+                "https://doi.org/10.64898/2026.04.17.719197"
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Emilia Huerta‐Sánchez, Xin Jin, Asan, Zhuoma Bianba, Benjamin Marco Peter, Nicolas Vinckenbosch, Yu Liang, Xin Yi, Mingze He, Mehmet Somel, Peixiang Ni, Bo Wang, Xiaohua Ou, Huasang, Jiangbai Luosang, Zha Xi Ping Cuo, Kui Li, Guoyi Gao, Ye Yin, Wei Wang, Xiuqing Zhang, Xun Xu, Huanming Yang, Yingrui Li, jian  Zi Wang, Jun Wang, Rasmus Nielsen (2014): Altitude adaptation in Tibetans caused by introgression of Denisovan-like DNA — Nature",
+          "url": "https://doi.org/10.1038/nature13408"
+        },
+        {
+          "title": "Guy S. Jacobs, Georgi Hudjashov, Lauri Saag, Pradiptajati Kusuma, Chelzie Crenna Darusallam, Daniel John Lawson, Mayukh Mondal, Luca Pagani, François‐Xavier Ricaut, Mark Stoneking, Mait Metspalu, Herawati Sudoyo, John Stephen Lansing, Murray P. Cox (2019): Multiple Deeply Divergent Denisovan Ancestries in Papuans — Cell",
+          "url": "https://doi.org/10.1016/j.cell.2019.02.035"
+        },
+        {
+          "title": "Arun Durvasula, Sriram Sankararaman (2020): Recovering signals of ghost archaic introgression in African populations — Science Advances",
+          "url": "https://doi.org/10.1126/sciadv.aax5097"
+        },
+        {
+          "title": "Debashree Tagore, Joshua M. Akey (2024): Archaic hominin admixture and its consequences for modern humans — Current Opinion in Genetics & Development",
+          "url": "https://doi.org/10.1016/j.gde.2024.102280"
+        },
+        {
+          "title": "Hrushikesh Loya, Anjali Gupta Hinch, Pier Francesco Palamara, Leo Speidel, Simon Myers (2026): Genome-wide genealogies reveal deep admixtures forming modern humans — bioRxiv",
+          "url": "https://doi.org/10.64898/2026.04.17.719197"
+        },
+        {
+          "title": "Laurits Skov, Ruoyun Hui, Vladimir Shchur, Asger Hobolth, Aylwyn Scally, Mikkel Heide Schierup, Richard Michael Durbin (2018): Detecting archaic introgression using an unadmixed outgroup — PLoS Genetics",
+          "url": "https://doi.org/10.1371/journal.pgen.1007641"
+        },
+        {
+          "title": "Kai Yuan, Xumin Ni, Chang Liu, Yuwen Pan, Lian Deng, Rui Zhang, Yang Gao, Xueling Ge, Jiaojiao Liu, Xixian Ma, Haiyi Lou, Taoyang Wu, Shuhua Xu (2021): Refining models of archaic admixture in Eurasia with ArchaicSeeker 2.0 — Nature Communications",
+          "url": "https://doi.org/10.1038/s41467-021-26503-5"
+        },
+        {
+          "title": "Nina Marchi, Laura Winkelbach, Ilektra Schulz, Maxime Brami, Zuzana Hofmanová, Jens Blöcher, Carlos S. Reyna-Blanco, Yoan Diekmann, Alexandre H. Thiéry, Adamandia Kapopoulou, Vivian Link, Valérie Piuz, Susanne Kreutzer, Sylwia Marta Figarska, Elissavet Ganiatsou, Albert Pukaj, Travis J. Struck, Ryan N. Gutenkunst, Necmi Karul, Fokke A. Gerritsen, Joachim Pechtl, Joris Peters, Andrea Zeeb‐Lanz, Eva Lenneis, Maria Teschler‐Nicola, Sevasti Triantaphyllou, Sofija Stefanović, Christina Papageorgopoulou, Daniel Wegmann, Joachim Bürger, Laurent Excoffier (2022): The genomic origins of the world’s first farmers — Cell",
+          "url": "https://doi.org/10.1016/j.cell.2022.04.008"
+        },
+        {
+          "title": "João C. Teixeira, Alan Cooper (2019): Using hominin introgression to trace modern human dispersals — Proceedings of the National Academy of Sciences",
+          "url": "https://doi.org/10.1073/pnas.1904824116"
+        },
+        {
+          "title": "Xinjun Zhang, Kelsey E. Witt, Mayra M. Bañuelos, Amy Ko, Kai Yuan, Shuhua Xu, Rasmus Nielsen, Emilia Huerta‐Sánchez (2021): The history and evolution of the Denisovan- EPAS1 haplotype in Tibetans — Proceedings of the National Academy of Sciences",
+          "url": "https://doi.org/10.1073/pnas.2020803118"
+        },
+        {
+          "title": "Benjamin Vernot, Serena Tucci, Janet F. Kelso, Joshua G. Schraiber, Aaron B. Wolf, Rachel M. Gittelman, Michael Dannemann, Steffi Grote, Rajiv C. McCoy, Heather Norton, Laura Scheinfeldt, David Andrew Merriwether, George Koki, Jonathan Scott Friedlaender, Jon C. Wakefield, Svante Pääbo, Joshua M. Akey (2016): Excavating Neandertal and Denisovan DNA from the genomes of Melanesian individuals — Science",
+          "url": "https://doi.org/10.1126/science.aad9416"
+        },
+        {
+          "title": "Jérémy Choin, Javier Mendoza‐Revilla, Lara R. Arauna, Sebastián Cuadros-Espinoza, Olivier Cassar, Maximilian Larena, Albert Min‐Shan Ko, Christine Harmant, Romain Laurent, Paul Verdu, Guillaume Laval, Anne Boland, Robert Olaso, Jean‐François Deleuze, Frédérique Valentin, Ying‐Chin Ko, Mattias Jakobsson, Antoine Gessain, Laurent Excoffier, Mark Stoneking, Étienne Patin, Lluís Quintana‐Murci (2021): Genomic insights into population history and biological adaptation in Oceania — Nature",
+          "url": "https://doi.org/10.1038/s41586-021-03236-5"
+        },
+        {
+          "title": "Maddy Comerford, Davide Maria Vespasiani, Navya Shukla, Laura E. Cook, Danat Yermakovich, Michael Dannemann, Matthew Leavesley, Christopher Kinipi, François‐Xavier Ricaut, Nicolas Brucato, Murray P. Cox, Irene Gallego Romero (2026): Mapping the gene regulatory landscape of archaic hominin introgression in modern Papuans — PLoS Genetics",
+          "url": "https://doi.org/10.1371/journal.pgen.1012067"
+        },
+        {
+          "title": "Yulin Zhang, Arjun Biddanda, Sarah Johnson, Colm O’Dushlaine, Priya Moorjani (2026): Recovering signatures of archaic hominin introgression using ancestral recombination graphs — Science",
+          "url": "https://doi.org/10.1126/science.aef8874"
+        },
+        {
+          "title": "Guanglin He, Yuntao Sun, Shuhan Duan, Lintao Luo, Qiuxia Sun, Bowen Li, Libing Yun, Chao Liu, Mengge Wang (2025): Ancient genomes give insight into 160,000 years of East Asian population dynamics and biological adaptation — Genome biology",
+          "url": "https://doi.org/10.1186/s13059-025-03859-1"
+        },
+        {
+          "title": "Ömer Gökçümen (2019): Archaic hominin introgression into modern human genomes — American Journal of Physical Anthropology",
+          "url": "https://doi.org/10.1002/ajpa.23951"
+        },
+        {
+          "title": "Giulia Ferraretti, Paolo Abondio, Marta Alberti, Agnese Dezi, Phurba T Sherpa, Paolo Cocco, Massimiliano Tiriticco, Marco Di Marcello, Guido Alberto Gnecchi‐Ruscone, Luca Natali, Angela Corcelli, Giorgio Marinelli, Davide Peluzzi, Stefania Sarno, Marco Sazzini (2024): Archaic introgression contributed to shape the adaptive modulation of angiogenesis and cardiovascular traits in human high-altitude populations from the Himalayas — eLife",
+          "url": "https://doi.org/10.7554/elife.89815.3"
+        }
+      ],
+      "relatedGuideIds": [
+        "world-human-family",
+        "world-global-genetic-drift-divergence",
+        "world-neanderthal-fossils",
+        "world-himalaya-tea-horse-road"
+      ]
+    }
+  ]
+}

@@ -3,6 +3,7 @@ import {recordInTimeline} from './time';
 import easternBrazil from '../data/eastern-brazil-scenes.json';
 import tradeExpansion from '../data/trade-0-1200-scenes.json';
 import tradeResearch from '../data/trade-network-scenes.json';
+import americasPre100TradeScenes from '../data/americas-pre100ce-trade-scenes.json';
 import shipwreckTopic from '../data/shipwreck-topic.json';
 import {raiStoneMoneyTopics,austronesianAndAustralianIndustryTopics,indigenousAmericanLanguageTopics} from './story-content';
 import {remainingTopics,remainingTopicOnlyIds} from './remaining-topic-dives';
@@ -68,7 +69,7 @@ const sourceTopics:TopicDive[]=[
 const tradeTopic=sourceTopics.find(topic=>topic.id==='trade')!;
 tradeTopic.title='Trade networks: materials moving across the world';
 tradeTopic.description='Follow stone, food, pottery and other goods through local exchange and ocean connections, then onward into colonial commerce.';
-tradeTopic.recordIds=[...new Set([...tradeTopic.recordIds,...tradeExpansion.recordIds,...tradeResearch.recordIds,...easternBrazil.tradeRecordIds])];
-tradeTopic.scenes=[...tradeTopic.scenes,...tradeExpansion.scenes as StoryScene[],...tradeResearch.scenes as StoryScene[],...easternBrazil.tradeScenes as StoryScene[]].sort((a,b)=>a.year-b.year);
+tradeTopic.recordIds=[...new Set([...tradeTopic.recordIds,...tradeExpansion.recordIds,...tradeResearch.recordIds,...easternBrazil.tradeRecordIds,...americasPre100TradeScenes.recordIds])];
+tradeTopic.scenes=[...tradeTopic.scenes,...tradeExpansion.scenes as StoryScene[],...tradeResearch.scenes as StoryScene[],...easternBrazil.tradeScenes as StoryScene[],...americasPre100TradeScenes.scenes as StoryScene[]].sort((a,b)=>a.year-b.year);
 export const topics=sourceTopics.map(topic=>chaptersThrough(topic,topicEndYear(topic.id))).filter(topic=>topic.scenes.length);
 export function topicRecords<T extends DisplayRecord>(topic:TopicDive,all:readonly T[]):T[]{const ids=new Set(topic.recordIds);return all.filter(r=>ids.has(r.id)&&recordInTimeline(r,topicEndYear(topic.id)));}
