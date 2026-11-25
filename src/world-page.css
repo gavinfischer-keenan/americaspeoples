@@ -1868,6 +1868,16 @@ body.world-surface .world-top :focus-visible {
   stroke: var(--ember-500);
 }
 
+.family-wave.trade {
+  stroke: #f5c95c;
+  stroke-dasharray: 7 4;
+  stroke-width: 2.3;
+}
+
+.family-trade-key {
+  color: #f5c95c;
+}
+
 .family-wave.selected {
   stroke: var(--ember-500) !important;
   stroke-width: 4.5 !important;
@@ -1966,10 +1976,10 @@ body.world-surface .world-top :focus-visible {
   color: var(--night);
   display: grid;
   grid-template-columns: auto 1fr auto;
-  gap: 4px 18px;
+  gap: 1px 14px;
   align-items: center;
   margin: 0;
-  padding: 8px 20px;
+  padding: 3px 16px 4px;
   position: static;
   box-shadow: none;
   flex-shrink: 0;
@@ -1977,21 +1987,24 @@ body.world-surface .world-top :focus-visible {
 
 .family-timeline form {
   display: flex;
-  gap: 6px;
-  align-items: end;
+  gap: 5px;
+  align-items: center;
   flex-wrap: nowrap;
 }
 
 .family-timeline form label {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   width: auto;
   margin: 0;
+  white-space: nowrap;
 }
 
 .family-timeline form input {
-  width: 85px !important;
-  display: block;
-  margin-top: 2px;
+  width: 78px !important;
+  display: inline-block;
+  margin-top: 0;
 }
 
 .family-timeline form select,
@@ -2003,8 +2016,15 @@ body.world-surface .world-top :focus-visible {
 .family-transport {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  align-items: end;
+  gap: 5px;
+  align-items: center;
+}
+
+.family-transport label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
 }
 
 .family-transport label,
@@ -2023,9 +2043,12 @@ body.world-surface .world-top :focus-visible {
   color: var(--night);
   border: 1px solid var(--slate-400);
   border-radius: 5px;
-  padding: 5px 8px;
-  font-size: 12px;
+  min-height: 25px;
+  padding: 2px 7px;
+  font-size: 11.5px;
+  line-height: 1.15;
   font-weight: 600;
+  margin-top: 0;
 }
 
 .family-transport button:not(#family-play):hover,
@@ -2039,8 +2062,10 @@ body.world-surface .world-top :focus-visible {
   color: var(--night);
   border: 1px solid var(--forest-800);
   border-radius: 5px;
-  padding: 6px 13px;
-  font-size: 12px;
+  min-height: 25px;
+  padding: 2px 10px;
+  font-size: 11.5px;
+  line-height: 1.15;
   font-weight: 700;
 }
 
@@ -2053,15 +2078,36 @@ body.world-surface .world-top :focus-visible {
   color: var(--mist);
 }
 
+.family-slider-label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 8px;
+  line-height: 1.1;
+}
+
 #family-slider {
   accent-color: var(--forest-600);
+  flex: 1 0 100%;
+  height: 13px;
+  min-height: 13px;
+  margin: 1px 0 0;
+  padding: 0;
 }
 
 .family-slider-label output {
   color: var(--night);
   font-weight: 700;
-  font-size: 15px;
-  padding-left: 8px;
+  font-size: 13px;
+  line-height: 1.1;
+  padding-left: 2px;
+}
+
+.family-time-ends {
+  flex: 1 0 100%;
+  font-size: 9.5px;
+  line-height: 1.1;
+  margin: 0;
 }
 
 #family-date-error {
@@ -2073,7 +2119,8 @@ body.world-surface .world-top :focus-visible {
 .family-playback-note {
   grid-column: 1 / -1;
   margin: 0;
-  font-size: 11px;
+  font-size: 10px;
+  line-height: 1.1;
   color: var(--slate-600);
 }
 
@@ -2183,9 +2230,9 @@ body.world-surface .world-top :focus-visible {
   .family-timeline {
     order: 2;
     position: static;
-    padding: 10px 12px;
+    padding: 6px 10px;
     grid-template-columns: 1fr;
-    gap: 8px;
+    gap: 4px;
   }
 
   .family-reader {

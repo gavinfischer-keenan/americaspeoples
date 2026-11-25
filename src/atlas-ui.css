@@ -685,9 +685,27 @@ body.movie-playing:not(.focus-view) .map-stage #cinema-caption p {
   background: var(--slate-100);
   color: var(--night);
   border-top: 1px solid var(--slate-400);
-  padding: 9px 20px 10px;
+  padding: 4px 16px 4px;
   min-height: 0;
   box-shadow: none;
+}
+
+.timeline .transport-row {
+  gap: 6px 14px;
+}
+
+.timeline .year-display {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  min-width: 110px;
+}
+
+.timeline .year-display strong,
+.timeline #current-year {
+  color: var(--night);
+  font-size: 16px;
+  line-height: 1.1;
 }
 
 .timeline :focus-visible {
@@ -704,15 +722,16 @@ body.movie-playing:not(.focus-view) .map-stage #cinema-caption p {
   color: var(--slate-600);
 }
 
-.timeline .year-display strong {
-  color: var(--night);
-}
-
 .timeline .play-button {
   background: var(--forest-500);
   color: var(--night);
   border: 1px solid var(--forest-800);
   font-weight: 700;
+  min-height: 26px;
+  min-width: 78px;
+  padding: 2px 10px;
+  font-size: 12px;
+  line-height: 1.15;
 }
 
 .timeline .play-button:hover {
@@ -730,8 +749,50 @@ body.movie-playing .timeline .play-button {
   background: var(--mist);
   color: var(--night);
   border: 1px solid var(--slate-400);
-  min-height: 32px;
+  min-height: 26px;
+  padding: 2px 8px;
+  font-size: 12px;
+  line-height: 1.15;
   border-radius: 5px;
+}
+
+.timeline #time-settings-toggle {
+  min-height: 24px;
+  padding: 2px 5px;
+}
+
+.timeline .slider-wrap {
+  margin: 2px 0 0;
+}
+
+.timeline input[type="range"],
+.timeline #time-slider {
+  accent-color: var(--forest-600);
+  display: block;
+  height: 12px;
+  min-height: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.timeline .range-labels {
+  font-size: 9px;
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+#story-progress-label {
+  margin-bottom: 1px;
+  font-size: 10px;
+  line-height: 1.1;
+}
+
+.local-date .timeline {
+  min-height: 0;
+}
+
+#toast {
+  bottom: 78px;
 }
 
 .timeline button:not(.play-button):hover {
@@ -969,12 +1030,20 @@ button.primary:hover {
     position: static;
     height: auto;
     max-height: none;
-    padding: 10px 12px;
+    padding: 5px 10px;
+    min-height: 0;
+  }
+
+  .timeline .playback button {
+    min-height: 28px;
+    padding: 3px 7px;
   }
 
   .explore-timeline-top {
     flex-direction: column;
     align-items: flex-start;
+    gap: 4px;
+    margin-bottom: 3px;
   }
 
   .explore-presets {
@@ -983,8 +1052,8 @@ button.primary:hover {
 
   .explore-presets button {
     font-size: 11px;
-    padding: 5px 8px;
-    min-height: 30px;
+    padding: 3px 8px;
+    min-height: 25px;
   }
 
   .explore-range-ticks {
@@ -1068,7 +1137,7 @@ button.primary:hover {
   position: relative;
   z-index: 20;
   flex-shrink: 0;
-  padding: 12px 24px 14px;
+  padding: 4px 16px 4px;
   background: var(--mist);
   color: var(--night);
   border-top: 1px solid var(--slate-400);
@@ -1079,19 +1148,19 @@ button.primary:hover {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 10px 18px;
-  margin-bottom: 10px;
+  gap: 4px 12px;
+  margin-bottom: 2px;
 }
 
 .explore-range-readout {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 8px;
+  gap: 6px;
 }
 
 .explore-range-readout .eyebrow {
-  font-size: 10px;
+  font-size: 9px;
   letter-spacing: 0.14em;
   color: var(--forest-600);
   font-weight: 700;
@@ -1100,7 +1169,8 @@ button.primary:hover {
 
 .explore-range-readout strong {
   font-family: Georgia, serif;
-  font-size: 19px;
+  font-size: 14px;
+  line-height: 1.1;
   color: var(--night);
 }
 
@@ -1110,25 +1180,26 @@ button.primary:hover {
 }
 
 .explore-range-count {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--slate-600);
-  margin-left: 6px;
+  margin-left: 4px;
 }
 
 .explore-presets {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 5px;
 }
 
 .explore-presets button {
-  min-height: 32px;
-  padding: 5px 11px;
+  min-height: 24px;
+  padding: 2px 9px;
   border-radius: 999px;
   border: 1px solid var(--slate-400);
   background: var(--slate-100);
   color: var(--night);
-  font-size: 12px;
+  font-size: 11px;
+  line-height: 1.15;
   font-weight: 600;
   cursor: pointer;
 }
@@ -1180,7 +1251,7 @@ button.primary:hover {
 
 .dual-slider {
   position: relative;
-  height: 28px;
+  height: 16px;
   display: flex;
   align-items: center;
 }
@@ -1189,14 +1260,14 @@ button.primary:hover {
   position: absolute;
   left: 0;
   right: 0;
-  height: 6px;
+  height: 5px;
   border-radius: 999px;
   background: var(--slate-200);
 }
 
 .dual-slider-fill {
   position: absolute;
-  height: 6px;
+  height: 5px;
   border-radius: 999px;
   background: var(--forest-500);
 }
@@ -1205,8 +1276,8 @@ button.primary:hover {
   position: absolute;
   inset: 0;
   width: 100%;
-  height: 28px;
-  min-height: 28px;
+  height: 16px;
+  min-height: 16px;
   margin: 0;
   padding: 0;
   border: 0;
@@ -1220,8 +1291,8 @@ button.primary:hover {
   pointer-events: auto;
   -webkit-appearance: none;
   appearance: none;
-  width: 19px;
-  height: 19px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: var(--forest-500);
   border: 2px solid var(--night);
@@ -1231,8 +1302,8 @@ button.primary:hover {
 
 .dual-slider input[type="range"]::-moz-range-thumb {
   pointer-events: auto;
-  width: 19px;
-  height: 19px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: var(--forest-500);
   border: 2px solid var(--night);
@@ -1248,7 +1319,8 @@ button.primary:hover {
 .explore-range-ticks {
   display: flex;
   justify-content: space-between;
-  font-size: 11px;
+  font-size: 9.5px;
+  line-height: 1.1;
   color: var(--slate-600);
-  margin-top: 3px;
+  margin-top: 1px;
 }

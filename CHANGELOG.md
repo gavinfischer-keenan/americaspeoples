@@ -2,6 +2,13 @@
 
 Release notes, newest first. These paragraphs were moved here from the README, where they had accumulated release by release; their counts describe the catalogue at the time of each release, not necessarily today. Detailed per-release verification is in [docs/release-verification-history.md](docs/release-verification-history.md).
 
+## 0.34.0 — November 24, 2026
+
+Adds evidence-backed early trade corridors across Africa, the Middle East, and Europe through 100 CE alongside a more compact map timeline bar. The main archive catalogue remains 11,370 records.
+
+- **Compact map controls:** bottom playback and explore control bars across Americas/Pacific, Global Explore, Europe, Africa/Asia/Origins, and Topic Movies now take roughly 50% less vertical height (`44–62 px` on desktop) while retaining every control in place.
+- **Early Afro-Eurasian trade routes (earliest through 100 CE):** adds 16 peer-reviewed schematic trade corridors and 14 archaeological/historical hub anchors to the World/Africa catalogue (`data/world/ancient-trade-africa-mideast-europe.json`, with a gold-dashed legend entry) plus 9 two-endpoint trade routes to the Europe atlas (`data/atlases/europe/ancient-trade-evidence.json`), spanning East African MSA obsidian, Anatolian–Levantine–European Neolithic obsidian, Badakhshan lapis lazuli, Gulf Dilmun–Magan–Meluhha, Egypt–Nubia/Kerma & Punt, Assur–Kanesh caravans, Baltic–Adriatic–Levant Amber Roads, Cornish tin via Nuragic Sardinia, Faynan/Timna copper, Meroitic Nile exchange, Garamantian trans-Saharan oases, West African Niger–Sahel networks, Nabataean/Palmyrene caravans, and Berenike–Myos Hormos Red Sea routes.
+
 ## 0.33.0 — November 24, 2026
 
 A maintenance and quality release from a full code and UI review. No evidence records were added or changed; the catalogue remains 11,370 records.
