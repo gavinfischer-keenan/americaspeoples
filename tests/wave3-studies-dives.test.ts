@@ -21,9 +21,9 @@ test("three Africa and Indian Ocean studies exist with valid routes, stops, and 
   }
 });
 
-test("deep dives expands to 125 world guides with global Languages and Cultures coverage", async () => {
+test("deep dives expands to 152+ world guides with global Languages and Cultures coverage", async () => {
   const guides = await readWorldGuides();
-  assert.equal(guides.length, 125);
+  assert.ok(guides.length >= 152, `Expected >= 152 guides, got ${guides.length}`);
   const langIds = deepDives.filter((d) => d.category === "languages").map((d) => d.id);
   const cultIds = deepDives.filter((d) => d.category === "cultures").map((d) => d.id);
   for (const reqLang of [

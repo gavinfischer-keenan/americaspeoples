@@ -1,18 +1,18 @@
 # Trade and exchange, 0–1200 CE
 
-The shared map now contains **52 mapped exchange observations** intersecting this period, compared with **7** in v0.23.1. These counts exclude founding migrations. They count evidence records; multiple records can describe phases or goods on one connection.
+The shared map now contains **108 mapped exchange observations** intersecting this period, compared with **7** in v0.23.1. These counts exclude founding migrations. They count evidence records; multiple records can describe phases or goods on one connection.
 
 Shared, explicitly classified exchange observations with line geometry and at least one supported activity window intersecting map years 0–1200. Founding migrations are excluded even where they use the same rendering layer. Multiple materials or dates may describe the same connection; counts are observations, not independent routes, traffic volume or evidence of continuous voyages. Samples use the same activity-window logic as the map. The point inventory also indexes explicitly reviewed exchange claims within settlement records; associated-context dates are identified separately from direct dates of traded objects.
 
 | Map year | Before | Now |
 |---|---:|---:|
-| 1 BCE (map year0) | 2 | 6 |
-| 250 CE | 1 | 9 |
-| 500 CE | 1 | 12 |
-| 750 CE | 0 | 14 |
-| 1000 CE | 2 | 21 |
-| 1150 CE | 2 | 11 |
-| 1200 CE | 3 | 12 |
+| 1 BCE (map year0) | 2 | 56 |
+| 250 CE | 1 | 19 |
+| 500 CE | 1 | 23 |
+| 750 CE | 0 | 25 |
+| 1000 CE | 2 | 35 |
+| 1150 CE | 2 | 25 |
+| 1200 CE | 3 | 27 |
 
 Source-to-find connections show where materials traveled. A schematic line does not establish a direct journey, a surveyed road or an annual trading schedule. Activity windows follow the dated assemblages or historical phases cited in each record. An endpoint means the last included evidence unless a source independently supports cessation. Later Inca imperial roads are not assigned to earlier centuries.
 
@@ -72,6 +72,62 @@ Source-to-find connections show where materials traveled. A schematic line does 
 - [Scarlet macaws reached Pueblo Bonito](../index.html#review/history-mesoamerica-chaco-macaws) — Approximately 900–1150 CE; AMS dates on Pueblo Bonito macaw remains, with an early group around 900–975 CE.. The upper date bounds this evidence record. Later continuation or cessation is unresolved.
 - [Fergusson obsidian to Caution Bay - repeated material transfer](../index.html#review/px-fergusson-caution-bay) — Imported obsidian c. 2950-1900 cal BP; isolated pieces at c. 1600-1500 may be redeposited or recycled.. Repeated material evidence across the range; inferred procurement cessation near 1900 cal BP is not proof all travel ended.
 - [Raoul obsidian at Norfolk - sourced transfer](../index.html#review/px-raoul-norfolk-obsidian) — Emily Bay context: early thirteenth to early fifteenth century.. Sourced material within a broad context; neither recurrence rate nor cessation of travel demonstrated.
+- [Georgina–Mulligan River Pituri (*Duboisia hopwoodii*) Exchange Corridor](../index.html#review/ausx-trade-pituri-corridor) — Late Holocene–c. 1900 CE. Arid plant-alkaloid preservation limits direct pre-contact radiocarbon tracking of the route beyond ~2,000-year stone village hubs.
+- [Wilgie Mia (Weld Range, WA) Specular Hematite & Red Ochre Exchange](../index.html#review/ausx-trade-wilgie-mia-ochre) — Mid–Late Holocene to 1900 CE. Ochre mining intensified over the past ~2,000 years, though trace-element overlap across Weld Range seams requires LA-ICP-MS resolution.
+- [Pukardu / Parachilna (Flinders Ranges) Ceremonial Red Ochre Route](../index.html#review/ausx-trade-parachilna-ochre) — Late Holocene–19th century CE. Ethnographic expeditions document 19th-century organization; pre-contact antiquity rests on quarry debris and regional ochre provenance.
+- [Wil-im-ee Moor-ring (Mount William, Vic) Kulin Greenstone Hatchet Trade](../index.html#review/ausx-trade-mt-william-greenstone) — c. 1,500 BCE–1850 CE. Visual similarity across Victorian greenstone dykes requires petrographic/XRF confirmation on museum blades.
+- [Kimberley *Riji* Pearl-Shell & Baler-Shell Trans-Desert Exchange](../index.html#review/ausx-trade-kimberley-pearl-shell) — Direct dates c. 2,000 BP–1900 CE. Radiocarbon-dated desert baler shell proves pre-colonial long-distance transport at ~2,000 BP, though ethnographic expansion accelerated recently.
+- [Mount Isa / Selwyn Range Metabasalt Axe & Sandstone Quarry Network](../index.html#review/ausx-trade-kalkadoon-metabasalt) — c. 1,000 BCE–1890 CE. Petrographic fingerprinting of dispersed Channel Country axes confirms transport distances >400 km.
+- [Torres Strait Canoe, Shell & Ochre Trade Corridor (Cape York ↔ Fly River)](../index.html#review/ausx-trade-torres-cape-york) — c. 600 BCE–1900 CE. Pre-European radiocarbon horizons document ceramic/shell transport across western and eastern islands prior to colonial trade.
+- [Pilbara Fossiliferous Chert & Inland Stone Procurement Network (WA)](../index.html#review/ausx-trade-pilbara-chert-corridor) — Terminal Pleistocene–Holocene exchange. Debate surrounds geological differentiation between coastal and Hamersley chert beds.
+- [Northern Australian Leilira Blade & Talking-Stones Quarry Network (NT)](../index.html#review/ausx-trade-wardaman-northern-stone) — Late Holocene–19th century CE. Late Holocene stylistic standardization postdates 1,500–1,000 BP intensification.
+- [Lou Island (Manus) Obsidian Long-Distance Sea Network (to Solomons & Fiji)](../index.html#review/pacx-trade-lou-admiralties-obsidian) — c. 1200 BCE–1000 CE. Early Pamwak Manus sequences reflect even earlier Pleistocene intra-island transport.
+- [Massim *Kula* Ring & Fergusson Obsidian Circulation (Milne Bay, PNG)](../index.html#review/pacx-trade-kula-massim-obsidian) — c. 450–1900 CE (crystallized Kula valuables c. 1400–1900 CE). Modern ceremonial *soulava*/*mwali* protocols solidified within the last 500–600 years.
+- [Vitiaz Strait & Bel Seafaring Exchange Corridor (New Britain ↔ Madang/Huon)](../index.html#review/pacx-trade-vitiaz-bel-siassi) — c. 1000–1900 CE. Holocene volcanic tephra eruptions (such as Arop/Long Island) periodically reset coastal villages.
+- [Palau–Yap *Rai* Limestone Quarrying & *Sawei* Carolinian Tribute Corridor](../index.html#review/pacx-trade-yap-palau-sawei-rai) — c. 1000–1900 CE (peak quarry transfer 1600–1900 CE). 19th-century European schooners accelerated stone-disk weights beyond traditional bamboo raft sizes.
+- [Tuʻi Tonga Maritime Adze, Mats & Obsidian Network (Tonga ↔ Fiji ↔ Samoa)](../index.html#review/pacx-trade-tui-tonga-network) — c. 1150–1750 CE (peak Tuʻi Tonga hegemony). Two-way gift tribute versus direct conquest fluctuated across royal reigns.
+- [Eiao Island Basalt Adze Long-Distance Polynesian Exchange (>2,400 km)](../index.html#review/pacx-trade-eiao-marquesas-adze) — c. 1200–1550 CE. Voyaging spheres contracted after ~1500 CE as inter-archipelago contact slowed.
+- [Mangareva–Pitcairn–Henderson Interaction Sphere (SE Polynesia)](../index.html#review/pacx-trade-pitcairn-mangareva-sphere) — c. 1000–1500 CE. Isolated Henderson populations vanished once voyaging links from Mangareva ceased.
+- [Siberian Krasnoye Lake obsidian crosses Bering Strait into western Alaska](../index.html#review/amtr-bering-krasnoye-strait-obsidian) — ~1000 BCE–100 CE (Norton–Choris Arctic maritime). Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Okmok caldera obsidian distributed along eastern Aleutian umiak lanes](../index.html#review/amtr-aleutian-okmok-umnak-obsidian) — ~4500 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Mount Edziza volcanic glass moves down Stikine canoes to Haida Gwaii & SE Alaska](../index.html#review/amtr-edziza-obsidian-nw-coast) — ~7000 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Fraser Canyon nephrite jade adzes move across British Columbia Plateau & Coast](../index.html#review/amtr-fraser-nephrite-jade-plateau) — ~1500 BCE–100 CE (Charles–Marpole horizons). Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Vancouver Island Dentalium tusk-shells move inland to Columbia Plateau & Northern Plains](../index.html#review/amtr-vancouver-dentalium-plateau) — ~3000 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Channel Islands Olivella beads reach Great Basin Lovelock & Danger Caves](../index.html#review/amtr-channel-olivella-great-basin) — ~7000 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Casa Diablo obsidian crosses Sierra passes into Central California & Coast](../index.html#review/amtr-casa-diablo-obsidian-california) — ~4000 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Santa Catalina Island steatite bowls & channel canoe commerce](../index.html#review/amtr-santa-catalina-steatite-mainland) — ~2500 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Mainland Coso & Napa obsidian shipped to Southern California Channel Islands](../index.html#review/amtr-channel-glass-mainland-coso-bight) — ~3500 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Bodega & Monterey Bay Olivella shell reaches Humboldt Sink via Carson River](../index.html#review/amtr-humboldt-bodega-olivella-nevada) — ~2000 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Bear Gulch volcanic glass spreads from Centennial Mountains across Northern Rockies](../index.html#review/amtr-bear-gulch-obsidian-west) — ~6000 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Yellowstone Obsidian Cliff glass reaches Mound City & Ohio Hopewell (>2,500 km)](../index.html#review/amtr-hopewell-yellowstone-obsidian-ohio) — ~100 BCE–100 CE (with Hopewell peak to ~250 CE). Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Idaho Bear Gulch volcanic glass reaches Illinois & Ohio Hopewell earthworks](../index.html#review/amtr-hopewell-bear-gulch-obsidian-illinois) — ~100 BCE–100 CE (Middle Woodland onset). Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Appalachian Blue Ridge sheet mica reaches Ohio–Illinois Hopewell workshops](../index.html#review/amtr-hopewell-appalachian-mica-ohio) — ~200 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Keweenaw–Lake Superior copper hammered into Scioto Hopewell breastplates & earspools](../index.html#review/amtr-hopewell-lake-superior-copper-scioto) — ~100 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Ontario Cobalt native silver sheathes Hopewell panpipes across Ohio & Illinois](../index.html#review/amtr-hopewell-cobalt-silver-ontario) — ~100 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Florida Gulf Coast lightning whelk & fossil shark teeth travel north to Ohio Hopewell](../index.html#review/amtr-hopewell-florida-whelk-crystal-river) — ~200 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Malad & Obsidian Cliff glass reaches Middle Woodland Eastern Plains camps](../index.html#review/amtr-plains-central-obsidian-bison) — ~200 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Gulf of California Glycymeris & Olivella shell enters Early Agricultural Tucson–Phoenix basins](../index.html#review/amtr-sw-gulf-california-shell-san-pedro) — ~1200 BCE–100 CE (San Pedro–Cienega). Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Government Mountain obsidian moves across Northern Arizona Archaic & Basketmaker II](../index.html#review/amtr-sw-government-mtn-obsidian-archaic) — ~1500 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Mule Creek & Antelope Wells obsidian crosses Mogollon–Sonoran borderlands](../index.html#review/amtr-sw-antelope-wells-mule-creek) — ~1200 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Early Southwest turquoise & Arizona argillite beads enter Basketmaker II ornaments](../index.html#review/amtr-sw-los-cerrillos-turquoise-pre100) — ~200 BCE–100 CE (Basketmaker II). Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Motagua jadeite celts reach Preclassic Maya plazas at Ceibal, Nakbe & Cuello](../index.html#review/amtr-meso-motagua-jadeite-preclassic-maya) — ~900 BCE–100 CE (Mamom–Chicanel Preclassic). Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [El Chayal obsidian flows downriver to Kaminaljuyu, Izapa & Preclassic Maya Lowlands](../index.html#review/amtr-meso-el-chayal-obsidian-peten) — ~1000 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Ixtepeque obsidian rides Motagua–Caribbean coastal canoes to Belize & Nim Li Punit](../index.html#review/amtr-meso-ixtepeque-belize-marine-coast) — ~1000 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Hidalgo Pachuca green obsidian spreads to Chalcatzingo, Cuicuilco & Monte Albán](../index.html#review/amtr-meso-pachuca-green-teotihuacan-preclassic) — ~900 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Sierra Madre & Motagua greenstone reaches Jovel Valley & Chiapas Preclassic centers](../index.html#review/amtr-meso-jovel-chiapas-greenstone) — ~1100 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Pacific Spondylus, Strombus & stingray spines ascend to Highland Oaxaca & Kaminaljuyu](../index.html#review/amtr-meso-pac-carib-shell-oaxaca-highlands) — ~1200 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [West Mexico Capacha–Shaft Tomb maritime link shares Spondylus & metallurgical hints](../index.html#review/amtr-meso-west-mexico-shaft-ecuador-link) — ~1500 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Olmecon–Motagua jadeite traditions spur Costa Rica Preclassic greenstone carving](../index.html#review/amtr-meso-costa-rica-guatemala-jade-axes) — ~500 BCE–100 CE (Zoned Bichrome). Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Ayacucho Quispisisa obsidian & cinnabar supply Paracas & Early Nasca desert towns](../index.html#review/amtr-sa-quispisisa-paracas-ica-nasca) — ~800 BCE–100 CE (Paracas–Initial Nasca). Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Huancavelica Santa Bárbara cinnabar vermilion enters Cupisnique, Chavín & Paracas tombs](../index.html#review/amtr-sa-huancavelica-cinnabar-chavin-cupisnique) — ~1000 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Alca highland obsidian equips Terminal Pleistocene Paiján & Formative coastal Peru](../index.html#review/amtr-sa-alca-obsidian-paijan-desert) — ~10,000 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Chivay & Charaña obsidian flows circulate around Titicaca Basin Chiripa & Pukara](../index.html#review/amtr-sa-chivay-charana-titicaca-obsidian) — ~1500 BCE–100 CE (Formative Titicaca). Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Southern Andes copper–turquoise beads & cebil snuff move along Atacama–NW Argentina trails](../index.html#review/amtr-sa-atacama-cebil-copper-turquoise-caravan) — ~1500 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Eastern Andean & Amazonian scarlet macaws cross the Andes to Pacific oases](../index.html#review/amtr-sa-high-andes-parrots-feathers) — ~500 BCE–100 CE (early trans-Andean baseline continuing later). Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [South American nephrite, amethyst & quartz beads sail north on Saladoid–Huecoid canoes](../index.html#review/amtr-sa-saladoid-huecoid-caribbean-lapidary) — ~500 BCE–100 CE (Saladoid–Huecoid Ceramic Age). Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Trants (Montserrat) & Pearls (Grenada) specialize in exotic bead drilling across Antilles](../index.html#review/amtr-sa-antilles-trants-montserrat-carnelian) — ~400 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Coastal Ecuador cacao & Spondylus climb Andean cloud forests toward Quito & Loja](../index.html#review/amtr-sa-quito-ecuador-chavin-spondylus-inland) — ~1500 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
+- [Highland volcanic glass travels via secondary river cobbles into Northern Peru](../index.html#review/amtr-sa-alto-salaverry-moche-obsidian-fluvial) — ~1200 BCE–100 CE. Endpoint marks the latest pre-100 CE horizon in this record; many corridors continued past 100 CE.
 
 ## Exchange evidence still shown as a point or not geographically mapped
 
@@ -84,4 +140,4 @@ Source-to-find connections show where materials traveled. A schematic line does 
 
 ## Earlier exchange
 
-The broader through-1200 inventory includes BCE evidence: **72 mapped exchange observations**, including **27** with a BCE window. The [complete machine-readable audit](../trade-pre1200-audit.json) lists their canonical IDs. Later Mexica tribute and Inka transport remain at their supported fifteenth- and sixteenth-century dates.
+The broader through-1200 inventory includes BCE evidence: **150 mapped exchange observations**, including **99** with a BCE window. The [complete machine-readable audit](../trade-pre1200-audit.json) lists their canonical IDs. Later Mexica tribute and Inka transport remain at their supported fifteenth- and sixteenth-century dates.

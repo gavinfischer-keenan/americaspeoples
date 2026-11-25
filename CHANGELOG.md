@@ -2,6 +2,15 @@
 
 Release notes, newest first. These paragraphs were moved here from the README, where they had accumulated release by release; their counts describe the catalogue at the time of each release, not necessarily today. Detailed per-release verification is in [docs/release-verification-history.md](docs/release-verification-history.md).
 
+## 0.36.0 — November 24, 2026
+
+Expands the atlas to **11,564 validated evidence records** and **152 deep-dive guides** across `8,144` world/shared records and `6,726` references (`3,069` Americas, `791` Pacific, `893` Africa, `2,488` Europe, `921` Asia-Pacific):
+
+- **Australia & Pacific deep history:** expands early hominins, Sahul/Wallacea, Pleistocene Australia, Tasmania (Lutruwita), New Guinea Highlands exchange, Lapita/Melanesia obsidian networks, Micronesia stone architectures, Polynesia (Aotearoa, Hawaiʻi, West Polynesia), Australian trade routes, frontier conflicts, and dedicated Pacific/Australian deep-dive guides.
+- **Systematic Asia expansion:** adds country-by-country evidence, monsoon and overland trade corridors, and new deep dives spanning China (Great Wall, dynastic capitals & Grand Canal), Russia/Siberia (Paleolithic steppe, siberian river corridors, Rus/Muscovy culture), Mongolia steppe empires, Japan (shogunate/samurai & historic castles), Korea kingdoms/fortresses, the Himalaya Tea-Horse Road, Central Asia oases & steppes, and Southeast Asia maritime spice networks.
+- **Pre-100 CE Americas trade:** adds `61` `amtr-*` exchange records, `5` `#topic/trade` chapters (`-7000` through `1 CE`), `12` world trade corridors, and the `world-americas-trade-before-100ce` deep dive across Arctic/Beringia, Pacific Northwest/Plateau, California/Great Basin, Old Copper/Poverty Point/Hopewell, Southwest Archaic/Basketmaker, Olmec & Preclassic Mesoamerica, Andean South America (*Spondylus*, *Theobroma cacao*, obsidian, cinnabar, caravans), and Caribbean Saladoid–Huecoid canoes.
+- **Global genetic drift & archaic interbreeding:** expands `world-human-family` to `17` sections, adds `world-global-genetic-drift-divergence` and `world-archaic-interbreeding-introgression`, and maps `24` global `genetics` pins and `10` dispersal/admixture waves covering the serial founder effect, Sahul isolation and dual Denisovan pulses, European three-wave synthesis, Beringian Standstill, Population Y, African ghost hominins, and adaptive archaic alleles.
+
 ## 0.35.0 — November 24, 2026
 
 Build, repository, and deployment pipeline cleanup; evidence stays unchanged at 11,370 records.
