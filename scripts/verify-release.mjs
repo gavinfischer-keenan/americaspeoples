@@ -39,7 +39,7 @@ const phases = [
   [
     "Production build and self-host package",
     node,
-    ["--import", "tsx", "scripts/build.ts"],
+    ["--import", "tsx", "scripts/build.ts", "--selfhost"],
   ],
   ["World hub, human family and four dated studies", node, ["tests/world.browser.mjs"]],
   ["Atlas navigation, active Europe and remaining previews", node, ["scripts/browser-atlases.mjs"]],

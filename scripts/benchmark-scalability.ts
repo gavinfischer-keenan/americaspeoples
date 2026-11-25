@@ -10,7 +10,7 @@ import {smartYearsPerSecond} from '../src/timeline';
 import {advancePlayback} from '../src/time';
 import {PlaybackIndex} from '../src/playback-index';
 
-const bytes=await readFile('templates/americas-peoples-researched-import.xlsx');
+const bytes=await readFile('templates/americas-peoples-import.xlsx');
 const pack=await importWorkbook(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),dataset.records);
 const timings:Record<string,number>={};
 function measure(name:string,fn:()=>unknown){const start=performance.now();fn();timings[name]=performance.now()-start;}
