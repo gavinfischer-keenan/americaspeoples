@@ -2,6 +2,15 @@
 
 Release notes, newest first. These paragraphs were moved here from the README, where they had accumulated release by release; their counts describe the catalogue at the time of each release, not necessarily today. Detailed per-release verification is in [docs/release-verification-history.md](docs/release-verification-history.md).
 
+## 0.37.0 — November 24, 2026
+
+Introduces **site deep dives with on-demand 3D models**, starting with Hovenweep Castle & Square Tower Group (related to [Issue #1](https://github.com/gavinfischer-keenan/americaspeoples/issues/1)):
+
+- **Hovenweep 3D site deep dive (`sites/hovenweep-castle.html`):** adds a building-level deep dive covering the 1200–1300 CE masonry horizon, the 1277 CE roof-timber cutting date, settlement-level population context, and neighboring Little Ruin Canyon structures alongside `hovenweep-castle.webp` terrain and Library of Congress HABS `UTAH,19-ANET.V,1C-` measured drawings and photographs.
+- **Public-domain USGS 3DEP 1 m LiDAR GLB (`data/site-3d/hovenweep-little-ruin-canyon-lidar.glb`):** stitches USGS 1 m DEM tiles `x66y414` + `x67y414` (`749 × 519 m`) into a 2.10 MB centered metric glTF 2.0 surface (`43,250` vertices, `85,656` triangles) with anchored labels for all eight Square Tower Group points, wired into both `hovenweep-castle.html` and `hovenweep.html`.
+- **Zero-dependency, CSP-safe on-demand 3D viewer (`src/site-3d-viewer.ts`):** fetches zero `.glb` bytes until requested, supports WebGL orbit/pan/zoom/keyboard controls, embedded texture decoding via `createImageBitmap`, download cancel/error/retry fallback, unload cleanup, explicit observed-survey vs. reconstruction badges, and provenance/attribution integration (`data/site-3d-models.json`, `scripts/site-3d-build.ts`, `scripts/ingest-3d-model.py`).
+- **Bidirectional atlas context preservation (`src/guide-return.ts`, `src/main.ts`):** preserves and restores the active atlas hash, year, story/scene, camera, and selected record when opening and returning from site deep dives, and adds `.glb`/`.gltf` MIME support in `server/app.py` and `scripts/static-server.mjs`.
+
 ## 0.36.0 — November 24, 2026
 
 Expands the atlas to **11,564 validated evidence records** and **152 deep-dive guides** across `8,144` world/shared records and `6,726` references (`3,069` Americas, `791` Pacific, `893` Africa, `2,488` Europe, `921` Asia-Pacific):

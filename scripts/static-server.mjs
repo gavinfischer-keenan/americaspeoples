@@ -19,6 +19,8 @@ const mime = {
   ".md": "text/plain; charset=utf-8",
   ".xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
   ".zip": "application/zip",
+  ".glb": "model/gltf-binary",
+  ".gltf": "model/gltf+json",
 };
 export function createStaticServer(directory, options = {}) {
   const root = path.resolve(directory);
