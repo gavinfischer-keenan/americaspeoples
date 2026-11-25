@@ -1,12 +1,13 @@
 {
   "name": "americas-peoples",
-  "version": "0.34.0",
+  "version": "0.35.0",
   "private": true,
   "type": "module",
   "scripts": {
     "test": "node --import tsx --test tests/*.test.ts",
     "typecheck": "tsc --noEmit",
     "build": "node --import tsx scripts/build.ts",
+    "package:selfhost": "node --import tsx scripts/build.ts --selfhost",
     "test:browser": "node --import tsx scripts/hosted-browser.mjs",
     "validate": "node --import tsx scripts/validate.ts",
     "preview": "node scripts/preview.mjs",

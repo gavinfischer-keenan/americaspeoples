@@ -68,19 +68,17 @@ try {
   await page.locator('.library-card[href="#proposals"]').click();
   await page
     .getByLabel("Import suggestions")
-    .setInputFiles("templates/americas-peoples-researched-import.xlsx");
-  // Parsing and validating the full 11,370-record workbook takes ~25-30 s in a
-  // headless browser; the default 30 s budget is too tight to be reliable.
+    .setInputFiles("templates/americas-peoples-import.xlsx");
   await page
     .getByRole("heading", { name: "Review import", exact: true })
-    .waitFor({ timeout: 120000 });
+    .waitFor({ timeout: 30000 });
   await page
     .getByRole("button", { name: "Add to local collection", exact: true })
     .click();
   await page
     .getByRole("heading", { name: "Your suggestions", exact: true })
     .waitFor();
-  assert.equal(await page.locator("[data-proposal-card]").count(), expectedRecords + saved.proposals.length);
+  assert.equal(await page.locator("[data-proposal-card]").count(), 1 + saved.proposals.length);
   const savedAfter = await page.evaluate(() =>
     localStorage.getItem("americas-peoples-proposals-v1"),
   );
@@ -88,7 +86,7 @@ try {
   await page
     .getByRole("heading", { name: "Your suggestions", exact: true })
     .waitFor();
-  assert.equal(await page.locator("[data-proposal-card]").count(), expectedRecords + saved.proposals.length);
+  assert.equal(await page.locator("[data-proposal-card]").count(), 1 + saved.proposals.length);
   assert.equal(
     await page.evaluate(() =>
       localStorage.getItem("americas-peoples-proposals-v1"),
@@ -106,7 +104,7 @@ try {
   assert.equal(
     JSON.parse(await readFile("test-results/hosted-proposals.json", "utf8"))
       .proposals.length,
-    expectedRecords + saved.proposals.length,
+    1 + saved.proposals.length,
   );
   await page.getByRole("link", { name: 'Americas', exact: true }).click();
   await mapSetting(page, () => page.locator("#story-select").selectOption("free"));
@@ -140,7 +138,7 @@ try {
   for (const url of [
     "/app.js",
     "/app.css",
-    "/templates/americas-peoples-researched-import.xlsx",
+    "/templates/americas-peoples-import.xlsx",
     "/docs/bulk-import-guide.html",
     "/research-proposals.json",
     "/docs/round8-synthesis.html",

@@ -16,3 +16,9 @@ work-lookup-literature.py
 # Python runtime bytecode
 __pycache__/
 *.pyc
+
+# Copied during build from data/ (keep single tracked source of truth in data/)
+sites/maps/
+sites/media/
+sites/writing-media/
+sites/guide-media/

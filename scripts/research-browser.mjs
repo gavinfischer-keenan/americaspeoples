@@ -49,11 +49,13 @@ try {
     }
   }
   await mkdir("test-results", { recursive: true });
+  process.env.WORKBOOK_OUT = "test-results/americas-peoples-researched-import.xlsx";
+  await import("./archive/workbook-tables.ts");
   await page.goto(url + "#map");
   await page.getByRole("link", { name: "Library", exact: true }).click();
   await page.locator('.library-card[href="#proposals"]').click();
   const importStarted = performance.now();
-  await page.locator('#import-file').setInputFiles("templates/americas-peoples-researched-import.xlsx");
+  await page.locator('#import-file').setInputFiles("test-results/americas-peoples-researched-import.xlsx");
   // Scope large-batch checks to known controls. A document-wide role query walks
   // every card and its collapsed comparisons before finding this heading.
   // The full 11,370-record workbook takes ~25-30 s to parse in a headless browser.
@@ -194,7 +196,7 @@ try {
   }
   await page.getByRole("link", { name: "Library", exact: true }).click();
   await page.locator('.library-card[href="#proposals"]').click();
-  await page.locator('#import-file').setInputFiles("templates/americas-peoples-researched-import.xlsx");
+  await page.locator('#import-file').setInputFiles("test-results/americas-peoples-researched-import.xlsx");
   // The full 11,370-record workbook takes ~25-30 s to parse in a headless browser.
   await page.locator('#confirm-import').waitFor({ timeout: 120000 });
   assert.equal(await page.locator('.proposals-page > h2').textContent(), 'Review import');

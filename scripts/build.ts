@@ -32,7 +32,8 @@ const proposalIds=new Set(research.proposals.map((p:{record:{id:string}})=>p.rec
 const appendix = createAppendix({...published,records:published.records.filter(r=>!proposalIds.has(r.id))}, research, version);
 const errors = validateDataset(published);
 if (errors.length) throw new Error(errors.join("\n"));
-await import("./workbook-tables");
+const includeSelfhost =
+  process.argv.includes("--selfhost") || process.env.PACKAGE_SELFHOST === "1";
 // Delete only this repository's generated directory, never a symlink or a caller-selected path.
 const projectRoot = path.resolve(fileURLToPath(new URL("..", import.meta.url)));
 const distRoot = path.resolve("dist");
@@ -222,7 +223,6 @@ for (const name of [
   "DEPLOYMENT.md",
   "docs/landing-page-content.md",
   "templates/americas-peoples-import.xlsx",
-  "templates/americas-peoples-researched-import.xlsx",
 ]) {
   await copyFile(name, `dist/${name}`);
   names.push(name);
@@ -248,33 +248,31 @@ for (const [name, content] of Object.entries({
 }
 await buildSiteGuides();
 await includeDirectory("sites");
-const files: Record<string, Uint8Array> = {};
-for (const name of names)
-  files[`americas-peoples/web/${name}`] = new Uint8Array(
-    await readFile("dist/" + name),
-  );
 execFileSync(process.env.PYTHON_PATH || 'python', ['server/database.py','--dataset','dist/dataset.json','--hazards','data/hazard-events.json','--ice','data/ice-snapshots.json','--target','release/atlas.sqlite3'],{stdio:'inherit'});
-for(const name of ['server/app.py','server/database.py','server/release_retention.py'])files['americas-peoples/'+name]=new Uint8Array(await readFile(name));
-files['americas-peoples/data/atlas.sqlite3']=new Uint8Array(await readFile('release/atlas.sqlite3'));
-files['americas-peoples/DEPLOYMENT.md']=new Uint8Array(await readFile('DEPLOYMENT.md'));
-const zip = zipSync(files, { level: 9 });
 const releaseName = `americas-peoples-v${version}-selfhost.zip`;
-await writeFile("release/americas-peoples-selfhost.zip", zip);
-await writeFile(`release/${releaseName}`, zip);
-const artifactFiles = [
-  {
-    path: `release/${releaseName}`,
-    repositoryPath: `downloads/${releaseName}`,
-  },
+const artifactFiles: { path: string; repositoryPath: string }[] = [
   {
     path: "templates/americas-peoples-import.xlsx",
     repositoryPath: "templates/americas-peoples-import.xlsx",
   },
-  {
-    path: "templates/americas-peoples-researched-import.xlsx",
-    repositoryPath: "templates/americas-peoples-researched-import.xlsx",
-  },
 ];
+if (includeSelfhost) {
+  const files: Record<string, Uint8Array> = {};
+  for (const name of names)
+    files[`americas-peoples/web/${name}`] = new Uint8Array(
+      await readFile("dist/" + name),
+    );
+  for(const name of ['server/app.py','server/database.py','server/release_retention.py'])files['americas-peoples/'+name]=new Uint8Array(await readFile(name));
+  files['americas-peoples/data/atlas.sqlite3']=new Uint8Array(await readFile('release/atlas.sqlite3'));
+  files['americas-peoples/DEPLOYMENT.md']=new Uint8Array(await readFile('DEPLOYMENT.md'));
+  const zip = zipSync(files, { level: 9 });
+  await writeFile("release/americas-peoples-selfhost.zip", zip);
+  await writeFile(`release/${releaseName}`, zip);
+  artifactFiles.unshift({
+    path: `release/${releaseName}`,
+    repositoryPath: `downloads/${releaseName}`,
+  });
+}
 const artifacts = await Promise.all(
   artifactFiles.map(async (item) => {
     const bytes = await readFile(item.path);

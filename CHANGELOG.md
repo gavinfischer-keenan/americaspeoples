@@ -2,6 +2,14 @@
 
 Release notes, newest first. These paragraphs were moved here from the README, where they had accumulated release by release; their counts describe the catalogue at the time of each release, not necessarily today. Detailed per-release verification is in [docs/release-verification-history.md](docs/release-verification-history.md).
 
+## 0.35.0 — November 24, 2026
+
+Build, repository, and deployment pipeline cleanup; evidence stays unchanged at 11,370 records.
+
+- **Delta production deploy:** `scripts/deploy.py` and `scripts/deploy_remote_ct703.py` compute a SHA-256 manifest diff against the live container release, hardlink unchanged media/assets on the server cleanly, and upload only changed/added files (`tar.gz`) while keeping rollback releases immutable.
+- **Decoupled self-host archive:** routine `npm run build` skips building the 467 MB `selfhost.zip` (moved behind `npm run package:selfhost`), and production web deploys omit the 142 MB legacy static JSON/HTML monolith dumps in favor of the SQLite `/api/export` endpoint.
+- **Repository deduplication:** retired the 5.5 MB generated `americas-peoples-researched-import.xlsx` snapshot (keeping the 300 KB contributor template `templates/americas-peoples-import.xlsx` and archiving `scripts/archive/workbook-tables.ts`) and stopped tracking 189 MB of duplicate build-copied media under `sites/`.
+
 ## 0.34.0 — November 24, 2026
 
 Adds evidence-backed early trade corridors across Africa, the Middle East, and Europe through 100 CE alongside a more compact map timeline bar. The main archive catalogue remains 11,370 records.
