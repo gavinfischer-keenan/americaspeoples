@@ -84,6 +84,7 @@ const phases = [
   ["Exact event navigation", node, ["tests/evidence-date.browser.mjs"]],
   ["Physical layers and source reviews", node, ["tests/physical.browser.mjs"]],
   ["Site and culture guides, road maps and natural events", node, ["tests/site-guides.browser.mjs"]],
+  ["Hovenweep 3D site deep dive and context preservation", node, ["tests/site-3d-viewer.browser.mjs"]],
   ["Dated geography, journeys, local selection and mobile", node, ["tests/expansion.browser.mjs"]],
   ["Guided stories, discovery and responsive UI", node, ["tests/watch-explore.browser.mjs"]],
   ["Shared world movie, scoped expeditions and local terrain", node, ["tests/shared-movie.browser.mjs"]],

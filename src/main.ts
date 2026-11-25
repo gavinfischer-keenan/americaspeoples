@@ -82,6 +82,7 @@ import { PlaybackIndex } from "./playback-index";
 import { suggestions, loadSuggestions, saveSuggestions, watchOtherTabs } from "./suggestions-store";
 import { suggestionPages } from "./pages/suggestions";
 import { contextHTML } from "./context";
+import { saveAtlasReturnContext, consumeAtlasReturnContext } from "./guide-return";
 
 const timelineRecords = dataset.records.filter(r=>!topicOnlyIds.has(r.id)&&recordInTimeline(r));
 const americasMinYear = earliestYear(timelineRecords.filter(isAmericasRecord));
@@ -1288,6 +1289,12 @@ async function route() {
       const targetRegion:'americas'|'pacific'=hash==='#atlas/pacific'?'pacific':'americas';
       const regionChanged=nextMode==='movie'&&targetRegion!==activeAtlasRegion;
       const targetKey:'americas'|'pacific'|'explore'=nextMode==='explore'?'explore':targetRegion;
+      const restored = consumeAtlasReturnContext(hash);
+      if (restored) {
+        openingPlayback = false;
+        activeAtlasRegion = targetRegion;
+        framedRegion = targetRegion;
+      }
       if(nextMode!==atlasMode||regionChanged){placeQuery='';placeCategory='all';}
       if(nextMode==='explore'){
         if(hashParams){
@@ -1327,7 +1334,18 @@ async function route() {
       }
       if(nextMode==='explore'&&atlasMode!=='explore'){explorePeriod='all';}
       atlasMode = nextMode;
-      if(regionChanged){
+      if (restored) {
+        if (nextMode === 'movie') {
+          storyId = restored.storyId ?? 'free';
+          storySceneIndex = restored.storySceneIndex ?? -1;
+          pendingStoryYear = null;
+          bounds(true);
+          setYear(restored.year, false);
+          movieClock = restored.year;
+          if (storyId !== 'free') storyElapsed = storyElapsedAtYear(currentStory(), restored.year);
+        }
+        selected = dataset.records.filter(r => restored.selectedIds.includes(r.id));
+      } else if(regionChanged){
         activeAtlasRegion=targetRegion;storyId='free';storySceneIndex=-1;
         selected=savedRegionSelection[targetKey]?.slice()??[];
         bounds(true);setYear(savedRegionYears[activeAtlasRegion].year,false);movieClock=savedRegionYears[activeAtlasRegion].clock;
@@ -1353,7 +1371,12 @@ async function route() {
         void ensureExploreCatalogs();
         if(hashParams&&(hashParams.has('q')||hashParams.has('category')||hashParams.has('from')||hashParams.has('to')||hashParams.has('wrecks')))(mapNavigation as MapNavigation|undefined)?.showFacts();
       }
-      if(topicOriginCamera){map.restoreCamera(topicOriginCamera);topicOriginCamera=undefined;}
+      if(restored){
+        if(restored.camera)map.restoreCamera(restored.camera);
+        renderMapData();
+        if(selected.length){openDetails();renderSelectionChoices();renderVisible();}
+      }
+      else if(topicOriginCamera){map.restoreCamera(topicOriginCamera);topicOriginCamera=undefined;}
       else if(pendingLocation){const record=pendingLocation;pendingLocation=null;map.focus(record);if(mountedMap){openDetails();renderSelectionChoices();renderVisible();}}
       else if(atlasMode==='explore'){
         if(savedRegionCameras.explore)map.restoreCamera(savedRegionCameras.explore);
@@ -1497,6 +1520,19 @@ async function route() {
   window.scrollTo(0, 0);
 }
 window.addEventListener("hashchange", route);
+document.addEventListener("click", (event) => {
+  const link = (event.target as Element | null)?.closest<HTMLAnchorElement>('a[href^="sites/"]');
+  if (!link) return;
+  saveAtlasReturnContext({
+    hash: location.hash || "#movie",
+    year,
+    selectedIds: selected.map((r) => r.id),
+    camera: mountedMap ? map.camera() : lastAtlasCamera,
+    storyId,
+    storySceneIndex,
+    pendingRestore: false,
+  });
+});
 // Another tab saved suggestions: adopt its collection so this tab's next save
 // does not discard that work. Pages listing proposals re-render; an in-progress
 // editor keeps its form until the next navigation.

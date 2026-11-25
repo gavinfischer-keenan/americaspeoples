@@ -62,6 +62,11 @@ class AtlasServer(ThreadingHTTPServer):
 class AtlasHandler(SimpleHTTPRequestHandler):
     """HTTP adapter only: no anonymous mutation or private-directory serving."""
     server_version='AtlasAPI/1'
+    extensions_map={
+        **SimpleHTTPRequestHandler.extensions_map,
+        '.glb':'model/gltf-binary',
+        '.gltf':'model/gltf+json',
+    }
     def __init__(self,*args,**kwargs):
         super().__init__(*args,directory=str(args[2].webroot),**kwargs)
     def setup(self):

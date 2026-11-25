@@ -79518,8 +79518,11 @@
         "Record: g20-hove-castle-architecture",
         "Record: g20-hove-castle-1277-beam",
         "Guide: hovenweep",
+        "Guide: hovenweep-castle",
         "Guide narrative: hovenweep",
-        "data/six-guide-expansion-records.json"
+        "Guide narrative: hovenweep-castle",
+        "data/six-guide-expansion-records.json",
+        "data/village-plans.json"
       ]
     },
     {
@@ -79537,6 +79540,7 @@
       "usedIn": [
         "Record: g20-hove-house-architecture",
         "Guide: hovenweep",
+        "Guide: hovenweep-castle",
         "data/six-guide-expansion-records.json"
       ]
     },
@@ -108793,6 +108797,20 @@
       "notes": [],
       "usedIn": [
         "THIRD_PARTY.md"
+      ]
+    },
+    {
+      "title": "https://github.com/gavinfischer-keenan/americaspeoples/issues/1)):",
+      "urls": [
+        "https://github.com/gavinfischer-keenan/americaspeoples/issues/1)):"
+      ],
+      "creators": [],
+      "kind": "Reference link",
+      "license": "Referenced only; reuse license not verified",
+      "licenseUrls": [],
+      "notes": [],
+      "usedIn": [
+        "CHANGELOG.md"
       ]
     },
     {
@@ -270783,6 +270801,22 @@
       "title": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/30798/15763.png",
       "urls": [
         "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/30798/15763.png"
+      ],
+      "creators": [],
+      "kind": "Reused data / map source",
+      "license": "Mixed elevation-source terms; preserve Mapzen/Tilezen and upstream credits in the linked attribution document.",
+      "licenseUrls": [],
+      "notes": [
+        "Public provenance manifest: data/guide-terrain/sources.json"
+      ],
+      "usedIn": [
+        "data/guide-terrain/sources.json"
+      ]
+    },
+    {
+      "title": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6455/12710.png",
+      "urls": [
+        "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6455/12710.png"
       ],
       "creators": [],
       "kind": "Reused data / map source",
@@ -448139,6 +448173,60 @@
       ]
     },
     {
+      "title": "Library of Congress — HABS UTAH,19-ANET.V,1B- (Hovenweep House)",
+      "urls": [
+        "https://www.loc.gov/pictures/item/ut0548/"
+      ],
+      "creators": [],
+      "kind": "Reference link",
+      "license": "Referenced only; reuse license not verified",
+      "licenseUrls": [],
+      "notes": [],
+      "usedIn": [
+        "Guide: hovenweep-castle"
+      ]
+    },
+    {
+      "title": "Library of Congress — HABS UTAH,19-ANET.V,1C- (Hovenweep Castle)",
+      "urls": [
+        "https://www.loc.gov/pictures/item/ut0549/"
+      ],
+      "creators": [],
+      "kind": "Reference link",
+      "license": "Referenced only; reuse license not verified",
+      "licenseUrls": [],
+      "notes": [],
+      "usedIn": [
+        "Guide: hovenweep-castle",
+        "Guide narrative: hovenweep-castle",
+        "Further reading: hovenweep-castle"
+      ]
+    },
+    {
+      "title": "Library of Congress — HABS UTAH,19-ANET.V,1C- (sheet 1 of 3)",
+      "urls": [
+        "https://www.loc.gov/pictures/item/ut0549.sheet.00001a/",
+        "https://cdn.loc.gov/service/pnp/habshaer/ut/ut0500/ut0549/sheet/00001v.jpg"
+      ],
+      "creators": [
+        "Historic American Buildings Survey (National Park Service)"
+      ],
+      "kind": "Reused historical map / chart",
+      "license": "Public domain (United States)",
+      "licenseUrls": [
+        "https://www.loc.gov/rr/print/res/114_habs.html"
+      ],
+      "notes": [
+        "Library of Congress Prints and Photographs Division records: No known restrictions on images made by the U.S. Government (HABS UTAH,19-ANET.V,1C-, sheet 1 of 3).",
+        "Copied Library of Congress JPEG service image (1024 × 791) with minor JPEG re-encoding; orientation and sheet annotations preserved.",
+        "The atlas’s noncommercial terms do not apply to this image. Used in: hovenweep-castle, hovenweep"
+      ],
+      "usedIn": [
+        "data/village-plans.json",
+        "Historical map / chart: hovenweep-castle-habs-plan.jpg"
+      ]
+    },
+    {
       "title": "Library of Congress · Oral history of Kesang Tsering",
       "urls": [
         "https://www.loc.gov/item/2020706065/"
@@ -449081,7 +449169,9 @@
         "Record: g20-hove-tower-point-architecture",
         "Record: g20-hove-castle-1277-beam",
         "Guide: hovenweep",
+        "Guide: hovenweep-castle",
         "Guide narrative: hovenweep",
+        "Guide narrative: hovenweep-castle",
         "data/six-guide-expansion-records.json"
       ]
     },
@@ -470415,6 +470505,29 @@
       ]
     },
     {
+      "title": "North elevation, Hovenweep Castle (HABS UTAH,19-ANET.V,1C--1)",
+      "urls": [
+        "https://www.loc.gov/pictures/item/ut0549.photos.367763p/",
+        "https://cdn.loc.gov/service/pnp/habshaer/ut/ut0500/ut0549/photos/367763pv.jpg"
+      ],
+      "creators": [
+        "Historic American Buildings Survey (National Park Service)"
+      ],
+      "kind": "Reused photograph",
+      "license": "Public domain (United States)",
+      "licenseUrls": [
+        "https://www.loc.gov/rr/print/res/114_habs.html"
+      ],
+      "notes": [
+        "Library of Congress Prints and Photographs Division records: No known restrictions on images made by the U.S. Government (HABS UTAH,19-ANET.V,1C--1).",
+        "Copied Library of Congress JPEG service image (1024 × 811) with minor JPEG re-encoding; no cropping or retouching.",
+        "The atlas’s noncommercial terms do not apply to this image. Used in: hovenweep-castle"
+      ],
+      "usedIn": [
+        "Photograph: hovenweep-castle-habs-north.jpg"
+      ]
+    },
+    {
       "title": "North Gorda Ridge Segment",
       "urls": [
         "https://volcano.si.edu/volcano.cfm?vn=331031"
@@ -471995,7 +472108,8 @@
       "licenseUrls": [],
       "notes": [],
       "usedIn": [
-        "Guide: hovenweep"
+        "Guide: hovenweep",
+        "Guide: hovenweep-castle"
       ]
     },
     {
@@ -472201,7 +472315,9 @@
       "notes": [],
       "usedIn": [
         "Guide: hovenweep",
-        "Guide narrative: hovenweep"
+        "Guide: hovenweep-castle",
+        "Guide narrative: hovenweep",
+        "Guide narrative: hovenweep-castle"
       ]
     },
     {
@@ -512331,15 +512447,26 @@
     {
       "title": "Square Tower Group",
       "urls": [
-        "https://www.nps.gov/hove/planyourvisit/squaretower.htm"
+        "https://www.nps.gov/hove/planyourvisit/squaretower.htm",
+        "https://apps.nationalmap.gov/downloader/",
+        "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/UT_StatewideCenSouth_2020_A20/TIFF/USGS_1M_12_x66y414_UT_StatewideCenSouth_2020_A20.tif",
+        "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/UT_StatewideCenSouth_2020_A20/TIFF/USGS_1M_12_x67y414_UT_StatewideCenSouth_2020_A20.tif"
       ],
       "creators": [
-        "National Park Service"
+        "National Park Service",
+        "U.S. Geological Survey — 3D Elevation Program (3DEP)"
       ],
-      "kind": "Reference link",
-      "license": "Referenced only; reuse license not verified",
-      "licenseUrls": [],
-      "notes": [],
+      "kind": "Reused 3D survey / model",
+      "license": "Public Domain (U.S. Federal Government Work — USGS)",
+      "licenseUrls": [
+        "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits"
+      ],
+      "notes": [
+        "Observed survey · Airborne LiDAR (not a reconstruction)",
+        "Airborne LiDAR 1-meter bare-earth Digital Elevation Model (tiles x66y414 and x67y414, EPSG:26912), cropped to Little Ruin Canyon head and triangulated into glTF 2.0 binary.",
+        "USGS 3DEP elevation data are works of the U.S. Federal Government in the public domain; USGS credit requested.",
+        "Used in: hovenweep-castle, hovenweep"
+      ],
       "usedIn": [
         "Record: hovenweep-square-tower",
         "Record: g20-hove-castle-architecture",
@@ -512350,11 +512477,14 @@
         "Record: g20-hove-rim-rock-house-architecture",
         "Record: g20-hove-tower-point-architecture",
         "Guide: hovenweep",
+        "Guide: hovenweep-castle",
         "Guide narrative: hovenweep",
+        "Guide narrative: hovenweep-castle",
         "data/intake-hovenweep-sites.json",
         "data/literature-intake-2026-10-28.json",
         "data/research-proposals.json",
-        "data/six-guide-expansion-records.json"
+        "data/six-guide-expansion-records.json",
+        "3D survey / model: hovenweep-little-ruin-canyon-lidar"
       ]
     },
     {
@@ -532264,6 +532394,7 @@
       "usedIn": [
         "Record: g20-hove-tower-point-architecture",
         "Guide: hovenweep",
+        "Guide: hovenweep-castle",
         "Guide narrative: hovenweep",
         "data/six-guide-expansion-records.json"
       ]
@@ -534347,6 +534478,7 @@
       "usedIn": [
         "Record: g20-hove-twin-towers-architecture",
         "Guide: hovenweep",
+        "Guide: hovenweep-castle",
         "Guide narrative: hovenweep",
         "data/six-guide-expansion-records.json"
       ]
@@ -539595,6 +539727,7 @@
       "usedIn": [
         "Record: g20-hove-unit-type-house-architecture",
         "Guide: hovenweep",
+        "Guide: hovenweep-castle",
         "Guide narrative: hovenweep",
         "data/six-guide-expansion-records.json"
       ]
@@ -542637,6 +542770,29 @@
       "notes": [],
       "usedIn": [
         "data/hazard-events.json"
+      ]
+    },
+    {
+      "title": "View of central tower, Hovenweep Castle (HABS UTAH,19-ANET.V,1C--2)",
+      "urls": [
+        "https://www.loc.gov/pictures/item/ut0549.photos.367764p/",
+        "https://cdn.loc.gov/service/pnp/habshaer/ut/ut0500/ut0549/photos/367764pv.jpg"
+      ],
+      "creators": [
+        "Historic American Buildings Survey (National Park Service)"
+      ],
+      "kind": "Reused photograph",
+      "license": "Public domain (United States)",
+      "licenseUrls": [
+        "https://www.loc.gov/rr/print/res/114_habs.html"
+      ],
+      "notes": [
+        "Library of Congress Prints and Photographs Division records: No known restrictions on images made by the U.S. Government (HABS UTAH,19-ANET.V,1C--2).",
+        "Copied Library of Congress JPEG service image (815 × 1024) with minor JPEG re-encoding; no cropping or retouching.",
+        "The atlas’s noncommercial terms do not apply to this image. Used in: hovenweep-castle"
+      ],
+      "usedIn": [
+        "Photograph: hovenweep-castle-habs-tower.jpg"
       ]
     },
     {
@@ -546381,7 +546537,8 @@
       "licenseUrls": [],
       "notes": [],
       "usedIn": [
-        "Further reading: hovenweep"
+        "Further reading: hovenweep",
+        "Further reading: hovenweep-castle"
       ]
     },
     {

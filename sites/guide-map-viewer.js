@@ -1,4 +1,18 @@
-// Local progressive enhancement: no map-service calls or visitor tracking.
+ // Local progressive enhancement: no map-service calls or visitor tracking.
+try{
+ const raw=sessionStorage.getItem('americas-peoples-return-context-v1');
+ if(raw){
+  const ctx=JSON.parse(raw);
+  if(ctx&&typeof ctx.hash==='string'&&ctx.hash.startsWith('#')){
+   for(const link of document.querySelectorAll('[data-atlas-return]')){
+    if(link.dataset.atlasReturnBound)continue;
+    link.dataset.atlasReturnBound='1';
+    link.setAttribute('href','../'+ctx.hash);
+    link.addEventListener('click',()=>{try{sessionStorage.setItem('americas-peoples-return-context-v1',JSON.stringify({...ctx,pendingRestore:true}));}catch{}});
+   }
+  }
+ }
+}catch{}
 for(const viewer of document.querySelectorAll('[data-map-viewer]')){
  const viewport=viewer.querySelector('.guide-map-viewport');
  const graphic=viewport?.querySelector('svg,img');

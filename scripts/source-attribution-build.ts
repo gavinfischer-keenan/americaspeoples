@@ -10,6 +10,7 @@ import {normalizeEurope,type EuropeSource} from '../src/europe-data';
 import {validateEuropeBoundaries,type EuropeBoundaryBundle} from '../src/europe-boundaries';
 import type {BoundarySource} from '../src/boundaries';
 import type {WorldGuideMedia} from './world-guide-media';
+import type {Site3DManifest} from './site-3d-build';
 
 type Source = { url: string; title?: string; authors?: string; doi?: string };
 type AttributionInputs = {
@@ -23,6 +24,7 @@ type AttributionInputs = {
   europeSources?: EuropeSource[];
   europeBoundaries?: EuropeBoundaryBundle & {sources: (BoundarySource & {download?: string})[]};
   worldMedia?: WorldGuideMedia[];
+  site3d?: Site3DManifest;
 };
 export type AttributionEntry = { title: string; urls: string[]; creators: string[]; kind: string; license: string; licenseUrls: string[]; notes: string[]; usedIn: string[] };
 const unknownLicense = 'Referenced only; reuse license not verified';
@@ -113,6 +115,16 @@ export function collectSourceAttributions(input: AttributionInputs): Attribution
     });
     for (const guideId of image.guideIds) add(source, 'Guide: ' + guideId);
   }
+  for (const model of input.site3d?.models ?? []) {
+    const source = { url: model.provenance.sourcePage, title: model.title, authors: model.provenance.creator };
+    add(source, '3D survey / model: ' + model.id, {
+      kind: 'Reused 3D survey / model',
+      license: model.license.name,
+      licenseUrls: [model.license.url],
+      urls: [...(model.provenance.sourceUrl ? [model.provenance.sourceUrl] : []), ...model.provenance.citations.map(c => c.url)],
+      notes: [model.classificationLabel, model.provenance.method, model.license.evidence, 'Used in: ' + model.guideIds.join(', ')],
+    });
+  }
   for(const e of input.writing??[]){
     const o=e.original,t=e.translation,where='Writing pair: '+e.id;
     add({url:o.sourceUrl,title:e.objectId,authors:o.creator},where,{kind:o.kind==='image'?'Reused object photograph':'Original-language transcription',license:o.license,licenseUrls:[o.licenseUrl],notes:[o.note]});
@@ -149,7 +161,7 @@ export function collectSourceAttributions(input: AttributionInputs): Attribution
 }
 
 export async function loadAttributionInputs(): Promise<AttributionInputs> {
-  const [{dataset}, pages, enrichment, media, europe, europeBoundaries, worldMedia] = await Promise.all([
+  const [{dataset}, pages, enrichment, media, europe, europeBoundaries, worldMedia, site3d] = await Promise.all([
     import('../src/published-data'),
     readFile('data/site-guide-content.json','utf8').then(JSON.parse),
     readFile('data/guide-enrichment.json','utf8').then(JSON.parse),
@@ -157,6 +169,7 @@ export async function loadAttributionInputs(): Promise<AttributionInputs> {
     readEuropeData(),
     readFile('data/atlases/europe/boundaries.json','utf8').then(JSON.parse).then(validateEuropeBoundaries),
     readFile('data/world-guide-media.json','utf8').then(JSON.parse).then((manifest: {assets: WorldGuideMedia[]}) => manifest.assets),
+    readFile('data/site-3d-models.json','utf8').then(JSON.parse) as Promise<Site3DManifest>,
   ]);
   const manifests: AttributionInputs['manifests'] = [];
   const walk = async (directory: string) => {
@@ -164,7 +177,7 @@ export async function loadAttributionInputs(): Promise<AttributionInputs> {
       const file = directory + '/' + item.name;
       if (item.isDirectory()) { await walk(file); continue; }
       // Raw event pages are represented by their fetch manifest and cited records.
-      if (!item.name.endsWith('.json') || (directory === 'data/physical-sources' && !/manifest|import/.test(item.name)) || ['site-guide-content.json','guide-enrichment.json','shipwreck-catalog-details.json'].includes(item.name) || directory === 'data/guide-media') continue;
+      if (!item.name.endsWith('.json') || (directory === 'data/physical-sources' && !/manifest|import/.test(item.name)) || ['site-guide-content.json','guide-enrichment.json','shipwreck-catalog-details.json','site-3d-models.json'].includes(item.name) || directory === 'data/guide-media') continue;
       if (file === 'data/world-guide-media.json' || file === 'data/rock-art-gallery.json' || (directory === 'data/atlases/europe' && (item.name.endsWith('-evidence.json') || item.name === 'boundaries.json'))) continue;
       const reused = /(?:boundary-sources|terrain\/sources|guide-maps\/manifest|physical-sources\/fetch-manifest|rail-network\.json)/.test(file);
       const data = JSON.parse(await readFile(file,'utf8'));
@@ -181,7 +194,7 @@ export async function loadAttributionInputs(): Promise<AttributionInputs> {
   for (const file of ['THIRD_PARTY.md','LICENSE.md','README.md','CHANGELOG.md','DEPLOYMENT.md']) manifests.push({file,data:await readFile(file,'utf8'),reused:false});
   const materials = [{url:'https://www.geonames.org/export/',title:'GeoNames gazetteer country extracts',authors:'GeoNames',license:'CC BY 4.0',licenseUrl:'https://creativecommons.org/licenses/by/4.0/',note:'Selected modern reference coordinates from public country dumps, rounded for public display; feature IDs and source URLs remain in the relevant records. Historical claims are independently sourced. GeoNames data retains CC BY 4.0; the atlas’s noncommercial restriction does not replace it.'}];
   const world=await readWorldGuides();
-  return {records:[...dataset.records,...normalizeEurope(europe)],pages:[...pages.pages,...world.map(g=>({id:g.id,sources:g.sources}))],enrichment,media,manifests,materials,writing:await readWritingExamples(),europeSources:europe.sources,europeBoundaries,worldMedia};
+  return {records:[...dataset.records,...normalizeEurope(europe)],pages:[...pages.pages,...world.map(g=>({id:g.id,sources:g.sources}))],enrichment,media,manifests,materials,writing:await readWritingExamples(),europeSources:europe.sources,europeBoundaries,worldMedia,site3d};
 }
 
 function noticeHTML(markdown: string): string {
